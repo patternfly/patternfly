@@ -31,10 +31,10 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   // top
   --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$pagination}--m-sticky--md--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-sticky--md--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-sticky--md--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-sticky--md--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--m-sticky--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-sticky--ZIndex: 100; // TODO: replace with z-index token
   --#{$pagination}--m-sticky--Top: 0;
 
@@ -43,9 +43,9 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--Bottom: 0;
   --#{$pagination}--m-bottom--md--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom--md--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--md--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom--md--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--xl--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
@@ -92,6 +92,8 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     justify-content: center;
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
+    padding-inline-start: var(--#{$pagination}--m-bottom--md--PaddingLeft);
+    padding-inline-end: var(--#{$pagination}--m-bottom--md--PaddingRight);
 
     &.pf-m-static {
       --#{$pagination}--m-bottom--MarginTop: 0;
@@ -127,8 +129,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       justify-content: flex-end;
       padding-block-start: var(--#{$pagination}--m-bottom--md--PaddingTop);
       padding-block-end: var(--#{$pagination}--m-bottom--md--PaddingBottom);
-      padding-inline-start: var(--#{$pagination}--m-bottom--md--PaddingLeft);
-      padding-inline-end: var(--#{$pagination}--m-bottom--md--PaddingRight);
 
       .#{$pagination}__nav-control.pf-m-first,
       .#{$pagination}__nav-control.pf-m-last,
@@ -163,13 +163,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     padding-inline-end: var(--#{$pagination}--m-sticky--PaddingRight);
     background-color: var(--#{$pagination}--m-sticky--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-sticky--BoxShadow);
-
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
-      padding-block-start: var(--#{$pagination}--m-sticky--md--PaddingTop);
-      padding-block-end: var(--#{$pagination}--m-sticky--md--PaddingBottom);
-      padding-inline-start: var(--#{$pagination}--m-sticky--md--PaddingLeft);
-      padding-inline-end: var(--#{$pagination}--m-sticky--md--PaddingRight);
-    }
   }
 
   &.pf-m-page-insets {
