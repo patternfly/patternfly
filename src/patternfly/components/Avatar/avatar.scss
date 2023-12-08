@@ -2,10 +2,10 @@
 $pf-v5-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
 
-.#{$avatar} {
+:root, .#{$avatar} {
   --#{$avatar}--BorderColor: transparent;
   --#{$avatar}--BorderWidth: 0;
-  --#{$avatar}--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
+  --#{$avatar}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$avatar}--Width: #{pf-size-prem(36px)};
   --#{$avatar}--Height: #{pf-size-prem(36px)};
   --#{$avatar}--m-sm--Width: #{pf-size-prem(24px)};
@@ -17,27 +17,20 @@ $pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-xl--Width: #{pf-size-prem(128px)};
   --#{$avatar}--m-xl--Height: #{pf-size-prem(128px)};
 
-  // Light
-  --#{$avatar}--m-light--BorderColor: var(--#{$pf-global}--BorderColor--dark-100);
-  --#{$avatar}--m-light--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  // Bordered
+  --#{$avatar}--m-bordered--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$avatar}--m-bordered--BorderWidth: var(--pf-t--global--border--width--box--default);
+}
 
-  // Dark
-  --#{$avatar}--m-dark--BorderColor: var(--#{$pf-global}--palette--black-700);
-  --#{$avatar}--m-dark--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-
+.#{$avatar} {
   width: var(--#{$avatar}--Width);
   height: var(--#{$avatar}--Height);
   border: var(--#{$avatar}--BorderWidth) solid var(--#{$avatar}--BorderColor);
   border-radius: var(--#{$avatar}--BorderRadius);
 
-  &.pf-m-light {
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-light--BorderColor);
-    --#{$avatar}--BorderWidth: var(--#{$avatar}--m-light--BorderWidth);
-  }
-
-  &.pf-m-dark {
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-dark--BorderColor);
-    --#{$avatar}--BorderWidth: var(--#{$avatar}--m-dark--BorderWidth);
+  &.pf-m-bordered {
+    --#{$avatar}--BorderColor: var(--#{$avatar}--m-bordered--BorderColor);
+    --#{$avatar}--BorderWidth: var(--#{$avatar}--m-bordered--BorderWidth);
   }
 
   @each $size in $pf-v5-c-avatar--sizes {
