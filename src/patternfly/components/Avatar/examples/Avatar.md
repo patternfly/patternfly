@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v5-c-avatar
 ---
 
-import './Avatar.css'
-
 ## Examples
 ### Basic
 ```hbs
