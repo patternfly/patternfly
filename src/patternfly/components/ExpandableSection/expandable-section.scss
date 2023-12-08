@@ -21,7 +21,7 @@
   // Toggle text
   --#{$expandable-section}__toggle-text--Color: var(--pf-t--global--color--brand--default);
   --#{$expandable-section}__toggle-text--hover--Color: var(--pf-t--global--color--brand--hover);
-  --#{$expandable-section}__toggle--m-expanded__toggle-text--Color: var(--pf-t--global--color--brand--hover);
+  --#{$expandable-section}--m-expanded__toggle-text--Color: var(--pf-t--global--color--brand--hover);
 
 
   // Content
@@ -69,7 +69,7 @@
 
 .#{$expandable-section} {
   &.pf-m-expanded {
-    --#{$expandable-section}__toggle-text--Color: var(--#{$expandable-section}__toggle--m-expanded__toggle-text--Color);
+    --#{$expandable-section}__toggle-text--Color: var(--#{$expandable-section}--m-expanded__toggle-text--Color);
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
     --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate);
     --#{$expandable-section}--m-display-lg--after--BackgroundColor: var(--#{$expandable-section}--m-display-lg--m-expanded--after--BackgroundColor);
