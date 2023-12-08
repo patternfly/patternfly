@@ -6,11 +6,6 @@
   --#{$expandable-section}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$expandable-section}__toggle--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__toggle--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}__toggle--Color: var(--pf-t--global--color--brand--default);
-  --#{$expandable-section}__toggle--hover--Color: var(--pf-t--global--color--brand--hover);
-  --#{$expandable-section}__toggle--active--Color: var(--pf-t--global--color--brand--hover);
-  --#{$expandable-section}__toggle--focus--Color: var(--pf-t--global--color--brand--hover);
-  --#{$expandable-section}__toggle--m-expanded--Color: var(--pf-t--global--color--brand--hover);
   --#{$expandable-section}__toggle--BackgroundColor: transparent;
   --#{$expandable-section}__toggle--ColumnGap: calc(var(--pf-t--global--spacer--xs) + var(--pf-t--global--spacer--sm));
   
@@ -23,6 +18,12 @@
   --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
   
+  // Toggle text
+  --#{$expandable-section}__toggle-text--Color: var(--pf-t--global--color--brand--default);
+  --#{$expandable-section}__toggle-text--hover--Color: var(--pf-t--global--color--brand--hover);
+  --#{$expandable-section}--m-expanded__toggle-text--Color: var(--pf-t--global--color--brand--hover);
+
+
   // Content
   --#{$expandable-section}__content--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__content--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -68,7 +69,7 @@
 
 .#{$expandable-section} {
   &.pf-m-expanded {
-    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--m-expanded--Color);
+    --#{$expandable-section}__toggle-text--Color: var(--#{$expandable-section}--m-expanded__toggle-text--Color);
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
     --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate);
     --#{$expandable-section}--m-display-lg--after--BackgroundColor: var(--#{$expandable-section}--m-display-lg--m-expanded--after--BackgroundColor);
@@ -132,25 +133,13 @@
   padding-block-end: var(--#{$expandable-section}__toggle--PaddingBottom);
   padding-inline-start: var(--#{$expandable-section}__toggle--PaddingLeft);
   padding-inline-end: var(--#{$expandable-section}__toggle--PaddingRight);
-  color: var(--#{$expandable-section}__toggle--Color);
   background-color: var(--#{$expandable-section}__toggle--BackgroundColor);
   border: none;
   border-radius: var(--#{$expandable-section}__toggle--BorderRadius, 0);
 
-  &:hover {
-    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--hover--Color);
+  &:is(:hover, :focus) {
+    --#{$expandable-section}__toggle-text--Color: var(--#{$expandable-section}__toggle-text--hover--Color);
     --#{$expandable-section}__toggle--BackgroundColor: var(--#{$expandable-section}__toggle--hover--BackgroundColor, initial);
-  }
-
-  &:active,
-  &.pf-m-active {
-    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--active--Color);
-    --#{$expandable-section}__toggle--BackgroundColor: var(--#{$expandable-section}__toggle--active--BackgroundColor, initial);
-  }
-
-  &:focus {
-    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--focus--Color);
-    --#{$expandable-section}__toggle--BackgroundColor: var(--#{$expandable-section}__toggle--focus--BackgroundColor, initial);
   }
 }
 
@@ -165,6 +154,10 @@
   &.pf-m-expand-top {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);
   }
+}
+
+.#{$expandable-section}__toggle-text {
+  color: var(--#{$expandable-section}__toggle-text--Color);
 }
 
 .#{$expandable-section}__content {
