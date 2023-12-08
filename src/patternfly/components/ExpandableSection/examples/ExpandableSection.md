@@ -129,9 +129,7 @@ cssPrefix: pf-v5-c-expandable-section
 | `.pf-v5-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
 | `.pf-m-expanded` | `.pf-v5-c-expandable-section` | Modifies the component for the expanded state. |
 | `.pf-m-display-lg` | `.pf-v5-c-expandable-section` | Modifies the styling of the component to have large display styling. |
-| `.pf-m-detached` | `.pf-v5-c-expandable-section` | Indicates that the expandable section toggle and content are detached from one another, so you can move them around independently in the markup. |
 | `.pf-m-indented` | `.pf-v5-c-expandable-section` | Indicates that the expandable section content is indented and is aligned with the start of the title text to provide visual hierarchy. |
 | `.pf-m-truncate` | `.pf-v5-c-expandable-section` | Indicates that the expandable section content is truncated by default, and not truncated when expanded. |
-| `.pf-m-active` | `.pf-v5-c-expandable-section__toggle` | Forces display of the active state of the toggle. |
 | `.pf-m-expand-top` | `.pf-v5-c-expandable-section__toggle-icon` | Modifies the toggle icon to point up when expanded. |
 | `--pf-v5-c-expandable-section--m-truncate__content--LineClamp` | `.pf-v5-c-expandable-section.pf-m-truncate` | Modifies the number of lines to show before truncating. |
