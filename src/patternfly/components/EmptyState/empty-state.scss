@@ -18,11 +18,11 @@
 
   // Icon
   --#{$empty-state}__icon--MarginBottom: var(--pf-t--global--spacer--lg);
-  --#{$empty-state}__icon--FontSize: var(--pf-t--global--icon--size--xl);
+  --#{$empty-state}__icon--FontSize: var(--pf-t--global--icon--size--2xl);
   --#{$empty-state}__icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$empty-state}--m-xs__icon--MarginBottom: var(--pf-t--global--spacer--lg);
   --#{$empty-state}--m-xl__icon--MarginBottom: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--m-xl__icon--FontSize: var(--pf-t--global--icon--size--2xl);
+  --#{$empty-state}--m-xl__icon--FontSize: var(--pf-t--global--icon--size--3xl);
 
   // Status variant icon color
   --#{$empty-state}--m-danger__icon--Color: var(--pf-t--global--icon--color--status--danger--default);
