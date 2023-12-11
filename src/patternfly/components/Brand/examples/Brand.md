@@ -10,13 +10,13 @@ import './Brand.css'
 ```hbs
 <div class="show-light">
 {{> brand 
-  brand--attribute='src="/assets/images/pf_logo.svg" alt="PatternFly logo"'
+  brand--attribute='src="/assets/images/PF-HorizontalLogo-Color.svg" alt="PatternFly logo"'
 }}
 </div>
 
 <div class="show-dark">
 {{> brand 
-  brand--attribute='src="/assets/images/pf_logo_white.svg" alt="PatternFly logo"' brand--IsDark="true"
+  brand--attribute='src="/assets/images/PF-HorizontalLogo-Reverse.svg" alt="PatternFly logo"' brand--IsDark="true"
 }}
 </div>
 ```
@@ -25,27 +25,20 @@ import './Brand.css'
 ```hbs
 <div class="show-light">
 {{> brand
-  brand--attribute='style="--pf-v5-c-brand--Width: 40px; --pf-v5-c-brand--Width-on-sm: 60px; --pf-v5-c-brand--Width-on-md: 220px;"'
+  brand--attribute='style="--pf-v5-c-brand--Width: 40px; --pf-v5-c-brand--Width-on-md: 220px;"'
   brand--IsPicture="true"
-  brand--img-url='/assets/images/pf-c-brand__logo.svg'
-  brand--img-url-on-sm='/assets/images/pf-c-brand__logo-on-sm.svg'
-  brand--img-url-on-md='/assets/images/pf-c-brand__logo-on-md.svg'
-  brand--img-url-on-lg='/assets/images/pf-c-brand__logo-on-lg.svg'
-  brand--img-url-on-xl='/assets/images/pf-c-brand__logo-on-xl.svg'
+  brand--img-url='/assets/images/PF-IconLogo-color.svg'
+  brand--img-url-on-md='/assets/images/PF-HorizontalLogo-Color.svg'
 }}
 </div>
 
 <div class="show-dark">
 {{> brand
   brand--IsDark="true"
-  brand--attribute='style="--pf-v5-c-brand--Width: 40px; --pf-v5-c-brand--Width-on-sm: 60px; --pf-v5-c-brand--Width-on-md: 220px;"'
+  brand--attribute='style="--pf-v5-c-brand--Width: 40px; --pf-v5-c-brand--Width-on-md: 220px;"'
   brand--IsPicture="true"
-  brand--img-url='/assets/images/pf-c-brand__logo-white.svg'
-  brand--img-url-on-sm='/assets/images/pf-c-brand__logo-on-sm-white.svg'
-  brand--img-url-on-md='/assets/images/pf-c-brand__logo-on-md-white.svg'
-  brand--img-url-on-lg='/assets/images/pf-c-brand__logo-on-lg-white.svg'
-  brand--img-url-on-xl='/assets/images/pf-c-brand__logo-on-xl-white.svg'
-  brand--img-url--base='/assets/images/pf_logo-white.svg'
+  brand--img-url='/assets/images/PF-IconLogo-Reverse.svg'
+  brand--img-url-on-md='/assets/images/PF-HorizontalLogo-Reverse.svg'
 }}
 </div>
 ```
