@@ -56,6 +56,7 @@ cssPrefix: pf-v5-c-empty-state
 ```hbs
 {{#> empty-state empty-state--modifier="pf-m-xs"}}
   {{#> empty-state-header}}
+    {{> empty-state-icon}}
     {{#> empty-state-title}}
       {{#> empty-state-title-text}}
         Empty state
@@ -64,7 +65,7 @@ cssPrefix: pf-v5-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in PatternFly. The icon is optional.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}
@@ -230,6 +231,52 @@ cssPrefix: pf-v5-c-empty-state
 {{/empty-state}}
 ```
 
+### With status
+```hbs
+{{#> empty-state empty-state--modifier="pf-m-success"}}
+  {{#> empty-state-header}}
+    {{> empty-state-icon empty-state-icon--type="check-circle"}}
+    {{#> empty-state-title}}
+      {{#> empty-state-title-text}}
+        You're all set
+      {{/empty-state-title-text}}
+    {{/empty-state-title}}
+  {{/empty-state-header}}
+
+  {{#> empty-state-body}}
+    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+  {{/empty-state-body}}
+
+  {{#> empty-state-footer}}
+    {{#> empty-state-actions}}
+      {{#> button button--modifier="pf-m-primary"}}
+        Primary action
+      {{/button}}
+    {{/empty-state-actions}}
+    {{#> empty-state-actions}}
+      {{#> button button--modifier="pf-m-link"}}
+        Multiple
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Action buttons
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Can
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Go here
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        In the second
+      {{/button}}
+      {{#> button button--modifier="pf-m-link"}}
+        Action area
+      {{/button}}
+    {{/empty-state-actions}}
+  {{/empty-state-footer}}
+{{/empty-state}}
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -253,3 +300,8 @@ cssPrefix: pf-v5-c-empty-state
 | `.pf-m-lg` | `.pf-v5-c-empty-state` | Modifies the empty state for a large max-width. |
 | `.pf-m-xl` | `.pf-v5-c-empty-state` | Modifies the empty state for an extra large variation and max-width. |
 | `.pf-m-full-height` | `.pf-v5-c-empty-state` | Modifies the empty state to be `height: 100%`. If you need the empty state content to be centered vertically, you can use this modifier to make the empty state fill the height of its container, and center `.pf-v5-c-empty-state__content`. **Note:** this modifier requires the parent of `.pf-v5-c-empty-state` have an implicit or explicit `height` defined.  |
+| `.pf-m-danger` | `.pf-v5-c-empty-state` | Modifies the empty state for danger status. |
+| `.pf-m-warning` | `.pf-v5-c-empty-state` | Modifies the empty state for warning status. |
+| `.pf-m-success` | `.pf-v5-c-empty-state` | Modifies the empty state for success status. |
+| `.pf-m-info` | `.pf-v5-c-empty-state` | Modifies the empty state for info status. |
+| `.pf-m-custom` | `.pf-v5-c-empty-state` | Modifies the empty state for custom status. |
