@@ -1,104 +1,110 @@
 // @debug $notification-drawer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root, 
 .#{$notification-drawer} {
-  --#{$notification-drawer}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$notification-drawer}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // Header
-  --#{$notification-drawer}__header--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__header--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__header--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__header--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__header--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$notification-drawer}__header--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$notification-drawer}__header--ZIndex: var(--#{$pf-global}--ZIndex--sm);
-  --#{$notification-drawer}__header-title--FontSize: var(--#{$pf-global}--FontSize--xl);
-  --#{$notification-drawer}__header-status--MarginLeft: var(--#{$pf-global}--spacer--md);
+  --#{$notification-drawer}__header--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__header--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__header--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__header--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$notification-drawer}__header--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$notification-drawer}__header-title--FontSize: var(--pf-t--global--font--size--heading--md);
+  --#{$notification-drawer}__header-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
+  --#{$notification-drawer}__header-status--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__header-status--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$notification-drawer}__header-status--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$notification-drawer}__header-status--Color: var(--pf-t--global--text--color--subtle);
 
   // Body
-  --#{$notification-drawer}__body--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$notification-drawer}__body--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$notification-drawer}__body--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__body--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+
+  // List
+  --#{$notification-drawer}__list--Gap: var(--pf-t--global--spacer--sm);
+  --#{$notification-drawer}__list--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__list--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
   // List item
-  --#{$notification-drawer}__list-item--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__list-item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__list-item--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__list-item--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__list-item--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$notification-drawer}__list-item--BoxShadow: inset var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$notification-drawer}__list-item--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$notification-drawer}__list-item--BorderBottomColor: transparent;
-  --#{$notification-drawer}__list-item--OutlineOffset: #{pf-size-prem(-4px)};
-  --#{$notification-drawer}__list-item--before--Width: var(--#{$pf-global}--BorderWidth--lg);
-  --#{$notification-drawer}__list-item--before--Top: 0;
-  --#{$notification-drawer}__list-item--before--Bottom: calc(var(--#{$notification-drawer}__list-item--BorderBottomWidth) * -1);
+  --#{$notification-drawer}__list-item--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$notification-drawer}__list-item--BorderWidth: var(--pf-t--global--border--width--box--status--default);
+  --#{$notification-drawer}__list-item--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$notification-drawer}__list-item--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // List item modifiers
-  --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color: var(--#{$pf-global}--info-color--100);
-  --#{$notification-drawer}__list-item--m-info__list-item--before--BackgroundColor: var(--#{$pf-global}--info-color--100);
-  --#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$notification-drawer}__list-item--m-warning__list-item--before--BackgroundColor: var(--#{$pf-global}--warning-color--100);
-  --#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color: var(--#{$pf-global}--danger-color--100);
-  --#{$notification-drawer}__list-item--m-danger__list-item--before--BackgroundColor: var(--#{$pf-global}--danger-color--100);
-  --#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color: var(--#{$pf-global}--success-color--100);
-  --#{$notification-drawer}__list-item--m-success__list-item--before--BackgroundColor: var(--#{$pf-global}--success-color--100);
-  --#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color: var(--#{$pf-global}--custom-color--200);
-  --#{$notification-drawer}__list-item--m-custom__list-item--before--BackgroundColor: var(--#{$pf-global}--custom-color--200);
-  --#{$notification-drawer}__list-item--m-read--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$notification-drawer}__list-item--m-read--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$notification-drawer}__list-item--m-read--before--Top: calc(var(--#{$notification-drawer}__list-item--BorderBottomWidth) * -1);
-  --#{$notification-drawer}__list-item--m-read--before--Bottom: 0;
-  --#{$notification-drawer}__list-item--m-read--before--BackgroundColor: transparent;
-  --#{$notification-drawer}__list-item--list-item--m-read--before--Top: 0;
-  --#{$notification-drawer}__list-item--list-item--m-read--BoxShadow: inset var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$notification-drawer}__list-item--m-hoverable--hover--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$notification-drawer}__list-item--m-hoverable--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--md-top), var(--#{$pf-global}--BoxShadow--md-bottom);
+  --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color: var(--pf-t--global--icon--color--brand--default);
+  --#{$notification-drawer}__list-item--m-info__list-item--BorderColor: var(--pf-t--global--border--color--status--info--default);
+  --#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$notification-drawer}__list-item--m-warning__list-item--BorderColor: var(--pf-t--global--border--color--status--warning--default);
+  --#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$notification-drawer}__list-item--m-danger__list-item--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+  --#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$notification-drawer}__list-item--m-success__list-item--BorderColor: var(--pf-t--global--border--color--status--success--default);
+  --#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
+  --#{$notification-drawer}__list-item--m-custom__list-item--BorderColor: var(--pf-t--global--border--color--status--custom--default);
+  --#{$notification-drawer}__list-item--m-read--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$notification-drawer}__list-item--m-read--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$notification-drawer}__list-item--m-read--BorderWidth: var(--pf-t--global--border--width--box--status--read);
+  --#{$notification-drawer}__list-item--m-read--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
   // List item header
-  --#{$notification-drawer}__list-item-header--MarginBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$notification-drawer}__list-item-header--MarginBottom: var(--pf-t--global--spacer--xs);
 
   // List item header icon
   --#{$notification-drawer}__list-item-header-icon--Color: inherit;
-  --#{$notification-drawer}__list-item-header-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$notification-drawer}__list-item-header-icon--MarginRight: var(--pf-t--global--spacer--sm);
 
   // List item header title
-  --#{$notification-drawer}__list-item-header-title--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$notification-drawer}__list-item-header-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
   --#{$notification-drawer}__list-item-header-title--max-lines: 1;
-  --#{$notification-drawer}__list-item--m-read__list-item-header-title--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$notification-drawer}__list-item--m-read__list-item-header-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
 
   // List item description
-  --#{$notification-drawer}__list-item-description--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$notification-drawer}__list-item-description--MarginBottom: var(--pf-t--global--spacer--sm);
 
   // List item timestamp
-  --#{$notification-drawer}__list-item-timestamp--Color: var(--#{$pf-global}--Color--200);
-  --#{$notification-drawer}__list-item-timestamp--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$notification-drawer}__list-item-timestamp--Color: var(--pf-t--global--text--color--subtle);
+  --#{$notification-drawer}__list-item-timestamp--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Group
-  --#{$notification-drawer}__group--m-expanded--group--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$notification-drawer}__group--m-expanded--group--BorderTopColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$notification-drawer}__group--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$notification-drawer}__group--m-expanded--group--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$notification-drawer}__group--m-expanded--MinHeight: 0; // remove at breaking change
+  --#{$notification-drawer}__group--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+
 
   // Group toggle
-  --#{$notification-drawer}__group-toggle--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__group-toggle--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__group-toggle--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__group-toggle--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__group-toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$notification-drawer}__group-toggle--BorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$notification-drawer}__group-toggle--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$notification-drawer}__group-toggle--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__group-toggle--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__group-toggle--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$notification-drawer}__group-toggle--OutlineOffset: #{pf-size-prem(-4px)};
 
   // Group toggle title
-  --#{$notification-drawer}__group-toggle-title--MarginRight: var(--#{$pf-global}--spacer--md);
+  --#{$notification-drawer}__group-toggle-title--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle-title--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$notification-drawer}__group-toggle-title--max-lines: 1;
 
   // Group toggle count
-  --#{$notification-drawer}__group-toggle-count--MarginRight: var(--#{$pf-global}--spacer--md);
+  --#{$notification-drawer}__group-toggle-count--MarginRight: var(--pf-t--global--spacer--md);
 
   // Group toggle icon
-  --#{$notification-drawer}__group-toggle-icon--MarginRight: var(--#{$pf-global}--spacer--md);
-  --#{$notification-drawer}__group-toggle-icon--Color: var(--#{$pf-global}--Color--200);
+  --#{$notification-drawer}__group-toggle-icon--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$notification-drawer}__group-toggle-icon--Transition: .2s ease-in 0s;
   --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: 90deg;
+}
 
+.#{$notification-drawer} {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -116,15 +122,18 @@
   padding-inline-start: var(--#{$notification-drawer}__header--PaddingLeft);
   padding-inline-end: var(--#{$notification-drawer}__header--PaddingRight);
   background-color: var(--#{$notification-drawer}__header--BackgroundColor);
-  box-shadow: var(--#{$notification-drawer}__header--BoxShadow);
 }
 
 .#{$notification-drawer}__header-title {
   font-size: var(--#{$notification-drawer}__header-title--FontSize);
+  font-weight: var(--#{$notification-drawer}__header-title--FontWeight);
 }
 
 .#{$notification-drawer}__header-status {
   margin-inline-start: var(--#{$notification-drawer}__header-status--MarginLeft);
+  font-size: var(--#{$notification-drawer}__header-status--FontSize);
+  font-weight: var(--#{$notification-drawer}__header-status--FontWeight);
+  color: var(--#{$notification-drawer}__header-status--Color);
 }
 
 .#{$notification-drawer}__header-action {
@@ -135,8 +144,17 @@
 
 .#{$notification-drawer}__body {
   flex: 1;
+  padding-block-start: var(--#{$notification-drawer}__body--PaddingBlockStart);
+  padding-block-end: var(--#{$notification-drawer}__body--PaddingBlockEnd);
   overflow-y: auto;
-  box-shadow: var(--#{$notification-drawer}__body--ZIndex);
+}
+
+.#{$notification-drawer}__list:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$notification-drawer}__list--Gap);
+  padding-inline-start: var(--#{$notification-drawer}__list--PaddingInlineStart);
+  padding-inline-end: var(--#{$notification-drawer}__list--PaddingInlineEnd);
 }
 
 .#{$notification-drawer}__list-item {
@@ -148,60 +166,39 @@
   padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingLeft);
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingRight);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
-  border-block-end: var(--#{$notification-drawer}__list-item--BorderBottomWidth) solid var(--#{$notification-drawer}__list-item--BorderBottomColor);
-  outline-offset: var(--#{$notification-drawer}__list-item--OutlineOffset);
-  box-shadow: var(--#{$notification-drawer}__list-item--BoxShadow);
-
-  &.pf-m-read,
-  &:first-child {
-    --#{$notification-drawer}__list-item--BoxShadow: none;
-  }
-
-  &:not(.pf-m-read) + &.pf-m-read {
-    --#{$notification-drawer}__list-item--BoxShadow: var(--#{$notification-drawer}__list-item--list-item--m-read--BoxShadow);
-    --#{$notification-drawer}__list-item--before--Top: var(--#{$notification-drawer}__list-item--list-item--m-read--before--Top);
-  }
-
-  &::before {
-    position: absolute;
-   inset-block-start: var(--#{$notification-drawer}__list-item--before--Top);
-   inset-block-end: var(--#{$notification-drawer}__list-item--before--Bottom);
-    width: var(--#{$notification-drawer}__list-item--before--Width);
-    content: "";
-    background-color: var(--#{$notification-drawer}__list-item--before--BackgroundColor);
-  }
+  border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
+  border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
 
   &.pf-m-info {
-    --#{$notification-drawer}__list-item--before--BackgroundColor: var(--#{$notification-drawer}__list-item--m-info__list-item--before--BackgroundColor);
+    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-info__list-item--BorderColor);
     --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color);
   }
 
   &.pf-m-warning {
-    --#{$notification-drawer}__list-item--before--BackgroundColor: var(--#{$notification-drawer}__list-item--m-warning__list-item--before--BackgroundColor);
+    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-warning__list-item--BorderColor);
     --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color);
   }
 
   &.pf-m-danger {
-    --#{$notification-drawer}__list-item--before--BackgroundColor: var(--#{$notification-drawer}__list-item--m-danger__list-item--before--BackgroundColor);
+    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-danger__list-item--BorderColor);
     --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color);
   }
 
   &.pf-m-success {
-    --#{$notification-drawer}__list-item--before--BackgroundColor: var(--#{$notification-drawer}__list-item--m-success__list-item--before--BackgroundColor);
+    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-success__list-item--BorderColor);
     --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color);
   }
 
   &.pf-m-custom {
-    --#{$notification-drawer}__list-item--before--BackgroundColor: var(--#{$notification-drawer}__list-item--m-custom__list-item--before--BackgroundColor);
+    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-custom__list-item--BorderColor);
     --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color);
   }
 
   &.pf-m-read {
     --#{$notification-drawer}__list-item--BorderBottomColor: var(--#{$notification-drawer}__list-item--m-read--BorderBottomColor);
+    --#{$notification-drawer}__list-item--BorderWidth: var(--#{$notification-drawer}__list-item--m-read--BorderWidth);
     --#{$notification-drawer}__list-item--BackgroundColor: var(--#{$notification-drawer}__list-item--m-read--BackgroundColor);
-    --#{$notification-drawer}__list-item--before--Top: var(--#{$notification-drawer}__list-item--m-read--before--Top);
-    --#{$notification-drawer}__list-item--before--Bottom: var(--#{$notification-drawer}__list-item--m-read--before--Bottom);
-    --#{$notification-drawer}__list-item--before--BackgroundColor: var(--#{$notification-drawer}__list-item--m-read--before--BackgroundColor);
+    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-read--BorderColor);
     --#{$notification-drawer}__list-item-header-title--FontWeight: var(--#{$notification-drawer}__list-item--m-read__list-item-header-title--FontWeight);
 
     position: relative;
@@ -211,8 +208,7 @@
     cursor: pointer;
 
     &:hover {
-      z-index: var(--#{$notification-drawer}__list-item--m-hoverable--hover--ZIndex);
-      box-shadow: var(--#{$notification-drawer}__list-item--m-hoverable--hover--BoxShadow);
+      background-color: var(--#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor);
     }
   }
 }
@@ -264,17 +260,11 @@
 }
 
 .#{$notification-drawer}__group {
+  border-block-end: var(--#{$notification-drawer}__group--BorderBottomWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderBottomColor);
+
   &.pf-m-expanded {
     min-height: var(--#{$notification-drawer}__group--m-expanded--MinHeight);
-
-    + .#{$notification-drawer}__group {
-      border-block-start: var(--#{$notification-drawer}__group--m-expanded--group--BorderTopWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderTopColor);
-    }
-  }
-
-  .#{$notification-drawer}__list-item:last-child {
-    --#{$notification-drawer}__list-item--BorderBottomWidth: 0;
-    --#{$notification-drawer}__list-item--before--Bottom: 0;
+    padding-block-end: var(--#{$notification-drawer}__group--m-expanded--PaddingBlockEnd);
   }
 }
 
@@ -287,8 +277,7 @@
   padding-inline-start: var(--#{$notification-drawer}__group-toggle--PaddingLeft);
   padding-inline-end: var(--#{$notification-drawer}__group-toggle--PaddingRight);
   background-color: var(--#{$notification-drawer}__group-toggle--BackgroundColor);
-  border: 0 solid var(--#{$notification-drawer}__group-toggle--BorderColor);
-  border-block-end-width: var(--#{$notification-drawer}__group-toggle--BorderBottomWidth);
+  border: none;
   outline-offset: var(--#{$notification-drawer}__group-toggle--OutlineOffset);
 }
 
@@ -297,6 +286,7 @@
 
   flex: 1;
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginRight);
+  font-size: var(--#{$notification-drawer}__group-toggle-title--FontSize);
   text-align: start;
   word-break: break-word;
 }
@@ -318,9 +308,3 @@
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/notification-drawer";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-notification-drawer;
-}
