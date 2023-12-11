@@ -1,40 +1,39 @@
 // @debug $data-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 $pf-v5-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
-.#{$description-list} {
-  --#{$description-list}--RowGap: var(--#{$pf-global}--gutter--md);
-  --#{$description-list}--ColumnGap: var(--#{$pf-global}--spacer--lg);
+:root {
+  --#{$description-list}--RowGap: var(--pf-t--global--spacer--lg);
+  --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--GridTemplateColumns--count: 1;
   --#{$description-list}--GridTemplateColumns--width: 1fr;
   --#{$description-list}--GridTemplateColumns--min: 0;
-  --#{$description-list}--GridTemplateColumns: repeat(var(--#{$description-list}--GridTemplateColumns--count), var(--#{$description-list}--GridTemplateColumns--width));
 
   // group
-  --#{$description-list}__group--RowGap: var(--#{$pf-global}--spacer--sm);
-  --#{$description-list}__group--ColumnGap: var(--#{$pf-global}--spacer--sm);
+  --#{$description-list}__group--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$description-list}__group--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$description-list}__group--GridTemplateColumns: auto;
   --#{$description-list}__group--GridTemplateRows: auto 1fr;
   --#{$description-list}__group--GridColumn: auto;
 
   // compact
-  --#{$description-list}--m-compact--RowGap: var(--#{$pf-global}--gutter);
-  --#{$description-list}--m-compact--ColumnGap: var(--#{$pf-global}--spacer--sm);
+  --#{$description-list}--m-compact--RowGap: var(--pf-t--global--spacer--md);
+  --#{$description-list}--m-compact--ColumnGap: var(--pf-t--global--spacer--sm);
 
   // term
   --#{$description-list}__term--Display: inline;
   --#{$description-list}__term--sm--Display: flex;
-  --#{$description-list}__term--FontWeight: var(--#{$pf-global}--FontWeight--bold);
-  --#{$description-list}__term--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$description-list}__term--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$description-list}__term--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$description-list}__term--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$description-list}__term--LineHeight: var(--pf-t--global--font--line-height--body);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
     --#{$description-list}__term--Display: var(--#{$description-list}__term--sm--Display);
   }
 
   // icon
-  --#{$description-list}__term-icon--MinWidth: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$description-list}__term-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$description-list}__term-icon--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$description-list}__term-icon--MinWidth: var(--pf-t--global--font--size--body--sm);
+  --#{$description-list}__term-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$description-list}__term-icon--Color: var(--pf-t--global--icon--color--subtle);
 
   // vertical
   --#{$description-list}--m-vertical__group--GridTemplateColumns: repeat(var(--#{$description-list}--GridTemplateColumns--count));
@@ -54,25 +53,26 @@ $pf-v5-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}--m-auto-fit--GridTemplateColumns--minmax--min: var(--#{$description-list}--m-auto-fit--GridTemplateColumns--min);
 
   // help text
-  --#{$description-list}__text--m-help-text--TextDecorationColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$description-list}__text--m-help-text--TextDecorationThickness: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$description-list}__text--m-help-text--TextDecorationColor: var(--pf-t--global--icon--color--regular);
+  --#{$description-list}__text--m-help-text--TextDecorationThickness: var(--pf-t--global--border--width--100);
   --#{$description-list}__text--m-help-text--TextDecorationOffset: #{pf-size-prem(4px)};
-  --#{$description-list}__text--m-help-text--hover--TextDecorationColor: var(--#{$pf-global}--Color--100);
-  --#{$description-list}__text--m-help-text--focus--TextDecorationColor: var(--#{$pf-global}--Color--100);
+  --#{$description-list}__text--m-help-text--hover--TextDecorationColor: var(--pf-t--global--border--color--hover);
+  --#{$description-list}__text--m-help-text--focus--TextDecorationColor: var(--pf-t--global--border--color--hover);
 
   // Display modifiers
-  --#{$description-list}--m-display-lg__description--FontSize: var(--#{$pf-global}--FontSize--lg);
-  --#{$description-list}--m-display-2xl__description--FontSize: var(--#{$pf-global}--FontSize--2xl);
+  --#{$description-list}--m-display-lg__description--FontSize: var(--pf-t--global--font--size--body--lg); // TODO replace with new font tokens when available
+  --#{$description-list}--m-display-2xl__description--FontSize: var(--pf-t--global--font--size--heading--lg); // TODO replace with new font tokens when available
 
+  @include pf-v5-output-root-variables("--#{$description-list}--m-horizontal__term--width", $pf-v5-c-description-list--breakpoint-map);
+  @include pf-v5-build-css-variable-stack("--pf-v5-c-description-list__term--width", "--pf-v5-c-description-list--m-horizontal__term--width", $pf-v5-c-description-list--breakpoint-map);
+}
+
+.#{$description-list} { 
   display: grid;
-  grid-template-columns: var(--#{$description-list}--GridTemplateColumns);
+  grid-template-columns: repeat(var(--#{$description-list}--GridTemplateColumns--count), var(--#{$description-list}--GridTemplateColumns--width));  
   row-gap: var(--#{$description-list}--RowGap);
   column-gap: var(--#{$description-list}--ColumnGap);
   align-items: baseline;
-
-  &[class*="pf-m-horizontal"] {
-    @include pf-v5-build-css-variable-stack("--pf-v5-c-description-list__term--width", "--pf-v5-c-description-list--m-horizontal__term--width", $pf-v5-c-description-list--breakpoint-map);
-  }
 
   &.pf-m-inline-grid {
     display: inline-grid;

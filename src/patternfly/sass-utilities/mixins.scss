@@ -295,6 +295,24 @@
   }
 }
 
+// Build variable stack
+@mixin pf-v5-output-root-variables($css-var, $breakpoint-map: $pf-v5-global--breakpoint-map) {
+  $list: ();
+
+  @each $breakpoint, $breakpoint-value in $breakpoint-map {
+    // Build variable list
+    // stylelint-disable scss/at-if-no-null
+    @if $breakpoint-value {
+      $list: append($list, $css-var + "-on-" + $breakpoint);
+    }
+    // stylelint-enable
+  }
+
+  @each $item in $list {
+    #{$item}: inherit;
+  }
+}
+
 // Dark theme style block
 @mixin pf-v5-theme-dark($theme-dark-class: $pf-v5--theme-dark--class, $theme-dark-target: $pf-v5--theme-dark--target) {
   #{$theme-dark-target}:where(#{$theme-dark-class}) {
