@@ -1,27 +1,28 @@
 // @debug $check; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$check} {
-  --#{$check}--GridGap: var(--#{$pf-global}--spacer--xs) var(--#{$pf-global}--spacer--sm);
-  --#{$check}__label--disabled--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$check}__label--Color: var(--#{$pf-global}--Color--100);
-  --#{$check}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
-  --#{$check}__label--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$check}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$check}__input--TranslateY: calc((var(--pf-v5-c-check__label--LineHeight) * var(--pf-v5-c-check__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
-  --#{$check}__input--TranslateY--moz: var(--#{$check}__input--TranslateY); // remove at breaking change
-  --#{$check}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$check}__description--Color: var(--#{$pf-global}--Color--200);
-  --#{$check}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
+:root {
+  --#{$check}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
+  --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
+  --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$check}__label--Color: var(--pf-t--global--text--color--regular);
+  --#{$check}__label--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$check}__label--FontSize: var(--pf-t--global--font--size--body);
+  --#{$check}__label--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$check}__input--TranslateY: calc((var(--#{$check}__label--LineHeight) * var(--#{$check}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height  
+  --#{$check}__description--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$check}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Required checkbox
-  --#{$check}__label-required--MarginLeft: var(--#{$pf-global}--spacer--xs);
-  --#{$check}__label-required--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$check}__label-required--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$check}__label-required--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$check}__label-required--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$check}__label-required--Color: var(--pf-t--global--color--status--danger--default);
+}
 
+.#{$check} {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$check}--GridGap);
-  align-items: baseline;
+  accent-color: var(--#{$check}--AccentColor);
 
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
@@ -33,10 +34,6 @@
 
 .#{$check}__input {
   align-self: start;
-
-  // stylelint-disable property-no-vendor-prefix
-  -moz-transform: translateY(var(--#{$check}__input--TranslateY--moz)); // remove at breaking change - no longer needed
-  // stylelint-enable
 
   // find height of single label, divide by two, offset by 50% of own height
   transform: translateY(var(--#{$check}__input--TranslateY));
@@ -57,7 +54,6 @@
 
 .#{$check}__body {
   grid-column: 2;
-  margin-block-start: var(--#{$check}__body--MarginTop);
 }
 
 .#{$check}__label,
