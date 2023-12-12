@@ -6,7 +6,7 @@
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$radio}__label--Color: var(--pf-t--global--text--color--regular);
   --#{$radio}__label--FontWeight: var(--pf-t--global--font--weight--body);
-  --#{$radio}__label--FontSize: var(--pf-t--global--font--size--body);
+  --#{$radio}__label--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$radio}__label--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$radio}__input--TranslateY: calc((var(--#{$radio}__label--LineHeight) * var(--#{$radio}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
   --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};

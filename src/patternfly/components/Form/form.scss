@@ -53,7 +53,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // plus the border width used by the text inputs is 1px
   // So we need to adjust by 21 - 16.1 + 1 = 5.9px
 
-  --#{$form}--m-horizontal__group-label--md--PaddingTop: calc((((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) + (2 * var(--pf-t--global--border--width--control--default))) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body)) - ((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) + var(--pf-t--global--border--width--control--default));
+  --#{$form}--m-horizontal__group-label--md--PaddingTop: calc((((((var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) + (2 * var(--pf-t--global--border--width--control--default))) - var(--pf-t--global--font--size--body--default)) / 2) + var(--pf-t--global--font--size--body--default)) - ((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) + var(--pf-t--global--border--width--control--default));
   --#{$form}__group-label--PaddingBottom: var(--pf-t--global--spacer--sm);
 
   // Use the no-padding modifier to align form groups that aren't text inputs
@@ -63,7 +63,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // - controls like checkboxes use the medium font and small line height
   // - This comes out to a difference of 2.3px.
   --#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingTop: 0;
-  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body)));
+  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--default)) / 2) + var(--pf-t--global--font--size--body--default)));
 
   // Label
   --#{$form}__label--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -152,7 +152,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-toggle-button--MarginTop: calc(var(--pf-t--global--spacer--form-element) * -1);
   --#{$form}__field-group-toggle-button--MarginBottom: calc(var(--pf-t--global--spacer--form-element) * -1);
   --#{$form}__field-group-toggle-icon--Transition: var(--#{$pf-global}--Transition);
-  --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body);
+  --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
   --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$form}__field-group-header--PaddingTop: var(--pf-t--global--spacer--md);

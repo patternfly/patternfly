@@ -1,7 +1,7 @@
 :root {
   --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$form-control}--Color: var(--pf-t--global--text--color--regular);
-  --#{$form-control}--FontSize: var(--pf-t--global--font--size--body);
+  --#{$form-control}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$form-control}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$form-control}--Resize: none;
   --#{$form-control}--OutlineOffset: -6px;
