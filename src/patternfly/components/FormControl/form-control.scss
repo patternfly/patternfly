@@ -1,4 +1,5 @@
-:root {
+:root,
+.#{$form-control} {
   --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$form-control}--Color: var(--pf-t--global--text--color--regular);
   --#{$form-control}--FontSize: var(--pf-t--global--font--size--body--default);
@@ -204,11 +205,6 @@
     --#{$form-control}--after--BorderColor: var(--#{$form-control}--hover--after--BorderColor);
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--hover--after--BorderWidth);
   }
-
-  // &:focus-within {
-  //   --#{$form-control}--after--BorderColor: var(--#{$form-control}--focus--after--BorderColor);
-  //   --#{$form-control}--after--BorderWidth: var(--#{$form-control}--focus--after--BorderWidth);
-  // }
 
   &.pf-m-expanded {
     --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-expanded--after--BorderColor);

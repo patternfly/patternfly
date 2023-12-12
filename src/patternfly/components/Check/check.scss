@@ -1,6 +1,7 @@
 // @debug $check; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root {
+:root,
+.#{$check} {
   --#{$check}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);

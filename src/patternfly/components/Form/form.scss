@@ -24,7 +24,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 }
 
-:root {
+:root,
+.#{$form} {
   --#{$form}--GridGap: var(--pf-t--global--spacer--lg);
 
   // Group
@@ -120,12 +121,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // Helper text
   --#{$form}__helper-text--MarginTop--base: var(--pf-t--global--spacer--xs);
   --#{$form}__helper-text--MarginTop: var(--#{$form}__helper-text--MarginTop--base);
-  --#{$form}__helper-text--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$form}__helper-text--Color: var(--pf-t--global--text--color--regular);
-
-  // Helper text icon
-  --#{$form}__helper-text-icon--FontSize: var(--pf-t--global--font--size--body--md);
-  --#{$form}__helper-text-icon--MarginRight: var(--pf-t--global--spacer--xs);
 
   // Section
   --#{$form}__section--MarginTop: var(--pf-t--global--spacer--xl);
@@ -249,8 +244,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__group-label {
   --#{$form}__helper-text--MarginTop: 0;
 
-  // padding-block-end: var(--#{$form}__group-label--PaddingBottom);
-
   &.pf-m-info {
     display: flex;
     align-items: flex-end;
@@ -262,7 +255,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-label-info {
-  // margin-inline-start: var(--#{$form}__group-label-info--MarginLeft);
   font-size: var(--#{$form}__group-label-info--FontSize);
 }
 
@@ -366,11 +358,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     visibility: hidden;
     opacity: 0;
   }
-}
-
-.#{$form}__helper-text-icon {
-  margin-inline-end: var(--#{$form}__helper-text-icon--MarginRight);
-  font-size: var(--#{$form}__helper-text-icon--FontSize);
 }
 
 // Fieldset

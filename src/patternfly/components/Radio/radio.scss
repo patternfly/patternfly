@@ -1,6 +1,7 @@
 // @debug $radio; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root {
+:root,
+.#{$radio} {
   --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
