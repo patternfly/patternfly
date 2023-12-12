@@ -324,6 +324,9 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-control {
+  display: grid;
+  gap: var(--#{$form}__group-control--Gap);
+
   &.pf-m-inline {
     display: flex;
     flex-flow: row wrap;
