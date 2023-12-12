@@ -6,7 +6,7 @@
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$check}__label--Color: var(--pf-t--global--text--color--regular);
   --#{$check}__label--FontWeight: var(--pf-t--global--font--weight--body);
-  --#{$check}__label--FontSize: var(--pf-t--global--font--size--body);
+  --#{$check}__label--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$check}__label--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$check}__input--TranslateY: calc((var(--#{$check}__label--LineHeight) * var(--#{$check}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height  
   --#{$check}__description--FontSize: var(--pf-t--global--font--size--body--sm);
