@@ -1,9 +1,12 @@
 // @debug $truncate; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$truncate} {
   --#{$truncate}--MinWidth: 12ch;
   --#{$truncate}__start--MinWidth: 6ch;
+}
 
+.#{$truncate} {
   display: inline-grid;
   grid-auto-flow: column;
   align-items: baseline;
