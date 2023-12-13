@@ -224,10 +224,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor);
     --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
   }
-
-  .#{$nav} {
-    align-self: stretch;
-  }
 }
 
 // Main

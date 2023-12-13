@@ -1,6 +1,22 @@
-<{{#if nav-section--IsListItem}}li{{else}}section{{/if}} class="{{pfv}}nav__section{{#if nav-section--modifier}} {{nav-section--modifier}}{{/if}}"
+{{setTag nav-section--IsListItem 'li' 'section'}}
+
+<{{tag}} class="{{pfv}}nav__section{{#if nav-section--modifier}} {{nav-section--modifier}}{{/if}}"
+  {{#if nav-section--id}}
+    id="{{dasherize nav--id nav-section--id}}"
+  {{/if}}
+  {{#if nav-section-title--text}}
+    aria-labelledby="{{dasherize nav--id nav-section--id nav-section-title--text}}"
+  {{/if}}
+  {{#if nav-section--aria-label}}
+    aria-label="{{nav-section--aria-label}}"
+  {{/if}}
   {{#if nav-section--attribute}}
     {{{nav-section--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
-</{{#if nav-section--IsListItem}}li{{else}}section{{/if}}>
+  {{#if nav-section-title--text}}
+    {{> nav-section-title nav-section-title--id=(dasherize nav--id nav-section--id nav-section-title--text)}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</{{tag}}>

@@ -1,7 +1,11 @@
-<{{#if nav-item--expandable}}button{{else}}a href="{{nav-link--href}}"{{/if}} class="{{pfv}}nav__link{{#if nav-link--current}} pf-m-current{{/if}}{{#if nav-link--modifier}} {{nav-link--modifier}}{{/if}}"
-  {{#if nav-link--attribute}}
-    {{{nav-link--attribute}}}
-  {{/if}}
+{{setTag nav-item--expandable 'button' 'a'}}
+
+<{{tag}}{{#unless nav-item--expandable}} href="{{ternary nav-link--href nav-link--href '#'}}"{{/unless}} class="{{pfv}}nav__link
+  {{setModifiers
+    nav-link--current='pf-m-current'
+    nav-link--IsHover='pf-m-hover'
+    nav-link--modifier=nav--modifier
+  }}"
   {{#if nav-link--current}}
     aria-current="page"
   {{/if}}
@@ -14,18 +18,21 @@
     {{else}}
       aria-expanded="false"
     {{/if}}
-  {{/ifAny}}>
+  {{/ifAny}}
+  {{#if nav-link--attribute}}
+    {{{nav-link--attribute}}}
+  {{/if}}>
   {{#if nav-item--IsDrillup}}
     {{> nav-toggle nav-toggle--modifier="pf-m-start"}}
   {{/if}}
-  {{#if nav-item--HasTextWrapper}}
-    {{#> nav-link-text}}
-      {{> @partial-block}}
-    {{/nav-link-text}}
-  {{else}}
+  {{#if nav-link--text}}
+    {{{nav-link--text}}}
+  {{else if nav-item--HasTextWrapper}}
+    {{> nav-link-text}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
   {{#ifAny nav-item--expandable nav-item--IsFlyout nav-item--IsDrilldown}}
     {{> nav-toggle}}
   {{/ifAny}}
-</{{#if nav-item--expandable}}button{{else}}a{{/if}}>
+</{{tag}}>

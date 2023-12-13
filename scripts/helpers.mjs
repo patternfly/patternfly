@@ -58,6 +58,143 @@ export const ternary = (testValue, trueValue, fallback) => {
   return testValue ? trueValue : fallback;
 };
 
+// ======================================================================================
+// debug: is a helper function that logs all parameters and their values, if defined to the console
+// ======================================================================================
+//
+// Usage:
+//   {{#> component}}
+//     {{debug}}
+//     {{debug component--id}}
+//
+// Options:
+//     Can request a specific value to be logged. `component--id` is requested on the second line
+// ======================================================================================
+export const debug = function (optionalValue) {
+  console.log('Current Context');
+  console.log('====================');
+  console.log(this);
+  if (optionalValue) {
+    console.log('Value');
+    console.log('====================');
+    console.log(optionalValue);
+  }
+}
+
+// ======================================================================================
+// stringToLower: is a helper function that transforms a string to lowercase
+// ======================================================================================
+export const stringToLower = function (string) {
+  const newString = string.toLowerCase();
+  return newString;
+}
+
+// ======================================================================================
+// dasherize: is a helper function that removes punctuaation and spaces from a string and replaces them with dashes
+// ======================================================================================
+export const dasherize = (...params) => {
+  let newString = '';
+
+  params.forEach(element => {
+    if (typeof element === 'string') {
+      element = element.replace(/[^\p{L}\p{N}\p{Z}]/gu, '').replace(/\s/g, '-').toLowerCase();
+      newString += element.toLowerCase();
+    }
+  });
+
+  return newString;
+};
+
+// ======================================================================================
+// setTag: is a helper function that sets the tag of a component
+// ======================================================================================
+//
+// Usage:
+//   {{> setTag component--IsList 'ul' 'div'}}
+//   {{> setTag component--IsList 'ul'}} // can also be used a the fallback value is div
+//
+// ======================================================================================
+export const setTag = function (partialVar, el, fallback = 'div') {
+  if (partialVar !== undefined) {
+    this.type = el;
+  } else {
+    this.type = fallback;
+  }
+};
+
+// ======================================================================================
+// tag: is a helper function that returns the tag of a component
+// ======================================================================================
+//
+// Usage:
+//   {{#> tag}}
+//     {{debug}}
+//     {{debug component--id}}
+//
+// Options:
+//     Can request a specific value to be logged. `component--id` is requested on the second line
+// ======================================================================================
+export const tag = function (tag) {
+  return this.type;
+};
+
+// ======================================================================================
+// setModifier: is a helper function that sets a modifier class
+// ======================================================================================
+export const setModifier = function (param, className) {
+  return param ? className : '';
+};
+
+// ======================================================================================
+// setAttribute: is a helper function that sets an attribute
+// ======================================================================================
+export const setAttribute = function (param, attribute) {
+  return param ? attribute : null;
+};
+
+// ======================================================================================
+// reset: reset is a helper function unsets all passed parameters
+// ======================================================================================
+//
+// Purpose: replaces `newcontext` helper in partials by unsetting specific parameters
+// Usage:
+//   {{#> component (reset component--id component--IsExpanded)}}
+//
+// ======================================================================================
+export const reset = function (...params) {
+  params.forEach(element => {
+    element = undefined;
+  })
+};
+
+// ======================================================================================
+// setModifiers: setModifiers is a helper function that returns a string of all partials parameters that are true
+// ======================================================================================
+//
+// Purpose: replaces repetitive {{#if component-IsState}}pf-m-state{{/if}} statements in partials
+// Usage:
+//   {{setModifiers
+//     component-IsExpanded='pf-m-expanded' // if component-IsExpanded is assigned to instance, return pf-m-expanded
+//     component-IsActive='pf-m-active' // if component-IsActive is assigned to instance, return pf-m-active
+//     component-IsCurrent='pf-m-current pf-m-selected' // if component-IsCurrent is assigned to instance, return pf-m-current and pf-m-selected
+//   }}
+//
+// ======================================================================================
+export const setModifiers = function (...mods) {
+  let modSet = '';
+
+  for (const prop in mods) {
+    const hash = mods[prop].hash;
+    for (const [key, value] of Object.entries(hash)) {
+      if (this[key]) {
+        modSet += ` ${value}`;
+      }
+    }
+  };
+
+  return modSet
+};
+
 /** Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS */
 export const inverse = (bool) => (bool ? null : 'true');
 
