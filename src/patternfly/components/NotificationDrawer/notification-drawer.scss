@@ -35,7 +35,6 @@
   --#{$notification-drawer}__list-item--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__list-item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$notification-drawer}__list-item--BorderWidth: var(--pf-t--global--border--width--box--status--default);
-  --#{$notification-drawer}__list-item--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$notification-drawer}__list-item--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // List item modifiers
@@ -50,7 +49,6 @@
   --#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
   --#{$notification-drawer}__list-item--m-custom__list-item--BorderColor: var(--pf-t--global--border--color--status--custom--default);
   --#{$notification-drawer}__list-item--m-read--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$notification-drawer}__list-item--m-read--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$notification-drawer}__list-item--m-read--BorderWidth: var(--pf-t--global--border--width--box--status--read);
   --#{$notification-drawer}__list-item--m-read--BorderColor: var(--pf-t--global--border--color--default);
   --#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
@@ -195,7 +193,6 @@
   }
 
   &.pf-m-read {
-    --#{$notification-drawer}__list-item--BorderBottomColor: var(--#{$notification-drawer}__list-item--m-read--BorderBottomColor);
     --#{$notification-drawer}__list-item--BorderWidth: var(--#{$notification-drawer}__list-item--m-read--BorderWidth);
     --#{$notification-drawer}__list-item--BackgroundColor: var(--#{$notification-drawer}__list-item--m-read--BackgroundColor);
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-read--BorderColor);
@@ -207,7 +204,8 @@
   &.pf-m-hoverable {
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor);
     }
   }
