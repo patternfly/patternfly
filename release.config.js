@@ -12,9 +12,9 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer',
       {
-        'preset': 'angular',
-        'parserOpts': {
-          'noteKeywords': ['BREAKING-CHANGE']
+        preset: 'angular',
+        parserOpts: {
+          noteKeywords: ['BREAKING-CHANGE']
         }
       }
     ],
