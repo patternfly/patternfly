@@ -1,6 +1,12 @@
-<{{#if nav-subnav-title--type}}{{nav-subnav-title--type}}{{else}}h2{{/if}} class="{{pfv}}nav__subnav-title{{#if nav-subnav-title--modifier}} {{nav-subnav-title--modifier}}{{/if}} {{pfv 'unset-prefix'}}screen-reader"
+{{setTag nav-subnav-title--type nav-subnav-title--type 'h2'}}
+
+<{{tag}} class="{{pfv}}nav__subnav-title{{#if nav-subnav-title--modifier}} {{nav-subnav-title--modifier}}{{/if}} {{pfv 'unset-prefix'}}screen-reader"
   {{#if nav-subnav-title--attribute}}
     {{{nav-subnav-title--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
-</{{#if nav-subnav-title--type}}/{{nav-subnav-title--type}}{{else}}h2{{/if}}>
+  {{#if nav-subnav-title--text}}
+    {{nav-subnav-title--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</{{tag}}>
