@@ -1,9 +1,27 @@
+{{!-- TODO: update toolbar content when all other components are ready --}}
 {{#> toolbar-content-section}}
-  {{#if masthead-template--HasContextSelector}}
-    {{#> toolbar-item toolbar-item--attribute='style="--pf-v5-c-toolbar__item--MinWidth: 140px"'}}
-      {{> masthead-template-context-selector}}
-    {{/toolbar-item}}
-  {{/if}}
+  {{#> toolbar-item}}
+    {{#> menu-toggle}}
+      {{#> menu-toggle-text}}
+        Overview
+      {{/menu-toggle-text}}
+      {{#> menu-toggle-controls}}
+        {{> menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
+    {{/menu-toggle}}
+  {{/toolbar-item}}
+
+  {{#> toolbar-item}}
+    {{#> menu-toggle}}
+      {{#> menu-toggle-text}}
+        Services
+      {{/menu-toggle-text}}
+      {{#> menu-toggle-controls}}
+        {{> menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
+    {{/menu-toggle}}
+  {{/toolbar-item}}
+
   {{#if masthead-template--HasHorizontalNav}}
     {{#> toolbar-item toolbar-item--modifier="pf-m-overflow-container" toolbar-item--attribute='style="--pf-v5-c-toolbar__item--MinWidth: 18ch;"'}}
       {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' masthead-q-id '-horizontal-nav" aria-label="Global"')}}

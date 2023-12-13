@@ -15,7 +15,6 @@ wrapperTag: div
       {{> toolbar-template
           toolbar-template--id='data-list-basic-example-toolbar'
           toolbar-template--HasBulkSelect=true
-          toolbar-template--HasContextSelector=true
           toolbar-template--HasOverflowMenu=true
         }}
       {{> data-list-simple-data-list}}
@@ -36,7 +35,6 @@ wrapperTag: div
           toolbar-template--id='data-list-actionable-example-toolbar'
           toolbar-template--HasToggleGroup=true
           toolbar-template--HasBulkSelect=true
-          toolbar-template--HasContextSelector=true
           toolbar-template--HasOverflowMenu=true
           toolbar-template--HasOverflowMenuSecondButton=true
         }}

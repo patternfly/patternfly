@@ -3,174 +3,84 @@ $pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 :root {
-  --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
+  // * Masthead
+  --#{$masthead}--inset: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$masthead}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$masthead}--PaddingInlineStart: var(--#{$masthead}--inset);
+  --#{$masthead}--PaddingInlineEnd: var(--#{$masthead}--inset);
+  --#{$masthead}--AlignItems: start;
+  --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$masthead}--BorderWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
 
-  // Insets
-  --#{$masthead}--inset: var(--pf-t--global--spacer--md); // match page insets
-  --#{$masthead}--xl--inset: var(--pf-t--global--spacer--lg); // match page insets
+  // * Masthead brand
+  --#{$masthead}__brand--MarginInlineEnd: var(--pf-t--global--spacer--md);
 
-  // Stack
+  // * Masthead toggle
+  --#{$masthead}__toggle--Size: var(--pf-t--global--icon--size--xl);
+
+  // * Masthead stack
   --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
   --#{$masthead}--m-display-stack__main--GridColumn: -1 / 1;
-  --#{$masthead}--m-display-stack__main--MinHeight: #{pf-size-prem(70px)};
   --#{$masthead}--m-display-stack__main--Order: -1;
-  --#{$masthead}--m-display-stack__main--FlexBasis: 100%;
-  --#{$masthead}--m-display-stack__main--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$masthead}--m-display-stack__main--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$masthead}--m-display-stack__main--MarginRight: 0;
-  --#{$masthead}--m-display-stack__main--before--BorderBottom: var(--#{$masthead}__main--before--BorderBottomWidth) solid var(--#{$masthead}__main--before--BorderBottomColor);
-  --#{$masthead}--m-display-stack__toggle--GridColumn: 1;
+  --#{$masthead}--m-display-stack__main--PaddingBlockEnd: var(--#{$masthead}--RowGap);
+  --#{$masthead}--m-display-stack__main--BorderBlockEnd: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
   --#{$masthead}--m-display-stack__content--GridColumn: 2;
-  --#{$masthead}--m-display-stack__content--MinHeight: auto;
   --#{$masthead}--m-display-stack__content--Order: 1;
-  --#{$masthead}--m-display-stack__content--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$masthead}--m-display-stack__content--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$masthead}--m-display-stack__content--MarginLeft: 0;
-  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}--inset) * -1);
 
-  // Inline
+  // * Masthead inline
   --#{$masthead}--m-display-inline--GridTemplateColumns: max-content max-content 1fr;
   --#{$masthead}--m-display-inline__main--GridColumn: 2;
-  --#{$masthead}--m-display-inline__main--MinHeight: #{pf-size-prem(70px)};
   --#{$masthead}--m-display-inline__main--Order: 0;
-  --#{$masthead}--m-display-inline__main--FlexBasis: auto;
-  --#{$masthead}--m-display-inline__main--PaddingTop: 0;
-  --#{$masthead}--m-display-inline__main--PaddingBottom: 0;
-  --#{$masthead}--m-display-inline__main--MarginRight: calc(var(--pf-t--global--spacer--lg) / 2); // split gutter
-  --#{$masthead}--m-display-inline__main--BorderBottom: 0;
-  --#{$masthead}--m-display-inline__toggle--GridColumn: 1;
+  --#{$masthead}--m-display-inline__main--PaddingBlockEnd: 0;
+  --#{$masthead}--m-display-inline__main--BorderBlockEnd: 0;
   --#{$masthead}--m-display-inline__content--GridColumn: 3;
-  --#{$masthead}--m-display-inline__content--MinHeight: #{pf-size-prem(70px)};
   --#{$masthead}--m-display-inline__content--Order: 0;
-  --#{$masthead}--m-display-inline__content--PaddingTop: 0;
-  --#{$masthead}--m-display-inline__content--PaddingBottom: 0;
-  --#{$masthead}--m-display-inline__content--MarginLeft: calc(var(--pf-t--global--spacer--lg) / 2); // split gutter
-  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight: 0;
-  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft: 0;
 
-  // Main border
-  --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$masthead}__main--before--BorderBottomColor: var(--pf-t--global--border--color--default);
-
-  // Content
-  --#{$masthead}__content--Gap: var(--pf-t--global--spacer--sm);
-
-  // Toggle
-  --#{$masthead}__toggle--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$masthead}__toggle--MarginLeft: calc(var(--pf-t--global--spacer--sm) * -1); // offset by button padding
-  --#{$masthead}__toggle--c-button--FontSize: var(--pf-t--global--icon--size--lg);
-
-  // Toolbar item
-  --#{$masthead}--c-toolbar__item--Display: flex;
-
-  // Borders
-  --#{$masthead}--item-border-color--base: var(--pf-t--global--border--color--default);
-
-  // Context selector
-  --#{$masthead}--c-context-selector--Width: auto;
-  --#{$masthead}--c-context-selector__toggle--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector__toggle--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector__toggle--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor: transparent;
-  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor: transparent;
-
-  // Dropdown
-  --#{$masthead}--c-dropdown__toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown__toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown__toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor: transparent;
-  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor: transparent;
-
-  // Menu toggle
-  --#{$masthead}--c-menu-toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-
-  // Toolbar
-  --#{$masthead}--c-toolbar--BackgroundColor: var(--#{$masthead}--BackgroundColor);
-  --#{$masthead}--c-toolbar--AlignItems--base: center;
-  --#{$masthead}--c-toolbar__content--PaddingRight: 0;
-  --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
-  --#{$masthead}--c-toolbar__expandable-content--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+  // * Masthead toolbar
+  --#{$masthead}__expandable-content--BoxShadow: var(--pf-v5-global--BoxShadow--md-bottom); // TODO: update after toolbar updates
+  --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor); // TODO: update after toolbar updates
 }
 
+// * Masthead display stack
 @mixin pf-v5-c-masthead--m-display-stack {
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-stack--GridTemplateColumns);
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-stack__main--GridColumn);
-  --#{$masthead}__main--MinHeight: var(--#{$masthead}--m-display-stack__main--MinHeight);
   --#{$masthead}__main--Order: var(--#{$masthead}--m-display-stack__main--Order);
-  --#{$masthead}__main--FlexBasis: var(--#{$masthead}--m-display-stack__main--FlexBasis);
-  --#{$masthead}__main--PaddingTop: var(--#{$masthead}--m-display-stack__main--PaddingTop);
-  --#{$masthead}__main--PaddingBottom: var(--#{$masthead}--m-display-stack__main--PaddingBottom);
-  --#{$masthead}__main--MarginRight: var(--#{$masthead}--m-display-stack__main--MarginRight);
-  --#{$masthead}__main--before--BorderBottom: var(--#{$masthead}--m-display-stack__main--before--BorderBottom);
+  --#{$masthead}__main--PaddingBlockEnd: var(--#{$masthead}--m-display-stack__main--PaddingBlockEnd);
+  --#{$masthead}__main--BorderBlockEnd: var(--#{$masthead}--m-display-stack__main--BorderBlockEnd);
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-stack__content--GridColumn);
-  --#{$masthead}__content--MinHeight: var(--#{$masthead}--m-display-stack__content--MinHeight);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-stack__content--Order);
-  --#{$masthead}__content--PaddingTop: var(--#{$masthead}--m-display-stack__content--PaddingTop);
-  --#{$masthead}__content--PaddingBottom: var(--#{$masthead}--m-display-stack__content--PaddingBottom);
-  --#{$masthead}__content--MarginLeft: var(--#{$masthead}--m-display-stack__content--MarginLeft);
-  --#{$masthead}__content--c-nav--m-horizontal--MarginRight: var(--#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight);
-  --#{$masthead}__content--c-nav--m-horizontal--MarginLeft: var(--#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft);
 }
 
+// * Masthead display inline
 @mixin pf-v5-c-masthead--m-display-inline {
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-inline--GridTemplateColumns);
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
-  --#{$masthead}__main--MinHeight: var(--#{$masthead}--m-display-inline__main--MinHeight);
   --#{$masthead}__main--Order: var(--#{$masthead}--m-display-inline__main--Order);
-  --#{$masthead}__main--FlexBasis: var(--#{$masthead}--m-display-inline__main--FlexBasis);
-  --#{$masthead}__main--PaddingTop: var(--#{$masthead}--m-display-inline__main--PaddingTop);
-  --#{$masthead}__main--PaddingBottom: var(--#{$masthead}--m-display-inline__main--PaddingBottom);
-  --#{$masthead}__main--MarginRight: var(--#{$masthead}--m-display-inline__main--MarginRight);
-  --#{$masthead}__main--before--BorderBottom: var(--#{$masthead}--m-display-inline__main--BorderBottom);
+  --#{$masthead}__main--PaddingBlockEnd: var(--#{$masthead}--m-display-inline__main--BorderBlockEnd);
+  --#{$masthead}__main--BorderBlockEnd: var(--#{$masthead}--m-display-inline__main--BorderBlockEnd);
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
-  --#{$masthead}__content--MinHeight: var(--#{$masthead}--m-display-inline__content--MinHeight);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
-  --#{$masthead}__content--PaddingTop: var(--#{$masthead}--m-display-inline__content--PaddingTop);
-  --#{$masthead}__content--PaddingBottom: var(--#{$masthead}--m-display-inline__content--PaddingBottom);
-  --#{$masthead}__content--MarginLeft: var(--#{$masthead}--m-display-inline__content--MarginLeft);
-  --#{$masthead}__content--c-nav--m-horizontal--MarginRight: var(--#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight);
-  --#{$masthead}__content--c-nav--m-horizontal--MarginLeft: var(--#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft);
 }
 
+// - Masthead
 .#{$masthead} {
-  // Toolbar
-  --#{$toolbar}--BackgroundColor: var(--#{$masthead}--c-toolbar--BackgroundColor);
-  --#{$toolbar}--AlignItems--base: var(--#{$masthead}--c-toolbar--AlignItems--base);
-  --#{$toolbar}__content--PaddingRight: var(--#{$masthead}--c-toolbar__content--PaddingRight);
-  --#{$toolbar}__content--PaddingLeft: var(--#{$masthead}--c-toolbar__content--PaddingLeft);
-  --#{$toolbar}__expandable-content--PaddingTop: var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop);
-  --#{$toolbar}__expandable-content--PaddingRight: var(--#{$masthead}--c-toolbar__expandable-content--PaddingRight);
-  --#{$toolbar}__expandable-content--PaddingBottom: var(--#{$masthead}--c-toolbar__expandable-content--PaddingBottom);
-  --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$masthead}--c-toolbar__expandable-content--PaddingLeft);
-
-  // Context selector
-  --#{$context-selector}--Width: var(--#{$masthead}--c-context-selector--Width);
-  --#{$context-selector}__toggle--BorderTopColor: var(--#{$masthead}--c-context-selector__toggle--BorderTopColor);
-  --#{$context-selector}__toggle--BorderRightColor: var(--#{$masthead}--c-context-selector__toggle--BorderRightColor);
-  --#{$context-selector}__toggle--BorderLeftColor: var(--#{$masthead}--c-context-selector__toggle--BorderLeftColor);
-
-  // Dropdown
-  --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderTopColor);
-  --#{$dropdown}__toggle--before--BorderRightColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderRightColor);
-  --#{$dropdown}__toggle--before--BorderLeftColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderLeftColor);
-
-  // Menu toggle
-  --#{$menu-toggle}--before--BorderTopColor: var(--#{$masthead}--c-menu-toggle--before--BorderTopColor);
-  --#{$menu-toggle}--before--BorderRightColor: var(--#{$masthead}--c-menu-toggle--before--BorderRightColor);
-  --#{$menu-toggle}--before--BorderLeftColor: var(--#{$masthead}--c-menu-toggle--before--BorderLeftColor);
-  --#{$menu-toggle}--m-full-height__toggle--after--BorderBottomWidth: 0;
+  --#{$toolbar}--PaddingTop: 0; // TODO: update after toolbar updates
+  --#{$toolbar}--PaddingBottom: 0; // TODO: update after toolbar updates
+  --#{$toolbar}__content--PaddingRight: 0; // TODO: update after toolbar updates
+  --#{$toolbar}__content--PaddingLeft: 0; // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--PaddingTop: var(--pf-t--global--spacer--md); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--PaddingRight: var(--#{$masthead}--inset); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--PaddingBottom: var(--pf-t--global--spacer--md); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$masthead}--inset); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--BackgroundColor: var(--#{$masthead}--BackgroundColor); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--lg--PaddingRight: var(--#{$masthead}--PaddingInlineStart); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--lg--PaddingBottom: var(--pf-t--global--spacer--md); // TODO: update after toolbar updates
+  --#{$toolbar}__expandable-content--lg--PaddingLeft: var(--#{$masthead}--PaddingInlineEnd); // TODO: update after toolbar updates
 
   // Set layout to stack by default
   @include pf-v5-c-masthead--m-display-stack;
@@ -182,141 +92,118 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     }
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$masthead}--inset: var(--#{$masthead}--xl--inset);
-  }
-
+  // - Masthead
   position: relative;
   display: grid;
   grid-template-columns: var(--#{$masthead}--GridTemplateColumns);
-  align-items: center;
+  row-gap: var(--#{$masthead}--RowGap);
+  column-gap: var(--#{$masthead}--ColumnGap);
+  align-items: var(--#{$masthead}--AlignItems);
   min-width: 0;
-  padding-inline-start: var(--#{$masthead}--PaddingLeft);
-  padding-inline-end: var(--#{$masthead}--PaddingRight);
+  padding-block-start: var(--#{$masthead}--PaddingBlockStart);
+  padding-block-end: var(--#{$masthead}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$masthead}--PaddingInlineStart);
+  padding-inline-end: var(--#{$masthead}--PaddingInlineEnd);
   background-color: var(--#{$masthead}--BackgroundColor);
 
+  // - Masthead toolbar
   .#{$toolbar} {
     width: 100%;
   }
 
-  .#{$toolbar}__content-section {
-    flex-wrap: nowrap;
-  }
-
+  // TODO: update when toolbar updates
+  // - Masthead toolbar expandable content
   .#{$toolbar}__expandable-content {
     inset-block-start: 100%;
+    border-block-start: var(--#{$masthead}__expandable-content--BorderBlockStart);
+    box-shadow: var(--#{$masthead}__expandable-content--BoxShadow);
+  }
 
-    &::before {
-      position: absolute;
-      inset: 0;
-      content: '';
-      border-block-start: var(--#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth) solid var(--#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor);
-      box-shadow: var(--#{$toolbar}__expandable-content--before--BoxShadow);
+  // - Masthead display stack
+  &.pf-m-display-stack {
+    @include pf-v5-c-masthead--m-display-stack;
+  }
+
+  // - Masthead display inline
+  &.pf-m-display-inline {
+    @include pf-v5-c-masthead--m-display-inline;
+  }
+
+  // - Masthead insets
+  @each $inset, $inset-value in $pf-v5-c-masthead--inset-map {
+    &.pf-m-inset-#{$inset} {
+      padding-inline-start: #{$inset-value};
+      padding-inline-end: #{$inset-value};
     }
   }
 
-  .#{$context-selector}.pf-m-full-height {
-    --#{$context-selector}__toggle--BorderTopColor: var(--#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor);
-    --#{$context-selector}__toggle--BorderBottomColor: var(--#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor);
-  }
-
-  .#{$dropdown}.pf-m-full-height {
-    --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor);
-    --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
-  }
-
-  .#{$nav} {
-    align-self: stretch;
+  .#{$button}.pf-m-plain {
+    @include pf-v5-t-dark(--#{$button}--m-plain--Color); // for all plain buttons, especially inside other components (.pf-v5-c-input-group), for dark mode
   }
 }
 
-// Main
+// - Masthead main masthead content masthead logo
+.#{$masthead},
 .#{$masthead}__main {
   position: relative;
-  display: flex;
-  flex-basis: var(--#{$masthead}__main--FlexBasis);
-  grid-column: var(--#{$masthead}__main--GridColumn);
-  align-items: center;
-  align-self: stretch;
-  order: var(--#{$masthead}__main--Order);
-  min-height: var(--#{$masthead}__main--MinHeight);
-  padding-block-start: var(--#{$masthead}__main--PaddingTop);
-  padding-block-end: var(--#{$masthead}__main--PaddingBottom);
-  margin-inline-end: var(--#{$masthead}__main--MarginRight);
-
-  &::before {
-    position: absolute;
-    inset-block-end: 0;
-    inset-inline-start: var(--#{$masthead}__main--before--Left);
-    inset-inline-end: var(--#{$masthead}__main--before--Right);
-    content: "";
-    border-block-end: var(--#{$masthead}__main--before--BorderBottom);
-  }
-
-  &:last-child {
-    --#{$masthead}__main--MarginRight: 0;
-  }
-}
-
-.#{$masthead}__logo {
-  display: flex;
-  gap: var(--pf-t--global--spacer--md);
-}
-
-// Content
-.#{$masthead}__content {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  grid-column: var(--#{$masthead}__content--GridColumn);
-  grid-column-end: -1; // force content to right edge or full available width
-  gap: var(--#{$masthead}__content--Gap);
-  align-items: center;
-  align-self: stretch;
-  order: var(--#{$masthead}__content--Order);
-  min-height: var(--#{$masthead}__content--MinHeight);
-  padding-block-start: var(--#{$masthead}__content--PaddingTop);
-  padding-block-end: var(--#{$masthead}__content--PaddingBottom);
-  margin-inline-start: var(--#{$masthead}__content--MarginLeft);
-
-  &:only-child {
-    --#{$masthead}__content--MarginLeft: 0;
-  }
-
-  .#{$nav}.pf-m-horizontal {
-    margin-inline-start: var(--#{$masthead}__content--c-nav--m-horizontal--MarginLeft);
-    margin-inline-end: var(--#{$masthead}__content--c-nav--m-horizontal--MarginRight);
-  }
-
-  .#{$masthead}__toggle ~ & {
-    --#{$masthead}__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}__content--MarginLeft) * -1);
-  }
 }
 
 .#{$masthead}__main,
+.#{$masthead}__content,
+.#{$masthead}__logo,
+.#{$masthead}__brand {
+  display: flex;
+  align-self: stretch;
+}
+
+// - Masthead main masthead brand masthead content
+.#{$masthead}__main,
 .#{$masthead}__brand,
 .#{$masthead}__content {
-  min-width: 0; // allow flex containers to shrink to fit possible overflow
+  min-width: #{pf-size-prem(4ch)}; // allow flex containers to shrink to fit possible overflow
 }
 
-// Brand
+// - Masthead Main
+.#{$masthead}__main {
+  grid-column: var(--#{$masthead}__main--GridColumn);
+  row-gap: var(--#{$masthead}__main--RowGap, var(--#{$masthead}--RowGap));
+  align-items: var(--#{$masthead}__main--AlignItems, var(--#{$masthead}--AlignItems));
+  order: var(--#{$masthead}__main--Order);
+  padding-block-end: var(--#{$masthead}__main--PaddingBlockEnd);
+  border-block-end: var(--#{$masthead}__main--BorderBlockEnd);
+}
+
+// - Masthead content
+.#{$masthead}__content {
+  flex-wrap: wrap;
+  grid-column: var(--#{$masthead}__content--GridColumn);
+  grid-column-end: -1; // force content to right edge or full available width
+  row-gap: var(--#{$masthead}__content-RowGap, var(--#{$masthead}--RowGap));
+  column-gap: var(--#{$masthead}__content-ColumnGap, var(--#{$masthead}--ColumnGap));
+  align-items: var(--#{$masthead}__content--AlignItems, var(--#{$masthead}--AlignItems));
+  order: var(--#{$masthead}__content--Order);
+}
+
+// - Masthead brand
 .#{$masthead}__brand {
-  display: inline-flex;
-  align-self: center;
+  align-items: var(--#{$masthead}__brand--AlignItems, var(--#{$masthead}--AlignItems));
+  margin-inline-end: var(--#{$masthead}__brand--MarginInlineEnd);
 }
 
-// Toggle
+// - Masthead toggle
 .#{$masthead}__toggle {
-  grid-column: var(--#{$masthead}__toggle--GridColumn);
-  align-self: center;
-  margin-inline-start: var(--#{$masthead}__toggle--MarginLeft);
-  margin-inline-end: var(--#{$masthead}__toggle--MarginRight);
-
-  .#{$button} {
-    --#{$button}--FontSize: var(--#{$masthead}__toggle--c-button--FontSize);
-  }
+  --#{$button}--FontSize: var(--#{$masthead}__toggle--Size);
 }
 
+// - Masthead expandable content
+.#{$masthead}__expandable-content {
+  row-gap: var(--#{$masthead}__expandable-content-RowGap, var(--#{$masthead}--RowGap));
+  background-color: var(--#{$masthead}--BackgroundColor);
+}
+
+
+// TODO: move this sass to separate file for resize observer updates
+// TODO: make this an opt in/out
 // stylelint-disable no-duplicate-selectors
 .#{$masthead} {
   @each $breakpoint, $breakpoint-value in $pf-v5-c-masthead--breakpoint-map {
@@ -332,11 +219,10 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       }
     }
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-v5-c-masthead--inset-map {
-        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
-          --#{$masthead}--inset: #{$spacer-value};
-        }
+    @each $inset, $inset-value in $pf-v5-c-masthead--inset-map {
+      &.pf-m-inset-#{$inset} {
+        padding-inline-start: #{$inset-value};
+        padding-inline-end: #{$inset-value};
       }
     }
   }
