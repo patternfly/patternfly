@@ -6,7 +6,7 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 @mixin pf-v5-c-divider--m-horizontal {
   flex-direction: row;
   width: 100%;
-  height: var(--#{$divider}--Size);  // apply size to width in horizontal orientation
+  height: var(--#{$divider}--Size);  // apply size to height in horizontal orientation
 }
 
 // * Divider vertical
@@ -16,7 +16,8 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
   height: 100%;
 }
 
-:root {
+:root,
+:where(.#{$divider}) {
   // * Divider
   --#{$divider}--Display: flex;
   --#{$divider}--Color: var(--pf-t--global--border--color--default);
@@ -31,13 +32,9 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
   @include pf-v5-c-divider--m-horizontal; // default, set to orientation to horizontal
   @include pf-v5-hidden-visible(var(--#{$divider}--Display));
 
-  display: flex;
   align-items: stretch;
   justify-content: center;
-
-  &:is(hr) {
-    border: 0; // removes the default border styling on an hr
-  }
+  border: 0; // removes the default border styling on an hr
 
   // - Divider before
   &::before {
