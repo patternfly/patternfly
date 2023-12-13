@@ -25,7 +25,6 @@ import './Divider.css'
 ```
 
 ### div
-
 ```hbs
 {{> divider divider--type="div"}}
 ```
@@ -33,19 +32,19 @@ import './Divider.css'
 ### Inset medium
 
 ```hbs
-{{> divider divider--type="div" divider--modifier="pf-m-inset-md"}}
+{{> divider divider--modifier="pf-m-inset-md"}}
 ```
 
 ### Md inset, no inset on md, 3xl inset on lg, lg inset on xl
 
 ```hbs
-{{> divider divider--type="div" divider--modifier="pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-3xl-on-lg pf-m-inset-lg-on-xl"}}
+{{> divider divider--modifier="pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-3xl-on-lg pf-m-inset-lg-on-xl"}}
 ```
 
 ### Vertical
 
 ```hbs
-{{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md"}}
+{{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
 ```
 
 ### Vertical, inset medium
