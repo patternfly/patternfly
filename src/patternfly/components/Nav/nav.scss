@@ -248,7 +248,6 @@
     inset-block: var(--#{$nav}__link--clickable-inset--Block);
     inset-inline: var(--#{$nav}__link--clickable-inset--Inline);
     content: "";
-    border: 1px dotted;
   }
 
   &[aria-expanded="true"]::before {
