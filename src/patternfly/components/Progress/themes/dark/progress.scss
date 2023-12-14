@@ -1,9 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-progress() {
-  .#{$progress} {
-    --#{$progress}--m-inside__measure--Color: var(--#{$pf-global}--palette--black-900);
-    --#{$progress}--m-success--m-inside__measure--Color: var(--#{$pf-global}--palette--black-900);
-    --#{$progress}--m-warning--m-inside__measure--Color: var(--#{$pf-global}--palette--black-900);
-  }
-}
