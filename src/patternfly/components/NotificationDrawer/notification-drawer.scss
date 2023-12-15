@@ -20,7 +20,7 @@
 
   // Body
   --#{$notification-drawer}__body--ZIndex: var(--pf-t--global--Zindex--xs);
-  --#{$notification-drawer}__body--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__body--PaddingBlockStart: 0; // TODO var(--pf-t--global--spacer--sm);
   --#{$notification-drawer}__body--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
   // List
