@@ -3,13 +3,11 @@
   align-items: center;
 }
 
-[id*="divider-vertical"],
 [id*="ws-core-c-divider-vertical"],
 #ws-core-c-divider-horizontal-on-lg {
-  height: 6rem;
+  height: 4rem;
 }
 
 [id*="ws-core-c-divider"] .ws-preview-html {
   height: 100%;
 }
-
