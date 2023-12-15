@@ -105,8 +105,9 @@
 
   // expandable content
   --#{$data-list}__expandable-content--BackgroundColor: var( --pf-t--global--background--color--primary--default);
-  --#{$data-list}__expandable-content--MarginRight: calc(var(--#{$data-list}__expandable-content-body--PaddingRight) * -1);
-  --#{$data-list}__expandable-content--MarginLeft: calc(var(--#{$data-list}__expandable-content-body--PaddingLeft) * -1);
+  --#{$data-list}__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__expandable-content--MarginInlineStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$data-list}__expandable-content--MaxHeight: #{pf-size-prem(600px)};
   --#{$data-list}__expandable-content-body--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$data-list}__expandable-content-body--PaddingRight: var(--pf-t--global--spacer--md);
@@ -117,7 +118,6 @@
   --#{$data-list}__expandable-content-body--md--PaddingBottom: var(--pf-t--global--spacer--lg);
   --#{$data-list}__expandable-content-body--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$data-list}__expandable-content-body--BorderRadius: var(--pf-t--global--border--radius--small);
-
 
   // compact
   --#{$data-list}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -410,9 +410,9 @@
 // expandable content
 .#{$data-list}__expandable-content {
   max-height: var(--#{$data-list}__expandable-content--MaxHeight);
-  margin-block-end: 16px;
-  margin-inline-start: 16px;
-  margin-inline-end: 16px;
+  margin-block-end: var(--#{$data-list}__expandable-content--MarginBlockEnd);
+  margin-inline-start: var(--#{$data-list}__expandable-content--MarginInlineStart);
+  margin-inline-end: var(--#{$data-list}__expandable-content--MarginInlineEnd);
   overflow-y: auto;
   background-color: var(--#{$data-list}__expandable-content--BackgroundColor);
   border-radius: var(--#{$data-list}__expandable-content-body--BorderRadius);
