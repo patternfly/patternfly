@@ -1,4 +1,4 @@
-{{#> toolbar-group toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"}}
+{{#> toolbar-group toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"}}
   {{#if masthead-template--HasNotificationDrawer}}
     {{#> toolbar-item}}
       {{> notification-badge notification-badge--IsExpanded=notification-drawer--IsExpanded notification-badge--IsAttention=notification-drawer--IsAttention notification-badge--IsUnread=notification-drawer--IsUnread}}
@@ -25,16 +25,3 @@
     {{/menu-toggle}}
   {{/toolbar-item}}
 {{/toolbar-group}}
-{{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-sm"}}
-  {{#> menu-toggle menu-toggle--modifier="pf-m-full-height"}}
-    {{#> menu-toggle-icon}}
-      {{> avatar}}
-    {{/menu-toggle-icon}}
-    {{#> menu-toggle-text}}
-      Ned Username
-    {{/menu-toggle-text}}
-    {{#> menu-toggle-controls}}
-      {{> menu-toggle-toggle-icon}}
-    {{/menu-toggle-controls}}
-  {{/menu-toggle}}
-{{/toolbar-item}}
