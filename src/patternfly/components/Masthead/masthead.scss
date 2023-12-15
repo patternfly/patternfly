@@ -19,6 +19,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // * Masthead brand
   --#{$masthead}__brand--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$masthead}__brand--MaxHeight: #{pf-size-prem(38px)};
 
   // * Masthead toggle
   --#{$masthead}__toggle--Size: var(--pf-t--global--icon--size--xl);
@@ -45,7 +46,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom); // TODO: update after toolbar updates
   --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor); // TODO: update after toolbar updates
 }
-
 
 // * Masthead display stack
 @mixin pf-v5-c-masthead--m-display-stack {
@@ -185,6 +185,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // - Masthead brand
 .#{$masthead}__brand {
   align-items: var(--#{$masthead}__brand--AlignItems, var(--#{$masthead}--AlignItems));
+  max-height: var(--#{$masthead}__brand--MaxHeight);
   margin-inline-end: var(--#{$masthead}__brand--MarginInlineEnd);
 }
 
