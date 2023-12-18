@@ -1,87 +1,90 @@
 // @debug $slider; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$slider} {
   --#{$slider}--value: 0; // should always be set inline
   --#{$slider}__step--Left: 0; // should always be set inline
-
+  
   // rail
-  --#{$slider}__rail--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$slider}__rail--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$slider}__rail--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$slider}__rail--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$slider}__rail-track--Height: #{pf-size-prem(4px)};
-  --#{$slider}__rail-track--before--base--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$slider}__rail-track--before--fill--BackgroundColor: var(--#{$pf-global}--active-color--300);
-  --#{$slider}__rail-track--before--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
+  --#{$slider}__rail-track--before--base--BackgroundColor: var(--pf-t--global--border--color--default);
+  --#{$slider}__rail-track--before--fill--BackgroundColor: var(--pf-t--global--border--color--hover);
+  --#{$slider}__rail-track--before--BorderRadius: var(--pf-t--global--border--radius--tiny);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
-
-  @include pf-v5-bidirectional-style(
-    $prop: --#{$slider}__rail-track--before--fill--direction, 
-    $ltr-val: right,
-    $rtl-val: left
-  );
-
+    
   // steps
-  --#{$slider}__steps--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$slider}__steps--FontSize: var(--pf-t--global--font--size--sm);
   --#{$slider}__steps--Height: var(--#{$slider}__steps--FontSize);
-
+  
   // step tick
-  --#{$slider}__step-tick--Top: var(--#{$pf-global}--spacer--md);
+  --#{$slider}__step-tick--Top: var(--pf-t--global--spacer--md);
   --#{$slider}__step-tick--Width: #{pf-size-prem(4px)};
   --#{$slider}__step-tick--Height: #{pf-size-prem(4px)};
-  --#{$slider}__step-tick--BackgroundColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--subtle);
   --#{$slider}__step-tick--TranslateX: -50%;
-  --#{$slider}__step-tick--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
-  --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--#{$pf-global}--primary-color--100);
+  --#{$slider}__step-tick--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--brand--clicked);
   --#{$slider}__step--first-child__step-tick--TranslateX: 0;
   --#{$slider}__step--last-child__step-tick--TranslateX: -100%;
-
+  
   // step label
   --#{$slider}__step-label--TranslateX: -50%;
-  --#{$slider}__step-label--Top: calc(var(--#{$pf-global}--spacer--xl) + var(--#{$slider}__rail-track--Height));
+  --#{$slider}__step-label--Top: calc(var(--pf-t--global--spacer--xl) + var(--#{$slider}__rail-track--Height));
   --#{$slider}__step--first-child__step-label--TranslateX: 0;
   --#{$slider}__step--last-child__step-label--TranslateX: -100%;
-
+  
   // thumb
-  --#{$slider}__thumb--Top: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--#{$pf-global}--spacer--md));
+  --#{$slider}__thumb--Top: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--pf-t--global--spacer--md));
   --#{$slider}__thumb--Width: #{pf-size-prem(16px)};
   --#{$slider}__thumb--Height: #{pf-size-prem(16px)};
   --#{$slider}__thumb--Left: var(--#{$slider}--value);
-  --#{$slider}__thumb--BackgroundColor: var(--#{$pf-global}--primary-color--100);
+  --#{$slider}__thumb--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$slider}__thumb--TranslateX: -50%;
   --#{$slider}__thumb--TranslateY: -50%;
-  --#{$slider}__thumb--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
+  --#{$slider}__thumb--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$slider}__thumb--BoxShadow--base:
-    0 0 0 2px var(--#{$pf-global}--BackgroundColor--100),
-    0 0 0 3px var(--#{$pf-global}--primary-color--100);
+    0 0 0 2px var(--pf-t--global--background--color--primary--default),
+    0 0 0 3px var(--pf-t--global--color--brand--default);
   --#{$slider}__thumb--hover--BoxShadow: var(--#{$slider}__thumb--BoxShadow--base);
   --#{$slider}__thumb--focus--BoxShadow: var(--#{$slider}__thumb--BoxShadow--base);
   --#{$slider}__thumb--active--BoxShadow:
     var(--#{$slider}__thumb--BoxShadow--base),
-    0 0 2px 5px var(--#{$pf-global}--active-color--200);
-  --#{$slider}__thumb--before--Width: var(--#{$pf-global}--target-size--MinWidth);
-  --#{$slider}__thumb--before--Height: var(--#{$pf-global}--target-size--MinHeight);
-  --#{$slider}__thumb--before--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
+    0 0 2px 5px var(--pf-t--global--color--nonstatus--blue--clicked);
+  --#{$slider}__thumb--before--Width: 44px;
+  --#{$slider}__thumb--before--Height: var(--#{$slider}__thumb--before--Width);
+  --#{$slider}__thumb--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$slider}__thumb--before--TranslateX: -50%;
   --#{$slider}__thumb--before--TranslateY: -50%;
-
+  
   // value
-  --#{$slider}__value--MarginLeft: var(--#{$pf-global}--spacer--md);
+  --#{$slider}__value--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$slider}__value--c-form-control--width-base: 3.5ch;
   --#{$slider}__value--c-form-control--width-chars: 3;
   --#{$slider}__value--c-form-control--Width: calc(var(--#{$slider}__value--c-form-control--width-base) + (var(--#{$slider}__value--c-form-control--width-chars) * 1ch));
   --#{$slider}__value--m-floating--TranslateX: -50%;
   --#{$slider}__value--m-floating--TranslateY: -100%;
   --#{$slider}__value--m-floating--Left: var(--#{$slider}--value);
-  --#{$slider}__value--m-floating--ZIndex: var(--#{$pf-global}--ZIndex--sm);
-
+  --#{$slider}__value--m-floating--ZIndex: var(--pf-t--global--Zindex--sm);
+  
   // actions
-  --#{$slider}__actions--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$slider}__main--actions--MarginLeft: var(--#{$pf-global}--spacer--sm);
-
+  --#{$slider}__actions--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$slider}__main--actions--MarginLeft: var(--pf-t--global--spacer--sm);
+  
   // disabled
-  --#{$slider}--m-disabled__rail-track--before--fill--BackgroundColor: var(--#{$pf-global}--palette--black-500);
-  --#{$slider}--m-disabled__step--m-active__slider-tick--BackgroundColor: var(--#{$pf-global}--palette--black-700);
-  --#{$slider}--m-disabled__thumb--BackgroundColor: var(--#{$pf-global}--palette--black-700);
+  --#{$slider}--m-disabled__rail-track--before--fill--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$slider}--m-disabled__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--disabled);
+  --#{$slider}--m-disabled__thumb--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+}
 
+.#{$slider} {
+  @include pf-v5-bidirectional-style(
+    $prop: --#{$slider}__rail-track--before--fill--direction, 
+    $ltr-val: right,
+    $rtl-val: left
+  );
+  
   display: flex;
 
   &.pf-m-disabled {
