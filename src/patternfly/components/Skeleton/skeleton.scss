@@ -1,10 +1,11 @@
 // @debug $skeleton; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$skeleton} {
-  --#{$skeleton}--BackgroundColor: var(--#{$pf-global}--palette--black-150);
+  --#{$skeleton}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--Width: auto;
   --#{$skeleton}--Height: auto;
-  --#{$skeleton}--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$skeleton}--BorderRadius: var(--pf-t--global--spacer--sm);
 
   // Before
   --#{$skeleton}--before--PaddingBottom: 0;
@@ -13,9 +14,9 @@
 
   // After
   --#{$skeleton}--after--LinearGradientAngle: 90deg;
-  --#{$skeleton}--after--LinearGradientColorStop1: var(--#{$pf-global}--palette--black-150);
+  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--after--LinearGradientColorStop2: #ededed;
-  --#{$skeleton}--after--LinearGradientColorStop3: var(--#{$pf-global}--palette--black-150);
+  --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--after--TranslateX: -100%;
   --#{$skeleton}--after--AnimationName: #{$skeleton}-loading;
   --#{$skeleton}--after--AnimationDuration: 2s;
@@ -24,17 +25,17 @@
   --#{$skeleton}--after--AnimationDelay: .5s;
 
   // Circle
-  --#{$skeleton}--m-circle--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
+  --#{$skeleton}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$skeleton}--m-circle--before--PaddingBottom: 100%;
 
   // Text modifiers
-  --#{$skeleton}--m-text-4xl--Height: calc(var(--#{$pf-global}--FontSize--4xl) * var(--#{$pf-global}--LineHeight--sm));
-  --#{$skeleton}--m-text-3xl--Height: calc(var(--#{$pf-global}--FontSize--3xl) * var(--#{$pf-global}--LineHeight--sm));
-  --#{$skeleton}--m-text-2xl--Height: calc(var(--#{$pf-global}--FontSize--2xl) * var(--#{$pf-global}--LineHeight--sm));
-  --#{$skeleton}--m-text-xl--Height: calc(var(--#{$pf-global}--FontSize--xl) * var(--#{$pf-global}--LineHeight--sm));
-  --#{$skeleton}--m-text-lg--Height: calc(var(--#{$pf-global}--FontSize--lg) * var(--#{$pf-global}--LineHeight--md));
-  --#{$skeleton}--m-text-md--Height: calc(var(--#{$pf-global}--FontSize--md) * var(--#{$pf-global}--LineHeight--md));
-  --#{$skeleton}--m-text-sm--Height: calc(var(--#{$pf-global}--FontSize--sm) * var(--#{$pf-global}--LineHeight--md));
+  --#{$skeleton}--m-text-4xl--Height: calc(var(--pf-t--global--font--size--4xl) * var(--pf-t--global--font--line-height--heading));
+  --#{$skeleton}--m-text-3xl--Height: calc(var(--pf-t--global--font--size--3xl) * var(--pf-t--global--font--line-height--heading));
+  --#{$skeleton}--m-text-2xl--Height: calc(var(--pf-t--global--font--size--2xl) * var(--pf-t--global--font--line-height--heading));
+  --#{$skeleton}--m-text-xl--Height: calc(var(--pf-t--global--font--size--xl) * var(--pf-t--global--font--line-height--heading));
+  --#{$skeleton}--m-text-lg--Height: calc(var(--pf-t--global--font--size--lg) * var(--pf-t--global--font--line-height--body));
+  --#{$skeleton}--m-text-md--Height: calc(var(--pf-t--global--font--size--md) * var(--pf-t--global--font--line-height--body));
+  --#{$skeleton}--m-text-sm--Height: calc(var(--pf-t--global--font--size--sm) * var(--pf-t--global--font--line-height--body));
 
   // Width
   --#{$skeleton}--m-width-sm--Width: #{pf-size-prem(100px)};
@@ -56,7 +57,9 @@
   --#{$skeleton}--m-height-66--Height: calc(100% / 3 * 2);
   --#{$skeleton}--m-height-75--Height: 75%;
   --#{$skeleton}--m-height-100--Height: 100%;
+}
 
+.#{$skeleton} {
   position: relative;
   width: var(--#{$skeleton}--Width);
   height: var(--#{$skeleton}--Height);
@@ -206,11 +209,4 @@
   100% {
     transform: translateX(100%);
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/skeleton";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-skeleton;
 }
