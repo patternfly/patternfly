@@ -153,7 +153,6 @@
   &::before {
     position: absolute;
     inset-block-start: 50%;
-    transform: translateY(-50%);
     inset-inline-start: var(--#{$switch}__toggle--before--Left);
     display: block;
     width: var(--#{$switch}__toggle--before--Width);
@@ -163,6 +162,7 @@
     border-radius: var(--#{$switch}__toggle--before--BorderRadius);
     box-shadow: var(--#{$switch}__toggle--before--BoxShadow);
     transition: var(--#{$switch}__toggle--before--Transition);
+    transform: translateY(-50%);
   }
 }
 
