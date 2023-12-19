@@ -213,16 +213,20 @@ For when a plain/icon button is placed inline with text {{#> button button--modi
 
 ### Stateful
 ```hbs
-{{#> button button--modifier="pf-m-stateful"}}
+<strong>Read</strong>
+<br>
+{{#> button button--modifier="pf-m-stateful pf-m-read"}}
   <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 
-{{#> button button--modifier="pf-m-stateful pf-m-clicked"}}
+{{#> button button--modifier="pf-m-stateful pf-m-read pf-m-clicked"}}
   <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 
 <br><br>
 
+<strong>Unread</strong>
+<br>
 {{#> button button--modifier="pf-m-stateful pf-m-unread"}}
   <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
@@ -233,11 +237,13 @@ For when a plain/icon button is placed inline with text {{#> button button--modi
 
 <br><br>
 
-{{#> button button--modifier="pf-m-stateful pf-m-unread pf-m-attention"}}
+<strong>Attention</strong>
+<br>
+{{#> button button--modifier="pf-m-stateful pf-m-attention"}}
   <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 
-{{#> button button--modifier="pf-m-stateful pf-m-unread pf-m-attention pf-m-clicked"}}
+{{#> button button--modifier="pf-m-stateful pf-m-attention pf-m-clicked"}}
   <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 ```
@@ -289,3 +295,4 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-display-lg` | `.pf-v5-c-button`, `pf-v5-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
 | `.pf-m-progress` | `.pf-v5-c-button` | Indicates that the button supports the progress state. **Note:** Not used with the plain variation. |
 | `.pf-m-in-progress` | `.pf-v5-c-button` | Indicates that the button is in the in progress state. |
+| `.pf-m-stateful` | `.pf-v5-c-button` | Indicates that the button is used for one of read, unread, and attention states. **Note:** Always use with a modifier of `.pf-m-read`, `.pf-m-unread`, or `.pf-m-attention`. |

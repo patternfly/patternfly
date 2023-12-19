@@ -136,6 +136,41 @@
   --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--active);
   --#{$button}--m-control--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
 
+  // Stateful
+  --#{$button}--m-stateful--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$button}--m-stateful--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$button}--m-stateful--PaddingRight: var(--pf-t--global--spacer--md);
+
+  // Read
+  --#{$button}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
+  --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-read--hover--BackgroundColor: var(--pf-t--global--background--color--control--hover);
+  --#{$button}--m-read--hover--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$button}--m-read--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--clicked);
+  --#{$button}--m-read--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
+
+  // Unread
+  --#{$button}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
+  --#{$button}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
+  --#{$button}--m-unread__icon--Color: var(--pf-t--global--icon--color--on-brand--default);
+  --#{$button}--m-unread--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
+  --#{$button}--m-unread--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
+  --#{$button}--m-unread--hover__icon--Color: var(--pf-t--global--icon--color--on-brand--hover);
+  --#{$button}--m-unread--m-clicked--Color: var(--pf-t--global--text--color--on-brand--clicked);
+  --#{$button}--m-unread--m-clicked--BackgroundColor: var(--pf-t--global--color--brand--clicked);
+  --#{$button}--m-unread--m-clicked__icon--Color: var(--pf-t--global--icon--color--on-brand--clicked);
+
+  // Attention
+  --#{$button}--m-attention--Color: var(--pf-t--global--text--color--status--on-danger--default);
+  --#{$button}--m-attention--BackgroundColor: var(--pf-t--global--color--status--danger--default);
+  --#{$button}--m-attention__icon--Color: var(--pf-t--global--icon--color--status--on-danger--default);
+  --#{$button}--m-attention--hover--Color: var(--pf-t--global--text--color--status--on-danger--hover);
+  --#{$button}--m-attention--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
+  --#{$button}--m-attention--hover__icon--Color: var(--pf-t--global--icon--color--status--on-danger--hover);
+  --#{$button}--m-attention--m-clicked--Color: var(--pf-t--global--text--color--status--on-danger--clicked);
+  --#{$button}--m-attention--m-clicked--BackgroundColor: var(--pf-t--global--color--status--danger--clicked);
+  --#{$button}--m-attention--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--on-danger--clicked);
+
   // Warning
   --#{$button}--m-warning--Color: var(--pf-t--global--text--color--status--on-warning--default);
   --#{$button}--m-warning--BackgroundColor: var(--pf-t--global--color--status--warning--default);
@@ -396,6 +431,49 @@
     --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-control--m-clicked--BorderColor);
     --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-control--m-clicked--BorderWidth);
     --#{$button}--m-clicked--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
+  }
+
+  // Stateful
+  &.pf-m-stateful {
+    --#{$button}--BorderRadius: var(--#{$button}--m-stateful--BorderRadius);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-stateful--PaddingLeft);
+    --#{$button}--PaddingRight: var(--#{$button}--m-stateful--PaddingRight);
+  }
+
+  // Read
+  &.pf-m-read {
+    --#{$button}--BackgroundColor: var(--#{$button}--m-read--BackgroundColor);
+    --#{$button}--BorderColor: var(--#{$button}--m-read--BorderColor);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-read--hover--BackgroundColor);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-read--hover--BorderColor);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-read--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-read--m-clicked--BorderColor);
+  }
+
+  // Unread
+  &.pf-m-unread {
+    --#{$button}--Color: var(--#{$button}--m-unread--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-unread--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-unread__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-unread--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-unread--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-unread--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-unread--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-unread--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-unread--m-clicked__icon--Color);
+  }
+
+  // Attention
+  &.pf-m-attention {
+    --#{$button}--Color: var(--#{$button}--m-attention--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-attention--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-attention__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-attention--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-attention--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-attention--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-attention--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-attention--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-attention--m-clicked__icon--Color);
   }
 
   // Icon buttons
