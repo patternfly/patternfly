@@ -161,8 +161,26 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{/button}}
 ```
 
-### Link button with a count
+### Counts
 ```hbs isBeta
+{{#*inline "button-counts"}}
+{{#> button button--modifier="pf-m-primary" button--attribute='aria-label="View 7 issues"'}}
+  View issues
+  {{#> button-count}}
+    {{#> badge badge--modifier="pf-m-unread"}}
+      7
+    {{/badge}}
+  {{/button-count}}
+{{/button}}
+{{#> button button--modifier="pf-m-primary" button--attribute='aria-label="View 7 issues"'}}
+  View issues
+  {{#> button-count}}
+    {{#> badge badge--modifier="pf-m-read"}}
+      7
+    {{/badge}}
+  {{/button-count}}
+{{/button}}
+
 {{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
   View issues
   {{#> button-count}}
@@ -179,6 +197,13 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
     {{/badge}}
   {{/button-count}}
 {{/button}}
+{{/inline}}
+
+{{> button-counts}}
+<br>
+<strong>disabled</strong>
+<br>
+{{> button-counts button--IsDisabled=true}}
 ```
 
 ### Plain with no padding

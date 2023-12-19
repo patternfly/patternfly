@@ -1,4 +1,5 @@
-:root {
+:root,
+.#{$button} {
   --#{$button}--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBottom: var(--pf-t--global--spacer--sm);
@@ -114,6 +115,7 @@
   --#{$button}--m-plain--m-clicked--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$button}__progress--Color: var(--#{$button}__icon--Color);
 
   // Control
   --#{$button}--m-control--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -189,15 +191,23 @@
   --#{$button}__progress--TranslateX: 0;
   --#{$button}__progress--Top: 50%;
   --#{$button}__progress--Left: var(--pf-t--global--spacer--md);
+  --#{$button}__progress--Color: var(--#{$button}__icon--Color);
   --#{$button}--m-progress--TransitionProperty: padding;
   --#{$button}--m-progress--TransitionDuration: var(--#{$pf-global}--TransitionDuration);
   --#{$button}--m-progress--PaddingRight: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$button}--m-in-progress--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width));
-  --#{$button}--m-in-progress--m-plain--Color: var(--pf-t--global--color--brand--default);
+  --#{$button}--m-in-progress--m-plain--Color: var(--#{$spinner}--Color);
   --#{$button}--m-in-progress--m-plain__progress--Left: 50%;
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
+
+  // Count
+  --#{$button}__count--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled--default);
+  --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
 }
 
 .#{$button} {
@@ -240,6 +250,10 @@
     --#{$button}--m-clicked--Color: var(--#{$button}--m-primary--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-primary--m-clicked--BackgroundColor);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-primary--m-clicked__icon--Color);
+
+    .#{$badge}.pf-m-unread {
+      border: var(--#{$button}--m-primary__c-badge--BorderWidth) solid var(--#{$button}--m-primary__c-badge--BorderColor);
+    }
   }
 
   // Secondary
@@ -398,6 +412,7 @@
     --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
     --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
+    --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
 
     &.pf-m-no-padding {
       padding: 0;
@@ -454,6 +469,10 @@
   &:disabled,
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
+    --#{$badge}--m-unread--Color: var(--#{$button}--disabled__c-badge--Color);
+    --#{$badge}--m-unread--BackgroundColor: var(--#{$button}--disabled__c-badge--BackgroundColor);
+    --#{$button}--m-primary__c-badge--BorderWidth: 0;
+
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
     
@@ -488,7 +507,6 @@
     }
 
     &.pf-m-plain {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-in-progress--m-plain--Color);
       --#{$button}__progress--Left: var(--#{$button}--m-in-progress--m-plain__progress--Left);
       --#{$button}__progress--TranslateX: var(--#{$button}--m-in-progress--m-plain__progress--TranslateX);
 
@@ -516,6 +534,7 @@
   inset-block-start: var(--#{$button}__progress--Top);
   inset-inline-start: var(--#{$button}__progress--Left);
   line-height: 1;
+  color: var(--#{$button}__progress--Color);
   transform: translate(var(--#{$button}__progress--TranslateX), var(--#{$button}__progress--TranslateY));
 
   .#{$spinner} {
