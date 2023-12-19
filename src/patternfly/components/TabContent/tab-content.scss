@@ -1,25 +1,30 @@
 // @debug $tab-content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
+:root,
 .#{$tab-content} {
   --#{$tab-content}__body--PaddingTop: 0;
   --#{$tab-content}__body--PaddingRight: 0;
   --#{$tab-content}__body--PaddingBottom: 0;
   --#{$tab-content}__body--PaddingLeft: 0;
+  --#{$tab-content}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // Padding
-  --#{$tab-content}__body--m-padding--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$tab-content}__body--m-padding--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$tab-content}__body--m-padding--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$tab-content}__body--m-padding--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingLeft: var(--pf-t--global--spacer--md);
 
   // Match page padding
-  --#{$tab-content}__body--m-padding--xl--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$tab-content}__body--m-padding--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$tab-content}__body--m-padding--xl--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$tab-content}__body--m-padding--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
 
-  // Light
-  --#{$tab-content}--m-light-300: var(--#{$pf-global}--BackgroundColor--light-300);
+  // Secondary modifier
+  --#{$tab-content}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+}
+
+.#{$tab-content} {
+  background-color: var(--#{$tab-content}--BackgroundColor);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$tab-content}__body--m-padding--PaddingTop: var(--#{$tab-content}__body--m-padding--xl--PaddingTop);
@@ -28,9 +33,8 @@
     --#{$tab-content}__body--m-padding--PaddingLeft: var(--#{$tab-content}__body--m-padding--xl--PaddingLeft);
   }
 
-
-  &.pf-m-light-300 {
-    background-color: var(--#{$tab-content}--m-light-300);
+  &.pf-m-secondary {
+    --#{$tab-content}--BackgroundColor: var(--#{$tab-content}--m-secondary--BackgroundColor);
   }
 }
 
