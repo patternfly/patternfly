@@ -1,0 +1,65 @@
+{{> button-list}}
+
+<br><br>
+
+<div><strong>Icon</strong></div>
+{{> button-list button--HasIcon=true}}
+
+<br><br>
+
+<div><strong>Icon end</strong></div>
+{{> button-list button--HasIconEnd=true}}
+
+{{#*inline "button-list"}}
+  {{#> button button--IsPrimary=true}}
+    Primary
+  {{/button}}
+
+  {{#> button button--IsSecondary=true}}
+    Secondary
+  {{/button}}
+
+  {{#> button button--IsSecondary=true button--IsDanger=true}}
+    Secondary danger
+  {{/button}}
+
+  {{#> button button--IsTertiary=true}}
+    Tertiary
+  {{/button}}
+
+  {{#> button button--IsDanger=true}}
+    Danger
+  {{/button}}
+
+  {{#> button button--IsWarning=true}}
+    Warning
+  {{/button}}
+
+  <br><br>
+
+  {{#> button button--IsLink=true}}
+    Link
+  {{/button}}
+
+  {{#> button button--IsLink=true button--IsDanger=true}}
+    Link danger
+  {{/button}}
+
+  {{#> button button--IsLink=true button--IsInline=true}}
+    Inline link
+  {{/button}}
+
+  {{#> button button--IsPlain=true button--attribute='aria-label="Remove"' button--HasIcon=false button--HasIconEnd=false}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+
+  <br><br>
+
+  {{#> button button--IsControl=true}}
+    Control
+  {{/button}}
+
+  {{#> button button--IsControl=true button--HasIcon=false button--HasIconEnd=false button--attribute='aria-label="Copy input"'}}
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  {{/button}}
+{{/inline}}
