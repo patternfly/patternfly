@@ -332,6 +332,7 @@
       text-align: start;
       white-space: normal;
       cursor: pointer;
+      outline-offset: #{pf-size-prem(2px)};
     }
 
     &:where(.pf-m-danger) {
