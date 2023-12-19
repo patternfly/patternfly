@@ -142,22 +142,29 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-shadow-top--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Main section horizontal nav
-  --#{$page}__main-nav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__main-nav--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$page}__main-nav--PaddingRight: 0;
-  --#{$page}__main-nav--PaddingLeft: 0;
-  --#{$page}__main-nav--m-sticky-top--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$page}__main-nav--xl--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$page}__main-nav--xl--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$page}__main-nav--BackgroundColor: transparent;
+
+  // Page main nav body horizontal
+  --#{$page}__main-nav--BackgroundColor: transparent;
+  --#{$page}__main-nav--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$page}__main-nav--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$page}__main-nav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-nav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
+
+  // --#{$page}__main-nav--PaddingRight: 0;
+  // --#{$page}__main-nav--PaddingLeft: 0;
+  // --#{$page}__main-nav--m-sticky-top--PaddingBottom: var(--pf-t--global--spacer--md);
+  // --#{$page}__main-nav--xl--PaddingRight: var(--pf-t--global--spacer--sm);
+  // --#{$page}__main-nav--xl--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // Main section horizontal subnav
-  --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__main-subnav--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$page}__main-subnav--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$page}__main-subnav--BorderLeftWidth: 0;
-  --#{$page}__main-subnav--BorderLeftColor: var(--pf-t--global--border--color--default);
-  --#{$page}__sidebar--main__main-subnav--BorderLeftWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$page}__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth: 0;
+  // --#{$page}__main-subnav--BackgroundColor: transparent;
+  // --#{$page}__main-subnav--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
+  // --#{$page}__main-subnav--BorderTopColor: var(--pf-t--global--border--color--default);
+  // --#{$page}__main-subnav--BorderLeftWidth: 0;
+  // --#{$page}__main-subnav--BorderLeftColor: var(--pf-t--global--border--color--default);
+  // --#{$page}__sidebar--main__main-subnav--BorderLeftWidth: var(--pf-t--global--border--width--divider--default);
+  // --#{$page}__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth: 0;
 
 
   // Main section breadcrumb
@@ -486,7 +493,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
       &.pf-m-sticky-bottom#{$breakpoint-name} {
         position: sticky;
-       inset-block-end: 0;
+        inset-block-end: 0;
         z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
@@ -528,9 +535,12 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-nav {
-  padding-block-start: var(--#{$page}__main-nav--PaddingTop);
-  padding-inline-start: var(--#{$page}__main-nav--PaddingLeft);
-  padding-inline-end: var(--#{$page}__main-nav--PaddingRight);
+  --pf-v5-c-page--section--m-sticky-top--BoxShadow: none;
+
+  padding-block-start: var(--#{$page}__main-nav--PaddingBlockStart);
+  padding-block-end: var(--#{$page}__main-nav--PaddingBlockEnd);
+  padding-inline-start: var(--#{$page}__main-nav--PaddingBlockStart);
+  padding-inline-end: var(--#{$page}__main-nav--PaddingBlockEnd);
   background-color: var(--#{$page}__main-nav--BackgroundColor);
 
   // Responsive height modifiers for sticky top/bottom
@@ -542,24 +552,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       .#{$page}__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
         padding-block-end: var(--#{$page}__main-nav--m-sticky-top--PaddingBottom);
       }
-    }
-  }
-}
-
-.#{$page}__main-subnav {
-  background-color: var(--#{$page}__main-subnav--BackgroundColor);
-  border-block-start: var(--#{$page}__main-subnav--BorderTopWidth) solid var(--#{$page}__main-subnav--BorderTopColor);
-  border-inline-start: var(--#{$page}__main-subnav--BorderLeftWidth) solid var(--#{$page}__main-subnav--BorderLeftColor);
-
-  @at-root .#{$page}__sidebar {
-    ~ .#{$page}__main {
-      @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-        --#{$page}__main-subnav--BorderLeftWidth: var(--#{$page}__sidebar--main__main-subnav--BorderLeftWidth);
-      }
-    }
-
-    &.pf-m-collapsed ~ .#{$page}__main {
-      --#{$page}__main-subnav--BorderLeftWidth: var(--#{$page}__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth);
     }
   }
 }
@@ -684,9 +676,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__main-body {
   .#{$page}__main-nav & {
-    padding-block-start: var(--#{$page}__main-nav--PaddingTop);
-    padding-inline-start: var(--#{$page}__main-nav--PaddingLeft);
-    padding-inline-end: var(--#{$page}__main-nav--PaddingRight);
+    padding-block-start: var(--#{$page}__main-nav--PaddingBlockStart);
+    padding-block-end: var(--#{$page}__main-nav--PaddingBlockEnd);
+    padding-inline-start: var(--#{$page}__main-nav--PaddingInlineStart);
+    padding-inline-end: var(--#{$page}__main-nav--PaddingInlineEnd);
   }
 
   .#{$page}__main-breadcrumb & {

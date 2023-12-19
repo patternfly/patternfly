@@ -213,7 +213,7 @@
   --#{$button}--m-small--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$button}--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$button}--m-small--PaddingLeft: var(--pf-t--global--spacer--md);
-  
+
   // Disabled
   --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
@@ -255,9 +255,12 @@
 
 .#{$button} {
   position: relative;
-  display: inline-block;
+  display: var(--#{$button}--Display);
+  flex: var(--#{$button}--Flex);
+  align-items: var(--#{$button}--AlignItems);
+  justify-content: var(--#{$button}--JustifyContent);
   padding-block-start: var(--#{$button}--PaddingTop);
-  padding-block-end: var(--#{$button}--PaddingBottom); 
+  padding-block-end: var(--#{$button}--PaddingBottom);
   padding-inline-start: var(--#{$button}--PaddingLeft);
   padding-inline-end: var(--#{$button}--PaddingRight);
   font-size: var(--#{$button}--FontSize, inherit);
@@ -271,7 +274,15 @@
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
   border: 0;
-  border-radius: var(--#{$button}--BorderRadius);
+  border-start-start-radius: var(--#{$button}--start-start--Radius--BorderRadius);
+  border-start-end-radius: var(--#{$button}--start-end--Radius--BorderRadius);
+  border-end-start-radius: var(--#{$button}--end-start--Radius--BorderRadius);
+  border-end-end-radius: var(--#{$button}--end-end--Radius--BorderRadius);
+
+  // apply line-height to all children, including fa fonts
+  > * {
+    line-height: var(--#{$button}--LineHeight);
+  }
 
   &::after {
     position: absolute;
@@ -408,7 +419,7 @@
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-warning--m-clicked--BackgroundColor);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-warning--m-clicked__icon--Color);
   }
-  
+
   // Danger
   &.pf-m-danger {
     --#{$button}--Color: var(--#{$button}--m-danger--Color);
@@ -571,7 +582,7 @@
 
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
-    
+
     &::after {
       border-color: transparent;
     }
@@ -609,6 +620,12 @@
       > :not(.#{$button}__progress) {
         opacity: 0;
       }
+    }
+  }
+
+  &.pf-m-RTL-icon-static {
+    .#{$button}__icon {
+      @include pf-v5-mirror-inline-on-rtl
     }
   }
 }

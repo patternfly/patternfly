@@ -8,6 +8,96 @@ import './Navigation.css'
 
 ## Examples
 
+### New spacing
+```hbs
+{{#> nav nav--id='new-spacing-example' nav--aria-label='Global'}}
+  {{#> nav-section nav-section-title--text='Cluster'}}
+    {{#> nav-list}}
+      {{> nav-item nav-link nav-link--text='Dashboard'}}
+      {{> nav-item nav-link nav-link--text='Builds'}}
+      {{> nav-item nav-link nav-link--text='Compute'}}
+      {{> nav-item nav-link nav-link--text='Networking'}}
+      {{> nav-item nav-link nav-link--text='Observe'}}
+      {{> nav-item nav-link nav-link--text='Operators'}}
+      {{> nav-item nav-link--IsCurrent=true nav-link--text='Applications'}}
+      {{> nav-item nav-link nav-link--text='Workloads'}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section-title--text='Settings'}}
+    {{#> nav-list}}
+      {{> nav-item nav-link nav-link--text='User management'}}
+      {{> nav-item nav-link nav-link--text='Administration'}}
+      {{> nav-item nav-link nav-link--text='Import YAML'}}
+      {{> nav-item nav-link nav-link--text='Help & support'}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
+```
+
+## New Expandable
+```hbs
+{{#> nav nav--id='new-expandable-example'}}
+  {{#> nav-section nav-section--id='Cluster' nav-section-title--text='Cluster'}}
+    {{#> nav-list}}
+      {{> nav-item nav-link nav-link--text='Dashboard'}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-list}}
+    {{> nav-item nav-link nav-link--text='Dashboard'}}
+    {{> nav-item nav-link nav-link--text='Builds'}}
+    {{> nav-item nav-link nav-link--text='Compute'}}
+    {{> nav-item nav-link nav-link--text='Networking'}}
+    {{> nav-item nav-link nav-link--text='Observe'}}
+    {{#> nav-item nav-item--IsExpandable=true nav-item--IsExpanded=true nav-link--text='Applications'}}
+      {{#> nav-subnav}}
+        {{> nav-item nav-link--text='Overview'}}
+        {{> nav-item nav-link--text='Logs'}}
+        {{> nav-item nav-link--text='Events'}}
+        {{#> nav-item nav-item--IsExpandable=true nav-item--IsExpanded=true nav-link--text='Applications'}}
+          {{#> nav-subnav}}
+            {{> nav-item nav-link--text='Overview'}}
+            {{> nav-item nav-link--text='Logs'}}
+
+            {{#> nav-item nav-item--IsExpandable=true nav-item--IsExpanded=true nav-link--text='Applications'}}
+              {{#> nav-subnav}}
+                {{> nav-item nav-link--text='Overview'}}
+                {{> nav-item nav-link--text='Logs'}}
+                {{> nav-item nav-link--IsCurrent=true nav-link--text='Events'}}
+                {{#> nav-item nav-item--IsExpandable=true nav-item--IsExpanded=true nav-link--text='Applications'}}
+                  {{#> nav-subnav}}
+                    {{> nav-item nav-link--text='Overview'}}
+                    {{> nav-item nav-link--text='Logs'}}
+                    {{> nav-item nav-link--text='Events'}}
+                  {{/nav-subnav}}
+                {{/nav-item}}
+              {{/nav-subnav}}
+            {{/nav-item}}
+
+            {{> nav-item nav-link--text='Events'}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{> nav-item nav-link nav-link--text='Operators'}}
+    {{#> nav-item nav-item--IsExpandable=true nav-link--text='Cluster'}}
+      {{#> nav-subnav}}
+        {{> nav-item nav-link nav-link--text='Dashboard'}}
+        {{> nav-item nav-link nav-link--text='Builds'}}
+        {{> nav-item nav-link nav-link--text='Compute'}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsExpandable=true nav-item--IsExpanded=true nav-link--text='Settings'}}
+      {{#> nav-subnav}}
+        {{> nav-item nav-link nav-link--text='User management'}}
+        {{> nav-item nav-link nav-link--text='Administration'}}
+        {{> nav-item nav-link nav-link--text='Import YAML'}}
+        {{> nav-item nav-link nav-link--text='Help & support'}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ### Default
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
@@ -135,7 +225,7 @@ import './Navigation.css'
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
         Link 1 (current and expanded example)
       {{/nav-link}}
@@ -157,7 +247,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
@@ -174,7 +264,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true"}}
+    {{#> nav-item nav-item--IsExpandable="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3"'}}
         Link 3
       {{/nav-link}}
@@ -199,7 +289,7 @@ import './Navigation.css'
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#"}}
         Link 1
       {{/nav-link}}
@@ -221,7 +311,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
       {{#> nav-link nav-link--href="#"}}
         Link 2
       {{/nav-link}}
@@ -251,7 +341,7 @@ import './Navigation.css'
         Link 1 (not expandable)
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
@@ -268,7 +358,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
         Link 3 (current, but not expanded example)
       {{/nav-link}}
@@ -313,7 +403,7 @@ import './Navigation.css'
         Releases
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true"}}
+    {{#> nav-item nav-item--IsExpandable="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-example-1"')}}
         Subscriptions
       {{/nav-link}}
@@ -330,7 +420,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-example-2"')}}
         Cost management
       {{/nav-link}}
@@ -345,7 +435,7 @@ import './Navigation.css'
             Openshift
           {{/nav-link}}
         {{/nav-item}}
-        {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+        {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-sub-example-1"')}}
             Public clouds
           {{/nav-link}}
@@ -413,7 +503,11 @@ import './Navigation.css'
 
 ### Horizontal overflow
 ```hbs
-{{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+{{#> nav nav--HasScroll=true
+    nav--IsHorizontal=true
+    nav--IsScrollable=true
+    nav--attribute='aria-label="Global"'
+  }}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -532,7 +626,7 @@ When using anything other than a text node for the link text, wrap the link text
         Link 1 <i class="fas fa-arrow-right" aria-hidden="true"></i>
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-link-text-link2"'}}
         Link 2 <small>(small text)</small>
       {{/nav-link}}
@@ -551,7 +645,7 @@ When using anything other than a text node for the link text, wrap the link text
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-link-text-link4"'}}
         Link 3
         <strong>(strong text)</strong>
@@ -618,12 +712,10 @@ The navigation system relies on several different sub-components:
 | `.pf-v5-c-nav__scroll-button` | `<button>` | Initiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-m-horizontal` | `.pf-v5-c-nav` | Modifies nav for the horizontal variation. |
 | `.pf-m-horizontal-subnav` | `.pf-v5-c-nav` | Modifies nav for the horizontal subnav variation. |
-| `.pf-m-tertiary` | `.pf-v5-c-nav` | Modifies nav for the tertiary variation. |
-| `.pf-m-light` | `.pf-v5-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-v5-c-page__sidebar`)**. |
+| `.pf-m-full-width` | `.pf-v5-c-nav` | Modifies nav for to full width of parent. |
 | `.pf-m-flyout` | `.pf-v5-c-nav__item` | Modifies nav item for the flyout variation. |
 | `.pf-m-scrollable` | `.pf-v5-c-nav` | Modifies nav for the scrollable state. |
 | `.pf-m-expandable` | `.pf-v5-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-v5-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-current` | `.pf-v5-c-nav__link` | Modifies for the current state. |
 | `.pf-m-hover` | `.pf-v5-c-nav__link` | Modifies for the hover state. |
-| `.pf-m-start` | `.pf-v5-c-nav__toggle` | Modifies nav toggle to align left. |

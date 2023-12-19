@@ -301,8 +301,6 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-block` | `.pf-v5-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-v5-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
 | `.pf-m-expanded` | `.pf-v5-c-button.pf-m-control` | Modifies a control button for the expanded state. |
-| `.pf-m-start` | `.pf-v5-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
-| `.pf-m-end` | `.pf-v5-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-active` | `.pf-v5-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
 | `.pf-m-small` | `.pf-v5-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-v5-c-button` | Modifies a button to be visually disabled, yet is still focusable. |

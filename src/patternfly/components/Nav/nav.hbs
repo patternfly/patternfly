@@ -5,20 +5,16 @@
       nav--IsScrollable='pf-m-scrollable'
       nav--modifier=nav--modifier
     }}"
-  {{#if aria-label}}
-    aria-label="{{aria-label}}"
-  {{/if}}
+  {{#ifAny aria-label nav--aria-label}}
+    aria-label="{{aria-label}}{{nav--aria-label}}"
+  {{/ifAny}}
   {{#if nav--attribute}}
     {{{nav--attribute}}}
   {{/if}}>
   {{#if nav--HasScroll}}
-    {{> nav-scroll-button nav-scroll-button--attribute="disabled" nav-scroll-button--IsLeft="true"}}
+    {{> nav-scroll-button nav-scroll-button--IsStart="true"}}
     {{> @partial-block}}
-    {{#if nav--IsScrollable}}
-      {{> nav-scroll-button nav-scroll-button--IsRight="true"}}
-    {{else}}
-      {{> nav-scroll-button nav-scroll-button--attribute="disabled" nav-scroll-button--IsRight="true"}}
-    {{/if}}
+    {{> nav-scroll-button nav-scroll-button--IsEnd="true"}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
