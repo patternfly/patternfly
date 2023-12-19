@@ -97,6 +97,7 @@
   --#{$button}--m-link--m-inline__progress--Left: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--#{$button}--m-link--m-inline__progress--Left) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -324,6 +325,8 @@
       --#{$button}--hover--BackgroundColor: transparent;
       --#{$button}--m-clicked--BackgroundColor: transparent;
       --#{$button}--disabled--BackgroundColor: transparent;
+      --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
+      --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
 
       display: inline;
       text-align: start;
