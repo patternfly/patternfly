@@ -123,6 +123,8 @@
 
   // Control
   --#{$button}--m-control--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$button}--m-control--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$button}--m-control--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$button}--m-control--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--m-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-control--BorderColor: var(--pf-t--global--border--color--default);
@@ -419,6 +421,8 @@
   // Control
   &.pf-m-control {
     --#{$button}--BorderRadius: var(--#{$button}--m-control--BorderRadius);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-control--PaddingLeft);
+    --#{$button}--PaddingRight: var(--#{$button}--m-control--PaddingRight);
     --#{$button}--Color: var(--#{$button}--m-control--Color);
     --#{$button}--BackgroundColor: var(--#{$button}--m-control--BackgroundColor);
     --#{$button}--BorderColor: var(--#{$button}--m-control--BorderColor);
