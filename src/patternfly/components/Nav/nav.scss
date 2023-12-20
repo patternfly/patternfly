@@ -20,6 +20,7 @@
   --#{$nav}--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$nav}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$nav}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$nav}--OutlineOffset: calc(var(--#{$pf-global}--spacer--xs) * -1);
 
   // * Nav list
   --#{$nav}__list--ScrollSnapTypeAxis: x;
@@ -326,6 +327,7 @@
     inset-block: 0;
     inset-inline: 0;
     content: "";
+    outline-offset: var(--#{$nav}--OutlineOffset);
   }
 
   &:first-of-type {
@@ -382,6 +384,10 @@
     -webkit-overflow-scrolling: touch;
 
     @include pf-v5-overflow-hide-scroll;
+  }
+
+  .#{$nav}__link {
+    outline-offset: var(--#{$nav}--OutlineOffset);
   }
 
   .#{$nav}__link::before { // - Nav link before
