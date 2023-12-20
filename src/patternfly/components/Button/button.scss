@@ -89,6 +89,8 @@
 
   // Inline link
   --#{$button}--m-link--m-inline--FontSize: initial;
+  --#{$button}--m-link--m-inline--LineHeight: initial;
+  --#{$button}--m-link--m-inline--FontWeight: initial;
   --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
   --#{$button}--m-link--m-inline--PaddingTop: 0;
   --#{$button}--m-link--m-inline--PaddingRight: 0;
@@ -259,8 +261,8 @@
   padding-inline-start: var(--#{$button}--PaddingLeft);
   padding-inline-end: var(--#{$button}--PaddingRight);
   font-size: var(--#{$button}--FontSize, inherit);
-  font-weight: var(--#{$button}--FontWeight);
-  line-height: var(--#{$button}--LineHeight);
+  font-weight: var(--#{$button}--FontWeight, inherit);
+  line-height: var(--#{$button}--LineHeight, inherit);
   color: var(--#{$button}--Color);
   text-align: center;
   text-decoration: var(--#{$button}--TextDecoration);
@@ -355,6 +357,8 @@
 
     &.pf-m-inline {
       --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
+      --#{$button}--LineHeight: var(--#{$button}--m-link--m-inline--LineHeight);
+      --#{$button}--FontWeight: var(--#{$button}--m-link--m-inline--FontWeight);
       --#{$button}--PaddingTop: var(--#{$button}--m-link--m-inline--PaddingTop);
       --#{$button}--PaddingRight: var(--#{$button}--m-link--m-inline--PaddingRight);
       --#{$button}--PaddingBottom: var(--#{$button}--m-link--m-inline--PaddingBottom);
