@@ -117,6 +117,9 @@
   --#{$button}--m-plain--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--on-disabled);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
+  --#{$button}--m-plain--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
+  --#{$button}--m-plain--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--m-plain--PaddingTop) + var(--#{$button}--m-plain--PaddingBottom));
+
 
   // Control
   --#{$button}--m-control--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -500,7 +503,8 @@
       padding: 0;
     }
 
-    mix-blend-mode: var(--pf-t--global--background--color--action--plain--hover--blend);
+    min-width: var(--#{$button}--m-plain--MinWidth);
+    mix-blend-mode: var(--#{$button}--m-plain--MixBlendMode);
   }
 
   &.pf-m-block {
