@@ -63,13 +63,13 @@ import './Button.css'
 ```hbs
 <strong>Plain</strong>
 <br>
-{{#> button button--IsSpan=true button--IsPlain=true}}
+{{#> button button--attribute='aria-label="Remove"' button--IsSpan=true button--IsPlain=true}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br><br>
 <strong>Plain no padding</strong>
 <br>
-{{#> button button--IsSpan=true button--IsPlain=true button--HasNoPadding=true}}
+{{#> button button--attribute='aria-label="Remove"' button--IsSpan=true button--IsPlain=true button--HasNoPadding=true}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br><br>
