@@ -1,9 +1,19 @@
 <{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}} class="{{pfv}}button
+  {{#if button--IsPrimary}} pf-m-primary{{/if}}
+  {{#if button--IsSecondary}} pf-m-secondary{{/if}}
+  {{#if button--IsTertiary}} pf-m-tertiary{{/if}}
+  {{#if button--IsWarning}} pf-m-warning{{/if}}
+  {{#if button--IsDanger}} pf-m-danger{{/if}}
+  {{#if button--IsLink}} pf-m-link{{/if}}
+  {{#if button--IsPlain}} pf-m-plain{{/if}}
+  {{#if button--IsInline}} pf-m-inline{{/if}}
+  {{#if button--IsControl}} pf-m-control{{/if}}
   {{#if button--IsExpanded}} pf-m-expanded{{/if}}
   {{#if button--IsProgress}} pf-m-progress{{/if}}
   {{#if button--IsInProgress}} pf-m-in-progress{{/if}}
-  {{#if button--IsInline}} pf-m-inline{{/if}}
-  {{#if button--IsPlain}} pf-m-plain{{/if}}
+  {{#if button--IsAriaDisabled}} pf-m-aria-disabled{{/if}}
+  {{#if button--IsSmall}} pf-m-small{{/if}}
+  {{#if button--IsClicked}} pf-m-clicked{{/if}}
   {{#if button--IsDisabled}}
     {{#if (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
       pf-m-disabled
@@ -29,6 +39,9 @@
   {{#if button--aria-label}}
     aria-label="{{button--aria-label}}"
   {{/if}}
+  {{#if button--IsAriaDisabled}}
+    aria-disabled="true"
+  {{/if}}
   {{#if button--IsDisabled}}
     {{#unless (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
       disabled
@@ -43,5 +56,15 @@
   {{#if button--IsInProgress}}
     {{> button-progress}}
   {{/if}}
+  {{#if button--HasIcon}}
+    {{#> button-icon button-icon--modifier="pf-m-start"}}
+      <i class="fas fa-plus-circle" aria-hidden="true"></i>
+    {{/button-icon}}
+  {{/if}}
   {{> @partial-block}}
+  {{#if button--HasIconEnd}}
+    {{#> button-icon button-icon--modifier="pf-m-end"}}
+      <i class="fas fa-plus-circle" aria-hidden="true"></i>
+    {{/button-icon}}
+  {{/if}}
 </{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}}>

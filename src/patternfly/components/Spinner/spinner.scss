@@ -1,5 +1,6 @@
 // @debug $spinner; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$spinner} {
   --#{$spinner}--diameter: var(--#{$pf-global}--icon--FontSize--xl);
   --#{$spinner}--Width: var(--#{$spinner}--diameter);
@@ -14,7 +15,9 @@
 
   // inline
   --#{$spinner}--m-inline--diameter: 1em;
+}
 
+.#{$spinner} {
   width: var(--#{$spinner}--Width);
   height: var(--#{$spinner}--Height);
   overflow: hidden;
