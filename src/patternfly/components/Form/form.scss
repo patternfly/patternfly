@@ -255,6 +255,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-label-info {
+  margin-inline-start: var(--#{$form}__group-label-info--MarginLeft);
   font-size: var(--#{$form}__group-label-info--FontSize);
 }
 
