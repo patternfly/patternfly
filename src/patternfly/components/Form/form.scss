@@ -317,8 +317,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-control {
-  display: grid;
-  gap: var(--#{$form}__group-control--Gap);
   min-width: 0;
 
   &.pf-m-inline {
@@ -336,9 +334,9 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   &.pf-m-stack {
     --#{$form}__helper-text--MarginTop: var(--#{$form}__group-control--m-stack__helper-text--MarginTop);
-    --#{$form}__group-control--Gap: var(--#{$form}__group-control--m-stack--Gap);
 
     display: grid;
+    gap: var(--#{$form}__group-control--m-stack--Gap);
   }
 
   .#{$form}__helper-text:first-child {
