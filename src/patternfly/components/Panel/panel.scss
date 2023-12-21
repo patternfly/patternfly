@@ -22,7 +22,7 @@
   // raised
   --#{$panel}--m-raised--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$panel}--m-raised--ZIndex: var(--pf-t--global--Zindex--sm);
-  --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // header
   --#{$panel}__header--PaddingTop: var(--pf-t--global--spacer--md);
@@ -50,7 +50,7 @@
   // scrollable
   --#{$panel}--m-scrollable__main--MaxHeight: #{pf-size-prem(300px)};
   --#{$panel}--m-scrollable__main--Overflow: auto;
-  --#{$panel}--m-scrollable__footer--BoxShadow: 0 #{pf-size-prem(-5px)} #{pf-size-prem(4px)} #{pf-size-prem(-4px)} #{rgba($pf-v5-color-black-1000, .16)}; // insets the shadow so it doesn't show on left/right sides
+  --#{$panel}--m-scrollable__footer--BoxShadow: 0 #{pf-size-prem(-5px)} #{pf-size-prem(4px)} #{pf-size-prem(-4px)} rgba(0 0 0 / 16%); // insets the shadow so it doesn't show on left/right sides
 }
 
 .#{$panel} {
