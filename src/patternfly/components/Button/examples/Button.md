@@ -61,8 +61,22 @@ import './Button.css'
 
 ### Inline link as span
 ```hbs
+<strong>Plain</strong>
+<br>
+{{#> button button--attribute='aria-label="Remove"' button--IsSpan=true button--IsPlain=true}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+<br><br>
+<strong>Plain no padding</strong>
+<br>
+{{#> button button--attribute='aria-label="Remove"' button--IsSpan=true button--IsPlain=true button--HasNoPadding=true}}
+  <i class="fas fa-times" aria-hidden="true"></i>
+{{/button}}
+<br><br>
+<strong>Inline link</strong>
+<br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-{{#> button button--IsInlineLinkSpan="true" button--modifier="pf-m-link pf-m-inline"}}
+{{#> button button--IsSpan="true" button--modifier="pf-m-link pf-m-inline"}}
   This is long button text that needs to be a span so that it will wrap inline with the text around it.
 {{/button}}
 Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum velit elementum non.
@@ -271,7 +285,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
+| `.pf-v5-c-button` | `<button>, <span>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-v5-c-button__icon` | `<span>` | Initiates a button icon. |
 | `.pf-v5-c-button__progress` | `<span>` | Initiates a button progress container. |
 | `.pf-v5-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
