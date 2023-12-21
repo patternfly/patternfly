@@ -1,4 +1,4 @@
-<{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}} class="{{pfv}}button
+<{{#if button--type}}{{button--type}}{{else if button--IsSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}} class="{{pfv}}button
   {{#if button--IsPrimary}} pf-m-primary{{/if}}
   {{#if button--IsSecondary}} pf-m-secondary{{/if}}
   {{#if button--IsTertiary}} pf-m-tertiary{{/if}}
@@ -12,10 +12,11 @@
   {{#if button--IsProgress}} pf-m-progress{{/if}}
   {{#if button--IsInProgress}} pf-m-in-progress{{/if}}
   {{#if button--IsAriaDisabled}} pf-m-aria-disabled{{/if}}
+  {{#if button--HasNoPadding}} pf-m-no-padding{{/if}}
   {{#if button--IsSmall}} pf-m-small{{/if}}
   {{#if button--IsClicked}} pf-m-clicked{{/if}}
   {{#if button--IsDisabled}}
-    {{#if (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
+    {{#if (concat button--type button--IsSpan button--IsAnchor)}}
       pf-m-disabled
     {{/if}}
   {{/if}}
@@ -32,7 +33,7 @@
   {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
     aria-expanded="true"
   {{/if}}
-  {{#if button--IsInlineLinkSpan}}
+  {{#if button--IsSpan}}
     role="button"
     tabindex="0"
   {{/if}}
@@ -43,7 +44,7 @@
     aria-disabled="true"
   {{/if}}
   {{#if button--IsDisabled}}
-    {{#unless (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
+    {{#unless (concat button--type button--IsSpan button--IsAnchor)}}
       disabled
     {{/unless}}
   {{/if}}
@@ -67,4 +68,4 @@
       <i class="fas fa-plus-circle" aria-hidden="true"></i>
     {{/button-icon}}
   {{/if}}
-</{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}}>
+</{{#if button--type}}{{button--type}}{{else if button--IsSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}}>

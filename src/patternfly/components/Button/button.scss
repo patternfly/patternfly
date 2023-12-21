@@ -267,6 +267,7 @@
   text-align: center;
   text-decoration: var(--#{$button}--TextDecoration);
   white-space: nowrap;
+  cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
   border: 0;
@@ -375,7 +376,6 @@
       display: inline;
       text-align: start;
       white-space: normal;
-      cursor: pointer;
       outline-offset: #{pf-size-prem(2px)};
     }
 
@@ -508,7 +508,9 @@
     --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
 
     &.pf-m-no-padding {
+      min-width: auto;
       padding: 0;
+      background-color: transparent;
     }
 
     min-width: var(--#{$button}--m-plain--MinWidth);
