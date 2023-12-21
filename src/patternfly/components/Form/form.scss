@@ -82,20 +82,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__label-required--Color: var(--pf-t--global--color--status--danger--default);
 
   // Field level help
-  --#{$form}__group-label-help--BackgroundColor: transparent;
-  --#{$form}__group-label-help--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$form}__group-label-help--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$form}__group-label-help--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$form}__group-label-help--PaddingLeft: var(--pf-t--global--spacer--xs);
-  --#{$form}__group-label-help--MarginTop: calc(var(--#{$form}__group-label-help--PaddingTop) * -1);
-  --#{$form}__group-label-help--MarginRight: calc(var(--#{$form}__group-label-help--PaddingRight) * -1);
-  --#{$form}__group-label-help--MarginBottom: calc(var(--#{$form}__group-label-help--PaddingBottom) * -1);
-  --#{$form}__group-label-help--MarginLeft: calc(var(--#{$form}__group-label-help--PaddingLeft) * -1 + var(--pf-t--global--spacer--xs));
   --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$form}__group-label-help--TranslateY: #{pf-size-prem(2px)};
-  --#{$form}__group-label-help--Color: var(--pf-t--global--icon--color--regular);
-  --#{$form}__group-label-help--hover--Color: var(--pf-t--global--icon--color--regular);
-  --#{$form}__group-label-help--focus--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Form group label info
   --#{$form}__group-label-info--MarginLeft: var(--pf-t--global--spacer--sm);
@@ -291,28 +278,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-label-help {
-  padding-block-start: var(--#{$form}__group-label-help--PaddingTop);
-  padding-block-end: var(--#{$form}__group-label-help--PaddingBottom);
-  padding-inline-start: var(--#{$form}__group-label-help--PaddingLeft);
-  padding-inline-end: var(--#{$form}__group-label-help--PaddingRight);
-  margin-block-start: var(--#{$form}__group-label-help--MarginTop);
-  margin-block-end: var(--#{$form}__group-label-help--MarginBottom);
-  margin-inline-start: var(--#{$form}__group-label-help--MarginLeft);
-  margin-inline-end: var(--#{$form}__group-label-help--MarginRight);
-  font-size: var(--#{$form}__group-label-help--FontSize);
-  line-height: 1;
-  color: var(--#{$form}__group-label-help--Color);
-  cursor: pointer;
-  background-color: var(--#{$form}__group-label-help--BackgroundColor);
-  border: 0;
-  transform: translateY(var(--#{$form}__group-label-help--TranslateY));
-
-  &:hover {
-    --#{$form}__group-label-help--Color: var(--#{$form}__group-label-help--hover--Color);
-  }
-
-  &:focus-within {
-    --#{$form}__group-label-help--Color: var(--#{$form}__group-label-help--focus--Color);
+  .#{$button} {
+    --#{$button}--FontSize: var(--#{$form}__group-label-help--FontSize);
   }
 }
 
