@@ -16,6 +16,17 @@ cssPrefix: pf-v5-c-panel
 {{/panel}}
 ```
 
+### Secondary
+```hbs
+{{#> panel panel--modifier="pf-m-secondary"}}
+  {{#> panel-main}}
+    {{#> panel-main-body}}
+      Main content with secondary styling
+    {{/panel-main-body}}
+  {{/panel-main}}
+{{/panel}}
+```
+
 ### Header
 ```hbs
 {{#> panel}}
@@ -148,3 +159,4 @@ cssPrefix: pf-v5-c-panel
 | `.pf-m-bordered` | `.pf-v5-c-panel` | Modifies the panel for bordered styles. |
 | `.pf-m-raised` | `.pf-v5-c-panel` | Modifies the panel for raised styles. |
 | `.pf-m-scrollable` | `.pf-v5-c-panel` | Modifies the panel for scrollable styles. |
+| `.pf-m-secondary` | `.pf-v5-c-panel` | Modifies the panel for secondary styles. |

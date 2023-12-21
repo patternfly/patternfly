@@ -1,53 +1,59 @@
 // @debug $panel; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$panel} {
   --#{$panel}--Width: auto;
   --#{$panel}--MinWidth: auto;
   --#{$panel}--MaxWidth: none;
   --#{$panel}--ZIndex: auto;
-  --#{$panel}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$panel}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$panel}--BoxShadow: none;
 
   // border
   --#{$panel}--before--BorderWidth: 0;
-  --#{$panel}--before--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$panel}--before--BorderColor: var(--pf-t--global--border--color--default);
+
+  // secondary modifier
+  --#{$panel}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // bordered
-  --#{$panel}--m-bordered--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--regular);
 
   // raised
-  --#{$panel}--m-raised--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-  --#{$panel}--m-raised--ZIndex: var(--#{$pf-global}--ZIndex--sm);
-  --#{$panel}--m-raised--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$panel}--m-raised--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$panel}--m-raised--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // header
-  --#{$panel}__header--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__header--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__header--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__header--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$panel}__header--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$panel}__header--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$panel}__header--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$panel}__header--PaddingLeft: var(--pf-t--global--spacer--md);
 
   // main
   --#{$panel}__main--MaxHeight: none;
   --#{$panel}__main--Overflow: visible;
 
   // body
-  --#{$panel}__main-body--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__main-body--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__main-body--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__main-body--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$panel}__main-body--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$panel}__main-body--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$panel}__main-body--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$panel}__main-body--PaddingLeft: var(--pf-t--global--spacer--md);
 
   // footer
-  --#{$panel}__footer--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__footer--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__footer--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$panel}__footer--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$panel}__footer--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$panel}__footer--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$panel}__footer--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$panel}__footer--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$panel}__footer--BoxShadow: none;
 
   // scrollable
   --#{$panel}--m-scrollable__main--MaxHeight: #{pf-size-prem(300px)};
   --#{$panel}--m-scrollable__main--Overflow: auto;
-  --#{$panel}--m-scrollable__footer--BoxShadow: 0 #{pf-size-prem(-5px)} #{pf-size-prem(4px)} #{pf-size-prem(-4px)} #{rgba($pf-v5-color-black-1000, .16)}; // insets the shadow so it doesn't show on left/right sides
+  --#{$panel}--m-scrollable__footer--BoxShadow: 0 #{pf-size-prem(-5px)} #{pf-size-prem(4px)} #{pf-size-prem(-4px)} rgba(0 0 0 / 16%); // insets the shadow so it doesn't show on left/right sides
+}
 
+.#{$panel} {
   position: relative;
   z-index: var(--#{$panel}--ZIndex);
   width: var(--#{$panel}--Width);
@@ -66,6 +72,10 @@
 
   &.pf-m-bordered {
     --#{$panel}--before--BorderWidth: var(--#{$panel}--m-bordered--before--BorderWidth);
+  }
+
+  &.pf-m-secondary {
+    --#{$panel}--BackgroundColor: var(--#{$panel}--m-secondary--BackgroundColor);
   }
 
   &.pf-m-raised {
@@ -106,11 +116,4 @@
   padding-inline-start: var(--#{$panel}__footer--PaddingLeft);
   padding-inline-end: var(--#{$panel}__footer--PaddingRight);
   box-shadow: var(--#{$panel}__footer--BoxShadow);
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/panel";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-panel;
 }
