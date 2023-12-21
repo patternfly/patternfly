@@ -2,17 +2,24 @@
 
 :root,
 .#{$spinner} {
-  --#{$spinner}--diameter: var(--#{$pf-global}--icon--FontSize--xl);
+  --#{$spinner}--diameter: var(--pf-t--global--icon--size--2xl);
   --#{$spinner}--Width: var(--#{$spinner}--diameter);
   --#{$spinner}--Height: var(--#{$spinner}--diameter);
-  --#{$spinner}--Color: var(--#{$pf-global}--primary-color--100);
+  --#{$spinner}--Color: var(--pf-t--global--icon--color--brand--default);
+  --#{$spinner}--AnimationDuration: 1.4s;
+  --#{$spinner}--AnimationTimingFunction: linear;
+  --#{$spinner}--StrokeWidth: 10;
 
+  // path
+  --#{$spinner}__path--StrokeWidth: var(--#{$spinner}--StrokeWidth);
+  --#{$spinner}__path--AnimationTimingFunction: ease-in-out;
+  
   // sizes
-  --#{$spinner}--m-sm--diameter: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$spinner}--m-md--diameter: var(--#{$pf-global}--icon--FontSize--md);
-  --#{$spinner}--m-lg--diameter: var(--#{$pf-global}--icon--FontSize--lg);
-  --#{$spinner}--m-xl--diameter: var(--#{$pf-global}--icon--FontSize--xl);
-
+  --#{$spinner}--m-sm--diameter: var(--pf-t--global--icon--size--md);
+  --#{$spinner}--m-md--diameter: var(--pf-t--global--icon--size--lg);
+  --#{$spinner}--m-lg--diameter: var(--pf-t--global--icon--size--xl);
+  --#{$spinner}--m-xl--diameter: var(--pf-t--global--icon--size--2xl);
+  
   // inline
   --#{$spinner}--m-inline--diameter: 1em;
 }
@@ -21,6 +28,7 @@
   width: var(--#{$spinner}--Width);
   height: var(--#{$spinner}--Height);
   overflow: hidden;
+  animation: #{$spinner}-animation-rotate calc(var(--#{$spinner}--AnimationDuration) * 2) var(--#{$spinner}--AnimationTimingFunction) infinite;
 
   // Modifiers change the variables for size variations
   &.pf-m-inline {
@@ -44,45 +52,6 @@
   }
 }
 
-// stylelint-disable selector-no-qualifying-type
-svg.#{$spinner} {
-  --#{$spinner}--diameter: var(--#{$pf-global}--icon--FontSize--xl);
-  --#{$spinner}--AnimationDuration: 1.4s;
-  --#{$spinner}--AnimationTimingFunction: linear;
-  --#{$spinner}--stroke-width: 10;
-
-  // path
-  --#{$spinner}__path--Stroke: var(--#{$spinner}--Color);
-  --#{$spinner}__path--StrokeWidth: var(--#{$spinner}--stroke-width);
-  --#{$spinner}__path--AnimationTimingFunction: ease-in-out;
-
-  // size modifiers
-  --#{$spinner}--m-sm--diameter: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$spinner}--m-md--diameter: var(--#{$pf-global}--icon--FontSize--md);
-  --#{$spinner}--m-lg--diameter: var(--#{$pf-global}--icon--FontSize--lg);
-  --#{$spinner}--m-xl--diameter: var(--#{$pf-global}--icon--FontSize--xl);
-
-  animation: #{$spinner}-animation-rotate calc(var(--#{$spinner}--AnimationDuration) * 2) var(--#{$spinner}--AnimationTimingFunction) infinite;
-
-  // Modifiers change the variables for size variations
-  &.pf-m-sm {
-    --#{$spinner}--diameter: var(--#{$spinner}--m-sm--diameter);
-  }
-
-  &.pf-m-md {
-    --#{$spinner}--diameter: var(--#{$spinner}--m-md--diameter);
-  }
-
-  &.pf-m-lg {
-    --#{$spinner}--diameter: var(--#{$spinner}--m-lg--diameter);
-  }
-
-  &.pf-m-xl {
-    --#{$spinner}--diameter: var(--#{$spinner}--m-xl--diameter);
-  }
-}
-// stylelint-enable
-
 .#{$spinner}__path {
   width: 100%;
   height: 100%;
@@ -90,7 +59,7 @@ svg.#{$spinner} {
   stroke-dasharray: 283;
   stroke-dashoffset: 280;
   stroke-linecap: round;
-  stroke-width: var(--#{$spinner}--stroke-width);
+  stroke-width: var(--#{$spinner}--StrokeWidth);
   transform-origin: 50% 50%;
   animation: #{$spinner}-animation-dash var(--#{$spinner}--AnimationDuration) var(--#{$spinner}__path--AnimationTimingFunction) infinite;
 }
