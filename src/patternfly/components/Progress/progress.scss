@@ -16,20 +16,21 @@
   --#{$progress}__helper-text--MarginTop: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
   
   // Modifier variables
-  --#{$progress}--m-success__bar--BackgroundColor: var(--pf-t--global--color--status--success--default);
-  --#{$progress}--m-warning__bar--BackgroundColor: var(--pf-t--global--color--status--warning--default);
-  --#{$progress}--m-danger__bar--BackgroundColor: var(--pf-t--global--color--status--danger--default);
-  --#{$progress}--m-success__status-icon--Color: var(--pf-t--global--color--status--success--default);
-  --#{$progress}--m-warning__status-icon--Color: var(--pf-t--global--color--status--warning--default);
-  --#{$progress}--m-danger__status-icon--Color: var(--pf-t--global--color--status--danger--default);
+  --#{$progress}--m-success__indicator--BackgroundColor: var(--pf-t--global--color--status--success--default);
+  --#{$progress}--m-warning__indicator--BackgroundColor: var(--pf-t--global--color--status--warning--default);
+  --#{$progress}--m-danger__indicator--BackgroundColor: var(--pf-t--global--color--status--danger--default);
+  --#{$progress}--m-success__status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$progress}--m-warning__status-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$progress}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$progress}--m-inside__indicator--MinWidth: var(--pf-t--global--spacer--xl);
   --#{$progress}--m-inside__measure--Color: var(--pf-t--global--text--color--on-brand--default);
+  --#{$progress}--m-success--m-inside__measure--Color: var(--pf-t--global--text--color--status--on-success--default);
   --#{$progress}--m-warning--m-inside__measure--Color: var(--pf-t--global--text--color--status--on-warning--default);
   --#{$progress}--m-danger--m-inside__measure--Color: var(--pf-t--global--text--color--status--on-danger--default);
   --#{$progress}--m-inside__measure--FontSize: var(--pf-t--global--font--size--sm);
   --#{$progress}--m-outside__measure--FontSize: var(--pf-t--global--font--size--sm);
   --#{$progress}--m-sm__bar--Height: var(--pf-t--global--spacer--sm);
-  --#{$progress}--m-sm__measure--FontSize: var(--pf-t--global--font--size--xs);
+  --#{$progress}--m-sm__measure--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$progress}--m-lg__bar--Height: var(--pf-t--global--spacer--lg);
 }
 
@@ -124,18 +125,19 @@
 
   // status modifiers
   &.pf-m-success {
-    --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-success__bar--BackgroundColor);
+    --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-success__indicator--BackgroundColor);
     --#{$progress}__status-icon--Color: var(--#{$progress}--m-success__status-icon--Color);
+    --#{$progress}--m-inside__measure--Color: var(--#{$progress}--m-success--m-inside__measure--Color);
   }
 
   &.pf-m-warning {
-    --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-warning__bar--BackgroundColor);
+    --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-warning__indicator--BackgroundColor);
     --#{$progress}__status-icon--Color: var(--#{$progress}--m-warning__status-icon--Color);
     --#{$progress}--m-inside__measure--Color: var(--#{$progress}--m-warning--m-inside__measure--Color);
   }
   
   &.pf-m-danger {
-    --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-danger__bar--BackgroundColor);
+    --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-danger__indicator--BackgroundColor);
     --#{$progress}__status-icon--Color: var(--#{$progress}--m-danger__status-icon--Color);
     --#{$progress}--m-inside__measure--Color: var(--#{$progress}--m-danger--m-inside__measure--Color);
   }
