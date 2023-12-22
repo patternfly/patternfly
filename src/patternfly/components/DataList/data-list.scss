@@ -18,7 +18,7 @@
   // item
   --#{$data-list}__item--BackgroundColor: var( --pf-t--global--background--color--primary--default);
   --#{$data-list}__item--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$data-list}__item--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$data-list}__item--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$data-list}__item--BorderBottomWidth: var(--pf-t--global--spacer--sm);
