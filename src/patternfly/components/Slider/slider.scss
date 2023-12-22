@@ -60,9 +60,9 @@
   
   // value
   --#{$slider}__value--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$slider}__value--c-form-control--width-base: 3.5ch;
+  --#{$slider}__value--c-form-control--width-base: calc(var(--#{$form-control}--PaddingLeft) + var(--#{$form-control}--PaddingRight) + #{pf-size-prem(20px)}); // form control base width + number input spinner width
   --#{$slider}__value--c-form-control--width-chars: 3;
-  --#{$slider}__value--c-form-control--Width: calc(var(--#{$slider}__value--c-form-control--width-base) + (var(--#{$slider}__value--c-form-control--width-chars) * 1ch));
+  --#{$slider}__value--c-form-control--Width: calc(var(--#{$slider}__value--c-form-control--width-base) + var(--#{$slider}__value--c-form-control--width-chars) * 1ch);
   --#{$slider}__value--m-floating--TranslateX: -50%;
   --#{$slider}__value--m-floating--TranslateY: -100%;
   --#{$slider}__value--m-floating--Left: var(--#{$slider}--value);
