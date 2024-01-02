@@ -1,7 +1,7 @@
 // @debug $data-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 $pf-v5-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
-:root {
+:root, :where(.#{$description-list}) {
   --#{$description-list}--RowGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--GridTemplateColumns--count: 1;
