@@ -23,6 +23,23 @@ import './Sidebar.css'
 {{/sidebar}}
 ```
 
+### Secondary
+
+```hbs
+{{#> sidebar}}
+  {{#> sidebar-panel sidebar-panel--modifier="pf-m-secondary"}}
+    Sidebar panel
+  {{/sidebar-panel}}
+  {{#> sidebar-content sidebar-content--modifier="pf-m-secondary"}}
+    {{#> content}}
+      <p>Default layout.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
+      <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
+    {{/content}}
+  {{/sidebar-content}}
+{{/sidebar}}
+```
+
 ### Gutter
 ```hbs
 {{#> sidebar sidebar--modifier="pf-m-gutter"}}
@@ -218,3 +235,4 @@ import './Sidebar.css'
 | `.pf-m-static` | `.pf-v5-c-sidebar__panel` | Modifies the panel to be positioned statically. |
 | `.pf-m-width-{default, 25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v5-c-sidebar__panel` | Modifies the panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** does not apply when the panel is stacked on top of the content. |
 | `.pf-m-no-background` | `.pf-v5-c-sidebar`, `.pf-v5-c-sidebar__panel, .pf-v5-c-sidebar__content` | Modifies the element to have a transparent background. |
+| `.pf-m-secondary` | `.pf-v5-c-sidebar__panel, .pf-v5-c-sidebar__content` | Modifies the element to have secondary styling. |
