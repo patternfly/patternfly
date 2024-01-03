@@ -486,7 +486,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
       &.pf-m-sticky-bottom#{$breakpoint-name} {
         position: sticky;
-       inset-block-end: 0;
+        inset-block-end: 0;
         z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }

@@ -2,5 +2,9 @@
   {{#if nav-link-text--attribute}}
     {{{nav-link-text--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if nav-link-text--text}}
+    {{{nav-link-text--text}}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

@@ -1,14 +1,23 @@
 <li class="{{pfv}}nav__item
-  {{~#if nav-item--expandable}} pf-m-expandable{{/if}}
+  {{setModifiers
+    nav-item--expandable='pf-m-expandable'
+    nav-item--IsExpandable='pf-m-expandable'
+    nav-item--IsDrilldown='pf-m-drilldown'
+    nav-item--IsFlyout='pf-m-flyout'
+    nav-item--modifier=nav--modifier
+  }}
   {{#unless nav-item--IsFlyout}}
-    {{~#if nav-item--expanded}} pf-m-expanded{{/if}}
-  {{/unless}}
-  {{~#if nav-item--current}} pf-m-current{{/if}}
-  {{~#if nav-item--IsDrilldown}} pf-m-drilldown{{/if}}
-  {{~#if nav-item--IsFlyout}} pf-m-flyout{{/if}}
-  {{~#if nav-item--modifier}} {{nav-item--modifier}}{{/if}}"
+    {{#ifAny nav-item--expanded nav-item--IsExpanded}}
+      pf-m-expanded
+    {{/ifAny}}
+  {{/unless}}"
   {{#if nav-item--attribute}}
     {{{nav-item--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if nav-link--text}}
+    {{> nav-link}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </li>

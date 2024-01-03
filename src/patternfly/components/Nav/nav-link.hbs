@@ -1,31 +1,36 @@
-<{{#if nav-item--expandable}}button{{else}}a href="{{nav-link--href}}"{{/if}} class="{{pfv}}nav__link{{#if nav-link--current}} pf-m-current{{/if}}{{#if nav-link--modifier}} {{nav-link--modifier}}{{/if}}"
-  {{#if nav-link--attribute}}
-    {{{nav-link--attribute}}}
-  {{/if}}
-  {{#if nav-link--current}}
+{{setTag nav-item--IsExpandable 'button' 'a'}}
+
+<{{tag}}{{#unless (concat nav-item--IsExpandable nav-item--IsExpandable)}} href="{{ternary nav-link--href nav-link--href '#'}}"{{/unless}} class="{{pfv}}nav__link
+  {{setModifiers
+    nav-link--current='pf-m-current'
+    nav-link--IsCurrent='pf-m-current'
+    nav-link--IsHover='pf-m-hover'
+    nav-link--modifier=nav--modifier
+  }}"
+  {{#ifAny nav-link--current nav-link--IsCurrent}}
     aria-current="page"
-  {{/if}}
+  {{/ifAny}}
   {{#if nav-item--IsFlyout}}
     aria-haspopup="true"
   {{/if}}
-  {{#ifAny nav-item--IsFlyout nav-item--IsDrilldown nav-item--expandable}}
-    {{#if nav-item--expanded}}
+  {{#ifAny nav-item--IsFlyout nav-item--IsDrilldown nav-item--IsExpandable nav-item--IsExpandable}}
+    {{#ifAny nav-item--expanded nav-item--IsExpanded}}
       aria-expanded="true"
     {{else}}
       aria-expanded="false"
-    {{/if}}
-  {{/ifAny}}>
-  {{#if nav-item--IsDrillup}}
-    {{> nav-toggle nav-toggle--modifier="pf-m-start"}}
-  {{/if}}
-  {{#if nav-item--HasTextWrapper}}
-    {{#> nav-link-text}}
-      {{> @partial-block}}
-    {{/nav-link-text}}
-  {{else}}
+    {{/ifAny}}
+  {{/ifAny}}
+  {{#if nav-link--attribute}}
+    {{{nav-link--attribute}}}
+  {{/if}}>
+  {{#if nav-link--text}}
+    {{{nav-link--text}}}
+  {{else if nav-item--HasTextWrapper}}
+    {{> nav-link-text}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
-  {{#ifAny nav-item--expandable nav-item--IsFlyout nav-item--IsDrilldown}}
+  {{#ifAny nav-item--IsExpandable nav-item--IsExpandable nav-item--IsFlyout nav-item--IsDrilldown}}
     {{> nav-toggle}}
   {{/ifAny}}
-</{{#if nav-item--expandable}}button{{else}}a{{/if}}>
+</{{tag}}>

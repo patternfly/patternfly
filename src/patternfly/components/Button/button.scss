@@ -13,6 +13,10 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
+  --#{$button}--BorderStartStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderStartEndRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndEndRadius: var(--#{$button}--BorderRadius);
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -213,7 +217,7 @@
   --#{$button}--m-small--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$button}--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$button}--m-small--PaddingLeft: var(--pf-t--global--spacer--md);
-  
+
   // Disabled
   --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
@@ -255,9 +259,12 @@
 
 .#{$button} {
   position: relative;
-  display: inline-block;
+  display: var(--#{$button}--Display, initial);
+  flex: var(--#{$button}--Flex, initial);
+  align-items: var(--#{$button}--AlignItems, initial);
+  justify-content: var(--#{$button}--JustifyContent, initial);
   padding-block-start: var(--#{$button}--PaddingTop);
-  padding-block-end: var(--#{$button}--PaddingBottom); 
+  padding-block-end: var(--#{$button}--PaddingBottom);
   padding-inline-start: var(--#{$button}--PaddingLeft);
   padding-inline-end: var(--#{$button}--PaddingRight);
   font-size: var(--#{$button}--FontSize, inherit);
@@ -271,7 +278,10 @@
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
   border: 0;
-  border-radius: var(--#{$button}--BorderRadius);
+  border-start-start-radius: var(--#{$button}--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$button}--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$button}--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$button}--BorderEndEndRadius);
 
   &::after {
     position: absolute;
@@ -408,7 +418,7 @@
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-warning--m-clicked--BackgroundColor);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-warning--m-clicked__icon--Color);
   }
-  
+
   // Danger
   &.pf-m-danger {
     --#{$button}--Color: var(--#{$button}--m-danger--Color);
@@ -571,7 +581,7 @@
 
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
-    
+
     &::after {
       border-color: transparent;
     }
