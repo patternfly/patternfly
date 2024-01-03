@@ -1,9 +1,9 @@
 :root,
 .#{$button} {
   --#{$button}--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$button}--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$button}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$button}--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$button}--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$button}--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body);
