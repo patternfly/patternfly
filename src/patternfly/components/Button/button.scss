@@ -1,9 +1,9 @@
 :root,
 .#{$button} {
   --#{$button}--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$button}--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$button}--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$button}--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$button}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$button}--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$button}--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body);
@@ -13,6 +13,10 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
+  --#{$button}--BorderStartStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderStartEndRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndEndRadius: var(--#{$button}--BorderRadius);
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -255,10 +259,10 @@
 
 .#{$button} {
   position: relative;
-  display: var(--#{$button}--Display);
-  flex: var(--#{$button}--Flex);
-  align-items: var(--#{$button}--AlignItems);
-  justify-content: var(--#{$button}--JustifyContent);
+  display: var(--#{$button}--Display, initial);
+  flex: var(--#{$button}--Flex, initial);
+  align-items: var(--#{$button}--AlignItems, initial);
+  justify-content: var(--#{$button}--JustifyContent, initial);
   padding-block-start: var(--#{$button}--PaddingTop);
   padding-block-end: var(--#{$button}--PaddingBottom);
   padding-inline-start: var(--#{$button}--PaddingLeft);
@@ -274,15 +278,10 @@
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
   border: 0;
-  border-start-start-radius: var(--#{$button}--start-start--Radius--BorderRadius);
-  border-start-end-radius: var(--#{$button}--start-end--Radius--BorderRadius);
-  border-end-start-radius: var(--#{$button}--end-start--Radius--BorderRadius);
-  border-end-end-radius: var(--#{$button}--end-end--Radius--BorderRadius);
-
-  // apply line-height to all children, including fa fonts
-  > * {
-    line-height: var(--#{$button}--LineHeight);
-  }
+  border-start-start-radius: var(--#{$button}--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$button}--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$button}--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$button}--BorderEndEndRadius);
 
   &::after {
     position: absolute;
@@ -620,12 +619,6 @@
       > :not(.#{$button}__progress) {
         opacity: 0;
       }
-    }
-  }
-
-  &.pf-m-RTL-icon-static {
-    .#{$button}__icon {
-      @include pf-v5-mirror-inline-on-rtl
     }
   }
 }

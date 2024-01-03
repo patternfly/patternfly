@@ -295,7 +295,6 @@
 
 // - Nav scroll button
 .#{$nav}__scroll-button {
-  // TODO: review after button updates
   :is(button) {
     --#{$button}--Display: flex;
     --#{$button}--Flex: 1;
@@ -303,6 +302,10 @@
     --#{$button}--JustifyContent: center;
 
     padding-inline: var(--#{$nav}__scroll-button--button--InlinePadding);
+
+    .#{$button}__icon {
+      @include pf-v5-mirror-inline-on-rtl;
+    }
 
     > * {
       display: inline-block;
@@ -331,10 +334,12 @@
   }
 
   &:first-of-type {
-    --#{$button}--start-start--Radius--BorderRadius: var(--#{$nav}__scroll-button--BorderRadius);
-    --#{$button}--start-end--Radius--BorderRadius: 0;
-    --#{$button}--end-start--Radius--BorderRadius: var(--#{$nav}__scroll-button--BorderRadius);
-    --#{$button}--end-end--Radius--BorderRadius: 0;
+    button {
+      --#{$button}--BorderStartStartRadius: var(--#{$nav}__scroll-button--BorderRadius);
+      --#{$button}--BorderStartEndRadius: 0;
+      --#{$button}--BorderEndStartRadius: var(--#{$nav}__scroll-button--BorderRadius);
+      --#{$button}--BorderEndEndRadius: 0;
+    }
 
     border-start-start-radius: var(--#{$nav}__scroll-button--BorderRadius);
     border-end-start-radius: var(--#{$nav}__scroll-button--BorderRadius);
@@ -345,10 +350,12 @@
   }
 
   &:last-of-type {
-    --#{$button}--start-start--Radius--BorderRadius: 0;
-    --#{$button}--start-end--Radius--BorderRadius: var(--#{$nav}__scroll-button--BorderRadius);
-    --#{$button}--end-start--Radius--BorderRadius: 0;
-    --#{$button}--end-end--Radius--BorderRadius: var(--#{$nav}__scroll-button--BorderRadius);
+    button {
+      --#{$button}--BorderStartStartRadius: 0;
+      --#{$button}--BorderStartEndRadius: var(--#{$nav}__scroll-button--BorderRadius);
+      --#{$button}--BorderEndStartRadius: 0;
+      --#{$button}--BorderEndEndRadius: var(--#{$nav}__scroll-button--BorderRadius);
+    }
 
     border-start-end-radius: var(--#{$nav}__scroll-button--BorderRadius);
     border-end-end-radius: var(--#{$nav}__scroll-button--BorderRadius);
