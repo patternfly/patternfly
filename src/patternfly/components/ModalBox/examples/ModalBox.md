@@ -289,6 +289,28 @@ import './ModalBox.css'
 {{/modal-example}}
 ```
 
+### Danger alert with modifier on modal title
+The status modifier classes can be applied directly to the modal title element, instead of the parent modal.
+
+```hbs isFullscreen
+{{#> modal-example modal-example--id="danger-alert-title"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDangerAlert="true" modal-box--HasStatusTitle=true}}
+    {{> modal-box-close}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Danger alert modal title
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
 ## Documentation
 ### Overview
 A modal box is a generic rectangular container that can be used to build modals. A modal box can have the following sections: header, title, description, body, and footer. With normal use of the modal, a title or body is required. Alternatively, no child elements can be used, and the `.pf-v5-c-modal-box` container will  serve as a generic container with no padding for custom modal content. If no `.pf-v5-c-modal-box__title` is used, `aria-label="[title of modal]"` must be provided for `.pf-v5-c-modal-box`.
@@ -327,9 +349,9 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-lg` | `.pf-v5-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-top` | `.pf-v5-c-modal-box` | Modifies for top alignment.  |
 | `.pf-m-icon` | `.pf-v5-c-modal-box__title` | Modifies the title layout to accommodate an icon. |
-| `.pf-m-custom` | `.pf-v5-c-modal-box` | Modifies for the custom alert state. |
-| `.pf-m-info` | `.pf-v5-c-modal-box` | Modifies for the info alert state. |
-| `.pf-m-success` | `.pf-v5-c-modal-box` | Modifies for the success alert state. |
-| `.pf-m-warning` | `.pf-v5-c-modal-box` | Modifies for the warning alert state. |
-| `.pf-m-danger` | `.pf-v5-c-modal-box` | Modifies for the danger alert state. |
+| `.pf-m-custom` | `.pf-v5-c-modal-box`, `.pf-v5-c-modal-box__title` | Modifies for the custom alert state. |
+| `.pf-m-info` | `.pf-v5-c-modal-box`, `.pf-v5-c-modal-box__title` | Modifies for the info alert state. |
+| `.pf-m-success` | `.pf-v5-c-modal-box`, `.pf-v5-c-modal-box__title` | Modifies for the success alert state. |
+| `.pf-m-warning` | `.pf-v5-c-modal-box`, `.pf-v5-c-modal-box__title` | Modifies for the warning alert state. |
+| `.pf-m-danger` | `.pf-v5-c-modal-box`, `.pf-v5-c-modal-box__title` | Modifies for the danger alert state. |
 | `.pf-m-help` | `.pf-v5-c-modal-box__header` | Modifies the modal box header to support the help action |
