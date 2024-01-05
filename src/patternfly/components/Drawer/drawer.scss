@@ -14,13 +14,16 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__content--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$drawer}__content--ZIndex: var(--pf-t--global--Zindex--xs);
-  
+
   // Panel
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --#{$drawer}__panel--MaxHeight: auto;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--Zindex--sm);
   --#{$drawer}__panel--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$drawer}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--TransitionDuration: 250ms;
   --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
   --#{$drawer}__panel--FlexBasis: 100%;
@@ -38,37 +41,42 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection: column;
   --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
-  
-  // Child padding
-  --#{$drawer}--child--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$drawer}--child--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$drawer}--child--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$drawer}--child--PaddingLeft: var(--pf-t--global--spacer--md);
-  
-  // Responsive child padding
-  --#{$drawer}--child--md--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$drawer}--child--md--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$drawer}--child--md--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$drawer}--child--md--PaddingLeft: var(--pf-t--global--spacer--lg);
-  
-  // Modified padding, child padding
-  --#{$drawer}--child--m-padding--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$drawer}--child--m-padding--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$drawer}--child--m-padding--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$drawer}--child--m-padding--PaddingLeft: var(--pf-t--global--spacer--md);
-  
-  // Responsive, modified padding, child padding
-  --#{$drawer}--child--m-padding--md--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$drawer}--child--m-padding--md--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$drawer}--child--m-padding--md--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$drawer}--child--m-padding--md--PaddingLeft: var(--pf-t--global--spacer--lg);
-  
-  // Content
-  --#{$drawer}__content--child--PaddingTop: 0;
-  --#{$drawer}__content--child--PaddingRight: 0;
-  --#{$drawer}__content--child--PaddingBottom: 0;
-  --#{$drawer}__content--child--PaddingLeft: 0;
-  
+
+  // Drawer panel head
+  --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$drawer}__head--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // Drawer panel description
+  --#{$drawer}__description--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$drawer}__description--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // Drawer body padding
+  --#{$drawer}__body--PaddingTop--base: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--PaddingRight--base: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--PaddingBottom--base: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--PaddingLeft--base: var(--pf-t--global--spacer--md);
+
+  // Drawer content body
+  --#{$drawer}__content__body--PaddingTop: 0;
+  --#{$drawer}__content__body--PaddingRight: 0;
+  --#{$drawer}__content__body--PaddingBottom: 0;
+  --#{$drawer}__content__body--PaddingLeft: 0;
+
+  // Drawer panel body
+  --#{$drawer}__panel__body--PaddingTop: var(--#{$drawer}__body--PaddingTop--base);
+  --#{$drawer}__panel__body--PaddingRight: var(--#{$drawer}__body--PaddingRight--base);
+  --#{$drawer}__panel__body--PaddingBottom: var(--#{$drawer}__body--PaddingBottom--base);
+  --#{$drawer}__panel__body--PaddingLeft: var(--#{$drawer}__body--PaddingLeft--base);
+
+  // Modified body padding
+  --#{$drawer}__body--m-padding--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--m-padding--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--m-padding--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--m-padding--PaddingLeft: var(--pf-t--global--spacer--md);
+
   // Splitter
   --#{$drawer}__splitter--Height: #{pf-size-prem(9px)};
   --#{$drawer}__splitter--Width: 100%;
@@ -78,7 +86,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter--m-vertical--Width: #{pf-size-prem(9px)};
   --#{$drawer}__splitter--m-vertical--Cursor: col-resize;
   --#{$drawer}--m-inline__splitter--focus--OutlineOffset: #{pf-size-prem(-1px)};
-  
+
   // Splitter border
   --#{$drawer}__splitter--after--BorderColor: var(--pf-t--global--border--color--default);
   --#{$drawer}__splitter--after--border-width--base: var(--pf-t--global--border--width--divider--default);
@@ -95,13 +103,13 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--Top: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderTopWidth: var(--#{$drawer}__splitter--after--border-width--base);
-  
+
   // Splitter handle
   --#{$drawer}__splitter-handle--Top: 50%;
   --#{$drawer}__splitter-handle--Left: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
   --#{$drawer}--m-panel-left__splitter-handle--Left: 50%;
   --#{$drawer}--m-panel-bottom__splitter-handle--Top: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
-  
+
   // Splitter handle line
   --#{$drawer}__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--default);
   --#{$drawer}__splitter-handle--after--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
@@ -117,21 +125,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter-handle--after--Height: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
-  
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
-    // Responsive child padding
-    --#{$drawer}--child--PaddingTop: var(--#{$drawer}--child--md--PaddingTop);
-    --#{$drawer}--child--PaddingRight: var(--#{$drawer}--child--md--PaddingRight);
-    --#{$drawer}--child--PaddingBottom: var(--#{$drawer}--child--md--PaddingBottom);
-    --#{$drawer}--child--PaddingLeft: var(--#{$drawer}--child--md--PaddingLeft);
-  
-    // Responsive, modified padding, child padding
-    --#{$drawer}--child--m-padding--PaddingTop: var(--#{$drawer}--child--m-padding--md--PaddingTop);
-    --#{$drawer}--child--m-padding--PaddingRight: var(--#{$drawer}--child--m-padding--md--PaddingRight);
-    --#{$drawer}--child--m-padding--PaddingBottom: var(--#{$drawer}--child--m-padding--md--PaddingBottom);
-    --#{$drawer}--child--m-padding--PaddingLeft: var(--#{$drawer}--child--m-padding--md--PaddingLeft);
-  }
-  
+
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
   
@@ -140,11 +134,11 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       --#{$drawer}__panel--MinHeight: var(--#{$drawer}--m-panel-bottom__panel--xl--MinHeight);
     }
   }
-  
+
   // Actions
   --#{$drawer}__actions--MarginTop: calc(var(--pf-t--global--spacer--xs) * -1.5); // TODO: add form element var
   --#{$drawer}__actions--MarginRight: calc(var(--pf-t--global--spacer--xs) * -1.5); // TODO: add form element var
-  
+
   // Box shadow
   --#{$drawer}__panel--BoxShadow: none;
   --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-t--global--box-shadow--lg--top);
@@ -256,7 +250,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   background-color: var(--#{$drawer}__section--BackgroundColor);
 
   &.pf-m-secondary {
-    --#{$drawer}__section--BackgroundColor: var(--#{$drawer}__panel--m-secondary--BackgroundColor);
+    --#{$drawer}__section--BackgroundColor: var(--#{$drawer}__section--m-secondary--BackgroundColor);
   }
 
   &.pf-m-no-background {
@@ -289,7 +283,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   background-color: var(--#{$drawer}__content--BackgroundColor);
   
   &.pf-m-secondary {
-    --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__panel--m-secondary--BackgroundColor);
+    --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-secondary--BackgroundColor);
   }
 
   &.pf-m-no-background {
@@ -297,10 +291,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   > .#{$drawer}__body {
-    padding-block-start: var(--#{$drawer}__content--child--PaddingTop);
-    padding-block-end: var(--#{$drawer}__content--child--PaddingBottom);
-    padding-inline-start: var(--#{$drawer}__content--child--PaddingLeft);
-    padding-inline-end: var(--#{$drawer}__content--child--PaddingRight);
+    padding-block-start: var(--#{$drawer}__content__body--PaddingTop);
+    padding-block-end: var(--#{$drawer}__content__body--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__content__body--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__content__body--PaddingRight);
   }
 }
 
@@ -309,6 +303,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   position: relative;
   z-index: var(--#{$drawer}__panel--ZIndex);
   flex-basis: var(--#{$drawer}__panel--FlexBasis);
+  row-gap: var(--#{$drawer}__panel--RowGap);
   order: 1;
   max-height: var(--#{$drawer}__panel--MaxHeight);
   overflow: auto;
@@ -327,6 +322,11 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     height: 100%;
     content: "";
     background-color: var(--#{$drawer}__panel--after--BackgroundColor);
+  }
+
+  &:not(.pf-m-resizable) {
+    padding-block-start: var(--#{$drawer}__panel--PaddingBlockStart);
+    padding-block-end: var(--#{$drawer}__panel--PaddingBlockEnd);
   }
 
   &.pf-m-secondary {
@@ -358,8 +358,20 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 }
 
+.#{$drawer}__panel,
+.#{$drawer}__panel-main {
+  > .#{$drawer}__body {
+    padding-block-start: var(--#{$drawer}__panel__body--PaddingTop);
+    padding-block-end: var(--#{$drawer}__panel__body--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__panel__body--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__panel__body--PaddingRight);
+  }
+}
+
 .#{$drawer}__panel-main {
   flex-grow: 1;
+  padding-block-start: var(--#{$drawer}__panel--PaddingBlockStart);
+  padding-block-end: var(--#{$drawer}__panel--PaddingBlockEnd);
 }
 
 // Remove tab focus
@@ -370,6 +382,11 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   display: grid;
   grid-template-columns: auto;
   grid-auto-columns: max-content;
+  column-gap: var(--#{$drawer}__head--ColumnGap);
+  padding-block-start: var(--#{$drawer}__head--PaddingBlockStart);
+  padding-block-end: var(--#{$drawer}__head--PaddingBlockEnd);
+  padding-inline-start: var(--#{$drawer}__head--PaddingInlineStart);
+  padding-inline-end: var(--#{$drawer}__head--PaddingInlineEnd);
 
   > * {
     grid-column: 1;
@@ -386,30 +403,25 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   margin-inline-end: var(--#{$drawer}__actions--MarginRight);
 }
 
+// Drawer panel description
+.#{$drawer}__description {
+  padding-inline-start: var(--#{$drawer}__description--PaddingInlineStart);
+  padding-inline-end: var(--#{$drawer}__description--PaddingInlineEnd);
+}
+
 // Modified content children
 .#{$drawer}__body {
-  padding-block-start: var(--#{$drawer}--child--PaddingTop);
-  padding-block-end: var(--#{$drawer}--child--PaddingBottom);
-  padding-inline-start: var(--#{$drawer}--child--PaddingLeft);
-  padding-inline-end: var(--#{$drawer}--child--PaddingRight);
-
   // No padding
   &.pf-m-no-padding {
     padding: 0;
-
-    > .#{$drawer}__actions,
-    > .#{$drawer}__head > .#{$drawer}__actions {
-      margin-block-start: 0;
-      margin-inline-end: 0;
-    }
   }
 
   // Padding
   &.pf-m-padding {
-    padding-block-start: var(--#{$drawer}--child--m-padding--PaddingTop);
-    padding-block-end: var(--#{$drawer}--child--m-padding--PaddingBottom);
-    padding-inline-start: var(--#{$drawer}--child--m-padding--PaddingLeft);
-    padding-inline-end: var(--#{$drawer}--child--m-padding--PaddingRight);
+    padding-block-start: var(--#{$drawer}__body--m-padding--PaddingTop);
+    padding-block-end: var(--#{$drawer}__body--m-padding--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__body--m-padding--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__body--m-padding--PaddingRight);
   }
 
   &:not(.pf-m-no-padding) + * {
@@ -578,8 +590,8 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel::after {
-     inset-block-start: 0;
-     inset-inline-start: auto;
+      inset-block-start: 0;
+      inset-inline-start: auto;
       width: 100%;
       height: var(--#{$drawer}--m-panel-bottom__panel--after--Height);
     }

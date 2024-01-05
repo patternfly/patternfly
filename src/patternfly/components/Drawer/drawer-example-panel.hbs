@@ -1,10 +1,14 @@
 {{#> drawer-panel}}
+  {{#> drawer-head}}
+    <span>Drawer panel header content</span>
+    {{#> drawer-actions}}
+      {{> drawer-close}}
+    {{/drawer-actions}}
+  {{/drawer-head}}
+  {{#> drawer-description}}
+    This is a helpful description of the drawer panel.
+  {{/drawer-description}}
   {{#> drawer-body}}
-    {{#> drawer-head}}
-      <span>drawer-panel</span>
-      {{#> drawer-actions}}
-        {{> drawer-close}}
-      {{/drawer-actions}}
-    {{/drawer-head}}
+    Drawer panel body content
   {{/drawer-body}}
 {{/drawer-panel}}

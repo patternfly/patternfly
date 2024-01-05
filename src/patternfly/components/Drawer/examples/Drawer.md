@@ -136,28 +136,27 @@ import './Drawer.css'
     {{/drawer-content}}
 
     {{#> drawer-panel}}
+      {{#> drawer-head}}
+        <span>Drawer panel header content</span>
+        {{#> drawer-actions}}
+          {{> drawer-close}}
+        {{/drawer-actions}}
+      {{/drawer-head}}
       {{#> drawer-body}}
-        {{#> drawer-head}}
-          {{#> drawer-actions}}
-            {{> drawer-close}}
-          {{/drawer-actions}}
-          {{#> drawer-header}}
-            drawer-panel
-          {{/drawer-header}}
-        {{/drawer-head}}
+        Drawer panel body content
       {{/drawer-body}}
       {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-        drawer-panel with no padding
+        Drawer panel body content with no padding
       {{/drawer-body}}
       {{#> drawer-body}}
-        drawer-panel
+        Drawer panel body content
       {{/drawer-body}}
     {{/drawer-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
 
-### Modified content padding
+### Modified content body padding
 ```hbs
 {{#> drawer drawer--id="modified-content-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
@@ -169,14 +168,27 @@ import './Drawer.css'
 {{/drawer}}
 ```
 
-### Modified panel padding
+### Modified panel body padding
 ```hbs
 {{#> drawer drawer--id="modified-panel-padding-example" drawer-panel--IsOpen="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
     {{/drawer-content}}
-    {{> drawer-example-panel}}
+    {{#> drawer-panel}}
+      {{#> drawer-head}}
+        <span>Drawer panel header content</span>
+        {{#> drawer-actions}}
+          {{> drawer-close}}
+        {{/drawer-actions}}
+      {{/drawer-head}}
+      {{#> drawer-body}}
+        Drawer panel body content
+      {{/drawer-body}}
+      {{#> drawer-body drawer-body--HasPadding=true drawer-body--attribute="style='--pf-v5-c-drawer__panel__body--PaddingLeft: 48px;'"}}
+        Drawer panel body content with modified inline start padding
+      {{/drawer-body}}
+    {{/drawer-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -264,7 +276,7 @@ import './Drawer.css'
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
     {{/drawer-content}}
-    {{> drawer-example-panel drawer-panel--modifier="pf-m-light-200"}}
+    {{> drawer-example-panel drawer-panel--modifier="pf-m-secondary"}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -308,6 +320,7 @@ import './Drawer.css'
 | `.pf-v5-c-drawer__head` | `<div>` | Initiates a drawer head container. This container positions `.pf-v5-c-drawer__actions`, if present. |
 | `.pf-v5-c-drawer__actions` | `<div>` | Initiates an actions container within `.pf-v5--drawer__head`. |
 | `.pf-v5-c-drawer__close` | `<div>` | Identifies the drawer close button within `.pf-v5-c-drawer__actions`. |
+| `.pf-v5-c-drawer__description` | `<div>` | Initiates a drawer panel description. |
 | `.pf-m-panel-left` | `.pf-v5-c-drawer` | Modifies the drawer panel to expand from the left. |
 | `.pf-m-panel-bottom` | `.pf-v5-c-drawer` | Modifies the drawer panel to expand from the bottom. **Note:** percentage based panel sizes require the drawer component's parent element have an implicit or explicit height. |
 | `.pf-m-expanded` | `.pf-v5-c-drawer` | Modifies the drawer panel for the expanded state. |
