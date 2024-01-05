@@ -23,7 +23,7 @@ import './Sidebar.css'
 {{/sidebar}}
 ```
 
-### Secondary
+### With secondary background
 
 ```hbs
 {{#> sidebar}}
