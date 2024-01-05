@@ -1,3 +1,8 @@
+{{#if card-title-text--IsButton}}
+  {{#> button button--type="button" button--IsLink=true button--IsInline=true button--modifier=(concat (pfv) 'card__title-text' )}}
+    {{{card-title-text--value}}}
+  {{/button}}
+{{else}}
 <{{#if card-title-text--element}}{{card-title-text--element}}{{else}}h2{{/if}} class="{{pfv}}card__title-text{{#if card-title-text--modifier}} {{card-title-text--modifier}}{{/if}}"
   {{#if card-title-text--id}}
     id="{{card-title-text--id}}"
@@ -11,3 +16,4 @@
     {{> @partial-block}}
   {{/if}}
 </{{#if card-title-text--element}}{{card-title-text--element}}{{else}}h2{{/if}}>
+{{/if}}
