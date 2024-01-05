@@ -296,7 +296,7 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-selectable-example-disabled" card--modifier="pf-m-selectable pf-m-disabled pf-m-secondary" card--IsSelectable="true"}}
+{{#> card card--id="card-selectable-secondary-example-disabled" card--modifier="pf-m-selectable pf-m-disabled pf-m-secondary" card--IsSelectable="true"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
       {{#> card-selectable-actions}}
@@ -315,7 +315,7 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-selectable-example-selected-disabled" card--modifier="pf-m-selectable pf-m-selected pf-m-disabled pf-m-secondary" card--IsSelectable="true"}}
+{{#> card card--id="card-selectable-secondary-example-selected-disabled" card--modifier="pf-m-selectable pf-m-selected pf-m-disabled pf-m-secondary" card--IsSelectable="true"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
       {{#> card-selectable-actions}}
