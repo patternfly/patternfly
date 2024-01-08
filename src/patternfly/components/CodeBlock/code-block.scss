@@ -1,21 +1,29 @@
 // @debug $code-block; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$code-block} {
-  --#{$code-block}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$code-block}__header--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$code-block}__header--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$code-block}__content--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$code-block}__content--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$code-block}__content--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$code-block}__content--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$code-block}__pre--FontFamily: var(--#{$pf-global}--FontFamily--monospace);
-  --#{$code-block}__pre--FontSize: var(--#{$pf-global}--FontSize--sm);
+:root, :where(.#{$code-block}) {
+  --#{$code-block}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$code-block}--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-block}__header--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$code-block}__header--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$code-block}__header--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$code-block}__header--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$code-block}__content--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$code-block}__content--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$code-block}__content--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$code-block}__content--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$code-block}__pre--FontFamily: var(--pf-t--global--font--family--mono);
+  --#{$code-block}__pre--FontSize: var(--pf-t--global--font--size--xs);
+}
 
+.#{$code-block} {
   background-color: var(--#{$code-block}--BackgroundColor);
+  border-radius: var(--#{$code-block}--BorderRadius);
 }
 
 .#{$code-block}__header {
   display: flex;
+  padding-inline-start: var(--#{$code-block}__header--PaddingLeft);
+  padding-inline-end: var(--#{$code-block}__header--PaddingRight);
   border-block-end: var(--#{$code-block}__header--BorderBottomWidth) solid var(--#{$code-block}__header--BorderBottomColor);
 }
 
