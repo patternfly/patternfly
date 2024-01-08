@@ -1,40 +1,41 @@
 // @debug $input-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$input-group} {
-  // Input group
-  --#{$input-group}--child--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$input-group}--Gap: var(--pf-t--global--spacer--xs);
 
   // Input group item
-  --#{$input-group}__item--offset: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$input-group}__item--MarginLeft: calc(var(--#{$input-group}__item--offset) * -1);
-  --#{$input-group}__item--BorderWidth--base: var(--#{$input-group}__item--offset);
-  --#{$input-group}__item--BorderColor--base: var(--#{$pf-global}--BorderColor--300);
-  --#{$input-group}__item--BorderColor--accent: var(--#{$pf-global}--BorderColor--200);
+  --#{$input-group}__item--offset: var(--pf-t--global--border--width--control--default);
+  --#{$input-group}__item--BorderWidth--base: var(--pf-t--global--border--width--control--default);
+  --#{$input-group}__item--BorderColor--base: var(--pf-t--global--border--color--default);
   --#{$input-group}__item--BackgroundColor: transparent;
 
   // Input group item, box variant
-  --#{$input-group}__item--m-box--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$input-group}__item--m-box--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$input-group}__item--m-box--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$input-group}__item--m-box--BorderWidth: var(--#{$input-group}__item--offset);
+  --#{$input-group}__item--m-box--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$input-group}__item--m-box--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$input-group}__item--m-box--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$input-group}__item--m-box--BorderWidth: var(--#{$input-group}__item--BorderWidth--base);
+  --#{$input-group}__item--m-box--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$input-group}__item--m-box--BorderTopColor: var(--#{$input-group}__item--BorderColor--base);
   --#{$input-group}__item--m-box--BorderRightColor: var(--#{$input-group}__item--BorderColor--base);
-  --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$input-group}__item--BorderColor--accent);
+  --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$input-group}__item--BorderColor--base);
   --#{$input-group}__item--m-box--BorderLeftColor: var(--#{$input-group}__item--BorderColor--base);
 
   // Input group item, plain variant
   --#{$input-group}__item--m-plain--BackgroundColor: transparent;
 
   // Input group text
-  --#{$input-group}__text--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$input-group}__text--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$input-group}__text--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$input-group}__text--Color: var(--pf-t--global--text--color--regular);
 
   // Input group text, disabled variant
-  --#{$input-group}__item--m-disabled__text--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$input-group}__item--m-disabled--BorderBottomColor: transparent;
-  --#{$input-group}__item--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$input-group}__item--m-disabled__text--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$input-group}__item--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+}
 
+.#{$input-group} {
   display: flex;
+  gap: var(--#{$input-group}--Gap);
   width: 100%;
 }
 
@@ -49,10 +50,6 @@
   border-inline-start-color: var(--#{$input-group}__item--m-box--BorderLeftColor);
   border-inline-end-color: var(--#{$input-group}__item--m-box--BorderRightColor);
 
-  &:where(:not(:first-child)) {
-    margin-inline-start: var(--#{$input-group}__item--MarginLeft);
-  }
-
   &.pf-m-box {
     --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-box--BackgroundColor);
 
@@ -63,10 +60,10 @@
     border-block-end-color: var(--#{$input-group}__item--m-box--BorderBottomColor);
     border-inline-start-color: var(--#{$input-group}__item--m-box--BorderLeftColor);
     border-inline-end-color: var(--#{$input-group}__item--m-box--BorderRightColor);
+    border-radius: var(--#{$input-group}__item--m-box--BorderRadius);
   }
 
   &.pf-m-plain {
-    --#{$input-group}__item--MarginLeft: 0;
     --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-plain--BackgroundColor);
 
     border: none;
@@ -74,7 +71,6 @@
 
   &.pf-m-disabled {
     --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-disabled--BackgroundColor);
-    --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$input-group}__item--m-disabled--BorderBottomColor);
     --#{$input-group}__text--Color: var(--#{$input-group}__item--m-disabled__text--Color);
   }
 
@@ -93,9 +89,3 @@
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/input-group";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-input-group;
-}
