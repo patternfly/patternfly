@@ -11,32 +11,34 @@
     {{/code-editor-tab}}
   {{/code-editor-header}}
   {{#> code-editor-main}}
-    {{#> empty-state}}
-      {{#> empty-state-header}}
-        {{> empty-state-icon empty-state-icon--type="code"}}
-        {{#> empty-state-title}}
-          {{#> empty-state-title-text}}
-            Start editing
-          {{/empty-state-title-text}}
-        {{/empty-state-title}}
-      {{/empty-state-header}}
+    {{#> code-editor-upload}}
+      {{#> empty-state}}
+        {{#> empty-state-header}}
+          {{> empty-state-icon empty-state-icon--type="code"}}
+          {{#> empty-state-title}}
+            {{#> empty-state-title-text}}
+              Start editing
+            {{/empty-state-title-text}}
+          {{/empty-state-title}}
+        {{/empty-state-header}}
 
-      {{#> empty-state-body}}
-        Drag a file here or browse to upload.
-      {{/empty-state-body}}
+        {{#> empty-state-body}}
+          Drag a file here or browse to upload.
+        {{/empty-state-body}}
 
-      {{#> empty-state-footer}}
-        {{#> empty-state-actions}}
-          {{#> button button--modifier="pf-m-primary"}}
-            Browse
-          {{/button}}
-        {{/empty-state-actions}}
-        {{#> empty-state-actions}}
-          {{#> button button--modifier="pf-m-link"}}
-            Start from scratch
-          {{/button}}
-        {{/empty-state-actions}}
-      {{/empty-state-footer}}
-    {{/empty-state}}
+        {{#> empty-state-footer}}
+          {{#> empty-state-actions}}
+            {{#> button button--modifier="pf-m-primary"}}
+              Browse
+            {{/button}}
+          {{/empty-state-actions}}
+          {{#> empty-state-actions}}
+            {{#> button button--modifier="pf-m-link"}}
+              Start from scratch
+            {{/button}}
+          {{/empty-state-actions}}
+        {{/empty-state-footer}}
+      {{/empty-state}}
+    {{/code-editor-upload}}
   {{/code-editor-main}}
 {{/code-editor}}
