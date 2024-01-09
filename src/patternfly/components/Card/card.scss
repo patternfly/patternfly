@@ -13,6 +13,7 @@
   --#{$card}--child--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$card}--c-divider--child--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$card}__title--not--last-child--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$card}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$card}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$card}__title-text--FontSize: var(--pf-t--global--font--size--heading--sm);
   --#{$card}__title-text--FontWeight: var(--pf-t--global--font--weight--heading);
@@ -20,7 +21,7 @@
   --#{$card}--c-button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$card}__body--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$card}__footer--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$card}__footer--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$card}__footer--Color: var(--pf-t--global--text--color--subtle);
   --#{$card}__actions--PaddingLeft: var(--#{$pf-global}--spacer--md);
   --#{$card}__actions--Gap: var(--#{$pf-global}--spacer--sm);
   --#{$card}__actions--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1); // TODO
@@ -54,6 +55,9 @@
   --#{$card}--m-selectable--m-selected--focus--BorderWidth: var(--pf-t--global--border--width--box--clicked);
 
   // Disabled state
+  --#{$card}--m-selectable--m-disabled__title-text--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$card}--m-selectable--m-disabled__body--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$card}--m-selectable--m-disabled__footer--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$card}--m-selectable--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$card}--m-selectable--m-disabled--BorderColor: transparent;
 
@@ -268,6 +272,7 @@
   font-size: var(--#{$card}__title-text--FontSize);
   font-weight: var(--#{$card}__title-text--FontWeight);
   line-height: var(--#{$card}__title-text--LineHeight);
+  color: var(--#{$card}__title-text--Color);
 }
 
 .#{$card}__actions {
@@ -341,6 +346,9 @@
 .#{$card}__selectable-actions .#{$check}__input:where(:disabled) ~ .#{$check}__label,
 .#{$card}__selectable-actions .#{$radio}__input:where(:disabled) ~ .#{$radio}__label,
 .#{$card}.pf-m-disabled {
+  --#{$card}__title-text--Color: var(--#{$card}--m-selectable--m-disabled__title-text--Color);
+  --#{$card}__body--Color: var(--#{$card}--m-selectable--m-disabled__body--Color);
+  --#{$card}__footer--Color: var(--#{$card}--m-selectable--m-disabled__footer--Color);
   --#{$card}--BackgroundColor: var(--#{$card}--m-selectable--m-disabled--BackgroundColor);
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-disabled--BorderColor);
 }
@@ -380,6 +388,7 @@
 
 .#{$card}__body {
   font-size: var(--#{$card}__body--FontSize);
+  color: var(--#{$card}__body--Color);
 }
 
 .#{$card}__footer {
