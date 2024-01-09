@@ -1,68 +1,55 @@
 // @debug $tile; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$tile} {
-  --#{$tile}--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$tile}--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$tile}--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$tile}--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$tile}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$tile}--Transition: none;
-  --#{$tile}--TranslateY: 0;
+  --#{$tile}--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$tile}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$tile}--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // borders
-  --#{$tile}--before--BorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$tile}--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$tile}--after--Height: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$tile}--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$tile}--before--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$tile}--before--BorderRadius: var(--#{$tile}--BorderRadius);
   --#{$tile}--after--BackgroundColor: transparent;
-  --#{$tile}--after--Transition: none;
-  --#{$tile}--after--ScaleY: 1;
-  --#{$tile}--after--TranslateY: 0;
 
   // icon
-  --#{$tile}__icon--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$tile}__icon--FontSize: var(--#{$pf-global}--icon--FontSize--md);
-  --#{$tile}__icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$tile}__icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$tile}__icon--FontSize: var(--pf-t--global--icon--size--body--default);
+  --#{$tile}__icon--Color: var(--pf-t--global--icon--color--regular);
 
   // title
-  --#{$tile}__title--Color: var(--#{$pf-global}--Color--100);
+  --#{$tile}__title--Color: var(--pf-t--global--text--color--regular);
+  --#{$tile}__title--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // body
-  --#{$tile}__body--Color: var(--#{$pf-global}--Color--100);
-  --#{$tile}__body--FontSize: var(--#{$pf-global}--FontSize--xs);
+  --#{$tile}__body--Color: var(--pf-t--global--text--color--regular);
+  --#{$tile}__body--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // hover
-  --#{$tile}--hover--after--BackgroundColor: var(--#{$pf-global}--active-color--400);
-  --#{$tile}--hover__icon--Color: var(--#{$pf-global}--primary-color--100);
-  --#{$tile}--hover__title--Color: var(--#{$pf-global}--primary-color--100);
-
-  // focus
-  --#{$tile}--focus--after--BackgroundColor: var(--#{$pf-global}--active-color--400);
-  --#{$tile}--focus__icon--Color: var(--#{$pf-global}--primary-color--100);
-  --#{$tile}--focus__title--Color: var(--#{$pf-global}--primary-color--100);
+  --#{$tile}--hover--before--BorderColor: var(--pf-t--global--border--color--hover);
 
   // selected
-  --#{$tile}--m-selected--TranslateY: calc(-1 * var(--#{$tile}--m-selected--after--ScaleY) * var(--#{$tile}--m-selected--after--Height));
-  --#{$tile}--m-selected--Transition: var(--#{$pf-global}--Transition);
-  --#{$tile}--m-selected--after--Height: var(--#{$pf-global}--BorderWidth--lg);
-  --#{$tile}--m-selected--after--BackgroundColor: var(--#{$pf-global}--active-color--100);
-  --#{$tile}--m-selected--after--Transition: var(--#{$pf-global}--Transition);
-  --#{$tile}--m-selected--after--ScaleY: 2;
-  --#{$tile}--m-selected__icon--Color: var(--#{$pf-global}--primary-color--100);
-  --#{$tile}--m-selected__title--Color: var(--#{$pf-global}--primary-color--100);
+  --#{$tile}--m-selected--before--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$tile}--m-selected--before--BorderWidth: var(--pf-t--global--border--width--box--clicked);
 
   // disabled
-  --#{$tile}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
-  --#{$tile}--m-disabled__icon--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$tile}--m-disabled__title--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$tile}--m-disabled__body--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$tile}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$tile}--m-disabled__title--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$tile}--m-disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$tile}--m-disabled__body--Color: var(--pf-t--global--text--color--on-disabled);
 
   // Stacked variatiion
-  --#{$tile}__header--m-stacked__icon--MarginBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$tile}__header--m-stacked__icon--FontSize: var(--#{$pf-global}--icon--FontSize--lg);
+  --#{$tile}__header--m-stacked__icon--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$tile}__header--m-stacked__icon--FontSize: var(--pf-t--global--icon--size--xl);
 
   // large variation
-  --#{$tile}--m-display-lg__header--m-stacked__icon--FontSize: var(--#{$pf-global}--icon--FontSize--xl);
+  --#{$tile}--m-display-lg__header--m-stacked__icon--FontSize: var(--pf-t--global--icon--size--2xl);
+}
 
+.#{$tile} {
   position: relative;
   display: inline-grid;
   grid-template-rows: min-content;
@@ -70,11 +57,9 @@
   padding-block-end: var(--#{$tile}--PaddingBottom);
   padding-inline-start: var(--#{$tile}--PaddingLeft);
   padding-inline-end: var(--#{$tile}--PaddingRight);
-  text-align: center;
   cursor: pointer;
   background-color: var(--#{$tile}--BackgroundColor);
-  transition: var(--#{$tile}--Transition);
-  transform: translateY(var(--#{$tile}--TranslateY));
+  border-radius: var(--#{$tile}--BorderRadius);
 
   &::before,
   &::after {
@@ -86,48 +71,25 @@
   &::before {
     inset: 0;
     border: var(--#{$tile}--before--BorderWidth) solid var(--#{$tile}--before--BorderColor);
-  }
-
-  &::after {
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    height: var(--#{$tile}--after--Height);
-    background-color: var(--#{$tile}--after--BackgroundColor);
-    transition: var(--#{$tile}--after--Transition);
-    transform: scaleY(var(--#{$tile}--after--ScaleY)) translateY(var(--#{$tile}--after--TranslateY));
+    border-radius: var(--#{$tile}--before--BorderRadius);
   }
 
   &:hover {
-    --#{$tile}__title--Color: var(--#{$tile}--hover__title--Color);
-    --#{$tile}__icon--Color: var(--#{$tile}--hover__icon--Color);
-    --#{$tile}--after--BackgroundColor: var(--#{$tile}--hover--after--BackgroundColor);
+    --#{$tile}--before--BorderColor: var(--#{$tile}--hover--before--BorderColor);
   }
 
-  &:focus {
-    --#{$tile}__title--Color: var(--#{$tile}--focus__title--Color);
-    --#{$tile}__icon--Color: var(--#{$tile}--focus__icon--Color);
-    --#{$tile}--after--BackgroundColor: var(--#{$tile}--focus--after--BackgroundColor);
-  }
-
-  &:active, // for demo purposes - will remove
+  &:active,
   &.pf-m-selected {
-    --#{$tile}__title--Color: var(--#{$tile}--m-selected__title--Color);
-    --#{$tile}__icon--Color: var(--#{$tile}--m-selected__icon--Color);
-    --#{$tile}--TranslateY: var(--#{$tile}--m-selected--TranslateY);
-    --#{$tile}--Transition: var(--#{$tile}--m-selected--Transition);
-    --#{$tile}--after--Height: var(--#{$tile}--m-selected--after--Height);
-    --#{$tile}--after--BackgroundColor: var(--#{$tile}--m-selected--after--BackgroundColor);
-    --#{$tile}--after--Transition: var(--#{$tile}--m-selected--after--Transition);
-    --#{$tile}--after--ScaleY: var(--#{$tile}--m-selected--after--ScaleY);
+    --#{$tile}--before--BorderColor: var(--#{$tile}--m-selected--before--BorderColor);
+    --#{$tile}--before--BorderWidth: var(--#{$tile}--m-selected--before--BorderWidth);
   }
 
   &.pf-m-disabled {
     --#{$tile}--BackgroundColor: var(--#{$tile}--m-disabled--BackgroundColor);
     --#{$tile}__title--Color: var(--#{$tile}--m-disabled__title--Color);
+    --#{$tile}__icon--Color: var(--#{$tile}--m-disabled__icon--Color);
     --#{$tile}__body--Color: var(--#{$tile}--m-disabled__body--Color);
     --#{$tile}--before--BorderWidth: 0;
-    --#{$tile}__icon--Color: var(--#{$tile}--m-disabled__icon--Color);
 
     pointer-events: none;
   }
@@ -142,25 +104,26 @@
 .#{$tile}__header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   &.pf-m-stacked {
     --#{$tile}__icon--MarginRight: 0;
     --#{$tile}__icon--FontSize: var(--#{$tile}__header--m-stacked__icon--FontSize);
 
     flex-direction: column;
+    align-items: flex-start;
     justify-content: initial;
 
     .#{$tile}__icon {
       display: flex;
       align-items: center;
-      justify-content: center;
       margin-block-end: var(--#{$tile}__header--m-stacked__icon--MarginBottom);
     }
   }
 }
 
 .#{$tile}__title {
+  font-weight: var(--#{$tile}__title--FontWeight);
   color: var(--#{$tile}__title--Color);
 }
 
@@ -175,9 +138,3 @@
   color: var(--#{$tile}__icon--Color);
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/tile";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-tile;
-}
