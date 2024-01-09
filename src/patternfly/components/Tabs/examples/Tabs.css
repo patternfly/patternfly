@@ -5,6 +5,6 @@
   background-color: var(--tabs-example-block--BackgroundColor);
 }
 
-.tabs-example-block--m-color-scheme--light-300 {
+.tabs-example-block--m-secondary {
   --tabs-example-block--BackgroundColor: var(--pf-v5-c--BackgroundColor--light-300);
 }

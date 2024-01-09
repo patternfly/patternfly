@@ -139,12 +139,12 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Box tabs color scheme light 300 example
+### Box tabs secondary variant example
 ```hbs
-{{#> tabs tabs--modifier="pf-m-box pf-m-color-scheme--light-300" tabs--id="box-tabs-color-scheme-light-300"}}
+{{#> tabs tabs--modifier="pf-m-box pf-m-secondary" tabs--id="box-tabs-secondary"}}
   {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
-<div className="tabs-example-block tabs-example-block--m-color-scheme--light-300"></div>
+<div className="tabs-example-block tabs-example-block--m-secondary"></div>
 ```
 
 ## Tab insets
@@ -193,7 +193,7 @@ import './Tabs.css'
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="tabs-with-sub-tabs-secondary" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="tabs-with-sub-tabs-subtab" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
@@ -204,7 +204,7 @@ import './Tabs.css'
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="box-tabs-with-sub-tabs-secondary" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="box-tabs-with-sub-tabs-subtab" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
@@ -259,7 +259,7 @@ import './Tabs.css'
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="sub-tabs-using-the-nav-element-secondary" tabs--type="nav" tabs--attribute='aria-label="Tabs secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element-subtab" tabs--type="nav" tabs--attribute='aria-label="Tabs subtab nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
   {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
@@ -311,7 +311,7 @@ import './Tabs.css'
 {{#> tabs tabs--id="default-tabs-add-tab-button" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
-{{#> tabs tabs--id="default-tabs-add-tab-button-secondary" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
+{{#> tabs tabs--id="default-tabs-add-tab-button-subtab" tabs--modifier="pf-m-scrollable" tabs--IsSubtab="true"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
@@ -323,7 +323,7 @@ import './Tabs.css'
 
 <br><br>
 
-{{#> tabs tabs--id="box-tabs-add-tab-button-color-scheme-light-300 " tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
+{{#> tabs tabs--id="box-tabs-add-tab-button-secondary " tabs--modifier="pf-m-box pf-m-secondary pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 ```
@@ -354,7 +354,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-v5-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
 | `.pf-v5-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
 | `.pf-v5-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
-| `.pf-m-secondary` | `.pf-v5-c-tabs` | Applies secondary styling to the tab component. |
+| `.pf-m-tubtab` | `.pf-v5-c-tabs` | Applies subtab styling to the tab component. |
 | `.pf-m-no-border-bottom` | `.pf-v5-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-v5-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-v5-c-tabs` | Applies vertical styling to the tab component. |
@@ -365,7 +365,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-expanded` | `.pf-v5-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v5-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-page-insets` | `.pf-v5-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
-| `.pf-m-color-scheme--light-300` | `.pf-v5-c-tabs` | Modifies the tabs component tab background colors. |
+| `.pf-m-secondary` | `.pf-v5-c-tabs.pf-m-box` | Modifies the tabs component tab background colors for the box variant. |
 | `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v5-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** works with vertical tabs only. |
 | `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v5-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-expanded` | `.pf-v5-c-tabs` | Modifies the expandable tabs component for the expanded state. |
