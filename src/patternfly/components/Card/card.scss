@@ -1,7 +1,7 @@
 // @debug $card; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root,
-.#{$card} {
+:where(:root),
+:where(.#{$card}) {
   --#{$card}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$card}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$card}--BorderStyle: solid;
@@ -22,8 +22,8 @@
   --#{$card}__body--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$card}__footer--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$card}__footer--Color: var(--pf-t--global--text--color--subtle);
-  --#{$card}__actions--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$card}__actions--Gap: var(--#{$pf-global}--spacer--sm);
+  --#{$card}__actions--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$card}__actions--Gap: var(--pf-t--global--spacer--sm);
   --#{$card}__actions--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1); // TODO
   --#{$card}__actions--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1); // TODO 
 
