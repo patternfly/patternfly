@@ -1,14 +1,16 @@
 // @debug $draggable; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$draggable} {
+:where(:root), :where(.#{$draggable}) {
   --#{$draggable}--Cursor: auto;
   --#{$draggable}--m-dragging--Cursor: grabbing;
-  --#{$draggable}--m-dragging--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-  --#{$draggable}--m-dragging--after--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$draggable}--m-dragging--after--BorderColor: var(--#{$pf-global}--active-color--100);
+  --#{$draggable}--m-dragging--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$draggable}--m-dragging--after--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$draggable}--m-dragging--after--BorderColor: var(--pf-t--global--border--color--brand--default);
   --#{$draggable}--m-drag-outside--Cursor: not-allowed;
-  --#{$draggable}--m-drag-outside--after--BorderColor: var(--#{$pf-global}--danger-color--100);
+  --#{$draggable}--m-drag-outside--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+}
 
+.#{$draggable} {
   cursor: var(--#{$draggable}--Cursor);
 
   &.pf-m-dragging {
@@ -35,17 +37,19 @@
   }
 }
 
-.#{$droppable} {
+:where(:root), :where(.#{$droppable}) {
   --#{$droppable}--before--BackgroundColor: transparent;
   --#{$droppable}--before--Opacity: 0;
   --#{$droppable}--after--BorderWidth: 0;
   --#{$droppable}--after--BorderColor: transparent;
-  --#{$droppable}--m-dragging--before--BackgroundColor: var(--#{$pf-global}--palette--white);
+  --#{$droppable}--m-dragging--before--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$droppable}--m-dragging--before--Opacity: .6;
-  --#{$droppable}--m-dragging--after--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$droppable}--m-dragging--after--BorderColor: var(--#{$pf-global}--active-color--100);
-  --#{$droppable}--m-drag-outside--after--BorderColor: var(--#{$pf-global}--danger-color--100);
+  --#{$droppable}--m-dragging--after--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$droppable}--m-dragging--after--BorderColor: var(--pf-t--global--border--color--brand--default);
+  --#{$droppable}--m-drag-outside--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+}
 
+.#{$droppable} {
   &::before,
   &::after {
     position: absolute;
@@ -78,11 +82,4 @@
   &.pf-m-drag-outside {
     --#{$droppable}--m-dragging--after--BorderColor: var(--#{$droppable}--m-drag-outside--after--BorderColor);
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/drag-drop";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-drag-drop;
 }
