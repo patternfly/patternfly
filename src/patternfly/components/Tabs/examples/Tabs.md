@@ -36,7 +36,7 @@ import './Tabs.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-scrollable` | `.pf-v5-c-tabs` | Enables the directional scroll buttons. |
-| `.pf-v5-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
+| `.pf-v5-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button container. |
 
 ### Horizontal overflow example
 ```hbs 
@@ -349,7 +349,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-v5-c-tabs__item-close` | `<span>` | Initiates a tabs component item close. |
 | `.pf-v5-c-tabs__item-close-icon` | `<span>` | Initiates a tabs component item close icon. |
 | `.pf-v5-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
-| `.pf-v5-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
+| `.pf-v5-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button container. |
 | `.pf-v5-c-tabs__add` | `<span>` | Initiates a tabs component add button. |
 | `.pf-v5-c-tabs__toggle` | `<div>` | Initiates a tabs expandable toggle. |
 | `.pf-v5-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |

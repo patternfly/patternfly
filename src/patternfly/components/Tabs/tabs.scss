@@ -50,10 +50,10 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__item--m-action--before--ZIndex: var(--pf-t--global--Zindex--sm);
 
   // Tabs item content
-    --#{$tabs}__item-content--ColumnGap: var(--pf-t--global--spacer--xs);
-    --#{$tabs}__item-content--BackgroundColor: transparent;
-    --#{$tabs}__item-content--BorderRadius: var(--pf-t--global--border--radius--small);
-    --#{$tabs}__item--m-action--m-disabled__item-content--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$tabs}__item-content--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$tabs}__item-content--BackgroundColor: transparent;
+  --#{$tabs}__item-content--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$tabs}__item--m-action--m-disabled__item-content--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // Tabs link
   --#{$tabs}__link--Color: var(--pf-t--global--text--color--subtle);
@@ -114,12 +114,11 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
   // Scroll buttons
-  --#{$tabs}__scroll-button--Color: var(--pf-t--global--icon--color--regular);
-  --#{$tabs}__scroll-button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$tabs}__scroll-button--disabled--Color: var(--pf-t--global--icon--color--disabled);
-  --#{$tabs}__scroll-button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$tabs}__scroll-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__scroll-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__scroll-button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__scroll-button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$tabs}__scroll-button--Width: var(--pf-t--global--spacer--2xl);
-  --#{$tabs}__scroll-button--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$tabs}__scroll-button--TransitionDuration--margin: .125s;
   --#{$tabs}__scroll-button--TransitionDuration--transform: .125s;
   --#{$tabs}__scroll-button--TransitionDuration--opacity: .125s;
@@ -155,8 +154,8 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-expandable--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // Item action
-  --#{$tabs}__item-action--c-button--FontSize: var(--pf-t--global--font--size--xs);
-  --#{$tabs}--m-subtab__item-action--c-button--FontSize: var(--pf-t--global--font--size--sm);
+  --#{$tabs}__item-action--c-button--FontSize: var(--pf-t--global--font--size--sm);
+  --#{$tabs}--m-subtab__item-action--c-button--FontSize: var(--pf-t--global--font--size--xs);
   --#{$tabs}__item-action-icon--MarginTop: #{pf-size-prem(2px)};
 
   // Add button
@@ -164,9 +163,10 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__add--before--BorderLeftWidth: var(--#{$tabs}__link--before--border-width--base);
   --#{$tabs}__add--c-button--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}--m-subtab__add--c-button--FontSize: var(--pf-t--global--font--size--xs);
-  --#{$tabs}__add--c-button--PaddingTop: var(--#{$tabs}__link--PaddingTop);
-  --#{$tabs}__add--c-button--PaddingBottom: var(--#{$tabs}__link--PaddingBottom);
-  --#{$tabs}__add--c-button--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
+  --#{$tabs}__add--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__add--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__add--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__add--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Overflow menu toggle icon
   --#{$tabs}__link-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -728,24 +728,12 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 // Scroll buttons
 .#{$tabs}__scroll-button {
-  flex: none;
-  width: var(--#{$tabs}__scroll-button--Width);
-  line-height: 1;
-  color: var(--#{$tabs}__scroll-button--Color);
-  background-color: var(--#{$tabs}__scroll-button--BackgroundColor);
-  outline-offset: var(--#{$tabs}__scroll-button--OutlineOffset);
+  padding-block-start: var(--#{$tabs}__scroll-button--PaddingBlockStart);
+  padding-block-end: var(--#{$tabs}__scroll-button--PaddingBlockEnd);
+  padding-inline-start: var(--#{$tabs}__scroll-button--PaddingInlineStart);
+  padding-inline-end: var(--#{$tabs}__scroll-button--PaddingInlineEnd);
   opacity: 0;
   transition: margin var(--#{$tabs}__scroll-button--TransitionDuration--margin), transform var(--#{$tabs}__scroll-button--TransitionDuration--transform), opacity var(--#{$tabs}__scroll-button--TransitionDuration--opacity);
-
-  > * {
-    @include pf-v5-mirror-inline-on-rtl; // in breaking change, add an icon wrapper and move this style to the wrapper
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    --#{$tabs}__scroll-button--Color: var(--#{$tabs}__scroll-button--hover--Color);
-  }
 
   &::before {
     border-color: var(--#{$tabs}__scroll-button--before--BorderColor);
@@ -768,17 +756,15 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     margin-inline-start: calc(var(--#{$tabs}__scroll-button--Width) * -1);
     transform: translateX(100%);
   }
-
-  &:disabled {
-    --#{$tabs}__scroll-button--Color: var(--#{$tabs}__scroll-button--disabled--Color);
-
-    pointer-events: none;
-  }
 }
 
 .#{$tabs}__add {
   position: relative;
   display: flex;
+  padding-block-start: var(--#{$tabs}__add--PaddingBlockStart);
+  padding-block-end: var(--#{$tabs}__add--PaddingBlockEnd);
+  padding-inline-start: var(--#{$tabs}__add--PaddingInlineStart);
+  padding-inline-end: var(--#{$tabs}__add--PaddingInlineEnd);
 
   &::before {
     border-inline-start: var(--#{$tabs}__add--before--BorderLeftWidth) solid var(--#{$tabs}__add--before--BorderColor);
@@ -786,10 +772,6 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$tabs}__add--c-button--FontSize);
-    --#{$button}--PaddingTop: var(--#{$tabs}__add--c-button--PaddingTop);
-    --#{$button}--PaddingBottom: var(--#{$tabs}__add--c-button--PaddingBottom);
-
-    outline-offset: var(--#{$tabs}__add--c-button--OutlineOffset);
   }
 }
 
