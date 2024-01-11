@@ -9,6 +9,7 @@
   --#{$input-group}__item--BorderWidth--base: var(--pf-t--global--border--width--control--default);
   --#{$input-group}__item--BorderColor--base: var(--pf-t--global--border--color--default);
   --#{$input-group}__item--BackgroundColor: transparent;
+  --#{$input-group}__item--AlignItems: start;
 
   // Input group item, box variant
   --#{$input-group}__item--m-box--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -42,6 +43,7 @@
 .#{$input-group}__item {
   position: relative; // stack items without explicit z-index
   display: flex;
+  align-items: var(--#{$input-group}__item--AlignItems);
   min-width: var(--#{$input-group}__item--MinWidth, revert);
   max-width: var(--#{$input-group}__item--MaxWidth, revert);
   background-color: var(--#{$input-group}__item--BackgroundColor);
