@@ -1,37 +1,38 @@
 // @debug $jump-links; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
-.#{$jump-links} {
+:where(:root),
+:where(.#{$jump-links}) {
   // list
   --#{$jump-links}__list--Display: flex;
   --#{$jump-links}__list--PaddingTop: 0;
-  --#{$jump-links}__list--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$jump-links}__list--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$jump-links}__list--PaddingBottom: 0;
-  --#{$jump-links}__list--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$jump-links}--m-vertical__list--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$jump-links}__list--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$jump-links}--m-vertical__list--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$jump-links}--m-vertical__list--PaddingRight: 0;
-  --#{$jump-links}--m-vertical__list--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$jump-links}--m-vertical__list--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$jump-links}--m-vertical__list--PaddingLeft: 0;
   --#{$jump-links}__list--FlexDirection: row;
   --#{$jump-links}--m-vertical__list--FlexDirection: column;
-  --#{$jump-links}__list--before--BorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$jump-links}__list--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$jump-links}__list--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$jump-links}__list--before--BorderTopWidth: var(--pf-t--global--border--width--box--default);
   --#{$jump-links}__list--before--BorderRightWidth: 0;
   --#{$jump-links}__list--before--BorderBottomWidth: 0;
   --#{$jump-links}__list--before--BorderLeftWidth: 0;
-  --#{$jump-links}--m-vertical__list--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$jump-links}--m-vertical__list--before--BorderLeftWidth: var(--pf-t--global--border--width--box--default);
   --#{$jump-links}--m-vertical__list--before--BorderTopWidth: 0;
-  --#{$jump-links}__list__list--MarginTop: calc(var(--#{$pf-global}--spacer--sm) * -1);
+  --#{$jump-links}__list__list--MarginTop: calc(var(--pf-t--global--spacer--sm) * -1);
 
   // link
-  --#{$jump-links}__link--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$jump-links}__link--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$jump-links}__link--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$jump-links}__link--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$jump-links}__list__list__link--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$jump-links}__list__list__link--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$jump-links}__list__list__link--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$jump-links}__link--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--sm));
+  --#{$jump-links}__link--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$jump-links}__link--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$jump-links}__link--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$jump-links}__link--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$jump-links}__list__list__link--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$jump-links}__list__list__link--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$jump-links}__list__list__link--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$jump-links}__link--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--sm));
 
   // before
   --#{$jump-links}__link--before--BorderTopWidth: 0;
@@ -39,41 +40,43 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__link--before--BorderBottomWidth: 0;
   --#{$jump-links}__link--before--BorderLeftWidth: 0;
   --#{$jump-links}__link--before--BorderColor: transparent;
-  --#{$jump-links}__item--m-current__link--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$jump-links}__item--m-current__link--before--BorderTopWidth: var(--pf-t--global--border--width--extra-strong);
   --#{$jump-links}__item--m-current__link--before--BorderLeftWidth: 0;
-  --#{$jump-links}__item--m-current__link--before--BorderColor: var(--#{$pf-global}--primary-color--100);
+  --#{$jump-links}__item--m-current__link--before--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$jump-links}--m-vertical__item--m-current__link--before--BorderTopWidth: 0;
-  --#{$jump-links}--m-vertical__item--m-current__link--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$jump-links}--m-vertical__item--m-current__link--before--BorderLeftWidth: var(--pf-t--global--border--width--extra-strong);
 
   // text
-  --#{$jump-links}__link-text--Color: var(--#{$pf-global}--Color--200);
-  --#{$jump-links}__link--hover__link-text--Color: var(--#{$pf-global}--Color--100);
-  --#{$jump-links}__link--focus__link-text--Color: var(--#{$pf-global}--Color--100);
-  --#{$jump-links}__item--m-current__link-text--Color: var(--#{$pf-global}--Color--100);
+  --#{$jump-links}__link-text--Color: var(--pf-t--global--text--color--subtle);
+  --#{$jump-links}__link--hover__link-text--Color: var(--pf-t--global--text--color--subtle);
+  --#{$jump-links}__link--focus__link-text--Color: var(--pf-t--global--text--color--subtle);
+  --#{$jump-links}__item--m-current__link-text--Color: var(--pf-t--global--text--color--regular);
 
   // label
-  --#{$jump-links}__label--MarginBottom: var(--#{$pf-global}--spacer--md);
+  --#{$jump-links}__label--MarginBottom: var(--pf-t--global--spacer--md);
   --#{$jump-links}__label--Display: block;
 
   // toggle
   --#{$jump-links}__toggle--MarginTop: calc(-1 * var(--#{$pf-global}--spacer--form-element));
   --#{$jump-links}__toggle--MarginBottom--base: calc(-1 * var(--#{$pf-global}--spacer--form-element));
   --#{$jump-links}__toggle--MarginBottom: var(--#{$jump-links}__toggle--MarginBottom--base);
-  --#{$jump-links}--m-expanded__toggle--MarginBottom: calc(var(--#{$jump-links}__toggle--MarginBottom--base) + var(--#{$pf-global}--spacer--md));
-  --#{$jump-links}__toggle--MarginLeft: calc(-1 * var(--#{$pf-global}--spacer--md));
+  --#{$jump-links}--m-expanded__toggle--MarginBottom: calc(var(--#{$jump-links}__toggle--MarginBottom--base) + var(--pf-t--global--spacer--md));
+  --#{$jump-links}__toggle--MarginLeft: calc(-1 * var(--pf-t--global--spacer--md));
   --#{$jump-links}__toggle--Display: none;
 
   // toggle icon
   --#{$jump-links}__toggle-icon--Color: currentcolor;
-  --#{$jump-links}__toggle-icon--Transition: var(--#{$pf-global}--Transition);
+  --#{$jump-links}__toggle-icon--Transition: var(--#{$pf-global}--Transition); // TODO
   --#{$jump-links}__toggle-icon--Rotate: 0;
-  --#{$jump-links}--m-expanded__toggle-icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$jump-links}--m-expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$jump-links}--m-expanded__toggle-icon--Rotate: 90deg;
 
   // toggle text
-  --#{$jump-links}__toggle-text--MarginLeft: var(--#{$pf-global}--spacer--md);
-  --#{$jump-links}__toggle-text--Color: var(--#{$pf-global}--Color--100);
+  --#{$jump-links}__toggle-text--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$jump-links}__toggle-text--Color: var(--pf-t--global--text--color--regular);
+}
 
+.#{$jump-links} {
   display: flex;
 
   &.pf-m-center {
