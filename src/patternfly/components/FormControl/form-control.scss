@@ -59,17 +59,17 @@
   // success
   --#{$form-control}--m-success--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-success--after--BorderColor: var(--pf-t--global--border--color--status--success--default);
-  --#{$form-control}--m-success--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$form-control}--m-success--PaddingRight: calc(var(--pf-t--global--spacer--xl) + var(--#{$form-control}--ColumnGap));
 
   // warning
   --#{$form-control}--m-warning--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-warning--after--BorderColor: var(--pf-t--global--border--color--status--warning--default);
-  --#{$form-control}--m-warning--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$form-control}--m-warning--PaddingRight: calc(var(--pf-t--global--spacer--xl) + var(--#{$form-control}--ColumnGap));
 
   // error
   --#{$form-control}--m-error--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-error--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
-  --#{$form-control}--m-error--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$form-control}--m-error--PaddingRight: calc(var(--pf-t--global--spacer--xl) + var(--#{$form-control}--ColumnGap));
   --#{$form-control}--m-error--icon--width: var(--#{$form-control}--FontSize);
 
   // custom icon
