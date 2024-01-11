@@ -1,7 +1,7 @@
 // @debug $tile; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root,
-.#{$tile} {
+:where(:root),
+:where(.#{$tile}) {
   --#{$tile}--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$tile}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$tile}--PaddingBottom: var(--pf-t--global--spacer--lg);
