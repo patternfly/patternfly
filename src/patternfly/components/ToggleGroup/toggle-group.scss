@@ -1,7 +1,7 @@
 // @debug $toggle-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root,
-.#{$toggle-group} {
+:where(:root),
+:where(.#{$toggle-group}) {
   // button
   --#{$toggle-group}__button--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$toggle-group}__button--PaddingRight: var(--pf-t--global--spacer--md);
