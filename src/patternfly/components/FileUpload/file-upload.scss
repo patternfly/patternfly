@@ -24,11 +24,6 @@
 
   // File details > Text area
   --#{$file-upload}__file-details__c-form-control--MinHeight: calc(var(--pf-t--global--spacer--3xl) * 2);
-
-  // Form helper text overrides
-  --#{$file-upload}__c-form-helper-text--MarginBlockStart: 0;
-  --#{$file-upload}__c-form-helper-text--PaddingInlineStart: var(--#{$file-upload}--PaddingInlineStart);
-  --#{$file-upload}__c-form-helper-text--PaddingInlineEnd: var(--#{$file-upload}--PaddingInlineEnd);
 }
 
 .#{$file-upload} {
@@ -52,13 +47,6 @@
     .#{$file-upload}__file-details {
       position: relative;
     }
-  }
-
-  & + .#{$form}__helper-text {
-    --#{$form}__helper-text__MarginTop:var(--#{$file-upload}__c-form-helper-text--MarginBlockStart);
-
-    padding-inline-start: var(--#{$file-upload}__c-form-helper-text--PaddingInlineStart);
-    padding-inline-end: var(--#{$file-upload}__c-form-helper-text--PaddingInlineEnd);
   }
 }
 
