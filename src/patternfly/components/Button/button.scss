@@ -1,5 +1,6 @@
 :root,
 .#{$button} {
+  --#{$button}--Display: inline-block;
   --#{$button}--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBottom: var(--pf-t--global--spacer--sm);
@@ -17,6 +18,7 @@
   --#{$button}--BorderStartEndRadius: var(--#{$button}--BorderRadius);
   --#{$button}--BorderEndStartRadius: var(--#{$button}--BorderRadius);
   --#{$button}--BorderEndEndRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--MixBlendMode: normal;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -77,6 +79,7 @@
   --#{$button}--m-link--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$button}--m-link--Color: var(--pf-t--global--text--color--brand--default);
   --#{$button}--m-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$button}--m-link--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$button}--m-link__icon--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$button}--m-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
@@ -259,7 +262,7 @@
 
 .#{$button} {
   position: relative;
-  display: var(--#{$button}--Display, initial);
+  display: var(--#{$button}--Display);
   flex: var(--#{$button}--Flex, initial);
   align-items: var(--#{$button}--AlignItems, initial);
   justify-content: var(--#{$button}--JustifyContent, initial);
@@ -282,6 +285,7 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius);
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius);
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius);
+  mix-blend-mode: var(--#{$button}--MixBlendMode);
 
   &::after {
     position: absolute;
@@ -358,6 +362,7 @@
     --#{$button}--Color: var(--#{$button}--m-link--Color);
     --#{$button}--BorderRadius: var(--#{$button}--m-link--BorderRadius);
     --#{$button}--BackgroundColor: var(--#{$button}--m-link--BackgroundColor);
+    --#{$button}--MixBlendMode: var(--#{$button}--m-link--MixBlendMode);
     --#{$button}__icon--Color: var(--#{$button}--m-link__icon--Color);
     --#{$button}--hover--Color: var(--#{$button}--m-link--hover--Color);
     --#{$button}--hover--BackgroundColor: var(--#{$button}--m-link--hover--BackgroundColor);
@@ -503,6 +508,7 @@
     --#{$button}--PaddingRight: var(--#{$button}--m-plain--PaddingRight);
     --#{$button}--PaddingBottom: var(--#{$button}--m-plain--PaddingBottom);
     --#{$button}--PaddingLeft: var(--#{$button}--m-plain--PaddingLeft);
+    --#{$button}--MixBlendMode: var(--#{$button}--m-plain--MixBlendMode);
     --#{$button}--m-small--PaddingTop: var(--#{$button}--m-plain--m-small--PaddingTop);
     --#{$button}--m-small--PaddingRight: var(--#{$button}--m-plain--m-small--PaddingRight);
     --#{$button}--m-small--PaddingBottom: var(--#{$button}--m-plain--m-small--PaddingBottom);
@@ -524,7 +530,6 @@
     }
 
     min-width: var(--#{$button}--m-plain--MinWidth);
-    mix-blend-mode: var(--#{$button}--m-plain--MixBlendMode);
   }
 
   &.pf-m-block {
