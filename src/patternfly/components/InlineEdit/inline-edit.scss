@@ -1,6 +1,7 @@
 // @debug $inline-edit; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root, .#{$inline-edit} {
+:where(:root),
+:where( .#{$inline-edit}) {
   // Group
   --#{$inline-edit}__group--item--MarginRight: var(--pf-t--global--spacer--sm);
 
