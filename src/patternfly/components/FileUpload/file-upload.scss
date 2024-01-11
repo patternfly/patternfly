@@ -1,65 +1,72 @@
 // @debug $file-upload; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$file-upload} {
-  // pf-m-loading
-  --#{$file-upload}--m-loading__file-details--before--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$file-upload}--m-loading__file-details--before--Left: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$file-upload}--m-loading__file-details--before--Right: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$file-upload}--m-loading__file-details--before--Bottom: var(--#{$pf-global}--BorderWidth--sm);
+:where(:root),
+:where(.#{$file-upload}) {
+  --#{$file-upload}--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$file-upload}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$file-upload}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$file-upload}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$file-upload}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$file-upload}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$file-upload}--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$file-upload}--BorderColor: transparent;
+  --#{$file-upload}--BorderStyle: solid;
 
   // pf-m-drag-hover
-  --#{$file-upload}--m-drag-hover--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$file-upload}--m-drag-hover--before--BorderColor: var(--#{$pf-global}--primary-color--100);
-  --#{$file-upload}--m-drag-hover--before--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$file-upload}--m-drag-hover--after--BackgroundColor: var(--#{$pf-global}--primary-color--100);
-  --#{$file-upload}--m-drag-hover--after--Opacity: .1;
+  --#{$file-upload}--m-drag-hover--BorderColor: var(--pf-t--global--icon--color--brand--default);
+  --#{$file-upload}--m-drag-hover--BorderStyle: dashed;
 
-  // Text area
-  --#{$file-upload}__file-details__c-form-control--MinHeight: calc(var(--#{$pf-global}--spacer--3xl) * 2);
+  // File select > Input group
+  --#{$file-upload}__file-select__c-input-group--ColumnGap: var(--pf-t--global--spacer--xs);
 
-  // Button overrides
-  --#{$file-upload}__file-select__c-button--m-control--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
+  // File select > Button
+  --#{$file-upload}__file-select__c-button--m-control--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
+  // File details > Text area
+  --#{$file-upload}__file-details__c-form-control--MinHeight: calc(var(--pf-t--global--spacer--3xl) * 2);
+
+  // Form helper text overrides
+  --#{$file-upload}__c-form-helper-text--MarginBlockStart: 0;
+  --#{$file-upload}__c-form-helper-text--PaddingInlineStart: var(--#{$file-upload}--PaddingInlineStart);
+  --#{$file-upload}__c-form-helper-text--PaddingInlineEnd: var(--#{$file-upload}--PaddingInlineEnd);
+}
+
+.#{$file-upload} {
   position: relative;
   display: flex;
   flex-direction: column;
+  row-gap: var(--#{$file-upload}--RowGap);
+  padding-block-start: var(--#{$file-upload}--PaddingBlockStart);
+  padding-block-end: var(--#{$file-upload}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$file-upload}--PaddingInlineStart);
+  padding-inline-end: var(--#{$file-upload}--PaddingInlineEnd);
+  border: var(--#{$file-upload}--BorderWidth) var(--#{$file-upload}--BorderStyle) var(--#{$file-upload}--BorderColor);
+  border-radius: var(--#{$file-upload}--BorderRadius);
 
   &.pf-m-drag-hover {
-    &::before {
-      position: absolute;
-      inset: 0;
-      z-index: var(--#{$file-upload}--m-drag-hover--before--ZIndex);
-      content: "";
-      border: var(--#{$file-upload}--m-drag-hover--before--BorderWidth) solid var(--#{$file-upload}--m-drag-hover--before--BorderColor);
-    }
-
-    &::after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background-color: var(--#{$file-upload}--m-drag-hover--after--BackgroundColor);
-      opacity: var(--#{$file-upload}--m-drag-hover--after--Opacity);
-    }
+    --#{$file-upload}--BorderColor: var(--#{$file-upload}--m-drag-hover--BorderColor);
+    --#{$file-upload}--BorderStyle: var(--#{$file-upload}--m-drag-hover--BorderStyle);
   }
 
   &.pf-m-loading {
     .#{$file-upload}__file-details {
       position: relative;
-
-      &::before {
-        position: absolute;
-        inset-block-start: 0;
-        inset-block-end: var(--#{$file-upload}--m-loading__file-details--before--Left);
-        inset-inline-start: var(--#{$file-upload}--m-loading__file-details--before--Left);
-        inset-inline-end: var(--#{$file-upload}--m-loading__file-details--before--Left);
-        content: "";
-        background-color: var(--#{$file-upload}--m-loading__file-details--before--BackgroundColor);
-      }
     }
+  }
+
+  & + .#{$form}__helper-text {
+    --#{$form}__helper-text__MarginTop:var(--#{$file-upload}__c-form-helper-text--MarginBlockStart);
+
+    padding-inline-start: var(--#{$file-upload}__c-form-helper-text--PaddingInlineStart);
+    padding-inline-end: var(--#{$file-upload}__c-form-helper-text--PaddingInlineEnd);
   }
 }
 
 .#{$file-upload}__file-select {
+  .#{$input-group} {
+    column-gap: var(--#{$file-upload}__file-select__c-input-group--ColumnGap);
+  }
+
   .#{$button}.pf-m-control {
     outline-offset: var(--#{$file-upload}__file-select__c-button--m-control--OutlineOffset);
   }
@@ -78,7 +85,7 @@
 
 .#{$file-upload}__file-details-spinner {
   position: absolute;
- inset-block-start: 50%;
- inset-inline-start: 50%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
   transform: translate(-50%, -50%);
 }

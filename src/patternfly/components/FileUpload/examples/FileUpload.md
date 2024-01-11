@@ -126,36 +126,38 @@ cssPrefix: pf-v5-c-file-upload
 ```hbs
 {{#> form}}
   {{#> form-group}}
-    {{#> file-upload file-upload--id="file-upload-error"}}
-      {{#> file-upload-file-select}}
-        {{#> input-group}}
-          {{#> input-group-item input-group-item--IsFill=true}}
-            {{> file-upload-text-input
-              form-control--IsRequired='true'
-              file-upload-text-input--aria-label="File upload error"
-              file-upload-text-input--attribute=(concat 'value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
-              }}
-          {{/input-group-item}}
-          {{#> input-group-item}}
-            {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
-              Upload
-            {{/button}}
-          {{/input-group-item}}
-          {{#> input-group-item}}
-            {{#> button button--modifier="pf-m-control"}}
-              Clear
-            {{/button}}
-          {{/input-group-item}}
-        {{/input-group}}
-      {{/file-upload-file-select}}
-      {{#> file-upload-file-details 
-        form-control--IsError='true'
-        file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' 
-        file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
-    {{/file-upload}}
-    {{#> form-helper-text}}
-      {{> helper-text helper-text--value="We don't support this file type. Try again with a different file type." helper-text-item--id='textAreaHelperText1' helper-text-item--IsError=true}}
-    {{/form-helper-text}}
+    {{#> form-group-control}}
+      {{#> file-upload file-upload--id="file-upload-error"}}
+        {{#> file-upload-file-select}}
+          {{#> input-group}}
+            {{#> input-group-item input-group-item--IsFill=true}}
+              {{> file-upload-text-input
+                form-control--IsReadonly='true'
+                file-upload-text-input--aria-label="File upload error"
+                file-upload-text-input--attribute=(concat 'value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
+                }}
+            {{/input-group-item}}
+            {{#> input-group-item}}
+              {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+                Upload
+              {{/button}}
+            {{/input-group-item}}
+            {{#> input-group-item}}
+              {{#> button button--modifier="pf-m-control"}}
+                Clear
+              {{/button}}
+            {{/input-group-item}}
+          {{/input-group}}
+        {{/file-upload-file-select}}
+        {{#> file-upload-file-details 
+          form-control--IsError='true'
+          file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' 
+          file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
+      {{/file-upload}}
+      {{#> form-helper-text}}
+        {{> helper-text helper-text-item--HasIcon=true helper-text--value="Must be a CSV file no larger than 1 KB" helper-text-item--id='textAreaHelperText1' helper-text-item--IsError=true}}
+      {{/form-helper-text}}
+    {{/form-group-control}}
   {{/form-group}}
 {{/form}}
 ```
