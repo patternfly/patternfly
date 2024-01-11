@@ -1,7 +1,7 @@
 // @debug $dual-list-selector; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 
-.#{$dual-list-selector} {
+:where(:root), :where(.#{$dual-list-selector}) {
   // Grid
   --#{$dual-list-selector}__header--GridArea: pane-header;
   --#{$dual-list-selector}__tools--GridArea: pane-tools;
@@ -16,79 +16,76 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--max: #{pf-size-prem(450px)};
 
   // Header
-  --#{$dual-list-selector}__header--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$dual-list-selector}__header--MarginBottom: var(--pf-t--global--spacer--sm);
 
   // Title
-  --#{$dual-list-selector}__title-text--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$dual-list-selector}__title-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Tools
-  --#{$dual-list-selector}__tools--MarginBottom: var(--#{$pf-global}--spacer--md);
-  --#{$dual-list-selector}__tools-filter--tools-actions--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$dual-list-selector}__tools--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$dual-list-selector}__tools-filter--tools-actions--MarginLeft: var(--pf-t--global--spacer--sm);
 
   // Menu
-  --#{$dual-list-selector}__menu--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$dual-list-selector}__menu--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$dual-list-selector}__menu--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$dual-list-selector}__menu--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$dual-list-selector}__menu--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$dual-list-selector}__menu--MinHeight: #{pf-size-prem(200px)};
   --#{$dual-list-selector}__menu--MaxHeight: #{pf-size-prem(320px)};
 
   // List item
-  --#{$dual-list-selector}__list-item-row--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$dual-list-selector}__list-item-row--BackgroundColor: transparent;
-  --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
+  --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
+  --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$dual-list-selector}__list-item-row--BorderRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
 
   // Item
-  --#{$dual-list-selector}__item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$dual-list-selector}__item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__item--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$dual-list-selector}__item--m-expandable--PaddingLeft: 0;
-  --#{$dual-list-selector}__item--indent--base: calc(var(--#{$pf-global}--spacer--md) + var(--#{$pf-global}--spacer--sm) + var(--#{$dual-list-selector}__list-item-row--FontSize));
-  --#{$dual-list-selector}__item--nested-indent--base: calc(var(--#{$dual-list-selector}__item--indent--base) - var(--#{$pf-global}--spacer--md));
-  --#{$dual-list-selector}__draggable--item--PaddingLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$dual-list-selector}__item--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$dual-list-selector}__item--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$dual-list-selector}__item--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$dual-list-selector}__item--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$dual-list-selector}__item--m-expandable--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$dual-list-selector}__item--indent--base: calc(var(--pf-t--global--spacer--md) + var(--pf-t--global--spacer--sm) + var(--#{$dual-list-selector}__list-item-row--FontSize));
+  --#{$dual-list-selector}__item--nested-indent--base: calc(var(--#{$dual-list-selector}__item--indent--base) - var(--pf-t--global--spacer--md));
+  --#{$dual-list-selector}__draggable--item--PaddingLeft: var(--pf-t--global--spacer--xs);
 
   // Item text
-  --#{$dual-list-selector}__item-text--Color: var(--#{$pf-global}--Color--100);
-  --#{$dual-list-selector}__list-item-row--m-selected__text--Color: var(--#{$pf-global}--active-color--100);
-  --#{$dual-list-selector}__list-item-row--m-selected__text--FontWeight: var(--#{$pf-global}--FontWeight--bold);
-  --#{$dual-list-selector}__list-item--m-disabled__item-text--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$dual-list-selector}__item-text--Color: var(--pf-t--global--text--color--subtle);
+  --#{$dual-list-selector}__list-item-row--m-selected__text--Color: var(--pf-t--global--text--color--regular);
+  --#{$dual-list-selector}__list-item--m-disabled__item-text--Color: var(--pf-t--global--background--color--disabled--default); // token?
 
   // Status
-  --#{$dual-list-selector}__status--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__status-text--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$dual-list-selector}__status-text--Color: var(--#{$pf-global}--Color--200);
+  --#{$dual-list-selector}__status--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$dual-list-selector}__status-text--FontSize: var(--pf-t--global--font--size--sm);
+  --#{$dual-list-selector}__status-text--Color: var(--pf-t--global--text--color--subtle);
 
   // Controls
-  --#{$dual-list-selector}__controls--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$dual-list-selector}__controls--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$dual-list-selector}__controls--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$dual-list-selector}__controls--PaddingLeft: var(--pf-t--global--spacer--md);
 
   // Toggle
-  --#{$dual-list-selector}__item-toggle--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__item-toggle--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__item-toggle--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__item-toggle--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$dual-list-selector}__item-toggle--MarginTop: calc(var(--#{$pf-global}--spacer--sm) * -1);
-  --#{$dual-list-selector}__item-toggle--MarginBottom: calc(var(--#{$pf-global}--spacer--sm) * -1);
+  --#{$dual-list-selector}__item-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$dual-list-selector}__list__list__item-toggle--Left: 0;
   --#{$dual-list-selector}__list__list__item-toggle--TranslateX: -100%;
 
   // Check
-  --#{$dual-list-selector}__item-check--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$dual-list-selector}__item-check--MarginRight: var(--pf-t--global--spacer--sm);
 
   // Badge
-  --#{$dual-list-selector}__item-count--Marginleft: var(--#{$pf-global}--spacer--sm);
-  --#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+  --#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
 
   // Icon
   --#{$dual-list-selector}__item-toggle-icon--Rotate: 0;
   --#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
-  --#{$dual-list-selector}__item-toggle-icon--Transition: var(--#{$pf-global}--Transition);
+  --#{$dual-list-selector}__item-toggle-icon--Transition: var(--#{$pf-global}--Transition); // need token
   --#{$dual-list-selector}__item-toggle-icon--MinWidth: var(--#{$dual-list-selector}__list-item-row--FontSize);
-  --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--#{$pf-global}--disabled-color--200);
+  --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--pf-t--global--background--color--disabled--default);
+}
 
+.#{$dual-list-selector} {
   display: grid;
   grid-template-areas:
     "pane-header . pane-header-c"
@@ -158,6 +155,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   max-height: var(--#{$dual-list-selector}__menu--MaxHeight);
   overflow: auto;
   border: var(--#{$dual-list-selector}__menu--BorderWidth) solid var(--#{$dual-list-selector}__menu--BorderColor);
+  border-radius: var(--#{$dual-list-selector}__menu--BorderRadius);
 }
 
 .#{$dual-list-selector}__list {
@@ -175,7 +173,6 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
       ); 
 
       position: absolute;
-      inset-block-start: 0;
       inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
     }
   }
@@ -213,6 +210,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   display: flex;
   font-size: var(--#{$dual-list-selector}__list-item-row--FontSize);
   background-color: var(--#{$dual-list-selector}__list-item-row--BackgroundColor);
+  border-radius: var(--#{$dual-list-selector}__list-item-row--BorderRadius);
 
   &:hover {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
@@ -225,6 +223,10 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
       --#{$dual-list-selector}__item-text--Color: var(--#{$dual-list-selector}__list-item-row--m-selected__text--Color);
 
       font-weight: var(--#{$dual-list-selector}__list-item-row--m-selected__text--FontWeight);
+    }
+
+    &:hover {
+      --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
     }
   }
 
@@ -347,10 +349,3 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   }
 }
 // stylelint-enable
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/dual-list-selector";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-dual-list-selector;
-}
