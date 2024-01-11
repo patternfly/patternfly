@@ -1,6 +1,7 @@
 // @debug $clipboard-copy; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root, .#{$clipboard-copy} {
+:where(:root),
+:where(.#{$clipboard-copy}) {
   // Toggle icon
   --#{$clipboard-copy}__toggle-icon--Transition: .2s ease-in 0s;
   --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;
@@ -62,6 +63,7 @@
 
 .#{$clipboard-copy}__group {
   display: flex;
+  gap: var(--pf-t--global--spacer--xs);
 
   > * + * {
     margin-inline-start: -1px;
