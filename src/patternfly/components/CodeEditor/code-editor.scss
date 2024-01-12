@@ -1,6 +1,6 @@
 // @debug $code-editor; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root, :where(.#{$code-editor}) {
+:where(:root), :where(.#{$code-editor}) {
   // controls
   --#{$code-editor}__controls--c-button--m-control--Color: var(--pf-t--global--icon--color--regular);
   --#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-t--global--border--color--default);
