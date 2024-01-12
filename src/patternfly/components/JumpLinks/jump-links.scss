@@ -49,7 +49,6 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   // text
   --#{$jump-links}__link-text--Color: var(--pf-t--global--text--color--subtle);
   --#{$jump-links}__link--hover__link-text--Color: var(--pf-t--global--text--color--subtle);
-  --#{$jump-links}__link--focus__link-text--Color: var(--pf-t--global--text--color--subtle);
   --#{$jump-links}__item--m-current__link-text--Color: var(--pf-t--global--text--color--regular);
 
   // label
@@ -171,12 +170,9 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   text-decoration: none;
   outline-offset: var(--#{$jump-links}__link--OutlineOffset);
 
-  &:hover {
-    --#{$jump-links}__link-text--Color: var(--#{$jump-links}__link--hover__link-text--Color);
-  }
-
+  &:hover,
   &:focus {
-    --#{$jump-links}__link-text--Color: var(--#{$jump-links}__link--focus__link-text--Color);
+    --#{$jump-links}__link-text--Color: var(--#{$jump-links}__link--hover__link-text--Color);
   }
 
   &::before {
