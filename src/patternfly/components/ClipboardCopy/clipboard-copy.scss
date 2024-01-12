@@ -38,7 +38,9 @@
   --#{$clipboard-copy}__actions-item--button--PaddingRight: var(--pf-t--global--spacer--xs);
   --#{$clipboard-copy}__actions-item--button--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$clipboard-copy}__actions-item--button--PaddingLeft: var(--pf-t--global--spacer--xs);
+}
 
+.#{$clipboard-copy} {
   // Toggle button expanded
   &.pf-m-expanded {
     .#{$clipboard-copy}__toggle-icon {
