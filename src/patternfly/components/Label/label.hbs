@@ -8,6 +8,7 @@
   {{#if label--color}}
     pf-m-{{label--color}}
   {{/if}}
+  {{#ifAny label-content--IsLink label-content--IsButton}} pf-m-clickable{{/ifAny}}
   {{#if label--modifier}} {{label--modifier}}{{/if}}"
   {{#if (concat label--IsOverflow label--IsAdd)}}
     type="button"
@@ -28,7 +29,7 @@
   {{/label-content}}
   {{#if label--isRemovable}}
     {{#> label-actions}}
-      {{#> button button--IsPlain=true button--attribute=(concat 'id="' label--id '-button"
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
     aria-label="Remove" aria-labelledby="' label--id '-button ' label--id '-text"')}}
         <i class="fas fa-times fa-fw" aria-hidden="true"></i>
       {{/button}}

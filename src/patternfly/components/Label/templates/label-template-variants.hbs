@@ -24,10 +24,21 @@
     label-content--IsLink=true}}
 
 {{> label
+    label--id=(concat label-template-variants--id '-button')
+    label-text--value=(concat label-template-variants--title ' button')
+    label-content--IsButton=true}}
+
+{{> label
     label--isRemovable=true
     label--id=(concat label-template-variants--id '-link-removable')
     label-text--value=(concat label-template-variants--title ' link removable')
     label-content--IsLink=true}}
+
+{{> label
+    label--isRemovable=true
+    label--id=(concat label-template-variants--id '-button-removable')
+    label-text--value=(concat label-template-variants--title ' button removable')
+    label-content--IsButton=true}}
 
 {{> label
     label--id=(concat label-template-variants--id '-truncated')

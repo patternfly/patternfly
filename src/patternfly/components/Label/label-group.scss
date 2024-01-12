@@ -1,54 +1,54 @@
 // @debug $label-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$label-group} {
+:where(:root),
+:where(.#{$label-group}) {
   // Label group - spaces main with the close button
-  --#{$label-group}--RowGap: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--ColumnGap: 0;
-  --#{$label-group}--m-vertical--RowGap: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--m-vertical--ColumnGap: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-vertical--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-vertical--ColumnGap: var(--pf-t--global--spacer--sm);
 
   // Main - spaces the category label with the list
-  --#{$label-group}__main--RowGap: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}__main--ColumnGap: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--m-vertical__main--RowGap: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--m-vertical__main--ColumnGap: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__main--RowGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__main--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-vertical__main--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-vertical__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // List - spaces the items
-  --#{$label-group}__list--RowGap: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}__list--ColumnGap: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}--m-vertical__list--RowGap: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}--m-vertical__list--ColumnGap: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__list--RowGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__list--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-vertical__list--RowGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-vertical__list--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // Category
-  --#{$label-group}--m-category--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}--m-category--PaddingRight: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}--m-category--PaddingBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$label-group}--m-category--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--m-vertical--m-category--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--m-category--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
-  --#{$label-group}--m-category--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$label-group}--m-category--BorderColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$label-group}--m-category--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$label-group}--m-category--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-category--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-category--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-category--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-category--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$label-group}--m-category--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$label-group}--m-category--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$label-group}--m-vertical--m-category--PaddingRight: var(--pf-t--global--spacer--sm);
 
   // Label
-  --#{$label-group}__label--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$label-group}__label--MaxWidth: 18ch;
 
   // Close
-  --#{$label-group}__close--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
-  --#{$label-group}__close--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
-  --#{$label-group}--m-vertical__close--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$label-group}--m-vertical__close--MarginRight: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$label-group}--m-vertical__close--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$label-group}--m-vertical__close--c-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}__close--c-button--FontSize: var(--pf-t--global--icon--size--body--sm);
+  --#{$label-group}__close--c-button--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__close--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$label-group}__close--c-button--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__close--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // Textarea
   --#{$label-group}__textarea--MinWidth: #{pf-size-prem(200px)};
   --#{$label-group}__textarea--PaddingTop: #{pf-size-prem(2px)};
-  --#{$label-group}__textarea--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__textarea--PaddingRight: var(--pf-t--global--spacer--xs);
   --#{$label-group}__textarea--PaddingBottom: 0;
-  --#{$label-group}__textarea--PaddingLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__textarea--PaddingLeft: var(--pf-t--global--spacer--xs);
+}
 
+.#{$label-group} {
   display: inline-flex;
   row-gap: var(--#{$label-group}--RowGap);
   column-gap: var(--#{$label-group}--ColumnGap);
@@ -71,10 +71,6 @@
     --#{$label-group}__main--ColumnGap: var(--#{$label-group}--m-vertical__main--ColumnGap);
     --#{$label-group}__list--RowGap: var(--#{$label-group}--m-vertical__list--RowGap);
     --#{$label-group}__list--ColumnGap: var(--#{$label-group}--m-vertical__list--ColumnGap);
-    --#{$label-group}__close--MarginTop: var(--#{$label-group}--m-vertical__close--MarginTop);
-    --#{$label-group}__close--MarginLeft: var(--#{$label-group}--m-vertical__close--MarginLeft);
-    --#{$label-group}__close--MarginBottom: 0;
-    --#{$label-group}__close--MarginRight: var(--#{$label-group}--m-vertical__close--MarginRight);
     --#{$label-group}--m-category--PaddingRight: var(--#{$label-group}--m-vertical--m-category--PaddingRight);
 
     &.#{$label-group} {
@@ -88,11 +84,6 @@
 
     .#{$label-group}__main {
       flex-direction: column;
-    }
-
-    .#{$label-group}__close .#{$button} {
-      --#{$button}--PaddingLeft: var(--#{$label-group}--m-vertical__close--c-button--PaddingLeft);
-      --#{$button}--PaddingRight: var(--#{$label-group}--m-vertical__close--c-button--PaddingRight);
     }
   }
 
@@ -136,16 +127,19 @@
   @include pf-v5-text-overflow;
 
   max-width: var(--#{$label-group}__label--MaxWidth);
-  font-size: var(--#{$label-group}__label--FontSize);
 }
 
 .#{$label-group}__close {
   display: flex;
   align-self: flex-start;
-  margin-block-start: var(--#{$label-group}__close--MarginTop);
-  margin-block-end: var(--#{$label-group}__close--MarginBottom);
-  margin-inline-start: var(--#{$label-group}__close--MarginLeft);
-  margin-inline-end: var(--#{$label-group}__close--MarginRight);
+
+  .#{$button} {
+    --#{$button}--FontSize: var(--#{$label-group}__close--c-button--FontSize);
+    --#{$button}--m-plain--m-no-padding--PaddingTop: var(--#{$label-group}__close--c-button--PaddingTop);
+    --#{$button}--m-plain--m-no-padding--PaddingRight: var(--#{$label-group}__close--c-button--PaddingRight);
+    --#{$button}--m-plain--m-no-padding--PaddingBottom: var(--#{$label-group}__close--c-button--PaddingBottom);
+    --#{$button}--m-plain--m-no-padding--PaddingLeft: var(--#{$label-group}__close--c-button--PaddingLeft);
+  }
 }
 
 .#{$label-group}__textarea {
