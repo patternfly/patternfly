@@ -1,50 +1,50 @@
 // @debug $toggle-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$toggle-group} {
+:where(:root),
+:where(.#{$toggle-group}) {
   // button
-  --#{$toggle-group}__button--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$toggle-group}__button--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$toggle-group}__button--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$toggle-group}__button--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$toggle-group}__button--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$toggle-group}__button--LineHeight: calc(var(--#{$pf-global}--FontSize--md) * var(--#{$pf-global}--LineHeight--md));
-  --#{$toggle-group}__button--Color: var(--#{$pf-global}--Color--100);
-  --#{$toggle-group}__button--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$toggle-group}__button--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}__button--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$toggle-group}__button--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}__button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$toggle-group}__button--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$toggle-group}__button--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$toggle-group}__button--Color: var(--pf-t--global--text--color--regular);
+  --#{$toggle-group}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$toggle-group}__button--ZIndex: auto;
-  --#{$toggle-group}__button--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$toggle-group}__button--hover--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$toggle-group}__button--hover--before--BorderColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$toggle-group}__button--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$toggle-group}__button--focus--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$toggle-group}__button--focus--before--BorderColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$toggle-group}__button--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
-  --#{$toggle-group}__button--disabled--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$toggle-group}__button--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$toggle-group}__button--before--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$toggle-group}__button--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$toggle-group}__button--hover--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$toggle-group}__button--hover--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$toggle-group}__button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$toggle-group}__button--before--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$toggle-group}__button--before--BorderColor: var(--pf-t--global--border--color--default);
 
   // item
-  --#{$toggle-group}__item--item--MarginLeft: calc(-1 * var(--#{$pf-global}--BorderWidth--sm));
-  --#{$toggle-group}__item--first-child__button--BorderTopLeftRadius: var(--#{$pf-global}--BorderRadius--sm);
-  --#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius: var(--#{$pf-global}--BorderRadius--sm);
-  --#{$toggle-group}__item--last-child__button--BorderTopRightRadius: var(--#{$pf-global}--BorderRadius--sm);
-  --#{$toggle-group}__item--last-child__button--BorderBottomRightRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$toggle-group}__item--item--MarginLeft: calc(-1 * var(--pf-t--global--border--width--control--default));
+  --#{$toggle-group}__item--first-child__button--BorderTopLeftRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--last-child__button--BorderTopRightRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--last-child__button--BorderBottomRightRadius: var(--pf-t--global--border--radius--tiny);
 
   // icon
-  --#{$toggle-group}__icon--text--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$toggle-group}__icon--text--MarginLeft: var(--pf-t--global--spacer--sm);
 
   // Selected
-  --#{$toggle-group}__button--m-selected--BackgroundColor: var(--#{$pf-global}--palette--blue-50);
-  --#{$toggle-group}__button--m-selected--Color: initial;
-  --#{$toggle-group}__button--m-selected--before--BorderColor: var(--#{$pf-global}--primary-color--100);
-  --#{$toggle-group}__button--m-selected--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$toggle-group}__button--m-selected--BackgroundColor: var(--pf-t--global--color--brand--default);
+  --#{$toggle-group}__button--m-selected--Color: var(--pf-t--global--text--color--on-brand--default);
+  --#{$toggle-group}__button--m-selected--before--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$toggle-group}__button--m-selected--ZIndex: var(--pf-t--global--Zindex--xs);
 
   // Compact
   --#{$toggle-group}--m-compact__button--PaddingTop: 0;
-  --#{$toggle-group}--m-compact__button--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$toggle-group}--m-compact__button--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$toggle-group}--m-compact__button--PaddingBottom: 0;
-  --#{$toggle-group}--m-compact__button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$toggle-group}--m-compact__button--FontSize: var(--#{$pf-global}--FontSize--xs);
+  --#{$toggle-group}--m-compact__button--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}--m-compact__button--FontSize: var(--pf-t--global--font--size--body--default);
+}
 
+.#{$toggle-group} {
   display: flex;
 
   &.pf-m-compact {
@@ -107,18 +107,13 @@
     border: var(--#{$toggle-group}__button--before--BorderWidth) solid var(--#{$toggle-group}__button--before--BorderColor);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--hover--BackgroundColor);
     --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--hover--ZIndex);
     --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--hover--before--BorderColor);
 
     text-decoration: none;
-  }
-
-  &:focus {
-    --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--focus--BackgroundColor);
-    --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--focus--ZIndex);
-    --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--focus--before--BorderColor);
   }
 
   &.pf-m-selected {
@@ -142,9 +137,3 @@
   margin-inline-start: var(--#{$toggle-group}__icon--text--MarginLeft);
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/toggle-group";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-toggle-group;
-}
