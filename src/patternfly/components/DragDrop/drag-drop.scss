@@ -6,6 +6,7 @@
   --#{$draggable}--m-dragging--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$draggable}--m-dragging--after--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$draggable}--m-dragging--after--BorderColor: var(--pf-t--global--border--color--brand--default);
+  --#{$draggable}--m-dragging--after--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$draggable}--m-drag-outside--Cursor: not-allowed;
   --#{$draggable}--m-drag-outside--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
 }
@@ -28,6 +29,7 @@
       inset-inline-end: 0;
       content: "";
       border: var(--#{$draggable}--m-dragging--after--BorderWidth) solid var(--#{$draggable}--m-dragging--after--BorderColor);
+      border-radius: var(--#{$draggable}--m-dragging--after--BorderRadius);
     }
   }
 
@@ -46,6 +48,7 @@
   --#{$droppable}--m-dragging--before--Opacity: .6;
   --#{$droppable}--m-dragging--after--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$droppable}--m-dragging--after--BorderColor: var(--pf-t--global--border--color--brand--default);
+  --#{$droppable}--m-dragging--after--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$droppable}--m-drag-outside--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
 }
 
@@ -68,6 +71,7 @@
 
   &::after {
     border: var(--#{$droppable}--after--BorderWidth, 0) solid var(--#{$droppable}--after--BorderColor, transparent);
+    border-radius: var(--#{$droppable}--m-dragging--after--BorderRadius);
   }
 
   &.pf-m-dragging {
