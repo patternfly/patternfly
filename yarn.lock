@@ -2622,10 +2622,10 @@
   dependencies:
     "@octokit/openapi-types" "^19.0.2"
 
-"@patternfly/ast-helpers@^1.3.15-alpha.4":
-  version "1.3.17"
-  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.3.17.tgz#2c49d7e64c372f5e99c34701b2ae3c83855b257b"
-  integrity sha512-M1U2fSrfKAw8VcQ3iRC13S7kKbewKUb5qOc2Q8ggeizGy0dC2ETW8/xQlhYEW5lJxoxgUHZ4BS/Ge0LNE6ErHA==
+"@patternfly/ast-helpers@^1.3.15-alpha.5":
+  version "1.3.15-alpha.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.3.15-alpha.5.tgz#89cc86d1e38bd65856ba0e4608b22231b4b080bb"
+  integrity sha512-Y1Ji+EyirFoutJ6F0NX8UycUSoRCsnOl3XUmaO12zfVY2RmgEgYXxpEfB3rIDZz71af0dJGD15xACO/TnpFuwQ==
   dependencies:
     acorn "^8.4.1"
     acorn-class-fields "^1.0.0"
@@ -2633,10 +2633,10 @@
     acorn-static-class-features "^1.0.0"
     astring "^1.7.5"
 
-"@patternfly/documentation-framework@6.0.0-alpha.5":
-  version "6.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.5.tgz#204b4898516972a11fbbd6509e073c0edcfd392c"
-  integrity sha512-4D1u25CSEOxKhu1l2ePUyZ7lc6tDlasiEWPYgLUJkwpDuHxVLUCbqD/yNRvIX+oQYv039u4qSv1Hjw4p7EJv0w==
+"@patternfly/documentation-framework@6.0.0-alpha.6":
+  version "6.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.6.tgz#182e5a46a7dc575091d99d6f47ab5111e7c8fb14"
+  integrity sha512-Tx+vCJ3JIybs6+uUisBeeQU9dY3/S5ExP2iRtVX/qworSekV3gL2wrEQjC5ZOA9DF29MKsexslAtlMKI8jLozQ==
   dependencies:
     "@babel/core" "7.18.2"
     "@babel/plugin-proposal-class-properties" "7.17.12"
@@ -2646,7 +2646,7 @@
     "@babel/plugin-transform-react-jsx" "7.17.12"
     "@babel/preset-env" "7.18.2"
     "@mdx-js/util" "1.6.16"
-    "@patternfly/ast-helpers" "^1.3.15-alpha.4"
+    "@patternfly/ast-helpers" "^1.3.15-alpha.5"
     "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer "9.8.6"
     babel-loader "9.1.2"
@@ -2680,7 +2680,7 @@
     postcss "8.4.32"
     postcss-loader "7.1.0"
     process "^0.11.10"
-    puppeteer "19.7.3"
+    puppeteer "19.11.1"
     puppeteer-cluster "0.23.0"
     react-docgen "5.3.1"
     react-monaco-editor "^0.51.0"
@@ -4980,13 +4980,6 @@ chromedriver@^101.0.0:
     proxy-from-env "^1.1.0"
     tcp-port-used "^1.0.1"
 
-chromium-bidi@0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/chromium-bidi/-/chromium-bidi-0.4.4.tgz#44f25d4fa5d2f3debc3fc3948d0657194cac4407"
-  integrity sha512-4BX5cSaponuvVT1+SbLYTOAgDoVtX/Khoc9UsbFJ/AsPVUeFAM3RiIDFI6XFhLYMi9WmVJqh1ZH+dRpNKkKwiQ==
-  dependencies:
-    mitt "3.0.0"
-
 chromium-bidi@0.4.7:
   version "0.4.7"
   resolved "https://registry.npmjs.org/chromium-bidi/-/chromium-bidi-0.4.7.tgz"
@@ -5591,16 +5584,6 @@ cosmiconfig-typescript-loader@^5.0.0:
   dependencies:
     jiti "^1.19.1"
 
-cosmiconfig@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-8.1.0.tgz#947e174c796483ccf0a48476c24e4fefb7e1aea8"
-  integrity sha512-0tLZ9URlPGU7JsKq0DQOQ3FoRsYX8xDZ7xMiATQfaiGMz7EHowNkbU9u1coAOmnh9p/1ySpm0RB3JNWRXM5GCg==
-  dependencies:
-    import-fresh "^3.2.1"
-    js-yaml "^4.1.0"
-    parse-json "^5.0.0"
-    path-type "^4.0.0"
-
 cosmiconfig@8.1.3:
   version "8.1.3"
   resolved "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-8.1.3.tgz"
@@ -6194,11 +6177,6 @@ devtools-protocol@0.0.1001819:
   version "0.0.1001819"
   resolved "https://registry.npmjs.org/devtools-protocol/-/devtools-protocol-0.0.1001819.tgz"
   integrity sha512-G6OsIFnv/rDyxSqBa2lDLR6thp9oJioLsb2Gl+LbQlyoA9/OBAkrTU9jiCcQ8Pnh7z4d6slDiLaogR5hzgJLmQ==
-
-devtools-protocol@0.0.1094867:
-  version "0.0.1094867"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1094867.tgz#2ab93908e9376bd85d4e0604aa2651258f13e374"
-  integrity sha512-pmMDBKiRVjh0uKK6CT1WqZmM3hBVSgD+N2MrgyV1uNizAZMw4tx6i/RTc+/uCsKSCmg0xXx7arCP/OFcIwTsiQ==
 
 devtools-protocol@0.0.1107588:
   version "0.0.1107588"
@@ -13270,7 +13248,19 @@ puppeteer-core@19.11.1:
     unbzip2-stream "1.4.3"
     ws "8.13.0"
 
-puppeteer@14.3.0, puppeteer@^14.2.0:
+puppeteer@19.11.1, puppeteer@^19.7.0:
+  version "19.11.1"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.11.1.tgz#bb75d518e87b0b4f6ef9bad1ea7e9d1cdcd18a5d"
+  integrity sha512-39olGaX2djYUdhaQQHDZ0T0GwEp+5f9UB9HmEP0qHfdQHIq0xGQZuAZ5TLnJIc/88SrPLpEflPC+xUqOTv3c5g==
+  dependencies:
+    "@puppeteer/browsers" "0.5.0"
+    cosmiconfig "8.1.3"
+    https-proxy-agent "5.0.1"
+    progress "2.0.3"
+    proxy-from-env "1.1.0"
+    puppeteer-core "19.11.1"
+
+puppeteer@^14.2.0:
   version "14.3.0"
   resolved "https://registry.npmjs.org/puppeteer/-/puppeteer-14.3.0.tgz"
   integrity sha512-pDtg1+vyw1UPIhUjh2/VW1HUdQnaZJHfMacrJciR3AVm+PBiqdCEcFeFb3UJ/CDEQlHOClm3/WFa7IjY25zIGg==
@@ -17129,11 +17119,6 @@ write-file-atomic@^5.0.1:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^4.0.1"
-
-ws@8.12.1:
-  version "8.12.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-8.12.1.tgz#c51e583d79140b5e42e39be48c934131942d4a8f"
-  integrity sha512-1qo+M9Ba+xNhPB+YTWUlK6M17brTut5EXbcBaMRN5pH5dFrXz7lzz1ChFSUq3bOUl8yEvSenhHmYUNJxFzdJew==
 
 ws@8.13.0, ws@^8.13.0:
   version "8.13.0"
