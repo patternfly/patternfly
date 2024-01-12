@@ -32,7 +32,7 @@ cssPrefix: pf-v5-c-icon
 {{/icon}}
 ```
 
-### Sizes
+### Standalone icon sizes
 ```hbs
 {{#> icon icon--modifier="pf-m-sm"}}
   {{#> icon-content}}
@@ -50,6 +50,69 @@ cssPrefix: pf-v5-c-icon
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-xl"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-2xl"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-3xl"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+```
+
+### Body sizes
+```hbs
+{{#> icon icon--modifier="pf-m-body-sm"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-body-default"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-body-lg"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+```
+
+### Heading sizes
+```hbs
+{{#> icon icon--modifier="pf-m-heading-sm"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-heading-md"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-heading-lg"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-heading-xl"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-heading-2xl"}}
+  {{#> icon-content}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-heading-3xl"}}
   {{#> icon-content}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/icon-content}}
@@ -88,23 +151,23 @@ cssPrefix: pf-v5-c-icon
 ### Sizing content within the icon container
 Use a size modifier on the icon container to maintain a consistent size, even if the contents change in size.
 ```hbs
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
-  {{#> icon-content icon-content--modifier="pf-m-sm"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/icon-content}}
-{{/icon}}
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
-  {{#> icon-content icon-content--modifier="pf-m-md"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/icon-content}}
-{{/icon}}
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
+{{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-lg"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
+{{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-xl"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
+  {{#> icon-content icon-content--modifier="pf-m-2xl"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
+  {{#> icon-content icon-content--modifier="pf-m-3xl"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
@@ -209,7 +272,11 @@ Refer to the [icons](/design-foundations/icons) page for information about the P
 | `.pf-v5-c-icon__content` | `<span>`, `<div>` | Initiates the icon content. **Required**  |
 | `.pf-v5-c-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
 | `.pf-m-inline` | `.pf-v5-c-icon` | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent. |
-| `.pf-m-[sm,md,lg,xl]` | `.pf-v5-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
-| `.pf-m-[sm,md,lg,xl]` | `.pf-v5-c-icon__content`, `pf-v5-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
+| `.pf-m-[sm,md,lg,xl,2xl,3xl]` | `.pf-v5-c-icon` | Modifies the icon container to be small, medium, large, extra large, double extra large, or triple extra large. |
+| `.pf-m-body-[sm,default,lg]` | `.pf-v5-c-icon` | Modifies the icon container to be a size matching small, default, or large body text. |
+| `.pf-m-heading-[sm,md,lg,xl,2xl,3xl]` | `.pf-v5-c-icon` | Modifies the icon container to be a size matching small, medium, large, extra large, double extra large, or triple extra large (h6-h1) heading text. |
+| `.pf-m-[sm,md,lg,xl,2xl,3xl]` | `.pf-v5-c-icon__content`, `pf-v5-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
+| `.pf-m-body-[sm,default,lg]` | `.pf-v5-c-icon__content` | Modifies the icon content or progress element to be a size matching small, default, or large body text. |
+| `.pf-m-heading-[sm,md,lg,xl,2xl,3xl]` | `.pf-v5-c-icon__content` | Modifies the icon content or progress element to be a size matching small, medium, large, extra large, double extra large, or triple extra large (h6-h1) heading text. |
 | `.pf-m-in-progress` | `.pf-v5-c-icon` | Shows the progress element in place of the icon content.  |
 | `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-custom`  | `.pf-v5-c-icon__content` | Modifies the icon content to use a status color.  |
