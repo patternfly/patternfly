@@ -78,7 +78,6 @@
     --#{$tile}--before--BorderColor: var(--#{$tile}--hover--before--BorderColor);
   }
 
-  &:active,
   &.pf-m-selected {
     --#{$tile}--before--BorderColor: var(--#{$tile}--m-selected--before--BorderColor);
     --#{$tile}--before--BorderWidth: var(--#{$tile}--m-selected--before--BorderWidth);
@@ -104,7 +103,6 @@
 .#{$tile}__header {
   display: flex;
   align-items: center;
-  justify-content: start;
 
   &.pf-m-stacked {
     --#{$tile}__icon--MarginRight: 0;
@@ -112,7 +110,6 @@
 
     flex-direction: column;
     align-items: flex-start;
-    justify-content: initial;
 
     .#{$tile}__icon {
       display: flex;
