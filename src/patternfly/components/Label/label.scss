@@ -157,6 +157,7 @@
   // Actions button (close)
   --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--body--sm);
   --#{$label}__actions--c-button--Color: var(--#{$label}__icon--Color);
+  --#{$label}__actions--c-button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$label}__actions--c-button--MarginTop: calc(var(--#{$label}__actions--c-button--PaddingTop) * -1);
   --#{$label}__actions--c-button--MarginBottom: calc(var(--#{$label}__actions--c-button--PaddingBottom) * -1);
   --#{$label}__actions--c-button--PaddingTop: var(--pf-t--global--spacer--xs);
@@ -431,5 +432,6 @@
 
     margin-block-start: var(--#{$label}__actions--c-button--MarginTop);
     margin-block-end: var(--#{$label}__actions--c-button--MarginBottom);
+    outline-offset: var(--#{$label}__actions--c-button--OutlineOffset);
   }
 }
