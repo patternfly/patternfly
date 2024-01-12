@@ -327,7 +327,6 @@ import './Drawer.css'
 | `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v5-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v5-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) will default to the `md` breakpoint. |
 | `.pf-m-no-border` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
-| `.pf-m-full-page` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel to remove border radius, intended for when the panel spans the entirety of a page. |
 | `.pf-m-padding` | `.pf-v5-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-v5-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-v5-c-drawer__section`, `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` | Modifies the drawer element background color to transparent. |

@@ -3,7 +3,7 @@ $pf-v5-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl")
 $pf-v5-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
-:root,
+:where(:root),
 :where(.#{$drawer}) {
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -93,13 +93,11 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter--after--BorderTopWidth: 0;
   --#{$drawer}__splitter--after--BorderRightWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}__splitter--after--BorderBottomWidth: 0;
-  --#{$drawer}__splitter--after--BorderLeftWidth: 0;
-  --#{$drawer}--m-panel-left__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-panel-bottom__splitter--after--BorderTopWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-panel-bottom__splitter--after--BorderBottomWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline__splitter-handle--Left: 50%;
-  --#{$drawer}--m-inline__splitter--after--BorderRightWidth: var(--#{$drawer}__splitter--after--border-width--base);
-  --#{$drawer}--m-inline__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--Top: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderTopWidth: var(--#{$drawer}__splitter--after--border-width--base);
@@ -143,10 +141,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--BoxShadow: none;
   --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-t--global--box-shadow--lg--top);
 
-  // Border radius
-  --#{$drawer}--m-panel-bottom__panel--BorderRadius: 0 0 var(--pf-t--global--border--radius--large) var(--pf-t--global--border--radius--large);
-  --#{$drawer}--m-full-page__panel--BorderRadius: 0;
-
   // Divider
   --#{$drawer}__panel--after--Width: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}--m-panel-bottom__panel--after--Height: var(--pf-t--global--border--width--divider--default);
@@ -167,16 +161,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
     $ltr-val: var(--#{$pf-global}--BoxShadow--lg-right),
     $rtl-val: var(--#{$pf-global}--BoxShadow--lg-left)
-  );
-  @include pf-v5-bidirectional-style(
-    $prop: --#{$drawer}__panel--BorderRadius,
-    $ltr-val: 0 var(--pf-t--global--border--radius--large) var(--pf-t--global--border--radius--large) 0,
-    $rtl-val: var(--pf-t--global--border--radius--large) 0 0 var(--pf-t--global--border--radius--large)
-  );
-  @include pf-v5-bidirectional-style(
-    $prop: --#{$drawer}--m-panel-left__panel--BorderRadius,
-    $ltr-val: var(--pf-t--global--border--radius--large) 0 0 var(--pf-t--global--border--radius--large),
-    $rtl-val: 0 var(--pf-t--global--border--radius--large) var(--pf-t--global--border--radius--large) 0
   );
 
   display: flex;
@@ -308,7 +292,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   max-height: var(--#{$drawer}__panel--MaxHeight);
   overflow: auto;
   background-color: var(--#{$drawer}__panel--BackgroundColor);
-  border-radius: var(--#{$drawer}__panel--BorderRadius);
   box-shadow: var(--#{$drawer}__panel--BoxShadow);
   transition-duration: var(--#{$drawer}__panel--TransitionDuration);
   transition-property: var(--#{$drawer}__panel--TransitionProperty);
@@ -335,10 +318,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-no-background {
     --#{$drawer}__panel--BackgroundColor: transparent;
-  }
-
-  &.pf-m-full-page {
-    --#{$drawer}__panel--BorderRadius: var(--#{$drawer}--m-full-page__panel--BorderRadius);
   }
 
   @media screen and (min-width: $pf-v5-global--breakpoint--md) {
@@ -542,7 +521,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Panel left
   .#{$drawer}.pf-m-panel-left {
     --#{$drawer}--m-expanded__panel--BoxShadow: var(--#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow);
-    --#{$drawer}__panel--BorderRadius: var(--#{$drawer}--m-panel-left__panel--BorderRadius);
 
     &.pf-m-inline,
     &.pf-m-static {
@@ -564,8 +542,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter-handle--Left: var(--#{$drawer}--m-panel-left__splitter-handle--Left);
-        --#{$drawer}__splitter--after--BorderRightWidth: 0;
-        --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}--m-panel-left__splitter--after--BorderLeftWidth);
 
         order: 1;
       }
@@ -574,7 +550,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   .#{$drawer}.pf-m-panel-bottom {
     --#{$drawer}--m-expanded__panel--BoxShadow: var(--#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow);
-    --#{$drawer}__panel--BorderRadius: var(--#{$drawer}--m-panel-bottom__panel--BorderRadius);
     --#{$drawer}__panel--MaxHeight: 100%;
     --#{$drawer}__panel--FlexBasis--min: var(--#{$drawer}--m-panel-bottom__panel--FlexBasis--min);
 
@@ -605,8 +580,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter-handle--Top: var(--#{$drawer}--m-panel-bottom__splitter-handle--Top);
+        --#{$drawer}__splitter--after--BorderTopWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderTopWidth);
         --#{$drawer}__splitter--after--BorderRightWidth: 0;
         --#{$drawer}__splitter--after--BorderBottomWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBottomWidth);
+        --#{$drawer}__splitter--after--BorderLeftWidth: 0;
       }
     }
   }
@@ -616,8 +593,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter--m-vertical--Width: var(--#{$drawer}--m-inline__splitter--m-vertical--Width);
         --#{$drawer}__splitter-handle--Left: var(--#{$drawer}--m-inline__splitter-handle--Left);
-        --#{$drawer}__splitter--after--BorderRightWidth: var(--#{$drawer}--m-inline__splitter--after--BorderRightWidth);
-        --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}--m-inline__splitter--after--BorderLeftWidth);
 
         outline-offset: var(--#{$drawer}--m-inline__splitter--focus--OutlineOffset);
       }
