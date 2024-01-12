@@ -162,7 +162,7 @@ import './Tile.css'
 <br/>
 <br/>
 
-{{#> tile}}
+{{#> tile tile--id="stacked-pf-logo-default"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -176,7 +176,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-selected"}}
+{{#> tile tile--modifier="pf-m-selected" tile--id="stacked-pf-logo-selected"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -190,7 +190,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--IsDisabled="true"}}
+{{#> tile tile--IsDisabled="true" tile--id="stacked-pf-logo-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -284,7 +284,7 @@ import './Tile.css'
 <br/>
 <br/>
 
-{{#> tile tile--modifier="pf-m-display-lg"}}
+{{#> tile tile--modifier="pf-m-display-lg" tile--id="stacked-large-pf-logo-default"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -298,7 +298,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-display-lg pf-m-selected"}}
+{{#> tile tile--modifier="pf-m-display-lg pf-m-selected" tile--id="stacked-large-pf-logo-selected"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -312,7 +312,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-display-lg" tile--IsDisabled="true"}}
+{{#> tile tile--modifier="pf-m-display-lg" tile--IsDisabled="true" tile--id="stacked-large-pf-logo-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
