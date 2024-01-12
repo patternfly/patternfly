@@ -20,8 +20,7 @@
   --#{$clipboard-copy}__expandable-content--BorderColor: var(--pf-t--global--border--color--default);
   --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
-}
-.#{$clipboard-copy} {
+
   // Inline
   --#{$clipboard-copy}--m-inline--PaddingTop: 0; // remove at breaking change
   --#{$clipboard-copy}--m-inline--PaddingBottom: 0; // remove at breaking change
@@ -60,6 +59,7 @@
     }
   }
 }
+
 
 .#{$clipboard-copy}__group {
   display: flex;
