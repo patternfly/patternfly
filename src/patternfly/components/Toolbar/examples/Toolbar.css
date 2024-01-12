@@ -65,9 +65,3 @@
 #ws-core-c-toolbar-width-control .pf-v5-c-toolbar__item {
   background-color: var(--pf-t--global--background--color--secondary--default);
 }
-
-.ws-core-c-toolbar .ws-preview-html {
-  resize: horizontal;
-  overflow: hidden;
-  border: var(--pf-t--global--border--width--box--default) solid var(--pf-t--global--border--color--brand--default);
-}

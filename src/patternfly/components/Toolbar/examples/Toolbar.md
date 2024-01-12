@@ -6,67 +6,7 @@ cssPrefix: pf-v5-c-toolbar
 
 import './Toolbar.css'
 
-## Testing
-
 <!-- TODO: add documentation for resize observer/responsive variable usage -->
-
-Resize this example to preview responsive layout. Pagination now aligns right when enough space is present and left when wrapped.
-
-### Testing toolbar
-```hbs
-{{#> toolbar toolbar--id="test-example"}}
-  {{#> toolbar-content toolbar-content--attribute='data-theme="pf-v5-c-button"'}}
-    {{#> toolbar-content-section}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-          {{#> toolbar-item}}
-            {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
-              {{#> date-picker date-picker--id=(concat toolbar--id "-helper-text")}}
-                {{#> input-group}}
-                  {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
-                {{/input-group}}
-              {{/date-picker}}
-            {{/input-group}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{> toolbar-item-search-filter toolbar-items-search-filter--text="Description"}}
-      {{/toolbar-group}}
-      {{#> toolbar-item}}
-        {{#> button button--modifier="pf-m-primary"}}
-          Download
-        {{/button}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{#> input-group}}
-          {{#> input-group-item input-group-item--IsFill=true}}
-            {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
-          {{/input-group-item}}
-          {{#> input-group-item}}
-            {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
-              <i class="fas fa-caret-down" aria-hidden="true"></i>
-            {{/button}}
-          {{/input-group-item}}
-          {{#> input-group-item}}
-            {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            {{/button}}
-          {{/input-group-item}}
-        {{/input-group}}
-      {{/toolbar-item}}
-    {{/toolbar-content-section}}
-    {{> divider}}
-    {{#> toolbar-content-section}}
-      {{> toolbar--overflow-menu}}
-      {{> toolbar-item-pagination}}
-    {{/toolbar-content-section}}
-    {{> divider}}
-    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
-      {{> toolbar--chip-group}}
-   {{/toolbar-expandable-content}}
-  {{/toolbar-content}}
-{{/toolbar}}
-```
 
 Toolbar relies on groups (`.pf-v5-c-toolbar__group`) and items (`.pf-v5-c-toolbar__item`), with default col/row gap values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. The default `column-gap` value for items and groups is set to `--pf-v5-c--ColumnGap`, whose value is `--pf-t--global--spacer--sm` or 8px.
 

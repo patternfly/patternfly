@@ -10,24 +10,29 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 
 :root,
 [data-theme="#{$toolbar}"] {
-  --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$toolbar}--PaddingBlock: var(--pf-t--global--spacer--sm);
-  --#{$toolbar}--PaddingInline: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--PaddingBlock: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--PaddingInline: var(--pf-t--global--spacer--md);
   --#{$toolbar}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$toolbar}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // * Toolbar item
   --#{$toolbar}__item--ColumnGap: var(--pf-t--global--spacer--sm);
 
+  // * Toolbar content * Toolbar expandable content
+  --#{$toolbar}__content--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}__content--PaddingBlock: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__content--PaddingInline: var(--#{$toolbar}--PaddingInline);
+
   // * Toolbar expandable content
-  --#{$toolbar}__expandable-content--ZIndex: var(--#{$pf-global}--ZIndex--xs); // TODO: update when z-index is tokenized
+  --#{$toolbar}__expandable-content--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$toolbar}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
-  --#{$toolbar}__expandable-content--BackgroundColor: var(--#{$toolbar}--BackgroundColor);
+  --#{$toolbar}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // * Toolbar chip group
   // * Toolbar sticky
-  --#{$toolbar}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs); // TODO: update when z-index is tokenized
+  --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
 
   // * Toolbar insets
@@ -111,22 +116,21 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   // }
 }
 
-// - Toolbar toolbar content toolbar content section toolbar expandable content
-.#{$toolbar},
+// - Toolbar content - Toolbar content section - Toolbar expandable content
 .#{$toolbar}__content,
 .#{$toolbar}__content-section,
 .#{$toolbar}__expandable-content {
-  row-gap: var(--#{$toolbar}--RowGap);
+  row-gap: var(--#{$toolbar}__content--RowGap);
   column-gap: var(--#{$toolbar}--ColumnGap);
 }
 
 // - Toolbar content expandable content
 .#{$toolbar}__content,
 .#{$toolbar}__expandable-content {
-  padding-block-start: var(--#{$toolbar}--PaddingBlockStart, var(--#{$toolbar}--PaddingBlock));
-  padding-block-end: var(--#{$toolbar}--PaddingBlockEnd, var(--#{$toolbar}--PaddingBlock));
-  padding-inline-start: var(--#{$toolbar}--PaddingInlineStart, var(--#{$toolbar}--PaddingInline));
-  padding-inline-end: var(--#{$toolbar}--PaddingInlineEnd, var(--#{$toolbar}--PaddingInline));
+  padding-block-start: var(--#{$toolbar}__content--PaddingBlockStart, var(--#{$toolbar}__content--PaddingBlock));
+  padding-block-end: var(--#{$toolbar}__content--PaddingBlockEnd, var(--#{$toolbar}__content--PaddingBlock));
+  padding-inline-start: var(--#{$toolbar}__content--PaddingInlineStart, var(--#{$toolbar}__content--PaddingInline));
+  padding-inline-end: var(--#{$toolbar}__content--PaddingInlineEnd, var(--#{$toolbar}__content--PaddingInline));
 }
 
 // - Toolbar content section
@@ -207,7 +211,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   z-index: var(--#{$toolbar}__expandable-content--ZIndex);
   display: none;
   width: 100%;
-  background-color: inherit;
+  background-color: var(--#{$toolbar}__expandable-content--BackgroundColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
@@ -244,11 +248,14 @@ $pf-v5--include-toolbar-breakpoints: true !default;
     flex: 1;
     overflow: auto;
   }
+}
 
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+@each $breakpoint, $breakpoint-value in $pf-v5-c-toolbar--breakpoint-map {
+  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+  @include pf-v5-apply-breakpoint($breakpoint) {
+    .#{$toolbar}__group,
+    .#{$toolbar}__item {
       &.pf-m-align-start#{$breakpoint-name} {
         margin-inline-start: 0;
       }
@@ -272,90 +279,88 @@ $pf-v5--include-toolbar-breakpoints: true !default;
         }
       }
     }
-  }
-}
 
-// - Toolbar group - Toolbar item - Toolbar content - Toolbar content section
-.#{$toolbar}__group,
-.#{$toolbar}__item,
-.#{$toolbar}__content,
-.#{$toolbar}__content-section {
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    &.pf-m-wrap#{$breakpoint-name} {
-      flex-wrap: wrap;
-    }
-
-    &.pf-m-nowrap#{$breakpoint-name} {
-      flex-wrap: nowrap;
-    }
-
-    @each $alignment in $pf-v5-c-toolbar--align-items--alignments {
-      &.pf-m-align-items-#{$alignment}#{$breakpoint-name} {
-        align-items: #{$alignment};
+    // - Toolbar - Toolbar content - Toolbar content section
+    .#{$toolbar},
+    .#{$toolbar}__content,
+    .#{$toolbar}__content-section {
+      // Inset modifiers
+      @each $inset, $inset-value in $pf-v5-c-toolbar--inset-map {
+        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
+          --#{$toolbar}__content--PaddingInline: #{$inset-value};
+        }
       }
     }
 
-    // Row and column gap modifiers
-    @each $spacer, $spacer-value in $pf-v5-c-toolbar--spacer-map {
-      &.pf-m-column-gap-#{$spacer}#{$breakpoint-name} {
-        column-gap: #{$spacer-value};
+    // - Toolbar group - Toolbar item - Toolbar content - Toolbar content section
+    .#{$toolbar}__group,
+    .#{$toolbar}__item,
+    .#{$toolbar}__content,
+    .#{$toolbar}__content-section {
+      &.pf-m-wrap#{$breakpoint-name} {
+        flex-wrap: wrap;
       }
 
-      &.pf-m-row-gap-#{$spacer}#{$breakpoint-name} {
-        column-gap: #{$spacer-value};
+      &.pf-m-nowrap#{$breakpoint-name} {
+        flex-wrap: nowrap;
       }
 
-      &.pf-m-margin-inline-start#{$spacer}#{$breakpoint-name} {
-        margin-inline-start: #{$spacer-value};
+      @each $alignment in $pf-v5-c-toolbar--align-items--alignments {
+        &.pf-m-align-items-#{$alignment}#{$breakpoint-name} {
+          align-items: #{$alignment};
+        }
       }
 
-      &.pf-m-margin-inline-end#{$spacer}#{$breakpoint-name} {
-        margin-inline-end: #{$spacer-value};
-      }
-    }
-
-    // Inset modifiers
-    @each $inset, $inset-value in $pf-v5-c-toolbar--inset-map {
-      &.pf-m-inset-#{$inset}#{$breakpoint-name} {
-        padding-inline: #{$inset-value};
-      }
-    }
-
-    @each $gap, $gap-value in $pf-v5-c-toolbar--spacer-map {
-      &.pf-m-gap-#{$gap}#{$breakpoint-name} {
-        column-gap: #{$gap-value};
-      }
-    }
-  }
-}
-
-@each $breakpoint, $breakpoint-value in $pf-v5-c-toolbar--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-  .#{$toolbar}__group:where(.pf-m-toggle-group) {
-    &.pf-m-show#{$breakpoint-name} {
-      .#{$toolbar}__group,
-      .#{$toolbar}__item {
-        display: flex;
-        flex: 0 1 auto;
+      @each $gap, $gap-value in $pf-v5-c-toolbar--spacer-map {
+        &.pf-m-gap-#{$gap}#{$breakpoint-name} {
+          column-gap: #{$gap-value};
+        }
       }
 
-      .#{$toolbar}__toggle {
-        display: none;
+      // Row and column gap modifiers
+      @each $spacer, $spacer-value in $pf-v5-c-toolbar--spacer-map {
+        &.pf-m-column-gap-#{$spacer}#{$breakpoint-name} {
+          column-gap: #{$spacer-value};
+        }
+
+        &.pf-m-row-gap-#{$spacer}#{$breakpoint-name} {
+          column-gap: #{$spacer-value};
+        }
+
+        &.pf-m-margin-inline-start#{$spacer}#{$breakpoint-name} {
+          margin-inline-start: #{$spacer-value};
+        }
+
+        &.pf-m-margin-inline-end#{$spacer}#{$breakpoint-name} {
+          margin-inline-end: #{$spacer-value};
+        }
       }
     }
 
-    &, // default value
-    &.pf-m-hide#{$breakpoint-name} {
-      .#{$toolbar}__group,
-      .#{$toolbar}__item {
-        display: none;
+    // - Toolbar toggle group
+    .#{$toolbar}__group:where(.pf-m-toggle-group) {
+      &.pf-m-show#{$breakpoint-name} {
+        .#{$toolbar}__group,
+        .#{$toolbar}__item {
+          display: flex;
+          flex: 0 1 auto;
+        }
+
+        .#{$toolbar}__toggle {
+          display: none;
+        }
       }
 
-      .#{$toolbar}__toggle {
-        display: inline-block;
+      &, // default value
+      &.pf-m-hide#{$breakpoint-name} {
+        .#{$toolbar}__group,
+        .#{$toolbar}__item {
+          display: none;
+        }
+
+        .#{$toolbar}__toggle {
+          display: inline-block;
+        }
       }
     }
   }
