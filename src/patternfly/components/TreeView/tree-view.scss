@@ -1,35 +1,32 @@
 // @debug $tree-view; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
-.#{$tree-view} {
-  --#{$tree-view}--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-
+:where(:root),
+:where(.#{$tree-view}) {
   // Node base
-  --#{$tree-view}__node--indent--base: calc(var(--#{$pf-global}--spacer--md) * 2 + var(--#{$tree-view}__node-toggle-icon--MinWidth)); // based off of the expected width of the toggle button
-  --#{$tree-view}__node--nested-indent--base: calc(var(--#{$tree-view}__node--indent--base) - var(--#{$pf-global}--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
+  --#{$tree-view}__node--indent--base: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$tree-view}__node-toggle-icon--MinWidth)); // based off of the expected width of the toggle button
+  --#{$tree-view}__node--nested-indent--base: calc(var(--#{$tree-view}__node--indent--base) - var(--pf-t--global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // Node
-  --#{$tree-view}__node--PaddingTop--base: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}__node--PaddingTop--base: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node--PaddingTop: var(--#{$tree-view}__node--PaddingTop--base);
-  --#{$tree-view}__node--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}__node--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}__node--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node--PaddingLeft: var(--#{$tree-view}__node--indent--base);
-  --#{$tree-view}__node--Color: var(--#{$pf-global}--Color--100);
-  --#{$tree-view}__node--m-current--Color: var(--#{$pf-global}--link--Color);
-  --#{$tree-view}__node--m-current--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$tree-view}__node--Color: var(--pf-t--global--text--color--subtle);
   --#{$tree-view}__node--BackgroundColor: transparent;
+  --#{$tree-view}__node--m-current--Color: var(--pf-t--global--text--color--regular);
+  --#{$tree-view}__node--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // Container
   --#{$tree-view}__node-container--Display: contents;
 
   // Content
-  --#{$tree-view}__node-content--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}__node-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node-content--Overflow: visible;
 
-  // Link hover/focus
-  --#{$tree-view}__node--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$tree-view}__node--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  // Link hover
+  --#{$tree-view}__node--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
   // Nested toggle
   --#{$tree-view}__list-item__list-item__node-toggle--Top: var(--#{$tree-view}__node--PaddingTop--base);
@@ -38,17 +35,14 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   // Toggle
   --#{$tree-view}__node-toggle--Position: absolute;
-  --#{$tree-view}__node-toggle--Color--base: var(--#{$pf-global}--Color--200);
+  --#{$tree-view}__node-toggle--Color--base: var(--pf-t--global--icon--color--subtle);
   --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--Color--base);
-  --#{$tree-view}__node-toggle--hover--Color: var(--#{$pf-global}--Color--100);
-  --#{$tree-view}__node-toggle--focus--Color: var(--#{$pf-global}--Color--100);
-  --#{$tree-view}__node-toggle--active--Color: var(--#{$pf-global}--Color--100);
   --#{$tree-view}__node-toggle--BackgroundColor: transparent;
-  --#{$tree-view}__list-item--m-expanded__node-toggle--Color: var(--#{$pf-global}--Color--100);
+  --#{$tree-view}__list-item--m-expanded__node-toggle--Color: var(--pf-t--global--icon--color--regular);
 
   // Toggle icon
-  --#{$tree-view}__node-toggle-icon--MinWidth: var(--#{$pf-global}--FontSize--md);
-  --#{$tree-view}__node-toggle-icon--Transition: transform var(--#{$pf-global}--TransitionDuration) var(--#{$pf-global}--TimingFunction);
+  --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--body--default);
+  --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--body--default);
   --#{$tree-view}__node-toggle-button--PaddingTop: var(--#{$pf-global}--spacer--form-element);
   --#{$tree-view}__node-toggle-button--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$tree-view}__node-toggle-button--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
@@ -172,10 +166,9 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingTop: 0;
   --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBottom: 0;
   --#{$tree-view}--m-compact--m-no-background__node--before--Top: calc(var(--#{$tree-view}--m-compact__node-container--nested--PaddingTop) + var(--#{$tree-view}--m-compact__node--nested--PaddingTop) + #{pf-size-prem(4px)});
+}
 
-  padding-block-start: var(--#{$tree-view}--PaddingTop);
-  padding-block-end: var(--#{$tree-view}--PaddingBottom);
-
+.#{$tree-view} {
   &.pf-m-compact,
   &.pf-m-guides {
     .#{$tree-view}__list-item {
@@ -337,7 +330,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   display: inline-block;
   min-width: var(--#{$tree-view}__node-toggle-icon--MinWidth);
   text-align: center;
-  transition: var(--#{$tree-view}__node-toggle-icon--Transition);
   transform: rotate(var(--#{$tree-view}__node-toggle-icon--Rotate));
 }
 
@@ -377,12 +369,7 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   &.pf-m-current {
     --#{$tree-view}__node--Color: var(--#{$tree-view}__node--m-current--Color);
-
-    font-weight: var(--#{$tree-view}__node--m-current--FontWeight);
-  }
-
-  &:focus {
-    --#{$tree-view}__node--BackgroundColor: var(--#{$tree-view}__node--focus--BackgroundColor);
+    --#{$tree-view}__node--BackgroundColor: var(--#{$tree-view}__node--m-current--BackgroundColor);
   }
 
   .#{$tree-view}__node-count {
@@ -390,21 +377,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
     .#{$badge}.pf-m-read {
       --#{$badge}--m-read--BackgroundColor: var(--#{$tree-view}__node-count--c-badge--m-read--BackgroundColor);
-    }
-  }
-
-  &:not(.pf-m-selectable),
-  &.pf-m-selectable .#{$tree-view}__node-toggle {
-    &:hover {
-      --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--hover--Color);
-    }
-
-    &:focus {
-      --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--focus--Color);
-    }
-
-    &:active {
-      --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--active--Color);
     }
   }
 }
