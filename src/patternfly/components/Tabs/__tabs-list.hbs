@@ -55,6 +55,8 @@ __tabs-list--IsCloseDisabled: bool
         __tabs-item--aria-label="Disabled"
         __tabs-item--text="Disabled"
         tabs-link--IsDisabled="true"
+        tabs-item-action--IsHelpDisabled=true
+        tabs-item-action--IsCloseDisabled=true
         }}
       {{> __tabs-item
         __tabs-item--id="aria-disabled"
@@ -62,6 +64,8 @@ __tabs-list--IsCloseDisabled: bool
         __tabs-item--aria-label="ARIA disabled"
         __tabs-item--text="ARIA disabled"
         tabs-link--IsAriaDisabled="true"
+        tabs-item-action--IsHelpAriaDisabled=true
+        tabs-item-action--IsCloseAriaDisabled=true
         }}
         {{#if __tabs-list--IsHelpDisabled}}
           {{> __tabs-item

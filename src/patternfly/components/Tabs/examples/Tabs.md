@@ -343,7 +343,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-v5-c-tabs` | `<nav>`, `<div>` | Initiates the tabs component. **Required** |
 | `.pf-v5-c-tabs__list` | `<ul>` | Initiates a tabs component list. **Required** |
 | `.pf-v5-c-tabs__item` | `<li>` | Initiates a tabs component item. **Required** |
-| `.pf-v5-c-tabs__item-content` | `<div>` | Initiates a tabs component item content. **Required** |
 | `.pf-v5-c-tabs__item-text` | `<span>` | Initiates a tabs component item icon. **Required** |
 | `.pf-v5-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
 | `.pf-v5-c-tabs__item-close` | `<span>` | Initiates a tabs component item close. |
