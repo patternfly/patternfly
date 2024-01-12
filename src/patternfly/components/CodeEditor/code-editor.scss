@@ -2,6 +2,8 @@
 
 :where(:root), :where(.#{$code-editor}) {
   // controls
+  --#{$code-editor}__controls--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$code-editor}__controls--Gap: var(--pf-t--global--spacer--xs);
   --#{$code-editor}__controls--c-button--m-control--Color: var(--pf-t--global--icon--color--regular);
   --#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-t--global--border--color--default);
 
@@ -10,6 +12,10 @@
   --#{$code-editor}__header--before--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$code-editor}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-editor}__header--m-plain--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+
+  // header content
+  --#{$code-editor}__header-content--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$code-editor}__header-content--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
 
   // upload
   --#{$code-editor}__upload--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -69,13 +75,6 @@
 .#{$code-editor}__header {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  background-color: var(--#{$code-editor}__header--BackgroundColor);
-  border-radius: var(--#{$code-editor}__tab--BorderRadius) var(--#{$code-editor}__tab--BorderRadius) 0 0;
-
-  &.pf-m-plain {
-    --#{$code-editor}__header--BackgroundColor: var( --#{$code-editor}__header--m-plain--BackgroundColor);
-  }
 
   &::before {
     position: absolute;
@@ -88,38 +87,25 @@
   }
 }
 
+.#{$code-editor}__header-content {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  padding-block-start: var(--#{$code-editor}__header-content--PaddingBlockStart);
+  padding-block-end: var(--#{$code-editor}__header-content--PaddingBlockEnd);
+  background-color: var(--#{$code-editor}__header--BackgroundColor);
+  border-radius: var(--#{$code-editor}__tab--BorderRadius) 0 0 0;
+
+  &.pf-m-plain {
+    --#{$code-editor}__header--BackgroundColor: var( --#{$code-editor}__header--m-plain--BackgroundColor);
+  }
+}
+
 .#{$code-editor}__controls {
   display: flex;
-  gap: var(--pf-t--global--spacer--xs); // Todo - use variable if correct value
+  gap: var(--#{$code-editor}__controls--Gap);
   align-items: flex-start;
-
-  .#{$button}.pf-m-icon { // Todo - use variables for these if they are correct
-    --pf-v5-c-button--PaddingTop: var(--pf-t--global--spacer--sm);
-    --pf-v5-c-button--PaddingBottom: var(--pf-t--global--spacer--sm);
-    --pf-v5-c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
-    --pf-v5-c-button--PaddingRight: var(--pf-t--global--spacer--sm);
-  }
-
-  // .#{$button}.pf-m-control {
-  //   --#{$button}--m-control--Color: var(--#{$code-editor}__controls--c-button--m-control--Color);    
-  //   --#{$button}--BorderColor: transparent;
-
-  //   background: inherit;
-
-  //   &:hover {
-  //     --#{$code-editor}__controls--c-button--m-control--Color: var(--#{$code-editor}__controls--c-button--m-control--hover--Color);
-  //   }
-
-  //   &:focus {
-  //     --#{$code-editor}__controls--c-button--m-control--Color: var(--#{$code-editor}__controls--c-button--m-control--focus--Color);
-  //   }
-
-  //   &:disabled {
-  //     &::after {
-  //       border-block-end-color: var(--#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor);
-  //     }
-  //   }
-  // }
+  padding-inline-start: var(--#{$code-editor}__controls--PaddingInlineStart);
 }
 
 .#{$code-editor}__header-main {
@@ -127,12 +113,6 @@
   padding-inline-start: var(--#{$code-editor}__header-main--PaddingLeft);
   padding-inline-end: var(--#{$code-editor}__header-main--PaddingRight);
 }
-
-// .#{$code-editor}__keyboard-shortcuts {
-//   &:hover {
-//     border-block-end: var(--#{$code-editor}__header--before--BorderBottomWidth) solid var(--#{$code-editor}__header--before--BorderBottomColor);
-//   }
-// }
 
 .#{$code-editor}__upload {
   position: relative;
