@@ -81,7 +81,7 @@
   --#{$multiple-file-upload}__status-progress--Gap: var(--pf-t--global--spacer--sm);
 
   // status progress icon
-  --#{$multiple-file-upload}__status-progress-icon--Color: var(--#{$pf-global}--icon--Color--dark);
+  --#{$multiple-file-upload}__status-progress-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // status item
   --#{$multiple-file-upload}__status-item--PaddingTop: var(--pf-t--global--spacer--md);
@@ -92,20 +92,17 @@
   --#{$multiple-file-upload}__status-item--BorderColor: var(--pf-t--global--border--color--default);
 
   // status item icon
-  --#{$multiple-file-upload}__status-item-icon--Color: var(--#{$pf-global}--icon--Color--dark);
-
-  // status item close
-  --#{$multiple-file-upload}__status-item-close--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$multiple-file-upload}__status-item-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // status item progress
   --#{$multiple-file-upload}__status-item-progress--GridTemplateColumns: fit-content(100%) max-content;
   --#{$multiple-file-upload}__status-item-progress--Gap: var(--pf-t--global--spacer--sm);
 
   // status item progress text
-  --#{$multiple-file-upload}__status-item-progress-text--Color: var(--#{$pf-global}--primary-color--100);
+  --#{$multiple-file-upload}__status-item-progress-text--Color: var(--pf-t--global--text--color--regular);
 
   // status item progress size
-  --#{$multiple-file-upload}__status-item-progress-size--Color: var(--#{$pf-global}--Color--200);
+  --#{$multiple-file-upload}__status-item-progress-size--Color: var(--pf-t--global--text--color--subtle);
 }
 
 .#{$multiple-file-upload} {
@@ -222,10 +219,6 @@
 
 .#{$multiple-file-upload}__status-item-icon {
   color: var(--#{$multiple-file-upload}__status-item-icon--Color);
-}
-
-.#{$multiple-file-upload}__status-item-close {
-  margin-block-start: var(--#{$multiple-file-upload}__status-item-close--MarginTop);
 }
 
 .#{$multiple-file-upload}__status-item-progress {
