@@ -16,9 +16,6 @@
   --#{$file-upload}--m-drag-hover--BorderColor: var(--pf-t--global--icon--color--brand--default);
   --#{$file-upload}--m-drag-hover--BorderStyle: dashed;
 
-  // File select > Input group
-  --#{$file-upload}__file-select__c-input-group--ColumnGap: var(--pf-t--global--spacer--xs);
-
   // File select > Button
   --#{$file-upload}__file-select__c-button--m-control--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
@@ -51,10 +48,6 @@
 }
 
 .#{$file-upload}__file-select {
-  .#{$input-group} {
-    column-gap: var(--#{$file-upload}__file-select__c-input-group--ColumnGap);
-  }
-
   .#{$button}.pf-m-control {
     outline-offset: var(--#{$file-upload}__file-select__c-button--m-control--OutlineOffset);
   }
