@@ -2,12 +2,12 @@
 $pf-v5-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
-.#{$sidebar} {
-  --#{$sidebar}--inset: var(--#{$pf-global}--spacer--md);
-  --#{$sidebar}--xl--inset: var(--#{$pf-global}--spacer--lg);
-  --#{$sidebar}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$sidebar}--BorderWidth--base: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$sidebar}--BorderColor--base: var(--#{$pf-global}--BorderColor--100);
+:root,
+:where(.#{$sidebar}) {
+  --#{$sidebar}--inset: var(--pf-t--global--spacer--md);
+  --#{$sidebar}--xl--inset: var(--pf-t--global--spacer--lg);
+  --#{$sidebar}--BorderWidth--base: var(--pf-t--global--border--width--regular);
+  --#{$sidebar}--BorderColor--base: var(--pf-t--global--border--color--default);
 
   // Panel
   --#{$sidebar}__panel--PaddingTop: 0;
@@ -85,15 +85,21 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__panel--md--FlexBasis: #{pf-size-prem(250px)};
   --#{$sidebar}__panel--m-split--FlexBasis: #{pf-size-prem(250px)};
   --#{$sidebar}__panel--m-stack--FlexBasis: auto;
-  --#{$sidebar}__panel--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$sidebar}__panel--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$sidebar}__panel--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$sidebar}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$sidebar}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // Content
-  --#{$sidebar}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$sidebar}__content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$sidebar}__content--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // Sticky
   --#{$sidebar}__panel--m-sticky--Top: 0;
   --#{$sidebar}__panel--m-sticky--Position: sticky;
+}
+
+.#{$sidebar} {
+  height: 100%;
 
   @media (min-width: $pf-v5-global--breakpoint--md) {
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}__main--md--FlexDirection);
@@ -144,8 +150,6 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}--m-split__main--m-border--before--Display);
     --#{$sidebar}--m-panel-right__panel--Order: var(--#{$sidebar}--m-split--m-panel-right__panel--Order);
   }
-
-  height: 100%;
 }
 
 .#{$sidebar}__main {
@@ -192,6 +196,10 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__panel--Position: static;
     --#{$sidebar}__panel--Top: auto;
   }
+
+  &.pf-m-secondary {
+    --#{$sidebar}__panel--BackgroundColor: var(--#{$sidebar}__panel--m-secondary--BackgroundColor);
+  }
 }
 
 .#{$sidebar}__content {
@@ -212,6 +220,10 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   &.pf-m-no-background {
     --#{$sidebar}__content--BackgroundColor: transparent;
+  }
+
+  &.pf-m-secondary {
+    --#{$sidebar}__content--BackgroundColor: var(--#{$sidebar}__content--m-secondary--BackgroundColor);
   }
 
   & + .#{$sidebar}__panel {
