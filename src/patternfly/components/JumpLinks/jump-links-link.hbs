@@ -1,7 +1,8 @@
-<a class="{{pfv}}jump-links__link{{#if jump-links-link--modifier}} {{jump-links-link--modifier}}{{/if}}"
-  href="#{{#if jump-links-link--target}}{{jump-links-link--target}}{{/if}}"
+<span class="{{pfv}}jump-links__link{{#if jump-links-link--modifier}} {{jump-links-link--modifier}}{{/if}}"
   {{#if jump-links-link--attribute}}
     {{{jump-links-link--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
-</a>
+  {{#> button button--IsAnchor="true" button--url=(concat '#' jump-links-link--target ) button--modifier="pf-m-link"}}
+    {{> @partial-block}}
+  {{/button}}
+</span>
