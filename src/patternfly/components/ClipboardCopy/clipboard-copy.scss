@@ -21,6 +21,9 @@
   --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
 
+  // Group
+  --#{$clipboard-copy}__group--Gap: var(--pf-t--global--spacer--xs);
+
   // Inline
   --#{$clipboard-copy}--m-inline--PaddingTop: 0; // remove at breaking change
   --#{$clipboard-copy}--m-inline--PaddingBottom: 0; // remove at breaking change
