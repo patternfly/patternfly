@@ -1,4 +1,7 @@
 <span class="{{pfv}}label__text{{#if label-text--modifier}} {{label-text--modifier}}{{/if}}"
+  {{#if label--IsRemovable}}
+    id="{{label--id}}-text"
+  {{/if}}
   {{#if label-text--attribute}}
     {{{label-text--attribute}}}
   {{/if}}>

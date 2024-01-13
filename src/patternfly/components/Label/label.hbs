@@ -27,7 +27,7 @@
       {{> @partial-block}}
     {{/if}}
   {{/label-content}}
-  {{#if label--isRemovable}}
+  {{#if label--IsRemovable}}
     {{#> label-actions}}
       {{#> button button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
     aria-label="Remove" aria-labelledby="' label--id '-button ' label--id '-text"')}}
