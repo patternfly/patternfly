@@ -10,9 +10,7 @@ cssPrefix: pf-v5-c-masthead
 {{#> masthead masthead--id="basic-masthead"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
+    {{> masthead-brand}}
   {{/masthead-main}}
   {{> masthead-content}}
 {{/masthead}}
@@ -20,16 +18,13 @@ cssPrefix: pf-v5-c-masthead
 
 ### Basic with mixed content
 ```hbs
-{{#> masthead masthead--id="basic-masthead-with-mixed-content"}}
+{{#> masthead masthead--id="basic-masthead-with-mixed-content-example"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
+    {{> masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    <span>Content</span>
-    {{#> button button--modifier="pf-m-primary pf-v5-u-text-align-right"}}
+    {{#> button button--modifier="pf-m-primary"}}
       Primary
     {{/button}}
     {{#> button button--modifier="pf-m-secondary"}}
@@ -44,12 +39,10 @@ cssPrefix: pf-v5-c-masthead
 
 ### Display inline
 ```hbs
-{{#> masthead masthead--id="inline-masthead" masthead--modifier="pf-m-display-inline"}}
+{{#> masthead masthead--id="inline-masthead-example" masthead--modifier="pf-m-display-inline"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
+    {{> masthead-brand}}
   {{/masthead-main}}
   {{> masthead-content}}
 {{/masthead}}
@@ -57,12 +50,10 @@ cssPrefix: pf-v5-c-masthead
 
 ### Display stack
 ```hbs
-{{#> masthead masthead--id="stack-masthead" masthead--modifier="pf-m-display-stack"}}
+{{#> masthead masthead--id="stack-masthead-example" masthead--modifier="pf-m-display-stack"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
+    {{> masthead-brand}}
   {{/masthead-main}}
   {{> masthead-content}}
 {{/masthead}}
@@ -70,12 +61,10 @@ cssPrefix: pf-v5-c-masthead
 
 ### Display stack, display inline responsive
 ```hbs
-{{#> masthead masthead--id="stack-inline-masthead" masthead--modifier="pf-m-display-inline pf-m-display-stack-on-lg pf-m-display-inline-on-2xl"}}
+{{#> masthead masthead--id="stack-inline-masthead-example" masthead--modifier="pf-m-display-inline pf-m-display-stack-on-lg pf-m-display-inline-on-2xl"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
+    {{> masthead-brand}}
   {{/masthead-main}}
   {{> masthead-content}}
 {{/masthead}}
@@ -83,12 +72,10 @@ cssPrefix: pf-v5-c-masthead
 
 ### Insets
 ```hbs
-{{#> masthead masthead--id="inset-masthead" masthead--modifier="pf-m-inset-sm"}}
+{{#> masthead masthead--id="inset-masthead-example" masthead--modifier="pf-m-inset-sm"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
+    {{> masthead-brand}}
   {{/masthead-main}}
   {{> masthead-content}}
 {{/masthead}}

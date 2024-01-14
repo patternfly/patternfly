@@ -37,18 +37,18 @@ cssPrefix: pf-v5-c-tab-content
 {{/tab-content}}
 ```
 
-### Light 300 background
+### Secondary
 ```hbs
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--IsActive="true" tab-content--attribute='id="light-300-tab1-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-secondary" tab-content--IsActive="true" tab-content--attribute='id="secondary-tab1-panel"'}}
   Panel 1
 {{/tab-content}}
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="light-300-tab2-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-secondary" tab-content--attribute='id="secondary-tab2-panel"'}}
   Panel 2
 {{/tab-content}}
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="light-300-tab3-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-secondary" tab-content--attribute='id="secondary-tab3-panel"'}}
   Panel 3
 {{/tab-content}}
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="light-300-tab4-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-secondary" tab-content--attribute='id="secondary-tab4-panel"'}}
   Panel 4
 {{/tab-content}}
 ```
@@ -72,4 +72,4 @@ Tab content should be used with the [tabs component](/components/tabs).
 | `.pf-v5-c-tab-content` | `<section>` |  Initiates the tab content component. **Required** |
 | `.pf-v5-c-tab-content__body` | `<div>` |  Initiates the tab content body component. |
 | `.pf-m-padding` | `.pf-v5-c-tab-content__body` | Modifies the tab content body component padding. |
-| `.pf-m-light-300` | `.pf-v5-c-tab-content` |  Modifies the tab content component background color. |
+| `.pf-m-secondary` | `.pf-v5-c-tab-content` |  Modifies the tab content component for secondary styles. |

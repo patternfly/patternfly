@@ -1,10 +1,13 @@
 // @debug $backdrop; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$backdrop} {
   --#{$backdrop}--Position: fixed;
-  --#{$backdrop}--ZIndex: var(--#{$pf-global}--ZIndex--lg);
-  --#{$backdrop}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-transparent-100);
+  --#{$backdrop}--ZIndex: var(--pf-t--global--Zindex--lg);
+  --#{$backdrop}--BackgroundColor: var(--pf-t--global--background--color--backdrop--default);
+}
 
+.#{$backdrop} {
   position: var(--#{$backdrop}--Position);
   inset-block-start: 0;
   inset-inline-start: 0;

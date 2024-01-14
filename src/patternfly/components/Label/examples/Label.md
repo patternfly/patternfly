@@ -45,6 +45,13 @@ import './Label.css'
 <br><br>
 
 {{> label-template-variants
+    label-template-variants--title="Orange red"
+    label-template-variants--id="orangered"
+    label--color="orangered"}}
+
+<br><br>
+
+{{> label-template-variants
     label-template-variants--title="Purple"
     label-template-variants--id="purple"
     label--color="purple"}}
@@ -106,6 +113,14 @@ import './Label.css'
 <br><br>
 
 {{> label-template-variants
+    label-template-variants--title="Orange red"
+    label-template-variants--id="orangered-outline"
+    label--color="orangered"
+    label--IsOutlined=true}}
+
+<br><br>
+
+{{> label-template-variants
     label-template-variants--title="Purple"
     label-template-variants--id="purple-outline"
     label--color="purple"
@@ -135,6 +150,15 @@ import './Label.css'
     label-template-variants--title="Compact"
     label-template-variants--id="compact"
     label--IsCompact=true}}
+
+<br><br>
+
+{{> label-template-variants
+    label-template-variants--title="Compact"
+    label-template-variants--id="compact-outline"
+    label--color="blue"
+    label--IsOutlined=true
+    label--IsCompact=true}}
 ```
 
 ### Overflow
@@ -150,19 +174,7 @@ This style of label is used to indicate overflow within a label group.
 
 ### Editable
 
-
 **Note: Editable label behavior must be handled with JavaScript.**
-
-- `.pf-v5-c-label__editable-text` onClick event should:
-  - Set `.pf-m-editable-active` on `.pf-v5-c-label`
-  - Change `.pf-v5-c-label__editable-text`from a button to an input
-- Return keypress, when content is editable, should:
-  - Be captured to prevent line wrapping and save updates to label text
-  - Remove `.pf-m-editable-active` from `.pf-v5-c-label`
-- Esc keypress, when content is editable, should:
-  - Undo any update to label text
-  - Remove `.pf-m-editable-active` from `.pf-v5-c-label`
-  - Change `.pf-v5-c-label__editable-text` back to a button
 
 ```hbs isBeta
 {{> label
@@ -523,7 +535,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
         {{> label label--id=(concat label-group--id '-editable-label-editable-2') label-text--value="Editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-3') label-text--value="Editable label 3, active" label-editable-content--value="Editable label 3, active" label--color="blue" label--IsEditable=true label--IsEditableActive=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-editable-3') label-text--value="Editable label 3, active" label-editable-content--value="Editable label 3, active" label--color="blue" label--IsEditable=true label--IsEditableActive=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}

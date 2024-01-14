@@ -90,6 +90,11 @@
     --#{$banner}--Color: var(--#{$banner}--m-info--Color);
   }
 
+  &.pf-m-custom {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-custom--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-custom--Color);
+  }
+
   &.pf-m-red {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-red--BackgroundColor);
     --#{$banner}--Color: var(--#{$banner}--m-red--Color);

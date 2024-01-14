@@ -1,13 +1,20 @@
 {{#if label--IsEditable}}
   {{#> label-editable-content}}{{> @partial-block}}{{/label-editable-content}}
 {{else}}
-<{{#if label-content--IsLink}}a{{else}}span{{/if}} class="{{pfv}}label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
+<{{#if label-content--IsLink}}a{{else if label-content--IsButton}}button{{else}}span{{/if}} class="{{pfv}}label__content
+  {{#ifAny label-content--IsLink label-content--IsButton}}
+    pf-m-clickable
+  {{/ifAny}}
+  {{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
   {{#if label-content--IsLink}}
     href="#"
+  {{/if}}
+  {{#if label-content--IsButton}}
+    type="button"
   {{/if}}
   {{#if label-content--attribute}}
     {{{label-content--attribute}}}
   {{/if}}>
   {{~> @partial-block}}
-</{{#if label-content--IsLink}}a{{else}}span{{/if}}>
+</{{#if label-content--IsLink}}a{{else if label-content--IsButton}}button{{else}}span{{/if}}>
 {{/if}}

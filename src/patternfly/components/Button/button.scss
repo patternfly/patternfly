@@ -1,185 +1,221 @@
-// @debug $button; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
-.#{$button} {
-  // Component
+:where(:root),
+:where(.#{$button}) {
+  --#{$button}--Display: inline-block;
   --#{$button}--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$button}--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$button}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$button}--BackgroundColor: transparent;
+  --#{$button}--BorderColor: transparent;
+  --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$button}--after--BorderColor: transparent;
-  --#{$button}--after--BorderWidth: var(--pf-t--global--border--width--button--default);
+  --#{$button}--TextDecoration: none;
+  --#{$button}--BorderStartStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderStartEndRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndEndRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--MixBlendMode: normal;
 
-  // Hover state variables
-  --#{$button}--hover--after--BorderWidth: var(--pf-t--global--border--width--button--hover);
+  // Hover
+  --#{$button}--hover--BackgroundColor: transparent;
+  --#{$button}--hover--BorderColor: transparent;
+  --#{$button}--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
+  --#{$button}--hover--TextDecoration: none;
 
-  // Focus state variables
-  --#{$button}--focus--after--BorderWidth: var(--pf-t--global--border--width--button--active);
+  // Clicked
+  --#{$button}--m-clicked--BackgroundColor: transparent;
+  --#{$button}--m-clicked--BorderColor: transparent;
+  --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--button--active);
 
-  // Active state variables
-  --#{$button}--active--after--BorderWidth: var(--pf-t--global--border--width--button--active);
-
-  // Disabled state variables
-  --#{$button}--disabled--Color: var(--pf-t--global--text--color--disabled--default);
-  --#{$button}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
-  --#{$button}--disabled--after--BorderColor: transparent;
-
-  // Primary btn
-  --#{$button}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
+  // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
-  --#{$button}--m-primary--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
+  --#{$button}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
+  --#{$button}--m-primary__icon--Color: var(--pf-t--global--icon--color--on-brand--default);
   --#{$button}--m-primary--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
-  --#{$button}--m-primary--focus--BackgroundColor: var(--pf-t--global--color--brand--active);
-  --#{$button}--m-primary--focus--Color: var(--pf-t--global--text--color--on-brand--active);
-  --#{$button}--m-primary--active--BackgroundColor: var(--pf-t--global--color--brand--active);
-  --#{$button}--m-primary--active--Color: var(--pf-t--global--text--color--on-brand--active);
+  --#{$button}--m-primary--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
+  --#{$button}--m-primary--hover__icon--Color: var(--pf-t--global--icon--color--on-brand--hover);
+  --#{$button}--m-primary--m-clicked--Color: var(--pf-t--global--text--color--on-brand--clicked);
+  --#{$button}--m-primary--m-clicked--BackgroundColor: var(--pf-t--global--color--brand--clicked);
+  --#{$button}--m-primary--m-clicked__icon--Color: var(--pf-t--global--icon--color--on-brand--clicked);
 
-  // Secondary btn
-  --#{$button}--m-secondary--BackgroundColor: transparent;
-  --#{$button}--m-secondary--after--BorderColor: var(--pf-t--global--border--color--brand--default);
+  // Secondary
   --#{$button}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
-  --#{$button}--m-secondary--hover--BackgroundColor: transparent;
-  --#{$button}--m-secondary--hover--after--BorderColor: var(--pf-t--global--border--color--brand--hover);
+  --#{$button}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
+  --#{$button}--m-secondary__icon--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$button}--m-secondary--hover--Color: var(--pf-t--global--text--color--brand--hover);
-  --#{$button}--m-secondary--focus--BackgroundColor: transparent;
-  --#{$button}--m-secondary--focus--after--BorderColor: var(--pf-t--global--border--color--brand--active);
-  --#{$button}--m-secondary--focus--Color: var(--pf-t--global--text--color--brand--active);
-  --#{$button}--m-secondary--active--BackgroundColor: transparent;
-  --#{$button}--m-secondary--active--after--BorderColor: var(--pf-t--global--border--color--brand--active);
-  --#{$button}--m-secondary--active--Color: var(--pf-t--global--text--color--brand--active);
-
-  // Secondary danger
-  --#{$button}--m-secondary--m-danger--BackgroundColor: transparent;
+  --#{$button}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
+  --#{$button}--m-secondary--hover__icon--Color: var(--pf-t--global--icon--color--brand--hover);
+  --#{$button}--m-secondary--m-clicked--Color: var(--pf-t--global--text--color--brand--clicked);
+  --#{$button}--m-secondary--m-clicked--BorderColor: var(--pf-t--global--border--color--brand--clicked);
+  --#{$button}--m-secondary--m-clicked__icon--Color: var(--pf-t--global--icon--color--brand--clicked);
   --#{$button}--m-secondary--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
-  --#{$button}--m-secondary--m-danger--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
-  --#{$button}--m-secondary--m-danger--hover--BackgroundColor: transparent;
+  --#{$button}--m-secondary--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+  --#{$button}--m-secondary--m-danger__icon--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$button}--m-secondary--m-danger--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
-  --#{$button}--m-secondary--m-danger--hover--after--BorderColor: var(--pf-t--global--border--color--status--danger--hover);
-  --#{$button}--m-secondary--m-danger--focus--BackgroundColor: transparent;
-  --#{$button}--m-secondary--m-danger--focus--Color: var(--pf-t--global--text--color--status--danger--active);
-  --#{$button}--m-secondary--m-danger--focus--after--BorderColor: var(--pf-t--global--border--color--status--danger--active);
-  --#{$button}--m-secondary--m-danger--active--BackgroundColor: transparent;
-  --#{$button}--m-secondary--m-danger--active--Color: var(--pf-t--global--text--color--status--danger--active);
-  --#{$button}--m-secondary--m-danger--active--after--BorderColor: var(--pf-t--global--border--color--status--danger--active);
+  --#{$button}--m-secondary--m-danger--hover--BorderColor: var(--pf-t--global--border--color--status--danger--hover);
+  --#{$button}--m-secondary--m-danger--hover__icon--Color: var(--pf-t--global--icon--color--status--danger--hover);
+  --#{$button}--m-secondary--m-danger--m-clicked--Color: var(--pf-t--global--text--color--status--danger--clicked);
+  --#{$button}--m-secondary--m-danger--m-clicked--BorderColor: var(--pf-t--global--border--color--status--danger--clicked);
+  --#{$button}--m-secondary--m-danger--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--danger--clicked);
 
-  // Tertiary btn
-  --#{$button}--m-tertiary--BackgroundColor: transparent;
-  --#{$button}--m-tertiary--after--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-tertiary--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-tertiary--hover--BackgroundColor: transparent;
-  --#{$button}--m-tertiary--hover--after--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$button}--m-tertiary--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-tertiary--focus--BackgroundColor: transparent;
-  --#{$button}--m-tertiary--focus--after--BorderColor: var(--pf-t--global--border--color--active);
-  --#{$button}--m-tertiary--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-tertiary--active--BackgroundColor: transparent;
-  --#{$button}--m-tertiary--active--after--BorderColor: var(--pf-t--global--border--color--active);
-  --#{$button}--m-tertiary--active--Color: var(--pf-t--global--text--color--regular);
+  // Tertiary
+  --#{$button}--m-tertiary--Color: var(--pf-t--global--text--color--brand--default);
+  --#{$button}--m-tertiary--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-tertiary__icon--Color: var(--pf-t--global--icon--color--brand--default);
+  --#{$button}--m-tertiary--hover--Color: var(--pf-t--global--text--color--brand--hover);
+  --#{$button}--m-tertiary--hover--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$button}--m-tertiary--hover__icon--Color: var(--pf-t--global--icon--color--brand--hover);
+  --#{$button}--m-tertiary--m-clicked--Color: var(--pf-t--global--text--color--brand--clicked);
+  --#{$button}--m-tertiary--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$button}--m-tertiary--m-clicked__icon--Color: var(--pf-t--global--icon--color--brand--clicked);
 
-  // Warning btn
-  // TODO need active state text?
-  --#{$button}--m-warning--BackgroundColor: var(--pf-t--global--color--status--warning--default);
-  --#{$button}--m-warning--Color: var(--pf-t--global--text--color--status--on-warning--default);
-  --#{$button}--m-warning--hover--BackgroundColor: var(--pf-t--global--color--status--warning--hover);
-  --#{$button}--m-warning--hover--Color: var(--pf-t--global--text--color--status--on-warning--hover);
-  --#{$button}--m-warning--focus--BackgroundColor: var(--pf-t--global--color--status--warning--active);
-  --#{$button}--m-warning--focus--Color: var(--pf-t--global--text--color--status--on-warning--hover);
-  --#{$button}--m-warning--active--BackgroundColor: var(--pf-t--global--color--status--warning--active);
-  --#{$button}--m-warning--active--Color: var(--pf-t--global--text--color--status--on-warning--hover);
+  // Link
+  --#{$button}--m-link--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$button}--m-link--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$button}--m-link--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$button}--m-link--Color: var(--pf-t--global--text--color--brand--default);
+  --#{$button}--m-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$button}--m-link--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
+  --#{$button}--m-link__icon--Color: var(--pf-t--global--icon--color--brand--default);
+  --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--brand--hover);
+  --#{$button}--m-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$button}--m-link--hover__icon--Color: var(--pf-t--global--text--color--brand--hover);
+  --#{$button}--m-link--m-clicked--Color: var(--pf-t--global--text--color--brand--clicked);
+  --#{$button}--m-link--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$button}--m-link--m-clicked__icon--Color: var(--pf-t--global--text--color--brand--clicked);
+  --#{$button}--m-link--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
+  --#{$button}--m-link--m-danger__icon--Color: var(--pf-t--global--text--color--status--danger--default);
+  --#{$button}--m-link--m-danger--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
+  --#{$button}--m-link--m-danger--hover__icon--Color: var(--pf-t--global--text--color--status--danger--hover);
+  --#{$button}--m-link--m-danger--m-clicked--Color: var(--pf-t--global--text--color--status--danger--clicked);
+  --#{$button}--m-link--m-danger--m-clicked__icon--Color: var(--pf-t--global--text--color--status--danger--clicked);
 
-  // Danger btn
-  // TODO need active state text?
-  --#{$button}--m-danger--BackgroundColor: var(--pf-t--global--color--status--danger--default);
-  --#{$button}--m-danger--Color: var(--pf-t--global--text--color--status--on-danger--default);
-  --#{$button}--m-danger--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
-  --#{$button}--m-danger--hover--Color: var(--pf-t--global--text--color--status--on-danger--hover);
-  --#{$button}--m-danger--focus--BackgroundColor: var(--pf-t--global--color--status--danger--active);
-  --#{$button}--m-danger--focus--Color: var(--pf-t--global--text--color--status--on-danger--hover);
-  --#{$button}--m-danger--active--BackgroundColor: var(--pf-t--global--color--status--danger--active);
-  --#{$button}--m-danger--active--Color: var(--pf-t--global--text--color--status--on-danger--hover);
-
-  // Link btn
-  --#{$button}--m-link--BackgroundColor: transparent;
-  --#{$button}--m-link--Color: var(--pf-t--global--text--color--link--default);
-  --#{$button}--m-link--hover--BackgroundColor: transparent;
-  --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$button}--m-link--focus--BackgroundColor: transparent;
-  --#{$button}--m-link--focus--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$button}--m-link--active--BackgroundColor: transparent;
-  --#{$button}--m-link--active--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$button}--m-link--disabled--BackgroundColor: transparent;
-  --#{$button}--m-link--disabled--Color: var(--pf-t--global--text--color--disabled--light);
-  --#{$button}--m-link--not--m-inline--TextDecoration: none;
-  --#{$button}--m-link--m-inline--FontSize: inherit;
+  // Inline link
+  --#{$button}--m-link--m-inline--FontSize: initial;
+  --#{$button}--m-link--m-inline--LineHeight: initial;
+  --#{$button}--m-link--m-inline--FontWeight: initial;
   --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
-  --#{$button}--m-link--m-inline--hover--Color: var(--pf-t--global--text--color--link--hover);
   --#{$button}--m-link--m-inline--PaddingTop: 0;
   --#{$button}--m-link--m-inline--PaddingRight: 0;
   --#{$button}--m-link--m-inline--PaddingBottom: 0;
   --#{$button}--m-link--m-inline--PaddingLeft: 0;
   --#{$button}--m-link--m-inline__progress--Left: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--#{$button}--m-link--m-inline__progress--Left) + 1rem + var(--pf-t--global--spacer--sm));
+  --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
 
-  // Link danger
-  --#{$button}--m-link--m-danger--BackgroundColor: transparent;
-  --#{$button}--m-link--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
-  --#{$button}--m-link--m-danger--hover--BackgroundColor: transparent;
-  --#{$button}--m-link--m-danger--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
-  --#{$button}--m-link--m-danger--focus--BackgroundColor: transparent;
-  --#{$button}--m-link--m-danger--focus--Color: var(--pf-t--global--text--color--status--danger--active);
-  --#{$button}--m-link--m-danger--active--BackgroundColor: transparent;
-  --#{$button}--m-link--m-danger--active--Color: var(--pf-t--global--text--color--status--danger--active);
-
-  // Plain btn
-  --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$button}--m-plain--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$button}--m-plain--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
+  --#{$button}--m-plain--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--m-plain--PaddingTop) + var(--#{$button}--m-plain--PaddingBottom));
+  --#{$button}--m-plain--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$button}--m-plain--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-plain--focus--BackgroundColor: transparent;
-  --#{$button}--m-plain--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-plain--active--BackgroundColor: transparent;
-  --#{$button}--m-plain--active--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--disabled);
-  --#{$button}--m-plain--disabled--BackgroundColor: transparent;
+  --#{$button}--m-plain--m-clicked--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--m-plain--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$button}--m-plain--m-small--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-plain--m-small--PaddingRight: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-plain--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-plain--m-small--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-plain--m-no-padding--MixBlendMode: normal;
+  --#{$button}--m-plain--m-no-padding--MinWidth: auto;
+  --#{$button}--m-plain--m-no-padding--PaddingTop: 0;
+  --#{$button}--m-plain--m-no-padding--PaddingRight: 0;
+  --#{$button}--m-plain--m-no-padding--PaddingBottom: 0;
+  --#{$button}--m-plain--m-no-padding--PaddingLeft: 0;
+  --#{$button}--m-plain--m-no-padding--BackgroundColor: transparent;
+  --#{$button}--m-plain--m-no-padding--hover--BackgroundColor: transparent;
+  --#{$button}--m-plain--m-no-padding--m-clicked--BackgroundColor: transparent;
+  --#{$button}__progress--Color: var(--#{$button}__icon--Color);
 
-  // Control Button
-  --#{$button}--m-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$button}--m-control--Color: var(--pf-t--global--text--color--subtle);
+  // Control
   --#{$button}--m-control--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$button}--m-control--after--BorderWidth: var(--pf-t--global--border--width--control--default);
-  --#{$button}--m-control--after--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-control--after--BorderRightColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-control--after--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-control--after--BorderLeftColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-control--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
-  --#{$button}--m-control--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$button}--m-control--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$button}--m-control--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$button}--m-control--Color: var(--pf-t--global--text--color--regular);
+  --#{$button}--m-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
+  --#{$button}--m-control--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-control--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$button}--m-control__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-control--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-control--hover--after--BorderBottomWidth: var(--pf-t--global--border--width--control--hover);
-  --#{$button}--m-control--hover--after--BorderBottomColor: var(--pf-t--global--background--color--secondary--hover);
-  --#{$button}--m-control--active--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$button}--m-control--active--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-control--active--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
-  --#{$button}--m-control--active--after--BorderBottomColor: var(--pf-t--global--color--brand--active);
-  --#{$button}--m-control--focus--BackgroundColor: var(--pf-t--global--background--color--brand--active);
-  --#{$button}--m-control--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$button}--m-control--focus--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
-  --#{$button}--m-control--focus--after--BorderBottomColor: var(--pf-t--global--color--brand--hover);
-  --#{$button}--m-control--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$button}--m-control--m-expanded--Color: var(--pf-t--global--text--color--inverse);
-  --#{$button}--m-control--m-expanded--after--BorderBottomWidth: var(--pf-t--global--border--width--200);
-  --#{$button}--m-control--m-expanded--after--BorderBottomColor: var(--pf-t--global--color--brand--hover);
-  --#{$button}--m-small--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$button}--m-control--hover--BackgroundColor: var(--pf-t--global--background--color--control--default);
+  --#{$button}--m-control--hover--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$button}--m-control--hover--BorderWidth: var(--pf-t--global--border--width--control--hover);
+  --#{$button}--m-control--hover__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--m-control--m-clicked--Color: var(--pf-t--global--text--color--regular);
+  --#{$button}--m-control--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--default);
+  --#{$button}--m-control--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$button}--m-control--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
 
-  // CTA Button
+  // Stateful
+  --#{$button}--m-stateful--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$button}--m-stateful--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$button}--m-stateful--PaddingRight: var(--pf-t--global--spacer--md);
+
+  // Read
+  --#{$button}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
+  --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-read--hover--BackgroundColor: var(--pf-t--global--background--color--control--hover);
+  --#{$button}--m-read--hover--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$button}--m-read--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--clicked);
+  --#{$button}--m-read--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
+
+  // Unread
+  --#{$button}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
+  --#{$button}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
+  --#{$button}--m-unread__icon--Color: var(--pf-t--global--icon--color--on-brand--default);
+  --#{$button}--m-unread--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
+  --#{$button}--m-unread--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
+  --#{$button}--m-unread--hover__icon--Color: var(--pf-t--global--icon--color--on-brand--hover);
+  --#{$button}--m-unread--m-clicked--Color: var(--pf-t--global--text--color--on-brand--clicked);
+  --#{$button}--m-unread--m-clicked--BackgroundColor: var(--pf-t--global--color--brand--clicked);
+  --#{$button}--m-unread--m-clicked__icon--Color: var(--pf-t--global--icon--color--on-brand--clicked);
+
+  // Attention
+  --#{$button}--m-attention--Color: var(--pf-t--global--text--color--status--on-danger--default);
+  --#{$button}--m-attention--BackgroundColor: var(--pf-t--global--color--status--danger--default);
+  --#{$button}--m-attention__icon--Color: var(--pf-t--global--icon--color--status--on-danger--default);
+  --#{$button}--m-attention--hover--Color: var(--pf-t--global--text--color--status--on-danger--hover);
+  --#{$button}--m-attention--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
+  --#{$button}--m-attention--hover__icon--Color: var(--pf-t--global--icon--color--status--on-danger--hover);
+  --#{$button}--m-attention--m-clicked--Color: var(--pf-t--global--text--color--status--on-danger--clicked);
+  --#{$button}--m-attention--m-clicked--BackgroundColor: var(--pf-t--global--color--status--danger--clicked);
+  --#{$button}--m-attention--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--on-danger--clicked);
+
+  // Warning
+  --#{$button}--m-warning--Color: var(--pf-t--global--text--color--status--on-warning--default);
+  --#{$button}--m-warning--BackgroundColor: var(--pf-t--global--color--status--warning--default);
+  --#{$button}--m-warning__icon--Color: var(--pf-t--global--icon--color--status--on-warning--default);
+  --#{$button}--m-warning--hover--Color: var(--pf-t--global--text--color--status--on-warning--hover);
+  --#{$button}--m-warning--hover--BackgroundColor: var(--pf-t--global--color--status--warning--hover);
+  --#{$button}--m-warning--hover__icon--Color: var(--pf-t--global--icon--color--status--on-warning--hover);
+  --#{$button}--m-warning--m-clicked--Color: var(--pf-t--global--text--color--status--on-warning--clicked);
+  --#{$button}--m-warning--m-clicked--BackgroundColor: var(--pf-t--global--color--status--warning--clicked);
+  --#{$button}--m-warning--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--on-warning--clicked);
+
+  // Danger
+  --#{$button}--m-danger--Color: var(--pf-t--global--text--color--status--on-danger--default);
+  --#{$button}--m-danger--BackgroundColor: var(--pf-t--global--color--status--danger--default);
+  --#{$button}--m-danger__icon--Color: var(--pf-t--global--icon--color--status--on-danger--default);
+  --#{$button}--m-danger--hover--Color: var(--pf-t--global--text--color--status--on-danger--hover);
+  --#{$button}--m-danger--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
+  --#{$button}--m-danger--hover__icon--Color: var(--pf-t--global--icon--color--status--on-danger--hover);
+  --#{$button}--m-danger--m-clicked--Color: var(--pf-t--global--text--color--status--on-danger--clicked);
+  --#{$button}--m-danger--m-clicked--BackgroundColor: var(--pf-t--global--color--status--danger--clicked);
+  --#{$button}--m-danger--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--on-danger--clicked);
+
+  // CTA
   --#{$button}--m-display-lg--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$button}--m-display-lg--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$button}--m-display-lg--PaddingBottom: var(--pf-t--global--spacer--md);
@@ -187,7 +223,22 @@
   --#{$button}--m-display-lg--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$button}--m-link--m-display-lg--FontSize: var(--pf-t--global--font--size--body--lg);
 
-  // Styles for an icon in button
+  // Small
+  --#{$button}--m-small--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-small--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$button}--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-small--PaddingLeft: var(--pf-t--global--spacer--md);
+
+  // Disabled
+  --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$button}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$button}--disabled--BorderColor: transparent;
+
+  // Icons
+  --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--hover__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}__icon--m-start--MarginRight: var(--pf-t--global--spacer--xs);
   --#{$button}__icon--m-end--MarginLeft: var(--pf-t--global--spacer--xs);
 
@@ -198,13 +249,14 @@
   --#{$button}__progress--TranslateX: 0;
   --#{$button}__progress--Top: 50%;
   --#{$button}__progress--Left: var(--pf-t--global--spacer--md);
+  --#{$button}__progress--Color: var(--#{$button}__icon--Color);
   --#{$button}--m-progress--TransitionProperty: padding;
   --#{$button}--m-progress--TransitionDuration: var(--#{$pf-global}--TransitionDuration);
   --#{$button}--m-progress--PaddingRight: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$button}--m-in-progress--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width));
-  --#{$button}--m-in-progress--m-plain--Color: var(--pf-t--global--color--brand--default);
+  --#{$button}--m-in-progress--m-plain--Color: var(--#{$spinner}--Color);
   --#{$button}--m-in-progress--m-plain__progress--Left: 50%;
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
 
@@ -213,49 +265,286 @@
   --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled--default);
   --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--300); // used only for primary, unread, not disabled
+  --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
+}
 
+.#{$button} {
   position: relative;
-  display: inline-block;
+  display: var(--#{$button}--Display);
+  flex: var(--#{$button}--Flex, initial);
+  align-items: var(--#{$button}--AlignItems, initial);
+  justify-content: var(--#{$button}--JustifyContent, initial);
   padding-block-start: var(--#{$button}--PaddingTop);
   padding-block-end: var(--#{$button}--PaddingBottom);
   padding-inline-start: var(--#{$button}--PaddingLeft);
   padding-inline-end: var(--#{$button}--PaddingRight);
-  font-size: var(--#{$button}--FontSize);
-  font-weight: var(--#{$button}--FontWeight);
-  line-height: var(--#{$button}--LineHeight);
+  font-size: var(--#{$button}--FontSize, inherit);
+  font-weight: var(--#{$button}--FontWeight, inherit);
+  line-height: var(--#{$button}--LineHeight, inherit);
+  color: var(--#{$button}--Color);
   text-align: center;
+  text-decoration: var(--#{$button}--TextDecoration);
   white-space: nowrap;
+  cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   user-select: none;
+  background-color: var(--#{$button}--BackgroundColor);
   border: 0;
-  border-radius: var(--#{$button}--BorderRadius);
+  border-start-start-radius: var(--#{$button}--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$button}--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$button}--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$button}--BorderEndEndRadius);
+  mix-blend-mode: var(--#{$button}--MixBlendMode);
 
   &::after {
     position: absolute;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
-    border: var(--#{$button}--after--BorderWidth) solid;
-    border-color: var(--#{$button}--after--BorderColor);
-    border-radius: var(--#{$button}--BorderRadius);
+    border: var(--#{$button}--BorderWidth) solid;
+    border-color: var(--#{$button}--BorderColor);
+    border-radius: inherit;
   }
 
-  &:hover {
-    --#{$button}--after--BorderWidth: var(--#{$button}--hover--after--BorderWidth);
+  // Primary
+  &.pf-m-primary {
+    --#{$button}--Color: var(--#{$button}--m-primary--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-primary--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-primary__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-primary--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-primary--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-primary--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-primary--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-primary--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-primary--m-clicked__icon--Color);
 
-    text-decoration: none;
+    .#{$badge}.pf-m-unread {
+      border: var(--#{$button}--m-primary__c-badge--BorderWidth) solid var(--#{$button}--m-primary__c-badge--BorderColor);
+    }
   }
 
-  &:focus {
-    --#{$button}--after--BorderWidth: var(--#{$button}--focus--after--BorderWidth);
+  // Secondary
+  &.pf-m-secondary {
+    --#{$button}--Color: var(--#{$button}--m-secondary--Color);
+    --#{$button}--BorderColor: var(--#{$button}--m-secondary--BorderColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-secondary__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-secondary--hover--Color);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-secondary--hover--BorderColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-secondary--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-secondary--m-clicked--Color);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-secondary--m-clicked--BorderColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-secondary--m-clicked__icon--Color);
+    --#{$button}--m-danger--Color: var(--#{$button}--m-secondary--m-danger--Color);
+    --#{$button}--m-danger__icon--Color: var(--#{$button}--m-secondary--m-danger__icon--Color);
+    --#{$button}--m-danger--hover--Color: var(--#{$button}--m-secondary--m-danger--hover--Color);
+    --#{$button}--m-danger--hover__icon--Color: var(--#{$button}--m-secondary--m-danger--hover__icon--Color);
+    --#{$button}--m-danger--m-clicked--Color: var(--#{$button}--m-secondary--m-danger--m-clicked--Color);
+    --#{$button}--m-danger--m-clicked__icon--Color: var(--#{$button}--m-secondary--m-danger--m-clicked__icon--Color);
+
+    &.pf-m-danger {
+      --#{$button}--m-secondary--BorderColor: var(--#{$button}--m-secondary--m-danger--BorderColor);
+      --#{$button}--m-secondary--hover--BorderColor: var(--#{$button}--m-secondary--m-danger--hover--BorderColor);
+      --#{$button}--m-secondary--m-clicked--BorderColor: var(--#{$button}--m-secondary--m-danger--m-clicked--BorderColor);
+      --#{$button}--m-danger--BackgroundColor: transparent;
+      --#{$button}--m-danger--hover--BackgroundColor: transparent;
+      --#{$button}--m-danger--m-clicked--BackgroundColor: transparent;
+    }
   }
 
-  &:active,
-  &.pf-m-active {
-    --#{$button}--after--BorderWidth: var(--#{$button}--active--after--BorderWidth);
+  // Tertiary
+  &.pf-m-tertiary {
+    --#{$button}--Color: var(--#{$button}--m-tertiary--Color);
+    --#{$button}--BorderColor: var(--#{$button}--m-tertiary--BorderColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-tertiary__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-tertiary--hover--Color);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-tertiary--hover--BorderColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-tertiary--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-tertiary--m-clicked--Color);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-tertiary--m-clicked--BorderColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-tertiary--m-clicked__icon--Color);
+  }
+
+  // Link
+  &.pf-m-link {
+    --#{$button}--PaddingRight: var(--#{$button}--m-link--PaddingRight);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-link--PaddingLeft);
+    --#{$button}--Color: var(--#{$button}--m-link--Color);
+    --#{$button}--BorderRadius: var(--#{$button}--m-link--BorderRadius);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-link--BackgroundColor);
+    --#{$button}--MixBlendMode: var(--#{$button}--m-link--MixBlendMode);
+    --#{$button}__icon--Color: var(--#{$button}--m-link__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-link--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-link--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-link--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-link--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-link--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-link--m-clicked__icon--Color);
+
+    &.pf-m-inline {
+      --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
+      --#{$button}--LineHeight: var(--#{$button}--m-link--m-inline--LineHeight);
+      --#{$button}--FontWeight: var(--#{$button}--m-link--m-inline--FontWeight);
+      --#{$button}--PaddingTop: var(--#{$button}--m-link--m-inline--PaddingTop);
+      --#{$button}--PaddingRight: var(--#{$button}--m-link--m-inline--PaddingRight);
+      --#{$button}--PaddingBottom: var(--#{$button}--m-link--m-inline--PaddingBottom);
+      --#{$button}--PaddingLeft: var(--#{$button}--m-link--m-inline--PaddingLeft);
+      --#{$button}--BackgroundColor: transparent;
+      --#{$button}__progress--Left: var(--#{$button}--m-link--m-inline__progress--Left);
+      --#{$button}--hover--TextDecoration: var(--#{$button}--m-link--m-inline--hover--TextDecoration);
+      --#{$button}--hover--BackgroundColor: transparent;
+      --#{$button}--m-clicked--BackgroundColor: transparent;
+      --#{$button}--disabled--BackgroundColor: transparent;
+      --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
+      --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
+
+      display: inline;
+      text-align: start;
+      white-space: normal;
+      outline-offset: #{pf-size-prem(2px)};
+    }
+
+    &:where(.pf-m-danger) {
+      --#{$button}--m-danger--Color: var(--#{$button}--m-link--m-danger--Color);
+      --#{$button}--m-danger__icon--Color: var(--#{$button}--m-link--m-danger__icon--Color);
+      --#{$button}--m-danger--hover--Color: var(--#{$button}--m-link--m-danger--hover--Color);
+      --#{$button}--m-danger--hover__icon--Color: var(--#{$button}--m-link--m-danger--hover__icon--Color);
+      --#{$button}--m-danger--m-clicked--Color: var(--#{$button}--m-link--m-danger--m-clicked--Color);
+      --#{$button}--m-danger--m-clicked__icon--Color: var(--#{$button}--m-link--m-danger--m-clicked__icon--Color);
+      --#{$button}--m-danger--BackgroundColor: transparent;
+      --#{$button}--m-danger--hover--BackgroundColor: transparent;
+      --#{$button}--m-danger--m-clicked--BackgroundColor: transparent;
+    }
+
+    &.pf-m-display-lg {
+      --#{$button}--FontSize: var(--#{$button}--m-link--m-display-lg--FontSize);
+    }
+  }
+
+  // Warning
+  &.pf-m-warning {
+    --#{$button}--Color: var(--#{$button}--m-warning--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-warning--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-warning__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-warning--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-warning--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-warning--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-warning--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-warning--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-warning--m-clicked__icon--Color);
+  }
+
+  // Danger
+  &.pf-m-danger {
+    --#{$button}--Color: var(--#{$button}--m-danger--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-danger--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-danger__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-danger--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-danger--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-danger--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-danger--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-danger--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-danger--m-clicked__icon--Color);
+  }
+
+  // Control
+  &.pf-m-control {
+    --#{$button}--BorderRadius: var(--#{$button}--m-control--BorderRadius);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-control--PaddingLeft);
+    --#{$button}--PaddingRight: var(--#{$button}--m-control--PaddingRight);
+    --#{$button}--Color: var(--#{$button}--m-control--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-control--BackgroundColor);
+    --#{$button}--BorderColor: var(--#{$button}--m-control--BorderColor);
+    --#{$button}--BorderWidth: var(--#{$button}--m-control--BorderWidth);
+    --#{$button}__icon--Color: var(--#{$button}--m-control__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-control--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-control--hover--BackgroundColor);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-control--hover--BorderColor);
+    --#{$button}--hover--BorderWidth: var(--#{$button}--m-control--hover--BorderWidth);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-control--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-control--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-control--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-control--m-clicked--BorderColor);
+    --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-control--m-clicked--BorderWidth);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
+  }
+
+  // Stateful
+  &.pf-m-stateful {
+    --#{$button}--BorderRadius: var(--#{$button}--m-stateful--BorderRadius);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-stateful--PaddingLeft);
+    --#{$button}--PaddingRight: var(--#{$button}--m-stateful--PaddingRight);
+  }
+
+  // Read
+  &.pf-m-read {
+    --#{$button}--BackgroundColor: var(--#{$button}--m-read--BackgroundColor);
+    --#{$button}--BorderColor: var(--#{$button}--m-read--BorderColor);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-read--hover--BackgroundColor);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-read--hover--BorderColor);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-read--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-read--m-clicked--BorderColor);
+  }
+
+  // Unread
+  &.pf-m-unread {
+    --#{$button}--Color: var(--#{$button}--m-unread--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-unread--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-unread__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-unread--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-unread--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-unread--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-unread--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-unread--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-unread--m-clicked__icon--Color);
+  }
+
+  // Attention
+  &.pf-m-attention {
+    --#{$button}--Color: var(--#{$button}--m-attention--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-attention--BackgroundColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-attention__icon--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-attention--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-attention--hover--BackgroundColor);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-attention--hover__icon--Color);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-attention--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-attention--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-attention--m-clicked__icon--Color);
+  }
+
+  // Icon buttons
+  &.pf-m-plain {
+    --#{$button}--PaddingTop: var(--#{$button}--m-plain--PaddingTop);
+    --#{$button}--PaddingRight: var(--#{$button}--m-plain--PaddingRight);
+    --#{$button}--PaddingBottom: var(--#{$button}--m-plain--PaddingBottom);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-plain--PaddingLeft);
+    --#{$button}--MixBlendMode: var(--#{$button}--m-plain--MixBlendMode);
+    --#{$button}--m-small--PaddingTop: var(--#{$button}--m-plain--m-small--PaddingTop);
+    --#{$button}--m-small--PaddingRight: var(--#{$button}--m-plain--m-small--PaddingRight);
+    --#{$button}--m-small--PaddingBottom: var(--#{$button}--m-plain--m-small--PaddingBottom);
+    --#{$button}--m-small--PaddingLeft: var(--#{$button}--m-plain--m-small--PaddingLeft);
+    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
+    --#{$button}--Color: var(--#{$button}--m-plain--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-plain--BackgroundColor);
+    --#{$button}--hover--Color: var(--#{$button}--m-plain--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
+    --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
+    --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
+
+    &.pf-m-no-padding {
+      --#{$button}--BackgroundColor: var(--#{$button}--m-plain--m-no-padding--BackgroundColor);
+      --#{$button}--hover--BackgroundColor: var(--#{$button}--m-plain--m-no-padding--hover--BackgroundColor);
+      --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-no-padding--m-clicked--BackgroundColor);
+      --#{$button}--m-plain--PaddingTop: var(--#{$button}--m-plain--m-no-padding--PaddingTop);
+      --#{$button}--m-plain--PaddingRight: var(--#{$button}--m-plain--m-no-padding--PaddingRight);
+      --#{$button}--m-plain--PaddingBottom: var(--#{$button}--m-plain--m-no-padding--PaddingBottom);
+      --#{$button}--m-plain--PaddingLeft: var(--#{$button}--m-plain--m-no-padding--PaddingLeft);
+      --#{$button}--m-plain--MixBlendMode: var(--#{$button}--m-plain--m-no-padding--MixBlendMode);
+
+      min-width: var(--#{$button}--m-plain--m-no-padding--MinWidth);
+    }
+
+    min-width: var(--#{$button}--m-plain--MinWidth);
   }
 
   &.pf-m-block {
@@ -264,338 +553,36 @@
   }
 
   &.pf-m-small {
-    --#{$button}--FontSize: var(--#{$button}--m-small--FontSize);
+    --#{$button}--PaddingTop: var(--#{$button}--m-small--PaddingTop);
+    --#{$button}--PaddingRight: var(--#{$button}--m-small--PaddingRight);
+    --#{$button}--PaddingBottom: var(--#{$button}--m-small--PaddingBottom);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-small--PaddingLeft);
   }
 
-  &.pf-m-primary,
-  &.pf-m-secondary,
-  &.pf-m-tertiary,
-  &.pf-m-link {
-    &.pf-m-display-lg {
-      --#{$button}--PaddingTop: var(--#{$button}--m-display-lg--PaddingTop);
-      --#{$button}--PaddingRight: var(--#{$button}--m-display-lg--PaddingRight);
-      --#{$button}--PaddingBottom: var(--#{$button}--m-display-lg--PaddingBottom);
-      --#{$button}--PaddingLeft: var(--#{$button}--m-display-lg--PaddingLeft);
-      --#{$button}--FontWeight: var(--#{$button}--m-display-lg--FontWeight);
-    }
+  &.pf-m-display-lg {
+    --#{$button}--PaddingTop: var(--#{$button}--m-display-lg--PaddingTop);
+    --#{$button}--PaddingRight: var(--#{$button}--m-display-lg--PaddingRight);
+    --#{$button}--PaddingBottom: var(--#{$button}--m-display-lg--PaddingBottom);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-display-lg--PaddingLeft);
+    --#{$button}--FontSize: var(--#{$button}--m-display-lg--FontSize);
   }
 
-  // Primary buttons
-  &.pf-m-primary {
-    color: var(--#{$button}--m-primary--Color);
-    background-color: var(--#{$button}--m-primary--BackgroundColor);
-
-    &:hover {
-      --#{$button}--m-primary--Color: var(--#{$button}--m-primary--hover--Color);
-      --#{$button}--m-primary--BackgroundColor: var(--#{$button}--m-primary--hover--BackgroundColor);
-    }
-
-    &:focus {
-      --#{$button}--m-primary--Color: var(--#{$button}--m-primary--focus--Color);
-      --#{$button}--m-primary--BackgroundColor: var(--#{$button}--m-primary--focus--BackgroundColor);
-    }
-
-    // &:active,
-    // &.pf-m-active {
-    //   --#{$button}--m-primary--Color: var(--#{$button}--m-primary--active--Color);
-    //   --#{$button}--m-primary--BackgroundColor: var(--#{$button}--m-primary--active--BackgroundColor);
-    // }
-
-    .#{$badge}.pf-m-unread {
-      border: var(--#{$button}--m-primary__c-badge--BorderWidth) solid var(--#{$button}--m-primary__c-badge--BorderColor);
-    }
+  &:hover,
+  &:focus {
+    --#{$button}--Color: var(--#{$button}--hover--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--hover--BackgroundColor);
+    --#{$button}--BorderColor: var(--#{$button}--hover--BorderColor);
+    --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
+    --#{$button}--TextDecoration: var(--#{$button}--hover--TextDecoration);
+    --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
   }
 
-  // Secondary buttons
-  &.pf-m-secondary {
-    --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--after--BorderColor);
-
-    color: var(--#{$button}--m-secondary--Color);
-    background-color: var(--#{$button}--m-secondary--BackgroundColor);
-
-    &:hover {
-      --#{$button}--m-secondary--Color: var(--#{$button}--m-secondary--hover--Color);
-      --#{$button}--m-secondary--BackgroundColor: var(--#{$button}--m-secondary--hover--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--hover--after--BorderColor);
-    }
-
-    &:focus {
-      --#{$button}--m-secondary--Color: var(--#{$button}--m-secondary--focus--Color);
-      --#{$button}--m-secondary--BackgroundColor: var(--#{$button}--m-secondary--focus--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--focus--after--BorderColor);
-    }
-
-    &.pf-m-active,
-    &:active {
-      --#{$button}--m-secondary--Color: var(--#{$button}--m-secondary--active--Color);
-      --#{$button}--m-secondary--BackgroundColor: var(--#{$button}--m-secondary--active--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--active--after--BorderColor);
-    }
-  }
-
-  // Tertiary buttons
-  &.pf-m-tertiary {
-    --#{$button}--after--BorderColor: var(--#{$button}--m-tertiary--after--BorderColor);
-
-    color: var(--#{$button}--m-tertiary--Color);
-    background-color: var(--#{$button}--m-tertiary--BackgroundColor);
-
-    &:hover {
-      --#{$button}--m-tertiary--Color: var(--#{$button}--m-tertiary--hover--Color);
-      --#{$button}--m-tertiary--BackgroundColor: var(--#{$button}--m-tertiary--hover--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-tertiary--hover--after--BorderColor);
-    }
-
-    &:focus {
-      --#{$button}--m-tertiary--Color: var(--#{$button}--m-tertiary--focus--Color);
-      --#{$button}--m-tertiary--BackgroundColor: var(--#{$button}--m-tertiary--focus--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-tertiary--focus--after--BorderColor);
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-tertiary--Color: var(--#{$button}--m-tertiary--active--Color);
-      --#{$button}--m-tertiary--BackgroundColor: var(--#{$button}--m-tertiary--active--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-tertiary--active--after--BorderColor);
-    }
-  }
-
-  // Link buttons
-  &.pf-m-link {
-    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-link--disabled--BackgroundColor);
-    --#{$button}--disabled--Color: var(--#{$button}--m-link--disabled--Color);
-
-    color: var(--#{$button}--m-link--Color);
-    background-color: var(--#{$button}--m-link--BackgroundColor);
-
-    &:not(.pf-m-inline) {
-      &:hover,
-      &:focus,
-      &:active {
-        text-decoration: var(--pf-t--global--link--text-decoration--hover); // TODO use variable?
-      }
-
-      &:hover {
-        --#{$button}--m-link--Color: var(--#{$button}--m-link--hover--Color);
-        --#{$button}--m-link--BackgroundColor: var(--#{$button}--m-link--hover--BackgroundColor);
-      }
-
-      &:focus {
-        --#{$button}--m-link--Color: var(--#{$button}--m-link--focus--Color);
-        --#{$button}--m-link--BackgroundColor: var(--#{$button}--m-link--focus--BackgroundColor);
-      }
-
-      &:active,
-      &.pf-m-active {
-        --#{$button}--m-link--Color: var(--#{$button}--m-link--active--Color);
-        --#{$button}--m-link--BackgroundColor: var(--#{$button}--m-link--active--BackgroundColor);
-      }
-    }
-
-    &.pf-m-inline {
-      --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
-      --#{$button}__progress--Left: var(--#{$button}--m-link--m-inline__progress--Left);
-
-      display: inline;
-      padding-block-start: var(--#{$button}--m-link--m-inline--PaddingTop);
-      padding-block-end: var(--#{$button}--m-link--m-inline--PaddingBottom);
-      padding-inline-start: var(--#{$button}--m-link--m-inline--PaddingLeft);
-      padding-inline-end: var(--#{$button}--m-link--m-inline--PaddingRight);
-      text-align: start;
-      white-space: normal;
-      cursor: pointer;
-
-      &:hover {
-        --#{$button}--m-link--Color: var(--#{$button}--m-link--m-inline--hover--Color);
-      }
-    }
-
-    &.pf-m-display-lg {
-      --#{$button}--FontSize: var(--#{$button}--m-link--m-display-lg--FontSize);
-    }
-  }
-
-  // Danger buttons
-  &.pf-m-danger {
-    color: var(--#{$button}--m-danger--Color);
-    background-color: var(--#{$button}--m-danger--BackgroundColor);
-
-    &:hover {
-      --#{$button}--m-danger--Color: var(--#{$button}--m-danger--hover--Color);
-      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-danger--hover--BackgroundColor);
-    }
-
-    &:focus {
-      --#{$button}--m-danger--Color: var(--#{$button}--m-danger--focus--Color);
-      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-danger--focus--BackgroundColor);
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-danger--Color: var(--#{$button}--m-danger--active--Color);
-      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-danger--active--BackgroundColor);
-    }
-
-    // Secondary danger
-    &.pf-m-secondary {
-      --#{$button}--m-danger--Color: var(--#{$button}--m-secondary--m-danger--Color);
-      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-secondary--m-danger--BackgroundColor);
-      --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--m-danger--after--BorderColor);
-
-      &:hover {
-        --#{$button}--m-secondary--m-danger--Color: var(--#{$button}--m-secondary--m-danger--hover--Color);
-        --#{$button}--m-secondary--m-danger--BackgroundColor: var(--#{$button}--m-secondary--m-danger--hover--BackgroundColor);
-        --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--m-danger--hover--after--BorderColor);
-      }
-
-      &:focus {
-        --#{$button}--m-secondary--m-danger--Color: var(--#{$button}--m-secondary--m-danger--focus--Color);
-        --#{$button}--m-secondary--m-danger--BackgroundColor: var(--#{$button}--m-secondary--m-danger--focus--BackgroundColor);
-        --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--m-danger--focus--after--BorderColor);
-      }
-
-      &:active,
-      &.pf-m-active {
-        --#{$button}--m-secondary--m-danger--Color: var(--#{$button}--m-secondary--m-danger--active--Color);
-        --#{$button}--m-secondary--m-danger--BackgroundColor: var(--#{$button}--m-secondary--m-danger--active--BackgroundColor);
-        --#{$button}--after--BorderColor: var(--#{$button}--m-secondary--m-danger--active--after--BorderColor);
-      }
-    }
-
-    // Link danger
-    &.pf-m-link {
-      --#{$button}--m-danger--Color: var(--#{$button}--m-link--m-danger--Color);
-      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-link--m-danger--BackgroundColor);
-
-      &:hover {
-        --#{$button}--m-link--m-danger--Color: var(--#{$button}--m-link--m-danger--hover--Color);
-        --#{$button}--m-link--m-danger--BackgroundColor: var(--#{$button}--m-link--m-danger--hover--BackgroundColor);
-      }
-
-      &:focus {
-        --#{$button}--m-link--m-danger--Color: var(--#{$button}--m-link--m-danger--focus--Color);
-        --#{$button}--m-link--m-danger--BackgroundColor: var(--#{$button}--m-link--m-danger--focus--BackgroundColor);
-      }
-
-      &:active,
-      &.pf-m-active {
-        --#{$button}--m-link--m-danger--Color: var(--#{$button}--m-link--m-danger--active--Color);
-        --#{$button}--m-link--m-danger--BackgroundColor: var(--#{$button}--m-link--m-danger--active--BackgroundColor);
-      }
-    }
-  }
-
-  // Warning buttons
-  &.pf-m-warning {
-    color: var(--#{$button}--m-warning--Color);
-    background-color: var(--#{$button}--m-warning--BackgroundColor);
-
-    &:hover {
-      --#{$button}--m-warning--Color: var(--#{$button}--m-warning--hover--Color);
-      --#{$button}--m-warning--BackgroundColor: var(--#{$button}--m-warning--hover--BackgroundColor);
-    }
-
-    &:focus {
-      --#{$button}--m-warning--Color: var(--#{$button}--m-warning--focus--Color);
-      --#{$button}--m-warning--BackgroundColor: var(--#{$button}--m-warning--focus--BackgroundColor);
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-warning--Color: var(--#{$button}--m-warning--active--Color);
-      --#{$button}--m-warning--BackgroundColor: var(--#{$button}--m-warning--active--BackgroundColor);
-    }
-  }
-
-  &.pf-m-control {
-    --#{$button}--BorderRadius: var(--#{$button}--m-control--BorderRadius);
-    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-control--disabled--BackgroundColor);
-    --#{$button}--after--BorderWidth: var(--#{$button}--m-control--after--BorderWidth);
-    --#{$button}--after--BorderColor: var(--#{$button}--m-control--after--BorderTopColor) var(--#{$button}--m-control--after--BorderRightColor) var(--#{$button}--m-control--after--BorderBottomColor) var(--#{$button}--m-control--after--BorderLeftColor);
-
-    color: var(--#{$button}--m-control--Color);
-    background-color: var(--#{$button}--m-control--BackgroundColor);
-
-    &::after {
-      border-radius: initial;
-    }
-
-    &:hover {
-      --#{$button}--m-control--Color: var(--#{$button}--m-control--hover--Color);
-      --#{$button}--m-control--BackgroundColor: var(--#{$button}--m-control--hover--BackgroundColor);
-      --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--hover--after--BorderBottomColor);
-
-      &::after {
-        border-block-end-width: var(--#{$button}--m-control--hover--after--BorderBottomWidth);
-      }
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-control--Color: var(--#{$button}--m-control--active--Color);
-      --#{$button}--m-control--BackgroundColor: var(--#{$button}--m-control--active--BackgroundColor);
-      --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--active--after--BorderBottomColor);
-
-      &::after {
-        border-block-end-width: var(--#{$button}--m-control--active--after--BorderBottomWidth);
-      }
-    }
-
-    &:focus {
-      --#{$button}--m-control--Color: var(--#{$button}--m-control--focus--Color);
-      --#{$button}--m-control--BackgroundColor: var(--#{$button}--m-control--focus--BackgroundColor);
-      --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--focus--after--BorderBottomColor);
-
-      &::after {
-        border-block-end-width: var(--#{$button}--m-control--focus--after--BorderBottomWidth);
-      }
-    }
-
-    &.pf-m-expanded {
-      --#{$button}--m-control--Color: var(--#{$button}--m-control--m-expanded--Color);
-      --#{$button}--m-control--BackgroundColor: var(--#{$button}--m-control--m-expanded--BackgroundColor);
-      --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--m-expanded--after--BorderBottomColor);
-
-      &::after {
-        border-block-end-width: var(--#{$button}--m-control--m-expanded--after--BorderBottomWidth);
-      }
-    }
-  }
-
-  // Icon buttons
-  &.pf-m-plain {
-    --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
-    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
-    --#{$button}--PaddingTop: var(--#{$button}--m-plain--PaddingTop);
-    --#{$button}--PaddingRight: var(--#{$button}--m-plain--PaddingRight);
-    --#{$button}--PaddingBottom: var(--#{$button}--m-plain--PaddingBottom);
-    --#{$button}--PaddingLeft: var(--#{$button}--m-plain--PaddingLeft);
-    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
-
-    color: var(--#{$button}--m-plain--Color);
-    background-color: var(--#{$button}--m-plain--BackgroundColor);
-
-    &.pf-m-no-padding {
-      padding: 0;
-    }
-
-    &:hover,
-    &:focus {
-      --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
-
-      mix-blend-mode: var(--pf-t--global--background--color--action--plain--hover--blend);
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-plain--active--Color);
-      --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--active--BackgroundColor);
-    }
-
-    &:focus {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-plain--focus--Color);
-      --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--focus--BackgroundColor);
-    }
+  &.pf-m-clicked {
+    --#{$button}--Color: var(--#{$button}--m-clicked--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-clicked--BackgroundColor);
+    --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
+    --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
+    --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
   }
 
   // Disabled buttons
@@ -608,22 +595,23 @@
   &:disabled,
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
-    &::after {
-      border-color: var(--#{$button}--disabled--after--BorderColor);
-    }
+    --#{$badge}--m-unread--Color: var(--#{$button}--disabled__c-badge--Color);
+    --#{$badge}--m-unread--BackgroundColor: var(--#{$button}--disabled__c-badge--BackgroundColor);
+    --#{$button}--m-primary__c-badge--BorderWidth: 0;
 
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
 
-    .#{$badge} {
-      --#{$badge}--m-unread--Color: var(--#{$button}--disabled__c-badge--Color);
-      --#{$badge}--m-unread--BackgroundColor: var(--#{$button}--disabled__c-badge--BackgroundColor);
-      --#{$button}--m-primary__c-badge--BorderWidth: 0;
+    &::after {
+      border-color: transparent;
+    }
+
+    .#{$button}__icon {
+      color: var(--#{$button}--disabled__icon--Color);
     }
   }
 
   &.pf-m-aria-disabled {
-    --#{$button}--after--BorderWidth: 0;
     --#{$button}--m-link--m-inline--hover--TextDecoration: none;
 
     cursor: default;
@@ -645,7 +633,6 @@
     }
 
     &.pf-m-plain {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-in-progress--m-plain--Color);
       --#{$button}__progress--Left: var(--#{$button}--m-in-progress--m-plain__progress--Left);
       --#{$button}__progress--TranslateX: var(--#{$button}--m-in-progress--m-plain__progress--TranslateX);
 
@@ -657,6 +644,8 @@
 }
 
 .#{$button}__icon {
+  color: var(--#{$button}__icon--Color);
+
   &.pf-m-start {
     margin-inline-end: var(--#{$button}__icon--m-start--MarginRight);
   }
@@ -671,6 +660,7 @@
   inset-block-start: var(--#{$button}__progress--Top);
   inset-inline-start: var(--#{$button}__progress--Left);
   line-height: 1;
+  color: var(--#{$button}__progress--Color);
   transform: translate(var(--#{$button}__progress--TranslateX), var(--#{$button}__progress--TranslateY));
 
   .#{$spinner} {
@@ -683,10 +673,3 @@
   align-items: center;
   margin-inline-start: var(--#{$button}__count--MarginLeft);
 }
-
-// // stylelint-disable no-invalid-position-at-import-rule
-// @import "themes/dark/button";
-
-// @include pf-v5-theme-dark {
-//   @include pf-v5-theme-dark-button;
-// }

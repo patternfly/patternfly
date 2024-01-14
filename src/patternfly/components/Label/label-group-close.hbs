@@ -2,7 +2,7 @@
   {{#if label-group-close--attribute}}
     {{{label-group-close--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' label-group--id '-button ' label-group--id '-label" aria-label="Close label group" id="' label-group--id '-button"')}}
-    <i class="fas fa-times-circle" aria-hidden="true"></i>
+  {{#> button button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id '-button ' label-group--id '-label" aria-label="Close label group" id="' label-group--id '-button"')}}
+    <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
 </div>

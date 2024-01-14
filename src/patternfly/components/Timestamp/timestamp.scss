@@ -1,21 +1,22 @@
 // @debug $timestamp; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
-.#{$timestamp} {
-  --#{$timestamp}--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$timestamp}--Color: var(--#{$pf-global}--Color--200);
+:root, .#{$timestamp} {
+  --#{$timestamp}--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$timestamp}--Color: var(--pf-t--global--text--color--subtle);
   --#{$timestamp}--OutlineOffset: #{pf-size-prem(3px)};
 
   // Help text variables for the timestamp
   --#{$timestamp}--m-help-text--TextDecorationLine: underline;
   --#{$timestamp}--m-help-text--TextDecorationStyle: dashed;
-  --#{$timestamp}--m-help-text--TextDecorationThickness: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$timestamp}--m-help-text--TextDecorationThickness: var(--pf-t--global--border--width--regular);
   --#{$timestamp}--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
-  --#{$timestamp}--m-help-text--TextDecorationColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$timestamp}--m-help-text--hover--Color: var(--#{$pf-global}--Color--100);
-  --#{$timestamp}--m-help-text--focus--Color: var(--#{$pf-global}--Color--100);
-  --#{$timestamp}--m-help-text--hover--TextDecorationColor: var(--#{$pf-global}--Color--100);
-  --#{$timestamp}--m-help-text--focus--TextDecorationColor: var(--#{$pf-global}--Color--100);
+  --#{$timestamp}--m-help-text--TextDecorationColor: var(--pf-t--global--border--color--default);
+  --#{$timestamp}--m-help-text--hover--Color: var(--pf-t--global--text--color--regular);
+  --#{$timestamp}--m-help-text--focus--Color: var(--pf-t--global--text--color--regular);
+  --#{$timestamp}--m-help-text--hover--TextDecorationColor: var(--pf-t--global--text--color--regular);
+  --#{$timestamp}--m-help-text--focus--TextDecorationColor: var(--pf-t--global--text--color--regular);
+}
 
+.#{$timestamp} { 
   display: inline-block;
   font-size: var(--#{$timestamp}--FontSize);
   color: var(--#{$timestamp}--Color);

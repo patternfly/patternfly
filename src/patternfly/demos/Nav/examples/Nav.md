@@ -43,18 +43,3 @@ section: components
       page-template--HasHorizontalSubnav="true"
 }}
 ```
-
-### Tertiary nav
-```hbs isFullscreen isDeprecated
-{{> page-template page-template--id="nav-legacy-teriary-example" page-template-sidebar--nav--IsExpandable="true" page-template--HasTertiaryNav="true"}}
-```
-
-### Light theme sidebar and nav
-```hbs isFullscreen isDeprecated
-{{> page-template
-      page-template--id="nav-light-theme-example"
-      page-template-sidebar--nav--IsExpandable="true"
-      page-sidebar--modifier="pf-m-light"
-      nav--modifier="pf-m-light"
-}}
-```

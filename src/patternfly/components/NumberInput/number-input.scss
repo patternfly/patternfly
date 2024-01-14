@@ -1,18 +1,16 @@
 // @debug $number-input; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
+:root,
 .#{$number-input} {
   // unit
-  --#{$number-input}__unit--c-input-group--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$number-input}__unit--c-input-group--MarginLeft: var(--pf-t--global--spacer--sm);
 
   // icon
-  --#{$number-input}__icon--FontSize: var(--#{$pf-global}--FontSize--xs);
+  --#{$number-input}__icon--FontSize: var(--pf-t--global--font--size--xs);
 
   // form control
-  --#{$number-input}--c-form-control--width-base: calc(var(--#{$pf-global}--spacer--sm) * 2 + var(--#{$pf-global}--BorderWidth--sm) * 2); // element's padding
-  // stylelint-disable length-zero-no-unit
-  --#{$number-input}--c-form-control--width-icon: 0px;
-  // stylelint-enable length-zero-no-unit
-  --#{$number-input}--m-status--c-form-control--width-icon: var(--#{$pf-global}--spacer--xl); // extra width to accommodate a status icon
+  --#{$number-input}--c-form-control--width-base: calc(var(--pf-t--global--spacer--md) * 2 + var(--pf-t--global--border--width--box--default) * 2); // form controls's padding
+  --#{$number-input}--c-form-control--width-icon: var(--pf-t--global--spacer--xl); // extra width to accommodate a status icon
   --#{$number-input}--c-form-control--width-chars: 4;
   --#{$number-input}--c-form-control--Width:
     calc(
@@ -20,14 +18,11 @@
         var(--#{$number-input}--c-form-control--width-base) + var(--#{$number-input}--c-form-control--width-chars) * 1ch
       ) + var(--#{$number-input}--c-form-control--width-icon)
     );
+}
 
+.#{$number-input} {
   display: inline-flex;
   align-items: center;
-
-  // This modifier can be removed in a breaking change and the extra space created can always be included.
-  &.pf-m-status {
-    --#{$number-input}--c-form-control--width-icon: var(--#{$number-input}--m-status--c-form-control--width-icon);
-  }
 
   .#{$form-control} {
     width: var(--#{$number-input}--c-form-control--Width);

@@ -1,17 +1,14 @@
 {{removeWhiteSpaceForPrettier}} &nbsp; {{removeWhiteSpaceForPrettier}} <span class="{{pfv}}form__group-label-help{{#if form-group-label-help--modifier}} {{form-group-label-help--modifier}}{{/if}}"
-  aria-label="{{#if form-group-label-help--aria-label}}{{form-group-label-help--aria-label}}{{else if form-group--id}}More information for {{form-group--id}}{{else}}More information{{/if}}"
-  {{#if form-group-label-help--aria-describedby}} aria-describedby="{{form-group-label-help--aria-describedby}}"{{/if}}
-  role="button"
-  type="button"
-  tabindex="0"
   {{#if form-group-label-help--attribute}}
     {{{form-group-label-help--attribute}}}
   {{/if}}>
-  {{#if form-label--HasHelpIcon}}
-    {{removeWhiteSpaceForPrettier}} <i class="pf-v5-pficon pf-v5-pficon-help" aria-hidden="true"></i>
-  {{else if @partial-block}}
-    {{> @partial-block}}
-  {{else}}
-    {{removeWhiteSpaceForPrettier}} <i class="pf-v5-pficon pf-v5-pficon-help" aria-hidden="true"></i>
-  {{/if}}
+  {{#> button
+    button--IsPlain=true
+    button--HasNoPadding=true
+    button--IsSpan=true
+    button--aria-label=(ternary form-group-label-help--aria-label form-group-label-help--aria-label (concat 'More information for ' form-group--id))
+    button--aria-describedby=(ternary form-group-label-help--aria-describedby form-group-label-help--aria-describedby false)
+  }}
+    <i class="fas fa-question-circle" aria-hidden="true"></i>
+  {{/button}}
 {{removeWhiteSpaceForPrettier}} </span>

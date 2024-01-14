@@ -408,7 +408,7 @@ To avoid the form label's required indicator or help tooltip icon from wrapping 
 | `.pf-v5-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
 | `.pf-v5-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
 | `.pf-v5-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
-| `.pf-v5-c-form__group-label-help` | `<button>`, `<span>` | Initiates a field level help span/button. |
+| `.pf-v5-c-form__group-label-help` | `<span>` | Initiates field level help. |
 | `.pf-v5-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-v5-c-form__actions` | `<div>` | Iniates a row of actions. |
 | `.pf-v5-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |

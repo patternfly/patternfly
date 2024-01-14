@@ -1,6 +1,7 @@
 // @debug $inline-edit; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$inline-edit} {
+:where(:root),
+:where( .#{$inline-edit}) {
   // Group
   --#{$inline-edit}__group--item--MarginRight: var(--pf-t--global--spacer--sm);
 
@@ -9,7 +10,7 @@
   --#{$inline-edit}__action--c-button--m-valid--m-plain--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Icon button
-  --#{$inline-edit}__action--m-icon-group--item--MarginRight: 0;
+  --#{$inline-edit}__action--m-icon-group--item--MarginRight: var(--pf-t--global--spacer--sm);
 
   // Footer group
   --#{$inline-edit}__group--m-footer--MarginTop: var(--pf-t--global--spacer--xl);

@@ -132,5 +132,3 @@ export function minifyCSS() {
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist'));
 }
-
-

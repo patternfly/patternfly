@@ -2,3 +2,7 @@
   margin-inline-end: 6px;
   margin-block-end: 6px;
 }
+
+#ws-core-c-button-plain-with-no-padding .pf-v5-c-button {
+  margin: 0;
+}
