@@ -5,8 +5,10 @@
   --#{$about-modal-box}--BackgroundImage: none;
   --#{$about-modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$about-modal-box}--BackgroundPosition: bottom right;
-  --#{$about-modal-box}--BackgroundSize--width: 100%;
-  --#{$about-modal-box}--BackgroundSize: contain;
+  --#{$about-modal-box}--BackgroundSize--min-width: 200px;
+  --#{$about-modal-box}--BackgroundSize--width: 60%;
+  --#{$about-modal-box}--BackgroundSize--max-width: 600px;
+  --#{$about-modal-box}--BackgroundSize: clamp(var(--#{$about-modal-box}--BackgroundSize--min-width), var(--#{$about-modal-box}--BackgroundSize--width), var(--#{$about-modal-box}--BackgroundSize--max-width));
   --#{$about-modal-box}--Height: 100%;
   --#{$about-modal-box}--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
   --#{$about-modal-box}--Width: 100%;
