@@ -29,6 +29,7 @@
 
   // title text
   --#{$multiple-file-upload}__title-text--Color: var(--pf-t--global--text--color--regular);
+  --#{$multiple-file-upload}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$multiple-file-upload}__title-text--FontSize: var(--pf-t--global--font--size--lg);
   --#{$multiple-file-upload}__title-text--FontWeight: var(--pf-t--global--font--weight--heading);
 
@@ -41,6 +42,7 @@
   --#{$multiple-file-upload}__title-text-separator--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$multiple-file-upload}__title-text-separator--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$multiple-file-upload}__title-text-separator--Color: var(--pf-t--global--text--color--regular);
+  --#{$multiple-file-upload}__title-text-separator--FontFamily: var(--pf-t--global--font--family--body);
   --#{$multiple-file-upload}__title-text-separator--FontSize: var(--pf-t--global--font--size--md);
   --#{$multiple-file-upload}__title-text-separator--FontWeight: var(--pf-t--global--font--weight--body);
 
@@ -64,9 +66,12 @@
   --#{$multiple-file-upload}--m-horizontal__main--PaddingBottom: var(--pf-t--global--spacer--lg);
   --#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns: auto 1fr;
   --#{$multiple-file-upload}--m-horizontal__title--Gap: var(--pf-t--global--spacer--sm);
+  --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize: var(--pf-t--global--font--size--md);
+  --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--md);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display: inline;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginTop: 0;
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--lg);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(--pf-t--global--font--family--heading);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--md);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(--pf-t--global--font--weight--heading);
   --#{$multiple-file-upload}--m-horizontal__info--MarginTop: 0;
 
@@ -119,6 +124,9 @@
     --#{$multiple-file-upload}__main--PaddingBottom: var(--#{$multiple-file-upload}--m-horizontal__main--PaddingBottom);
     --#{$multiple-file-upload}__title--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns);
     --#{$multiple-file-upload}__title--Gap: var(--#{$multiple-file-upload}--m-horizontal__title--Gap);
+    --#{$multiple-file-upload}__title-icon--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-icon--FontSize);
+    --#{$multiple-file-upload}__title-text--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-text--FontSize);
+    --#{$multiple-file-upload}__title-text-separator--FontFamily: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily);
     --#{$multiple-file-upload}__title-text-separator--Display: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--Display);
     --#{$multiple-file-upload}__title-text-separator--MarginTop: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginTop);
     --#{$multiple-file-upload}__title-text-separator--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize);
@@ -161,6 +169,7 @@
 }
 
 .#{$multiple-file-upload}__title-text {
+  font-family: var(--#{$multiple-file-upload}__title-text--FontFamily);
   font-size: var(--#{$multiple-file-upload}__title-text--FontSize);
   font-weight: var(--#{$multiple-file-upload}__title-text--FontWeight);
   color: var(--#{$multiple-file-upload}__title-text--Color, inherit);
@@ -170,6 +179,7 @@
   display: var(--#{$multiple-file-upload}__title-text-separator--Display);
   margin-block-start: var(--#{$multiple-file-upload}__title-text-separator--MarginTop);
   margin-block-end: var(--#{$multiple-file-upload}__title-text-separator--MarginBottom);
+  font-family: var(--#{$multiple-file-upload}__title-text-separator--FontFamily);
   font-size: var(--#{$multiple-file-upload}__title-text-separator--FontSize);
   font-weight: var(--#{$multiple-file-upload}__title-text-separator--FontWeight);
   color: var(--#{$multiple-file-upload}__title-text-separator--Color);
