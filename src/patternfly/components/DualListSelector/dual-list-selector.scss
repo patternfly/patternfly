@@ -65,6 +65,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   // Controls
   --#{$dual-list-selector}__controls--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$dual-list-selector}__controls--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$dual-list-selector}__controls--Gap: var(--pf-t--global--spacer--sm);
 
   // Toggle
   --#{$dual-list-selector}__item-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -295,8 +296,13 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__controls {
+  display: flex;
+  flex-direction: column;
   grid-area: var(--#{$dual-list-selector}__controls--GridArea);
+  gap: var(--#{$dual-list-selector}__controls--Gap);
+  align-items: center;
   align-self: center;
+  justify-content: center;
   padding-inline-start: var(--#{$dual-list-selector}__controls--PaddingLeft);
   padding-inline-end: var(--#{$dual-list-selector}__controls--PaddingRight);
 }
