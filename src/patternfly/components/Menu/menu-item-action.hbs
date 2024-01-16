@@ -1,18 +1,20 @@
-<button class="{{pfv}}menu__item-action{{#if menu-item-action--IsFavorite}} pf-m-favorite{{/if}}{{#if menu-item-action--IsFavorited}} pf-m-favorited{{/if}}{{#if menu-list-item--IsAriaDisabled}} pf-m-aria-disabled{{/if}}{{#if menu-item-action--modifier}} {{menu-item-action--modifier}}{{/if}}"
-  type="button"
-  role="menuitem"
-  {{#if menu-list-item--IsDisabled}}
-    disabled
-  {{else if menu-list-item--IsAriaDisabled}}
-    aria-disabled="true"
-  {{/if}}
-  {{#if menu-item-action--IsFavorited}}
-    aria-label="Starred"
-  {{else if menu-item-action--IsFavorite}}
-    aria-label="Not starred"
-  {{/if}}
+<div class="{{pfv}}menu__item-action
+  {{setModifiers
+    menu-item-action--IsFavorite='pf-m-favorite'
+    menu-item-action--IsFavorited='pf-m-favorited'
+    menu-list-item--IsAriaDisabled='pf-m-aria-disabled'
+    menu-item-action--modifier=menu-item-action--modifier
+  }}"
   {{#if menu-item-action--attribute}}
     {{{menu-item-action--attribute}}}
   {{/if}}>
-  {{> menu-item-action-icon}}
-</button>
+  {{#> button button--role="menuitem" button--IsPlain=true button--IsDisabled=menu-list-item--IsDisabled button--IsAriaDisabled=menu-list-item--IsAriaDisabled}}
+    {{#> button-icon}}
+      {{#ifAny menu-item-action--IsFavorite menu-item-action--IsFavorited}}
+        <i class="fas fa-star" aria-hidden="true"></i>
+      {{else if @partial-block}}
+        {{> @partial-block}}
+      {{/ifAny}}
+    {{/button-icon}}
+  {{/button}}
+</div>

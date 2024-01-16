@@ -40,7 +40,7 @@ section: components
                     {{/menu-item-text}}
                   {{/menu-item-main}}
                 {{/menu-item}}
-                {{#> menu-item-action menu-item-action--attribute='aria-label="Generate a new suggested password"'}}
+                {{#> menu-item-action button--aria-label='Generate a new suggested password'}}
                   <i class="fas fa-fw fa-redo" aria-hidden="true"></i>
                 {{/menu-item-action}}
               {{/menu-list-item}}

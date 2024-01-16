@@ -1312,7 +1312,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Actions"'}}
+          {{#> menu-item-action button--aria-label='Actions'}}
             <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1324,7 +1324,7 @@ import './Menu.css'
               {{/menu-item-text}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Alert"'}}
+          {{#> menu-item-action button--aria-label='Alert'}}
             <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1340,7 +1340,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Copy"'}}
+          {{#> menu-item-action button--aria-label='Copy'}}
             <i class="fas fa-fw fa-clipboard" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1356,7 +1356,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Expand"'}}
+          {{#> menu-item-action button--aria-label='Expand'}}
             <i class="fas fa-fw fa-bars" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1372,7 +1372,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Copy"'}}
+          {{#> menu-item-action button--aria-label='Copy'}}
             <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1402,7 +1402,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true" menu-item-action--IsFavorited="true"}}
+          {{> menu-item-action button--aria-label='Starred' menu-item-action--IsFavorit=true menu-item-action--IsFavorited=true}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1413,7 +1413,7 @@ import './Menu.css'
               {{> menu-item-external-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
@@ -1434,7 +1434,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1448,7 +1448,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1459,7 +1459,7 @@ import './Menu.css'
               {{> menu-item-external-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
