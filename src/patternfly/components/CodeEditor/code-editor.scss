@@ -103,6 +103,7 @@
 
 .#{$code-editor}__controls {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--#{$code-editor}__controls--Gap);
   align-items: flex-start;
   padding-inline-start: var(--#{$code-editor}__controls--PaddingInlineStart);
@@ -110,6 +111,7 @@
 
 .#{$code-editor}__header-main {
   flex-grow: 1;
+  align-self: center;
   padding-inline-start: var(--#{$code-editor}__header-main--PaddingLeft);
   padding-inline-end: var(--#{$code-editor}__header-main--PaddingRight);
 }
