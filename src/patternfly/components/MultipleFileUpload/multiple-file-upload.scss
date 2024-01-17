@@ -43,11 +43,11 @@
   --#{$multiple-file-upload}__title-text-separator--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$multiple-file-upload}__title-text-separator--Color: var(--pf-t--global--text--color--regular);
   --#{$multiple-file-upload}__title-text-separator--FontFamily: var(--pf-t--global--font--family--body);
-  --#{$multiple-file-upload}__title-text-separator--FontSize: var(--pf-t--global--font--size--md);
+  --#{$multiple-file-upload}__title-text-separator--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$multiple-file-upload}__title-text-separator--FontWeight: var(--pf-t--global--font--weight--body);
 
   // info
-  --#{$multiple-file-upload}__info--FontSize: var(--pf-t--global--font--size--sm);
+  --#{$multiple-file-upload}__info--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$multiple-file-upload}__info--Color: var(--pf-t--global--text--color--subtle);
   --#{$multiple-file-upload}__info--MarginTop: var(--pf-t--global--spacer--lg);
 
