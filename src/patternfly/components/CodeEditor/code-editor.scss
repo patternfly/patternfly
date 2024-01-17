@@ -8,12 +8,14 @@
   // header
   --#{$code-editor}__header--before--BorderBottomWidth: var(--pf-t--global--border--width--control--default);
   --#{$code-editor}__header--before--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$code-editor}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$code-editor}__header--m-plain--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // header content
+  --#{$code-editor}__header-content--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$code-editor}__header-content--m-plain--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$code-editor}__header-content--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$code-editor}__header-content--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$code-editor}__header-content--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$code-editor}__header-content--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // upload
   --#{$code-editor}__upload--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -91,11 +93,13 @@
   align-items: flex-end;
   padding-block-start: var(--#{$code-editor}__header-content--PaddingBlockStart);
   padding-block-end: var(--#{$code-editor}__header-content--PaddingBlockEnd);
-  background-color: var(--#{$code-editor}__header--BackgroundColor);
+  padding-inline-start: var(--#{$code-editor}__header-content--PaddingInlineStart);
+  padding-inline-end: var(--#{$code-editor}__header-content--PaddingInlineEnd);
+  background-color: var(--#{$code-editor}__header-content--BackgroundColor);
   border-radius: var(--#{$code-editor}__tab--BorderRadius) 0 0 0;
 
   &.pf-m-plain {
-    --#{$code-editor}__header--BackgroundColor: var( --#{$code-editor}__header--m-plain--BackgroundColor);
+    --#{$code-editor}__header-content--BackgroundColor: var( --#{$code-editor}__header-content--m-plain--BackgroundColor);
   }
 }
 
@@ -104,7 +108,6 @@
   flex-wrap: wrap;
   gap: var(--#{$code-editor}__controls--Gap);
   align-items: flex-start;
-  padding-inline-start: var(--#{$code-editor}__controls--PaddingInlineStart);
 }
 
 .#{$code-editor}__header-main {

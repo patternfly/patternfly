@@ -5,6 +5,8 @@
   --#{$code-block}--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$code-block}__header--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
   --#{$code-block}__header--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$code-block}__header--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$code-block}__header--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$code-block}__header--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$code-block}__header--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$code-block}__content--PaddingTop: var(--pf-t--global--spacer--md);
@@ -22,6 +24,8 @@
 
 .#{$code-block}__header {
   display: flex;
+  padding-block-start: var(--#{$code-block}__header--PaddingTop);
+  padding-block-end: var(--#{$code-block}__header--PaddingBottom);
   padding-inline-start: var(--#{$code-block}__header--PaddingLeft);
   padding-inline-end: var(--#{$code-block}__header--PaddingRight);
   border-block-end: var(--#{$code-block}__header--BorderBottomWidth) solid var(--#{$code-block}__header--BorderBottomColor);
