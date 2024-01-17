@@ -1,58 +1,93 @@
-{{> label
-    label--id=(concat label--variants--id '-default')
-    label-text--value=label--variants--title}}
+{{#if label--status}}
+  {{> label
+      label--id=(concat label--variants--id '-status-default')
+      label-text--value=(concat label--variants--title)}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-status-removable')
+      label-text--value=(concat label--variants--title ' removable')}}
+  {{> label
+      label-content--IsLink=true
+      label--id=(concat label--variants--id '-status-link')
+      label-text--value=(concat label--variants--title ' link')}}
+  {{> label
+      label-content--IsButton=true
+      label--id=(concat label--variants--id '-status-button')
+      label-text--value=(concat label--variants--title ' button')}}
+  {{> label
+      label--IsRemovable=true
+      label-content--IsLink=true
+      label--id=(concat label--variants--id '-status-link-removable')
+      label-text--value=(concat label--variants--title ' link removable')}}
+  {{> label
+      label--IsRemovable=true
+      label-content--IsButton=true
+      label--id=(concat label--variants--id '-status-button-removable')
+      label-text--value=(concat label--variants--title ' button removable')}}
+  {{> label
+      label--id=(concat label--variants--id '-status-truncated')
+      label-text--value=(concat label--variants--title ', max-width truncation customization')}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-status-truncated-removable')
+      label-text--value=(concat label--variants--title ' removable, max-width truncation customization')}}
+{{else}}
+  {{> label
+      label--id=(concat label--variants--id '-default')
+      label-text--value=label--variants--title}}
 
-{{> label
-    label--id=(concat label--variants--id '-icon')
-    label-icon--value="info-circle"
-    label-text--value=(concat label--variants--title ' icon')}}
+  {{> label
+      label--id=(concat label--variants--id '-icon')
+      label-icon--value="info-circle"
+      label-text--value=(concat label--variants--title ' icon')}}
 
-{{> label
-    label--IsRemovable=true
-    label--id=(concat label--variants--id '-removable')
-    label-text--value=(concat label--variants--title ' removable')}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-removable')
+      label-text--value=(concat label--variants--title ' removable')}}
 
-{{> label
-    label--IsRemovable=true
-    label--id=(concat label--variants--id '-icon-removable')
-    label-text--value=(concat label--variants--title ' icon removable')
-    label-icon--value="info-circle"}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-icon-removable')
+      label-text--value=(concat label--variants--title ' icon removable')
+      label-icon--value="info-circle"}}
 
-{{> label
-    label--id=(concat label--variants--id '-link')
-    label-text--value=(concat label--variants--title ' link')
-    label-content--IsLink=true}}
+  {{> label
+      label--id=(concat label--variants--id '-link')
+      label-text--value=(concat label--variants--title ' link')
+      label-content--IsLink=true}}
 
-{{> label
-    label--id=(concat label--variants--id '-button')
-    label-text--value=(concat label--variants--title ' button')
-    label-content--IsButton=true}}
+  {{> label
+      label--id=(concat label--variants--id '-button')
+      label-text--value=(concat label--variants--title ' button')
+      label-content--IsButton=true}}
 
-{{> label
-    label--IsRemovable=true
-    label--id=(concat label--variants--id '-link-removable')
-    label-text--value=(concat label--variants--title ' link removable')
-    label-content--IsLink=true}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-link-removable')
+      label-text--value=(concat label--variants--title ' link removable')
+      label-content--IsLink=true}}
 
-{{> label
-    label--IsRemovable=true
-    label--id=(concat label--variants--id '-button-removable')
-    label-text--value=(concat label--variants--title ' button removable')
-    label-content--IsButton=true}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-button-removable')
+      label-text--value=(concat label--variants--title ' button removable')
+      label-content--IsButton=true}}
 
-{{> label
-    label--id=(concat label--variants--id '-truncated')
-    label-text--value=(concat label--variants--title ' label, max-width truncation customization')
-    label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'
-    label-icon--value="info-circle"}}
+  {{> label
+      label--id=(concat label--variants--id '-truncated')
+      label-text--value=(concat label--variants--title ' label, max-width truncation customization')
+      label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'
+      label-icon--value="info-circle"}}
 
-{{> label
-    label--IsRemovable=true
-    label--id=(concat label--variants--id '-truncated-with-icon')
-    label-text--value=(concat label--variants--title ' label with icon and set max-width truncation customization')
-    label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 38ch"'
-    label-icon--value="info-circle"}}
+  {{> label
+      label--IsRemovable=true
+      label--id=(concat label--variants--id '-truncated-with-icon')
+      label-text--value=(concat label--variants--title ' label with icon and set max-width truncation customization')
+      label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 38ch"'
+      label-icon--value="info-circle"}}
 
-{{#if @partial-block}}
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 {{/if}}
