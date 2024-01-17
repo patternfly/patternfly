@@ -66,12 +66,14 @@
   --#{$multiple-file-upload}--m-horizontal__main--PaddingBottom: var(--pf-t--global--spacer--lg);
   --#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns: auto 1fr;
   --#{$multiple-file-upload}--m-horizontal__title--Gap: var(--pf-t--global--spacer--sm);
-  --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize: var(--pf-t--global--font--size--heading-xs);
-  --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--heading-xs);
+
+  // TODO replace with icon size token when available
+  --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display: inline;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginTop: 0;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--heading-xs);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(--pf-t--global--font--weight--heading);
   --#{$multiple-file-upload}--m-horizontal__info--MarginTop: 0;
 
