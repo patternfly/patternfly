@@ -1,4 +1,8 @@
-<div class="{{pfv}}toolbar__toggle{{#if toolbar-toggle--modifier}} {{toolbar-toggle--modifier}}{{/if}}"
+<div class="{{pfv}}toolbar__toggle{{#if toolbar-toggle--modifier}} {{toolbar-toggle--modifier}}{{/if}}
+  pf-m-show{{ternary toolbar-toogle--at toolbar-toogle--at ''}}
+  {{setModifiers
+
+  }}"
   {{#if toolbar-toggle--attribute}}
     {{{toolbar-toggle--attribute}}}
   {{/if}}>

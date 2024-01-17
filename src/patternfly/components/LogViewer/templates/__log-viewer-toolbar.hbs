@@ -9,7 +9,7 @@
           {{> toolbar-toggle toolbar-toggle--icon="fa-search"}}
           {{> __log-viewer-toolbar-search-filter __log-viewer-toolbar-search-filter--Width="268px"}}
         {{/toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-spacer-none"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-gap-none"}}
           {{#> button button--modifier="pf-m-link"}}
             {{#> button-icon button-icon--modifier="pf-m-start"}}
               <i class="fas fa-pause" aria-hidden="true"></i>
@@ -17,17 +17,17 @@
             Pause
           {{/button}}
         {{/toolbar-item}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-align-right pf-m-hidden-on-lg pf-m-spacer-none"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-align-end pf-m-hidden-on-lg pf-m-gap-none"}}
           {{> __log-viewer-dropdown-menu}}
         {{/toolbar-item}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right pf-m-hidden pf-m-visible-on-lg"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end pf-m-hidden pf-m-visible-on-lg"}}
           {{#> toolbar-item}}
             {{#> button button--modifier="pf-m-link"}}
               Clear log
             {{/button}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> dropdown dropdown--id=(concat log-viewer--id '-settings-dropdown') dropdown-menu--modifier="pf-m-align-right" dropdown--HasCheckboxes="true"}}
+            {{#> dropdown dropdown--id=(concat log-viewer--id '-settings-dropdown') dropdown-menu--modifier="pf-m-align-end" dropdown--HasCheckboxes="true"}}
               {{#> dropdown-toggle dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Settings"' dropdown-toggle--modifier="pf-m-plain"}}
                 <i class="fas fa-cog" aria-hidden="true"></i>
               {{/dropdown-toggle}}

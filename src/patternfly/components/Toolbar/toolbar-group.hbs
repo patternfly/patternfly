@@ -1,4 +1,9 @@
-<div class="{{pfv}}toolbar__group{{#if toolbar-group--modifier}} {{toolbar-group--modifier}}{{/if}}"
+<div class="{{pfv}}toolbar__group
+  {{setModifiers
+    toolbar-group--IsChipGroupContainer='pf-m-chip-group-container'
+    toolbar-group--IsChipGroup='pf-m-chip-group'
+    toolbar-group--modifier=toolbar-group--modifier
+  }}"
   {{#if toolbar-group--attribute}}
     {{{toolbar-group--attribute}}}
   {{/if}}>

@@ -2,14 +2,15 @@
 $pf-v5-c-pagination--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:root {
+:where(:root),
+:where(.#{$pagination}) {
   --#{$pagination}--inset: 0;
   --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
-  
+
   // Page insets
   --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--md);
   --#{$pagination}--m-page-insets--xl--inset: var(--pf-t--global--spacer--lg);
-  
+
   // nav
   --#{$pagination}__nav--Display: none;
   --#{$pagination}--m-display-summary__nav--Display: none;

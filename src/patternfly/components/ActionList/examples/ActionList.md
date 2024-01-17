@@ -8,35 +8,39 @@ cssPrefix: pf-v5-c-action-list
 ### Action list single group
 ```hbs
 {{#> action-list}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-primary"}}
-      Next
-    {{/button}}
-  {{/action-list-item}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Back
-    {{/button}}
-  {{/action-list-item}}
+  {{#> action-list-group}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-primary"}}
+        Next
+      {{/button}}
+    {{/action-list-item}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+    {{/action-list-item}}
+  {{/action-list-group}}
 {{/action-list}}
 <br/>
 With kebab
 {{#> action-list}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-primary"}}
-      Next
-    {{/button}}
-  {{/action-list-item}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Back
-    {{/button}}
-  {{/action-list-item}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
-      <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-    {{/button}}
-  {{/action-list-item}}
+  {{#> action-list-group}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-primary"}}
+        Next
+      {{/button}}
+    {{/action-list-item}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Back
+      {{/button}}
+    {{/action-list-item}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+      {{/button}}
+    {{/action-list-item}}
+  {{/action-list-group}}
 {{/action-list}}
 ```
 
@@ -53,6 +57,34 @@ With kebab
       <i class="fas fa-check" aria-hidden="true"></i>
     {{/button}}
   {{/action-list-item}}
+{{/action-list}}
+<br>
+With group icons wrapper
+{{#> action-list}}
+  {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/action-list-item}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+        <i class="fas fa-check" aria-hidden="true"></i>
+      {{/button}}
+    {{/action-list-item}}
+  {{/action-list-group}}
+  {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/action-list-item}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+        <i class="fas fa-check" aria-hidden="true"></i>
+      {{/button}}
+    {{/action-list-item}}
+  {{/action-list-group}}
 {{/action-list}}
 ```
 
@@ -90,16 +122,18 @@ With kebab
 ```hbs
 In modals, forms, data lists
 {{#> action-list}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-primary"}}
-      Save
-    {{/button}}
-  {{/action-list-item}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-link"}}
-      Cancel
-    {{/button}}
-  {{/action-list-item}}
+  {{#> action-list-group}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-primary"}}
+        Save
+      {{/button}}
+    {{/action-list-item}}
+    {{#> action-list-item}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/action-list-item}}
+  {{/action-list-group}}
 {{/action-list}}
 <br/>
 In wizards
@@ -115,8 +149,6 @@ In wizards
         Back
       {{/button}}
     {{/action-list-item}}
-  {{/action-list-group}}
-  {{#> action-list-group}}
     {{#> action-list-item}}
       {{#> button button--modifier="pf-m-link"}}
         Cancel

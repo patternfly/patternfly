@@ -1,89 +1,51 @@
-// @debug $overflow-menu; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+:root {
+  --#{$overflow-menu}--ColumnGap: var(--pf-t--global--spacer--md);
 
+  // * Overflow menu group
+  --#{$overflow-menu}__group--ColumnGap: var(--pf-t--global--spacer--md);
+
+  // * Overflow menu button group
+  --#{$overflow-menu}__group--m-button-group--ColumnGap: var(--pf-t--global--spacer--sm);
+
+  // * Overflow menu icon button group
+  --#{$overflow-menu}__group--m-icon-button-group--ColumnGap: var(--pf-t--global--spacer--xs);
+}
+
+// - Overflow menu
 .#{$overflow-menu} {
-  // Base spacer - shared value
-  --#{$overflow-menu}--spacer--base: var(--#{$pf-global}--spacer--md);
-
-  // Spacer values
-  --#{$overflow-menu}--spacer: var(--#{$pf-global}--spacer--sm);
-  --#{$overflow-menu}__group--spacer: var(--#{$overflow-menu}--spacer--base);
-  --#{$overflow-menu}__item--spacer: var(--#{$overflow-menu}--spacer--base);
-  --#{$overflow-menu}--c-divider--m-vertical--spacer: var(--#{$overflow-menu}--spacer--base);
-
-  // Button group
-  --#{$overflow-menu}__group--m-button-group--spacer: var(--#{$overflow-menu}--spacer--base);
-  --#{$overflow-menu}__group--m-button-group--space-items: var(--#{$pf-global}--spacer--sm);
-
-  // Icon button group
-  --#{$overflow-menu}__group--m-icon-button-group--spacer: var(--#{$overflow-menu}--spacer--base);
-  --#{$overflow-menu}__group--m-icon-button-group--space-items: 0;
-
   display: inline-flex;
-  align-items: center;
+  column-gap: var(--#{$overflow-menu}--ColumnGap);
 }
 
-// Content
-.#{$overflow-menu}__content {
-  display: flex;
-  align-items: center;
-}
-
-// Group
-.#{$overflow-menu}__group {
-  --#{$overflow-menu}--spacer: var(--#{$overflow-menu}__group--spacer);
-
-  display: flex;
-  align-items: center;
-
-  // Button group
-  &.pf-m-button-group {
-    --#{$overflow-menu}--spacer: var(--#{$overflow-menu}__group--m-button-group--spacer);
-
-    > * {
-      --#{$overflow-menu}--spacer: var(--#{$overflow-menu}__group--m-button-group--space-items);
-    }
-  }
-
-  // Icon button group
-  &.pf-m-icon-button-group {
-    --#{$overflow-menu}--spacer: var(--#{$overflow-menu}__group--m-icon-button-group--spacer);
-
-    > * {
-      --#{$overflow-menu}--spacer: var(--#{$overflow-menu}__group--m-icon-button-group--space-items);
-    }
-  }
-}
-
-// Item
-.#{$overflow-menu}__item {
-  // reset spacer
-  --#{$overflow-menu}--spacer: var(--#{$overflow-menu}__item--spacer);
-}
-
+// - Overflow menu content - Overflow menu group
 .#{$overflow-menu}__content,
-.#{$overflow-menu}__control,
-.#{$overflow-menu}__group,
-.#{$overflow-menu}__item {
-  margin-inline-end: var(--#{$overflow-menu}--spacer);
+.#{$overflow-menu}__group {
+  display: flex;
+  align-items: start;
+}
 
-  &:last-child {
-    --#{$overflow-menu}--spacer: 0;
+// - Overflow menu group
+.#{$overflow-menu}__group {
+  column-gap: var(--#{$overflow-menu}__group--ColumnGap);
+
+  // - Overflow menu button group
+  &.pf-m-button-group {
+    column-gap: var(--#{$overflow-menu}__group--m-button-group--ColumnGap);
+  }
+
+  // - Overflow menu icon button group
+  &.pf-m-icon-button-group {
+    column-gap: var(--#{$overflow-menu}__group--m-icon-button-group--ColumnGap);
   }
 }
 
-// Divider
-.#{$overflow-menu},
-.#{$overflow-menu}__group {
-  // set this var here so specificity is 20
-  > .#{$divider} {
-    --#{$overflow-menu}--spacer: var(--#{$overflow-menu}--c-divider--m-vertical--spacer);
-  }
+// - Oveflow menu item
+.#{$overflow-menu}__item {
+  column-gap: var(--#{$overflow-menu}__item--ColumnGap, var(--#{$overflow-menu}--ColumnGap));
+}
 
-  > .#{$divider}.pf-m-vertical {
-    margin-inline-end: var(--#{$overflow-menu}--spacer);
-
-    &:last-child {
-      --#{$overflow-menu}--spacer: 0;
-    }
-  }
+// - Overflow menu content - Overflow menu control
+.#{$overflow-menu}__content,
+.#{$overflow-menu}__control  {
+  column-gap: var(--#{$overflow-menu}--ColumnGap);
 }

@@ -1,20 +1,14 @@
-// @debug $masthead; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 $pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 :root,
-:where(.#{$masthead}) {
+[data-theme="#{$masthead}"] {
   // * Masthead
-  --#{$masthead}--inset: var(--pf-t--global--spacer--lg);
-  --#{$masthead}--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$masthead}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$masthead}--PaddingInlineStart: var(--#{$masthead}--inset);
-  --#{$masthead}--PaddingInlineEnd: var(--#{$masthead}--inset);
-  --#{$masthead}--AlignItems: start;
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--md);
-  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$masthead}--BorderWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
+  --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
 
   // * Masthead brand
@@ -43,8 +37,13 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline__content--Order: 0;
 
   // * Masthead toolbar
-  --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom); // TODO: update after toolbar updates
-  --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor); // TODO: update after toolbar updates
+  --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
+  --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
+
+  // * Masthead toolbar
+  --#{$masthead}--#{$toolbar}--Width: 100%;
+  --#{$masthead}--#{$toolbar}--PaddingBlock: 0;
+  --#{$masthead}--#{$toolbar}--PaddingInline: 0;
 }
 
 // * Masthead display stack
@@ -71,18 +70,9 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // - Masthead
 .#{$masthead} {
-  --#{$toolbar}--PaddingTop: 0; // TODO: update after toolbar updates
-  --#{$toolbar}--PaddingBottom: 0; // TODO: update after toolbar updates
-  --#{$toolbar}__content--PaddingRight: 0; // TODO: update after toolbar updates
-  --#{$toolbar}__content--PaddingLeft: 0; // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--PaddingTop: var(--pf-t--global--spacer--md); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--PaddingRight: var(--#{$masthead}--inset); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--PaddingBottom: var(--pf-t--global--spacer--md); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$masthead}--inset); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--BackgroundColor: var(--#{$masthead}--BackgroundColor); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--lg--PaddingRight: var(--#{$masthead}--PaddingInlineStart); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--lg--PaddingBottom: var(--pf-t--global--spacer--md); // TODO: update after toolbar updates
-  --#{$toolbar}__expandable-content--lg--PaddingLeft: var(--#{$masthead}--PaddingInlineEnd); // TODO: update after toolbar updates
+  --#{$toolbar}--Width: var(--#{$masthead}--#{$toolbar}--Width);
+  --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--#{$toolbar}--PaddingBlock);
+  --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--#{$toolbar}--PaddingInline);
 
   // Set layout to stack by default
   @include pf-v5-c-masthead--m-display-stack;
@@ -99,21 +89,16 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   grid-template-columns: var(--#{$masthead}--GridTemplateColumns);
   row-gap: var(--#{$masthead}--RowGap);
   column-gap: var(--#{$masthead}--ColumnGap);
-  align-items: var(--#{$masthead}--AlignItems);
+  align-items: start;
   min-width: 0;
-  padding-block-start: var(--#{$masthead}--PaddingBlockStart);
-  padding-block-end: var(--#{$masthead}--PaddingBlockEnd);
-  padding-inline-start: var(--#{$masthead}--inset);
-  padding-inline-end: var(--#{$masthead}--inset);
-  background-color: var(--#{$masthead}--BackgroundColor);
 
-  // TODO: update when toolbar updates
-  // - Masthead toolbar
-  .#{$toolbar} {
-    width: 100%;
-  }
+  // set the fallback of any customizable, nested variable to its default value
+  padding-block-start: var(--#{$masthead}--PaddingBlockStart, var(--#{$masthead}--PaddingBlock));
+  padding-block-end: var(--#{$masthead}--PaddingBlockEnd, var(--#{$masthead}--PaddingBlock));
+  padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
+  padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
+  background-color: var(--#{$masthead}--BackgroundColor, var(--pf-t--global--background--color--secondary--default));
 
-  // TODO: update when toolbar updates
   // - Masthead toolbar expandable content
   .#{$toolbar}__expandable-content {
     inset-block-start: 100%;
@@ -199,7 +184,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   row-gap: var(--#{$masthead}__expandable-content-RowGap, var(--#{$masthead}--RowGap));
   background-color: var(--#{$masthead}--BackgroundColor);
 }
-
 
 // TODO: move this sass to separate file for resize observer updates
 // TODO: make this an opt in/out

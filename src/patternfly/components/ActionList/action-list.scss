@@ -1,29 +1,39 @@
-// @debug $action-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+:where(:root) {
+  --#{$action-list}--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$action-list}--ColumnGap: var(--pf-t--global--spacer--2xl);
 
-.#{$action-list} {
-  --#{$action-list}--m-icon--spacer: 0;
-  --#{$action-list}--child--spacer-base: var(--#{$pf-global}--spacer--md);
-  --#{$action-list}--group--spacer-base: var(--#{$pf-global}--spacer--2xl);
+  // * Action list group
+  --#{$action-list}__group--ColumnGap: var(--pf-t--global--spacer--md);
+
+  // * Action list icons
+  --#{$action-list}--m-icons--ColumnGap: var(--pf-t--global--spacer--sm);
 }
 
+// - Action list - Action list group
 .#{$action-list},
 .#{$action-list}__group {
-  --#{$action-list}--child--spacer: var(--#{$action-list}--child--spacer-base);
-  --#{$action-list}--group--spacer: var(--#{$action-list}--group--spacer-base);
-
   display: flex;
-  align-items: center;
+  align-items: start;
+}
 
-  > * + * {
-    margin-inline-start: var(--#{$action-list}--child--spacer);
-  }
+// - Action list
+.#{$action-list} {
+  row-gap: var(--#{$action-list}--RowGap);
+  column-gap: var(--#{$action-list}--ColumnGap);
 
-  > * + .#{$action-list}__group,
-  .#{$action-list}__group + * {
-    margin-inline-start: var(--#{$action-list}--group--spacer);
-  }
-
+  // - Action list icons
   &.pf-m-icons {
-    --#{$action-list}--child--spacer: var(--#{$action-list}--m-icon--spacer);
+    column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
+  }
+}
+
+// - Action list group
+.#{$action-list}__group {
+  row-gap: var(--#{$action-list}__group--RowGap, var(--#{$action-list}--RowGap));
+  column-gap: var(--#{$action-list}__group--ColumnGap);
+
+  // - Action list group icons
+  &.pf-m-icons {
+    column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
   }
 }

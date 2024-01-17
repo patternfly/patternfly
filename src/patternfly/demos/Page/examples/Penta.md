@@ -34,7 +34,7 @@ wrapperTag: div
                 {{/menu-toggle-controls}}
               {{/menu-toggle}}
             {{/toolbar-item}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
               {{#> toolbar-item}}
                 {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
                   <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
@@ -188,7 +188,7 @@ wrapperTag: div
                 {{/menu-toggle-controls}}
               {{/menu-toggle}}
             {{/toolbar-item}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
               {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
                 {{#> toolbar-item}}
                   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
