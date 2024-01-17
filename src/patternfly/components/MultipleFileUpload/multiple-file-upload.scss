@@ -30,7 +30,7 @@
   // title text
   --#{$multiple-file-upload}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$multiple-file-upload}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$multiple-file-upload}__title-text--FontSize: var(--pf-t--global--font--size--lg);
+  --#{$multiple-file-upload}__title-text--FontSize: var(--pf-t--global--font--size--heading--sm);
   --#{$multiple-file-upload}__title-text--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // title icon
@@ -66,12 +66,12 @@
   --#{$multiple-file-upload}--m-horizontal__main--PaddingBottom: var(--pf-t--global--spacer--lg);
   --#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns: auto 1fr;
   --#{$multiple-file-upload}--m-horizontal__title--Gap: var(--pf-t--global--spacer--sm);
-  --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize: var(--pf-t--global--font--size--md);
-  --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--md);
+  --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize: var(--pf-t--global--font--size--heading-xs);
+  --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--heading-xs);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display: inline;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginTop: 0;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--md);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--heading-xs);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(--pf-t--global--font--weight--heading);
   --#{$multiple-file-upload}--m-horizontal__info--MarginTop: 0;
 
