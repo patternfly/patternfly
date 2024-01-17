@@ -3,24 +3,28 @@ $pf-v5-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl")
 $pf-v5-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
-.#{$drawer} {
+:where(:root),
+:where(.#{$drawer}) {
   // Section
-  --#{$drawer}__section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$drawer}__section--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$drawer}__section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // Content
   --#{$drawer}__content--FlexBasis: 100%;
-  --#{$drawer}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$drawer}__content--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$drawer}__content--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$drawer}__content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$drawer}__content--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$drawer}__content--ZIndex: var(--pf-t--global--Zindex--xs);
 
   // Panel
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --#{$drawer}__panel--MaxHeight: auto;
-  --#{$drawer}__panel--ZIndex: var(--#{$pf-global}--ZIndex--sm);
-  --#{$drawer}__panel--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$drawer}__panel--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$drawer}__panel--TransitionDuration: var(--#{$pf-global}--TransitionDuration);
+  --#{$drawer}__panel--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$drawer}__panel--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$drawer}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--TransitionDuration: 250ms;
   --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
   --#{$drawer}__panel--FlexBasis: 100%;
   --#{$drawer}__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
@@ -38,40 +42,45 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
 
-  // Child padding
-  --#{$drawer}--child--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$drawer}--child--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$drawer}--child--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$drawer}--child--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  // Drawer panel head
+  --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$drawer}__head--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
-  // Responsive child padding
-  --#{$drawer}--child--md--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$drawer}--child--md--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$drawer}--child--md--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$drawer}--child--md--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  // Drawer panel description
+  --#{$drawer}__description--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$drawer}__description--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
-  // Modified padding, child padding
-  --#{$drawer}--child--m-padding--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$drawer}--child--m-padding--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$drawer}--child--m-padding--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$drawer}--child--m-padding--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  // Drawer body padding
+  --#{$drawer}__body--PaddingTop--base: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--PaddingRight--base: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--PaddingBottom--base: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--PaddingLeft--base: var(--pf-t--global--spacer--md);
 
-  // Responsive, modified padding, child padding
-  --#{$drawer}--child--m-padding--md--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$drawer}--child--m-padding--md--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$drawer}--child--m-padding--md--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$drawer}--child--m-padding--md--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  // Drawer content body
+  --#{$drawer}__content__body--PaddingTop: 0;
+  --#{$drawer}__content__body--PaddingRight: 0;
+  --#{$drawer}__content__body--PaddingBottom: 0;
+  --#{$drawer}__content__body--PaddingLeft: 0;
 
-  // Content
-  --#{$drawer}__content--child--PaddingTop: 0;
-  --#{$drawer}__content--child--PaddingRight: 0;
-  --#{$drawer}__content--child--PaddingBottom: 0;
-  --#{$drawer}__content--child--PaddingLeft: 0;
+  // Drawer panel body
+  --#{$drawer}__panel__body--PaddingTop: var(--#{$drawer}__body--PaddingTop--base);
+  --#{$drawer}__panel__body--PaddingRight: var(--#{$drawer}__body--PaddingRight--base);
+  --#{$drawer}__panel__body--PaddingBottom: var(--#{$drawer}__body--PaddingBottom--base);
+  --#{$drawer}__panel__body--PaddingLeft: var(--#{$drawer}__body--PaddingLeft--base);
+
+  // Modified body padding
+  --#{$drawer}__body--m-padding--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--m-padding--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--m-padding--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$drawer}__body--m-padding--PaddingLeft: var(--pf-t--global--spacer--md);
 
   // Splitter
   --#{$drawer}__splitter--Height: #{pf-size-prem(9px)};
   --#{$drawer}__splitter--Width: 100%;
-  --#{$drawer}__splitter--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$drawer}__splitter--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__splitter--Cursor: row-resize;
   --#{$drawer}__splitter--m-vertical--Height: 100%;
   --#{$drawer}__splitter--m-vertical--Width: #{pf-size-prem(9px)};
@@ -79,18 +88,16 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-inline__splitter--focus--OutlineOffset: #{pf-size-prem(-1px)};
 
   // Splitter border
-  --#{$drawer}__splitter--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$drawer}__splitter--after--border-width--base: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter--after--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}__splitter--after--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter--after--BorderTopWidth: 0;
   --#{$drawer}__splitter--after--BorderRightWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}__splitter--after--BorderBottomWidth: 0;
-  --#{$drawer}__splitter--after--BorderLeftWidth: 0;
-  --#{$drawer}--m-panel-left__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-panel-bottom__splitter--after--BorderTopWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-panel-bottom__splitter--after--BorderBottomWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline__splitter-handle--Left: 50%;
-  --#{$drawer}--m-inline__splitter--after--BorderRightWidth: var(--#{$drawer}__splitter--after--border-width--base);
-  --#{$drawer}--m-inline__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--Top: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderTopWidth: var(--#{$drawer}__splitter--after--border-width--base);
@@ -102,39 +109,24 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__splitter-handle--Top: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
 
   // Splitter handle line
-  --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$pf-global}--Color--200);
-  --#{$drawer}__splitter-handle--after--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}__splitter-handle--after--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter-handle--after--BorderRightWidth: 0;
-  --#{$drawer}__splitter-handle--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter-handle--after--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter-handle--after--BorderLeftWidth: 0;
-  --#{$drawer}__splitter--hover__splitter-handle--after--BorderColor: var(--#{$pf-global}--Color--100);
-  --#{$drawer}__splitter--focus__splitter-handle--after--BorderColor: var(--#{$pf-global}--Color--100);
+  --#{$drawer}__splitter--hover__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderTopWidth: 0;
-  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderRightWidth: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBottomWidth: 0;
-  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderLeftWidth: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter-handle--after--Width: #{pf-size-prem(12px)};
   --#{$drawer}__splitter-handle--after--Height: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
-    // Responsive child padding
-    --#{$drawer}--child--PaddingTop: var(--#{$drawer}--child--md--PaddingTop);
-    --#{$drawer}--child--PaddingRight: var(--#{$drawer}--child--md--PaddingRight);
-    --#{$drawer}--child--PaddingBottom: var(--#{$drawer}--child--md--PaddingBottom);
-    --#{$drawer}--child--PaddingLeft: var(--#{$drawer}--child--md--PaddingLeft);
-
-    // Responsive, modified padding, child padding
-    --#{$drawer}--child--m-padding--PaddingTop: var(--#{$drawer}--child--m-padding--md--PaddingTop);
-    --#{$drawer}--child--m-padding--PaddingRight: var(--#{$drawer}--child--m-padding--md--PaddingRight);
-    --#{$drawer}--child--m-padding--PaddingBottom: var(--#{$drawer}--child--m-padding--md--PaddingBottom);
-    --#{$drawer}--child--m-padding--PaddingLeft: var(--#{$drawer}--child--m-padding--md--PaddingLeft);
-  }
-
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
-
+  
     &.pf-m-panel-bottom {
       --#{$drawer}__panel--MinWidth: auto;
       --#{$drawer}__panel--MinHeight: var(--#{$drawer}--m-panel-bottom__panel--xl--MinHeight);
@@ -142,32 +134,34 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   // Actions
-  --#{$drawer}__actions--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$drawer}__actions--MarginRight: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$drawer}__actions--MarginTop: calc(var(--pf-t--global--spacer--xs) * -1.5); // TODO: add form element var
+  --#{$drawer}__actions--MarginRight: calc(var(--pf-t--global--spacer--xs) * -1.5); // TODO: add form element var
 
   // Box shadow
   --#{$drawer}__panel--BoxShadow: none;
-  --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-top);
+  --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-t--global--box-shadow--lg--top);
 
+  // Divider
+  --#{$drawer}__panel--after--Width: var(--pf-t--global--border--width--divider--default);
+  --#{$drawer}--m-panel-bottom__panel--after--Height: var(--pf-t--global--border--width--divider--default);
+  --#{$drawer}__panel--after--BackgroundColor: transparent;
+  --#{$drawer}--m-inline--m-expanded__panel--after--BackgroundColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}--m-inline__panel--PaddingLeft: var(--#{$drawer}__panel--after--Width);
+  --#{$drawer}--m-panel-left--m-inline__panel--PaddingRight: var(--#{$drawer}__panel--after--Width);
+  --#{$drawer}--m-panel-bottom--m-inline__panel--PaddingTop: var(--#{$drawer}__panel--after--Width);
+}
+
+.#{$drawer} {
   @include pf-v5-bidirectional-style(
     $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
-    $ltr-val: var(--#{$pf-global}--BoxShadow--lg-left),
-    $rtl-val: var(--#{$pf-global}--BoxShadow--lg-right)
+    $ltr-val: var(--pf-t--global--box-shadow--lg--left),
+    $rtl-val: var(--pf-t--global--box-shadow--lg--right)
   ); 
   @include pf-v5-bidirectional-style(
     $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
     $ltr-val: var(--#{$pf-global}--BoxShadow--lg-right),
     $rtl-val: var(--#{$pf-global}--BoxShadow--lg-left)
-  ); 
-
-  // Divider
-  --#{$drawer}__panel--after--Width: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$drawer}--m-panel-bottom__panel--after--Height: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$drawer}__panel--after--BackgroundColor: transparent;
-  --#{$drawer}--m-inline--m-expanded__panel--after--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$drawer}--m-inline__panel--PaddingLeft: var(--#{$drawer}__panel--after--Width);
-  --#{$drawer}--m-panel-left--m-inline__panel--PaddingRight: var(--#{$drawer}__panel--after--Width);
-  --#{$drawer}--m-panel-bottom--m-inline__panel--PaddingTop: var(--#{$drawer}__panel--after--Width);
+  );
 
   display: flex;
   flex-direction: column;
@@ -239,12 +233,12 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   flex-grow: 0;
   background-color: var(--#{$drawer}__section--BackgroundColor);
 
-  &.pf-m-no-background {
-    --#{$drawer}__section--BackgroundColor: transparent;
+  &.pf-m-secondary {
+    --#{$drawer}__section--BackgroundColor: var(--#{$drawer}__section--m-secondary--BackgroundColor);
   }
 
-  &.pf-m-light-200 {
-    --#{$drawer}__section--BackgroundColor: var(--#{$drawer}__section--m-light-200--BackgroundColor);
+  &.pf-m-no-background {
+    --#{$drawer}__section--BackgroundColor: transparent;
   }
 }
 
@@ -270,22 +264,21 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   z-index: var(--#{$drawer}__content--ZIndex);
   flex-basis: var(--#{$drawer}__content--FlexBasis);
   order: 0;
-
-  // background-color: var(--#{$drawer}__content--BackgroundColor);
+  background-color: var(--#{$drawer}__content--BackgroundColor);
+  
+  &.pf-m-secondary {
+    --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-secondary--BackgroundColor);
+  }
 
   &.pf-m-no-background {
     --#{$drawer}__content--BackgroundColor: transparent;
   }
 
-  &.pf-m-light-200 {
-    --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-light-200--BackgroundColor);
-  }
-
   > .#{$drawer}__body {
-    padding-block-start: var(--#{$drawer}__content--child--PaddingTop);
-    padding-block-end: var(--#{$drawer}__content--child--PaddingBottom);
-    padding-inline-start: var(--#{$drawer}__content--child--PaddingLeft);
-    padding-inline-end: var(--#{$drawer}__content--child--PaddingRight);
+    padding-block-start: var(--#{$drawer}__content__body--PaddingTop);
+    padding-block-end: var(--#{$drawer}__content__body--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__content__body--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__content__body--PaddingRight);
   }
 }
 
@@ -294,6 +287,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   position: relative;
   z-index: var(--#{$drawer}__panel--ZIndex);
   flex-basis: var(--#{$drawer}__panel--FlexBasis);
+  row-gap: var(--#{$drawer}__panel--RowGap);
   order: 1;
   max-height: var(--#{$drawer}__panel--MaxHeight);
   overflow: auto;
@@ -305,20 +299,25 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &::after {
     position: absolute;
-   inset-block-start: 0;
-   inset-inline-start: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: var(--#{$drawer}__panel--after--Width);
     height: 100%;
     content: "";
     background-color: var(--#{$drawer}__panel--after--BackgroundColor);
   }
 
-  &.pf-m-no-background {
-    --#{$drawer}__panel--BackgroundColor: transparent;
+  &:not(.pf-m-resizable) {
+    padding-block-start: var(--#{$drawer}__panel--PaddingBlockStart);
+    padding-block-end: var(--#{$drawer}__panel--PaddingBlockEnd);
   }
 
-  &.pf-m-light-200 {
-    --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-light-200--BackgroundColor);
+  &.pf-m-secondary {
+    --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-secondary--BackgroundColor);
+  }
+
+  &.pf-m-no-background {
+    --#{$drawer}__panel--BackgroundColor: transparent;
   }
 
   @media screen and (min-width: $pf-v5-global--breakpoint--md) {
@@ -338,8 +337,20 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 }
 
+.#{$drawer}__panel,
+.#{$drawer}__panel-main {
+  > .#{$drawer}__body {
+    padding-block-start: var(--#{$drawer}__panel__body--PaddingTop);
+    padding-block-end: var(--#{$drawer}__panel__body--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__panel__body--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__panel__body--PaddingRight);
+  }
+}
+
 .#{$drawer}__panel-main {
   flex-grow: 1;
+  padding-block-start: var(--#{$drawer}__panel--PaddingBlockStart);
+  padding-block-end: var(--#{$drawer}__panel--PaddingBlockEnd);
 }
 
 // Remove tab focus
@@ -350,6 +361,11 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   display: grid;
   grid-template-columns: auto;
   grid-auto-columns: max-content;
+  column-gap: var(--#{$drawer}__head--ColumnGap);
+  padding-block-start: var(--#{$drawer}__head--PaddingBlockStart);
+  padding-block-end: var(--#{$drawer}__head--PaddingBlockEnd);
+  padding-inline-start: var(--#{$drawer}__head--PaddingInlineStart);
+  padding-inline-end: var(--#{$drawer}__head--PaddingInlineEnd);
 
   > * {
     grid-column: 1;
@@ -366,30 +382,25 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   margin-inline-end: var(--#{$drawer}__actions--MarginRight);
 }
 
+// Drawer panel description
+.#{$drawer}__description {
+  padding-inline-start: var(--#{$drawer}__description--PaddingInlineStart);
+  padding-inline-end: var(--#{$drawer}__description--PaddingInlineEnd);
+}
+
 // Modified content children
 .#{$drawer}__body {
-  padding-block-start: var(--#{$drawer}--child--PaddingTop);
-  padding-block-end: var(--#{$drawer}--child--PaddingBottom);
-  padding-inline-start: var(--#{$drawer}--child--PaddingLeft);
-  padding-inline-end: var(--#{$drawer}--child--PaddingRight);
-
   // No padding
   &.pf-m-no-padding {
     padding: 0;
-
-    > .#{$drawer}__actions,
-    > .#{$drawer}__head > .#{$drawer}__actions {
-      margin-block-start: 0;
-      margin-inline-end: 0;
-    }
   }
 
   // Padding
   &.pf-m-padding {
-    padding-block-start: var(--#{$drawer}--child--m-padding--PaddingTop);
-    padding-block-end: var(--#{$drawer}--child--m-padding--PaddingBottom);
-    padding-inline-start: var(--#{$drawer}--child--m-padding--PaddingLeft);
-    padding-inline-end: var(--#{$drawer}--child--m-padding--PaddingRight);
+    padding-block-start: var(--#{$drawer}__body--m-padding--PaddingTop);
+    padding-block-end: var(--#{$drawer}__body--m-padding--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__body--m-padding--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__body--m-padding--PaddingRight);
   }
 
   &:not(.pf-m-no-padding) + * {
@@ -426,12 +437,9 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__splitter-handle--after--BorderLeftWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderLeftWidth);
   }
 
-  &:hover {
-    --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$drawer}__splitter--hover__splitter-handle--after--BorderColor);
-  }
-
+  &:hover,
   &:focus {
-    --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$drawer}__splitter--focus__splitter-handle--after--BorderColor);
+    --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$drawer}__splitter--hover__splitter-handle--after--BorderColor);
   }
 
   &::after {
@@ -534,8 +542,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter-handle--Left: var(--#{$drawer}--m-panel-left__splitter-handle--Left);
-        --#{$drawer}__splitter--after--BorderRightWidth: 0;
-        --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}--m-panel-left__splitter--after--BorderLeftWidth);
 
         order: 1;
       }
@@ -559,8 +565,8 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel::after {
-     inset-block-start: 0;
-     inset-inline-start: auto;
+      inset-block-start: 0;
+      inset-inline-start: auto;
       width: 100%;
       height: var(--#{$drawer}--m-panel-bottom__panel--after--Height);
     }
@@ -574,8 +580,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter-handle--Top: var(--#{$drawer}--m-panel-bottom__splitter-handle--Top);
+        --#{$drawer}__splitter--after--BorderTopWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderTopWidth);
         --#{$drawer}__splitter--after--BorderRightWidth: 0;
         --#{$drawer}__splitter--after--BorderBottomWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBottomWidth);
+        --#{$drawer}__splitter--after--BorderLeftWidth: 0;
       }
     }
   }
@@ -585,8 +593,6 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter--m-vertical--Width: var(--#{$drawer}--m-inline__splitter--m-vertical--Width);
         --#{$drawer}__splitter-handle--Left: var(--#{$drawer}--m-inline__splitter-handle--Left);
-        --#{$drawer}__splitter--after--BorderRightWidth: var(--#{$drawer}--m-inline__splitter--after--BorderRightWidth);
-        --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}--m-inline__splitter--after--BorderLeftWidth);
 
         outline-offset: var(--#{$drawer}--m-inline__splitter--focus--OutlineOffset);
       }
@@ -752,11 +758,4 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       // stylelint-enable
     }
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/drawer";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-drawer;
 }
