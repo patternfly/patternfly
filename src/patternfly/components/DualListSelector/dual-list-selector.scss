@@ -37,7 +37,6 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
   --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$dual-list-selector}__list-item-row--BorderRadius: var(--pf-t--global--border--radius--tiny);
-  --#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
@@ -188,7 +187,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 
 .#{$dual-list-selector}__list-item {
   &:focus {
-    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
   }
 
   &.pf-m-expandable {
