@@ -27,7 +27,6 @@
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$back-to-top}--c-button--FontSize);
-    --#{$button}--BorderRadius: var(--#{$back-to-top}--c-button--BorderRadius);
     --#{$button}--PaddingTop: var(--#{$back-to-top}--c-button--PaddingTop);
     --#{$button}--PaddingRight: var(--#{$back-to-top}--c-button--PaddingRight);
     --#{$button}--PaddingBottom: var(--#{$back-to-top}--c-button--PaddingBottom);
