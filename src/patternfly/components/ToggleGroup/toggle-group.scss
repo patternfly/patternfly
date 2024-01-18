@@ -15,8 +15,6 @@
   --#{$toggle-group}__button--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$toggle-group}__button--hover--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$toggle-group}__button--hover--before--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$toggle-group}__button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
-  --#{$toggle-group}__button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$toggle-group}__button--before--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$toggle-group}__button--before--BorderColor: var(--pf-t--global--border--color--default);
 
@@ -34,7 +32,15 @@
   --#{$toggle-group}__button--m-selected--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$toggle-group}__button--m-selected--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$toggle-group}__button--m-selected--before--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
   --#{$toggle-group}__button--m-selected--ZIndex: var(--pf-t--global--Zindex--xs);
+
+  // disabled
+  --#{$toggle-group}__button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$toggle-group}__button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$toggle-group}__button--disabled--before--BorderColor: var(--pf-t--global--border--color--disabled);
+  --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--Zindex--xs);
 
   // Compact
   --#{$toggle-group}--m-compact__button--PaddingTop: 0;
@@ -98,13 +104,18 @@
 
   &::before {
     position: absolute;
-   inset-block-start: 0;
-   inset-block-end: 0;
-   inset-inline-start: 0;
-   inset-inline-end: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     pointer-events: none;
     content: "";
-    border: var(--#{$toggle-group}__button--before--BorderWidth) solid var(--#{$toggle-group}__button--before--BorderColor);
+    border-style: solid;
+    border-width: var(--#{$toggle-group}__button--before--BorderWidth);
+    border-block-start-color: var(--#{$toggle-group}__button--before--BorderBlockStartColor, var(--#{$toggle-group}__button--before--BorderColor));
+    border-block-end-color: var(--#{$toggle-group}__button--before--BorderBlockEndColor, var(--#{$toggle-group}__button--before--BorderColor));
+    border-inline-start-color: var(--#{$toggle-group}__button--before--BorderInlineStartColor, var(--#{$toggle-group}__button--before--BorderColor));
+    border-inline-end-color: var(--#{$toggle-group}__button--before--BorderInlineEndColor, var(--#{$toggle-group}__button--before--BorderColor));
   }
 
   &:hover,
@@ -127,9 +138,22 @@
   &.pf-m-disabled {
     --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--disabled--BackgroundColor);
     --#{$toggle-group}__button--Color: var(--#{$toggle-group}__button--disabled--Color);
+    --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--disabled--ZIndex);
+    --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--disabled--before--BorderColor);
 
     pointer-events: none;
   }
+}
+
+// For consecutive selected items, turn the left border back to what it was
+.pf-v5-c-toggle-group__item:has(.pf-m-selected) + .pf-v5-c-toggle-group__item:has(.pf-m-selected) {
+  --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor);
+}
+    
+// For consecutive disabled items, turn the left border back to what it was
+// .pf-v5-c-toggle-group__item:has(.pf-m-disabled) + .pf-v5-c-toggle-group__item:has(.pf-m-disabled),
+.pf-v5-c-toggle-group__item:has(:disabled, .pf-m-disabled) + .pf-v5-c-toggle-group__item:has(:disabled, .pf-m-disabled) {
+  --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor);
 }
 
 .#{$toggle-group}__icon + .#{$toggle-group}__text,
