@@ -151,7 +151,6 @@
 }
     
 // For consecutive disabled items, turn the left border back to what it was
-// .pf-v5-c-toggle-group__item:has(.pf-m-disabled) + .pf-v5-c-toggle-group__item:has(.pf-m-disabled),
 .pf-v5-c-toggle-group__item:has(:disabled, .pf-m-disabled) + .pf-v5-c-toggle-group__item:has(:disabled, .pf-m-disabled) {
   --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor);
 }
