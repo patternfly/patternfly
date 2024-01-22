@@ -595,7 +595,8 @@ The progress stepper is intended to show progress through a finite number of dis
 
 Add a modifier class to the progress stepper to change the orientation or alignment: `.pf-m-center`, `.pf-m-vertical`, or `.pf-m-compact`.
 
-Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and `.pf-m-info` to change their color. Use modifiers `.pf-m-pending` and `.pf-m-current` to indicate progress through the steps.
+Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, `.pf-m-info`, `.pf-m-custom`, and `.pf-m-in-progress-alt` to change their color. Use modifiers `.pf-m-pending` and `.pf-m-current` to indicate progress through the steps.
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -620,6 +621,8 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and
 | `.pf-m-warning`| `.pf-v5-c-progress-stepper__step` | Modifies for warning styling. |
 | `.pf-m-danger`| `.pf-v5-c-progress-stepper__step` | Modifies for danger styling. |
 | `.pf-m-info`| `.pf-v5-c-progress-stepper__step` | Modifies for info styling. |
+| `.pf-m-custom`| `.pf-v5-c-progress-stepper__step` | Modifies for custom styling. |
 | `.pf-m-current`| `.pf-v5-c-progress-stepper__step` | Modifies styling for the current step. |
+| `.pf-m-in-progress-alt`| `.pf-v5-c-progress-stepper__step` | Modifies for alternate in progress styling. |
 | `.pf-m-pending`| `.pf-v5-c-progress-stepper__step` | Modifies styling for pending steps. |
 | `.pf-m-help-text`| `.pf-v5-c-progress-stepper__step-title` | Modifies styling for steps that have help text. |
