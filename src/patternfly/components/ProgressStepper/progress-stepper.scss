@@ -270,12 +270,10 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     }
 
     // For this compact variant only, move the main content for the current step to above the icons
-    // stylelint-disable
     .#{$progress-stepper}__step.pf-m-current .#{$progress-stepper}__step-main {
-        grid-column: 1/-1;
         grid-row: 1/2;
+        grid-column: 1/-1;
       }
-    // stylelint-enable
 
     .#{$progress-stepper}__step-description {
       display: none;
@@ -303,11 +301,11 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   }
 
   &.pf-m-success {
-    --#{$progress-stepper}__step-icon--Color: var(--#{$progress-stepper}__step--m-success__step-icon--Color); // var(--#{$pf-global}--success-color--100);
+    --#{$progress-stepper}__step-icon--Color: var(--#{$progress-stepper}__step--m-success__step-icon--Color);
   }
 
   &.pf-m-danger {
-    --#{$progress-stepper}__step-icon--Color: var(--#{$progress-stepper}__step--m-danger__step-icon--Color); // var(--#{$pf-global}--danger-color--100);
+    --#{$progress-stepper}__step-icon--Color: var(--#{$progress-stepper}__step--m-danger__step-icon--Color);
     --#{$progress-stepper}__step-title--Color: var(--#{$progress-stepper}__step--m-danger__step-title--Color);
 
     // Help text variables for failure state
