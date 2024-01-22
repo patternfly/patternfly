@@ -114,7 +114,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}--m-compact--GridAutoFlow: row;
   --#{$progress-stepper}--m-compact__step-main--MarginTop: 0;
   --#{$progress-stepper}--m-compact__step-main--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$progress-stepper}--m-compact__step-connector--MinWidth: var(--pf-t--global--spacer--md);
+  --#{$progress-stepper}--m-compact__step-connector--MinWidth: #{pf-size-prem(28px)};
   --#{$progress-stepper}--m-compact__step-icon--Width: #{pf-size-prem(18px)};
   --#{$progress-stepper}--m-compact__step-icon--FontSize: var(--pf-t--global--icon--size--body--sm);
   --#{$progress-stepper}--m-compact__step-title--FontSize: var(--pf-t--global--font--size--body--lg);
