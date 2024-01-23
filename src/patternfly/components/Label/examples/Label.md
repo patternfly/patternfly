@@ -74,7 +74,7 @@ This style of label is used to indicate overflow within a label group.
 {{> label
     label--id="compact-editable-label"
     label--color="blue"
-    label--IsFilled=true
+    label--IsOutlined=true
     label--IsEditable=true
     label--IsRemovable=true
     label--IsCompact=true
@@ -84,7 +84,7 @@ This style of label is used to indicate overflow within a label group.
 {{> label
     label--id="compact-editable-label-active"
     label--color="blue"
-    label--IsFilled=true
+    label--IsOutlined=true
     label--IsEditable=true
     label--IsEditableActive=true
     label--IsCompact=true
