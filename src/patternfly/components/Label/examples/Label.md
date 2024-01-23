@@ -568,12 +568,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required** |
+| `.pf-v5-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required. Note: always use with either `.pf-m-filled` or `.pf-m-outline`.** |
 | `.pf-v5-c-label__content` | `<span>`, `<a>`, `<button>` | Creates a content wrapper. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
 | `.pf-v5-c-label__icon` | `<span>` | Initiates a label icon. |
 | `.pf-v5-c-label__text` | `<span>` | Initiates label text. **Required** |
 | `.pf-v5-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
 | `.pf-v5-c-label__actions` | `<span>` | Creates a wrapper for label actions. **Required for removable labels** |
+| `.pf-m-filled` | `.pf-v5-c-label` | Modifies label for filled styles. |
 | `.pf-m-outline` | `.pf-v5-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-v5-c-label` | Modifies label for compact styles. |
 | `.pf-m-overflow` | `.pf-v5-c-label` | Modifies label for overflow styles for use in a label group. |
