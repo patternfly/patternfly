@@ -167,6 +167,9 @@
   --#{$label}--m-clickable--hover--BorderWidth: 0;
   --#{$label}--m-clickable--hover--BorderColor: transparent;
 
+  // Filled
+  --#{$label}--m-filled__actions--c-button--Color: var(--#{$label}__icon--Color);
+
   // Outline
   --#{$label}--m-outline--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$label}--m-outline--BackgroundColor: transparent;
@@ -217,7 +220,6 @@
 
   // Actions button (close)
   --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--body--sm);
-  --#{$label}__actions--c-button--Color: var(--#{$label}__icon--Color);
   --#{$label}__actions--c-button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$label}__actions--c-button--MarginTop: calc(var(--#{$label}__actions--c-button--PaddingTop) * -1);
   --#{$label}__actions--c-button--MarginBottom: calc(var(--#{$label}__actions--c-button--PaddingBottom) * -1);
@@ -250,6 +252,7 @@
   padding-inline-end: var(--#{$label}--PaddingRight);
   font-size: var(--#{$label}--FontSize);
   white-space: nowrap;
+  background: transparent;
   isolation: isolate;
   border: 0;
   border-radius: var(--#{$label}--BorderRadius);
@@ -416,6 +419,12 @@
     --#{$label}--m-editable--TextDecorationOffset: var(--#{$label}--m-compact--m-editable--TextDecorationOffset);
   }
 
+  &.pf-m-filled {
+    .#{$label}__actions .#{$button} {
+      --#{$button}--Color: var(--#{$label}--m-filled__actions--c-button--Color);
+    }
+  }
+
   &.pf-m-outline {
     --#{$label}--Color: var(--#{$label}--m-outline--Color);
     --#{$label}--BorderWidth: var(--#{$label}--m-outline--BorderWidth);
@@ -445,11 +454,6 @@
     --#{$label}--m-editable--TextDecoration: var(--#{$label}--m-editable--m-editable-active--TextDecoration);
     --#{$label}--BackgroundColor: var(--#{$label}--m-editable--m-editable-active--BackgroundColor);
     --#{$label}--Color: var(--#{$label}--m-editable--m-editable-active--Color);
-  }
-
-  &.pf-m-add,
-  &.pf-m-overflow {
-    background: transparent;
   }
 
   &.pf-m-overflow {
@@ -505,7 +509,7 @@
         --#{$label}--m-outline--BorderColor: var(--#{$label}--m-outline--m-clickable--hover--BorderColor);
 
         ~ .#{$label}__actions .#{$button} {
-          --#{$button}--Color: var(--#{$label}--m-clickable--hover__icon--Color);
+          --#{$label}--m-filled__actions--c-button--Color: var(--#{$label}--m-clickable--hover__icon--Color);
         }
       }
     }
@@ -556,7 +560,6 @@
   margin-inline-end: var(--#{$label}__actions--MarginRight);
 
   .#{$button} {
-    --#{$button}--Color: var(--#{$label}__actions--c-button--Color);
     --#{$button}--FontSize: var(--#{$label}__actions--c-button--FontSize);
     --#{$button}--m-plain--m-no-padding--PaddingTop: var(--#{$label}__actions--c-button--PaddingTop);
     --#{$button}--m-plain--m-no-padding--PaddingRight: var(--#{$label}__actions--c-button--PaddingRight);

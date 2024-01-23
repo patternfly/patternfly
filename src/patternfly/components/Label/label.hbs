@@ -1,4 +1,5 @@
 <{{#if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}} class="{{pfv}}label
+  {{#if label--IsFilled}} pf-m-filled{{/if}}
   {{#if label--IsOutlined}} pf-m-outline{{/if}}
   {{#if label--IsCompact}} pf-m-compact{{/if}}
   {{#if label--IsOverflow}} pf-m-overflow{{/if}}

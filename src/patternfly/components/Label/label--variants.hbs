@@ -26,11 +26,13 @@
       label-text--value=(concat label--variants--title ' button removable')}}
   {{> label
       label--id=(concat label--variants--id '-status-truncated')
-      label-text--value=(concat label--variants--title ', max-width truncation customization')}}
+      label-text--value=(concat label--variants--title ', max-width truncation customization')
+      label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'}}
   {{> label
       label--IsRemovable=true
       label--id=(concat label--variants--id '-status-truncated-removable')
-      label-text--value=(concat label--variants--title ' removable, max-width truncation customization')}}
+      label-text--value=(concat label--variants--title ' removable, max-width truncation customization')
+      label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'}}
 {{else}}
   {{> label
       label--id=(concat label--variants--id '-default')
@@ -38,7 +40,7 @@
 
   {{> label
       label--id=(concat label--variants--id '-icon')
-      label-icon--value="info-circle"
+      label-icon--value="cube"
       label-text--value=(concat label--variants--title ' icon')}}
 
   {{> label
@@ -50,7 +52,7 @@
       label--IsRemovable=true
       label--id=(concat label--variants--id '-icon-removable')
       label-text--value=(concat label--variants--title ' icon removable')
-      label-icon--value="info-circle"}}
+      label-icon--value="cube"}}
 
   {{> label
       label--id=(concat label--variants--id '-link')
@@ -78,14 +80,14 @@
       label--id=(concat label--variants--id '-truncated')
       label-text--value=(concat label--variants--title ' label, max-width truncation customization')
       label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'
-      label-icon--value="info-circle"}}
+      label-icon--value="cube"}}
 
   {{> label
       label--IsRemovable=true
       label--id=(concat label--variants--id '-truncated-with-icon')
       label-text--value=(concat label--variants--title ' label with icon and set max-width truncation customization')
       label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 38ch"'
-      label-icon--value="info-circle"}}
+      label-icon--value="cube"}}
 
   {{#if @partial-block}}
     {{> @partial-block}}
