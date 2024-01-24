@@ -4,12 +4,12 @@
     {{{tabs-item-action--attribute}}}
   {{/if}}>
   {{#if tabs-item-action--IsHelp}}
-    {{#> tabs-item-action-button tabs-item-action-button--aria-label=(concat "More info for " __tabs-item--text " label") tabs-item-action-button--IsDisabled=tabs-item-action--IsHelpDisabled}}
+    {{#> tabs-item-action-button tabs-item-action-button--aria-label=(concat "More info for " __tabs-item--text " label") tabs-item-action-button--IsDisabled=tabs-item-action--IsHelpDisabled tabs-item-action-button--IsAriaDisabled=tabs-item-action--IsHelpAriaDisabled}}
       <i class="pf-v5-pficon pf-v5-pficon-help" aria-hidden="true"></i>
     {{/tabs-item-action-button}}
   {{/if}}
   {{#if tabs-item-action--IsClose}}
-    {{#> tabs-item-action-button tabs-item-action-button--aria-label=(concat "Close " __tabs-item--text) tabs-item-action-button--IsDisabled=tabs-item-action--IsCloseDisabled}}
+    {{#> tabs-item-action-button tabs-item-action-button--aria-label=(concat "Close " __tabs-item--text) tabs-item-action-button--IsDisabled=tabs-item-action--IsCloseDisabled tabs-item-action-button--IsAriaDisabled=tabs-item-action--IsCloseAriaDisabled}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/tabs-item-action-button}}
   {{/if}}
@@ -17,8 +17,7 @@
 
 {{#*inline "tabs-item-action-button"}}
   {{#> button button--modifier="pf-m-plain"
-    button--aria-label=tabs-item-action-button--aria-label
-    button--IsDisabled=tabs-item-action-button--IsDisabled}}
+    button--aria-label=tabs-item-action-button--aria-label button--IsDisabled=tabs-item-action-button--IsDisabled button--IsAriaDisabled=tabs-item-action-button--IsAriaDisabled}}
     {{#> tabs-item-action-icon}}
       {{> @partial-block}}
     {{/tabs-item-action-icon}}

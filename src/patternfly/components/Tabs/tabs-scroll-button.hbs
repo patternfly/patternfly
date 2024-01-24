@@ -1,24 +1,15 @@
-<button class="{{pfv}}tabs__scroll-button{{#if tabs-scroll-button--modifier}} {{tabs-scroll-button--modifier}}{{/if}}"
+<div class="{{pfv}}tabs__scroll-button{{#if tabs-scroll-button--modifier}} {{tabs-scroll-button--modifier}}{{/if}}"
   {{#if tabs-scroll-button--attribute}}
     {{{tabs-scroll-button--attribute}}}
   {{/if}}
-  type="button"
-  {{#if tabs-scroll-button--IsDisabled}}
-    disabled
-  {{/if}}
   {{#if tabs-scroll-button--IsHidden}}
     aria-hidden="true"
-  {{/if}}
-  {{#if tabs-scroll-button--IsLeft}}
-    aria-label="Scroll left"
-  {{/if}}
-  {{#if tabs-scroll-button--IsRight}}
-    aria-label="Scroll right"
   {{/if}}>
-  {{#if tabs-scroll-button--IsLeft}}
-    <i class="fas fa-angle-left" aria-hidden="true"></i>
-  {{/if}}
-  {{#if tabs-scroll-button--IsRight}}
-    <i class="fas fa-angle-right" aria-hidden="true"></i>
-  {{/if}}
-</button>
+  {{#> button button--IsPlain=true button--IsDisabled=tabs-scroll-button--IsDisabled button--aria-label=(ternary tabs-scroll-button--IsLeft "Scroll left" "Scroll right")}}
+    {{#if tabs-scroll-button--IsLeft}}
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    {{else }}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/if}}
+  {{/button}}
+</div>

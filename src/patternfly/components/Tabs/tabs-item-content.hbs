@@ -1,0 +1,13 @@
+<div class="{{pfv}}tabs__item-content
+  {{~#if tabs-item-content--modifier}} {{tabs-item-content--modifier}}{{/if}}"
+  {{#if tabs-item-content--attribute}}
+    {{{tabs-item-content--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+  {{#if tabs-item--HasHelp}}
+    {{> tabs-item-action tabs-item-action--IsHelp="true"}}
+  {{/if}}
+  {{#if tabs-item--HasClose}}
+    {{> tabs-item-action tabs-item-action--IsClose="true"}}
+  {{/if}}
+</div>
