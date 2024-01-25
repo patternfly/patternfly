@@ -10,7 +10,7 @@
   --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
   --#{$menu}--ZIndex: var(--pf-t--global--Zindex--sm);
-  --#{$menu}--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$menu}--icon--disabled--Color: var(--pf-t--global--icon--color--disabled);
 
   // * Menu colors
@@ -47,7 +47,6 @@
   --#{$menu}__list-item--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$menu}__list-item--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
-  --#{$menu}__list-item--child--not-active--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // * Menu item
@@ -71,7 +70,6 @@
 
   // * Menu select icon
   --#{$menu}__item-select-icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$menu}__item-select-icon--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu}__item-select-icon--m-selected--Color: var(--pf-t--global--icon--color--brand--default);
 
   // * Menu action
@@ -141,19 +139,21 @@
 }
 
 // - Menu disabled
-[class*="#{$menu}"]:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled) {
-  --#{$menu}__item--Color: var(--#{$menu}__list-item--m-disabled--Color);
-  --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
-  --#{$menu}__item-external-icon--Color: var(--#{$menu}--icon--disabled--Color);
-  --#{$menu}__item-description--Color: var(--#{$menu}--icon--disabled--Color);
-  --#{$menu}__list-item--BackgroundColor: transparent;
+.#{$menu}__item {
+  &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled) {
+    --#{$menu}__item--Color: var(--#{$menu}__list-item--m-disabled--Color);
+    --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__item-external-icon--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__item-description--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__list-item--BackgroundColor: transparent;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  .#{$button} {
-    --#{$button}--disabled--Color: var(--#{$menu}--disabled--Color);
-    --#{$button}--disabled__icon--Color: var(--#{$menu}--icon--disabled--Color);
-    --#{$button}--disabled--BackgroundColor: transparent;
+    .#{$button} {
+      // --#{$button}--disabled--Color: var(--#{$menu}--button--disabled--Color);
+      // --#{$button}--disabled__icon--Color: var(--#{$menu}--icon--disabled--Color);
+      --#{$button}--disabled--BackgroundColor: transparent;
+    }
   }
 }
 
@@ -398,12 +398,7 @@
   color: var(--#{$menu}__list-item--Color);
   background-color: var(--#{$menu}__list-item--BackgroundColor);
 
-  &:hover .#{$menu}__list-item {
-    background-color: var(--#{$menu}__list-item--child--not-active--BackgroundColor);
-  }
-
   &:has(.#{$menu}__item:hover, .#{$menu}__item:focus) {
-    --#{$menu}__list-item--Color: var(--#{$menu}__list-item--hover--Color);
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
     --#{$menu}--link--icon--Color: var(--#{$menu}--link--icon--hover--Color);
 
@@ -475,12 +470,11 @@
   &.pf-m-selected {
     --#{$menu}__item-select-icon--Color: var(--#{$menu}__item-select-icon--m-selected--Color);
   }
-
 }
 
 // - Menu item select icon
 .#{$menu}__item-select-icon {
-  color: var(--#{$menu}__item-select-icon--Color, var(--#{$menu}--link--icon--Color));
+  color: var(--#{$menu}__item-select-icon--Color);
 }
 
 // - Menu item main
@@ -552,7 +546,6 @@
 
 // - Menu actions
 .#{$menu}__item-action {
-
   &:disabled,
   &.pf-m-disabled,
   &.pf-m-aria-disabled {

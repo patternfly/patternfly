@@ -1723,8 +1723,8 @@ import './Menu.css'
 | `.pf-m-current` | `.pf-v5-c-menu__list-item` | Modifies a list item for current styles. |
 | `.pf-m-load` | `.pf-v5-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-v5-c-menu__list-item` | Modifies a list item for loading styles. |
-| `.pf-m-disabled` | `.pf-v5-c-menu__list-item` | Modifies a list item for disabled styling. |
-| `.pf-m-aria-disabled` | `.pf-v5-c-menu__list-item` | Modifies a list item for aria-disabled styling. |
+| `.pf-m-disabled` | `.pf-v5-c-menu__item` | Modifies a list item for disabled styling. |
+| `.pf-m-aria-disabled` | `.pf-v5-c-menu__item` | Modifies a list item for aria-disabled styling. |
 | `.pf-m-drilldown` | `.pf-v5-c-menu` | Modifies the menu so that all nested `.pf-v5-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-v5-c-menu.pf-m-drilldown, .pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu` | Modifies the menu list for drilled in state. |
