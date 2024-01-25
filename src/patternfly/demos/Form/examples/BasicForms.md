@@ -416,10 +416,10 @@ subsection: forms
             {{#> label-group-main}}
               {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                 {{#> label-group-list-item}}
-                  {{> label label--id=(concat label-group--id '-label-1') label--isRemovable=true label-text--value="prometheus=k8s" label-icon--value="info-circle"}}
+                  {{> label label--id=(concat label-group--id '-label-1') label--IsRemovable=true label-text--value="prometheus=k8s" label-icon--value="info-circle"}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
-                  {{> label label--id=(concat label-group--id '-label-2') label--isRemovable=true label-text--value="new" label-icon--value="info-circle"}}
+                  {{> label label--id=(concat label-group--id '-label-2') label--IsRemovable=true label-text--value="new" label-icon--value="info-circle"}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
                   {{> label label--IsAdd="true" label-text--value="Add Label"}}

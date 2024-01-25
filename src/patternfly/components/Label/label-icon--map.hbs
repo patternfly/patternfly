@@ -1,0 +1,9 @@
+{{#if label-icon--value}}
+  {{~label-icon--value}}
+{{else}}
+  {{~#ifEquals label--status "success"}}check-circle{{/ifEquals}}
+  {{~#ifEquals label--status "warning"}}exclamation-triangle{{/ifEquals}}
+  {{~#ifEquals label--status "danger"}}exclamation-circle{{/ifEquals}}
+  {{~#ifEquals label--status "info"}}info-circle{{/ifEquals}}
+  {{~#ifEquals label--status "custom"}}bell{{/ifEquals}}
+{{/if}}

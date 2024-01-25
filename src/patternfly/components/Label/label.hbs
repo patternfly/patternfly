@@ -1,25 +1,26 @@
-<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}} class="{{pfv}}label
+<{{#if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}} class="{{pfv}}label
+  {{#if label--IsFilled}} pf-m-filled{{/if}}
   {{#if label--IsOutlined}} pf-m-outline{{/if}}
   {{#if label--IsCompact}} pf-m-compact{{/if}}
   {{#if label--IsOverflow}} pf-m-overflow{{/if}}
   {{#if label--IsAdd}} pf-m-add{{/if}}
   {{#if label--IsEditable}} pf-m-editable{{/if}}
   {{#if label--IsEditableActive}} pf-m-editable-active{{/if}}
-  {{#if label--color}}
-    pf-m-{{label--color}}
-  {{/if}}
+  {{#ifAny label--color label--status}}
+    pf-m-{{ternary label--status label--status label--color}}
+  {{/ifAny}}
   {{#ifAny label-content--IsLink label-content--IsButton}} pf-m-clickable{{/ifAny}}
   {{#if label--modifier}} {{label--modifier}}{{/if}}"
-  {{#if (concat label--IsOverflow label--IsAdd)}}
+  {{#ifAny label--IsOverflow label--IsAdd}}
     type="button"
-  {{/if}}
+  {{/ifAny}}
   {{#if label--attribute}}
     {{{label--attribute}}}
   {{/if}}>
   {{#> label-content}}
-    {{#if label-icon--value}}
+    {{#ifAny label--status label-icon--value}}
       {{> label-icon}}
-    {{/if}}
+    {{/ifAny}}
     {{#if label-text--value}}
       {{> label-text}}
     {{/if}}
@@ -27,7 +28,7 @@
       {{> @partial-block}}
     {{/if}}
   {{/label-content}}
-  {{#if label--isRemovable}}
+  {{#if label--IsRemovable}}
     {{#> label-actions}}
       {{#> button button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
     aria-label="Remove" aria-labelledby="' label--id '-button ' label--id '-text"')}}
@@ -35,4 +36,4 @@
       {{/button}}
     {{/label-actions}}
   {{/if}}
-</{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}}>
+</{{#if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}}>

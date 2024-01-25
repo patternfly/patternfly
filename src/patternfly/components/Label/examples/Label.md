@@ -10,152 +10,28 @@ import './Label.css'
 
 ### Filled
 ```hbs
-{{> label-template-variants
-    label-template-variants--title="Grey"
-    label-template-variants--id="default"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Blue"
-    label-template-variants--id="blue"
-    label--color="blue"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Green"
-    label-template-variants--id="green"
-    label--color="green"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Orange"
-    label-template-variants--id="orange"
-    label--color="orange"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Red"
-    label-template-variants--id="red"
-    label--color="red"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Orange red"
-    label-template-variants--id="orangered"
-    label--color="orangered"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Purple"
-    label-template-variants--id="purple"
-    label--color="purple"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Cyan"
-    label-template-variants--id="cyan"
-    label--color="cyan"}}
-
-<br><br>
-{{> label-template-variants
-    label-template-variants--title="Gold"
-    label-template-variants--id="gold"
-    label--color="gold"}}
+{{> label--colors label--IsFilled=true label--colors--id="filled"}}
 ```
 
 ### Outline
 
 ```hbs
-{{> label-template-variants
-    label-template-variants--title="Grey"
-    label-template-variants--id="grey-outline"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Blue"
-    label-template-variants--id="blue-outline"
-    label--color="blue"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Green"
-    label-template-variants--id="green-outline"
-    label--color="green"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Orange"
-    label-template-variants--id="orange-outline"
-    label--IsOutlined=true
-    label--color="orange"}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Red"
-    label-template-variants--id="red-outline"
-    label--color="red"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Orange red"
-    label-template-variants--id="orangered-outline"
-    label--color="orangered"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Purple"
-    label-template-variants--id="purple-outline"
-    label--color="purple"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Cyan"
-    label-template-variants--id="cyan-outline"
-    label--color="cyan"
-    label--IsOutlined=true}}
-
-<br><br>
-
-{{> label-template-variants
-    label-template-variants--title="Gold"
-    label-template-variants--id="gold-outline"
-    label--color="gold"
-    label--IsOutlined=true}}
+{{> label--colors label--IsOutlined=true label--colors--id="outline"}}
 ```
 
 ### Compact
 
 ```hbs
-{{> label-template-variants
-    label-template-variants--title="Compact"
-    label-template-variants--id="compact"
+{{> label--variants
+    label--variants--title="Compact"
+    label--variants--id="compact"
     label--IsCompact=true}}
 
 <br><br>
 
-{{> label-template-variants
-    label-template-variants--title="Compact"
-    label-template-variants--id="compact-outline"
+{{> label--variants
+    label--variants--title="Compact"
+    label--variants--id="compact-outline"
     label--color="blue"
     label--IsOutlined=true
     label--IsCompact=true}}
@@ -180,14 +56,16 @@ This style of label is used to indicate overflow within a label group.
 {{> label
     label--id="editable-label"
     label--color="blue"
+    label--IsFilled=true
     label--IsEditable=true
-    label--isRemovable=true
+    label--IsRemovable=true
     label-text--value="Editable label"
     label-editable-content--value="Editable label"}}
 
 {{> label
     label--id="editable-label-active"
     label--color="blue"
+    label--IsFilled=true
     label--IsEditable=true
     label--IsEditableActive=true
     label-text--value="Editable active"
@@ -196,8 +74,9 @@ This style of label is used to indicate overflow within a label group.
 {{> label
     label--id="compact-editable-label"
     label--color="blue"
+    label--IsOutlined=true
     label--IsEditable=true
-    label--isRemovable=true
+    label--IsRemovable=true
     label--IsCompact=true
     label-text--value="Compact editable label"
     label-editable-content--value="Compact editable label"}}
@@ -205,6 +84,7 @@ This style of label is used to indicate overflow within a label group.
 {{> label
     label--id="compact-editable-label-active"
     label--color="blue"
+    label--IsOutlined=true
     label--IsEditable=true
     label--IsEditableActive=true
     label--IsCompact=true
@@ -496,14 +376,14 @@ In addition to the JavaScript management of [editable labels](/components/label#
             label--id=(concat label-group--id '-editable-label-editable-1')
             label--color="blue"
             label--IsEditable=true
-            label--isRemovable=true
+            label--IsRemovable=true
             label-text--value="Editable label 1"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--id=(concat label-group--id '-editable-label-editable-2')
             label--color="blue"
-            label--isRemovable=true
+            label--IsRemovable=true
             label--IsEditable=true
             label-text--value="Editable label 2"}}
       {{/label-group-list-item}}
@@ -511,7 +391,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
         {{> label
             label--id=(concat label-group--id '-editable-label-editable-3')
             label--color="blue"
-            label--isRemovable=true
+            label--IsRemovable=true
             label--IsEditable=true
             label-text--value="Editable label 3"}}
       {{/label-group-list-item}}
@@ -529,10 +409,10 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-1') label-text--value="Editable label 1" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-editable-1') label-text--value="Editable label 1" label--color="blue" label--IsEditable=true label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-2') label-text--value="Editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-editable-2') label-text--value="Editable label 2" label--color="blue" label--IsEditable=true label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--id=(concat label-group--id '-editable-label-editable-3') label-text--value="Editable label 3, active" label-editable-content--value="Editable label 3, active" label--color="blue" label--IsEditable=true label--IsEditableActive=true}}
@@ -551,13 +431,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--value="Static label 1" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--value="Static label 1" label--color="green" label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--value="Static label 2" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--value="Static label 2" label--color="green" label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-3') label-text--value="Static label 3" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-3') label-text--value="Static label 3" label--color="green" label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
@@ -573,19 +453,19 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--value="Static label 1" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--value="Static label 1" label--color="green" label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--value="Static label 2" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--value="Static label 2" label--color="green" label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-dynamic-1') label-text--value="Dynamic, editable label 1" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-dynamic-1') label-text--value="Dynamic, editable label 1" label--color="blue" label--IsEditable=true label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-dynamic-2') label-text--value="Dynamic, editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-dynamic-2') label-text--value="Dynamic, editable label 2" label--color="blue" label--IsEditable=true label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-dynamic-3') label-text--value="Dynamic, editable label 3" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-dynamic-3') label-text--value="Dynamic, editable label 3" label--color="blue" label--IsEditable=true label--IsRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
@@ -688,12 +568,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required** |
+| `.pf-v5-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required. Note: always use with either `.pf-m-filled` or `.pf-m-outline`.** |
 | `.pf-v5-c-label__content` | `<span>`, `<a>`, `<button>` | Creates a content wrapper. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
 | `.pf-v5-c-label__icon` | `<span>` | Initiates a label icon. |
 | `.pf-v5-c-label__text` | `<span>` | Initiates label text. **Required** |
 | `.pf-v5-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
 | `.pf-v5-c-label__actions` | `<span>` | Creates a wrapper for label actions. **Required for removable labels** |
+| `.pf-m-filled` | `.pf-v5-c-label` | Modifies label for filled styles. |
 | `.pf-m-outline` | `.pf-v5-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-v5-c-label` | Modifies label for compact styles. |
 | `.pf-m-overflow` | `.pf-v5-c-label` | Modifies label for overflow styles for use in a label group. |
@@ -705,6 +586,11 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `.pf-m-purple` | `.pf-v5-c-label` | Modifies the label to have purple colored styling. |
 | `.pf-m-cyan` | `.pf-v5-c-label` | Modifies the label to have cyan colored styling. |
 | `.pf-m-gold` | `.pf-v5-c-label` | Modifies the label to have gold colored styling. |
+| `.pf-m-success` | `.pf-v5-c-label` | Modifies the label to have success colored styling. |
+| `.pf-m-warning` | `.pf-v5-c-label` | Modifies the label to have warning colored styling. |
+| `.pf-m-danger` | `.pf-v5-c-label` | Modifies the label to have danger colored styling. |
+| `.pf-m-info` | `.pf-v5-c-label` | Modifies the label to have info colored styling. |
+| `.pf-m-custom` | `.pf-v5-c-label` | Modifies the label to have custom colored styling. |
 | `.pf-m-editable` | `.pf-v5-c-label` | Modifies label for editable styles. |
 | `.pf-m-editable-active` | `.pf-v5-c-label.pf-m-editable` | Modifies editable label for active styles. |
 | `--pf-v5-c-label__text--MaxWidth` | `.pf-v5-c-label` | Modifiex the max width of the text before text will truncate. |
