@@ -97,8 +97,8 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}--m-horizontal__step-connector--before--Height: auto;
   --#{$progress-stepper}--m-horizontal__step-connector--before--BorderRightWidth: 0;
   --#{$progress-stepper}--m-horizontal__step-connector--before--BorderRightColor: unset;
-  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$progress-stepper}--m-horizontal__step-connector--before--Transform: translateY(-50%);
   --#{$progress-stepper}--m-horizontal__step-main--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$progress-stepper}--m-horizontal__step-main--MarginRight: var(--pf-t--global--spacer--sm);
@@ -174,11 +174,9 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness: var(--pf-t--global--border--width--box--default);
   --#{$progress-stepper}__step-title--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
   --#{$progress-stepper}__step-title--m-help-text--hover--Color: var(--pf-t--global--text--color--brand--hover);
-  --#{$progress-stepper}__step-title--m-help-text--focus--Color: var(--pf-t--global--text--color--brand--hover);
 
   // Help text variables the step title for failure state
   --#{$progress-stepper}__step--m-danger__step-title--m-help-text--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
-  --#{$progress-stepper}__step--m-danger__step-title--m-help-text--focus--Color: var(--pf-t--global--text--color--status--danger--hover);
 
   // Step Description variables
   --#{$progress-stepper}__step-description--MarginTop: var(--pf-t--global--spacer--xs);
@@ -310,7 +308,6 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
     // Help text variables for failure state
     --#{$progress-stepper}__step-title--m-help-text--hover--Color: var(--#{$progress-stepper}__step--m-danger__step-title--m-help-text--hover--Color);
-    --#{$progress-stepper}__step-title--m-help-text--focus--Color: var(--#{$progress-stepper}__step--m-danger__step-title--m-help-text--focus--Color);
   }
 
   &.pf-m-warning {
@@ -415,12 +412,9 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     text-underline-offset: var(--#{$progress-stepper}__step-title--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 
-    &:hover {
-      --#{$progress-stepper}__step-title--Color: var(--#{$progress-stepper}__step-title--m-help-text--hover--Color);
-    }
-
+    &:hover,
     &:focus {
-      --#{$progress-stepper}__step-title--Color: var(--#{$progress-stepper}__step-title--m-help-text--focus--Color);
+      --#{$progress-stepper}__step-title--Color: var(--#{$progress-stepper}__step-title--m-help-text--hover--Color);
     }
   }
 }
