@@ -1,7 +1,3 @@
-{{#> config
-
-}}
-
 <{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-list-item--IsCheckbox}}label{{else}}button{{/if}} class="{{pfv}}menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}
   {{#if menu-item--IsSelected}} pf-m-selected{{/if}}
   {{#if menu-list-item--IsCurrent}} pf-m-current{{/if}}"
@@ -74,4 +70,3 @@
     {{/if}}
   {{/ifAny}}
 </{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-list-item--IsCheckbox}}label{{else}}button{{/if}}>
-{{/config}}

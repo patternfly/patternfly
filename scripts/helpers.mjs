@@ -122,6 +122,27 @@ export const setTag = function (partialVar, el, fallback = 'div') {
 };
 
 // ======================================================================================
+// array: creates array from string
+// ======================================================================================
+export const array = function () {
+  return Array.prototype.slice.call(arguments, 0, -1);
+};
+
+export const hasValue = function (prop) {
+  let temp = '';
+
+  if (Array.isArray(prop)) {
+    temp = prop.includes(true);
+  } else if (prop !== undefined) {
+    temp = false;
+  } else {
+    temp = false
+  }
+
+  return temp;
+}
+
+// ======================================================================================
 // tag: is a helper function that returns the tag of a component
 // ======================================================================================
 //
