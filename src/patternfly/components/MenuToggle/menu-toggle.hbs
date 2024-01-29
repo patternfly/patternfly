@@ -65,6 +65,8 @@
   {{#ifAny menu-toggle--IsPlain @partial-block}}
     {{#if menu-toggle--HasKebab}}
       <i class="fas fa-ellipsis-v" aria-hidden=true></i>
+    {{else if menu-toggle--UsesButton}}
+      {{#> button button--IsPlain=true button--icon='ellipsis-v' button--aria-label='Actions'}}{{/button}}
     {{/if}}
     {{#if @partial-block}}
       {{> @partial-block}}

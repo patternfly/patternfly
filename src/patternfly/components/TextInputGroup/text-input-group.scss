@@ -41,8 +41,6 @@
   --#{$text-input-group}__icon--TranslateY: -50%;
 
   // Utilities
-  --#{$text-input-group}__utilities--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$text-input-group}__utilities--MarginLeft: var(--#{$pf-global}--spacer--xs);
   --#{$text-input-group}__utilities--child--MarginLeft: var(--#{$pf-global}--spacer--xs);
   --#{$text-input-group}__utilities--c-button--PaddingRight: var(--#{$pf-global}--spacer--xs);
   --#{$text-input-group}__utilities--c-button--PaddingLeft: var(--#{$pf-global}--spacer--xs);
@@ -135,8 +133,8 @@
 
 .#{$text-input-group}__icon {
   position: absolute;
- inset-block-start: 50%;
- inset-inline-start: var(--#{$text-input-group}__icon--Left);
+  inset-block-start: 50%;
+  inset-inline-start: var(--#{$text-input-group}__icon--Left);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
 }
@@ -168,6 +166,7 @@
   }
 }
 
+// TODO: update to use gap
 .#{$text-input-group}__utilities {
   display: flex;
   align-items: center;
@@ -177,21 +176,9 @@
   > * + * {
     margin-inline-start: var(--#{$text-input-group}__utilities--child--MarginLeft);
   }
-
-  .#{$button} {
-    --#{$button}--PaddingRight: var(--#{$text-input-group}__utilities--c-button--PaddingRight);
-    --#{$button}--PaddingLeft: var(--#{$text-input-group}__utilities--c-button--PaddingLeft);
-  }
 }
 
 
 .#{$text-input-group}__group {
   display: flex;
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/text-input-group";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-text-input-group;
 }
