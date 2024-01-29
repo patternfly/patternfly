@@ -374,14 +374,14 @@
     --#{$button}--Color: var(--#{$button}--m-link--Color);
     --#{$button}--BorderRadius: var(--#{$button}--m-link--BorderRadius);
     --#{$button}--BackgroundColor: var(--#{$button}--m-link--BackgroundColor);
-    --#{$button}--hover--MixBlendMode: var(--#{$button}--m-link--hover--MixBlendMode);
-    --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-link--m-clicked--MixBlendMode);
     --#{$button}__icon--Color: var(--#{$button}--m-link__icon--Color);
+    --#{$button}--hover--MixBlendMode: var(--#{$button}--m-link--hover--MixBlendMode);
     --#{$button}--hover--Color: var(--#{$button}--m-link--hover--Color);
     --#{$button}--hover--BackgroundColor: var(--#{$button}--m-link--hover--BackgroundColor);
     --#{$button}--hover__icon--Color: var(--#{$button}--m-link--hover__icon--Color);
     --#{$button}--m-clicked--Color: var(--#{$button}--m-link--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-link--m-clicked--BackgroundColor);
+    --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-link--m-clicked--MixBlendMode);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-link--m-clicked__icon--Color);
 
     &.pf-m-inline {
@@ -396,7 +396,9 @@
       --#{$button}__progress--Left: var(--#{$button}--m-link--m-inline__progress--Left);
       --#{$button}--hover--TextDecoration: var(--#{$button}--m-link--m-inline--hover--TextDecoration);
       --#{$button}--hover--BackgroundColor: transparent;
+      --#{$button}--hover--MixBlendMode: var(--#{$button}--m-link--m-inline--hover--MixBlendMode);
       --#{$button}--m-clicked--BackgroundColor: transparent;
+      --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-link--m-inline--m-clicked--MixBlendMode);
       --#{$button}--disabled--BackgroundColor: transparent;
       --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
       --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
@@ -409,14 +411,14 @@
 
     &:where(.pf-m-danger) {
       --#{$button}--m-danger--Color: var(--#{$button}--m-link--m-danger--Color);
+      --#{$button}--m-danger--BackgroundColor: transparent;
       --#{$button}--m-danger__icon--Color: var(--#{$button}--m-link--m-danger__icon--Color);
       --#{$button}--m-danger--hover--Color: var(--#{$button}--m-link--m-danger--hover--Color);
+      --#{$button}--m-danger--hover--BackgroundColor: transparent;
       --#{$button}--m-danger--hover__icon--Color: var(--#{$button}--m-link--m-danger--hover__icon--Color);
       --#{$button}--m-danger--m-clicked--Color: var(--#{$button}--m-link--m-danger--m-clicked--Color);
-      --#{$button}--m-danger--m-clicked__icon--Color: var(--#{$button}--m-link--m-danger--m-clicked__icon--Color);
-      --#{$button}--m-danger--BackgroundColor: transparent;
-      --#{$button}--m-danger--hover--BackgroundColor: transparent;
       --#{$button}--m-danger--m-clicked--BackgroundColor: transparent;
+      --#{$button}--m-danger--m-clicked__icon--Color: var(--#{$button}--m-link--m-danger--m-clicked__icon--Color);
     }
 
     &.pf-m-display-lg {
@@ -469,7 +471,7 @@
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-control--m-clicked--BackgroundColor);
     --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-control--m-clicked--BorderColor);
     --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-control--m-clicked--BorderWidth);
-    --#{$button}--m-clicked--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
   }
 
   // Stateful
@@ -517,26 +519,26 @@
 
   // Icon buttons
   &.pf-m-plain {
+    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
+    --#{$button}--Color: var(--#{$button}--m-plain--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-plain--BackgroundColor);
     --#{$button}--PaddingTop: var(--#{$button}--m-plain--PaddingTop);
     --#{$button}--PaddingRight: var(--#{$button}--m-plain--PaddingRight);
     --#{$button}--PaddingBottom: var(--#{$button}--m-plain--PaddingBottom);
     --#{$button}--PaddingLeft: var(--#{$button}--m-plain--PaddingLeft);
+    --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
+    --#{$button}--hover--Color: var(--#{$button}--m-plain--hover--Color);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
     --#{$button}--hover--MixBlendMode: var(--#{$button}--m-plain--hover--MixBlendMode);
+    --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
     --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-plain--m-clicked--MixBlendMode);
+    --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
+    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
     --#{$button}--m-small--PaddingTop: var(--#{$button}--m-plain--m-small--PaddingTop);
     --#{$button}--m-small--PaddingRight: var(--#{$button}--m-plain--m-small--PaddingRight);
     --#{$button}--m-small--PaddingBottom: var(--#{$button}--m-plain--m-small--PaddingBottom);
     --#{$button}--m-small--PaddingLeft: var(--#{$button}--m-plain--m-small--PaddingLeft);
-    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
-    --#{$button}--Color: var(--#{$button}--m-plain--Color);
-    --#{$button}--BackgroundColor: var(--#{$button}--m-plain--BackgroundColor);
-    --#{$button}--hover--Color: var(--#{$button}--m-plain--hover--Color);
-    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
-    --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
-    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
-    --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
-    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
-    --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
 
     &.pf-m-no-padding {
       --#{$button}--BackgroundColor: var(--#{$button}--m-plain--m-no-padding--BackgroundColor);
