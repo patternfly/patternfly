@@ -209,7 +209,7 @@
   // Content
   --#{$label}__content--MaxWidth: 100%;
   --#{$label}__content--Gap: var(--pf-t--global--spacer--xs);
-  --#{$label}__content--Cursor: auto;
+  --#{$label}__content--Cursor: initial;
 
   // Icon
   --#{$label}__icon--FontSize: var(--pf-t--global--icon--size--body--sm);
@@ -243,7 +243,7 @@
   --#{$label}--m-editable--m-editable-active--TextDecoration: none;
   --#{$label}--m-editable--m-editable-active--BackgroundColor: transparent;
   --#{$label}--m-editable--m-editable-active--Color: var(--pf-t--global--text--color--regular);
-  --#{$label}--m-editable--m-editable-active__content--Cursor: auto;
+  --#{$label}--m-editable--m-editable-active__content--Cursor: initial;
 }
 
 .#{$label} {
@@ -531,7 +531,7 @@
   padding: 0;
   overflow: hidden;
   color: var(--#{$label}--Color);
-  cursor: var(--#{$label}__content--Cursor);
+  cursor: var(--#{$label}__content--Cursor, revert);
   background: transparent;
   border-width: 0;
 
