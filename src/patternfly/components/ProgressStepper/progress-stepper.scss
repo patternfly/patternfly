@@ -71,10 +71,10 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}--m-vertical__step-connector--before--BorderBottomWidth: 0;
   --#{$progress-stepper}--m-vertical__step-connector--before--BorderBottomColor: transparent;
   --#{$progress-stepper}--m-vertical__step-connector--before--Transform: translateX(-50%);
-  --#{$progress-stepper}--m-vertical__step-main--MarginTop: var(--pf-t--global--spacer--xs);
+  --#{$progress-stepper}--m-vertical__step-main--MarginTop: 0px; // needs px for calc
   --#{$progress-stepper}--m-vertical__step-main--MarginRight: 0;
   --#{$progress-stepper}--m-vertical__step-main--MarginBottom: var(--pf-t--global--spacer--xl);
-  --#{$progress-stepper}--m-vertical__step-main--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$progress-stepper}--m-vertical__step-main--MarginLeft: var(--pf-t--global--spacer--sm);
 
   // Compact, vertical
   --#{$progress-stepper}--m-vertical--m-compact--GridTemplateColumns: 1fr;
@@ -148,7 +148,6 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step-icon--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$progress-stepper}__step-icon--BorderColor: var(--pf-t--global--border--color--default);
   --#{$progress-stepper}__step--m-current__step-icon--Color: var(--pf-t--global--icon--color--brand--default);
-  --#{$progress-stepper}__step--m-in-progress__step-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$progress-stepper}__step--m-info__step-icon--Color: var(--pf-t--global--icon--color--status--info--default);
   --#{$progress-stepper}__step--m-success__step-icon--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$progress-stepper}__step--m-warning__step-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
@@ -170,8 +169,10 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step--m-danger__step-title--Color: var(--pf-t--global--text--color--status--danger--default);
 
   // Help text variables for the step title
+  --#{$progress-stepper}__step-title--m-help-text--PaddingInlineStart: 0;
+  --#{$progress-stepper}__step-title--m-help-text--PaddingInlineEnd: 0;
   --#{$progress-stepper}__step-title--m-help-text--TextDecorationColor: currentcolor;
-  --#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness: var(--pf-t--global--border--width--box--default);
+  --#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness: var(--pf-t--global--link--text-decoration);
   --#{$progress-stepper}__step-title--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
   --#{$progress-stepper}__step-title--m-help-text--hover--Color: var(--pf-t--global--text--color--brand--hover);
 
@@ -294,10 +295,6 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     --#{$progress-stepper}__step-title--Color: var(--#{$progress-stepper}__step--m-pending__step-title--Color);
   }
 
-  &.pf-m-in-progress-alt {
-    --#{$progress-stepper}__step-icon--Color: var(--#{$progress-stepper}__step--m-in-progress__step-icon--Color);
-  }
-
   &.pf-m-success {
     --#{$progress-stepper}__step-icon--Color: var(--#{$progress-stepper}__step--m-success__step-icon--Color);
   }
@@ -405,6 +402,8 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   border: 0;
 
   &.pf-m-help-text {
+    padding-inline-start: var(--#{$progress-stepper}__step-title--m-help-text--PaddingInlineStart);
+    padding-inline-end: var(--#{$progress-stepper}__step-title--m-help-text--PaddingInlineEnd);
     text-decoration: underline;
     text-decoration-thickness: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness);
     text-decoration-style: dashed;

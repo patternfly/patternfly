@@ -623,6 +623,5 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, `.p
 | `.pf-m-info`| `.pf-v5-c-progress-stepper__step` | Modifies for info styling. |
 | `.pf-m-custom`| `.pf-v5-c-progress-stepper__step` | Modifies for custom styling. |
 | `.pf-m-current`| `.pf-v5-c-progress-stepper__step` | Modifies styling for the current step. |
-| `.pf-m-in-progress-alt`| `.pf-v5-c-progress-stepper__step` | Modifies for alternate in progress styling. |
 | `.pf-m-pending`| `.pf-v5-c-progress-stepper__step` | Modifies styling for pending steps. |
 | `.pf-m-help-text`| `.pf-v5-c-progress-stepper__step-title` | Modifies styling for steps that have help text. |
