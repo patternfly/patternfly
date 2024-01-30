@@ -84,14 +84,19 @@
   --#{$button}--m-link--m-clicked--Color: var(--pf-t--global--text--color--brand--clicked);
   --#{$button}--m-link--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-link--m-clicked__icon--Color: var(--pf-t--global--text--color--brand--clicked);
+
+  // Link danger
   --#{$button}--m-link--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
+  --#{$button}--m-link--m-danger--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$button}--m-link--m-danger__icon--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$button}--m-link--m-danger--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
+  --#{$button}--m-link--m-danger--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$button}--m-link--m-danger--hover__icon--Color: var(--pf-t--global--text--color--status--danger--hover);
   --#{$button}--m-link--m-danger--m-clicked--Color: var(--pf-t--global--text--color--status--danger--clicked);
+  --#{$button}--m-link--m-danger--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-link--m-danger--m-clicked__icon--Color: var(--pf-t--global--text--color--status--danger--clicked);
 
-  // Inline link
+  // Link inline
   --#{$button}--m-link--m-inline--FontSize: initial;
   --#{$button}--m-link--m-inline--LineHeight: initial;
   --#{$button}--m-link--m-inline--FontWeight: initial;
@@ -410,15 +415,15 @@
       outline-offset: #{pf-size-prem(2px)};
     }
 
-    &:where(.pf-m-danger) {
+    &.pf-m-danger {
       --#{$button}--m-danger--Color: var(--#{$button}--m-link--m-danger--Color);
-      --#{$button}--m-danger--BackgroundColor: transparent;
+      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-link--m-danger--BackgroundColor);
       --#{$button}--m-danger__icon--Color: var(--#{$button}--m-link--m-danger__icon--Color);
       --#{$button}--m-danger--hover--Color: var(--#{$button}--m-link--m-danger--hover--Color);
-      --#{$button}--m-danger--hover--BackgroundColor: transparent;
+      --#{$button}--m-danger--hover--BackgroundColor: var(--#{$button}--m-link--m-danger--hover--BackgroundColor);
       --#{$button}--m-danger--hover__icon--Color: var(--#{$button}--m-link--m-danger--hover__icon--Color);
       --#{$button}--m-danger--m-clicked--Color: var(--#{$button}--m-link--m-danger--m-clicked--Color);
-      --#{$button}--m-danger--m-clicked--BackgroundColor: transparent;
+      --#{$button}--m-danger--m-clicked--BackgroundColor: var(--#{$button}--m-link--m-danger--m-clicked--BackgroundColor);
       --#{$button}--m-danger--m-clicked__icon--Color: var(--#{$button}--m-link--m-danger--m-clicked__icon--Color);
     }
 
