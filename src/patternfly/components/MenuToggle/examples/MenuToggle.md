@@ -161,24 +161,19 @@ import './MenuToggle.css'
 ### Plain
 ```hbs
 {{> menu-toggle menu-toggle--UsesButton=true menu-toggle--IsPlain=true menu-toggle--IsDiv=true}}
-
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
+&nbsp;
+{{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"'}}
   <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
 {{/menu-toggle}}
-
-
 &nbsp;
 {{> menu-toggle menu-toggle--UsesButton=true menu-toggle--IsPlain=true menu-toggle--IsDiv=true menu-toggle--IsExpanded=true}}
-
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsExpanded="true" menu-toggle--attribute='aria-label="Actions"'}}
+&nbsp;
+{{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"'}}
   <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
 {{/menu-toggle}}
-
-
 &nbsp;
-
 {{> menu-toggle menu-toggle--UsesButton=true menu-toggle--IsPlain=true menu-toggle--IsDiv=true menu-toggle--IsDisabled=true}}
-
+&nbsp;
 {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"'}}
   <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
 {{/menu-toggle}}
@@ -198,6 +193,16 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+  {{#> menu-toggle-text}}
+    Custom text
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--IsExpanded=true}}
   {{#> menu-toggle-text}}
     Custom text
   {{/menu-toggle-text}}
