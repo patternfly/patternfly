@@ -6,7 +6,7 @@
   --#{$code-editor}__controls--Gap: var(--pf-t--global--spacer--xs);
 
   // header
-  --#{$code-editor}__header--before--BorderBottomWidth: var(--pf-t--global--border--width--control--default);
+  --#{$code-editor}__header--before--BorderBottomWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__header--before--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // header content
@@ -26,7 +26,7 @@
 
   // main
   --#{$code-editor}__main--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$code-editor}__main--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$code-editor}__main--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$code-editor}--m-read-only__main--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-editor}__upload--before--BorderWidth: 0;
@@ -55,10 +55,10 @@
   --#{$code-editor}__tab--PaddingRight: var( --pf-t--global--spacer--sm);
   --#{$code-editor}__tab--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__tab--PaddingLeft: var( --pf-t--global--spacer--sm);
-  --#{$code-editor}__tab--BorderTopWidth: var(--pf-t--global--border--width--control--default);
-  --#{$code-editor}__tab--BorderRightWidth: var(--pf-t--global--border--width--control--default);
+  --#{$code-editor}__tab--BorderTopWidth: var(--pf-t--global--border--width--box--default);
+  --#{$code-editor}__tab--BorderRightWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__tab--BorderBottomWidth: 0;
-  --#{$code-editor}__tab--BorderLeftWidth: var(--pf-t--global--border--width--control--default);
+  --#{$code-editor}__tab--BorderLeftWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__tab--BorderColor: var(--pf-t--global--border--color--default);
   --#{$code-editor}__tab--BorderRadius: var(--pf-t--global--border--radius--medium);
 
@@ -105,7 +105,6 @@
 
 .#{$code-editor}__controls {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--#{$code-editor}__controls--Gap);
   align-items: flex-start;
 }
