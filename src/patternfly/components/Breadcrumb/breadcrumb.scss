@@ -11,7 +11,8 @@
   --#{$breadcrumb}__item-divider--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // Breadcrumb link
-  --#{$breadcrumb}__link--PaddingInline: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
+  --#{$breadcrumb}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
+  --#{$breadcrumb}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
   --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
   --#{$breadcrumb}__link--TextDecoration: var(--pf-t--global--link--text-decoration);
   --#{$breadcrumb}__link--hover--Color: var(--pf-t--global--text--color--link--hover);
@@ -54,7 +55,7 @@
   list-style: none;
 
   &:first-child {
-    margin-inline-start: calc(var(--#{$breadcrumb}__link--PaddingInlineStart, var(--#{$breadcrumb}__link--PaddingInline)) * -1); // left align first item in list with list bounds while retaining link padding
+    margin-inline-start: calc(var(--#{$breadcrumb}__link--PaddingInlineStart) * -1); // left align first item in list with list bounds while retaining link padding
   }
 
   &:not(:last-child) {
@@ -74,8 +75,8 @@
 
 // Breadcrumb link
 .#{$breadcrumb}__link {
-  padding-inline-start: var(--#{$breadcrumb}__link--PaddingInlineStart, var(--#{$breadcrumb}__link--PaddingInline)); // use a mutable value for alignment control
-  padding-inline-end: var(--#{$breadcrumb}__link--PaddingInlineEnd, var(--#{$breadcrumb}__link--PaddingInline)); // use a mutable value for alignment control
+  padding-inline-start: var(--#{$breadcrumb}__link--PaddingInlineStart); // use a mutable value for alignment control
+  padding-inline-end: var(--#{$breadcrumb}__link--PaddingInlineEnd); // use a mutable value for alignment control
   font-size: inherit;
   font-weight: var(--#{$breadcrumb}__link--FontWeight);
   line-height: inherit;
