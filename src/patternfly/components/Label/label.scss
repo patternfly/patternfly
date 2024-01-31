@@ -166,6 +166,7 @@
   // Clickable
   --#{$label}--m-clickable--hover--BorderWidth: 0;
   --#{$label}--m-clickable--hover--BorderColor: transparent;
+  --#{$label}--m-clickable__content--Cursor: pointer;
 
   // Filled
   --#{$label}--m-filled__actions--c-button--Color: var(--#{$label}__icon--Color);
@@ -208,6 +209,7 @@
   // Content
   --#{$label}__content--MaxWidth: 100%;
   --#{$label}__content--Gap: var(--pf-t--global--spacer--xs);
+  --#{$label}__content--Cursor: initial;
 
   // Icon
   --#{$label}__icon--FontSize: var(--pf-t--global--icon--size--body--sm);
@@ -235,11 +237,13 @@
   --#{$label}--m-editable--TextDecorationOffset: #{pf-size-prem(4px)};
   --#{$label}--m-editable--TextDecorationColor: currentcolor;
   --#{$label}--m-editable__content--MaxWidth: 16ch;
+  --#{$label}--m-editable__content--Cursor: pointer;
 
   // Editable active
   --#{$label}--m-editable--m-editable-active--TextDecoration: none;
   --#{$label}--m-editable--m-editable-active--BackgroundColor: transparent;
-  --#{$label}--m-editable--m-editable-active--Color: var(--pf-t--global--text--color--regular);;
+  --#{$label}--m-editable--m-editable-active--Color: var(--pf-t--global--text--color--regular);
+  --#{$label}--m-editable--m-editable-active__content--Cursor: initial;
 }
 
 .#{$label} {
@@ -439,6 +443,7 @@
 
   &.pf-m-editable {
     --#{$label}__content--MaxWidth: var(--#{$label}--m-editable__content--MaxWidth);
+    --#{$label}__content--Cursor: var(--#{$label}--m-editable__content--Cursor);
 
     .#{$label}__text {
       text-decoration: var(--#{$label}--m-editable--TextDecoration);
@@ -453,6 +458,7 @@
     --#{$label}--m-editable--TextDecoration: var(--#{$label}--m-editable--m-editable-active--TextDecoration);
     --#{$label}--BackgroundColor: var(--#{$label}--m-editable--m-editable-active--BackgroundColor);
     --#{$label}--Color: var(--#{$label}--m-editable--m-editable-active--Color);
+    --#{$label}__content--Cursor: var(--#{$label}--m-editable--m-editable-active__content--Cursor);
   }
 
   &.pf-m-overflow {
@@ -481,17 +487,9 @@
     }
   }
 
-  &.pf-m-clickable,
-  &.pf-m-editable {
-    .#{$label}__content {
-      padding: 0;
-      cursor: pointer;
-      background-color: transparent;
-      border: none;
-    }
-  }
-
   &.pf-m-clickable {
+    --#{$label}__content--Cursor: var(--#{$label}--m-clickable__content--Cursor);
+
     .#{$label}__content {
       &,
       &:is(:hover, :focus) {
@@ -530,8 +528,11 @@
 .#{$label}__content {
   gap: var(--#{$label}__content--Gap);
   max-width: var(--#{$label}__content--MaxWidth);
+  padding: 0;
   overflow: hidden;
   color: var(--#{$label}--Color);
+  cursor: var(--#{$label}__content--Cursor, revert);
+  background: transparent;
   border-width: 0;
 
   &::before {
