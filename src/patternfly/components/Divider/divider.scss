@@ -13,7 +13,7 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 @mixin pf-v5-c-divider--m-vertical {
   flex-direction: column;
   width: var(--#{$divider}--Size); // apply size to width in vertical orientation
-  height: 100%;
+  height: inherit;
 }
 
 :root,
@@ -32,7 +32,9 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
   @include pf-v5-c-divider--m-horizontal; // default, set to orientation to horizontal
   @include pf-v5-hidden-visible(var(--#{$divider}--Display));
 
+  flex-shrink: 0;
   align-items: stretch;
+  align-self: stretch;
   justify-content: center;
   border: 0; // removes the default border styling on an hr
 

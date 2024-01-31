@@ -71,6 +71,29 @@ import './Divider.css'
 {{> divider divider--type="div" divider--modifier="pf-m-horizontal-on-lg pf-m-vertical"}}
 ```
 
+### In flex layout
+
+```hbs
+<strong>Horizontal</strong>
+<br>
+<br>
+{{#> l-flex}}
+  {{#> l-flex-item}}item 1{{/l-flex-item}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+  {{#> l-flex-item}}item 1{{/l-flex-item}}
+{{/l-flex}}
+<br>
+<br>
+<strong>Vertical</strong>
+<br>
+<br>
+{{#> l-flex l-flex--modifier="pf-m-column"}}
+  {{#> l-flex-item}}item 1{{/l-flex-item}}
+  {{> divider divider--type="div"}}
+  {{#> l-flex-item}}item 1{{/l-flex-item}}
+{{/l-flex}}
+```
+
 ## Documentation
 
 ### Overview
