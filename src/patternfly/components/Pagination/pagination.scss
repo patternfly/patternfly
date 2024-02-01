@@ -8,8 +8,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
 
   // Page insets
-  --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-page-insets--xl--inset: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--lg);
 
   // nav
   --#{$pagination}__nav--Display: none;
@@ -67,7 +66,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom--PaddingRight: var(--#{$pagination}--m-bottom--xl--PaddingRight);
     --#{$pagination}--m-bottom--PaddingLeft: var(--#{$pagination}--m-bottom--xl--PaddingLeft);
     --#{$pagination}__scroll-button--Width: var(--#{$pagination}__scroll-button--xl--Width);
-    --#{$pagination}--m-page-insets--inset: var(--#{$pagination}--m-page-insets--xl--inset);
   }
 }
 
