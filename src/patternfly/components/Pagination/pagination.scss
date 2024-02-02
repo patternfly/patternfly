@@ -19,7 +19,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   // nav page select
   --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--md);
   --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--sm) * 2 + var(--pf-t--global--border--width--100) * 2); // TODO: replace border width token with semantic token
+  --#{$pagination}__nav-page-select--c-form-control--width-base: calc((var(--#{$form-control}--PaddingRight) + var(--#{$form-control}--PaddingLeft)) + (var(--#{$form-control}--before--BorderWidth) * 2));
   --#{$pagination}__nav-page-select--c-form-control--width-chars: 2;
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
 
