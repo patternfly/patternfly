@@ -44,10 +44,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--Bottom: 0;
   --#{$pagination}--m-bottom--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$pagination}--m-bottom--md--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$pagination}--m-bottom--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
 
   // options menu
@@ -63,8 +59,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$pagination}--m-bottom--PaddingRight: var(--#{$pagination}--m-bottom--xl--PaddingRight);
-    --#{$pagination}--m-bottom--PaddingLeft: var(--#{$pagination}--m-bottom--xl--PaddingLeft);
     --#{$pagination}__scroll-button--Width: var(--#{$pagination}__scroll-button--xl--Width);
   }
 }
@@ -126,8 +120,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
       position: relative;
       justify-content: flex-end;
-      padding-block-start: var(--#{$pagination}--m-bottom--md--PaddingTop);
-      padding-block-end: var(--#{$pagination}--m-bottom--md--PaddingBottom);
 
       .#{$pagination}__nav-control.pf-m-first,
       .#{$pagination}__nav-control.pf-m-last,
