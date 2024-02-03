@@ -54,8 +54,8 @@
   white-space: nowrap; // Keeps the item-divider and __link text on the same line
   list-style: none;
 
-  &:first-child {
-    margin-inline-start: calc(var(--#{$breadcrumb}__link--PaddingInlineStart) * -1); // left align first item in list with list bounds while retaining link padding
+  &:first-child:has(.#{$breadcrumb}__link) {
+    --#{$breadcrumb}__link--PaddingInlineStart: 0; // remove padding from first child if link
   }
 
   &:not(:last-child) {

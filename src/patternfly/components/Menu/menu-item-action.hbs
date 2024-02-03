@@ -8,7 +8,7 @@
   {{#if menu-item-action--attribute}}
     {{{menu-item-action--attribute}}}
   {{/if}}>
-  {{#> button button--role="menuitem" button--IsPlain=true button--IsDisabled=menu-item--IsDisabled button--IsAriaDisabled=menu-list-item--IsAriaDisabled}}
+  {{#> button button--role="menuitem" button--IsPlain=true button--IsDisabled=menu-item--IsDisabled button--IsAriaDisabled=menu-item--IsAriaDisabled}}
     {{!-- TODO: {{#> button-icon}} --}}
     {{#ifAny menu-item-action--IsFavorite menu-item-action--IsFavorited}}
       <i class="fas fa-star" aria-hidden="true"></i>

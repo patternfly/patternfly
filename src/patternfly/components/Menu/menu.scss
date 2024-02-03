@@ -55,7 +55,7 @@
   --#{$menu}__item--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$menu}__item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$menu}__item--m-favorite--IconSize: var(--pf-t--global--icon--size--sm);
+  --#{$menu}__item--m-favorite--FontSize: var(--pf-t--global--icon--size--sm);
   --#{$menu}__item--m-disabled--Color: var(--pf-t--global--text--color--disabled);
 
   // * Menu header
@@ -64,7 +64,7 @@
   --#{$menu}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$menu}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
-  // * Menu header
+  // * Menu group title
   --#{$menu}__group-title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__group-title--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$menu}__group-title--PaddingInlineStart: var(--pf-t--global--spacer--lg);
@@ -92,26 +92,23 @@
   --#{$menu}__item-description--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$menu}__item-description--Color: var(--pf-t--global--text--color--subtle);
 
+  // * Menu action
+  // --#{$menu}__item-action--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$menu}__item-action--IconSize: var(--pf-t--global--icon--size--md);
+  --#{$menu}__item-action--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$menu}__item-action--m-favorited--Color: var(--pf-t--global--icon--color--favorite--clicked);
+  --#{$menu}__item-action--button--MinWidth: calc(var(--#{$menu}__item-action--IconSize) + var(--pf-t--global--spacer--sm) * 2);
+
+  // --#{$menu}__item-action--BackgroundColor: transparent;
+  // --#{$menu}__item-action--hover--Color: var(--pf-t--global--icon--color--regular);
+  // --#{$menu}__item-action--hover--BackgroundColor: transparent;
+  // --#{$menu}__item-action--disabled--Color: var(--pf-t--global--text--color--disabled);
+  // --#{$menu}__item-action--m-favorite--Color: var(--pf-t--global--icon--color--subtle);
+  // --#{$menu}__item-action--m-favorite--hover--Color: var(--pf-t--global--icon--color--favorite--hover);
+
   // * Menu select icon
   --#{$menu}__item-select-icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$menu}__item-select-icon--m-selected--Color: var(--pf-t--global--icon--color--brand--default);
-
-  // * Menu action
-  --#{$menu}__item-action--PaddingBlock: var(--pf-t--global--spacer--sm);
-  --#{$menu}__item-action--PaddingInline: var(--pf-t--global--spacer--md);
-  --#{$menu}__item-action--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$menu}__item-action--IconSize: var(--pf-t--global--icon--size--md);
-  --#{$menu}__item-action--Color: var(--pf-t--global--text--color--subtle);
-  --#{$menu}__item-action--BackgroundColor: transparent;
-  --#{$menu}__item-action--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$menu}__item-action--hover--BackgroundColor: transparent;
-  --#{$menu}__item-action--disabled--Color: var(--pf-t--global--text--color--disabled);
-  --#{$menu}__item-action--m-favorite--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$menu}__item-action--m-favorite--hover--Color: var(--pf-t--global--icon--color--favorite--hover);
-  --#{$menu}__item-action--m-favorited--Color: var(--pf-t--global--icon--color--favorite--clicked);
-
-  // // * Menu item icon
-  // --#{$menu}__item-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$menu}__item--m-selected__item-select-icon--Color: var(--pf-t--global--icon--color--brand--default);
 
   // * Menu link icon
   --#{$menu}__item-external--Color: var(--pf-t--global--icon--color--brand--default);
@@ -170,9 +167,9 @@
   position: relative;
 }
 
-// - Menu disabled
+// - Menu item disabled - Menu action disabled
 .#{$menu}__item,
-.#{$menu}__action {
+.#{$menu}__item-action {
   &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled, [aria-disabled="true"]) {
     --#{$menu}__item--Color: var(--#{$menu}__item--m-disabled--Color);
     --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
@@ -427,10 +424,9 @@
 .#{$menu}__list-item {
   align-items: start;
   min-width: 0; // allow list item to shrink for text overflow
-  color: var(--#{$menu}__list-item--Color);
   background-color: var(--#{$menu}__list-item--BackgroundColor);
 
-  &:has(.#{$menu}__item:hover, .#{$menu}__item:focus) {
+  &:is(:hover, :focus) {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
 
     .#{$menu}__item-external-icon {
@@ -501,7 +497,7 @@
   }
 
   &.pf-m-selected {
-    --#{$menu}__item-select-icon--Color: var(--#{$menu}__item-select-icon--m-selected--Color);
+    --#{$menu}__item-select-icon--Color: var(--#{$menu}__item--m-selected__item-select-icon--Color);
   }
 }
 
@@ -566,41 +562,32 @@
   color: var(--#{$menu}__item--icon--Color, inherit);
 }
 
-// - Menu item external}
-
 // - Menu item select icon - Menu item external icon
 .#{$menu}__item-select-icon,
 .#{$menu}__item-external-icon {
   opacity: 0;
 }
 
-// - Menu actions
+// - Menu item action
 .#{$menu}__item-action {
-  color: var(--#{$menu}__item-action--Color);
-  background-color: var(--#{$menu}__item-action--BackgroundColor);
+  margin-top: 2px;
 
   .#{$button} {
-    --#{$button}--FontSize: var(--#{$menu}__item-action--IconSize);
+    --#{$button}--FontSize: inherit;
     --#{$button}--Color: var(--#{$menu}__item-action--Color);
-    --#{$button}--hover--Color: var(--#{$menu}__item-action--hover--Color);
-    --#{$button}--disabled--Color: var(--#{$menu}__item-action--disabled--Color);
-    --#{$button}--disabled--BackgroundColor: var(--#{$menu}__item-action--disabled--BackgroundColor);
+    --#{$button}--m-plain--MinWidth: var(--#{$menu}__item-action--button--MinWidth);
+
+    line-height: 1;
+    aspect-ratio: 1 / 1;
+
+    > i {
+      font-size: var(--#{$menu}__item-action--IconSize);
+    }
   }
 
   &.pf-m-favorited,
   &.pf-m-favorited:hover {
     --#{$menu}__item-action--Color: var(--#{$menu}__item-action--m-favorited--Color);
-  }
-
-  &:is(:hover, :focus) {
-    --#{$menu}__item-action--Color: var(--#{$menu}__item-action--hover--Color);
-  }
-
-  &:disabled,
-  &.pf-m-disabled,
-  &.pf-m-aria-disabled {
-    --#{$menu}__item-action--Color: var(--#{$menu}__item-action--disabled--Color);
-    --#{$menu}__item-action--BackgroundColor: var(--#{$menu}__item-action--disabled--BackgroundColor);
   }
 }
 
@@ -608,7 +595,6 @@
 .#{$menu}__breadcrumb {
   --#{$breadcrumb}__item--FontSize: var(--#{$menu}__breadcrumb--FontSize);
 
-  z-index: var(--#{$menu}--ZIndex);
   padding-block-start: var(--#{$menu}__breadcrumb--PaddingBlockStart);
   padding-block-end: var(--#{$menu}__breadcrumb--PaddingBlockEnd);
   padding-inline-start: var(--#{$menu}__breadcrumb--PaddingInlineStart);

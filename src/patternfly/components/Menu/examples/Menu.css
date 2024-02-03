@@ -16,3 +16,7 @@
 :is([id="ws-core-c-menu-drilldown-with-breadcrumbs---level-3"], [id="ws-core-c-menu-drilldown-with-breadcrumbs---level-4"]) .pf-v5-c-breadcrumb__dropdown .pf-v5-c-menu {
   position: absolute;
 }
+
+.pf-v5-c-menu__breadcrumb .pf-v5-c-menu {
+  z-index: 1;
+}
