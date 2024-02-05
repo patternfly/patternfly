@@ -29,7 +29,7 @@
 
   // Close
   --#{$wizard}__close--Top: calc(var(--pf-t--global--spacer--lg) - var(--#{$pf-global}--spacer--form-element));
-  --#{$wizard}__close--Right: 0;
+  --#{$wizard}__close--Right: var(--pf-t--global--spacer--sm);
   --#{$wizard}__close--xl--Right: var(--pf-t--global--spacer--lg);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
 
@@ -68,7 +68,7 @@
   // Nav link number
   --#{$wizard}__nav-link--before--Width: 1.5rem;
   --#{$wizard}__nav-link--before--Height: 1.5rem;
-  --#{$wizard}__nav-link--before--Top: var(--#{$pf-global}--spacer--form-element);
+  --#{$wizard}__nav-link--before--Top: var(--#{$pf-global}--spacer--form-element); // TOOD form element spacer
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
