@@ -23,12 +23,12 @@
         {{/wizard-nav-link}}
       {{/if}}
       {{#> wizard-nav-list}}
-        {{#> wizard-nav-item}}
+        {{#> wizard-nav-item newcontext}}
           {{#> wizard-nav-link}}
             Substep A
           {{/wizard-nav-link}}
         {{/wizard-nav-item}}
-        {{#> wizard-nav-item}}
+        {{#> wizard-nav-item newcontext}}
           {{!-- If info page --}}
           {{#if wizard-template-nav--IsInfo}}
             {{#> wizard-nav-link}}
@@ -40,7 +40,7 @@
             {{/wizard-nav-link}}
           {{/if}}
         {{/wizard-nav-item}}
-        {{#> wizard-nav-item}}
+        {{#> wizard-nav-item newcontext}}
           {{#> wizard-nav-link}}
             Substep C
           {{/wizard-nav-link}}

@@ -40,22 +40,22 @@ import './Wizard.css'
                 Information
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"}}
               {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
                 Configuration
               {{/wizard-nav-link}}
               {{#> wizard-nav-list}}
-                {{#> wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
                   {{#> wizard-nav-link}}
                     Substep A
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
                   {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                     Substep B
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
                   {{#> wizard-nav-link}}
                     Substep C
                   {{/wizard-nav-link}}
@@ -115,22 +115,22 @@ import './Wizard.css'
               Information
             {{/wizard-nav-link}}
           {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
+          {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"}}
             {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
               Configuration
             {{/wizard-nav-link}}
             {{#> wizard-nav-list}}
-              {{#> wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
                 {{#> wizard-nav-link}}
                   Substep A
                 {{/wizard-nav-link}}
               {{/wizard-nav-item}}
-              {{#> wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
                 {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                   Substep B
                 {{/wizard-nav-link}}
               {{/wizard-nav-item}}
-              {{#> wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
                 {{#> wizard-nav-link}}
                   Substep C
                 {{/wizard-nav-link}}
@@ -183,7 +183,7 @@ import './Wizard.css'
   {{/wizard-toggle}}
   {{#> wizard-outer-wrap}}
     {{#> wizard-inner-wrap}}
-      {{> wizard-template-nav}}
+      {{> wizard-template-nav wizard-template-nav--IsExpandable="true" wizard-template-nav--IsExpanded="true"}}
       {{#> wizard-main wizard-main--HasNoBody="true"}}
         {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
           {{#> drawer-main}}
