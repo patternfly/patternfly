@@ -36,6 +36,7 @@
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 
   // Title
+  --#{$alert}__title--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$alert}__title--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$alert}__title--FontWeight: var(--pf-t--global--font--weight--heading);
   --#{$alert}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
@@ -204,6 +205,7 @@
 
 .#{$alert}__title {
   grid-area: title;
+  font-family: var(--#{$alert}__title--FontFamily);
   font-size: var(--#{$alert}__title--FontSize);
   font-weight: var(--#{$alert}__title--FontWeight);
   line-height: var(--#{$alert}__title--LineHeight);
