@@ -1,7 +1,7 @@
-/**
- * Do not edit directly
- * Generated on Tue, 05 Dec 2023 16:11:05 GMT
- */
+// /**
+//  * Do not edit directly
+//  * Generated on Thu, 01 Feb 2024 18:21:44 GMT
+//  */
 
  :root:where(.pf-v5-theme-dark) {
   --pf-t--global--background--color--action--plain--default: rgba(0, 0, 0, 0.0000);
@@ -253,6 +253,8 @@
   --pf-t--global--text--color--on-brand--clicked: var(--pf-t--global--text--color--inverse);
   --pf-t--global--text--color--on-brand--hover: var(--pf-t--global--text--color--inverse);
   --pf-t--global--text--color--on-brand--default: var(--pf-t--global--text--color--inverse);
+  --pf-t--global--border--color--alt: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--border--color--disabled: var(--pf-t--global--background--color--disabled--default);
   --pf-t--global--border--color--status--custom--clicked: var(--pf-t--global--color--status--custom--clicked);
   --pf-t--global--border--color--status--custom--hover: var(--pf-t--global--color--status--custom--hover);
   --pf-t--global--border--color--status--custom--default: var(--pf-t--global--color--status--custom--default);
@@ -345,7 +347,7 @@
   --pf-t--global--color--status--unread--attention--hover: var(--pf-t--global--color--status--danger--hover);
   --pf-t--global--color--status--unread--attention--clicked: var(--pf-t--global--color--status--danger--clicked);
   --pf-t--global--color--status--unread--attention--default: var(--pf-t--global--color--status--danger--default);
-  --pf-t--global--color--status--unread--default--active: var(--pf-t--global--color--brand--clicked);
+  --pf-t--global--color--status--unread--default--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--color--status--unread--default--hover: var(--pf-t--global--color--brand--hover);
   --pf-t--global--color--status--unread--default--default: var(--pf-t--global--color--brand--default);
   --pf-t--global--background--color--floating--clicked: var(--pf-t--global--background--color--action--plain--hover);
