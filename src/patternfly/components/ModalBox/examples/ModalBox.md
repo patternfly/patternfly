@@ -292,7 +292,7 @@ import './ModalBox.css'
 ### Danger alert with modifier on modal title
 The status modifier classes can be applied directly to the modal title element, instead of the parent modal.
 
-```hbs isFullscreen
+```hbs isFullscreen isBeta
 {{#> modal-example modal-example--id="danger-alert-title"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDangerAlert="true" modal-box--HasStatusTitle=true}}
     {{> modal-box-close}}
