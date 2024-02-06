@@ -28,11 +28,11 @@
   --#{$form-control}--hover--after--BorderColor: var(--pf-t--global--border--color--hover);
 
   // focus
-  --#{$form-control}--focus--after--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$form-control}--focus--after--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$form-control}--focus--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // expanded
-  --#{$form-control}--m-expanded--after--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$form-control}--m-expanded--after--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$form-control}--m-expanded--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // placeholder
@@ -48,7 +48,7 @@
   --#{$form-control}--m-readonly--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$form-control}--m-readonly--BorderColor: transparent;
   --#{$form-control}--m-readonly--hover--after--BorderColor: revert;
-  --#{$form-control}--m-readonly--focus--after--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$form-control}--m-readonly--focus--after--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$form-control}--m-readonly--focus--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // readonly plain

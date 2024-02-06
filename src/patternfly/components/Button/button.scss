@@ -25,7 +25,7 @@
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
-  --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--button--active);
+  --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--button--clicked);
 
   // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -164,7 +164,7 @@
   --#{$button}--m-control--m-clicked--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--m-control--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-control--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$button}--m-control--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Stateful

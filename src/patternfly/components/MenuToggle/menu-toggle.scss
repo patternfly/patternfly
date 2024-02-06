@@ -14,7 +14,7 @@
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$menu-toggle}--hover--BorderWidth: var(--pf-t--global--border--width--control--hover);
   --#{$menu-toggle}--hover--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$menu-toggle}--active--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$menu-toggle}--active--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$menu-toggle}--active--BorderColor: var(--pf-t--global--border--color--active);
 
   // Border base
@@ -34,18 +34,18 @@
 
   // Focus
   --#{$menu-toggle}--focus--BackgroundColor: transparent;
-  --#{$menu-toggle}--focus--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
+  --#{$menu-toggle}--focus--after--BorderBottomWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$menu-toggle}--focus--after--BorderBottomColor: var(--pf-t--global--border--color--active);
 
   // Active
   --#{$menu-toggle}--active--BackgroundColor: transparent;
-  --#{$menu-toggle}--active--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
+  --#{$menu-toggle}--active--after--BorderBottomWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$menu-toggle}--active--after--BorderBottomColor: var(--pf-t--global--border--color--active);
 
   // Expanded
   --#{$menu-toggle}--m-expanded--Color: var(--#{$pf-global}--Color--100);
   --#{$menu-toggle}--m-expanded--BackgroundColor: transparent;
-  --#{$menu-toggle}--m-expanded--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
+  --#{$menu-toggle}--m-expanded--after--BorderBottomWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$menu-toggle}--m-expanded--after--BorderBottomColor: var(--pf-t--global--border--color--active);
 
   // Disabled
