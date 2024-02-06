@@ -38,6 +38,8 @@
   --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__list-item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu}__list-item--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$menu}__list-item--MixBlendMode: normal;
+  --#{$menu}__list-item--MixBlendMode--hover: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$menu}__list-item--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
   --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -51,11 +53,11 @@
   --#{$menu}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$menu}__item--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__item--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu}__item--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu}__item--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$menu}__item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$menu}__item--m-favorite--FontSize: var(--pf-t--global--icon--size--sm);
   --#{$menu}__item--m-disabled--Color: var(--pf-t--global--text--color--disabled);
 
   // * Menu header
@@ -93,18 +95,11 @@
   --#{$menu}__item-description--Color: var(--pf-t--global--text--color--subtle);
 
   // * Menu action
-  // --#{$menu}__item-action--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$menu}__item-action--IconSize: var(--pf-t--global--icon--size--md);
+  --#{$menu}__item-action--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$menu}__item-action--icon--size: var(--#{$menu}__item-action--FontSize, var(--pf-t--global--icon--size--md));
   --#{$menu}__item-action--Color: var(--pf-t--global--icon--color--subtle);
   --#{$menu}__item-action--m-favorited--Color: var(--pf-t--global--icon--color--favorite--clicked);
-  --#{$menu}__item-action--button--MinWidth: calc(var(--#{$menu}__item-action--IconSize) + var(--pf-t--global--spacer--sm) * 2);
-
-  // --#{$menu}__item-action--BackgroundColor: transparent;
-  // --#{$menu}__item-action--hover--Color: var(--pf-t--global--icon--color--regular);
-  // --#{$menu}__item-action--hover--BackgroundColor: transparent;
-  // --#{$menu}__item-action--disabled--Color: var(--pf-t--global--text--color--disabled);
-  // --#{$menu}__item-action--m-favorite--Color: var(--pf-t--global--icon--color--subtle);
-  // --#{$menu}__item-action--m-favorite--hover--Color: var(--pf-t--global--icon--color--favorite--hover);
+  --#{$menu}__item-action--button--MinWidth: calc(var(--#{$menu}__item-action--icon--size) + var(--pf-t--global--spacer--sm) * 2);
 
   // * Menu select icon
   --#{$menu}__item-select-icon--Color: var(--pf-t--global--icon--color--subtle);
@@ -168,7 +163,7 @@
 }
 
 // - Menu item disabled - Menu action disabled
-.#{$menu}__item,
+.#{$menu}__list-item,
 .#{$menu}__item-action {
   &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled, [aria-disabled="true"]) {
     --#{$menu}__item--Color: var(--#{$menu}__item--m-disabled--Color);
@@ -186,6 +181,7 @@
   display: none;
 }
 
+// TODO: simplify this code block
 // - Menu
 .#{$menu} {
   // TODO: Explore this fallback method
@@ -204,6 +200,7 @@
 
   .#{$menu} {
     min-width: 100%;
+    border-radius: 0;
   }
 
   .#{$menu}__content {
@@ -228,6 +225,7 @@
     inset-inline-start: var(--#{$menu}--m-flyout__menu--Left);
     inset-inline-end: var(--#{$menu}--m-flyout__menu--Right);
     z-index: var(--#{$menu}--m-flyout__Zindex);
+    border-radius: var(--#{$menu}--BorderRadius);
 
     .#{$menu}__content {
       overflow-y: visible;
@@ -357,6 +355,10 @@
     --#{$menu}__footer--PaddingBlockStart: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
     --#{$menu}__footer--PaddingBlockEnd: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
 
+    &:has(.#{$menu}__footer) {
+      --#{$menu}--PaddingBlockEnd: 0;
+    }
+
     .#{$menu}__content,
     .#{$menu}__list {
       overflow-y: auto;
@@ -364,16 +366,18 @@
 
     // offset row-gap when scrollbar is present
     .#{$menu}__content {
+      // TODO: figure out why this fixes the scrollable
+      position: relative;
+      z-index: var(--#{$menu}--ZIndex);
       margin-block-start: calc(var(--#{$menu}--RowGap) * -1);
       margin-block-end: calc(var(--#{$menu}--RowGap) * -1);
+      overflow: hidden; // hide scrollbars
     }
 
     .#{$menu}__list {
       padding-block-start: var(--#{$menu}--RowGap);
       padding-block-end: var(--#{$menu}--RowGap);
     }
-
-    overflow: hidden; // hide scrollbars
   }
 }
 
@@ -422,17 +426,19 @@
 
 // - Menu list item
 .#{$menu}__list-item {
-  align-items: start;
+  align-items: baseline;
   min-width: 0; // allow list item to shrink for text overflow
-  background-color: var(--#{$menu}__list-item--BackgroundColor);
 
-  &:is(:hover, :focus) {
-    --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
+  > * {
+    position: relative;
+  }
 
-    .#{$menu}__item-external-icon {
-      color: var(--#{$menu}__item-external--Color);
-      opacity: 1;
-    }
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--#{$menu}__list-item--BackgroundColor);
+    mix-blend-mode: var(--#{$menu}__list-item--MixBlendMode);
   }
 
   // - Menu item load
@@ -455,14 +461,23 @@
   &.pf-m-danger {
     --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--Color);
 
-    &:hover,
-    &:focus {
+    &:is(:hover, :focus) {
       --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--hover--Color, var(--#{$menu}__list-item--m-danger--Color));
     }
   }
 
   &:has(.#{$menu}__item-action) {
     padding-inline-end: var(--#{$menu}__list-item--has--menu-action--PaddingInlineEnd);
+  }
+
+  &:has(> :hover) {
+    --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
+    --#{$menu}__list-item--MixBlendMode: var(--#{$menu}__list-item--MixBlendMode--hover);
+
+    .#{$menu}__item-select-icon,
+    .#{$menu}__item-external-icon {
+      opacity: 1;
+    }
   }
 }
 
@@ -486,18 +501,19 @@
   border: 0;
   outline-offset: var(--#{$menu}--OutlineOffset);
 
-  &:is(:hover, :focus) {
-    --#{$menu}__item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
-  }
-
-  &:is(.pf-m-selected, :hover) {
-    .#{$menu}__item-select-icon {
-      opacity: 1;
-    }
-  }
-
   &.pf-m-selected {
     --#{$menu}__item-select-icon--Color: var(--#{$menu}__item--m-selected__item-select-icon--Color);
+  }
+
+  &:is(:hover, :focus, :active, .pf-m-selected) {
+    .#{$menu}__item-select-icon,
+    .#{$menu}__item-external-icon {
+      opacity: 1;
+    }
+
+    .#{$menu}__item-external-icon {
+      color: var(--#{$menu}__item-external--Color);
+    }
   }
 }
 
@@ -568,25 +584,14 @@
   opacity: 0;
 }
 
+// TODO: standardize icon fitting
 // - Menu item action
+.#{$menu}__item-toggle-icon,
 .#{$menu}__item-action {
-  margin-top: 2px;
-
-  .#{$button} {
-    --#{$button}--FontSize: inherit;
-    --#{$button}--Color: var(--#{$menu}__item-action--Color);
-    --#{$button}--m-plain--MinWidth: var(--#{$menu}__item-action--button--MinWidth);
-
-    line-height: 1;
-    aspect-ratio: 1 / 1;
-
-    > i {
-      font-size: var(--#{$menu}__item-action--IconSize);
-    }
-  }
-
   &.pf-m-favorited,
-  &.pf-m-favorited:hover {
+  &.pf-m-favorited:hover,
+  &.pf-m-favorited .#{$button} {
+    --#{$button}--Color: var(--#{$menu}__item-action--m-favorited--Color);
     --#{$menu}__item-action--Color: var(--#{$menu}__item-action--m-favorited--Color);
   }
 }

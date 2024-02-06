@@ -95,13 +95,13 @@ export const stringToLower = function (string) {
 export const dasherize = (...params) => {
   let newString = '';
 
-  params.forEach(function(element, i) {
+  params.forEach(function(element) {
     if (typeof element === 'string') {
-      newString += element.replace(/[A-Z]/g, m => '-' + m.toLowerCase().replace(/\s/g, ''));
+      newString += element.replace(/[A-Z]/g, m => '-' + m.toLowerCase());
     }
   });
 
-  return newString
+  return newString.replace(' ', '-');
 };
 
 // ======================================================================================
@@ -128,18 +128,65 @@ export const array = function () {
   return Array.prototype.slice.call(arguments, 0, -1);
 };
 
-export const hasValue = function (prop) {
-  let temp = '';
+// ======================================================================================
+// has: is a function that returns an object with three properties: any, all, none
+//      these properties are boolean values that represent the state of the passed value
+// ======================================================================================
+export const has = function (value) {
+  const result = {};
 
-  if (Array.isArray(prop)) {
-    temp = prop.includes(true);
-  } else if (prop !== undefined) {
-    temp = false;
+  if (Array.isArray(value)) {
+    result.any = value.includes(true);
+    result.all = value.every(element => element === true);
+    result.none = value.every(value => !value);
+  } else if (value !== undefined && value === true) {
+    result.any = true;
+    result.all = true;
+    result.none = false;
   } else {
-    temp = false
+    result.any = false;
+    result.all = false;
+    result.none = true;
   }
 
-  return temp;
+  return result;
+}
+
+export const returnHas = function (value, keyword, fallback) {
+  const compValue = has(value);
+  const boolResult = compValue[keyword];
+
+  if (boolResult === true && fallback !== undefined) {
+    return fallback;
+  } else {
+    return boolResult;
+  }
+}
+
+// ======================================================================================
+// hasAny/All/None: is a helper function that returns the value of a propterty or array
+// these properties are boolean values that represent the state of the passed value
+// optional string value can be returned if true
+// ======================================================================================
+//
+// Usage:
+//   {{#> component}}
+//     {{hasAny (array component--IsExpanded component--IsCurrent component--IsActive)}}
+//     returns: result[any: true/false, all: true/false, none: true/false]
+//
+// Options:
+//     Can request a specific value to be logged. `component--id` is requested on the second line
+// ======================================================================================
+export const hasAny = function (value, fallback = '') {
+  return returnHas(value, 'any', fallback);
+}
+
+export const hasAll = function (value, fallback = '') {
+  return returnHas(value, 'all', fallback);
+}
+
+export const hasNone = function (value, fallback = '') {
+  return returnHas(value, 'none', fallback);
 }
 
 // ======================================================================================

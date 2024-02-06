@@ -12,11 +12,10 @@
       {{#if menu-list-item--IsDisabled}}
         tabindex="-1"
       {{/if}}
-    {{else}}
+    {{else if (hasNone menu-list-item--IsLoading)}}
       type="button"
       {{#if menu-list-item--IsDisabled}}
         disabled
-        tabindex="-1"
       {{else if menu-list-item--IsAriaDisabled}}
         aria-disabled="true"
       {{/if}}

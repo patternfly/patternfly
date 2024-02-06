@@ -1515,7 +1515,7 @@ import './Menu.css'
       {{/menu-list-item}}
       {{> divider divider--type='li'}}
       {{#> menu-list-item menu-list-item--modifier="pf-m-loading"}}
-        {{#> menu-item}}
+        {{#> menu-item menu-item--type='div'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
