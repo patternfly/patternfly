@@ -87,8 +87,8 @@
   // ============================================================ //
 
   // Table cell - toggle
-  --#{$table}__toggle--c-button--MarginTop: calc(var(--pf-t--global--spacer--control--vertical) * -1);
-  --#{$table}__toggle--c-button--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical) * -1);
+  --#{$table}__toggle--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
+  --#{$table}__toggle--c-button--MarginBottom: calc(var(--#{$button}--PaddingTop) * -1);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 270deg;
   --#{$table}__toggle--c-button__toggle-icon--Transition: .2s ease-in 0s;
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
