@@ -22,13 +22,6 @@
   --#{$table}__caption--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$table}__caption--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$table}__caption--xl--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$table}__caption--xl--PaddingLeft: var(--pf-t--global--spacer--md);
-
-  @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
-    --#{$table}__caption--PaddingRight: var(--#{$table}__caption--xl--PaddingRight);
-    --#{$table}__caption--PaddingLeft: var(--#{$table}__caption--xl--PaddingLeft);
-  }
 
   // Thead
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--default);
@@ -52,8 +45,6 @@
   --#{$table}--cell--PaddingLeft: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--first-last-child--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}--cell--first-last-child--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--first-last-child--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$table}--cell--first-last-child--xl--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingLeft: var(--#{$table}--cell--Padding--base);
 
   // Default cell variables
@@ -234,8 +225,6 @@
   --#{$table}--m-compact--cell--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--first-last-child--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}--m-compact--cell--first-last-child--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$table}--m-compact--cell--first-last-child--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$table}--m-compact--cell--first-last-child--xl--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$table}--m-compact--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--m-compact__expandable-row-content--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$table}--m-compact__expandable-row-content--PaddingRight: var(--pf-t--global--spacer--lg);
@@ -313,13 +302,6 @@
 
   // Sticky
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--Zindex--xs);
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$table}--cell--first-last-child--PaddingRight: var(--#{$table}--cell--first-last-child--xl--PaddingRight);
-    --#{$table}--cell--first-last-child--PaddingLeft: var(--#{$table}--cell--first-last-child--xl--PaddingLeft);
-    --#{$table}--m-compact--cell--first-last-child--PaddingLeft: var(--#{$table}--m-compact--cell--first-last-child--xl--PaddingLeft);
-    --#{$table}--m-compact--cell--first-last-child--PaddingRight: var(--#{$table}--m-compact--cell--first-last-child--xl--PaddingRight);
-  }
 
   @include pf-v5-t-light; // This component always needs to be light
 
