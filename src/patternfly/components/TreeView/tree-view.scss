@@ -8,15 +8,16 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node--nested-indent--base: calc(var(--#{$tree-view}__node--indent--base) - var(--pf-t--global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // Node
-  --#{$tree-view}__node--PaddingTop--base: var(--pf-t--global--spacer--sm);
-  --#{$tree-view}__node--PaddingTop: var(--#{$tree-view}__node--PaddingTop--base);
+  --#{$tree-view}__node--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node--PaddingLeft: var(--#{$tree-view}__node--indent--base);
   --#{$tree-view}__node--Color: var(--pf-t--global--text--color--subtle);
   --#{$tree-view}__node--BackgroundColor: transparent;
+  --#{$tree-view}__node--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$tree-view}__node--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$tree-view}__node--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$tree-view}__node--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
   // Container
   --#{$tree-view}__node-container--Display: contents;
@@ -25,11 +26,8 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node-content--Overflow: visible;
 
-  // Link hover
-  --#{$tree-view}__node--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-
   // Nested toggle
-  --#{$tree-view}__list-item__list-item__node-toggle--Top: var(--#{$tree-view}__node--PaddingTop--base);
+  --#{$tree-view}__list-item__list-item__node-toggle--Top: var(--#{$tree-view}__node--PaddingTop);
   --#{$tree-view}__list-item__list-item__node-toggle--Left: var(--#{$tree-view}__node--PaddingLeft);
   --#{$tree-view}__list-item__list-item__node-toggle--TranslateX: -100%;
 
@@ -43,29 +41,28 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   // Toggle icon
   --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--body--default);
   --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--body--default);
-  --#{$tree-view}__node-toggle-button--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$tree-view}__node-toggle-button--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$tree-view}__node-toggle-button--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$tree-view}__node-toggle-button--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$tree-view}__node-toggle-button--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$tree-view}__node-toggle-button--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$tree-view}__node-toggle-button--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node-toggle-button--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$tree-view}__node-toggle-button--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node-toggle-button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$tree-view}__node-toggle-button--MarginTop: calc(var(--#{$tree-view}__node-toggle-button--PaddingTop) * -1);
+  --#{$tree-view}__node-toggle-button--MarginBottom: calc(var(--#{$tree-view}__node-toggle-button--PaddingTop) * -1);
 
   // Check
-  --#{$tree-view}__node-check--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}__node-check--MarginRight: var(--pf-t--global--spacer--sm);
 
   // Badge
-  --#{$tree-view}__node-count--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}__node-count--c-badge--m-read--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+  --#{$tree-view}__node-count--MarginLeft: var(--pf-t--global--spacer--sm);
 
   // Search
-  --#{$tree-view}__search--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}__search--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}__search--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}__search--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}__search--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__search--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__search--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__search--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // Icon
-  --#{$tree-view}__node-icon--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}__node-icon--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$tree-view}__node-icon--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$tree-view}__node-toggle-icon--base--Rotate: 0;
   --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__node-toggle-icon--base--Rotate);
   --#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate: 90deg;
@@ -74,21 +71,21 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node-text--max-lines: 1;
 
   // Title
-  --#{$tree-view}__node-title--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$tree-view}__node-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Action
-  --#{$tree-view}__action--MarginLeft: var(--#{$pf-global}--spacer--md);
+  --#{$tree-view}__action--MarginLeft: var(--pf-t--global--spacer--md);
 
   // Guides
   // ================================================================== //
   --#{$tree-view}--m-guides--guide--Left: var(--#{$tree-view}--m-guides--guide-left--base); // starting value, this gets updated for each nesting level
 
   // Base
-  --#{$tree-view}--m-guides--guide-color--base: var(--#{$pf-global}--BorderColor--100);
-  --#{$tree-view}--m-guides--guide-width--base: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$tree-view}--m-guides--guide-color--base: var(--pf-t--global--border--color--default);
+  --#{$tree-view}--m-guides--guide-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$tree-view}--m-guides--guide-left--base: calc(var(--#{$tree-view}__node--PaddingLeft) - var(--#{$tree-view}--m-guides__list-node--guide-width--base));
   --#{$tree-view}--m-guides--guide-left--base--offset: calc(var(--#{$tree-view}__list-item__list-item__node-toggle--Left) + var(--#{$tree-view}__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
-  --#{$tree-view}--m-guides__list-node--guide-width--base: var(--#{$pf-global}--spacer--lg);
+  --#{$tree-view}--m-guides__list-node--guide-width--base: var(--pf-t--global--spacer--lg);
 
   // List item
   --#{$tree-view}--m-guides__list-item--before--Top: 0;
@@ -97,7 +94,7 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-guides__list-item--before--BackgroundColor: var(--#{$tree-view}--m-guides--guide-color--base);
   --#{$tree-view}--m-guides__list-item--last-child--before--Top: var(--#{$tree-view}--m-guides__node--before--Top);
   --#{$tree-view}--m-guides__list-item--last-child--before--Height: var(--#{$tree-view}--m-guides__list-item--last-child--before--Top);
-  --#{$tree-view}--m-guides__list-item--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$tree-view}--m-guides__list-item--ZIndex: var(--pf-t--global--Zindex--xs);
 
   // Node
   --#{$tree-view}--m-guides__node--before--Width: #{pf-size-prem(16px)};
@@ -108,28 +105,28 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   // Compact
   // ================================================================== //
   // Base
-  --#{$tree-view}--m-compact--base-border--Left--offset: var(--#{$pf-global}--spacer--md);
+  --#{$tree-view}--m-compact--base-border--Left--offset: var(--pf-t--global--spacer--md);
   --#{$tree-view}--m-compact--base-border--Left: calc(var(--#{$tree-view}__node--PaddingLeft) - var(--#{$tree-view}--m-compact--base-border--Left--offset));
   --#{$tree-view}--m-compact__node--indent--base: var(--#{$tree-view}__node--indent--base); // based off of the expected width of the toggle button
-  --#{$tree-view}--m-compact__node--nested-indent--base: var(--#{$pf-global}--spacer--lg);
+  --#{$tree-view}--m-compact__node--nested-indent--base: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact--border--Left: var(--#{$tree-view}--m-compact--base-border--Left);
 
   // Node
   --#{$tree-view}--m-compact__node--PaddingTop: 0;
   --#{$tree-view}--m-compact__node--PaddingBottom: 0;
-  --#{$tree-view}--m-compact__node--nested--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$tree-view}--m-compact__node--nested--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}--m-compact__node--nested--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}--m-compact__node--nested--PaddingBottom: var(--pf-t--global--spacer--sm);
 
   // Node toggle
   --#{$tree-view}--m-compact__list-item__list-item__node-toggle--Top: calc(var(--#{$tree-view}--m-compact__node-container--PaddingTop));
 
   // List item
-  --#{$tree-view}--m-compact__list-item--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$tree-view}--m-compact__list-item--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$tree-view}--m-compact__list-item--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$tree-view}--m-compact__list-item--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$tree-view}--m-compact__list-item--before--Top: 0;
   --#{$tree-view}--m-compact__list-item--last-child--before--Height: var(--#{$tree-view}--m-compact__node--before--Top);
-  --#{$tree-view}--m-compact__list-item--nested--before--Top: calc(var(--#{$tree-view}__node--PaddingTop--base) * -1);
-  --#{$tree-view}--m-compact__list-item--nested--last-child--before--Height: calc(var(--#{$tree-view}--m-compact__node--before--Top) + var(--#{$tree-view}__node--PaddingTop--base));
+  --#{$tree-view}--m-compact__list-item--nested--before--Top: calc(var(--#{$tree-view}__node--PaddingTop) * -1);
+  --#{$tree-view}--m-compact__list-item--nested--last-child--before--Height: calc(var(--#{$tree-view}--m-compact__node--before--Top) + var(--#{$tree-view}__node--PaddingTop));
 
   // Node
   --#{$tree-view}--m-compact__node--PaddingLeft: var(--#{$tree-view}--m-compact__node--indent--base);
@@ -142,16 +139,16 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   // Node container
   --#{$tree-view}--m-compact__node-container--Display: flex;
-  --#{$tree-view}--m-compact__node-container--PaddingBottom--base: var(--#{$pf-global}--spacer--lg);
-  --#{$tree-view}--m-compact__node-container--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$tree-view}--m-compact__node-container--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$tree-view}--m-compact__node-container--PaddingBottom--base: var(--pf-t--global--spacer--lg);
+  --#{$tree-view}--m-compact__node-container--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$tree-view}--m-compact__node-container--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--PaddingBottom: var(--#{$tree-view}--m-compact__node-container--PaddingBottom--base);
-  --#{$tree-view}--m-compact__node-container--PaddingLeft: var(--#{$pf-global}--spacer--xs);
-  --#{$tree-view}--m-compact__node-container--nested--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$tree-view}--m-compact__node-container--nested--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$tree-view}--m-compact__node-container--nested--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$tree-view}--m-compact__node-container--nested--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$tree-view}--m-compact__node-container--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$tree-view}--m-compact__node-container--nested--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$tree-view}--m-compact__node-container--nested--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$tree-view}--m-compact__node-container--nested--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$tree-view}--m-compact__node-container--nested--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$tree-view}--m-compact__list-item--m-expanded__node-container--PaddingBottom: 0;
 
   // Background transparent
@@ -159,10 +156,10 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   // Compact, no background
   // ================================================================== //
-  --#{$tree-view}--m-compact--m-no-background--base-border--Left--offset: var(--#{$pf-global}--spacer--sm);
+  --#{$tree-view}--m-compact--m-no-background--base-border--Left--offset: var(--pf-t--global--spacer--sm);
   --#{$tree-view}--m-compact--m-no-background--base-border--Left: calc(var(--#{$tree-view}__node--PaddingLeft) - var(--#{$tree-view}--m-compact--m-no-background--base-border--Left--offset));
   --#{$tree-view}--m-compact--m-no-background__node--indent--base: var(--#{$tree-view}__node--indent--base); // based off of the expected width of the toggle button
-  --#{$tree-view}--m-compact--m-no-background__node--nested-indent--base: var(--#{$pf-global}--spacer--2xl);
+  --#{$tree-view}--m-compact--m-no-background__node--nested-indent--base: var(--pf-t--global--spacer--2xl);
   --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingTop: 0;
   --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBottom: 0;
   --#{$tree-view}--m-compact--m-no-background__node--before--Top: calc(var(--#{$tree-view}--m-compact__node-container--nested--PaddingTop) + var(--#{$tree-view}--m-compact__node--nested--PaddingTop) + #{pf-size-prem(4px)});
@@ -366,6 +363,7 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   padding-inline-end: var(--#{$tree-view}__node--PaddingRight);
   color: var(--#{$tree-view}__node--Color);
   background-color: var(--#{$tree-view}__node--BackgroundColor);
+  border-radius: var(--#{$tree-view}__node--BorderRadius);
 
   &.pf-m-current {
     --#{$tree-view}__node--Color: var(--#{$tree-view}__node--m-current--Color);
@@ -374,10 +372,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   .#{$tree-view}__node-count {
     margin-inline-start: var(--#{$tree-view}__node-count--MarginLeft);
-
-    .#{$badge}.pf-m-read {
-      --#{$badge}--m-read--BackgroundColor: var(--#{$tree-view}__node-count--c-badge--m-read--BackgroundColor);
-    }
   }
 }
 
@@ -505,10 +499,3 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   }
 }
 // stylelint-enable
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/tree-view";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-tree-view;
-}

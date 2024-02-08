@@ -1,8 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-tree-view() {
-  .#{$tree-view} {
-    --#{$tree-view}__node--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-    --#{$tree-view}__node--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-  }
-}
