@@ -199,8 +199,8 @@
   // Table header popover
   --#{$table}__column-help--MarginLeft: var(--pf-t--global--spacer--xs);
   --#{$table}__column-help--TranslateY: #{pf-size-prem(2px)};
-  --#{$table}__column-help--c-button--MarginTop: calc(var(--pf-t--global--spacer--control--vertical) * -1);
-  --#{$table}__column-help--c-button--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical) * -1);
+  --#{$table}__column-help--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
+  --#{$table}__column-help--c-button--MarginBottom: calc(var(--#{$button}--PaddingBottom) * -1);
   --#{$table}__column-help--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__column-help--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
 
