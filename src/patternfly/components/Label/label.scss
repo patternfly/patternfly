@@ -212,7 +212,7 @@
   --#{$label}__content--Cursor: initial;
 
   // Icon
-  --#{$label}__icon--FontSize: var(--pf-t--global--icon--size--body--sm);
+  --#{$label}__icon--FontSize: var(--pf-t--global--icon--size--font--body--sm);
 
   // Text
   --#{$label}__text--MaxWidth: 100%;
@@ -221,7 +221,7 @@
   --#{$label}__actions--MarginRight: calc(var(--#{$label}__actions--c-button--PaddingRight) * -1);
 
   // Actions button (close)
-  --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--body--sm);
+  --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label}__actions--c-button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$label}__actions--c-button--MarginTop: calc(var(--#{$label}__actions--c-button--PaddingTop) * -1);
   --#{$label}__actions--c-button--MarginBottom: calc(var(--#{$label}__actions--c-button--PaddingBottom) * -1);
