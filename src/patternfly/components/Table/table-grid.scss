@@ -50,7 +50,7 @@
   --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$table}__tr--responsive--last-child--BorderBottomWidth: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__tr--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
-  --#{$table}__tr--responsive--MarginTop: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__tr--responsive--MarginTop: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__tr--responsive--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$table}__tr--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$table}__tr--responsive--xl--PaddingRight: var(--pf-t--global--spacer--md);
@@ -118,7 +118,7 @@
   }
 
   // Check
-  --#{$table}__check--responsive--MarginLeft: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__check--responsive--MarginLeft: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__check--responsive--MarginTop: #{pf-size-prem(14px)};
 
   // Favorite
