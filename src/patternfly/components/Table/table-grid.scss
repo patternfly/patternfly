@@ -53,16 +53,10 @@
   --#{$table}__tr--responsive--MarginTop: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__tr--responsive--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$table}__tr--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$table}__tr--responsive--xl--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__tr--responsive--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$table}__tr--responsive--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$table}__tr--responsive--xl--PaddingLeft: var(--pf-t--global--spacer--md);
 
-  @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
-    --#{$table}__tr--responsive--PaddingRight: var(--#{$table}__tr--responsive--xl--PaddingRight);
-    --#{$table}__tr--responsive--PaddingLeft: var(--#{$table}__tr--responsive--xl--PaddingLeft);
-  }
-
+  // * Table tr responsive nested table
   --#{$table}__tr--responsive--nested-table--PaddingTop: var(--pf-t--global--spacer--xl);
   --#{$table}__tr--responsive--nested-table--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$table}__tr--responsive--nested-table--PaddingBottom: var(--pf-t--global--spacer--xl);
@@ -108,14 +102,7 @@
   // Expandable row content
   --#{$table}__expandable-row-content--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$table}__expandable-row-content--responsive--xl--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$table}__expandable-row-content--responsive--xl--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-
-  @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
-    --#{$table}__expandable-row-content--responsive--PaddingRight: var(--#{$table}__expandable-row-content--responsive--xl--PaddingRight);
-    --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--#{$table}__expandable-row-content--responsive--xl--PaddingLeft);
-  }
 
   // Check
   --#{$table}__check--responsive--MarginLeft: var(--#{$table}__tbody--responsive--border-width--base);
