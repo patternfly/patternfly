@@ -16,7 +16,7 @@
   --#{$code-editor}__header-content--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$code-editor}__header-content--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__header-content--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$code-editor}__header-content--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-editor}__header-content--BorderStartStartRadius: var(--pf-t--global--border--radius--medium);
 
   // upload
   --#{$code-editor}__upload--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -28,7 +28,8 @@
   // main
   --#{$code-editor}__main--BorderColor: var(--pf-t--global--border--color--default);
   --#{$code-editor}__main--BorderWidth: var(--pf-t--global--border--width--box--default);
-  --#{$code-editor}__main--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-editor}__main--BorderEndStartRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-editor}__main--BorderEndEndRadius: var(--pf-t--global--border--radius--medium);
   --#{$code-editor}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$code-editor}--m-read-only__main--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-editor}__upload--before--BorderWidth: 0;
@@ -62,7 +63,7 @@
   --#{$code-editor}__tab--BorderBottomWidth: 0;
   --#{$code-editor}__tab--BorderLeftWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__tab--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$code-editor}__tab--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-editor}__tab--BorderStartEndRadius: var(--pf-t--global--border--radius--medium);
 
   // tab text
   --#{$code-editor}__tab-icon--text--MarginLeft: var(--pf-t--global--spacer--sm);
@@ -102,7 +103,7 @@
   padding-inline-start: var(--#{$code-editor}__header-content--PaddingInlineStart);
   padding-inline-end: var(--#{$code-editor}__header-content--PaddingInlineEnd);
   background-color: var(--#{$code-editor}__header-content--BackgroundColor);
-  border-radius: var(--#{$code-editor}__header-content--BorderRadius) 0 0 0;
+  border-start-start-radius: var(--#{$code-editor}__header-content--BorderStartStartRadius);
 }
 
 .#{$code-editor}__controls {
@@ -143,7 +144,8 @@
   background-color: var(--#{$code-editor}__main--BackgroundColor);
   border: var(--#{$code-editor}__main--BorderWidth) solid;
   border-color: var(--#{$code-editor}__main--BorderColor);
-  border-radius: 0 0 var(--#{$code-editor}__main--BorderRadius) var(--#{$code-editor}__main--BorderRadius);
+  border-end-start-radius: var(--#{$code-editor}__main--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$code-editor}__main--BorderEndEndRadius);
 
   &.pf-m-drag-hover {
     --#{$code-editor}__upload--before--BorderWidth: var(--#{$code-editor}__main--m-drag-hover--before--BorderWidth);
@@ -191,7 +193,7 @@
   border-block-end-width: var(--#{$code-editor}__tab--BorderBottomWidth);
   border-inline-start-width: var(--#{$code-editor}__tab--BorderLeftWidth);
   border-inline-end-width: var(--#{$code-editor}__tab--BorderRightWidth);
-  border-radius: 0 var(--#{$code-editor}__tab--BorderRadius) 0 0;
+  border-start-end-radius: var(--#{$code-editor}__tab--BorderStartEndRadius);
 }
 
 .#{$code-editor}__tab-icon + .#{$code-editor}__tab-text {
