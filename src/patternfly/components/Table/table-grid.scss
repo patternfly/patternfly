@@ -42,37 +42,37 @@
 
   // Body
   --#{$table}__tbody--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__tbody--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$table}__tbody--after--border-width--base: var(--pf-t--global--border--width--extra-strong);
   --#{$table}__tbody--after--BorderLeftWidth: 0;
   --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // Row
   --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__tr--responsive--last-child--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}__tr--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
-  --#{$table}__tr--responsive--MarginTop: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$table}__tr--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}__tr--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$table}__tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$table}__tr--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$table}__tr--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$table}__tr--responsive--last-child--BorderBottomWidth: var(--#{$table}__tbody--responsive--border-width--base);
+  --#{$table}__tr--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
+  --#{$table}__tr--responsive--MarginTop: var(--#{$table}__tbody--responsive--border-width--base);
+  --#{$table}__tr--responsive--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$table}__tr--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--xl--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$table}__tr--responsive--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$table}__tr--responsive--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--xl--PaddingLeft: var(--pf-t--global--spacer--md);
 
   @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
     --#{$table}__tr--responsive--PaddingRight: var(--#{$table}__tr--responsive--xl--PaddingRight);
     --#{$table}__tr--responsive--PaddingLeft: var(--#{$table}__tr--responsive--xl--PaddingLeft);
   }
 
-  --#{$table}__tr--responsive--nested-table--PaddingTop: var(--#{$pf-global}--spacer--xl);
-  --#{$table}__tr--responsive--nested-table--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}__tr--responsive--nested-table--PaddingBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$table}__tr--responsive--nested-table--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__tr--responsive--nested-table--PaddingTop: var(--pf-t--global--spacer--xl);
+  --#{$table}__tr--responsive--nested-table--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--nested-table--PaddingBottom: var(--pf-t--global--spacer--xl);
+  --#{$table}__tr--responsive--nested-table--PaddingLeft: var(--pf-t--global--spacer--lg);
 
   // expandable
   --#{$table}__tbody--after__tr--BorderLeftWidth: 0;
   --#{$table}__tbody--after__tr--BorderLeftColor: transparent;
   --#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--#{$pf-global}--active-color--400);
+  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--pf-t--global--border--color--active);
 
   // selected
   --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
@@ -88,28 +88,28 @@
   --#{$table}--m-grid--cell--PaddingLeft: 0;
 
   // Td
-  --#{$table}-td--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
-  --#{$table}--cell--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$table}--cell--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$table}--cell--first-child--responsive--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$table}-td--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
+  --#{$table}--cell--responsive--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$table}--cell--responsive--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-child--responsive--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}--cell--responsive--PaddingRight: 0;
   --#{$table}--cell--responsive--PaddingLeft: 0;
 
   // Compact table
-  --#{$table}--m-compact__tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$table}--m-compact__tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$table}--m-compact__tr__td--responsive--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$table}--m-compact__tr__td--responsive--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-compact__tr--responsive--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$table}--m-compact__tr--responsive--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}--m-compact__tr__td--responsive--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact__tr__td--responsive--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__check--responsive--MarginTop: #{pf-size-prem(7px)};
-  --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
-  --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   // Expandable row content
-  --#{$table}__expandable-row-content--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$table}__expandable-row-content--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$table}__expandable-row-content--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$table}__expandable-row-content--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--xl--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$table}__expandable-row-content--responsive--xl--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
@@ -118,17 +118,17 @@
   }
 
   // Check
-  --#{$table}__check--responsive--MarginLeft: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__check--responsive--MarginLeft: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__check--responsive--MarginTop: #{pf-size-prem(14px)};
 
   // Favorite
   --#{$table}--m-grid__favorite--MarginTop: #{pf-size-prem(8px)};
-  --#{$table}--m-grid__check--favorite--MarginLeft: var(--#{$pf-global}--spacer--xl);
+  --#{$table}--m-grid__check--favorite--MarginLeft: var(--pf-t--global--spacer--xl);
 
   // Action
   --#{$table}--m-grid__action--MarginTop: #{pf-size-prem(6px)};
-  --#{$table}__action--responsive--MarginLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$table}--m-grid__favorite--action--MarginLeft: var(--#{$pf-global}--spacer--2xl);
+  --#{$table}__action--responsive--MarginLeft: var(--pf-t--global--spacer--xl);
+  --#{$table}--m-grid__favorite--action--MarginLeft: var(--pf-t--global--spacer--2xl);
   --#{$table}--m-grid__check--favorite--action--MarginLeft: calc(var(--#{$table}--m-grid__check--favorite--MarginLeft) + var(--#{$table}--m-grid__favorite--action--MarginLeft));
 
   // Toggle icons
@@ -335,9 +335,9 @@
 
     &::after {
       position: absolute;
-     inset-block-start: 0;
-     inset-block-end: 0;
-     inset-inline-start: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
       content: "";
       border: 0;
       border-inline-start: var(--#{$table}__tbody--after--BorderLeftWidth) solid var(--#{$table}__tbody--after--BorderColor);
@@ -423,9 +423,9 @@
     > tr:where(.#{$table}__tr)::after {
       content: '';
       position: absolute;
-     inset-block-start: 0;
-     inset-block-end: 0;
-     inset-inline-start: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
       width: var(--#{$table}__tbody--after__tr--BorderLeftWidth);
       background-color: var(--#{$table}__tbody--after__tr--BorderLeftColor);
     }
@@ -447,9 +447,9 @@
     &::after {
       content: '';
       position: absolute;
-     inset-block-start: 0;
-     inset-block-end: 0;
-     inset-inline-start: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
       width: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
       background-color: var(--#{$table}__tr--m-selected--after--BorderLeftColor);
     }
