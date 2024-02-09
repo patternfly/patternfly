@@ -497,7 +497,7 @@ cssPrefix: pf-v5-c-tree-view
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
         {{#> tree-view-action}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+          {{#> button button--IsPlain=true button--aria-label="Actions"}}
             <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
           {{/button}}
         {{/tree-view-action}}
@@ -507,7 +507,7 @@ cssPrefix: pf-v5-c-tree-view
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 1"}}
             {{#> tree-view-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy"'}}
+              {{#> button button--IsPlain=true button--aria-label="Copy"}}
                 <i class="fas fa-clipboard" aria-hidden="true"></i>
               {{/button}}
             {{/tree-view-action}}
@@ -529,7 +529,7 @@ cssPrefix: pf-v5-c-tree-view
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 2"}}
             {{#> tree-view-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Action"'}}
+              {{#> button button--IsPlain=true button--aria-label="Action"}}
                 <i class="fas fa-bars" aria-hidden="true"></i>
               {{/button}}
             {{/tree-view-action}}
@@ -580,7 +580,9 @@ cssPrefix: pf-v5-c-tree-view
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{> dropdown dropdown--id="dropdown-kebab" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+          {{#> button button--IsPlain=true button--aria-label="Actions"}}
+            <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+          {{/button}}
         {{/tree-view-action}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
