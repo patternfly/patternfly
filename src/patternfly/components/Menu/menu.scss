@@ -355,6 +355,8 @@
     --#{$menu}__footer--PaddingBlockStart: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
     --#{$menu}__footer--PaddingBlockEnd: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
 
+    overflow: hidden; // hide scrollbars
+
     &:has(.#{$menu}__footer) {
       --#{$menu}--PaddingBlockEnd: 0;
     }
