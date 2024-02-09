@@ -21,26 +21,26 @@
   --#{$icon}--m-3xl--Height: var(--pf-t--global--icon--size--3xl);
 
   // Body sizes
-  --#{$icon}--m-body-sm--Width: var(--pf-t--global--icon--size--body--sm);
-  --#{$icon}--m-body-sm--Height: var(--pf-t--global--icon--size--body--sm);
-  --#{$icon}--m-body-default--Width: var(--pf-t--global--icon--size--body--default);
-  --#{$icon}--m-body-default--Height: var(--pf-t--global--icon--size--body--default);
-  --#{$icon}--m-body-lg--Width: var(--pf-t--global--icon--size--body--lg);
-  --#{$icon}--m-body-lg--Height: var(--pf-t--global--icon--size--body--lg);
+  --#{$icon}--m-body-sm--Width: var(--pf-t--global--icon--size--font--body--sm);
+  --#{$icon}--m-body-sm--Height: var(--pf-t--global--icon--size--font--body--sm);
+  --#{$icon}--m-body-default--Width: var(--pf-t--global--icon--size--font--body--default);
+  --#{$icon}--m-body-default--Height: var(--pf-t--global--icon--size--font--body--default);
+  --#{$icon}--m-body-lg--Width: var(--pf-t--global--icon--size--font--body--lg);
+  --#{$icon}--m-body-lg--Height: var(--pf-t--global--icon--size--font--body--lg);
 
   // Heading sizes
-  --#{$icon}--m-heading-sm--Width: var(--pf-t--global--icon--size--heading--h6);
-  --#{$icon}--m-heading-sm--Height: var(--pf-t--global--icon--size--heading--h6);
-  --#{$icon}--m-heading-md--Width: var(--pf-t--global--icon--size--heading--h5);
-  --#{$icon}--m-heading-md--Height: var(--pf-t--global--icon--size--heading--h5);
-  --#{$icon}--m-heading-lg--Width: var(--pf-t--global--icon--size--heading--h4);
-  --#{$icon}--m-heading-lg--Height: var(--pf-t--global--icon--size--heading--h4);
-  --#{$icon}--m-heading-xl--Width: var(--pf-t--global--icon--size--heading--h3);
-  --#{$icon}--m-heading-xl--Height: var(--pf-t--global--icon--size--heading--h3);
-  --#{$icon}--m-heading-2xl--Width: var(--pf-t--global--icon--size--heading--h2);
-  --#{$icon}--m-heading-2xl--Height: var(--pf-t--global--icon--size--heading--h2);
-  --#{$icon}--m-heading-3xl--Width: var(--pf-t--global--icon--size--heading--h1);
-  --#{$icon}--m-heading-3xl--Height: var(--pf-t--global--icon--size--heading--h1);
+  --#{$icon}--m-heading-sm--Width: var(--pf-t--global--icon--size--font--heading--h6);
+  --#{$icon}--m-heading-sm--Height: var(--pf-t--global--icon--size--font--heading--h6);
+  --#{$icon}--m-heading-md--Width: var(--pf-t--global--icon--size--font--heading--h5);
+  --#{$icon}--m-heading-md--Height: var(--pf-t--global--icon--size--font--heading--h5);
+  --#{$icon}--m-heading-lg--Width: var(--pf-t--global--icon--size--font--heading--h4);
+  --#{$icon}--m-heading-lg--Height: var(--pf-t--global--icon--size--font--heading--h4);
+  --#{$icon}--m-heading-xl--Width: var(--pf-t--global--icon--size--font--heading--h3);
+  --#{$icon}--m-heading-xl--Height: var(--pf-t--global--icon--size--font--heading--h3);
+  --#{$icon}--m-heading-2xl--Width: var(--pf-t--global--icon--size--font--heading--h2);
+  --#{$icon}--m-heading-2xl--Height: var(--pf-t--global--icon--size--font--heading--h2);
+  --#{$icon}--m-heading-3xl--Width: var(--pf-t--global--icon--size--font--heading--h1);
+  --#{$icon}--m-heading-3xl--Height: var(--pf-t--global--icon--size--font--heading--h1);
 
   // Inline sizes
   --#{$icon}--m-inline--Width: 1em;
@@ -70,17 +70,17 @@
   --#{$icon}--m-3xl__content--FontSize: var(--pf-t--global--icon--size--3xl);
 
   // Body content sizes
-  --#{$icon}--m-body-sm__content--FontSize: var(--pf-t--global--icon--size--body--sm);
-  --#{$icon}--m-body-default__content--FontSize: var(--pf-t--global--icon--size--body--default);
-  --#{$icon}--m-body-lg__content--FontSize: var(--pf-t--global--icon--size--body--lg);
+  --#{$icon}--m-body-sm__content--FontSize: var(--pf-t--global--icon--size--font--body--sm);
+  --#{$icon}--m-body-default__content--FontSize: var(--pf-t--global--icon--size--font--body--default);
+  --#{$icon}--m-body-lg__content--FontSize: var(--pf-t--global--icon--size--font--body--lg);
 
   // Heading content sizes
-  --#{$icon}--m-heading-sm__content--FontSize: var(--pf-t--global--icon--size--heading--h6);
-  --#{$icon}--m-heading-md__content--FontSize: var(--pf-t--global--icon--size--heading--h5);
-  --#{$icon}--m-heading-lg__content--FontSize: var(--pf-t--global--icon--size--heading--h4);
-  --#{$icon}--m-heading-xl__content--FontSize: var(--pf-t--global--icon--size--heading--h3);
-  --#{$icon}--m-heading-2xl__content--FontSize: var(--pf-t--global--icon--size--heading--h2);
-  --#{$icon}--m-heading-3xl__content--FontSize: var(--pf-t--global--icon--size--heading--h1);
+  --#{$icon}--m-heading-sm__content--FontSize: var(--pf-t--global--icon--size--font--heading--h6);
+  --#{$icon}--m-heading-md__content--FontSize: var(--pf-t--global--icon--size--font--heading--h5);
+  --#{$icon}--m-heading-lg__content--FontSize: var(--pf-t--global--icon--size--font--heading--h4);
+  --#{$icon}--m-heading-xl__content--FontSize: var(--pf-t--global--icon--size--font--heading--h3);
+  --#{$icon}--m-heading-2xl__content--FontSize: var(--pf-t--global--icon--size--font--heading--h2);
+  --#{$icon}--m-heading-3xl__content--FontSize: var(--pf-t--global--icon--size--font--heading--h1);
 
   // Inline sizes
   --#{$icon}--m-inline__content--FontSize: 1em;
