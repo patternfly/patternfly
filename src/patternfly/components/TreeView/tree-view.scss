@@ -9,7 +9,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   // Content
   --#{$tree-view}__content--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$tree-view}__content--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Node
   --#{$tree-view}__node--PaddingTop: var(--pf-t--global--spacer--sm);
@@ -77,7 +76,7 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Action
-  --#{$tree-view}__action--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$tree-view}__action--MarginInlineEnd: var(--pf-t--global--spacer--md);
 
   // Guides
   // ================================================================== //
@@ -470,7 +469,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 .#{$tree-view}__content {
   display: flex;
   align-items: center;
-  padding-inline-end: var(--#{$tree-view}__content--PaddingInlineEnd);
   background-color: var(--#{$tree-view}__content--BackgroundColor);
   border-radius: var(--#{$tree-view}__content--BorderRadius);
 }
@@ -478,6 +476,10 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 .#{$tree-view}__content:hover,
 .#{$tree-view}__content:focus-within {
   background-color: var(--#{$tree-view}__node--hover--BackgroundColor);
+}
+
+.#{$tree-view}__action {
+  margin-inline-end: var(--#{$tree-view}__action--MarginInlineEnd);
 }
 
 // TODO - make sure we can use :has(), maybe move pf-m-current modifier to __content
