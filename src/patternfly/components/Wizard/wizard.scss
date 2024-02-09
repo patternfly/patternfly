@@ -54,6 +54,7 @@
   // Nav link
   --#{$wizard}__nav-link--Color: var(--pf-t--global--text--color--subtle);
   --#{$wizard}__nav-link--m-current--Color: var(--pf-t--global--text--color--regular);
+  --#{$wizard}__nav-link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$wizard}__nav-link--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
 
@@ -68,7 +69,7 @@
   // Nav link number
   --#{$wizard}__nav-link--before--Width: 1.5rem;
   --#{$wizard}__nav-link--before--Height: 1.5rem;
-  --#{$wizard}__nav-link--before--Top: var(--#{$pf-global}--spacer--form-element); // TOOD form element spacer
+  --#{$wizard}__nav-link--before--Top: var(--#{$pf-global}--spacer--form-element); // TODO form element spacer
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
@@ -484,6 +485,7 @@
 
   &.pf-m-current {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
+    --#{$button}--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
 
     @at-root .#{$wizard}__toggle-num,
     &::before {
