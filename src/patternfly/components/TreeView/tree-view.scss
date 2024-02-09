@@ -42,7 +42,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
   // Toggle icon
   --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--body--default);
-  --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--body--default);
   --#{$tree-view}__node-toggle--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node-toggle--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$tree-view}__node-toggle--PaddingBottom: var(--pf-t--global--spacer--sm);
