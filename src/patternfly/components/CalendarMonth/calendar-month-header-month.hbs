@@ -2,7 +2,12 @@
   {{#if calendar-month-header-month--attribute}}
     {{{calendar-month-header-month--attribute}}}
   {{/if}}>
-  {{#> select select-typeahead--Placeholder="Month" select--id=(concat calendar-month--id '-month-select')}}
-    {{calendar-month--month}}
-  {{/select}}
+  {{#> menu-toggle menu-toggle--id=(concat calendar-month--id '-month-select')}}
+    {{#> menu-toggle-text}}
+      {{calendar-month--month}}
+    {{/menu-toggle-text}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle}}
 </div>

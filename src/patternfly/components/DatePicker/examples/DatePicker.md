@@ -91,7 +91,7 @@ import './DatePicker.css'
 
 ### Custom width input based on number of characters
 ```hbs
-{{#> date-picker date-picker--id="custom-width-input-based-on-number-of-characters" date-picker--attribute='style="--pf-v5-c-date-picker__input--c-form-control--width-chars: 17;"'}}
+{{#> date-picker date-picker--id="custom-width-input-based-on-number-of-characters" date-picker--attribute='style="--pf-v5-c-date-picker__input--c-form-control--width-chars: 18;"'}}
   {{#> input-group}}
     {{#> input-group-item input-group-item--IsFill=true}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
