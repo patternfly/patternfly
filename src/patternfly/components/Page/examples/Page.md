@@ -235,8 +235,9 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__sidebar` | `<aside>` |   Declares the page sidebar. |
 | `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-v6-c-page__main` | `<main>` |   Declares the main page area. |
-| `.pf-v6-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
-| `.pf-v6-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
+| `.pf-v6-c-page__main-nav` | `<section>` | Creates a container to nest the (deprecated) tertiary navigation component in the main page area. |
+| `.pf-v6-c-page__main-subnav` | `<section>` | Creates a container to nest the horizontal subnav navigation component in the main page area. |
+| `.pf-v6-c-page__main-breadcrumb` | `<section>` | Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-v6-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-v6-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
 | `.pf-v6-c-page__main-tabs` | `<section>` | Creates a container to nest the tabs component in the main page area. |
 | `.pf-v6-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the main page area. |

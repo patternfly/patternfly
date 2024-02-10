@@ -30,7 +30,7 @@ section: components
 
 ### Horizontal subnav
 ```hbs isFullscreen
-{{> page-template page-template--id="nav-horizontal-subnav-example" page-template-sidebar--nav--IsExpandable="true"}}
+{{> page-template page-template--id="nav-horizontal-subnav-example" page-template--HasHorizontalSubnav=true}}
 ```
 
 ### Horizontal nav with horizontal subnav

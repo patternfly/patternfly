@@ -117,7 +117,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Main section
   --#{$page}__main-section--MarginTop: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$page}__main-section--PaddingRight: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-section--PaddingRight: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section - TODO, see if we can remove the need for this calc(), or possibly move it down to the property definition so a user can theme this without a calc()
   --#{$page}__main-section--PaddingBottom: 0;
   --#{$page}__main-section--PaddingLeft: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--pf-t--global--spacer--md);
@@ -151,14 +151,11 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-nav--xl--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // Main section horizontal subnav
-  --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__main-subnav--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$page}__main-subnav--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$page}__main-subnav--BorderLeftWidth: 0;
-  --#{$page}__main-subnav--BorderLeftColor: var(--pf-t--global--border--color--default);
-  --#{$page}__sidebar--main__main-subnav--BorderLeftWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$page}__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth: 0;
-
+  --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);;
+  --#{$page}__main-subnav--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$page}__main-subnav--PaddingBlockEnd: 0;
+  --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth));
+  --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth));
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--PaddingTop: var(--pf-t--global--spacer--md);
@@ -547,21 +544,11 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-subnav {
+  padding-block-start: var(--#{$page}__main-subnav--PaddingBlockStart);
+  padding-block-end: var(--#{$page}__main-subnav--PaddingBlockEnd);
+  padding-inline-start: var(--#{$page}__main-subnav--PaddingInlineStart);
+  padding-inline-end: var(--#{$page}__main-subnav--PaddingInlineEnd);
   background-color: var(--#{$page}__main-subnav--BackgroundColor);
-  border-block-start: var(--#{$page}__main-subnav--BorderTopWidth) solid var(--#{$page}__main-subnav--BorderTopColor);
-  border-inline-start: var(--#{$page}__main-subnav--BorderLeftWidth) solid var(--#{$page}__main-subnav--BorderLeftColor);
-
-  @at-root .#{$page}__sidebar {
-    ~ .#{$page}__main {
-      @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-        --#{$page}__main-subnav--BorderLeftWidth: var(--#{$page}__sidebar--main__main-subnav--BorderLeftWidth);
-      }
-    }
-
-    &.pf-m-collapsed ~ .#{$page}__main {
-      --#{$page}__main-subnav--BorderLeftWidth: var(--#{$page}__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth);
-    }
-  }
 }
 
 .#{$page}__main-breadcrumb {

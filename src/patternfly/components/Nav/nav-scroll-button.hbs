@@ -2,9 +2,7 @@
   {{#if nav-scroll-button--attribute}}
     {{{nav-scroll-button--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain pf-m-RTL-icon-static" button--aria-label=(ternary nav-scroll-button--IsEnd 'Scroll end' 'Scroll start')}}
-    {{#> button-icon}}
-      <i class="fas fa-{{ternary nav-scroll-button--IsEnd 'angle-right' 'angle-left'}}" aria-hidden="true"></i>
-    {{/button-icon}}
+  {{#> button button--IsPlain=true button--aria-label=(ternary nav-scroll-button--IsEnd 'Scroll end' 'Scroll start') button--IsDisabled=nav-scroll-button--IsDisabled}}
+    <i class="fas fa-{{ternary nav-scroll-button--IsEnd 'angle-right' 'angle-left'}}" aria-hidden="true"></i>
   {{/button}}
 </div>

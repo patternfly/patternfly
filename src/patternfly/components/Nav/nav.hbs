@@ -12,9 +12,9 @@
     {{{nav--attribute}}}
   {{/if}}>
   {{#if nav--HasScroll}}
-    {{> nav-scroll-button nav-scroll-button--IsStart="true"}}
+    {{> nav-scroll-button nav-scroll-button--IsStart=true nav-scroll-button--IsDisabled=nav-scroll-button--IsStartDisabled}}
     {{> @partial-block}}
-    {{> nav-scroll-button nav-scroll-button--IsEnd="true"}}
+    {{> nav-scroll-button nav-scroll-button--IsEnd=true  nav-scroll-button--IsDisabled=nav-scroll-button--IsEndDisabled}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
