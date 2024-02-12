@@ -151,7 +151,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-nav--xl--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // Main section horizontal subnav
-  --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);;
+  --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-subnav--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-subnav--PaddingBlockEnd: 0;
   --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth));
