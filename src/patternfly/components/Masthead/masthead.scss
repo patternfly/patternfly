@@ -2,7 +2,7 @@ $pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 :root,
-[data-theme="#{$masthead}"] {
+:where(.#{$masthead}) {
   // * Masthead
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--md);
@@ -44,6 +44,8 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--#{$toolbar}--Width: 100%;
   --#{$masthead}--#{$toolbar}--PaddingBlock: 0;
   --#{$masthead}--#{$toolbar}--PaddingInline: 0;
+  --#{$masthead}--c-nav--m-horizontal--MarginBlockStart: calc(-1 * var(--#{$nav}--m-horizontal__list--PaddingBlockStart));
+  --#{$masthead}--c-nav--m-horizontal--MarginBlockEnd: calc(-1 * var(--#{$nav}--m-horizontal__list--PaddingBlockEnd));
 }
 
 // * Masthead display stack
@@ -70,9 +72,12 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // - Masthead
 .#{$masthead} {
-  --#{$toolbar}--Width: var(--#{$masthead}--#{$toolbar}--Width);
-  --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--#{$toolbar}--PaddingBlock);
-  --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--#{$toolbar}--PaddingInline);
+  .#{$toolbar} {
+    --#{$toolbar}--Width: var(--#{$masthead}--#{$toolbar}--Width);
+    --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--#{$toolbar}--PaddingBlock);
+    --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--#{$toolbar}--PaddingInline);
+    --#{$toolbar}__content--MinWidth: 0;
+  }
 
   // Set layout to stack by default
   @include pf-v5-c-masthead--m-display-stack;
@@ -99,11 +104,22 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
   background-color: var(--#{$masthead}--BackgroundColor, var(--pf-t--global--background--color--secondary--default));
 
+  .#{$toolbar}__content-section {
+    min-width: 0;
+  }
+
   // - Masthead toolbar expandable content
   .#{$toolbar}__expandable-content {
     inset-block-start: 100%;
     border-block-start: var(--#{$masthead}__expandable-content--BorderBlockStart);
     box-shadow: var(--#{$masthead}__expandable-content--BoxShadow);
+  }
+
+  // keep horizontal nav from making masthead taller
+  // TODO - should masthead or toolbar have a container specificlly for horizontal nav where these types of styles can be set?
+  .#{$nav}.pf-m-horizontal {
+    margin-block-start: var(--#{$masthead}--c-nav--m-horizontal--MarginBlockStart);
+    margin-block-end: var(--#{$masthead}--c-nav--m-horizontal--MarginBlockEnd);
   }
 
   // - Masthead display stack

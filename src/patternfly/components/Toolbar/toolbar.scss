@@ -9,7 +9,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 }
 
 :root,
-[data-theme="#{$toolbar}"] {
+.#{$toolbar} {
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingBlock: var(--pf-t--global--spacer--md);
@@ -18,7 +18,13 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // * Toolbar item
+  --#{$toolbar}__item--Width: auto;
+  --#{$toolbar}__item--MinWidth: auto;
   --#{$toolbar}__item--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}__item--m-overflow-container--MinWidth: 0;
+
+  // * Toolbar group
+  --#{$toolbar}__group--m-overflow-container--MinWidth: 0;
 
   // * Toolbar content * Toolbar expandable content
   --#{$toolbar}__content--RowGap: var(--pf-t--global--spacer--sm);
@@ -154,8 +160,13 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 
 // - Toolbar item
 .#{$toolbar}__item {
+  @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v5-c-toolbar--breakpoint-map);
+  @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
+
   row-gap: var(--#{$toolbar}__item--RowGap, var(--#{$toolbar}--RowGap));
   column-gap: var(--#{$toolbar}__item--ColumnGap);
+  width: var(--#{$toolbar}__item--Width--base);
+  min-width: var(--#{$toolbar}__item--MinWidth--base);
 
   // - Toolbar expand
   &.pf-m-expand-all.pf-m-expanded {
@@ -174,6 +185,10 @@ $pf-v5--include-toolbar-breakpoints: true !default;
     &.#{$pagination} {
       flex-wrap: nowrap;
     }
+  }
+
+  &.pf-m-overflow-container {
+    min-width: var(--#{$toolbar}__item--m-overflow-container--MinWidth);
   }
 }
 
@@ -201,6 +216,10 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   // - Toolbar chip group
   &.pf-m-chip-group {
     flex: 1;
+  }
+
+  &.pf-m-overflow-container {
+    min-width: var(--#{$toolbar}__group--m-overflow-container--MinWidth);
   }
 }
 

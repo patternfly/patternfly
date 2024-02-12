@@ -295,6 +295,8 @@
 
 // - Nav scroll button
 .#{$nav}__scroll-button {
+  @include pf-v5-mirror-inline-on-rtl;
+
   :is(button) {
     --#{$button}--Display: flex;
     --#{$button}--Flex: 1;
