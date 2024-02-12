@@ -21,9 +21,7 @@
     {{#> table-td table-td--data-label="Action"}}
       <a href="#">Link {{table-tbody--expandable--index}}</a>
     {{/table-td}}
-    {{#> table-td table-td--action="true"}}
-      {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tbody--expandable--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-    {{/table-td}}
+    {{#> table-td table-td--action="true"}}{{/table-td}}
   {{/table-tr}}
 
   {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded=table-tbody--expandable--IsExpanded}}

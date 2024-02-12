@@ -5,8 +5,8 @@
 
 #ws-core-c-table-th-truncation .pf-v5-c-tooltip {
   position: absolute;
- inset-inline-start: 440px;
- inset-block-start: -18px;
+  inset-inline-start: 440px;
+  inset-block-start: -18px;
 }
 
 #ws-core-c-table-sticky-header .ws-preview-html {
@@ -15,4 +15,15 @@
 
 #ws-core-c-table-sticky-columns-and-header .ws-preview-html {
   height: 600px;
+}
+
+.pf-v5-c-table__action .pf-v5-c-menu {
+  position: absolute;
+  width: 140px;
+  inset-inline-end: calc(var(--pf-v5-c-table--cell--first-last-child--PaddingInline) + var(--pf-v5-c-table--cell--PaddingRight));
+  z-index: var(--pf-t--global--Zindex--sm);
+}
+
+.pf-v5-c-table.pf-m-grid .pf-v5-c-table__action .pf-v5-c-menu {
+  inset-inline-end: 0;
 }

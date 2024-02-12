@@ -2,7 +2,7 @@
   {{#> table-th table-th--modifier="pf-v5-c-table__tree-view-title-cell"}}
     {{#> table-tree-view-main}}
       {{#unless (concat table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
-        {{> table-td table-td--type="span" table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}
+        {{> table-td table-td--type="span" table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}
       {{/unless}}
       {{#unless table-tr--tree--HasNoCheckbox}}
         {{#if tree-view--HasCheckboxes}}
@@ -16,9 +16,7 @@
         {{/if}}
       {{/unless}}
       {{#if table-tr--tree--HasActions}}
-        {{#> table-td table-td--action="true"}}
-          {{> dropdown dropdown--id=(concat table--id '-actions-main') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-        {{/table-td}}
+        {{> table-td table-td--IsAction=true}}
       {{/if}}
       {{#> table-tree-view-text}}
         {{#if table-tree-view--HasIcons}}
@@ -53,7 +51,5 @@
   {{#> table-td table-td--data-label="Number of Data Stores"}}
     5
   {{/table-td}}
-  {{#> table-td table-td--action="true"}}
-    {{> dropdown dropdown--id=(concat table--id '-' table-tr--tree--index '-actions') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-  {{/table-td}}
+  {{> table-td table-td--IsAction=true}}
 {{/table-tr}}

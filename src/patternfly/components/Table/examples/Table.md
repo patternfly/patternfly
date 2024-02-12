@@ -292,9 +292,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-td table-td--UsesOverflowMenu=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -307,9 +305,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-td table-td--UsesOverflowMenu=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -332,7 +328,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody}}
+  {{#> table-tbody overflow-menu--IsControl=true}}
     {{#> table-tr table-tr--index="1"}}
       {{#> table-td table-td--data-label="Repository name"}}
         Repository 1
@@ -343,9 +339,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--dropdown--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsHidden=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -358,9 +352,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu}}
-      {{/table-td}}
+      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsExpanded=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -395,9 +387,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--dropdown--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsHidden=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -410,9 +400,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu}}
-      {{/table-td}}
+      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsExpanded=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -461,9 +449,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -481,9 +467,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -501,9 +485,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -521,9 +503,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -570,9 +550,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -590,9 +568,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -610,9 +586,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -630,9 +604,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -696,9 +668,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -727,9 +697,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -755,9 +723,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -783,9 +749,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -836,9 +800,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
@@ -867,9 +829,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
@@ -903,9 +863,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
@@ -931,9 +889,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
@@ -992,15 +948,13 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
-          {{#> table newcontext table--id=(concat table--id "-table-basic") table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a simple table"'}}
+          {{#> table newcontext table--id=(concat table--id "-table-basic") table--IsCompact=true table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a simple table"'}}
             {{#> table-thead}}
               {{#> table-tr}}
                 {{#> table-th table-th--attribute='scope="col"'}}
@@ -1114,9 +1068,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1142,9 +1094,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -1170,9 +1120,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -1258,9 +1206,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -1305,9 +1251,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1352,9 +1296,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1398,7 +1340,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
 
 ### Compact example
 ```hbs
-{{#> table table--id="table-compact" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
+{{#> table table--id="table-compact" table--IsCompact=true table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table--check table--check--IsThead="true"}}
@@ -1447,9 +1389,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -1473,9 +1413,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -1499,9 +1437,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -1525,9 +1461,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -1535,7 +1469,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
 
 ### Compact expandable example
 ```hbs
-{{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
+{{#> table table--id="table-compact-expandable" table--IsCompact=true table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table--toggle-all}}
@@ -1568,9 +1502,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -1599,9 +1531,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1627,9 +1557,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -1655,9 +1583,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -1683,9 +1609,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-5') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1711,9 +1635,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
@@ -1748,9 +1670,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1776,9 +1696,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
@@ -1810,9 +1728,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -1997,9 +1913,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -2023,9 +1937,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -2049,9 +1961,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -2075,9 +1985,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -2085,7 +1993,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
 
 ### Borderless compact example
 ```hbs
-{{#> table table--id="borderless-compact-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
+{{#> table table--id="borderless-compact-table" table--IsCompact=true table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table--check table--check--IsThead="true"}}
@@ -2134,9 +2042,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -2160,9 +2066,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -2186,9 +2090,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -2212,9 +2114,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -2255,9 +2155,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -2286,9 +2184,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -2315,9 +2211,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -2343,9 +2237,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -2406,9 +2298,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -2453,9 +2343,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -2503,9 +2391,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -2553,9 +2439,7 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -3367,7 +3251,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 
     {{#> table-tbody table-tbody--modifier="pf-m-expanded" table-tr--index="1"}}
       {{#> table--tr table-tr--expanded="true"}}
-        {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true" table-th--IsNode="true"}}
+        {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true"}}
           Developer program
         {{/table-th}}
         {{#> table-td table-td--data-label="Branches"}}
@@ -3628,9 +3512,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -3651,9 +3533,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -3674,9 +3554,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -3697,9 +3575,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -4118,9 +3994,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -4149,9 +4023,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true"}}
@@ -4177,9 +4049,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
@@ -4205,9 +4075,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-td table-td--IsAction=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}

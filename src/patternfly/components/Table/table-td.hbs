@@ -1,13 +1,14 @@
 <{{#if table-td--type}}{{table-td--type}}{{else}}td{{/if}} class="{{pfv}}table__td
-  {{~#if table-td--toggle}} {{pfv}}table__toggle{{/if}}
+  {{~#if table-td--IsToggle}} {{pfv}}table__toggle{{/if}}
   {{~#if table-td--check}} {{pfv}}table__check{{/if}}
-  {{~#if table-td--action}} {{pfv}}table__action{{/if}}
+  {{~#if table-td--IsAction}} {{pfv}}table__action{{/if}}
   {{~#if table-td--icon}} {{pfv}}table__icon{{/if}}
   {{~#if table-td--compound-expansion-toggle}} {{pfv}}table__compound-expansion-toggle{{/if}}
   {{~#if table-td--IsStickyColumn}} {{pfv}}table__sticky-column{{/if}}
   {{~#if table-td--IsFavorite}} {{pfv}}table__favorite{{/if}}
-  {{~#if table-td--IsFavorited}} pf-m-favorited{{/if}}
   {{~#if table-td--IsDraggable}} {{pfv}}table__draggable{{/if}}
+  {{~#if table-td--IsFavorited}} pf-m-favorited{{/if}}
+  {{~#if table--IsCompact}} pf-m-compact{{/if}}
   {{~#if table-td--modifier}} {{table-td--modifier}}{{/if}}"
   {{#unless table-td--IsEmpty}}
     {{#unless table-td--type}}
@@ -25,10 +26,19 @@
     data-label="{{table-td--data-label}}"
   {{/if}}>
   {{#unless table-td--IsEmpty}}
-    {{#if table-td--toggle}}
-      <button class="{{pfv}}button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
+    {{#if table-td--IsAction}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--aria-label='Table actions'}}
+      {{!-- TODO: add small variant to menu toggle --}}
+    {{else if table-td--IsToggle}}
+      {{#> button
+          button--IsSmall=table--IsCompact
+          button--IsPlain=true
+          button--IsExpanded=table-tr--expanded
+          button--IsAriaExpanded=table-tr--expanded
+          button--id=(dasherize table--id 'toggle' table-tr--index)
+      }}
         {{> table-toggle-icon}}
-      </button>
+      {{/button}}
     {{else if table-td--compound-expansion-toggle}}
       {{#> table-button table-button--attribute=table-th--button--attribute}}
         {{#> table-text}}
@@ -39,7 +49,7 @@
       {{> table-favorite-button}}
     {{else if table-td--IsDraggable}}
       {{> table-draggable-button}}
-    {{else}}
+    {{else if @partial-block}}
       {{> @partial-block}}
     {{/if}}
   {{/unless}}
