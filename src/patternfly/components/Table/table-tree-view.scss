@@ -6,6 +6,9 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   --#{$table}__tree-view-main--indent--base: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$table}__tree-view-icon--MinWidth)); // based off of the expected width of the toggle button
   --#{$table}__tree-view-main--nested-indent--base: calc(var(--#{$table}__tree-view-main--indent--base) - var(--pf-t--global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
+  // * Table tree view main button
+  --#{$table}__tree-view-main--c-button--MarginRight: var(--pf-t--global--spacer--sm);
+
     // main
   --#{$table}__tree-view-main--PaddingLeft: var(--#{$table}__tree-view-main--indent--base);
   --#{$table}__tree-view-main--MarginLeft: calc(var(--#{$table}--cell--PaddingLeft) * -1);
@@ -79,7 +82,13 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     .#{$table}__toggle-icon {
       min-width: var(--#{$table}--m-tree-view__toggle__toggle-icon--MinWidth);
     }
+
+    .#{$button} {
+      margin-block-start: -50%;
+      margin-inline-end: var(--#{$table}__tree-view-main--c-button--MarginRight);
+    }
   }
+
 
   > .#{$table}__check {
     margin-inline-end: var(--#{$table}__tree-view-main--c-table__check--MarginRight);
