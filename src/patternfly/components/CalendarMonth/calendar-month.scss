@@ -35,7 +35,6 @@
   --#{$calendar-month}__dates-cell--m-selected__date--hover--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$calendar-month}__dates-cell--m-selected__date--focus--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$calendar-month}__dates-cell--m-selected__date--focus--after--BorderColor: var(--pf-t--global--border--color--brand--default);
-  --#{$calendar-month}__dates-cell--m-selected__date--focus--BoxShadow: 0 0 #{pf-size-prem(5px)} var(--pf-t--global--background--color--primary--default);
   --#{$calendar-month}__dates-cell--m-selected__date--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$calendar-month}__dates-cell--before--BackgroundColor: transparent;
   --#{$calendar-month}__dates-cell--before--Top: 0;
@@ -69,7 +68,6 @@
   --#{$calendar-month}__date--focus--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$calendar-month}__date--focus--after--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$calendar-month}__date--after--focus--OutlineOffset: -2px;
-  --#{$calendar-month}__date--focus--BoxShadow: none;
 }
 
 :where(.#{$calendar-month}) {
@@ -179,7 +177,6 @@
     --#{$calendar-month}__date--hover--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--hover--BackgroundColor);
     --#{$calendar-month}__date--focus--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--focus--BackgroundColor);
     --#{$calendar-month}__date--focus--after--BorderColor: var(--#{$calendar-month}__dates-cell--m-selected__date--focus--after--BorderColor);
-    --#{$calendar-month}__date--focus--BoxShadow: var(--#{$calendar-month}__dates-cell--m-selected__date--focus--BoxShadow);
     --#{$calendar-month}__date--after--OutlineOffset: var(--#{$calendar-month}__date--after--focus--OutlineOffset);
   }
 
@@ -228,7 +225,6 @@
     --#{$calendar-month}__date--after--BorderColor: var(--#{$calendar-month}__date--focus--after--BorderColor);
 
     outline: 0;
-    box-shadow: var(--#{$calendar-month}__date--focus--BoxShadow);
   }
 
   &:disabled {
