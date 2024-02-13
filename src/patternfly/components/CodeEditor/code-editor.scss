@@ -17,6 +17,7 @@
   --#{$code-editor}__header-content--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__header-content--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__header-content--BorderStartStartRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-editor}__header-content--m-no-language-tab--BorderStartEndRadius: var(--pf-t--global--border--radius--medium);
 
   // upload
   --#{$code-editor}__upload--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -104,6 +105,10 @@
   padding-inline-end: var(--#{$code-editor}__header-content--PaddingInlineEnd);
   background-color: var(--#{$code-editor}__header-content--BackgroundColor);
   border-start-start-radius: var(--#{$code-editor}__header-content--BorderStartStartRadius);
+
+  &.pf-m-no-language-tab {
+    border-start-end-radius: var(--#{$code-editor}__header-content--m-no-language-tab--BorderStartEndRadius);
+  }
 }
 
 .#{$code-editor}__controls {
