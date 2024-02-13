@@ -7,7 +7,9 @@
 
   // accordion item
   --#{$accordion}__item--BorderRadius: var(--pf-t--global--border--radius--200);
-  --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--selected);
+  --#{$accordion}__item--MixBlendMode: normal;
+  --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$accordion}__item--m-expanded--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
 
   // accordion toggle
   --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--sm);
@@ -19,6 +21,8 @@
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$accordion}__toggle--MixBlendMode: normal;
+  --#{$accordion}__toggle--hover--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
 
   // Accordion toggle toggle-start modifier
   --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--pf-t--global--spacer--md);
@@ -105,10 +109,12 @@
 
 .#{$accordion}__item {
   border-radius: var(--#{$accordion}__item--BorderRadius);
+  mix-blend-mode: var(--#{$accordion}__item--MixBlendMode);
   
   &.pf-m-expanded {
     --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}__toggle--m-expanded--PaddingBottom);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
+    --#{$accordion}__item--MixBlendMode: var(--#{$accordion}__item--m-expanded--MixBlendMode);
     
     background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
 
@@ -133,9 +139,11 @@
   background-color: var(--#{$accordion}__toggle--BackgroundColor);
   border: 0;
   border-radius: var(--#{$accordion}__toggle--BorderRadius);
+  mix-blend-mode: var(--#{$accordion}__toggle--MixBlendMode);
 
   &:is(:hover, :focus) {
     --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__toggle--hover--BackgroundColor);
+    --#{$accordion}__toggle--MixBlendMode: var(--#{$accordion}__toggle--hover--MixBlendMode);
   }
 }
 
