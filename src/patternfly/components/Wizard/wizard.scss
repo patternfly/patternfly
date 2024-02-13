@@ -52,9 +52,20 @@
   --#{$wizard}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Nav link
+  --#{$wizard}__nav-link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__nav-link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__nav-link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__nav-link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link--Color: var(--pf-t--global--text--color--subtle);
+  --#{$wizard}__nav-link--TextDecoration: none;
+  --#{$wizard}__nav-link--BackgroundColor: transparent;
+  --#{$wizard}__nav-link--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$wizard}__nav-link--hover--Color: var(--pf-t--global--text--color--subtle);
+  --#{$wizard}__nav-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$wizard}__nav-link--hover--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$wizard}__nav-link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$wizard}__nav-link--m-current--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$wizard}__nav-link--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
 
@@ -74,7 +85,7 @@
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--before--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$wizard}__nav-link--before--TranslateX: calc(-100% - var(--pf-t--global--spacer--sm));
+  --#{$wizard}__nav-link--before--TranslateX: calc(-100% - var(--pf-t--global--spacer--xs));
   --#{$wizard}__nav-link--m-current--before--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$wizard}__nav-link--m-current--before--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$wizard}__nav-link--m-disabled--before--BackgroundColor: transparent;
@@ -443,15 +454,28 @@
       --#{$wizard}__nav-link-toggle-icon--Rotate: var(--#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate);
     }
   }
+
+    :where(&:hover) {
+    --#{$wizard}__nav-link--Color: var({$wizard}__nav-link--hover--Color);
+    --#{$wizard}__nav-link--BackgroundColor: var({$wizard}__nav-link--hover--BackgroundColor);
+  }
 }
 
 .#{$wizard}__nav-link {
   position: relative;
   display: inline-block;
   width: 100%;
+  padding-block-start: var(--#{$wizard}__nav-link--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__nav-link--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__nav-link--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__nav-link--PaddingInlineEnd);
   color: var(--#{$wizard}__nav-link--Color);
   text-align: start; // needed for when the item is a button
+  text-decoration: var(--#{$wizard}__nav-link--TextDecoration);
   word-break: break-word;
+  background-color: var(--#{$wizard}__nav-link--BackgroundColor);
+  border: none;
+  border-radius: var(--#{$wizard}__nav-link--BorderRadius);
 
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
@@ -485,7 +509,9 @@
 
   &.pf-m-current {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
-    --#{$button}--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
+    --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
+
+    mix-blend-mode: var(--#{$wizard}__nav-link--m-current--MixBlendMode);
 
     @at-root .#{$wizard}__toggle-num,
     &::before {
@@ -494,11 +520,18 @@
     }
   }
 
+  :where(&:hover, &:focus) {
+    --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
+    --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--hover--BackgroundColor);
+    
+    mix-blend-mode: var(--#{$wizard}__nav-link--hover--MixBlendMode);
+  }
+
   // override the button background/color for disabled nav links
   &:disabled,
   &.pf-m-disabled {
-    --#{$button}--disabled--Color: var(--#{$wizard}__nav-link--m-disabled--Color);
-    --#{$button}--disabled--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--BackgroundColor);
+    --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-disabled--Color);
+    --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--BackgroundColor);
 
     &::before {
       --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--before--BackgroundColor);

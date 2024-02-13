@@ -496,7 +496,7 @@ import './Wizard.css'
 | `.pf-v5-c-wizard__nav` | `<nav>` | Initiates the steps nav. **Required** |
 | `.pf-v5-c-wizard__nav-list` | `<ol>` | Initiates a list of steps. **Required** |
 | `.pf-v5-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
-| `.pf-v5-c-wizard__nav-link` | `<a>` | Initiates a step link. **Required** |
+| `.pf-v5-c-wizard__nav-link` | `<a>`, `<button>` | Initiates a step link. **Required** |
 | `.pf-v5-c-wizard__nav-link-text` | `<span>` | Initiates the link text container. **Required when nav item is expandable** |
 | `.pf-v5-c-wizard__nav-link-toggle` | `<span>` | Initiates the toggle container. **Required when nav item is expandable** |
 | `.pf-v5-c-wizard__nav-link-toggle-icon` | `<span>` | Initiates the toggle icon container. **Required when nav item is expandable** |
