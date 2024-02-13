@@ -10,7 +10,7 @@
   // header
   --#{$calendar-month}__header--MarginBottom: var(--pf-t--global--spacer--md);
   --#{$calendar-month}__header--Gap: var(--pf-t--global--spacer--xs);
-  --#{$calendar-month}__header-year--Width: 8.5ch;
+  --#{$calendar-month}__header-year--Width: 9ch;
   --#{$calendar-month}__header-nav-control--MarginRight: 0;
   --#{$calendar-month}__header-nav-control--MarginLeft: 0;
 
@@ -174,7 +174,12 @@
   &.pf-m-selected {
     --#{$calendar-month}__date--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--BackgroundColor);
     --#{$calendar-month}__date--Color: var(--#{$calendar-month}__dates-cell--m-selected__date--Color);
+
+    // tweak the hover styling for a selected date
     --#{$calendar-month}__date--hover--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--hover--BackgroundColor);
+    --#{$calendar-month}__date--hover--BorderWidth: 0;
+
+    // tweak the focus styling for a selected date
     --#{$calendar-month}__date--focus--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--focus--BackgroundColor);
     --#{$calendar-month}__date--focus--after--BorderColor: var(--#{$calendar-month}__dates-cell--m-selected__date--focus--after--BorderColor);
     --#{$calendar-month}__date--after--OutlineOffset: var(--#{$calendar-month}__date--after--focus--OutlineOffset);

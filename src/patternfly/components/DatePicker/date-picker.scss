@@ -1,9 +1,10 @@
 // @debug $date-picker; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root, .#{$date-picker} {
+:where(:root),
+.#{$date-picker} {
   --#{$date-picker}--m-top__calendar--Top: 0;
   --#{$date-picker}--m-top__calendar--TranslateY: calc(-100% - var(--pf-t--global--spacer--xs));
-  --#{$date-picker}__helper-text--MarginTop: var(--pf-t--global--spacer--xs);
+  --#{$date-picker}__helper-text--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$date-picker}__input--c-form-control--Width: calc(var(--#{$date-picker}__input--c-form-control--width-chars) * 1ch + var(--#{$date-picker}__input--c-form-control--width-base));
   --#{$date-picker}__input--c-form-control--width-base: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm)); // form control left/right padding + status icon width and spacer
   --#{$date-picker}__input--c-form-control--width-chars: 11;
@@ -16,6 +17,7 @@
   --#{$date-picker}__calendar--m-align-right--Right: 0;
   --#{$date-picker}__calendar--m-align-right--Left: auto;
 }
+
 .#{$date-picker} {
   position: relative;
   display: inline-block;
