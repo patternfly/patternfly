@@ -106,7 +106,7 @@
   background-color: var(--#{$code-editor}__header-content--BackgroundColor);
   border-start-start-radius: var(--#{$code-editor}__header-content--BorderStartStartRadius);
 
-  &.pf-m-no-language-tab {
+  &:last-child {
     border-start-end-radius: var(--#{$code-editor}__header-content--m-no-language-tab--BorderStartEndRadius);
   }
 }
