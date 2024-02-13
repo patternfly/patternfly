@@ -1,7 +1,7 @@
 // @debug $date-picker; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 :where(:root),
-.#{$date-picker} {
+:where(.#{$date-picker}) {
   --#{$date-picker}--m-top__calendar--Top: 0;
   --#{$date-picker}--m-top__calendar--TranslateY: calc(-100% - var(--pf-t--global--spacer--xs));
   --#{$date-picker}__helper-text--MarginTop: var(--pf-t--global--spacer--sm);
