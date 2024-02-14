@@ -33,13 +33,13 @@
 
   // * Menu toggle active
   --#{$menu-toggle}--active--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--active--BorderWidth: var(--pf-t--global--border--width--button--active);
+  --#{$menu-toggle}--active--BorderWidth: var(--pf-t--global--border--width--button--clicked);
   --#{$menu-toggle}--active--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // * Menu toggle expanded
   --#{$menu-toggle}--expanded--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--expanded--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--expanded--BorderWidth: var(--pf-t--global--border--width--button--active);
+  --#{$menu-toggle}--expanded--BorderWidth: var(--pf-t--global--border--width--button--clicked);
   --#{$menu-toggle}--expanded--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$menu-toggle}--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
 
@@ -96,10 +96,10 @@
   --#{$menu-toggle}--m-secondary--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
   --#{$menu-toggle}--m-secondary--active--Color: var(--pf-t--global--text--color--brand--clicked);
-  --#{$menu-toggle}--m-secondary--active--BorderWidth: var(--pf-t--global--border--width--button--active);
+  --#{$menu-toggle}--m-secondary--active--BorderWidth: var(--pf-t--global--border--width--button--clicked);
   --#{$menu-toggle}--m-secondary--active--BorderColor: var(--pf-t--global--border--color--brand--clicked);
   --#{$menu-toggle}--m-secondary--expanded--Color: var(--pf-t--global--text--color--brand--clicked);
-  --#{$menu-toggle}--m-secondary--expanded--BorderWidth: var(--pf-t--global--border--width--button--active);
+  --#{$menu-toggle}--m-secondary--expanded--BorderWidth: var(--pf-t--global--border--width--button--clicked);
   --#{$menu-toggle}--m-secondary--expanded--BorderColor: var(--pf-t--global--border--color--brand--clicked);
   --#{$menu-toggle}--m-secondary__toggle-icon--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$menu-toggle}--m-secondary--hover__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
