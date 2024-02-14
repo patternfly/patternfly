@@ -40,22 +40,22 @@ import './Wizard.css'
                 Information
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"}}
               {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
                 Configuration
               {{/wizard-nav-link}}
               {{#> wizard-nav-list}}
-                {{#> wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
                   {{#> wizard-nav-link}}
                     Substep A
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
                   {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                     Substep B
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
                   {{#> wizard-nav-link}}
                     Substep C
                   {{/wizard-nav-link}}
@@ -115,22 +115,22 @@ import './Wizard.css'
               Information
             {{/wizard-nav-link}}
           {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
+          {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"}}
             {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
               Configuration
             {{/wizard-nav-link}}
             {{#> wizard-nav-list}}
-              {{#> wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
                 {{#> wizard-nav-link}}
                   Substep A
                 {{/wizard-nav-link}}
               {{/wizard-nav-item}}
-              {{#> wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
                 {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                   Substep B
                 {{/wizard-nav-link}}
               {{/wizard-nav-item}}
-              {{#> wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
                 {{#> wizard-nav-link}}
                   Substep C
                 {{/wizard-nav-link}}
@@ -183,7 +183,7 @@ import './Wizard.css'
   {{/wizard-toggle}}
   {{#> wizard-outer-wrap}}
     {{#> wizard-inner-wrap}}
-      {{> wizard-template-nav}}
+      {{> wizard-template-nav wizard-template-nav--IsExpandable="true" wizard-template-nav--IsExpanded="true"}}
       {{#> wizard-main wizard-main--HasNoBody="true"}}
         {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
           {{#> drawer-main}}
@@ -496,7 +496,7 @@ import './Wizard.css'
 | `.pf-v5-c-wizard__nav` | `<nav>` | Initiates the steps nav. **Required** |
 | `.pf-v5-c-wizard__nav-list` | `<ol>` | Initiates a list of steps. **Required** |
 | `.pf-v5-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
-| `.pf-v5-c-wizard__nav-link` | `<a>` | Initiates a step link. **Required** |
+| `.pf-v5-c-wizard__nav-link` | `<a>`, `<button>` | Initiates a step link. **Required** |
 | `.pf-v5-c-wizard__nav-link-text` | `<span>` | Initiates the link text container. **Required when nav item is expandable** |
 | `.pf-v5-c-wizard__nav-link-toggle` | `<span>` | Initiates the toggle container. **Required when nav item is expandable** |
 | `.pf-v5-c-wizard__nav-link-toggle-icon` | `<span>` | Initiates the toggle icon container. **Required when nav item is expandable** |
