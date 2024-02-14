@@ -9,33 +9,14 @@
   --#{$wizard}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__header--ZIndex: auto;
   --#{$wizard}__header--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__header--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$wizard}__header--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__header--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$wizard}__header--lg--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$wizard}__header--lg--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$wizard}__header--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__header--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
-    --#{$wizard}__header--PaddingRight: var(--#{$wizard}__header--lg--PaddingRight);
-    --#{$wizard}__header--PaddingLeft: var(--#{$wizard}__header--lg--PaddingLeft);
-  }
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$wizard}__header--PaddingRight: var(--#{$wizard}__header--xl--PaddingRight);
-    --#{$wizard}__header--PaddingLeft: var(--#{$wizard}__header--xl--PaddingLeft);
-  }
+  --#{$wizard}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
 
   // Close
-  --#{$wizard}__close--Top: calc(var(--pf-t--global--spacer--lg) - var(--pf-v5-c-button--m-plain--PaddingTop));
+  --#{$wizard}__close--Top: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingTop));
   --#{$wizard}__close--Right: var(--pf-t--global--spacer--sm);
-  --#{$wizard}__close--xl--Right: var(--pf-t--global--spacer--lg);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$wizard}__close--Right: var(--#{$wizard}__close--xl--Right);
-  }
 
   // Title
   --#{$wizard}__title--PaddingRight: var(--pf-t--global--spacer--2xl);
@@ -68,6 +49,7 @@
   --#{$wizard}__nav-link--m-current--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$wizard}__nav-link--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
+  --#{$wizard}__nav-link--m-disabled--hover--MixBlendMode: normal;
 
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -80,12 +62,13 @@
   // Nav link number
   --#{$wizard}__nav-link--before--Width: 1.5rem;
   --#{$wizard}__nav-link--before--Height: 1.5rem;
-  --#{$wizard}__nav-link--before--Top: var(--#{$pf-global}--spacer--form-element); // TODO form element spacer
+  --#{$wizard}__nav-link--before--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--before--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$wizard}__nav-link--before--TranslateX: calc(-100% - var(--pf-t--global--spacer--xs));
+  --#{$wizard}__nav-link--before--TranslateY: -50%;
   --#{$wizard}__nav-link--m-current--before--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$wizard}__nav-link--m-current--before--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$wizard}__nav-link--m-disabled--before--BackgroundColor: transparent;
@@ -94,13 +77,12 @@
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__toggle--ZIndex: var(--pf-t--global--Zindex--xs);
-  --#{$wizard}__toggle--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__toggle--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$wizard}__toggle--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__toggle--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
-  --#{$wizard}__toggle--m-expanded--BorderBottomWidth: var(--pf-t--global--border--width--regular);
-  --#{$wizard}__toggle--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$wizard}__toggle--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
+  --#{$wizard}__toggle--BorderBottomWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__toggle--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$wizard}--m-in-page__toggle--xl--PaddingLeft: calc(var(--pf-t--global--spacer--xl) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
 
   // Toggle number
@@ -138,31 +120,11 @@
 
   // Nav list (nested)
   --#{$wizard}__nav-list--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$wizard}__nav-list--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$wizard}__nav-list--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
-  --#{$wizard}__nav-list--lg--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$wizard}__nav-list--lg--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$wizard}__nav-list--lg--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$wizard}__nav-list--xl--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--xl--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--xl--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
+  --#{$wizard}__nav-list--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
   --#{$wizard}__nav-list--nested--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$wizard}__nav-list--nested--MarginTop: var(--pf-t--global--spacer--md);
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
-    --#{$wizard}__nav-list--PaddingTop: var(--#{$wizard}__nav-list--lg--PaddingTop);
-    --#{$wizard}__nav-list--PaddingRight: var(--#{$wizard}__nav-list--lg--PaddingRight);
-    --#{$wizard}__nav-list--PaddingBottom: var(--#{$wizard}__nav-list--lg--PaddingBottom);
-  }
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$wizard}__nav-list--PaddingTop: var(--#{$wizard}__nav-list--xl--PaddingTop);
-    --#{$wizard}__nav-list--PaddingRight: var(--#{$wizard}__nav-list--xl--PaddingRight);
-    --#{$wizard}__nav-list--PaddingBottom: var(--#{$wizard}__nav-list--xl--PaddingBottom);
-    --#{$wizard}__nav-list--PaddingLeft: var(--#{$wizard}__nav-list--xl--PaddingLeft);
-  }
 
   // Nav item
   --#{$wizard}__nav-item--MarginTop: var(--pf-t--global--spacer--md);
@@ -176,45 +138,23 @@
   --#{$wizard}__main--ZIndex: auto;
 
   // Body
-  --#{$wizard}__main-body--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$wizard}__main-body--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$wizard}__main-body--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$wizard}__main-body--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$wizard}__main-body--xl--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__main-body--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__main-body--xl--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__main-body--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$wizard}__main-body--PaddingTop: var(--#{$wizard}__main-body--xl--PaddingTop);
-    --#{$wizard}__main-body--PaddingRight: var(--#{$wizard}__main-body--xl--PaddingRight);
-    --#{$wizard}__main-body--PaddingBottom: var(--#{$wizard}__main-body--xl--PaddingBottom);
-    --#{$wizard}__main-body--PaddingLeft: var(--#{$wizard}__main-body--xl--PaddingLeft);
-  }
+  --#{$wizard}__main-body--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingLeft: var(--pf-t--global--spacer--lg);
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__footer--ZIndex: var(--pf-t--global--Zindex--xs);
-  --#{$wizard}__footer--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$wizard}__footer--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$wizard}__footer--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$wizard}__footer--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$wizard}__footer--xl--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__footer--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__footer--xl--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$wizard}__footer--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__footer--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__footer--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__footer--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$wizard}__footer--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__footer--BorderColor: var(--pf-t--global--border--color--default);
   --#{$wizard}__footer--child--MarginRight: var(--pf-t--global--spacer--md);
   --#{$wizard}__footer--child--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$wizard}__footer-cancel--MarginLeft: calc(var(--pf-t--global--spacer--2xl) - var(--#{$wizard}__footer--child--MarginRight));
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$wizard}__footer--PaddingTop: var(--#{$wizard}__footer--xl--PaddingTop);
-    --#{$wizard}__footer--PaddingRight: var(--#{$wizard}__footer--xl--PaddingRight);
-    --#{$wizard}__footer--PaddingBottom: var(--#{$wizard}__footer--xl--PaddingBottom);
-    --#{$wizard}__footer--PaddingLeft: var(--#{$wizard}__footer--xl--PaddingLeft);
-  }
 }
 
 .#{$wizard} {
@@ -301,18 +241,16 @@
   padding-inline-start: var(--#{$wizard}__toggle--PaddingLeft);
   padding-inline-end: var(--#{$wizard}__toggle--PaddingRight);
   background-color: var(--#{$wizard}__toggle--BackgroundColor);
-  border: 0;
-  box-shadow: var(--#{$wizard}__toggle--BoxShadow);
+  border-block-start: 0;
+  border-block-end: var(--#{$wizard}__toggle--BorderBottomWidth) solid var(--#{$wizard}__toggle--BorderBottomColor);
+  border-inline-start: 0;
+  border-inline-end: 0;
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     display: none;
   }
 
   &.pf-m-expanded {
-    --#{$wizard}__toggle--BoxShadow: none;
-
-    border-block-end: var(--#{$wizard}__toggle--m-expanded--BorderBottomWidth) solid var(--#{$wizard}__toggle--m-expanded--BorderBottomColor);
-
     .#{$wizard}__toggle-icon {
       transform: rotate(var(--#{$wizard}__toggle--m-expanded__toggle-icon--Rotate));
     }
@@ -340,6 +278,7 @@
 }
 
 .#{$wizard}__toggle-num {
+  --#{$wizard}__nav-link--before--TranslateY: 0;
   --#{$wizard}__nav-link--before--Top: var(--#{$wizard}__toggle-num--before--Top);
 }
 
@@ -482,8 +421,8 @@
   &::before {
     @include pf-v5-bidirectional-style(
       $prop: transform,
-      $ltr-val: translateX(var(--#{$wizard}__nav-link--before--TranslateX)),
-      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))})
+      $ltr-val: translateX(var(--#{$wizard}__nav-link--before--TranslateX)) translateY(var(--#{$wizard}__nav-link--before--TranslateY)),
+      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))}) translateY(var(--#{$wizard}__nav-link--before--TranslateY))
     );
 
     position: absolute;
@@ -520,7 +459,7 @@
     }
   }
 
-  :where(&:hover, &:focus) {
+  &:where(:hover, :focus) {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
     --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--hover--BackgroundColor);
     
@@ -532,6 +471,9 @@
   &.pf-m-disabled {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-disabled--Color);
     --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--BackgroundColor);
+    --#{$wizard}__nav-link--hover--MixBlendMode: var(--#{$wizard}__nav-link--m-disabled--hover--MixBlendMode);
+
+    pointer-events: none;
 
     &::before {
       --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--before--BackgroundColor);
