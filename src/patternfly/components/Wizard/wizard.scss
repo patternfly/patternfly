@@ -455,7 +455,7 @@
     }
   }
 
-    :where(&:hover) {
+  :where(:hover) {
     --#{$wizard}__nav-link--Color: var({$wizard}__nav-link--hover--Color);
     --#{$wizard}__nav-link--BackgroundColor: var({$wizard}__nav-link--hover--BackgroundColor);
   }
