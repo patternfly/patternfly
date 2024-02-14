@@ -17,6 +17,11 @@
   {{#if menu-toggle--IsTypeahead}}
     pf-m-typeahead
   {{/if}}
+  {{#unless menu-toggle--IsSplitButton}}
+    {{#if menu-toggle--IsDisabled}}
+      pf-m-disabled
+    {{/if}}
+  {{/unless}}
   {{#if menu-toggle--IsSplitButton}}
     pf-m-split-button
     {{#if menu-toggle--IsAction}}
@@ -65,6 +70,8 @@
   {{#ifAny menu-toggle--IsPlain @partial-block}}
     {{#if menu-toggle--HasKebab}}
       <i class="fas fa-ellipsis-v" aria-hidden=true></i>
+    {{else if menu-toggle--UsesButton}}
+      {{#> button button--IsPlain=true button--icon='ellipsis-v' button--IsDisabled=menu-toggle--IsDisabled button--IsAriaDisabled=menu-toggle--IsAriaDisabled button--IsExpanded=menu-toggle--IsExpanded button--aria-label='Actions'}}{{/button}}
     {{/if}}
     {{#if @partial-block}}
       {{> @partial-block}}
