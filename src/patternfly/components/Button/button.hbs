@@ -37,6 +37,9 @@
   {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
     aria-expanded="true"
   {{/if}}
+  {{#if button--role}}
+    role="{{button--role}}"
+  {{/if}}
   {{#if button--IsSpan}}
     role="button"
     tabindex="0"

@@ -50,7 +50,7 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
+      {{#> menu-list-item menu-list-item--IsAriaDisabled=true}}
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -59,8 +59,8 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
-        {{#> menu-item menu-item--IsLink="true"}}
+      {{#> menu-list-item menu-list-item--IsAriaDisabled=true}}
+        {{#> menu-item menu-item--IsLink=true}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
             Aria-disabled link
@@ -770,150 +770,6 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### Standard menu, flyout child
-```hbs
-{{#> menu}}
-  {{#> menu-content}}
-    {{#> menu-list}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Start rollout
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Pause rollouts
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item menu-item--attribute='aria-expanded="false"'}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Add storage
-            {{/menu-item-text}}
-            {{> menu-item-toggle-icon}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-        {{#> menu menu--attribute="hidden" menu--modifier="pf-m-flyout"}}
-          {{#> menu-content}}
-            {{#> menu-list}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Application grouping
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Count
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Labels
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Annotations
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-            {{/menu-list}}
-          {{/menu-content}}
-        {{/menu}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Edit
-            {{/menu-item-text}}
-            {{> menu-item-toggle-icon}}
-          {{/menu-item-main}}
-          {{#> menu-item-description}}
-            Description
-          {{/menu-item-description}}
-        {{/menu-item}}
-        {{#> menu menu--modifier="pf-m-flyout"}}
-          {{#> menu-content}}
-            {{#> menu-list}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Application grouping
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Count
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Labels
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-              {{#> menu-list-item}}
-                {{#> menu-item}}
-                  {{#> menu-item-main}}
-                    {{#> menu-item-text}}
-                      Annotations
-                    {{/menu-item-text}}
-                  {{/menu-item-main}}
-                {{/menu-item}}
-              {{/menu-list-item}}
-            {{/menu-list}}
-          {{/menu-content}}
-        {{/menu}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Delete deployment config
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-    {{/menu-list}}
-  {{/menu-content}}
-{{/menu}}
-```
-
 ### Drilldown
 ```hbs isBeta
 {{> menu--Drilldown menu--Drilldown--id="drilldown-default"}}
@@ -921,22 +777,22 @@ import './Menu.css'
 
 ### Drilldown level two
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 193px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 165px;"'}}
 ```
 
 ### Drilldown level three
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-3" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 233px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-3" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 202px;"'}}
 ```
 
 ### Drilldown level four
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 193px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 165px;"'}}
 ```
 
 ### Scrollable drilldown
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-default" menu--Drilldown--menu--modifier="pf-m-scrollable" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu__content--MaxHeight: 100px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-default" menu--Drilldown--menu--modifier="pf-m-scrollable" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu__content--MaxHeight: 180px;"'}}
 ```
 
 ### Width modified drilldown
@@ -953,7 +809,7 @@ import './Menu.css'
 
 ### Drilldown with breadcrumbs - level 2
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-level-2" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 96px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-2" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 74px;"'}}
   {{> menu-breadcrumbs--Drilldown menu-breadcrumbs--Drilldown--IsLevel2="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true"}}
 {{/menu}}
@@ -961,7 +817,7 @@ import './Menu.css'
 
 ### Drilldown with breadcrumbs - level 3
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-level-3" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 136px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-3" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 111px;"'}}
   {{> menu-breadcrumbs--Drilldown menu-breadcrumbs--Drilldown--IsLevel3="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true"}}
 {{/menu}}
@@ -969,7 +825,7 @@ import './Menu.css'
 
 ### Drilldown with breadcrumbs - level 4
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 216px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 185px;"'}}
   {{> menu-breadcrumbs--Drilldown breadcrumb--id="drilldown-with-breadcrumbs-level-4" menu-breadcrumbs--Drilldown--IsLevel4="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true" menu-content--Breadcrumbs--level4="true"}}
 {{/menu}}
@@ -1312,7 +1168,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Actions"'}}
+          {{#> menu-item-action button--aria-label='Actions'}}
             <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1322,9 +1178,10 @@ import './Menu.css'
               {{#> menu-item-text}}
                 Item 2
               {{/menu-item-text}}
+              {{> menu-item-select-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Alert"'}}
+          {{#> menu-item-action button--aria-label='Alert'}}
             <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1340,7 +1197,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Copy"'}}
+          {{#> menu-item-action button--aria-label='Copy'}}
             <i class="fas fa-fw fa-clipboard" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1356,7 +1213,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Expand"'}}
+          {{#> menu-item-action button--aria-label='Expand'}}
             <i class="fas fa-fw fa-bars" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1372,7 +1229,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action menu-item-action--attribute='aria-label="Copy"'}}
+          {{#> menu-item-action button--aria-label='Copy'}}
             <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -1402,7 +1259,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true" menu-item-action--IsFavorited="true"}}
+          {{> menu-item-action button--aria-label='Starred' menu-item-action--IsFavorit=true menu-item-action--IsFavorited=true}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1413,7 +1270,7 @@ import './Menu.css'
               {{> menu-item-external-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
@@ -1434,7 +1291,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1448,7 +1305,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1459,7 +1316,7 @@ import './Menu.css'
               {{> menu-item-external-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
@@ -1478,6 +1335,7 @@ import './Menu.css'
             {{#> menu-item-text}}
               Option 1
             {{/menu-item-text}}
+            {{> menu-item-select-icon}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
@@ -1487,6 +1345,7 @@ import './Menu.css'
             {{#> menu-item-text}}
               Option 2
             {{/menu-item-text}}
+            {{> menu-item-select-icon}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
@@ -1598,6 +1457,7 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
+      {{> divider divider--type='li'}}
       {{#> menu-list-item menu-list-item--modifier="pf-m-load"}}
         {{#> menu-item}}
           {{#> menu-item-main}}
@@ -1653,8 +1513,9 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
+      {{> divider divider--type='li'}}
       {{#> menu-list-item menu-list-item--modifier="pf-m-loading"}}
-        {{#> menu-item}}
+        {{#> menu-item menu-item--type='div'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
@@ -1710,6 +1571,7 @@ import './Menu.css'
       {{/menu-list-item}}
     {{/menu-list}}
   {{/menu-content}}
+  {{> divider}}
   {{#> menu-footer}}
     {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Action
@@ -1776,6 +1638,7 @@ import './Menu.css'
   {{#> menu-content}}
     {{> menu--long-list}}
   {{/menu-content}}
+  {{> divider}}
   {{#> menu-footer}}
     {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Footer
@@ -1860,8 +1723,8 @@ import './Menu.css'
 | `.pf-m-current` | `.pf-v5-c-menu__list-item` | Modifies a list item for current styles. |
 | `.pf-m-load` | `.pf-v5-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-v5-c-menu__list-item` | Modifies a list item for loading styles. |
-| `.pf-m-disabled` | `.pf-v5-c-menu__list-item` | Modifies a list item for disabled styling. |
-| `.pf-m-aria-disabled` | `.pf-v5-c-menu__list-item` | Modifies a list item for aria-disabled styling. |
+| `.pf-m-disabled` | `.pf-v5-c-menu__item` | Modifies a list item for disabled styling. |
+| `.pf-m-aria-disabled` | `.pf-v5-c-menu__item` | Modifies a list item for aria-disabled styling. |
 | `.pf-m-drilldown` | `.pf-v5-c-menu` | Modifies the menu so that all nested `.pf-v5-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-v5-c-menu.pf-m-drilldown, .pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu` | Modifies the menu list for drilled in state. |

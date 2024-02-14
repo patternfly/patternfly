@@ -7,6 +7,9 @@
   {{else if menu-list-item--IsAriaDisabled}}
     pf-m-aria-disabled
   {{/if}}
+  {{#if menu-list-item--IsLoading}}
+    pf-m-loading
+  {{/if}}
   {{#if menu-list-item--IsDrillUp}}
     pf-m-drill-up
   {{/if}}
@@ -14,7 +17,7 @@
   {{#if menu-list-item--IsCheckbox}}
     role="menuitem"
   {{else}}
-    role="{{ternary menu-list-item--role menu-list-item--role "group"}}"
+    role="{{ternary menu-list-item--IsGroup 'group' 'none'}}"
   {{/if}}
   {{#if menu-list-item--attribute}}
     {{{menu-list-item--attribute}}}
