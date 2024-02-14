@@ -28,7 +28,7 @@
   }
 
   // Close
-  --#{$wizard}__close--Top: calc(var(--pf-t--global--spacer--lg) - var(--#{$pf-global}--spacer--form-element));
+  --#{$wizard}__close--Top: calc(var(--pf-t--global--spacer--lg) - var(--pf-v5-c-button--m-plain--PaddingTop));
   --#{$wizard}__close--Right: var(--pf-t--global--spacer--sm);
   --#{$wizard}__close--xl--Right: var(--pf-t--global--spacer--lg);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
