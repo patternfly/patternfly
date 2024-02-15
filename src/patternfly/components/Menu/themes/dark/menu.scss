@@ -1,9 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-menu() {
-  .#{$menu} {
-    --#{$menu}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-    --#{$menu}__list-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
-    --#{$menu}__list-item--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
-  }
-}
