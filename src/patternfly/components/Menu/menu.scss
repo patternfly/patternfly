@@ -138,23 +138,21 @@
   --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--Zindex--xs);
 }
 
-// - Menu shared display grid
-.#{$menu},
-.#{$menu}__list,
-.#{$menu}__group {
-  @include pf-v5-hidden-visible(grid);
-}
-
 // - Menu shared display flex
 .#{$menu}__content,
 .#{$menu}__list-item,
-.#{$menu}__item,
 .#{$menu}__item-main,
 .#{$menu}__breadcrumb,
 .#{$menu}__item-check,
 .#{$menu}__item-action,
 .#{$menu}__item-action-icon {
-  @include pf-v5-hidden-visible(flex);
+  display: flex;
+}
+
+// - Menu shared hidden visible
+.#{$menu}__list,
+.#{$menu}__group {
+  @include pf-v5-hidden-visible(grid);
 }
 
 // - Menu shared position relative
@@ -190,6 +188,7 @@
   // TODO: Explore this fallback method
   // padding-block-start: var(--#{$menu}--PaddingBlockStart, var(--#{$menu}--PaddingBlock));
   // padding-block-end: var(--#{$menu}--PaddingBlockEnd, var(--#{$menu}--PaddingBlock));
+  display: grid;
   row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
   min-width: var(--#{$menu}--MinWidth);
@@ -474,6 +473,7 @@
     padding-inline-end: var(--#{$menu}__list-item--has--menu-action--PaddingInlineEnd);
   }
 
+  &:focus-within,
   &:has(> :hover) {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
 
@@ -504,11 +504,17 @@
   border: 0;
   outline-offset: var(--#{$menu}--OutlineOffset);
 
+  @include pf-v5-hidden-visible(flex);
+
+  @at-root :where(label)#{&} {
+    cursor: pointer;
+  }
+
   &.pf-m-selected {
     --#{$menu}__item-select-icon--Color: var(--#{$menu}__item--m-selected__item-select-icon--Color);
   }
 
-  &:is(:hover, :focus, :active, .pf-m-selected) {
+  &:is(:hover, :focus, .pf-m-selected) {
     .#{$menu}__item-select-icon,
     .#{$menu}__item-external-icon {
       opacity: 1;
@@ -560,13 +566,6 @@
 // - Menu check
 .#{$menu}__item-check .#{$check} {
   --pf-v5-c-check__input--TranslateY: none;
-
-  // expand clickable area to full width/height of list__item
-  input::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-  }
 }
 
 // - Menu toggle icon
