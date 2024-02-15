@@ -106,7 +106,7 @@
   --#{$button}--m-link--m-inline--PaddingLeft: 0;
   --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
   --#{$button}--m-link--m-inline--hover--MixBlendMode: normal;
-  --#{$button}--m-link--m-inline--m-clicked--MixBlendMode: normal
+  --#{$button}--m-link--m-inline--m-clicked--MixBlendMode: normal;
   --#{$button}--m-link--m-inline__progress--Left: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--#{$button}--m-link--m-inline__progress--Left) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
