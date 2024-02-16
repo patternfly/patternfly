@@ -8,8 +8,8 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   $pf-v5-c-toolbar--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
 }
 
-:root,
-.#{$toolbar} {
+:where(:root),
+:where(.#{$toolbar}) {
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingBlock: var(--pf-t--global--spacer--md);
