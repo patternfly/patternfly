@@ -105,12 +105,6 @@
   --#{$menu-toggle}--m-secondary--hover__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
   --#{$menu-toggle}--m-secondary--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
 
-  // Icon
-  --#{$menu-toggle}__icon--MarginRight: var(--pf-t--global--spacer--sm);
-
-  // Count
-  --#{$menu-toggle}__count--MarginLeft: var(--pf-t--global--spacer--sm);
-
   // Controls
   --#{$menu-toggle}__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--sm));
 
@@ -157,8 +151,6 @@
   --#{$menu-toggle}--m-plain--disabled--BackgroundColor: transparent; // picking icon color rather than text...?
 
   // Typeahead
-  --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--m-typeahead__controls--MarginLeft: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
 }
@@ -166,6 +158,7 @@
 .#{$menu-toggle} {
   position: relative;
   display: inline-flex;
+  column-gap: var(--#{$menu-toggle}--ColumnGap);
   align-items: center;
   justify-content: center;
   min-width: var(--#{$menu-toggle}--MinWidth);
@@ -269,22 +262,6 @@
     }
   }
 
-  // TODO: wrap all toggle icons with .menu-toggle__button to eliminate the need for this
-  &:has(.#{$button}:only-child) {
-    padding: revert;
-  }
-
-  // TODO: wrap all toggle icons with .menu-toggle__button to eliminate the need for this
-  // TODO: update menu toggle to consume .pf-v5-c-button
-  &:is(button),
-  .#{$button} {
-    background-color: var(--#{$menu-toggle}--BackgroundColor);
-
-    &:has(> i:only-child) {
-      aspect-ratio: 1 / 1;
-    }
-  }
-
   &:is(:hover, :focus) {
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--hover--Color);
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--hover--BackgroundColor);
@@ -333,6 +310,8 @@
 
 // - Menu toggle split button
 .#{$menu-toggle}.pf-m-split-button {
+  --#{$menu-toggle}--ColumnGap: 0;
+
   padding: 0; // pass padding to children
 
   > * {
@@ -375,7 +354,6 @@
 
 // - Menu toggle split button action
 .#{$menu-toggle}.pf-m-split-button.pf-m-action {
-  --#{$menu-toggle}--ColumnGap: 0;
   --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--#{$menu-toggle}--BorderColor);
 
   // all subsequent buttons
@@ -437,6 +415,7 @@
 // - Menu toggle typeahead
 .#{$menu-toggle}.pf-m-typeahead {
   --#{$menu-toggle}__button--AlignSelf: var(--#{$menu-toggle}--m-typeahead__button--AlignSelf);
+  --#{$menu-toggle}--ColumnGap: 0;
 
   align-items: stretch;
   padding: 0;
@@ -446,7 +425,6 @@
   }
 
   .#{$menu-toggle}__controls {
-    --#{$menu-toggle}--ColumnGap: 0;
     --#{$menu-toggle}__button--PaddingRight: 0;
 
     display: flex;
@@ -479,8 +457,6 @@
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
   align-self: center;
-  margin-inline-end: var(--#{$menu-toggle}__icon--MarginRight);
-  line-height: 1;
 }
 
 .#{$menu-toggle}__text {
@@ -492,7 +468,6 @@
 .#{$menu-toggle}__count {
   display: flex;
   flex-wrap: nowrap;
-  margin-inline-start: var(--#{$menu-toggle}__count--MarginLeft);
 }
 
 .#{$menu-toggle}__controls {
@@ -500,7 +475,6 @@
   align-items: center;
   justify-content: center;
   min-width: var(--#{$menu-toggle}__controls--MinWidth);
-  margin-inline-start: var(--#{$menu-toggle}--ColumnGap);
 }
 
 .#{$menu-toggle}__toggle-icon {

@@ -161,15 +161,15 @@ import './MenuToggle.css'
 ### Plain
 ```hbs
 {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"'}}
-  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+  {{> menu-toggle-icon menu-toggle--icon="ellipsis-v"}}
 {{/menu-toggle}}
 &nbsp;
 {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"'}}
-  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+  {{> menu-toggle-icon menu-toggle--icon="ellipsis-v"}}
 {{/menu-toggle}}
 &nbsp;
 {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"'}}
-  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+  {{> menu-toggle-icon menu-toggle--icon="ellipsis-v"}}
 {{/menu-toggle}}
 ```
 
