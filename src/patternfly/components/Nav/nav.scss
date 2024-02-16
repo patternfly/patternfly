@@ -258,8 +258,6 @@
 
 // - Nav scroll button
 .#{$nav}__scroll-button {
-  @include pf-v5-mirror-inline-on-rtl;
-
   // - Nav button
   position: relative;
 
@@ -293,6 +291,10 @@
     &::before {
       border-inline-start: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
     }
+  }
+
+  .#{$button} {
+    @include pf-v5-mirror-inline-on-rtl;
   }
 }
 
