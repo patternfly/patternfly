@@ -473,6 +473,7 @@
     padding-inline-end: var(--#{$menu}__list-item--has--menu-action--PaddingInlineEnd);
   }
 
+  &.pf-m-focus,
   &:focus-within,
   &:has(> :hover) {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
