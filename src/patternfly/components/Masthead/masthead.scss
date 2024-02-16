@@ -10,6 +10,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // * Masthead brand
   --#{$masthead}__brand--MarginInlineEnd: var(--pf-t--global--spacer--md);
@@ -102,7 +103,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-block-end: var(--#{$masthead}--PaddingBlockEnd, var(--#{$masthead}--PaddingBlock));
   padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
-  background-color: var(--#{$masthead}--BackgroundColor, var(--pf-t--global--background--color--secondary--default));
+  background-color: var(--#{$masthead}--BackgroundColor);
 
   .#{$toolbar}__content-section {
     min-width: 0;
@@ -113,13 +114,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     inset-block-start: 100%;
     border-block-start: var(--#{$masthead}__expandable-content--BorderBlockStart);
     box-shadow: var(--#{$masthead}__expandable-content--BoxShadow);
-  }
-
-  // keep horizontal nav from making masthead taller
-  // TODO - should masthead or toolbar have a container specificlly for horizontal nav where these types of styles can be set?
-  .#{$nav}.pf-m-horizontal {
-    margin-block-start: var(--#{$masthead}--c-nav--m-horizontal--MarginBlockStart);
-    margin-block-end: var(--#{$masthead}--c-nav--m-horizontal--MarginBlockEnd);
   }
 
   // - Masthead display stack

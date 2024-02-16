@@ -14,13 +14,13 @@
   --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$nav}--RowGap: var(--pf-t--global--spacer--lg);
-  --#{$nav}--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$nav}--ColumnGap: 0;
   --#{$nav}--AlignItems: baseline;
   --#{$nav}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$nav}--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$nav}--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$nav}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$nav}--OutlineOffset: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$nav}--BackgroundColor: transparent;
 
   // * Nav list
   --#{$nav}__list--ScrollSnapTypeAxis: x;
@@ -31,6 +31,10 @@
   // * Nav section title
   --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
+  --#{$nav}__section-title--PaddingBlockStart: var(--#{$nav}__link--PaddingBlockStart);
+  --#{$nav}__section-title--PaddingBlockEnd: var(--#{$nav}__link--PaddingBlockEnd);
+  --#{$nav}__section-title--PaddingInlineStart: var(--#{$nav}__link--PaddingInlineStart);
+  --#{$nav}__section-title--PaddingInlineEnd: var(--#{$nav}__link--PaddingInlineEnd);
 
   // * Nav toggle icon
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
@@ -38,16 +42,14 @@
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
 
   // * Nav link
+  --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$nav}__link--AlignItems: baseline;
   --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$nav}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$nav}__link--WhiteSpace: normal;
   --#{$nav}__link--Color: var(--pf-t--global--text--color--subtle);
   --#{$nav}__link--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}__link--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}__link--active--Color: var(--pf-t--global--text--color--regular);
   --#{$nav}__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
-  --#{$nav}__link--focus--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
-  --#{$nav}__link--active--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
   --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
 
@@ -58,53 +60,36 @@
   // * Nav scroll button
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
   --#{$nav}__scroll-button--BorderWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$nav}__scroll-button--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$nav}__scroll-button--button--InlinePadding: var(--pf-t--global--spacer--sm); // TODO: update after button updates
-  --#{$nav}__scroll-button--button--icon--InlinePadding: var(--pf-t--global--spacer--sm);
-  --#{$nav}__scroll-button--button--icon--IconSize: var(--pf-t--global--icon--size--md);
 
   // * Nav toggle
   --#{$nav}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2) - 50%); // find height of single label, divide by two, offset by 50% of own height
 
-  // * Nav link clickable inset
-  --#{$nav}__link--clickable-inset--InlineStart: 0;
-  --#{$nav}__link--clickable-inset--InlineEnd: 0;
-  --#{$nav}__link--clickable-inset--Inline: var(--#{$nav}__link--clickable-inset--InlineStart) var(--#{$nav}__link--clickable-inset--InlineEnd);
-
   // * Nav horizontal
-  --#{$nav}--m-horizontal--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}--m-horizontal--BorderRadius: none;
 
   // * Nav horizontal list
-  --#{$nav}--m-horizontal__list--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
+  --#{$nav}--m-horizontal__list--PaddingBlockEnd: 0;
+  --#{$nav}--m-horizontal__list--PaddingInlineStart: 0;
+  --#{$nav}--m-horizontal__list--PaddingInlineEnd: 0;
+  --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart: var(--#{$nav}__list--ColumnGap);
+  --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}__list--ColumnGap);
 
-  // * Nav horizontal list - base vars
-  --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-
-  // * Nav horizontal list - mapped vars
-  --#{$nav}--m-horizontal__list--PaddingBlock: var(--#{$nav}--m-horizontal__list--PaddingBlockStart) var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
-  --#{$nav}--m-horizontal__list--PaddingInline: var(--#{$nav}--m-horizontal__list--PaddingInlineStart) var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
-
-  // * Nav horizontal link - base vars
+  // * Nav horizontal subnav
+  --#{$nav}--m-horizontal--m-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$nav}--m-horizontal--m-subnav__list--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineStart: var(--#{$nav}__list--ColumnGap);
+  --#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}__list--ColumnGap);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-
-  // * Nav horizontal link - mapped vars
-  --#{$nav}--m-horizontal--m-subnav__link--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
-  --#{$nav}--m-horizontal--m-subnav__link--PaddingInline: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineEnd);
-
-
-  // * Nav horizontal subnav link
-  --#{$nav}--m-horizontal--m-subnav__link--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
-
-  // * Nav horizontal scrollable
-  --pf-v5-c-nav--horizontal-scrollable--PaddingInlineStart: var(--pf-t--global--border--width--extra-strong);
 }
 
 // - Nav display - default to grid
@@ -122,6 +107,7 @@
 
   position: relative;
   row-gap: var(--#{$nav}--RowGap);
+  column-gap: var(--#{$nav}--ColumnGap);
   max-width: 100%;
   padding-block-start: var(--#{$nav}--PaddingBlockStart);
   padding-block-end: var(--#{$nav}--PaddingBlockEnd);
@@ -131,10 +117,6 @@
   font-weight: var(--#{$nav}--FontWeight);
   line-height: var(--#{$nav}--LineHeight);
   background-color: var(--#{$nav}--BackgroundColor);
-
-  &:where(.pf-m-scrollable) {
-    padding-inline: var(--#{$nav}--m-scrollable__list--PaddingInline);
-  }
 
   &.pf-m-overflow-hidden {
     overflow: hidden;
@@ -147,7 +129,6 @@
   &.pf-m-fill {
     flex-grow: 1;
   }
-
 }
 
 [class^="#{$nav}"][hidden] {
@@ -202,10 +183,10 @@
 
 // - Nav section title
 .#{$nav}__section-title {
-  padding-block-start: var(--#{$nav}__section-title--PaddingBlock, var(--#{$nav}__link--PaddingBlockStart));
-  padding-block-end: var(--#{$nav}__section-title--PaddingBlock, var(--#{$nav}__link--PaddingBlockEnd));
-  padding-inline-start: var(--#{$nav}__section-title--PaddingInline, var(--#{$nav}__link--PaddingInlineStart));
-  padding-inline-end: var(--#{$nav}__section-title--PaddingInline, var(--#{$nav}__link--PaddingInlineEnd));
+  padding-block-start: var(--#{$nav}__section-title--PaddingBlockStart);
+  padding-block-end: var(--#{$nav}__section-title--PaddingBlockEnd);
+  padding-inline-start: var(--#{$nav}__section-title--PaddingInlineStart);
+  padding-inline-end: var(--#{$nav}__section-title--PaddingInlineEnd);
   font-size: var(--#{$nav}__section-title--FontSize, inherit); // default to inherit if no custom value is set
   font-weight: var(--#{$nav}__section-title--FontWeight);
   color: var(--#{$nav}__section-title--Color);
@@ -215,8 +196,8 @@
 .#{$nav}__link {
   position: relative;
   display: flex;
-  column-gap: var(--#{$nav}__link--ColumnGap, var(--#{$nav}--ColumnGap)); // default to nav column gap if no custom value is set
-  align-items: var(--#{$nav}__link--AlignItems, var(--#{$nav}--AlignItems)); // default to nav align items if no custom value is set
+  column-gap: var(--#{$nav}__link--ColumnGap);
+  align-items: var(--#{$nav}__link--AlignItems);
   padding-block-start: var(--#{$nav}__link--PaddingBlockStart);
   padding-block-end: var(--#{$nav}__link--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__link--PaddingInlineStart);
@@ -230,14 +211,6 @@
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
 
-  // adjust clickable target area to consume space between items to prevent cursor flicker
-  &::before {
-    position: absolute;
-    inset-block: var(--#{$nav}__link--clickable-inset--Block); // do not customize this property
-    inset-inline: var(--#{$nav}__link--clickable-inset--Inline); // do not customize this property
-    content: "";
-  }
-
   // increase height clickable area of expanded nav_links to account for
   &[aria-expanded="true"]::before {
     inset-block-end: calc(var(--#{$nav}__item--RowGap) * -1);
@@ -245,19 +218,10 @@
 
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
-  &.pf-m-hover {
+  &.pf-m-hover,
+  &:focus {
     color: var(--#{$nav}__link--hover--Color);
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
-  }
-
-  &:focus {
-    color: var(--#{$nav}__link--focus--Color);
-    background-color: var(--#{$nav}__link--focus--BackgroundColor);
-  }
-
-  &:active {
-    color: var(--#{$nav}__link--active--Color);
-    background-color: var(--#{$nav}__link--active--BackgroundColor);
   }
 
   &.pf-m-current,
@@ -297,54 +261,22 @@
 .#{$nav}__scroll-button {
   @include pf-v5-mirror-inline-on-rtl;
 
-  :is(button) {
-    --#{$button}--Display: flex;
-    --#{$button}--Flex: 1;
-    --#{$button}--AlignItems: center;
-    --#{$button}--JustifyContent: center;
-
-    padding-inline: var(--#{$nav}__scroll-button--button--InlinePadding);
-
-    .#{$button}__icon {
-      @include pf-v5-mirror-inline-on-rtl;
-    }
-
-    > * {
-      display: inline-block;
-      padding-inline: var(--#{$nav}__scroll-button--button--icon--InlinePadding);
-
-      > * {
-        min-width: var(--#{$nav}__scroll-button--button--icon--IconSize);
-      }
-    }
-  }
-
   // - Nav button
   position: relative;
-  display: flex;
-  flex: none;
-  align-items: stretch;
-  justify-items: stretch;
-  min-width: var(--#{$nav}__scroll-button--MinWidth);
 
   &::before {
     position: absolute;
-    inset-block: 0;
-    inset-inline: 0;
+    inset: 0;
     content: "";
-    outline-offset: var(--#{$nav}--OutlineOffset);
   }
 
   &:first-of-type {
-    button {
+    .#{$button} {
       --#{$button}--BorderStartStartRadius: var(--#{$nav}__scroll-button--BorderRadius);
       --#{$button}--BorderStartEndRadius: 0;
       --#{$button}--BorderEndStartRadius: var(--#{$nav}__scroll-button--BorderRadius);
       --#{$button}--BorderEndEndRadius: 0;
     }
-
-    border-start-start-radius: var(--#{$nav}__scroll-button--BorderRadius);
-    border-end-start-radius: var(--#{$nav}__scroll-button--BorderRadius);
 
     &::before {
       border-inline-end: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
@@ -352,15 +284,12 @@
   }
 
   &:last-of-type {
-    button {
+    .#{$button} {
       --#{$button}--BorderStartStartRadius: 0;
       --#{$button}--BorderStartEndRadius: var(--#{$nav}__scroll-button--BorderRadius);
       --#{$button}--BorderEndStartRadius: 0;
       --#{$button}--BorderEndEndRadius: var(--#{$nav}__scroll-button--BorderRadius);
     }
-
-    border-start-end-radius: var(--#{$nav}__scroll-button--BorderRadius);
-    border-end-end-radius: var(--#{$nav}__scroll-button--BorderRadius);
 
     &::before {
       border-inline-start: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
@@ -385,11 +314,14 @@
 
   // - Nav horizontal list
   .#{$nav}__list {
-    padding-block: var(--#{$nav}--m-horizontal__list--PaddingBlock);
-    padding-inline: var(--#{$nav}--m-horizontal__list--PaddingInline);
+    padding-block-start: var(--#{$nav}--m-horizontal__list--PaddingBlockStart);
+    padding-block-end: var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
+    padding-inline-start: var(--#{$nav}--m-horizontal__list--PaddingInlineStart);
+    padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
     overflow-x: auto;
     white-space: nowrap;
     scroll-snap-type: var(--#{$nav}__list--ScrollSnapType);
+    scroll-padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
     -webkit-overflow-scrolling: touch;
 
     @include pf-v5-overflow-hide-scroll;
@@ -399,32 +331,22 @@
     outline-offset: var(--#{$nav}--OutlineOffset);
   }
 
-  .#{$nav}__link::before { // - Nav link before
-    // offset vertical clickable area by list padding start/end
-    inset-block-start: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockStart) * -1);
-    inset-block-end: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockEnd) * -1);
-    inset-inline-start: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) / 2 * -1);
-    inset-inline-end: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) / 2 * -1);
-  }
-
   // - Nav subnav
   &.pf-m-subnav {
-    // - Nav subnav link1
+    --#{$nav}--BackgroundColor: var(--#{$nav}--m-horizontal--m-subnav--BackgroundColor);
+    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
+    --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
+    --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
+    --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
+    --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineEnd);
+    --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineStart);
+    --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineEnd);
     --#{$nav}__link--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart);
     --#{$nav}__link--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd);
-
-    // - Nav subnav list
-    --#{$nav}__list--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
-    --#{$nav}__list--PaddingInline: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
   }
 
-  // - Nav scrollable
-  .#{$nav}__scroll-button + .#{$nav}__list {
-    padding-inline-start: var(--pf-v5-c-nav--horizontal-scrollable--PaddingInlineStart);
-
-    // offset clickable area for first child by padding update
-    > :first-child .#{$nav}__link::before {
-      inset-inline-start: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) / 2 * -1 - var(--pf-v5-c-nav--horizontal-scrollable--PaddingInlineStart));
-    }
+  &.pf-m-scrollable {
+    --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart);
+    --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd);
   }
 }
