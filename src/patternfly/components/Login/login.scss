@@ -86,13 +86,7 @@
   --#{$login}__main-footer-links--PaddingRight: var(--pf-t--global--spacer--3xl);
   --#{$login}__main-footer-links--PaddingBottom: var(--pf-t--global--spacer--xl);
   --#{$login}__main-footer-links--PaddingLeft: var(--pf-t--global--spacer--3xl);
-  --#{$login}__main-footer-links-item--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$login}__main-footer-links-item--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$login}__main-footer-links-item--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$login}__main-footer-links-item-link-svg--Fill: var(--pf-t--global--icon--color--subtle);
-  --#{$login}__main-footer-links-item-link-svg--Width: var(--pf-t--global--icon--size--lg);
-  --#{$login}__main-footer-links-item-link-svg--Height: var(--pf-t--global--icon--size--lg);
-  --#{$login}__main-footer-links-item-link-svg--hover--Fill: var(--pf-t--global--icon--color--nonstatus--hover); // TODO is this needed?
+  --#{$login}__main-footer-links--Gap: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-band--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$login}__main-footer-band--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-band--PaddingBottom: var(--pf-t--global--spacer--lg);
@@ -244,33 +238,12 @@
 .#{$login}__main-footer-links {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--#{$login}__main-footer-links--Gap);
   justify-content: center;
   padding-block-start: var(--#{$login}__main-footer-links--PaddingTop);
   padding-block-end: var(--#{$login}__main-footer-links--PaddingBottom);
   padding-inline-start: var(--#{$login}__main-footer-links--PaddingLeft);
   padding-inline-end: var(--#{$login}__main-footer-links--PaddingRight);
-}
-
-.#{$login}__main-footer-links-item {
-  padding-inline-start: var(--#{$login}__main-footer-links-item--PaddingLeft);
-  padding-inline-end: var(--#{$login}__main-footer-links-item--PaddingRight);
-  margin-block-end: var(--#{$login}__main-footer-links-item--MarginBottom);
-}
-
-.#{$login}__main-footer-links-item-link {
-  svg {
-    width: 100%;
-    max-width: var(--#{$login}__main-footer-links-item-link-svg--Width);
-    height: 100%;
-    max-height: var(--#{$login}__main-footer-links-item-link-svg--Height);
-    fill: var(--#{$login}__main-footer-links-item-link-svg--Fill);
-  }
-
-  &:hover {
-    svg {
-      fill: var(--#{$login}__main-footer-links-item-link-svg--hover--Fill);
-    }
-  }
 }
 
 .#{$login}__main-footer-band {

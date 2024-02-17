@@ -44,7 +44,7 @@
   --#{$table}__tbody--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$table}__tbody--after--border-width--base: var(--pf-t--global--border--width--extra-strong);
   --#{$table}__tbody--after--BorderLeftWidth: 0;
-  --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--active);
+  --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // Row
   --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
@@ -66,11 +66,11 @@
   --#{$table}__tbody--after__tr--BorderLeftWidth: 0;
   --#{$table}__tbody--after__tr--BorderLeftColor: transparent;
   --#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--pf-t--global--border--color--active);
+  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
 
   // selected
   --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--pf-t--global--border--color--active);
+  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
 
   // Cell display
   --#{$table}--m-grid--cell--hidden-visible--Display: grid;
