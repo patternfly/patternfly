@@ -87,6 +87,7 @@
   --#{$login}__main-footer-links--PaddingBottom: var(--pf-t--global--spacer--xl);
   --#{$login}__main-footer-links--PaddingLeft: var(--pf-t--global--spacer--3xl);
   --#{$login}__main-footer-links--Gap: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-links-item--c-button--FontSize: var(--pf-t--global--icon--size--xl);
   --#{$login}__main-footer-band--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$login}__main-footer-band--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-band--PaddingBottom: var(--pf-t--global--spacer--lg);
@@ -244,6 +245,12 @@
   padding-block-end: var(--#{$login}__main-footer-links--PaddingBottom);
   padding-inline-start: var(--#{$login}__main-footer-links--PaddingLeft);
   padding-inline-end: var(--#{$login}__main-footer-links--PaddingRight);
+}
+
+.#{$login}__main-footer-links-item {
+  .#{$button}{
+    --#{$button}--FontSize: var(--#{$login}__main-footer-links-item--c-button--FontSize);
+  }
 }
 
 .#{$login}__main-footer-band {
