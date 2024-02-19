@@ -38,7 +38,6 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
   --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
   --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$dual-list-selector}__list-item-row--BorderRadius: var(--pf-t--global--border--radius--tiny);
   --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
@@ -56,7 +55,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   // Item text
   --#{$dual-list-selector}__item-text--Color: var(--pf-t--global--text--color--subtle);
   --#{$dual-list-selector}__list-item-row--m-selected__text--Color: var(--pf-t--global--text--color--regular);
-  --#{$dual-list-selector}__list-item--m-disabled__item-text--Color: var(--pf-t--global--background--color--disabled--default); // token?
+  --#{$dual-list-selector}__list-item--m-disabled__item-text--Color: var(--pf-t--global--text--color--disabled);
 
   // Status
   --#{$dual-list-selector}__status--MarginBottom: var(--pf-t--global--spacer--sm);
@@ -85,7 +84,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
   --#{$dual-list-selector}__item-toggle-icon--Transition: var(--#{$pf-global}--Transition); // need token
   --#{$dual-list-selector}__item-toggle-icon--MinWidth: var(--#{$dual-list-selector}__list-item-row--FontSize);
-  --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--pf-t--global--background--color--disabled--default);
+  --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
 }
 
 .#{$dual-list-selector} {
@@ -215,11 +214,6 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   display: flex;
   font-size: var(--#{$dual-list-selector}__list-item-row--FontSize);
   background-color: var(--#{$dual-list-selector}__list-item-row--BackgroundColor);
-  border-radius: var(--#{$dual-list-selector}__list-item-row--BorderRadius);
-
-  &:hover {
-    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
-  }
 
   &.pf-m-selected {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor);
@@ -229,10 +223,10 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 
       font-weight: var(--#{$dual-list-selector}__list-item-row--m-selected__text--FontWeight);
     }
+  }
 
-    &:hover {
-      --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
-    }
+  &:hover {
+    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
   }
 
   &.pf-m-check {
