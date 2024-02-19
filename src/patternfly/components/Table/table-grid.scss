@@ -62,15 +62,15 @@
   --#{$table}__tr--responsive--nested-table--PaddingBottom: var(--pf-t--global--spacer--xl);
   --#{$table}__tr--responsive--nested-table--PaddingLeft: var(--pf-t--global--spacer--lg);
 
-  // expandable
-  --#{$table}__tbody--after__tr--BorderLeftWidth: 0;
-  --#{$table}__tbody--after__tr--BorderLeftColor: transparent;
-  --#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
+  // // expandable
+  // --#{$table}__tbody--after__tr--BorderLeftWidth: 0;
+  // --#{$table}__tbody--after__tr--BorderLeftColor: transparent;
+  // --#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  // --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
 
-  // selected
-  --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
+  // // selected
+  // --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  // --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
 
   // Cell display
   --#{$table}--m-grid--cell--hidden-visible--Display: grid;
@@ -360,7 +360,8 @@
     max-height: var(--#{$table}__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
     overflow-y: auto;
     border-block-end: none;
-    box-shadow: none;
+
+    // box-shadow: none;
 
     // cells
     > * {
@@ -399,8 +400,8 @@
 
   // tr selected
   tbody:where(.#{$table}__tbody).pf-m-hoverable {
-    --#{$table}__tbody--after--BorderLeftWidth: 0;
-    --#{$table}__tbody--after--BorderLeftColor: transparent;
+    // --#{$table}__tbody--after--BorderLeftWidth: 0;
+    // --#{$table}__tbody--after--BorderLeftColor: transparent;
 
     &,
     > tr:where(.#{$table}__tr) {
@@ -417,15 +418,15 @@
       background-color: var(--#{$table}__tbody--after__tr--BorderLeftColor);
     }
 
-    &.pf-m-expanded {
-      --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth);
-      --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftColor);
-    }
+    // &.pf-m-expanded {
+    //   --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth);
+    //   --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftColor);
+    // }
 
-    &.pf-m-selected {
-      --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftWidth);
-      --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftColor);
-    }
+    // &.pf-m-selected {
+    //   --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftWidth);
+    //   --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftColor);
+    // }
   }
 
 

@@ -25,7 +25,7 @@
   --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
 
   // Tr
-  --#{$table}__tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);
+  // --#{$table}__tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);
 
   // TODO: update these in order of appearance in scss declarations
 
@@ -82,12 +82,11 @@
   --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__button--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__button--BackgroundColor: transparent;
+  --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__button--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__button--active--Color: var(--pf-t--global--text--color--regular);
+  --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
 
   // Compact
@@ -106,8 +105,6 @@
   --#{$table}__favorite--m-favorited--c-button--Color: var(--pf-t--global--color--favorite--clicked);
   --#{$table}__sort--m-favorite__button__text--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__sort--m-favorite__button--hover__text--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort--m-favorite__button--focus__text--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort--m-favorite__button--active__text--Color: var(--pf-t--global--text--color--regular);
 
   // Draggable
   --#{$table}__draggable--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
@@ -133,6 +130,8 @@
   --#{$table}__expandable-row-content--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__expandable-row-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__expandable-row-content--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
 
   // ::after border
@@ -163,8 +162,6 @@
   // Sort text
   --#{$table}__sort__button__text--Color: currentcolor;
   --#{$table}__sort__button--hover__text--Color: currentcolor;
-  --#{$table}__sort__button--focus__text--Color: currentcolor;
-  --#{$table}__sort__button--active__text--Color: currentcolor;
 
   // Sort text
   --#{$table}__sort--cell--PaddingLeft: var(--pf-t--global--spacer--xs);
@@ -173,10 +170,9 @@
   // Sort indicator
   --#{$table}__sort-indicator--Color: var(--pf-t--global--icon--color--subtle);
   --#{$table}__sort-indicator--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--border--color--clicked);
   --#{$table}__sort__button--hover__sort-indicator--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort__button--active__sort-indicator--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort__button--focus__sort-indicator--Color: var(--pf-t--global--text--color--regular);
+  --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--icon--color--brand--clicked);
+  --#{$table}__sort--m-selected__button__text--Color: var(--pf-t--global--color--brand--clicked);
 
   // Help
   --#{$table}__th--m-help--MinWidth: 11ch;
@@ -191,8 +187,6 @@
   // Compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--focus--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--active--Color: var(--pf-t--global--icon--color--brand--clicked);
 
   // ::before border treatment
   --#{$table}__compound-expansion-toggle__button--before--border-width--base: var(--pf-t--global--border--width--button--default);
@@ -222,56 +216,50 @@
   // Modifier - expandable row expanded
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
 
-  // tr clickable
-  --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tr--m-clickable--BackgroundColor: transparent;
+  // * Table tr clickable
+  // --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
+
+  --#{$table}__tr--m-clickable--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tr--m-clickable--BoxShadow: none;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // TODO Shadow tokens START HERE AGAIN
-  --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--focus--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-clickable--focus--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--active--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-clickable--active--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  // --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
-  // tr selected
-  --#{$table}__tr--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+  // - Table tr selected
+  --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
-  --#{$table}__tr--m-selected--after--BorderLeftColor: var(--pf-t--global--color--brand--default);
-  --#{$table}__tr--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
 
-  // tbody clickable
-  --#{$table}__tbody--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-clickable--BoxShadow: none;
-  --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
+  // --#{$table}__tr--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
+  // --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tr--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+
+  // * Table tbody clickable
+  --#{$table}__tbody--m-clickable--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-clickable--focus--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-clickable--focus--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-clickable--active--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-clickable--active--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
-  // tbody selected
-  --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tbody--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
+  // --#{$table}__tbody--m-clickable--BoxShadow: none;
+  // --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  // --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
+
+  // * Table tbody selected
+  --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
-  --#{$table}__tbody--m-selected--after--BorderLeftColor: var(--pf-t--global--border--color--clicked);
-  --#{$table}__tbody--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+
+  // --#{$table}__tbody--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
+  // --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tbody--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
+  // --#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
 
   // Nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
@@ -284,7 +272,7 @@
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
   // Striped
-  --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // Sticky
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--Zindex--xs);
@@ -292,11 +280,8 @@
 
 // TODO: update grouping comments to // Table {element}
 // TODO: flatten the modifiers out ex: .#{$table}.pf-m-sticky-header {}
-// Table
+// - Table
 .#{$table} {
-  @include pf-v5-t-light; // This component always needs to be light
-
-  // Base
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
 
@@ -308,7 +293,7 @@
     position: relative;
 
     thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
-      border-block-end: 0;
+      // border-block-end: 0;
 
       > * {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
@@ -390,7 +375,7 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    // border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
 
     // stylelint-disable-next-line
     &.pf-m-ghost-row {
@@ -399,7 +384,7 @@
     }
   }
 
-  // Table cell
+  // - Table tr *
   tr:where(.#{$table}__tr) > * {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
@@ -462,13 +447,13 @@
       content: "";
     }
 
-    &.pf-m-border-right::before {
-      border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderRightWidth) solid var(--#{$table}--cell--m-border-right--before--BorderRightColor);
-    }
+    // &.pf-m-border-right::before {
+    //   border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderRightWidth) solid var(--#{$table}--cell--m-border-right--before--BorderRightColor);
+    // }
 
-    &.pf-m-border-left::before {
-      border-inline-start: var(--#{$table}--cell--m-border-left--before--BorderLeftWidth) solid var(--#{$table}--cell--m-border-left--before--BorderLeftColor);
-    }
+    // &.pf-m-border-left::before {
+    //   border-inline-start: var(--#{$table}--cell--m-border-left--before--BorderLeftWidth) solid var(--#{$table}--cell--m-border-left--before--BorderLeftColor);
+    // }
   }
 
   // Table caption
@@ -482,7 +467,7 @@
     background-color: var(--#{$table}--BackgroundColor);
   }
 
-  // Table header cell
+  // - Table thead
   thead:where(.#{$table}__thead) {
     --#{$table}--cell--FontSize: var(--#{$table}__thead--cell--FontSize);
     --#{$table}--cell--FontWeight: var(--#{$table}__thead--cell--FontWeight);
@@ -506,6 +491,7 @@
     }
     // stylelint-enable
 
+    // - Table subhead
     .#{$table}__subhead {
       --#{$table}--cell--PaddingLeft: var(--#{$table}__subhead--PaddingLeft);
       --#{$table}--cell--PaddingRight: var(--#{$table}__subhead--PaddingRight);
@@ -519,15 +505,18 @@
     }
   }
 
-  // Table body cell
+  // - Table tbody
   // stylelint-disable
   tbody:where(.#{$table}__tbody) {
     --#{$table}--cell--PaddingTop: var(--#{$table}__tbody--cell--PaddingTop);
     --#{$table}--cell--PaddingBottom: var(--#{$table}__tbody--cell--PaddingBottom);
+    --#{$table}--cell--FontSize: var(--#{$table}__tbody--cell--FontSize);
 
     vertical-align: top;
 
-    --#{$table}--cell--FontSize: var(--#{$table}__tbody--cell--FontSize);
+    tr:where(.#{$table}__tr) {
+      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    }
 
     > tr:where(.#{$table}__tr) > * {
       overflow-wrap: break-word;
@@ -546,12 +535,13 @@
 
       // add border left
       background-color: transparent;
-      border-inline-start: var(--#{$table}__expandable-row--after--BorderLeftWidth) solid var(--#{$table}__expandable-row--after--BorderColor);
+
+      // border-inline-start: var(--#{$table}__expandable-row--after--BorderLeftWidth) solid var(--#{$table}__expandable-row--after--BorderColor);
     }
 
-    &.pf-m-expanded > :first-child:not(.#{$table}__control-row) {
-      border-block-end-width: 0;
-    }
+    // &.pf-m-expanded > :first-child:not(.#{$table}__control-row) {
+    //   border-block-end-width: 0;
+    // }
   }
   // stylelint-enable
 
@@ -624,29 +614,25 @@
 
   // stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
   &.pf-m-no-border-rows > tbody:where(.#{$table}__tbody) {
-    > tr:where(.#{$table}__tr) {
-      border-block-end: 0;
+    // > tr:where(.#{$table}__tr) {
+    //   // border-block-end: 0;
 
-      > :first-child::after {
-        border-inline-start: 0;
-      }
-    }
+    //   > :first-child::after {
+    //     border-inline-start: 0;
+    //   }
+    // }
 
     &:not(.pf-m-expanded) .#{$table}__compound-expansion-toggle .#{$table}__button::before {
       display: none;
     }
 
-    &.pf-m-expanded > .#{$table}__control-row {
-      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-    }
+    // &.pf-m-expanded > .#{$table}__control-row {
+    //   border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    // }
 
-    .#{$table}__control-row > .#{$table}__compound-expansion-toggle:first-child > ::before {
-      border-inline-start-width: 0;
-    }
-  }
-
-  tr.pf-m-clickable:last-child {
-    border-block-end-color: transparent;
+    // .#{$table}__control-row > .#{$table}__compound-expansion-toggle:first-child > ::before {
+    //   border-inline-start-width: 0;
+    // }
   }
 
   // tr clickable
@@ -655,36 +641,33 @@
       cursor: pointer;
       background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
 
-      &:hover,
-      &:focus,
-      &:active {
+      // box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
+
+      &:is(:hover, :focus) {
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
       }
     }
 
-    // tr selected
+    // - Table tr selected
     &.pf-m-selected {
-      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
-      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tr--m-selected--after--BorderLeftColor);
-
       position: relative;
       background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-selected--BoxShadow);
 
-      & + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--m-selected--BoxShadow);
-      }
+      // --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
+      // box-shadow: var(--#{$table}__tr--m-selected--BoxShadow);
+      // & + tr:where(.#{$table}__tr).pf-m-selected {
+      //   box-shadow: var(--#{$table}__tr--m-selected--m-selected--BoxShadow);
+      // }
 
-      & + tr:where(.#{$table}__tr).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow);
-      }
+      // & + tr:where(.#{$table}__tr).pf-m-selected:hover {
+      //   box-shadow: var(--#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow);
+      // }
 
-      &:hover + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow);
-      }
+      // &:hover + tr:where(.#{$table}__tr).pf-m-selected {
+      //   box-shadow: var(--#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow);
+      // }
     }
 
     &.pf-m-first-cell-offset-reset {
@@ -692,65 +675,51 @@
     }
   }
 
-  // tbody clickable
+  // - Table tbody
   // stylelint-disable no-duplicate-selectors
   tbody:where(.#{$table}__tbody) {
     &.pf-m-clickable {
       cursor: pointer;
       background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tbody--m-clickable--BoxShadow);
 
-      &.pf-m-expanded:not(.pf-m-selected) {
-        --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-clickable--m-expanded--BorderColor);
-      }
+      // box-shadow: var(--#{$table}__tbody--m-clickable--BoxShadow);
 
-      &:hover,
-      &:focus,
-      &:active {
+      // &.pf-m-expanded:not(.pf-m-selected) {
+      //   --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-clickable--m-expanded--BorderColor);
+      // }
+
+      &:is(:hover, :focus) {
         // stylelint-disable max-nesting-depth
-        &:not(.pf-m-selected) + tbody:where(.#{$table}__tbody).pf-m-selected {
-          box-shadow: var(--#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow);
-        }
+        // &:not(.pf-m-selected) + tbody:where(.#{$table}__tbody).pf-m-selected {
+        //   box-shadow: var(--#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow);
+        // }
         // stylelint-enable
-      }
 
-      &:hover {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--hover--BoxShadow);
+        // --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--hover--BoxShadow);
         --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
-      }
-
-      &:focus {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--focus--BoxShadow);
-        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--focus--BackgroundColor);
-      }
-
-      &:active {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--active--BoxShadow);
-        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--active--BackgroundColor);
       }
     }
 
     // tbody selected
     &.pf-m-selected {
-      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after--BorderLeftWidth);
-      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-selected--after--BorderLeftColor);
-
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tbody--m-selected--BoxShadow);
 
-      & + tbody:where(.#{$table}__tbody).pf-m-selected {
-        --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--m-selected--BoxShadow);
-      }
+      // --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after--BorderLeftWidth);
+      // box-shadow: var(--#{$table}__tbody--m-selected--BoxShadow);
 
-      & + tbody:where(.#{$table}__tbody).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow);
-      }
+      // & + tbody:where(.#{$table}__tbody).pf-m-selected {
+      //   --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--m-selected--BoxShadow);
+      // }
 
-      &:hover + tbody:where(.#{$table}__tbody).pf-m-selected {
-        box-shadow: var(--#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow);
-      }
+      // & + tbody:where(.#{$table}__tbody).pf-m-selected:hover {
+      //   box-shadow: var(--#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow);
+      // }
+
+      // &:hover + tbody:where(.#{$table}__tbody).pf-m-selected {
+      //   box-shadow: var(--#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow);
+      // }
     }
   }
 
@@ -821,16 +790,9 @@
     content: '';
   }
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: var(--#{$table}__button--hover--Color);
-  }
-
-  &:focus {
-    color: var(--#{$table}__button--focus--Color);
-  }
-
-  &:active {
-    color: var(--#{$table}__button--active--Color);
+    background-color: var(--#{$table}__button--hover--BackgroundColor);
   }
 }
 
@@ -927,15 +889,13 @@
   --#{$table}--cell--PaddingLeft: var(--#{$table}__check--PaddingLeft);
   --#{$table}--cell--PaddingRight: var(--#{$table}__check--PaddingRight);
 
+  vertical-align: top;
+
   .#{$check}.pf-m-standalone {
     display: inline-flex;
 
     thead & {
       vertical-align: bottom;
-    }
-
-    tbody & {
-      vertical-align: top;
     }
   }
 
@@ -989,8 +949,6 @@
 .#{$table}__compound-expansion-toggle {
   --#{$table}__button--Color: var(--#{$table}__compound-expansion-toggle__button--Color);
   --#{$table}__button--hover--Color: var(--#{$table}__compound-expansion-toggle__button--hover--Color);
-  --#{$table}__button--focus--Color: var(--#{$table}__compound-expansion-toggle__button--focus--Color);
-  --#{$table}__button--active--Color: var(--#{$table}__compound-expansion-toggle__button--active--Color);
 
   position: relative;
   padding: 0;
@@ -1002,19 +960,18 @@
 
   .#{$table}__button {
     position: static;
+    display: table-cell;
     min-width: 100%;
     padding: 0;
     margin: 0;
     overflow: hidden;
+    background: none; // ** var update
 
     // Remove outline and apply to parent td
-    &:hover,
-    &:focus,
-    &:active {
+    &:is(:hover, :focus, :active) {
       outline: 0;
     }
   }
-
 
   // Apply borders to button to avoid conflicts with expanded states
   .#{$table}__button::before,
@@ -1030,9 +987,10 @@
     inset-block-start: 0;
     inset-block-end: var(--#{$table}__compound-expansion-toggle__button--before--Bottom);
     inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--before--Left);
-    border-color: var(--#{$table}__compound-expansion-toggle__button--before--BorderColor);
-    border-inline-start-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth);
-    border-inline-end-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderRightWidth);
+
+    // border-color: var(--#{$table}__compound-expansion-toggle__button--before--BorderColor);
+    // border-inline-start-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth);
+    // border-inline-end-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderRightWidth);
   }
 
   .#{$table}__button::after {
@@ -1044,23 +1002,21 @@
     border-block-start-width: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth);
   }
 
-  &:hover,
-  &:focus-within,
-  &.pf-m-expanded {
-    --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
+  &:is(:hover, :focus-within, .pf-m-expanded) {
+    // --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
+    // --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
     --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: var(--#{$table}__compound-expansion-toggle__button--after--border-width--base);
   }
 
-  &.pf-m-expanded {
-    .#{$table}__button::before {
-      border-block-end: var(--#{$table}--BackgroundColor) solid var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    }
+  // &.pf-m-expanded {
+  //   .#{$table}__button::before {
+  //     border-block-end: var(--#{$table}--BackgroundColor) solid var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
+  //   }
 
-    &:first-child {
-      --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-    }
-  }
+  //   &:first-child {
+  //     --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+  //   }
+  // }
 
   &:focus-within {
     outline-offset: var(--#{$table}__button--OutlineOffset);
@@ -1079,25 +1035,26 @@
   margin-inline-start: var(--#{$table}__column-help--MarginLeft);
 }
 
-// Table sort
+// - Table sort
 // ==================================================================
 .#{$table}__sort {
-  // - Table sort button
-  // ==================================================================
+  --#{$table}__button--Color: var(--#{$table}__sort__button--Color);
+  --#{$table}__button__text--Color: var(--#{$table}__sort__button__text--Color);
+
+  &.pf-m-help {
+    --#{$table}__th--m-help--MinWidth: var(--#{$table}__sort--m-help--MinWidth);
+  }
+
+  &.pf-m-favorite {
+    --#{$table}__sort__button__text--Color: var(--#{$table}__sort--m-favorite__button__text--Color);
+    --#{$table}__sort__button--hover__text--Color: var(--#{$table}__sort--m-favorite__button--hover__text--Color);
+    --#{$table}__sort--m-selected__button__text--Color: currentcolor;
+  }
+
   .#{$table}__button {
-    &:hover {
+    &:is(:hover, :focus) {
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
       --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--hover__text--Color);
-    }
-
-    &:focus {
-      --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--focus__sort-indicator--Color);
-      --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--focus__text--Color);
-    }
-
-    &:active {
-      --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--active__sort-indicator--Color);
-      --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--active__text--Color);
     }
 
     .#{$table}__text {
@@ -1112,26 +1069,15 @@
     // override state colors on text
     color: var(--#{$table}__sort--m-selected__button--Color);
   }
-
-  &.pf-m-help {
-    --#{$table}__th--m-help--MinWidth: var(--#{$table}__sort--m-help--MinWidth);
-  }
-
-  &.pf-m-favorite {
-    --#{$table}__sort__button__text--Color: var(--#{$table}__sort--m-favorite__button__text--Color);
-    --#{$table}__sort__button--hover__text--Color: var(--#{$table}__sort--m-favorite__button--hover__text--Color);
-    --#{$table}__sort__button--focus__text--Color: var(--#{$table}__sort--m-favorite__button--focus__text--Color);
-    --#{$table}__sort__button--active__text--Color: var(--#{$table}__sort--m-favorite__button--active__text--Color);
-    --#{$table}__sort--m-selected__button__text--Color: currentcolor;
-  }
 }
+
 
 // Sort indicator
 .#{$table}__sort-indicator {
   grid-column: 2;
   margin-inline-start: var(--#{$table}__sort-indicator--MarginLeft); // TODO: update this to gap
+  font-size: var(--#{$table}__sort-indicator--FontSize);
   color: var(--#{$table}__sort-indicator--Color);
-  color: var(--#{$table}__sort-indicator--FontSize);
   pointer-events: none;
 }
 
@@ -1139,8 +1085,9 @@
 // ==================================================================
 .#{$table}__expandable-row {
   position: relative;
-  border-block-end: 0 solid transparent;
-  box-shadow: 0 0 0 0 transparent;
+
+  // border-block-end: 0 solid transparent;
+  // box-shadow: 0 0 0 0 transparent;
 
   &,
   td:where(.#{$table}__td):first-child::after {
@@ -1171,23 +1118,27 @@
   .#{$table}__expandable-row-content {
     padding-block-start: var(--#{$table}__expandable-row-content--PaddingTop);
     padding-block-end: var(--#{$table}__expandable-row-content--PaddingBottom);
+    padding-inline-start: var(--#{$table}__expandable-row-content--PaddingLeft);
+    padding-inline-end: var(--#{$table}__expandable-row-content--PaddingRight);
+    background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
+    border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
   }
 
-  // Modifier - Expanded tr
-  &.pf-m-expanded {
-    border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
-    border-block-end-width: var(--#{$table}--border-width--base);
-    box-shadow: var(--#{$table}__expandable-row--m-expanded--BoxShadow);
-  }
+  // // Modifier - Expanded tr
+  // &.pf-m-expanded {
+  //   border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
+  //   border-block-end-width: var(--#{$table}--border-width--base);
+  //   box-shadow: var(--#{$table}__expandable-row--m-expanded--BoxShadow);
+  // }
 
   &:not(.pf-m-expanded) {
     display: none;
   }
 
-  // Table table
-  tr:last-child {
-    border-block-end: 0;
-  }
+  // // Table table
+  // tr:last-child {
+  //   border-block-end: 0;
+  // }
 }
 
 // Compact table
@@ -1294,12 +1245,4 @@
 
 .#{$table} .pf-m-width-100 {
   --#{$table}--cell--Width: 100%;
-}
-// stylelint-enable
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import 'themes/dark/table';
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-table;
 }
