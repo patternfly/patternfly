@@ -7,7 +7,7 @@
 
   // accordion item
   --#{$accordion}__item--BorderRadius: var(--pf-t--global--border--radius--200);
-  --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--selected);
+  --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
 
   // accordion toggle
   --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--sm);

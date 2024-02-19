@@ -22,22 +22,22 @@
   --#{$notification-badge}--m-read--Color: var(--pf-t--global--text--color--regular);
   --#{$notification-badge}--m-read--before--BorderColor: var(--pf-t--global--border--color--default);
   --#{$notification-badge}--m-read--hover--before--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$notification-badge}--m-read--m-expanded--before--BorderColor: var(--pf-t--global--border--color--active);
+  --#{$notification-badge}--m-read--m-expanded--before--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$notification-badge}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$notification-badge}--m-read--m-expanded--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$notification-badge}--m-read--m-expanded--before--BorderColor: var(--pf-t--global--border--color--active);
+  --#{$notification-badge}--m-read--m-expanded--before--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // Unread
   --#{$notification-badge}--m-unread--Color: var(--pf-t--global--icon--color--on-brand--default);
   --#{$notification-badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$notification-badge}--m-unread--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
-  --#{$notification-badge}--m-unread--m-expanded--BackgroundColor: var(--pf-t--global--color--brand--active);
+  --#{$notification-badge}--m-unread--m-expanded--BackgroundColor: var(--pf-t--global--color--brand--clicked);
 
   // Attention
   --#{$notification-badge}--m-attention--Color: var(--pf-t--global--icon--color--status--on-danger--default);
   --#{$notification-badge}--m-attention--BackgroundColor: var(--pf-t--global--color--status--danger--default);
   --#{$notification-badge}--m-attention--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
-  --#{$notification-badge}--m-attention--m-expanded--BackgroundColor: var(--pf-t--global--color--status--danger--active);
+  --#{$notification-badge}--m-attention--m-expanded--BackgroundColor: var(--pf-t--global--color--status--danger--clicked);
 }
 
 .#{$notification-badge} {

@@ -249,7 +249,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
 
     &::before {
-      font-weight: var(--pf-t--global--FontWeight--bold);;
+      font-weight: var(--pf-t--global--font--weight--body--bold);
       text-align: start;
       content: attr(data-label);
     }
