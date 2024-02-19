@@ -13,9 +13,7 @@ wrapperTag: div
   {{#> toolbar-content-section}}
     {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
       {{#> toolbar-item}}
-        {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-        {{/menu-toggle}}
+        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
       {{/toolbar-item}}
     {{/toolbar-group}}
   {{/toolbar-content-section}}
@@ -44,9 +42,7 @@ wrapperTag: div
       {{/toolbar-item}}
     {{/toolbar-group}}
     {{#> toolbar-item toolbar-item--modifier="pf-m-align-end"}}
-      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-      {{/menu-toggle}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
     {{/toolbar-item}}
   {{/toolbar-content-section}}
 {{/inline}}
@@ -63,9 +59,7 @@ wrapperTag: div
       {{> toolbar-item-search-filter button--id=(concat masthead--id '-content')}}
     {{/toolbar-group}}
     {{#> toolbar-item}}
-      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-      {{/menu-toggle}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
     {{/toolbar-item}}
   {{/toolbar-content-section}}
   {{> toolbar-expandable-content}}
@@ -83,9 +77,7 @@ wrapperTag: div
       {{> toolbar-item-search-filter button--id=(concat masthead--id '-content')}}
     {{/toolbar-group}}
     {{#> toolbar-item}}
-      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-      {{/menu-toggle}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
     {{/toolbar-item}}
   {{/toolbar-content-section}}
   {{> toolbar-expandable-content}}
@@ -169,9 +161,7 @@ wrapperTag: div
       {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
     {{/toolbar-group}}
     {{#> toolbar-item}}
-      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-      {{/menu-toggle}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
     {{/toolbar-item}}
   {{/toolbar-content-section}}
   {{#> toolbar-expandable-content toolbar--id=(concat masthead--id '-toolbar') toolbar-expandable-content--IsExpanded="true"}}

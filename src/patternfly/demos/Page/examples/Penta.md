@@ -36,9 +36,7 @@ wrapperTag: div
             {{/toolbar-item}}
             {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
               {{#> toolbar-item}}
-                {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-                  <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                {{/menu-toggle}}
+                {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
               {{/toolbar-item}}
               {{#> toolbar-item}}
                 {{#> menu-toggle}}
