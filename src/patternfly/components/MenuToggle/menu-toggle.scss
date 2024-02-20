@@ -475,6 +475,7 @@
   align-items: center;
   justify-content: center;
   min-width: var(--#{$menu-toggle}__controls--MinWidth);
+  margin-inline-start: auto; // TODO: possibly replace as part of one of the other TODOs at top of file
 }
 
 .#{$menu-toggle}__toggle-icon {

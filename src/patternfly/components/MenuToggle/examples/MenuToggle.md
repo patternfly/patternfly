@@ -543,6 +543,18 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Full width
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-full-width"}}
+  {{#> menu-toggle-text}}
+    Full width
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Typeahead
 ```hbs
 {{#> menu-toggle menu-toggle--id="typeahead-example" menu-toggle--IsDiv="true" menu-toggle--IsTypeahead="true" menu-toggle--modifier="pf-m-full-width"}}
@@ -594,3 +606,4 @@ import './MenuToggle.css'
 | `.pf-m-plain` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
+| `.pf-m-full-width` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component to full width of parent. |
