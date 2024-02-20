@@ -6,11 +6,10 @@
   {{#if toolbar-toggle--attribute}}
     {{{toolbar-toggle--attribute}}}
   {{/if}}>
-  {{#> menu-toggle
+  {{> menu-toggle
+        menu-toggle--icon=(ternary toolbar-toggle--icon toolbar-toggle--icon 'filter')
         menu-toggle--IsPlain=true
         menu-toggle--IsExpanded=toolbar-toggle--IsExpanded
         menu-toggle--attribute=(concat 'aria-label="Show filters" aria-controls="' toolbar--id '-expandable-content"')
       }}
-    <i class="fas {{#if toolbar-toggle--icon}}{{toolbar-toggle--icon}}{{else}}fa-filter{{/if}}" aria-hidden="true"></i>
-  {{/menu-toggle}}
 </div>
