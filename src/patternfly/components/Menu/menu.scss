@@ -127,12 +127,17 @@
   --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration); // TODO: Update transition with token update
   --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
 
+  // * Menu drilldown menu
+  --#{$menu}--m-drilldown--c-menu--Top: 0;
+  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration);
+  --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
+
   // * Menu drilldown list
   --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration); // TODO: Update transition with token update
   --#{$menu}--m-drilldown__list--Transition: transform var(--#{$menu}--m-drilldown__list--TransitionDuration--transform);
 
   // * Menu drilled in
-  --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--ZIndex--xs);
+  --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--Zindex--xs);
 }
 
 // - Menu shared display grid
