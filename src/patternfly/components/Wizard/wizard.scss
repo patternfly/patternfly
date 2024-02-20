@@ -43,13 +43,10 @@
   --#{$wizard}__nav-link--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$wizard}__nav-link--hover--Color: var(--pf-t--global--text--color--subtle);
   --#{$wizard}__nav-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$wizard}__nav-link--hover--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$wizard}__nav-link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
-  --#{$wizard}__nav-link--m-current--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$wizard}__nav-link--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
-  --#{$wizard}__nav-link--m-disabled--hover--MixBlendMode: normal;
 
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -450,8 +447,6 @@
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
     --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
 
-    mix-blend-mode: var(--#{$wizard}__nav-link--m-current--MixBlendMode);
-
     @at-root .#{$wizard}__toggle-num,
     &::before {
       --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$wizard}__nav-link--m-current--before--BackgroundColor);
@@ -462,16 +457,13 @@
   &:where(:hover, :focus) {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
     --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--hover--BackgroundColor);
-    
-    mix-blend-mode: var(--#{$wizard}__nav-link--hover--MixBlendMode);
-  }
+      }
 
   // override the button background/color for disabled nav links
   &:disabled,
   &.pf-m-disabled {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-disabled--Color);
     --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--BackgroundColor);
-    --#{$wizard}__nav-link--hover--MixBlendMode: var(--#{$wizard}__nav-link--m-disabled--hover--MixBlendMode);
 
     pointer-events: none;
 

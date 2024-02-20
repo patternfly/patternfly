@@ -1,12 +1,19 @@
 // /**
 //  * Do not edit directly
-//  * Generated on Tue, 06 Feb 2024 18:33:23 GMT
+//  * Generated on Tue, 20 Feb 2024 01:08:05 GMT
 //  */
 
- :root:where(.pf-v5-theme-dark) {
+:root:where(.pf-v5-theme-dark) {
   --pf-t--global--background--color--action--plain--default: rgba(0, 0, 0, 0.0000);
+  --pf-t--global--dark--box-shadow--color--100: rgba(0, 0, 0, 0.5000);
+  --pf-t--global--dark--background--color--600: rgba(199, 199, 199, 0.1500);
   --pf-t--global--dark--background--color--500: rgba(21, 21, 21, 0.8000);
+  --pf-t--global--box-shadow--color--lg: var(--pf-t--global--dark--box-shadow--color--100);
+  --pf-t--global--box-shadow--color--md: var(--pf-t--global--dark--box-shadow--color--100);
+  --pf-t--global--box-shadow--color--sm: var(--pf-t--global--dark--box-shadow--color--100);
   --pf-t--global--background--color--backdrop--default: var(--pf-t--global--dark--background--color--500);
+  --pf-t--global--background--color--action--plain--clicked: var(--pf-t--global--dark--background--color--600);
+  --pf-t--global--background--color--action--plain--hover: var(--pf-t--global--dark--background--color--600);
   --pf-t--global--dark--icon--color--300: var(--pf-t--color--gray--90);
   --pf-t--global--dark--icon--color--200: var(--pf-t--color--gray--40);
   --pf-t--global--dark--icon--color--100: var(--pf-t--color--gray--10);
@@ -71,7 +78,7 @@
   --pf-t--global--dark--background--color--400: var(--pf-t--color--gray--10);
   --pf-t--global--dark--background--color--300: var(--pf-t--color--gray--70);
   --pf-t--global--dark--background--color--200: var(--pf-t--color--gray--80);
-  --pf-t--global--dark--background--color--100: var(--pf-t--color--black);
+  --pf-t--global--dark--background--color--100: var(--pf-t--color--gray--95);
   --pf-t--global--text--color--status--danger--clicked: var(--pf-t--global--dark--color--status--danger--300);
   --pf-t--global--text--color--status--danger--hover: var(--pf-t--global--dark--color--status--danger--300);
   --pf-t--global--text--color--status--danger--default: var(--pf-t--global--dark--color--status--danger--250);
@@ -180,8 +187,8 @@
   --pf-t--global--background--color--control--default: var(--pf-t--global--dark--background--color--300);
   --pf-t--global--background--color--action--plain--alt--clicked: var(--pf-t--global--dark--background--color--200);
   --pf-t--global--background--color--action--plain--alt--hover: var(--pf-t--global--dark--background--color--200);
-  --pf-t--global--background--color--action--plain--clicked: var(--pf-t--global--dark--background--color--200);
-  --pf-t--global--background--color--action--plain--hover: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--floating--clicked: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--floating--hover: var(--pf-t--global--dark--background--color--200);
   --pf-t--global--background--color--floating--default: var(--pf-t--global--dark--background--color--300);
   --pf-t--global--background--color--secondary--clicked: var(--pf-t--global--dark--background--color--200);
   --pf-t--global--background--color--secondary--hover: var(--pf-t--global--dark--background--color--200);
@@ -344,12 +351,10 @@
   --pf-t--global--icon--color--on-brand--default: var(--pf-t--global--icon--color--inverse);
   --pf-t--global--color--status--read--on-primary: var(--pf-t--global--background--color--secondary--default);
   --pf-t--global--color--status--read--on-secondary: var(--pf-t--global--background--color--control--default);
-  --pf-t--global--color--status--unread--attention--hover: var(--pf-t--global--color--status--danger--hover);
   --pf-t--global--color--status--unread--attention--clicked: var(--pf-t--global--color--status--danger--clicked);
+  --pf-t--global--color--status--unread--attention--hover: var(--pf-t--global--color--status--danger--hover);
   --pf-t--global--color--status--unread--attention--default: var(--pf-t--global--color--status--danger--default);
   --pf-t--global--color--status--unread--default--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--color--status--unread--default--hover: var(--pf-t--global--color--brand--hover);
   --pf-t--global--color--status--unread--default--default: var(--pf-t--global--color--brand--default);
-  --pf-t--global--background--color--floating--clicked: var(--pf-t--global--background--color--action--plain--hover);
-  --pf-t--global--background--color--floating--hover: var(--pf-t--global--background--color--action--plain--hover);
 }

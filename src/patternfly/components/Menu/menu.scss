@@ -38,8 +38,6 @@
   --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__list-item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu}__list-item--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$menu}__list-item--MixBlendMode: normal;
-  --#{$menu}__list-item--MixBlendMode--hover: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$menu}__list-item--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
   --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -440,7 +438,6 @@
     inset: 0;
     content: "";
     background-color: var(--#{$menu}__list-item--BackgroundColor);
-    mix-blend-mode: var(--#{$menu}__list-item--MixBlendMode);
   }
 
   // - Menu item load
@@ -474,7 +471,6 @@
 
   &:has(> :hover) {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
-    --#{$menu}__list-item--MixBlendMode: var(--#{$menu}__list-item--MixBlendMode--hover);
 
     .#{$menu}__item-select-icon,
     .#{$menu}__item-external-icon {

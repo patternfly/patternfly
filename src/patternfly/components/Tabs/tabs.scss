@@ -639,9 +639,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   &:where(:hover, :focus) {
     --#{$tabs}__link--BackgroundColor: var(--#{$tabs}__link--hover--BackgroundColor);
-    
-    mix-blend-mode: var(--pf-t--global--background--color--action--plain--hover--blend);
-  }
+      }
 
   &:disabled,
   &.pf-m-disabled {
