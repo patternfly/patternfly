@@ -143,7 +143,6 @@
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu-toggle}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu-toggle}--m-plain--BorderColor: transparent;
-  --#{$menu-toggle}--m-plain--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu-toggle}--m-plain--active--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
@@ -254,8 +253,6 @@
     --#{$menu-toggle}--expanded--BackgroundColor: var(--#{$menu-toggle}--m-plain--expanded--BackgroundColor);
     --#{$menu-toggle}--disabled--Color: var(--#{$menu-toggle}--m-plain--disabled--Color);
     --#{$menu-toggle}--disabled--BackgroundColor: var(--#{$menu-toggle}--m-plain--disabled--BackgroundColor);
-
-    mix-blend-mode: var(--#{$menu-toggle}--m-plain--MixBlendMode);
 
     &::before {
       border: none;

@@ -14,7 +14,6 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
-  --#{$button}--MixBlendMode: normal;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -75,8 +74,6 @@
   --#{$button}--m-link--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$button}--m-link--Color: var(--pf-t--global--text--color--brand--default);
   --#{$button}--m-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$button}--m-link--hover--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
-  --#{$button}--m-link--m-clicked--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$button}--m-link__icon--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$button}--m-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
@@ -105,8 +102,6 @@
   --#{$button}--m-link--m-inline--PaddingBottom: 0;
   --#{$button}--m-link--m-inline--PaddingLeft: 0;
   --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
-  --#{$button}--m-link--m-inline--hover--MixBlendMode: normal;
-  --#{$button}--m-link--m-inline--m-clicked--MixBlendMode: normal;
   --#{$button}--m-link--m-inline__progress--Left: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--#{$button}--m-link--m-inline__progress--Left) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -120,8 +115,6 @@
   --#{$button}--m-plain--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$button}--m-plain--hover--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
-  --#{$button}--m-plain--m-clicked--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$button}--m-plain--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--m-plain--PaddingTop) + var(--#{$button}--m-plain--PaddingBottom));
   --#{$button}--m-plain--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
@@ -135,8 +128,6 @@
   --#{$button}--m-plain--m-small--PaddingLeft: var(--pf-t--global--spacer--xs);
 
   // Plain no padding
-  --#{$button}--m-plain--m-no-padding--hover--MixBlendMode: normal;
-  --#{$button}--m-plain--m-no-padding--m-clicked--MixBlendMode: normal;
   --#{$button}--m-plain--m-no-padding--MinWidth: auto;
   --#{$button}--m-plain--m-no-padding--PaddingTop: 0;
   --#{$button}--m-plain--m-no-padding--PaddingRight: 0;
@@ -240,7 +231,6 @@
 
   // Disabled
   --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$button}--disabled--MixBlendMode: normal;
   --#{$button}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--disabled--BorderColor: transparent;
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
@@ -303,7 +293,6 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
-  mix-blend-mode: var(--#{$button}--MixBlendMode);
 
   &::after {
     position: absolute;
@@ -381,13 +370,11 @@
     --#{$button}--BorderRadius: var(--#{$button}--m-link--BorderRadius);
     --#{$button}--BackgroundColor: var(--#{$button}--m-link--BackgroundColor);
     --#{$button}__icon--Color: var(--#{$button}--m-link__icon--Color);
-    --#{$button}--hover--MixBlendMode: var(--#{$button}--m-link--hover--MixBlendMode);
     --#{$button}--hover--Color: var(--#{$button}--m-link--hover--Color);
     --#{$button}--hover--BackgroundColor: var(--#{$button}--m-link--hover--BackgroundColor);
     --#{$button}--hover__icon--Color: var(--#{$button}--m-link--hover__icon--Color);
     --#{$button}--m-clicked--Color: var(--#{$button}--m-link--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-link--m-clicked--BackgroundColor);
-    --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-link--m-clicked--MixBlendMode);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-link--m-clicked__icon--Color);
 
     &.pf-m-inline {
@@ -402,9 +389,7 @@
       --#{$button}__progress--Left: var(--#{$button}--m-link--m-inline__progress--Left);
       --#{$button}--hover--TextDecoration: var(--#{$button}--m-link--m-inline--hover--TextDecoration);
       --#{$button}--hover--BackgroundColor: transparent;
-      --#{$button}--hover--MixBlendMode: var(--#{$button}--m-link--m-inline--hover--MixBlendMode);
       --#{$button}--m-clicked--BackgroundColor: transparent;
-      --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-link--m-inline--m-clicked--MixBlendMode);
       --#{$button}--disabled--BackgroundColor: transparent;
       --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
       --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
@@ -535,10 +520,8 @@
     --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
     --#{$button}--hover--Color: var(--#{$button}--m-plain--hover--Color);
     --#{$button}--hover--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
-    --#{$button}--hover--MixBlendMode: var(--#{$button}--m-plain--hover--MixBlendMode);
     --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
-    --#{$button}--m-clicked--MixBlendMode: var(--#{$button}--m-plain--m-clicked--MixBlendMode);
     --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
     --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
     --#{$button}--m-small--PaddingTop: var(--#{$button}--m-plain--m-small--PaddingTop);
@@ -554,8 +537,6 @@
       --#{$button}--m-plain--PaddingRight: var(--#{$button}--m-plain--m-no-padding--PaddingRight);
       --#{$button}--m-plain--PaddingBottom: var(--#{$button}--m-plain--m-no-padding--PaddingBottom);
       --#{$button}--m-plain--PaddingLeft: var(--#{$button}--m-plain--m-no-padding--PaddingLeft);
-      --#{$button}--m-plain--hover--MixBlendMode: var(--#{$button}--m-plain--m-no-padding--hover--MixBlendMode);
-      --#{$button}--m-plain--m-clicked--MixBlendMode: var(--#{$button}--m-plain--m-no-padding--m-clicked--MixBlendMode);
 
       min-width: var(--#{$button}--m-plain--m-no-padding--MinWidth);
     }
@@ -590,7 +571,6 @@
     --#{$button}--BorderColor: var(--#{$button}--hover--BorderColor);
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
     --#{$button}--TextDecoration: var(--#{$button}--hover--TextDecoration);
-    --#{$button}--MixBlendMode: var(--#{$button}--hover--MixBlendMode);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
   }
 
@@ -599,7 +579,6 @@
     --#{$button}--BackgroundColor: var(--#{$button}--m-clicked--BackgroundColor);
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
-    --#{$button}--MixBlendMode: var(--#{$button}--m-clicked--MixBlendMode);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
   }
 
@@ -616,7 +595,6 @@
     --#{$badge}--m-unread--Color: var(--#{$button}--disabled__c-badge--Color);
     --#{$badge}--m-unread--BackgroundColor: var(--#{$button}--disabled__c-badge--BackgroundColor);
     --#{$button}--m-primary__c-badge--BorderWidth: 0;
-    --#{$button}--MixBlendMode: var(--#{$button}--disabled--MixBlendMode);
 
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
