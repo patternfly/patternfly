@@ -39,7 +39,7 @@
         "stylelint-commands"
       ]
     }],
-    "custom-property-pattern": "^pf-(v5|t-)-(color|global|chart|[lcud])-.+$",
+    "custom-property-pattern": "^pf-(v[56]|t-)-(color|global|chart|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-no-important": true,
     "declaration-property-value-disallowed-list": {
@@ -67,7 +67,7 @@
         "after-dollar-variable"
       ]
     }],
-    "scss/dollar-variable-pattern": ["^pf-v5-", {"ignore": "local"}],
+    "scss/dollar-variable-pattern": ["^pf-v[56]-", {"ignore": "local"}],
     "scss/double-slash-comment-empty-line-before": ["always", {
       "except": ["first-nested"],
       "ignore": [
