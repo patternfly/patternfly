@@ -67,7 +67,7 @@
   --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2) - 50%); // find height of single label, divide by two, offset by 50% of own height
 
   // * Nav horizontal
-  --#{$nav}--m-horizontal--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}--m-horizontal--BorderRadius: 0;
 
   // * Nav horizontal list
   --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
@@ -78,6 +78,7 @@
   --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}__list--ColumnGap);
 
   // * Nav horizontal subnav
+  --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$nav}--m-horizontal--m-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
@@ -268,26 +269,12 @@
   }
 
   &:first-of-type {
-    .#{$button} {
-      --#{$button}--BorderStartStartRadius: var(--#{$nav}__scroll-button--BorderRadius);
-      --#{$button}--BorderStartEndRadius: 0;
-      --#{$button}--BorderEndStartRadius: var(--#{$nav}__scroll-button--BorderRadius);
-      --#{$button}--BorderEndEndRadius: 0;
-    }
-
     &::before {
       border-inline-end: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
     }
   }
 
   &:last-of-type {
-    .#{$button} {
-      --#{$button}--BorderStartStartRadius: 0;
-      --#{$button}--BorderStartEndRadius: var(--#{$nav}__scroll-button--BorderRadius);
-      --#{$button}--BorderEndStartRadius: 0;
-      --#{$button}--BorderEndEndRadius: var(--#{$nav}__scroll-button--BorderRadius);
-    }
-
     &::before {
       border-inline-start: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
     }
@@ -334,6 +321,7 @@
 
   // - Nav subnav
   &.pf-m-subnav {
+    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
     --#{$nav}--BackgroundColor: var(--#{$nav}--m-horizontal--m-subnav--BackgroundColor);
     --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
     --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);

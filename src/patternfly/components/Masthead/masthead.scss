@@ -104,6 +104,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   background-color: var(--#{$masthead}--BackgroundColor);
 
   .#{$toolbar}__content-section {
+    flex-wrap: nowrap;
     min-width: 0;
   }
 
