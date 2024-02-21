@@ -145,16 +145,5 @@
     var(--pf-t--global--box-shadow--blur--lg) 
     var(--pf-t--global--box-shadow--spread--lg)
     var(--pf-t--global--box-shadow--color--lg);
-
-  &:where(.pf-v5-theme-dark) {
-    // box shadow
-    --pf-t--global--box-shadow--sm: 0px 1px 2px 0px rgb(0 0 0 / 50%);
-    --pf-t--global--box-shadow--sm--top: 0px -1px 2px 0px rgb(0 0 0 / 50%);
-    --pf-t--global--box-shadow--sm--right: 1px 0px 2px 0px rgb(0 0 0 / 50%);
-    --pf-t--global--box-shadow--sm--bottom: 0px 1px 2px 0px rgb(0 0 0 / 50%);
-    --pf-t--global--box-shadow--sm--left: -1px 0px 2px 0px rgb(0 0 0 / 50%);
-    --pf-t--global--box-shadow--md: 0px 4px 8px 0px rgb(0 0 0 / 50%);
-    --pf-t--global--box-shadow--lg: 0px 8px 24px 0px rgb(0 0 0 / 50%);
-  }
 }
 
