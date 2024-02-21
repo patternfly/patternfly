@@ -1196,12 +1196,6 @@
   --#{$table}--cell--PaddingTop: var(--#{$table}--m-compact--cell--PaddingTop);
   --#{$table}--cell--PaddingBottom: var(--#{$table}--m-compact--cell--PaddingBottom);
 
-  // TODO: add small variant to menu toggle
-  .#{$menu-toggle} {
-    --#{$menu-toggle}--PaddingTop: var(--pf-t--global--spacer--xs);
-    --#{$menu-toggle}--PaddingBottom: var(--pf-t--global--spacer--xs);
-  }
-
   tr:where(.#{$table}__tr) {
     &:not(.#{$table}__expandable-row) {
       --#{$table}--cell--PaddingTop: var(--#{$table}--m-compact--cell--PaddingTop);

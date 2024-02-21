@@ -95,6 +95,8 @@
   --#{$table}--m-compact__tr__td--responsive--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__tr__td--responsive--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__check--responsive--MarginTop: #{pf-size-prem(7px)};
+  --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   // Expandable row content
@@ -111,6 +113,7 @@
   --#{$table}--m-grid__check--favorite--MarginLeft: var(--pf-t--global--spacer--xl);
 
   // Action
+  --#{$table}--m-grid__action--MarginTop: #{pf-size-prem(6px)};
   --#{$table}__action--responsive--MarginLeft: var(--pf-t--global--spacer--xl);
   --#{$table}--m-grid__favorite--action--MarginLeft: var(--pf-t--global--spacer--2xl);
   --#{$table}--m-grid__check--favorite--action--MarginLeft: calc(var(--#{$table}--m-grid__check--favorite--MarginLeft) + var(--#{$table}--m-grid__favorite--action--MarginLeft));
@@ -243,7 +246,12 @@
     --#{$table}__check--input--MarginTop: 0;
 
     .#{$table}__action {
+      margin-block-start: var(--#{$table}--m-compact__action--responsive--MarginTop);
       margin-block-end: var(--#{$table}--m-compact__action--responsive--MarginTop);
+    }
+
+    .#{$table}__toggle .#{$button} {
+      margin-block-end: var(--#{$table}--m-compact__toggle--c-button--responsive--MarginBottom);
     }
   }
 
@@ -504,6 +512,7 @@
 
   // Action cell
   .#{$table}__action {
+    margin-block-start: var(--#{$table}--m-grid__action--MarginTop);
     text-align: end;
 
     // @smallest breakpoint

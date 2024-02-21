@@ -284,7 +284,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--action="true"}}
+            {{#> table-td table-td--IsAction=true}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
                 <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
               {{/button}}
@@ -338,7 +338,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--action="true"}}
+            {{#> table-td table-td--IsAction=true}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
                 <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
               {{/button}}
@@ -392,7 +392,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="#">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--action="true"}}
+            {{#> table-td table-td--IsAction=true}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
                 <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
               {{/button}}
@@ -446,7 +446,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--action="true"}}
+            {{#> table-td table-td--IsAction=true}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
                 <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
               {{/button}}
@@ -500,7 +500,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--action="true"}}
+            {{#> table-td table-td--IsAction=true}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
                 <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
               {{/button}}

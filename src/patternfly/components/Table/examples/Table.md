@@ -328,7 +328,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody overflow-menu--IsControl=true}}
+  {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
       {{#> table-td table-td--data-label="Repository name"}}
         Repository 1
@@ -3218,7 +3218,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Nested column headers and expandable rows
 ```hbs
 <div class="pf-v5-c-scroll-inner-wrapper">
-  {{#> table table--id="nested-columns-expandable-example" table--expandable="true" table--grid="true" table--attribute='aria-label="This is a nested column header table example"' table--HasToggles="true" table--HasChecks="true" table--HasActions="true"}}
+  {{#> table table--id="nested-columns-expandable-example" table--expandable="true" table--grid="true" table--attribute='aria-label="This is a nested column header table example"' table--HasToggles="true" table--HasChecks="true"}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{> table-td table-td--IsEmpty="true" table-td--attribute='rowspan="2"'}}
@@ -3268,6 +3268,7 @@ For sticky columns to function correctly, the parent table's width must be contr
             Message us!
           {{/button}}
         {{/table-td}}
+        {{> table-td table-td--IsAction=true}}
       {{/table--tr}}
       {{#> table--tr table--tr--IsExpandable="true" table-tr--IsExpanded="true" table--tr--content-cols="5"}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -3293,6 +3294,7 @@ For sticky columns to function correctly, the parent table's width must be contr
             Message us!
           {{/button}}
         {{/table-td}}
+        {{> table-td table-td--IsAction=true}}
       {{/table--tr}}
       {{#> table--tr table--tr--IsExpandable="true" table--tr--content-cols="5"}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -3318,6 +3320,7 @@ For sticky columns to function correctly, the parent table's width must be contr
             Message us!
           {{/button}}
         {{/table-td}}
+        {{> table-td table-td--IsAction=true}}
       {{/table--tr}}
       {{#> table--tr table--tr--IsExpandable="true" table--tr--content-cols="5"}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
