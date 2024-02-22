@@ -211,7 +211,7 @@ wrapperTag: div
       {{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
         {{#> table-thead}}
           {{#> table-tr}}
-            {{#> table-td table-td--check="true"}}
+            {{#> table-td table-td--IsCheck=true}}
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
               {{/check}}
@@ -238,7 +238,7 @@ wrapperTag: div
 
         {{#> table-tbody table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
           {{#> table-tr}}
-            {{#> table-td table-td--check="true"}}
+            {{#> table-td table-td--IsCheck=true}}
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
               {{/check}}
@@ -292,7 +292,7 @@ wrapperTag: div
           {{/table-tr}}
 
           {{#> table-tr table-tr--IsSelected="true"}}
-            {{#> table-td table-td--check="true"}}
+            {{#> table-td table-td--IsCheck=true}}
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-node2" checked')}}{{/check-input}}
               {{/check}}
@@ -346,7 +346,7 @@ wrapperTag: div
           {{/table-tr}}
 
           {{#> table-tr}}
-            {{#> table-td table-td--check="true"}}
+            {{#> table-td table-td--IsCheck=true}}
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-node3"')}}{{/check-input}}
               {{/check}}
@@ -400,7 +400,7 @@ wrapperTag: div
           {{/table-tr}}
 
           {{#> table-tr}}
-            {{#> table-td table-td--check="true"}}
+            {{#> table-td table-td--IsCheck=true}}
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-node4"')}}{{/check-input}}
               {{/check}}
@@ -454,7 +454,7 @@ wrapperTag: div
           {{/table-tr}}
 
           {{#> table-tr}}
-            {{#> table-td table-td--check="true"}}
+            {{#> table-td table-td--IsCheck=true}}
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="checkrow5" aria-labelledby="' table--id '-node5"')}}{{/check-input}}
               {{/check}}

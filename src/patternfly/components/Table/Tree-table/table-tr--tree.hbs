@@ -6,7 +6,7 @@
       {{/unless}}
       {{#unless table-tr--tree--HasNoCheckbox}}
         {{#if tree-view--HasCheckboxes}}
-          {{#> table-td table-td--type="span" table-td--check="true"}}
+          {{#> table-td table-td--type="span" table-td--IsCheck=true}}
             <label>
               {{#> check check--modifier="pf-m-standalone"}}
                 {{#> check-input check-input--attribute=(concat 'name="' table--id '-checkrow-' table-tr--tree--index '" aria-labelledby="' table--id '-node-' table-tr--tree--index '"')}}{{/check-input}}
