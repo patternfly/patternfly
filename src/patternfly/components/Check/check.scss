@@ -24,6 +24,7 @@
   --#{$check}__input--TranslateY: calc((var(--#{$check}__label--LineHeight) * var(--#{$check}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
 }
 
+// - Check
 .#{$check} {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -36,12 +37,15 @@
     height: var(--#{$check}--Height);
 
     .#{$check}__input {
+      align-self: center;
       transform: none;
     }
   }
 }
 
+// - Check input
 .#{$check}__input {
+  align-self: start;
   font-size: var(--#{$check}__label--FontSize);
   line-height: var(--#{$check}__label--LineHeight);
 

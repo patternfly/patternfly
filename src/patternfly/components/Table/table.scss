@@ -927,21 +927,34 @@
   --#{$table}--cell--PaddingLeft: var(--#{$table}__check--PaddingLeft);
   --#{$table}--cell--PaddingRight: var(--#{$table}__check--PaddingRight);
 
-  .#{$check}.pf-m-standalone {
-    display: inline-flex;
+  vertical-align: top;
 
+  .#{$check} {
+    --#{$check}__label--FontSize: var(--#{$table}--cell--FontSize);
+    --#{$check}__label--LineHeight: var(--#{$table}--cell--LineHeight);
+  }
+
+  .#{$radio} {
+    --#{$radio}__label--FontSize: var(--#{$table}--cell--FontSize);
+    --#{$radio}__label--LineHeight: var(--#{$table}--cell--LineHeight);
+  }
+
+  thead & {
+    vertical-align: bottom;
+  }
+
+  .#{$check}.pf-m-standalone,
+  .#{$radio}.pf-m-standalone {
     thead & {
-      vertical-align: bottom;
+      display: table-cell;
+      height: auto;
+      line-height: 1;
+      vertical-align: baseline;
     }
 
     tbody & {
-      vertical-align: top;
+      height: auto;
     }
-  }
-
-  // TODO: remove label wrapper at breaking change
-  label {
-    display: contents;
   }
 }
 

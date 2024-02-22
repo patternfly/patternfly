@@ -4,19 +4,27 @@
 .#{$radio} {
   --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
+  --#{$radio}--Height: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));
+
+  // TODO: update to `--#{$radio}--FontSize` `--#{$radio}--LineHeight`
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$radio}__label--Color: var(--pf-t--global--text--color--regular);
   --#{$radio}__label--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$radio}__label--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$radio}__label--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$radio}__input--TranslateY: calc((var(--#{$radio}__label--LineHeight) * var(--#{$radio}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
-  --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
-  --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --#{$radio}__description--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$radio}__description--Color: var(--pf-t--global--text--color--subtle);
+
+  // * Radio input
+  --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
+  --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --#{$radio}__body--MarginTop: var(--pf-t--global--spacer--sm);
+
+  // TODO: due to subpixel rendering and this value resolving to 21px, the checkbox vertical centering is off by 1px. Mozilla rounds subpixels up while chrome rounds down. This is a temporary fix until we can find a better solution.
+  --#{$radio}__input--TranslateY: calc((var(--#{$radio}__label--LineHeight) * var(--#{$radio}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
 }
 
+// - Radio
 .#{$radio} {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -25,15 +33,22 @@
   accent-color: var(--#{$radio}--AccentColor);
 
   &.pf-m-standalone {
-    --#{$radio}--GridGap: 0;
-    --#{$radio}__input--TranslateY: none;
-
     display: inline-grid;
+    grid-template-columns: auto;
+    height: var(--#{$check}--Height);
+
+    .#{$radio}__input {
+      align-self: center;
+      transform: none;
+    }
   }
 }
 
+// - Radio input
 .#{$radio}__input {
   align-self: start;
+  font-size: var(--#{$radio}__label--FontSize);
+  line-height: var(--#{$radio}__label--LineHeight);
 
   // find height of single label, divide by two, offset by 50% of own height
   transform: translateY(var(--#{$radio}__input--TranslateY));
