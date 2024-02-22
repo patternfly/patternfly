@@ -284,11 +284,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--IsAction=true}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-              {{/button}}
-            {{/table-td}}
+            {{> table-td table-td--IsAction=true menu-toggle--icon='ellipsis-h'}}
           {{/table-tr}}
 
           {{#> table-tr table-tr--IsSelected="true"}}
@@ -338,11 +334,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--IsAction=true}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-              {{/button}}
-            {{/table-td}}
+            {{> table-td table-td--IsAction=true menu-toggle--icon='ellipsis-h'}}
           {{/table-tr}}
 
           {{#> table-tr}}
@@ -392,11 +384,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="#">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--IsAction=true}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-              {{/button}}
-            {{/table-td}}
+            {{> table-td table-td--IsAction=true menu-toggle--icon='ellipsis-h'}}
           {{/table-tr}}
 
           {{#> table-tr}}
@@ -446,11 +434,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--IsAction=true}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-              {{/button}}
-            {{/table-td}}
+            {{> table-td table-td--IsAction=true menu-toggle--icon='ellipsis-h'}}
           {{/table-tr}}
 
           {{#> table-tr}}
@@ -500,11 +484,7 @@ wrapperTag: div
             {{#> table-td table-td--data-label="Action"}}
               <a href="/some/path">Action link</a>
             {{/table-td}}
-            {{#> table-td table-td--IsAction=true}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-              {{/button}}
-            {{/table-td}}
+            {{> table-td table-td--IsAction=true menu-toggle--icon='ellipsis-h'}}
           {{/table-tr}}
         {{/table-tbody}}
       {{/table}}

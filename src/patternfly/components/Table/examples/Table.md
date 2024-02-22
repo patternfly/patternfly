@@ -292,7 +292,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-td table-td--UsesOverflowMenu=true}}
+      {{> table-td table-td--HasOverflowMenu=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -305,7 +305,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-td table-td--UsesOverflowMenu=true}}
+      {{> table-td table-td--HasOverflowMenu=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -339,7 +339,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsHidden=true}}
+      {{> table-td table-td--HasOverflowMenu=true overflow-menu--IsControl=true menu--IsHidden=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -352,7 +352,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsExpanded=true}}
+      {{> table-td table-td--HasOverflowMenu=true overflow-menu--IsControl=true menu--IsExpanded=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -387,7 +387,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsHidden=true}}
+      {{> table-td table-td--HasOverflowMenu=true overflow-menu--IsControl=true menu--IsHidden=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -400,7 +400,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-td table-td--UsesOverflowMenu=true overflow-menu--IsControl=true menu--IsExpanded=true}}
+      {{> table-td table-td--HasOverflowMenu=true overflow-menu--IsControl=true menu--IsExpanded=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

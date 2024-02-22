@@ -1,6 +1,6 @@
 <{{#if table-td--type}}{{table-td--type}}{{else}}td{{/if}} class="{{pfv}}table__td
   {{~#if table-td--IsToggle}} {{pfv}}table__toggle{{/if}}
-  {{~#if table-td--check}} {{pfv}}table__check{{/if}}
+  {{~#if table-td--IsCheck}} {{pfv}}table__check{{/if}}
   {{~#if table-td--IsAction}} {{pfv}}table__action{{/if}}
   {{~#if table-td--HasOverflowMenu}} {{pfv}}table__action{{/if}}
   {{~#if table-td--icon}} {{pfv}}table__icon{{/if}}
@@ -30,7 +30,7 @@
     {{#if table-td--HasOverflowMenu}}
       {{> table--overflow-menu}}
     {{else if table-td--IsAction}}
-      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--aria-label='Table actions'}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=(ternary menu-toggle--icon false true) menu-toggle--aria-label='Table actions'}}
       {{!-- TODO: add small variant to menu toggle --}}
     {{else if table-td--IsToggle}}
       {{#> button
