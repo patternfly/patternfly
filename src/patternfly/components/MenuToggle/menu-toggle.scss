@@ -152,6 +152,10 @@
   // Typeahead
   --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
+
+  // * Menu toggle small
+  --#{$menu-toggle}--m-small--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
 }
 
 .#{$menu-toggle} {
@@ -298,6 +302,12 @@
     &::before {
       border: 0;
     }
+  }
+
+  // - Menu item small
+  &.pf-m-small {
+    --#{$menu-toggle}--PaddingTop: var(--#{$menu-toggle}--m-small--PaddingTop);
+    --#{$menu-toggle}--PaddingBottom: var(--#{$menu-toggle}--m-small--PaddingBottom);
   }
 
   &:has(.#{$button}) {
@@ -452,8 +462,7 @@
 }
 
 .#{$menu-toggle}__icon {
-  flex-shrink: 0;
-  align-self: center;
+  display: flex;
 }
 
 .#{$menu-toggle}__text {
