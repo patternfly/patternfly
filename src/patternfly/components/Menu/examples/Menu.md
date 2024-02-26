@@ -187,7 +187,7 @@ import './Menu.css'
 
 ### Scrollable with custom menu height
 ```hbs
-{{#> menu menu--modifier="pf-m-scrollable" menu--attribute='style="--pf-v5-c-menu__content--MaxHeight: 200px;"'}}
+{{#> menu menu--modifier="pf-m-scrollable" menu--attribute='style="--pf-v6-c-menu__content--MaxHeight: 200px;"'}}
   {{#> menu-content}}
     {{> menu--long-list}}
   {{/menu-content}}
@@ -777,27 +777,27 @@ import './Menu.css'
 
 ### Drilldown level two
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 165px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 165px;"'}}
 ```
 
 ### Drilldown level three
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-3" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 202px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-3" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 202px;"'}}
 ```
 
 ### Drilldown level four
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu__content--attribute='style="--pf-v5-c-menu__content--Height: 165px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 165px;"'}}
 ```
 
 ### Scrollable drilldown
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-default" menu--Drilldown--menu--modifier="pf-m-scrollable" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu__content--MaxHeight: 180px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-default" menu--Drilldown--menu--modifier="pf-m-scrollable" menu--Drilldown--menu--attribute='style="--pf-v6-c-menu__content--MaxHeight: 180px;"'}}
 ```
 
 ### Width modified drilldown
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--menu--attribute='style="--pf-v5-c-menu--Width: 350px;"'}}
+{{> menu--Drilldown menu--Drilldown--menu--attribute='style="--pf-v6-c-menu--Width: 350px;"'}}
 ```
 
 ### Drilldown with breadcrumbs - level 1
@@ -809,7 +809,7 @@ import './Menu.css'
 
 ### Drilldown with breadcrumbs - level 2
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-level-2" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 74px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-2" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v6-c-menu__content--Height: 74px;"'}}
   {{> menu-breadcrumbs--Drilldown menu-breadcrumbs--Drilldown--IsLevel2="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true"}}
 {{/menu}}
@@ -817,7 +817,7 @@ import './Menu.css'
 
 ### Drilldown with breadcrumbs - level 3
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-level-3" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 111px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-3" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v6-c-menu__content--Height: 111px;"'}}
   {{> menu-breadcrumbs--Drilldown menu-breadcrumbs--Drilldown--IsLevel3="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true"}}
 {{/menu}}
@@ -825,7 +825,7 @@ import './Menu.css'
 
 ### Drilldown with breadcrumbs - level 4
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu__content--Height: 185px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v6-c-menu__content--Height: 185px;"'}}
   {{> menu-breadcrumbs--Drilldown breadcrumb--id="drilldown-with-breadcrumbs-level-4" menu-breadcrumbs--Drilldown--IsLevel4="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true" menu-content--Breadcrumbs--level4="true"}}
 {{/menu}}
@@ -834,27 +834,27 @@ import './Menu.css'
 <!--
 ### Drilldown managed height
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu--MaxHeight: 120px; --pf-v5-c-menu__content--Height: 216px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height" menu--Drilldown--menu--attribute='style="--pf-v6-c-menu--MaxHeight: 120px; --pf-v6-c-menu__content--Height: 216px;"'}}
 ```
 
 ### Drilldown managed height level two
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu--MaxHeight: 120px; --pf-v5-c-menu__content--Height: 193px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu--attribute='style="--pf-v6-c-menu--MaxHeight: 120px; --pf-v6-c-menu__content--Height: 193px;"'}}
 ```
 
 ### Drilldown managed height level three
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height-level-3" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu--MaxHeight: 120px; --pf-v5-c-menu__content--Height: 233px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height-level-3" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu--attribute='style="--pf-v6-c-menu--MaxHeight: 120px; --pf-v6-c-menu__content--Height: 233px;"'}}
 ```
 
 ### Drilldown managed height level four
 ```hbs isBeta
-{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu--attribute='style="--pf-v5-c-menu--MaxHeight: 120px; --pf-v5-c-menu__content--Height: 216px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-managed-height-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu--attribute='style="--pf-v6-c-menu--MaxHeight: 120px; --pf-v6-c-menu__content--Height: 216px;"'}}
 ```
 
 ### Drilldown with breadcrumbs and managed height - level 4
 ```hbs isBeta
-{{#> menu menu--id="drilldown-with-breadcrumbs-and-managed-height-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v5-c-menu--MaxHeight: 120px; --pf-v5-c-menu__content--Height: 216px;"'}}
+{{#> menu menu--id="drilldown-with-breadcrumbs-and-managed-height-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in" menu--attribute='style="--pf-v6-c-menu--MaxHeight: 120px; --pf-v6-c-menu__content--Height: 216px;"'}}
   {{> menu-breadcrumbs--Drilldown breadcrumb--id="drilldown-with-breadcrumbs-level-4" menu-breadcrumbs--Drilldown--IsLevel4="true"}}
   {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true" menu-content--Breadcrumbs--level4="true"}}
 {{/menu}}
