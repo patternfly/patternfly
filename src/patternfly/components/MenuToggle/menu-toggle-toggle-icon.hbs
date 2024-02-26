@@ -2,5 +2,9 @@
   {{#if menu-toggle-toggle-icon--attribute}}
     {{{menu-toggle-toggle-icon--attribute}}}
   {{/if}}>
-  <i class="fas fa-caret-down" aria-hidden="true"></i>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    <i class="fas fa-caret-down" aria-hidden="true"></i>
+  {{/if}}
 </span>

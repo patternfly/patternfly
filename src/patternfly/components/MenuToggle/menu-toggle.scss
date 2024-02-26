@@ -484,6 +484,8 @@
   margin-inline-start: auto; // TODO: possibly replace as part of one of the other TODOs at top of file
 }
 
+// TODO: group properties that are defined > 3x - eg flex/grid
 .#{$menu-toggle}__toggle-icon {
+  display: flex;
   color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
 }

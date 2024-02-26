@@ -78,6 +78,12 @@
     {{else if menu-toggle--UsesButton}}
       {{#> button button--IsPlain=true button--icon='ellipsis-v' button--IsDisabled=menu-toggle--IsDisabled button--IsAriaDisabled=menu-toggle--IsAriaDisabled button--IsExpanded=menu-toggle--IsExpanded button--aria-label='Actions'}}{{/button}}
     {{/if}}
+    {{!-- TODO: refactor this logic --}}
+    {{#if menu-toggle--text}}
+      {{#> menu-toggle-controls}}
+        {{> menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
+    {{/if}}
     {{#if @partial-block}}
       {{> @partial-block}}
     {{/if}}
