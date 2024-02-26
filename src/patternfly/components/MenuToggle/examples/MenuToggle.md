@@ -280,11 +280,11 @@ import './MenuToggle.css'
 
 ### Small with text
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--text='Collapsed'}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Collapsed'}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--text='Expanded' menu-toggle--IsExpanded=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Expanded' menu-toggle--IsExpanded=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true  menu-toggle--text='Disabled' menu-toggle--IsDisabled=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true  menu-toggle--text='Disabled' menu-toggle--IsDisabled=true}}
 ```
 
 ### Split button, primary

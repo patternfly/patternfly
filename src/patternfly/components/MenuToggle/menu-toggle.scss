@@ -6,6 +6,7 @@
 // TODO: abstract button / control styling to affect any/all variants
 // TODO: move controls to wrap buttons, not the other way around
 // TODO: update text-input-button to use gap
+// TODO: label all variables group - // * Menu toggle (vars) // - Menu toggle (selectors)
 
 :where(:root),
 :where(.#{$menu-toggle}) {
@@ -46,6 +47,12 @@
   // * Menu toggle disabled
   --#{$menu-toggle}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$menu-toggle}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+
+  // * Menu toggle icon
+  --#{$menu-toggle}__icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+
+  // * Menu toggle toggle icon
+  --#{$menu-toggle}__toggle-icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle button
@@ -461,10 +468,6 @@
   }
 }
 
-.#{$menu-toggle}__icon {
-  display: flex;
-}
-
 .#{$menu-toggle}__text {
   @include pf-v5-text-overflow;
 
@@ -476,16 +479,28 @@
   flex-wrap: nowrap;
 }
 
-.#{$menu-toggle}__controls {
+// - Menu toggle controls - Menu toggle icon
+.#{$menu-toggle}__icon,
+.#{$menu-toggle}__controls,
+.#{$menu-toggle}__toggle-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.#{$menu-toggle}__icon {
+  flex-shrink: 0;
+  height: var(--#{$menu-toggle}__icon--Height);
+}
+
+// - Menu toggle controls
+.#{$menu-toggle}__controls {
   min-width: var(--#{$menu-toggle}__controls--MinWidth);
   margin-inline-start: auto; // TODO: possibly replace as part of one of the other TODOs at top of file
 }
 
-// TODO: group properties that are defined > 3x - eg flex/grid
+// - Menu toggle icon
 .#{$menu-toggle}__toggle-icon {
-  display: flex;
+  height: var(--#{$menu-toggle}__toggle-icon--Height);
   color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
 }
