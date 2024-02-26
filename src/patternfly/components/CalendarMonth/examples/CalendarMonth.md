@@ -97,9 +97,7 @@ cssPrefix: pf-v5-c-calendar-month
     {{/calendar-month-header-nav-control}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
-        {{#> calendar-month-header-month}}
-          {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
-        {{/calendar-month-header-month}}
+        {{> calendar-month-header-month}}
       {{/input-group-item}}
       {{#> input-group-item}}
         {{#> calendar-month-header-year}}
@@ -179,9 +177,7 @@ cssPrefix: pf-v5-c-calendar-month
     {{/calendar-month-header-nav-control}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
-        {{#> calendar-month-header-month}}
-          {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
-        {{/calendar-month-header-month}}
+        {{> calendar-month-header-month}}
       {{/input-group-item}}
       {{#> input-group-item}}
         {{#> calendar-month-header-year}}
@@ -261,9 +257,7 @@ cssPrefix: pf-v5-c-calendar-month
     {{/calendar-month-header-nav-control}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
-        {{#> calendar-month-header-month}}
-          {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
-        {{/calendar-month-header-month}}
+        {{> calendar-month-header-month}}
       {{/input-group-item}}
       {{#> input-group-item}}
         {{#> calendar-month-header-year}}
