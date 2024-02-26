@@ -2,7 +2,7 @@
 id: Menu
 section: components
 subsection: menus
-cssPrefix: pf-v5-c-menu
+cssPrefix: pf-v6-c-menu
 ---
 
 import './Menu.css'
@@ -1673,66 +1673,66 @@ import './Menu.css'
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `role="menu"` | `.pf-v5-c-menu__list` | Declares `.pf-v5-c-menu__list` as a menu. |
-| `disabled` | `button.pf-v5-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `role="menuitem"` | `.pf-v5-c-menu__item`, `.pf-v5-c-menu__list-item` (checkbox) | Assigns `.pf-v5-c-menu__item` as an option in a set of choices contained by a menu. |
-| `role="none"` | `.pf-v5-c-menu__list-item` | Removes semantic meaning from `.pf-v5-c-menu__list-item`. |
-| `aria-disabled="true"` | `.pf-v5-c-menu__item` | Indicates to assistive technologies that the menu item is disabled, but still allows it to be focusable via keyboard. Additional click prevention may be required. |
-| `tabindex="-1"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element and has `aria-disabled="true"` passed in, removes it from keyboard focus. This is similar to passing `disabled` to a menu item that uses a button element. |
-| `aria-hidden="true"` | `.pf-v5-c-menu__item-icon`, `.pf-v5-c-menu__item-action-icon`, `.pf-v5-c-menu__item-external-icon`, `.pf-v5-c-menu__item-toggle-icon`, `.pf-v5-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
-| `aria-label="Descriptive text"` | `.pf-v5-c-menu__item-action-icon` | There should always be descriptive text on an action icon because there is no visible descriptive text labelling the icon. |
-| `aria-label="Not starred"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
-| `aria-label="Starred"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
+| `role="menu"` | `.pf-v6-c-menu__list` | Declares `.pf-v6-c-menu__list` as a menu. |
+| `disabled` | `button.pf-v6-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `role="menuitem"` | `.pf-v6-c-menu__item`, `.pf-v6-c-menu__list-item` (checkbox) | Assigns `.pf-v6-c-menu__item` as an option in a set of choices contained by a menu. |
+| `role="none"` | `.pf-v6-c-menu__list-item` | Removes semantic meaning from `.pf-v6-c-menu__list-item`. |
+| `aria-disabled="true"` | `.pf-v6-c-menu__item` | Indicates to assistive technologies that the menu item is disabled, but still allows it to be focusable via keyboard. Additional click prevention may be required. |
+| `tabindex="-1"` | `a.pf-v6-c-menu__item` | When the menu item uses a link element and has `aria-disabled="true"` passed in, removes it from keyboard focus. This is similar to passing `disabled` to a menu item that uses a button element. |
+| `aria-hidden="true"` | `.pf-v6-c-menu__item-icon`, `.pf-v6-c-menu__item-action-icon`, `.pf-v6-c-menu__item-external-icon`, `.pf-v6-c-menu__item-toggle-icon`, `.pf-v6-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
+| `aria-label="Descriptive text"` | `.pf-v6-c-menu__item-action-icon` | There should always be descriptive text on an action icon because there is no visible descriptive text labelling the icon. |
+| `aria-label="Not starred"` | `.pf-v6-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="Starred"` | `.pf-v6-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-menu` | `<div>` | Initiates the menu. **Required** |
-| `.pf-v5-c-menu__header` | `<div>` | Initiates the menu header container. |
-| `.pf-v5-c-menu__search` | `<div>` | Initiates the menu search container. Use for filtering. |
-| `.pf-v5-c-menu__search-input` | `<div>` | Initiates the menu search input container. |
-| `.pf-v5-c-menu__content` | `<div>` | Initiates the menu content. Use for lists. **Required** |
-| `.pf-v5-c-menu__list` | `<ul>` | Initiates the menu list. **Required** |
-| `.pf-v5-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
-| `.pf-v5-c-menu__item` | `<button>`, `<a>`, `<div>`, `<label>` | Initiates the menu item. **Required** |
-| `.pf-v5-c-menu__item-main` | `<span>` | Initiates the menu item main container. **Required** |
-| `.pf-v5-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
-| `.pf-v5-c-menu__item-check` | `<span>` | Initiates a menu label. |
-| `.pf-v5-c-menu__item-description` | `<span>` | Initiates the menu item description. |
-| `.pf-v5-c-menu__item-group` | `<section>` | Initiates the menu item group. |
-| `.pf-v5-c-menu__item-group-title` | `<h1>` | Initiates the menu item group title. |
-| `.pf-v5-c-menu__item-icon` | `<span>` | Initiates the menu item icon. |
-| `.pf-v5-c-menu__item-toggle-icon` | `<span>` | Initiates the menu item toggle icon. |
-| `.pf-v5-c-menu__item-select-icon` | `<span>` | Initiates the menu item select icon. |
-| `.pf-v5-c-menu__item-action` | `<button>` | Initiates the menu item action. |
-| `.pf-v5-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
-| `.pf-v5-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
-| `.pf-v5-c-menu__footer` | `<div>` | Initiates the menu footer. |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v5-c-menu__list`, `.pf-v5-c-menu__list-item`, `.pf-v5-c-menu__group` | Modifies a menu element to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v5-c-menu__list`, `.pf-v5-c-menu__list-item`, `.pf-v5-c-menu__group` | Modifies a menu element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-favorite` | `.pf-v5-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
-| `.pf-m-favorited` | `.pf-v5-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
-| `.pf-m-selected` | `.pf-v5-c-menu__item` | Modifies the menu item to be selected. |
-| `.pf-m-drill-up` | `.pf-v5-c-menu__list-item` | Flags the menu item as a drill up button. |
-| `.pf-m-flyout` | `.pf-v5-c-menu` | Modifies the menu so that all nested `.pf-v5-c-menu` elements "flyout". |
-| `.pf-m-nav` | `.pf-v5-c-menu` | Modifies the menu for nav variant. |
-| `.pf-m-top` | `.pf-v5-c-menu` | Modifies a flyout menu to expand to the top. |
-| `.pf-m-left` | `.pf-v5-c-menu` | Modifies a flyout menu to expand to the left. |
-| `.pf-m-plain` | `.pf-v5-c-menu` | Modifies the menu component for use in the page instead of as a dropdown. |
-| `.pf-m-scrollable` | `.pf-v5-c-menu` | Modifies the menu component content for scrollable styles. Scrollable content height can be customized by setting `--pf-v5-c-menu__content--MaxHeight`. |
-| `.pf-m-current` | `.pf-v5-c-menu__list-item` | Modifies a list item for current styles. |
-| `.pf-m-load` | `.pf-v5-c-menu__list-item` | Modifies a list item for "load more" styles. |
-| `.pf-m-loading` | `.pf-v5-c-menu__list-item` | Modifies a list item for loading styles. |
-| `.pf-m-disabled` | `.pf-v5-c-menu__item` | Modifies a list item for disabled styling. |
-| `.pf-m-aria-disabled` | `.pf-v5-c-menu__item` | Modifies a list item for aria-disabled styling. |
-| `.pf-m-drilldown` | `.pf-v5-c-menu` | Modifies the menu so that all nested `.pf-v5-c-menu` elements "drill down". |
-| `.pf-m-current-path` | `.pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu__list-item` | Modifies the menu list item for current path state. |
-| `.pf-m-drilled-in` | `.pf-v5-c-menu.pf-m-drilldown, .pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu` | Modifies the menu list for drilled in state. |
-| `.pf-m-static` | `.pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu` | Modifies the menu list for drilled static state. |
-| `.pf-m-danger` | `.pf-v5-c-menu__item-text` | Modifies a list item for danger styles. |
-| `--pf-v5-c-menu--Width: {width}` | `.pf-v5-c-menu` | Modifies the width of the menu. The default value is `auto`. |
-| `--pf-v5-c-menu__content--MaxHeight: {height}` | `.pf-v5-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
-| `--pf-v5-c-menu__content--Height: {height}` | `.pf-v5-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
-| `--pf-v5-c-menu--m-flyout__menu--top-offset` | `.pf-v5-c-menu` | Modifies the menu to allow for an offset to the top positioning. |
-| `--pf-v5-c-menu--m-flyout__menu--left-offset` | `.pf-v5-c-menu` | Modifies the menu to allow for an offset to the left positioning. |
-| `--pf-v5-c-menu--m-flyout__menu--m-left--right-offset` | `.pf-v5-c-menu.pf-m-flyout > .pf-v5-c-menu` | Modifies the menu to allow for an offset to the right positioning. |
+| `.pf-v6-c-menu` | `<div>` | Initiates the menu. **Required** |
+| `.pf-v6-c-menu__header` | `<div>` | Initiates the menu header container. |
+| `.pf-v6-c-menu__search` | `<div>` | Initiates the menu search container. Use for filtering. |
+| `.pf-v6-c-menu__search-input` | `<div>` | Initiates the menu search input container. |
+| `.pf-v6-c-menu__content` | `<div>` | Initiates the menu content. Use for lists. **Required** |
+| `.pf-v6-c-menu__list` | `<ul>` | Initiates the menu list. **Required** |
+| `.pf-v6-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
+| `.pf-v6-c-menu__item` | `<button>`, `<a>`, `<div>`, `<label>` | Initiates the menu item. **Required** |
+| `.pf-v6-c-menu__item-main` | `<span>` | Initiates the menu item main container. **Required** |
+| `.pf-v6-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
+| `.pf-v6-c-menu__item-check` | `<span>` | Initiates a menu label. |
+| `.pf-v6-c-menu__item-description` | `<span>` | Initiates the menu item description. |
+| `.pf-v6-c-menu__item-group` | `<section>` | Initiates the menu item group. |
+| `.pf-v6-c-menu__item-group-title` | `<h1>` | Initiates the menu item group title. |
+| `.pf-v6-c-menu__item-icon` | `<span>` | Initiates the menu item icon. |
+| `.pf-v6-c-menu__item-toggle-icon` | `<span>` | Initiates the menu item toggle icon. |
+| `.pf-v6-c-menu__item-select-icon` | `<span>` | Initiates the menu item select icon. |
+| `.pf-v6-c-menu__item-action` | `<button>` | Initiates the menu item action. |
+| `.pf-v6-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
+| `.pf-v6-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
+| `.pf-v6-c-menu__footer` | `<div>` | Initiates the menu footer. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-menu__list`, `.pf-v6-c-menu__list-item`, `.pf-v6-c-menu__group` | Modifies a menu element to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-menu__list`, `.pf-v6-c-menu__list-item`, `.pf-v6-c-menu__group` | Modifies a menu element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-favorite` | `.pf-v6-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
+| `.pf-m-favorited` | `.pf-v6-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
+| `.pf-m-selected` | `.pf-v6-c-menu__item` | Modifies the menu item to be selected. |
+| `.pf-m-drill-up` | `.pf-v6-c-menu__list-item` | Flags the menu item as a drill up button. |
+| `.pf-m-flyout` | `.pf-v6-c-menu` | Modifies the menu so that all nested `.pf-v6-c-menu` elements "flyout". |
+| `.pf-m-nav` | `.pf-v6-c-menu` | Modifies the menu for nav variant. |
+| `.pf-m-top` | `.pf-v6-c-menu` | Modifies a flyout menu to expand to the top. |
+| `.pf-m-left` | `.pf-v6-c-menu` | Modifies a flyout menu to expand to the left. |
+| `.pf-m-plain` | `.pf-v6-c-menu` | Modifies the menu component for use in the page instead of as a dropdown. |
+| `.pf-m-scrollable` | `.pf-v6-c-menu` | Modifies the menu component content for scrollable styles. Scrollable content height can be customized by setting `--pf-v6-c-menu__content--MaxHeight`. |
+| `.pf-m-current` | `.pf-v6-c-menu__list-item` | Modifies a list item for current styles. |
+| `.pf-m-load` | `.pf-v6-c-menu__list-item` | Modifies a list item for "load more" styles. |
+| `.pf-m-loading` | `.pf-v6-c-menu__list-item` | Modifies a list item for loading styles. |
+| `.pf-m-disabled` | `.pf-v6-c-menu__item` | Modifies a list item for disabled styling. |
+| `.pf-m-aria-disabled` | `.pf-v6-c-menu__item` | Modifies a list item for aria-disabled styling. |
+| `.pf-m-drilldown` | `.pf-v6-c-menu` | Modifies the menu so that all nested `.pf-v6-c-menu` elements "drill down". |
+| `.pf-m-current-path` | `.pf-v6-c-menu.pf-m-drilldown .pf-v6-c-menu__list-item` | Modifies the menu list item for current path state. |
+| `.pf-m-drilled-in` | `.pf-v6-c-menu.pf-m-drilldown, .pf-v6-c-menu.pf-m-drilldown .pf-v6-c-menu` | Modifies the menu list for drilled in state. |
+| `.pf-m-static` | `.pf-v6-c-menu.pf-m-drilldown .pf-v6-c-menu` | Modifies the menu list for drilled static state. |
+| `.pf-m-danger` | `.pf-v6-c-menu__item-text` | Modifies a list item for danger styles. |
+| `--pf-v6-c-menu--Width: {width}` | `.pf-v6-c-menu` | Modifies the width of the menu. The default value is `auto`. |
+| `--pf-v6-c-menu__content--MaxHeight: {height}` | `.pf-v6-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
+| `--pf-v6-c-menu__content--Height: {height}` | `.pf-v6-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
+| `--pf-v6-c-menu--m-flyout__menu--top-offset` | `.pf-v6-c-menu` | Modifies the menu to allow for an offset to the top positioning. |
+| `--pf-v6-c-menu--m-flyout__menu--left-offset` | `.pf-v6-c-menu` | Modifies the menu to allow for an offset to the left positioning. |
+| `--pf-v6-c-menu--m-flyout__menu--m-left--right-offset` | `.pf-v6-c-menu.pf-m-flyout > .pf-v6-c-menu` | Modifies the menu to allow for an offset to the right positioning. |

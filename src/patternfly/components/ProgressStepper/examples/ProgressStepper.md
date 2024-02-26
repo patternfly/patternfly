@@ -1,7 +1,7 @@
 ---
 id: 'Progress stepper'
 section: components
-cssPrefix: pf-v5-c-progress-stepper
+cssPrefix: pf-v6-c-progress-stepper
 ---
 
 ## Examples
@@ -600,28 +600,28 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, `.p
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="[State of the step]"` | `.pf-v5-c-progress-stepper__step` |  Provides an accessible label for the step. |
-| `aria-hidden="true"` | `.pf-v5-c-progress-stepper__step-icon <i>` |  Hides icon for assistive technologies. **Required** |
+| `aria-label="[State of the step]"` | `.pf-v6-c-progress-stepper__step` |  Provides an accessible label for the step. |
+| `aria-hidden="true"` | `.pf-v6-c-progress-stepper__step-icon <i>` |  Hides icon for assistive technologies. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-progress-stepper` | `<ol>` | Applies default progress stepper styling. **Required** |
-| `.pf-v5-c-progress-stepper__step` | `<li>` | Defines each step of the progress stepper. **Required** |
+| `.pf-v6-c-progress-stepper` | `<ol>` | Applies default progress stepper styling. **Required** |
+| `.pf-v6-c-progress-stepper__step` | `<li>` | Defines each step of the progress stepper. **Required** |
 | `.progress-stepper__step-connector` | `<div>` | Creates the connecting line between steps **Required** |
 | `.progress-stepper__step-icon` | `<span>` | Creates the step node and contains the icon designating the type of step. This element is required, but may be empty if no icon is used for the step. **Required** |
 | `.progress-stepper__step-main` | `<div>` | Contains the main text content of the step. This element is required, but may be empty if title and description are not used. **Required** |
 | `.progress-stepper__step-title` | `<div>`, `<button>` | Contains the title of the step. **Note:** the step title is a `<button>` when it has `.pf-m-help-text` and is used to trigger a popover with help text. |
 | `.progress-stepper__step-description` | `<div>` | Contains the description of the step. |
-| `.pf-m-center`| `.pf-v5-c-progress-stepper` | Modifies to center each step. |
-| `.pf-m-vertical{-on-[breakpoint]}`| `.pf-v5-c-progress-stepper` | Modifies progress stepper vertical layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-horizontal{-on-[breakpoint]}`| `.pf-v5-c-progress-stepper` | Modifies progress stepper horizontal layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-compact`| `.pf-v5-c-progress-stepper` | Modifies for compact styling. |
-| `.pf-m-success`| `.pf-v5-c-progress-stepper__step` | Modifies for success styling. |
-| `.pf-m-warning`| `.pf-v5-c-progress-stepper__step` | Modifies for warning styling. |
-| `.pf-m-danger`| `.pf-v5-c-progress-stepper__step` | Modifies for danger styling. |
-| `.pf-m-info`| `.pf-v5-c-progress-stepper__step` | Modifies for info styling. |
-| `.pf-m-custom`| `.pf-v5-c-progress-stepper__step` | Modifies for custom styling. |
-| `.pf-m-current`| `.pf-v5-c-progress-stepper__step` | Modifies styling for the current step. |
-| `.pf-m-pending`| `.pf-v5-c-progress-stepper__step` | Modifies styling for pending steps. |
-| `.pf-m-help-text`| `.pf-v5-c-progress-stepper__step-title` | Modifies styling for steps that have help text. |
+| `.pf-m-center`| `.pf-v6-c-progress-stepper` | Modifies to center each step. |
+| `.pf-m-vertical{-on-[breakpoint]}`| `.pf-v6-c-progress-stepper` | Modifies progress stepper vertical layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-horizontal{-on-[breakpoint]}`| `.pf-v6-c-progress-stepper` | Modifies progress stepper horizontal layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-compact`| `.pf-v6-c-progress-stepper` | Modifies for compact styling. |
+| `.pf-m-success`| `.pf-v6-c-progress-stepper__step` | Modifies for success styling. |
+| `.pf-m-warning`| `.pf-v6-c-progress-stepper__step` | Modifies for warning styling. |
+| `.pf-m-danger`| `.pf-v6-c-progress-stepper__step` | Modifies for danger styling. |
+| `.pf-m-info`| `.pf-v6-c-progress-stepper__step` | Modifies for info styling. |
+| `.pf-m-custom`| `.pf-v6-c-progress-stepper__step` | Modifies for custom styling. |
+| `.pf-m-current`| `.pf-v6-c-progress-stepper__step` | Modifies styling for the current step. |
+| `.pf-m-pending`| `.pf-v6-c-progress-stepper__step` | Modifies styling for pending steps. |
+| `.pf-m-help-text`| `.pf-v6-c-progress-stepper__step-title` | Modifies styling for steps that have help text. |

@@ -1,7 +1,7 @@
 ---
 id: Avatar
 section: components
-cssPrefix: pf-v5-c-avatar
+cssPrefix: pf-v6-c-avatar
 ---
 
 ## Examples
@@ -42,14 +42,14 @@ The avatar component provides a default SVG icon. If an image is used it should 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `alt` | `.pf-v5-c-avatar` | The alt attribute describes the appearance and function of the avatar image. **Required** |
+| `alt` | `.pf-v6-c-avatar` | The alt attribute describes the appearance and function of the avatar image. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |
-| `.pf-m-bordered` | `.pf-v5-c-avatar` | Modifies an avatar to have a border. |
-| `.pf-m-sm{-on-[breakpoint]}` | `.pf-v5-c-avatar` | Modifies an avatar to be small on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-md{-on-[breakpoint]}` | `.pf-v5-c-avatar` | Modifies an avatar to be medium on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** This is the default size. |
-| `.pf-m-lg{-on-[breakpoint]}` | `.pf-v5-c-avatar` | Modifies an avatar to be large on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-xl{-on-[breakpoint]}` | `.pf-v5-c-avatar` | Modifies an avatar to be extra large on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-v6-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |
+| `.pf-m-bordered` | `.pf-v6-c-avatar` | Modifies an avatar to have a border. |
+| `.pf-m-sm{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be small on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-md{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be medium on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** This is the default size. |
+| `.pf-m-lg{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be large on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-xl{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be extra large on an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

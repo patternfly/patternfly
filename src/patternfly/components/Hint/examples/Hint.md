@@ -1,7 +1,7 @@
 ---
 id: 'Hint'
 section: components
-cssPrefix: pf-v5-c-hint
+cssPrefix: pf-v6-c-hint
 ---
 
 ## Examples
@@ -70,8 +70,8 @@ cssPrefix: pf-v5-c-hint
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-hint` | `<div>` | Initiates the hint component. **Required** |
-| `.pf-v5-c-hint__title` | `<div>` | Initiates the hint title element. |
-| `.pf-v5-c-hint__body` | `<div>` | Initiates the hint body element. |
-| `.pf-v5-c-hint__footer` | `<div>` | Initiates the hint footer element. |
-| `.pf-v5-c-hint__actions` | `<div>` | Initiates the hint actions element. |
+| `.pf-v6-c-hint` | `<div>` | Initiates the hint component. **Required** |
+| `.pf-v6-c-hint__title` | `<div>` | Initiates the hint title element. |
+| `.pf-v6-c-hint__body` | `<div>` | Initiates the hint body element. |
+| `.pf-v6-c-hint__footer` | `<div>` | Initiates the hint footer element. |
+| `.pf-v6-c-hint__actions` | `<div>` | Initiates the hint actions element. |

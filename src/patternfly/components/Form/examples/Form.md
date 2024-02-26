@@ -2,7 +2,7 @@
 id: Form
 section: components
 subsection: forms
-cssPrefix: pf-v5-c-form
+cssPrefix: pf-v6-c-form
 ---
 
 ## Examples
@@ -371,7 +371,7 @@ cssPrefix: pf-v5-c-form
 ```
 
 ## Documentation
-To avoid the form label's required indicator or help tooltip icon from wrapping separately from the form label text, all whitespace characters between the last word of the label text, the required indicator (`.pf-v5-c-form__label-required`), and help tooltip icon (`.pf-v5-c-form__label-help`) must be removed, and `&nbsp;` characters added in between to maintain spacing. Also the help tooltip icon's `.pf-v5-c-form__label-required` element must be a `<span>` instead of a `<button>` due to layout limitations of the `<button>` element imposed by user agent styles.
+To avoid the form label's required indicator or help tooltip icon from wrapping separately from the form label text, all whitespace characters between the last word of the label text, the required indicator (`.pf-v6-c-form__label-required`), and help tooltip icon (`.pf-v6-c-form__label-help`) must be removed, and `&nbsp;` characters added in between to maintain spacing. Also the help tooltip icon's `.pf-v6-c-form__label-required` element must be a `<span>` instead of a `<button>` due to layout limitations of the `<button>` element imposed by user agent styles.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -379,58 +379,58 @@ To avoid the form label's required indicator or help tooltip icon from wrapping 
 | `for` | `<label>` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
 | `id` | `<input type="radio/checkbox/text">`, `<select>`, `<textarea>` |  Each `<form>` field must have an `id` attribute that matches its label's `for` value. **Required** |
 | `required` | `<input>`, `<select>`, `<textarea>` | Required fields must include these attributes. |
-| `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-v5-c-helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}">`.  |
+| `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-v6-c-helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}">`.  |
 | `aria-invalid="true" aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` |  When form validation fails `aria-describedby` is used to communicate the error to the user. These attributes need to be handled with Javascript so that `aria-describedby` only references help text that explains the error, and so that `aria-invalid="true"` is only present when validation fails. For proper styling of errors `aria-invalid="true"` is required. |
-| `aria-hidden="true"` | `.pf-v5-c-form__label-required` |  Hides the required indicator from assistive technologies. |
-| `role="group"` | `.pf-v5-c-form__group`, `.pf-v5-c-form__section`, `.pf-v5-c-form__field-group` | Provides group role for form groups, form sections, and form field groups. **Required for checkbox groups, form groups, form sections, and form field groups.** |
-| `role="radiogroup"` | `.pf-v5-c-form__group` | Provides group role for radio input groups. **Required for radio input groups** |
-| `role="button"` | `.pf-v5-c-form__group-label-help` | Provides button role for group label help spans. **Required for group label help.** |
-| `id` | `.pf-v5-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
-| `id` | `.pf-v5-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
-| `id` | `.pf-v5-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
-| `aria-labelledby="{label id}"` | `.pf-v5-c-form__group`, `.pf-v5-c-form__section`, `.pf-v5-c-form__field-group` | Provides an accessible label for form groups, form sections, and form field groups. **Required for form groups, form sections, and form field groups that contain labels.** |
-| `aria-label` | `.pf-v5-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
-| `aria-labelledby="{title id} {toggle button id}"` | `.pf-v5-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
-| `aria-expanded="true/false"` | `.pf-v5-c-form__field-group-toggle-button > button` | Indicates whether the field group body is visible or hidden. |
-| `id="{form_label_id}"` | `.pf-v5-c-form__label` |  Generates an `id` for use in the `aria-describedby` attribute in a `.pf-v5-c-form__group-label-help`. |
-| `aria-label="{descriptive text}" aria-describedby="{form_label_id}"` | `.pf-v5-c-form__group-label-help` |  Provides an accessible label on a button that provides additional information for a form element. |
+| `aria-hidden="true"` | `.pf-v6-c-form__label-required` |  Hides the required indicator from assistive technologies. |
+| `role="group"` | `.pf-v6-c-form__group`, `.pf-v6-c-form__section`, `.pf-v6-c-form__field-group` | Provides group role for form groups, form sections, and form field groups. **Required for checkbox groups, form groups, form sections, and form field groups.** |
+| `role="radiogroup"` | `.pf-v6-c-form__group` | Provides group role for radio input groups. **Required for radio input groups** |
+| `role="button"` | `.pf-v6-c-form__group-label-help` | Provides button role for group label help spans. **Required for group label help.** |
+| `id` | `.pf-v6-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
+| `id` | `.pf-v6-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
+| `id` | `.pf-v6-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
+| `aria-labelledby="{label id}"` | `.pf-v6-c-form__group`, `.pf-v6-c-form__section`, `.pf-v6-c-form__field-group` | Provides an accessible label for form groups, form sections, and form field groups. **Required for form groups, form sections, and form field groups that contain labels.** |
+| `aria-label` | `.pf-v6-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
+| `aria-labelledby="{title id} {toggle button id}"` | `.pf-v6-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
+| `aria-expanded="true/false"` | `.pf-v6-c-form__field-group-toggle-button > button` | Indicates whether the field group body is visible or hidden. |
+| `id="{form_label_id}"` | `.pf-v6-c-form__label` |  Generates an `id` for use in the `aria-describedby` attribute in a `.pf-v6-c-form__group-label-help`. |
+| `aria-label="{descriptive text}" aria-describedby="{form_label_id}"` | `.pf-v6-c-form__group-label-help` |  Provides an accessible label on a button that provides additional information for a form element. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-form` | `<form>` |  Initiates a standard form. **Required** |
-| `.pf-v5-c-form__section` | `<div>, <section>` |  Initiates a form section. |
-| `.pf-v5-c-form__section-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` |  Initiates a form section title. |
-| `.pf-v5-c-form__group` | `<div>` |  Initiates a form group. |
-| `.pf-v5-c-form__group-label` | `<div>` |  Initiates a form group label. |
-| `.pf-v5-c-form__label` | `<label>`, `<span>` |  Initiates a form label. **Required** |
-| `.pf-v5-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
-| `.pf-v5-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
-| `.pf-v5-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
-| `.pf-v5-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
-| `.pf-v5-c-form__group-label-help` | `<span>` | Initiates field level help. |
-| `.pf-v5-c-form__group-control` | `<div>` |  Initiates a form group control section. |
-| `.pf-v5-c-form__actions` | `<div>` | Iniates a row of actions. |
-| `.pf-v5-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |
-| `.pf-v5-c-form__alert` | `<div>` | Initiates the form alert container for inline alerts. |
-| `.pf-v5-c-form__field-group` | `<div>` | Initiates a form field group. |
-| `.pf-v5-c-form__field-group-toggle` | `<div>` | Initiates the form field group toggle. |
-| `.pf-v5-c-form__field-group-toggle-button` | `<div>` | Initiates the form field group toggle button. |
-| `.pf-v5-c-form__field-group-toggle-icon` | `<span>` | Initiates the form field group toggle icon. |
-| `.pf-v5-c-form__field-group-header` | `<div>` | Initiates the form field group header. |
-| `.pf-v5-c-form__field-group-header-main` | `<div>` | Initiates the form field group main section. |
-| `.pf-v5-c-form__field-group-header-title` | `<div>` | Initiates the form field group title. |
-| `.pf-v5-c-form__field-group-header-title-text` | `<div>` | Initiates the form field group title text. |
-| `.pf-v5-c-form__field-group-header-description` | `<div>` | Initiates the form field group description. |
-| `.pf-v5-c-form__field-group-header-actions` | `<div>` | Initiates the form field group actions container. |
-| `.pf-v5-c-form__field-group-body` | `<div>` | Initiates the form field group body. |
-| `.pf-m-horizontal{-on-[xs, sm, md, lg, xl, 2xl]}` | `.pf-v5-c-form` | Modifies the form for a horizontal layout at an optional breakpoint. The default breakpoint is `-md`. |
-| `.pf-m-limit-width` | `.pf-v5-c-form` | Limits the overall max-width of the form. Configurable by defining `--pf-v5-c-form--m-limit-width--MaxWidth`. |
-| `.pf-m-info` | `.pf-v5-c-form__group-label` | Modifies the form group label to contain form group label info. |
-| `.pf-m-action` | `.pf-v5-c-form__group` | Modifies form group margin-top. |
-| `.pf-m-disabled` | `.pf-v5-c-form__label` | Modifies form label to show disabled state. |
-| `.pf-m-no-padding-top` | `.pf-v5-c-form__group-label` | Removes top padding from the label element for labels adjacent to an element that isn't a form control. |
-| `.pf-m-inline` | `.pf-v5-c-form__group-control` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
-| `.pf-m-stack` | `.pf-v5-c-form__group-control` | Modifies form group children to be stacked with space between children. |
-| `.pf-m-expanded` | `.pf-v5-c-form__field-group` | Modifies an expandable field group for the expanded state. |
-| `--pf-v5-c-form--m-limit-width--MaxWidth` | `.pf-v5-c-form.pf-m-limit-width` | Sets a custom `max-width` for a width limited form. |
+| `.pf-v6-c-form` | `<form>` |  Initiates a standard form. **Required** |
+| `.pf-v6-c-form__section` | `<div>, <section>` |  Initiates a form section. |
+| `.pf-v6-c-form__section-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` |  Initiates a form section title. |
+| `.pf-v6-c-form__group` | `<div>` |  Initiates a form group. |
+| `.pf-v6-c-form__group-label` | `<div>` |  Initiates a form group label. |
+| `.pf-v6-c-form__label` | `<label>`, `<span>` |  Initiates a form label. **Required** |
+| `.pf-v6-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
+| `.pf-v6-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
+| `.pf-v6-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
+| `.pf-v6-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
+| `.pf-v6-c-form__group-label-help` | `<span>` | Initiates field level help. |
+| `.pf-v6-c-form__group-control` | `<div>` |  Initiates a form group control section. |
+| `.pf-v6-c-form__actions` | `<div>` | Iniates a row of actions. |
+| `.pf-v6-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |
+| `.pf-v6-c-form__alert` | `<div>` | Initiates the form alert container for inline alerts. |
+| `.pf-v6-c-form__field-group` | `<div>` | Initiates a form field group. |
+| `.pf-v6-c-form__field-group-toggle` | `<div>` | Initiates the form field group toggle. |
+| `.pf-v6-c-form__field-group-toggle-button` | `<div>` | Initiates the form field group toggle button. |
+| `.pf-v6-c-form__field-group-toggle-icon` | `<span>` | Initiates the form field group toggle icon. |
+| `.pf-v6-c-form__field-group-header` | `<div>` | Initiates the form field group header. |
+| `.pf-v6-c-form__field-group-header-main` | `<div>` | Initiates the form field group main section. |
+| `.pf-v6-c-form__field-group-header-title` | `<div>` | Initiates the form field group title. |
+| `.pf-v6-c-form__field-group-header-title-text` | `<div>` | Initiates the form field group title text. |
+| `.pf-v6-c-form__field-group-header-description` | `<div>` | Initiates the form field group description. |
+| `.pf-v6-c-form__field-group-header-actions` | `<div>` | Initiates the form field group actions container. |
+| `.pf-v6-c-form__field-group-body` | `<div>` | Initiates the form field group body. |
+| `.pf-m-horizontal{-on-[xs, sm, md, lg, xl, 2xl]}` | `.pf-v6-c-form` | Modifies the form for a horizontal layout at an optional breakpoint. The default breakpoint is `-md`. |
+| `.pf-m-limit-width` | `.pf-v6-c-form` | Limits the overall max-width of the form. Configurable by defining `--pf-v6-c-form--m-limit-width--MaxWidth`. |
+| `.pf-m-info` | `.pf-v6-c-form__group-label` | Modifies the form group label to contain form group label info. |
+| `.pf-m-action` | `.pf-v6-c-form__group` | Modifies form group margin-top. |
+| `.pf-m-disabled` | `.pf-v6-c-form__label` | Modifies form label to show disabled state. |
+| `.pf-m-no-padding-top` | `.pf-v6-c-form__group-label` | Removes top padding from the label element for labels adjacent to an element that isn't a form control. |
+| `.pf-m-inline` | `.pf-v6-c-form__group-control` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
+| `.pf-m-stack` | `.pf-v6-c-form__group-control` | Modifies form group children to be stacked with space between children. |
+| `.pf-m-expanded` | `.pf-v6-c-form__field-group` | Modifies an expandable field group for the expanded state. |
+| `--pf-v6-c-form--m-limit-width--MaxWidth` | `.pf-v6-c-form.pf-m-limit-width` | Sets a custom `max-width` for a width limited form. |

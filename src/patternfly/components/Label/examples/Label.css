@@ -5,9 +5,9 @@
   margin: -4px;
 }
 
-#ws-core-c-label-filled .pf-v5-c-label,
-#ws-core-c-label-outline .pf-v5-c-label,
-#ws-core-c-label-compact .pf-v5-c-label,
-#ws-core-c-label-overflow .pf-v5-c-label {
+#ws-core-c-label-filled .pf-v6-c-label,
+#ws-core-c-label-outline .pf-v6-c-label,
+#ws-core-c-label-compact .pf-v6-c-label,
+#ws-core-c-label-overflow .pf-v6-c-label {
   margin: 4px;
 }

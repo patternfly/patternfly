@@ -2,7 +2,7 @@
 id: Timestamp
 beta: true
 section: components
-cssPrefix: pf-v5-c-timestamp
+cssPrefix: pf-v6-c-timestamp
 ---
 
 ## Examples
@@ -59,6 +59,6 @@ cssPrefix: pf-v5-c-timestamp
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
-| `.pf-v5-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
-| `.pf-m-help-text`| `.pf-v5-c-timestamp` | Modifies styling for a timestamp that has help text. |
+| `.pf-v6-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
+| `.pf-v6-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
+| `.pf-m-help-text`| `.pf-v6-c-timestamp` | Modifies styling for a timestamp that has help text. |

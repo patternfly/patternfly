@@ -1,7 +1,7 @@
 ---
 id: Notification badge
 section: components
-cssPrefix: pf-v5-c-notification-badge
+cssPrefix: pf-v6-c-notification-badge
 ---
 
 ## Examples
@@ -61,7 +61,7 @@ cssPrefix: pf-v5-c-notification-badge
 ## Documentation
 
 ### Overview
-Always add a modifier class to indicate read, unread, or attention state. Never use the class `.pf-v5-c-notification-badge` on its own.
+Always add a modifier class to indicate read, unread, or attention state. Never use the class `.pf-v6-c-notification-badge` on its own.
 
 ### Accessibility
 Be sure that the component associated with this indicator handles screen reader text indicating read or unread notifications.
@@ -69,9 +69,9 @@ Be sure that the component associated with this indicator handles screen reader 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-notification-badge` | `<div>` |  Initiates a notification badge. **Always use it with a modifier class.** |
-| `.pf-v5-c-notification-badge__count` | `<span>` |  Initiates a notification badge count. |
-| `.pf-m-read` | `.pf-v5-c-notification-badge` |  Applies read notification badge styling. |
-| `.pf-m-unread` | `.pf-v5-c-notification-badge` |  Applies unread notification badge styling. |
-| `.pf-m-attention` | `.pf-v5-c-notification-badge` |  Applies attention notification badge styling. |
-| `.pf-m-expanded` | `.pf-v5-c-notification-badge` |  Applies expanded notification badge styling. |
+| `.pf-v6-c-notification-badge` | `<div>` |  Initiates a notification badge. **Always use it with a modifier class.** |
+| `.pf-v6-c-notification-badge__count` | `<span>` |  Initiates a notification badge count. |
+| `.pf-m-read` | `.pf-v6-c-notification-badge` |  Applies read notification badge styling. |
+| `.pf-m-unread` | `.pf-v6-c-notification-badge` |  Applies unread notification badge styling. |
+| `.pf-m-attention` | `.pf-v6-c-notification-badge` |  Applies attention notification badge styling. |
+| `.pf-m-expanded` | `.pf-v6-c-notification-badge` |  Applies expanded notification badge styling. |

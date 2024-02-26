@@ -2,7 +2,7 @@
 id: Radio
 section: components
 subsection: forms
-cssPrefix: pf-v5-c-radio
+cssPrefix: pf-v6-c-radio
 ---
 
 ## Examples
@@ -74,15 +74,15 @@ If you extend this component or modify the styles of this component, then make s
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `disabled` | `<input type="radio">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
-| `aria-describedby` | `.pf-v5-c-radio__input` |  When using `.pf-v5-c-radio__description` make use of this on the input. |
+| `aria-describedby` | `.pf-v6-c-radio__input` |  When using `.pf-v6-c-radio__description` make use of this on the input. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |
-| `.pf-v5-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |
-| `.pf-v5-c-radio__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
-| `.pf-v5-c-radio__description` | `<span>` | Initiates a radio description. |
-| `.pf-v5-c-radio__body` | `<span>` | Initiates a radio body. |
-| `.pf-m-standalone` | `.pf-v5-c-radio` |  Modifies the radio component for use with a standalone `<input type="radio">`. **Required when there is no label** |
-| `.pf-m-disabled` | `.pf-v5-c-radio__label` |  Modifies the radio component for the disabled state. **Required when input is disabled** |
+| `.pf-v6-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |
+| `.pf-v6-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |
+| `.pf-v6-c-radio__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
+| `.pf-v6-c-radio__description` | `<span>` | Initiates a radio description. |
+| `.pf-v6-c-radio__body` | `<span>` | Initiates a radio body. |
+| `.pf-m-standalone` | `.pf-v6-c-radio` |  Modifies the radio component for use with a standalone `<input type="radio">`. **Required when there is no label** |
+| `.pf-m-disabled` | `.pf-v6-c-radio__label` |  Modifies the radio component for the disabled state. **Required when input is disabled** |

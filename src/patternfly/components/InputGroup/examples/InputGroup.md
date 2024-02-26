@@ -1,7 +1,7 @@
 ---
 id: Input group
 section: components
-cssPrefix: pf-v5-c-input-group
+cssPrefix: pf-v6-c-input-group
 ---
 ### Overview
 Use the input group to extend form controls by adding text, buttons, selects, etc. The input group handles border overlap.
@@ -137,21 +137,21 @@ Use the input group to extend form controls by adding text, buttons, selects, et
 
 ## Documentation
 ### Accessibility
-When using the `.pf-v5-c-input-group` always ensure labels are used outside the input group with the `.pf-v5-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributes. For more information on accessibility and forms see the [form component](/components/form).
+When using the `.pf-v6-c-input-group` always ensure labels are used outside the input group with the `.pf-v6-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributes. For more information on accessibility and forms see the [form component](/components/form).
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-describedby` | `.pf-v5-c-form-control` |  When using `.pf-v5-c-input-group__text` or `.pf-v5-c-input-group__action` make use of this on the input field. |
+| `aria-describedby` | `.pf-v6-c-form-control` |  When using `.pf-v6-c-input-group__text` or `.pf-v6-c-input-group__action` make use of this on the input field. |
 
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-input-group` | `<div>` |  Initiates the input group. **Required** |
-| `.pf-v5-c-input-group__item` | `<div>` |  Initiates the input group item. |
-| `.pf-v5-c-input-group__text` | `<span>` |  Initiates input group text. This should be used within `.pf-v5-c-input-group__item` to contain text. |
-| `.pf-m-plain` | `.pf-v5-c-input-group__item` | Removes the border from the input group element. |
-| `.pf-m-box` | `.pf-v5-c-input-group__item` | Adds appropriate styling for items that are not form controls. |
-| `.pf-m-fill` | `.pf-v5-c-input-group__item` | Allows the input group element to stretch to fill available space. |
-| `.pf-m-disabled` | `.pf-v5-c-input-group__item` | Adds disabled styling to match a disabled input within the input group. |
+| `.pf-v6-c-input-group` | `<div>` |  Initiates the input group. **Required** |
+| `.pf-v6-c-input-group__item` | `<div>` |  Initiates the input group item. |
+| `.pf-v6-c-input-group__text` | `<span>` |  Initiates input group text. This should be used within `.pf-v6-c-input-group__item` to contain text. |
+| `.pf-m-plain` | `.pf-v6-c-input-group__item` | Removes the border from the input group element. |
+| `.pf-m-box` | `.pf-v6-c-input-group__item` | Adds appropriate styling for items that are not form controls. |
+| `.pf-m-fill` | `.pf-v6-c-input-group__item` | Allows the input group element to stretch to fill available space. |
+| `.pf-m-disabled` | `.pf-v6-c-input-group__item` | Adds disabled styling to match a disabled input within the input group. |
 

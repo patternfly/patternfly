@@ -1,7 +1,7 @@
 ---
 id: Title
 section: components
-cssPrefix: pf-v5-c-title
+cssPrefix: pf-v6-c-title
 ---
 
 ## Examples
@@ -57,26 +57,26 @@ The content component defines margin on headers. To regain the same spacing use,
 
 | Title | Margin top | Margin bottom |
 | -- | -- | -- |
-| 4xl | `.pf-v5-u-mt-lg` | `.pf-v5-u-mb-sm` |
-| 3xl | `.pf-v5-u-mt-lg` | `.pf-v5-u-mb-sm` |
-| 2xl | `.pf-v5-u-mt-lg` | `.pf-v5-u-mb-sm` |
-| xl | `.pf-v5-u-mt-lg` | `.pf-v5-u-mb-sm` |
-| lg | `.pf-v5-u-mt-lg` | `.pf-v5-u-mb-sm` |
-| md | `.pf-v5-u-mt-lg` | `.pf-v5-u-mb-sm` |
+| 4xl | `.pf-v6-u-mt-lg` | `.pf-v6-u-mb-sm` |
+| 3xl | `.pf-v6-u-mt-lg` | `.pf-v6-u-mb-sm` |
+| 2xl | `.pf-v6-u-mt-lg` | `.pf-v6-u-mb-sm` |
+| xl | `.pf-v6-u-mt-lg` | `.pf-v6-u-mb-sm` |
+| lg | `.pf-v6-u-mt-lg` | `.pf-v6-u-mb-sm` |
+| md | `.pf-v6-u-mt-lg` | `.pf-v6-u-mb-sm` |
 
 ### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-title` | `*` |  Initiates a title. Always use it with a modifier class. |
-| `.pf-m-4xl` | `.pf-v5-c-title` | Modifies for 4xl size |
-| `.pf-m-3xl` | `.pf-v5-c-title` | Modifies for 3xl size |
-| `.pf-m-2xl` | `.pf-v5-c-title` | Modifies for 2xl size |
-| `.pf-m-xl` | `.pf-v5-c-title` | Modifies for xl size |
-| `.pf-m-lg` | `.pf-v5-c-title` | Modifies for lg size |
-| `.pf-m-md` | `.pf-v5-c-title` | Modifies for md size |
-| `.pf-m-h1` | `.pf-v5-c-title` | Modifies for default h1 size |
-| `.pf-m-h2` | `.pf-v5-c-title` | Modifies for default h2 size |
-| `.pf-m-h3` | `.pf-v5-c-title` | Modifies for default h3 size |
-| `.pf-m-h4` | `.pf-v5-c-title` | Modifies for default h4 size |
-| `.pf-m-h5` | `.pf-v5-c-title` | Modifies for default h5 size |
-| `.pf-m-h6` | `.pf-v5-c-title` | Modifies for default h6 size |
+| `.pf-v6-c-title` | `*` |  Initiates a title. Always use it with a modifier class. |
+| `.pf-m-4xl` | `.pf-v6-c-title` | Modifies for 4xl size |
+| `.pf-m-3xl` | `.pf-v6-c-title` | Modifies for 3xl size |
+| `.pf-m-2xl` | `.pf-v6-c-title` | Modifies for 2xl size |
+| `.pf-m-xl` | `.pf-v6-c-title` | Modifies for xl size |
+| `.pf-m-lg` | `.pf-v6-c-title` | Modifies for lg size |
+| `.pf-m-md` | `.pf-v6-c-title` | Modifies for md size |
+| `.pf-m-h1` | `.pf-v6-c-title` | Modifies for default h1 size |
+| `.pf-m-h2` | `.pf-v6-c-title` | Modifies for default h2 size |
+| `.pf-m-h3` | `.pf-v6-c-title` | Modifies for default h3 size |
+| `.pf-m-h4` | `.pf-v6-c-title` | Modifies for default h4 size |
+| `.pf-m-h5` | `.pf-v6-c-title` | Modifies for default h5 size |
+| `.pf-m-h6` | `.pf-v6-c-title` | Modifies for default h6 size |

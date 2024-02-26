@@ -1,7 +1,7 @@
 ---
 id: 'Description list'
 section: components
-cssPrefix: pf-v5-c-description-list
+cssPrefix: pf-v6-c-description-list
 ---
 
 ## Examples
@@ -73,12 +73,12 @@ Column fill will modify the default placement of description list groups to fill
 
 ### Auto-fit, min width modified, grid template columns
 ```hbs
-{{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit" description-list--attribute='style="--pf-v5-c-description-list--GridTemplateColumns--min: 200px;"'}}
+{{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit" description-list--attribute='style="--pf-v6-c-description-list--GridTemplateColumns--min: 200px;"'}}
 ```
 
 ### Auto-fit, min width modified, responsive grid template columns
 ```hbs
-{{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit" description-list--attribute='style="--pf-v5-c-description-list--GridTemplateColumns--min-on-md: 100px; --pf-v5-c-description-list--GridTemplateColumns--min-on-lg: 150px; --pf-v5-c-description-list--GridTemplateColumns--min-on-xl: 200px; --pf-v5-c-description-list--GridTemplateColumns--min-on-2xl: 300px;"'}}
+{{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit" description-list--attribute='style="--pf-v6-c-description-list--GridTemplateColumns--min-on-md: 100px; --pf-v6-c-description-list--GridTemplateColumns--min-on-lg: 150px; --pf-v6-c-description-list--GridTemplateColumns--min-on-xl: 200px; --pf-v6-c-description-list--GridTemplateColumns--min-on-2xl: 300px;"'}}
 ```
 
 ## Responsive column definitions
@@ -148,7 +148,7 @@ Cards can be used as description list group wrappers. Using cards in this way ap
 
 ### Display and card variant, horizontal, modified term width
 ```hbs
-{{> description-list__example description-list--attribute='style="--pf-v5-c-description-list__term--width: 10ch;"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-2-col-on-lg pf-m-display-lg pf-m-horizontal" description-list--title="Card DL"}}
+{{> description-list__example description-list--attribute='style="--pf-v6-c-description-list__term--width: 10ch;"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-2-col-on-lg pf-m-display-lg pf-m-horizontal" description-list--title="Card DL"}}
 ```
 
 <!-- ## Auto term with is only supported in FF currently
@@ -171,33 +171,33 @@ Cards can be used as description list group wrappers. Using cards in this way ap
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `title` | `.pf-v5-c-description-list` | Provides an accessible title for the description list. **Required** |
-| `tabindex="0"` | `.pf-v5-c-description-list__text.pf-m-help-text` | Inserts the `.pf-v5-c-description-list__text` into the tab order of the page so that it is focusable. **Required when the element is clickable** |
+| `title` | `.pf-v6-c-description-list` | Provides an accessible title for the description list. **Required** |
+| `tabindex="0"` | `.pf-v6-c-description-list__text.pf-m-help-text` | Inserts the `.pf-v6-c-description-list__text` into the tab order of the page so that it is focusable. **Required when the element is clickable** |
 
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-description-list` | `<dl>` | Initiates the description list component. **Required** |
-| `.pf-v5-c-description-list__group` | `<div>` | Initiates a description list component group. **Required** |
-| `.pf-v5-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
-| `.pf-v5-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
-| `.pf-v5-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-v5-c-description-list__term`. **Required** |
-| `.pf-v5-c-description-list__term-icon` | `<span>` | Initiates a description list component term icon element. |
-| `.pf-m-compact` | `.pf-v5-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
-| `.pf-m-display-lg` | `.pf-v5-c-description-list` | Modifies the description list to have large display styling. |
-| `.pf-m-display-2xl` | `.pf-v5-c-description-list` | Modifies the description list to have 2xl display styling. |
-| `.pf-m-fluid` | `.pf-v5-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
-| `.pf-m-help-text` | `.pf-v5-c-description-list__text` | Indicates there is more information available for the description list component term text. |
-| `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v5-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
-| `.pf-m-vertical{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v5-c-description-list` | Modifies the description list component term and description pair to a vertical layout. |
-| `.pf-m-fill-columns` | `.pf-v5-c-description-list` | Modifies the description list groups to fill columns from top to bottom, instead of rows from left to right. |
-| `.pf-m-auto-column-widths` | `.pf-v5-c-description-list` | Modifies the description list to format automatically. |
-| `.pf-m-inline-grid` | `.pf-v5-c-description-list` | Modifies the description list display to inline-grid. |
-| `.pf-m-{1,2,3}-col{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v5-c-description-list` | Modifies the description list number of columns. |
-| `--pf-v5-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v5-c-description-list` | Modifies the min value of the `grid-template-columns` declaration at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `--pf-v5-c-description-list--m-horizontal__term--width{-on-[breakpoint]}: {width}` | `.pf-v5-c-description-list.pf-m-horizontal` | Modifies the description list term width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-v6-c-description-list` | `<dl>` | Initiates the description list component. **Required** |
+| `.pf-v6-c-description-list__group` | `<div>` | Initiates a description list component group. **Required** |
+| `.pf-v6-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
+| `.pf-v6-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
+| `.pf-v6-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-v6-c-description-list__term`. **Required** |
+| `.pf-v6-c-description-list__term-icon` | `<span>` | Initiates a description list component term icon element. |
+| `.pf-m-compact` | `.pf-v6-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
+| `.pf-m-display-lg` | `.pf-v6-c-description-list` | Modifies the description list to have large display styling. |
+| `.pf-m-display-2xl` | `.pf-v6-c-description-list` | Modifies the description list to have 2xl display styling. |
+| `.pf-m-fluid` | `.pf-v6-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
+| `.pf-m-help-text` | `.pf-v6-c-description-list__text` | Indicates there is more information available for the description list component term text. |
+| `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v6-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
+| `.pf-m-vertical{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v6-c-description-list` | Modifies the description list component term and description pair to a vertical layout. |
+| `.pf-m-fill-columns` | `.pf-v6-c-description-list` | Modifies the description list groups to fill columns from top to bottom, instead of rows from left to right. |
+| `.pf-m-auto-column-widths` | `.pf-v6-c-description-list` | Modifies the description list to format automatically. |
+| `.pf-m-inline-grid` | `.pf-v6-c-description-list` | Modifies the description list display to inline-grid. |
+| `.pf-m-{1,2,3}-col{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v6-c-description-list` | Modifies the description list number of columns. |
+| `--pf-v6-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v6-c-description-list` | Modifies the min value of the `grid-template-columns` declaration at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-v6-c-description-list--m-horizontal__term--width{-on-[breakpoint]}: {width}` | `.pf-v6-c-description-list.pf-m-horizontal` | Modifies the description list term width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
-<!-- | `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-v5-c-description-list__group` | Modifies the order of the flex layout element. |
-| `.pf-m-order-first{-on-[breakpoint]}` | `.pf-v5-c-description-list__group` | Modifies the order of the flex layout element to -1. |
-| `.pf-m-order-last{-on-[breakpoint]}` | `..pf-v5-c-description-list__group` | Modifies the order of the flex layout element to $limit + 1. | -->
+<!-- | `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-v6-c-description-list__group` | Modifies the order of the flex layout element. |
+| `.pf-m-order-first{-on-[breakpoint]}` | `.pf-v6-c-description-list__group` | Modifies the order of the flex layout element to -1. |
+| `.pf-m-order-last{-on-[breakpoint]}` | `..pf-v6-c-description-list__group` | Modifies the order of the flex layout element to $limit + 1. | -->

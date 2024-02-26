@@ -1,7 +1,7 @@
 ---
 id: Chip
 section: components
-cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
+cssPrefix: ['pf-v6-c-chip', 'pf-v6-c-chip-group']
 ---
 
 ## Examples
@@ -444,7 +444,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 {{/chip-group}}
 ```
 
-### Chip group with removable categories 
+### Chip group with removable categories
 ```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-removable" chip-group--HasCategoryText="true"}}
   {{#> chip-group-main}}
@@ -550,20 +550,20 @@ A Chip is used to display items that have been filtered or selected from a large
 ### Chip accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-v5-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
-| `aria-labelledby="[id value of .pf-v5-c-button]"` | `.pf-v5-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. Required when the button is being removed. |
+| `aria-label="[button label text]"` | `.pf-v6-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
+| `aria-labelledby="[id value of .pf-v6-c-button]"` | `.pf-v6-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. Required when the button is being removed. |
 | `aria-hidden="true"` | `<i>` |  Hides the icon from assistive technologies. |
 
 ### Chip usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
-| `.pf-v5-c-chip__content` | `<span>` | Creates a content wrapper for the chip. **Required** |
-| `.pf-v5-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
-| `.pf-v5-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
-| `.pf-v5-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removable chips** |
-| `.pf-m-overflow` | `button.pf-v5-c-chip` | Applies styling of the overflow chip. |
-| `.pf-m-draggable` | `.pf-v5-c-chip` | Modifies the chip to be in the draggable state. |
+| `.pf-v6-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
+| `.pf-v6-c-chip__content` | `<span>` | Creates a content wrapper for the chip. **Required** |
+| `.pf-v6-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
+| `.pf-v6-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
+| `.pf-v6-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removable chips** |
+| `.pf-m-overflow` | `button.pf-v6-c-chip` | Applies styling of the overflow chip. |
+| `.pf-m-draggable` | `.pf-v6-c-chip` | Modifies the chip to be in the draggable state. |
 
 ### Chip group overview
 A chip group is constrained to the width of its container and will wrap when it exceeds that width. An overflow value can be set and when the number of chips exceeds that value, additional chips will be hidden by default. The default overflow value will be set to 3 chips but this can be adjusted per application needs. The toggle button after the last chip allows the group to be expanded (or collapsed).
@@ -576,18 +576,18 @@ The chip group requires the [chip component](#chip-overview). **All single chip 
 
 | Attributes for closable chip group button | Applied to | Outcome |
 | -- | -- | -- |
-| `role="list"` | `.pf-v5-c-chip-group__list` | Indicates that the chip group list is a list element. This role is redundant since `.pf-v5-c-chip-group__list` is a `<ul>` but is required for screen readers to announce the list properly. **Required** |
-| `aria-label="[button label text]"` | `.pf-v5-c-chip-group__close > button` |  Provides an accessible name for a chip group close when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
-| `aria-labelledby="[id value of .pf-v5-c-chip-group__close > button] [id value of .pf-v5-c-chip-group__label]"` | `.pf-v5-c-chip-group__close > button` | Provides an accessible name for the button. **Required** |
+| `role="list"` | `.pf-v6-c-chip-group__list` | Indicates that the chip group list is a list element. This role is redundant since `.pf-v6-c-chip-group__list` is a `<ul>` but is required for screen readers to announce the list properly. **Required** |
+| `aria-label="[button label text]"` | `.pf-v6-c-chip-group__close > button` |  Provides an accessible name for a chip group close when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
+| `aria-labelledby="[id value of .pf-v6-c-chip-group__close > button] [id value of .pf-v6-c-chip-group__label]"` | `.pf-v6-c-chip-group__close > button` | Provides an accessible name for the button. **Required** |
 
 ### Chip group usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-chip-group` | `<div>` | Initiates the chip group component. **Required.** |
-| `.pf-v5-c-chip-group__list` | `<ul>` | Initiates the container for a list of chips. **Required.** |
-| `.pf-v5-c-chip-group__list-item` | `<li>` | Initiates the list item inside of the chip group. **Required.** |
-| `.pf-v5-c-chip-group__label` | `<span>` | Initiates the label to be used in the chip group. |
-| `.pf-v5-c-chip-group__close` | `<div>` | Initiates the container used for the button to remove the chip group. |
-| `.pf-v5-c-chip-group__main` | `<div>` | Initiates the container for the label and list elements so that they wrap together. **Required** |
-| `.pf-v5-c-button` | `.pf-v5-c-chip-group__close <button>` | Initiates the button used to remove the chip group. |
-| `.pf-m-category` | `.pf-v5-c-chip-group` | Modifies the chip group to support category styling. |
+| `.pf-v6-c-chip-group` | `<div>` | Initiates the chip group component. **Required.** |
+| `.pf-v6-c-chip-group__list` | `<ul>` | Initiates the container for a list of chips. **Required.** |
+| `.pf-v6-c-chip-group__list-item` | `<li>` | Initiates the list item inside of the chip group. **Required.** |
+| `.pf-v6-c-chip-group__label` | `<span>` | Initiates the label to be used in the chip group. |
+| `.pf-v6-c-chip-group__close` | `<div>` | Initiates the container used for the button to remove the chip group. |
+| `.pf-v6-c-chip-group__main` | `<div>` | Initiates the container for the label and list elements so that they wrap together. **Required** |
+| `.pf-v6-c-button` | `.pf-v6-c-chip-group__close <button>` | Initiates the button used to remove the chip group. |
+| `.pf-m-category` | `.pf-v6-c-chip-group` | Modifies the chip group to support category styling. |

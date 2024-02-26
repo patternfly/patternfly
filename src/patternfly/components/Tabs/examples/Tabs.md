@@ -1,7 +1,7 @@
 ---
 id: Tabs
 section: components
-cssPrefix: pf-v5-c-tabs
+cssPrefix: pf-v6-c-tabs
 ---
 
 import './Tabs.css'
@@ -20,8 +20,8 @@ import './Tabs.css'
 ### Default tabs usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-disabled` | `a.pf-v5-c-tabs__link` | Modifies a tabs link for disabled styles. |
-| `.pf-m-aria-disabled` | `.pf-v5-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
+| `.pf-m-disabled` | `a.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles. |
+| `.pf-m-aria-disabled` | `.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
 
 ## Overflow
 
@@ -35,25 +35,25 @@ import './Tabs.css'
 ### Overflow beginning of list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-scrollable` | `.pf-v5-c-tabs` | Enables the directional scroll buttons. |
-| `.pf-v5-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button container. |
+| `.pf-m-scrollable` | `.pf-v6-c-tabs` | Enables the directional scroll buttons. |
+| `.pf-v6-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button container. |
 
 ### Horizontal overflow example
-```hbs 
+```hbs
 {{#> tabs tabs--id="horizontal-overflow" __tabs-list--IsOverflow="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Horizontal overflow expanded example
-```hbs 
+```hbs
 {{#> tabs tabs--id="horizontal-overflow-expanded" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Horizontal overflow selected example
-```hbs 
+```hbs
 {{#> tabs tabs--id="horizontal-overflow-selected" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -173,8 +173,8 @@ import './Tabs.css'
 ### Insets usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v5-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
-| `.pf-m-page-insets` | `.pf-v5-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v6-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
+| `.pf-m-page-insets` | `.pf-v6-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 
 ## Icons
 
@@ -242,7 +242,7 @@ import './Tabs.css'
 ### Filled usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-fill`  | `.pf-v5-c-tabs` | Modifies the tabs to fill the available space. **Required** |
+| `.pf-m-fill`  | `.pf-v6-c-tabs` | Modifies the tabs to fill the available space. **Required** |
 
 ## Tabs as navigation
 
@@ -267,7 +267,7 @@ import './Tabs.css'
 ## Tab item actions
 
 ### Help button example
-```hbs 
+```hbs
 {{> __tabs-all
       __tabs-all--id="help-button"
       __tabs-list--IsDisabled="true"
@@ -278,7 +278,7 @@ import './Tabs.css'
 ```
 
 ### Close button example
-```hbs 
+```hbs
 {{> __tabs-all
       __tabs-all--id="close-button"
       __tabs-list--IsDisabled="true"
@@ -290,7 +290,7 @@ import './Tabs.css'
 ```
 
 ### Help and close button example
-```hbs 
+```hbs
 {{> __tabs-all
       __tabs-all--id="help-close-button"
       __tabs-list--IsDisabled="true"
@@ -340,34 +340,34 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-tabs` | `<nav>`, `<div>` | Initiates the tabs component. **Required** |
-| `.pf-v5-c-tabs__list` | `<ul>` | Initiates a tabs component list. **Required** |
-| `.pf-v5-c-tabs__item` | `<li>` | Initiates a tabs component item. **Required** |
-| `.pf-v5-c-tabs__item-text` | `<span>` | Initiates a tabs component item icon. **Required** |
-| `.pf-v5-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
-| `.pf-v5-c-tabs__item-close` | `<span>` | Initiates a tabs component item close. |
-| `.pf-v5-c-tabs__item-close-icon` | `<span>` | Initiates a tabs component item close icon. |
-| `.pf-v5-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
-| `.pf-v5-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button container. |
-| `.pf-v5-c-tabs__add` | `<span>` | Initiates a tabs component add button. |
-| `.pf-v5-c-tabs__toggle` | `<div>` | Initiates a tabs expandable toggle. |
-| `.pf-v5-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
-| `.pf-v5-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
-| `.pf-v5-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
-| `.pf-m-tubtab` | `.pf-v5-c-tabs` | Applies subtab styling to the tab component. |
-| `.pf-m-no-border-bottom` | `.pf-v5-c-tabs` | Removes bottom border from a tab component. |
-| `.pf-m-box` | `.pf-v5-c-tabs` | Applies box styling to the tab component. |
-| `.pf-m-vertical` | `.pf-v5-c-tabs` | Applies vertical styling to the tab component. |
-| `.pf-m-fill` | `.pf-v5-c-tabs` | Modifies the tabs to fill the available space. |
-| `.pf-m-current` | `.pf-v5-c-tabs__item` | Indicates that a tab item is currently selected. |
-| `.pf-m-action` | `.pf-v5-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
-| `.pf-m-overflow` | `.pf-v5-c-tabs__item` | Applies overflow menu styling to a tab item. |
-| `.pf-m-expanded` | `.pf-v5-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v5-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-page-insets` | `.pf-v5-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
-| `.pf-m-secondary` | `.pf-v5-c-tabs.pf-m-box` | Modifies the tabs component tab background colors for the box variant. |
-| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v5-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** works with vertical tabs only. |
-| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v5-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-expanded` | `.pf-v5-c-tabs` | Modifies the expandable tabs component for the expanded state. |
-| `.pf-m-disabled` | `a.pf-v5-c-tabs__link` | Modifies a tabs link for disabled styles. |
-| `.pf-m-aria-disabled` | `.pf-v5-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
+| `.pf-v6-c-tabs` | `<nav>`, `<div>` | Initiates the tabs component. **Required** |
+| `.pf-v6-c-tabs__list` | `<ul>` | Initiates a tabs component list. **Required** |
+| `.pf-v6-c-tabs__item` | `<li>` | Initiates a tabs component item. **Required** |
+| `.pf-v6-c-tabs__item-text` | `<span>` | Initiates a tabs component item icon. **Required** |
+| `.pf-v6-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
+| `.pf-v6-c-tabs__item-close` | `<span>` | Initiates a tabs component item close. |
+| `.pf-v6-c-tabs__item-close-icon` | `<span>` | Initiates a tabs component item close icon. |
+| `.pf-v6-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
+| `.pf-v6-c-tabs__scroll-button` | `<div>` | Initiates a tabs component scroll button container. |
+| `.pf-v6-c-tabs__add` | `<span>` | Initiates a tabs component add button. |
+| `.pf-v6-c-tabs__toggle` | `<div>` | Initiates a tabs expandable toggle. |
+| `.pf-v6-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
+| `.pf-v6-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
+| `.pf-v6-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
+| `.pf-m-tubtab` | `.pf-v6-c-tabs` | Applies subtab styling to the tab component. |
+| `.pf-m-no-border-bottom` | `.pf-v6-c-tabs` | Removes bottom border from a tab component. |
+| `.pf-m-box` | `.pf-v6-c-tabs` | Applies box styling to the tab component. |
+| `.pf-m-vertical` | `.pf-v6-c-tabs` | Applies vertical styling to the tab component. |
+| `.pf-m-fill` | `.pf-v6-c-tabs` | Modifies the tabs to fill the available space. |
+| `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
+| `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
+| `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
+| `.pf-m-expanded` | `.pf-v6-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v6-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-page-insets` | `.pf-v6-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
+| `.pf-m-secondary` | `.pf-v6-c-tabs.pf-m-box` | Modifies the tabs component tab background colors for the box variant. |
+| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** works with vertical tabs only. |
+| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-expanded` | `.pf-v6-c-tabs` | Modifies the expandable tabs component for the expanded state. |
+| `.pf-m-disabled` | `a.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles. |
+| `.pf-m-aria-disabled` | `.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
