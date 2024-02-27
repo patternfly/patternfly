@@ -1,7 +1,7 @@
 ---
 id: Split
 section: layouts
-cssPrefix: pf-v5-l-split
+cssPrefix: pf-v6-l-split
 ---
 
 import './Split.css'
@@ -92,8 +92,8 @@ The split layout is designed to position items horizontally, with one item filli
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-l-split` | `<div>`, `<section>`, or `<article>` | Initiates the split layout. |
-| `.pf-v5-l-split__item` | `<div>` | Initiates a split item. **Required** |
-| `.pf-m-gutter` | `.pf-v5-l-split` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-wrap` | `.pf-v5-l-split` | Sets the split layout to wrap. |
-| `.pf-m-fill` | `.pf-v5-l-split__item` | Specifies which item(s) should fill the avaiable horizontal space. |
+| `.pf-v6-l-split` | `<div>`, `<section>`, or `<article>` | Initiates the split layout. |
+| `.pf-v6-l-split__item` | `<div>` | Initiates a split item. **Required** |
+| `.pf-m-gutter` | `.pf-v6-l-split` | Adds space between children by using the globally defined gutter value. |
+| `.pf-m-wrap` | `.pf-v6-l-split` | Sets the split layout to wrap. |
+| `.pf-m-fill` | `.pf-v6-l-split__item` | Specifies which item(s) should fill the avaiable horizontal space. |

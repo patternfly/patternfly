@@ -339,35 +339,35 @@ For these utilities to have effect, the parent element must be set to `display: 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-u-flex-direction-row{-on-[breakpoint]}`            | `*` |  Sets flex-direction: row |
-| `.pf-v5-u-flex-direction-row-reverse{-on-[breakpoint]}`    | `*` |  Sets flex-direction: row-reverse |
-| `.pf-v5-u-flex-direction-column{-on-[breakpoint]}`         | `*` |  Sets flex-direction: column |
-| `.pf-v5-u-flex-direction-column-reverse{-on-[breakpoint]}` | `*` |  Sets flex-direction: column-reverse |
-| `.pf-v5-u-justify-content-flex-start{-on-[breakpoint]}`    | `*` |  Sets justify-content: flex-start |
-| `.pf-v5-u-justify-content-flex-end{-on-[breakpoint]}`      | `*` |  Sets justify-content: flex-end |
-| `.pf-v5-u-justify-content-center{-on-[breakpoint]}`        | `*` |  Sets justify-content: center |
-| `.pf-v5-u-justify-content-space-around{-on-[breakpoint]}`  | `*` |  Sets justify-content: space-around |
-| `.pf-v5-u-justify-content-space-between{-on-[breakpoint]}` | `*` |  Sets justify-content: space-between |
-| `.pf-v5-u-align-items-flex-start{-on-[breakpoint]}`        | `*` |  Sets align-items: flex-start |
-| `.pf-v5-u-align-items-flex-end{-on-[breakpoint]}`          | `*` |  Sets align-items: flex-start |
-| `.pf-v5-u-align-items-center{-on-[breakpoint]}`            | `*` |  Sets align-items: center |
-| `.pf-v5-u-align-items-baseline{-on-[breakpoint]}`          | `*` |  Sets align-items: baseline |
-| `.pf-v5-u-align-items-stretch{-on-[breakpoint]}`           | `*` |  Sets align-items: stretch |
-| `.pf-v5-u-align-self-flex-start{-on-[breakpoint]}`         | `*` |  Sets align-self: flex-start |
-| `.pf-v5-u-align-self-flex-end{-on-[breakpoint]}`           | `*` |  Sets align-self: flex-end |
-| `.pf-v5-u-align-self-center{-on-[breakpoint]}`             | `*` |  Sets align-self: center |
-| `.pf-v5-u-align-self-baseline{-on-[breakpoint]}`           | `*` |  Sets align-self: baseline |
-| `.pf-v5-u-align-self-stretch{-on-[breakpoint]}`            | `*` |  Sets align-self: stretch |
-| `.pf-v5-u-align-content-flex-start{-on-[breakpoint]}`      | `*` |  Sets align-content: flex-start |
-| `.pf-v5-u-align-content-flex-end{-on-[breakpoint]}`        | `*` |  Sets align-content: flex-end |
-| `.pf-v5-u-align-content-center{-on-[breakpoint]}`          | `*` |  Sets align-content: center |
-| `.pf-v5-u-align-content-space-between{-on-[breakpoint]}`   | `*` |  Sets align-content: space-between |
-| `.pf-v5-u-align-content-space-around{-on-[breakpoint]}`    | `*` |  Sets align-content: space-around |
-| `.pf-v5-u-align-content-stretch{-on-[breakpoint]}`         | `*` |  Sets align-content: stretch |
-| `.pf-v5-u-flex-shrink{1 or 0}{-on-[breakpoint]}`           | `*` |  Sets flex-shrink to 1 or 0 |
-| `.pf-v5-u-flex-grow{1 or 0}{-on-[breakpoint]}`             | `*` |  Sets flex-grow to 1 or 0 |
-| `.pf-v5-u-flex-basis{0 or auto}{-on-[breakpoint]}`         | `*` |  Sets flex-basis to 0 auto |
-| `.pf-v5-u-flex-fill{-on-[breakpoint]}`                     | `*` |  Sets flex to 1 1 auto |
-| `.pf-v5-u-flex-wrap{-on-[breakpoint]}`                     | `*` |  sets flex-wrap: wrap |
-| `.pf-v5-u-flex-nowrap{-on-[breakpoint]}`                   | `*` |  sets flex-wrap: nowrap |
-| `.pf-v5-u-flex-wrap-reverse{-on-[breakpoint]}`             | `*` |  sets flex-wrap: wrap-reverse |
+| `.pf-v6-u-flex-direction-row{-on-[breakpoint]}`            | `*` |  Sets flex-direction: row |
+| `.pf-v6-u-flex-direction-row-reverse{-on-[breakpoint]}`    | `*` |  Sets flex-direction: row-reverse |
+| `.pf-v6-u-flex-direction-column{-on-[breakpoint]}`         | `*` |  Sets flex-direction: column |
+| `.pf-v6-u-flex-direction-column-reverse{-on-[breakpoint]}` | `*` |  Sets flex-direction: column-reverse |
+| `.pf-v6-u-justify-content-flex-start{-on-[breakpoint]}`    | `*` |  Sets justify-content: flex-start |
+| `.pf-v6-u-justify-content-flex-end{-on-[breakpoint]}`      | `*` |  Sets justify-content: flex-end |
+| `.pf-v6-u-justify-content-center{-on-[breakpoint]}`        | `*` |  Sets justify-content: center |
+| `.pf-v6-u-justify-content-space-around{-on-[breakpoint]}`  | `*` |  Sets justify-content: space-around |
+| `.pf-v6-u-justify-content-space-between{-on-[breakpoint]}` | `*` |  Sets justify-content: space-between |
+| `.pf-v6-u-align-items-flex-start{-on-[breakpoint]}`        | `*` |  Sets align-items: flex-start |
+| `.pf-v6-u-align-items-flex-end{-on-[breakpoint]}`          | `*` |  Sets align-items: flex-start |
+| `.pf-v6-u-align-items-center{-on-[breakpoint]}`            | `*` |  Sets align-items: center |
+| `.pf-v6-u-align-items-baseline{-on-[breakpoint]}`          | `*` |  Sets align-items: baseline |
+| `.pf-v6-u-align-items-stretch{-on-[breakpoint]}`           | `*` |  Sets align-items: stretch |
+| `.pf-v6-u-align-self-flex-start{-on-[breakpoint]}`         | `*` |  Sets align-self: flex-start |
+| `.pf-v6-u-align-self-flex-end{-on-[breakpoint]}`           | `*` |  Sets align-self: flex-end |
+| `.pf-v6-u-align-self-center{-on-[breakpoint]}`             | `*` |  Sets align-self: center |
+| `.pf-v6-u-align-self-baseline{-on-[breakpoint]}`           | `*` |  Sets align-self: baseline |
+| `.pf-v6-u-align-self-stretch{-on-[breakpoint]}`            | `*` |  Sets align-self: stretch |
+| `.pf-v6-u-align-content-flex-start{-on-[breakpoint]}`      | `*` |  Sets align-content: flex-start |
+| `.pf-v6-u-align-content-flex-end{-on-[breakpoint]}`        | `*` |  Sets align-content: flex-end |
+| `.pf-v6-u-align-content-center{-on-[breakpoint]}`          | `*` |  Sets align-content: center |
+| `.pf-v6-u-align-content-space-between{-on-[breakpoint]}`   | `*` |  Sets align-content: space-between |
+| `.pf-v6-u-align-content-space-around{-on-[breakpoint]}`    | `*` |  Sets align-content: space-around |
+| `.pf-v6-u-align-content-stretch{-on-[breakpoint]}`         | `*` |  Sets align-content: stretch |
+| `.pf-v6-u-flex-shrink{1 or 0}{-on-[breakpoint]}`           | `*` |  Sets flex-shrink to 1 or 0 |
+| `.pf-v6-u-flex-grow{1 or 0}{-on-[breakpoint]}`             | `*` |  Sets flex-grow to 1 or 0 |
+| `.pf-v6-u-flex-basis{0 or auto}{-on-[breakpoint]}`         | `*` |  Sets flex-basis to 0 auto |
+| `.pf-v6-u-flex-fill{-on-[breakpoint]}`                     | `*` |  Sets flex to 1 1 auto |
+| `.pf-v6-u-flex-wrap{-on-[breakpoint]}`                     | `*` |  sets flex-wrap: wrap |
+| `.pf-v6-u-flex-nowrap{-on-[breakpoint]}`                   | `*` |  sets flex-wrap: nowrap |
+| `.pf-v6-u-flex-wrap-reverse{-on-[breakpoint]}`             | `*` |  sets flex-wrap: wrap-reverse |

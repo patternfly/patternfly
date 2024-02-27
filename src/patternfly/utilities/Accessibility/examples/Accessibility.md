@@ -34,5 +34,5 @@ The text underneath is hidden.
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
-| `.pf-v5-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-v5-u-screen-reader` and `.pf-v5-screen-reader` |
+| `.pf-v6-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
+| `.pf-v6-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-v6-u-screen-reader` and `.pf-v6-screen-reader` |
