@@ -8,14 +8,26 @@
 // TODO: update text-input-button to use gap
 // TODO: label all variables group - // * Menu toggle (vars) // - Menu toggle (selectors)
 
+// stylelint-disable
+.test-container {
+  display: flex;
+  gap: var(--pf-t--global--spacer--sm);
+  resize: horizontal;
+  border: 1px dashed;
+  overflow: auto;
+  margin: 60px;
+  padding: var(--pf-t--global--spacer--sm);
+}
+// stylelint-enable
+
 :where(:root),
 :where(.#{$menu-toggle}) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingTop) + var(--#{$menu-toggle}--PaddingBottom));
+  --#{$menu-toggle}--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$menu-toggle}--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$menu-toggle}--MinWidth: 12ch;
   --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -49,10 +61,10 @@
   --#{$menu-toggle}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // * Menu toggle icon
-  --#{$menu-toggle}__icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
 
   // * Menu toggle toggle icon
-  --#{$menu-toggle}__toggle-icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle button
@@ -112,9 +124,6 @@
   --#{$menu-toggle}--m-secondary--hover__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
   --#{$menu-toggle}--m-secondary--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
 
-  // Controls
-  --#{$menu-toggle}__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--sm));
-
   // Full height
   --#{$menu-toggle}--m-full-height--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$menu-toggle}--m-full-height--PaddingLeft: var(--pf-t--global--spacer--lg);
@@ -147,6 +156,7 @@
   --#{$menu-toggle}__button--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingTop) + var(--#{$menu-toggle}--PaddingBottom));
 
   // Menu toggle plain
+  --#{$menu-toggle}--m-plain--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingTop) + var(--#{$menu-toggle}--PaddingBottom));
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu-toggle}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu-toggle}--m-plain--BorderColor: transparent;
@@ -170,7 +180,8 @@
   display: inline-flex;
   column-gap: var(--#{$menu-toggle}--ColumnGap);
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  flex-shrink: 1;
   min-width: var(--#{$menu-toggle}--MinWidth);
   max-width: 100%;
   padding-block-start: var(--#{$menu-toggle}--PaddingTop);
@@ -264,6 +275,7 @@
     --#{$menu-toggle}--expanded--BackgroundColor: var(--#{$menu-toggle}--m-plain--expanded--BackgroundColor);
     --#{$menu-toggle}--disabled--Color: var(--#{$menu-toggle}--m-plain--disabled--Color);
     --#{$menu-toggle}--disabled--BackgroundColor: var(--#{$menu-toggle}--m-plain--disabled--BackgroundColor);
+    --#{$menu-toggle}--MinWidth: var(--#{$menu-toggle}--m-plain--MinWidth);
 
     &::before {
       border: none;
@@ -471,7 +483,9 @@
 .#{$menu-toggle}__text {
   @include pf-v5-text-overflow;
 
-  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .#{$menu-toggle}__count {
@@ -479,28 +493,18 @@
   flex-wrap: nowrap;
 }
 
-// - Menu toggle controls - Menu toggle icon
 .#{$menu-toggle}__icon,
-.#{$menu-toggle}__controls,
 .#{$menu-toggle}__toggle-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.#{$menu-toggle}__icon {
   flex-shrink: 0;
-  height: var(--#{$menu-toggle}__icon--Height);
+  flex-basis: 100%;
 }
 
-// - Menu toggle controls
-.#{$menu-toggle}__controls {
-  min-width: var(--#{$menu-toggle}__controls--MinWidth);
-  margin-inline-start: auto; // TODO: possibly replace as part of one of the other TODOs at top of file
-}
 
 // - Menu toggle icon
 .#{$menu-toggle}__toggle-icon {
-  height: var(--#{$menu-toggle}__toggle-icon--Height);
+  min-height: var(--#{$menu-toggle}__toggle-icon--MinHeight);
   color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
 }
