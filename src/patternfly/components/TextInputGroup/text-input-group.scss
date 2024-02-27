@@ -137,8 +137,8 @@
 
 .#{$text-input-group}__icon {
   position: absolute;
- inset-block-start: 50%;
- inset-inline-start: var(--#{$text-input-group}__icon--Left);
+  inset-block-start: 50%;
+  inset-inline-start: var(--#{$text-input-group}__icon--Left);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
 }
