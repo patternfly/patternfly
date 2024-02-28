@@ -1,7 +1,7 @@
 ---
 id: Drawer
 section: components
-cssPrefix: pf-v5-c-drawer
+cssPrefix: pf-v6-c-drawer
 ---
 
 import './Drawer.css'
@@ -185,7 +185,7 @@ import './Drawer.css'
       {{#> drawer-body}}
         Drawer panel body content
       {{/drawer-body}}
-      {{#> drawer-body drawer-body--HasPadding=true drawer-body--attribute="style='--pf-v5-c-drawer__panel__body--PaddingLeft: 48px;'"}}
+      {{#> drawer-body drawer-body--HasPadding=true drawer-body--attribute="style='--pf-v6-c-drawer__panel__body--PaddingLeft: 48px;'"}}
         Drawer panel body content with modified inline start padding
       {{/drawer-body}}
     {{/drawer-panel}}
@@ -284,17 +284,17 @@ import './Drawer.css'
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `role="separator"` | `.pf-v5-c-drawer__splitter` | Indicates that the splitter is a separator. **Required** |
-| `tabindex="0"` | `.pf-v5-c-drawer__splitter` | Inserts the splitter into the tab order of the page so that it is focusable. **Required** |
-| `aria-orientation="horizontal"` | `.pf-v5-c-drawer__splitter` | Indicates that the splitter is oriented horizontally. |
-| `aria-orientation="vertical"` | `.pf-v5-c-drawer__splitter.pf-m-vertical` | Indicates that the splitter is oriented vertically. |
+| `role="separator"` | `.pf-v6-c-drawer__splitter` | Indicates that the splitter is a separator. **Required** |
+| `tabindex="0"` | `.pf-v6-c-drawer__splitter` | Inserts the splitter into the tab order of the page so that it is focusable. **Required** |
+| `aria-orientation="horizontal"` | `.pf-v6-c-drawer__splitter` | Indicates that the splitter is oriented horizontally. |
+| `aria-orientation="vertical"` | `.pf-v6-c-drawer__splitter.pf-m-vertical` | Indicates that the splitter is oriented vertically. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-drawer__splitter` | `<div>` | Initiates the splitter. |
-| `.pf-v5-c-drawer__splitter-handle` | `<div>` | Initiates the splitter handle element. |
-| `.pf-m-vertical` |  `.pf-v5-c-drawer__splitter` | Modifies the splitter to be vertical. |
+| `.pf-v6-c-drawer__splitter` | `<div>` | Initiates the splitter. |
+| `.pf-v6-c-drawer__splitter-handle` | `<div>` | Initiates the splitter handle element. |
+| `.pf-m-vertical` |  `.pf-v6-c-drawer__splitter` | Modifies the splitter to be vertical. |
 
 ## Documentation
 
@@ -304,35 +304,35 @@ import './Drawer.css'
 | -- | -- | -- |
 | `aria-expanded="true"` | `action that opens drawer` | Indicates that the expandable content is visible. **Required** |
 | `aria-expanded="false"` | `action that opens drawer` | Indicates that the expandable content is hidden. **Required** |
-| `hidden` | `.pf-v5-c-drawer__panel` | Hides the drawer panel from assistive technologies. **Required** |
+| `hidden` | `.pf-v6-c-drawer__panel` | Hides the drawer panel from assistive technologies. **Required** |
 
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-drawer` | `<div>` | Initiates the drawer container. **Required** |
-| `.pf-v5-c-drawer__section` | `<div>` | Initiates a drawer section area. This element can be used above or below `.pf-v5-c-drawer__main` for titles, toolbars, footers, etc. |
-| `.pf-v5-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
-| `.pf-v5-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
-| `.pf-v5-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
-| `.pf-v5-c-drawer__panel-main` | `<div>` | Initiates the drawer panel main container for resizable drawers only. |
-| `.pf-v5-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` and `.pf-v5-c-drawer__panel-main`. **Required** |
-| `.pf-v5-c-drawer__head` | `<div>` | Initiates a drawer head container. This container positions `.pf-v5-c-drawer__actions`, if present. |
-| `.pf-v5-c-drawer__actions` | `<div>` | Initiates an actions container within `.pf-v5--drawer__head`. |
-| `.pf-v5-c-drawer__close` | `<div>` | Identifies the drawer close button within `.pf-v5-c-drawer__actions`. |
-| `.pf-v5-c-drawer__description` | `<div>` | Initiates a drawer panel description. |
-| `.pf-m-panel-left` | `.pf-v5-c-drawer` | Modifies the drawer panel to expand from the left. |
-| `.pf-m-panel-bottom` | `.pf-v5-c-drawer` | Modifies the drawer panel to expand from the bottom. **Note:** percentage based panel sizes require the drawer component's parent element have an implicit or explicit height. |
-| `.pf-m-expanded` | `.pf-v5-c-drawer` | Modifies the drawer panel for the expanded state. |
-| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v5-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v5-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) will default to the `md` breakpoint. |
-| `.pf-m-no-border` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
-| `.pf-m-padding` | `.pf-v5-c-drawer__body` | Modifies the element to add padding. |
-| `.pf-m-no-padding` | `.pf-v5-c-drawer__body` | Modifies the element to remove padding. |
-| `.pf-m-no-background` | `.pf-v5-c-drawer__section`, `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` | Modifies the drawer element background color to transparent. |
-| `.pf-m-secondary` | `.pf-v5-c-drawer__section`, `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` | Modifies the drawer element to use the secondary background color. |
-| `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-resizable` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-v5-c-drawer__splitter` element. |
-| `--pf-v5-c-drawer__panel--md--FlexBasis--min` | `.pf-v5-c-drawer__panel` | Defines the drawer panel minimum size. |
-| `--pf-v5-c-drawer__panel--md--FlexBasis` | `.pf-v5-c-drawer__panel` | Defines the drawer panel size. |
-| `--pf-v5-c-drawer__panel--md--FlexBasis--max` | `.pf-v5-c-drawer__panel` | Defines the drawer panel maximum size. |
+| `.pf-v6-c-drawer` | `<div>` | Initiates the drawer container. **Required** |
+| `.pf-v6-c-drawer__section` | `<div>` | Initiates a drawer section area. This element can be used above or below `.pf-v6-c-drawer__main` for titles, toolbars, footers, etc. |
+| `.pf-v6-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
+| `.pf-v6-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
+| `.pf-v6-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
+| `.pf-v6-c-drawer__panel-main` | `<div>` | Initiates the drawer panel main container for resizable drawers only. |
+| `.pf-v6-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` and `.pf-v6-c-drawer__panel-main`. **Required** |
+| `.pf-v6-c-drawer__head` | `<div>` | Initiates a drawer head container. This container positions `.pf-v6-c-drawer__actions`, if present. |
+| `.pf-v6-c-drawer__actions` | `<div>` | Initiates an actions container within `.pf-v6--drawer__head`. |
+| `.pf-v6-c-drawer__close` | `<div>` | Identifies the drawer close button within `.pf-v6-c-drawer__actions`. |
+| `.pf-v6-c-drawer__description` | `<div>` | Initiates a drawer panel description. |
+| `.pf-m-panel-left` | `.pf-v6-c-drawer` | Modifies the drawer panel to expand from the left. |
+| `.pf-m-panel-bottom` | `.pf-v6-c-drawer` | Modifies the drawer panel to expand from the bottom. **Note:** percentage based panel sizes require the drawer component's parent element have an implicit or explicit height. |
+| `.pf-m-expanded` | `.pf-v6-c-drawer` | Modifies the drawer panel for the expanded state. |
+| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) will default to the `md` breakpoint. |
+| `.pf-m-no-border` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
+| `.pf-m-padding` | `.pf-v6-c-drawer__body` | Modifies the element to add padding. |
+| `.pf-m-no-padding` | `.pf-v6-c-drawer__body` | Modifies the element to remove padding. |
+| `.pf-m-no-background` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` | Modifies the drawer element background color to transparent. |
+| `.pf-m-secondary` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` | Modifies the drawer element to use the secondary background color. |
+| `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-resizable` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-v6-c-drawer__splitter` element. |
+| `--pf-v6-c-drawer__panel--md--FlexBasis--min` | `.pf-v6-c-drawer__panel` | Defines the drawer panel minimum size. |
+| `--pf-v6-c-drawer__panel--md--FlexBasis` | `.pf-v6-c-drawer__panel` | Defines the drawer panel size. |
+| `--pf-v6-c-drawer__panel--md--FlexBasis--max` | `.pf-v6-c-drawer__panel` | Defines the drawer panel maximum size. |

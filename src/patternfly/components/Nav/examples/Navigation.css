@@ -1,5 +1,5 @@
-#ws-core-c-navigation-horizontal-in-masthead .pf-v5-c-page__header-nav,
-#ws-core-c-navigation-horizontal-in-masthead-overflow .pf-v5-c-page__header-nav {
+#ws-core-c-navigation-horizontal-in-masthead .pf-v6-c-page__header-nav,
+#ws-core-c-navigation-horizontal-in-masthead-overflow .pf-v6-c-page__header-nav {
   grid-row: 1;
 }
 
@@ -12,7 +12,7 @@
   position: relative;
 }
 
-#ws-core-c-navigation-nav-with-flyout .pf-v5-c-menu.pf-m-flyout.pf-m-nav {
+#ws-core-c-navigation-nav-with-flyout .pf-v6-c-menu.pf-m-flyout.pf-m-nav {
   position: absolute;
   inset-block-start: 168px;
   inset-inline-start: 256px;

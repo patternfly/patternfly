@@ -2,7 +2,7 @@
 id: 'Calendar month'
 section: components
 subsection: date-and-time
-cssPrefix: pf-v5-c-calendar-month
+cssPrefix: pf-v6-c-calendar-month
 ---
 
 ## Examples
@@ -330,35 +330,35 @@ cssPrefix: pf-v5-c-calendar-month
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-hidden="true"` | `.pf-v5-c-calendar-month__header-nav-control > button > [icon]` | Hides the nav control icon from assistive technologies. **Required** |
-| `aria-hidden="true"` | `.pf-v5-c-calendar-month__day > span` | Hides the visual day of the month label from assistive technologies. **Required** |
-| `.pf-v5-screen-reader` | `.pf-v5-c-calendar-month__day > span` | Hides the full day of the month text visually. **Required** |
-| `aria-label="[Prev/Next] month"` | `.pf-v5-c-calendar-month__header-nav-control` | Provides an accessible label for the nav controls. **Required** |
-| `disabled` | `.pf-v5-c-calendar-month__date` | Indicates that a date is selected. **Required when the parent is `.pf-v5-c-calendar-month__dates-cell.pf-m-disabled`** |
-| `aria-label="[date] [month] [year]"` | `.pf-v5-c-calendar-month__date` | Provides an accessible label for the date button. **Required** |
+| `aria-hidden="true"` | `.pf-v6-c-calendar-month__header-nav-control > button > [icon]` | Hides the nav control icon from assistive technologies. **Required** |
+| `aria-hidden="true"` | `.pf-v6-c-calendar-month__day > span` | Hides the visual day of the month label from assistive technologies. **Required** |
+| `.pf-v6-screen-reader` | `.pf-v6-c-calendar-month__day > span` | Hides the full day of the month text visually. **Required** |
+| `aria-label="[Prev/Next] month"` | `.pf-v6-c-calendar-month__header-nav-control` | Provides an accessible label for the nav controls. **Required** |
+| `disabled` | `.pf-v6-c-calendar-month__date` | Indicates that a date is selected. **Required when the parent is `.pf-v6-c-calendar-month__dates-cell.pf-m-disabled`** |
+| `aria-label="[date] [month] [year]"` | `.pf-v6-c-calendar-month__date` | Provides an accessible label for the date button. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-calendar-month` | `<div>` | Initiates the calendar month component. **Required** |
-| `.pf-v5-c-calendar-month__header` | `<div>` | Initiates the calendar month header. **Required** |
-| `.pf-v5-c-calendar-month__header-nav-control` | `<div>` | Initiates a nav control for navigating by month. **Required** |
-| `.pf-v5-c-calendar-month__header-month` | `<div>` | Initiates the month select. **Required** |
-| `.pf-v5-c-calendar-month__header-year` | `<div>` | Initiates the year input. **Required** |
-| `.pf-v5-c-calendar-month__calendar` | `<table>` | Initiates the calendar. **Required** |
-| `.pf-v5-c-calendar-month__days` | `<thead>` | Initiates the calendar days section. **Required** |
-| `.pf-v5-c-calendar-month__days-row` | `<tr>` | Initiates the calendar days row. **Required** |
-| `.pf-v5-c-calendar-month__day` | `<th>` | Initiates a calendar day. **Required** |
-| `.pf-v5-c-calendar-month__dates` | `<tbody>` | Initiates the calendar dates section. **Required** |
-| `.pf-v5-c-calendar-month__dates-row` | `<tr>` | Initiates a calendar dates row. **Required** |
-| `.pf-v5-c-calendar-month__dates-cell` | `<td>` | Initiates a calendar date cell. **Required** |
-| `.pf-v5-c-calendar-month__date` | `<button>` | Initiates a calendar date. **Required** |
-| `.pf-m-prev-month` | `.pf-v5-c-calendar-month__header-nav-control` | Indicates a nav control is the previous month. **Required** |
-| `.pf-m-next-month` | `.pf-v5-c-calendar-month__header-nav-control` | Indicates a nav control is the next month. **Required** |
-| `.pf-m-current` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is the current day. **Required** |
-| `.pf-m-selected` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is selected. |
-| `.pf-m-start-range` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is the start of a range. |
-| `.pf-m-in-range` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is in a range. |
-| `.pf-m-end-range` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is the end of a range. |
-| `.pf-m-adjacent-month` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is in an adjacent month. |
-| `.pf-m-disabled` | `.pf-v5-c-calendar-month__dates-cell` | Indicates a date is disabled and unavailable. |
+| `.pf-v6-c-calendar-month` | `<div>` | Initiates the calendar month component. **Required** |
+| `.pf-v6-c-calendar-month__header` | `<div>` | Initiates the calendar month header. **Required** |
+| `.pf-v6-c-calendar-month__header-nav-control` | `<div>` | Initiates a nav control for navigating by month. **Required** |
+| `.pf-v6-c-calendar-month__header-month` | `<div>` | Initiates the month select. **Required** |
+| `.pf-v6-c-calendar-month__header-year` | `<div>` | Initiates the year input. **Required** |
+| `.pf-v6-c-calendar-month__calendar` | `<table>` | Initiates the calendar. **Required** |
+| `.pf-v6-c-calendar-month__days` | `<thead>` | Initiates the calendar days section. **Required** |
+| `.pf-v6-c-calendar-month__days-row` | `<tr>` | Initiates the calendar days row. **Required** |
+| `.pf-v6-c-calendar-month__day` | `<th>` | Initiates a calendar day. **Required** |
+| `.pf-v6-c-calendar-month__dates` | `<tbody>` | Initiates the calendar dates section. **Required** |
+| `.pf-v6-c-calendar-month__dates-row` | `<tr>` | Initiates a calendar dates row. **Required** |
+| `.pf-v6-c-calendar-month__dates-cell` | `<td>` | Initiates a calendar date cell. **Required** |
+| `.pf-v6-c-calendar-month__date` | `<button>` | Initiates a calendar date. **Required** |
+| `.pf-m-prev-month` | `.pf-v6-c-calendar-month__header-nav-control` | Indicates a nav control is the previous month. **Required** |
+| `.pf-m-next-month` | `.pf-v6-c-calendar-month__header-nav-control` | Indicates a nav control is the next month. **Required** |
+| `.pf-m-current` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is the current day. **Required** |
+| `.pf-m-selected` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is selected. |
+| `.pf-m-start-range` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is the start of a range. |
+| `.pf-m-in-range` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is in a range. |
+| `.pf-m-end-range` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is the end of a range. |
+| `.pf-m-adjacent-month` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is in an adjacent month. |
+| `.pf-m-disabled` | `.pf-v6-c-calendar-month__dates-cell` | Indicates a date is disabled and unavailable. |

@@ -31,7 +31,7 @@ import './Alignment.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-u-text-align-left{-on-[breakpoint]}` | `*` |  Aligns text left |
-| `.pf-v5-u-text-align-center{-on-[breakpoint]}` | `*` |  Aligns text center |
-| `.pf-v5-u-text-align-right{-on-[breakpoint]}` | `*` |  Aligns text right |
-| `.pf-v5-u-text-align-justify{-on-[breakpoint]}` | `*` |  Aligns text justify |
+| `.pf-v6-u-text-align-left{-on-[breakpoint]}` | `*` |  Aligns text left |
+| `.pf-v6-u-text-align-center{-on-[breakpoint]}` | `*` |  Aligns text center |
+| `.pf-v6-u-text-align-right{-on-[breakpoint]}` | `*` |  Aligns text right |
+| `.pf-v6-u-text-align-justify{-on-[breakpoint]}` | `*` |  Aligns text justify |

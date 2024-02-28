@@ -1,7 +1,7 @@
 ---
 id: Tree view
 section: components
-cssPrefix: pf-v5-c-tree-view
+cssPrefix: pf-v6-c-tree-view
 ---
 
 ## Examples
@@ -879,38 +879,38 @@ cssPrefix: pf-v5-c-tree-view
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="tree"` | `.pf-v5-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
-| `role="group"` | `.pf-v5-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
-| `role="treeitem"` | `.pf-v5-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
-| `aria-expanded="false"` | `.pf-v5-c-tree-view__list-item` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
-| `aria-expanded="true"` | `.pf-v5-c-tree-view__list-item.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
-| `tabindex="-1"` | `.pf-v5-c-tree-view__list-item` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
-| `tabindex="0"` | `.pf-v5-c-tree-view__list-item` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
-| `aria-label="[button label text]"` | `.pf-v5-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
+| `role="tree"` | `.pf-v6-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
+| `role="group"` | `.pf-v6-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
+| `role="treeitem"` | `.pf-v6-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
+| `aria-expanded="false"` | `.pf-v6-c-tree-view__list-item` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
+| `aria-expanded="true"` | `.pf-v6-c-tree-view__list-item.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
+| `tabindex="-1"` | `.pf-v6-c-tree-view__list-item` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
+| `tabindex="0"` | `.pf-v6-c-tree-view__list-item` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
+| `aria-label="[button label text]"` | `.pf-v6-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 
 ### Usage
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-tree-view` | `<div>` | Initiates the tree view container. **Required** |
-| `.pf-v5-c-tree-view__list` | `<ul>` | Initiates a tree view list. **Required** |
-| `.pf-v5-c-tree-view__list-item` | `<li>` | Initiates a tree view list item. **Required** |
-| `.pf-v5-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
-| `.pf-v5-c-tree-view__node` | `<button>`, `<label>` | Initiates a tree view node. **Required** |
-| `.pf-v5-c-tree-view__node-container` | `<span>` | Initiates a tree view node container. **Required for compact variant** |
-| `.pf-v5-c-tree-view__node-content` | `<span>` | Initiates a tree view node content container used to stack elements. |
-| `.pf-v5-c-tree-view__node-count` | `<span>` | Initiates a tree view node count. |
-| `.pf-v5-c-tree-view__node-toggle` | `<span>`, `<button>` | Initiates a tree view toggle. |
-| `.pf-v5-c-tree-view__node-toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
-| `.pf-v5-c-tree-view__node-title` | `<span>` | Initiates a tree view node title. |
-| `.pf-v5-c-tree-view__node-text` | `<span>`, `<button>` | Initiates tree view text. **Note:** Use a `<button>` when the node is expandable and selectable. |
-| `.pf-v5-c-tree-view__node-icon` | `<span>` | Initiates a tree view icon. |
-| `.pf-v5-c-tree-view__node-check` | `<span>` | Initiates a tree view check. |
-| `.pf-v5-c-tree-view__action` | `<div>` | Initiates a tree view action wrapper. |
-| `.pf-v5-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
-| `.pf-m-guides` | `.pf-v5-c-tree-view` | Modifies the tree view to the guides presentation. |
-| `.pf-m-compact` | `.pf-v5-c-tree-view` | Modifies the tree view to the compact presentation. |
-| `.pf-m-no-background` | `.pf-v5-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
-| `.pf-m-current` | `.pf-v5-c-tree-view__node` | Modifies the tree view node to be current. |
-| `.pf-m-selectable` | `.pf-v5-c-tree-view__node` | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
-| `.pf-m-truncate` | `.pf-v5-c-tree-view`, `.pf-v5-c-tree-view__node-title`, `.pf-v5-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |
+| `.pf-v6-c-tree-view` | `<div>` | Initiates the tree view container. **Required** |
+| `.pf-v6-c-tree-view__list` | `<ul>` | Initiates a tree view list. **Required** |
+| `.pf-v6-c-tree-view__list-item` | `<li>` | Initiates a tree view list item. **Required** |
+| `.pf-v6-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
+| `.pf-v6-c-tree-view__node` | `<button>`, `<label>` | Initiates a tree view node. **Required** |
+| `.pf-v6-c-tree-view__node-container` | `<span>` | Initiates a tree view node container. **Required for compact variant** |
+| `.pf-v6-c-tree-view__node-content` | `<span>` | Initiates a tree view node content container used to stack elements. |
+| `.pf-v6-c-tree-view__node-count` | `<span>` | Initiates a tree view node count. |
+| `.pf-v6-c-tree-view__node-toggle` | `<span>`, `<button>` | Initiates a tree view toggle. |
+| `.pf-v6-c-tree-view__node-toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
+| `.pf-v6-c-tree-view__node-title` | `<span>` | Initiates a tree view node title. |
+| `.pf-v6-c-tree-view__node-text` | `<span>`, `<button>` | Initiates tree view text. **Note:** Use a `<button>` when the node is expandable and selectable. |
+| `.pf-v6-c-tree-view__node-icon` | `<span>` | Initiates a tree view icon. |
+| `.pf-v6-c-tree-view__node-check` | `<span>` | Initiates a tree view check. |
+| `.pf-v6-c-tree-view__action` | `<div>` | Initiates a tree view action wrapper. |
+| `.pf-v6-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
+| `.pf-m-guides` | `.pf-v6-c-tree-view` | Modifies the tree view to the guides presentation. |
+| `.pf-m-compact` | `.pf-v6-c-tree-view` | Modifies the tree view to the compact presentation. |
+| `.pf-m-no-background` | `.pf-v6-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
+| `.pf-m-current` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to be current. |
+| `.pf-m-selectable` | `.pf-v6-c-tree-view__node` | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
+| `.pf-m-truncate` | `.pf-v6-c-tree-view`, `.pf-v6-c-tree-view__node-title`, `.pf-v6-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |

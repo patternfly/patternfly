@@ -1,7 +1,7 @@
 ---
 id: 'Masthead'
 section: components
-cssPrefix: pf-v5-c-masthead
+cssPrefix: pf-v6-c-masthead
 ---
 
 ## Examples
@@ -87,9 +87,9 @@ cssPrefix: pf-v5-c-masthead
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-masthead` | `<header>` | Initiates the masthead component. **Required** |
-| `.pf-v5-c-masthead__main` | `<div>` | Initiates the masthead main component. **Required** |
-| `.pf-v5-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
-| `.pf-v5-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
-| `.pf-v5-c-masthead__content` | `<div>` | Initiates the masthead content component. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v5-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-v6-c-masthead` | `<header>` | Initiates the masthead component. **Required** |
+| `.pf-v6-c-masthead__main` | `<div>` | Initiates the masthead main component. **Required** |
+| `.pf-v6-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
+| `.pf-v6-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
+| `.pf-v6-c-masthead__content` | `<div>` | Initiates the masthead content component. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

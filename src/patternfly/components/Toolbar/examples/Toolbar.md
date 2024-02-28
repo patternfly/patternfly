@@ -1,41 +1,41 @@
 ---
 id: Toolbar
 section: components
-cssPrefix: pf-v5-c-toolbar
+cssPrefix: pf-v6-c-toolbar
 ---
 
 import './Toolbar.css'
 
 <!-- TODO: add documentation for resize observer/responsive variable usage -->
 
-Toolbar relies on groups (`.pf-v5-c-toolbar__group`) and items (`.pf-v5-c-toolbar__item`), with default col/row gap values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. The default `column-gap` value for items and groups is set to `--pf-v5-c--ColumnGap`, whose value is `--pf-t--global--spacer--sm` or 8px.
+Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolbar__item`), with default col/row gap values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. The default `column-gap` value for items and groups is set to `--pf-v6-c--ColumnGap`, whose value is `--pf-t--global--spacer--sm` or 8px.
 
 ### Default spacing for items and groups:
 
 | Class | CSS Variable | Computed Value |
 | -- | -- | -- |
-| `.pf-v5-c-toolbar__group` | `--pf-v5-c-toolbar__group--ColumnGap` | `8px` |
-| `.pf-v5-c-toolbar__item` | `--pf-v5-c-toolbar__item--ColumnGap` | `8px` |
+| `.pf-v6-c-toolbar__group` | `--pf-v6-c-toolbar__group--ColumnGap` | `8px` |
+| `.pf-v6-c-toolbar__item` | `--pf-v6-c-toolbar__item--ColumnGap` | `8px` |
 
 ### Toolbar item types
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-pagination` | `.pf-v5-c-toolbar__item` | Initiates pagination and margin. |
+| `.pf-m-pagination` | `.pf-v6-c-toolbar__item` | Initiates pagination and margin. |
 
 ### Modifiers
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-[hidden/visible]` | `.pf-v5-c-toolbar > *` | Modifies toolbar element to be hidden/visible. |
-| `.pf-m-flex-grow` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to `flex-grow: 1`, allowing it to consume available main-axis space. |
-| `.pf-m-align-[start/end]` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
-| `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
-| `.pf-m-align-self-[stretch/baseline/start/center/end]` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) self alignment. |
+| `.pf-m-[hidden/visible]` | `.pf-v6-c-toolbar > *` | Modifies toolbar element to be hidden/visible. |
+| `.pf-m-flex-grow` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element to `flex-grow: 1`, allowing it to consume available main-axis space. |
+| `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
+| `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
+| `.pf-m-align-self-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) self alignment. |
 
 ### Special notes
 
-Several components in the following examples do not include functional and/or accessibility specifications (for example `.pf-v5-c-select`, `.pf-v5-c-options-menu`). Rather, `.pf-v5-c-toolbar` focuses on functionality and accessibility specifications that apply to it only.
+Several components in the following examples do not include functional and/or accessibility specifications (for example `.pf-v6-c-select`, `.pf-v6-c-options-menu`). Rather, `.pf-v6-c-toolbar` focuses on functionality and accessibility specifications that apply to it only.
 
 **Available [breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) are: `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl`.**
 
@@ -86,8 +86,8 @@ Several components in the following examples do not include functional and/or ac
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-toolbar__item` | `<div>` | Initiates the toolbar component item. **Required** |
-| `.pf-v5-c-toolbar__group` | `<div>` | Initiates the toolbar component group. |
+| `.pf-v6-c-toolbar__item` | `<div>` | Initiates the toolbar component item. **Required** |
+| `.pf-v6-c-toolbar__group` | `<div>` | Initiates the toolbar component group. |
 
 ### Adjusted group column gap
 ```hbs
@@ -170,8 +170,8 @@ Several components in the following examples do not include functional and/or ac
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-column-gap-[none/sm/md/lg]` | `.pf-v5-c-toolbar__group` | Modifies toolbar group child spacing. |
-| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v5-c-toolbar` | Modifies toolbar horizontal. |
+| `.pf-m-column-gap-[none/sm/md/lg]` | `.pf-v6-c-toolbar__group` | Modifies toolbar group child spacing. |
+| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar` | Modifies toolbar horizontal. |
 
 ### Width control
 ```hbs
@@ -179,7 +179,7 @@ Several components in the following examples do not include functional and/or ac
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--attribute='style="--pf-v5-c-toolbar__item--Width: 80px; --pf-v5-c-toolbar__item--Width-on-xl: 10rem"'}}
+        {{#> toolbar-item toolbar-item--attribute='style="--pf-v6-c-toolbar__item--Width: 80px; --pf-v6-c-toolbar__item--Width-on-xl: 10rem"'}}
           Item
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -202,8 +202,8 @@ Several components in the following examples do not include functional and/or ac
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `--pf-v5-c-toolbar__item--Width: {width}` | `.pf-v5-c-toolbar__item` |  Modifies the width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `--pf-v5-c-toolbar__item--MinWidth: {width}` | `.pf-v5-c-toolbar__item` |  Modifies the min width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-v6-c-toolbar__item--Width: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-v6-c-toolbar__item--MinWidth: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the min width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ### Group types
 ```hbs
@@ -248,8 +248,8 @@ Several components in the following examples do not include functional and/or ac
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-filter-group` | `.pf-v5-c-toolbar__group` | Modifies toolbar group column gap. |
-| `.pf-m-icon-button-group` | `.pf-v5-c-toolbar__group` | Modifies toolbar group column gap. |
+| `.pf-m-filter-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap. |
+| `.pf-m-icon-button-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap. |
 
 ### Toggle group
 ```hbs
@@ -318,24 +318,24 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `hidden` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__toggle`, `.pf-v5-c-toolbar__expandable-content` |  Indicates that the toggle group element is hidden. **Required** |
-| `aria-expanded="[true/false]"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates that the expandable content is visible/hidden. **Required** |
-| `aria-controls="[id of expandable content]"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
-| `id="[expandable-content_id]"` | `.pf-v5-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
+| `hidden` | `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__toggle`, `.pf-v6-c-toolbar__expandable-content` |  Indicates that the toggle group element is hidden. **Required** |
+| `aria-expanded="[true/false]"` | `.pf-v6-c-toolbar__toggle > .pf-v6-c-button` |  Indicates that the expandable content is visible/hidden. **Required** |
+| `aria-controls="[id of expandable content]"` | `.pf-v6-c-toolbar__toggle > .pf-v6-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
+| `id="[expandable-content_id]"` | `.pf-v6-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
 
 ### Responsive attributes
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-haspopup=true` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` | When expandable content appears above content (mobile viewport), `aria-haspopup=true` should be applied to indicate that focus should be trapped. **Required** |
+| `aria-haspopup=true` | `.pf-v6-c-toolbar__toggle > .pf-v6-c-button` | When expandable content appears above content (mobile viewport), `aria-haspopup=true` should be applied to indicate that focus should be trapped. **Required** |
 
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v5-c-toolbar__group.pf-m-toggle-group`, `.pf-v5-c-toolbar__expandable-content` | Modifies toolbar element visibility. |
-| `.pf-m-chip-container` | `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
-| `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content`, `.pf-v5-c-toolbar__toggle` | Modifies the component for the expanded state. |
+| `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element visibility. |
+| `.pf-m-chip-container` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
+| `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Selected
 
@@ -590,47 +590,47 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-toolbar` | `<div>` | Initiates the toolbar component. **Required** |
-| `.pf-v5-c-toolbar__item` | `<div>` | Initiates a toolbar item. **Required** |
-| `.pf-v5-c-toolbar__group` | `<div>` | Initiates a toolbar group. |
-| `.pf-v5-c-toolbar__content` | `<div>` | Initiates a toolbar content container. **Required** |
-| `.pf-v5-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-v5-c-toolbar__content-section` per `.pf-v5-c-toolbar__content` **Required** |
-| `.pf-v5-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
-| `.pf-m-sticky` | `.pf-v5-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
-| `.pf-m-full-height` | `.pf-v5-c-toolbar`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies toolbar component to full height of its container and removes vertical padding. |
-| `.pf-m-static` | `.pf-v5-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
-| `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
-| `.pf-m-expanded` | `.pf-v5-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
-| `.pf-m-icon-button-group` | `.pf-v5-c-toolbar__group` | Initiates icon button group spacing. |
-| `.pf-m-filter-group` | `.pf-v5-c-toolbar__group` | Initiates filter group spacing. |
-| `.pf-m-chip-container` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
-| `.pf-m-overflow-container` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
-| `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content`, `.pf-v5-c-toolbar__toggle` | Modifies the component for the expanded state. |
-| `.pf-m-[wrap/nowrap]` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies the toolbar element to wrap/not wrap. |
-| `.pf-m-align-[start/end]` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
-| `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
-| `.pf-m-align-self-[stretch/baseline/start/center/end]` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) self alignment. |
+| `.pf-v6-c-toolbar` | `<div>` | Initiates the toolbar component. **Required** |
+| `.pf-v6-c-toolbar__item` | `<div>` | Initiates a toolbar item. **Required** |
+| `.pf-v6-c-toolbar__group` | `<div>` | Initiates a toolbar group. |
+| `.pf-v6-c-toolbar__content` | `<div>` | Initiates a toolbar content container. **Required** |
+| `.pf-v6-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-v6-c-toolbar__content-section` per `.pf-v6-c-toolbar__content` **Required** |
+| `.pf-v6-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
+| `.pf-m-sticky` | `.pf-v6-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
+| `.pf-m-full-height` | `.pf-v6-c-toolbar`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies toolbar component to full height of its container and removes vertical padding. |
+| `.pf-m-static` | `.pf-v6-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
+| `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
+| `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
+| `.pf-m-icon-button-group` | `.pf-v6-c-toolbar__group` | Initiates icon button group spacing. |
+| `.pf-m-filter-group` | `.pf-v6-c-toolbar__group` | Initiates filter group spacing. |
+| `.pf-m-chip-container` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
+| `.pf-m-overflow-container` | `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
+| `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
+| `.pf-m-[wrap/nowrap]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies the toolbar element to wrap/not wrap. |
+| `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
+| `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
+| `.pf-m-align-self-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) self alignment. |
 
 ### Accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `hidden` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__toggle`, `.pf-v5-c-toolbar__expandable-content` |  Indicates that the toolbar element is hidden. **Required** |
-| `aria-expanded="[true/false]"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates the the expandable content is hidden/visible. **Required** |
-| `aria-controls="[id of expandable content]"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
-| `id="[expandable-content_id]"` | `.pf-v5-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
-| `aria-label="Expand all"` | `.pf-v5-c-toolbar__item.pf-m-expand-all` | Provides an accessible label for the expand all item button. **Required** |
-| `aria-label="Collapse all"` | `.pf-v5-c-toolbar__item.pf-m-expand-all.pf-m-expanded` | Provides an accessible label for the expand all item button. **Required** |
+| `hidden` | `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__toggle`, `.pf-v6-c-toolbar__expandable-content` |  Indicates that the toolbar element is hidden. **Required** |
+| `aria-expanded="[true/false]"` | `.pf-v6-c-toolbar__toggle > .pf-v6-c-button` |  Indicates the the expandable content is hidden/visible. **Required** |
+| `aria-controls="[id of expandable content]"` | `.pf-v6-c-toolbar__toggle > .pf-v6-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
+| `id="[expandable-content_id]"` | `.pf-v6-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
+| `aria-label="Expand all"` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Provides an accessible label for the expand all item button. **Required** |
+| `aria-label="Collapse all"` | `.pf-v6-c-toolbar__item.pf-m-expand-all.pf-m-expanded` | Provides an accessible label for the expand all item button. **Required** |
 
 ### Toggle group usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-toggle-group` | `.pf-v5-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
-| `.pf-m-[show/hide]` | `.pf-v5-c-toolbar__group.pf-m-toggle-group`, `.pf-v5-c-toolbar__expandable-content` | Modifies toolbar element to hidden. |
+| `.pf-m-toggle-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
+| `.pf-m-[show/hide]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element to hidden. |
 
 ### Spacer system
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

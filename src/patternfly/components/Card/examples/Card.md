@@ -1,7 +1,7 @@
 ---
 id: Card
 section: components
-cssPrefix: pf-v5-c-card
+cssPrefix: pf-v6-c-card
 ---
 
 import './Card.css'
@@ -855,32 +855,32 @@ A card is a generic rectangular container that can be used to build other compon
 ### Usage
 | Class | Applied | Outcome |
 | ---- | ---- | ---- |
-| `.pf-v5-c-card` | `<div>` | Creates a card component.  **Required** |
-| `.pf-v5-c-card__title` | `<div>` | Creates a card title container. |
-| `.pf-v5-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | Creates a card title text element. |
-| `.pf-v5-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-v5-c-card__body` elements. |
-| `.pf-v5-c-card__footer` | `<div>` | Creates the footer of a card. |
-| `.pf-v5-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
-| `.pf-v5-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
-| `.pf-v5-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
-| `.pf-v5-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
-| `.pf-v5-c-card__selectable-actions` | `<div>` | Creates an element to hold a checkbox or radio and the related label used to make a card selectable or clickable. |
-| `.pf-v5-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-v5-c-card__header` has content outside of a card header toggle or card header actions** |
-| `.pf-v5-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
-| `.pf-v5-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-v5-c-card` appear focused. |
-| `.pf-m-compact` | `.pf-v5-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
-| `.pf-m-display-lg` | `.pf-v5-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
-| `.pf-m-no-fill` | `.pf-v5-c-card__body` | Sets a `.pf-v5-c-card__body` not to fill the available space in `.pf-v5-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
-| `.pf-m-selectable` | `.pf-v5-c-card` | Modifies a card to be selectable.  |
-| `.pf-m-clickable` | `.pf-v5-c-card` | Modifies a card to be clickable. |
-| `.pf-m-selected` | `.pf-v5-c-card` | Modifies a selectable card for selected state styling. Can be used in addition to indicating selection via the `.pf-v5-c-card__input`. |
-| `.pf-m-current` | `.pf-v5-c-card` | Modifies a card that is both clickable and selectable for clicked state styling. |
-| `.pf-m-disabled` | `.pf-v5-c-card` | Modifies a card so it is not selectable or clickable.  |
-| `.pf-m-secondary` | `.pf-v5-c-card` | Modifies the card to have secondary styling. |
-| `.pf-m-flat` | `.pf-v5-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
-| `.pf-m-rounded` | `.pf-v5-c-card` | Modifies the card to have rounded corners. |
-| `.pf-m-plain` | `.pf-v5-c-card` | Modifies the card to have no box shadow and no background color. |
-| `.pf-m-expanded` | `.pf-v5-c-card` | Modifies the card for the expanded state. |
-| `.pf-m-toggle-right` | `.pf-v5-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |
-| `.pf-m-full-height` | `.pf-v5-c-card` | Modifies the card to full height of its parent. |
-| `.pf-m-no-offset` | `.pf-v5-c-card__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the card title. |
+| `.pf-v6-c-card` | `<div>` | Creates a card component.  **Required** |
+| `.pf-v6-c-card__title` | `<div>` | Creates a card title container. |
+| `.pf-v6-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | Creates a card title text element. |
+| `.pf-v6-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-v6-c-card__body` elements. |
+| `.pf-v6-c-card__footer` | `<div>` | Creates the footer of a card. |
+| `.pf-v6-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
+| `.pf-v6-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
+| `.pf-v6-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
+| `.pf-v6-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
+| `.pf-v6-c-card__selectable-actions` | `<div>` | Creates an element to hold a checkbox or radio and the related label used to make a card selectable or clickable. |
+| `.pf-v6-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-v6-c-card__header` has content outside of a card header toggle or card header actions** |
+| `.pf-v6-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
+| `.pf-v6-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-v6-c-card` appear focused. |
+| `.pf-m-compact` | `.pf-v6-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
+| `.pf-m-display-lg` | `.pf-v6-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
+| `.pf-m-no-fill` | `.pf-v6-c-card__body` | Sets a `.pf-v6-c-card__body` not to fill the available space in `.pf-v6-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
+| `.pf-m-selectable` | `.pf-v6-c-card` | Modifies a card to be selectable.  |
+| `.pf-m-clickable` | `.pf-v6-c-card` | Modifies a card to be clickable. |
+| `.pf-m-selected` | `.pf-v6-c-card` | Modifies a selectable card for selected state styling. Can be used in addition to indicating selection via the `.pf-v6-c-card__input`. |
+| `.pf-m-current` | `.pf-v6-c-card` | Modifies a card that is both clickable and selectable for clicked state styling. |
+| `.pf-m-disabled` | `.pf-v6-c-card` | Modifies a card so it is not selectable or clickable.  |
+| `.pf-m-secondary` | `.pf-v6-c-card` | Modifies the card to have secondary styling. |
+| `.pf-m-flat` | `.pf-v6-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
+| `.pf-m-rounded` | `.pf-v6-c-card` | Modifies the card to have rounded corners. |
+| `.pf-m-plain` | `.pf-v6-c-card` | Modifies the card to have no box shadow and no background color. |
+| `.pf-m-expanded` | `.pf-v6-c-card` | Modifies the card for the expanded state. |
+| `.pf-m-toggle-right` | `.pf-v6-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |
+| `.pf-m-full-height` | `.pf-v6-c-card` | Modifies the card to full height of its parent. |
+| `.pf-m-no-offset` | `.pf-v6-c-card__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the card title. |

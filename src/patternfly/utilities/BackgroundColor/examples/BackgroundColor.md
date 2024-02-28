@@ -145,13 +145,13 @@ Note that "inverse" background colors are labeled as such to indicate that they 
 
 | Class                             | Applied to | Outcome                            |
 | --------------------------------- | ---------- | ---------------------------------- |
-| `.pf-v5-u-background-color-{100, 200}{-on-[breakpoint]}`                | `*`        | Applies background color 100 or 200.      |
-| `.pf-v5-u-background-color-active-color-{100, 300}{-on-[breakpoint]}`   | `*`        | Applies background color active 100 or 300. |
-| `.pf-v5-u-background-color-primary-color-200{-on-[breakpoint]}`         | `*`        | Applies background color primary 200. |
-| `.pf-v5-u-background-color-dark-{100, 200, 300, 400}{-on-[breakpoint]}` | `*`        | Applies background color dark 100, 200, 300, or 400. |
-| `.pf-v5-u-background-color-disabled-color-{200, 300}{-on-[breakpoint]}` | `*`        | Applies background color disabled 200 or 300. |
-| `.pf-v5-u-background-color-default{-on-[breakpoint]}`  | `*`        | Applies the background color for the default state.  |
-| `.pf-v5-u-background-color-success{-on-[breakpoint]}`  | `*`        | Applies the background color for the success state.  |
-| `.pf-v5-u-background-color-info{-on-[breakpoint]}`     | `*`        | Applies the background color for the info state.     |
-| `.pf-v5-u-background-color-warning{-on-[breakpoint]}`  | `*`        | Applies the background color for the warning state.  |
-| `.pf-v5-u-background-color-danger{-on-[breakpoint]}`   | `*`        | Applies the background color for the danger state.   |
+| `.pf-v6-u-background-color-{100, 200}{-on-[breakpoint]}`                | `*`        | Applies background color 100 or 200.      |
+| `.pf-v6-u-background-color-active-color-{100, 300}{-on-[breakpoint]}`   | `*`        | Applies background color active 100 or 300. |
+| `.pf-v6-u-background-color-primary-color-200{-on-[breakpoint]}`         | `*`        | Applies background color primary 200. |
+| `.pf-v6-u-background-color-dark-{100, 200, 300, 400}{-on-[breakpoint]}` | `*`        | Applies background color dark 100, 200, 300, or 400. |
+| `.pf-v6-u-background-color-disabled-color-{200, 300}{-on-[breakpoint]}` | `*`        | Applies background color disabled 200 or 300. |
+| `.pf-v6-u-background-color-default{-on-[breakpoint]}`  | `*`        | Applies the background color for the default state.  |
+| `.pf-v6-u-background-color-success{-on-[breakpoint]}`  | `*`        | Applies the background color for the success state.  |
+| `.pf-v6-u-background-color-info{-on-[breakpoint]}`     | `*`        | Applies the background color for the info state.     |
+| `.pf-v6-u-background-color-warning{-on-[breakpoint]}`  | `*`        | Applies the background color for the warning state.  |
+| `.pf-v6-u-background-color-danger{-on-[breakpoint]}`   | `*`        | Applies the background color for the danger state.   |

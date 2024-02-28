@@ -1,7 +1,7 @@
 ---
 id: Expandable section
 section: components
-cssPrefix: pf-v5-c-expandable-section
+cssPrefix: pf-v6-c-expandable-section
 ---
 
 ## Examples
@@ -112,24 +112,24 @@ cssPrefix: pf-v5-c-expandable-section
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-v5-c-expandable-section__toggle` | Indicates that the expandable section content is visible. **Required** |
-| `aria-expanded="false"` | `.pf-v5-c-expandable-section__toggle` | Indicates the the expandable section content is hidden. **Required** |
-| `hidden` | `.pf-v5-c-expandable-section__content` | Indicates that the expandable section content element is hidden. Use with `aria-expanded="false"` **Required** |
-| `aria-hidden="true"` | `.pf-v5-c-expandable-section__toggle-icon` | Hides the icon from screen readers. **Required** |
-| `aria-controls="[id of content element]"` | `.pf-v5-c-expandable-section.pf-m-detached .pf-v5-c-expandable-section__toggle` | Identifies the element controlled by the toggle button. **Required** |
-| `id` | `.pf-v5-c-expandable-section.pf-m-detached .pf-v5-c-expandable-section__content` | Gives the content an `id` for use with `aria-controls` on `.pf-v5-c-expandable-section__toggle`. **Required** |
+| `aria-expanded="true"` | `.pf-v6-c-expandable-section__toggle` | Indicates that the expandable section content is visible. **Required** |
+| `aria-expanded="false"` | `.pf-v6-c-expandable-section__toggle` | Indicates the the expandable section content is hidden. **Required** |
+| `hidden` | `.pf-v6-c-expandable-section__content` | Indicates that the expandable section content element is hidden. Use with `aria-expanded="false"` **Required** |
+| `aria-hidden="true"` | `.pf-v6-c-expandable-section__toggle-icon` | Hides the icon from screen readers. **Required** |
+| `aria-controls="[id of content element]"` | `.pf-v6-c-expandable-section.pf-m-detached .pf-v6-c-expandable-section__toggle` | Identifies the element controlled by the toggle button. **Required** |
+| `id` | `.pf-v6-c-expandable-section.pf-m-detached .pf-v6-c-expandable-section__content` | Gives the content an `id` for use with `aria-controls` on `.pf-v6-c-expandable-section__toggle`. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-expandable-section` | `<div>` | Initiates the expandable section component. **Required** |
-| `.pf-v5-c-expandable-section__toggle` | `<button>` | Initiates the expandable section toggle. **Required** |
-| `.pf-v5-c-expandable-section__toggle-text` | `<span>` | Initiates the expandable toggle text. **Required** |
-| `.pf-v5-c-expandable-section__toggle-icon` | `<span>` | Initiates the expandable toggle icon. **Required** |
-| `.pf-v5-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
-| `.pf-m-expanded` | `.pf-v5-c-expandable-section` | Modifies the component for the expanded state. |
-| `.pf-m-display-lg` | `.pf-v5-c-expandable-section` | Modifies the styling of the component to have large display styling. |
-| `.pf-m-indented` | `.pf-v5-c-expandable-section` | Indicates that the expandable section content is indented and is aligned with the start of the title text to provide visual hierarchy. |
-| `.pf-m-truncate` | `.pf-v5-c-expandable-section` | Indicates that the expandable section content is truncated by default, and not truncated when expanded. |
-| `.pf-m-expand-top` | `.pf-v5-c-expandable-section__toggle-icon` | Modifies the toggle icon to point up when expanded. |
-| `--pf-v5-c-expandable-section--m-truncate__content--LineClamp` | `.pf-v5-c-expandable-section.pf-m-truncate` | Modifies the number of lines to show before truncating. |
+| `.pf-v6-c-expandable-section` | `<div>` | Initiates the expandable section component. **Required** |
+| `.pf-v6-c-expandable-section__toggle` | `<button>` | Initiates the expandable section toggle. **Required** |
+| `.pf-v6-c-expandable-section__toggle-text` | `<span>` | Initiates the expandable toggle text. **Required** |
+| `.pf-v6-c-expandable-section__toggle-icon` | `<span>` | Initiates the expandable toggle icon. **Required** |
+| `.pf-v6-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
+| `.pf-m-expanded` | `.pf-v6-c-expandable-section` | Modifies the component for the expanded state. |
+| `.pf-m-display-lg` | `.pf-v6-c-expandable-section` | Modifies the styling of the component to have large display styling. |
+| `.pf-m-indented` | `.pf-v6-c-expandable-section` | Indicates that the expandable section content is indented and is aligned with the start of the title text to provide visual hierarchy. |
+| `.pf-m-truncate` | `.pf-v6-c-expandable-section` | Indicates that the expandable section content is truncated by default, and not truncated when expanded. |
+| `.pf-m-expand-top` | `.pf-v6-c-expandable-section__toggle-icon` | Modifies the toggle icon to point up when expanded. |
+| `--pf-v6-c-expandable-section--m-truncate__content--LineClamp` | `.pf-v6-c-expandable-section.pf-m-truncate` | Modifies the number of lines to show before truncating. |

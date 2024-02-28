@@ -1,7 +1,7 @@
 ---
 id: 'Dual list selector'
 section: components
-cssPrefix: pf-v5-c-dual-list-selector
+cssPrefix: pf-v6-c-dual-list-selector
 ---
 
 ## Examples
@@ -814,48 +814,48 @@ cssPrefix: pf-v5-c-dual-list-selector
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the dual list selector, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
-| `aria-labelledby="[id of .pf-v5-c-dual-list-selector__status-text]` | `.pf-v5-c-dual-list-selector__list [ul]` | Gives the list an accessible name. |
-| `role="listbox or tree or group"` | `.pf-v5-c-dual-list-selector__list [ul]` | Indicates the list is single, a tree, or a subgroup within the tree. |
-| `aria-multiselectable="true"` | `.pf-v5-c-dual-list-selector__list [ul]` | Indicates the list is multiselectable. |
-| `aria-activedescendant=""` | `.pf-v5-c-dual-list-selector__list [ul]` | Indicates the list has clickable children. |
-| `role="option or treeitem"` | `.pf-v5-c-dual-list-selector__list-item [li]` | Indicates whether the item is part of a tree. |
-| `aria-expanded="true"`      | `.pf-v5-c-dual-list-selector__list-item [li]` | Indicates a treeitem is expanded. |
+| `aria-labelledby="[id of .pf-v6-c-dual-list-selector__status-text]` | `.pf-v6-c-dual-list-selector__list [ul]` | Gives the list an accessible name. |
+| `role="listbox or tree or group"` | `.pf-v6-c-dual-list-selector__list [ul]` | Indicates the list is single, a tree, or a subgroup within the tree. |
+| `aria-multiselectable="true"` | `.pf-v6-c-dual-list-selector__list [ul]` | Indicates the list is multiselectable. |
+| `aria-activedescendant=""` | `.pf-v6-c-dual-list-selector__list [ul]` | Indicates the list has clickable children. |
+| `role="option or treeitem"` | `.pf-v6-c-dual-list-selector__list-item [li]` | Indicates whether the item is part of a tree. |
+| `aria-expanded="true"`      | `.pf-v6-c-dual-list-selector__list-item [li]` | Indicates a treeitem is expanded. |
 
 ### Usage
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-dual-list-selector` | `<div>` | Initiates the dual list selector component. **Required** |
-| `.pf-v5-c-dual-list-selector__pane` | `<div>` | Initiates a dual list selector pane. **Required** |
-| `.pf-v5-c-dual-list-selector__header` | `<div>` | Initiates a dual list selector pane header. **Required** |
-| `.pf-v5-c-dual-list-selector__title` | `<div>` | Initiates a dual list selector pane title. **Required** |
-| `.pf-v5-c-dual-list-selector__title-text` | `<div>` | Initiates a dual list selector pane title text. **Required** |
-| `.pf-v5-c-dual-list-selector__tools` | `<div>` | Initiates a dual list selector tools. **Required** |
-| `.pf-v5-c-dual-list-selector__filter` | `<div>` | Initiates a dual list selector pane filter. **Required** |
-| `.pf-v5-c-dual-list-selector__actions` | `<div>` | Initiates a dual list selector pane actions. |
-| `.pf-v5-c-dual-list-selector__actions-item` | `<div>` | Initiates a dual list selector pane actions item. |
-| `.pf-v5-c-dual-list-selector__status` | `<div>` | Initiates a dual list selector pane selected status. **Required** |
-| `.pf-v5-c-dual-list-selector__status-text` | `<span>` | Initiates a dual list selector pane selected status text. **Required** |
-| `.pf-v5-c-dual-list-selector__menu` | `<div>` | Initiates a dual list selector pane menu container. **Required** |
-| `.pf-v5-c-dual-list-selector__list` | `<ul>` | Initiates a dual list selector pane menu list. **Required** |
-| `.pf-v5-c-dual-list-selector__list-item` | `<li>` | Initiates a dual list selector pane menu list item. **Required** |
-| `.pf-v5-c-dual-list-selector__list-item-row` | `<div>` | Initiates a dual list selector pane menu list item row. **Required** |
-| `.pf-v5-c-dual-list-selector__draggable` | `<div>` | Initiates a dual list selector pane draggable element. |
-| `.pf-v5-c-dual-list-selector__item` | `<span>`, `<div>` | Initiates a dual list selector pane menu item. **Required** |
-| `.pf-v5-c-dual-list-selector__item-main` | `<span>` | Initiates a dual list selector pane menu item main container. **Required** |
-| `.pf-v5-c-dual-list-selector__item-check` | `<span>` | Initiates the dual list selector item check. |
-| `.pf-v5-c-dual-list-selector__item-count` | `<span>` | Initiates the dual list selector item count. |
-| `.pf-v5-c-dual-list-selector__item-toggle-icon` | `<span>` | Initiates the dual list selector item toggle icon. |
-| `.pf-v5-c-dual-list-selector__item-toggle` | `<button>` | Initiates the dual list selector item toggle. |
-| `.pf-v5-c-dual-list-selector__item-text` | `<span>` | Initiates a dual list selector pane menu item text. **Required** |
-| `.pf-v5-c-dual-list-selector__controls` | `<div>` | Initiates the dual list selector controls. **Required** |
-| `.pf-v5-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
-| `.pf-m-available` | `.pf-v5-c-dual-list-selector__pane` | Defines a pane as the available list. |
-| `.pf-m-chosen` | `.pf-v5-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
-| `.pf-m-drag-over` | `.pf-v5-c-dual-list-selector__list` | Modifies the dual list selector list to indicate that a draggable item is being dragged over the list. |
-| `.pf-m-ghost-row` | `.pf-v5-c-dual-list-selector__list-item-row` | Modifies the list item main to be a ghost row. |
-| `.pf-m-selected` | `.pf-v5-c-dual-list-selector__list-item-row` | Modifies the menu item for the selected state. |
-| `.pf-m-check` | `.pf-v5-c-dual-list-selector__list-item-row` | Indicates that an item is selectable with a checkbox. |
-| `.pf-m-expandable` | `.pf-v5-c-dual-list-selector__list-item` | Indicates that an item is expandable. |
-| `.pf-m-expanded` | `.pf-v5-c-dual-list-selector__list-item` | Indicates that an item is expanded. |
-| `.pf-m-disabled` | `.pf-v5-c-dual-list-selector__list-item` | Indicates that an item is disabled. **Note:** If an item is expandable, only the top level item needs the disabled class. |
+| `.pf-v6-c-dual-list-selector` | `<div>` | Initiates the dual list selector component. **Required** |
+| `.pf-v6-c-dual-list-selector__pane` | `<div>` | Initiates a dual list selector pane. **Required** |
+| `.pf-v6-c-dual-list-selector__header` | `<div>` | Initiates a dual list selector pane header. **Required** |
+| `.pf-v6-c-dual-list-selector__title` | `<div>` | Initiates a dual list selector pane title. **Required** |
+| `.pf-v6-c-dual-list-selector__title-text` | `<div>` | Initiates a dual list selector pane title text. **Required** |
+| `.pf-v6-c-dual-list-selector__tools` | `<div>` | Initiates a dual list selector tools. **Required** |
+| `.pf-v6-c-dual-list-selector__filter` | `<div>` | Initiates a dual list selector pane filter. **Required** |
+| `.pf-v6-c-dual-list-selector__actions` | `<div>` | Initiates a dual list selector pane actions. |
+| `.pf-v6-c-dual-list-selector__actions-item` | `<div>` | Initiates a dual list selector pane actions item. |
+| `.pf-v6-c-dual-list-selector__status` | `<div>` | Initiates a dual list selector pane selected status. **Required** |
+| `.pf-v6-c-dual-list-selector__status-text` | `<span>` | Initiates a dual list selector pane selected status text. **Required** |
+| `.pf-v6-c-dual-list-selector__menu` | `<div>` | Initiates a dual list selector pane menu container. **Required** |
+| `.pf-v6-c-dual-list-selector__list` | `<ul>` | Initiates a dual list selector pane menu list. **Required** |
+| `.pf-v6-c-dual-list-selector__list-item` | `<li>` | Initiates a dual list selector pane menu list item. **Required** |
+| `.pf-v6-c-dual-list-selector__list-item-row` | `<div>` | Initiates a dual list selector pane menu list item row. **Required** |
+| `.pf-v6-c-dual-list-selector__draggable` | `<div>` | Initiates a dual list selector pane draggable element. |
+| `.pf-v6-c-dual-list-selector__item` | `<span>`, `<div>` | Initiates a dual list selector pane menu item. **Required** |
+| `.pf-v6-c-dual-list-selector__item-main` | `<span>` | Initiates a dual list selector pane menu item main container. **Required** |
+| `.pf-v6-c-dual-list-selector__item-check` | `<span>` | Initiates the dual list selector item check. |
+| `.pf-v6-c-dual-list-selector__item-count` | `<span>` | Initiates the dual list selector item count. |
+| `.pf-v6-c-dual-list-selector__item-toggle-icon` | `<span>` | Initiates the dual list selector item toggle icon. |
+| `.pf-v6-c-dual-list-selector__item-toggle` | `<button>` | Initiates the dual list selector item toggle. |
+| `.pf-v6-c-dual-list-selector__item-text` | `<span>` | Initiates a dual list selector pane menu item text. **Required** |
+| `.pf-v6-c-dual-list-selector__controls` | `<div>` | Initiates the dual list selector controls. **Required** |
+| `.pf-v6-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
+| `.pf-m-available` | `.pf-v6-c-dual-list-selector__pane` | Defines a pane as the available list. |
+| `.pf-m-chosen` | `.pf-v6-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
+| `.pf-m-drag-over` | `.pf-v6-c-dual-list-selector__list` | Modifies the dual list selector list to indicate that a draggable item is being dragged over the list. |
+| `.pf-m-ghost-row` | `.pf-v6-c-dual-list-selector__list-item-row` | Modifies the list item main to be a ghost row. |
+| `.pf-m-selected` | `.pf-v6-c-dual-list-selector__list-item-row` | Modifies the menu item for the selected state. |
+| `.pf-m-check` | `.pf-v6-c-dual-list-selector__list-item-row` | Indicates that an item is selectable with a checkbox. |
+| `.pf-m-expandable` | `.pf-v6-c-dual-list-selector__list-item` | Indicates that an item is expandable. |
+| `.pf-m-expanded` | `.pf-v6-c-dual-list-selector__list-item` | Indicates that an item is expanded. |
+| `.pf-m-disabled` | `.pf-v6-c-dual-list-selector__list-item` | Indicates that an item is disabled. **Note:** If an item is expandable, only the top level item needs the disabled class. |

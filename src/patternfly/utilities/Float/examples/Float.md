@@ -25,5 +25,5 @@ import './Float.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-u-float-left{-on-[breakpoint]}` | `*` |  Float element left |
-| `.pf-v5-u-float-right{-on-[breakpoint]}` | `*` |  Float element right |
+| `.pf-v6-u-float-left{-on-[breakpoint]}` | `*` |  Float element left |
+| `.pf-v6-u-float-right{-on-[breakpoint]}` | `*` |  Float element right |

@@ -2,7 +2,7 @@
 id: 'Drag and drop'
 beta: true
 section: components
-cssPrefix: pf-v5-c-drag-drop
+cssPrefix: pf-v6-c-drag-drop
 ---
 
 import './DragDrop.css'
@@ -54,7 +54,7 @@ import './DragDrop.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-draggable` | `*` | Initiates a draggable element. |
-| `.pf-v5-c-droppable` | `*` | Initiates a droppable element. |
-| `.pf-m-dragging` | `.pf-v5-c-draggable`, `.pf-v5-c-droppable` | Indicates a draggable and droppable element are in the dragging state. |
-| `.pf-m-drag-outside` | `.pf-v5-c-draggable`, `.pf-v5-c-droppable` | Indicates a draggable element is dragged outside of a droppable element. |
+| `.pf-v6-c-draggable` | `*` | Initiates a draggable element. |
+| `.pf-v6-c-droppable` | `*` | Initiates a droppable element. |
+| `.pf-m-dragging` | `.pf-v6-c-draggable`, `.pf-v6-c-droppable` | Indicates a draggable and droppable element are in the dragging state. |
+| `.pf-m-drag-outside` | `.pf-v6-c-draggable`, `.pf-v6-c-droppable` | Indicates a draggable element is dragged outside of a droppable element. |
