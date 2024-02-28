@@ -231,27 +231,27 @@ This component provides the basic chrome for a page, including sidebar and main 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-page` | `<div>` |   Declares the page component. |
-| `.pf-v6-c-page__sidebar` | `<aside>` |   Declares the page sidebar. |
+| `.pf-v6-c-page` | `<div>` | Declares the page component. |
+| `.pf-v6-c-page__sidebar` | `<aside>` | Declares the page sidebar. |
 | `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
-| `.pf-v6-c-page__main` | `<main>` |   Declares the main page area. |
+| `.pf-v6-c-page__main` | `<main>` | Declares the main page area. |
 | `.pf-v6-c-page__main-nav` | `<section>` | Creates a container to nest the (deprecated) tertiary navigation component in the main page area. |
 | `.pf-v6-c-page__main-subnav` | `<section>` | Creates a container to nest the horizontal subnav navigation component in the main page area. |
 | `.pf-v6-c-page__main-breadcrumb` | `<section>` | Creates a container to nest the breadcrumb component in the main page area. |
-| `.pf-v6-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-v6-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
+| `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: The last/only `.pf-v6-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
 | `.pf-v6-c-page__main-tabs` | `<section>` | Creates a container to nest the tabs component in the main page area. |
 | `.pf-v6-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the main page area. |
 | `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required when using `.pf-m-limit-width` on `.pf-v6-c-page__main-section`** |
 | `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
-| `.pf-v6-c-page__drawer` | `<div>` |  Creates a container for the drawer component when placing the main page element in the drawer body. |
-| `.pf-m-expanded` | `.pf-v6-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
-| `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
-| `.pf-m-page-insets` | `.pf-v6-c-page__sidebar-body` |  Modifies a sidebar body padding/inset to visually match padding of page elements. |
+| `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
+| `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |
+| `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the collapsed state. |
+| `.pf-m-page-insets` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body padding/inset to visually match padding of page elements. |
 | `.pf-m-inset-none` | `.pf-v6-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
-| `.pf-m-light` | `.pf-v6-c-page__sidebar` |  Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
+| `.pf-m-light` | `.pf-v6-c-page__sidebar` | Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
 | `.pf-m-light` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a light theme. |
-| `.pf-m-dark-200` | `.pf-v6-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
-| `.pf-m-dark-100` | `.pf-v6-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
+| `.pf-m-dark-200` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a dark theme and a dark transparent background. |
+| `.pf-m-dark-100` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a dark theme and a darker transparent background. |
 | `.pf-m-light-200` | `.pf-v6-c-page__main-wizard` | Modifies a wizard page section to have a light 200 theme. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
 | `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
