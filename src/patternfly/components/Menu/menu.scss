@@ -1,232 +1,209 @@
-// @debug $menu; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
-.#{$menu} {
-  @include pf-v5-t-light;
-
-  // Menu
-  --#{$menu}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$menu}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-  --#{$menu}--MinWidth: auto;
+:where(:root),
+:where(.#{$menu}) {
+  // * Menu
+  --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$menu}--Width: auto;
-  --#{$menu}--ZIndex: var(--#{$pf-global}--ZIndex--sm);
-  --#{$menu}--Top: auto;
+  --#{$menu}--MinWidth: auto;
+  --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$menu}--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$menu}--Color: var(--pf-t--global--text--color--regular);
+  --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
+  --#{$menu}--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$menu}--icon--disabled--Color: var(--pf-t--global--icon--color--disabled);
 
-  // Flyout
-  --#{$menu}--m-flyout__menu--Top: calc(var(--#{$menu}__list--PaddingTop) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
-  --#{$menu}--m-flyout__menu--Right: auto;
-  --#{$menu}--m-flyout__menu--Bottom: auto;
-  --#{$menu}--m-flyout__menu--Left: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
-  --#{$menu}--m-flyout__menu--m-top--Bottom: calc(var(--#{$menu}__list--PaddingTop) * -1);
-  --#{$menu}--m-flyout__menu--m-left--Right: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
-
-  // Plain
+  // * Menu plain
   --#{$menu}--m-plain--BoxShadow: none;
 
-  // stylelint-disable length-zero-no-unit
-  // Needs a unit because of type checking for use in calc()
-  --#{$menu}--m-flyout__menu--top-offset: 0px;
-  --#{$menu}--m-flyout__menu--left-offset: 0px;
-  --#{$menu}--m-flyout__menu--m-left--right-offset: 0px;
-  // stylelint-enable
-
-  // Content
+  // * Menu content
+  --#{$menu}__content--RowGap: var(--#{$menu}--RowGap);
   --#{$menu}__content--Height: auto;
   --#{$menu}__content--MaxHeight: none;
   --#{$menu}--m-scrollable__content--MaxHeight: #{pf-size-prem(300px)};
 
-  // Divider
-  --#{$menu}--c-divider--MarginTop: 0;
-  --#{$menu}--c-divider--MarginBottom: 0;
-  --#{$menu}__list--c-divider--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__list--c-divider--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  // * Menu search
+  --#{$menu}__search--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}__search--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}__search--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__search--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
-  // Header
-  --#{$menu}__header--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__header--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__header--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__header--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  // * Menu footer
+  --#{$menu}__footer--BoxShadow: none;
+  --#{$menu}--m-scrollable__footer--BoxShadow: var(--pf-t--global--box-shadow--md--top);
 
-  // Header > item
-  --#{$menu}__header--c-menu__item--MarginTop: calc(var(--#{$menu}__header--PaddingTop) * -1 / 2);
-  --#{$menu}__header--c-menu__item--MarginRight: calc(var(--#{$menu}__header--PaddingRight) * -1 / 2);
-  --#{$menu}__header--c-menu__item--MarginBottom: calc(var(--#{$menu}__header--PaddingBottom) * -1 / 2);
-  --#{$menu}__header--c-menu__item--MarginLeft: calc(var(--#{$menu}__header--PaddingLeft) * -1 / 2);
-  --#{$menu}__header--c-menu__item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__header--c-menu__item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__header--c-menu__item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__header--c-menu__item--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__header--c-menu__item--BackgroundColor: transparent;
-  --#{$menu}__header--c-menu__item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$menu}__header--c-menu__item--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  // * Menu list item
+  --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
+  --#{$menu}__list-item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$menu}__list-item--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$menu}__list-item--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
+  --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
+  --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
-  // Search
-  --#{$menu}__search--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__search--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__search--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__search--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  // * Menu li divider
+  --#{$menu}__list--divider--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$menu}__list--divider--MarginBottom: var(--pf-t--global--spacer--sm);
 
-  // Header + search
-  --#{$menu}__header__search--PaddingTop: 0;
+  // * Menu item
+  --#{$menu}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$menu}__item--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__item--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$menu}__item--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$menu}__item--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$menu}__item--Color: var(--pf-t--global--text--color--regular);
+  --#{$menu}__item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$menu}__item--m-disabled--Color: var(--pf-t--global--text--color--disabled);
 
-  // List
-  --#{$menu}__list--Display: block;
-  --#{$menu}__list--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__list--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  // * Menu header
+  --#{$menu}__header--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}__header--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$menu}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
-  // List item
-  --#{$menu}__list-item--Display: flex;
-  --#{$menu}__list-item--Color: var(--#{$pf-global}--Color--100);
-  --#{$menu}__list-item--BackgroundColor: transparent;
-  --#{$menu}__list-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$menu}__list-item--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$menu}__list-item--m-loading--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  // * Menu group title
+  --#{$menu}__group-title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}__group-title--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}__group-title--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$menu}__group-title--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
-  // Menu item
-  --#{$menu}__item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__item--OutlineOffset: calc(#{pf-size-prem(2px)} * -1);
-  --#{$menu}__item--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$menu}__item--FontWeight: var(--#{$pf-global}--FontWeight--normal);
-  --#{$menu}__item--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$menu}__list-item--m-disabled__item--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$menu}__list-item--m-danger__item--Color: var(--#{$pf-global}--danger-color--100);
-  --#{$menu}__list-item--m-load__item--Color: var(--#{$pf-global}--link--Color);
+  // * Menu breadcrumb
+  --#{$menu}__breadcrumb--PaddingBlockStart: 0;
+  --#{$menu}__breadcrumb--PaddingBlockEnd: 0;
+  --#{$menu}__breadcrumb--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$menu}__breadcrumb--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
-  // Group
-  --#{$menu}__group--Display: block;
+  // * Menu footer
+  --#{$menu}__footer--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$menu}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
-  // Group title
-  --#{$menu}__group-title--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__group-title--PaddingRight: var(--#{$menu}__item--PaddingRight);
-  --#{$menu}__group-title--PaddingLeft: var(--#{$menu}__item--PaddingLeft);
-  --#{$menu}__group-title--FontSize: var(--#{$pf-global}--FontSize--xs);
-  --#{$menu}__group-title--FontWeight: var(--#{$pf-global}--FontWeight--normal);
-  --#{$menu}__group-title--Color: var(--#{$pf-global}--Color--200);
+  // * Menu item main
+  --#{$menu}__item-main--ColumnGap: var(--pf-t--global--spacer--sm);
 
-  // Description
-  --#{$menu}__item-description--FontSize: var(--#{$pf-global}--FontSize--xs);
-  --#{$menu}__item-description--Color: var(--#{$pf-global}--Color--200);
+  // * Menu group title
+  --#{$menu}__group-title--Color: var(--pf-t--global--text--color--subtle);
 
-  // Icon
-  --#{$menu}__item-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
+  // * Menu description
+  --#{$menu}__item-description--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$menu}__item-description--Color: var(--pf-t--global--text--color--subtle);
 
-  // Check
-  --#{$menu}__item-check--MarginRight: var(--#{$pf-global}--spacer--sm);
+  // * Menu action
+  --#{$menu}__item-action--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$menu}__item-action--icon--size: var(--#{$menu}__item-action--FontSize, var(--pf-t--global--icon--size--md));
+  --#{$menu}__item-action--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$menu}__item-action--m-favorited--Color: var(--pf-t--global--icon--color--favorite--clicked);
+  --#{$menu}__item-action--button--MinWidth: calc(var(--#{$menu}__item-action--icon--size) + var(--pf-t--global--spacer--sm) * 2);
 
-  // Toggle icon
-  --#{$menu}__item-toggle-icon--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item-toggle-icon--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__list-item--m-disabled__item-toggle-icon--Color: var(--#{$pf-global}--disabled-color--200);
+  // * Menu select icon
+  --#{$menu}__item-select-icon--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$menu}__item--m-selected__item-select-icon--Color: var(--pf-t--global--icon--color--brand--default);
 
-  // Text + toggle
-  --#{$menu}__item-text--item-toggle-icon--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  // * Menu link icon
+  --#{$menu}__item-external--Color: var(--pf-t--global--icon--color--brand--default);
 
-  // Toggle + text
-  --#{$menu}__item-toggle-icon--item-text--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  // Needs a unit because of type checking for use in calc()
+  --#{$menu}--m-flyout__menu--top-offset: 0px;
+  --#{$menu}--m-flyout__menu--left-offset: 0px;
+  --#{$menu}--m-flyout__menu--m-left--right-offset: 0px;
 
-  // Select icon
-  --#{$menu}__item-select-icon--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item-select-icon--Color: var(--#{$pf-global}--active-color--100);
-  --#{$menu}__item-select-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
+  // * Menu flyout
+  --#{$menu}--m-flyout__Zindex: var(--pf-t--global--Zindex--sm);
+  --#{$menu}--m-flyout__menu--Top: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
+  --#{$menu}--m-flyout__menu--Right: auto;
+  --#{$menu}--m-flyout__menu--Bottom: auto;
+  --#{$menu}--m-flyout__menu--Left: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
+  --#{$menu}--m-flyout__menu--m-top--Bottom: calc(var(--#{$menu}__list--PaddingBlockStart) * -1);
+  --#{$menu}--m-flyout__menu--m-left--Right: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
 
-  // External icon
-  --#{$menu}__item-external-icon--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item-external-icon--Color: var(--#{$pf-global}--link--Color);
-  --#{$menu}__item-external-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$menu}__item-external-icon--Opacity: 0;
+  // * Menu drilldown content
+  --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--#{$pf-global}--TransitionDuration); // TODO: Update transition with token update
+  --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration); // TODO: Update transition with token update
+  --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
 
-  // Action
-  --#{$menu}__item-action--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item-action--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__item-action--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$menu}__item-action--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__item-action--Color: var(--#{$pf-global}--Color--200);
-  --#{$menu}__item-action--BackgroundColor: transparent;
-  --#{$menu}__item-action--hover--Color: var(--#{$pf-global}--Color--100);
-  --#{$menu}__item-action--disabled--Color: var(--#{$pf-global}--disabled-color--200);
-  --#{$menu}__item-action--m-favorited--Color: var(--#{$pf-global}--palette--gold-400);
-  --#{$menu}__item-action--m-favorited--hover--Color: var(--#{$pf-global}--palette--gold-500);
-
-  // Action icon
-  --#{$menu}__item-action-icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
-  --#{$menu}__item-action--m-favorite__icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-
-  // breadcrumb
-  --#{$menu}__breadcrumb--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__breadcrumb--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__breadcrumb--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__breadcrumb--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__breadcrumb--c-breadcrumb__item--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$menu}__breadcrumb--c-breadcrumb__heading--FontSize: var(--#{$pf-global}--FontSize--md);
-
-  // Nested menu
+  // * Menu drilldown menu
   --#{$menu}--m-drilldown--c-menu--Top: 0;
   --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration);
   --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
 
-  // Drilldown content
-  --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--#{$pf-global}--TransitionDuration);
-  --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration);
-  --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
-
-  // Drilldown list
-  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration);
+  // * Menu drilldown list
+  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--#{$pf-global}--TransitionDuration); // TODO: Update transition with token update
   --#{$menu}--m-drilldown__list--Transition: transform var(--#{$menu}--m-drilldown__list--TransitionDuration--transform);
 
-  // Drilled in
-  --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  // * Menu drilled in
+  --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--Zindex--xs);
+}
 
-  // Footer
-  --#{$menu}__footer--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__footer--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__footer--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__footer--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$menu}__footer--BoxShadow: none;
-  --#{$menu}__footer--after--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$menu}__footer--after--BorderTopColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$menu}--m-scrollable__footer--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
-  --#{$menu}--m-scrollable__footer--after--BorderTopWidth: 0;
-  --#{$menu}--m-scrollable__footer--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+// - Menu shared display flex
+.#{$menu}__content,
+.#{$menu}__list-item,
+.#{$menu}__item-main,
+.#{$menu}__breadcrumb,
+.#{$menu}__item-check,
+.#{$menu}__item-action,
+.#{$menu}__item-action-icon {
+  display: flex;
+}
 
-  // Nav variant
-  --#{$menu}--m-nav--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
-  --#{$menu}--m-nav--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-300);
-  --#{$menu}--m-nav__list--PaddingTop: 0;
-  --#{$menu}--m-nav__list--PaddingBottom: 0;
-  --#{$menu}--m-nav__list-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
-  --#{$menu}--m-nav__list-item--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
-  --#{$menu}--m-nav__list-item--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
-  --#{$menu}--m-nav__item--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$menu}--m-nav__item--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$menu}--m-nav__item--Color: var(--#{$pf-global}--Color--light-100);
-  --#{$menu}--m-nav__item--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$menu}--m-nav__item--OutlineOffset: calc(var(--#{$pf-global}--spacer--xs) * -1);
-  --#{$menu}--m-nav__item--before--BorderBottomColor: var(--#{$pf-global}--BackgroundColor--dark-200);
-  --#{$menu}--m-nav__item--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$menu}--m-nav__item--hover--after--BorderLeftColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$menu}--m-nav__item--hover--after--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$menu}--m-nav__item--hover--after--Top: calc(var(--#{$menu}--m-nav__item--before--BorderBottomWidth) * -1);
-  --#{$menu}--m-nav__item__list-item--first-child__item--hover--after--Top: 0;
-  --#{$menu}--m-nav__item-description--Color: var(--#{$pf-global}--Color--light-200);
+// - Menu shared hidden visible
+.#{$menu}__list,
+.#{$menu}__group {
+  @include pf-v5-hidden-visible(grid);
+}
 
-  // Nav nested menus
-  --#{$menu}--m-nav--c-menu--left-offset: #{pf-size-prem(4px)};
-  --#{$menu}--m-nav--c-menu--m-top--bottom-offset: 0;
-  --#{$menu}--m-nav--c-menu--m-left--right-offset: #{pf-size-prem(4px)};
-  --#{$menu}--m-nav--c-menu--Top: calc(var(--#{$menu}--m-nav__item--before--BorderBottomWidth) * -1);
-  --#{$menu}--m-nav--c-menu--Left: calc(100% - var(--#{$menu}--m-nav--c-menu--left-offset));
-  --#{$menu}--m-nav--c-menu--m-left--Right: calc(100% - var(--#{$menu}--m-nav--c-menu--m-left--right-offset));
-  --#{$menu}--m-nav--c-menu--m-top--Bottom: calc(0 + var(--#{$menu}--m-nav--c-menu--m-top--bottom-offset));
-  --#{$menu}--m-nav__list-item--first-child--c-menu--Top: 0;
+// - Menu shared position relative
+.#{$menu}__list,
+.#{$menu}__list-item,
+.#{$menu}__breadcrumb,
+.#{$menu}__footer {
+  position: relative;
+}
 
- inset-block-start: var(--#{$menu}--Top);
-  z-index: var(--#{$menu}--ZIndex);
+// - Menu item disabled - Menu action disabled
+.#{$menu}__list-item,
+.#{$menu}__item-action {
+  &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled, [aria-disabled="true"]) {
+    --#{$menu}__item--Color: var(--#{$menu}__item--m-disabled--Color);
+    --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__item-external-icon--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__item-description--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__list-item--BackgroundColor: transparent;
+
+    pointer-events: none;
+  }
+}
+
+// - Menu hidden
+[class*="#{$menu}"]:is([hidden]) {
+  display: none;
+}
+
+// TODO: simplify this code block
+// - Menu
+.#{$menu} {
+  // TODO: Explore this fallback method
+  // padding-block-start: var(--#{$menu}--PaddingBlockStart, var(--#{$menu}--PaddingBlock));
+  // padding-block-end: var(--#{$menu}--PaddingBlockEnd, var(--#{$menu}--PaddingBlock));
+  display: grid;
+  row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
   min-width: var(--#{$menu}--MinWidth);
+  padding-block-start: var(--#{$menu}--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}--PaddingBlockEnd);
+  overflow: hidden;
+  color: var(--#{$menu}--Color);
   background-color: var(--#{$menu}--BackgroundColor);
+  border-radius: var(--#{$menu}--BorderRadius);
   box-shadow: var(--#{$menu}--BoxShadow);
+
+  .#{$menu} {
+    min-width: 100%;
+    border-radius: 0;
+  }
 
   .#{$menu}__content {
     & & {
@@ -234,12 +211,14 @@
     }
   }
 
-  .#{$divider} {
-    margin-block-start: var(--#{$menu}--c-divider--MarginTop);
-    margin-block-end: var(--#{$menu}--c-divider--MarginBottom);
+  // - Menu nested flyout menu
+  &.pf-m-flyout,
+  &.pf-m-flyout &,
+  & &.pf-m-flyout,
+  &.pf-m-flyout .#{$menu}__content {
+    overflow: visible;
   }
 
-  // nested flyout menu
   & &.pf-m-flyout,
   &.pf-m-flyout & {
     position: absolute;
@@ -247,6 +226,8 @@
     inset-block-end: var(--#{$menu}--m-flyout__menu--Bottom);
     inset-inline-start: var(--#{$menu}--m-flyout__menu--Left);
     inset-inline-end: var(--#{$menu}--m-flyout__menu--Right);
+    z-index: var(--#{$menu}--m-flyout__Zindex);
+    border-radius: var(--#{$menu}--BorderRadius);
 
     .#{$menu}__content {
       overflow-y: visible;
@@ -264,17 +245,13 @@
   }
 
   &.pf-m-drilldown {
-    display: flex;
-    flex-direction: column;
-
-    &[hidden] {
-      display: none;
-    }
-
     > .#{$menu}__content {
-      flex-grow: 1;
       overflow: hidden;
       transition: var(--#{$menu}--m-drilldown__content--Transition);
+    }
+
+    :where(.#{$menu}) {
+      padding: 0;
     }
 
     &.pf-m-drilled-in {
@@ -291,14 +268,13 @@
       // stylelint-enable
     }
 
-    // Nested menu
+    // - Menu nested menu
     > .#{$menu}__content .#{$menu} {
-      --#{$menu}--BoxShadow: none;
-
       position: absolute;
-     inset-block-start: var(--#{$menu}--m-drilldown--c-menu--Top);
-     inset-inline-start: 100%;
+      inset-block-start: var(--#{$menu}--m-drilldown--c-menu--Top);
+      inset-inline-start: 100%;
       width: 100%;
+      box-shadow: none;
       transition: var(--#{$menu}--m-drilldown--c-menu--Transition);
 
       // stylelint-disable selector-max-class
@@ -312,15 +288,15 @@
       // stylelint-enable
     }
 
+    // - Menu list
     .#{$menu}__list {
-      position: relative;
       overflow: hidden;
       visibility: visible;
       transition: var(--#{$menu}--m-drilldown__list--Transition);
 
       & .#{$menu}__list {
-        --#{$menu}__list--PaddingTop: 0;
-        --#{$menu}__list--PaddingBottom: 0;
+        --#{$menu}__list--PaddingBlockStart: 0;
+        --#{$menu}__list--PaddingBlockEnd: 0;
       }
     }
 
@@ -348,12 +324,12 @@
         display: none;
       }
     }
+    // stylelint-enable
 
     .#{$menu}__item {
-      outline-offset: var(--#{$menu}__item--OutlineOffset);
+      outline-offset: var(--#{$menu}--OutlineOffset);
     }
   }
-  // stylelint-enable
 
   // stylelint-disable selector-max-class
   &.pf-m-drilled-in > .#{$menu}__content > .#{$menu}__list {
@@ -378,109 +354,66 @@
   &.pf-m-scrollable {
     --#{$menu}__content--MaxHeight: var(--#{$menu}--m-scrollable__content--MaxHeight);
     --#{$menu}__footer--BoxShadow: var(--#{$menu}--m-scrollable__footer--BoxShadow);
-    --#{$menu}__footer--after--BorderTopWidth: var(--#{$menu}--m-scrollable__footer--after--BorderTopWidth);
+    --#{$menu}__footer--PaddingBlockStart: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
+    --#{$menu}__footer--PaddingBlockEnd: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
 
-    .#{$menu}__content {
+    overflow: hidden; // hide scrollbars
+
+    &:has(.#{$menu}__footer) {
+      --#{$menu}--PaddingBlockEnd: 0;
+    }
+
+    .#{$menu}__content,
+    .#{$menu}__list {
       overflow-y: auto;
     }
-  }
 
-  &.pf-m-nav,
-  &.pf-m-nav & {
-    --#{$menu}--BackgroundColor: var(--#{$menu}--m-nav--BackgroundColor);
-    --#{$menu}__list--PaddingTop: var(--#{$menu}--m-nav__list--PaddingTop);
-    --#{$menu}__list--PaddingBottom: var(--#{$menu}--m-nav__list--PaddingBottom);
-    --#{$menu}__list-item--hover--BackgroundColor: var(--#{$menu}--m-nav__list-item--hover--BackgroundColor);
-    --#{$menu}__list-item--focus-within--BackgroundColor: var(--#{$menu}--m-nav__list-item--focus-within--BackgroundColor);
-    --#{$menu}__list-item--active--BackgroundColor: var(--#{$menu}--m-nav__list-item--active--BackgroundColor);
-    --#{$menu}__item--Color: var(--#{$menu}--m-nav__item--Color);
-    --#{$menu}__item--FontSize: var(--#{$menu}--m-nav__item--FontSize);
-    --#{$menu}__item--OutlineOffset: var(--#{$menu}--m-nav__item--OutlineOffset);
-    --#{$menu}__item--PaddingRight: var(--#{$menu}--m-nav__item--PaddingRight);
-    --#{$menu}__item--PaddingLeft: var(--#{$menu}--m-nav__item--PaddingLeft);
-    --#{$menu}__item-description--Color: var(--#{$menu}--m-nav__item-description--Color);
-
-    box-shadow: var(--#{$menu}--m-nav--BoxShadow);
-
-    // stylelint-disable max-nesting-depth, selector-max-class
-    .#{$menu}__item {
+    // offset row-gap when scrollbar is present
+    .#{$menu}__content {
+      // TODO: figure out why this fixes the scrollable
       position: relative;
-      outline-offset: var(--#{$nav}__item--m-flyout--c-menu__item--OutlineOffset);
-
-      &::before {
-        position: absolute;
-       inset-block-end: 0;
-       inset-inline-start: 0;
-       inset-inline-end: 0;
-        content: "";
-        border-block-end: var(--#{$menu}--m-nav__item--before--BorderBottomWidth) solid var(--#{$menu}--m-nav__item--before--BorderBottomColor);
-      }
-
-      &:hover {
-        &::after {
-          position: absolute;
-         inset-block-start: var(--#{$menu}--m-nav__item--hover--after--Top);
-         inset-block-end: 0;
-         inset-inline-start: 0;
-          content: "";
-          border-inline-start: var(--#{$menu}--m-nav__item--hover--after--BorderLeftWidth) solid var(--#{$menu}--m-nav__item--hover--after--BorderLeftColor);
-        }
-      }
-    }
-    // stylelint-enable
-  }
-
-  &.pf-m-nav & {
-    width: 100%;
-  }
-
-  &.pf-m-flyout.pf-m-nav,
-  &.pf-m-flyout.pf-m-nav & {
-   inset-block-start: var(--#{$menu}--m-nav--c-menu--Top);
-   inset-inline-start: var(--#{$menu}--m-nav--c-menu--Left);
-
-    // stylelint-disable selector-max-class
-    &.pf-m-top {
-      --#{$menu}--m-nav--c-menu--Top: auto;
-
-     inset-block-end: var(--#{$menu}--m-nav--c-menu--m-top--Bottom);
+      z-index: var(--#{$menu}--ZIndex);
+      margin-block-start: calc(var(--#{$menu}--RowGap) * -1);
+      margin-block-end: calc(var(--#{$menu}--RowGap) * -1);
+      overflow: hidden; // hide scrollbars
     }
 
-    &.pf-m-left {
-      --#{$menu}--m-nav--c-menu--Left: auto;
-
-     inset-inline-end: var(--#{$menu}--m-nav--c-menu--m-left--Right);
+    .#{$menu}__list {
+      padding-block-start: var(--#{$menu}--RowGap);
+      padding-block-end: var(--#{$menu}--RowGap);
     }
-
-    .#{$menu}__list-item:first-child {
-      --#{$menu}--m-nav__item--hover--after--Top: var(--#{$menu}--m-nav__item__list-item--first-child__item--hover--after--Top);
-    }
-
-    .#{$menu}__list-item:first-child .#{$menu} {
-      --#{$menu}--m-nav--c-menu--Top: var(--#{$menu}--m-nav__list-item--first-child--c-menu--Top);
-    }
-    // stylelint-enable
   }
 }
 
-// breadcrumb
-.#{$menu}__breadcrumb {
-  display: flex;
-  align-items: center;
-  min-height: var(--#{$menu}__breadcrumb--MinHeight);
-  padding-block-start: var(--#{$menu}__breadcrumb--PaddingTop);
-  padding-block-end: var(--#{$menu}__breadcrumb--PaddingBottom);
-  padding-inline-start: var(--#{$menu}__breadcrumb--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__breadcrumb--PaddingRight);
-
-  .#{$breadcrumb} {
-    --#{$breadcrumb}__item--FontSize: var(--#{$menu}__breadcrumb--c-breadcrumb__item--FontSize);
-    --#{$breadcrumb}__heading--FontSize: var(--#{$menu}__breadcrumb--c-breadcrumb__heading--FontSize);
-  }
+// - Menu header
+.#{$menu}__header {
+  padding-block-start: var(--#{$menu}__header--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}__header--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}__header--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__header--PaddingInlineEnd);
 }
 
-// content
+// - Menu search
+.#{$menu}__search {
+  padding-block-start: var(--#{$menu}__search--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}__search--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}__search--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__search--PaddingInlineEnd);
+}
+
+// - Menu footer
+.#{$menu}__footer {
+  padding-block-start: var(--#{$menu}__footer--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}__footer--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}__footer--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__footer--PaddingInlineEnd);
+  box-shadow: var(--#{$menu}__footer--BoxShadow);
+}
+
+// - Menu content
 .#{$menu}__content {
+  flex-direction: column;
+  row-gap: var(--#{$menu}__content--RowGap);
   height: var(--#{$menu}__content--Height);
   max-height: var(--#{$menu}__content--MaxHeight);
 
@@ -489,298 +422,206 @@
   }
 }
 
-// Header
-.#{$menu}__header {
-  --#{$menu}__item--PaddingTop: var(--#{$menu}__header--c-menu__item--PaddingTop);
-  --#{$menu}__item--PaddingRight: var(--#{$menu}__header--c-menu__item--PaddingRight);
-  --#{$menu}__item--PaddingBottom: var(--#{$menu}__header--c-menu__item--PaddingBottom);
-  --#{$menu}__item--PaddingLeft: var(--#{$menu}__header--c-menu__item--PaddingLeft);
-
-  padding-block-start: var(--#{$menu}__header--PaddingTop);
-  padding-block-end: var(--#{$menu}__header--PaddingBottom);
-  padding-inline-start: var(--#{$menu}__header--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__header--PaddingRight);
-
-  > .#{$menu}__item {
-    --#{$menu}__item--BackgroundColor: var(--#{$menu}__header--c-menu__item--BackgroundColor);
-
-    margin-block-start: var(--#{$menu}__header--c-menu__item--MarginTop);
-    margin-block-end: var(--#{$menu}__header--c-menu__item--MarginBottom);
-    margin-inline-start: var(--#{$menu}__header--c-menu__item--MarginLeft);
-    margin-inline-end: var(--#{$menu}__header--c-menu__item--MarginRight);
-
-    &:hover {
-      --#{$menu}__item--BackgroundColor: var(--#{$menu}__header--c-menu__item--hover--BackgroundColor);
-    }
-
-    &:focus {
-      --#{$menu}__item--BackgroundColor: var(--#{$menu}__header--c-menu__item--focus--BackgroundColor);
-    }
-  }
-
-  + .#{$menu}__search {
-    --#{$menu}__search--PaddingTop: var(--#{$menu}__header__search--PaddingTop);
-  }
+// - Menu list
+.#{$menu}__list :where(.#{$divider}:is(li)) {
+  margin-block-start: var(--#{$menu}__list--divider--MarginTop);
+  margin-block-end: var(--#{$menu}__list--divider--MarginBottom);
 }
 
-// Search
-.#{$menu}__search {
-  padding-block-start: var(--#{$menu}__search--PaddingTop);
-  padding-block-end: var(--#{$menu}__search--PaddingBottom);
-  padding-inline-start: var(--#{$menu}__search--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__search--PaddingRight);
-}
-
-// List
-.#{$menu}__list {
-  @include pf-v5-hidden-visible(var(--#{$menu}__list--Display));
-
-  padding-block-start: var(--#{$menu}__list--PaddingTop);
-  padding-block-end: var(--#{$menu}__list--PaddingBottom);
-
-  > .#{$divider} {
-    margin-block-start: var(--#{$menu}__list--c-divider--MarginTop);
-    margin-block-end: var(--#{$menu}__list--c-divider--MarginBottom);
-  }
-}
-
-// List item
+// - Menu list item
 .#{$menu}__list-item {
-  @include pf-v5-hidden-visible(var(--#{$menu}__list-item--Display));
+  align-items: baseline;
+  min-width: 0; // allow list item to shrink for text overflow
 
-  position: relative;
-  color: var(--#{$menu}__list-item--Color);
-  background-color: var(--#{$menu}__list-item--BackgroundColor);
-
-  &:hover {
-    --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
-    --#{$menu}__list-item--Color: var(--#{$menu}__list-item--hover--Color, inherit);
+  > * {
+    position: relative;
   }
 
-  &:focus-within,
-  &.pf-m-focus {
-    --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--focus-within--BackgroundColor);
-    --#{$menu}__list-item--Color: var(--#{$menu}__list-item--focus-within--Color, inherit);
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--#{$menu}__list-item--BackgroundColor);
   }
 
-  &.pf-m-disabled,
-  &.pf-m-aria-disabled {
-    --#{$menu}__list-item--hover--BackgroundColor: transparent;
-    --#{$menu}__item--Color: var(--#{$menu}__list-item--m-disabled__item--Color);
-    --#{$menu}__item-toggle-icon: var(--#{$menu}__list-item--m-disabled__item-toggle-icon--Color);
-  }
-
-  &.pf-m-disabled {
-    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
-
-    pointer-events: none;
-  }
-
-  &.pf-m-aria-disabled .#{$menu}__item {
-    cursor: default;
-  }
-
+  // - Menu item load
   &.pf-m-load {
-    --#{$menu}__list-item--hover--BackgroundColor: transparent;
-    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
     --#{$menu}__item--Color: var(--#{$menu}__list-item--m-load__item--Color);
   }
 
+  // - Menu item loading
   &.pf-m-loading {
-    --#{$menu}__list-item--hover--BackgroundColor: transparent;
-    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
-
     justify-content: center;
-    padding-block-start: var(--#{$menu}__list-item--m-loading--PaddingTop);
     overflow: hidden; // prevents spinner rotation from overflowing
+    pointer-events: none;
+
+    .#{$menu}__item-text {
+      text-align: center;
+    }
   }
 
+  // - Menu item danger
   &.pf-m-danger {
-    --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger__item--Color, inherit);
+    --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--Color);
+
+    &:is(:hover, :focus) {
+      --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--hover--Color, var(--#{$menu}__list-item--m-danger--Color));
+    }
+  }
+
+  &:has(.#{$menu}__item-action) {
+    padding-inline-end: var(--#{$menu}__list-item--has--menu-action--PaddingInlineEnd);
+  }
+
+  &.pf-m-focus,
+  &:focus-within,
+  &:has(> :hover) {
+    --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
+
+    .#{$menu}__item-select-icon,
+    .#{$menu}__item-external-icon {
+      opacity: 1;
+    }
   }
 }
 
-// Item
+// TODO: organize these in order of importance
+// - Menu item
 .#{$menu}__item {
-  display: flex;
   flex-basis: 100%;
   flex-direction: column;
   min-width: 0;
-  padding-block-start: var(--#{$menu}__item--PaddingTop);
-  padding-block-end: var(--#{$menu}__item--PaddingBottom);
-  padding-inline-start: var(--#{$menu}__item--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__item--PaddingRight);
+  padding-block-start: var(--#{$menu}__item--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}__item--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}__item--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__item--PaddingInlineEnd);
   font-size: var(--#{$menu}__item--FontSize);
   font-weight: var(--#{$menu}__item--FontWeight);
   line-height: var(--#{$menu}__item--LineHeight);
   color: var(--#{$menu}__item--Color);
   text-align: start;
+  text-decoration: none;
   background-color: var(--#{$menu}__item--BackgroundColor);
-  border: none;
+  border: 0;
+  outline-offset: var(--#{$menu}--OutlineOffset);
 
-  &:hover {
-    text-decoration: none;
-  }
+  @include pf-v5-hidden-visible(flex);
 
-  &:hover,
-  &:focus {
-    --#{$menu}__item-external-icon--Opacity: 1;
+  @at-root :where(label)#{&} {
+    cursor: pointer;
   }
 
   &.pf-m-selected {
-    .#{$menu}__item-select-icon {
-      opacity: 1;
-    }
+    --#{$menu}__item-select-icon--Color: var(--#{$menu}__item--m-selected__item-select-icon--Color);
   }
 
-  @at-root label#{&}:where(:not([disabled], .pf-m-disabled, .pf-m-aria-disabled)) {
-    cursor: pointer;
+  &:is(:hover, :focus, .pf-m-selected) {
+    .#{$menu}__item-select-icon,
+    .#{$menu}__item-external-icon {
+      opacity: 1;
+    }
+
+    .#{$menu}__item-external-icon {
+      color: var(--#{$menu}__item-external--Color);
+    }
   }
 }
 
+// - Menu item select icon
+.#{$menu}__item-select-icon {
+  color: var(--#{$menu}__item-select-icon--Color);
+}
+
+// - Menu item main
 .#{$menu}__item-main {
-  display: flex;
+  column-gap: var(--#{$menu}__item-main--ColumnGap);
   align-items: center;
   width: 100%;
 }
 
-.#{$menu}__item-external-icon {
-  margin-inline-start: var(--#{$menu}__item-external-icon--MarginLeft);
-  font-size: var(--#{$menu}__item-external-icon--FontSize);
-  color: var(--#{$menu}__item-external-icon--Color);
-  opacity: var(--#{$menu}__item-external-icon--Opacity);
-}
-
-// Item text
+// - Menu item text
 .#{$menu}__item-text {
   @include pf-v5-text-overflow;
 
   flex-grow: 1;
 }
 
-// Group
-.#{$menu}__group {
-  @include pf-v5-hidden-visible(var(--#{$menu}__group--Display));
-}
-
-// Group title
+// - Menu group title
 .#{$menu}__group-title {
-  padding-block-start: var(--#{$menu}__group-title--PaddingTop);
-  padding-inline-start: var(--#{$menu}__group-title--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__group-title--PaddingRight);
-  font-size: var(--#{$menu}__group-title--FontSize);
-  font-weight: var(--#{$menu}__group-title--FontWeight);
+  padding-block-start: var(--#{$menu}__group-title--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}__group-title--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}__group-title--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__group-title--PaddingInlineEnd);
+  font-size: var(--#{$menu}__group-title--FontSize, inherit);
+  font-weight: var(--#{$menu}__group-title--FontWeight, inherit);
   color: var(--#{$menu}__group-title--Color);
 }
 
-// Description
+// - Menu description
 .#{$menu}__item-description {
   font-size: var(--#{$menu}__item-description--FontSize);
   color: var(--#{$menu}__item-description--Color);
   word-break: break-word;
 }
 
-// General icon
-.#{$menu}__item-icon {
-  margin-inline-end: var(--#{$menu}__item-icon--MarginRight);
+// - Menu check
+.#{$menu}__item-check .#{$check} {
+  --pf-v5-c-check__input--TranslateY: none;
 }
 
-// Check
-.#{$menu}__item-check {
-  display: flex;
-  align-items: center;
-  margin-inline-end: var(--#{$menu}__item-check--MarginRight);
-
-  .#{$check} {
-    --pf-v5-c-check__input--TranslateY: none;
-  }
-}
-
-// Toggle icon
+// - Menu toggle icon
 .#{$menu}__item-toggle-icon {
   @include pf-v5-mirror-inline-on-rtl;
 
-  padding-inline-start: var(--#{$menu}__item-toggle-icon--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__item-toggle-icon--PaddingRight);
-  color: var(--#{$menu}__item-toggle-icon, inherit);
+  color: var(--#{$menu}__item-toggle-icon--Color, inherit);
 }
 
-.#{$menu}__item-text + .#{$menu}__item-toggle-icon {
-  margin-inline-start: var(--#{$menu}__item-text--item-toggle-icon--MarginLeft);
+// - Menu item icon
+.#{$menu}__item-icon {
+  color: var(--#{$menu}__item--icon--Color, inherit);
 }
 
-.#{$menu}__item-toggle-icon + .#{$menu}__item-text {
-  margin-inline-start: var(--#{$menu}__item-toggle-icon--item-text--MarginLeft);
-}
-
-// Select icon
-.#{$menu}__item-select-icon {
-  margin-inline-start: var(--#{$menu}__item-select-icon--MarginLeft);
-  font-size: var(--#{$menu}__item-select-icon--FontSize);
-  color: var(--#{$menu}__item-select-icon--Color);
+// - Menu item select icon - Menu item external icon
+.#{$menu}__item-select-icon,
+.#{$menu}__item-external-icon {
   opacity: 0;
 }
 
-// Actions
+// TODO: standardize icon fitting
+// - Menu item action
+.#{$menu}__item-toggle-icon,
 .#{$menu}__item-action {
-  display: flex;
-  padding-block-start: var(--#{$menu}__item-action--PaddingTop);
-  padding-block-end: var(--#{$menu}__item-action--PaddingBottom);
-  padding-inline-start: var(--#{$menu}__item-action--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__item-action--PaddingRight);
-  color: var(--#{$menu}__item-action--Color);
-  background-color: var(--#{$menu}__item-action--BackgroundColor);
-  border: none;
-
-  &.pf-m-favorite {
-    .#{$menu}__item-action-icon {
-      font-size: var(--#{$menu}__item-action--m-favorite__icon--FontSize);
-    }
-  }
-
-  &.pf-m-favorited {
+  &.pf-m-favorited,
+  &.pf-m-favorited:hover,
+  &.pf-m-favorited .#{$button} {
+    --#{$button}--Color: var(--#{$menu}__item-action--m-favorited--Color);
     --#{$menu}__item-action--Color: var(--#{$menu}__item-action--m-favorited--Color);
-    --#{$menu}__item-action--hover--Color: var(--#{$menu}__item-action--m-favorited--hover--Color);
-  }
-
-  &:hover,
-  &:focus {
-    --#{$menu}__item-action--Color: var(--#{$menu}__item-action--hover--Color);
-  }
-
-  &:disabled,
-  &.pf-m-disabled,
-  &.pf-m-aria-disabled {
-    --#{$menu}__item-action--Color: var(--#{$menu}__item-action--disabled--Color);
   }
 }
 
-.#{$menu}__item-action-icon {
-  display: flex;
-  align-items: center;
-  height: var(--#{$menu}__item-action-icon--Height);
-}
+// - Menu breadcrumb
+.#{$menu}__breadcrumb {
+  --#{$breadcrumb}__item--FontSize: var(--#{$menu}__breadcrumb--FontSize);
 
-.#{$menu}__footer {
-  position: relative;
-  padding-block-start: var(--#{$menu}__footer--PaddingTop);
-  padding-block-end: var(--#{$menu}__footer--PaddingBottom);
-  padding-inline-start: var(--#{$menu}__footer--PaddingLeft);
-  padding-inline-end: var(--#{$menu}__footer--PaddingRight);
-  box-shadow: var(--#{$menu}__footer--BoxShadow);
+  padding-block-start: var(--#{$menu}__breadcrumb--PaddingBlockStart);
+  padding-block-end: var(--#{$menu}__breadcrumb--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}__breadcrumb--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__breadcrumb--PaddingInlineEnd);
 
-  &::after {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    content: "";
-    border-block-start: var(--#{$menu}__footer--after--BorderTopWidth) solid var(--#{$menu}__footer--after--BorderTopColor);
+  .#{$menu} {
+    min-width: auto;
+    padding-block-start: var(--#{$menu}--PaddingBlockStart);
+    padding-block-end: var(--#{$menu}--PaddingBlockEnd);
   }
-}
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/menu";
+  .#{$menu}__content {
+    height: auto;
+  }
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-menu;
+  .#{$menu-toggle} {
+    --#{$menu-toggle}--BorderWidth: 0;
+    --#{$menu-toggle}--BorderColor: transparent;
+
+    outline-offset: var(--#{$menu}--OutlineOffset);
+  }
 }

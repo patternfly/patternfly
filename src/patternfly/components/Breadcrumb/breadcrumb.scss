@@ -1,6 +1,5 @@
-// @debug $breadcrumb; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
-:root, .#{$breadcrumb} {
+:where(:root),
+:where(.#{$breadcrumb}) {
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -12,6 +11,8 @@
   --#{$breadcrumb}__item-divider--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // Breadcrumb link
+  --#{$breadcrumb}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
+  --#{$breadcrumb}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
   --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
   --#{$breadcrumb}__link--TextDecoration: var(--pf-t--global--link--text-decoration);
   --#{$breadcrumb}__link--hover--Color: var(--pf-t--global--text--color--link--hover);
@@ -53,6 +54,10 @@
   white-space: nowrap; // Keeps the item-divider and __link text on the same line
   list-style: none;
 
+  &:first-child:has(.#{$breadcrumb}__link) {
+    --#{$breadcrumb}__link--PaddingInlineStart: 0; // remove padding from first child if link
+  }
+
   &:not(:last-child) {
     margin-inline-end: var(--#{$breadcrumb}__item--MarginRight);
   }
@@ -70,6 +75,8 @@
 
 // Breadcrumb link
 .#{$breadcrumb}__link {
+  padding-inline-start: var(--#{$breadcrumb}__link--PaddingInlineStart); // use a mutable value for alignment control
+  padding-inline-end: var(--#{$breadcrumb}__link--PaddingInlineEnd); // use a mutable value for alignment control
   font-size: inherit;
   font-weight: var(--#{$breadcrumb}__link--FontWeight);
   line-height: inherit;

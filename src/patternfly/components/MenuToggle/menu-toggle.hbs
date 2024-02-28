@@ -8,6 +8,9 @@
   {{#if menu-toggle--IsPlain}}
     pf-m-plain
   {{/if}}
+  {{#if menu-toggle--IsSmall}}
+    pf-m-small
+  {{/if}}
   {{#if menu-toggle--IsText}}
     pf-m-text
   {{/if}}
@@ -17,6 +20,11 @@
   {{#if menu-toggle--IsTypeahead}}
     pf-m-typeahead
   {{/if}}
+  {{#unless menu-toggle--IsSplitButton}}
+    {{#if menu-toggle--IsDisabled}}
+      pf-m-disabled
+    {{/if}}
+  {{/unless}}
   {{#if menu-toggle--IsSplitButton}}
     pf-m-split-button
     {{#if menu-toggle--IsAction}}
@@ -64,7 +72,17 @@
   {{/if}}
   {{#ifAny menu-toggle--IsPlain @partial-block}}
     {{#if menu-toggle--HasKebab}}
-      <i class="fas fa-ellipsis-v" aria-hidden=true></i>
+      {{#> menu-toggle-toggle-icon}}
+        <svg class="pf-v5-svg" viewBox="0 0 192 512" fill="currentColor" aria-hidden="true" role="img" width="1em" height="1em"><path d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"></path></svg>
+      {{/menu-toggle-toggle-icon}}
+    {{else if menu-toggle--UsesButton}}
+      {{#> button button--IsPlain=true button--icon='ellipsis-v' button--IsDisabled=menu-toggle--IsDisabled button--IsAriaDisabled=menu-toggle--IsAriaDisabled button--IsExpanded=menu-toggle--IsExpanded button--aria-label='Actions'}}{{/button}}
+    {{/if}}
+    {{!-- TODO: refactor this logic --}}
+    {{#if menu-toggle--text}}
+      {{#> menu-toggle-controls}}
+        {{> menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
     {{/if}}
     {{#if @partial-block}}
       {{> @partial-block}}

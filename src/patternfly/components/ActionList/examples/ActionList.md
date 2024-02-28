@@ -166,4 +166,4 @@ In wizards
 | `.pf-v5-c-action-list` | `<div>` | Initiates the action list container. |
 | `.pf-v5-c-action-list__item` | `<div>` | Initiates the action list item container. |
 | `.pf-v5-c-action-list__group` | `<div>` | Initiates the action list group container. |
-| `.pf-m-icons` | `.pf-v5-c-action-list`, `.pf-v5-c-action-list__group` | Modifies the action list to support button icons. |
+| `.pf-m-icons` | `.pf-v5-c-action-list`, `.pf-v5-c-action-list__group` | Modifies the action list and/or group to support icon buttons. If applied to `.pf-v5-c-action-list`, all nested groups will inherit this modification. |

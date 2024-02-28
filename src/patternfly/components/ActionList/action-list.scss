@@ -23,6 +23,8 @@
 
   // - Action list icons
   &.pf-m-icons {
+    --#{$action-list}__group--ColumnGap: var(--#{$action-list}--m-icons--ColumnGap);
+
     column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
   }
 }

@@ -14,7 +14,6 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
-  --#{$button}--MixBlendMode: normal;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -25,7 +24,7 @@
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
-  --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--button--active);
+  --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--button--clicked);
 
   // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -75,7 +74,6 @@
   --#{$button}--m-link--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$button}--m-link--Color: var(--pf-t--global--text--color--brand--default);
   --#{$button}--m-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$button}--m-link--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$button}--m-link__icon--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$button}--m-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
@@ -83,22 +81,27 @@
   --#{$button}--m-link--m-clicked--Color: var(--pf-t--global--text--color--brand--clicked);
   --#{$button}--m-link--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-link--m-clicked__icon--Color: var(--pf-t--global--text--color--brand--clicked);
+
+  // Link danger
   --#{$button}--m-link--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
+  --#{$button}--m-link--m-danger--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$button}--m-link--m-danger__icon--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$button}--m-link--m-danger--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
+  --#{$button}--m-link--m-danger--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$button}--m-link--m-danger--hover__icon--Color: var(--pf-t--global--text--color--status--danger--hover);
   --#{$button}--m-link--m-danger--m-clicked--Color: var(--pf-t--global--text--color--status--danger--clicked);
+  --#{$button}--m-link--m-danger--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-link--m-danger--m-clicked__icon--Color: var(--pf-t--global--text--color--status--danger--clicked);
 
-  // Inline link
+  // Link inline
   --#{$button}--m-link--m-inline--FontSize: initial;
   --#{$button}--m-link--m-inline--LineHeight: initial;
   --#{$button}--m-link--m-inline--FontWeight: initial;
-  --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
   --#{$button}--m-link--m-inline--PaddingTop: 0;
   --#{$button}--m-link--m-inline--PaddingRight: 0;
   --#{$button}--m-link--m-inline--PaddingBottom: 0;
   --#{$button}--m-link--m-inline--PaddingLeft: 0;
+  --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
   --#{$button}--m-link--m-inline__progress--Left: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--#{$button}--m-link--m-inline__progress--Left) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -112,18 +115,19 @@
   --#{$button}--m-plain--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$button}--m-plain--MixBlendMode: var(--pf-t--global--background--color--action--plain--hover--blend);
   --#{$button}--m-plain--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--m-plain--PaddingTop) + var(--#{$button}--m-plain--PaddingBottom));
   --#{$button}--m-plain--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$button}--m-plain--m-clicked--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
-  --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$button}--m-plain--disabled--BackgroundColor: transparent;
   --#{$button}--m-plain--m-small--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$button}--m-plain--m-small--PaddingRight: var(--pf-t--global--spacer--xs);
   --#{$button}--m-plain--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$button}--m-plain--m-small--PaddingLeft: var(--pf-t--global--spacer--xs);
-  --#{$button}--m-plain--m-no-padding--MixBlendMode: normal;
+
+  // Plain no padding
   --#{$button}--m-plain--m-no-padding--MinWidth: auto;
   --#{$button}--m-plain--m-no-padding--PaddingTop: 0;
   --#{$button}--m-plain--m-no-padding--PaddingRight: 0;
@@ -151,7 +155,7 @@
   --#{$button}--m-control--m-clicked--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--m-control--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-control--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$button}--m-control--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Stateful
@@ -162,32 +166,32 @@
   // Read
   --#{$button}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-read--hover--BackgroundColor: var(--pf-t--global--background--color--control--hover);
+  --#{$button}--m-read--hover--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-read--hover--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$button}--m-read--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--clicked);
+  --#{$button}--m-read--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-read--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // Unread
-  --#{$button}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
-  --#{$button}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$button}--m-unread__icon--Color: var(--pf-t--global--icon--color--on-brand--default);
-  --#{$button}--m-unread--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
-  --#{$button}--m-unread--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
-  --#{$button}--m-unread--hover__icon--Color: var(--pf-t--global--icon--color--on-brand--hover);
-  --#{$button}--m-unread--m-clicked--Color: var(--pf-t--global--text--color--on-brand--clicked);
-  --#{$button}--m-unread--m-clicked--BackgroundColor: var(--pf-t--global--color--brand--clicked);
-  --#{$button}--m-unread--m-clicked__icon--Color: var(--pf-t--global--icon--color--on-brand--clicked);
+  --#{$button}--m-unread--Color: var(--pf-t--global--text--color--status--unread--on-default--default);
+  --#{$button}--m-unread--BackgroundColor: var(--pf-t--global--color--status--unread--default--default);
+  --#{$button}--m-unread__icon--Color: var(--pf-t--global--icon--color--status--unread--on-default--default);
+  --#{$button}--m-unread--hover--Color: var(--pf-t--global--text--color--status--unread--on-default--hover);
+  --#{$button}--m-unread--hover--BackgroundColor: var(--pf-t--global--color--status--unread--default--hover);
+  --#{$button}--m-unread--hover__icon--Color: var(--pf-t--global--icon--color--status--unread--on-default--hover);
+  --#{$button}--m-unread--m-clicked--Color: var(--pf-t--global--text--color--status--unread--on-default--clicked);
+  --#{$button}--m-unread--m-clicked--BackgroundColor: var(--pf-t--global--color--status--unread--default--clicked);
+  --#{$button}--m-unread--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--unread--on-default--clicked);
 
   // Attention
-  --#{$button}--m-attention--Color: var(--pf-t--global--text--color--status--on-danger--default);
-  --#{$button}--m-attention--BackgroundColor: var(--pf-t--global--color--status--danger--default);
-  --#{$button}--m-attention__icon--Color: var(--pf-t--global--icon--color--status--on-danger--default);
-  --#{$button}--m-attention--hover--Color: var(--pf-t--global--text--color--status--on-danger--hover);
-  --#{$button}--m-attention--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
-  --#{$button}--m-attention--hover__icon--Color: var(--pf-t--global--icon--color--status--on-danger--hover);
-  --#{$button}--m-attention--m-clicked--Color: var(--pf-t--global--text--color--status--on-danger--clicked);
-  --#{$button}--m-attention--m-clicked--BackgroundColor: var(--pf-t--global--color--status--danger--clicked);
-  --#{$button}--m-attention--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--on-danger--clicked);
+  --#{$button}--m-attention--Color: var(--pf-t--global--text--color--status--unread--on-attention--default);
+  --#{$button}--m-attention--BackgroundColor: var(--pf-t--global--color--status--unread--attention--default);
+  --#{$button}--m-attention__icon--Color: var(--pf-t--global--icon--color--status--unread--on-attention--default);
+  --#{$button}--m-attention--hover--Color: var(--pf-t--global--text--color--status--unread--on-attention--hover);
+  --#{$button}--m-attention--hover--BackgroundColor: var(--pf-t--global--color--status--unread--attention--hover);
+  --#{$button}--m-attention--hover__icon--Color: var(--pf-t--global--icon--color--status--unread--on-attention--hover);
+  --#{$button}--m-attention--m-clicked--Color: var(--pf-t--global--text--color--status--unread--on-attention--clicked);
+  --#{$button}--m-attention--m-clicked--BackgroundColor: var(--pf-t--global--color--status--unread--attention--clicked);
+  --#{$button}--m-attention--m-clicked__icon--Color: var(--pf-t--global--icon--color--status--unread--on-attention--clicked);
 
   // Warning
   --#{$button}--m-warning--Color: var(--pf-t--global--text--color--status--on-warning--default);
@@ -227,9 +231,9 @@
 
   // Disabled
   --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
   --#{$button}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--disabled--BorderColor: transparent;
+  --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
 
   // Icons
   --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -258,7 +262,7 @@
 
   // Count
   --#{$button}__count--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled--default);
+  --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
   --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
@@ -365,7 +369,6 @@
     --#{$button}--Color: var(--#{$button}--m-link--Color);
     --#{$button}--BorderRadius: var(--#{$button}--m-link--BorderRadius);
     --#{$button}--BackgroundColor: var(--#{$button}--m-link--BackgroundColor);
-    --#{$button}--MixBlendMode: var(--#{$button}--m-link--MixBlendMode);
     --#{$button}__icon--Color: var(--#{$button}--m-link__icon--Color);
     --#{$button}--hover--Color: var(--#{$button}--m-link--hover--Color);
     --#{$button}--hover--BackgroundColor: var(--#{$button}--m-link--hover--BackgroundColor);
@@ -397,16 +400,16 @@
       outline-offset: #{pf-size-prem(2px)};
     }
 
-    &:where(.pf-m-danger) {
+    &.pf-m-danger {
       --#{$button}--m-danger--Color: var(--#{$button}--m-link--m-danger--Color);
+      --#{$button}--m-danger--BackgroundColor: var(--#{$button}--m-link--m-danger--BackgroundColor);
       --#{$button}--m-danger__icon--Color: var(--#{$button}--m-link--m-danger__icon--Color);
       --#{$button}--m-danger--hover--Color: var(--#{$button}--m-link--m-danger--hover--Color);
+      --#{$button}--m-danger--hover--BackgroundColor: var(--#{$button}--m-link--m-danger--hover--BackgroundColor);
       --#{$button}--m-danger--hover__icon--Color: var(--#{$button}--m-link--m-danger--hover__icon--Color);
       --#{$button}--m-danger--m-clicked--Color: var(--#{$button}--m-link--m-danger--m-clicked--Color);
+      --#{$button}--m-danger--m-clicked--BackgroundColor: var(--#{$button}--m-link--m-danger--m-clicked--BackgroundColor);
       --#{$button}--m-danger--m-clicked__icon--Color: var(--#{$button}--m-link--m-danger--m-clicked__icon--Color);
-      --#{$button}--m-danger--BackgroundColor: transparent;
-      --#{$button}--m-danger--hover--BackgroundColor: transparent;
-      --#{$button}--m-danger--m-clicked--BackgroundColor: transparent;
     }
 
     &.pf-m-display-lg {
@@ -459,7 +462,7 @@
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-control--m-clicked--BackgroundColor);
     --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-control--m-clicked--BorderColor);
     --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-control--m-clicked--BorderWidth);
-    --#{$button}--m-clicked--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
+    --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
   }
 
   // Stateful
@@ -507,24 +510,24 @@
 
   // Icon buttons
   &.pf-m-plain {
+    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
+    --#{$button}--Color: var(--#{$button}--m-plain--Color);
+    --#{$button}--BackgroundColor: var(--#{$button}--m-plain--BackgroundColor);
     --#{$button}--PaddingTop: var(--#{$button}--m-plain--PaddingTop);
     --#{$button}--PaddingRight: var(--#{$button}--m-plain--PaddingRight);
     --#{$button}--PaddingBottom: var(--#{$button}--m-plain--PaddingBottom);
     --#{$button}--PaddingLeft: var(--#{$button}--m-plain--PaddingLeft);
-    --#{$button}--MixBlendMode: var(--#{$button}--m-plain--MixBlendMode);
-    --#{$button}--m-small--PaddingTop: var(--#{$button}--m-plain--m-small--PaddingTop);
-    --#{$button}--m-small--PaddingRight: var(--#{$button}--m-plain--m-small--PaddingRight);
-    --#{$button}--m-small--PaddingBottom: var(--#{$button}--m-plain--m-small--PaddingBottom);
-    --#{$button}--m-small--PaddingLeft: var(--#{$button}--m-plain--m-small--PaddingLeft);
-    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
-    --#{$button}--Color: var(--#{$button}--m-plain--Color);
-    --#{$button}--BackgroundColor: var(--#{$button}--m-plain--BackgroundColor);
+    --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
     --#{$button}--hover--Color: var(--#{$button}--m-plain--hover--Color);
     --#{$button}--hover--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
     --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
     --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
-    --#{$button}__progress--Color: var(--#{$button}--m-in-progress--m-plain--Color);
+    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
+    --#{$button}--m-small--PaddingTop: var(--#{$button}--m-plain--m-small--PaddingTop);
+    --#{$button}--m-small--PaddingRight: var(--#{$button}--m-plain--m-small--PaddingRight);
+    --#{$button}--m-small--PaddingBottom: var(--#{$button}--m-plain--m-small--PaddingBottom);
+    --#{$button}--m-small--PaddingLeft: var(--#{$button}--m-plain--m-small--PaddingLeft);
 
     &.pf-m-no-padding {
       --#{$button}--BackgroundColor: var(--#{$button}--m-plain--m-no-padding--BackgroundColor);
@@ -534,7 +537,6 @@
       --#{$button}--m-plain--PaddingRight: var(--#{$button}--m-plain--m-no-padding--PaddingRight);
       --#{$button}--m-plain--PaddingBottom: var(--#{$button}--m-plain--m-no-padding--PaddingBottom);
       --#{$button}--m-plain--PaddingLeft: var(--#{$button}--m-plain--m-no-padding--PaddingLeft);
-      --#{$button}--m-plain--MixBlendMode: var(--#{$button}--m-plain--m-no-padding--MixBlendMode);
 
       min-width: var(--#{$button}--m-plain--m-no-padding--MinWidth);
     }

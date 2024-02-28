@@ -126,13 +126,13 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$form}__field-group--field-group--MarginTop: calc(var(--#{$form}--GridGap) * -1);
   --#{$form}__field-group--GridTemplateColumns--toggle: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) + var(--pf-t--global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
-  --#{$form}__field-group-toggle--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$form}__field-group-toggle--PaddingTop: var(--#{$form}__field-group-header--PaddingTop);
   --#{$form}__field-group-toggle--PaddingRight: var(--pf-t--global--spacer--xs);
   --#{$form}__field-group__field-group__field-group-toggle--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$form}__field-group-header-toggle--BorderWidth--base: var(--pf-t--global--border--width--divider--default);
   --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderTopWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
-  --#{$form}__field-group-toggle-button--MarginTop: calc(var(--pf-t--global--spacer--form-element) * -1);
-  --#{$form}__field-group-toggle-button--MarginBottom: calc(var(--pf-t--global--spacer--form-element) * -1);
+  --#{$form}__field-group-toggle-button--MarginTop: calc(var(--#{$button}--m-plain--PaddingTop) * -1);
+  --#{$form}__field-group-toggle-button--MarginBottom: calc(var(--#{$button}--m-plain--PaddingBottom) * -1);
   --#{$form}__field-group-toggle-icon--Transition: var(--#{$pf-global}--Transition);
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
@@ -146,8 +146,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group__field-group--field-group__field-group-header--after--BorderTopWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
   --#{$form}__field-group-header-description--MarginTop: var(--pf-t--global--spacer--xs);
   --#{$form}__field-group-header-description--Color: var(--pf-t--global--text--color--subtle);
-  --#{$form}__field-group-header-actions--MarginTop: calc(var(--pf-t--global--spacer--form-element) * -1);
-  --#{$form}__field-group-header-actions--MarginBottom: calc(var(--pf-t--global--spacer--form-element) * -1);
   --#{$form}__field-group-header-actions--MarginLeft: var(--pf-t--global--spacer--sm);
   --#{$form}__field-group-body--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group-body--PaddingBottom: var(--pf-t--global--spacer--lg);
@@ -443,8 +441,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__field-group-header-actions {
-  margin-block-start: var(--#{$form}__field-group-header-actions--MarginTop);
-  margin-block-end: var(--#{$form}__field-group-header-actions--MarginBottom);
   margin-inline-start: var(--#{$form}__field-group-header-actions--MarginLeft);
   white-space: nowrap;
 }

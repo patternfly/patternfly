@@ -152,6 +152,7 @@
   }
 }
 
+// TODO: update to use gap
 .#{$text-input-group}__utilities {
   display: flex;
   align-items: center;
@@ -160,11 +161,6 @@
 
   > * + * {
     margin-inline-start: var(--#{$text-input-group}__utilities--child--MarginLeft);
-  }
-
-  .#{$button} {
-    --#{$button}--PaddingRight: var(--#{$text-input-group}__utilities--c-button--PaddingRight);
-    --#{$button}--PaddingLeft: var(--#{$text-input-group}__utilities--c-button--PaddingLeft);
   }
 }
 

@@ -1,26 +1,30 @@
 <{{#if button--type}}{{button--type}}{{else if button--IsSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}} class="{{pfv}}button
-  {{#if button--IsPrimary}} pf-m-primary{{/if}}
-  {{#if button--IsSecondary}} pf-m-secondary{{/if}}
-  {{#if button--IsTertiary}} pf-m-tertiary{{/if}}
-  {{#if button--IsWarning}} pf-m-warning{{/if}}
-  {{#if button--IsDanger}} pf-m-danger{{/if}}
-  {{#if button--IsLink}} pf-m-link{{/if}}
-  {{#if button--IsPlain}} pf-m-plain{{/if}}
-  {{#if button--IsInline}} pf-m-inline{{/if}}
-  {{#if button--IsControl}} pf-m-control{{/if}}
-  {{#if button--IsExpanded}} pf-m-expanded{{/if}}
-  {{#if button--IsProgress}} pf-m-progress{{/if}}
-  {{#if button--IsInProgress}} pf-m-in-progress{{/if}}
-  {{#if button--IsAriaDisabled}} pf-m-aria-disabled{{/if}}
-  {{#if button--HasNoPadding}} pf-m-no-padding{{/if}}
-  {{#if button--IsSmall}} pf-m-small{{/if}}
-  {{#if button--IsClicked}} pf-m-clicked{{/if}}
+  {{setModifiers
+    button--IsPrimary='pf-m-primary'
+    button--IsSecondary='pf-m-secondary'
+    button--IsTertiary='pf-m-tertiary'
+    button--IsWarning='pf-m-warning'
+    button--IsDanger='pf-m-danger'
+    button--IsLink='pf-m-link'
+    button--IsPlain='pf-m-plain'
+    button--IsActive='pf-m-active'
+    button--IsExpanded='pf-m-expanded'
+    button--IsInline='pf-m-inline'
+    button--IsControl='pf-m-control'
+    button--IsExpanded='pf-m-expanded'
+    button--IsProgress='pf-m-progress'
+    button--IsInProgress='pf-m-in-progress'
+    button--IsAriaDisabled='pf-m-aria-disabled'
+    button--HasNoPadding='pf-m-no-padding'
+    button--IsSmall='pf-m-small'
+    button--IsClicked='pf-m-clicked'
+    button--modifier=button--modifier
+  }}
   {{#if button--IsDisabled}}
     {{#if (concat button--type button--IsSpan button--IsAnchor)}}
       pf-m-disabled
     {{/if}}
-  {{/if}}
-  {{#if button--modifier}} {{button--modifier}}{{/if}}"
+  {{/if}}"
   {{#if button--IsSubmit}}
     type="submit"
   {{else if button--IsReset}}
@@ -32,6 +36,9 @@
   {{/if}}
   {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
     aria-expanded="true"
+  {{/if}}
+  {{#if button--role}}
+    role="{{button--role}}"
   {{/if}}
   {{#if button--IsSpan}}
     role="button"
@@ -60,7 +67,9 @@
   {{#if button--IsInProgress}}
     {{> button-progress}}
   {{/if}}
-  {{#if button--HasIcon}}
+  {{#if button--icon}}
+    <i class="fas fa-{{button--icon}}" aria-hidden="true"></i>
+  {{else if button--HasIcon}}
     {{#> button-icon button-icon--modifier="pf-m-start"}}
       <i class="fas fa-plus-circle" aria-hidden="true"></i>
     {{/button-icon}}
