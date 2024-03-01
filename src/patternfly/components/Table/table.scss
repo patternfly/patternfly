@@ -310,14 +310,14 @@
     thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
       border-block-end: 0;
 
-      > * {
+      > :where(th, td) {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
       }
     }
 
     // standard sticky headers
     > thead:where(.#{$table}__thead):not(.pf-m-nested-column-header) {
-      > tr:where(.#{$table}__tr) > * {
+      > tr:where(.#{$table}__tr) > :where(th, td) {
         position: sticky;
         inset-block-start: 0;
         background: var(--#{$table}--BackgroundColor);
@@ -400,7 +400,7 @@
   }
 
   // Table cell
-  tr:where(.#{$table}__tr) > * {
+  tr:where(.#{$table}__tr) > :where(th, td) {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
     // set position relative for ::before/::after borders
@@ -529,7 +529,7 @@
 
     --#{$table}--cell--FontSize: var(--#{$table}__tbody--cell--FontSize);
 
-    > tr:where(.#{$table}__tr) > * {
+    > tr:where(.#{$table}__tr) > :where(th, td) {
       overflow-wrap: break-word;
     }
 
@@ -778,7 +778,7 @@
   &.pf-m-truncate {
     --#{$table}--cell--MinWidth: 100%;
 
-    > * {
+    > :where(th, td) {
       overflow: var(--#{$table}--cell--Overflow);
       text-overflow: var(--#{$table}--cell--TextOverflow);
       white-space: var(--#{$table}--cell--WhiteSpace);
