@@ -1,7 +1,7 @@
 ---
 id: Accordion
 section: components
-cssPrefix: pf-v5-c-accordion
+cssPrefix: pf-v6-c-accordion
 ---
 
 ## Examples
@@ -407,30 +407,30 @@ cssPrefix: pf-v5-c-accordion
 ### Overview
 There are two variations to build the accordion component. The first is to use `<div>` and `<h1 - h6>` tags:
 
-- `.pf-v5-c-accordion` is placed on a `<div>`,
-- `.pf-v5-c-accordion__toggle` is placed on a `<button>` that is inside a `<h1-h6>`, and 
-- `.pf-v5-c-accordion__expandable-content` is placed on a `<div>`. 
+- `.pf-v6-c-accordion` is placed on a `<div>`,
+- `.pf-v6-c-accordion__toggle` is placed on a `<button>` that is inside a `<h1-h6>`, and
+- `.pf-v6-c-accordion__expandable-content` is placed on a `<div>`.
 
 The heading level that you use should fit within the rest of the headings outlined on your page.
 
 Another variation is using the definition list:
 
-- `.pf-v5-c-accordion` is placed on a `<dl>`, 
-- `.pf-v5-c-accordion__toggle` is placed on a `<button>` that is inside a `<dt>`, and 
-- `.pf-v5-c-accordion__expandable-content` is placed on a `<dd>`.
+- `.pf-v6-c-accordion` is placed on a `<dl>`,
+- `.pf-v6-c-accordion__toggle` is placed on a `<button>` that is inside a `<dt>`, and
+- `.pf-v6-c-accordion__expandable-content` is placed on a `<dd>`.
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-accordion` | `<div>`, `<dl>` | Initiates an accordion component. **Required**|
-| `.pf-v5-c-accordion__item` | `<div>` | Initiates an accordion item component. **Required**|
-| `.pf-v5-c-accordion__toggle` | `<h1-h6><button>`, `<dt><button>` | Initiates a toggle in the accordion. **Required** |
-| `.pf-v5-c-accordion__toggle-text` | `<span>` | Initiates the text inside the toggle. **Required** |
-| `.pf-v5-c-accordion__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
-| `.pf-v5-c-accordion__expandable-content` | `<div>`, `<dd>` | Initiates expandable content. **Must be paired with a button** |
-| `.pf-v5-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
-| `.pf-m-bordered` | `.pf-v5-c-accordion` | Modifies the accordion to add borders between items. |
-| `.pf-m-display-lg` | `.pf-v5-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
-| `.pf-m-toggle-start` | `.pf-v5-c-accordion` | Modifies accordion styling when accordion toggle icons are rendered at the start of the toggle, before the toggle text. |
-| `.pf-m-expanded` | `.pf-v5-c-accordion__item` | Modifies the accordion item for the expanded state. |
-| `.pf-m-fixed` | `.pf-v5-c-accordion__expandable-content` | Modifies the expandable content for the fixed state. |
+| `.pf-v6-c-accordion` | `<div>`, `<dl>` | Initiates an accordion component. **Required**|
+| `.pf-v6-c-accordion__item` | `<div>` | Initiates an accordion item component. **Required**|
+| `.pf-v6-c-accordion__toggle` | `<h1-h6><button>`, `<dt><button>` | Initiates a toggle in the accordion. **Required** |
+| `.pf-v6-c-accordion__toggle-text` | `<span>` | Initiates the text inside the toggle. **Required** |
+| `.pf-v6-c-accordion__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
+| `.pf-v6-c-accordion__expandable-content` | `<div>`, `<dd>` | Initiates expandable content. **Must be paired with a button** |
+| `.pf-v6-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
+| `.pf-m-bordered` | `.pf-v6-c-accordion` | Modifies the accordion to add borders between items. |
+| `.pf-m-display-lg` | `.pf-v6-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
+| `.pf-m-toggle-start` | `.pf-v6-c-accordion` | Modifies accordion styling when accordion toggle icons are rendered at the start of the toggle, before the toggle text. |
+| `.pf-m-expanded` | `.pf-v6-c-accordion__item` | Modifies the accordion item for the expanded state. |
+| `.pf-m-fixed` | `.pf-v6-c-accordion__expandable-content` | Modifies the expandable content for the fixed state. |

@@ -1,7 +1,7 @@
 ---
 id: Grid
 section: layouts
-cssPrefix: pf-v5-l-grid
+cssPrefix: pf-v6-l-grid
 ---
 
 import './Grid.css'
@@ -418,10 +418,10 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-l-grid` | `<div>` | Initializes the grid layout. |
-| `.pf-v5-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
-| `.pf-m-gutter` | `.pf-v5-l-grid` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-all-{1-12}-col{-on-[breakpoint]}` | `.pf-v5-l-grid` | Defines grid item size on grid container at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-{1-12}-col{-on-[breakpoint]}` | `.pf-v5-l-grid__item` | Defines grid item size at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  Although not required, they are strongly suggested. If not used, grid item will default to 12 col. |
-| `.pf-m-{2-x}-row{-on-[breakpoint]}` | `.pf-v5-l-grid__item` | Defines grid item row span at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
-| `--pf-v5-l-grid--item--Order{-on-[breakpoint]}: {order}` | `.pf-v5-l-grid > .pf-v5-l-grid`, `.pf-v5-l-grid__item` | Modifies the order of the grid layout element at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-v6-l-grid` | `<div>` | Initializes the grid layout. |
+| `.pf-v6-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
+| `.pf-m-gutter` | `.pf-v6-l-grid` | Adds space between children by using the globally defined gutter value. |
+| `.pf-m-all-{1-12}-col{-on-[breakpoint]}` | `.pf-v6-l-grid` | Defines grid item size on grid container at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-{1-12}-col{-on-[breakpoint]}` | `.pf-v6-l-grid__item` | Defines grid item size at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  Although not required, they are strongly suggested. If not used, grid item will default to 12 col. |
+| `.pf-m-{2-x}-row{-on-[breakpoint]}` | `.pf-v6-l-grid__item` | Defines grid item row span at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
+| `--pf-v6-l-grid--item--Order{-on-[breakpoint]}: {order}` | `.pf-v6-l-grid > .pf-v5-l-grid`, `.pf-v6-l-grid__item` | Modifies the order of the grid layout element at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

@@ -1,7 +1,7 @@
 ---
 id: Skeleton
 section: components
-cssPrefix: pf-v5-c-skeleton
+cssPrefix: pf-v6-c-skeleton
 ---
 
 import './Skeleton.css'
@@ -53,31 +53,31 @@ import './Skeleton.css'
 
 ### Text modifiers
 ```hbs
---pf-v5-global--FontSize--4xl
+--pf-v6-global--FontSize--4xl
 {{#> skeleton skeleton--modifier="pf-m-text-4xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--3xl
+--pf-v6-global--FontSize--3xl
 {{#> skeleton skeleton--modifier="pf-m-text-3xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--2xl
+--pf-v6-global--FontSize--2xl
 {{#> skeleton skeleton--modifier="pf-m-text-2xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--xl
+--pf-v6-global--FontSize--xl
 {{#> skeleton skeleton--modifier="pf-m-text-xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--lg
+--pf-v6-global--FontSize--lg
 {{#> skeleton skeleton--modifier="pf-m-text-lg"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--md
+--pf-v6-global--FontSize--md
 {{#> skeleton skeleton--modifier="pf-m-text-md"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--sm
+--pf-v6-global--FontSize--sm
 {{#> skeleton skeleton--modifier="pf-m-text-sm"}}
 {{/skeleton}}
 ```
@@ -126,9 +126,9 @@ Large rectangle
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
-| `.pf-m-width-[sm, md, lg, 25, 33, 50, 66, 75]` | `.pf-v5-c-skeleton` | Modifies the width of the skeleton. The default is 100%. |
-| `.pf-m-height-[sm, md, lg, 25, 33, 50, 66, 75, 100]` | `.pf-v5-c-skeleton` | Modifies the height of the skeleton. The default is the inherited font size. |
-| `.pf-m-text-[sm, md, lg, xl, 2xl, 3xl, 4xl]` | `.pf-v5-c-skeleton` | Modifies the skeleton height to match the height of PatternFly's text elements. |
-| `.pf-m-circle` | `.pf-v5-c-skeleton` | Modifies the border radius of the skeleton to be a circle. Use a width modifier to specify the size. |
-| `.pf-m-square` | `.pf-v5-c-skeleton` | Modifies the border radius of the skeleton to be a square. Use a width modifier to specify the size. |
+| `.pf-v6-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
+| `.pf-m-width-[sm, md, lg, 25, 33, 50, 66, 75]` | `.pf-v6-c-skeleton` | Modifies the width of the skeleton. The default is 100%. |
+| `.pf-m-height-[sm, md, lg, 25, 33, 50, 66, 75, 100]` | `.pf-v6-c-skeleton` | Modifies the height of the skeleton. The default is the inherited font size. |
+| `.pf-m-text-[sm, md, lg, xl, 2xl, 3xl, 4xl]` | `.pf-v6-c-skeleton` | Modifies the skeleton height to match the height of PatternFly's text elements. |
+| `.pf-m-circle` | `.pf-v6-c-skeleton` | Modifies the border radius of the skeleton to be a circle. Use a width modifier to specify the size. |
+| `.pf-m-square` | `.pf-v6-c-skeleton` | Modifies the border radius of the skeleton to be a square. Use a width modifier to specify the size. |

@@ -1,7 +1,7 @@
 ---
 id: Popover
 section: components
-cssPrefix: pf-v5-c-popover
+cssPrefix: pf-v6-c-popover
 ---
 
 import './Popover.css'
@@ -430,36 +430,36 @@ A popover is used to provide contextual information for another component on cli
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-v5-c-popover` | Identifies the element that serves as the popover container. **Required** |
-| `aria-labelledby="[id value of .pf-v5-c-title]"` | `.pf-v5-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title. **Required when .pf-v5-c-title is present** |
-| `aria-label="[title of popover]"` | `.pf-v5-c-popover` | Gives the popover an accessible name. **Required when .pf-v5-c-title is _not_ present** |
-| `aria-describedby="[id value of applicable content]"` | `.pf-v5-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
-| `aria-modal="true"` | `.pf-v5-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
-| `aria-label="Close"` | `.pf-v5-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
-| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-v5-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
-| `.pf-v5-screen-reader` | `.pf-v5-c-popover__title-text <span>` | Adds text to be read saying the alert status before the title. If `.pf-v5-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
+| `role="dialog"` | `.pf-v6-c-popover` | Identifies the element that serves as the popover container. **Required** |
+| `aria-labelledby="[id value of .pf-v6-c-title]"` | `.pf-v6-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title. **Required when .pf-v6-c-title is present** |
+| `aria-label="[title of popover]"` | `.pf-v6-c-popover` | Gives the popover an accessible name. **Required when .pf-v6-c-title is _not_ present** |
+| `aria-describedby="[id value of applicable content]"` | `.pf-v6-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
+| `aria-modal="true"` | `.pf-v6-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
+| `aria-label="Close"` | `.pf-v6-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
+| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-v6-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
+| `.pf-v6-screen-reader` | `.pf-v6-c-popover__title-text <span>` | Adds text to be read saying the alert status before the title. If `.pf-v6-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-popover` | `<div>` |  Creates a popover. Always use it with a modifier class that positions the popover relative to the element that triggered it. **Required** |
-| `.pf-v5-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
-| `.pf-v5-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
-| `.pf-v5-c-popover__close` | `<div>` |  Positions the close icon in the top-right corner of the popover. **Required if there is a close button** |
-| `.pf-v5-c-popover__header` | `<header>` | Creates the popover header. **Required if there is a title**|
-| `.pf-v5-c-popover__title` | `<div>` | Creates the popover title. |
-| `.pf-v5-c-popover__title-icon` | `<span>` | Creates the popover title icon. |
-| `.pf-v5-c-popover__title-text` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<span>` | Creates the popover title text. |
-| `.pf-v5-c-popover__body` | `<div>` |  The popover's body text. **Required** |
-| `.pf-v5-c-popover__footer` | `<footer>` | Initiates a popover footer. |
-| `.pf-m-left{-top/bottom}` | `.pf-v5-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |
-| `.pf-m-right{-top/bottom}` | `.pf-v5-c-popover` | Positions the popover to the right (or right top/right bottom) of the element. |
-| `.pf-m-top{-left/right}` | `.pf-v5-c-popover` | Positions the popover to the top (or top left/top right) of the element. |
-| `.pf-m-bottom{-left/right}` | `.pf-v5-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
-| `.pf-m-no-padding` | `.pf-v5-c-popover` | Removes the outer padding from the popover content. |
-| `.pf-m-width-auto` | `.pf-v5-c-popover` | Allows popover width to be defined by the popover content. |
-| `.pf-m-custom` | `.pf-v5-c-popover` | Modifies for the custom alert state. |
-| `.pf-m-info` | `.pf-v5-c-popover` | Modifies for the info alert state. |
-| `.pf-m-success` | `.pf-v5-c-popover` | Modifies for the success alert state. |
-| `.pf-m-warning` | `.pf-v5-c-popover` | Modifies for the warning alert state. |
-| `.pf-m-danger` | `.pf-v5-c-popover` | Modifies for the danger alert state. |
+| `.pf-v6-c-popover` | `<div>` |  Creates a popover. Always use it with a modifier class that positions the popover relative to the element that triggered it. **Required** |
+| `.pf-v6-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
+| `.pf-v6-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
+| `.pf-v6-c-popover__close` | `<div>` |  Positions the close icon in the top-right corner of the popover. **Required if there is a close button** |
+| `.pf-v6-c-popover__header` | `<header>` | Creates the popover header. **Required if there is a title**|
+| `.pf-v6-c-popover__title` | `<div>` | Creates the popover title. |
+| `.pf-v6-c-popover__title-icon` | `<span>` | Creates the popover title icon. |
+| `.pf-v6-c-popover__title-text` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<span>` | Creates the popover title text. |
+| `.pf-v6-c-popover__body` | `<div>` |  The popover's body text. **Required** |
+| `.pf-v6-c-popover__footer` | `<footer>` | Initiates a popover footer. |
+| `.pf-m-left{-top/bottom}` | `.pf-v6-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |
+| `.pf-m-right{-top/bottom}` | `.pf-v6-c-popover` | Positions the popover to the right (or right top/right bottom) of the element. |
+| `.pf-m-top{-left/right}` | `.pf-v6-c-popover` | Positions the popover to the top (or top left/top right) of the element. |
+| `.pf-m-bottom{-left/right}` | `.pf-v6-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
+| `.pf-m-no-padding` | `.pf-v6-c-popover` | Removes the outer padding from the popover content. |
+| `.pf-m-width-auto` | `.pf-v6-c-popover` | Allows popover width to be defined by the popover content. |
+| `.pf-m-custom` | `.pf-v6-c-popover` | Modifies for the custom alert state. |
+| `.pf-m-info` | `.pf-v6-c-popover` | Modifies for the info alert state. |
+| `.pf-m-success` | `.pf-v6-c-popover` | Modifies for the success alert state. |
+| `.pf-m-warning` | `.pf-v6-c-popover` | Modifies for the warning alert state. |
+| `.pf-m-danger` | `.pf-v6-c-popover` | Modifies for the danger alert state. |

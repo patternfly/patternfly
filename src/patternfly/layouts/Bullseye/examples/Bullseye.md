@@ -1,7 +1,7 @@
 ---
 id: Bullseye
 section: layouts
-cssPrefix: pf-v5-l-bullseye
+cssPrefix: pf-v6-l-bullseye
 ---
 
 import './Bullseye.css'
@@ -21,5 +21,5 @@ The bullseye layout is designed to center a single child element horizontally an
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-l-bullseye` | `<div>` | Initializes the bullseye layout. A bullseye can only have one child. |
-| `.pf-v5-l-bullseye__item` |  `<div>` | Explicitly sets the child for the bullseye. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
+| `.pf-v6-l-bullseye` | `<div>` | Initializes the bullseye layout. A bullseye can only have one child. |
+| `.pf-v6-l-bullseye__item` |  `<div>` | Explicitly sets the child for the bullseye. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |

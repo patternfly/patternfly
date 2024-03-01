@@ -1,7 +1,7 @@
 ---
 id: Text
 section: components
-cssPrefix: pf-v5-c-content
+cssPrefix: pf-v6-c-content
 ---
 
 ## Examples
@@ -131,7 +131,7 @@ cssPrefix: pf-v5-c-content
 
 ## Documentation
 ### Overview
-When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-v5-c-content` as container. It can handle almost any HTML tag:
+When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-v6-c-content` as container. It can handle almost any HTML tag:
 
 - `<p>` paragraphs
 - `<ul>` `<ol>` `<dl>` lists
@@ -139,13 +139,13 @@ When you can't use the CSS classes you want, or when you just want to directly u
 - `<blockquote>` quotes
 - `<em>` and `<strong>`
 
-This `pf-v5-c-content` class can be used in any context where you just want to (or can only) write some text.
+This `pf-v6-c-content` class can be used in any context where you just want to (or can only) write some text.
 
 This component is an exception to the variable system since we style type selectors.
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rhythm and typographic treatment to html elements. |
-| `.pf-m-visited` | `.pf-v5-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
+| `.pf-v6-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rhythm and typographic treatment to html elements. |
+| `.pf-m-visited` | `.pf-v6-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
 | `.pf-m-plain` | `<ul>`, `<ol>` | Removes the list marker and indentation. |

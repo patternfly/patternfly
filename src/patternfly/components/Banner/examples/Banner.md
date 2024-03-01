@@ -1,7 +1,7 @@
 ---
 id: 'Banner'
 section: components
-cssPrefix: pf-v5-c-banner
+cssPrefix: pf-v6-c-banner
 ---
 
 ## Examples
@@ -99,7 +99,7 @@ Banners can be styled with one of 9 different nonstatus colors. A nonstatus bann
 ```
 
 ### Status
-When a banner is used to convey status, it is advised to add an icon that also conveys status visually, and to provide screen reader text using ` .pf-v5-screen-reader ` or an equivalent.
+When a banner is used to convey status, it is advised to add an icon that also conveys status visually, and to provide screen reader text using ` .pf-v6-screen-reader ` or an equivalent.
 
 ```hbs
 {{#> banner banner--modifier="pf-m-success"}}
@@ -176,18 +176,18 @@ When a banner is used to convey status, it is advised to add an icon that also c
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-banner` | `<div>` |  Initiates a banner. **Required** |
-| `.pf-m-red` | `.pf-v5-c-banner` |  Modifies banner for red styling. |
-| `.pf-m-orangered` | `.pf-v5-c-banner` |  Modifies banner for orangered styling. |
-| `.pf-m-orange` | `.pf-v5-c-banner` |  Modifies banner for orange styling. |
-| `.pf-m-gold` | `.pf-v5-c-banner` |  Modifies banner for gold styling. |
-| `.pf-m-green` | `.pf-v5-c-banner` |  Modifies banner for green styling. |
-| `.pf-m-cyan` | `.pf-v5-c-banner` |  Modifies banner for cyan styling. |
-| `.pf-m-blue` | `.pf-v5-c-banner` |  Modifies banner for blue styling. |
-| `.pf-m-purple` | `.pf-v5-c-banner` |  Modifies banner for purple styling. |
-| `.pf-m-success` | `.pf-v5-c-banner` |  Modifies banner for success status styling. |
-| `.pf-m-warning` | `.pf-v5-c-banner` |  Modifies banner for warning status styling. |
-| `.pf-m-danger` | `.pf-v5-c-banner` |  Modifies banner for danger status styling. |
-| `.pf-m-info` | `.pf-v5-c-banner` |  Modifies banner for info status styling. |
-| `.pf-m-custom` | `.pf-v5-c-banner` |  Modifies banner for custom status styling. |
-| `.pf-m-sticky` | `.pf-v5-c-banner` |  Modifies banner to be sticky to the top of its container. |
+| `.pf-v6-c-banner` | `<div>` |  Initiates a banner. **Required** |
+| `.pf-m-red` | `.pf-v6-c-banner` |  Modifies banner for red styling. |
+| `.pf-m-orangered` | `.pf-v6-c-banner` |  Modifies banner for orangered styling. |
+| `.pf-m-orange` | `.pf-v6-c-banner` |  Modifies banner for orange styling. |
+| `.pf-m-gold` | `.pf-v6-c-banner` |  Modifies banner for gold styling. |
+| `.pf-m-green` | `.pf-v6-c-banner` |  Modifies banner for green styling. |
+| `.pf-m-cyan` | `.pf-v6-c-banner` |  Modifies banner for cyan styling. |
+| `.pf-m-blue` | `.pf-v6-c-banner` |  Modifies banner for blue styling. |
+| `.pf-m-purple` | `.pf-v6-c-banner` |  Modifies banner for purple styling. |
+| `.pf-m-success` | `.pf-v6-c-banner` |  Modifies banner for success status styling. |
+| `.pf-m-warning` | `.pf-v6-c-banner` |  Modifies banner for warning status styling. |
+| `.pf-m-danger` | `.pf-v6-c-banner` |  Modifies banner for danger status styling. |
+| `.pf-m-info` | `.pf-v6-c-banner` |  Modifies banner for info status styling. |
+| `.pf-m-custom` | `.pf-v6-c-banner` |  Modifies banner for custom status styling. |
+| `.pf-m-sticky` | `.pf-v6-c-banner` |  Modifies banner to be sticky to the top of its container. |

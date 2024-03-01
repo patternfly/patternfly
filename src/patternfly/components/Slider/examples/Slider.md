@@ -1,7 +1,7 @@
 ---
 id: 'Slider'
 section: components
-cssPrefix: pf-v5-c-slider
+cssPrefix: pf-v6-c-slider
 ---
 
 ## Examples
@@ -11,7 +11,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="8"
   slider--value-now="5"
-  slider--attribute='style="--pf-v5-c-slider--value: 62.5%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 62.5%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -37,7 +37,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -49,7 +49,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -68,7 +68,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="8"
   slider--value-now="5"
-  slider--attribute='style="--pf-v5-c-slider--value: 62.5%; --pf-v5-c-slider__value--c-form-control--width-chars: 1;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 62.5%; --pf-v6-c-slider__value--c-form-control--width-chars: 1;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -96,7 +96,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -127,7 +127,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -152,7 +152,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -177,7 +177,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Minus"'}}
@@ -201,7 +201,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -230,7 +230,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -261,7 +261,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="8"
   slider--value-now="5"
-  slider--attribute='style="--pf-v5-c-slider--value: 62.5%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 62.5%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -287,7 +287,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
+  slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -318,27 +318,27 @@ cssPrefix: pf-v5-c-slider
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="slider"` | `.pf-v5-c-slider__thumb` | Identifies the element as a slider. **Required** |
-| `tabindex="0"` | `.pf-v5-c-slider__thumb` | Includes the slider thumb in the page tab sequence. **Note:** only for use with non-disabled slider. **Required** |
-| `aria-disabled="true"` | `.pf-v5-c-slider.pf-m-disabled .pf-v5-c-slider__thumb` | Indicates that the slider thumb is disabled. **Required** |
-| `aria-valuemin="[value]"` | `.pf-v5-c-slider__thumb` | Specifies the minimum value of the slider. **Required** |
-| `aria-valuemax="[value]"` | `.pf-v5-c-slider__thumb` | Specifies the maximum value of the slider. **Required** |
-| `aria-valuenow="[value]"` | `.pf-v5-c-slider__thumb` | Specifies the current value of the slider. **Required** |
+| `role="slider"` | `.pf-v6-c-slider__thumb` | Identifies the element as a slider. **Required** |
+| `tabindex="0"` | `.pf-v6-c-slider__thumb` | Includes the slider thumb in the page tab sequence. **Note:** only for use with non-disabled slider. **Required** |
+| `aria-disabled="true"` | `.pf-v6-c-slider.pf-m-disabled .pf-v6-c-slider__thumb` | Indicates that the slider thumb is disabled. **Required** |
+| `aria-valuemin="[value]"` | `.pf-v6-c-slider__thumb` | Specifies the minimum value of the slider. **Required** |
+| `aria-valuemax="[value]"` | `.pf-v6-c-slider__thumb` | Specifies the maximum value of the slider. **Required** |
+| `aria-valuenow="[value]"` | `.pf-v6-c-slider__thumb` | Specifies the current value of the slider. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-slider` | `<div>` | Initiates the slider component. **Required** |
-| `.pf-v5-c-slider__main` | `<div>` | Initiates the slider main element. **Required** |
-| `.pf-v5-c-slider__rail` | `<div>` | Initiates the slider rail. **Required** |
-| `.pf-v5-c-slider__rail-track` | `<div>` | Initiates the slider rail track. **Required** |
-| `.pf-v5-c-slider__steps` | `<div>` | Initiates the slider steps. |
-| `.pf-v5-c-slider__step` | `<div>` | Initiates a slider step. |
-| `.pf-v5-c-slider__step-tick` | `<div>` | Initiates a slider step tick. |
-| `.pf-v5-c-slider__step-label` | `<div>` | Initiates a slider step label. |
-| `.pf-v5-c-slider__thumb` | `<div>` | Initiates the slider thumb. **Required** |
-| `.pf-v5-c-slider__value` | `<div>` | Initiates the slider value. |
-| `.pf-v5-c-slider__actions` | `<div>` | Initiates the slider actions. |
-| `.pf-m-disabled` | `.pf-v5-c-slider` | Modifies the slider for the disabled state. |
-| `.pf-m-floating` | `.pf-v5-c-slider__thumb` | Modifies the slider value to float above the thumb. |
-| `--pf-v5-c-slider--value` | `.pf-v5-c-slider` | Applies appropriate slider styles based on the current value. **Required** |
+| `.pf-v6-c-slider` | `<div>` | Initiates the slider component. **Required** |
+| `.pf-v6-c-slider__main` | `<div>` | Initiates the slider main element. **Required** |
+| `.pf-v6-c-slider__rail` | `<div>` | Initiates the slider rail. **Required** |
+| `.pf-v6-c-slider__rail-track` | `<div>` | Initiates the slider rail track. **Required** |
+| `.pf-v6-c-slider__steps` | `<div>` | Initiates the slider steps. |
+| `.pf-v6-c-slider__step` | `<div>` | Initiates a slider step. |
+| `.pf-v6-c-slider__step-tick` | `<div>` | Initiates a slider step tick. |
+| `.pf-v6-c-slider__step-label` | `<div>` | Initiates a slider step label. |
+| `.pf-v6-c-slider__thumb` | `<div>` | Initiates the slider thumb. **Required** |
+| `.pf-v6-c-slider__value` | `<div>` | Initiates the slider value. |
+| `.pf-v6-c-slider__actions` | `<div>` | Initiates the slider actions. |
+| `.pf-m-disabled` | `.pf-v6-c-slider` | Modifies the slider for the disabled state. |
+| `.pf-m-floating` | `.pf-v6-c-slider__thumb` | Modifies the slider value to float above the thumb. |
+| `--pf-v6-c-slider--value` | `.pf-v6-c-slider` | Applies appropriate slider styles based on the current value. **Required** |

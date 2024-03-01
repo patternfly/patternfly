@@ -1,7 +1,7 @@
 ---
 id: Action list
 section: components
-cssPrefix: pf-v5-c-action-list
+cssPrefix: pf-v6-c-action-list
 ---
 
 ## Examples
@@ -163,7 +163,7 @@ In wizards
 ### Usage
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-action-list` | `<div>` | Initiates the action list container. |
-| `.pf-v5-c-action-list__item` | `<div>` | Initiates the action list item container. |
-| `.pf-v5-c-action-list__group` | `<div>` | Initiates the action list group container. |
-| `.pf-m-icons` | `.pf-v5-c-action-list`, `.pf-v5-c-action-list__group` | Modifies the action list and/or group to support icon buttons. If applied to `.pf-v5-c-action-list`, all nested groups will inherit this modification. |
+| `.pf-v6-c-action-list` | `<div>` | Initiates the action list container. |
+| `.pf-v6-c-action-list__item` | `<div>` | Initiates the action list item container. |
+| `.pf-v6-c-action-list__group` | `<div>` | Initiates the action list group container. |
+| `.pf-m-icons` | `.pf-v6-c-action-list`, `.pf-v6-c-action-list__group` | Modifies the action list and/or group to support icon buttons. If applied to `.pf-v6-c-action-list`, all nested groups will inherit this modification. |

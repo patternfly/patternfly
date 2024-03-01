@@ -1,7 +1,7 @@
 ---
 id: Gallery
 section: layouts
-cssPrefix: pf-v5-l-gallery
+cssPrefix: pf-v6-l-gallery
 ---
 
 import './Gallery.css'
@@ -106,8 +106,8 @@ The gallery layout is designed so that all of its children are of uniform size, 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-l-gallery` |  `<div>` |  Initializes a Gallery layout |
-| `.pf-v5-l-gallery__item` | `<div>` |  Explicitly sets the child for the gallery. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
-| `.pf-m-gutter` | `.pf-v5-l-gallery` | Adds space between children by using the globally defined gutter value. |
-| `--pf-v5-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v5-l-gallery` | Modifies the min value of `grid-template-columns` declaration at the optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `--pf-v5-l-gallery--GridTemplateColumns--max{-on-[breakpoint]}: {width}` | `.pf-v5-l-gallery` | Modifies the max value of `grid-template-columns` declaration at the optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-v6-l-gallery` |  `<div>` |  Initializes a Gallery layout |
+| `.pf-v6-l-gallery__item` | `<div>` |  Explicitly sets the child for the gallery. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
+| `.pf-m-gutter` | `.pf-v6-l-gallery` | Adds space between children by using the globally defined gutter value. |
+| `--pf-v6-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v6-l-gallery` | Modifies the min value of `grid-template-columns` declaration at the optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-v6-l-gallery--GridTemplateColumns--max{-on-[breakpoint]}: {width}` | `.pf-v6-l-gallery` | Modifies the max value of `grid-template-columns` declaration at the optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

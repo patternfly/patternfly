@@ -1,7 +1,7 @@
 ---
 id: Tab content
 section: components
-cssPrefix: pf-v5-c-tab-content
+cssPrefix: pf-v6-c-tab-content
 ---
 
 ## Examples
@@ -60,16 +60,16 @@ Tab content should be used with the [tabs component](/components/tabs).
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="tabpanel"` | `.pf-v5-c-tab-content` | Indicates that the element serves as a container for a set of tabs. **Required** |
-| `aria-labelledby=[ID of tab element]` | `.pf-v5-c-tab-content` | Provides an accessible name for the tab panel by referring to the tab element that controls it. **Required**
-| `id=[ID of tab panel]` | `.pf-v5-c-tab-content` | Provides an ID for the tab panel, and should be used as the value of `aria-controls` on the tab element that controls the panel.  **Required**
-| `hidden` | `.pf-v5-c-tab-content` | Indicates that the tab panel is not visible. **Required on all but the active tab panel**
-| `tabindex="0"` | `.pf-v5-c-tab-content` | Puts the tab panel in the page tab sequence and facilitates movement to panel content for assistive technology users. **Required**
+| `role="tabpanel"` | `.pf-v6-c-tab-content` | Indicates that the element serves as a container for a set of tabs. **Required** |
+| `aria-labelledby=[ID of tab element]` | `.pf-v6-c-tab-content` | Provides an accessible name for the tab panel by referring to the tab element that controls it. **Required**
+| `id=[ID of tab panel]` | `.pf-v6-c-tab-content` | Provides an ID for the tab panel, and should be used as the value of `aria-controls` on the tab element that controls the panel.  **Required**
+| `hidden` | `.pf-v6-c-tab-content` | Indicates that the tab panel is not visible. **Required on all but the active tab panel**
+| `tabindex="0"` | `.pf-v6-c-tab-content` | Puts the tab panel in the page tab sequence and facilitates movement to panel content for assistive technology users. **Required**
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-tab-content` | `<section>` |  Initiates the tab content component. **Required** |
-| `.pf-v5-c-tab-content__body` | `<div>` |  Initiates the tab content body component. |
-| `.pf-m-padding` | `.pf-v5-c-tab-content__body` | Modifies the tab content body component padding. |
-| `.pf-m-secondary` | `.pf-v5-c-tab-content` |  Modifies the tab content component for secondary styles. |
+| `.pf-v6-c-tab-content` | `<section>` |  Initiates the tab content component. **Required** |
+| `.pf-v6-c-tab-content__body` | `<div>` |  Initiates the tab content body component. |
+| `.pf-m-padding` | `.pf-v6-c-tab-content__body` | Modifies the tab content body component padding. |
+| `.pf-m-secondary` | `.pf-v6-c-tab-content` |  Modifies the tab content component for secondary styles. |

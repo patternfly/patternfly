@@ -1,7 +1,7 @@
 ---
 id: Number input
 section: components
-cssPrefix: pf-v5-c-number-input
+cssPrefix: pf-v6-c-number-input
 ---
 
 ## Examples
@@ -207,7 +207,7 @@ cssPrefix: pf-v5-c-number-input
 
 ### Varying sizes
 ```hbs
-{{#> number-input number-input--id="number-input-sizes" number-input--attribute='style="--pf-v5-c-number-input--c-form-control--width-chars: 1;"'}}
+{{#> number-input number-input--id="number-input-sizes" number-input--attribute='style="--pf-v6-c-number-input--c-form-control--width-chars: 1;"'}}
   {{#> input-group}}
     {{#> input-group-item}}
       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
@@ -230,7 +230,7 @@ cssPrefix: pf-v5-c-number-input
 {{/number-input}}
 <br>
 <br>
-{{#> number-input number-input--id="number-input-sizes2" number-input--attribute='style="--pf-v5-c-number-input--c-form-control--width-chars: 10;"'}}
+{{#> number-input number-input--id="number-input-sizes2" number-input--attribute='style="--pf-v6-c-number-input--c-form-control--width-chars: 10;"'}}
   {{#> input-group}}
     {{#> input-group-item}}
       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
@@ -253,7 +253,7 @@ cssPrefix: pf-v5-c-number-input
 {{/number-input}}
 <br>
 <br>
-{{#> number-input number-input--id="number-input-sizes3" number-input--attribute='style="--pf-v5-c-number-input--c-form-control--width-chars: 5;"'}}
+{{#> number-input number-input--id="number-input-sizes3" number-input--attribute='style="--pf-v6-c-number-input--c-form-control--width-chars: 5;"'}}
   {{#> input-group}}
     {{#> input-group-item}}
       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
@@ -275,7 +275,7 @@ cssPrefix: pf-v5-c-number-input
   {{/input-group}}
 {{/number-input}}
 <br><br>
-{{#> number-input number-input--id="number-input-sizes4" number-input--attribute='style="--pf-v5-c-number-input--c-form-control--width-chars: 5;"'}}
+{{#> number-input number-input--id="number-input-sizes4" number-input--attribute='style="--pf-v6-c-number-input--c-form-control--width-chars: 5;"'}}
   {{#> input-group}}
     {{#> input-group-item}}
       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
@@ -302,15 +302,15 @@ cssPrefix: pf-v5-c-number-input
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="Plus"`, `aria-label="Minus"` | `.pf-v5-c-button.pf-m-control` | Provides an accessible name for the outer plus/minus buttons. **Required** |
-| `min` | `input[type="number"].pf-v5-c-form-control` | Provides an optional minimum value for the input. |
-| `max` | `input[type="number"].pf-v5-c-form-control` | Provides an optional maximum value for the input. |
+| `aria-label="Plus"`, `aria-label="Minus"` | `.pf-v6-c-button.pf-m-control` | Provides an accessible name for the outer plus/minus buttons. **Required** |
+| `min` | `input[type="number"].pf-v6-c-form-control` | Provides an optional minimum value for the input. |
+| `max` | `input[type="number"].pf-v6-c-form-control` | Provides an optional maximum value for the input. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-number-input` | `<div>` | Initiates the number input component. |
-| `.pf-v5-c-number-input__icon` | `<span>` | Initiates the number input icon. |
-| `.pf-v5-c-number-input__unit` | `<span>` | Initiates the number input unit. |
-| `.pf-m-status` | `.pf-v5-c-number-input` | Modifies the width to create enough space for a status icon to be included in the form control portion of the number input. **Required** if a status icon may be shown, even if the icon is not currently shown. |
-| `--pf-v5-c-number-input--c-form-control--width-chars` | `.pf-v5-c-number-input` | Specifies the number of characters to show in the input. |
+| `.pf-v6-c-number-input` | `<div>` | Initiates the number input component. |
+| `.pf-v6-c-number-input__icon` | `<span>` | Initiates the number input icon. |
+| `.pf-v6-c-number-input__unit` | `<span>` | Initiates the number input unit. |
+| `.pf-m-status` | `.pf-v6-c-number-input` | Modifies the width to create enough space for a status icon to be included in the form control portion of the number input. **Required** if a status icon may be shown, even if the icon is not currently shown. |
+| `--pf-v6-c-number-input--c-form-control--width-chars` | `.pf-v6-c-number-input` | Specifies the number of characters to show in the input. |

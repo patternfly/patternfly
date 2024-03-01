@@ -1,7 +1,7 @@
 ---
 id: Empty state
 section: components
-cssPrefix: pf-v5-c-empty-state
+cssPrefix: pf-v6-c-empty-state
 ---
 
 ## Examples
@@ -281,27 +281,27 @@ cssPrefix: pf-v5-c-empty-state
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-hidden="true"` | `.pf-v5-c-empty-state__icon` |  Hides icon for assistive technologies. **Required** |
+| `aria-hidden="true"` | `.pf-v6-c-empty-state__icon` |  Hides icon for assistive technologies. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-empty-state` | `<div>` |  Initiates an empty state component. The empty state centers its content (`.pf-v5-c-empty-state__content`) vertically and horizontally. **Required** |
-| `.pf-v5-c-empty-state__content` | `<div>` |  Creates the content container. **Required** |
-| `.pf-v5-c-empty-state__header` | `<div>` |  Creates the header container. **Required** |
-| `.pf-v5-c-empty-state__title` | `<div>` |  Creates the empty state title container. **Required** |
-| `.pf-v5-c-empty-state__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` |  Creates the empty state title text container. |
-| `.pf-v5-c-empty-state__icon` | `<div>` |  Creates the empty state icon container. |
-| `.pf-v5-c-empty-state__body` | `<div>` |  Creates the empty state body content. There can be more than one `.pf-v5-c-empty-state__body` elements. |
-| `.pf-v5-c-empty-state__footer` | `<div>` |  Creates the footer container. **Required** |
-| `.pf-v5-c-empty-state__actions` | `<div>` |  Container for actions. **Required** |
-| `.pf-m-xs` | `.pf-v5-c-empty-state` | Modifies the empty state for an extra small variation and max-width. |
-| `.pf-m-sm` | `.pf-v5-c-empty-state` | Modifies the empty state for a small max-width. |
-| `.pf-m-lg` | `.pf-v5-c-empty-state` | Modifies the empty state for a large max-width. |
-| `.pf-m-xl` | `.pf-v5-c-empty-state` | Modifies the empty state for an extra large variation and max-width. |
-| `.pf-m-full-height` | `.pf-v5-c-empty-state` | Modifies the empty state to be `height: 100%`. If you need the empty state content to be centered vertically, you can use this modifier to make the empty state fill the height of its container, and center `.pf-v5-c-empty-state__content`. **Note:** this modifier requires the parent of `.pf-v5-c-empty-state` have an implicit or explicit `height` defined.  |
-| `.pf-m-danger` | `.pf-v5-c-empty-state` | Modifies the empty state for danger status. |
-| `.pf-m-warning` | `.pf-v5-c-empty-state` | Modifies the empty state for warning status. |
-| `.pf-m-success` | `.pf-v5-c-empty-state` | Modifies the empty state for success status. |
-| `.pf-m-info` | `.pf-v5-c-empty-state` | Modifies the empty state for info status. |
-| `.pf-m-custom` | `.pf-v5-c-empty-state` | Modifies the empty state for custom status. |
+| `.pf-v6-c-empty-state` | `<div>` |  Initiates an empty state component. The empty state centers its content (`.pf-v6-c-empty-state__content`) vertically and horizontally. **Required** |
+| `.pf-v6-c-empty-state__content` | `<div>` |  Creates the content container. **Required** |
+| `.pf-v6-c-empty-state__header` | `<div>` |  Creates the header container. **Required** |
+| `.pf-v6-c-empty-state__title` | `<div>` |  Creates the empty state title container. **Required** |
+| `.pf-v6-c-empty-state__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` |  Creates the empty state title text container. |
+| `.pf-v6-c-empty-state__icon` | `<div>` |  Creates the empty state icon container. |
+| `.pf-v6-c-empty-state__body` | `<div>` |  Creates the empty state body content. There can be more than one `.pf-v6-c-empty-state__body` elements. |
+| `.pf-v6-c-empty-state__footer` | `<div>` |  Creates the footer container. **Required** |
+| `.pf-v6-c-empty-state__actions` | `<div>` |  Container for actions. **Required** |
+| `.pf-m-xs` | `.pf-v6-c-empty-state` | Modifies the empty state for an extra small variation and max-width. |
+| `.pf-m-sm` | `.pf-v6-c-empty-state` | Modifies the empty state for a small max-width. |
+| `.pf-m-lg` | `.pf-v6-c-empty-state` | Modifies the empty state for a large max-width. |
+| `.pf-m-xl` | `.pf-v6-c-empty-state` | Modifies the empty state for an extra large variation and max-width. |
+| `.pf-m-full-height` | `.pf-v6-c-empty-state` | Modifies the empty state to be `height: 100%`. If you need the empty state content to be centered vertically, you can use this modifier to make the empty state fill the height of its container, and center `.pf-v6-c-empty-state__content`. **Note:** this modifier requires the parent of `.pf-v6-c-empty-state` have an implicit or explicit `height` defined.  |
+| `.pf-m-danger` | `.pf-v6-c-empty-state` | Modifies the empty state for danger status. |
+| `.pf-m-warning` | `.pf-v6-c-empty-state` | Modifies the empty state for warning status. |
+| `.pf-m-success` | `.pf-v6-c-empty-state` | Modifies the empty state for success status. |
+| `.pf-m-info` | `.pf-v6-c-empty-state` | Modifies the empty state for info status. |
+| `.pf-m-custom` | `.pf-v6-c-empty-state` | Modifies the empty state for custom status. |

@@ -2,7 +2,7 @@
   position: relative;
 }
 
-#ws-core-e-log-viewer-with-popover-open .pf-v5-c-popover {
+#ws-core-e-log-viewer-with-popover-open .pf-v6-c-popover {
   display: none;
   position: absolute;
   z-index: 9999;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #ws-core-e-log-viewer-with-popover-open .pf-v5-c-popover {
+  #ws-core-e-log-viewer-with-popover-open .pf-v6-c-popover {
     display: block;
   }
 }
