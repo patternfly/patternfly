@@ -253,7 +253,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     align-items: start;
 
     // set contents of td to start at column two of td grid
-    > * {
+    > :where(:is(th, td)) {
       grid-column: 2;
     }
 
