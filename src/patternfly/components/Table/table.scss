@@ -77,10 +77,10 @@
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // Button
-  --#{$table}__button--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$table}__button--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$table}__button--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
@@ -146,11 +146,10 @@
   --#{$table}__sort--MinWidth: calc(6ch + var(--#{$table}--cell--PaddingRight) + var(--#{$table}--cell--PaddingLeft) + var(--#{$table}__sort-indicator--MarginLeft));
 
   // Sort button
-  --#{$table}__sort__button--PaddingTop: var(--pf-t--global--spacer--control--vertical);
-  --#{$table}__sort__button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$table}__sort__button--PaddingBottom: var(--pf-t--global--spacer--control--vertical);
-  --#{$table}__sort__button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__sort__button--MarginTop: calc(var(--#{$table}__sort__button--PaddingTop) * -1);
+  --#{$table}__sort__button--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$table}__sort__button--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}__sort__button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$table}__sort__button--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__sort__button--MarginBottom: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
   --#{$table}__sort__button--MarginLeft: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
   --#{$table}__sort__button--Color: var(--pf-t--global--text--color--regular);
@@ -469,8 +468,6 @@
   thead:where(.#{$table}__thead) {
     --#{$table}--cell--FontSize: var(--#{$table}__thead--cell--FontSize);
     --#{$table}--cell--FontWeight: var(--#{$table}__thead--cell--FontWeight);
-
-    vertical-align: baseline;
 
     // stylelint-disable
     &.pf-m-nested-column-header {
@@ -1026,9 +1023,14 @@
 // Table sort
 // ==================================================================
 .#{$table}__sort {
+  vertical-align: bottom;
+
   // - Table sort button
   // ==================================================================
   .#{$table}__button {
+    margin-block-end: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
+    margin-inline-start: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
+
     &:is(:hover, :focus) {
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
       --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--hover__text--Color);
@@ -1062,9 +1064,10 @@
 // Sort indicator
 .#{$table}__sort-indicator {
   grid-column: 2;
+  align-self: end;
   margin-inline-start: var(--#{$table}__sort-indicator--MarginLeft); // TODO: update this to gap
+  font-size: var(--#{$table}__sort-indicator--FontSize);
   color: var(--#{$table}__sort-indicator--Color);
-  color: var(--#{$table}__sort-indicator--FontSize);
   pointer-events: none;
 }
 
@@ -1158,6 +1161,14 @@
     min-width: 0;
     text-align: center;
   }
+}
+
+.#{$table}__thead {
+  vertical-align: bottom;
+}
+
+.#{$table}__tbody {
+  vertical-align: top
 }
 
 // replace this when inline text with icon is in place
