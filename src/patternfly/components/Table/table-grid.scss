@@ -139,7 +139,7 @@
   border: none;
 
   // reset cell modifications
-  tr:where(.#{$table}__tr) > :where(:is(th, td)) {
+  tr:where(.#{$table}__tr) > :where(th, td) {
     width: auto;
     min-width: 0;
     max-width: none;
@@ -224,7 +224,7 @@
     padding-inline-start: var(--#{$table}__tr--responsive--PaddingLeft);
 
     // Reset td padding
-    & > :where(:is(th, td)) {
+    & > :where(th, td) {
       padding-block-start: var(--#{$table}--cell--responsive--PaddingTop);
       padding-inline-end: var(--#{$table}--cell--responsive--PaddingRight);
       padding-block-end: var(--#{$table}--cell--responsive--PaddingBottom);
@@ -283,7 +283,7 @@
     }
   }
 
-  tr:where(.#{$table}__tr) > :where(:is(th, td)) {
+  tr:where(.#{$table}__tr) > :where(th, td) {
     // Remove first child padding left
     &:first-child {
       --#{$table}--cell--PaddingLeft: 0;
@@ -363,7 +363,7 @@
     box-shadow: none;
 
     // cells
-    > :where(:is(th, td)) {
+    > :where(th, td) {
       position: static;
       display: block;
     }
