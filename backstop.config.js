@@ -1048,7 +1048,6 @@ const relativeUrls = [
   '/layouts/stack/html/with-gutter',
   '/patterns/card-view/html-demos/card-view',
   '/patterns/dashboard/html-demos/basic',
-  '/patterns/penta-example/html-demos/penta-demo-in-progress',
   '/patterns/primary-detail/html-demos/inline-modifier',
   '/patterns/primary-detail/html-demos/primary-detail-card-data-list-expanded-on-mobile',
   '/patterns/primary-detail/html-demos/primary-detail-card-simple-list-expanded-on-mobile',
