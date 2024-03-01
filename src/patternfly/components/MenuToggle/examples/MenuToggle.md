@@ -9,47 +9,6 @@ import './MenuToggle.css'
 
 ## Examples
 
-### Testing
-```hbs
-<div class="test-container">
-{{> menu-toggle menu-toggle--text='Testing the button, this button has long text' menu-toggle--count='4 selected'}}
-{{> menu-toggle menu-toggle--IsAction=true menu-toggle--text='Action' menu-toggle--IsSecondary=true menu-toggle--IsSplitButton=true menu-toggle--check=true check--IsStandalone=true}}
-{{> menu-toggle menu-toggle--IsPrimary=true menu-toggle--text='Primary button'}}
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
-{{#> input-group}}
-  {{#> input-group-item input-group-item--IsFill=true}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
-  {{/input-group-item}}
-  {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
-  {{/input-group-item}}
-  {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
-  {{/input-group-item}}
-{{/input-group}}
-{{#> clipboard-copy clipboard-copy--id="expandable-not-expanded-editable"}}
-  {{#> clipboard-copy-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-labelledby="' clipboard-copy--id '-toggle ' clipboard-copy--id '-text-input" aria-controls="' clipboard-copy--id '-content"')}}
-      {{> clipboard-copy-toggle-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="' clipboard-copy--id '-copy-button" aria-labelledby="' clipboard-copy--id '-copy-button ' clipboard-copy--id '-text-input"')}}
-      <i class="fas fa-copy" aria-hidden="true"></i>
-    {{/button}}
-  {{/clipboard-copy-group}}
-  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
-    This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
-  {{/clipboard-copy-expandable-content}}
-{{/clipboard-copy}}
-</div>
-```
-
 ### Collapsed
 ```hbs
 {{#> menu-toggle}}
