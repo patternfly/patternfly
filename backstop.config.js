@@ -15,7 +15,7 @@ const viewports = {
 };
 
 // Base URL for the test relative URLs - defaults to the PF core default dev server
-const baseUrl = 'http://localhost:8001';
+const baseUrl = 'http://localhost:5000';
 
 // Relative URLs to test
 // These can be regular array item with the URL as the item, or an object with a 'url' item for the URL and additional items for scenario options outlined at https://github.com/garris/BackstopJS#advanced-scenarios
@@ -29,6 +29,7 @@ const baseUrl = 'http://localhost:8001';
   },
   '/components/accordion/html/bordered',
 */
+
 const relativeUrls = [
   '/components/about-modal/html-demos/basic',
   '/components/about-modal/html/basic',
@@ -37,6 +38,7 @@ const relativeUrls = [
   '/components/accordion/html/fixed',
   '/components/accordion/html/fluid',
   '/components/accordion/html/large-bordered',
+  '/components/accordion/html/toggle-icon-at-start',
   '/components/action-list/html/action-list-multiple-groups',
   '/components/action-list/html/action-list-single-group',
   '/components/action-list/html/action-list-with-cancel-button',
@@ -89,6 +91,7 @@ const relativeUrls = [
   '/components/button/html/link-button-with-a-count',
   '/components/button/html/links-as-buttons',
   '/components/button/html/progress',
+  '/components/button/html/small-buttons',
   '/components/button/html/types',
   '/components/button/html/variations',
   '/components/card/html-demos/aggregate-status-card',
@@ -582,6 +585,7 @@ const relativeUrls = [
   '/components/modal/html/custom-alert',
   '/components/modal/html/custom-title',
   '/components/modal/html/danger-alert',
+  '/components/modal/html/danger-alert-with-modifier-on-modal-title',
   '/components/modal/html/icon',
   '/components/modal/html/info-alert',
   '/components/modal/html/large',
@@ -614,6 +618,7 @@ const relativeUrls = [
   '/components/navigation/html/horizontal-subnav',
   '/components/navigation/html/horizontal-subnav-overflow',
   '/components/navigation/html/mixed',
+  '/components/navigation/html/nav-link-text',
   '/components/navigation/html/nav-with-drilldown-menu',
   '/components/navigation/html/nav-with-drilldown-menu-level-three',
   '/components/navigation/html/nav-with-drilldown-menu-level-two',
@@ -910,8 +915,8 @@ const relativeUrls = [
   '/components/toggle-group/html/default',
   '/components/toggle-group/html/icon-and-text',
   '/components/toggle-group/html/with-icon',
-  '/components/toolbar/html-demos/toolbar-attribute-value-checkbox-select-filter-on-desktop',
-  '/components/toolbar/html-demos/toolbar-attribute-value-checkbox-select-filter-on-mobile',
+  '/components/toolbar/html-demos/toolbar-attribute-value-checkbox-menu-toggle-filter-on-desktop',
+  '/components/toolbar/html-demos/toolbar-attribute-value-checkbox-menu-toggle-filter-on-mobile',
   '/components/toolbar/html-demos/toolbar-attribute-value-search-filter-on-desktop',
   '/components/toolbar/html-demos/toolbar-attribute-value-search-filter-on-mobile',
   '/components/toolbar/html-demos/toolbar-attribute-value-single-select-filter-on-desktop',
@@ -920,7 +925,6 @@ const relativeUrls = [
   '/components/toolbar/html-demos/toolbar-with-validation-on-desktop',
   '/components/toolbar/html/adjusted-group-spacers',
   '/components/toolbar/html/adjusted-spacers',
-  '/components/toolbar/html/expanded-elements',
   '/components/toolbar/html/group-types',
   '/components/toolbar/html/insets',
   '/components/toolbar/html/page-insets',
