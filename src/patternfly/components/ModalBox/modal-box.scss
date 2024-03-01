@@ -59,8 +59,8 @@
   --#{$modal-box}__header--body--PaddingTop: var(--pf-t--global--spacer--md);
 
   // Close
-  --#{$modal-box}__close--Top: var(--pf-v5-c-modal-box__header--PaddingTop); // calc(var(--pf-t--global--spacer--md));
-  --#{$modal-box}__close--Right: var(--pf-v5-c-modal-box__header--PaddingRight); // var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__close--Top: var(--#{$modal-box}__header--PaddingTop);
+  --#{$modal-box}__close--Right: var(--#{$modal-box}__header--PaddingRight);
   --#{$modal-box}__close--sibling--MarginRight: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
