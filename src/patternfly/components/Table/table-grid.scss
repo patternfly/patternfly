@@ -360,7 +360,6 @@
     max-height: var(--#{$table}__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
     overflow-y: auto;
     border-block-end: none;
-    box-shadow: none;
 
     // cells
     > :where(th, td) {

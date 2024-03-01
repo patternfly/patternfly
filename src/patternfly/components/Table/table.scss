@@ -24,9 +24,6 @@
   --#{$table}__tbody--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
 
-  // Tr
-  --#{$table}__tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);
-
   // TODO: update these in order of appearance in scss declarations
 
   // Th / td shared variables
@@ -184,14 +181,6 @@
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
-  // ::before border treatment
-  --#{$table}__compound-expansion-toggle__button--before--border-width--base: var(--pf-t--global--border--width--button--default);
-  --#{$table}__compound-expansion-toggle__button--before--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--before--Bottom: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
-  --#{$table}__compound-expansion-toggle__button--before--Left: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
-
   // ::after border treatment
   --#{$table}__compound-expansion-toggle__button--after--border-width--base: var(--pf-t--global--border--width--strong);
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
@@ -213,47 +202,29 @@
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // tr clickable
-  --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
-  --#{$table}__tr--m-clickable--BoxShadow: none;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-
-  // TODO Shadow tokens START HERE AGAIN
-  --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
+  --#{$table}__tr--m-clickable--focus--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
   // tr selected
-  --#{$table}__tr--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
   --#{$table}__tr--m-selected--after--BorderLeftColor: var(--pf-t--global--color--brand--default);
-  --#{$table}__tr--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
 
   // tbody clickable
-  --#{$table}__tbody--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-clickable--BoxShadow: none;
   --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__tbody--m-clickable--focus--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
   // tbody selected
   --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
   --#{$table}__tbody--m-selected--after--BorderLeftColor: var(--pf-t--global--border--color--clicked);
-  --#{$table}__tbody--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
 
   // Nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
@@ -316,30 +287,57 @@
       }
     }
 
-    // nested column header
-    > .pf-m-nested-column-header {
-      position: sticky;
-      inset-block-start: 0;
-      z-index: var(--pf-t--global--Zindex--xs);
-      background: var(--#{$table}--BackgroundColor);
+  //   thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
+  //     // border-block-end: 0;
 
-      > .pf-m-border-row {
-        height: var(--#{$table}--border-width--base);
-        background-color: var(--#{$table}--BorderColor);
-      }
+  //     > * {
+  //       z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
+  //     }
+  //   }
 
-      tr:where(.#{$table}__tr):not(:nth-last-child(2)) {
-        // stylelint-disable max-nesting-depth
-        th:where(.#{$table}__th),
-        td:where(.#{$table}__td) {
-          &:not([rowspan]) {
-            --#{$table}--cell--PaddingBottom: var(--#{$table}__thead--m-nested-column-header__tr--PaddingBottom);
-          }
-        }
-        // stylelint-enable
-      }
-    }
-  }
+  //   // // standard sticky headers
+  //   // > thead:where(.#{$table}__thead):not(.pf-m-nested-column-header) {
+  //   //   > tr:where(.#{$table}__tr) > * {
+  //   //     position: sticky;
+  //   //     inset-block-start: 0;
+  //   //     background: var(--#{$table}--BackgroundColor);
+
+  //   //     // stylelint-disable-next-line
+  //   //     &::after {
+  //   //       position: absolute;
+  //   //       inset-block-end: 0;
+  //   //       inset-inline-start: 0;
+  //   //       inset-inline-end: 0;
+  //   //       content: '';
+  //   //       border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+  //   //     }
+  //   //   }
+  //   // }
+
+  //   // nested column header
+  //   > .pf-m-nested-column-header {
+  //     position: sticky;
+  //     inset-block-start: 0;
+  //     z-index: var(--pf-t--global--Zindex--xs);
+  //     background: var(--#{$table}--BackgroundColor);
+
+  //     > .pf-m-border-row {
+  //       height: var(--#{$table}--border-width--base);
+  //       background-color: var(--#{$table}--BorderColor);
+  //     }
+
+  //     // tr:where(.#{$table}__tr):not(:nth-last-child(2)) {
+  //     //   // stylelint-disable max-nesting-depth
+  //     //   th:where(.#{$table}__th),
+  //     //   td:where(.#{$table}__td) {
+  //     //     &:not([rowspan]) {
+  //     //       --#{$table}--cell--PaddingBottom: var(--#{$table}__thead--m-nested-column-header__tr--PaddingBottom);
+  //     //     }
+  //     //   }
+  //     //   // stylelint-enable
+  //     // }
+  //   }
+  // }
 
   &:not(.pf-m-sticky-header) > .pf-m-nested-column-header {
     tr:where(.#{$table}__tr):not(:last-child) {
@@ -372,8 +370,6 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-
     // stylelint-disable-next-line
     &.pf-m-ghost-row {
       background-color: var(--#{$table}__tr--m-ghost-row--BackgroundColor);
@@ -473,6 +469,12 @@
     &.pf-m-nested-column-header {
       button:where(.#{$button}) {
         outline-offset: var(--#{$table}__thead--m-nested-column-header--button--OutlineOffset);
+      }
+
+      th:where(.#{$table}__th),
+      td:where(.#{$table}__td),
+      input:where(.#{$check}__input) {
+        vertical-align: middle;
       }
 
       tr:where(.#{$table}__tr):not(:first-child) {
@@ -635,7 +637,6 @@
       cursor: pointer;
       background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
 
       &:is(:hover, :focus) {
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
@@ -650,19 +651,6 @@
       position: relative;
       background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-selected--BoxShadow);
-
-      & + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--m-selected--BoxShadow);
-      }
-
-      & + tr:where(.#{$table}__tr).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow);
-      }
-
-      &:hover + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow);
-      }
     }
 
     &.pf-m-first-cell-offset-reset {
@@ -677,7 +665,6 @@
       cursor: pointer;
       background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tbody--m-clickable--BoxShadow);
 
       &.pf-m-expanded:not(.pf-m-selected) {
         --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-clickable--m-expanded--BorderColor);
@@ -702,24 +689,80 @@
 
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tbody--m-selected--BoxShadow);
-
-      & + tbody:where(.#{$table}__tbody).pf-m-selected {
-        --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--m-selected--BoxShadow);
-      }
-
-      & + tbody:where(.#{$table}__tbody).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow);
-      }
-
-      &:hover + tbody:where(.#{$table}__tbody).pf-m-selected {
-        box-shadow: var(--#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow);
-      }
     }
   }
 
   &.pf-m-drag-over {
     overflow-anchor: none;
+  }
+}
+
+// - Table thead
+.#{$table}__thead {
+  .#{$table}__tr {
+    border-block-end: 0;
+  }
+
+  &.pf-m-sticky-header {
+    position: relative;
+
+    thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
+      // border-block-end: 0;
+
+      > * {
+        z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
+      }
+    }
+
+    // // standard sticky headers
+    // > thead:where(.#{$table}__thead):not(.pf-m-nested-column-header) {
+    //   > tr:where(.#{$table}__tr) > * {
+    //     position: sticky;
+    //     inset-block-start: 0;
+    //     background: var(--#{$table}--BackgroundColor);
+
+    //     // stylelint-disable-next-line
+    //     &::after {
+    //       position: absolute;
+    //       inset-block-end: 0;
+    //       inset-inline-start: 0;
+    //       inset-inline-end: 0;
+    //       content: '';
+    //       border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    //     }
+    //   }
+    // }
+
+    // nested column header
+    > .pf-m-nested-column-header {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--pf-t--global--Zindex--xs);
+      background: var(--#{$table}--BackgroundColor);
+
+      > .pf-m-border-row {
+        height: var(--#{$table}--border-width--base);
+        background-color: var(--#{$table}--BorderColor);
+      }
+
+      // tr:where(.#{$table}__tr):not(:nth-last-child(2)) {
+      //   // stylelint-disable max-nesting-depth
+      //   th:where(.#{$table}__th),
+      //   td:where(.#{$table}__td) {
+      //     &:not([rowspan]) {
+      //       --#{$table}--cell--PaddingBottom: var(--#{$table}__thead--m-nested-column-header__tr--PaddingBottom);
+      //     }
+      //   }
+      //   // stylelint-enable
+      // }
+    }
+  }
+}
+
+// - Table tbody
+.#{$table}__tbody {
+  .#{$table}__tr {
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
   }
 }
 
@@ -750,14 +793,9 @@
   }
 }
 
-// Table button
+// - Table button
 .#{$table}__button {
   position: static;
-  width: auto;
-  padding-block-start: var(--#{$table}__button--PaddingTop);
-  padding-block-end: var(--#{$table}__button--PaddingBottom);
-  padding-inline-start: var(--#{$table}__button--PaddingLeft);
-  padding-inline-end: var(--#{$table}__button--PaddingRight);
   margin-inline-start: calc(var(--#{$table}__button--PaddingLeft) * -1);
   font-size: inherit;
   font-weight: inherit;
@@ -936,7 +974,6 @@
   --#{$table}__button--hover--Color: var(--#{$table}__compound-expansion-toggle__button--hover--Color);
 
   position: relative;
-  padding: 0;
 
   // show left border, use __text to truncate content
   &.pf-m-truncate {
@@ -944,10 +981,7 @@
   }
 
   .#{$table}__button {
-    position: static;
     min-width: 100%;
-    padding: 0;
-    margin: 0;
     overflow: hidden;
 
     // Remove outline and apply to parent td
@@ -956,51 +990,22 @@
     }
   }
 
-
   // Apply borders to button to avoid conflicts with expanded states
-  .#{$table}__button::before,
   .#{$table}__button::after {
     position: absolute;
     inset: 0;
-    content: '';
-    border-style: solid;
-    border-width: 0;
-  }
-
-  .#{$table}__button::before {
-    inset-block-start: 0;
-    inset-block-end: var(--#{$table}__compound-expansion-toggle__button--before--Bottom);
-    inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--before--Left);
-    border-color: var(--#{$table}__compound-expansion-toggle__button--before--BorderColor);
-    border-inline-start-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth);
-    border-inline-end-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderRightWidth);
-  }
-
-  .#{$table}__button::after {
-    // overlap previous row's border
-    inset-block-start: var(--#{$table}__compound-expansion-toggle__button--after--Top);
-    inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--after--Left);
     pointer-events: none;
-    border-color: var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
-    border-block-start-width: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth);
+    content: '';
+    border: 0;
   }
 
   &:hover,
   &:focus-within,
   &.pf-m-expanded {
-    --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: var(--#{$table}__compound-expansion-toggle__button--after--border-width--base);
-  }
-
-  &.pf-m-expanded {
-    .#{$table}__button::before {
-      border-block-end: var(--#{$table}--BackgroundColor) solid var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    }
-
-    &:first-child {
-      --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-    }
+    border-block-start-color: var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
+    border-block-start-width: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth);
+    border-block-start-style: solid;
+  //   --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: var(--#{$table}__compound-expansion-toggle__button--after--border-width--base);
   }
 
   &:focus-within {
@@ -1076,7 +1081,6 @@
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
-  box-shadow: 0 0 0 0 transparent;
 
   &,
   td:where(.#{$table}__td):first-child::after {
@@ -1113,7 +1117,6 @@
   &.pf-m-expanded {
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
     border-block-end-width: var(--#{$table}--border-width--base);
-    box-shadow: var(--#{$table}__expandable-row--m-expanded--BoxShadow);
   }
 
   &:not(.pf-m-expanded) {
