@@ -77,17 +77,16 @@
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // Button
-  --#{$table}__button--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$table}__button--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$table}__button--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__button--BackgroundColor: transparent;
+  --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__button--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__button--active--Color: var(--pf-t--global--text--color--regular);
+  --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
 
   // Compact
@@ -106,8 +105,6 @@
   --#{$table}__favorite--m-favorited--c-button--Color: var(--pf-t--global--color--favorite--clicked);
   --#{$table}__sort--m-favorite__button__text--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__sort--m-favorite__button--hover__text--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort--m-favorite__button--focus__text--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort--m-favorite__button--active__text--Color: var(--pf-t--global--text--color--regular);
 
   // Draggable
   --#{$table}__draggable--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
@@ -149,11 +146,10 @@
   --#{$table}__sort--MinWidth: calc(6ch + var(--#{$table}--cell--PaddingRight) + var(--#{$table}--cell--PaddingLeft) + var(--#{$table}__sort-indicator--MarginLeft));
 
   // Sort button
-  --#{$table}__sort__button--PaddingTop: var(--pf-t--global--spacer--control--vertical);
-  --#{$table}__sort__button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$table}__sort__button--PaddingBottom: var(--pf-t--global--spacer--control--vertical);
-  --#{$table}__sort__button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__sort__button--MarginTop: calc(var(--#{$table}__sort__button--PaddingTop) * -1);
+  --#{$table}__sort__button--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$table}__sort__button--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}__sort__button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$table}__sort__button--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__sort__button--MarginBottom: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
   --#{$table}__sort__button--MarginLeft: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
   --#{$table}__sort__button--Color: var(--pf-t--global--text--color--regular);
@@ -163,8 +159,6 @@
   // Sort text
   --#{$table}__sort__button__text--Color: currentcolor;
   --#{$table}__sort__button--hover__text--Color: currentcolor;
-  --#{$table}__sort__button--focus__text--Color: currentcolor;
-  --#{$table}__sort__button--active__text--Color: currentcolor;
 
   // Sort text
   --#{$table}__sort--cell--PaddingLeft: var(--pf-t--global--spacer--xs);
@@ -175,8 +169,6 @@
   --#{$table}__sort-indicator--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--border--color--clicked);
   --#{$table}__sort__button--hover__sort-indicator--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort__button--active__sort-indicator--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort__button--focus__sort-indicator--Color: var(--pf-t--global--text--color--regular);
 
   // Help
   --#{$table}__th--m-help--MinWidth: 11ch;
@@ -191,8 +183,6 @@
   // Compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--focus--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--active--Color: var(--pf-t--global--icon--color--brand--clicked);
 
   // ::before border treatment
   --#{$table}__compound-expansion-toggle__button--before--border-width--base: var(--pf-t--global--border--width--button--default);
@@ -231,10 +221,6 @@
   // TODO Shadow tokens START HERE AGAIN
   --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--focus--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-clickable--focus--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--active--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-clickable--active--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
   // tr selected
@@ -255,10 +241,6 @@
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-clickable--focus--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-clickable--focus--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-clickable--active--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-clickable--active--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
@@ -487,8 +469,6 @@
     --#{$table}--cell--FontSize: var(--#{$table}__thead--cell--FontSize);
     --#{$table}--cell--FontWeight: var(--#{$table}__thead--cell--FontWeight);
 
-    vertical-align: baseline;
-
     // stylelint-disable
     &.pf-m-nested-column-header {
       button:where(.#{$button}) {
@@ -657,9 +637,7 @@
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
       box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
 
-      &:hover,
-      &:focus,
-      &:active {
+      &:is(:hover, :focus) {
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
       }
     }
@@ -705,29 +683,15 @@
         --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-clickable--m-expanded--BorderColor);
       }
 
-      &:hover,
-      &:focus,
-      &:active {
+      &:is(:hover, :focus) {
+        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--hover--BoxShadow);
+        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
+
         // stylelint-disable max-nesting-depth
         &:not(.pf-m-selected) + tbody:where(.#{$table}__tbody).pf-m-selected {
           box-shadow: var(--#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow);
         }
         // stylelint-enable
-      }
-
-      &:hover {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--hover--BoxShadow);
-        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
-      }
-
-      &:focus {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--focus--BoxShadow);
-        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--focus--BackgroundColor);
-      }
-
-      &:active {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--active--BoxShadow);
-        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--active--BackgroundColor);
       }
     }
 
@@ -810,27 +774,8 @@
     margin-block-end: 0; // remove offset in nested tables
   }
 
-  // Define clickable area with invisible ::before pseudo
-  &::before {
-    position: absolute;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    cursor: pointer;
-    content: '';
-  }
-
-  &:hover {
+  &:is(:hover, :focus) {
     color: var(--#{$table}__button--hover--Color);
-  }
-
-  &:focus {
-    color: var(--#{$table}__button--focus--Color);
-  }
-
-  &:active {
-    color: var(--#{$table}__button--active--Color);
   }
 }
 
@@ -989,8 +934,6 @@
 .#{$table}__compound-expansion-toggle {
   --#{$table}__button--Color: var(--#{$table}__compound-expansion-toggle__button--Color);
   --#{$table}__button--hover--Color: var(--#{$table}__compound-expansion-toggle__button--hover--Color);
-  --#{$table}__button--focus--Color: var(--#{$table}__compound-expansion-toggle__button--focus--Color);
-  --#{$table}__button--active--Color: var(--#{$table}__compound-expansion-toggle__button--active--Color);
 
   position: relative;
   padding: 0;
@@ -1008,9 +951,7 @@
     overflow: hidden;
 
     // Remove outline and apply to parent td
-    &:hover,
-    &:focus,
-    &:active {
+    &:is(:hover, :focus) {
       outline: 0;
     }
   }
@@ -1082,22 +1023,18 @@
 // Table sort
 // ==================================================================
 .#{$table}__sort {
+  vertical-align: bottom;
+
   // - Table sort button
   // ==================================================================
   .#{$table}__button {
-    &:hover {
+    margin-block-end: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
+    margin-inline-start: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
+
+    &:is(:hover, :focus) {
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
       --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--hover__text--Color);
-    }
-
-    &:focus {
-      --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--focus__sort-indicator--Color);
-      --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--focus__text--Color);
-    }
-
-    &:active {
-      --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--active__sort-indicator--Color);
-      --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--active__text--Color);
+      --#{$table}__button--BackgroundColor: var(--#{$table}__button--hover--BackgroundColor);
     }
 
     .#{$table}__text {
@@ -1120,8 +1057,6 @@
   &.pf-m-favorite {
     --#{$table}__sort__button__text--Color: var(--#{$table}__sort--m-favorite__button__text--Color);
     --#{$table}__sort__button--hover__text--Color: var(--#{$table}__sort--m-favorite__button--hover__text--Color);
-    --#{$table}__sort__button--focus__text--Color: var(--#{$table}__sort--m-favorite__button--focus__text--Color);
-    --#{$table}__sort__button--active__text--Color: var(--#{$table}__sort--m-favorite__button--active__text--Color);
     --#{$table}__sort--m-selected__button__text--Color: currentcolor;
   }
 }
@@ -1129,9 +1064,10 @@
 // Sort indicator
 .#{$table}__sort-indicator {
   grid-column: 2;
+  align-self: end;
   margin-inline-start: var(--#{$table}__sort-indicator--MarginLeft); // TODO: update this to gap
+  font-size: var(--#{$table}__sort-indicator--FontSize);
   color: var(--#{$table}__sort-indicator--Color);
-  color: var(--#{$table}__sort-indicator--FontSize);
   pointer-events: none;
 }
 
@@ -1225,6 +1161,14 @@
     min-width: 0;
     text-align: center;
   }
+}
+
+.#{$table}__thead {
+  vertical-align: bottom;
+}
+
+.#{$table}__tbody {
+  vertical-align: top
 }
 
 // replace this when inline text with icon is in place
