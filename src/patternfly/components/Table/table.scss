@@ -24,9 +24,6 @@
   --#{$table}__tbody--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
 
-  // Tr
-  --#{$table}__tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);
-
   // TODO: update these in order of appearance in scss declarations
 
   // Th / td shared variables
@@ -213,47 +210,27 @@
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // tr clickable
-  --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
-  --#{$table}__tr--m-clickable--BoxShadow: none;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-
-  // TODO Shadow tokens START HERE AGAIN
-  --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
   // tr selected
-  --#{$table}__tr--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
   --#{$table}__tr--m-selected--after--BorderLeftColor: var(--pf-t--global--color--brand--default);
-  --#{$table}__tr--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
 
   // tbody clickable
-  --#{$table}__tbody--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-clickable--BoxShadow: none;
   --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
 
   // tbody selected
   --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__tbody--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
   --#{$table}__tbody--m-selected--after--BorderLeftColor: var(--pf-t--global--border--color--clicked);
-  --#{$table}__tbody--m-selected--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom) inset, var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf-t--global--box-shadow--sm--bottom);
 
   // Nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
@@ -635,7 +612,6 @@
       cursor: pointer;
       background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
 
       &:is(:hover, :focus) {
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
@@ -650,19 +626,6 @@
       position: relative;
       background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-selected--BoxShadow);
-
-      & + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--m-selected--BoxShadow);
-      }
-
-      & + tr:where(.#{$table}__tr).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow);
-      }
-
-      &:hover + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow);
-      }
     }
 
     &.pf-m-first-cell-offset-reset {
@@ -677,21 +640,13 @@
       cursor: pointer;
       background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tbody--m-clickable--BoxShadow);
 
       &.pf-m-expanded:not(.pf-m-selected) {
         --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-clickable--m-expanded--BorderColor);
       }
 
       &:is(:hover, :focus) {
-        --#{$table}__tbody--m-clickable--BoxShadow: var(--#{$table}__tbody--m-clickable--hover--BoxShadow);
         --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
-
-        // stylelint-disable max-nesting-depth
-        &:not(.pf-m-selected) + tbody:where(.#{$table}__tbody).pf-m-selected {
-          box-shadow: var(--#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow);
-        }
-        // stylelint-enable
       }
     }
 
@@ -702,19 +657,6 @@
 
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tbody--m-selected--BoxShadow);
-
-      & + tbody:where(.#{$table}__tbody).pf-m-selected {
-        --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--m-selected--BoxShadow);
-      }
-
-      & + tbody:where(.#{$table}__tbody).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow);
-      }
-
-      &:hover + tbody:where(.#{$table}__tbody).pf-m-selected {
-        box-shadow: var(--#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow);
-      }
     }
   }
 
@@ -1076,7 +1018,7 @@
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
-  box-shadow: 0 0 0 0 transparent;
+
 
   &,
   td:where(.#{$table}__td):first-child::after {
@@ -1113,7 +1055,7 @@
   &.pf-m-expanded {
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
     border-block-end-width: var(--#{$table}--border-width--base);
-    box-shadow: var(--#{$table}__expandable-row--m-expanded--BoxShadow);
+
   }
 
   &:not(.pf-m-expanded) {
