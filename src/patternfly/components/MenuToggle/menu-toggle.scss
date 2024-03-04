@@ -49,10 +49,10 @@
   --#{$menu-toggle}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // * Menu toggle icon
-  --#{$menu-toggle}__icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
 
   // * Menu toggle toggle icon
-  --#{$menu-toggle}__toggle-icon--Height: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle button
@@ -490,7 +490,7 @@
 
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
-  height: var(--#{$menu-toggle}__icon--Height);
+  min-height: var(--#{$menu-toggle}__icon--MinHeight);
 }
 
 // - Menu toggle controls
@@ -501,6 +501,6 @@
 
 // - Menu toggle icon
 .#{$menu-toggle}__toggle-icon {
-  height: var(--#{$menu-toggle}__toggle-icon--Height);
+  min-height: var(--#{$menu-toggle}__toggle-icon--MinHeight);
   color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
 }
