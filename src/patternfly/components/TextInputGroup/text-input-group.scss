@@ -52,6 +52,7 @@
   width: 100%; // when child of flex layout, take up space
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
+  border-radius: var(--#{$text-input-group}--BorderRadius);
   
   &::before {
     position: absolute;
@@ -67,7 +68,6 @@
   }
 
   &.pf-m-disabled {
-    --#{$text-input-group}--BorderWidth: 0;
     --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
     --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled--Color);
     --#{$text-input-group}--BackgroundColor: var(--#{$text-input-group}--m-disabled--BackgroundColor);
