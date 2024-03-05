@@ -60,15 +60,15 @@
   // * Nav scroll button
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
   --#{$nav}__scroll-button--BorderWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$nav}__scroll-button--first-of-type--c-button--BorderStartStartRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}__scroll-button--first-of-type--c-button--BorderEndStartRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}__scroll-button--last-of-type--c-button--BorderStartEndRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}__scroll-button--last-of-type--c-button--BorderEndEndRadius: var(--pf-t--global--border--radius--pill);
 
   // * Nav toggle
   --#{$nav}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2) - 50%); // find height of single label, divide by two, offset by 50% of own height
-
-  // * Nav horizontal
-  --#{$nav}--m-horizontal--BorderRadius: 0;
-  --#{$nav}--m-horizontal--m-scrollable--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // * Nav horizontal list
   --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
@@ -79,8 +79,8 @@
   --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}__list--ColumnGap);
 
   // * Nav horizontal subnav
-  --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$nav}--m-horizontal--m-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -269,21 +269,30 @@
   }
 
   &:first-of-type {
+    .#{$button} {
+      --#{$button}--BorderStartStartRadius: var(--#{$nav}__scroll-button--first-of-type--c-button--BorderStartStartRadius);
+      --#{$button}--BorderEndStartRadius: var(--#{$nav}__scroll-button--first-of-type--c-button--BorderEndStartRadius);
+    }
+
     &::before {
       border-inline-end: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
     }
   }
 
   &:last-of-type {
+    .#{$button} {
+      --#{$button}--BorderStartEndRadius: var(--#{$nav}__scroll-button--last-of-type--c-button--BorderStartEndRadius);
+      --#{$button}--BorderEndEndRadius: var(--#{$nav}__scroll-button--last-of-type--c-button--BorderEndEndRadius);
+    }
+
     &::before {
       border-inline-start: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
     }
   }
 
-  .#{$button} {
-    @include pf-v5-mirror-inline-on-rtl; // TODO - move this to the icon container once that is introduced
-
-    border-radius: 0;
+  // TODO - update this selector to the $pf-button__icon once that is introduced
+  .#{$button} > * {
+    @include pf-v5-mirror-inline-on-rtl;
   }
 }
 
@@ -291,7 +300,6 @@
 .#{$nav}:where(.pf-m-horizontal) {
   padding: 0;
   overflow: hidden;
-  border-radius: var(--#{$nav}--m-horizontal--BorderRadius);
 
   // update to flex
   &,
@@ -324,7 +332,6 @@
   // - Nav subnav
   &.pf-m-subnav {
     --#{$nav}--BackgroundColor: var(--#{$nav}--m-horizontal--m-subnav--BackgroundColor);
-    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
     --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
     --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
@@ -333,10 +340,11 @@
     --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineEnd);
     --#{$nav}__link--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart);
     --#{$nav}__link--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd);
+
+    border-radius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
   }
 
   &.pf-m-scrollable {
-    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-scrollable--BorderRadius);
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart);
     --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd);
   }
