@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 **Describe the problem**
+This is an issue with [ ] V5  [ ] V6  [ ] other.
 A clear and concise description of the problem. Which components are affected?
 
 **How do you reproduce the problem?**
