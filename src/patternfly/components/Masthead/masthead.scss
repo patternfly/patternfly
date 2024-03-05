@@ -42,9 +42,9 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
 
   // * Masthead toolbar
-  --#{$masthead}--#{$toolbar}--Width: 100%;
-  --#{$masthead}--#{$toolbar}--PaddingBlock: 0;
-  --#{$masthead}--#{$toolbar}--PaddingInline: 0;
+  --#{$masthead}--c-toolbar--Width: 100%;
+  --#{$masthead}--c-toolbar--PaddingBlock: 0;
+  --#{$masthead}--c-toolbar--PaddingInline: 0;
 }
 
 // * Masthead display stack
@@ -72,9 +72,9 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // - Masthead
 .#{$masthead} {
   .#{$toolbar} {
-    --#{$toolbar}--Width: var(--#{$masthead}--#{$toolbar}--Width);
-    --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--#{$toolbar}--PaddingBlock);
-    --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--#{$toolbar}--PaddingInline);
+    --#{$toolbar}--Width: var(--#{$masthead}--c-toolbar--Width);
+    --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--c-toolbar--PaddingBlock);
+    --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--c-toolbar--PaddingInline);
     --#{$toolbar}__content--MinWidth: 0;
   }
 
