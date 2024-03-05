@@ -68,6 +68,7 @@
 
   // * Nav horizontal
   --#{$nav}--m-horizontal--BorderRadius: 0;
+  --#{$nav}--m-horizontal--m-scrollable--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // * Nav horizontal list
   --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
@@ -259,7 +260,6 @@
 
 // - Nav scroll button
 .#{$nav}__scroll-button {
-  // - Nav button
   position: relative;
 
   &::before {
@@ -281,7 +281,9 @@
   }
 
   .#{$button} {
-    @include pf-v5-mirror-inline-on-rtl;
+    @include pf-v5-mirror-inline-on-rtl; // TODO - move this to the icon container once that is introduced
+
+    border-radius: 0;
   }
 }
 
@@ -321,8 +323,8 @@
 
   // - Nav subnav
   &.pf-m-subnav {
-    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
     --#{$nav}--BackgroundColor: var(--#{$nav}--m-horizontal--m-subnav--BackgroundColor);
+    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
     --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
     --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
@@ -334,6 +336,7 @@
   }
 
   &.pf-m-scrollable {
+    --#{$nav}--m-horizontal--BorderRadius: var(--#{$nav}--m-horizontal--m-scrollable--BorderRadius);
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart);
     --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd);
   }

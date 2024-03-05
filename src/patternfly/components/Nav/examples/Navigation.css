@@ -24,11 +24,11 @@
 }
 
 .ws-core-c-navigation .ws-preview-html {
-  background: var(--pf-v5-c-page__sidebar--BackgroundColor); /* use sidebar background for vertical nav examples */
+  background: var(--pf-v6-c-page__sidebar--BackgroundColor); /* use sidebar background for vertical nav examples */
 }
 
 [id^="ws-core-c-navigation-horizontal"] .ws-preview-html {
-  background: var(--pf-v5-c-masthead--BackgroundColor); /* use masthead background for horizontal nav examples */
+  background: var(--pf-v6-c-masthead--BackgroundColor); /* use masthead background for horizontal nav examples */
 }
 
 [id^="ws-core-c-navigation-horizontal-subnav"] .ws-preview-html {
