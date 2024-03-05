@@ -1103,10 +1103,3 @@
   --#{$table}--cell--Width: 100%;
 }
 // stylelint-enable
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import 'themes/dark/table';
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-table;
-}
