@@ -8,8 +8,12 @@ assignees: ''
 ---
 
 **Describe the problem**
-This is an issue with [ ] Patternfly 5  [ ] Patternfly 6  [ ] other.
-A clear and concise description of the problem. Which components are affected?
+This is an issue with 
+- [ ] Patternfly 5  
+- [ ] Patternfly 6  
+- [ ] other
+
+Please give a clear and concise description of the problem. Which components are affected?
 
 **How do you reproduce the problem?**
 Provide steps to reproduce. A [codepen](http://codepen.io) or [codesandbox](https://codesandbox.io/) demonstrating the problem is appreciated.
