@@ -1,4 +1,6 @@
-.#{$table} {
+// * Table scrollable
+:where(:root),
+:where(.#{$table}) {
   --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
   --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
   --#{$table}__sticky-cell--ZIndex: var(--pf-t--global--Zindex--xs);
@@ -13,6 +15,7 @@
   --#{$table}__sticky-cell--m-left--Left: 0;
   --#{$table}--m-sticky-header__sticky-cell--ZIndex: calc(var(--#{$table}__sticky-cell--ZIndex) + 1);
 
+  // * Table sticky cell
   .#{$table}__sticky-cell {
     --#{$table}--cell--Overflow: visible;
     --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$table}--m-sticky-header__sticky-cell--ZIndex);
@@ -48,6 +51,7 @@
   }
 }
 
+// * Scroll outer wrapper
 .#{$scroll-outer-wrapper} {
   --#{$scroll-outer-wrapper}--MinHeight: #{pf-size-prem(400px)};
   --#{$scroll-outer-wrapper}--MaxHeight: 100%;
@@ -60,6 +64,7 @@
   overflow: hidden;
 }
 
+// * Scroll inner wrapper
 .#{$scroll-inner-wrapper} {
   display: flex;
   flex-direction: column;
