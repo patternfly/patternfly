@@ -1,7 +1,4 @@
-<label>
-  {{#> check check--modifier="pf-m-standalone"}}
-    {{#> check-input 
-      check-input--attribute=(concat (ternary table-check--name (concat 'name="' table-check--name '"') '') (ternary table-check--aria-labelledby (concat ' aria-labelledby="' table-check--aria-labelledby '"') '') (ternary table-check--aria-label (concat ' aria-label="' table-check--aria-label '"') ''))
-    }}{{/check-input}}
-  {{/check}}
-</label>
+{{#> check check--modifier="pf-m-standalone" check--IsLabelWrapped=true}}
+  {{> check-input check-input--attribute=(concat (ternary table-check--name (concat 'name="' table-check--name '"') '') (ternary table-check--aria-labelledby (concat ' aria-labelledby="' table-check--aria-labelledby '"') '') (ternary table-check--aria-label (concat ' aria-label="' table-check--aria-label '"') ''))
+  }}
+{{/check}}

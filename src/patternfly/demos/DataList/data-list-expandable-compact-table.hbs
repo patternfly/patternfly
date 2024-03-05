@@ -1,7 +1,7 @@
 {{#> table table--id="compact-table-demo-data-list" table--grid="true" table--modifier="pf-m-compact pf-m-grid-lg pf-m-no-border-rows" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
+      {{#> table-td table-td--IsCheck=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute='name="check-all" aria-label="Select all rows"'}}{{/check-input}}
         {{/check}}
@@ -30,7 +30,7 @@
   {{/table-thead}}
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
+      {{#> table-td table-td--IsCheck=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-name1"')}}{{/check-input}}
         {{/check}}
@@ -61,7 +61,7 @@
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
+      {{#> table-td table-td--IsCheck=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-name2"')}}{{/check-input}}
         {{/check}}
@@ -92,7 +92,7 @@
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
+      {{#> table-td table-td--IsCheck=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-name3"')}}{{/check-input}}
         {{/check}}
@@ -123,7 +123,7 @@
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
+      {{#> table-td table-td--IsCheck=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-name4"')}}{{/check-input}}
         {{/check}}

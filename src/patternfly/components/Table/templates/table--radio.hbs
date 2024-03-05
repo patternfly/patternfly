@@ -1,7 +1,5 @@
-{{#> table-td table-td--check="true"}}
-  <label>
-    {{#> radio radio--modifier="pf-m-standalone"}}
-      {{#> radio-input radio-input--attribute=(concat 'name="' table--id '-radio" aria-labelledby="' table--id '-node' table-tr--index '"')}}{{/radio-input}}
-    {{/radio}}
-  </label>
+{{#> table-td table-td--IsCheck=true}}
+  {{#> radio radio--IsStandalone=true}}
+    {{#> radio-input radio-input--attribute=(concat 'name="' table--id '-radio" aria-labelledby="' table--id '-node' table-tr--index '"')}}{{/radio-input}}
+  {{/radio}}
 {{/table-td}}
