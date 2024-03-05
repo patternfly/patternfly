@@ -129,13 +129,6 @@
   --#{$table}__expandable-row-content--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
 
-  // ::after border
-  --#{$table}__expandable-row--after--Top: calc(var(--#{$table}--border-width--base) * -1);
-  --#{$table}__expandable-row--after--Bottom: calc(var(--#{$table}--border-width--base) * -1);
-  --#{$table}__expandable-row--after--border-width--base: var(--pf-t--global--border--width--strong);
-  --#{$table}__expandable-row--after--BorderLeftWidth: 0;
-  --#{$table}__expandable-row--after--BorderColor: var(--pf-t--global--border--color--clicked);
-
   // Icon inline
   --#{$table}__icon-inline--MarginRight: var(--pf-t--global--spacer--sm);
 
@@ -150,7 +143,7 @@
   --#{$table}__sort__button--MarginBottom: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
   --#{$table}__sort__button--MarginLeft: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
   --#{$table}__sort__button--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}__sort--m-selected__button--Color: var(--pf-t--global--border--color--clicked);
+  --#{$table}__sort--m-selected__button--Color: var(--pf-t--global--color--brand--clicked);
   --#{$table}__sort--m-help--MinWidth: 15ch;
 
   // Sort text
@@ -164,7 +157,7 @@
   // Sort indicator
   --#{$table}__sort-indicator--Color: var(--pf-t--global--icon--color--subtle);
   --#{$table}__sort-indicator--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--border--color--clicked);
+  --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--color--brand--clicked);
   --#{$table}__sort__button--hover__sort-indicator--Color: var(--pf-t--global--text--color--regular);
 
   // Help
@@ -181,28 +174,22 @@
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
-  // ::before border treatment
-  --#{$table}__compound-expansion-toggle__button--before--border-width--base: var(--pf-t--global--border--width--button--default);
-  --#{$table}__compound-expansion-toggle__button--before--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--before--Bottom: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
-  --#{$table}__compound-expansion-toggle__button--before--Left: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
-
-  // ::after border treatment
-  --#{$table}__compound-expansion-toggle__button--after--border-width--base: var(--pf-t--global--border--width--strong);
+  // - Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--after--Top: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
-  --#{$table}__compound-expansion-toggle__button--after--Left: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
+  --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderTopWidth: var(--pf-t--global--border--width--strong);
 
-  // Compact table
+  // - Table compact th
   --#{$table}--m-compact__th--PaddingTop: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
   --#{$table}--m-compact__th--PaddingBottom: var(--pf-t--global--spacer--sm);
+
+  // - Table compact cell
   --#{$table}--m-compact--cell--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingLeft: var(--pf-t--global--spacer--sm);
+
+  // - Table compact action
   --#{$table}--m-compact__action--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__action--PaddingBottom: var(--pf-t--global--spacer--xs);
 
@@ -214,13 +201,11 @@
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
-  // tr selected
+  // * Table tr selected
   --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tr--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
-  --#{$table}__tr--m-selected--after--BorderLeftColor: var(--pf-t--global--color--brand--default);
 
-  // tbody clickable
+  // * Table tbody clickable
   --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -229,8 +214,6 @@
   // tbody selected
   --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tbody--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
-  --#{$table}__tbody--m-selected--after--BorderLeftColor: var(--pf-t--global--border--color--clicked);
 
   // Nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
@@ -267,8 +250,6 @@
     position: relative;
 
     thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
-      border-block-end: 0;
-
       > :where(th, td) {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
       }
@@ -305,6 +286,7 @@
         background-color: var(--#{$table}--BorderColor);
       }
 
+      // TODO: remove this block
       tr:where(.#{$table}__tr):not(:nth-last-child(2)) {
         // stylelint-disable max-nesting-depth
         th:where(.#{$table}__th),
@@ -349,8 +331,6 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-
     // stylelint-disable-next-line
     &.pf-m-ghost-row {
       background-color: var(--#{$table}__tr--m-ghost-row--BackgroundColor);
@@ -362,7 +342,7 @@
   tr:where(.#{$table}__tr) > :where(th, td) {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
-    // set position relative for ::before/::after borders
+    // set position relative for ::after borders
     position: relative;
     width: var(--#{$table}--cell--Width);
     min-width: var(--#{$table}--cell--MinWidth);
@@ -481,33 +461,10 @@
   tbody:where(.#{$table}__tbody) {
     --#{$table}--cell--PaddingTop: var(--#{$table}__tbody--cell--PaddingTop);
     --#{$table}--cell--PaddingBottom: var(--#{$table}__tbody--cell--PaddingBottom);
-
-    vertical-align: top;
-
     --#{$table}--cell--FontSize: var(--#{$table}__tbody--cell--FontSize);
 
     > tr:where(.#{$table}__tr) > :where(th, td) {
       overflow-wrap: break-word;
-    }
-
-    // Border treatment
-    // using first child as row does not calculate height appropriately
-    > tr:where(.#{$table}__tr) > :first-child::after {
-      position: absolute;
-
-      // offset top to extend above tr border
-      inset-block-start: var(--#{$table}__expandable-row--after--Top);
-      inset-block-end: var(--#{$table}__expandable-row--after--Bottom);
-      inset-inline-start: 0;
-      content: '';
-
-      // add border left
-      background-color: transparent;
-      border-inline-start: var(--#{$table}__expandable-row--after--BorderLeftWidth) solid var(--#{$table}__expandable-row--after--BorderColor);
-    }
-
-    &.pf-m-expanded > :first-child:not(.#{$table}__control-row) {
-      border-block-end-width: 0;
     }
   }
   // stylelint-enable
@@ -583,22 +540,10 @@
   &.pf-m-no-border-rows > tbody:where(.#{$table}__tbody) {
     > tr:where(.#{$table}__tr) {
       border-block-end: 0;
-
-      > :first-child::after {
-        border-inline-start: 0;
-      }
     }
 
     &:not(.pf-m-expanded) .#{$table}__compound-expansion-toggle .#{$table}__button::before {
       display: none;
-    }
-
-    &.pf-m-expanded > .#{$table}__control-row {
-      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-    }
-
-    .#{$table}__control-row > .#{$table}__compound-expansion-toggle:first-child > ::before {
-      border-inline-start-width: 0;
     }
   }
 
@@ -692,14 +637,21 @@
   }
 }
 
-// Table button
+// - Table tr
+.#{$table}__tr {
+  &.pf-m-border-row {
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+  }
+}
+
+// - Table button
 .#{$table}__button {
-  position: static;
   width: auto;
   padding-block-start: var(--#{$table}__button--PaddingTop);
   padding-block-end: var(--#{$table}__button--PaddingBottom);
   padding-inline-start: var(--#{$table}__button--PaddingLeft);
   padding-inline-end: var(--#{$table}__button--PaddingRight);
+  margin-block-end: calc(var(--#{$table}__button--PaddingBottom) * -1);
   margin-inline-start: calc(var(--#{$table}__button--PaddingLeft) * -1);
   font-size: inherit;
   font-weight: inherit;
@@ -872,7 +824,7 @@
   }
 }
 
-// Compound expansion toggle
+// - Table compound expansion toggle
 .#{$table}__compound-expansion-toggle {
   --#{$table}__button--Color: var(--#{$table}__compound-expansion-toggle__button--Color);
   --#{$table}__button--hover--Color: var(--#{$table}__compound-expansion-toggle__button--hover--Color);
@@ -898,51 +850,19 @@
     }
   }
 
-
   // Apply borders to button to avoid conflicts with expanded states
-  .#{$table}__button::before,
   .#{$table}__button::after {
     position: absolute;
     inset: 0;
     content: '';
-    border-style: solid;
-    border-width: 0;
-  }
-
-  .#{$table}__button::before {
-    inset-block-start: 0;
-    inset-block-end: var(--#{$table}__compound-expansion-toggle__button--before--Bottom);
-    inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--before--Left);
-    border-color: var(--#{$table}__compound-expansion-toggle__button--before--BorderColor);
-    border-inline-start-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth);
-    border-inline-end-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderRightWidth);
-  }
-
-  .#{$table}__button::after {
-    // overlap previous row's border
-    inset-block-start: var(--#{$table}__compound-expansion-toggle__button--after--Top);
-    inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--after--Left);
-    pointer-events: none;
-    border-color: var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
-    border-block-start-width: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth);
+    border: 0;
+    border-block-start: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth) solid var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
   }
 
   &:hover,
   &:focus-within,
   &.pf-m-expanded {
-    --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: var(--#{$table}__compound-expansion-toggle__button--after--border-width--base);
-  }
-
-  &.pf-m-expanded {
-    .#{$table}__button::before {
-      border-block-end: var(--#{$table}--BackgroundColor) solid var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
-    }
-
-    &:first-child {
-      --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-    }
+    --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: var(--#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderTopWidth);
   }
 
   &:focus-within {
@@ -970,9 +890,6 @@
   // - Table sort button
   // ==================================================================
   .#{$table}__button {
-    margin-block-end: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
-    margin-inline-start: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
-
     &:is(:hover, :focus) {
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
       --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--hover__text--Color);
@@ -1110,7 +1027,11 @@
 }
 
 .#{$table}__tbody {
-  vertical-align: top
+  vertical-align: top;
+
+  .#{$table}__tr {
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+  }
 }
 
 // replace this when inline text with icon is in place
