@@ -291,8 +291,12 @@
   }
 
   // TODO - update this selector to the $pf-button__icon once that is introduced
-  .#{$button} > * {
-    @include pf-v5-mirror-inline-on-rtl;
+  .#{$button} {
+    outline-offset: var(--#{$nav}--OutlineOffset);
+
+    > * {
+      @include pf-v5-mirror-inline-on-rtl;
+    }
   }
 }
 
