@@ -274,7 +274,7 @@
       --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}__select--PaddingLeft) - 4px);
     }
 
-    // We need this property for certain Linux distros/non-Mac OS where dark theme styles aren'y applied properly.
+    // We need this property for certain Linux distros/non-Mac OS where dark theme styles aren't applied properly.
     background-color: var(--#{$form-control}--BackgroundColor);
   }
 
