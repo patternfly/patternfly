@@ -7,7 +7,7 @@
   --#{$table}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$table}--border-width--base: var(--pf-t--global--border--width--divider--default);
 
-  // Caption
+  // * Table caption
   --#{$table}__caption--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__caption--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__caption--PaddingTop: var(--pf-t--global--spacer--md);
@@ -15,18 +15,18 @@
   --#{$table}__caption--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingLeft: var(--pf-t--global--spacer--lg);
 
-  // Thead
+  // * Table thead cell
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
-  // Tbody cell
+  // * Table body cell
   --#{$table}__tbody--cell--PaddingTop: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
 
   // TODO: update these in order of appearance in scss declarations
 
-  // Th / td shared variables
+  // * Table cell
   --#{$table}--cell--Padding--base: var(--pf-t--global--spacer--md);
   --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body);
@@ -39,7 +39,7 @@
   --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--sm);
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingLeft: var(--#{$table}--cell--Padding--base);
 
-  // Default cell variables
+  // * Table cell - default variables
   --#{$table}--cell--MinWidth: 0;
   --#{$table}--cell--MaxWidth: none;
   --#{$table}--cell--Width: auto;
@@ -48,23 +48,23 @@
   --#{$table}--cell--WhiteSpace: normal;
   --#{$table}--cell--WordBreak: normal;
 
-  // Border
+  // * Table cell border right
   --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--pf-t--global--border--width--divider--default);
   --#{$table}--cell--m-border-right--before--BorderRightColor: var(--pf-t--global--border--color--default);
   --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--pf-t--global--border--width--divider--default);
   --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--pf-t--global--border--color--default);
 
-  // Help
+  // * Table help
   --#{$table}--cell--m-help--MinWidth: 11ch;
 
-  // Truncate
+  // * Table truncate
   --#{$table}--m-truncate--cell--MaxWidth: 1px;
   --#{$table}--m-truncate--cell--MinWidth: calc(5ch + var(--#{$table}--cell--PaddingRight) + var(--#{$table}--cell--PaddingLeft));
 
-  // Hidden visible
+  // * Table cell hidden visible
   --#{$table}--cell--hidden-visible--Display: table-cell;
 
-  // Table cell - toggle
+  // * Table toggle
   --#{$table}__toggle--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingLeft: var(--pf-t--global--spacer--sm);
@@ -73,7 +73,7 @@
   --#{$table}__toggle--c-button__toggle-icon--Transition: .2s ease-in 0s;
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
-  // Button
+  // * Table button
   --#{$table}__button--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}__button--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--md);
@@ -86,15 +86,15 @@
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
 
-  // Compact
+  // * Table compact
   --#{$table}--m-compact__toggle--PaddingTop: 0;
   --#{$table}--m-compact__toggle--PaddingBottom: 0;
 
-  // Check
+  // * Table check
   --#{$table}__check--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__check--PaddingRight: var(--pf-t--global--spacer--sm);
 
-  // Favorite
+  // * Table favorite
   --#{$table}__favorite--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__favorite--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body--default);
@@ -103,25 +103,25 @@
   --#{$table}__sort--m-favorite__button__text--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__sort--m-favorite__button--hover__text--Color: var(--pf-t--global--text--color--regular);
 
-  // Draggable
+  // * Table draggable button
   --#{$table}__draggable--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
   --#{$table}__draggable--c-button--MarginRight: calc(var(--#{$button}--PaddingRight) * -1);
   --#{$table}__draggable--c-button--MarginBottom: calc(var(--#{$button}--PaddingBottom) * -1);
   --#{$table}__draggable--c-button--MarginLeft: calc(var(--#{$button}--PaddingLeft) * -1);
 
-  // Ghost row
+  // * Table ghost row
   --#{$table}__tr--m-ghost-row--Opacity: .4;
   --#{$table}__tr--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
-  // Action
+  // * Table Action
   --#{$table}__action--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingBottom: var(--pf-t--global--spacer--sm);
 
-  // Inline edit
+  // * Table inline edit
   --#{$table}__inline-edit-action--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}__inline-edit-action--PaddingBottom: var(--pf-t--global--spacer--sm);
 
-  // Expandable row
+  // * Table expandable row
   --#{$table}__expandable-row--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
   --#{$table}__expandable-row-content--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingBottom: var(--pf-t--global--spacer--md);
@@ -129,13 +129,13 @@
   --#{$table}__expandable-row-content--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
 
-  // Icon inline
+  // * Table icon inline
   --#{$table}__icon-inline--MarginRight: var(--pf-t--global--spacer--sm);
 
-  // Sort cell
+  // * Table sort cell
   --#{$table}__sort--MinWidth: calc(6ch + var(--#{$table}--cell--PaddingRight) + var(--#{$table}--cell--PaddingLeft) + var(--#{$table}__sort-indicator--MarginLeft));
 
-  // Sort button
+  // * Table sort button
   --#{$table}__sort__button--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}__sort__button--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$table}__sort__button--PaddingLeft: var(--pf-t--global--spacer--md);
@@ -146,57 +146,57 @@
   --#{$table}__sort--m-selected__button--Color: var(--pf-t--global--color--brand--clicked);
   --#{$table}__sort--m-help--MinWidth: 15ch;
 
-  // Sort text
+  // * Table sort button
   --#{$table}__sort__button__text--Color: currentcolor;
   --#{$table}__sort__button--hover__text--Color: currentcolor;
 
-  // Sort text
+  // * Table sort cell
   --#{$table}__sort--cell--PaddingLeft: var(--pf-t--global--spacer--xs);
   --#{$table}__sort--cell--PaddingRight: var(--pf-t--global--spacer--sm);
 
-  // Sort indicator
+  // * Table sort indicator
   --#{$table}__sort-indicator--Color: var(--pf-t--global--icon--color--subtle);
   --#{$table}__sort-indicator--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--color--brand--clicked);
   --#{$table}__sort__button--hover__sort-indicator--Color: var(--pf-t--global--text--color--regular);
 
-  // Help
+  // * Table help
   --#{$table}__th--m-help--MinWidth: 11ch;
 
-  // Table header popover
+  // * Table header popover
   --#{$table}__column-help--MarginLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__column-help--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
   --#{$table}__column-help--c-button--MarginBottom: calc(var(--#{$button}--PaddingBottom) * -1);
   --#{$table}__column-help--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__column-help--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
 
-  // Compound expansion toggle button
+  // * Table compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
-  // - Table compound expansion toggle button after
+  // * Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: 0;
   --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderTopWidth: var(--pf-t--global--border--width--strong);
 
-  // - Table compact th
+  // * Table compact th
   --#{$table}--m-compact__th--PaddingTop: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
   --#{$table}--m-compact__th--PaddingBottom: var(--pf-t--global--spacer--sm);
 
-  // - Table compact cell
+  // * Table compact cell
   --#{$table}--m-compact--cell--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingLeft: var(--pf-t--global--spacer--sm);
 
-  // - Table compact action
+  // * Table compact action
   --#{$table}--m-compact__action--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__action--PaddingBottom: var(--pf-t--global--spacer--xs);
 
-  // Modifier - expandable row expanded
+  // * Table expandable row expanded
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
 
-  // tr clickable
+  // * Table tr clickable
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
@@ -211,33 +211,31 @@
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
 
-  // tbody selected
+  // * Table tbody selected
   --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
-  // Nested column header
+  // * Table nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$table}__thead--m-nested-column-header__tr--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$table}__thead--m-nested-column-header__tr--PaddingBottom: var(--pf-t--global--spacer--xs);
 
-  // Subhead
+  // * Table subhead
   --#{$table}__subhead--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__subhead--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
-  // Striped
+  // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
-  // Sticky
+  // * Table sticky
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--Zindex--xs);
 }
 
 // TODO: update grouping comments to // Table {element}
 // TODO: flatten the modifiers out ex: .#{$table}.pf-m-sticky-header {}
-// Table
+// - Table
 .#{$table} {
-  @include pf-v5-t-light; // This component always needs to be light
-
   // Base
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
@@ -338,7 +336,7 @@
     }
   }
 
-  // Table cell
+  // - Table th - Table td
   tr:where(.#{$table}__tr) > :where(th, td) {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
@@ -410,7 +408,7 @@
     }
   }
 
-  // Table caption
+  // - Table caption
   caption:where(.#{$table}__caption) {
     padding-block-start: var(--#{$table}__caption--PaddingTop);
     padding-block-end: var(--#{$table}__caption--PaddingBottom);
@@ -421,7 +419,7 @@
     background-color: var(--#{$table}--BackgroundColor);
   }
 
-  // Table header cell
+  // - Table header cell
   thead:where(.#{$table}__thead) {
     --#{$table}--cell--FontSize: var(--#{$table}__thead--cell--FontSize);
     --#{$table}--cell--FontWeight: var(--#{$table}__thead--cell--FontWeight);
@@ -443,6 +441,7 @@
     }
     // stylelint-enable
 
+    // - Table subhead
     .#{$table}__subhead {
       --#{$table}--cell--PaddingLeft: var(--#{$table}__subhead--PaddingLeft);
       --#{$table}--cell--PaddingRight: var(--#{$table}__subhead--PaddingRight);
@@ -456,7 +455,7 @@
     }
   }
 
-  // Table body cell
+  // - Table tbody
   // stylelint-disable
   tbody:where(.#{$table}__tbody) {
     --#{$table}--cell--PaddingTop: var(--#{$table}__tbody--cell--PaddingTop);
@@ -482,6 +481,7 @@
   //   }
   // }
 
+  // - Table sort
   // set property here to increase specificity
   .#{$table}__sort {
     min-width: var(--#{$table}__sort--MinWidth);
@@ -493,6 +493,7 @@
     }
   }
 
+  // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
   :where([class*='#{$table}']),
   :where(&) > :is(thead, tbody) {
     @at-root .#{$table} > thead,
@@ -551,7 +552,7 @@
     border-block-end-color: transparent;
   }
 
-  // tr clickable
+  // - Table tr clickable
   tr:where(.#{$table}__tr) {
     &.pf-m-clickable {
       cursor: pointer;
@@ -578,7 +579,7 @@
     }
   }
 
-  // tbody clickable
+  // - Table tbody clickable
   // stylelint-disable no-duplicate-selectors
   tbody:where(.#{$table}__tbody) {
     &.pf-m-clickable {
@@ -595,7 +596,7 @@
       }
     }
 
-    // tbody selected
+    // - Table tbody expanded
     &.pf-m-selected {
       --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after--BorderLeftWidth);
       --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-selected--after--BorderLeftColor);
@@ -610,7 +611,7 @@
   }
 }
 
-// Text
+// - Table text
 .#{$table}__text {
   --#{$table}--cell--MaxWidth: 100%;
 
@@ -673,7 +674,7 @@
   }
 }
 
-// Focus styles
+// - Table sort - Table compound expansion toggle
 .#{$table}__sort,
 .#{$table}__compound-expansion-toggle {
   // Pass properties to text
@@ -686,7 +687,7 @@
   }
 }
 
-// Sort content
+// - Table button content - Table column help
 // display grid for buttons is not supported
 .#{$table}__button-content,
 .#{$table}__column-help {
@@ -722,7 +723,7 @@
 }
 
 // stylelint-disable
-// Minimize width
+// - Table check - Table toggle - Table action - Table favorite - Table inline-edit-action - Table draggable
 .#{$table} .#{$table}__check,
 .#{$table} .#{$table}__toggle,
 .#{$table} .#{$table}__action,
@@ -735,7 +736,7 @@
 }
 // stylelint-enable
 
-// Toggle table cell
+// - Table toggle
 .#{$table}__toggle {
   --#{$table}--cell--PaddingTop: var(--#{$table}__toggle--PaddingTop);
   --#{$table}--cell--PaddingBottom: var(--#{$table}__toggle--PaddingBottom);
@@ -761,7 +762,7 @@
   }
 }
 
-// Check table cell
+// - Table check
 .#{$table}__check {
   --#{$table}--cell--PaddingLeft: var(--#{$table}__check--PaddingLeft);
   --#{$table}--cell--PaddingRight: var(--#{$table}__check--PaddingRight);
@@ -797,7 +798,7 @@
   }
 }
 
-// Favorite body cell
+// - Table favorite
 .#{$table}__favorite {
   --#{$table}--cell--PaddingLeft: var(--#{$table}__favorite--PaddingLeft);
   --#{$table}--cell--PaddingRight: var(--#{$table}__favorite--PaddingRight);
@@ -811,7 +812,7 @@
   }
 }
 
-// Draggable
+// - Table draggable
 .#{$table}__draggable {
   .#{$button} {
     cursor: grab;
@@ -822,7 +823,7 @@
   }
 }
 
-// Table action cell
+// - Table action - Table inline edit action - Table draggable
 .#{$table}__action,
 .#{$table}__inline-edit-action,
 .#{$table}__draggable {
@@ -830,6 +831,7 @@
   --#{$table}--cell--PaddingBottom: var(--#{$table}__action--PaddingBottom);
 }
 
+// - Table action - Table inline edit action
 .#{$table}__action,
 .#{$table}__inline-edit-action {
   &:last-child {
@@ -895,13 +897,11 @@
   margin-inline-start: var(--#{$table}__column-help--MarginLeft);
 }
 
-// Table sort
-// ==================================================================
+// - Table sort
 .#{$table}__sort {
   vertical-align: bottom;
 
-  // - Table sort button
-  // ==================================================================
+  // - Table button
   .#{$table}__button {
     &:is(:hover, :focus) {
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
@@ -909,6 +909,7 @@
       --#{$table}__button--BackgroundColor: var(--#{$table}__button--hover--BackgroundColor);
     }
 
+    // - Table text
     .#{$table}__text {
       color: var(--#{$table}__sort__button__text--Color);
     }
@@ -933,7 +934,7 @@
   }
 }
 
-// Sort indicator
+// - Table sort indicator
 .#{$table}__sort-indicator {
   grid-column: 2;
   align-self: end;
@@ -943,8 +944,7 @@
   pointer-events: none;
 }
 
-// Expandable row
-// ==================================================================
+// - Table expandable row
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
@@ -998,8 +998,7 @@
   }
 }
 
-// Compact table
-// ==================================================================
+// - Table compact
 .#{$table}.pf-m-compact {
   --#{$table}--cell--PaddingTop: var(--#{$table}--m-compact--cell--PaddingTop);
   --#{$table}--cell--PaddingBottom: var(--#{$table}--m-compact--cell--PaddingBottom);
@@ -1058,7 +1057,7 @@
   }
 }
 
-// Modifier - Width
+// - Table width
 // stylelint-disable
 .#{$table} .pf-m-width-10 {
   --#{$table}--cell--Width: 10%;
