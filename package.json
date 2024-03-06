@@ -50,7 +50,7 @@
     "@patternfly/patternfly-a11y": "4.3.1",
     "@patternfly/react-code-editor": "5.2.1",
     "@patternfly/react-core": "5.2.1",
-    "@patternfly/react-table": "5.1.2",
+    "@patternfly/react-table": "5.2.1",
     "@starptech/prettyhtml": "^0.10.0",
     "backstopjs": "^6.2.2",
     "cheerio": "^1.0.0-rc.12",
