@@ -303,6 +303,7 @@
 .#{$card}__selectable-actions .#{$radio}__label {
   position: absolute;
   inset: 0;
+  justify-self: auto;
   cursor: pointer;
 
   &::before {

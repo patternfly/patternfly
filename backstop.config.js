@@ -29,6 +29,7 @@ const baseUrl = 'http://localhost:5000';
   },
   '/components/accordion/html/bordered',
 */
+
 const relativeUrls = [
   '/components/about-modal/html-demos/basic',
   '/components/about-modal/html/basic',
@@ -588,6 +589,7 @@ const relativeUrls = [
   '/components/modal/html/custom-alert',
   '/components/modal/html/custom-title',
   '/components/modal/html/danger-alert',
+  '/components/modal/html/danger-alert-with-modifier-on-modal-title',
   '/components/modal/html/icon',
   '/components/modal/html/info-alert',
   '/components/modal/html/large',
