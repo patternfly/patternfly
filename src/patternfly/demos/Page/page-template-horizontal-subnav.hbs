@@ -1,5 +1,5 @@
-{{#> page-main-nav page-main-nav--IsLimitWidth="true" page-main-nav--modifier=page-template-horizontal-subnav--modifier}}
-  {{#> nav nav--HasScroll="true" nav--IsHorizontalSubnav="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+{{#> page-main-subnav page-main-subnav--IsLimitWidth="true" page-main-subnav--modifier=page-template-horizontal-subnav--modifier}}
+  {{#> nav nav--HasScroll=page-template-horizontal-subnav--HasScroll nav--IsHorizontalSubnav="true" nav--IsScrollable=page-template-horizontal-subnav--HasScroll nav--attribute='aria-label="Local"'}}
     {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -11,21 +11,23 @@
           Horizontal subnav item 2
         {{/nav-link}}
       {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Horizontal subnav item 3
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Horizontal subnav item 4
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Horizontal subnav item 5
-        {{/nav-link}}
-      {{/nav-item}}
+      {{#if page-template-horizontal-subnav--HasScroll}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal subnav item 3
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal subnav item 4
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Horizontal subnav item 5
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/if}}
     {{/nav-list}}
   {{/nav}}
-{{/page-main-nav}}
+{{/page-main-subnav}}

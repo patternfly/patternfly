@@ -416,6 +416,7 @@ import './Navigation.css'
 {{#> nav nav--HasScroll=true
     nav--IsHorizontal=true
     nav--IsScrollable=true
+    nav-scroll-button--IsStartDisabled=true
     nav--attribute='aria-label="Global"'
   }}
   {{#> nav-list}}
@@ -473,7 +474,11 @@ import './Navigation.css'
 
 ### Horizontal subnav overflow
 ```hbs
-{{#> nav nav--HasScroll="true" nav--IsHorizontalSubnav="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+{{#> nav nav--HasScroll="true"
+    nav--IsHorizontalSubnav="true"
+    nav--IsScrollable="true"
+    nav-scroll-button--IsStartDisabled=true
+    nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}

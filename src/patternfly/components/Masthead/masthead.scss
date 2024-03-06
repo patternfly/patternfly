@@ -1,8 +1,8 @@
 $pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:root,
-[data-theme="#{$masthead}"] {
+:where(:root),
+:where(.#{$masthead}) {
   // * Masthead
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--md);
@@ -10,6 +10,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // * Masthead brand
   --#{$masthead}__brand--MarginInlineEnd: var(--pf-t--global--spacer--md);
@@ -41,9 +42,9 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
 
   // * Masthead toolbar
-  --#{$masthead}--#{$toolbar}--Width: 100%;
-  --#{$masthead}--#{$toolbar}--PaddingBlock: 0;
-  --#{$masthead}--#{$toolbar}--PaddingInline: 0;
+  --#{$masthead}--c-toolbar--Width: 100%;
+  --#{$masthead}--c-toolbar--PaddingBlock: 0;
+  --#{$masthead}--c-toolbar--PaddingInline: 0;
 }
 
 // * Masthead display stack
@@ -70,9 +71,12 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // - Masthead
 .#{$masthead} {
-  --#{$toolbar}--Width: var(--#{$masthead}--#{$toolbar}--Width);
-  --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--#{$toolbar}--PaddingBlock);
-  --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--#{$toolbar}--PaddingInline);
+  .#{$toolbar} {
+    --#{$toolbar}--Width: var(--#{$masthead}--c-toolbar--Width);
+    --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--c-toolbar--PaddingBlock);
+    --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--c-toolbar--PaddingInline);
+    --#{$toolbar}__content--MinWidth: 0;
+  }
 
   // Set layout to stack by default
   @include pf-v5-c-masthead--m-display-stack;
@@ -97,7 +101,12 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-block-end: var(--#{$masthead}--PaddingBlockEnd, var(--#{$masthead}--PaddingBlock));
   padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
-  background-color: var(--#{$masthead}--BackgroundColor, var(--pf-t--global--background--color--secondary--default));
+  background-color: var(--#{$masthead}--BackgroundColor);
+
+  .#{$toolbar}__content-section {
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
 
   // - Masthead toolbar expandable content
   .#{$toolbar}__expandable-content {
