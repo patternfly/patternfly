@@ -3398,6 +3398,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Destination
         {{/table-th}}
       {{/table-tr}}
+      {{> table-tr table-tr--IsBorderRow="true" table-tr--colspan="9"}}
     {{/table-thead}}
 
     {{#> table-tbody}}
