@@ -211,7 +211,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ### Inline edit table row
 ```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
-  {{#> table table--id="inline-edit-table-row-example" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
+  {{#> table table--id="inline-edit-table-row-example" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
     {{#> table-caption}}
       This is the table caption
     {{/table-caption}}
@@ -232,8 +232,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
         {{#> table-th}}
           Number
         {{/table-th}}
-        {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
-        {{#> table-td table-td--IsEmpty="true"}}{{/table-td}}
+        {{> table-cell-empty}}
+        {{> table-cell-empty}}
       {{/table-tr}}
     {{/table-thead}}
 
@@ -312,9 +312,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             {{/button}}
           {{/inline-edit-action}}
         {{/table-td}}
-        {{#> table-td table-td--action="true"}}
-          {{> dropdown dropdown--id=(concat table--id inline-edit--row '-dropdown-kebab') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
-        {{/table-td}}
+        {{> table-cell-action}}
       {{/table-tr}}
 
       {{#> table-tr inline-edit--row="-row-2-"}}
@@ -391,9 +389,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             {{/button}}
           {{/inline-edit-action}}
         {{/table-td}}
-        {{#> table-td table-td--action="true"}}
-          {{> dropdown dropdown--id=(concat table--id inline-edit--row '-dropdown-kebab') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
-        {{/table-td}}
+        {{> table-cell-action}}
       {{/table-tr}}
     {{/table-tbody}}
   {{/table}}

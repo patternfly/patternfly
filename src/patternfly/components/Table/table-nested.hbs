@@ -1,10 +1,10 @@
-{{#> table newcontext table--id=(concat table--id '-' table-nested--id) table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact pf-m-no-border-rows" table--grid="true"}}
+{{#> table newcontext table--id=(concat table--id '-' table-nested--id) table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact pf-m-no-border-rows" table--IsGrid=true}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}Description{{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}Date{{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}Status{{/table-th}}
-      {{#> table-td}}{{/table-td}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
   {{#> table-tbody}}
@@ -12,41 +12,31 @@
       {{#> table-th table-th--data-label="Description"}}Item one{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr2"}}
       {{#> table-th table-th--data-label="Description"}}Item two{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Warning{{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr3"}}
       {{#> table-th table-th--data-label="Description"}}Item three{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr4"}}
       {{#> table-th table-th--data-label="Description"}}Item four{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr5"}}
       {{#> table-th table-th--data-label="Description"}}Item five{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

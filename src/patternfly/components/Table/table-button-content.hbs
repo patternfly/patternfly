@@ -1,6 +1,8 @@
-<div class="{{pfv}}table__button-content{{#if table-button-content--modifier}} {{table-button-content--modifier}}{{/if}}"
+<span class="{{pfv}}table__button-content{{#if table-button-content--modifier}} {{table-button-content--modifier}}{{/if}}"
   {{#if table-button-content--attribute}}
     {{{table-button-content--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
-</div>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</span>

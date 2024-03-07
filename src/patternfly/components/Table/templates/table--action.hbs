@@ -1,4 +1,6 @@
-{{#> table-td table-td--action="true"}}
+{{!-- TODO: remove this once stable --}}
+
+{{#> table-td table-td--IsAction=true}}
   {{!-- Use content of {empty string} to avoid passing @partial-block to dropdown --}}
-  {{#> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}{{/dropdown}}
+  {{> table-cell-action}}
 {{/table-td}}

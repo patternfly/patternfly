@@ -1,8 +1,8 @@
-{{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--index="thead"}}
-      {{> table--toggle-all}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--index='1' table-tr--index="thead"}}
+      {{> table-cell-toggle}}
+      {{> table-cell-empty}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
@@ -18,19 +18,15 @@
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
-      {{#> table-td table-td--check="true"}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+    {{#> table-tr table-tr--index='1'}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node1">Node 1</div>
@@ -52,14 +48,12 @@
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+    {{#> table-tr table-tr--index='2' table-tr--IsExpandable=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -70,15 +64,14 @@
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       {{/table-td}}
-      {{#> table-td}}
-      {{/table-td}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
+    {{#> table-tr table-tr--index='3' table-tr--IsExpanded=true}}
       {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}
-      {{#> table-td table-td--IsCheck=true}}
+      {{#> table-td table-td--IsCheckbox=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-node2"')}}{{/check-input}}
         {{/check}}
@@ -104,14 +97,12 @@
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+    {{#> table-tr table-tr--index='4' table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="5" id="' table--id '-content2"')}}
         <div class="{{pfv}}table__expandable-row-content">
           {{#> content}}
@@ -122,17 +113,15 @@
           {{/content}}
         </div>
       {{/table-td}}
-      {{#> table-td}}
-      {{/table-td}}
-      {{#> table-td}}
-      {{/table-td}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index='5'}}
       {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}
-      {{#> table-td table-td--IsCheck=true}}
+      {{#> table-td table-td--IsCheckbox=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-node3"')}}{{/check-input}}
         {{/check}}
@@ -158,12 +147,10 @@
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--index='6' table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content3"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -178,9 +165,9 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index='7'}}
       {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}
-      {{#> table-td table-td--IsCheck=true}}
+      {{#> table-td table-td--IsCheckbox=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-node4"')}}{{/check-input}}
         {{/check}}
@@ -206,12 +193,10 @@
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-5') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--index='8' table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content4"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -226,13 +211,9 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index='9'}}
       {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 expandable-toggle5" id="expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow5" aria-labelledby="' table--id '-node5"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+      {{> table-cell-check}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node5">Node 5</div>
@@ -254,12 +235,10 @@
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-6') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--index='10' table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content5"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

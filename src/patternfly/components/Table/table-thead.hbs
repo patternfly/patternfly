@@ -1,3 +1,8 @@
+{{#>
+  config
+  IsThead=true
+}}
+
 <thead class="{{pfv}}table__thead
   {{#if table-thead--modifier}}{{table-thead--modifier}}{{/if}}{{#if table-thead--IsNested}} pf-m-nested-column-header{{/if}}"
   {{#if table-thead--attribute}}
@@ -5,3 +10,5 @@
   {{/if}}>
   {{> @partial-block}}
 </thead>
+
+{{/config}}

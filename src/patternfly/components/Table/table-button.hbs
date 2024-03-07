@@ -2,5 +2,9 @@
   {{#if table-button--attribute}}
     {{{table-button--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if table-button--text}}
+    {{{table-button--text}}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </button>

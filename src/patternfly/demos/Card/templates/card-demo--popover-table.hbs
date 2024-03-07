@@ -1,7 +1,7 @@
-{{#> table table--id=(concat card--id '-popover-table') table--modifier="pf-m-compact" table--expandable="true" table--attribute='aria-label="Control panel table"'}}
+{{#> table table--id=(concat card--id '-popover-table') table--modifier="pf-m-compact" table--IsExpandable=true table--attribute='aria-label="Control panel table"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
+      {{> table-cell-empty}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Components
       {{/table-th}}
@@ -12,8 +12,13 @@
   {{/table-thead}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle
+          menu-toggle--aria-labelledby=(concat table--id '-node1 expandable-toggle1')
+          menu-toggle--id="expandable-toggle1"
+          menu-toggle--aria-label="Details"
+          menu-toggle--aria-controls=(concat table--id '-content1')}}
+
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node1"'}}
         {{#> table-text}}
           API Servers
@@ -26,7 +31,7 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content1"')}}
         <div class="{{pfv}}table__expandable-row-content">
           {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
@@ -44,7 +49,12 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{> table-cell-toggle
+          menu-toggle--aria-labelledby=(concat table--id '-node2 expandable-toggle')
+          menu-toggle--id="expandable-toggle2"
+          menu-toggle--aria-label="Details"
+          menu-toggle--aria-controls=(concat table--id '-content2')}}
+
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node2"'}}
         {{#> table-text}}
           Controller Managers
@@ -57,7 +67,7 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content2"')}}
         <div class="{{pfv}}table__expandable-row-content">
           This is message
@@ -68,7 +78,12 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
+      {{> table-cell-toggle
+          menu-toggle--aria-labelledby=(concat table--id '-node2 expandable-toggle')
+          menu-toggle--id="expandable-toggle2"
+          menu-toggle--aria-label="Details"
+          menu-toggle--aria-controls=(concat table--id '-content3')}}
+
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node3"'}}
         {{#> table-text}}
           Schedulers
@@ -81,7 +96,7 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content3"')}}
         <div class="{{pfv}}table__expandable-row-content">
           This is the message
@@ -92,7 +107,12 @@
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
+      {{> table-cell-toggle
+          menu-toggle--aria-labelledby=(concat table--id '-node3 expandable-toggle')
+          menu-toggle--id="expandable-toggle3"
+          menu-toggle--aria-label="Details"
+          menu-toggle--aria-controls=(concat table--id '-content3')}}
+
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node4"'}}
         {{#> table-text}}
           etcd
@@ -105,7 +125,7 @@
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content4"')}}
         <div class="{{pfv}}table__expandable-row-content">
           This is the message

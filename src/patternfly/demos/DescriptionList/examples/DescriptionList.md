@@ -390,7 +390,7 @@ cssPrefix: pf-d-description-list
                   {{/description-list-text}}
                 {{/description-list-term}}
                 {{#> description-list-description}}
-                  {{#> table table--id="service-address" table--grid="true" table--modifier="pf-m-grid-md pf-m-compact" table--attribute='aria-label="Service address"'}}
+                  {{#> table table--id="service-address" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-compact" table--attribute='aria-label="Service address"'}}
                     {{#> table-thead}}
                       {{#> table-tr}}
                         {{#> table-th table-th--attribute='scope="col"'}}
@@ -429,7 +429,7 @@ cssPrefix: pf-d-description-list
                   {{/description-list-text}}
                 {{/description-list-term}}
                 {{#> description-list-description}}
-                  {{#> table table--id="service-port" table--grid="true" table--modifier="pf-m-grid-md pf-m-compact" table--attribute='aria-label="Service address"'}}
+                  {{#> table table--id="service-port" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-compact" table--attribute='aria-label="Service address"'}}
                     {{#> table-thead}}
                       {{#> table-tr}}
                         {{#> table-th table-th--attribute='scope="col"'}}
