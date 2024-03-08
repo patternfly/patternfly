@@ -12,7 +12,7 @@ import './Table.css'
 
 ### Basic table example
 ```hbs
-{{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--id="table-basic" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
@@ -146,16 +146,16 @@ These classes can be used to ensure that the table changes between the tabular a
 
 ### Sortable example
 ```hbs
-{{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
+{{#> table table--id="table-sortable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--IsColumnHelp="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsColumnHelp="true"}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -277,7 +277,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -292,9 +292,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-cell-overflow-menu table-cell-overflow-menu--IsExpanded=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -307,16 +305,14 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
 ```
 ### Overflow menu usage, overflow menu collapsed
 ```hbs
-{{#> table table--id="table-with-overflow-menu-collapsed" table--grid="true" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--id="table-with-overflow-menu-collapsed" table--IsGrid=true table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -328,7 +324,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -343,9 +339,8 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--dropdown--IsExpanded="true"}}
-      {{/table-td}}
+      <!-- TODO: update overflow menu with menu/menu toggle  -->
+      {{> table-cell-overflow-menu table-cell-overflow-menu--IsExpanded=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -358,9 +353,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu}}
-      {{/table-td}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -368,7 +361,7 @@ These classes can be used to ensure that the table changes between the tabular a
 
 ### Overflow menu usage, mobile
 ```hbs
-{{#> table table--id="table-with-overflow-menu-collapsed-mobile" table--grid="true" table--modifier="pf-m-grid" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--id="table-with-overflow-menu-collapsed-mobile" table--IsGrid=true table--modifier="pf-m-grid" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -380,7 +373,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -395,9 +388,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--dropdown--IsExpanded="true"}}
-      {{/table-td}}
+      {{> table-cell-overflow-menu table-td--IsExpanded=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -410,9 +401,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu}}
-      {{/table-td}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -422,10 +411,10 @@ These classes can be used to ensure that the table changes between the tabular a
 
 ### Checkboxes and actions example
 ```hbs
-{{#> table table--id="table-checkboxes-and-actions" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
+{{#> table table--id="table-checkboxes-and-actions" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
+    {{#> table-tr}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -441,13 +430,13 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -461,13 +450,11 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -481,13 +468,11 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -501,13 +486,11 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -521,9 +504,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -531,10 +512,10 @@ These classes can be used to ensure that the table changes between the tabular a
 
 ### Single select radio example
 ```hbs
-{{#> table table--id="table-single-select-radio" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is single select table with radio inputs"'}}
+{{#> table table--id="table-single-select-radio" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is single select table with radio inputs"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -550,7 +531,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -570,9 +551,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -590,9 +569,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
@@ -610,9 +587,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
@@ -630,9 +605,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -663,29 +636,29 @@ Note: Table column widths will respond automatically when toggling expanded rows
 
 ### Expandable example
 ```hbs
-{{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--id="table-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--toggle-all}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -696,27 +669,25 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="2"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -727,12 +698,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -742,9 +711,9 @@ Note: Table column widths will respond automatically when toggling expanded rows
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -755,12 +724,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -770,9 +737,9 @@ Note: Table column widths will respond automatically when toggling expanded rows
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -783,12 +750,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
@@ -801,31 +766,31 @@ Note: Table column widths will respond automatically when toggling expanded rows
 
 ### Expandable with set width columns example
 ```hbs
-{{#> table table--id="expandable-set-width-columns-example" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table, set column widths example"'}}
+{{#> table table--id="expandable-set-width-columns-example" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table, set column widths example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--toggle-all table-tr--expanded="true"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30" table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-toggle table-tr--IsExpanded=true}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30" table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20" table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20" table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20" table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20" table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-10"}}
         Links
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -836,27 +801,25 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute='colspan="4"'}}
         {{#> table-expandable-row-content}}
           <b>Span four</b>&nbsp;lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
-  {{#> table-tbody table-tr--index="2" table-tr--IsExpanded="true"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+  {{#> table-tbody table-tr--index="2" table-tr--IsExpanded=true}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -867,14 +830,12 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute='colspan="2"'}}
         {{#> table-expandable-row-content}}
           Span three and four
@@ -885,14 +846,14 @@ Note: Table column widths will respond automatically when toggling expanded rows
           Span five and six
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -903,12 +864,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="7"'}}
         {{#> table-expandable-row-content}}
           <b>Span all</b>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -918,9 +877,9 @@ Note: Table column widths will respond automatically when toggling expanded rows
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -931,12 +890,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="3"'}}
         {{#> table-expandable-row-content}}
           Span one, two, and three
@@ -959,29 +916,29 @@ Note: Table column widths will respond automatically when toggling expanded rows
 
 ### Expandable with nested table example
 ```hbs
-{{#> table table--id="table-expandable-nested-table" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable with nested table example"'}}
+{{#> table table--id="table-expandable-nested-table" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable with nested table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--toggle-all}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -992,15 +949,13 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
-          {{#> table newcontext table--id=(concat table--id "-table-basic") table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a simple table"'}}
+          {{#> table newcontext table--id=(concat table--id "-table-basic") table--IsGrid=true table--IsCompact=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table"'}}
             {{#> table-thead}}
               {{#> table-tr}}
                 {{#> table-th table-th--attribute='scope="col"'}}
@@ -1102,8 +1057,8 @@ Note: Table column widths will respond automatically when toggling expanded rows
 
   {{#> table-tbody table-tr--index="2"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1114,12 +1069,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1129,9 +1082,9 @@ Note: Table column widths will respond automatically when toggling expanded rows
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1142,12 +1095,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1157,9 +1108,9 @@ Note: Table column widths will respond automatically when toggling expanded rows
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1170,12 +1121,10 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
@@ -1213,16 +1162,16 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Compound expansion example
 ```hbs
-{{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
+{{#> table table--id="table-compound-expansion" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -1231,21 +1180,21 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
        Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--IsControlRow="true" table-tr--expanded="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+    {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         234
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
@@ -1258,24 +1207,22 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-1'}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-2'}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-3'}}
       {{/table-td}}
@@ -1284,15 +1231,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         2
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         82
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
@@ -1305,24 +1252,22 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-4'}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-5'}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-6'}}
       {{/table-td}}
@@ -1331,15 +1276,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
@@ -1352,24 +1297,22 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-7'}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-8'}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{> table-nested table-nested--id='nested-table-9'}}
       {{/table-td}}
@@ -1398,10 +1341,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Compact example
 ```hbs
-{{#> table table--id="table-compact" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
+{{#> table table--id="table-compact" table--IsCompact=true table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
@@ -1417,17 +1360,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
         Numbers
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Sam Jones" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -1441,19 +1384,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         0556
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Amy Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
@@ -1467,19 +1408,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         9492
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Steve Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -1493,19 +1432,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         9929
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Emma Jackson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -1519,15 +1456,13 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Last commit"}}
         2217
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -1535,11 +1470,11 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Compact expandable example
 ```hbs
-{{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
+{{#> table table--id="table-compact-expandable" table--IsGrid=true table--IsCompact=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--toggle-all}}
-      {{> table--check table--check--IsThead="true"}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
@@ -1549,15 +1484,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1568,27 +1503,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
         <div class="pf-v6-c-table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="2"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1599,12 +1532,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1614,9 +1545,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1627,12 +1558,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1642,9 +1571,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1655,12 +1584,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           This content has no padding.
@@ -1671,8 +1598,8 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody table-tr--index="5"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1683,12 +1610,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-5') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1698,9 +1623,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="6" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1711,14 +1636,12 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute='colspan="2"'}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -1730,14 +1653,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="7"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1748,12 +1671,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1763,9 +1684,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="8" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1776,12 +1697,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="4"'}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -1798,8 +1717,8 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody table-tr--index="9"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -1810,12 +1729,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1836,14 +1753,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Clickable example
 ```hbs
-{{#> table table--id="table-clickable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Clickable and selectable table example"'}}
+{{#> table table--id="table-clickable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="Clickable and selectable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         State
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
   {{#> table-tbody table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
@@ -1856,22 +1773,22 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Clickable and expandable example
 ```hbs
-{{#> table table--id="table-expandable-clickable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable and clickable table example"'}}
+{{#> table table--id="table-expandable-clickable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable and clickable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
   {{#> wrapper table-tbody--IsClickable="true" table-tbody--expandable--title="Clickable and not expanded"}}
@@ -1898,22 +1815,22 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Tree table basic
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-basic-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table example"' table-tree-view--basic--HasActions="true"}}
+{{> table-tree-view--basic table--id='tree-table-basic-example' table--modifier="pf-m-tree-view-grid-lg" table--aria-label='This is a simple tree table example' table-tree-view--HasActions=true}}
 ```
 
 ### Tree table with checkboxes
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"' table-tr--tree--HasActions="true"}}
+{{> table-tree-view--basic table--id='tree-table-with-checkboxes-example' table--modifier='pf-m-tree-view-grid-lg' table--aria-label='This is a simple tree table, with checkboxes example'  table-tree-view--HasActions=true table-tree-view--HasCheckboxes=true}}
 ```
 
 ### Tree table with checkboxes and icons
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"' table-tr--tree--HasActions="true"}}
+{{> table-tree-view--basic table--id='tree-table-with-checkboxes-icons-example' table--modifier='pf-m-tree-view-grid-lg' table--arial-label='This is a simple tree table, with checkboxes and icons example' table-tree-view--HasCheckboxes=true table-tree-view--HasIcons=true table-tree-view--HasActions=true}}
 ```
 
 ### Tree with no children or indentation
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-indent-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table with no indentation"' table--HasNoPosinset=true}}
+{{> table-tree-view--basic table--id="tree-table-indent-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table with no indentation"' table-tree-view--HasNoPosinset=true}}
 ```
 
 ### Tree table accessibility
@@ -1948,10 +1865,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Borderless example
 ```hbs
-{{#> table table--id="borderless-table" table--grid="true" table--modifier="pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
+{{#> table table--id="borderless-table" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
@@ -1967,17 +1884,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
         Numbers
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Sam Jones" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -1991,19 +1908,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         0556
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Amy Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
@@ -2017,19 +1932,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         9492
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Steve Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -2043,19 +1956,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         9929
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Emma Jackson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -2069,15 +1980,13 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Last commit"}}
         2217
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -2085,10 +1994,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Borderless compact example
 ```hbs
-{{#> table table--id="borderless-compact-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
+{{#> table table--id="borderless-compact-table" table--IsGrid=true table--IsCompact=true table--modifier="pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
@@ -2104,17 +2013,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
         Numbers
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Sam Jones" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -2128,19 +2037,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         0556
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Amy Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
@@ -2154,19 +2061,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         9492
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Steve Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -2180,19 +2085,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Numbers"}}
         9929
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--content="Emma Jackson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -2206,15 +2109,13 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Last commit"}}
         2217
       {{/table-td}}
-      {{#> table-td table-td--data-label="Icon" table-td--icon="true"}}
+      {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
         <i class="fas fa-check"></i>
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -2222,29 +2123,29 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Borderless expandable example
 ```hbs
-{{#> table table--id="borderless-table-expandable" table--grid="true" table--modifier="pf-m-grid-lg pf-m-no-border-rows" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--id="borderless-table-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg pf-m-no-border-rows" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2255,27 +2156,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="2"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2286,12 +2185,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -2302,9 +2199,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2315,12 +2212,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -2330,9 +2225,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2343,12 +2238,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
@@ -2361,16 +2254,16 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Borderless with compound expansion example
 ```hbs
-{{#> table table--id="borderless-compound-expansion-table" table--grid="true" table--modifier="pf-m-grid-md pf-m-no-border-rows" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
+{{#> table table--id="borderless-compound-expansion-table" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-no-border-rows" table--IsExpandable=true table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -2379,21 +2272,21 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
        Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-1"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         234
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
@@ -2406,26 +2299,24 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-1')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-2')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-3')}}
         {{/table-nested}}
@@ -2433,14 +2324,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsControlRow="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-4"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-4"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         234
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
@@ -2453,26 +2344,24 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-4')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-5')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-6')}}
         {{/table-nested}}
@@ -2481,16 +2370,16 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{/table-tbody}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--IsControlRow="true" table-tr--expanded="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
+    {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         2
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--modifier="pf-m-expanded" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--modifier="pf-m-expanded" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         82
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
@@ -2503,26 +2392,24 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-7')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-8')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-9')}}
         {{/table-nested}}
@@ -2532,15 +2419,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-10"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-10"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-11"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-11"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         4
       {{/table-td}}
-      {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-12"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-12"')}}
         <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
         1
       {{/table-td}}
@@ -2553,26 +2440,24 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Open in Github</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-10')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-11')}}
         {{/table-nested}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-nested table--id=(concat table--id '-nested-table-12')}}
         {{/table-nested}}
@@ -2593,17 +2478,17 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Width modifiers examples
 ```hbs
-{{#> table table--id="table-width-modifiers" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
+{{#> table table--id="table-width-modifiers" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsGrid=true table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true" table-th--modifier="pf-m-width-30"}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true" table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
@@ -2617,7 +2502,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2634,7 +2519,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2651,7 +2536,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2668,7 +2553,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2700,7 +2585,7 @@ Width modifiers control the width of the columns. To control the responsive beha
 
 ### Hidden/visible breakpoint modifiers example
 ```hbs
-{{#> table table--id="table-hidden-visible" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
+{{#> table table--id="table-hidden-visible" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-hidden pf-m-visible-on-md pf-m-hidden-on-lg"}}
@@ -2804,13 +2689,13 @@ Width modifiers control the width of the columns. To control the responsive beha
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-table tr > th`, `.pf-v6-c-table tr > td` | Hides a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes), or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-table tr > th`, `.pf-v6-c-table tr > td` | Shows a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
+
 ## Text control modifiers
 
 To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-v6-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-v6-c-table__text`].
-
 ### Text control example
 ```hbs
-{{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--IsGrid=true table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20"}}
@@ -2825,7 +2710,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
         Fit content
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -2855,7 +2740,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 
 ### Text control using the table text element example
 ```hbs
-{{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--IsGrid=true table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
     This table contains <code>.pf-v6-c-table__text</code>&nbsp; examples. The <code>.pf-v6-c-table__text</code>&nbsp; element can be using alone or in a nested configuration.
   {{/table-caption}}
@@ -2872,7 +2757,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 
   {{#> table-tbody}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content"  table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content"  table-th--IsRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
           <b><code>th.pf-m-truncate</code></b>
         {{/table-text}}
@@ -2884,7 +2769,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--IsRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
           <b><code>.pf-v6-l-stack</code></b>
         {{/table-text}}
@@ -2915,7 +2800,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--IsRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
           <b><code>.pf-v6-l-flex</code></b>
         {{/table-text}}
@@ -2936,7 +2821,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--IsRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
           <b><code>.pf-v6-l-flex</code></b>
         {{/table-text}}
@@ -2975,7 +2860,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
-      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--IsRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
           <b><code>.pf-v6-l-grid</code></b>
         {{/table-text}}
@@ -3083,7 +2968,7 @@ Long strings in table cells will push that column wider and possible take from o
 ### Width constrained
 Add a [width modifier](#width-modifiers) to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
 ```hbs
-{{#> table table--id="width-constrained-example" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
+{{#> table table--id="width-constrained-example" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-40"}}
@@ -3170,7 +3055,7 @@ There are a few ways this can be handled:
 ### Sticky header
 ```hbs
 <div class="pf-v6-c-scroll-inner-wrapper">
-  {{#> table table--id="table-sticky-header" table--grid="true" table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
+  {{#> table table--id="table-sticky-header" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
     {{#> table-thead}}
       {{#> table-tr}}
         {{#> table-th table-th--attribute='scope="col"'}}
@@ -3334,11 +3219,11 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Nested column headers and expandable rows
 ```hbs
 <div class="pf-v6-c-scroll-inner-wrapper">
-  {{#> table table--id="nested-columns-expandable-example" table--expandable="true" table--grid="true" table--attribute='aria-label="This is a nested column header table example"' table--HasToggles="true" table--HasChecks="true" table--HasActions="true"}}
+  {{#> table table--id="nested-columns-expandable-example" table--attribute='aria-label="This is a nested column header table example"' table--IsExpandable=true table--IsGrid=true table--HasToggles=true table--HasChecks=true table--HasActions=true}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
-        {{> table-td table-td--IsEmpty="true" table-td--attribute='rowspan="2"'}}
-        {{> table--check table--check--IsThead="true" table-td--attribute='rowspan="2"'}}
+        {{> table-cell-empty table-td--attribute='rowspan="2"'}}
+        {{> table-cell-check table-td--attribute='rowspan="2"'}}
         {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right"}}
           Team
         {{/table-th}}
@@ -3352,13 +3237,13 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
 
       {{#> table-tr table-tr--modifier="pf-m-first-cell-offset-reset"}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead"}}
           Design lead
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead"}}
           Interaction design
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v6-c-table__subhead pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead pf-m-border-right"}}
           Visual designers
         {{/table-th}}
       {{/table-tr}}
@@ -3366,7 +3251,9 @@ For sticky columns to function correctly, the parent table's width must be contr
     {{/table-thead}}
 
     {{#> table-tbody table-tbody--modifier="pf-m-expanded" table-tr--index="1"}}
-      {{#> table--tr table-tr--expanded="true"}}
+      {{#> table-tr table-tr--IsExpanded=true}}
+        {{> table-cell-toggle}}
+        {{> table-cell-check}}
         {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true" table-th--IsNode="true"}}
           Developer program
         {{/table-th}}
@@ -3384,14 +3271,23 @@ For sticky columns to function correctly, the parent table's width must be contr
             Message us!
           {{/button}}
         {{/table-td}}
-      {{/table--tr}}
-      {{#> table--tr table--tr--IsExpandable="true" table-tr--IsExpanded="true" table--tr--content-cols="5"}}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      {{/table--tr}}
+      {{/table-tr}}
+      {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+        {{> table-cell-empty}}
+        {{> table-cell-empty}}
+        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content1"'}}
+          {{#> table-expandable-row-content}}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{/table-expandable-row-content}}
+        {{/table-td}}
+        {{> table-cell-empty}}
+      {{/table-tr}}
     {{/table-tbody}}
 
     {{#> table-tbody table-tr--index="2"}}
-      {{#> table--tr}}
+      {{#> table-tr}}
+        {{> table-cell-toggle}}
+        {{> table-cell-check}}
         {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true"}}
           Developer program
         {{/table-th}}
@@ -3409,14 +3305,23 @@ For sticky columns to function correctly, the parent table's width must be contr
             Message us!
           {{/button}}
         {{/table-td}}
-      {{/table--tr}}
-      {{#> table--tr table--tr--IsExpandable="true" table--tr--content-cols="5"}}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      {{/table--tr}}
+      {{/table-tr}}
+      {{#> table-tr table-tr--IsExpandable=true}}
+        {{> table-cell-empty}}
+        {{> table-cell-empty}}
+        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content2"'}}
+          {{#> table-expandable-row-content}}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{/table-expandable-row-content}}
+        {{/table-td}}
+        {{> table-cell-empty}}
+      {{/table-tr}}
     {{/table-tbody}}
 
     {{#> table-tbody table-tr--index="3"}}
-      {{#> table--tr}}
+      {{#> table-tr}}
+        {{> table-cell-toggle}}
+        {{> table-cell-check}}
         {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true"}}
           Developer program
         {{/table-th}}
@@ -3434,10 +3339,17 @@ For sticky columns to function correctly, the parent table's width must be contr
             Message us!
           {{/button}}
         {{/table-td}}
-      {{/table--tr}}
-      {{#> table--tr table--tr--IsExpandable="true" table--tr--content-cols="5"}}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      {{/table--tr}}
+      {{/table-tr}}
+      {{#> table-tr table-tr--IsExpandable=true}}
+        {{> table-cell-empty}}
+        {{> table-cell-empty}}
+        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content3"'}}
+          {{#> table-expandable-row-content}}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{/table-expandable-row-content}}
+        {{/table-td}}
+        {{> table-cell-empty}}
+      {{/table-tr}}
     {{/table-tbody}}
   {{/table}}
 </div>
@@ -3446,7 +3358,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Nested column headers example
 ```hbs
 <div class="pf-v6-c-scroll-inner-wrapper">
-  {{#> table table--id="table-nested-column-headers-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
+  {{#> table table--id="table-nested-column-headers-example" table--IsGrid=true table--attribute='aria-label="This is a nested column header table example"'}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
@@ -3455,34 +3367,34 @@ For sticky columns to function correctly, the parent table's width must be contr
         {{#> table-th table-th--attribute='scope="col" colspan="2"' table-th--modifier="pf-m-border-right"}}
           Ports
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
           Protocol
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
           Flow rate
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
           Traffic
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-fit-content"}}
           Packets
         {{/table-th}}
       {{/table-tr}}
 
       {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
           Destination
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Date & Time
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Destination
         {{/table-th}}
       {{/table-tr}}
@@ -3507,7 +3419,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Nested column headers, sticky header
 ```hbs
 <div class="pf-v6-c-scroll-inner-wrapper">
-  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--grid="true" table--attribute='aria-label="This is a sticky nested column header table example"'}}
+  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--IsGrid=true table--attribute='aria-label="This is a sticky nested column header table example"'}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
@@ -3516,34 +3428,34 @@ For sticky columns to function correctly, the parent table's width must be contr
         {{#> table-th table-th--attribute='scope="col" colspan="2"' table-th--modifier="pf-m-border-right"}}
           Ports
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
           Protocol
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
           Flow rate
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
           Traffic
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-fit-content"}}
           Packets
         {{/table-th}}
       {{/table-tr}}
 
       {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
           Destination
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Date & Time
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Destination
         {{/table-th}}
       {{/table-tr}}
@@ -3583,11 +3495,11 @@ For sticky columns to function correctly, the parent table's width must be contr
 
 ### Favorites examples
 ```hbs
-{{#> table table--id="table-favorites" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a favorites table example"'}}
+{{#> table table--id="table-favorites" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-check}}
+      {{> table-cell-empty}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -3603,13 +3515,13 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
@@ -3628,13 +3540,11 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--index}}">Repository {{table-tr--index}}</span>
@@ -3651,13 +3561,11 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--index}}">Repository {{table-tr--index}}</span>
@@ -3674,13 +3582,11 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--check}}
+      {{> table-cell-check}}
       {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--index}}">Repository {{table-tr--index}}</span>
@@ -3697,9 +3603,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -3707,10 +3611,10 @@ For sticky columns to function correctly, the parent table's width must be contr
 
 ### Favorites sortable example
 ```hbs
-{{#> table table--id="table-favorites-sortable" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
+{{#> table table--id="table-favorites-sortable" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true" table-button--attribute='aria-label="Favorite"'}}
+      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--IsSortable=true table-th--IsSelected="true" table-button--attribute='aria-label="Favorite"'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -3853,13 +3757,13 @@ For sticky columns to function correctly, the parent table's width must be contr
   <div id="{{table--id}}-help">
     Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
   </div>
-  {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with draggable rows example"'}}
+  {{#> table table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with draggable rows example"'}}
     {{#> table-caption}}
       This is the table caption
     {{/table-caption}}
     {{#> table-thead}}
       {{#> table-tr}}
-        {{> table-td table-td--IsEmpty="true"}}
+        {{> table-cell-empty}}
         {{#> table-th table-th--attribute='scope="col"'}}
           Repositories
         {{/table-th}}
@@ -3983,7 +3887,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 ### Striped table example
 ```hbs
-{{#> table table--id="table-striped" table--grid="true" table--modifier="pf-m-grid-md pf-m-striped" table--attribute='aria-label="This is a striped table example"'}}
+{{#> table table--id="table-striped" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-striped" table--attribute='aria-label="This is a striped table example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
@@ -4085,29 +3989,29 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 ### Striped expandable table example
 ```hbs
-{{#> table table--id="table-striped-expandable" table--grid="true" table--modifier="pf-m-grid-lg pf-m-striped" table--expandable="true" table--attribute='aria-label="Striped expandable table example"'}}
+{{#> table table--id="table-striped-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg pf-m-striped" table--IsExpandable=true table--attribute='aria-label="Striped expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Branches
       {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -4118,27 +4022,25 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 1</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="2"}}
     {{#> table-tr}}
-      {{> table--toggle}}
-      {{> table--check}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -4149,12 +4051,10 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 2</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -4164,9 +4064,9 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -4177,12 +4077,10 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 3</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -4192,9 +4090,9 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
   {{/table-tbody}}
 
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
-      {{> table--toggle}}
-      {{> table--check}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -4205,12 +4103,10 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Link 4</a>
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
@@ -4223,7 +4119,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 ### Striped multiple tbody example
 ```hbs
-{{#> table table--id="table-striped-tbody" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tbody example"'}}
+{{#> table table--id="table-striped-tbody" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tbody example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
@@ -4389,7 +4285,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 ### Striped tr example
 ```hbs
-{{#> table table--id="table-striped-tr" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tr example"'}}
+{{#> table table--id="table-striped-tr" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tr example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}

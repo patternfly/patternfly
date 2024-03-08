@@ -40,6 +40,12 @@
   {{#if button--role}}
     role="{{button--role}}"
   {{/if}}
+  {{#if button--aria-controls}}
+    aria-controls="{{button--aria-controls}}"
+  {{/if}}
+  {{#if button--aria-labelledby}}
+    aria-labelledby="{{button--aria-labelledby}}"
+  {{/if}}
   {{#if button--IsSpan}}
     role="button"
     tabindex="0"

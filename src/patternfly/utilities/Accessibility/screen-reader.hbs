@@ -2,5 +2,11 @@
   {{#if screen-reader--attribute}}
     {{{screen-reader--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if screen-reader--text}}
+    {{screen-reader--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    Actions
+  {{/if}}
 </{{#if screen-reader--element}}{{screen-reader--element}}{{else}}span{{/if}}>

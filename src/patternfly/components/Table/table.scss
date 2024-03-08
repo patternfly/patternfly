@@ -95,8 +95,6 @@
   --#{$table}__check--PaddingRight: var(--pf-t--global--spacer--sm);
 
   // * Table favorite
-  --#{$table}__favorite--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__favorite--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--m-favorite--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__favorite--m-favorited--c-button--Color: var(--pf-t--global--color--favorite--clicked);
@@ -116,6 +114,8 @@
   // * Table Action
   --#{$table}__action--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$table}__action--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$table}__action--PaddingRight: var(--pf-t--global--spacer--sm);
 
   // * Table inline edit
   --#{$table}__inline-edit-action--PaddingTop: var(--pf-t--global--spacer--sm);
@@ -791,17 +791,13 @@
       line-height: 1;
       vertical-align: baseline;
     }
-
-    tbody & {
-      height: auto;
-    }
   }
 }
 
 // - Table favorite
 .#{$table}__favorite {
-  --#{$table}--cell--PaddingLeft: var(--#{$table}__favorite--PaddingLeft);
-  --#{$table}--cell--PaddingRight: var(--#{$table}__favorite--PaddingRight);
+  // --#{$table}--cell--PaddingLeft: var(--#{$table}__favorite--PaddingLeft);
+  // --#{$table}--cell--PaddingRight: var(--#{$table}__favorite--PaddingRight);
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$table}__favorite--c-button--FontSize);
@@ -823,12 +819,15 @@
   }
 }
 
-// - Table action - Table inline edit action - Table draggable
+// - Table action - Table favorite - Table inline edit action - Table draggable
 .#{$table}__action,
+.#{$table}__favorite,
 .#{$table}__inline-edit-action,
 .#{$table}__draggable {
   --#{$table}--cell--PaddingTop: var(--#{$table}__action--PaddingTop);
   --#{$table}--cell--PaddingBottom: var(--#{$table}__action--PaddingBottom);
+  --#{$table}--cell--PaddingLeft: var(--#{$table}__action--PaddingLeft);
+  --#{$table}--cell--PaddingRight: var(--#{$table}__action--PaddingRight);
 }
 
 // - Table action - Table inline edit action

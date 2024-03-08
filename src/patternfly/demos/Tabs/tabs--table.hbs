@@ -1,11 +1,7 @@
-{{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
+{{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute='name="check-all" aria-label="Select all rows"'}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -21,17 +17,13 @@
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+    {{#> table-tr table-tr--index='1'}}
+      {{> table-cell-check}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node1">Node 1</div>
@@ -71,17 +63,11 @@
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> tabs--table-overflow-menu tabs--table-overflow-menu--id=(concat table--id "-dropdown-kebab-1")}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--modifier="pf-m-selected"}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-node2"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+    {{#> table-tr table-tr--modifier="pf-m-selected" table-tr--index='2'}}
+      {{> table-cell-check}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node2">Node 2</div>
@@ -121,17 +107,11 @@
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> tabs--table-overflow-menu tabs--table-overflow-menu--id=(concat table--id "-dropdown-kebab-2")}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-node3"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+    {{#> table-tr table-tr--index='3'}}
+      {{> table-cell-check}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node3">Node 3</div>
@@ -171,17 +151,11 @@
       {{#> table-td table-td--data-label="Last commit"}}
         30 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> tabs--table-overflow-menu tabs--table-overflow-menu--id=(concat table--id "-dropdown-kebab-3")}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-node4"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+    {{#> table-tr  table-tr--index='4'}}
+      {{> table-cell-check}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node4">Node 4</div>
@@ -221,17 +195,11 @@
       {{#> table-td table-td--data-label="Last commit"}}
         8 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> tabs--table-overflow-menu tabs--table-overflow-menu--id=(concat table--id "-dropdown-kebab-4")}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr}}
-      {{#> table-td table-td--IsCheck=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute=(concat 'name="checkrow5" aria-labelledby="' table--id '-node5"')}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+    {{#> table-tr table-tr--index='5'}}
+      {{> table-cell-check}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node5">Node 5</div>
@@ -271,9 +239,7 @@
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
       {{/table-td}}
-      {{#> table-td table-td--action="true"}}
-        {{> tabs--table-overflow-menu tabs--table-overflow-menu--id=(concat table--id "-dropdown-kebab-5")}}
-      {{/table-td}}
+      {{> table-cell-action}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

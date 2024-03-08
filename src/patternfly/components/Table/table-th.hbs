@@ -1,28 +1,32 @@
-<th class="{{pfv}}table__th
+{{#>
+  config
+  table-th--tag=(ternary table-th--tag table-th--tag 'th')
+}}
+
+<{{table-th--tag}} class="{{pfv}}table__th
   {{#if table-th--modifier}} {{table-th--modifier}}{{/if}}
-  {{#if table-th--compound-expansion-toggle}} {{pfv}}table__compound-expansion-toggle{{/if}}
-  {{#if table-th--sortable}} {{pfv}}table__sort{{/if}}
+  {{#if table-th--IsCompoundExpansionToggle}} {{pfv}}table__compound-expansion-toggle{{/if}}
+  {{#if table-th--IsSortable}} {{pfv}}table__sort{{/if}}
   {{#if table-th--IsSortable}} {{pfv}}table__sort{{/if}}
   {{#if table-th--IsStickyLeft}} {{pfv}}table__sticky-cell pf-m-left{{/if}}
   {{#if table-th--IsStickyRight}} {{pfv}}table__sticky-cell pf-m-right{{/if}}
-  {{#if table-th--toggle}} {{pfv}}table__toggle{{/if}}
-  {{#if table-th--check}} {{pfv}}table__check{{/if}}
-  {{#if table-th--action}} {{pfv}}table__action{{/if}}
-  {{#if table-th--icon}} {{pfv}}table__icon{{/if}}
-  {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
+  {{#if table-th--IsToggle}} {{pfv}}table__toggle{{/if}}
+  {{#if table-th--IsCheckbox}} {{pfv}}table__check{{/if}}
+  {{#if table-th--IsAction}} {{pfv}}table__action{{/if}}
+  {{#if table-th--IsIcon}} {{pfv}}table__icon{{/if}}
   {{#if table-th--IsWrap}} pf-m-wrap{{/if}}
-  {{#if table-th--selected}} pf-m-selected{{/if}}
+  {{#if table-th--IsSelected}} pf-m-selected{{/if}}
   {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}
   {{#if table-th--IsFavorite}} pf-m-favorite{{/if}}"
-  {{#if table--grid}}
-    {{#if table-th--isRowHeader}}
+  {{#if table--IsGrid}}
+    {{#if table-th--IsRowHeader}}
       role="rowheader"
     {{else}}
       role="columnheader"
     {{/if}}
   {{/if}}
-  {{#if table-th--sortable}}
-    {{#if table-th--asc}}
+  {{#if table-th--IsSortable}}
+    {{#if table-th--IsAsc}}
       aria-sort="ascending"
     {{else if table-th--desc}}
       aria-sort="descending"
@@ -42,19 +46,19 @@
   {{#if table-th--IsColumnHelp}}
     <div class="{{pfv}}table__column-help">
   {{/if}}
-  {{#if table-th--sortable}}
+  {{#if table-th--IsSortable}}
     {{#> table-button}}
       {{#> table-button-content}}
         {{#> table-text}}
           {{#if table-th--IsFavorite}}
             <i class="fas fa-star" aria-hidden="true"></i>
-          {{else}}
+          {{else if @partial-block}}
             {{> @partial-block}}
           {{/if}}
         {{/table-text}}
         {{#> table-sort-indicator}}
-          {{#if table-th--selected}}
-            {{#if table-th--asc}}
+          {{#if table-th--IsSelected}}
+            {{#if table-th--IsAsc}}
               <i class="fas fa-long-arrow-alt-up"></i>
             {{else}}
               <i class="fas fa-long-arrow-alt-down"></i>
@@ -65,7 +69,7 @@
         {{/table-sort-indicator}}
       {{/table-button-content}}
     {{/table-button}}
-  {{else if table-th--compound-expansion-toggle}}
+  {{else if table-th--IsCompoundExpansionToggle}}
     {{#> table-button table-button--attribute=table-th--button--attribute}}
       {{#> table-text}}
         {{> @partial-block}}
@@ -75,11 +79,13 @@
     {{#> table-text}}
       {{> @partial-block}}
     {{/table-text}}
-  {{else}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
   {{#if table-th--IsColumnHelp}}
     {{> table-column-help-action}}
     </div>
   {{/if}}
-</th>
+</{{table-th--tag}}>
+
+{{/config}}

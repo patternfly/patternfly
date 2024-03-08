@@ -1,9 +1,14 @@
+{{#>
+  config
+  IsBody=true
+}}
+
 <tbody class="{{pfv}}table__tbody
-  {{~#if table-tbody--IsClickable}} pf-m-clickable{{/if}}
-  {{~#if table-tbody--IsSelected}} pf-m-selected{{/if}}
-  {{~#if table-tbody--IsExpanded}} pf-m-expanded{{/if}}
+  {{#if table-tbody--IsClickable}} pf-m-clickable{{/if}}
+  {{#if table-tbody--IsSelected}} pf-m-selected{{/if}}
+  {{#if table-tbody--IsExpanded}} pf-m-expanded{{/if}}
   {{#if table-tbody--modifier}} {{table-tbody--modifier}}{{/if}}"
-  {{#if table--grid}}
+  {{#if table--IsGrid}}
     role="rowgroup"
   {{/if}}
   {{#if table-tbody--IsClickable}}
@@ -14,3 +19,5 @@
   {{/if}}>
   {{> @partial-block}}
 </tbody>
+
+{{/config}}

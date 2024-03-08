@@ -46,6 +46,9 @@
       disabled
     {{/if}}
   {{/unless}}
+  {{#if menu-toggle--aria-label}}
+    aria-label="{{menu-toggle--aria-label}}"
+  {{/if}}
   {{#if menu-toggle--id}}
     id="{{menu-toggle--id}}"
   {{/if}}
@@ -73,7 +76,7 @@
   {{#ifAny menu-toggle--IsPlain @partial-block}}
     {{#if menu-toggle--HasKebab}}
       {{#> menu-toggle-icon}}
-        <i class="fas fa-ellipsis-v" aria-hidden=true></i>
+        <i class="fas fa-{{ternary menu-toggle--icon menu-toggle--icon 'ellipsis-v'}}" aria-hidden=true></i>
       {{/menu-toggle-icon}}
     {{else if menu-toggle--UsesButton}}
       {{#> button button--IsPlain=true button--icon='ellipsis-v' button--IsDisabled=menu-toggle--IsDisabled button--IsAriaDisabled=menu-toggle--IsAriaDisabled button--IsExpanded=menu-toggle--IsExpanded button--aria-label='Actions'}}{{/button}}

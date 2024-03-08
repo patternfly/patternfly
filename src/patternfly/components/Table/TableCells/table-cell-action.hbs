@@ -1,0 +1,12 @@
+{{!-- TODO: update `table-td` to `table-cell` --}}
+{{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
+{{!-- TODO: automate attribution --}}
+
+{{#> table-td table-td--IsAction=true}}
+  {{> menu-toggle
+      menu-toggle--IsPlain=true
+      menu-toggle--HasKebab=true
+      menu-toggle--IsSmall=table--IsCompact
+      menu-toggle--aria-label='Table actions'
+    }}
+{{/table-td}}

@@ -360,16 +360,16 @@ By default, table cell alignment is set to baseline. This retains vertical align
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth=true}}
-    {{#> table table--id="image-alignment-demo-table" table--grid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is an example of how to control image and text alignment in table cells."'}}
+    {{#> table table--id="image-alignment-demo-table" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is an example of how to control image and text alignment in table cells."'}}
       {{#> table-thead}}
         {{#> table-tr table-th--modifier="pf-m-fit-content"}}
-          {{#> table-th table-th--modifier="pf-m-nowrap" table-th--attribute='scope="col"' table-th--sortable=true table-th--selected=true table-th--asc=true}}
+          {{#> table-th table-th--modifier="pf-m-nowrap" table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected=true table-th--IsAsc=true}}
             Repositories
           {{/table-th}}
-          {{#> table-th table-th--attribute='scope="col"' table-th--sortable=true table-th--IsColumnHelp=true}}
+          {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsColumnHelp=true}}
             Branches
           {{/table-th}}
-          {{#> table-th table-th--attribute='scope="col"' table-th--sortable=true}}
+          {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
             Pull requests
           {{/table-th}}
           {{#> table-th table-th--attribute='scope="col"'}}

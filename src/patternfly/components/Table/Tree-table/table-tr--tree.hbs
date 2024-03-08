@@ -1,25 +1,49 @@
-{{#> table-tr table-tr--attribute='role="row"' table-tr--tree--HasActions=table-tr--HasActions}}
+{{#> table-tr table-tr--attribute='role="row"'}}
   {{#> table-th table-th--modifier="pf-v5-c-table__tree-view-title-cell"}}
     {{#> table-tree-view-main}}
+      {{!-- TODO: fix this after merge --}}
       {{#unless (concat table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
-        {{> table-td table-td--type="span" table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}
+        {{#> table-td table-td--IsToggle=true table-td--type='span'}}
+          {{#> button
+            button--aria-label='Toggle row'
+            button--IsSmall=table--IsCompact
+            button--IsPlain=true
+            button--IsExpanded=table-tr--IsExpanded
+            button--IsAriaExpanded=table-tr--IsExpanded
+            button--aria-describedby=table-tr--IsExpanded
+            button--aria-labelledby=(concat table--id '-node-' table-tr--index)
+            button--aria-control=(concat table--id '-content-' table-tr--index)
+            button--id=(concat table--id '-expandable-toggle' table-tr--index)}}
+
+            {{> table-toggle-icon}}
+          {{/button}}
+        {{/table-td}}
       {{/unless}}
+      {{!-- TODO: fix this after merge --}}
       {{#unless table-tr--tree--HasNoCheckbox}}
-        {{#if tree-view--HasCheckboxes}}
-          {{#> table-td table-td--type="span" table-td--IsCheck=true}}
-            <label>
-              {{#> check check--modifier="pf-m-standalone"}}
-                {{#> check-input check-input--attribute=(concat 'name="' table--id '-checkrow-' table-tr--tree--index '" aria-labelledby="' table--id '-node-' table-tr--tree--index '"')}}{{/check-input}}
-              {{/check}}
-            </label>
+        {{#if table-tree-view--HasCheckboxes}}
+          {{#> table-td table-td--type='span' table-td--IsCheckbox=true}}
+            {{> check
+              check--IsStandalone=true
+              check--IsLabelWrapped=true
+              check--id=(ternary table-cell-check--id table-cell-check--id (dasherize table--id 'level' table--IsTree-view--level 'level' table-tr--tree--index 'check'))
+            }}
           {{/table-td}}
         {{/if}}
       {{/unless}}
+
       {{#if table-tr--tree--HasActions}}
-        {{#> table-td table-td--action="true"}}
-          {{> dropdown dropdown--id=(concat table--id '-actions-main') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{#> table-td table-td--IsAction=true}}
+          {{> menu-toggle
+            menu-toggle--id=(concat table--id '-actions-main')
+            menu-toggle--IsPlain=true
+            menu-toggle--IsSmall=table--IsCompact
+            menu-toggle--HasKebab=(ternary menu-toggle--icon false true)
+            menu-toggle--aria-label='Table actions'
+          }}
         {{/table-td}}
       {{/if}}
+
       {{#> table-tree-view-text}}
         {{#if table-tree-view--HasIcons}}
           {{#> table-tree-view-icon}}
@@ -30,7 +54,7 @@
             {{/if}}
           {{/table-tree-view-icon}}
         {{/if}}
-        {{#> table-text table-text--attribute=(concat 'id="' table--id '-node-' table-tr--tree--index '"')}}
+        {{#> table-text table-text--attribute=(concat table--id '-node-' table-tr--tree--index)}}
           {{#if table-tr--tree--title}}
             {{{table-tr--tree--title}}}
           {{else}}
@@ -53,7 +77,16 @@
   {{#> table-td table-td--data-label="Number of Data Stores"}}
     5
   {{/table-td}}
-  {{#> table-td table-td--action="true"}}
-    {{> dropdown dropdown--id=(concat table--id '-' table-tr--tree--index '-actions') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-  {{/table-td}}
+  {{!-- TODO: fix this after merge --}}
+  {{#if table--HasActions}}
+    {{#> table-td table-td--IsAction=true}}
+      {{> menu-toggle
+        menu-toggle--id=(concat table--id '-actions-' table-tr--tree--index)
+        menu-toggle--IsPlain=true
+        menu-toggle--IsSmall=table--IsCompact
+        menu-toggle--HasKebab=(ternary menu-toggle--icon false true)
+        menu-toggle--aria-label='Table actions'
+      }}
+    {{/table-td}}
+  {{/if}}
 {{/table-tr}}

@@ -1,9 +1,9 @@
 <tr class="{{pfv}}table__tr
-  {{#if table-tr--expandable}} {{pfv}}table__expandable-row{{/if}}
+  {{#if table-tr--IsExpandable}} {{pfv}}table__expandable-row{{/if}}
   {{#if table-tr--IsControlRow}} {{pfv}}table__control-row{{/if}}
   {{#if table-tr--IsExpanded}} pf-m-expanded{{/if}}
   {{#if table-tr--details--IsExpanded}} pf-m-tree-view-details-expanded{{/if}}
-  {{~#if table-tr--IsClickable}} pf-m-clickable{{/if}}
+  {{#if table-tr--IsClickable}} pf-m-clickable{{/if}}
   {{#if table-tr--IsSelected}} pf-m-selected{{/if}}
   {{#if table-tr--IsBorderRow}} pf-m-border-row{{/if}}
   {{#if table-tr--HasNoInset}} pf-m-no-inset{{/if}}
@@ -19,7 +19,7 @@
         tabindex="-1"
       {{else}}
         tabindex="0"
-        {{#if table-tr--expanded}}
+        {{#if table-tr--IsExpanded}}
           aria-expanded="true"
         {{else}}
           aria-expanded="false"
@@ -31,7 +31,7 @@
     {{/if}}
   {{/unless}}
   {{#unless table-tr--IsBorderRow}}
-    {{#if table--grid}}
+    {{#if table--IsGrid}}
       role="row"
     {{/if}}
   {{/unless}}
@@ -45,7 +45,8 @@
     {{{table-tr--attribute}}}
   {{/if}}>
   {{#if table-tr--IsBorderRow}}
-    {{> table-td table-td--IsEmpty="true" table-td--attribute=(concat 'colspan="' table-tr--colspan '"')}}
+    {{!-- TODO: abstract the border row --}}
+    {{> table-cell-empty table-td--attribute=(concat 'colspan="' table-tr--colspan '"')}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
