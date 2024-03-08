@@ -123,7 +123,7 @@ import './Table.css'
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-table` | `<table>` | Initiates a table element. **Required** |
+| <meta class="table" /> | `<table>` | Initiates a table element. **Required** |
 | `.pf-v6-c-table__thead` | `<tr>` | Initiates a table header. **Required** |
 | `.pf-v6-c-table__tbody` | `<tr>` | Initiates a table body. **Required** |
 | `.pf-v6-c-table__tfoot` | `<tr>` | Initiates a table footer. |

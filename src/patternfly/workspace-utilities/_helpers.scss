@@ -1,0 +1,57 @@
+// Options:
+// type: Any, c, l, u, or none
+// format: selector (default), var (css variable)
+
+meta:is([class], [modifier]) {
+  --format: '.'; // set default type to selector
+  --extend: ''; // set default extend to nothing
+
+  // TODO: add this styling to workspace
+  // emulate code block
+  display: inline;
+  background-color: var(--pf-t--global--background--color--100);
+  padding: 1px var(--pf-t--global--spacer--sm);
+  border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--300);
+  font-size: var(--pf-t--global--font--size--sm);
+  font-family: var(--pf-t--global--font--family--mono);
+
+  &[format="var"] {
+    --format: '--';
+  }
+}
+
+meta[class] {
+  --content: ''; // initialize content variable
+  --class: attr(class); // initialize content variable
+  --version-prefix: '#{$pf-prefix}'; // version prefix
+  --type: 'c-'; // set default type to selector
+  --format: '.'; // set default type to selector
+
+  &[type] {
+    --type: attr(type)'-';
+  }
+
+  &[type="none"] {
+    --type: '';
+  }
+
+  &[format="none"] {
+    --format: '';
+  }
+
+  &[extend] {
+    --extend: ' ' attr(extend);
+  }
+
+  &::before {
+    content: var(--format) var(--version-prefix) var(--type) var(--class) var(--extend);
+  }
+}
+
+meta[modifier] {
+  --modifier: 'pf-m-'attr(modifier); // initialize content variable
+
+  &::before {
+    content: var(--format) var(--modifier) var(--extend);
+  }
+}
