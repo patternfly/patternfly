@@ -2,7 +2,7 @@
   {{#> table-thead}}
     {{#> table-tr table-tr--index='1' table-tr--index="thead"}}
       {{> table-cell-toggle}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--IsCheck=true}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
@@ -18,8 +18,8 @@
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-cell-empty}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--IsUrl=true}}
+      {{> table-cell-empty table-cell--IsPrimaryAction=true}}
     {{/table-tr}}
   {{/table-thead}}
 

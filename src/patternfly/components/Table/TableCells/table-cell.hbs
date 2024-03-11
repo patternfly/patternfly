@@ -1,0 +1,29 @@
+{{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
+{{!-- TODO: automate attribution --}}
+
+{{#>
+  config
+  table-cell--root=(pfPrefix 'table__')
+  table-cell--tag=(ternary IsThead 'th' 'td')
+  table-cell--className=(concat table-cell--root table-cell--tag)
+  table-cell--modifiers=(setModifiers
+    table-cell--IsToggle=(pfPrefix 'table__toggle')
+    table-cell--IsEmpty=(pfPrefix 'table__cell-empty')
+    table-cell--IsCheckbox=(pfPrefix 'table__check')
+  )
+}}
+{{!-- TODO: Logic for both table__th and table__td goes here --}}
+
+
+<{{table-cell--tag}} class="{{table-cell--root}}{{table-cell--tag}}{{table-cell--modifiers}}"
+  role='cell'
+  {{#if table-cell--attribute}}
+    {{{table-cell--attribute}}}
+  {{/if}}>
+
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</{{table-cell--tag}}>
+
+{{/config}}

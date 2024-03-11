@@ -1,4 +1,4 @@
-{{#> table table--IsTree-view="true"
+{{#> table table--IsTree-view=true
     table--HasActions=table-tree-view--HasActions
     table--HasCheckboxes=table-tree-view--HasCheckboxes
     table--HasIcons=table-tree-view--HasIcons
@@ -6,7 +6,7 @@
   }}
   {{#> table-thead table-tr--IsExpanded=true}}
     {{#> table-tr newcontext table--HasActions=table-tree-view--HasActions}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier=(prefix 'table__tree-view-title-header-cell')}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier=(pfPrefix 'table__tree-view-title-header-cell')}}
         Name
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}

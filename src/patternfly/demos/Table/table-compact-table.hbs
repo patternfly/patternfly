@@ -1,7 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier="pf-m-compact pf-m-grid-lg" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--IsCheck}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
@@ -20,8 +20,8 @@
       {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-cell-empty}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--IsUrl=true}}
+      {{> table-cell-empty table-cell--IsPrimaryAction=true}}
     {{/table-tr}}
   {{/table-thead}}
 

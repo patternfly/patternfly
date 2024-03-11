@@ -124,8 +124,46 @@ export const setTag = function (partialVar, el, fallback = 'div') {
 // ======================================================================================
 // array: creates array from string
 // ======================================================================================
+//
+// Props:
+//  - First parameter is the function call
+//  - array: can be anonymous or named
+//  - array items: space separated (no comma separated)
+//
+// Usage:
+//   {{> myPartial (array 'Hello World' true 2 '3')}}
+//   {{> myPartial namedArray=(array 'Hello World' true 2 '3' (object name='Marty' age=41 int=1))
+//
+// Debug:
+//   {{#> myPartial (array 'Hello World' true 2 '3')}}
+//     {{debug}}
+//   {{/myPartial}}
+//
+// ======================================================================================
 export const array = function () {
   return Array.prototype.slice.call(arguments, 0, -1);
+};
+
+// ======================================================================================
+// object: creates object from key: val
+// ======================================================================================
+//
+// Props:
+//  - First parameter is the function call
+//  - object: can be anonymous or named
+//
+// Object entries:
+//  - key value pairs ex: key=value
+//  - object space separated (no comma separated)
+//  - key-value separator is = rather than :
+//
+// Usage:
+//   {{> myPartial (object name='Marty' age=41 int=1}}
+//   {{> myPartial namedObj=(object name='Marty' age=40 array_example=(array 'Hello World' true 2 '3'))}}
+//
+// ======================================================================================
+export const object = function ({ hash }) {
+  return hash;
 };
 
 // ======================================================================================
@@ -163,6 +201,7 @@ export const returnHas = function (value, keyword, fallback) {
   }
 }
 
+// Truthy functions
 // ======================================================================================
 // hasAny/All/None: is a helper function that returns the value of a propterty or array
 // these properties are boolean values that represent the state of the passed value
@@ -281,6 +320,64 @@ export const pfv = (type) => {
   return namespace + version + prefix;
 };
 
-export const prefix = function (term) {
-  return pfv('c') + term;
+// TODO: extend this function, simplify and clafiry params. Prefix should be built from individual params
+export const pfPrefixConstructor = function (...terms) {
+  let className = '';
+  let firstPass = true;
+
+  // to reset the keyword, pass 'noNamespace', 'noVersion', 'noType'... resets follow this pattern no + (capitalized) Keyword
+  const keywords = {
+    namespace: patternflyNamespace,
+    version: patternflyVersion,
+    type: 'c'
+  }
+
+  for (const term in terms) {
+    // if string start swith no and is not all lowercase, consider it a keyword that should be set to ''
+    if (term.startsWith('no') && term !== term.toLowerCase()) {
+      keywords[term.split('no').pop().toLowerCase()] = '';
+    }
+
+    if (term.startsWith('type') && term !== term.toLowerCase()) {
+      keywords[term.split('type').pop().toLowerCase()] = '';
+    }
+
+    terms.forEach((term) => {
+      className = (!firstPass ? '-' + term : '' + term);
+    }, firstPass = false);
+  }
+
+  const prefix = keywords.namespace + keywords.version + keywords.type + className;
+  return prefix;
+};
+
+export const list = function (str) {
+  return str.split(';');
 }
+
+export const pfPrefix = function (term) {
+  const prefix = pfPrefixConstructor(term);
+  return prefix;
+}
+
+export const pfVar = function (term) {
+  const varName = '--' + pfPrefixConstructor(term);
+  return varName;
+}
+
+export const pfClass = function (term) {
+  const className = '.' + pfPrefixConstructor(term);
+  return className;
+}
+
+export const styles = function (...params) {
+  params.forEach(function(item) {
+    return item;
+  });
+}
+
+export const inlineStyle = function (prop, val) {
+  return prop + ': ' + val + ';';
+}
+
+// TODO: create helper to look for `Is` then camelcase to return boolean with the need for `true`

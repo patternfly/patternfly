@@ -2,7 +2,8 @@
 {{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
 {{!-- TODO: automate attribution --}}
 
-{{#> table-td table-td--IsToggle=true}}
+{{!-- {{#> table-td table-td--IsToggle=true}} --}}
+{{#> table-cell table-cell--IsToggle=true}}
   {{#> button
     button--IsSmall=table--IsCompact
     button--IsPlain=true
@@ -16,4 +17,5 @@
 
     {{> table-toggle-icon}}
   {{/button}}
-{{/table-td}}
+{{/table-cell}}
+{{!-- {{/table-td}} --}}
