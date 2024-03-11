@@ -24,17 +24,19 @@ import './Page.css'
   {{#> page-sidebar}}
     Navigation
   {{/page-sidebar}}
-  {{#> page-main}}
-    {{#> page-main-section}}
-      This is a default <code>.pf-v6-c-page__main-section</code>.
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
-      This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
-    {{/page-main-section}}
-    {{#> page-main-section}}
-      This is a default <code>.pf-v6-c-page__main-section</code>.
-    {{/page-main-section}}
-  {{/page-main}}
+  {{#> page-main-container}}
+    {{#> page-main}}
+      {{#> page-main-section}}
+        This is a default <code>.pf-v6-c-page__main-section</code>.
+      {{/page-main-section}}
+      {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+        This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
+      {{/page-main-section}}
+      {{#> page-main-section}}
+        This is a default <code>.pf-v6-c-page__main-section</code>.
+      {{/page-main-section}}
+    {{/page-main}}
+  {{/page-main-container}}
 {{/page}}
 ```
 
