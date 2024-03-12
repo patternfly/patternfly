@@ -3247,7 +3247,6 @@ For sticky columns to function correctly, the parent table's width must be contr
           Visual designers
         {{/table-th}}
       {{/table-tr}}
-      {{> table-tr table-tr--IsBorderRow="true" table-tr--colspan="9"}}
     {{/table-thead}}
 
     {{#> table-tbody table-tbody--modifier="pf-m-expanded" table-tr--index="1"}}
@@ -3398,7 +3397,6 @@ For sticky columns to function correctly, the parent table's width must be contr
           Destination
         {{/table-th}}
       {{/table-tr}}
-      {{> table-tr table-tr--IsBorderRow="true" table-tr--colspan="9"}}
     {{/table-thead}}
 
     {{#> table-tbody}}
@@ -3460,7 +3458,6 @@ For sticky columns to function correctly, the parent table's width must be contr
           Destination
         {{/table-th}}
       {{/table-tr}}
-      {{> table-tr table-tr--IsBorderRow="true" table-tr--colspan="9"}}
     {{/table-thead}}
 
     {{#> table-tbody}}
@@ -3478,17 +3475,11 @@ For sticky columns to function correctly, the parent table's width must be contr
   {{/table}}
 </div>
 ```
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-hidden="true"` | `.pf-m-border-row` |  Hides table row from assistive technologies. **Required** |
-
 ### Nested column header modifier usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-nested-column-header` | `<thead>` | Modifies a table header to handle nested header cells. |
-| `.pf-m-border-row` | `.pf-m-sticky-header > .pf-m-nested-column-header > tr` | Modifies the last row in a sticky header with nested column headers to display as a border. |
 | `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
 | `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 

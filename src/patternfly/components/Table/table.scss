@@ -19,6 +19,9 @@
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
+  // * Table thead toggle
+  --#{$table}__thead__toggle--PaddingBottom: var(--pf-t--global--spacer--xs);
+
   // * Table body cell
   --#{$table}__tbody--cell--PaddingTop: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
@@ -88,7 +91,6 @@
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
 
   // * Table compact
   --#{$table}--m-compact__toggle--PaddingTop: 0;
@@ -245,7 +247,7 @@
   // * Table nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$table}__thead--m-nested-column-header__tr--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$table}__thead--m-nested-column-header__tr--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$table}__thead--m-nested-column-header__tr--PaddingBottom: var(--pf-t--global--spacer--md);
 
   // * Table subhead
   --#{$table}__subhead--PaddingLeft: var(--pf-t--global--spacer--sm);
@@ -282,10 +284,12 @@
 
     &::before {
       position: absolute;
+      inset-block-start: 0;
       inset-block-end: 0;
       inset-inline-start: 0;
       inset-inline-end: 0;
       z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
+      pointer-events: none;
       content: '';
       border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
     }
@@ -460,7 +464,7 @@
       color: var(--#{$table}__subhead--Color);
 
       .#{$table}__button {
-        margin-inline-start: 0;
+        margin-inline-start: calc(var(--#{$table}--cell--PaddingLeft) * -1);
       }
     }
   }
@@ -627,55 +631,6 @@
   }
 }
 
-// - Table thead
-.#{$table}__thead {
-  --#{$table}__tr--BorderBottomWidth: 0;
-
-  vertical-align: bottom;
-}
-
-// - Table tbody
-.#{$table}__tbody {
-  vertical-align: top;
-
-  // TODO: make this a class `compound expansion content`
-  .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
-    background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
-  }
-}
-
-// Table table tbody expandable
-.#{$table}.pf-m-expandable {
-  .#{$table}__tr.pf-m-expanded {
-    border-block-end: 0;
-  }
-
-  // - Table tbody
-  .#{$table}__tbody {
-    border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
-  }
-
-  // - Table tbody - Table tr
-  .#{$table}__tbody.pf-m-expanded {
-    border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
-
-    // - Table tbody table control row
-    .#{$table}__control-row {
-      background-color: var(--#{$table}__control-row--BackgroundColor);
-      border-block-end: var(--#{$table}__control-row--BorderBottomWidth) solid var(--#{$table}__control-row__tbody--BorderBottomColor);
-    }
-  }
-}
-
-// - Table tr
-.#{$table}__tr {
-  border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
-
-  &.pf-m-border-row {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-  }
-}
-
 // - Table text
 .#{$table}__text {
   --#{$table}--cell--MaxWidth: 100%;
@@ -721,6 +676,7 @@
   background-color: var(--#{$table}__button--BackgroundColor);
   border: 0;
   border-radius: var(--#{$table}__button--BorderRadius);
+  outline-offset: var(--#{$table}__button--OutlineOffset);
 
   // Table table table button
   .#{$table} .#{$table} & {
@@ -1099,6 +1055,60 @@
     width: auto;
     min-width: 0;
     text-align: center;
+  }
+}
+
+// - Table thead
+.#{$table}__thead {
+  --#{$table}__tr--BorderBottomWidth: 0;
+  --#{$table}__toggle--PaddingBottom: var(--#{$table}__thead__toggle--PaddingBottom);
+
+  vertical-align: bottom;
+}
+
+// - Table tbody
+.#{$table}__tbody {
+  vertical-align: top;
+
+  // TODO: make this a class `compound expansion content`
+  .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
+    background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
+  }
+}
+
+// Table table tbody expandable
+.#{$table}.pf-m-expandable {
+  .#{$table}__tr.pf-m-expanded {
+    border-block-end: 0;
+  }
+
+  // - Table tbody
+  .#{$table}__tbody {
+    border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
+  }
+
+  // - Table tbody - Table tr
+  .#{$table}__tbody.pf-m-expanded {
+    border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
+
+    // - Table tbody table control row
+    .#{$table}__control-row {
+      background-color: var(--#{$table}__control-row--BackgroundColor);
+      border-block-end: var(--#{$table}__control-row--BorderBottomWidth) solid var(--#{$table}__control-row__tbody--BorderBottomColor);
+    }
+  }
+}
+
+// - Table tr
+.#{$table}__tr {
+  border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
+
+  .#{$table}__thead & {
+    border-block-end: 0;
+  }
+
+  &.pf-m-border-row {
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
   }
 }
 

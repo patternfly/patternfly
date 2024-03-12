@@ -1,7 +1,7 @@
 // * Table scrollable
 :where(:root),
 :where(.#{$table}) {
-  --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
+  --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(140px)};
   --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
   --#{$table}__sticky-cell--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$table}__sticky-cell--Right: auto;
@@ -20,17 +20,16 @@
 // - Table sticky cell
 .#{$table} .#{$table}__sticky-cell {
   position: sticky;
+  inset-inline-start: var(--#{$table}__sticky-cell--Left);
+  inset-inline-end: var(--#{$table}__sticky-cell--Right);
+  z-index: var(--#{$table}__sticky-cell--ZIndex);
+  min-width: var(--#{$table}__sticky-cell--MinWidth);
 }
 
 .#{$table}__sticky-cell {
   --#{$table}--cell--Overflow: visible;
   --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$table}--m-sticky-header__sticky-cell--ZIndex);
 
-  position: sticky;
-  inset-inline-start: var(--#{$table}__sticky-cell--Left);
-  inset-inline-end: var(--#{$table}__sticky-cell--Right);
-  z-index: var(--#{$table}__sticky-cell--ZIndex);
-  min-width: var(--#{$table}__sticky-cell--MinWidth);
   background-color: var(--#{$table}__sticky-cell--BackgroundColor);
   background-clip: padding-box;
 
