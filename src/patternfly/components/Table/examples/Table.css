@@ -3,16 +3,14 @@
   width: 800px;
 }
 
-#ws-core-c-table-th-truncation .pf-v5-c-tooltip {
+#ws-core-c-table-th-truncation .pf-v6-c-tooltip {
   position: absolute;
- inset-inline-start: 440px;
- inset-block-start: -18px;
+  inset-inline-start: 440px;
+  inset-block-start: -18px;
 }
 
+#ws-core-c-table-sticky-columns-and-header .ws-preview-html,
+#ws-core-c-table-nested-column-headers-sticky-header .ws-preview-html,
 #ws-core-c-table-sticky-header .ws-preview-html {
-  height: 300px;
-}
-
-#ws-core-c-table-sticky-columns-and-header .ws-preview-html {
-  height: 600px;
+  height: 400px;
 }

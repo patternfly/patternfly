@@ -24,18 +24,22 @@
   --#{$table}__tbody--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
 
+  // * Table tr
+  --#{$table}__tr--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__tr--BorderBottomColor: var(--pf-t--global--border--color--default);
+
   // TODO: update these in order of appearance in scss declarations
 
   // * Table cell
   --#{$table}--cell--Padding--base: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body);
-  --#{$table}--cell--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
   --#{$table}--cell--PaddingTop: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingRight: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingLeft: var(--#{$table}--cell--Padding--base);
+  --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$table}--cell--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
   --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--sm);
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingLeft: var(--#{$table}--cell--Padding--base);
 
@@ -98,6 +102,7 @@
   --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--m-favorite--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__favorite--m-favorited--c-button--Color: var(--pf-t--global--color--favorite--clicked);
+  --#{$table}__favorite--m-favorited--c-button--hover--Color: var(--pf-t--global--color--favorite--clicked);
   --#{$table}__sort--m-favorite__button__text--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__sort--m-favorite__button--hover__text--Color: var(--pf-t--global--text--color--regular);
 
@@ -123,7 +128,6 @@
 
   // * Table expandable row
   --#{$table}__expandable-row--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
-  --#{$table}__expandable-row--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingTop: var(--pf-t--global--spacer--md);
@@ -135,6 +139,8 @@
 
   // * Table control row
   --#{$table}__control-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__control-row--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__control-row__tbody--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // * Table icon inline
   --#{$table}__icon-inline--MarginRight: var(--pf-t--global--spacer--sm);
@@ -191,6 +197,9 @@
   --#{$table}__compound-expansion-toggle__button--hover--after--BorderTopWidth: var(--pf-t--global--border--width--strong);
   --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderTopWidth: var(--pf-t--global--border--width--strong);
 
+  // * Compound expandable
+  --#{$table}--compound-expansion--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+
   // * Table compact th
   --#{$table}--m-compact__th--PaddingTop: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
   --#{$table}--m-compact__th--PaddingBottom: var(--pf-t--global--spacer--sm);
@@ -213,22 +222,24 @@
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // * Table tr clickable
-  --#{$table}__tr--m-clickable--BackgroundColor: transparent;
+  --#{$table}__tr--m-clickable--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$table}__tr--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // * Table tr selected
-  --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // * Table tbody clickable
-  --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
+  --#{$table}__tbody--m-clickable--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // * Table tbody selected
-  --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // * Table nested column header
@@ -244,15 +255,16 @@
   // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
-  // * Table sticky
+  // * Table sticky header
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--Zindex--xs) + 1);
+  --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--Zindex--xs) + 2);
 }
 
 // TODO: update grouping comments to // Table {element}
 // TODO: flatten the modifiers out ex: .#{$table}.pf-m-sticky-header {}
 // - Table
 .#{$table} {
-  // Base
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
 
@@ -261,6 +273,24 @@
   }
 
   // - Table sticky header
+  &.pf-m-sticky-header > .#{$table}__thead,
+  .#{$table}__thead.pf-m-nested-column-header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--#{$table}--m-sticky-header--ZIndex);
+    background: var(--#{$table}--BackgroundColor);
+
+    &::before {
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
+      content: '';
+      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    }
+  }
+
   &.pf-m-sticky-header {
     position: relative;
 
@@ -270,58 +300,19 @@
       }
     }
 
-    // - Table thead not nested column header
-    > thead:where(.#{$table}__thead):not(.pf-m-nested-column-header) {
-      > tr:where(.#{$table}__tr) > :where(th, td) {
-        position: sticky;
-        inset-block-start: 0;
-        background: var(--#{$table}--BackgroundColor);
-
-        // stylelint-disable-next-line
-        &::after {
-          position: absolute;
-          inset-block-end: 0;
-          inset-inline-start: 0;
-          inset-inline-end: 0;
-          content: '';
-          border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-        }
-      }
-    }
-
     // - Table nested column header
     > .pf-m-nested-column-header {
       position: sticky;
       inset-block-start: 0;
-      z-index: var(--pf-t--global--Zindex--xs);
       background: var(--#{$table}--BackgroundColor);
-
-      > .pf-m-border-row {
-        height: var(--#{$table}--border-width--base);
-        background-color: var(--#{$table}--BorderColor);
-      }
-
-      // TODO: remove this block
-      tr:where(.#{$table}__tr):not(:nth-last-child(2)) {
-        // stylelint-disable max-nesting-depth
-        th:where(.#{$table}__th),
-        td:where(.#{$table}__td) {
-          &:not([rowspan]) {
-            --#{$table}--cell--PaddingBottom: var(--#{$table}__thead--m-nested-column-header__tr--PaddingBottom);
-          }
-        }
-        // stylelint-enable
-      }
     }
   }
 
   // - Table not sticky header nested column header
   &:not(.pf-m-sticky-header) > .pf-m-nested-column-header {
-    tr:where(.#{$table}__tr) {
-      // border-block-end: 0;
-    }
-
     tr:where(.#{$table}__tr):not(:last-child) {
+      border-block-end: 0; // hard reset tr borders in nested headers
+
       // stylelint-disable max-nesting-depth
       th:where(.#{$table}__th),
       td:where(.#{$table}__td) {
@@ -336,7 +327,7 @@
   // - Table striped
   // stylelint-disable
   &.pf-m-striped:not(.pf-m-expandable) > tbody:where(.#{$table}__tbody) > tr:where(.#{$table}__tr):nth-child(odd), // regular table
-  &.pf-m-striped.pf-m-expandable > tbody:where(.#{$table}__tbody):nth-of-type(odd) > tr:where(.#{$table}__tr):not(.#{$table}__expandable-row), // expandable table
+  &.pf-m-striped.pf-m-expandable > tbody:where(.#{$table}__tbody):nth-of-type(odd) > tr:where(.#{$table}__tr), // expandable table
   > .pf-m-striped > tr:nth-child(odd), // tbody odd
   > .pf-m-striped-even > tr:nth-child(even), // tbody even
   tr:where(.#{$table}__tr).pf-m-striped { // tr
@@ -360,7 +351,6 @@
   tr:where(.#{$table}__tr) > :where(th, td) {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
-    // set position relative for ::after borders
     position: relative;
     width: var(--#{$table}--cell--Width);
     min-width: var(--#{$table}--cell--MinWidth);
@@ -394,7 +384,7 @@
       text-align: center;
     }
 
-    &:empty {
+    &:is(:empty, .#{$table}__cell-empty) {
       width: auto;
       min-width: 0;
       padding: 0;
@@ -463,7 +453,15 @@
 
     // - Table subhead
     .#{$table}__subhead {
+      --#{$table}--cell--PaddingLeft: var(--#{$table}__subhead--PaddingLeft);
+      --#{$table}--cell--PaddingRight: var(--#{$table}__subhead--PaddingRight);
+      --#{$table}__sort__button__text--Color: var(--#{$table}__subhead--Color);
+
       color: var(--#{$table}__subhead--Color);
+
+      .#{$table}__button {
+        margin-inline-start: 0;
+      }
     }
   }
 
@@ -580,9 +578,6 @@
 
     // tr selected
     &.pf-m-selected {
-      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
-      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tr--m-selected--after--BorderLeftColor);
-
       position: relative;
       background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
@@ -601,20 +596,17 @@
       background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-clickable--OutlineOffset);
 
-      &.pf-m-expanded:not(.pf-m-selected) {
-        --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-clickable--m-expanded--BorderColor);
-      }
-
       &:is(:hover, :focus) {
         --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
+      }
+
+      &.pf-m-expanded {
+        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--m-expanded--BackgroundColor);
       }
     }
 
     // - Table tbody expanded
     &.pf-m-selected {
-      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after--BorderLeftWidth);
-      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tbody--m-selected--after--BorderLeftColor);
-
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
     }
@@ -622,6 +614,65 @@
 
   &.pf-m-drag-over {
     overflow-anchor: none;
+  }
+
+  // - Table table
+  .#{$table}{
+    background-color: transparent;
+
+    &,
+    :is(.#{$table}__tbody, .#{$table}__tr:last-child) {
+      border-block-end: 0;
+    }
+  }
+}
+
+// - Table thead
+.#{$table}__thead {
+  --#{$table}__tr--BorderBottomWidth: 0;
+
+  vertical-align: bottom;
+}
+
+// - Table tbody
+.#{$table}__tbody {
+  vertical-align: top;
+
+  // TODO: make this a class `compound expansion content`
+  .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
+    background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
+  }
+}
+
+// Table table tbody expandable
+.#{$table}.pf-m-expandable {
+  .#{$table}__tr.pf-m-expanded {
+    border-block-end: 0;
+  }
+
+  // - Table tbody
+  .#{$table}__tbody {
+    border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
+  }
+
+  // - Table tbody - Table tr
+  .#{$table}__tbody.pf-m-expanded {
+    border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
+
+    // - Table tbody table control row
+    .#{$table}__control-row {
+      background-color: var(--#{$table}__control-row--BackgroundColor);
+      border-block-end: var(--#{$table}__control-row--BorderBottomWidth) solid var(--#{$table}__control-row__tbody--BorderBottomColor);
+    }
+  }
+}
+
+// - Table tr
+.#{$table}__tr {
+  border-block-end: var(--#{$table}__tr--BorderBottomWidth) solid var(--#{$table}__tr--BorderBottomColor);
+
+  &.pf-m-border-row {
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
   }
 }
 
@@ -649,13 +700,6 @@
       text-overflow: var(--#{$table}--cell--TextOverflow);
       white-space: var(--#{$table}--cell--WhiteSpace);
     }
-  }
-}
-
-// - Table tr
-.#{$table}__tr {
-  &.pf-m-border-row {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
   }
 }
 
@@ -810,14 +854,15 @@
 
 // - Table favorite
 .#{$table}__favorite {
-  // --#{$table}--cell--PaddingLeft: var(--#{$table}__favorite--PaddingLeft);
-  // --#{$table}--cell--PaddingRight: var(--#{$table}__favorite--PaddingRight);
-
   .#{$button} {
     --#{$button}--FontSize: var(--#{$table}__favorite--c-button--FontSize);
+  }
 
-    @at-root .pf-m-favorited#{&} {
-      --#{$button}--m-plain--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+  &.pf-m-favorited .#{$button} {
+    --#{$button}--m-plain--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+
+    &:is(:hover, :focus) {
+      --#{$button}--m-plain--hover--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
     }
   }
 }
@@ -947,9 +992,9 @@
   }
 
   &.pf-m-favorite {
-    --#{$table}__sort__button__text--Color: var(--#{$table}__sort--m-favorite__button__text--Color);
-    --#{$table}__sort__button--hover__text--Color: var(--#{$table}__sort--m-favorite__button--hover__text--Color);
-    --#{$table}__sort--m-selected__button__text--Color: currentcolor;
+    .#{$table}__text {
+      font-size: var(--#{$table}__favorite--c-button--FontSize);
+    }
   }
 }
 
@@ -967,10 +1012,6 @@
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
-
-  .#{$table} {
-    --#{$table}--BackgroundColor: var(--#{$table}__expandable-row--BackgroundColor);
-  }
 
   &,
   td:where(.#{$table}__td):first-child::after {
@@ -1012,10 +1053,6 @@
   &.pf-m-expanded {
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
     border-block-end-width: var(--#{$table}--border-width--base);
-
-    .#{$table} {
-      --#{$table}--BackgroundColor:  var(--#{$table}__expandable-row--m-expanded--BackgroundColor);
-    }
   }
 
   &:not(.pf-m-expanded) {
@@ -1062,40 +1099,6 @@
     width: auto;
     min-width: 0;
     text-align: center;
-  }
-}
-
-// - Table thead
-.#{$table}__thead {
-  vertical-align: bottom;
-}
-
-// - Table tbody
-.#{$table}__tbody {
-  vertical-align: top;
-  background-color: var(--#{$table}--BackgroundColor);
-
-  // - Table tbody table tr
-  .#{$table}__tr {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-  }
-
-  // - Table tbody table control row
-  .#{$table}__control-row {
-    background-color: var(--#{$table}__control-row--BackgroundColor);
-  }
-
-  &.pf-m-expanded {
-    --#{$table}--BackgroundColor:  var(--#{$table}__expandable-row--m-expanded--BackgroundColor);
-  }
-}
-
-// Table table tbody expandable
-.#{$table}.pf-m-expandable .#{$table}__tbody {
-  border-block-end: var(--#{$table}--m-expandable__tbody--BorderBottomWidth) solid var(--#{$table}--m-expandable__tbody--BorderBottomColor);
-
-  .#{$table}__tr:not(.#{$table}__control-row) {
-    border-block-end: 0;
   }
 }
 
