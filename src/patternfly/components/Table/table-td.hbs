@@ -20,6 +20,11 @@
       {{/if}}
     {{/unless}}
   {{/unless}}
+
+  {{#ifAny table-td--style table-td--min-width}}
+    style="{{table-td--style}}{{#if table-td--min-width}} min-width: {{table-td--min-width}}{{/if}}"
+  {{/ifAny}}
+
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
   {{/if}}

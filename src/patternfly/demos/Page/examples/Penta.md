@@ -227,8 +227,8 @@ wrapperTag: div
             {{#> table-th table-th--attribute='scope="col"'}}
               Last commit
             {{/table-th}}
-            {{> table-cell-empty}}
-            {{> table-cell-empty}}
+            {{> table-cell-empty table-cell--IsUrl=true}}
+            {{> table-cell-empty table-cell--IsPrimaryAction=true}}
           {{/table-tr}}
         {{/table-thead}}
 

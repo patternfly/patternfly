@@ -3,14 +3,24 @@
     {{> table--scrollable--th
         table--scrollable--th--modifier=table--scrollable--th--modifier--cell-1-modifier
         table--scrollable--th--content=cell-1--content
-        table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 100px;"'
+        table-th--IsStickyLeft=true
         table-th--IsSortable=true
-        table-th--IsStickyLeft=true}}
+        table-th--attribute='scope="col"'
+        table-th--min-width='110px'
+    }}
   {{else}}
     {{> table--scrollable--th table--scrollable--th--content=cell-1--content table-th--IsSortable=true}}
   {{/if}}
+  {{!-- TODO: simplify this --}}
   {{#if table--scrollable--Column2IsStickyColumn}}
-    {{> table--scrollable--th table--scrollable--th--modifier=table--scrollable--th--modifier--cell-2-modifier table--scrollable--th--content=cell-2--content table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 120px; --pf-v6-c-table__sticky-cell--Left: 100px;"' table-th--IsSortable=true table-th--IsStickyLeft=true}}
+    {{> table--scrollable--th
+        table--scrollable--th--modifier=table--scrollable--th--modifier--cell-2-modifier
+        table--scrollable--th--content=cell-2--content
+        table-th--IsStickyLeft=true
+        table-th--attribute='scope="col"'
+        table-th--min-width='120px'
+        table-th--style=(inlineStyle (pfVar 'table__sticky-cell--Left') '110px')
+    }}
   {{else}}
     {{> table--scrollable--th table--scrollable--th--content=cell-2--content table-th--IsSortable=true}}
   {{/if}}
@@ -25,8 +35,10 @@
     {{> table--scrollable--th
         table--scrollable--th--modifier=table--scrollable--th--modifier--cell-9-modifier
         table--scrollable--th--content=cell-9--content
-        table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 150px;"'
-        table-th--IsStickyRight=true}}
+        table-th--IsStickyRight=true
+        table-th--attribute='scope="col"'
+        table-th--min-width='150px'
+    }}
   {{else}}
     {{> table--scrollable--th table--scrollable--th--content=cell-9--content table--scrollable--th--icon=cell-9--icon}}
   {{/if}}

@@ -2,6 +2,24 @@
 {{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
 {{!-- TODO: automate attribution --}}
 
-{{#> table-td table-td--IsEmpty=true}}
-  {{> screen-reader screen-reader--text=table-cell--text}}
-{{/table-td}}
+{{#>
+  config
+  table-cell--IsEmpty=true
+  table-cell--empty--text=(concat
+    (ternary table-cell--IsText 'Text' '')
+    (ternary table-cell--IsToggle 'Row expansion' '')
+    (ternary table-cell--IsAction 'Action' '')
+    (ternary table-cell--IsPrimaryAction 'Primary action' '')
+    (ternary table-cell--IsSecondaryAction 'Secondary action' '')
+    (ternary table-cell--IsUrl 'URL' '')
+    (ternary table-cell--IsRadio 'Radio select' '')
+    (ternary table-cell--IsCheck 'Checkbox' '')
+  )
+}}
+
+{{#> table-cell}}
+  {{> screen-reader screen-reader--text=(ternary table-cell--empty--text table-cell--empty--text table-cell--text)}}
+  {{!-- TODO: Simplify the ternary on line 22 --}}
+{{/table-cell}}
+
+{{/config}}

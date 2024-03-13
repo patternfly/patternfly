@@ -1,7 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index='1'}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--IsCheckbox=true}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -17,8 +17,8 @@
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{> table-cell-empty}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--IsUrl=true}}
+      {{> table-cell-empty table-cell--IsPrimaryAction=true}}
     {{/table-tr}}
   {{/table-thead}}
 

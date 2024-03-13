@@ -7,7 +7,6 @@
   {{#if table-th--modifier}} {{table-th--modifier}}{{/if}}
   {{#if table-th--IsCompoundExpansionToggle}} {{pfv}}table__compound-expansion-toggle{{/if}}
   {{#if table-th--IsSortable}} {{pfv}}table__sort{{/if}}
-  {{#if table-th--IsSortable}} {{pfv}}table__sort{{/if}}
   {{#if table-th--IsStickyLeft}} {{pfv}}table__sticky-cell pf-m-left{{/if}}
   {{#if table-th--IsStickyRight}} {{pfv}}table__sticky-cell pf-m-right{{/if}}
   {{#if table-th--IsToggle}} {{pfv}}table__toggle{{/if}}
@@ -16,6 +15,7 @@
   {{#if table-th--IsIcon}} {{pfv}}table__icon{{/if}}
   {{#if table-th--IsWrap}} pf-m-wrap{{/if}}
   {{#if table-th--IsSelected}} pf-m-selected{{/if}}
+  {{#if table-th--IsSubhead}} {{pfPrefix 'table__subhead'}}{{/if}}
   {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}
   {{#if table-th--IsFavorite}} pf-m-favorite{{/if}}"
   {{#if table--IsGrid}}
@@ -33,6 +33,14 @@
     {{else}}
       aria-sort="none"
     {{/if}}
+  {{/if}}
+
+  {{#ifAny table-th--style table-th--min-width}}
+    style="{{table-th--style}}{{#if table-th--min-width}} min-width: {{table-th--min-width}}{{/if}}"
+  {{/ifAny}}
+
+  {{#if table-th--attribute}}
+    {{{table-th--attribute}}}
   {{/if}}
   {{#if table-th--data-label}}
     data-label="{{table-th--data-label}}"

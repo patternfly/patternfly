@@ -232,8 +232,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
         {{#> table-th}}
           Number
         {{/table-th}}
-        {{> table-cell-empty}}
-        {{> table-cell-empty}}
+        {{> table-cell-empty table-cell--IsPrimaryAction=true}}
+        {{> table-cell-empty table-cell--IsSecondaryAction=true}}
       {{/table-tr}}
     {{/table-thead}}
 

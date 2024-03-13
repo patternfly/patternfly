@@ -44,10 +44,7 @@
   {{#if table-tr--attribute}}
     {{{table-tr--attribute}}}
   {{/if}}>
-  {{#if table-tr--IsBorderRow}}
-    {{!-- TODO: abstract the border row --}}
-    {{> table-cell-empty table-td--attribute=(concat 'colspan="' table-tr--colspan '"')}}
-  {{else}}
+  {{#if @partial-block}}
     {{> @partial-block}}
   {{/if}}
 </tr>
