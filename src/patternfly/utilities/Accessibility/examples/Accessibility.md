@@ -15,7 +15,7 @@ Content available only to screen reader, open inspector to investigate
 ### Visible
 ```hbs
 {{#> accessibility accessibility--type="visible"}}
-    This class unsets .pf--u-screen-reader and .pf--screen-reader. It will be visible.
+    This class unsets .pf-v6-u-screen-reader and .pf-v6-screen-reader. It will be visible.
 {{/accessibility}}
 ```
 

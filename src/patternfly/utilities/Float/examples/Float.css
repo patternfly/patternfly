@@ -1,5 +1,5 @@
-.ws-core-u-float .pf-v6-u-float-start,
-.ws-core-u-float .pf-v6-u-float-end {
+.ws-core-u-float .pf-v6-u-float-inline-start,
+.ws-core-u-float .pf-v6-u-float-inline-end {
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
