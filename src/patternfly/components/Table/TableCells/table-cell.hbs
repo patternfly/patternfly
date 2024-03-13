@@ -5,6 +5,7 @@
   config
   table-cell--root=(pfPrefix 'table__')
   table-cell--tag=(ternary IsThead 'th' 'td')
+  table-cell--type=(ternary table-cell--type table-cell--type table-cell--tag)
   table-cell--className=(concat table-cell--root table-cell--tag)
   table-cell--modifiers=(setModifiers
     table-cell--IsToggle=(pfPrefix 'table__toggle')

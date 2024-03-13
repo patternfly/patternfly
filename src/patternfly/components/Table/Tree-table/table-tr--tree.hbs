@@ -3,11 +3,11 @@
     {{#> table-tree-view-main}}
       {{#> config table-th--type='span' table-td--type='span'}}
         {{#unless (concat table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
-          {{> table-cell-toggle button--id=(concat table--id '-expandable-toggle-' table-tr--tree--index)}}
+          {{> table-cell-toggle table-cell--type='span' button--id=(concat table--id '-expandable-toggle-' table-tr--tree--index)}}
         {{/unless}}
         {{#unless table-tr--tree--HasNoCheckbox}}
           {{#if table-tree-view--HasCheckboxes}}
-            {{> table-cell-check}}
+            {{> table-cell-check table-cell--type='span' table-cell--id=(dasherize table--id 'checkrow' table-tr--tree--index 'check')}}
           {{/if}}
         {{/unless}}
         {{#if table-tr--tree--HasActions}}
