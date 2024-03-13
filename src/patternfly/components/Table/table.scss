@@ -224,7 +224,7 @@
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // * Table tr clickable
-  --#{$table}__tr--m-clickable--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__tr--m-clickable--BackgroundColor: transparent;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$table}__tr--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
@@ -234,7 +234,7 @@
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // * Table tbody clickable
-  --#{$table}__tbody--m-clickable--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
@@ -553,7 +553,10 @@
 
   // stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
   &.pf-m-no-border-rows > tbody:where(.#{$table}__tbody) {
+    --#{$table}__tr--BorderBottomWidth: 0;
+    --#{$table}__tbody--BorderBottomWidth: 0;
     --#{$table}--m-expandable__tbody--BorderBottomWidth: 0;
+    --#{$table}__control-row--BorderBottomWidth: 0;
 
     > tr:where(.#{$table}__tr) {
       border-block-end: 0;
