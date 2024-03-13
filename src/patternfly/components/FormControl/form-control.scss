@@ -272,13 +272,18 @@
       --#{$form-control}--PaddingRight: calc(var(--#{$form-control}__select--PaddingRight) - 1px);
       --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}__select--PaddingLeft) - 4px);
     }
+
+    // We need this property for certain Linux distros/non-Mac OS where dark theme styles aren't applied properly.
+    background-color: var(--#{$form-control}--BackgroundColor);
   }
 
   &.pf-m-placeholder > select {
     --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--Color);
 
     * {
-      --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--Color);
+      // We need to use the color property instead of redefining a var
+      // for certain Linux distros/non-Mac OS
+      color: var(--#{$form-control}--m-placeholder--child--Color);
 
       // stylelint-disable max-nesting-depth
       &:disabled {
