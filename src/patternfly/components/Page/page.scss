@@ -181,7 +181,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   display: grid;
   grid-template-areas:
     "header"
-    "main-container";
+    "main";
   grid-template-rows: max-content 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
@@ -192,7 +192,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     grid-template-areas:
       "header header"
-      "nav main-container";
+      "sidebar main";
     grid-template-columns: max-content 1fr;
     }
 }
@@ -316,7 +316,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   z-index: var(--#{$page}__sidebar--ZIndex);
   display: flex;
   flex-direction: column;
-  grid-area: nav;
+  grid-area: sidebar;
   grid-row-start: 2;
   grid-column-start: 1;
   width: var(--#{$page}__sidebar--Width);
@@ -507,7 +507,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-container,
 .#{$page}__drawer {
   z-index: var(--#{$page}__main-container--ZIndex);
-  grid-area: main-container;
+  grid-area: main;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -700,7 +700,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__drawer {
-  grid-area: main-container;
+  grid-area: main;
 
   > .#{$drawer} {
     flex: 1 0 auto;
