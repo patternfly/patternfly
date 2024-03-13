@@ -10,22 +10,22 @@ import './Text.css'
 ### Font family
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-font-family-text"}}
+{{#> text text--modifier="pf-v6-u-font-family-text"}}
   Text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-heading"}}
+{{#> text text--modifier="pf-v6-u-font-family-heading"}}
   Heading
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-monospace"}}
+{{#> text text--modifier="pf-v6-u-font-family-monospace"}}
   Monospace
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-text-vf"}}
+{{#> text text--modifier="pf-v6-u-font-family-text-vf"}}
   Variable font text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-heading-vf"}}
+{{#> text text--modifier="pf-v6-u-font-family-heading-vf"}}
   Variable font heading
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-monospace-vf"}}
+{{#> text text--modifier="pf-v6-u-font-family-monospace-vf"}}
   Variable font monospace
 {{/text}}
 ```
@@ -33,28 +33,28 @@ import './Text.css'
 ### Font size
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-font-size-xs"}}
+{{#> text text--modifier="pf-v6-u-font-size-xs"}}
   Extra small text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-sm"}}
+{{#> text text--modifier="pf-v6-u-font-size-sm"}}
   Small text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-md"}}
+{{#> text text--modifier="pf-v6-u-font-size-md"}}
   Medium text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-lg"}}
+{{#> text text--modifier="pf-v6-u-font-size-lg"}}
   Large text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-xl"}}
+{{#> text text--modifier="pf-v6-u-font-size-xl"}}
   Extra large text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-2xl"}}
+{{#> text text--modifier="pf-v6-u-font-size-2xl"}}
   2xl text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-3xl"}}
+{{#> text text--modifier="pf-v6-u-font-size-3xl"}}
   3xl text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-size-4xl"}}
+{{#> text text--modifier="pf-v6-u-font-size-4xl"}}
   4xl text
 {{/text}}
 ```
@@ -62,13 +62,13 @@ import './Text.css'
 ### Font weight
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-font-weight-light"}}
+{{#> text text--modifier="pf-v6-u-font-weight-light"}}
   Light
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-weight-normal"}}
+{{#> text text--modifier="pf-v6-u-font-weight-normal"}}
   Normal
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-weight-bold"}}
+{{#> text text--modifier="pf-v6-u-font-weight-bold"}}
   Bold
 {{/text}}
 ```
@@ -76,25 +76,25 @@ import './Text.css'
 ### Standard colors
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-color-100"}}
+{{#> text text--modifier="pf-v6-u-color-100"}}
   Font color 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-color-200"}}
+{{#> text text--modifier="pf-v6-u-color-200"}}
   Font color 200
 {{/text}}
-{{#> text text--modifier="pf-v5-u-color-300"}}
+{{#> text text--modifier="pf-v6-u-color-300"}}
   Font color 300
 {{/text}}
-{{#> text text--modifier="pf-v5-u-color-400"}}
+{{#> text text--modifier="pf-v6-u-color-400"}}
   Font color 400
 {{/text}}
-{{#> text text--modifier="pf-v5-u-active-color-100"}}
+{{#> text text--modifier="pf-v6-u-active-color-100"}}
   Active color 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-active-color-400"}}
+{{#> text text--modifier="pf-v6-u-active-color-400"}}
   Active color 400
 {{/text}}
-{{#> text text--modifier="pf-v5-u-primary-color-100"}}
+{{#> text text--modifier="pf-v6-u-primary-color-100"}}
   Primary color 100
 {{/text}}
 ```
@@ -103,11 +103,11 @@ import './Text.css'
 These colors are best used with the ["inverse" background colors](/utility-classes/background-color#inverse-background-colors).
 
 ```hbs
-<div class="pf-v5-u-background-color-dark-400">
-  {{#> text text--modifier="pf-v5-u-color-light-100"}}
+<div class="pf-v6-u-background-color-dark-400">
+  {{#> text text--modifier="pf-v6-u-color-light-100"}}
     Font color light 100
   {{/text}}
-  {{#> text text--modifier="pf-v5-u-color-light-200"}}
+  {{#> text text--modifier="pf-v6-u-color-light-200"}}
     Font color light 200
   {{/text}}
 </div>
@@ -116,27 +116,27 @@ These colors are best used with the ["inverse" background colors](/utility-class
 ### Link colors
 
 ```hbs
-  {{#> text text--modifier="pf-v5-u-link-color"}}
+  {{#> text text--modifier="pf-v6-u-link-color"}}
     Link color
   {{/text}}
-  {{#> text text--modifier="pf-v5-u-link-color-hover"}}
+  {{#> text text--modifier="pf-v6-u-link-color-hover"}}
     Hover link color
   {{/text}}
-<div class="pf-v5-u-background-color-dark-400">
-  {{#> text text--modifier="pf-v5-u-link-color-light"}}
+<div class="pf-v6-u-background-color-dark-400">
+  {{#> text text--modifier="pf-v6-u-link-color-light"}}
     Light link color
   {{/text}}
-  {{#> text text--modifier="pf-v5-u-link-color-light-hover"}}
+  {{#> text text--modifier="pf-v6-u-link-color-light-hover"}}
     Light hover link color
   {{/text}}
 </div>
-  {{#> text text--modifier="pf-v5-u-link-color-dark"}}
+  {{#> text text--modifier="pf-v6-u-link-color-dark"}}
     Dark link color
   {{/text}}
-  {{#> text text--modifier="pf-v5-u-link-color-dark-hover"}}
+  {{#> text text--modifier="pf-v6-u-link-color-dark-hover"}}
     Dark hover link color
   {{/text}}
-  {{#> text text--modifier="pf-v5-u-link-color-visited"}}
+  {{#> text text--modifier="pf-v6-u-link-color-visited"}}
     Visited link color
   {{/text}}
 ```
@@ -144,40 +144,40 @@ These colors are best used with the ["inverse" background colors](/utility-class
 ### Status and state text colors
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-custom-color-100"}}
+{{#> text text--modifier="pf-v6-u-custom-color-100"}}
   Font color custom 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-custom-color-200"}}
+{{#> text text--modifier="pf-v6-u-custom-color-200"}}
   Font color custom 200
 {{/text}}
-{{#> text text--modifier="pf-v5-u-custom-color-300"}}
+{{#> text text--modifier="pf-v6-u-custom-color-300"}}
   Font color custom 300
 {{/text}}
-{{#> text text--modifier="pf-v5-u-success-color-100"}}
+{{#> text text--modifier="pf-v6-u-success-color-100"}}
   Font color success 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-success-color-200"}}
+{{#> text text--modifier="pf-v6-u-success-color-200"}}
   Font color success 200
 {{/text}}
-{{#> text text--modifier="pf-v5-u-info-color-100"}}
+{{#> text text--modifier="pf-v6-u-info-color-100"}}
   Font color info 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-info-color-200"}}
+{{#> text text--modifier="pf-v6-u-info-color-200"}}
   Font color info 200
 {{/text}}
-{{#> text text--modifier="pf-v5-u-warning-color-100"}}
+{{#> text text--modifier="pf-v6-u-warning-color-100"}}
   Font color warning 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-warning-color-200"}}
+{{#> text text--modifier="pf-v6-u-warning-color-200"}}
   Font color warning 200
 {{/text}}
-{{#> text text--modifier="pf-v5-u-danger-color-100"}}
+{{#> text text--modifier="pf-v6-u-danger-color-100"}}
   Font color danger 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-danger-color-200"}}
+{{#> text text--modifier="pf-v6-u-danger-color-200"}}
   Font color danger 200
 {{/text}}
-{{#> text text--modifier="pf-v5-u-danger-color-300"}}
+{{#> text text--modifier="pf-v6-u-danger-color-300"}}
   Font color danger 300
 {{/text}}
 ```
@@ -185,10 +185,10 @@ These colors are best used with the ["inverse" background colors](/utility-class
 ### Disabled text colors
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-disabled-color-100"}}
+{{#> text text--modifier="pf-v6-u-disabled-color-100"}}
   Font color disabled 100
 {{/text}}
-{{#> text text--modifier="pf-v5-u-disabled-color-200"}}
+{{#> text text--modifier="pf-v6-u-disabled-color-200"}}
   Font color disabled 200
 {{/text}}
 ```
@@ -196,10 +196,10 @@ These colors are best used with the ["inverse" background colors](/utility-class
 ### Icon colors
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-icon-color-dark"}}
+{{#> text text--modifier="pf-v6-u-icon-color-dark"}}
   <i class="fas fa-thumbtack" aria-hidden="true"></i>
 {{/text}}
-{{#> text text--modifier="pf-v5-u-icon-color-light"}}
+{{#> text text--modifier="pf-v6-u-icon-color-light"}}
   <i class="fas fa-thumbtack" aria-hidden="true"></i>
 {{/text}}
 ```
@@ -208,12 +208,12 @@ These colors are best used with the ["inverse" background colors](/utility-class
 
 ```hbs
 <h4><strong>Breakword</strong></h4>
-{{#> text text--modifier="pf-v5-u-text-break-word"}}
+{{#> text text--modifier="pf-v6-u-text-break-word"}}
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.</p>
   <br />
 {{/text}}
 <h4><strong>No Wrap</strong></h4>
-{{#> text text--modifier="pf-v5-u-text-nowrap"}}
+{{#> text text--modifier="pf-v6-u-text-nowrap"}}
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula.
   </p>

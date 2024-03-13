@@ -1,7 +1,7 @@
 // stylelint-disable
 
 // Background color options
-$pf-v5-u-background-color-options: (
+$pf-v6-u-background-color-options: (
   background-color-100: (
     background-color var(--#{$pf-global}--BackgroundColor--100)
   ),
@@ -52,13 +52,7 @@ $pf-v5-u-background-color-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v5-u-background-color-options, $pf-v5-global--breakpoint-list);
-
-@import "themes/dark/BackgroundColor";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-background-color;
-}
+@include pf-v5-utility-builder($pf-v6-u-background-color-options, $pf-v5-global--breakpoint-list);
 
 // stylelint-enable
 

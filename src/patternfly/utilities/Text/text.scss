@@ -1,7 +1,7 @@
 // stylelint-disable
 
 // Font family options
-$pf-v5-u-font-family-options: (
+$pf-v6-u-font-family-options: (
   font-family-text: (
     font-family var(--#{$pf-global}--FontFamily--text)
   ),
@@ -22,10 +22,10 @@ $pf-v5-u-font-family-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v5-u-font-family-options);
+@include pf-v5-utility-builder($pf-v6-u-font-family-options);
 
 // Font size options
-$pf-v5-u-font-size-options: (
+$pf-v6-u-font-size-options: (
   font-size-xs: (
     font-size var(--#{$pf-global}--FontSize--xs)
   ),
@@ -52,10 +52,10 @@ $pf-v5-u-font-size-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v5-u-font-size-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-font-size-options, $pf-v5-global--breakpoint-list);
 
 // Font weight options
-$pf-v5-u-font-weight-options: (
+$pf-v6-u-font-weight-options: (
   font-weight-normal: (
     font-weight var(--#{$pf-global}--FontWeight--normal)
   ),
@@ -64,10 +64,10 @@ $pf-v5-u-font-weight-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v5-u-font-weight-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-font-weight-options, $pf-v5-global--breakpoint-list);
 
 // Font color options
-$pf-v5-u-font-color-options: (
+$pf-v6-u-font-color-options: (
   color-100: (
     color var(--#{$pf-global}--Color--100)
   ),
@@ -166,10 +166,10 @@ $pf-v5-u-font-color-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v5-u-font-color-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-font-color-options, $pf-v5-global--breakpoint-list);
 
 // Font layout options
-$pf-v5-u-font-alignment-options: (
+$pf-v6-u-font-alignment-options: (
   text-break-word: (
     word-break break-word
   ),
@@ -181,7 +181,7 @@ $pf-v5-u-font-alignment-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v5-u-font-alignment-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-font-alignment-options, $pf-v5-global--breakpoint-list);
 
 .#{$pf-prefix}u-text-truncate {
   min-width: 0 !important;
@@ -189,12 +189,6 @@ $pf-v5-u-font-alignment-options: (
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
-}
-
-@import "themes/dark/text";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-text;
 }
 
 // stylelint-enable

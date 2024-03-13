@@ -9,42 +9,42 @@ import './Display.css'
 ### Inline block
 ```hbs
 {{#> display display--type="inline-block"}}
-  .pf-v5-u-display-inline-block
+  .pf-v6-u-display-inline-block
 {{/display}}
 ```
 
 ### Block
 ```hbs
 {{#> display display--type="block"}}
-  .pf-v5-u-display-block
+  .pf-v6-u-display-block
 {{/display}}
 ```
 
 ### Flex
 ```hbs
 {{#> display display--type="flex"}}
-  .pf-v5-u-display-flex
+  .pf-v6-u-display-flex
 {{/display}}
 ```
 
 ### Inline flex
 ```hbs
 {{#> display display--type="inline-flex"}}
-  .pf-v5-u-display-inline-flex
+  .pf-v6-u-display-inline-flex
 {{/display}}
 ```
 
 ### Grid
 ```hbs
 {{#> display display--type="grid"}}
-  .pf-v5-u-display-grid
+  .pf-v6-u-display-grid
 {{/display}}
 ```
 
 ### Inline
 ```hbs
 {{#> display display--type="inline"}}
-  .pf-v5-u-display-inline
+  .pf-v6-u-display-inline
 {{/display}}
 ```
 
@@ -85,7 +85,7 @@ import './Display.css'
 
 ## Documentation
 ### Overview
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v5-u-display-inline-block-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-display-inline-block-on-lg**
 
 ### Usage
 | Class | Applied to | Outcome |
