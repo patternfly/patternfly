@@ -422,7 +422,6 @@
 
     &.pf-m-border-right::before {
       border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderRightWidth) solid var(--#{$table}--cell--m-border-right--before--BorderRightColor);
-
     }
 
     &.pf-m-border-left::before {
