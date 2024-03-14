@@ -2733,19 +2733,19 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.2.1.tgz#f7180e5214902d1ef7af86ef128476b8e94650ea"
-  integrity sha512-waehn8842z/yCqpN9ZEE4/RxTm3j5uFscGQ6eroC94fy6LbK+S2eiHfk1bXwTyWi0gd6FEU75S43zN4Vz9y+8A==
+"@patternfly/react-code-editor@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.2.2.tgz#24d13c552b54259d6c8fe67c87823159e976967e"
+  integrity sha512-7ZRYkTuf9VN7brml5+HTWbXytMcYmYFPob2K+A5xHkaOP6LSEaH3c6/XXdXdFSktR183ssdi2aZdwOW47gHVSw==
   dependencies:
     "@monaco-editor/react" "^4.6.0"
-    "@patternfly/react-core" "^5.2.1"
+    "@patternfly/react-core" "^5.2.2"
     "@patternfly/react-icons" "^5.2.1"
     "@patternfly/react-styles" "^5.2.1"
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-core@5.2.2":
+"@patternfly/react-core@5.2.2", "@patternfly/react-core@^5.2.2":
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.2.2.tgz#93cf450547e34dcacb43a36b08fd3443ccf8118e"
   integrity sha512-8dCERIVT+/ESRZ7w7UvFz3w96189W8zU+6mqbkWMG/kO6ay4o1pxIoktUT67BMMtHQNZCA+onO6+SYJrl93I0Q==
