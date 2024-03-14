@@ -68,6 +68,9 @@
   --#{$table}--m-truncate--cell--MaxWidth: 1px;
   --#{$table}--m-truncate--cell--MinWidth: calc(5ch + var(--#{$table}--cell--PaddingRight) + var(--#{$table}--cell--PaddingLeft));
 
+  // * Table truncate
+  --#{$table}--m-truncate__text--MinWidth: 5ch;
+
   // * Table cell hidden visible
   --#{$table}--cell--hidden-visible--Display: table-cell;
 
@@ -253,6 +256,10 @@
   --#{$table}__subhead--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__subhead--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
+
+  // * Table subhead button
+  --#{$table}__nested-column-header__button--PaddingLeft: calc(var(--#{$table}__button--PaddingLeft) - var(--pf-t--global--spacer--sm));
+  --#{$table}__nested-column-header__button--PaddingRight: calc(var(--#{$table}__button--PaddingRight) - var(--pf-t--global--spacer--xs));
 
   // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -457,15 +464,9 @@
 
     // - Table subhead
     .#{$table}__subhead {
-      --#{$table}--cell--PaddingLeft: var(--#{$table}__subhead--PaddingLeft);
-      --#{$table}--cell--PaddingRight: var(--#{$table}__subhead--PaddingRight);
       --#{$table}__sort__button__text--Color: var(--#{$table}__subhead--Color);
 
       color: var(--#{$table}__subhead--Color);
-
-      .#{$table}__button {
-        margin-inline-start: calc(var(--#{$table}--cell--PaddingLeft) * -1);
-      }
     }
   }
 
@@ -652,6 +653,7 @@
   // Only apply these settings if specifically modified
   &.pf-m-truncate {
     --#{$table}--cell--MinWidth: 100%;
+    --#{$table}--text--MinWidth: var(--#{$table}--m-truncate__text--MinWidth);
 
     > :where(th, td) {
       overflow: var(--#{$table}--cell--Overflow);
@@ -1067,6 +1069,17 @@
   --#{$table}__toggle--PaddingBottom: var(--#{$table}__thead__toggle--PaddingBottom);
 
   vertical-align: bottom;
+
+  // - Table nested column header button
+  &.pf-m-nested-column-header {
+    .#{$table}__button {
+      --#{$table}__button--PaddingLeft: var(--#{$table}__nested-column-header__button--PaddingLeft);
+      --#{$table}__button--PaddingRight: var(--#{$table}__nested-column-header__button--PaddingRight);
+
+      // margin to align with thead padding
+      margin-inline-end: calc(var(--#{$table}__button--PaddingLeft) * -1);
+    }
+  }
 }
 
 // - Table tbody
