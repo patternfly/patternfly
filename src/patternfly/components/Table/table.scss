@@ -253,8 +253,6 @@
   --#{$table}__thead--m-nested-column-header__tr--PaddingBottom: var(--pf-t--global--spacer--md);
 
   // * Table subhead
-  --#{$table}__subhead--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__subhead--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
   // * Table subhead button
@@ -380,16 +378,6 @@
     text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
-
-    // First child padding left
-    &:first-child {
-      padding-inline-start: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingLeft));
-    }
-
-    // Last child padding right
-    &:last-child {
-      padding-inline-end: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingRight));
-    }
 
     &.pf-m-center {
       text-align: center;
@@ -633,6 +621,31 @@
       border-block-end: 0;
     }
   }
+
+  .#{$button}.pf-m-plain {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    // stylelint-disable
+    .fas {
+      line-height: inherit;
+    }
+    // stylelint-enable
+  }
+}
+
+ // - Table cell
+ :is(.#{$table}__th, .#{$table}__td) {
+  // First child padding left
+  &:first-child {
+    padding-inline-start: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingLeft));
+  }
+
+  // Last child padding right
+  &:last-child {
+    padding-inline-end: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingRight));
+  }
 }
 
 // - Table text
@@ -690,6 +703,20 @@
 
   &:is(:hover, :focus) {
     color: var(--#{$table}__button--hover--Color);
+  }
+
+  &:has(.#{$table}__text i:only-child) {
+    min-width: var(--#{$button}--m-plain--MinWidth);
+    padding-inline-start: var(--#{$button}--m-plain--PaddingLeft);
+    padding-inline-end: var(--#{$button}--m-plain--PaddingRight);
+    margin-inline-start: calc(var(--#{$button}--m-plain--PaddingLeft) * -1);
+
+    .#{$table}__text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: calc(var(--#{$button}--m-plain--MinWidth) - var(--#{$button}--m-plain--PaddingLeft) - var(--#{$button}--m-plain--PaddingRight));
+    }
   }
 }
 
@@ -942,7 +969,6 @@
 
   &.pf-m-selected .#{$table}__button {
     --#{$table}__sort-indicator--Color: var(--#{$table}__sort--m-selected__sort-indicator--Color);
-    --#{$table}__sort__button__text--Color: var(--#{$table}__sort--m-selected__button__text--Color);
 
     // override state colors on text
     color: var(--#{$table}__sort--m-selected__button--Color);
