@@ -174,17 +174,21 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   background-color: var(--#{$masthead}--BackgroundColor);
 
   &.pf-m-light {
-    @include pf-v5-t-light;
-
     --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-light--BackgroundColor);
     --#{$masthead}__main--BorderBottomColor: var(--#{$masthead}--m-light__main--BorderBottomColor);
   }
 
   &.pf-m-light-200 {
-    @include pf-v5-t-light;
-
     --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-light-200--BackgroundColor);
     --#{$masthead}__main--BorderBottomColor: var(--#{$masthead}--m-light-200__main--BorderBottomColor);
+  }
+
+  &:is(.pf-m-light, .pf-m-light-200) {
+    @include pf-v5-t-light;
+
+    .#{$button}.pf-m-plain {
+      @include pf-v5-t-light(--#{$button}--m-plain--Color); // for all plain buttons, especially inside other components (.pf-v5-c-input-group), for dark mode
+    }
   }
 
   .#{$toolbar} {
