@@ -29,6 +29,19 @@
     label-text--value=(concat label-template-variants--title ' link removable')
     label-content--IsLink=true}}
 
+
+{{> label
+    label--id=(concat label-template-variants--id '-clickable')
+    label-text--value=(concat label-template-variants--title ' clickable')
+    label-content--IsAction=true}}
+
+{{> label
+    label--isRemovable=true
+    label--id=(concat label-template-variants--id '-clickable-removable')
+    label-text--value=(concat label-template-variants--title ' clickable removable')
+    label-content--IsAction=true}}
+    
+
 {{> label
     label--id=(concat label-template-variants--id '-truncated')
     label-text--value=(concat label-template-variants--title ' label, max-width truncation customization')
@@ -40,6 +53,22 @@
     label--id=(concat label-template-variants--id '-truncated-with-icon')
     label-text--value=(concat label-template-variants--title ' label with icon and set max-width truncation customization')
     label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 38ch"'
+    label-icon--value="info-circle"}}
+
+{{> label
+    label--isRemovable=true
+    label--id=(concat label-template-variants--id '-link-removable')
+    label--IsDisabled=true
+    label-text--value=(concat label-template-variants--title ' link removable (disabled)')
+    label-content--IsLink=true
+    label-icon--value="info-circle"}}
+
+{{> label
+    label--isRemovable=true
+    label--id=(concat label-template-variants--id '-clickable-removable')
+    label--IsDisabled=true
+    label-text--value=(concat label-template-variants--title ' clickable removable (disabled)')
+    label-content--IsAction=true
     label-icon--value="info-circle"}}
 
 {{#if @partial-block}}

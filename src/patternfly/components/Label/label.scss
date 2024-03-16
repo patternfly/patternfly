@@ -185,6 +185,12 @@
   --#{$label}--m-editable--m-editable-active__content--before--BorderWidth: 0;
   --#{$label}--m-editable--m-editable-active__content--before--BorderColor: transparent;
 
+  // Disabled
+  --#{$label}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+  --#{$label}--m-disabled__content--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$label}--m-disabled__icon--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$label}--c-button--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
+
   position: relative;
   max-width: var(--#{$label}--MaxWidth);
   padding-block-start: var(--#{$label}--PaddingTop);
@@ -394,6 +400,19 @@
     --#{$label}__content--link--hover--before--BorderColor: var(--#{$label}--m-overflow__content--link--hover--before--BorderColor);
     --#{$label}__content--link--focus--before--BorderWidth: var(--#{$label}--m-overflow__content--link--focus--before--BorderWidth);
     --#{$label}__content--link--focus--before--BorderColor: var(--#{$label}--m-overflow__content--link--focus--before--BorderColor);
+  }
+
+  &.pf-m-disabled {
+    --#{$label}--BackgroundColor: var(--#{$label}--m-disabled--BackgroundColor);
+    --#{$label}__content--Color: var(--#{$label}--m-disabled__content--Color);
+    --#{$label}__icon--Color: var(--#{$label}--m-disabled__icon--Color);
+    --#{$label}__content--before--BorderWidth: 0;
+
+    pointer-events: none;
+
+    .#{$button} {
+      --#{$button}--m-plain--disabled--Color: var(--#{$label}--c-button--m-disabled--Color);
+    }
   }
 }
 
