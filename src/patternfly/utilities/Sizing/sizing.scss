@@ -1,8 +1,8 @@
-$pf-v5-u-sizing--min-max--breakpoint-map: build-breakpoint-map();
+$pf-v6-u-sizing--min-max--breakpoint-map: build-breakpoint-map();
 // stylelint-disable
 
 // Width options
-$pf-v5-u-width-options: (
+$pf-v6-u-width-options: (
   w-auto:    (width auto),
   w-initial: (width initial),
   w-inherit: (width inherit),
@@ -22,7 +22,7 @@ $pf-v5-u-width-options: (
 );
 
 // Height options
-$pf-v5-u-height-options: (
+$pf-v6-u-height-options: (
   h-auto:    (height auto),
   h-initial: (height initial),
   h-inherit: (height inherit),
@@ -41,49 +41,49 @@ $pf-v5-u-height-options: (
   h-100vh:   (height 100vh)
 );
 
-@include pf-v5-utility-builder($pf-v5-u-width-options, $pf-v5-global--breakpoint-list);
-@include pf-v5-utility-builder($pf-v5-u-height-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-width-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-height-options, $pf-v5-global--breakpoint-list);
 
 .#{$pf-prefix}u-min-width {
-  --pf-v5-u-min-width--MinWidth: 0;
+  --pf-v6-u-min-width--MinWidth: 0;
 
   @include pf-v5-build-css-variable-stack(
     "min-width",
-    "--pf-v5-u-min-width--MinWidth",
-    $pf-v5-u-sizing--min-max--breakpoint-map,
+    "--pf-v6-u-min-width--MinWidth",
+    $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }
 
 .#{$pf-prefix}u-max-width {
-  --pf-v5-u-max-width--MaxWidth: auto;
+  --pf-v6-u-max-width--MaxWidth: auto;
 
   @include pf-v5-build-css-variable-stack(
     "max-width",
-    "--pf-v5-u-max-width--MaxWidth",
-    $pf-v5-u-sizing--min-max--breakpoint-map,
+    "--pf-v6-u-max-width--MaxWidth",
+    $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }
 
 .#{$pf-prefix}u-min-height {
-  --pf-v5-u-min-height--MinHeight: 0;
+  --pf-v6-u-min-height--MinHeight: 0;
 
   @include pf-v5-build-css-variable-stack(
     "min-height",
-    "--pf-v5-u-min-height--MinHeight",
-    $pf-v5-u-sizing--min-max--breakpoint-map,
+    "--pf-v6-u-min-height--MinHeight",
+    $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }
 
 .#{$pf-prefix}u-max-height {
-  --pf-v5-u-max-height--MaxHeight: auto;
+  --pf-v6-u-max-height--MaxHeight: auto;
 
   @include pf-v5-build-css-variable-stack(
     "max-height",
-    "--pf-v5-u-max-height--MaxHeight",
-    $pf-v5-u-sizing--min-max--breakpoint-map,
+    "--pf-v6-u-max-height--MaxHeight",
+    $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }

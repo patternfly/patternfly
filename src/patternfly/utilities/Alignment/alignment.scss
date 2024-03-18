@@ -1,12 +1,12 @@
 // stylelint-disable
-$pf-v5-u-alignment-options: (
-  text-align-left:    (text-align left),
+$pf-v6-u-alignment-options: (
+  text-align-start:    (text-align start),
   text-align-center:  (text-align center),
-  text-align-right:   (text-align right),
+  text-align-end:   (text-align end),
   text-align-justify: (text-align justify)
 );
 
 // Text utilities
-@include pf-v5-utility-builder($pf-v5-u-alignment-options, $pf-v5-global--breakpoint-list);
+@include pf-v5-utility-builder($pf-v6-u-alignment-options, $pf-v5-global--breakpoint-list);
 
 // stylelint-enable

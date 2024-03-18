@@ -21,7 +21,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex row
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-direction-row"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-direction-row"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -30,7 +30,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex row-reverse
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-direction-row-reverse"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-direction-row-reverse"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -39,7 +39,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex column
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-direction-column"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-direction-column"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -48,7 +48,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex column-reverse
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-direction-column-reverse"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-direction-column-reverse"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -60,7 +60,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content flex-start
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-justify-content-flex-start"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-justify-content-flex-start"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -69,7 +69,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content flex-end
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-justify-content-flex-end"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-justify-content-flex-end"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -78,7 +78,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content center
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-justify-content-center"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-justify-content-center"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -87,7 +87,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content space-around
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-justify-content-space-around"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-justify-content-space-around"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -96,7 +96,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content space-between
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-justify-content-space-between"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-justify-content-space-between"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -108,7 +108,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items flex-start
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-items-flex-start"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-items-flex-start"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
@@ -117,7 +117,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items flex-end
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-items-flex-end"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-items-flex-end"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
@@ -126,7 +126,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items center
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-items-center"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-items-center"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
@@ -135,7 +135,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items baseline
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-items-baseline"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-items-baseline"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-md"}}Flex item 2{{/flex-item}}
   {{#> flex-item flex-item--modifier="ws-example-u-flex-lg"}}Flex item 3{{/flex-item}}
@@ -144,7 +144,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items stretch
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-items-stretch"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-items-stretch"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -154,19 +154,19 @@ import './Flex.css'
 ### Aligned self
 ```hbs
 {{#> display display--type="flex"}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-align-self-flex-start"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-align-self-flex-start"}}
     flex-start
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-align-self-center"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-align-self-center"}}
     center
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-align-self-flex-end"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-align-self-flex-end"}}
     flex end
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-align-self-baseline"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-align-self-baseline"}}
     baseline
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-align-self-stretch"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-align-self-stretch"}}
     stretch
   {{/flex-item}}
 {{/display}}
@@ -177,7 +177,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content flex-start
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-content-flex-start"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-content-flex-start"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -188,7 +188,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content flex-end
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-content-flex-end"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-content-flex-end"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -199,7 +199,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content center
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-content-center"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-content-center"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -210,7 +210,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content space-around
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-content-space-around"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-content-space-around"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -221,7 +221,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content space-between
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-content-space-between"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-content-space-between"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -232,7 +232,7 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content stretch
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-align-content-stretch"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-align-content-stretch"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
@@ -244,10 +244,10 @@ import './Flex.css'
 ### Shrink
 ```hbs
 {{#> display display--type="flex"}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-shrink-0"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-shrink-0"}}
     Flex shrink 0
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-shrink-1"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-shrink-1"}}
     Flex shrink 1
   {{/flex-item}}
 {{/display}}
@@ -256,10 +256,10 @@ import './Flex.css'
 ### Grow
 ```hbs
 {{#> display display--type="flex"}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-grow-0"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-grow-0"}}
     Flex grow 0
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-grow-1"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-grow-1"}}
     Flex grow 1
   {{/flex-item}}
 {{/display}}
@@ -268,16 +268,16 @@ import './Flex.css'
 ### Basis and none
 ```hbs
 {{#> display display--type="flex"}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-basis-0"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-basis-0"}}
     Flex basis 0
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-basis-auto"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-basis-auto"}}
     Flex basis auto
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-basis-none"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-basis-none"}}
     Flex basis none
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-1"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-1"}}
     Flex 1
   {{/flex-item}}
 {{/display}}
@@ -286,10 +286,10 @@ import './Flex.css'
 ### Fill
 ```hbs
 {{#> display display--type="flex"}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-none"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-none"}}
     Flex none
   {{/flex-item}}
-  {{#> flex-item flex-item--modifier="pf-v5-u-flex-fill"}}
+  {{#> flex-item flex-item--modifier="pf-v6-u-flex-fill"}}
     Flex fill
   {{/flex-item}}
 {{/display}}
@@ -300,40 +300,61 @@ import './Flex.css'
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex wrap
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-wrap"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-wrap"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
+  {{#> flex-item}}Flex item 6{{/flex-item}}
+  {{#> flex-item}}Flex item 7{{/flex-item}}
+  {{#> flex-item}}Flex item 8{{/flex-item}}
+  {{#> flex-item}}Flex item 9{{/flex-item}}
+  {{#> flex-item}}Flex item 10{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex no wrap
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-nowrap"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-nowrap"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
+  {{#> flex-item}}Flex item 6{{/flex-item}}
+  {{#> flex-item}}Flex item 7{{/flex-item}}
+  {{#> flex-item}}Flex item 8{{/flex-item}}
+  {{#> flex-item}}Flex item 9{{/flex-item}}
+  {{#> flex-item}}Flex item 10{{/flex-item}}
 {{/display}}
 <br>
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex wrap reverse
 {{/title}}
-{{#> display display--type="flex" display--modifier="pf-v5-u-flex-wrap-reverse"}}
+{{#> display display--type="flex" display--modifier="pf-v6-u-flex-wrap-reverse"}}
   {{#> flex-item}}Flex item 1{{/flex-item}}
   {{#> flex-item}}Flex item 2{{/flex-item}}
   {{#> flex-item}}Flex item 3{{/flex-item}}
+  {{#> flex-item}}Flex item 4{{/flex-item}}
+  {{#> flex-item}}Flex item 5{{/flex-item}}
+  {{#> flex-item}}Flex item 6{{/flex-item}}
+  {{#> flex-item}}Flex item 7{{/flex-item}}
+  {{#> flex-item}}Flex item 8{{/flex-item}}
+  {{#> flex-item}}Flex item 9{{/flex-item}}
+  {{#> flex-item}}Flex item 10{{/flex-item}}
 {{/display}}
 ```
 
 ## Documentation
 ### Overview
-For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v5-u-flex-row-on-lg**
+For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-flex-row-on-lg**
 
 <!-- ## Accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role` or `aria` | `pf-v5-u-flex` |  accessibility notes. |
+| `role` or `aria` | `pf-v6-u-flex` |  accessibility notes. |
  -->
 
 ### Usage
