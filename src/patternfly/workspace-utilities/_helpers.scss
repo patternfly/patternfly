@@ -2,6 +2,7 @@
 // type: Any, c, l, u, or none
 // format: selector (default), var (css variable)
 
+// stylelint-disable
 meta:is([class], [modifier]) {
   --format: '.'; // set default type to selector
   --extend: ''; // set default extend to nothing
@@ -55,3 +56,4 @@ meta[modifier] {
     content: var(--format) var(--modifier) var(--extend);
   }
 }
+// stylelint-enable
