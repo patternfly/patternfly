@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v6-c-breadcrumb
 ---
 
-import './Breadcrumb.css'
-
 ## Examples
 ### Basic
 ```hbs
