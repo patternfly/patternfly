@@ -41,4 +41,7 @@
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 {{/nav}}

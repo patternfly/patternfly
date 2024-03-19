@@ -511,8 +511,9 @@ import './Navigation.css'
 
 ### Nav with flyout
 ```hbs isBeta
-{{> nav--flyout nav--flyout--id="nav-flyout-example" nav--flyout--submenu--IsExpanded="true"}}
-{{> nav--menu--submenu}}
+{{#> nav--flyout nav--flyout--id="nav-flyout-example" nav--flyout--submenu--IsExpanded="true"}}
+  {{> nav--menu--submenu}}
+{{/nav--flyout}}
 ```
 
 ### Nav with drilldown menu

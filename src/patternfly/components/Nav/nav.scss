@@ -129,7 +129,7 @@
     flex-grow: 1;
   }
 
-  + .#{$menu} {
+  .#{$menu} {
     --#{$menu}--MinWidth: 100%;
   }
 }
