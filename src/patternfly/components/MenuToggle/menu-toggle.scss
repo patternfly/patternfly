@@ -168,15 +168,15 @@
   --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
 
   // Success
-  --#{$menu-toggle}--m-success--after--BorderBottomColor: var(--pf-t--global--border--color--status--success--default);
+  --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
   --#{$menu-toggle}--m-success__status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
 
   // Warning
-  --#{$menu-toggle}--m-warning--after--BorderBottomColor: var(--pf-t--global--border--color--status--warning--default);
+  --#{$menu-toggle}--m-warning--BorderColor: var(--pf-t--global--border--color--status--warning--default);
   --#{$menu-toggle}--m-warning__status-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
 
   // Danger
-  --#{$menu-toggle}--m-danger--after--BorderBottomColor: var(--pf-t--global--border--color--status--danger--default);
+  --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
 }
 
@@ -337,17 +337,17 @@
   }
 
   &.pf-m-success {
-    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-success--after--BorderBottomColor);
+    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-success--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-success__status-icon--Color);
   }
 
   &.pf-m-warning {
-    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-warning--after--BorderBottomColor);
+    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-warning--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-warning__status-icon--Color);
   }
 
   &.pf-m-danger {
-    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--after--BorderBottomColor);
+    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
   }
 }
