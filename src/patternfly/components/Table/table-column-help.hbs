@@ -1,0 +1,10 @@
+{{!-- Table column help --}}
+
+<div class="{{pfv}}table__column-help{{#if table-column-help--modifier}} {{table-column-help--modifier}}{{/if}}"
+  {{#if table-column-help--attribute}}
+    {{{table-column-help--attribute}}}
+  {{/if}}>
+  {{#if partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</div>

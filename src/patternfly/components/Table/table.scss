@@ -88,12 +88,17 @@
   --#{$table}__button--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$table}__button--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}__button--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$table}__button--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+
+  // * Table button plain
+  --#{$table}__button--m-plain--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--m-plain--PaddingRight: var(--pf-t--global--spacer--sm);
 
   // * Table check
   --#{$table}__check--PaddingLeft: var(--pf-t--global--spacer--sm);
@@ -130,6 +135,9 @@
   --#{$table}__control-row__tbody--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // * Table icon inline
+  --#{$table}__icon--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$table}__icon--MinWidth: calc(var(--#{$table}__icon--FontSize) * var(--#{$table}--cell--LineHeight));
+  --#{$table}__icon--MinHeight: calc(var(--#{$table}__icon--FontSize) * var(--#{$table}--cell--LineHeight));
   --#{$table}__icon-inline--MarginRight: var(--pf-t--global--spacer--sm);
 
   // * Table sort cell
@@ -142,6 +150,7 @@
   --#{$table}__sort__button--hover__text--Color: currentcolor;
 
   // * Table sort indicator
+  --#{$table}__sort-indicator--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__sort-indicator--Color: var(--pf-t--global--icon--color--subtle);
   --#{$table}__sort-indicator--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf-t--global--color--brand--clicked);
@@ -637,6 +646,11 @@
   border-radius: var(--#{$table}__button--BorderRadius);
   outline-offset: var(--#{$table}__button--OutlineOffset);
 
+  &.pf-m-plain {
+    --#{$table}__button--PaddingLeft: var(--#{$table}__button--m-plain--PaddingLeft);
+    --#{$table}__button--PaddingRight: var(--#{$table}__button--m-plain--PaddingRight);
+  }
+
   // Table table table button
   .#{$table} .#{$table} & {
     margin-block-end: 0; // remove offset in nested tables
@@ -692,6 +706,22 @@
   .#{$table} tr:where(.#{$table}__tr).pf-m-truncate &,
   .#{$table} th:where(.#{$table}__th).pf-m-truncate & {
     grid-template-columns: auto max-content;
+  }
+}
+
+// - Table button content
+.#{$table}__button-content {
+  column-gap: var(--#{$table}__button--ColumnGap);
+
+  // - Table text
+  .#{$table}__sort-indicator,
+  .#{$table}__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--#{$table}__icon--MinWidth);
+    min-height: var(--#{$table}__icon--MinHeight);
+    font-size: var(--#{$table}__icon--FontSize);
   }
 }
 
@@ -914,9 +944,10 @@
 
 // - Table sort indicator
 .#{$table}__sort-indicator {
-  grid-column: 2;
-  align-self: end;
-  margin-inline-start: var(--#{$table}__sort-indicator--MarginLeft); // TODO: update this to gap
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--#{$table}__sort-indicator--FontSize);
   color: var(--#{$table}__sort-indicator--Color);
   pointer-events: none;
 }
@@ -1077,6 +1108,10 @@
   &.pf-m-border-row {
     border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
   }
+}
+
+.#{$table}__icon {
+  font-size: var(--#{$table}__icon--FontSize);
 }
 
 // - Table icon inline
