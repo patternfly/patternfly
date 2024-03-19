@@ -462,7 +462,7 @@
     }
   }
 
-  &.pf-m-error {
+  &.pf-m-danger {
     --#{$wizard}__nav-link-icon--Color: var(--#{$wizard}__nav-link--m-danger--nav-link-icon--Color);
 
     &::before {

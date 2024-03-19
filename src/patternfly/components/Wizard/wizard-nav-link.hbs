@@ -2,8 +2,8 @@
   {{~#if wizard-nav-link--IsCurrent}}
     pf-m-current
   {{/if}}
-  {{~#if wizard-nav-item--IsError}}
-    pf-m-error
+  {{~#if wizard-nav-item--IsDanger}}
+    pf-m-danger
   {{/if}}
   {{~#if wizard-nav-link--IsDisabled}}
     {{~#if wizard-nav-link--IsLink}}
@@ -41,7 +41,7 @@
     {{#> wizard-nav-link-text}}
       {{> @partial-block}}
     {{/wizard-nav-link-text}}
-    {{#if wizard-nav-item--IsError}}
+    {{#if wizard-nav-item--IsDanger}}
       {{#> wizard-nav-link-icon}}
         <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
       {{/wizard-nav-link-icon}}
@@ -51,7 +51,7 @@
     {{/wizard-nav-link-toggle}}
   {{else}}
     {{> @partial-block}}
-    {{#if wizard-nav-item--IsError}}
+    {{#if wizard-nav-item--IsDanger}}
       {{#> wizard-nav-link-icon}}
         <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
       {{/wizard-nav-link-icon}}

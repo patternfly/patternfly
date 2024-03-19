@@ -486,12 +486,12 @@ import './Wizard.css'
       {{#> wizard-inner-wrap}}
         {{#> wizard-nav}}
           {{#> wizard-nav-list}}
-            {{#> wizard-nav-item wizard-nav-item--IsError='true'}}
+            {{#> wizard-nav-item wizard-nav-item--IsDanger='true'}}
               {{#> wizard-nav-link}}
                 Information
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
-            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"  wizard-nav-item--IsError='true'}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"  wizard-nav-item--IsDanger='true'}}
               {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
                 Configuration
               {{/wizard-nav-link}}
@@ -586,4 +586,5 @@ import './Wizard.css'
 | `.pf-m-expanded` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the disabled state. |
+| `.pf-m-danger` | `.pf-v6-c-wizard__nav-link` | Modifies a step link to indicate danger status. |
 | `.pf-m-no-padding` | `.pf-v6-c-wizard__main-body` | Modifies the main container body to remove the padding. |
