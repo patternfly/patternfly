@@ -95,10 +95,6 @@
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
 
-  // * Table compact
-  --#{$table}--m-compact__toggle--PaddingTop: 0;
-  --#{$table}--m-compact__toggle--PaddingBottom: 0;
-
   // * Table check
   --#{$table}__check--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__check--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -107,15 +103,6 @@
   --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--m-favorite--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__favorite--m-favorited--c-button--Color: var(--pf-t--global--color--favorite--clicked);
-  --#{$table}__favorite--m-favorited--c-button--hover--Color: var(--pf-t--global--color--favorite--clicked);
-  --#{$table}__sort--m-favorite__button__text--Color: var(--pf-t--global--text--color--subtle);
-  --#{$table}__sort--m-favorite__button--hover__text--Color: var(--pf-t--global--text--color--regular);
-
-  // * Table draggable button
-  --#{$table}__draggable--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
-  --#{$table}__draggable--c-button--MarginRight: calc(var(--#{$button}--PaddingRight) * -1);
-  --#{$table}__draggable--c-button--MarginBottom: calc(var(--#{$button}--PaddingBottom) * -1);
-  --#{$table}__draggable--c-button--MarginLeft: calc(var(--#{$button}--PaddingLeft) * -1);
 
   // * Table ghost row
   --#{$table}__tr--m-ghost-row--Opacity: .4;
@@ -127,10 +114,6 @@
   --#{$table}__action--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingRight: var(--pf-t--global--spacer--sm);
 
-  // * Table inline edit action
-  --#{$table}__inline-edit-action--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$table}__inline-edit-action--PaddingBottom: var(--pf-t--global--spacer--sm);
-
   // * Table expandable row
   --#{$table}__expandable-row--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
 
@@ -140,7 +123,6 @@
   --#{$table}__expandable-row-content--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$table}__expandable-row-content--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
 
   // * Table control row
   --#{$table}__control-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -152,25 +134,12 @@
 
   // * Table sort cell
   --#{$table}__sort--MinWidth: calc(6ch + var(--#{$table}--cell--PaddingRight) + var(--#{$table}--cell--PaddingLeft) + var(--#{$table}__sort-indicator--MarginLeft));
-
-  // * Table sort button
-  --#{$table}__sort__button--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$table}__sort__button--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$table}__sort__button--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$table}__sort__button--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$table}__sort__button--MarginBottom: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
-  --#{$table}__sort__button--MarginLeft: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
-  --#{$table}__sort__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__sort--m-selected__button--Color: var(--pf-t--global--color--brand--clicked);
   --#{$table}__sort--m-help--MinWidth: 15ch;
 
   // * Table sort button
   --#{$table}__sort__button__text--Color: currentcolor;
   --#{$table}__sort__button--hover__text--Color: currentcolor;
-
-  // * Table sort cell
-  --#{$table}__sort--cell--PaddingLeft: var(--pf-t--global--spacer--xs);
-  --#{$table}__sort--cell--PaddingRight: var(--pf-t--global--spacer--sm);
 
   // * Table sort indicator
   --#{$table}__sort-indicator--Color: var(--pf-t--global--icon--color--subtle);
@@ -183,10 +152,6 @@
 
   // * Table header popover
   --#{$table}__column-help--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__column-help--c-button--MarginTop: calc(var(--#{$button}--PaddingTop) * -1);
-  --#{$table}__column-help--c-button--MarginBottom: calc(var(--#{$button}--PaddingBottom) * -1);
-  --#{$table}__column-help--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$table}__column-help--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // * Table compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
@@ -198,7 +163,6 @@
   // * Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--hover--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$table}__compound-expansion-toggle__button--hover--after--BorderTopWidth: var(--pf-t--global--border--width--strong);
   --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderTopWidth: var(--pf-t--global--border--width--strong);
 
@@ -211,17 +175,11 @@
 
   // * Table compact cell
   --#{$table}--m-compact--cell--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$table}--m-compact--cell--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$table}--m-compact--cell--PaddingLeft: var(--pf-t--global--spacer--sm);
 
   // * Table compact action
   --#{$table}--m-compact__action--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__action--PaddingBottom: var(--pf-t--global--spacer--xs);
-
-  // * Table expandable tbody
-  --#{$table}--m-expandable__tbody--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$table}--m-expandable__tbody--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // * Table expandable row expanded
   --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf-t--global--border--color--default);
@@ -230,7 +188,6 @@
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tr--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // * Table tr selected
   --#{$table}__tr--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
@@ -241,7 +198,6 @@
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // * Table tbody selected
   --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
@@ -253,8 +209,6 @@
   --#{$table}__thead--m-nested-column-header__tr--PaddingBottom: var(--pf-t--global--spacer--md);
 
   // * Table subhead
-  --#{$table}__subhead--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$table}__subhead--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
   // * Table subhead button
@@ -942,7 +896,6 @@
 
   &.pf-m-selected .#{$table}__button {
     --#{$table}__sort-indicator--Color: var(--#{$table}__sort--m-selected__sort-indicator--Color);
-    --#{$table}__sort__button__text--Color: var(--#{$table}__sort--m-selected__button__text--Color);
 
     // override state colors on text
     color: var(--#{$table}__sort--m-selected__button--Color);
@@ -964,7 +917,6 @@
   grid-column: 2;
   align-self: end;
   margin-inline-start: var(--#{$table}__sort-indicator--MarginLeft); // TODO: update this to gap
-  font-size: var(--#{$table}__sort-indicator--FontSize);
   color: var(--#{$table}__sort-indicator--Color);
   pointer-events: none;
 }
@@ -1006,7 +958,6 @@
     padding-block-end: var(--#{$table}__expandable-row-content--PaddingBottom);
     padding-inline-start: var(--#{$table}__expandable-row-content--PaddingLeft);
     padding-inline-end: var(--#{$table}__expandable-row-content--PaddingRight);
-    background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
     border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
   }
 
