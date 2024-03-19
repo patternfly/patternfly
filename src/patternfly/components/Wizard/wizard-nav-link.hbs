@@ -2,6 +2,9 @@
   {{~#if wizard-nav-link--IsCurrent}}
     pf-m-current
   {{/if}}
+  {{~#if wizard-nav-item--IsError}}
+    pf-m-error
+  {{/if}}
   {{~#if wizard-nav-link--IsDisabled}}
     {{~#if wizard-nav-link--IsLink}}
       pf-m-disabled
@@ -38,10 +41,20 @@
     {{#> wizard-nav-link-text}}
       {{> @partial-block}}
     {{/wizard-nav-link-text}}
+    {{#if wizard-nav-item--IsError}}
+      {{#> wizard-nav-link-icon}}
+        <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+      {{/wizard-nav-link-icon}}
+    {{/if}}
     {{#> wizard-nav-link-toggle}}
       {{> wizard-nav-link-toggle-icon}}
     {{/wizard-nav-link-toggle}}
   {{else}}
     {{> @partial-block}}
+    {{#if wizard-nav-item--IsError}}
+      {{#> wizard-nav-link-icon}}
+        <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+      {{/wizard-nav-link-icon}}
+    {{/if}}
   {{/if}}
 </{{#if wizard-nav-link--IsLink}}a{{else}}button{{/if}}>

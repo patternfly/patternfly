@@ -459,6 +459,82 @@ import './Wizard.css'
 {{/wizard}}
 ```
 
+### Error on step
+```hbs isFullscreen
+{{#> wizard wizard--id="wizard-basic"}}
+  {{#> wizard-header}}
+    {{> wizard-close}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item wizard-nav-item--IsError='true'}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"  wizard-nav-item--IsError='true'}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        {{> __wizard-form}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{> wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |

@@ -48,6 +48,14 @@
   --#{$wizard}__nav-link--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
 
+  // Nav link status icon
+  --#{$wizard}__nav-link-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$wizard}__nav-link--m-danger--nav-link-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__nav-link-icon--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
+  --#{$wizard}__nav-link-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
+  --#{$wizard}__nav-link-icon--TranslateX: calc(-100% - var(--pf-t--global--spacer--xs));
+  --#{$wizard}__nav-link-icon--TranslateY: calc(-50% - var(--pf-t--global--spacer--xs));
+
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-toggle--PaddingLeft: var(--pf-t--global--spacer--sm);
@@ -57,8 +65,8 @@
   --#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate: 90deg;
 
   // Nav link number
-  --#{$wizard}__nav-link--before--Width: 1.5rem;
-  --#{$wizard}__nav-link--before--Height: 1.5rem;
+  --#{$wizard}__nav-link--before--Width: var(--pf-t--global--icon--size--font--xl);
+  --#{$wizard}__nav-link--before--Height: var(--pf-t--global--icon--size--font--xl);
   --#{$wizard}__nav-link--before--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
@@ -454,6 +462,14 @@
     }
   }
 
+  &.pf-m-error {
+    --#{$wizard}__nav-link-icon--Color: var(--#{$wizard}__nav-link--m-danger--nav-link-icon--Color);
+
+    &::before {
+      display: none;
+    }
+  }    
+
   &:where(:hover, :focus) {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
     --#{$wizard}__nav-link--BackgroundColor: var(--#{$wizard}__nav-link--hover--BackgroundColor);
@@ -476,6 +492,20 @@
 
 .#{$wizard}__nav-link-text {
   flex-grow: 1;
+}
+
+.#{$wizard}__nav-link-icon {
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$wizard}__nav-link-icon--TranslateX)) translateY(var(--#{$wizard}__nav-link-icon--TranslateY)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link-icon--TranslateX))}) translateY(var(--#{$wizard}__nav-link-icon--TranslateY))
+  );
+
+  position: absolute;
+  inset-block-start: var(--#{$wizard}__nav-link-icon--Top);
+  inset-inline-start: 0;
+  font-size: var(--#{$wizard}__nav-link-icon--FontSize);
+  color: var(--#{$wizard}__nav-link-icon--Color);
 }
 
 .#{$wizard}__nav-link-toggle {
