@@ -104,8 +104,6 @@
 
 // - Nav root
 .#{$nav} {
-  --#{$menu}--MinWidth: 100%;
-
   position: relative;
   row-gap: var(--#{$nav}--RowGap);
   column-gap: var(--#{$nav}--ColumnGap);
@@ -129,6 +127,10 @@
 
   &.pf-m-fill {
     flex-grow: 1;
+  }
+
+  + .#{$menu} {
+    --#{$menu}--MinWidth: 100%;
   }
 }
 
