@@ -11,7 +11,8 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Content
   --#{$drawer}__content--FlexBasis: 100%;
-  --#{$drawer}__content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$drawer}__content--BackgroundColor: transparent;
+  --#{$drawer}__content--m-primary--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__content--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$drawer}__content--ZIndex: var(--pf-t--global--Zindex--xs);
 
@@ -266,14 +267,14 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   order: 0;
   background-color: var(--#{$drawer}__content--BackgroundColor);
   
+  &.pf-m-primary {
+    --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-primary--BackgroundColor);
+  }
+
   &.pf-m-secondary {
     --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-secondary--BackgroundColor);
   }
-
-  &.pf-m-no-background {
-    --#{$drawer}__content--BackgroundColor: transparent;
-  }
-
+  
   > .#{$drawer}__body {
     padding-block-start: var(--#{$drawer}__content__body--PaddingTop);
     padding-block-end: var(--#{$drawer}__content__body--PaddingBottom);
