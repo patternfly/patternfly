@@ -165,6 +165,24 @@
   --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: center;
 
+  // Status icon
+  --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--#{$pf-global}--spacer--md);
+
+  // Success
+  --#{$menu-toggle}--m-success--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$menu-toggle}--m-success--after--BorderBottomColor: var(--#{$pf-global}--success-color--100);
+  --#{$menu-toggle}--m-success__status-icon--Color: var(--#{$pf-global}--success-color--100);
+
+  // Warning
+  --#{$menu-toggle}--m-warning--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$menu-toggle}--m-warning--after--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
+  --#{$menu-toggle}--m-warning__status-icon--Color: var(--#{$pf-global}--warning-color--100);
+
+  // Danger
+  --#{$menu-toggle}--m-danger--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$menu-toggle}--m-danger--after--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
+  --#{$menu-toggle}--m-danger__status-icon--Color: var(--#{$pf-global}--danger-color--100);
+
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -521,6 +539,24 @@
   &.pf-m-full-width {
     width: 100%;
   }
+
+  &.pf-m-success {
+    --#{$menu-toggle}--after--BorderBottomWidth: var(--#{$menu-toggle}--m-success--after--BorderBottomWidth);
+    --#{$menu-toggle}--after--BorderBottomColor: var(--#{$menu-toggle}--m-success--after--BorderBottomColor);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-success__status-icon--Color);
+  }
+
+  &.pf-m-warning {
+    --#{$menu-toggle}--after--BorderBottomWidth: var(--#{$menu-toggle}--m-warning--after--BorderBottomWidth);
+    --#{$menu-toggle}--after--BorderBottomColor: var(--#{$menu-toggle}--m-warning--after--BorderBottomColor);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-warning__status-icon--Color);
+  }
+
+  &.pf-m-danger {
+    --#{$menu-toggle}--after--BorderBottomWidth: var(--#{$menu-toggle}--m-danger--after--BorderBottomWidth);
+    --#{$menu-toggle}--after--BorderBottomColor: var(--#{$menu-toggle}--m-danger--after--BorderBottomColor);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
+  }
 }
 
 .#{$menu-toggle}__button {
@@ -556,6 +592,7 @@
 }
 
 .#{$menu-toggle}__controls {
+  display: flex;
   padding-inline-start: var(--#{$menu-toggle}__controls--PaddingLeft);
   margin-inline-start: var(--#{$menu-toggle}__controls--MarginLeft);
   margin-inline-end: var(--#{$menu-toggle}__controls--MarginRight);
@@ -564,6 +601,11 @@
 .#{$menu-toggle}__toggle-icon {
   margin-inline-end: var(--#{$menu-toggle}__toggle-icon--MarginRight);
   color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
+}
+
+.#{$menu-toggle}__status-icon {
+  margin-inline-end: var(--#{$menu-toggle}__status-icon--MarginInlineEnd);
+  color: var(--#{$menu-toggle}__status-icon--Color, inherit);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

@@ -565,6 +565,21 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Status
+```hbs isBeta
+{{> menu-toggle menu-toggle--IsSuccess=true menu-toggle--text="Success"}}
+
+<br/><br/>
+
+{{> menu-toggle menu-toggle--IsWarning=true menu-toggle--text="Warning"}}
+
+<br/><br/>
+
+{{> menu-toggle menu-toggle--IsDanger=true menu-toggle--text="Danger"}}
+```
+
+## Documentation
+
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -593,3 +608,6 @@ import './MenuToggle.css'
 | `.pf-m-plain` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
+| `.pf-m-success` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the success state. |
+| `.pf-m-warning` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
+| `.pf-m-danger` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
