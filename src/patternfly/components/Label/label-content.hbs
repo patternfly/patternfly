@@ -11,6 +11,9 @@
   {{/if}}
   {{#if label-content--IsButton}}
     type="button"
+    {{#if label--IsDisabled}}
+      disabled
+    {{/if}}
   {{/if}}
   {{#if label-content--attribute}}
     {{{label-content--attribute}}}

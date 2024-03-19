@@ -6,6 +6,7 @@
   {{#if label--IsAdd}} pf-m-add{{/if}}
   {{#if label--IsEditable}} pf-m-editable{{/if}}
   {{#if label--IsEditableActive}} pf-m-editable-active{{/if}}
+  {{#if label--IsDisabled}} pf-m-disabled{{/if}}
   {{#ifAny label--color label--status}}
     pf-m-{{ternary label--status label--status label--color}}
   {{/ifAny}}
@@ -30,7 +31,7 @@
   {{/label-content}}
   {{#if label--IsRemovable}}
     {{#> label-actions}}
-      {{#> button button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
+      {{#> button button--IsDisabled=label--IsDisabled button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
     aria-label="Remove" aria-labelledby="' label--id '-button ' label--id '-text"')}}
         <i class="fas fa-times fa-fw" aria-hidden="true"></i>
       {{/button}}
