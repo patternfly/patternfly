@@ -574,6 +574,7 @@ import './Wizard.css'
 | `.pf-v6-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
 | `.pf-v6-c-wizard__nav-link` | `<a>`, `<button>` | Initiates a step link. **Required** |
 | `.pf-v6-c-wizard__nav-link-text` | `<span>` | Initiates the link text container. **Required when nav item is expandable** |
+| `.pf-v6-c-wizard__nav-link-status-icon` | `<span>` | Initiates the status icon container. |
 | `.pf-v6-c-wizard__nav-link-toggle` | `<span>` | Initiates the toggle container. **Required when nav item is expandable** |
 | `.pf-v6-c-wizard__nav-link-toggle-icon` | `<span>` | Initiates the toggle icon container. **Required when nav item is expandable** |
 | `.pf-v6-c-wizard__main` | `<main>`, `<div>` | Initiates the main container. **Required** Note: use the `<main>` element when when there are no other `<main>` elements on the page.|

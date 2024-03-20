@@ -49,12 +49,12 @@
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
 
   // Nav link status icon
-  --#{$wizard}__nav-link-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$wizard}__nav-link--m-danger--nav-link-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
-  --#{$wizard}__nav-link-icon--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
-  --#{$wizard}__nav-link-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
-  --#{$wizard}__nav-link-icon--TranslateX: calc(-100% - var(--pf-t--global--spacer--xs));
-  --#{$wizard}__nav-link-icon--TranslateY: calc(-50% - var(--pf-t--global--spacer--xs));
+  --#{$wizard}__nav-link-status-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__nav-link-status-icon--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
+  --#{$wizard}__nav-link-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
+  --#{$wizard}__nav-link-status-icon--TranslateX: calc(-100% - var(--pf-t--global--spacer--xs));
+  --#{$wizard}__nav-link-status-icon--TranslateY: calc(-50% - var(--pf-t--global--spacer--xs));
 
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
@@ -463,10 +463,11 @@
   }
 
   &.pf-m-danger {
-    --#{$wizard}__nav-link-icon--Color: var(--#{$wizard}__nav-link--m-danger--nav-link-icon--Color);
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
 
     &::before {
-      display: none;
+      // display: none;
+      opacity: 0;
     }
   }    
 
@@ -494,18 +495,18 @@
   flex-grow: 1;
 }
 
-.#{$wizard}__nav-link-icon {
+.#{$wizard}__nav-link-status-icon {
   @include pf-v5-bidirectional-style(
     $prop: transform,
-    $ltr-val: translateX(var(--#{$wizard}__nav-link-icon--TranslateX)) translateY(var(--#{$wizard}__nav-link-icon--TranslateY)),
-    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link-icon--TranslateX))}) translateY(var(--#{$wizard}__nav-link-icon--TranslateY))
+    $ltr-val: translateX(var(--#{$wizard}__nav-link-status-icon--TranslateX)) translateY(var(--#{$wizard}__nav-link-status-icon--TranslateY)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link-status-icon--TranslateX))}) translateY(var(--#{$wizard}__nav-link-status-icon--TranslateY))
   );
 
   position: absolute;
-  inset-block-start: var(--#{$wizard}__nav-link-icon--Top);
+  inset-block-start: var(--#{$wizard}__nav-link-status-icon--Top);
   inset-inline-start: 0;
-  font-size: var(--#{$wizard}__nav-link-icon--FontSize);
-  color: var(--#{$wizard}__nav-link-icon--Color);
+  font-size: var(--#{$wizard}__nav-link-status-icon--FontSize);
+  color: var(--#{$wizard}__nav-link-status-icon--Color);
 }
 
 .#{$wizard}__nav-link-toggle {

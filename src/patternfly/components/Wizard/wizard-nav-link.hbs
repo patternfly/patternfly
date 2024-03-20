@@ -42,9 +42,9 @@
       {{> @partial-block}}
     {{/wizard-nav-link-text}}
     {{#if wizard-nav-item--IsDanger}}
-      {{#> wizard-nav-link-icon}}
+      {{#> wizard-nav-link-status-icon}}
         <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-      {{/wizard-nav-link-icon}}
+      {{/wizard-nav-link-status-icon}}
     {{/if}}
     {{#> wizard-nav-link-toggle}}
       {{> wizard-nav-link-toggle-icon}}
@@ -52,9 +52,9 @@
   {{else}}
     {{> @partial-block}}
     {{#if wizard-nav-item--IsDanger}}
-      {{#> wizard-nav-link-icon}}
+      {{#> wizard-nav-link-status-icon}}
         <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-      {{/wizard-nav-link-icon}}
+      {{/wizard-nav-link-status-icon}}
     {{/if}}
   {{/if}}
 </{{#if wizard-nav-link--IsLink}}a{{else}}button{{/if}}>
