@@ -104,22 +104,22 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
   }
 
-  // Main
-  --#{$page}__main--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$page}__main--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
-  --#{$page}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$page}__main--MarginInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$page}__main--MarginInlineEnd: var(--pf-t--global--spacer--lg);
-  --#{$page}__main--BorderRadius: var(--pf-t--global--border--radius--large);
-  --#{$page}__main--BorderWidth: var(--pf-t--global--spacer--sm); // TODO Change to be a page outline token
-  --#{$page}__main--BorderColor: var(--#{$page}__main--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
+  // Container for the main content area (grid area)
+  --#{$page}__main-container--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
+  --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$page}__main-container--MarginInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$page}__main-container--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$page}__main-container--BorderWidth: var(--pf-t--global--spacer--sm); // TODO Change to be a page outline token
+  --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
 
   // Main section
   --#{$page}__main-section--MarginTop: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$page}__main-section--PaddingRight: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section - TODO, see if we can remove the need for this calc(), or possibly move it down to the property definition so a user can theme this without a calc()
   --#{$page}__main-section--PaddingBottom: 0;
-  --#{$page}__main-section--PaddingLeft: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-section--PaddingLeft: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -159,9 +159,9 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$page}__main-breadcrumb--PaddingRight: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingRight: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--PaddingBottom: 0;
-  --#{$page}__main-breadcrumb--PaddingLeft: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingLeft: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // Main section tabs
@@ -192,7 +192,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     grid-template-areas:
       "header header"
-      "nav main";
+      "sidebar main";
     grid-template-columns: max-content 1fr;
     }
 }
@@ -316,7 +316,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   z-index: var(--#{$page}__sidebar--ZIndex);
   display: flex;
   flex-direction: column;
-  grid-area: nav;
+  grid-area: sidebar;
   grid-row-start: 2;
   grid-column-start: 1;
   width: var(--#{$page}__sidebar--Width);
@@ -492,20 +492,21 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 // Main & Drawer
-.#{$page}__main {
+.#{$page}__main-container {
   align-self: start;
-  max-height: var(--#{$page}__main--MaxHeight);
+  max-height: var(--#{$page}__main-container--MaxHeight);
   margin-block-start: 0;
-  margin-inline-start: var(--#{$page}__main--MarginInlineStart);
-  margin-inline-end: var(--#{$page}__main--MarginInlineEnd);
-  background: var(--#{$page}__main--BackgroundColor);
-  border: var(--#{$page}__main--BorderWidth) solid var(--#{$page}__main--BorderColor);
-  border-radius: var(--#{$page}__main--BorderRadius);
+  margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
+  margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
+  overflow: auto;
+  background: var(--#{$page}__main-container--BackgroundColor);
+  border: var(--#{$page}__main-container--BorderWidth) solid var(--#{$page}__main-container--BorderColor);
+  border-radius: var(--#{$page}__main-container--BorderRadius);
 }
 
-.#{$page}__main,
+.#{$page}__main-container,
 .#{$page}__drawer {
-  z-index: var(--#{$page}__main--ZIndex);
+  z-index: var(--#{$page}__main-container--ZIndex);
   grid-area: main;
   overflow-x: hidden;
   overflow-y: auto;
