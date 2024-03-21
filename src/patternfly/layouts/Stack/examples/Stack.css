@@ -1,5 +1,5 @@
-.ws-core-l-stack .pf-v5-l-stack,
-.ws-core-l-stack .pf-v5-l-stack__item {
+.ws-core-l-stack .pf-v6-l-stack,
+.ws-core-l-stack .pf-v6-l-stack__item {
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
@@ -11,6 +11,6 @@
   width: 100%;
 }
 
-.ws-core-l-stack .pf-v5-l-stack {
+.ws-core-l-stack .pf-v6-l-stack {
   flex-grow: 1;
 }

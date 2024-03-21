@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   min-height: 160px;
 }
-.ws-core-l-level .pf-v5-l-level__item,
-.ws-core-l-level .pf-v5-l-level {
+.ws-core-l-level .pf-v6-l-level__item,
+.ws-core-l-level .pf-v6-l-level {
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
-.ws-core-l-level .pf-v5-l-level {
+.ws-core-l-level .pf-v6-l-level {
   width: 100%;
 }
