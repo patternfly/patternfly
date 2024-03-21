@@ -10,7 +10,7 @@
     @each $property, $property-value in $pf-v5-global--spacer-properties-map {
 
       // Loop through spacer values
-      @each $spacer, $spacer-value in $pf-v5-global--spacer-map {
+      @each $spacer, $spacer-value in $pf-v6-global--spacer-map {
 
         // If breakpoint != null, append responsive value
         .#{$pf-prefix}u-#{$property}-#{$spacer}#{$breakpoint-value} {

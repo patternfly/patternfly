@@ -83,13 +83,13 @@
 
 
 // Build spacer map
-// Based on $pf-v5-global--spacer-map
+// Based on $pf-v6-global--spacer-map
 @function build-spacer-map($map-items...) {
   $map: ();
 
   @if length($map-items) == 0 {
     $map: ("none": 0);
-    $map: map-merge($map, $pf-v5-global--spacer-map);
+    $map: map-merge($map, $pf-v6-global--spacer-map);
     $map: map-remove($map, "auto", "0");
   }
 
@@ -97,7 +97,7 @@
     @if $spacer == "none" {
       $map: map-merge($map, ($spacer: 0));
     } @else {
-      $map: map-merge($map, ($spacer: map-get($pf-v5-global--spacer-map, #{$spacer})));
+      $map: map-merge($map, ($spacer: map-get($pf-v6-global--spacer-map, #{$spacer})));
     }
   }
 

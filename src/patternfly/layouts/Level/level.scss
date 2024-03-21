@@ -1,6 +1,9 @@
-.#{$level} {
-  --#{$level}--m-gutter--Gap: var(--#{$pf-global}--gutter);
+:where(:root),
+:where(.#{$level}) {
+  --#{$level}--m-gutter--Gap: var(--pf-t--global--spacer--lg);
+}
 
+.#{$level} {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
