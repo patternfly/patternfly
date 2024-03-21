@@ -4,7 +4,7 @@
 .#{$check} {
   --#{$check}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
-  --#{$check}--Height: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
+  --#{$check}--MinHeight: 1lh;
 
   // TODO: update to `--#{$check}--FontSize` `--#{$check}--LineHeight`
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -34,7 +34,7 @@
   &.pf-m-standalone {
     display: inline-grid;
     grid-template-columns: auto;
-    height: var(--#{$check}--Height);
+    min-height: var(--#{$check}--MinHeight);
 
     .#{$check}__input {
       align-self: center;
