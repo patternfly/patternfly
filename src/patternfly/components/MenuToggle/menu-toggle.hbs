@@ -34,6 +34,15 @@
       pf-m-disabled
     {{/if}}
   {{/if}}
+  {{#if menu-toggle--IsSuccess}}
+    pf-m-success
+  {{/if}}
+  {{#if menu-toggle--IsWarning}}
+    pf-m-warning
+  {{/if}}
+  {{#if menu-toggle--IsDanger}}
+    pf-m-danger
+  {{/if}}
   {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
   {{#unless (concat menu-toggle--IsDiv menu-toggle--IsSplitButton)}}
     type="button"
@@ -92,6 +101,9 @@
     {{/if}}
   {{else}}
     {{#> menu-toggle-controls}}
+      {{#ifAny menu-toggle--IsSuccess menu-toggle--IsWarning menu-toggle--IsDanger}}
+        {{> menu-toggle-status-icon}}
+      {{/ifAny}}
       {{> menu-toggle-toggle-icon}}
     {{/menu-toggle-controls}}
   {{/ifAny}}

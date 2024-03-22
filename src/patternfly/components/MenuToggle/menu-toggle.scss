@@ -163,6 +163,21 @@
   // * Menu toggle small
   --#{$menu-toggle}--m-small--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$menu-toggle}--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
+
+  // Status icon
+  --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
+
+  // Success
+  --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
+  --#{$menu-toggle}--m-success__status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
+
+  // Warning
+  --#{$menu-toggle}--m-warning--BorderColor: var(--pf-t--global--border--color--status--warning--default);
+  --#{$menu-toggle}--m-warning__status-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
+
+  // Danger
+  --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+  --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
 }
 
 .#{$menu-toggle} {
@@ -319,6 +334,21 @@
 
   &:has(.#{$button}) {
     background-color: transparent;
+  }
+
+  &.pf-m-success {
+    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-success--BorderColor);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-success__status-icon--Color);
+  }
+
+  &.pf-m-warning {
+    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-warning--BorderColor);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-warning__status-icon--Color);
+  }
+
+  &.pf-m-danger {
+    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
   }
 }
 
@@ -503,4 +533,10 @@
 .#{$menu-toggle}__toggle-icon {
   min-height: var(--#{$menu-toggle}__toggle-icon--MinHeight);
   color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
+}
+
+// - Menu toggle status icon
+.#{$menu-toggle}__status-icon {
+  margin-inline-end: var(--#{$menu-toggle}__status-icon--MarginInlineEnd);
+  color: var(--#{$menu-toggle}__status-icon--Color, inherit);
 }
