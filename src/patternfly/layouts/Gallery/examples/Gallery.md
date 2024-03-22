@@ -31,11 +31,11 @@ import './Gallery.css'
 
 ### Grid template minmax() width customization
 
-Grid template columms min value can be applied to <code>.pf-v5-l-gallery</code>.  Min-width is set inline as `--pf-v5-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}`.
+Grid template columms min value can be applied to <code>.pf-v6-l-gallery</code>.  Min-width is set inline as `--pf-v6-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}`.
 
 ### Min width modified gallery
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 150px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min: 150px;"')}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -46,7 +46,7 @@ Grid template columms min value can be applied to <code>.pf-v5-l-gallery</code>.
 
 ### Max width modified gallery
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--max: 300px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--max: 300px;"')}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -57,7 +57,7 @@ Grid template columms min value can be applied to <code>.pf-v5-l-gallery</code>.
 
 ### Min width modified gallery, responsive updates
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min-on-md: 100px; --pf-v5-l-gallery--GridTemplateColumns--min-on-lg: 150px; --pf-v5-l-gallery--GridTemplateColumns--min-on-xl: 200px; --pf-v5-l-gallery--GridTemplateColumns--min-on-2xl: 300px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min-on-md: 100px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min-on-lg: 150px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min-on-xl: 200px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min-on-2xl: 300px;"')}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -68,7 +68,7 @@ Grid template columms min value can be applied to <code>.pf-v5-l-gallery</code>.
 
 ### Max width modified gallery, responsive updates
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--max-on-md: 280px; --pf-v5-l-gallery--GridTemplateColumns--max-on-lg: 320px; --pf-v5-l-gallery--GridTemplateColumns--max-on-2xl: 400px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--max-on-md: 280px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--max-on-lg: 320px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--max-on-2xl: 400px;"')}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -79,7 +79,7 @@ Grid template columms min value can be applied to <code>.pf-v5-l-gallery</code>.
 
 ### Min and max width modified gallery, responsive updates
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 100%; --pf-v5-l-gallery--GridTemplateColumns--min-on-md: 100px; --pf-v5-l-gallery--GridTemplateColumns--max-on-md: 200px; --pf-v5-l-gallery--GridTemplateColumns--min-on-xl: 300px; --pf-v5-l-gallery--GridTemplateColumns--max-on-xl: 1fr;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min: 100%; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min-on-md: 100px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--max-on-md: 200px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--min-on-xl: 300px; --' (pfv "unset-prefix") 'l-gallery--GridTemplateColumns--max-on-xl: 1fr;"')}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
