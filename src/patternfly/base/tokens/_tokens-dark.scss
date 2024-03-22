@@ -1,6 +1,6 @@
 // /**
 //  * Do not edit directly
-//  * Generated on Tue, 20 Feb 2024 01:08:05 GMT
+//  * Generated on Thu, 21 Mar 2024 17:46:16 GMT
 //  */
 
 :root:where(.pf-v5-theme-dark) {
@@ -53,8 +53,8 @@
   --pf-t--global--dark--color--nonstatus--red--300: var(--pf-t--color--red--10);
   --pf-t--global--dark--color--nonstatus--red--200: var(--pf-t--color--red--20);
   --pf-t--global--dark--color--nonstatus--red--100: var(--pf-t--color--red--30);
-  --pf-t--global--dark--color--status--custom--200: var(--pf-t--color--teal--20);
-  --pf-t--global--dark--color--status--custom--100: var(--pf-t--color--teal--30);
+  --pf-t--global--dark--color--status--custom--200: var(--pf-t--color--teal--30);
+  --pf-t--global--dark--color--status--custom--100: var(--pf-t--color--teal--40);
   --pf-t--global--dark--color--status--info--200: var(--pf-t--color--purple--20);
   --pf-t--global--dark--color--status--info--100: var(--pf-t--color--purple--30);
   --pf-t--global--dark--color--status--danger--300: var(--pf-t--color--red-orange--20);
@@ -121,6 +121,7 @@
   --pf-t--global--border--color--nonstatus--red--clicked: var(--pf-t--global--dark--color--nonstatus--red--200);
   --pf-t--global--border--color--nonstatus--red--hover: var(--pf-t--global--dark--color--nonstatus--red--200);
   --pf-t--global--border--color--nonstatus--red--default: var(--pf-t--global--dark--color--nonstatus--red--100);
+  --pf-t--global--border--color--on-secondary: var(--pf-t--global--dark--border--color--200);
   --pf-t--global--border--color--clicked: var(--pf-t--global--dark--color--brand--200);
   --pf-t--global--border--color--hover: var(--pf-t--global--dark--color--brand--100);
   --pf-t--global--border--color--default: var(--pf-t--global--dark--border--color--200);
