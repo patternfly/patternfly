@@ -1,9 +1,8 @@
-{{#if table-td--IsFavorited}}
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Starred" id="' table--id '-favorite-button' table-tr--index '" aria-labelledby="' table--id '-node' table-tr--index ' ' table--id '-favorite-button' table-tr--index '"')}}
-    <i class="fas fa-star" aria-hidden="true"></i>
-  {{/button}}
-{{else}}
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Not starred" id="' table--id '-favorite-button' table-tr--index '" aria-labelledby="' table--id '-node' table-tr--index ' ' table--id '-favorite-button' table-tr--index '"')}}
-    <i class="fas fa-star" aria-hidden="true"></i>
-  {{/button}}
-{{/if}}
+{{#>button
+    button--IsPlain=true
+    button--id=(dasherize table--id 'favorite-button' table-tr--index)
+    button--aria-label=(ternary table-td--IsFavorited 'Starred' 'Not starred')
+    button--aria-labelledby=(dasherize table--id 'node' table-tr--index table--id 'favorite-button' table-tr--index)
+  }}
+  <i class="fas fa-star" aria-hidden="true"></i>
+{{/button}}

@@ -256,7 +256,9 @@ These classes can be used to ensure that the table changes between the tabular a
 | `.pf-v6-c-table__sort` | `<th>` | Initiates a table header sort cell. **Required for sortable table columns** |
 | `.pf-v6-c-table__button` | `<button>`, `<a>` | Initiates a table header sort cell button. If sorting a table row generates a unique URL that can be used as the `href` value for this element, use an `<a>`. Otherwise, use a `<button>`. **Required for sortable table columns** |
 | `.pf-v6-c-table__button-content` | `<div>` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
+| `.pf-v6-c-table__icon` | `<span>` | Initiates a table icon. |
 | `.pf-v6-c-table__sort-indicator` | `.pf-v6-c-table__sort > .pf-v6-c-table__button > span` | Initiates a sort indicator. **Required for sortable table columns** |
+| `.pf-m-selected` | `.pf-v6-c-table__button` | Modifies for plain button state. |
 | `.pf-m-selected` | `.pf-v6-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
 | `.pf-m-help` | `.pf-v6-c-table__sort`, `.pf-v6-c-table th` | Modifies a sortable table header to accommodate a help tooltip. **Required for sortable table columns with help tooltips** |
 | `.fa-arrows-alt-v` | `.pf-v6-c-table__sort > .pf-v6-c-table__button > .pf-v6-c-table__sort-indicator > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
@@ -3606,7 +3608,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 {{#> table table--id="table-favorites-sortable" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--IsSortable=true table-th--IsSelected="true" table-button--attribute='aria-label="Favorite"'}}
+      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite=true table-th--IsSortable=true table-th--IsSelected=true table-button--IsPlain=true}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}

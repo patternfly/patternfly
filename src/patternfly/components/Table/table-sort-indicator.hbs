@@ -1,6 +1,12 @@
-<span class="{{pfv}}table__sort-indicator{{#if table-sort-indicator--modifier}} {{table-sort-indicator--modifier}}{{/if}}"
+{{#> config table-sort-indicator--direction=(ternary table-th--IsAsc 'long-arrow-alt-up' (ternary table-th--IsDesc 'arrow-alt-down' 'arrows-alt-v'))}}
+
+{{!-- Table sort indicator --}}
+{{!-- TODO: return component--modifier as default --}}
+<span class="{{pfv}}table__sort-indicator {{setModifiers table-sort-indicator--modifier='table-sort-indicator--modifier'}}"
   {{#if table-sort-indicator--attribute}}
     {{{table-sort-indicator--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  <i class="fas fa-{{table-sort-indicator--direction}}"></i>
 </span>
+
+{{/config}}
