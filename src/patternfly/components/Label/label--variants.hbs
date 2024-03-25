@@ -2,37 +2,58 @@
   {{> label
       label--id=(concat label--variants--id '-status-default')
       label-text--value=(concat label--variants--title)}}
+
   {{> label
       label--IsRemovable=true
       label--id=(concat label--variants--id '-status-removable')
       label-text--value=(concat label--variants--title ' removable')}}
+
   {{> label
       label-content--IsLink=true
       label--id=(concat label--variants--id '-status-link')
       label-text--value=(concat label--variants--title ' link')}}
+
   {{> label
       label-content--IsButton=true
       label--id=(concat label--variants--id '-status-button')
       label-text--value=(concat label--variants--title ' button')}}
+
   {{> label
       label--IsRemovable=true
       label-content--IsLink=true
       label--id=(concat label--variants--id '-status-link-removable')
       label-text--value=(concat label--variants--title ' link removable')}}
+
   {{> label
       label--IsRemovable=true
       label-content--IsButton=true
       label--id=(concat label--variants--id '-status-button-removable')
       label-text--value=(concat label--variants--title ' button removable')}}
+
   {{> label
       label--id=(concat label--variants--id '-status-truncated')
       label-text--value=(concat label--variants--title ', max-width truncation customization')
       label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'}}
+
   {{> label
       label--IsRemovable=true
       label--id=(concat label--variants--id '-status-truncated-removable')
       label-text--value=(concat label--variants--title ' removable, max-width truncation customization')
       label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 28ch"'}}
+
+  {{> label
+      label--IsRemovable=true
+      label--IsDisabled=true
+      label-content--IsLink=true
+      label--id=(concat label--variants--id '-status-link-removable-disabled')
+      label-text--value=(concat label--variants--title ' link removable (disabled)')}}
+
+  {{> label
+      label--IsRemovable=true
+      label--IsDisabled=true
+      label-content--IsButton=true
+      label--id=(concat label--variants--id '-status-button-removable-disabled')
+      label-text--value=(concat label--variants--title ' button removable (disabled)')}}
 {{else}}
   {{> label
       label--id=(concat label--variants--id '-default')
@@ -87,6 +108,22 @@
       label--id=(concat label--variants--id '-truncated-with-icon')
       label-text--value=(concat label--variants--title ' label with icon and set max-width truncation customization')
       label-text--attribute='style="--pf-v5-c-label__text--MaxWidth: 38ch"'
+      label-icon--value="cube"}}
+
+  {{> label
+      label--IsRemovable=true
+      label--IsDisabled=true
+      label--id=(concat label--variants--id '-link-removable-disabled')
+      label-text--value=(concat label--variants--title ' link removable (disabled)')
+      label-content--IsLink=true
+      label-icon--value="cube"}}
+
+  {{> label
+      label--IsRemovable=true
+      label--IsDisabled=true
+      label--id=(concat label--variants--id '-button-removable-disabled')
+      label-text--value=(concat label--variants--title ' button removable (disabled)')
+      label-content--IsButton=true
       label-icon--value="cube"}}
 
   {{#if @partial-block}}

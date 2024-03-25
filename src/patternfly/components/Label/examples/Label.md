@@ -591,6 +591,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `.pf-m-danger` | `.pf-v6-c-label` | Modifies the label to have danger colored styling. |
 | `.pf-m-info` | `.pf-v6-c-label` | Modifies the label to have info colored styling. |
 | `.pf-m-custom` | `.pf-v6-c-label` | Modifies the label to have custom colored styling. |
+| `.pf-m-disabled` | `.pf-v6-c-label` | Modifies label for disabled styles. |
 | `.pf-m-editable` | `.pf-v6-c-label` | Modifies label for editable styles. |
 | `.pf-m-editable-active` | `.pf-v6-c-label.pf-m-editable` | Modifies editable label for active styles. |
 | `--pf-v6-c-label__text--MaxWidth` | `.pf-v6-c-label` | Modifiex the max width of the text before text will truncate. |

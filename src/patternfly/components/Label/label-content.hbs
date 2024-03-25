@@ -8,9 +8,15 @@
   {{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
   {{#if label-content--IsLink}}
     href="#"
-  {{/if}}
+    {{#if label--IsDisabled}}
+      tabindex="-1"
+      aria-disabled="true"
+    {{/if}}  {{/if}}
   {{#if label-content--IsButton}}
     type="button"
+    {{#if label--IsDisabled}}
+      disabled
+    {{/if}}
   {{/if}}
   {{#if label-content--attribute}}
     {{{label-content--attribute}}}
