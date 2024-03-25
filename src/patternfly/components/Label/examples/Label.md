@@ -695,6 +695,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `.pf-m-gold` | `.pf-v5-c-label` | Modifies the label to have gold colored styling. |
 | `.pf-m-editable` | `.pf-v5-c-label` | Modifies label for editable styles. |
 | `.pf-m-editable-active` | `.pf-v5-c-label.pf-m-editable` | Modifies editable label for active styles. |
+| `.pf-m-disabled` | `.pf-v5-c-label` | Modifies label for disabled styles. |
 | `--pf-v5-c-label__text--MaxWidth` | `.pf-v5-c-label` | Modifiex the max width of the text before text will truncate. |
 
 ### Label group accessibility

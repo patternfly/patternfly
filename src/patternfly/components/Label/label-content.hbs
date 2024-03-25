@@ -1,13 +1,23 @@
 {{#if label--IsEditable}}
   {{#> label-editable-content}}{{> @partial-block}}{{/label-editable-content}}
 {{else}}
-<{{#if label-content--IsLink}}a{{else}}span{{/if}} class="{{pfv}}label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
+<{{#if label-content--IsLink}}a{{else if label-content--IsAction}}button{{else}}span{{/if}} class="{{pfv}}label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
   {{#if label-content--IsLink}}
     href="#"
+    {{#if label--IsDisabled}}
+      tabindex="-1"
+      aria-disabled="true"
+    {{/if}}
+  {{/if}}
+  {{#if label-content--IsAction}}
+    type="button"
+    {{#if label--IsDisabled}}
+      disabled
+    {{/if}}
   {{/if}}
   {{#if label-content--attribute}}
     {{{label-content--attribute}}}
   {{/if}}>
   {{~> @partial-block}}
-</{{#if label-content--IsLink}}a{{else}}span{{/if}}>
+</{{#if label-content--IsLink}}a{{else if label-content--IsAction}}button{{else}}span{{/if}}>
 {{/if}}
