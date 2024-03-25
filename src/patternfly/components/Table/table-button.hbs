@@ -1,4 +1,7 @@
 <button class="{{pfv}}table__button {{setModifiers table-button--IsPlain='pf-m-plain' table-button--modifier=table-button--modifier}}"
+  {{#if table-button--IsPlain}}
+    aria-label="Sort column"
+  {{/if}}
   {{#if table-button--attribute}}
     {{{table-button--attribute}}}
   {{/if}}>
