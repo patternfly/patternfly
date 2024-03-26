@@ -57,8 +57,8 @@
 
   // toggle
   --#{$data-list}__toggle--MarginLeft: calc(var(--pf-t--global--spacer--sm) * -1); // offset toggle to align left
-  --#{$data-list}__toggle--MarginTop: calc(var(--pf-t--global--spacer--sm) * -1); // updating to spacer--sm (8x) as spacer--form-element (6px) doesn't exist
-  --#{$data-list}__toggle--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
+  --#{$data-list}__toggle--MarginTop: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
+  --#{$data-list}__toggle--MarginBottom: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
   --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
   --#{$data-list}__toggle-icon--Transition: .2s ease-in 0s;
   --#{$data-list}__toggle-icon--Rotate: 0;
