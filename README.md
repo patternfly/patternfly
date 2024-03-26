@@ -121,3 +121,4 @@ PatternFly 5 is supported on the latest two major versions of the following brow
 - Firefox
 - Safari
 - Edge
+
