@@ -2,9 +2,16 @@
   {{> breadcrumb-item-divider}}
   {{#> breadcrumb-dropdown}}
     {{#> menu-toggle menu-toggle--IsPlain=true}}
-      {{#> badge badge--modifier="pf-m-read"}}
-        {{menu-toggle--badge--text}} <i class="fas fa-caret-down" aria-hidden="true"></i>
-      {{/badge}}
+      {{#> menu-toggle-count}}
+        {{#> badge badge--modifier="pf-m-read"}}
+          {{menu-toggle--badge--text}}
+        {{/badge}}
+      {{/menu-toggle-count}}
+      {{#> menu-toggle-controls}}
+        {{#> menu-toggle-toggle-icon}}
+          <i class="fas fa-caret-down" aria-hidden="true"></i>
+        {{/menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
     {{/menu-toggle}}
     {{#> menu newcontext}}
       {{#> menu-content}}

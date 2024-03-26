@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v6-c-breadcrumb
 ---
 
-import './Breadcrumb.css'
-
 ## Examples
 ### Basic
 ```hbs
@@ -140,7 +138,17 @@ import './Breadcrumb.css'
     {{#> breadcrumb-item}}
       {{> breadcrumb-item-divider}}
       {{#> breadcrumb-dropdown}}
-        {{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Breadcrumb="true" dropdown--IsExpanded="true"}}
+        {{#> menu-toggle menu-toggle--IsPlain=true}}
+          {{#> menu-toggle-count}}
+            {{#> badge badge--modifier="pf-m-unread"}}
+              4
+              <span class="pf-v6-screen-reader">additional items</span>
+            {{/badge}}
+          {{/menu-toggle-count}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
       {{/breadcrumb-dropdown}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
