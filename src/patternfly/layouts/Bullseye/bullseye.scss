@@ -1,6 +1,9 @@
-.#{$bullseye} {
+:where(:root),
+:where(.#{$bullseye}) {
   --#{$bullseye}--Padding: 0;
+}
 
+.#{$bullseye} {
   display: flex;
   align-items: center;
   justify-content: center;

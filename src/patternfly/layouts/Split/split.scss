@@ -1,6 +1,9 @@
-.#{$split} {
-  --#{$stack}--m-gutter--Gap: var(--#{$pf-global}--gutter);
+:where(:root),
+:where(.#{$split}) {
+  --#{$stack}--m-gutter--Gap: var(--pf-t--global--spacer--lg);
+}
 
+.#{$split} {
   display: flex;
   padding: 0;
   margin: 0;

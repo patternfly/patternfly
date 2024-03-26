@@ -1,5 +1,5 @@
-.ws-core-l-bullseye .pf-v5-l-bullseye,
-.ws-core-l-bullseye .pf-v5-l-bullseye__item {
-  padding: .5rem;
-  border: 2px dashed #393f44;
+.ws-core-l-bullseye .pf-v6-l-bullseye,
+.ws-core-l-bullseye .pf-v6-l-bullseye__item {
+  padding: var(--pf-t--global--spacer--sm);
+  border: var(--pf-t--global--border--width--box--default) dashed var(--pf-t--global--border--color--default);
 }

@@ -1,6 +1,9 @@
-.#{$stack} {
-  --#{$stack}--m-gutter--Gap: var(--#{$pf-global}--gutter);
+:where(:root),
+:where(.#{$stack}) {
+  --#{$stack}--m-gutter--Gap: var(--pf-t--global--spacer--lg);
+}
 
+.#{$stack} {
   display: flex;
   flex-direction: column;
   height: 100%;

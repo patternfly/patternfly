@@ -1,4 +1,4 @@
-$pf-v5-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
+$pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
 
 // URL.com/guidelines#layout
 // Generate smart grid layout
@@ -39,12 +39,15 @@ $pf-v5-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
 }
 
 // Grid base
-.#{$grid} {
-  --#{$grid}--m-gutter--GridGap: var(--#{$pf-global}--gutter);
+:where(:root),
+:where(.#{$grid}) {
+  --#{$grid}--m-gutter--GridGap: var(--pf-t--global--spacer--lg);
   --#{$grid}__item--GridColumnStart: auto;
   --#{$grid}__item--GridColumnEnd: span 12;
   --#{$grid}--item--Order: 0;
+}
 
+.#{$grid} {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
@@ -55,7 +58,7 @@ $pf-v5-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
     min-width: 0;
     min-height: 0;
 
-    @include pf-v5-build-css-variable-stack("order", "--#{$grid}--item--Order", $pf-v5-l-grid--breakpoint-map);
+    @include pf-v5-build-css-variable-stack("order", "--#{$grid}--item--Order", $pf-v6-l-grid--breakpoint-map);
   }
 
   // Loop through $breakpoints map to generate responsive classes

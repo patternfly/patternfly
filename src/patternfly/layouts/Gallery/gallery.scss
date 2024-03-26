@@ -1,14 +1,17 @@
-$pf-v5-l-gallery--breakpoint-map: build-breakpoint-map();
+$pf-v6-l-gallery--breakpoint-map: build-breakpoint-map();
 
-.#{$gallery} {
-  --#{$gallery}--m-gutter--GridGap: var(--#{$pf-global}--gutter);
+:where(:root),
+:where(.#{$gallery}) {
+  --#{$gallery}--m-gutter--GridGap: var(--pf-t--global--spacer--lg);
   --#{$gallery}--GridTemplateColumns--min: 250px;
   --#{$gallery}--GridTemplateColumns--minmax--min: var(--#{$gallery}--GridTemplateColumns--min);
   --#{$gallery}--GridTemplateColumns--max: 1fr;
   --#{$gallery}--GridTemplateColumns--minmax--max: var(--#{$gallery}--GridTemplateColumns--max);
   --#{$gallery}--GridTemplateColumns: repeat(auto-fill, minmax(var(--#{$gallery}--GridTemplateColumns--minmax--min), var(--#{$gallery}--GridTemplateColumns--minmax--max)));
   --#{$gallery}--GridTemplateRows: auto;
+}
 
+.#{$gallery} {
   display: grid;
   grid-template-rows: var(--#{$gallery}--GridTemplateRows);
   grid-template-columns: var(--#{$gallery}--GridTemplateColumns);
@@ -17,6 +20,6 @@ $pf-v5-l-gallery--breakpoint-map: build-breakpoint-map();
     grid-gap: var(--#{$gallery}--m-gutter--GridGap);
   }
 
-  @include pf-v5-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--min", "--#{$gallery}--GridTemplateColumns--min", $pf-v5-l-gallery--breakpoint-map);
-  @include pf-v5-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--max", "--#{$gallery}--GridTemplateColumns--max", $pf-v5-l-gallery--breakpoint-map);
+  @include pf-v5-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--min", "--#{$gallery}--GridTemplateColumns--min", $pf-v6-l-gallery--breakpoint-map);
+  @include pf-v5-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--max", "--#{$gallery}--GridTemplateColumns--max", $pf-v6-l-gallery--breakpoint-map);
 }
