@@ -189,7 +189,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   @include pf-v5-c-progress-stepper--m-vertical;
 
   // Horizontal at md breakpoint
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--md) {
     @include pf-v5-c-progress-stepper--m-horizontal;
   }
 }

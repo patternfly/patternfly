@@ -41,8 +41,8 @@ $pf-v6-u-height-options: (
   h-100vh:   (height 100vh)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-width-options, $pf-v5-global--breakpoint-list);
-@include pf-v5-utility-builder($pf-v6-u-height-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-width-options, $pf-v6-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-height-options, $pf-v6-global--breakpoint-list);
 
 .#{$pf-prefix}u-min-width {
   --pf-v6-u-min-width--MinWidth: 0;

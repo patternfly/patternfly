@@ -1,19 +1,19 @@
 @mixin pf-v5-c-data-list-responsive-block() {
   // base responsive styles
   @at-root .#{$data-list}:not([class*="pf-m-grid"]) {
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @content;
     }
   }
 
   @at-root .#{$data-list}.pf-m-grid-none {
-    @media screen and (min-width: $pf-v5-global--breakpoint--xs) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--xs) {
       @content;
     }
   }
 
   // grid modifiers
-  @each $size, $bp in $pf-v5-global--breakpoint-name-map {
+  @each $size, $bp in $pf-v6-global--breakpoint-name-map {
     @at-root .#{$data-list}.pf-m-grid-#{$size} {
       @media screen and (min-width: #{$bp}) {
         @content;
@@ -32,7 +32,7 @@
   --#{$data-list}--m-compact__cell--PaddingBottom: var(--#{$data-list}--m-compact__cell--md--PaddingBottom);
   --#{$data-list}--m-compact__cell-cell--PaddingTop: var(--#{$data-list}--m-compact__cell-cell--md--PaddingTop);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$data-list}__item-row--PaddingRight: var(--#{$data-list}__item-row--xl--PaddingRight);
     --#{$data-list}__item-row--PaddingLeft: var(--#{$data-list}__item-row--xl--PaddingLeft);
     --#{$data-list}__expandable-content-body--PaddingRight: var(--#{$data-list}__expandable-content-body--xl--PaddingRight);

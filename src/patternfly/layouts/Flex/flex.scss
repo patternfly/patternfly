@@ -46,23 +46,23 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   margin-inline-end: var(--#{$flex}--spacer--column);
 
   // don't set base value for --#{$flex}--item--Order as it defaults to 0
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     order: var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order));
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--md) {
     order: var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order)));
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     order: var(--#{$flex}--item--Order-on-lg, var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order))));
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     order: var(--#{$flex}--item--Order-on-xl, var(--#{$flex}--item--Order-on-lg, var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order)))));
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--2xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--2xl) {
     order: var(--#{$flex}--item--Order-on-2xl, var(--#{$flex}--item--Order-on-xl, var(--#{$flex}--item--Order-on-lg, var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order))))));
   }
 

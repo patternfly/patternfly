@@ -22,7 +22,7 @@ $pf-v6-u-font-family-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v6-u-font-family-options);
+@include pf-v6-utility-builder($pf-v6-u-font-family-options);
 
 // Font size options
 $pf-v6-u-font-size-options: (
@@ -52,7 +52,7 @@ $pf-v6-u-font-size-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v6-u-font-size-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-font-size-options, $pf-v6-global--breakpoint-list);
 
 // Font weight options
 $pf-v6-u-font-weight-options: (
@@ -64,7 +64,7 @@ $pf-v6-u-font-weight-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v6-u-font-weight-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-font-weight-options, $pf-v6-global--breakpoint-list);
 
 // Font color options
 $pf-v6-u-font-color-options: (
@@ -166,7 +166,7 @@ $pf-v6-u-font-color-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v6-u-font-color-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-font-color-options, $pf-v6-global--breakpoint-list);
 
 // Font layout options
 $pf-v6-u-font-alignment-options: (
@@ -181,7 +181,7 @@ $pf-v6-u-font-alignment-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v6-u-font-alignment-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-font-alignment-options, $pf-v6-global--breakpoint-list);
 
 .#{$pf-prefix}u-text-truncate {
   min-width: 0 !important;

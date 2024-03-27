@@ -10,7 +10,7 @@
   --#{$data-list}--sm--BorderTopColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--MarginLeft: var(--pf-t--global--spacer--md);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$data-list}--BorderTopColor: var(--#{$data-list}--sm--BorderTopColor);
     --#{$data-list}--BorderTopWidth: var(--#{$data-list}--sm--BorderTopWidth);
   }
@@ -25,7 +25,7 @@
   --#{$data-list}__item--sm--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
   --#{$data-list}__item--sm--BorderBottomColor: var(--pf-t--global--border--color--default);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$data-list}__item--BorderBottomWidth: var(--#{$data-list}__item--sm--BorderBottomWidth);
     --#{$data-list}__item--BorderBottomColor: var(--#{$data-list}__item--sm--BorderBottomColor);
   }

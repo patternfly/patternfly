@@ -3,13 +3,13 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
 @mixin pf-v5-c-form--m-horizontal {
   // default horizontal styles applied at medium breakpoint
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--md) {
     @content;
   }
 
   // custom xs style since this isn't in our maps - maps are based on mobile first design. This may not even be a valid option based on design but I guess it doesn't hurt to add.
   &-on-xs {
-    @media screen and (min-width: $pf-v5-global--breakpoint--xs) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--xs) {
       @content;
     }
   }

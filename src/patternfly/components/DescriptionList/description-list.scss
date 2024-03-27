@@ -26,7 +26,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}__term--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$description-list}__term--LineHeight: var(--pf-t--global--font--line-height--body);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$description-list}__term--Display: var(--#{$description-list}__term--sm--Display);
   }
 
