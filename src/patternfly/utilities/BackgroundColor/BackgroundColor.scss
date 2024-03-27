@@ -52,7 +52,7 @@ $pf-v6-u-background-color-options: (
   )
 );
 
-@include pf-v5-utility-builder($pf-v6-u-background-color-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-background-color-options, $pf-v6-global--breakpoint-list);
 
 // stylelint-enable
 

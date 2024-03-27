@@ -110,7 +110,7 @@
   --#{$wizard}__nav--lg--BorderRightWidth: var(--pf-t--global--border--width--regular);
   --#{$wizard}__nav--lg--BorderRightColor: var(--pf-t--global--border--color--default);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
     --#{$wizard}__nav--BoxShadow: none;
   }
@@ -222,7 +222,7 @@
   padding-block-start: var(--#{$wizard}__description--PaddingTop);
   color: var(--#{$wizard}__description--Color);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     display: block;
   }
 }
@@ -243,7 +243,7 @@
   border-inline-start: 0;
   border-inline-end: 0;
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     display: none;
   }
 
@@ -298,7 +298,7 @@
   min-height: var(--#{$wizard}__outer-wrap--MinHeight);
   background-color: var(--#{$wizard}__outer-wrap--BackgroundColor);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     padding-inline-start: var(--#{$wizard}__outer-wrap--lg--PaddingLeft);
   }
 }
@@ -310,7 +310,7 @@
   flex-grow: 1;
   min-height: 0;
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     position: static;
   }
 }
@@ -332,7 +332,7 @@
     display: block;
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     display: block;
     height: 100%;
     border-inline-end: var(--#{$wizard}__nav--lg--BorderRightWidth) solid var(--#{$wizard}__nav--lg--BorderRightColor);

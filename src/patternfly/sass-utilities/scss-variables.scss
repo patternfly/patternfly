@@ -155,19 +155,19 @@ $pf-v5-global--ZIndex--xl: 500;
 $pf-v5-global--ZIndex--2xl: 600;
 
 // Grid breakpoints
-$pf-v5-global--breakpoint--xs: 0 !default;
-$pf-v5-global--breakpoint--sm: 576px !default;
-$pf-v5-global--breakpoint--md: 768px !default;
-$pf-v5-global--breakpoint--lg: 992px !default;
-$pf-v5-global--breakpoint--xl: 1200px !default;
-$pf-v5-global--breakpoint--2xl: 1450px !default;
+$pf-v6-global--breakpoint--xs: 0 !default;
+$pf-v6-global--breakpoint--sm: 576px !default;
+$pf-v6-global--breakpoint--md: 768px !default;
+$pf-v6-global--breakpoint--lg: 992px !default;
+$pf-v6-global--breakpoint--xl: 1200px !default;
+$pf-v6-global--breakpoint--2xl: 1450px !default;
 
 // Height breakpoints
-$pf-v5-global--height-breakpoint--sm: 0 !default;
-$pf-v5-global--height-breakpoint--md: 40rem !default; // 640px
-$pf-v5-global--height-breakpoint--lg: 48rem !default; // 768px
-$pf-v5-global--height-breakpoint--xl: 60rem !default; // 960px
-$pf-v5-global--height-breakpoint--2xl: 80rem !default; // 1280px
+$pf-v6-global--height-breakpoint--sm: 0 !default;
+$pf-v6-global--height-breakpoint--md: 40rem !default; // 640px
+$pf-v6-global--height-breakpoint--lg: 48rem !default; // 768px
+$pf-v6-global--height-breakpoint--xl: 60rem !default; // 960px
+$pf-v6-global--height-breakpoint--2xl: 80rem !default; // 1280px
 
 // Borders
 $pf-v5-global--BorderWidth--sm:     1px !default;
@@ -255,7 +255,7 @@ $pf-v5-global--target-size--MinHeight: 44px !default;
 // animations
 
 // Global breakpoint map - used for @pf-grid-item-modifiers
-$pf-v5-global--breakpoint-map: (
+$pf-v6-global--breakpoint-map: (
   "": null,
   "sm": "-on-sm",
   "md": "-on-md",
@@ -264,8 +264,8 @@ $pf-v5-global--breakpoint-map: (
   "2xl": "-on-2xl"
 );
 
-// Global breakpoint list - used for @pf-v5-utility-builder
-$pf-v5-global--breakpoint-list: (
+// Global breakpoint list - used for @pf-v6-utility-builder
+$pf-v6-global--breakpoint-list: (
   "sm",
   "md",
   "lg",
@@ -274,21 +274,21 @@ $pf-v5-global--breakpoint-list: (
 );
 
 // Global breakpoint name map - used for %pf-v5-hidden-visible
-$pf-v5-global--breakpoint-name-map: (
-  "sm": $pf-v5-global--breakpoint--sm,
-  "md": $pf-v5-global--breakpoint--md,
-  "lg": $pf-v5-global--breakpoint--lg,
-  "xl": $pf-v5-global--breakpoint--xl,
-  "2xl": $pf-v5-global--breakpoint--2xl
+$pf-v6-global--breakpoint-name-map: (
+  "sm": $pf-v6-global--breakpoint--sm,
+  "md": $pf-v6-global--breakpoint--md,
+  "lg": $pf-v6-global--breakpoint--lg,
+  "xl": $pf-v6-global--breakpoint--xl,
+  "2xl": $pf-v6-global--breakpoint--2xl
 );
 
 // Global breakpoint name map - used for %pf-v5-hidden-visible
-$pf-v5-global--height-breakpoint-name-map: (
-  "sm": $pf-v5-global--height-breakpoint--sm,
-  "md": $pf-v5-global--height-breakpoint--md,
-  "lg": $pf-v5-global--height-breakpoint--lg,
-  "xl": $pf-v5-global--height-breakpoint--xl,
-  "2xl": $pf-v5-global--height-breakpoint--2xl
+$pf-v6-global--height-breakpoint-name-map: (
+  "sm": $pf-v6-global--height-breakpoint--sm,
+  "md": $pf-v6-global--height-breakpoint--md,
+  "lg": $pf-v6-global--height-breakpoint--lg,
+  "xl": $pf-v6-global--height-breakpoint--xl,
+  "2xl": $pf-v6-global--height-breakpoint--2xl
 );
 
 // Spacer properties

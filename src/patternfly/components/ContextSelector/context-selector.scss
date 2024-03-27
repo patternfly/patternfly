@@ -125,7 +125,7 @@
   --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$context-selector}--m-page-insets__toggle--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--xl--PaddingRight);
     --#{$context-selector}--m-page-insets__toggle--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--xl--PaddingLeft);
     --#{$context-selector}--m-page-insets__menu-list-item--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingRight);

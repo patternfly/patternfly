@@ -101,7 +101,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 .#{$sidebar} {
   height: 100%;
 
-  @media (min-width: $pf-v5-global--breakpoint--md) {
+  @media (min-width: $pf-v6-global--breakpoint--md) {
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}__main--md--FlexDirection);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}__main--md--AlignItems);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}__main--m-border--before--md--Display); // show border starting at md breakpoint
@@ -111,7 +111,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}__panel--md--Position);
   }
 
-  @media (min-width: $pf-v5-global--breakpoint--xl) {
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$sidebar}--inset: var(--#{$sidebar}--xl--inset);
   }
 
@@ -123,7 +123,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__panel--Order: var(--#{$sidebar}--m-panel-right__panel--Order);
     --#{$sidebar}__content--Order: var(--#{$sidebar}--m-panel-right__content--Order);
 
-    @media (min-width: $pf-v5-global--breakpoint--md) {
+    @media (min-width: $pf-v6-global--breakpoint--md) {
       --#{$sidebar}--m-panel-right__panel--Order: var(--#{$sidebar}--m-panel-right__panel--md--Order);
       --#{$sidebar}--m-panel-right__content--Order: var(--#{$sidebar}--m-panel-right__content--md--Order);
     }

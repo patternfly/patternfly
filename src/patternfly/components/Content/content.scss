@@ -284,7 +284,7 @@
     display: grid;
     grid-template-columns: 1fr;
 
-    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       grid-template: auto / auto 1fr;
       grid-row-gap: var(--#{$content}--dl--RowGap);
       grid-column-gap: var(--#{$content}--dl--ColumnGap);
@@ -297,18 +297,18 @@
     &:not(:first-child) {
       margin-block-start: var(--#{$content}--dt--MarginTop);
 
-      @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+      @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
         --#{$content}--dt--MarginTop: var(--#{$content}--dt--sm--MarginTop);
       }
     }
 
-    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       grid-column: 1;
     }
   }
 
   dd {
-    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       grid-column: 2;
     }
   }

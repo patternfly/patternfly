@@ -45,7 +45,7 @@
     --pf-v5-hidden-visible--Display: var(--pf-v5-hidden-visible--hidden--Display);
   }
 
-  @each $size, $bp in $pf-v5-global--breakpoint-name-map {
+  @each $size, $bp in $pf-v6-global--breakpoint-name-map {
     @media screen and (min-width: $bp) {
       &.pf-m-hidden-on-#{$size} {
         --pf-v5-hidden-visible--Display: var(--pf-v5-hidden-visible--hidden--Display);

@@ -24,7 +24,7 @@
   --#{$modal-box}--m-info__title-icon--Color: var(--pf-t--global--icon--color--status--info--default);
   --#{$modal-box}--m-custom__title-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
 
-  @media (min-width: $pf-v5-global--breakpoint--xl) {
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$modal-box}--m-align-top--spacer: var(--#{$modal-box}--m-align-top--xl--spacer);
   }
 
@@ -239,7 +239,7 @@
   > .#{$button}:not(:last-child) {
     margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginRight);
 
-    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       --#{$modal-box}__footer--c-button--MarginRight: var(--#{$modal-box}__footer--c-button--sm--MarginRight);
     }
   }

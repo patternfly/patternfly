@@ -31,7 +31,7 @@
   --#{$about-modal-box}__brand--sm--PaddingLeft: var(--pf-t--global--spacer--3xl);
   --#{$about-modal-box}__brand--sm--PaddingBottom: var(--pf-t--global--spacer--3xl);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$about-modal-box}__brand--PaddingRight: var(--#{$about-modal-box}__brand--sm--PaddingRight);
     --#{$about-modal-box}__brand--PaddingLeft: var(--#{$about-modal-box}__brand--sm--PaddingLeft);
     --#{$about-modal-box}__brand--PaddingBottom: var(--#{$about-modal-box}__brand--sm--PaddingBottom);
@@ -45,11 +45,11 @@
   --#{$about-modal-box}__close--sm--PaddingBottom: var(--pf-t--global--spacer--3xl);
   --#{$about-modal-box}__close--lg--PaddingRight: var(--pf-t--global--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$about-modal-box}__close--PaddingBottom: var(--#{$about-modal-box}__close--sm--PaddingBottom);
   }
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--lg) {
     --#{$about-modal-box}__close--PaddingRight: var(--#{$about-modal-box}__close--lg--PaddingRight);
   }
 
@@ -66,7 +66,7 @@
   --#{$about-modal-box}__header--sm--PaddingRight: var(--pf-t--global--spacer--3xl);
   --#{$about-modal-box}__header--sm--PaddingLeft: var(--pf-t--global--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$about-modal-box}__header--PaddingRight: var(--#{$about-modal-box}__header--sm--PaddingRight);
     --#{$about-modal-box}__header--PaddingLeft: var(--#{$about-modal-box}__header--sm--PaddingLeft);
   }
@@ -77,7 +77,7 @@
   --#{$about-modal-box}__strapline--Color: var(--pf-t--global--text--color--subtle);
   --#{$about-modal-box}__strapline--sm--PaddingTop: var(--pf-t--global--spacer--2xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$about-modal-box}__strapline--PaddingTop: var(--#{$about-modal-box}__strapline--sm--PaddingTop);
   }
 
@@ -91,7 +91,7 @@
   --#{$about-modal-box}__content--sm--MarginBottom: var(--pf-t--global--spacer--2xl);
   --#{$about-modal-box}__content--sm--MarginLeft: var(--pf-t--global--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$about-modal-box}__content--MarginTop: var(--#{$about-modal-box}__content--sm--MarginTop);
     --#{$about-modal-box}__content--MarginRight: var(--#{$about-modal-box}__content--sm--MarginRight);
     --#{$about-modal-box}__content--MarginBottom: var(--#{$about-modal-box}__content--sm--MarginBottom);
@@ -117,7 +117,7 @@
   background-position: var(--#{$about-modal-box}--BackgroundPosition);
   background-size: var(--#{$about-modal-box}--BackgroundSize);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     grid-template-areas:
     "brand          close"
     "header         close"
@@ -125,7 +125,7 @@
     grid-template-columns: var(--#{$about-modal-box}--sm--GridTemplateColumns);
   }
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--lg) {
     --#{$about-modal-box}--Height: var(--#{$about-modal-box}--lg--Height);
     --#{$about-modal-box}--Width: var(--#{$about-modal-box}--lg--Width);
 
@@ -181,7 +181,7 @@
   word-break: break-word;
   -webkit-overflow-scrolling: touch;
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     overflow: visible;
     overscroll-behavior: auto;
   }
@@ -199,12 +199,12 @@
   padding-block-end: var(--#{$about-modal-box}__close--PaddingBottom);
   padding-inline-end: var(--#{$about-modal-box}__close--PaddingRight);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     grid-area: 1 / 2;
     justify-content: center;
   }
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media only screen and (min-width: $pf-v6-global--breakpoint--lg) {
     justify-content: flex-end;
   }
 

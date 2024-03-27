@@ -26,7 +26,7 @@
 .#{$tab-content} {
   background-color: var(--#{$tab-content}--BackgroundColor);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$tab-content}__body--m-padding--PaddingTop: var(--#{$tab-content}__body--m-padding--xl--PaddingTop);
     --#{$tab-content}__body--m-padding--PaddingRight: var(--#{$tab-content}__body--m-padding--xl--PaddingRight);
     --#{$tab-content}__body--m-padding--PaddingBottom: var(--#{$tab-content}__body--m-padding--xl--PaddingBottom);

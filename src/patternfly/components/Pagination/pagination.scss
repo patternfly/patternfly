@@ -51,14 +51,14 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-display-summary__page-menu--Display: none;
   --#{$pagination}--m-display-full__page-menu--Display: inline-flex;
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--md) {
     --#{$pagination}--m-bottom--BoxShadow: none;
     --#{$pagination}__page-menu--Display: inline-flex;
     --#{$pagination}__nav--Display: inline-flex;
     --#{$pagination}__total-items--Display: none;
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$pagination}__scroll-button--Width: var(--#{$pagination}__scroll-button--xl--Width);
   }
 }
@@ -113,7 +113,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       justify-content: space-between;
     }
 
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       --#{$pagination}--m-bottom--BorderTopWidth: 0;
       --#{$pagination}--m-bottom--MarginTop: 0;
       --#{$pagination}--m-bottom--Bottom: auto;

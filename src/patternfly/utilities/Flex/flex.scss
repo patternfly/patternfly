@@ -8,7 +8,7 @@ $pf-v6-u-flex-direction-options: (
   flex-direction-row-reverse:       (flex-direction row-reverse)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-flex-direction-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-flex-direction-options, $pf-v6-global--breakpoint-list);
 
 // Flex wrap options
 $pf-v6-u-flex-wrap-options: (
@@ -17,7 +17,7 @@ $pf-v6-u-flex-wrap-options: (
   flex-wrap-reverse:        (flex-wrap wrap-reverse)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-flex-wrap-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-flex-wrap-options, $pf-v6-global--breakpoint-list);
 
 // Align item options
 $pf-v6-u-align-items-options: (
@@ -28,7 +28,7 @@ $pf-v6-u-align-items-options: (
   align-items-stretch:      (align-items stretch)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-align-items-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-align-items-options, $pf-v6-global--breakpoint-list);
 
 // Align self options
 $pf-v6-u-align-self-options: (
@@ -39,7 +39,7 @@ $pf-v6-u-align-self-options: (
   align-self-stretch:       (align-self stretch)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-align-self-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-align-self-options, $pf-v6-global--breakpoint-list);
 
 // Align content options
 $pf-v6-u-align-content-options: (
@@ -51,7 +51,7 @@ $pf-v6-u-align-content-options: (
   align-content-stretch:       (align-content stretch)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-align-content-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-align-content-options, $pf-v6-global--breakpoint-list);
 
 // Justify content options
 $pf-v6-u-justify-content-options: (
@@ -63,7 +63,7 @@ $pf-v6-u-justify-content-options: (
   justify-content-stretch:       (justify-content stretch)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-justify-content-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-justify-content-options, $pf-v6-global--breakpoint-list);
 
 // Justify content options
 $pf-v6-u-flex-shrink-grow-options: (
@@ -73,7 +73,7 @@ $pf-v6-u-flex-shrink-grow-options: (
   flex-grow-0:      (flex-grow 0)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-flex-shrink-grow-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-flex-shrink-grow-options, $pf-v6-global--breakpoint-list);
 
 // Flex basis options
 $pf-v6-u-flex-basis-options: (
@@ -81,7 +81,7 @@ $pf-v6-u-flex-basis-options: (
   flex-basis-auto:  (flex-basis auto)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-flex-basis-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-flex-basis-options, $pf-v6-global--breakpoint-list);
 
 // Justify content options
 $pf-v6-u-flex-options: (
@@ -89,9 +89,9 @@ $pf-v6-u-flex-options: (
   flex-1:     (flex 1)
 );
 
-@include pf-v5-utility-builder($pf-v6-u-flex-options, $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder($pf-v6-u-flex-options, $pf-v6-global--breakpoint-list);
 
 // Flex fill
-@include pf-v5-utility-builder(flex-fill flex "1 1 auto", $pf-v5-global--breakpoint-list);
+@include pf-v6-utility-builder(flex-fill flex "1 1 auto", $pf-v6-global--breakpoint-list);
 
 // stylelint-enable

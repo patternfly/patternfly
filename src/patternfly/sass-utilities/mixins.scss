@@ -1,52 +1,52 @@
 // Media query used to create responsive classes
-@mixin pf-v5-media-query($point) {
+@mixin pf-v6-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
     @content;
   } @else if $point == "sm" {
-    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       @content;
     }
   } @else if $point == "md" {
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @content;
     }
   } @else if $point == "lg" {
-    @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
       @content;
     }
   } @else if $point == "xl" {
-    @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
       @content;
     }
   } @else if $point == "2xl" {
-    @media screen and (min-width: $pf-v5-global--breakpoint--2xl) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--2xl) {
       @content;
     }
   }
 }
 
 // Media query used to create responsive classes
-@mixin pf-v5-height-media-query($point) {
+@mixin pf-v6-height-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
     @content;
   } @else if $point == "sm" {
-    @media screen and (min-height: $pf-v5-global--height-breakpoint--sm) {
+    @media screen and (min-height: $pf-v6-global--height-breakpoint--sm) {
       @content;
     }
   } @else if $point == "md" {
-    @media screen and (min-height: $pf-v5-global--height-breakpoint--md) {
+    @media screen and (min-height: $pf-v6-global--height-breakpoint--md) {
       @content;
     }
   } @else if $point == "lg" {
-    @media screen and (min-height: $pf-v5-global--height-breakpoint--lg) {
+    @media screen and (min-height: $pf-v6-global--height-breakpoint--lg) {
       @content;
     }
   } @else if $point == "xl" {
-    @media screen and (min-height: $pf-v5-global--height-breakpoint--xl) {
+    @media screen and (min-height: $pf-v6-global--height-breakpoint--xl) {
       @content;
     }
   } @else if $point == "2xl" {
-    @media screen and (min-height: $pf-v5-global--height-breakpoint--2xl) {
+    @media screen and (min-height: $pf-v6-global--height-breakpoint--2xl) {
       @content;
     }
   }
@@ -56,28 +56,28 @@
 // @group mixins
 // @moduleType mixin
 // @parameter: [Suffix] xs, sm, md, lg, xl, base or null
-// @usage: @include pf-v5-utility-builder(class-name, base sm md lg xl);
+// @usage: @include pf-v6-utility-builder(class-name, base sm md lg xl);
 // ===============================================================================================
 
 // ## Example sass map:
 // this must be used when order matters or a cluster of similar utilties need to overwrite each other
 
 // Justify content options
-// $pf-v5-u-flex-options: (
+// $pf-v6-u-flex-options: (
 //   flex-none:  (flex none),
 //   flex-1:     (flex 1)
 // );
 
-// non-responsive, base only                @include pf-v5-utility-builder($sass-map)
-// responsive, including all breakpoints    @include pf-v5-utility-builder($sass-map, $pf-v5-global--breakpoint-list)
-// responsive height breakpoints            @include pf-v5-utility-builder($sass-map, $pf-v5-global--height-breakpoint-list, 'height')
+// non-responsive, base only                @include pf-v6-utility-builder($sass-map)
+// responsive, including all breakpoints    @include pf-v6-utility-builder($sass-map, $pf-v6-global--breakpoint-list)
+// responsive height breakpoints            @include pf-v6-utility-builder($sass-map, $pf-v6-global--height-breakpoint-list, 'height')
 
 // ## Passing individual utilities values
 // ===============================================================================================
 // Example individual utility:
-// @include pf-v5-utility-builder(flex-fill flex "1 1 auto", $pf-v5-global--breakpoint-list);
+// @include pf-v6-utility-builder(flex-fill flex "1 1 auto", $pf-v6-global--breakpoint-list);
 
-@mixin pf-v5-utility-builder($props, $breakpoints: null, $direction: "width") {
+@mixin pf-v6-utility-builder($props, $breakpoints: null, $direction: "width") {
   // if $class-name is a map
 
   // stylelint-disable
@@ -97,7 +97,7 @@
         $suffix: -on-#{$breakpoint};
 
         @if $direction == 'height' {
-          @include pf-v5-height-media-query($breakpoint) {
+          @include pf-v6-height-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
               $value: #{nth($val, 2) !important};
@@ -109,7 +109,7 @@
           }
         }
         @else if $direction == 'width' {
-          @include pf-v5-media-query($breakpoint) {
+          @include pf-v6-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
               $value: #{nth($val, 2) !important};
@@ -138,7 +138,7 @@
         $suffix: -on-#{$breakpoint};
 
         .#{$pf-prefix}u-#{$class}#{$suffix} {
-          @include pf-v5-media-query($breakpoint) {
+          @include pf-v6-media-query($breakpoint) {
             #{$property}: #{$value};
           }
         }
@@ -260,7 +260,7 @@
 }
 
 // Build variable stack
-@mixin pf-v5-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v5-global--breakpoint-map, $important: false) {
+@mixin pf-v5-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -296,7 +296,7 @@
 }
 
 // Build variable stack
-@mixin pf-v5-output-root-variables($css-var, $breakpoint-map: $pf-v5-global--breakpoint-map) {
+@mixin pf-v5-output-root-variables($css-var, $breakpoint-map: $pf-v6-global--breakpoint-map) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {

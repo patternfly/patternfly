@@ -19,7 +19,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__header-brand--xl--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$page}__header-brand--xl--PaddingLeft: var(--pf-t--global--spacer--xl);
 
-  @media (min-width: $pf-v5-global--breakpoint--xl) {
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__header-brand--PaddingLeft: var(--#{$page}__header-brand--xl--PaddingLeft);
     --#{$page}--inset: var(--#{$page}--xl--inset);
   }
@@ -42,7 +42,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__header-nav--xl--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$page}__header-nav--xl--PaddingLeft: var(--pf-t--global--spacer--xl);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__header-nav--BackgroundColor: var(--#{$page}__header-nav--xl--BackgroundColor);
     --#{$page}__header-nav--PaddingRight: var(--#{$page}__header-nav--xl--PaddingRight);
     --#{$page}__header-nav--PaddingLeft: var(--#{$page}__header-nav--xl--PaddingLeft);
@@ -60,7 +60,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__header-tools--c-button--m-selected--before--Width: auto;
   --#{$page}__header-tools--c-button--m-selected--before--Height: auto;
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__header-tools--MarginRight: var(--#{$page}__header-tools--xl--MarginRight);
   }
 
@@ -100,7 +100,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-body--m-menu--BorderTopWidth: var(--pf-t--global--border--width--button--default);
   --#{$page}__sidebar-body--m-menu--c-context-selector--BorderBottomColor: var(--pf-t--global--border--color--default);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
   }
 
@@ -189,7 +189,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   max-height: 100%;
   background-color: var(--#{$page}--BackgroundColor);
 
-  @media (min-width: $pf-v5-global--breakpoint--xl) {
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
     grid-template-areas:
       "header header"
       "sidebar main";
@@ -217,7 +217,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     align-items: center;
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     grid-template-columns: auto 1fr auto;
   }
 
@@ -232,7 +232,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-column: 1 / 2;
   padding-inline-start: var(--#{$page}__header-brand--PaddingLeft);
 
-  @media (min-width: $pf-v5-global--breakpoint--xl) {
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
     padding-inline-end: var(--#{$page}__header-brand--xl--PaddingRight); // set padding right here to allow mobile view to accomodate tools
   }
 }
@@ -272,7 +272,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-inline-end: var(--#{$page}__header-nav--PaddingRight);
   background-color: var(--#{$page}__header-nav--BackgroundColor);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
@@ -292,7 +292,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     margin-inline-start: var(--#{$page}__header-tools--c-avatar--MarginLeft);
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     grid-column: 3 / 4;
   }
 }
@@ -343,7 +343,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
     box-shadow: var(--#{$page}__sidebar--BoxShadow);
 
-    @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
       --#{$page}__sidebar--BoxShadow: none;
     }
   }

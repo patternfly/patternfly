@@ -5,25 +5,25 @@
   }
 
   .pf-m-grid-md.#{$table} {
-    @media screen and (max-width: $pf-v5-global--breakpoint--md) {
+    @media screen and (max-width: $pf-v6-global--breakpoint--md) {
       @content;
     }
   }
 
   .pf-m-grid-lg.#{$table} {
-    @media screen and (max-width: $pf-v5-global--breakpoint--lg) {
+    @media screen and (max-width: $pf-v6-global--breakpoint--lg) {
       @content;
     }
   }
 
   .pf-m-grid-xl.#{$table} {
-    @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
+    @media screen and (max-width: $pf-v6-global--breakpoint--xl) {
       @content;
     }
   }
 
   .pf-m-grid-2xl.#{$table} {
-    @media screen and (max-width: $pf-v5-global--breakpoint--2xl) {
+    @media screen and (max-width: $pf-v6-global--breakpoint--2xl) {
       @content;
     }
   }
@@ -526,7 +526,7 @@
     text-align: end;
 
     // @smallest breakpoint
-    @media screen and (max-width: $pf-v5-global--breakpoint--sm) {
+    @media screen and (max-width: $pf-v6-global--breakpoint--sm) {
       grid-row-start: 1;
       grid-column-start: 2;
       margin-inline-start: 0;

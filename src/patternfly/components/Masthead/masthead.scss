@@ -83,7 +83,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // Set layout to inline at medium breakpoint
   :where(:not(.pf-m-resize-observer)) & {
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @include pf-v5-c-masthead--m-display-inline;
     }
   }

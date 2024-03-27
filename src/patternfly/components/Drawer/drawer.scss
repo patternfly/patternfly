@@ -125,7 +125,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
   
     &.pf-m-panel-bottom {
@@ -321,7 +321,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__panel--BackgroundColor: transparent;
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--md) {
     --#{$drawer}__panel--FlexBasis:
       max(
         var(--#{$drawer}__panel--md--FlexBasis--min),
@@ -329,7 +329,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       );
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$drawer}__panel--md--FlexBasis: var(--#{$drawer}__panel--xl--FlexBasis);
 
     .#{$drawer}.pf-m-panel-bottom & {
@@ -485,7 +485,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Layout modifications happen after md breakpoint
-@media screen and (min-width: $pf-v5-global--breakpoint--md) {
+@media screen and (min-width: $pf-v6-global--breakpoint--md) {
   // Default
   .#{$drawer} {
     min-width: var(--#{$drawer}__panel--MinWidth);

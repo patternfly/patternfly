@@ -233,7 +233,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   background-color: var(--#{$toolbar}__expandable-content--BackgroundColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     position: static;
     padding: 0;
     box-shadow: none;

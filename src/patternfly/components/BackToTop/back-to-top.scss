@@ -11,7 +11,7 @@
   --#{$back-to-top}--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$back-to-top}--c-button--BoxShadow: var(--pf-t--global--box-shadow--sm);
 
-  @media (min-width: $pf-v5-global--breakpoint--md) {
+  @media (min-width: $pf-v6-global--breakpoint--md) {
     --#{$back-to-top}--Bottom: var(--#{$back-to-top}--md--Bottom);
   }
 }

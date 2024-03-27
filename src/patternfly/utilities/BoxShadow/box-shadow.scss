@@ -24,6 +24,6 @@ $pf-v6-u-box-shadow-options: (
 );
 
 // Text utilities
-@include pf-v5-utility-builder($pf-v6-u-box-shadow-options);
+@include pf-v6-utility-builder($pf-v6-u-box-shadow-options);
 
 // stylelint-enable
