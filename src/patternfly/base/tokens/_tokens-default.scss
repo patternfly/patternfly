@@ -1,6 +1,6 @@
 // /**
 //  * Do not edit directly
-//  * Generated on Thu, 21 Mar 2024 17:46:16 GMT
+//  * Generated on Wed, 27 Mar 2024 19:35:16 GMT
 //  */
 
 :root {
@@ -113,8 +113,8 @@
   --pf-t--global--color--favorite--200: var(--pf-t--color--yellow--40);
   --pf-t--global--color--favorite--100: var(--pf-t--color--yellow--30);
   --pf-t--global--color--disabled--300: var(--pf-t--color--gray--60);
-  --pf-t--global--color--disabled--200: var(--pf-t--color--gray--50);
-  --pf-t--global--color--disabled--100: var(--pf-t--color--gray--40);
+  --pf-t--global--color--disabled--200: var(--pf-t--color--gray--40);
+  --pf-t--global--color--disabled--100: var(--pf-t--color--gray--30);
   --pf-t--global--color--brand--300: var(--pf-t--color--blue--60);
   --pf-t--global--color--brand--200: var(--pf-t--color--blue--50);
   --pf-t--global--color--brand--100: var(--pf-t--color--blue--40);
@@ -202,10 +202,10 @@
   --pf-t--global--border--width--box--default: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--extra-strong: var(--pf-t--global--border--width--300);
   --pf-t--global--border--width--strong: var(--pf-t--global--border--width--200);
+  --pf-t--global--border--width--regular: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--divider--clicked: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--divider--hover: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--divider--default: var(--pf-t--global--border--width--100);
-  --pf-t--global--border--width--regular: var(--pf-t--global--border--width--100);
   --pf-t--global--icon--color--300: var(--pf-t--color--white);
   --pf-t--global--icon--color--200: var(--pf-t--color--gray--50);
   --pf-t--global--icon--color--100: var(--pf-t--color--gray--90);
@@ -215,10 +215,14 @@
   --pf-t--global--icon--size--lg: var(--pf-t--global--icon--size--250);
   --pf-t--global--icon--size--md: var(--pf-t--global--icon--size--200);
   --pf-t--global--icon--size--sm: var(--pf-t--global--icon--size--100);
-  --pf-t--global--spacer--control--horizontal: var(--pf-t--global--spacer--300);
-  --pf-t--global--spacer--control--vertical: var(--pf-t--global--spacer--200);
+  --pf-t--global--spacer--control--horizontal--plain: var(--pf-t--global--spacer--200);
+  --pf-t--global--spacer--control--horizontal--default: var(--pf-t--global--spacer--300);
+  --pf-t--global--spacer--control--vertical--plain: var(--pf-t--global--spacer--200);
+  --pf-t--global--spacer--control--vertical--default: var(--pf-t--global--spacer--200);
+  --pf-t--global--spacer--button--horizontal--plain: var(--pf-t--global--spacer--200);
   --pf-t--global--spacer--button--horizontal--compact: var(--pf-t--global--spacer--300);
   --pf-t--global--spacer--button--horizontal--default: var(--pf-t--global--spacer--400);
+  --pf-t--global--spacer--button--vertical--plain: var(--pf-t--global--spacer--200);
   --pf-t--global--spacer--button--vertical--compact: var(--pf-t--global--spacer--100);
   --pf-t--global--spacer--button--vertical--default: var(--pf-t--global--spacer--200);
   --pf-t--global--spacer--4xl: var(--pf-t--global--spacer--800);
@@ -234,7 +238,7 @@
   --pf-t--global--text--color--status--warning--default: var(--pf-t--global--color--status--warning--200);
   --pf-t--global--text--color--required: var(--pf-t--global--text--color--400);
   --pf-t--global--text--color--on-disabled: var(--pf-t--global--color--disabled--300);
-  --pf-t--global--text--color--disabled: var(--pf-t--global--color--disabled--100);
+  --pf-t--global--text--color--disabled: var(--pf-t--global--color--disabled--200);
   --pf-t--global--text--color--inverse: var(--pf-t--global--text--color--300);
   --pf-t--global--text--color--subtle: var(--pf-t--global--text--color--200);
   --pf-t--global--text--color--regular: var(--pf-t--global--text--color--100);
@@ -348,7 +352,7 @@
   --pf-t--global--border--color--status--warning--hover: var(--pf-t--global--color--status--warning--300);
   --pf-t--global--border--color--status--warning--default: var(--pf-t--global--color--status--warning--200);
   --pf-t--global--icon--color--on-disabled: var(--pf-t--global--color--disabled--300);
-  --pf-t--global--icon--color--disabled: var(--pf-t--global--color--disabled--100);
+  --pf-t--global--icon--color--disabled: var(--pf-t--global--color--disabled--200);
   --pf-t--global--icon--color--inverse: var(--pf-t--global--icon--color--300);
   --pf-t--global--icon--color--subtle: var(--pf-t--global--icon--color--200);
   --pf-t--global--icon--color--regular: var(--pf-t--global--icon--color--100);
@@ -524,14 +528,14 @@
   --pf-t--global--icon--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--icon--color--brand--hover: var(--pf-t--global--color--brand--hover);
   --pf-t--global--icon--color--brand--default: var(--pf-t--global--color--brand--default);
-  --pf-t--global--icon--size--font--body--lg: var(--pf-t--global--font--size--body--lg);
-  --pf-t--global--icon--size--font--body--default: var(--pf-t--global--font--size--body--default);
-  --pf-t--global--icon--size--font--body--sm: var(--pf-t--global--font--size--body--sm);
   --pf-t--global--icon--size--font--heading--h6: var(--pf-t--global--font--size--heading--h6);
   --pf-t--global--icon--size--font--heading--h5: var(--pf-t--global--font--size--heading--h5);
   --pf-t--global--icon--size--font--heading--h4: var(--pf-t--global--font--size--heading--h4);
   --pf-t--global--icon--size--font--heading--h3: var(--pf-t--global--font--size--heading--h3);
   --pf-t--global--icon--size--font--heading--h2: var(--pf-t--global--font--size--heading--h2);
   --pf-t--global--icon--size--font--heading--h1: var(--pf-t--global--font--size--heading--h1);
+  --pf-t--global--icon--size--font--body--lg: var(--pf-t--global--font--size--body--lg);
+  --pf-t--global--icon--size--font--body--default: var(--pf-t--global--font--size--body--default);
+  --pf-t--global--icon--size--font--body--sm: var(--pf-t--global--font--size--body--sm);
   --pf-t--global--color--status--read--on-secondary: var(--pf-t--global--background--color--control--default);
 }
