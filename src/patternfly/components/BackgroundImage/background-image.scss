@@ -12,7 +12,7 @@
 }
 
 .#{$background-image} {
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: --#{$background-image}--BackgroundPosition,
     $ltr-val: bottom right,
     $rtl-val: bottom left

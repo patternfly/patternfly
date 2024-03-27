@@ -259,10 +259,10 @@
       // target first list in menu
       > .#{$menu}__content > .#{$menu}__list,
       > .#{$menu}__list {
-        @include pf-v5-bidirectional-style(
+        @include pf-v6-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(-100%),
-          $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
+          $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)})
         );
       }
       // stylelint-enable
@@ -279,10 +279,10 @@
 
       // stylelint-disable selector-max-class
       &.pf-m-drilled-in {
-        @include pf-v5-bidirectional-style(
+        @include pf-v6-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(-100%),
-          $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
+          $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)})
         );
       }
       // stylelint-enable
@@ -571,7 +571,7 @@
 
 // - Menu toggle icon
 .#{$menu}__item-toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   color: var(--#{$menu}__item-toggle-icon--Color, inherit);
 }

@@ -153,12 +153,12 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 .#{$drawer} {
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
     $ltr-val: var(--pf-t--global--box-shadow--lg--left),
     $rtl-val: var(--pf-t--global--box-shadow--lg--right)
   ); 
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
     $ltr-val: var(--#{$pf-global}--BoxShadow--lg-right),
     $rtl-val: var(--#{$pf-global}--BoxShadow--lg-left)
@@ -181,10 +181,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       order: 0;
       margin-inline-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
 
-      @include pf-v5-bidirectional-style(
+      @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(-100%),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
       ); 
     }
 
@@ -201,10 +201,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
     > .#{$drawer}__main > .#{$drawer}__panel {
-      @include pf-v5-bidirectional-style(
+      @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(-100%),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
       ); 
     }
 
@@ -463,10 +463,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   inset-block-start: var(--#{$drawer}__splitter-handle--Top);
   inset-inline-start: var(--#{$drawer}__splitter-handle--Left);
 
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translate(-50%, -50%),
-    $rtl-val: translate(#{pf-v5-calc-inverse(-50%)}, -50%),
+    $rtl-val: translate(#{pf-v6-calc-inverse(-50%)}, -50%),
   ); 
 
 
@@ -675,10 +675,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       > .#{$drawer}__main > .#{$drawer}__panel {
         margin-inline-start: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
 
-        @include pf-v5-bidirectional-style(
+        @include pf-v6-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(100%),
-          $rtl-val: translateX(#{pf-v5-calc-inverse(100%)}),
+          $rtl-val: translateX(#{pf-v6-calc-inverse(100%)}),
         ); 
       }
 
@@ -699,10 +699,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
           margin-inline-start: 0;
           margin-inline-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
 
-          @include pf-v5-bidirectional-style(
+          @include pf-v6-bidirectional-style(
             $prop: transform,
             $ltr-val: translateX(-100%),
-            $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)}),
+            $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
           ); 
         }
 

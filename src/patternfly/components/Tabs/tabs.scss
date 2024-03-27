@@ -490,7 +490,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
   color: var(--#{$tabs}__toggle-icon--Color);
@@ -677,7 +677,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__link-toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   align-self: end;
   font-size: var(--#{$tabs}__link-toggle-icon--FontSize);

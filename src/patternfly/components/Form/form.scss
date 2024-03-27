@@ -409,7 +409,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   transition: var(--#{$form}__field-group-toggle-icon--Transition);
   transform: rotate(var(--#{$form}__field-group-toggle-icon--Rotate));
 
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$form}__field-group-header {

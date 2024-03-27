@@ -332,7 +332,7 @@
 
 // Used to create the RTL selector for RTL specific styles
 
-// @include pf-v5-rtl {
+// @include pf-v6-rtl {
 //   background: red;
 // }
 
@@ -341,14 +341,14 @@
 // [dir="rtl"] {
 //   background: red;
 // }
-@mixin pf-v5-rtl {
+@mixin pf-v6-rtl {
   @at-root :where(.#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
     @content;
   }
 }
 
 // Used to create the LTR selector for LTR specific styles
-@mixin pf-v5-ltr {
+@mixin pf-v6-ltr {
   @at-root :where(.#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
     @content;
   }
@@ -356,7 +356,7 @@
 
 // Creates a default/LTR declaration, and an RTL declaration.
 
-// @include pf-v5-bidirectional-style(background, blue, red)
+// @include pf-v6-bidirectional-style(background, blue, red)
 
 // renders as
 
@@ -364,26 +364,26 @@
 // [dir="rtl"] {
 //   background: red;
 // }
-@mixin pf-v5-bidirectional-style($prop, $ltr-val, $rtl-val) {
+@mixin pf-v6-bidirectional-style($prop, $ltr-val, $rtl-val) {
   #{$prop}: #{$ltr-val};
 
-  @include pf-v5-rtl {
+  @include pf-v6-rtl {
     #{$prop}: #{$rtl-val};
   }
 }
 
 // Mirrors/flips something horizontally/inline. Relies upon scale/scale() not already being used for the element. Can be extended to take arguments to use different methods other than scale().
-@mixin pf-v5-mirror-inline {
+@mixin pf-v6-mirror-inline {
   scale: -1 1;
 }
 
-@mixin pf-v5-mirror-inline-on-rtl {
-  @include pf-v5-rtl {
-    @include pf-v5-mirror-inline;
+@mixin pf-v6-mirror-inline-on-rtl {
+  @include pf-v6-rtl {
+    @include pf-v6-mirror-inline;
   }
 }
 
 // Declares a global inverse multiplier var used for returning the inverse of a number. Defined within blocks that reference the global var in calc() functions to conditionally return the default or inverse value of a number.
-@mixin pf-v5-set-inverse($val: true) {
+@mixin pf-v6-set-inverse($val: true) {
   --#{$pf-global}--inverse--multiplier: #{if($val, -1, 1)};
 }

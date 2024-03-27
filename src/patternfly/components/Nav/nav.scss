@@ -249,7 +249,7 @@
   display: inline-block;
   transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
 
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   .#{$nav}__item:where(.pf-m-flyout) & {
     --#{$nav}__item--m-expanded__toggle-icon--Rotate: 0;
@@ -297,7 +297,7 @@
     outline-offset: var(--#{$nav}--OutlineOffset);
 
     > * {
-      @include pf-v5-mirror-inline-on-rtl;
+      @include pf-v6-mirror-inline-on-rtl;
     }
   }
 }

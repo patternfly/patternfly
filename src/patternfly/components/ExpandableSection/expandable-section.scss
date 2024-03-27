@@ -144,7 +144,7 @@
 }
 
 .#{$expandable-section}__toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
   color: var(--#{$expandable-section}__toggle-icon--Color);

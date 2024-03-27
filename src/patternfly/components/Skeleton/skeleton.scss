@@ -76,7 +76,7 @@
   }
 
   &::after {
-    @include pf-v5-mirror-inline-on-rtl;
+    @include pf-v6-mirror-inline-on-rtl;
 
     position: absolute;
     inset: 0;

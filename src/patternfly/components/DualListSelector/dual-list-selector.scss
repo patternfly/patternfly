@@ -170,10 +170,10 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
     --#{$dual-list-selector}__item-toggle--MarginBottom: 0;
 
     .#{$dual-list-selector}__item-toggle {
-      @include pf-v5-bidirectional-style(
+      @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX)),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
       ); 
 
       position: absolute;
@@ -308,7 +308,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 :is(.#{$dual-list-selector}__controls-item, .#{$dual-list-selector}__item-toggle-icon) {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$dual-list-selector}__item-main {

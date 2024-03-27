@@ -284,11 +284,11 @@
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
 
   // RTL
-  @include pf-v5-set-inverse(false);
+  @include pf-v6-set-inverse(false);
 }
 
-@include pf-v5-rtl {
-  @include pf-v5-set-inverse;
+@include pf-v6-rtl {
+  @include pf-v6-set-inverse;
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

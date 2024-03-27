@@ -65,7 +65,7 @@
 
 // Breadcrumb divider
 .#{$breadcrumb}__item-divider {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   margin-inline-end: var(--#{$breadcrumb}__item-divider--MarginRight);
   font-size: var(--#{$breadcrumb}__item-divider--FontSize);
