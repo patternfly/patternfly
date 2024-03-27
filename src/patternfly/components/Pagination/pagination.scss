@@ -204,7 +204,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   @each $breakpoint, $breakpoint-value in $pf-v5-c-pagination--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-display-summary#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-summary__nav--Display);
         --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-display-summary__page-menu--Display);

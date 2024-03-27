@@ -1,7 +1,7 @@
 // @debug $chip-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$chip}-group {
-  @include pf-v5-t-light; // force the container follow the light theme
+  @include pf-v6-t-light; // force the container follow the light theme
 
   // Chip group - spaces main and close
   // column-gap spacer supports legacy chip group
@@ -84,7 +84,7 @@
 }
 
 .#{$chip}-group__label {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   max-width: var(--#{$chip}-group__label--MaxWidth);
   font-size: var(--#{$chip}-group__label--FontSize);

@@ -30,7 +30,7 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 // - Divider
 .#{$divider} {
   @include pf-v5-c-divider--m-horizontal; // default, set to orientation to horizontal
-  @include pf-v5-hidden-visible(var(--#{$divider}--Display));
+  @include pf-v6-hidden-visible(var(--#{$divider}--Display));
 
   flex-shrink: 0;
   align-items: stretch;
@@ -74,19 +74,19 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
   @each $breakpoint, $breakpoint-value in $pf-v5-c-divider--breakpoint-map {
     $breakpoint-name: '-on-' + #{$breakpoint};
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-horizontal#{$breakpoint-name} {
         @include pf-v5-c-divider--m-horizontal;
       }
     }
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-vertical#{$breakpoint-name} {
         @include pf-v5-c-divider--m-vertical;
       }
     }
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v5-c-divider--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           @if $spacer == none {

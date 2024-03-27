@@ -17,7 +17,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // loop to build the rest of the breakpoints
   @each $breakpoint, $breakpoint-value in $pf-v5-c-form--m-horizontal--breakpoint-map {
     &-on-#{$breakpoint} {
-      @include pf-v5-apply-breakpoint($breakpoint) {
+      @include pf-v6-apply-breakpoint($breakpoint) {
         @content;
       }
     }

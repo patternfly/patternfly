@@ -20,6 +20,6 @@ $pf-v6-l-gallery--breakpoint-map: build-breakpoint-map();
     grid-gap: var(--#{$gallery}--m-gutter--GridGap);
   }
 
-  @include pf-v5-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--min", "--#{$gallery}--GridTemplateColumns--min", $pf-v6-l-gallery--breakpoint-map);
-  @include pf-v5-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--max", "--#{$gallery}--GridTemplateColumns--max", $pf-v6-l-gallery--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--min", "--#{$gallery}--GridTemplateColumns--min", $pf-v6-l-gallery--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--max", "--#{$gallery}--GridTemplateColumns--max", $pf-v6-l-gallery--breakpoint-map);
 }

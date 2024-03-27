@@ -499,7 +499,7 @@
 }
 
 .#{$menu-toggle}__text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   min-width: 0;
 }

@@ -248,7 +248,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 @each $breakpoint, $breakpoint-value in $pf-v5-c-sidebar--breakpoint-map--width {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-  @include pf-v5-apply-breakpoint($breakpoint) {
+  @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v5-c-sidebar__panel--list--width {
       .pf-v5-c-sidebar__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
         @if $width-value == "default" {

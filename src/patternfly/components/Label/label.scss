@@ -536,7 +536,7 @@
 }
 
 .#{$label}__text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   max-width: var(--#{$label}__text--MaxWidth);
 }
@@ -564,7 +564,7 @@
 
   // truncate input fields
   @at-root input#{&} {
-    @include pf-v5-text-overflow;
+    @include pf-v6-text-overflow;
   }
 }
 

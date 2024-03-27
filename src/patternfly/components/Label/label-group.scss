@@ -124,7 +124,7 @@
 }
 
 .#{$label-group}__label {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   max-width: var(--#{$label-group}__label--MaxWidth);
 }

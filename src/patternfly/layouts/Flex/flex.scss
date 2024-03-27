@@ -24,7 +24,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
 .#{$flex} {
   // Emit spacer css variables that map to requested spacer values
-  @include pf-v5-emit-properties($pf-v6-l-flex--variable-map);
+  @include pf-v6-emit-properties($pf-v6-l-flex--variable-map);
 
   display: var(--#{$flex}--Display);
   flex-wrap: var(--#{$flex}--FlexWrap);
@@ -75,7 +75,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       // display
       &.pf-m-flex#{$breakpoint-name} {
         display: var(--#{$flex}--Display);
@@ -302,7 +302,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
         &.pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
@@ -321,7 +321,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
         .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
           --#{$flex}--spacer: var(#{map-get($pf-v6-l-flex--variable-map, $spacer-value)});
@@ -338,7 +338,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
     @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
       $pf-v6-l-flex--gap--selectors: ();
 
-      @include pf-v5-apply-breakpoint($breakpoint) {
+      @include pf-v6-apply-breakpoint($breakpoint) {
         @each $spacer, $value in $pf-v6-l-flex--gap-map {
           $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
           $spacer-name: if($spacer == "base", "", -#{$spacer});
@@ -364,7 +364,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
   // .pf-m-row-gap{-[size]}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       $pf-v6-l-flex--row-gap--selectors: ();
 
       @each $spacer, $value in $pf-v6-l-flex--gap-map {
@@ -391,7 +391,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
     $pf-v6-l-flex--column-gap--selectors: ();
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $value in $pf-v6-l-flex--gap-map {
         $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
         $spacer-name: if($spacer == "base", "", -#{$spacer});

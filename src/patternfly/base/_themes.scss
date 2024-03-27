@@ -1,5 +1,5 @@
-#{$pf-v5--theme-dark--placeholder--class} {
-  @extend %pf-v5-t-dark;
+#{$pf-v6--theme-dark--placeholder--class} {
+  @extend %pf-v6-t-dark;
 
   &.pf-m-transparent {
     background-color: transparent;
@@ -23,7 +23,7 @@
 }
 
 #{$pf-v5--theme-light--placeholder--class} {
-  @extend %pf-v5-t-light;
+  @extend %pf-v6-t-light;
 
   &.pf-m-transparent {
     background-color: transparent;

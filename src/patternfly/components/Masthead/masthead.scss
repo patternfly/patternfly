@@ -201,7 +201,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   @each $breakpoint, $breakpoint-value in $pf-v5-c-masthead--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-display-stack#{$breakpoint-name} {
         @include pf-v5-c-masthead--m-display-stack;
       }

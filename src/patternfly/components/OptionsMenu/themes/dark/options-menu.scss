@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-options-menu() {
+@mixin pf-v6-theme-dark-options-menu() {
   .#{$options-menu} {
     --#{$options-menu}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
     --#{$options-menu}__toggle--BorderTopColor: transparent;

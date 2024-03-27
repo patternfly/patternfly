@@ -152,7 +152,7 @@
 // - Menu shared hidden visible
 .#{$menu}__list,
 .#{$menu}__group {
-  @include pf-v5-hidden-visible(grid);
+  @include pf-v6-hidden-visible(grid);
 }
 
 // - Menu shared position relative
@@ -505,7 +505,7 @@
   border: 0;
   outline-offset: var(--#{$menu}--OutlineOffset);
 
-  @include pf-v5-hidden-visible(flex);
+  @include pf-v6-hidden-visible(flex);
 
   @at-root :where(label)#{&} {
     cursor: pointer;
@@ -541,7 +541,7 @@
 
 // - Menu item text
 .#{$menu}__item-text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   flex-grow: 1;
 }

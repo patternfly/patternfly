@@ -47,7 +47,7 @@ $pf-v6-u-height-options: (
 .#{$pf-prefix}u-min-width {
   --pf-v6-u-min-width--MinWidth: 0;
 
-  @include pf-v5-build-css-variable-stack(
+  @include pf-v6-build-css-variable-stack(
     "min-width",
     "--pf-v6-u-min-width--MinWidth",
     $pf-v6-u-sizing--min-max--breakpoint-map,
@@ -58,7 +58,7 @@ $pf-v6-u-height-options: (
 .#{$pf-prefix}u-max-width {
   --pf-v6-u-max-width--MaxWidth: auto;
 
-  @include pf-v5-build-css-variable-stack(
+  @include pf-v6-build-css-variable-stack(
     "max-width",
     "--pf-v6-u-max-width--MaxWidth",
     $pf-v6-u-sizing--min-max--breakpoint-map,
@@ -69,7 +69,7 @@ $pf-v6-u-height-options: (
 .#{$pf-prefix}u-min-height {
   --pf-v6-u-min-height--MinHeight: 0;
 
-  @include pf-v5-build-css-variable-stack(
+  @include pf-v6-build-css-variable-stack(
     "min-height",
     "--pf-v6-u-min-height--MinHeight",
     $pf-v6-u-sizing--min-max--breakpoint-map,
@@ -80,7 +80,7 @@ $pf-v6-u-height-options: (
 .#{$pf-prefix}u-max-height {
   --pf-v6-u-max-height--MaxHeight: auto;
 
-  @include pf-v5-build-css-variable-stack(
+  @include pf-v6-build-css-variable-stack(
     "max-height",
     "--pf-v6-u-max-height--MaxHeight",
     $pf-v6-u-sizing--min-max--breakpoint-map,

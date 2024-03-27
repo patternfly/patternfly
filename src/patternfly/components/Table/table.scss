@@ -314,7 +314,7 @@
 
   // - Table th - Table td
   tr:where(.#{$table}__tr) > :where(th, td) {
-    @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
+    @include pf-v6-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
     position: relative;
     width: var(--#{$table}--cell--Width);

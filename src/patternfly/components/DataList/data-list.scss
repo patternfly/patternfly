@@ -320,7 +320,7 @@
 }
 
 .#{$data-list}__item-action {
-  @include pf-v5-hidden-visible(var(--#{$data-list}__item-action--Display));
+  @include pf-v6-hidden-visible(var(--#{$data-list}__item-action--Display));
 
   align-content: flex-start;
   align-items: flex-start;

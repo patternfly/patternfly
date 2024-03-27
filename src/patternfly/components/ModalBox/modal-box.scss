@@ -182,7 +182,7 @@
 
 .#{$modal-box}__title,
 .#{$modal-box}__title-text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 }
 
 .#{$modal-box}__title {

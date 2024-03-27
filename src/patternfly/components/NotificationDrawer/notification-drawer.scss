@@ -237,7 +237,7 @@
   word-break: break-word;
 
   &.pf-m-truncate {
-    @include pf-v5-line-clamp("var(--#{$notification-drawer}__list-item-header-title--max-lines)");
+    @include pf-v6-line-clamp("var(--#{$notification-drawer}__list-item-header-title--max-lines)");
   }
 }
 
@@ -288,7 +288,7 @@
 }
 
 .#{$notification-drawer}__group-toggle-title {
-  @include pf-v5-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
+  @include pf-v6-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
 
   flex: 1;
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginRight);
