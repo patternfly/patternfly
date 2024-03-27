@@ -325,7 +325,7 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 }
 
 .#{$tree-view}__node-toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
   min-width: var(--#{$tree-view}__node-toggle-icon--MinWidth);
@@ -415,10 +415,10 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   background-color: var(--#{$tree-view}__node-toggle--BackgroundColor);
   border: 0;
 
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translateX(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX)),
-    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX))})
+    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX))})
   );
 }
 

@@ -255,7 +255,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   transition: var(--#{$toolbar}__expand-all-icon--Transition);
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
-  @include pf-v5-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change
+  @include pf-v6-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change
 }
 
 // - Toolbar group - Toolbar item

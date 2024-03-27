@@ -79,7 +79,7 @@
 }
 
 .#{$slider} {
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: --#{$slider}__rail-track--before--fill--direction, 
     $ltr-val: right,
     $rtl-val: left
@@ -160,10 +160,10 @@
 }
 
 .#{$slider}__step-tick {
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translateX(var(--#{$slider}__step-tick--TranslateX)),
-    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
+    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
   );
 
   position: absolute;
@@ -176,10 +176,10 @@
 }
 
 .#{$slider}__step-label {
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translateX(var(--#{$slider}__step-label--TranslateX)),
-    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
+    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
   );
 
   position: absolute;
@@ -188,10 +188,10 @@
 }
 
 .#{$slider}__thumb {
-  @include pf-v5-bidirectional-style(
+  @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
-    $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
+    $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
   );
 
   position: absolute;
@@ -205,10 +205,10 @@
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
 
   &::before {
-    @include pf-v5-bidirectional-style(
+    @include pf-v6-bidirectional-style(
       $prop: transform,
       $ltr-val: translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
-      $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
+      $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
     );
 
     position: absolute;
@@ -239,10 +239,10 @@
   margin-inline-start: var(--#{$slider}__value--MarginLeft);
 
   &.pf-m-floating {
-    @include pf-v5-bidirectional-style(
+    @include pf-v6-bidirectional-style(
       $prop: transform,
       $ltr-val: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
-      $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
+      $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
     );
 
     --#{$slider}__value--MarginLeft: 0;

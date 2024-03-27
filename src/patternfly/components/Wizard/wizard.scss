@@ -280,7 +280,7 @@
 }
 
 .#{$wizard}__toggle-separator {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
@@ -416,10 +416,10 @@
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
   &::before {
-    @include pf-v5-bidirectional-style(
+    @include pf-v6-bidirectional-style(
       $prop: transform,
       $ltr-val: translateX(var(--#{$wizard}__nav-link--before--TranslateX)) translateY(var(--#{$wizard}__nav-link--before--TranslateY)),
-      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))}) translateY(var(--#{$wizard}__nav-link--before--TranslateY))
+      $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))}) translateY(var(--#{$wizard}__nav-link--before--TranslateY))
     );
 
     position: absolute;
@@ -485,7 +485,7 @@
 }
 
 .#{$wizard}__nav-link-toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
   transition: var(--#{$wizard}__nav-link-toggle-icon--Transition);

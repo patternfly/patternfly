@@ -303,7 +303,7 @@
 }
 
 .#{$notification-drawer}__group-toggle-icon {
-  @include pf-v5-mirror-inline-on-rtl;
+  @include pf-v6-mirror-inline-on-rtl;
 
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginRight);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
