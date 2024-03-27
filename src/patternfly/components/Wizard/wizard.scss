@@ -33,6 +33,7 @@
   --#{$wizard}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Nav link
+  --#{$wizard}__nav-link--Gap: var(--pf-t--global--spacer--xs);
   --#{$wizard}__nav-link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
@@ -41,10 +42,16 @@
   --#{$wizard}__nav-link--TextDecoration: none;
   --#{$wizard}__nav-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$wizard}__nav-link--BorderRadius: var(--pf-t--global--border--radius--small);
+
+  // Nav link hover
   --#{$wizard}__nav-link--hover--Color: var(--pf-t--global--text--color--subtle);
   --#{$wizard}__nav-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+
+  // Nav link current
   --#{$wizard}__nav-link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+
+  // Nav link disabled
   --#{$wizard}__nav-link--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
 
@@ -57,19 +64,23 @@
   --#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate: 90deg;
 
   // Nav link number
-  --#{$wizard}__nav-link--before--Width: 1.5rem;
-  --#{$wizard}__nav-link--before--Height: 1.5rem;
-  --#{$wizard}__nav-link--before--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
+  --#{$wizard}__nav-link--before--Width: var(--pf-t--global--icon--size--font--xl);
+  --#{$wizard}__nav-link--before--Height: var(--pf-t--global--icon--size--font--xl);
+  --#{$wizard}__nav-link--before--Top: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--before--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$wizard}__nav-link--before--TranslateX: calc(-100% - var(--pf-t--global--spacer--xs));
-  --#{$wizard}__nav-link--before--TranslateY: -50%;
   --#{$wizard}__nav-link--m-current--before--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$wizard}__nav-link--m-current--before--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$wizard}__nav-link--m-disabled--before--BackgroundColor: transparent;
   --#{$wizard}__nav-link--m-disabled--before--Color: var(--pf-t--global--text--color--disabled);
+
+  // Nav link status icon
+  --#{$wizard}__nav-link-status-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__nav-link-status-icon--Top: var(--pf-t--global--spacer--xs);
+  --#{$wizard}__nav-link-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -77,24 +88,30 @@
   --#{$wizard}__toggle--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$wizard}__toggle--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__toggle--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
+  --#{$wizard}__toggle--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--BorderBottomWidth: var(--pf-t--global--border--width--regular);
   --#{$wizard}__toggle--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$wizard}--m-in-page__toggle--xl--PaddingLeft: calc(var(--pf-t--global--spacer--xl) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
 
   // Toggle number
-  --#{$wizard}__toggle-num--before--Top: #{pf-size-prem(-2px)}; // TODO this should probably be calculated
+  --#{$wizard}__toggle-num--Top: 0;
 
   // Toggle list item
   --#{$wizard}__toggle-list-item--not-last-child--MarginRight: var(--pf-t--global--spacer--sm);
   --#{$wizard}__toggle-list-item--MarginBottom: var(--pf-t--global--spacer--xs);
+  --#{$wizard}__toggle-list-item--Gap: var(--pf-t--global--spacer--sm);
 
+  // Toggle status icon
+  --#{$wizard}__nav-link-status-icon--LineHeight: 1;
+  --#{$wizard}__toggle-status-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$wizard}__toggle--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__toggle-status-icon--Top: calc(var(--pf-t--global--spacer--xs) / 2);
+  --#{$wizard}__toggle-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
+  
   // Toggle list
   --#{$wizard}__toggle-list--MarginRight: var(--pf-t--global--spacer--sm);
   --#{$wizard}__toggle-list--MarginBottom: calc(var(--#{$wizard}__toggle-list-item--MarginBottom) * -1);
 
   // Toggle separator
-  --#{$wizard}__toggle-separator--MarginLeft: var(--pf-t--global--spacer--sm);
   --#{$wizard}__toggle-separator--Color: var(--pf-t--global--border--color--default);
 
   // Toggle icon
@@ -119,14 +136,14 @@
   --#{$wizard}__nav-list--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$wizard}__nav-list--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$wizard}__nav-list--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
-  --#{$wizard}__nav-list--nested--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$wizard}__nav-list--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__nav-list--nested--MarginLeft: var(--pf-t--global--spacer--lg);
   --#{$wizard}__nav-list--nested--MarginTop: var(--pf-t--global--spacer--md);
 
   // Nav item
   --#{$wizard}__nav-item--MarginTop: var(--pf-t--global--spacer--md);
 
-  // Outer wrap
+  // Outer wrap 
   --#{$wizard}__outer-wrap--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__outer-wrap--lg--PaddingLeft: var(--#{$wizard}__nav--Width);
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
@@ -265,6 +282,9 @@
 }
 
 .#{$wizard}__toggle-list-item {
+  display: flex;
+  gap: var(--#{$wizard}__toggle-list-item--Gap);
+  align-items: baseline;
   margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBottom);
   text-align: start;
   word-break: break-word;
@@ -272,17 +292,29 @@
   &:not(:last-child) {
     margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginRight);
   }
+
+  &.pf-m-danger {
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
+    --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
+  }
 }
 
 .#{$wizard}__toggle-num {
-  --#{$wizard}__nav-link--before--TranslateY: 0;
-  --#{$wizard}__nav-link--before--Top: var(--#{$wizard}__toggle-num--before--Top);
+  position: relative;
+  inset-block-start: var(--#{$wizard}__toggle-num--Top);
+}
+
+.#{$wizard}__toggle-status-icon {
+  position: relative;
+  inset-block-start: var(--#{$wizard}__toggle-status-icon--Top);
+  font-size: var(--#{$wizard}__toggle-status-icon--FontSize);
+  line-height: var(--#{$wizard}__nav-link-status-icon--LineHeight);
+  color: var(--#{$wizard}__toggle-status-icon--Color);
 }
 
 .#{$wizard}__toggle-separator {
   @include pf-v5-mirror-inline-on-rtl;
 
-  margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
 }
 
@@ -399,32 +431,23 @@
 
 .#{$wizard}__nav-link {
   position: relative;
-  display: inline-block;
+  display: flex;
+  gap: var(--#{$wizard}__nav-link--Gap);
   width: 100%;
-  padding-block-start: var(--#{$wizard}__nav-link--PaddingBlockStart);
-  padding-block-end: var(--#{$wizard}__nav-link--PaddingBlockEnd);
-  padding-inline-start: var(--#{$wizard}__nav-link--PaddingInlineStart);
-  padding-inline-end: var(--#{$wizard}__nav-link--PaddingInlineEnd);
+  padding-inline: 0;
   color: var(--#{$wizard}__nav-link--Color);
   text-align: start; // needed for when the item is a button
   text-decoration: var(--#{$wizard}__nav-link--TextDecoration);
   word-break: break-word;
-  background-color: var(--#{$wizard}__nav-link--BackgroundColor);
+  counter-increment: wizard-nav-count;
+  background-color: transparent;
   border: none;
   border-radius: var(--#{$wizard}__nav-link--BorderRadius);
 
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
   &::before {
-    @include pf-v5-bidirectional-style(
-      $prop: transform,
-      $ltr-val: translateX(var(--#{$wizard}__nav-link--before--TranslateX)) translateY(var(--#{$wizard}__nav-link--before--TranslateY)),
-      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))}) translateY(var(--#{$wizard}__nav-link--before--TranslateY))
-    );
-
-    position: absolute;
-    inset-block-start: var(--#{$wizard}__nav-link--before--Top);
-    inset-inline-start: 0;
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -439,9 +462,9 @@
 
   // Nav step number
   &::before {
+    inset-block-start:  var(--#{$wizard}__nav-link--before--Top); // 8px; // TODO variable
     content: counter(wizard-nav-count);
-    counter-increment: wizard-nav-count;
-  }
+}
 
   &.pf-m-current {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
@@ -453,6 +476,14 @@
       --#{$wizard}__nav-link--before--Color: var(--#{$wizard}__nav-link--m-current--before--Color);
     }
   }
+
+  &.pf-m-danger {
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
+
+    &::before {
+      display:none;
+    }
+  }    
 
   &:where(:hover, :focus) {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
@@ -476,6 +507,26 @@
 
 .#{$wizard}__nav-link-text {
   flex-grow: 1;
+}
+
+.#{$wizard}__nav-link-main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding-block-start: var(--#{$wizard}__nav-link--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__nav-link--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__nav-link--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__nav-link--PaddingInlineEnd);
+  background-color: var(--#{$wizard}__nav-link--BackgroundColor);
+  border: none;
+  border-radius: var(--#{$wizard}__nav-link--BorderRadius);
+}
+
+.#{$wizard}__nav-link-status-icon {
+  position: relative;
+  inset-block-start: var(--#{$wizard}__nav-link-status-icon--Top);
+  font-size: var(--#{$wizard}__nav-link-status-icon--FontSize);
+  color: var(--#{$wizard}__nav-link-status-icon--Color);
 }
 
 .#{$wizard}__nav-link-toggle {
@@ -536,7 +587,5 @@
 .#{$wizard}__footer-cancel {
   margin-inline-start: var(--#{$wizard}__footer-cancel--MarginLeft);
 }
-
-// stylelint-disable no-invalid-position-at-import-rule
 
 

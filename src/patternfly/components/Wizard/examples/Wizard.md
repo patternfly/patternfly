@@ -459,6 +459,157 @@ import './Wizard.css'
 {{/wizard}}
 ```
 
+### Error on step
+```hbs isFullscreen
+{{#> wizard wizard--id="wizard-basic"}}
+  {{#> wizard-header}}
+    {{> wizard-close}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item wizard-nav-item--IsDanger='true'}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"  wizard-nav-item--IsDanger='true'}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        {{> __wizard-form}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{> wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+### Nav expanded with error (mobile)
+```hbs isFullscreen
+{{#> wizard wizard--IsExpanded="true"}}
+  {{#> wizard-header}}
+    {{> wizard-close}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+      {{#> wizard-toggle-list-item wizard-toggle-list-item--modifier='pf-m-danger'}}
+        {{#> wizard-toggle-status-icon}}<i class="fas fa-exclamation-circle" aria-hidden="true"></i>{{/wizard-toggle-status-icon}}
+        Configuration
+        {{> wizard-toggle-separator}}
+      {{/wizard-toggle-list-item}}
+      {{#> wizard-toggle-list-item}}
+        Substep B
+      {{/wizard-toggle-list-item}}
+    {{/wizard-toggle-list}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{#> wizard-nav}}
+        {{#> wizard-nav-list}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Information
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true" wizard-nav-item--IsDanger='true'}}
+            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+              Configuration
+            {{/wizard-nav-link}}
+            {{#> wizard-nav-list}}
+              {{#> wizard-nav-item newcontext}}
+                {{#> wizard-nav-link}}
+                  Substep A
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
+                {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
+                  Substep B
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
+                {{#> wizard-nav-link}}
+                  Substep C
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+            {{/wizard-nav-list}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Additional
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
+              Review
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+        {{/wizard-nav-list}}
+      {{/wizard-nav}}
+      {{#> wizard-main}}
+        {{> __wizard-form}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{> wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -498,6 +649,7 @@ import './Wizard.css'
 | `.pf-v6-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
 | `.pf-v6-c-wizard__nav-link` | `<a>`, `<button>` | Initiates a step link. **Required** |
 | `.pf-v6-c-wizard__nav-link-text` | `<span>` | Initiates the link text container. **Required when nav item is expandable** |
+| `.pf-v6-c-wizard__nav-link-status-icon` | `<span>` | Initiates the status icon container. |
 | `.pf-v6-c-wizard__nav-link-toggle` | `<span>` | Initiates the toggle container. **Required when nav item is expandable** |
 | `.pf-v6-c-wizard__nav-link-toggle-icon` | `<span>` | Initiates the toggle icon container. **Required when nav item is expandable** |
 | `.pf-v6-c-wizard__main` | `<main>`, `<div>` | Initiates the main container. **Required** Note: use the `<main>` element when when there are no other `<main>` elements on the page.|
@@ -510,4 +662,5 @@ import './Wizard.css'
 | `.pf-m-expanded` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the disabled state. |
+| `.pf-m-danger` | `.pf-v6-c-wizard__nav-link` | Modifies a step link to indicate danger status. |
 | `.pf-m-no-padding` | `.pf-v6-c-wizard__main-body` | Modifies the main container body to remove the padding. |
