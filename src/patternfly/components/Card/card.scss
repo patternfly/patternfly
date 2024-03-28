@@ -24,8 +24,8 @@
   --#{$card}__footer--Color: var(--pf-t--global--text--color--subtle);
   --#{$card}__actions--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$card}__actions--Gap: var(--pf-t--global--spacer--sm);
-  --#{$card}__actions--MarginTop: calc(var(--pf-t--global--spacer--control--vertical) * -1);
-  --#{$card}__actions--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical) * -1);
+  --#{$card}__actions--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__actions--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 
   // Expandable 
   --#{$card}__header-toggle--MarginTop: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);

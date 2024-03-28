@@ -42,8 +42,8 @@
   --#{$alert}__title--max-lines: 1;
 
   // Action
-  --#{$alert}__action--MarginTop: calc(var(--pf-t--global--spacer--control--vertical) * -1);
-  --#{$alert}__action--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical) * -1);
+  --#{$alert}__action--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$alert}__action--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$alert}__action--TranslateY: #{pf-size-prem(2px)};
   --#{$alert}__action--MarginRight: calc(var(--pf-t--global--spacer--sm) * -1);
 
