@@ -1,6 +1,6 @@
 // @debug $pagination; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-pagination--breakpoint-map: build-breakpoint-map();
-$pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-pagination--breakpoint-map: build-breakpoint-map();
+$pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 :where(:root),
 :where(.#{$pagination}) {
@@ -189,7 +189,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     width: var(--#{$pagination}__nav-page-select--c-form-control--Width);
 
     > :is(input) {
-      @extend %pf-v5-remove-num-arrows;
+      @extend %pf-v6-remove-num-arrows;
     }
   }
 }
@@ -201,7 +201,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
 // stylelint-disable no-duplicate-selectors
 .#{$pagination} {
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-pagination--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-pagination--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {
@@ -217,7 +217,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
         --#{$pagination}__total-items--Display: var(--#{$pagination}--m-display-full__total-items--Display);
       }
 
-      @each $spacer, $spacer-value in $pf-v5-c-pagination--variable-map {
+      @each $spacer, $spacer-value in $pf-v6-c-pagination--variable-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --#{$pagination}--inset: #{$spacer-value};
         }

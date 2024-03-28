@@ -273,7 +273,7 @@ $pf-v6-global--breakpoint-list: (
   "2xl"
 );
 
-// Global breakpoint name map - used for %pf-v6-hidden-visible
+// Global breakpoint name map - used for %pf-v5-hidden-visible
 $pf-v6-global--breakpoint-name-map: (
   "sm": $pf-v6-global--breakpoint--sm,
   "md": $pf-v6-global--breakpoint--md,
@@ -282,7 +282,7 @@ $pf-v6-global--breakpoint-name-map: (
   "2xl": $pf-v6-global--breakpoint--2xl
 );
 
-// Global breakpoint name map - used for %pf-v6-hidden-visible
+// Global breakpoint name map - used for %pf-v5-hidden-visible
 $pf-v6-global--height-breakpoint-name-map: (
   "sm": $pf-v6-global--height-breakpoint--sm,
   "md": $pf-v6-global--height-breakpoint--md,
@@ -292,7 +292,7 @@ $pf-v6-global--height-breakpoint-name-map: (
 );
 
 // Spacer properties
-$pf-v5-global--spacer-properties-map: (
+$pf-v6-global--spacer-properties-map: (
   "m":  "margin",
   "mt": "margin-block-start",
   "mr": "margin-inline-end",

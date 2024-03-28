@@ -1,6 +1,6 @@
 // @debug $avatar; // check your variable names located in src/patternfly/sass-utilities/component-namespaces
-$pf-v5-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
+$pf-v6-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
 
 :root, .#{$avatar} {
   --#{$avatar}--BorderColor: transparent;
@@ -33,10 +33,10 @@ $pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
     --#{$avatar}--BorderWidth: var(--#{$avatar}--m-bordered--BorderWidth);
   }
 
-  @each $size in $pf-v5-c-avatar--sizes {
+  @each $size in $pf-v6-c-avatar--sizes {
     &.pf-m-#{$size} {
-      @include pf-v6-build-css-variable-stack("--#{$avatar}--Width", "--#{$avatar}--m-#{$size}--Width", $pf-v5-c-avatar--breakpoint-map);
-      @include pf-v6-build-css-variable-stack("--#{$avatar}--Height", "--#{$avatar}--m-#{$size}--Height", $pf-v5-c-avatar--breakpoint-map);
+      @include pf-v6-build-css-variable-stack("--#{$avatar}--Width", "--#{$avatar}--m-#{$size}--Width", $pf-v6-c-avatar--breakpoint-map);
+      @include pf-v6-build-css-variable-stack("--#{$avatar}--Height", "--#{$avatar}--m-#{$size}--Height", $pf-v6-c-avatar--breakpoint-map);
     }
   }
 }

@@ -1,6 +1,6 @@
 // @debug $tabs; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-tabs--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-tabs--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 :where(:root),
 :where(.#{$tabs}) {
@@ -374,7 +374,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       overflow-wrap: break-word;
     }
 
-    @each $breakpoint, $breakpoint-value in $pf-v5-c-tabs--breakpoint-map {
+    @each $breakpoint, $breakpoint-value in $pf-v6-c-tabs--breakpoint-map {
       $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
       @include pf-v6-apply-breakpoint($breakpoint) {
@@ -750,11 +750,11 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 // stylelint-disable no-duplicate-selectors, max-nesting-depth
 .#{$tabs} {
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-tabs--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-tabs--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-v5-c-tabs--spacer-map {
+      @each $spacer, $spacer-value in $pf-v6-c-tabs--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --#{$tabs}--inset: #{$spacer-value};
           --#{$tabs}--m-vertical--inset: #{$spacer-value};

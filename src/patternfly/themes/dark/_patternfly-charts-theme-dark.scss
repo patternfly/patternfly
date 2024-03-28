@@ -1,6 +1,6 @@
 @import "../../base/themes/dark/chart-globals";
 
-@mixin pf-v5-charts-theme-dark($pf-v5-charts-theme-dark-class: "") {
+@mixin pf-v6-charts-theme-dark($pf-v6-charts-theme-dark-class: "") {
   // stylelint-disable
   .#{$chart} {
     svg g[clip-path] {

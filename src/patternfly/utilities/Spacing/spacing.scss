@@ -7,7 +7,7 @@
   @each $breakpoint, $breakpoint-value in $pf-v6-global--breakpoint-map {
 
     // Loop through margin and padding values
-    @each $property, $property-value in $pf-v5-global--spacer-properties-map {
+    @each $property, $property-value in $pf-v6-global--spacer-properties-map {
 
       // Loop through spacer values
       @each $spacer, $spacer-value in $pf-v6-global--spacer-map {

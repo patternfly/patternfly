@@ -1,7 +1,7 @@
 // @debug $drawer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
-$pf-v5-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
-$pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
+$pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
+$pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
+$pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 :where(:root),
 :where(.#{$drawer}) {
@@ -625,7 +625,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Responsive width modifiers
-@each $breakpoint, $breakpoint-value in $pf-v5-c-drawer--breakpoint-map--width {
+@each $breakpoint, $breakpoint-value in $pf-v6-c-drawer--breakpoint-map--width {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
   @if $breakpoint == "base" {
@@ -633,7 +633,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   @include pf-v6-apply-breakpoint($breakpoint) {
-    @each $width-value in $pf-v5-c-drawer__panel--list--width {
+    @each $width-value in $pf-v6-c-drawer__panel--list--width {
       .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
         --#{$drawer}__panel--md--FlexBasis: #{percentage(div($width-value, 100))};
       }
@@ -642,7 +642,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Responsive modifiers
-@each $breakpoint, $breakpoint-value in $pf-v5-c-drawer--breakpoint-map {
+@each $breakpoint, $breakpoint-value in $pf-v6-c-drawer--breakpoint-map {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
   @if $breakpoint == "base" {

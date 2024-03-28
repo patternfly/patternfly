@@ -1,8 +1,8 @@
 // @debug $progress-stepper; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
+$pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
 // Default layout is vertical
-@mixin pf-v5-c-progress-stepper--m-vertical {
+@mixin pf-v6-c-progress-stepper--m-vertical {
   --#{$progress-stepper}--GridAutoFlow: var(--#{$progress-stepper}--m-vertical--GridAutoFlow);
   --#{$progress-stepper}--GridTemplateColumns: var(--#{$progress-stepper}--m-vertical--GridTemplateColumns);
   --#{$progress-stepper}__step-connector--before--Top: var(--#{$progress-stepper}--m-vertical__step-connector--before--Top);
@@ -29,7 +29,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}--m-center__step-main--before--Content: ""; // border swap
 }
 
-@mixin pf-v5-c-progress-stepper--m-horizontal {
+@mixin pf-v6-c-progress-stepper--m-horizontal {
   --#{$progress-stepper}--GridAutoFlow: var(--#{$progress-stepper}--m-horizontal--GridAutoFlow);
   --#{$progress-stepper}--GridTemplateColumns: var(--#{$progress-stepper}--m-horizontal--GridTemplateColumns);
   --#{$progress-stepper}__step-connector--before--Top: var(--#{$progress-stepper}--m-horizontal__step-connector--before--Top);
@@ -186,11 +186,11 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step-description--TextAlign: start;
 
   // Vertical by default
-  @include pf-v5-c-progress-stepper--m-vertical;
+  @include pf-v6-c-progress-stepper--m-vertical;
 
   // Horizontal at md breakpoint
   @media screen and (min-width: $pf-v6-global--breakpoint--md) {
-    @include pf-v5-c-progress-stepper--m-horizontal;
+    @include pf-v6-c-progress-stepper--m-horizontal;
   }
 }
 
@@ -428,16 +428,16 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
 // stylelint-disable no-duplicate-selectors
 .#{$progress-stepper} {
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-progress-stepper--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-progress-stepper--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-horizontal#{$breakpoint-name} {
-        @include pf-v5-c-progress-stepper--m-horizontal;
+        @include pf-v6-c-progress-stepper--m-horizontal;
       }
 
       &.pf-m-vertical#{$breakpoint-name} {
-        @include pf-v5-c-progress-stepper--m-vertical;
+        @include pf-v6-c-progress-stepper--m-vertical;
       }
     }
   }

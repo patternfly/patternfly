@@ -1,5 +1,5 @@
 // @debug $jump-links; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
 :where(:root),
 :where(.#{$jump-links}) {
@@ -101,7 +101,7 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
     flex-direction: column;
   }
 
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-jump-links--m-expandable--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-jump-links--m-expandable--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {
