@@ -1,11 +1,11 @@
-$pf-v5-c-toolbar--spacer-map: build-spacer-map();
-$pf-v5-c-toolbar--inset-map: build-spacer-map();
-$pf-v5-c-toolbar--align-items--alignments: ('stretch', 'baseline', 'start', 'center', 'end');
-$pf-v5-c-toolbar--breakpoint-map: build-breakpoint-map('base');
-$pf-v5--include-toolbar-breakpoints: true !default;
+$pf-v6-c-toolbar--spacer-map: build-spacer-map();
+$pf-v6-c-toolbar--inset-map: build-spacer-map();
+$pf-v6-c-toolbar--align-items--alignments: ('stretch', 'baseline', 'start', 'center', 'end');
+$pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map('base');
+$pf-v6--include-toolbar-breakpoints: true !default;
 
-@if $pf-v5--include-toolbar-breakpoints {
-  $pf-v5-c-toolbar--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
+@if $pf-v6--include-toolbar-breakpoints {
+  $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
 }
 
 :where(:root),
@@ -160,8 +160,8 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 
 // - Toolbar item
 .#{$toolbar}__item {
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v5-c-toolbar--breakpoint-map);
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map);
 
   row-gap: var(--#{$toolbar}__item--RowGap, var(--#{$toolbar}--RowGap));
   column-gap: var(--#{$toolbar}__item--ColumnGap);
@@ -269,7 +269,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
   }
 }
 
-@each $breakpoint, $breakpoint-value in $pf-v5-c-toolbar--breakpoint-map {
+@each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
   @include pf-v6-apply-breakpoint($breakpoint) {
@@ -292,7 +292,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
         flex-grow: 1;
       }
 
-      @each $alignment in $pf-v5-c-toolbar--align-items--alignments {
+      @each $alignment in $pf-v6-c-toolbar--align-items--alignments {
         &.pf-m-align-self-#{$alignment}#{$breakpoint-name} {
           align-self: #{$alignment};
         }
@@ -304,7 +304,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
     .#{$toolbar}__content,
     .#{$toolbar}__content-section {
       // Inset modifiers
-      @each $inset, $inset-value in $pf-v5-c-toolbar--inset-map {
+      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
         &.pf-m-inset-#{$inset}#{$breakpoint-name} {
           --#{$toolbar}__content--PaddingInline: #{$inset-value};
         }
@@ -324,20 +324,20 @@ $pf-v5--include-toolbar-breakpoints: true !default;
         flex-wrap: nowrap;
       }
 
-      @each $alignment in $pf-v5-c-toolbar--align-items--alignments {
+      @each $alignment in $pf-v6-c-toolbar--align-items--alignments {
         &.pf-m-align-items-#{$alignment}#{$breakpoint-name} {
           align-items: #{$alignment};
         }
       }
 
-      @each $gap, $gap-value in $pf-v5-c-toolbar--spacer-map {
+      @each $gap, $gap-value in $pf-v6-c-toolbar--spacer-map {
         &.pf-m-gap-#{$gap}#{$breakpoint-name} {
           column-gap: #{$gap-value};
         }
       }
 
       // Row and column gap modifiers
-      @each $spacer, $spacer-value in $pf-v5-c-toolbar--spacer-map {
+      @each $spacer, $spacer-value in $pf-v6-c-toolbar--spacer-map {
         &.pf-m-column-gap-#{$spacer}#{$breakpoint-name} {
           column-gap: #{$spacer-value};
         }

@@ -1,5 +1,5 @@
-$pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
-$pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
+$pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 :where(:root),
 :where(.#{$masthead}) {
@@ -48,7 +48,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 }
 
 // * Masthead display stack
-@mixin pf-v5-c-masthead--m-display-stack {
+@mixin pf-v6-c-masthead--m-display-stack {
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-stack--GridTemplateColumns);
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-stack__main--GridColumn);
   --#{$masthead}__main--Order: var(--#{$masthead}--m-display-stack__main--Order);
@@ -59,7 +59,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 }
 
 // * Masthead display inline
-@mixin pf-v5-c-masthead--m-display-inline {
+@mixin pf-v6-c-masthead--m-display-inline {
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-inline--GridTemplateColumns);
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
   --#{$masthead}__main--Order: var(--#{$masthead}--m-display-inline__main--Order);
@@ -79,12 +79,12 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   // Set layout to stack by default
-  @include pf-v5-c-masthead--m-display-stack;
+  @include pf-v6-c-masthead--m-display-stack;
 
   // Set layout to inline at medium breakpoint
   :where(:not(.pf-m-resize-observer)) & {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
-      @include pf-v5-c-masthead--m-display-inline;
+      @include pf-v6-c-masthead--m-display-inline;
     }
   }
 
@@ -117,16 +117,16 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // - Masthead display stack
   &.pf-m-display-stack {
-    @include pf-v5-c-masthead--m-display-stack;
+    @include pf-v6-c-masthead--m-display-stack;
   }
 
   // - Masthead display inline
   &.pf-m-display-inline {
-    @include pf-v5-c-masthead--m-display-inline;
+    @include pf-v6-c-masthead--m-display-inline;
   }
 
   // - Masthead insets
-  @each $inset, $inset-value in $pf-v5-c-masthead--inset-map {
+  @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
     &.pf-m-inset-#{$inset} {
       padding-inline-start: #{$inset-value};
       padding-inline-end: #{$inset-value};
@@ -198,20 +198,20 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // TODO: make this an opt in/out
 // stylelint-disable no-duplicate-selectors
 .#{$masthead} {
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-masthead--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-masthead--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-display-stack#{$breakpoint-name} {
-        @include pf-v5-c-masthead--m-display-stack;
+        @include pf-v6-c-masthead--m-display-stack;
       }
 
       &.pf-m-display-inline#{$breakpoint-name} {
-        @include pf-v5-c-masthead--m-display-inline;
+        @include pf-v6-c-masthead--m-display-inline;
       }
     }
 
-    @each $inset, $inset-value in $pf-v5-c-masthead--inset-map {
+    @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
       &.pf-m-inset-#{$inset} {
         padding-inline-start: #{$inset-value};
         padding-inline-end: #{$inset-value};

@@ -1,6 +1,6 @@
 // @debug $sidebar; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
+$pf-v6-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 :root,
 :where(.#{$sidebar}) {
@@ -74,7 +74,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   // Panel
   --#{$sidebar}__panel--FlexBasis--base: auto;
-  --#{$sidebar}__panel--BoxShadow--base: #{0 pf-size-prem(4px) pf-size-prem(4px) pf-size-prem(-4px) rgba($pf-v5-color-black-1000, .16)}; // modified so the shadow is only visible on the bottom of the element
+  --#{$sidebar}__panel--BoxShadow--base: #{0 pf-size-prem(4px) pf-size-prem(4px) pf-size-prem(-4px) rgba($pf-v5-color-black-1000, .16)}; // TODO NEEDS TOKEN. previous comment:modified so the shadow is only visible on the bottom of the element 
   --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
   --#{$sidebar}__panel--Top: 0;
   --#{$sidebar}__panel--md--Top: auto;
@@ -245,16 +245,16 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 
 // Responsive width modifiers
-@each $breakpoint, $breakpoint-value in $pf-v5-c-sidebar--breakpoint-map--width {
+@each $breakpoint, $breakpoint-value in $pf-v6-c-sidebar--breakpoint-map--width {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
   @include pf-v6-apply-breakpoint($breakpoint) {
-    @each $width-value in $pf-v5-c-sidebar__panel--list--width {
-      .pf-v5-c-sidebar__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
+    @each $width-value in $pf-v6-c-sidebar__panel--list--width {
+      .pf-v6-c-sidebar__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
         @if $width-value == "default" {
-          --pf-v5-c-sidebar__panel--FlexBasis: var(--pf-v5-c-sidebar__panel--FlexBasis--base);
+          --pf-v6-c-sidebar__panel--FlexBasis: var(--pf-v6-c-sidebar__panel--FlexBasis--base);
         } @else {
-          --pf-v5-c-sidebar__panel--FlexBasis: #{percentage(div($width-value, 100))};
+          --pf-v6-c-sidebar__panel--FlexBasis: #{percentage(div($width-value, 100))};
         }
       }
     }
