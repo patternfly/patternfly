@@ -6,10 +6,10 @@ cssPrefix: pf-v5-c-tree-view
 
 ## Examples
 
-### Default
+### Single selectable
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Single selectable example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -25,9 +25,9 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
+                {{> tree-view-node tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -97,14 +97,13 @@ cssPrefix: pf-v5-c-tree-view
 {{/tree-view}}
 ```
 
-### With search
+### Multiselectable
+
+A tree view can be setup to allow multiple nodes to be selected. When a tree view is intended to allow multiple selection, `aria-multiselectable="true"` must be passed to the root `ul[role="tree"]` element.
+
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-search}}
-    {{> text-input-group--search-input text-input-group-text-input--aria-label="Filter menu items" text-input-group-text-input--placeholder="Search"}}
-  {{/tree-view-search}}
-  {{> divider}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--IsMultiselectable=true tree-view-list--AriaLabel="Multiselectable example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -120,9 +119,107 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Current"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+          {{/tree-view-list}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--text="Application 2"}}
+          {{/tree-view-content}}
+          {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
+              {{#> tree-view-list newcontext}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 1"}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+                {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+                {{#> tree-view-list-item}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+              {{/tree-view-list}}
+            {{/tree-view-list-item}}
+          {{/tree-view-list}}
+        {{/tree-view-list-item}}
+      {{/tree-view-list}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--text="Cost management"}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--text="Sources"}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+  {{/tree-view-list}}
+{{/tree-view}}
+```
+
+### With search
+
+A search input can be used to filter tree view items. It is recommended that a tree view with more than 7 nodes includes a search input.
+
+```hbs
+{{#> tree-view}}
+  {{#> tree-view-search}}
+    {{> text-input-group--search-input text-input-group-text-input--aria-label="Filter menu items" text-input-group-text-input--placeholder="Search"}}
+  {{/tree-view-search}}
+  {{> divider}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With search example"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--text="Application launcher"}}
+      {{/tree-view-content}}
+      {{#> tree-view-list newcontext}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--text="Application 1"}}
+          {{/tree-view-content}}
+          {{#> tree-view-list newcontext}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
@@ -185,67 +282,67 @@ cssPrefix: pf-v5-c-tree-view
 ### With checkboxes
 ```hbs
 {{#> tree-view tree-view--id="tree-view-checkboxes"}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With checkboxes example"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--HasCheckbox=true}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Application launcher" tree-view-node--id=(concat tree-view--id '-1') }}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--id=(concat tree-view--id '-1') }}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Application 1" tree-view-node--id=(concat tree-view--id '-2')}}
+            {{> tree-view-node tree-view-node--text="Application 1" tree-view-node--id=(concat tree-view--id '-2')}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Settings" tree-view-node--id=(concat tree-view--id '-3')}}
+                {{> tree-view-node tree-view-node--text="Settings" tree-view-node--id=(concat tree-view--id '-3')}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader" tree-view-node--id=(concat tree-view--id '-4')}}
+                {{> tree-view-node tree-view-node--text="Loader" tree-view-node--id=(concat tree-view--id '-4')}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader" tree-view-node--id=(concat tree-view--id '-5')}}
+                {{> tree-view-node tree-view-node--text="Loader" tree-view-node--id=(concat tree-view--id '-5')}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--HasCheckbox=true}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Application 2" tree-view-node--id=(concat tree-view--id '-6')}}
+            {{> tree-view-node tree-view-node--text="Application 2" tree-view-node--id=(concat tree-view--id '-6')}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--HasCheckbox=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Settings" tree-view-node--id=(concat tree-view--id '-7')}}
+                {{> tree-view-node tree-view-node--text="Settings" tree-view-node--id=(concat tree-view--id '-7')}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--HasCheckbox=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Settings" tree-view-node--id=(concat tree-view--id '-8')}}
+                {{> tree-view-node tree-view-node--text="Settings" tree-view-node--id=(concat tree-view--id '-8')}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-node--text="Current"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-node--text="Current" tree-view-list-item--HasCheckbox=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--id=(concat tree-view--id '-9')}}
+                {{> tree-view-node tree-view-node--id=(concat tree-view--id '-9')}}
               {{/tree-view-content}}
               {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
                   {{#> tree-view-content}}
-                    {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--HasCheckboxSelected="true" tree-view-node--text="Loader app 1" tree-view-node--id=(concat tree-view--id '-10')}}
+                    {{> tree-view-node tree-view-node--text="Loader app 1" tree-view-node--id=(concat tree-view--id '-10')}}
                   {{/tree-view-content}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
+                {{#> tree-view-list-item tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
                   {{#> tree-view-content}}
-                    {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader app 2" tree-view-node--id=(concat tree-view--id '-11')}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2" tree-view-node--id=(concat tree-view--id '-11')}}
                   {{/tree-view-content}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
+                {{#> tree-view-list-item tree-view-list-item--HasCheckbox=true}}
                   {{#> tree-view-content}}
-                    {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Loader app 3" tree-view-node--id=(concat tree-view--id '-12')}}
+                    {{> tree-view-node tree-view-node--text="Loader app 3" tree-view-node--id=(concat tree-view--id '-12')}}
                   {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
@@ -254,19 +351,19 @@ cssPrefix: pf-v5-c-tree-view
         {{/tree-view-list-item}}
       {{/tree-view-list}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--HasCheckbox=true}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Cost management" tree-view-node--id=(concat tree-view--id '-13')}}
+        {{> tree-view-node tree-view-node--text="Cost management" tree-view-node--id=(concat tree-view--id '-13')}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--HasCheckbox=true}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node--text="Sources" tree-view-node--id=(concat tree-view--id '-14')}}
+        {{> tree-view-node tree-view-node--text="Sources" tree-view-node--id=(concat tree-view--id '-14')}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container." tree-view-node--id=(concat tree-view--id '-15')}}
+        {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container." tree-view-node--id=(concat tree-view--id '-15')}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
@@ -276,7 +373,7 @@ cssPrefix: pf-v5-c-tree-view
 ### With icons
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With icons example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher"}}
@@ -292,9 +389,9 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+                {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
@@ -357,7 +454,7 @@ cssPrefix: pf-v5-c-tree-view
 ### With badges
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With badges example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{#> tree-view-node tree-view-node--text="Application launcher"}}
@@ -385,9 +482,9 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+                {{> tree-view-node tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
@@ -492,7 +589,7 @@ cssPrefix: pf-v5-c-tree-view
 ### With action item
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With action item example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -518,9 +615,9 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+                {{> tree-view-node tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
@@ -591,7 +688,7 @@ cssPrefix: pf-v5-c-tree-view
 ### With non-expandable top level nodes
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With non-expandable top level nodes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -607,9 +704,9 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
+                {{> tree-view-node tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -682,13 +779,13 @@ cssPrefix: pf-v5-c-tree-view
 ### With selectable, expandable nodes
 ```hbs
 {{#> tree-view tree-view--id="tree-view-selectable-expandable"}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-1')}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With selectable, expandable nodes example"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-1')}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-2')}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-2')}}
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 1"}}
           {{/tree-view-content}}
@@ -703,14 +800,14 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Options"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-3')}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-3')}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--text="Loader"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-4')}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-4')}}
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 2"}}
           {{/tree-view-content}}
@@ -720,19 +817,19 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-5')}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-5')}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-6')}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-6')}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--text="Loader"}}
               {{/tree-view-content}}
               {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-7')}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsSelected=true tree-view-node--id=(concat tree-view--id '-7')}}
                   {{#> tree-view-content}}
-                    {{> tree-view-node tree-view-node--text="Loader app 1" tree-view-node--modifier="pf-m-current"}}
+                    {{> tree-view-node tree-view-node--text="Loader app 1"}}
                   {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
@@ -751,17 +848,17 @@ cssPrefix: pf-v5-c-tree-view
         {{/tree-view-list-item}}
       {{/tree-view-list}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-8')}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-8')}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Cost management"}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-9')}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-9')}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Sources"}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-10')}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-10')}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
       {{/tree-view-content}}
@@ -773,7 +870,7 @@ cssPrefix: pf-v5-c-tree-view
 ### Guides
 ```hbs
 {{#> tree-view tree-view--modifier="pf-m-guides"}}
-  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Guides example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -789,9 +886,9 @@ cssPrefix: pf-v5-c-tree-view
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsSelected=true}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
+                {{> tree-view-node tree-view-node--text="Current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -863,28 +960,15 @@ cssPrefix: pf-v5-c-tree-view
 
 ### Compact
 ```hbs
-{{> tree-view--base tree-view--base--modifier="pf-m-compact"}}
+{{> tree-view--base tree-view-list--AriaLabel="Compact example" tree-view--base--modifier="pf-m-compact"}}
 ```
 
 ### Compact, no background
 ```hbs
-{{> tree-view--base tree-view--base--modifier="pf-m-compact pf-m-no-background"}}
+{{> tree-view--base tree-view-list--AriaLabel="Compact no background example" tree-view--base--modifier="pf-m-compact pf-m-no-background"}}
 ```
 
 ## Documentation
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role="tree"` | `.pf-v5-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
-| `role="group"` | `.pf-v5-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
-| `role="treeitem"` | `.pf-v5-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
-| `aria-expanded="false"` | `.pf-v5-c-tree-view__list-item` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
-| `aria-expanded="true"` | `.pf-v5-c-tree-view__list-item.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
-| `tabindex="-1"` | `.pf-v5-c-tree-view__list-item` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
-| `tabindex="0"` | `.pf-v5-c-tree-view__list-item` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
-| `aria-label="[button label text]"` | `.pf-v5-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 
 ### Usage
 

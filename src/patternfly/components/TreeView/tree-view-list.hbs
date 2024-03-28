@@ -1,6 +1,12 @@
 <ul class="{{pfv}}tree-view__list{{#if tree-view-list--modifier}} {{tree-view-list--modifier}}{{/if}}"
   {{#if tree-view-list--IsRoot}}
     role="tree"
+    {{#if tree-view-list--IsMultiselectable}}
+      aria-multiselectable="true"
+    {{/if}}
+    {{#if tree-view-list--AriaLabel}}
+      aria-label="{{tree-view-list--AriaLabel}}"
+    {{/if}}
   {{else}}
     role="group"
   {{/if}}

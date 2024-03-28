@@ -1,8 +1,13 @@
 <li class="{{pfv}}tree-view__list-item{{#if tree-view-list-item--IsExpanded}} pf-m-expanded{{/if}}{{#if tree-view-list-item--modifier}} {{tree-view-list-item--modifier}}{{/if}}"
   role="treeitem"
+  {{#if tree-view-list-item--HasCheckbox}}
+    aria-checked="{{ternary tree-view-list-item--IsSelected true false}}"
+  {{else}}
+    aria-selected="{{ternary tree-view-list-item--IsSelected true false}}"
+  {{/if}}
   {{#if tree-view-list-item--IsExpandable}}
     aria-expanded="{{#if tree-view-list-item--IsExpanded}}true{{else}}false{{/if}}"
-    {{#if tree-view-node--HasCheckbox}}
+    {{#if tree-view-list-item--HasCheckbox}}
       tabindex="-1"
     {{else}}
       tabindex="0"
