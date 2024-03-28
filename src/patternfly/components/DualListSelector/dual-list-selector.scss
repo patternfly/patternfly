@@ -288,7 +288,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__item-text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   flex-grow: 1;
   color: var(--#{$dual-list-selector}__item-text--Color);

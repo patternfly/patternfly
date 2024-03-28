@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-chip() {
+@mixin pf-v6-theme-dark-chip() {
   .#{$chip} {
     --#{$chip}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
     --#{$chip}--before--BorderColor: var(--#{$pf-global}--BorderColor--100);

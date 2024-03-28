@@ -267,7 +267,7 @@
 
   // - Table grid th td data label
   :where(.#{$table}__th, .#{$table}__td)[data-label] {
-    // default pf-v5-hidden-visible() mixin is called in table.scss. redefining variable here
+    // default pf-v6-hidden-visible() mixin is called in table.scss. redefining variable here
     --#{$table}--cell--hidden-visible--Display: var(--#{$table}--m-grid--cell--hidden-visible--Display);
 
     grid-column: 1;

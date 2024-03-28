@@ -72,7 +72,7 @@
     --#{$log-viewer}__main--BorderWidth: var(--#{$log-viewer}--m-dark__main--BorderWidth);
 
     .#{$log-viewer}__main {
-      @include pf-v5-t-dark;
+      @include pf-v6-t-dark;
 
       --#{$log-viewer}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
       --#{$log-viewer}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
@@ -221,6 +221,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/log-viewer";
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-log-viewer;
+@include pf-v6-theme-dark {
+  @include pf-v6-theme-dark-log-viewer;
 }

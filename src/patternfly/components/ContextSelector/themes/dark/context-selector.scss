@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-context-selector() {
+@mixin pf-v6-theme-dark-context-selector() {
   .#{$context-selector} {
     --#{$context-selector}__menu--Top: 100%;
     --#{$context-selector}__menu-list-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);

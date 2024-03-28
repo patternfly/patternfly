@@ -62,7 +62,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 .#{$toolbar}__item,
 .#{$toolbar}__group.pf-m-chip-group-container,
 .#{$toolbar}__group.pf-m-chip-group {
-  @include pf-v5-hidden-visible(flex);
+  @include pf-v6-hidden-visible(flex);
 
   flex-wrap: wrap;
 }
@@ -160,8 +160,8 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 
 // - Toolbar item
 .#{$toolbar}__item {
-  @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v5-c-toolbar--breakpoint-map);
-  @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v5-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
 
   row-gap: var(--#{$toolbar}__item--RowGap, var(--#{$toolbar}--RowGap));
   column-gap: var(--#{$toolbar}__item--ColumnGap);
@@ -272,7 +272,7 @@ $pf-v5--include-toolbar-breakpoints: true !default;
 @each $breakpoint, $breakpoint-value in $pf-v5-c-toolbar--breakpoint-map {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-  @include pf-v5-apply-breakpoint($breakpoint) {
+  @include pf-v6-apply-breakpoint($breakpoint) {
     .#{$toolbar}__group,
     .#{$toolbar}__item {
       &.pf-m-align-start#{$breakpoint-name} {

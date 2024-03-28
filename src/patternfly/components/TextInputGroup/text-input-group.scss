@@ -133,7 +133,7 @@
 }
 
 .#{$text-input-group}__text-input {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   position: relative;
   width: 100%;

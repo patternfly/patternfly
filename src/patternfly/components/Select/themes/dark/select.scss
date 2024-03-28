@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-select() {
+@mixin pf-v6-theme-dark-select() {
   .#{$select} {
     --#{$select}__toggle--disabled--BackgroundColor: var(--#{$pf-global}--palette--black-500);
     --#{$select}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);

@@ -355,7 +355,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Remove tab focus
-@include pf-v5-animate-remove-tab-focus(".#{$drawer}__panel", var(--#{$drawer}__panel--TransitionDuration));
+@include pf-v6-animate-remove-tab-focus(".#{$drawer}__panel", var(--#{$drawer}__panel--TransitionDuration));
 
 // Panel head
 .#{$drawer}__head {
@@ -632,7 +632,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $breakpoint: "md";
   }
 
-  @include pf-v5-apply-breakpoint($breakpoint) {
+  @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v5-c-drawer__panel--list--width {
       .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
         --#{$drawer}__panel--md--FlexBasis: #{percentage(div($width-value, 100))};
@@ -649,7 +649,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $breakpoint: "md";
   }
 
-  @include pf-v5-apply-breakpoint($breakpoint) {
+  @include pf-v6-apply-breakpoint($breakpoint) {
     // Drawer and inline
     .#{$drawer}.pf-m-inline#{$breakpoint-name},
     .#{$drawer}.pf-m-static#{$breakpoint-name} {

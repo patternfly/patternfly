@@ -298,7 +298,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__header-tools-group {
-  @include pf-v5-hidden-visible(var(--#{$page}__header-tools-group--Display));
+  @include pf-v6-hidden-visible(var(--#{$page}__header-tools-group--Display));
 
   align-items: center;
 
@@ -308,7 +308,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__header-tools-item {
-  @include pf-v5-hidden-visible(var(--#{$page}__header-tools-item--Display));
+  @include pf-v6-hidden-visible(var(--#{$page}__header-tools-item--Display));
 }
 
 // Sidebar
@@ -393,7 +393,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       --#{$context-selector}__toggle--BorderLeftColor: transparent;
       --#{$context-selector}__menu--Top: 100%;
 
-      @include pf-v5-t-dark;
+      @include pf-v6-t-dark;
 
       width: 100%;
     }
@@ -472,7 +472,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
-    @include pf-v5-apply-height-breakpoint($breakpoint) {
+    @include pf-v6-apply-height-breakpoint($breakpoint) {
 
       &.pf-m-sticky-top#{$breakpoint-name} {
         position: sticky;
@@ -535,7 +535,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
-    @include pf-v5-apply-height-breakpoint($breakpoint) {
+    @include pf-v6-apply-height-breakpoint($breakpoint) {
       &.pf-m-sticky-top#{$breakpoint-name},
       .#{$page}__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
         padding-block-end: var(--#{$page}__main-nav--m-sticky-top--PaddingBottom);
@@ -567,7 +567,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
-    @include pf-v5-apply-height-breakpoint($breakpoint) {
+    @include pf-v6-apply-height-breakpoint($breakpoint) {
       &.pf-m-sticky-top#{$breakpoint-name},
       .#{$page}__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
         --#{$page}__main-breadcrumb--PaddingBottom: var(--#{$page}__main-breadcrumb--m-sticky-top--PaddingBottom);
@@ -620,7 +620,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @each $breakpoint, $breakpoint-value in $pf-page-v5--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       // stylelint-disable max-nesting-depth
       &.pf-m-padding#{$breakpoint-name} {
         padding-block-start: var(--#{$page}__main-section--PaddingTop);

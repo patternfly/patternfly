@@ -2,13 +2,13 @@
 @each $breakpoint, $breakpoint-value in $pf-v6-global--breakpoint-map {
   .#{$pf-prefix}u-screen-reader#{$breakpoint-value} {
     @include pf-v6-media-query($breakpoint) {
-      @include pf-v5-u-screen-reader;
+      @include pf-v6-u-screen-reader;
     }
   }
 
   .#{$pf-prefix}u-visible#{$breakpoint-value} {
     @include pf-v6-media-query($breakpoint) {
-      @include pf-v5-u-visible;
+      @include pf-v6-u-visible;
     }
   }
 

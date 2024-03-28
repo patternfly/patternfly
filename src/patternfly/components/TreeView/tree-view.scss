@@ -427,13 +427,13 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   &.pf-m-truncate {
     --#{$tree-view}__node-content--Overflow: hidden;
 
-    @include pf-v5-text-overflow;
+    @include pf-v6-text-overflow;
   }
 
   @at-root .#{$tree-view}.pf-m-truncate & {
     --#{$tree-view}__node-content--Overflow: hidden;
 
-    @include pf-v5-text-overflow;
+    @include pf-v6-text-overflow;
   }
 }
 

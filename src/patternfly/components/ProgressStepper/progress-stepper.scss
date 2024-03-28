@@ -265,7 +265,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     }
 
     .#{$progress-stepper}__step:not(.pf-m-current) .#{$progress-stepper}__step-main {
-      @include pf-v5-u-screen-reader;
+      @include pf-v6-u-screen-reader;
     }
 
     // For this compact variant only, move the main content for the current step to above the icons
@@ -431,7 +431,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   @each $breakpoint, $breakpoint-value in $pf-v5-c-progress-stepper--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-horizontal#{$breakpoint-name} {
         @include pf-v5-c-progress-stepper--m-horizontal;
       }

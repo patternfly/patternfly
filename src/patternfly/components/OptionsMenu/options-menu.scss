@@ -217,7 +217,7 @@
 }
 
 .#{$options-menu}__toggle-text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   flex: 1 1 auto;
   text-align: start;
@@ -327,6 +327,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/options-menu";
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-options-menu;
+@include pf-v6-theme-dark {
+  @include pf-v6-theme-dark-options-menu;
 }

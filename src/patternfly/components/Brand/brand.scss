@@ -8,8 +8,8 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
   width: var(--#{$brand}--Width--base);
   height: var(--#{$brand}--Height--base);
 
-  @include pf-v5-build-css-variable-stack("--#{$brand}--Width--base", "--#{$brand}--Width", $pf-v5-c-brand--breakpoint-map);
-  @include pf-v5-build-css-variable-stack("--#{$brand}--Height--base", "--#{$brand}--Height", $pf-v5-c-brand--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$brand}--Width--base", "--#{$brand}--Width", $pf-v5-c-brand--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$brand}--Height--base", "--#{$brand}--Height", $pf-v5-c-brand--breakpoint-map);
 
   &.pf-m-picture {
     display: inline-flex;

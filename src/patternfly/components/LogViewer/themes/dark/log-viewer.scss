@@ -1,7 +1,7 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-log-viewer() {
+@mixin pf-v6-theme-dark-log-viewer() {
   .#{$log-viewer}.pf-m-dark .#{$log-viewer}__main {
-    @include pf-v5-theme-dark--t-dark;
+    @include pf-v6-theme-dark--t-dark;
   }
 }

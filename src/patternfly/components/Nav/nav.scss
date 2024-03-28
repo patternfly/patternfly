@@ -328,7 +328,7 @@
     scroll-padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
     -webkit-overflow-scrolling: touch;
 
-    @include pf-v5-overflow-hide-scroll;
+    @include pf-v6-overflow-hide-scroll;
   }
 
   .#{$nav}__link {

@@ -151,7 +151,7 @@
   word-break: break-word;
 
   &.pf-m-truncate {
-    @include pf-v5-text-overflow;
+    @include pf-v6-text-overflow;
   }
 }
 

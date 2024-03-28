@@ -286,7 +286,7 @@
   }
 
   .#{$context-selector}__toggle-text {
-    @include pf-v5-text-overflow;
+    @include pf-v6-text-overflow;
 
     flex: 1 1 auto;
     font-size: var(--#{$context-selector}__toggle-text--FontSize);
@@ -303,7 +303,7 @@
 }
 
 .#{$context-selector}__menu {
-  @include pf-v5-t-light;
+  @include pf-v6-t-light;
 
   position: absolute;
   inset-block-start: var(--#{$context-selector}__menu--Top);
@@ -379,6 +379,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/context-selector";
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-context-selector;
+@include pf-v6-theme-dark {
+  @include pf-v6-theme-dark-context-selector;
 }

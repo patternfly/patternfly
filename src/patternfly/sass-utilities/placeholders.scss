@@ -1,4 +1,4 @@
-%pf-v5-t-light {
+%pf-v6-t-light {
   --#{$pf-global}--Color--100: var(--#{$pf-global}--Color--dark-100);
   --#{$pf-global}--Color--200: var(--#{$pf-global}--Color--dark-200);
   --#{$pf-global}--BorderColor--100: var(--#{$pf-global}--BorderColor--dark-100);
@@ -10,7 +10,7 @@
   --#{$pf-global}--icon--Color--dark: var(--#{$pf-global}--icon--Color--dark--dark);
 }
 
-%pf-v5-t-dark {
+%pf-v6-t-dark {
   --#{$pf-global}--Color--100: var(--#{$pf-global}--Color--light-100);
   --#{$pf-global}--Color--200: var(--#{$pf-global}--Color--light-200);
   --#{$pf-global}--BorderColor--100: var(--#{$pf-global}--BorderColor--light-100);
@@ -27,32 +27,32 @@
 }
 
 // stylelint-disable
-%pf-v5-hidden-visible {
+%pf-v6-hidden-visible {
   // base value for visible display property is set to 'block' by default and passed in to
-  // placeholder via `pf-v5-hidden-visible` mixin
+  // placeholder via `pf-v6-hidden-visible` mixin
 
   // set hidden var values
-  --pf-v5-hidden-visible--hidden--Display: none;
+  --pf-v6-hidden-visible--hidden--Display: none;
 
   // set visibile var values
-  --pf-v5-hidden-visible--Display: var(--pf-v5-hidden-visible--visible--Display);
+  --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--visible--Display);
 
   // set default state to visible
-  display: var(--pf-v5-hidden-visible--Display);
+  display: var(--pf-v6-hidden-visible--Display);
 
   // toggle values based on state
   &.pf-m-hidden {
-    --pf-v5-hidden-visible--Display: var(--pf-v5-hidden-visible--hidden--Display);
+    --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--hidden--Display);
   }
 
   @each $size, $bp in $pf-v6-global--breakpoint-name-map {
     @media screen and (min-width: $bp) {
       &.pf-m-hidden-on-#{$size} {
-        --pf-v5-hidden-visible--Display: var(--pf-v5-hidden-visible--hidden--Display);
+        --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--hidden--Display);
       }
 
       &.pf-m-visible-on-#{$size} {
-        --pf-v5-hidden-visible--Display: var(--pf-v5-hidden-visible--visible--Display);
+        --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--visible--Display);
       }
     }
   }

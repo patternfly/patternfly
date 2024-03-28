@@ -377,7 +377,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     @each $breakpoint, $breakpoint-value in $pf-v5-c-tabs--breakpoint-map {
       $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-      @include pf-v5-apply-breakpoint($breakpoint) {
+      @include pf-v6-apply-breakpoint($breakpoint) {
         // stylelint-disable max-nesting-depth
         &.pf-m-expandable#{$breakpoint-name} {
           --#{$tabs}__list--Display: none;
@@ -506,7 +506,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 // Tab list
 .#{$tabs}__list {
-  @include pf-v5-overflow-hide-scroll;
+  @include pf-v6-overflow-hide-scroll;
 
   position: relative;
   display: var(--#{$tabs}__list--Display);
@@ -753,7 +753,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @each $breakpoint, $breakpoint-value in $pf-v5-c-tabs--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v5-c-tabs--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --#{$tabs}--inset: #{$spacer-value};

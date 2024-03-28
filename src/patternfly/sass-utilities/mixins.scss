@@ -149,7 +149,7 @@
 
 // stylelint-enable
 
-@mixin pf-v5-u-screen-reader {
+@mixin pf-v6-u-screen-reader {
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -159,7 +159,7 @@
   border: 0;
 }
 
-@mixin pf-v5-u-visible {
+@mixin pf-v6-u-visible {
   position: static;
   overflow: visible;
   clip: auto;
@@ -167,27 +167,28 @@
   border: inherit;
 }
 
-@mixin pf-v5-t-light($color: "--#{$pf-global}--Color--100") {
+// Remove when deprecated components are removed
+@mixin pf-v6-t-light($color: "--#{$pf-global}--Color--100") {
   @if $color {
     color: var(#{$color});
   }
 
-  @extend %pf-v5-t-light;
+  @extend %pf-v6-t-light;
 }
 
-@mixin pf-v5-t-dark($color: "--#{$pf-global}--Color--100") {
+@mixin pf-v6-t-dark($color: "--#{$pf-global}--Color--100") {
   color: var(#{$color});
 
-  @extend %pf-v5-t-dark;
+  @extend %pf-v6-t-dark;
 }
 
-@mixin pf-v5-text-overflow {
+@mixin pf-v6-text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-@mixin pf-v5-line-clamp($line-clamp-val: 1) {
+@mixin pf-v6-line-clamp($line-clamp-val: 1) {
   // stylelint-disable
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -196,7 +197,7 @@
   overflow: hidden;
 }
 
-@mixin pf-v5-overflow-hide-scroll {
+@mixin pf-v6-overflow-hide-scroll {
   &::-webkit-scrollbar {
     display: none;
   } // hides scrollbars in Chrome
@@ -205,15 +206,15 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v5-hidden-visible($val: "block") {
+@mixin pf-v6-hidden-visible($val: "block") {
   // stylelint-disable-next-line
-  --pf-v5-hidden-visible--visible--Display: #{$val};
+  --pf-v6-hidden-visible--visible--Display: #{$val};
 
-  @extend %pf-v5-hidden-visible;
+  @extend %pf-v6-hidden-visible;
 }
 
 // Apply media query if value is passed
-@mixin pf-v5-apply-breakpoint($breakpoint) {
+@mixin pf-v6-apply-breakpoint($breakpoint) {
   @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
     @content;
   } @else {
@@ -226,7 +227,7 @@
 }
 
 // Apply height media query if value is passed
-@mixin pf-v5-apply-height-breakpoint($breakpoint) {
+@mixin pf-v6-apply-height-breakpoint($breakpoint) {
   @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
     @content;
   } @else {
@@ -238,14 +239,14 @@
   }
 }
 
-@mixin pf-v5-emit-properties($map) {
+@mixin pf-v6-emit-properties($map) {
   @each $prop, $value in $map {
     #{$value}: #{$prop};
   }
 }
 
 // Animate tab focus removal
-@mixin pf-v5-animate-remove-tab-focus($element, $delay: $pf-v5-global--TransitionDuration) {
+@mixin pf-v6-animate-remove-tab-focus($element, $delay: $pf-v5-global--TransitionDuration) {
   @keyframes pf-remove-tab-focus {
     to {
       visibility: hidden;
@@ -260,7 +261,7 @@
 }
 
 // Build variable stack
-@mixin pf-v5-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
+@mixin pf-v6-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -283,7 +284,7 @@
     }
 
     // Assign variable stack to $prop
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       @if $important == true {
         // stylelint-disable declaration-no-important
         #{$prop}: #{$variable-list} !important;
@@ -296,7 +297,7 @@
 }
 
 // Build variable stack
-@mixin pf-v5-output-root-variables($css-var, $breakpoint-map: $pf-v6-global--breakpoint-map) {
+@mixin pf-v6-output-root-variables($css-var, $breakpoint-map: $pf-v6-global--breakpoint-map) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -314,13 +315,13 @@
 }
 
 // Dark theme style block
-@mixin pf-v5-theme-dark($theme-dark-class: $pf-v5--theme-dark--class, $theme-dark-target: $pf-v5--theme-dark--target) {
+@mixin pf-v6-theme-dark($theme-dark-class: $pf-v6--theme-dark--class, $theme-dark-target: $pf-v6--theme-dark--target) {
   #{$theme-dark-target}:where(#{$theme-dark-class}) {
     @content;
   }
 }
 
-@mixin pf-v5-construct-global-vars($prefix: $pf-prefix--version, $maps...) {
+@mixin pf-v6-construct-global-vars($prefix: $pf-prefix--version, $maps...) {
   @each $map in $maps {
     @each $name, $val in $map {
       #{$prefix}#{$name}: #{$val};

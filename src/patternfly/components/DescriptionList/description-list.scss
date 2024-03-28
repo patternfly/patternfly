@@ -63,8 +63,8 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}--m-display-lg__description--FontSize: var(--pf-t--global--font--size--body--lg); // TODO replace with new font tokens when available
   --#{$description-list}--m-display-2xl__description--FontSize: var(--pf-t--global--font--size--heading--lg); // TODO replace with new font tokens when available
 
-  @include pf-v5-output-root-variables("--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
-  @include pf-v5-build-css-variable-stack("--#{$description-list}__term--width", "--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
+  @include pf-v6-output-root-variables("--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$description-list}__term--width", "--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
 }
 
 .#{$description-list} { 
@@ -85,7 +85,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   &.pf-m-auto-fit {
     grid-template-columns: repeat(auto-fit, minmax(var(--#{$description-list}--m-auto-fit--GridTemplateColumns--minmax--min), 1fr));
 
-    @include pf-v5-build-css-variable-stack("--#{$description-list}--GridTemplateColumns--minmax--min", "--#{$description-list}--GridTemplateColumns--min", $pf-v6-c-description-list--breakpoint-map);
+    @include pf-v6-build-css-variable-stack("--#{$description-list}--GridTemplateColumns--minmax--min", "--#{$description-list}--GridTemplateColumns--min", $pf-v6-c-description-list--breakpoint-map);
   }
 
   &.pf-m-compact {
@@ -201,7 +201,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   @each $breakpoint, $breakpoint-value in $pf-v6-c-description-list--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-1-col#{$breakpoint-name} {
         --#{$description-list}--GridTemplateColumns--count: var(--#{$description-list}--m-1-col--GridTemplateColumns--count);
       }

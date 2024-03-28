@@ -44,7 +44,7 @@
   // icon
   --#{$chip}__icon--MarginLeft: var(--#{$pf-global}--spacer--sm);
 
-  @include pf-v5-t-light;  // This component always needs to be light
+  @include pf-v6-t-light;  // This component always needs to be light
 
   position: relative;
   display: inline-flex;
@@ -91,7 +91,7 @@
 
 // Text element
 .#{$chip}__text {
-  @include pf-v5-text-overflow;
+  @include pf-v6-text-overflow;
 
   position: relative;
   max-width: var(--#{$chip}__text--MaxWidth);
@@ -135,6 +135,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/chip";
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-chip;
+@include pf-v6-theme-dark {
+  @include pf-v6-theme-dark-chip;
 }

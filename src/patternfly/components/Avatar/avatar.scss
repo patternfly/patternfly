@@ -35,8 +35,8 @@ $pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
 
   @each $size in $pf-v5-c-avatar--sizes {
     &.pf-m-#{$size} {
-      @include pf-v5-build-css-variable-stack("--#{$avatar}--Width", "--#{$avatar}--m-#{$size}--Width", $pf-v5-c-avatar--breakpoint-map);
-      @include pf-v5-build-css-variable-stack("--#{$avatar}--Height", "--#{$avatar}--m-#{$size}--Height", $pf-v5-c-avatar--breakpoint-map);
+      @include pf-v6-build-css-variable-stack("--#{$avatar}--Width", "--#{$avatar}--m-#{$size}--Width", $pf-v5-c-avatar--breakpoint-map);
+      @include pf-v6-build-css-variable-stack("--#{$avatar}--Height", "--#{$avatar}--m-#{$size}--Height", $pf-v5-c-avatar--breakpoint-map);
     }
   }
 }

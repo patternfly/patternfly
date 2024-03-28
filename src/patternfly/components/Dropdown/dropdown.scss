@@ -613,7 +613,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 
   .#{$dropdown}__toggle-text {
-    @include pf-v5-text-overflow;
+    @include pf-v6-text-overflow;
   }
 }
 
@@ -687,7 +687,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   @each $breakpoint, $breakpoint-value in $pf-v5-c-dropdown--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-v5-apply-breakpoint($breakpoint) {
+    @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-align-right#{$breakpoint-name} {
        inset-inline-end: 0;
       }
@@ -815,6 +815,6 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/dropdown";
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-dropdown;
+@include pf-v6-theme-dark {
+  @include pf-v6-theme-dark-dropdown;
 }

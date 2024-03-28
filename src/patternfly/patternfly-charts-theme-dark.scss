@@ -1,8 +1,8 @@
 @import "themes/dark/patternfly-charts-theme-dark";
 
-$pf-v5-theme-dark-class: ".pf-v5-theme-dark" !default;
-$pf-v5-charts-theme-dark-class: $pf-v5-theme-dark-class !default;
+$pf-v6-theme-dark-class: ".pf-v6-theme-dark" !default;
+$pf-v5-charts-theme-dark-class: $pf-v6-theme-dark-class !default;
 
-:where(#{$pf-v5-theme-dark-class}) {
+:where(#{$pf-v6-theme-dark-class}) {
   @include pf-v5-charts-theme-dark($pf-v5-charts-theme-dark-class);
 }
