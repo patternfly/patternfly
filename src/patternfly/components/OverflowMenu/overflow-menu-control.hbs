@@ -8,7 +8,7 @@
       {{{dropdown--attribute}}}
     {{/if}}>
     {{#if overflow-menu-control--IsControl}}
-      {{#> button button--modifier="pf-v5-c-dropdown__toggle pf-m-plain pf-m-control" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-button--aria-expanded '"')}}
+      {{#> button button--modifier="pf-v6-c-dropdown__toggle pf-m-plain pf-m-control" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-button--aria-expanded '"')}}
         {{#if dropdown--icon}}
           <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
         {{else}}
@@ -16,7 +16,7 @@
         {{/if}}
       {{/button}}
     {{else}}
-      {{#> button button--modifier="pf-v5-c-dropdown__toggle pf-m-plain" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-button--aria-expanded '"')}}
+      {{#> button button--modifier="pf-v6-c-dropdown__toggle pf-m-plain" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-button--aria-expanded '"')}}
         {{#if dropdown-icon}}
           <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
         {{else}}

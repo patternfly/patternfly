@@ -15,8 +15,8 @@ wrapperTag: div
       {{> masthead-toggle}}
       {{#> masthead-main}}
         {{#> masthead-brand}}
-          {{> brand brand--modifier="pf-m-light" brand--attribute='src="/assets/images/PF-IconLogo-color.svg" style="--pf-v5-c-brand--Width: 37px;" alt="PatternFly logo"'}}
-          {{> brand brand--modifier="pf-m-dark" brand--attribute='src="/assets/images/PF-IconLogo-Reverse.svg" style="--pf-v5-c-brand--Width: 37px;" alt="PatternFly logo"'}}
+          {{> brand brand--modifier="pf-m-light" brand--attribute='src="/assets/images/PF-IconLogo-color.svg" style="--pf-v6-c-brand--Width: 37px;" alt="PatternFly logo"'}}
+          {{> brand brand--modifier="pf-m-dark" brand--attribute='src="/assets/images/PF-IconLogo-Reverse.svg" style="--pf-v6-c-brand--Width: 37px;" alt="PatternFly logo"'}}
         {{/masthead-brand}}
       {{/masthead-main}}
     {{/masthead-logo}}
