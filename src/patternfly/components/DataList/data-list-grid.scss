@@ -1,4 +1,4 @@
-@mixin pf-v5-c-data-list-responsive-block() {
+@mixin pf-v6-c-data-list-responsive-block() {
   // base responsive styles
   @at-root .#{$data-list}:not([class*="pf-m-grid"]) {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
@@ -22,7 +22,7 @@
   }
 }
 
-@include pf-v5-c-data-list-responsive-block {
+@include pf-v6-c-data-list-responsive-block {
   --#{$data-list}__cell--cell--PaddingTop: var(--#{$data-list}__cell--cell--md--PaddingTop);
   --#{$data-list}__cell--PaddingBottom: var(--#{$data-list}__cell--md--PaddingBottom);
   --#{$data-list}__item-control--MarginRight: var(--#{$data-list}__item-control--md--MarginRight);

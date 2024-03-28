@@ -566,7 +566,7 @@
 
 // - Menu check
 .#{$menu}__item-check .#{$check} {
-  --pf-v5-c-check__input--TranslateY: none;
+  --#{$check}__input--TranslateY: none;
 }
 
 // - Menu toggle icon
