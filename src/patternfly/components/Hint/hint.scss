@@ -27,7 +27,7 @@
 
   // Hint Actions
   --#{$hint}__actions--MarginLeft: var(--pf-t--global--spacer--2xl);
-  --#{$hint}__actions--c-dropdown--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1); // TODO form element spacer
+  --#{$hint}__actions--c-dropdown--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 }
 
 .#{$hint} {

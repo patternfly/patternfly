@@ -18,8 +18,8 @@
 
   // padding
   --#{$form-control}--inset--base: var(--pf-t--global--spacer--md);
-  --#{$form-control}--PaddingTop: var(--pf-t--global--spacer--sm); // (--#{$pf-global}--spacer--form-element);
-  --#{$form-control}--PaddingBottom: var(--pf-t--global--spacer--sm); // var(--#{$pf-global}--spacer--form-element);
+  --#{$form-control}--PaddingTop: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$form-control}--PaddingBottom: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}--PaddingRight: var(--#{$form-control}--inset--base);
   --#{$form-control}--PaddingLeft: var(--#{$form-control}--inset--base);
 
