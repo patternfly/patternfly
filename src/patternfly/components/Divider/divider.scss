@@ -1,16 +1,16 @@
 // @debug $divider; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-divider--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
-$pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl");
+$pf-v6-c-divider--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl");
 
 // * Divider horizontal
-@mixin pf-v5-c-divider--m-horizontal {
+@mixin pf-v6-c-divider--m-horizontal {
   flex-direction: row;
   width: 100%;
   height: var(--#{$divider}--Size);  // apply size to height in horizontal orientation
 }
 
 // * Divider vertical
-@mixin pf-v5-c-divider--m-vertical {
+@mixin pf-v6-c-divider--m-vertical {
   flex-direction: column;
   width: var(--#{$divider}--Size); // apply size to width in vertical orientation
   height: inherit;
@@ -29,7 +29,7 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 
 // - Divider
 .#{$divider} {
-  @include pf-v5-c-divider--m-horizontal; // default, set to orientation to horizontal
+  @include pf-v6-c-divider--m-horizontal; // default, set to orientation to horizontal
   @include pf-v6-hidden-visible(var(--#{$divider}--Display));
 
   flex-shrink: 0;
@@ -47,16 +47,16 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 
   // - Divider horizontal
   &.pf-m-horizontal {
-    @include pf-v5-c-divider--m-horizontal;
+    @include pf-v6-c-divider--m-horizontal;
   }
 
   // - Divider vertical
   &.pf-m-vertical {
-    @include pf-v5-c-divider--m-vertical;
+    @include pf-v6-c-divider--m-vertical;
   }
 
   // - Divider spacer insets
-  @each $spacer, $spacer-value in $pf-v5-c-divider--spacer-map {
+  @each $spacer, $spacer-value in $pf-v6-c-divider--spacer-map {
     @if $spacer == none {
       $spacer-value: 0%;
     }
@@ -71,23 +71,23 @@ $pf-v5-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 // TODO: make responsive values opt in/out
 // stylelint-disable
 .#{$divider} {
-  @each $breakpoint, $breakpoint-value in $pf-v5-c-divider--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-divider--breakpoint-map {
     $breakpoint-name: '-on-' + #{$breakpoint};
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-horizontal#{$breakpoint-name} {
-        @include pf-v5-c-divider--m-horizontal;
+        @include pf-v6-c-divider--m-horizontal;
       }
     }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-vertical#{$breakpoint-name} {
-        @include pf-v5-c-divider--m-vertical;
+        @include pf-v6-c-divider--m-vertical;
       }
     }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-v5-c-divider--spacer-map {
+      @each $spacer, $spacer-value in $pf-v6-c-divider--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           @if $spacer == none {
             --#{$divider}--before--FlexBasis: 100%;

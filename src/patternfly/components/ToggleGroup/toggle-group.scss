@@ -146,12 +146,12 @@
 }
 
 // For consecutive selected items, turn the left border back to what it was
-.pf-v5-c-toggle-group__item:has(.pf-m-selected) + .pf-v5-c-toggle-group__item:has(.pf-m-selected) {
+.#{$toggle-group}__item:has(.pf-m-selected) + .#{$toggle-group}__item:has(.pf-m-selected) {
   --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor);
 }
     
 // For consecutive disabled items, turn the left border back to what it was
-.pf-v5-c-toggle-group__item:has(:disabled, .pf-m-disabled) + .pf-v5-c-toggle-group__item:has(:disabled, .pf-m-disabled) {
+.#{$toggle-group}__item:has(:disabled, .pf-m-disabled) + .#{$toggle-group}__item:has(:disabled, .pf-m-disabled) {
   --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor);
 }
 
