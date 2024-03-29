@@ -8,124 +8,25 @@ section: utility-classes
 ### Standard background colors
 
 ```hbs
-<div class="pf-v6-u-background-color-100">
+<div class="pf-v6-u-background-color-disabled">
   {{#> background-color}}
-    Background color 100
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-200">
-{{#> background-color}}
-  Background color 200
-{{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-active-color-100">
-{{#> background-color}}
-  {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Active color 100
-  {{/text}}
-{{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-active-color-300">
-{{#> background-color}}
-  {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Active color 300
-  {{/text}}
-{{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-primary-color-200">
-{{#> background-color}}
-  {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Primary color 200
-  {{/text}}
-{{/background-color}}
-</div>
-```
-
-### Inverse background colors
-
-```hbs
-<div class="pf-v6-u-background-color-dark-100">
-  {{#> background-color }}
-    {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Background color dark 100
+    {{#> text text--modifier="pf-v6-u-text-color-on-disabled" }}
+      Disabled background color
     {{/text}}
   {{/background-color}}
 </div>
 <br/>
-<div class="pf-v6-u-background-color-dark-200">
-  {{#> background-color }}
-    {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Background color dark 200
+<div class="pf-v6-u-background-color-inverse">
+  {{#> background-color}}
+    {{#> text text--modifier="pf-v6-u-text-color-inverse" }}
+      Inverse background color
     {{/text}}
   {{/background-color}}
 </div>
 <br/>
-<div class="pf-v6-u-background-color-dark-300">
+<div class="pf-v6-u-background-color-highlight">
   {{#> background-color}}
-    {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Background color dark 300
-    {{/text}}
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-dark-400">
-  {{#> background-color}}
-    {{#> text text--modifier="pf-v6-u-color-light-200" }}
-    Background color dark 400
-    {{/text}}
-  {{/background-color}}
-</div>
-```
-
-### Disabled background colors
-
-```hbs
-<div class="pf-v6-u-background-color-disabled-color-200">
-  {{#> background-color }}
-    Disabled color 200
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-disabled-color-300">
-  {{#> background-color}}
-    Disabled color 300
-  {{/background-color}}
-</div>
-```
-
-### Status and state background colors
-```hbs
-<div class="pf-v6-u-background-color-default">
-  {{#> background-color}}
-    Default
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-success">
-  {{#> background-color}}
-    Success
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-info">
-  {{#> background-color}}
-    Info
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-warning">
-  {{#> background-color}}
-    Warning
-  {{/background-color}}
-</div>
-<br/>
-<div class="pf-v6-u-background-color-danger">
-  {{#> background-color}}
-    Danger
+      Highlight background color
   {{/background-color}}
 </div>
 ```
@@ -140,18 +41,9 @@ Care should be taken especially when applying background colors, as this can hav
 
 Note that "inverse" background colors are labeled as such to indicate that they are best used with the ["inverse" text colors](/utility-classes/text#inverse-colors).
 
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-background-color-200-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-background-color-disabled-on-lg**
 ### Usage
 
 | Class                             | Applied to | Outcome                            |
 | --------------------------------- | ---------- | ---------------------------------- |
-| `.pf-v6-u-background-color-{100, 200}{-on-[breakpoint]}`                | `*`        | Applies background color 100 or 200.      |
-| `.pf-v6-u-background-color-active-color-{100, 300}{-on-[breakpoint]}`   | `*`        | Applies background color active 100 or 300. |
-| `.pf-v6-u-background-color-primary-color-200{-on-[breakpoint]}`         | `*`        | Applies background color primary 200. |
-| `.pf-v6-u-background-color-dark-{100, 200, 300, 400}{-on-[breakpoint]}` | `*`        | Applies background color dark 100, 200, 300, or 400. |
-| `.pf-v6-u-background-color-disabled-color-{200, 300}{-on-[breakpoint]}` | `*`        | Applies background color disabled 200 or 300. |
-| `.pf-v6-u-background-color-default{-on-[breakpoint]}`  | `*`        | Applies the background color for the default state.  |
-| `.pf-v6-u-background-color-success{-on-[breakpoint]}`  | `*`        | Applies the background color for the success state.  |
-| `.pf-v6-u-background-color-info{-on-[breakpoint]}`     | `*`        | Applies the background color for the info state.     |
-| `.pf-v6-u-background-color-warning{-on-[breakpoint]}`  | `*`        | Applies the background color for the warning state.  |
-| `.pf-v6-u-background-color-danger{-on-[breakpoint]}`   | `*`        | Applies the background color for the danger state.   |
+| `.pf-v6-u-background-color-{disabled, inverse, highlight}{-on-[breakpoint]}`                | `*`        | Applies background color |

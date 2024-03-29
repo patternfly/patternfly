@@ -3,22 +3,13 @@
 // Font family options
 $pf-v6-u-font-family-options: (
   font-family-text: (
-    font-family var(--#{$pf-global}--FontFamily--text)
+    font-family var(--pf-t--global--font--family--body)
   ),
   font-family-heading: (
-    font-family var(--#{$pf-global}--FontFamily--heading)
+    font-family var(--pf-t--global--font--family--heading)
   ),
   font-family-monospace: (
-    font-family var(--#{$pf-global}--FontFamily--monospace)
-  ),
-  font-family-text-vf: (
-    font-family var(--#{$pf-global}--FontFamily--text--vf)
-  ),
-  font-family-heading-vf: (
-    font-family var(--#{$pf-global}--FontFamily--heading--vf)
-  ),
-  font-family-monospace-vf: (
-    font-family var(--#{$pf-global}--FontFamily--monospace--vf)
+    font-family var(--pf-t--global--font--family--mono)
   )
 );
 
@@ -27,28 +18,28 @@ $pf-v6-u-font-family-options: (
 // Font size options
 $pf-v6-u-font-size-options: (
   font-size-xs: (
-    font-size var(--#{$pf-global}--FontSize--xs)
+    font-size var(--pf-t--global--font--size--xs)
   ),
   font-size-sm: (
-    font-size var(--#{$pf-global}--FontSize--sm)
+    font-size var(--pf-t--global--font--size--sm)
   ),
   font-size-md: (
-    font-size var(--#{$pf-global}--FontSize--md)
+    font-size var(--pf-t--global--font--size--md)
   ),
   font-size-lg: (
-    font-size var(--#{$pf-global}--FontSize--lg)
+    font-size var(--pf-t--global--font--size--lg)
   ),
   font-size-xl: (
-    font-size var(--#{$pf-global}--FontSize--xl)
+    font-size var(--pf-t--global--font--size--xl)
   ),
   font-size-2xl: (
-    font-size var(--#{$pf-global}--FontSize--2xl)
+    font-size var(--pf-v6-global--FontSize--2xl)
   ),
   font-size-3xl: (
-    font-size var(--#{$pf-global}--FontSize--3xl)
+    font-size var(--pf-t--global--font--size--3xl)
   ),
   font-size-4xl: (
-    font-size var(--#{$pf-global}--FontSize--4xl)
+    font-size var(--pf-t--global--font--size--4xl)
   )
 );
 
@@ -57,10 +48,10 @@ $pf-v6-u-font-size-options: (
 // Font weight options
 $pf-v6-u-font-weight-options: (
   font-weight-normal: (
-    font-weight var(--#{$pf-global}--FontWeight--normal)
+    font-weight var(--pf-t--global--font--weight--body)
   ),
   font-weight-bold: (
-    font-weight var(--#{$pf-global}--FontWeight--bold)
+    font-weight var(--pf-t--global--font--weight--body--bold)
   )
 );
 
@@ -68,102 +59,90 @@ $pf-v6-u-font-weight-options: (
 
 // Font color options
 $pf-v6-u-font-color-options: (
-  color-100: (
-    color var(--#{$pf-global}--Color--100)
+  text-color-brand-default: (
+    color var(--pf-t--global--text--color--brand--default)
   ),
-  color-200: (
-    color var(--#{$pf-global}--Color--200)
+  text-color-disabled: (
+    color var(--pf-t--global--text--color--disabled)
   ),
-  color-300: (
-    color var(--#{$pf-global}--Color--300)
+  text-color-on-disabled: (
+    color var(--pf-t--global--text--color--on-disabled)
   ),
-  color-400: (
-    color var(--#{$pf-global}--Color--400)
+  text-color-link: (
+    color var(--pf-t--global--text--color--link--default)
   ),
-  active-color-100: (
-    color var(--#{$pf-global}--active-color--100)
+  text-color-link-hover: (
+    color var(--pf-t--global--text--color--link--hover)
   ),
-  active-color-400: (
-    color var(--#{$pf-global}--active-color--400)
+  text-color-link-visited: (
+    color var(--pf-t--global--text--color--link--visited)
   ),
-  primary-color-100: (
-    color var(--#{$pf-global}--primary-color--100)
+  text-color-placeholder: (
+    color var(--pf-t--global--text--color--placeholder)
   ),
-  color-light-100: (
-    color var(--#{$pf-global}--Color--light-100)
+  text-color-regular: (
+    color var(--pf-t--global--text--color--regular)
   ),
-  color-light-200: (
-    color var(--#{$pf-global}--Color--light-200)
+  text-color-required: (
+    color var(--pf-t--global--text--color--required)
   ),
-  link-color: (
-    color var(--#{$pf-global}--link--Color)
+  text-color-subtle: (
+    color var(--pf-t--global--text--color--subtle)
   ),
-  link-color-hover: (
-    color var(--#{$pf-global}--link--Color--hover)
+  text-color-inverse: (
+    color var(--pf-t--global--text--color--inverse)
   ),
-  link-color-light: (
-    color var(--#{$pf-global}--link--Color--light)
+  text-color-status-success: (
+    color var(--pf-t--global--color--status--success--default)
   ),
-  link-color-light-hover: (
-    color var(--#{$pf-global}--link--Color--light--hover)
+  text-color-status-warning: (
+    color var(--pf-t--global--text--color--status--warning--default)
   ),
-  link-color-dark: (
-    color var(--#{$pf-global}--link--Color--dark)
+  text-color-status-danger: (
+    color var(--pf-t--global--text--color--status--danger--default)
   ),
-  link-color-dark-hover: (
-    color var(--#{$pf-global}--link--Color--dark--hover)
+  text-color-status-default: (
+    color var(--pf-t--global--text--color--status--info--default)
   ),
-  link-color-visited: (
-    color var(--#{$pf-global}--link--Color--visited)
+  text-color-status-custom: (
+    color var(--pf-t--global--text--color--status--custom--default)
   ),
-  custom-color-100: (
-    color var(--#{$pf-global}--custom-color--100)
+  icon-color-regular: (
+    color var(--pf-t--global--icon--color--regular)
   ),
-  custom-color-200: (
-    color var(--#{$pf-global}--custom-color--200)
+  icon-color-disabled: (
+    color var(--pf-t--global--icon--color--disabled)
   ),
-  custom-color-300: (
-    color var(--#{$pf-global}--custom-color--300)
+  icon-color-on-disabled: (
+    color var(--pf-t--global--icon--color--on-disabled)
   ),
-  success-color-100: (
-    color var(--#{$pf-global}--success-color--100)
+  icon-color-subtle: (
+    color var(--pf-t--global--icon--color--subtle)
   ),
-  success-color-200: (
-    color var(--#{$pf-global}--success-color--200)
+  icon-color-inverse: (
+    color var(--pf-t--global--icon--color--inverse)
   ),
-  info-color-100: (
-    color var(--#{$pf-global}--info-color--100)
+  icon-color-brand: (
+    color var(--pf-t--global--icon--color--brand--default)
   ),
-  info-color-200: (
-    color var(--#{$pf-global}--info-color--200)
+  icon-color-favorite: (
+    color var(--pf-t--global--icon--color--favorite--default)
   ),
-  warning-color-100: (
-    color var(--#{$pf-global}--warning-color--100)
+  icon-color-status-success: (
+    color var(--pf-t--global--icon--color--status--success--default)
   ),
-  warning-color-200: (
-    color var(--#{$pf-global}--warning-color--200)
+  icon-color-status-warning: (
+    color var(--pf-t--global--icon--color--status--warning--default)
   ),
-  danger-color-100: (
-    color var(--#{$pf-global}--danger-color--100)
+  icon-color-status-danger: (
+    color var(--pf-t--global--icon--color--status--danger--default)
   ),
-  danger-color-200: (
-    color var(--#{$pf-global}--danger-color--200)
+  icon-color-status-info: (
+    color var(--pf-t--global--icon--color--status--info--default)
   ),
-  danger-color-300: (
-    color var(--#{$pf-global}--danger-color--300)
+  icon-color-status-custom: (
+    color var(--pf-t--global--icon--color--status--custom--default)
   ),
-  disabled-color-100: (
-    color var(--#{$pf-global}--disabled-color--100)
-  ),
-  disabled-color-200: (
-    color var(--#{$pf-global}--disabled-color--200)
-  ),
-  icon-color-light: (
-    color var(--#{$pf-global}--icon--Color--light)
-  ),
-  icon-color-dark: (
-    color var(--#{$pf-global}--icon--Color--dark)
-  )
 );
 
 @include pf-v6-utility-builder($pf-v6-u-font-color-options, $pf-v6-global--breakpoint-list);
