@@ -3,8 +3,6 @@ id: Text
 section: utility-classes
 ---
 
-import './Text.css'
-
 ## Examples
 
 ### Font family
@@ -70,7 +68,7 @@ import './Text.css'
 {{#> text text--modifier="pf-v6-u-text-color-regular"}}
   Regular text color
 {{/text}}
-{{#> text text--modifier="pf-v6-u-text-color-brand-default"}}
+{{#> text text--modifier="pf-v6-u-text-color-brand"}}
   Brand font color
 {{/text}}
 {{#> text text--modifier="pf-v6-u-text-color-placeholder"}}
@@ -229,14 +227,14 @@ Care should be taken especially when applying text colors, as this can have a ne
 | `.pf-v6-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*` | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, or 4xl |
 | `.pf-v6-u-font-family-{text, heading, monospace}` | `*` | Sets font-family to text, heading, or monospace |
 | `.pf-v6-u-font-weight-{normal, bold}{-on-[breakpoint]}` | `*` | Sets font-weight to light, normal, or bold |
-| `.pf-v6-u-text-color-{regular, brand-default, placeholder, requried, subtle}{-on-[breakpoint]}` | `*` | Sets font-color |
+| `.pf-v6-u-text-color-{regular, brand, placeholder, requried, subtle}{-on-[breakpoint]}` | `*` | Sets font-color |
 | `.pf-v6-u-text-color-link{-on-[breakpoint]}` | `*` | Sets font-color to link color |
 | `.pf-v6-u-text-color-link-hover{-on-[breakpoint]}` | `*` | Sets font-color to hover link color |
 | `.pf-v6-u-text-color-link-visited{-on-[breakpoint]}` | `*` | Sets font-color to visited link color |
 | `.pf-v6-u-text-color-status-{success, warning, danger, info, custom}{-on-[breakpoint]}` | `*` | Sets font-color to status color |
 | `.pf-v6-u-text-color-disabled{-on-[breakpoint]}` | `*` | Sets font-color to disabled text color |
 | `.pf-v6-u-text-color-on-disabled{-on-[breakpoint]}` | `*` | Sets font-color to text color on disabled background |
-| `.pf-v6-u-icon-color-{regular, brand-default, placeholder, requried, subtle}{-on-[breakpoint]}` | `*` | Sets font-color for icons |
+| `.pf-v6-u-icon-color-{regular, brand, placeholder, requried, subtle}{-on-[breakpoint]}` | `*` | Sets font-color for icons |
 | `.pf-v6-u-icon-color-status-{success, warning, danger, info, custom}{-on-[breakpoint]}` | `*` | Sets font-color to icon status color |
 | `.pf-v6-u-text-break-word{-on-[breakpoint]}` | `*` | Sets word-break to break-word |
 | `.pf-v6-u-text-nowrap{-on-[breakpoint]}` | `*` | Sets white-space to nowrap |
