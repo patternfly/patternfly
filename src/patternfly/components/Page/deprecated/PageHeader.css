@@ -1,8 +1,8 @@
-.ws-html-deprecated-c-page :is(.pf-v5-c-page__sidebar, .pf-v5-c-page__main-subnav) {
+.ws-html-deprecated-c-page :is(.pf-v6-c-page__sidebar, .pf-v6-c-page__main-subnav) {
   color: var(--pf-t--global--text--color--inverse);
 }
 
-.ws-html-deprecated-c-page .pf-v5-c-page__main-section.pf-m-dark-200 {
+.ws-html-deprecated-c-page .pf-v6-c-page__main-section.pf-m-dark-200 {
   color: var(--pf-t--global--text--color--regular);
 }
 
