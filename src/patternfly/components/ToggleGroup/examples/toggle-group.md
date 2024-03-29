@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v6-c-toggle-group
 ---
 
-import './toggle-group.css'
-
 ## Examples
 
 ### Default
