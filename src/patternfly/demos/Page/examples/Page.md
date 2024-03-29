@@ -127,10 +127,10 @@ wrapperTag: div
     {{> page-template-gallery-cards}}
   {{/page-main-section}}
   {{> divider}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-v5-u-text-align-center"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-v6-u-text-align-center"}}
     {{#> card}}
       {{#> card-body}}
-        <p>The content in this section is also centered using the <code>.pf-v5-u-text-align-center</code> utility class.</p>
+        <p>The content in this section is also centered using the <code>.pf-v6-u-text-align-center</code> utility class.</p>
       {{/card-body}}
     {{/card}}
   {{/page-main-section}}

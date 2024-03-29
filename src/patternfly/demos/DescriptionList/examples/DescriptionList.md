@@ -85,7 +85,7 @@ cssPrefix: pf-d-description-list
           Node selector
         {{/description-list-text}}
       {{/description-list-term}}
-      {{#> description-list-description description-list-text--type="p" description-list-text--modifier="pf-v5-u-color-200"}}
+      {{#> description-list-description description-list-text--type="p" description-list-text--modifier="pf-v6-u-color-200"}}
         Nod selector is not available at this time
       {{/description-list-description}}
     {{/description-list-group}}
@@ -95,7 +95,7 @@ cssPrefix: pf-d-description-list
           Tolerations
         {{/description-list-text}}
       {{/description-list-term}}
-      {{#> description-list-description description-list-text--modifier="pf-v5-u-color-200"}}
+      {{#> description-list-description description-list-text--modifier="pf-v6-u-color-200"}}
         No tolerations
       {{/description-list-description}}
     {{/description-list-group}}
@@ -105,7 +105,7 @@ cssPrefix: pf-d-description-list
           Annotations
         {{/description-list-text}}
       {{/description-list-term}}
-      {{#> description-list-description description-list-text--modifier="pf-v5-u-color-200"}}
+      {{#> description-list-description description-list-text--modifier="pf-v6-u-color-200"}}
         No annotations
       {{/description-list-description}}
     {{/description-list-group}}
@@ -164,7 +164,7 @@ cssPrefix: pf-d-description-list
           Session affinity
         {{/description-list-text}}
       {{/description-list-term}}
-      {{#> description-list-description description-list-text--modifier="pf-v5-u-color-200"}}
+      {{#> description-list-description description-list-text--modifier="pf-v6-u-color-200"}}
         None
       {{/description-list-description}}
     {{/description-list-group}}
@@ -244,7 +244,7 @@ cssPrefix: pf-d-description-list
           Min ready seconds
         {{/description-list-text}}
       {{/description-list-term}}
-      {{#> description-list-description description-list-text--modifier="pf-v5-u-color-200"}}
+      {{#> description-list-description description-list-text--modifier="pf-v6-u-color-200"}}
         Not configured
       {{/description-list-description}}
     {{/description-list-group}}

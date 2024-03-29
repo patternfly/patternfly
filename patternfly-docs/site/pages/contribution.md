@@ -33,7 +33,7 @@ For example:
 
 ```html noLive
 <!-- Component definition -->
-<div class="pf-v5-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
+<div class="pf-v6-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
   {{#if grid--attribute}}
     {{{grid--attribute}}}
   {{/if}}>

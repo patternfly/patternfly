@@ -3237,13 +3237,13 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
 
       {{#> table-tr table-tr--modifier="pf-m-first-cell-offset-reset"}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v6-c-table__subhead"}}
           Design lead
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v6-c-table__subhead"}}
           Interaction design
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v6-c-table__subhead pf-m-border-right"}}
           Visual designers
         {{/table-th}}
       {{/table-tr}}

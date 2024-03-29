@@ -2,20 +2,20 @@
   {{#> form-control controlType="input"
     input="true"
     form-control--IsDisabled='true'
-    form-control--modifier="pf-v5-c-select__toggle-typeahead"
+    form-control--modifier="pf-v6-c-select__toggle-typeahead"
     form-control--attribute=(concat 'type="text" id="' select--id '-typeahead" aria-label="Type to filter" placeholder="' (ternary select-typeahead--TypeaheadText select-typeahead--TypeaheadText select-typeahead--Placeholder) '"')}}
   {{/form-control}}
 {{else}}
   {{#if select--IsInvalid}}
     {{#> form-control controlType="input"
       input="true"
-      form-control--modifier="pf-v5-c-select__toggle-typeahead"
+      form-control--modifier="pf-v6-c-select__toggle-typeahead"
       form-control--attribute=(concat 'type="text" id="' select--id '-typeahead" aria-invalid="true" value="Invalid" aria-label="Type to filter" placeholder="' (ternary select-typeahead--TypeaheadText select-typeahead--TypeaheadText select-typeahead--Placeholder) '"')}}
     {{/form-control}}
   {{else}}
     {{#> form-control controlType="input"
       input="true"
-      form-control--modifier="pf-v5-c-select__toggle-typeahead"
+      form-control--modifier="pf-v6-c-select__toggle-typeahead"
       form-control--attribute=(concat 'type="text" id="' select--id '-typeahead" aria-label="Type to filter" value="' select-typeahead--Value '" placeholder="' (ternary select-typeahead--TypeaheadText select-typeahead--TypeaheadText select-typeahead--Placeholder) '"')}}
     {{/form-control}}
   {{/if}}
