@@ -582,7 +582,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Primary background
 ```hbs
-{{#> toolbar toolbar--modifier="pf-m-primary" toolbar--id="primary-background"}}
+{{#> toolbar toolbar--modifier="pf-m-primary" toolbar--id="toolbar-primary-background-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
@@ -623,7 +623,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Secondary background
 ```hbs
-{{#> toolbar toolbar--modifier="pf-m-secondary" toolbar--id="secondary-background"}}
+{{#> toolbar toolbar--modifier="pf-m-secondary" toolbar--id="toolbar-secondary-background-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
@@ -664,7 +664,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### No background
 ```hbs
-{{#> toolbar toolbar--modifier="pf-m-no-background" toolbar--id="no-background"}}
+{{#> toolbar toolbar--modifier="pf-m-no-background" toolbar--id="toolbar-no-background-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
@@ -705,7 +705,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Sticky toolbar
 ```hbs
-{{#> toolbar toolbar--modifier="pf-m-sticky" toolbar--id="sticky-toolbar"}}
+{{#> toolbar toolbar--modifier="pf-m-sticky" toolbar--id="toolbar-sticky-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
