@@ -1,5 +1,5 @@
 // @debug $tree-view; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-tree-view--MaxNesting: 10 !default;
+$pf-v6-c-tree-view--MaxNesting: 10 !default;
 
 :where(:root),
 :where(.#{$tree-view}) {
@@ -491,7 +491,7 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   $root: &;
   $nested-item: &;
 
-  @for $i from 1 through $pf-v5-c-tree-view--MaxNesting {
+  @for $i from 1 through $pf-v6-c-tree-view--MaxNesting {
     #{$nested-item} {
       --#{$tree-view}__list-item__list-item__node-toggle--Left: var(--#{$tree-view}__node--PaddingLeft);
       --#{$tree-view}__node--PaddingLeft: calc(var(--#{$tree-view}__node--nested-indent--base) * #{$i} + var(--#{$tree-view}__node--indent--base));

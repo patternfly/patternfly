@@ -74,7 +74,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   // Panel
   --#{$sidebar}__panel--FlexBasis--base: auto;
-  --#{$sidebar}__panel--BoxShadow--base: #{0 pf-size-prem(4px) pf-size-prem(4px) pf-size-prem(-4px) rgba($pf-v5-color-black-1000, .16)}; // TODO NEEDS TOKEN. previous comment:modified so the shadow is only visible on the bottom of the element 
+  --#{$sidebar}__panel--BoxShadow--base: var(--pf-t--global--box-shadow--md--bottom); // TODO NEEDS TOKEN. previous comment:modified so the shadow is only visible on the bottom of the element 
   --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
   --#{$sidebar}__panel--Top: 0;
   --#{$sidebar}__panel--md--Top: auto;

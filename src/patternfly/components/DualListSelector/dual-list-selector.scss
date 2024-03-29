@@ -1,5 +1,5 @@
 // @debug $dual-list-selector; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-dual-list-selector__item--MaxNesting: 10;
+$pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
 :where(:root), :where(.#{$dual-list-selector}) {
   // Grid
@@ -345,7 +345,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   $root: &;
   $nested-item: &;
 
-  @for $i from 1 through $pf-v5-c-dual-list-selector__item--MaxNesting {
+  @for $i from 1 through $pf-v6-c-dual-list-selector__item--MaxNesting {
     #{$nested-item} {
       --#{$dual-list-selector}__item--PaddingLeft: calc(var(--#{$dual-list-selector}__item--nested-indent--base) * #{$i} + var(--#{$dual-list-selector}__item--indent--base));
       --#{$dual-list-selector}__list__list__item-toggle--Left: var(--#{$dual-list-selector}__item--PaddingLeft);
