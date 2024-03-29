@@ -319,19 +319,19 @@ import './Card.css'
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="5 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-check-circle pf-v6-u-success-color-100" aria-hidden="true"></i>
+          <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="15 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-exclamation-triangle pf-v6-u-warning-color-100" aria-hidden="true"></i>
+          <i class="fas fa-exclamation-triangle pf-v6-u-icon-status-warning" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="3 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-times-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+          <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
     {{/gallery}}
@@ -344,7 +344,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-circle pf-v6-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">2</a>
@@ -353,7 +353,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">1</a>
@@ -368,7 +368,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">5</a>
@@ -377,7 +377,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">12</a>
@@ -392,7 +392,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">2</a>
@@ -401,7 +401,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">7</a>
@@ -420,7 +420,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">2 errors</a>
@@ -429,7 +429,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">1 warnings</a>
@@ -445,7 +445,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">2 successes</a>
@@ -454,7 +454,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">3 warnings</a>
@@ -470,7 +470,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">7 warnings</a>
@@ -479,7 +479,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">1 error</a>
@@ -735,7 +735,7 @@ import './Card.css'
       {{#> l-flex l-flex--modifier="pf-m-column"}}
         <span>System</span>
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-          <i class="fas fa-exclamation-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+          <i class="fas fa-exclamation-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
           <a hfer="#">25 incidents detected</a>
         {{/l-flex}}
         {{> card-demo--chart card-demo--chart--IsStackChart="true"}}
@@ -924,7 +924,7 @@ import './Card.css'
             1,050,765 IOPS
           {{/title}}
         {{/card-title}}
-        <span class="pf-v6-u-color-200">
+        <span>
           Workload
         </span>
       {{/card-header-main}}
@@ -955,7 +955,7 @@ import './Card.css'
                   842 TB
                 {{/title}}
               {{/card-title}}
-              <span class="pf-v6-u-color-200">
+              <span>
                 Storage capacity
               </span>
             {{/l-flex}}
@@ -1006,7 +1006,7 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 11:02 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1017,7 +1017,7 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 11:13 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1028,7 +1028,7 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 10:59 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1039,7 +1039,7 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 10:45 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}
@@ -1078,7 +1078,7 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-circle pf-v6-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Readiness probe failed
@@ -1089,14 +1089,14 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 11:02 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Successful assignment
@@ -1107,7 +1107,7 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 11:13 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1125,14 +1125,14 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 10:59 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Created container
@@ -1143,7 +1143,7 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-color-200 pf-v6-u-font-size-sm">Jun 17, 10:45 am</time>
+            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}
