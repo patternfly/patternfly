@@ -47,7 +47,7 @@
   --#{$popover}__arrow--m-block-right--Right: var(--pf-t--global--border--radius--medium);
 
   // Close
-  --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - (var(--pf-t--global--spacer--xs) * 1.5)); // align top of button with top of text - TODO: replace with form element token
+  --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - (var(--pf-t--global--spacer--control--vertical--compact) * 1.5)); // align top of button with top of text
   --#{$popover}__close--Right: var(--#{$popover}__content--PaddingRight); // align right of content
   --#{$popover}__close--sibling--PaddingRight: var(--pf-t--global--spacer--2xl);
 

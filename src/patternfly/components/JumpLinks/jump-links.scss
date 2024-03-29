@@ -56,8 +56,8 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__label--Display: block;
 
   // toggle
-  --#{$jump-links}__toggle--MarginTop: calc(-1 * var(--#{$pf-global}--spacer--form-element));
-  --#{$jump-links}__toggle--MarginBottom--base: calc(-1 * var(--#{$pf-global}--spacer--form-element));
+  --#{$jump-links}__toggle--MarginTop: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
+  --#{$jump-links}__toggle--MarginBottom--base: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
   --#{$jump-links}__toggle--MarginBottom: var(--#{$jump-links}__toggle--MarginBottom--base);
   --#{$jump-links}--m-expanded__toggle--MarginBottom: calc(var(--#{$jump-links}__toggle--MarginBottom--base) + var(--pf-t--global--spacer--md));
   --#{$jump-links}__toggle--MarginLeft: calc(-1 * var(--pf-t--global--spacer--md));

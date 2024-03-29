@@ -1,7 +1,5 @@
 // @debug $alert; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-// TODO create a token for --#{$pf-global}--spacer--form-element ?
-
 :root {
   // Alert variables
   --#{$alert}--BoxShadow: var(--pf-t--global--box-shadow--lg);
@@ -21,8 +19,8 @@
   --#{$alert}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Toggle
-  --#{$alert}__toggle--MarginTop: calc(-1 * var(--#{$pf-global}--spacer--form-element) - #{pf-size-prem(1px)});
-  --#{$alert}__toggle--MarginBottom: calc(-1 * var(--#{$pf-global}--spacer--form-element));
+  --#{$alert}__toggle--MarginTop: calc(-1 * var(--pf-t--global--spacer--button--vertical--default) - #{pf-size-prem(1px)});
+  --#{$alert}__toggle--MarginBottom: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
   --#{$alert}__toggle--MarginRight: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
@@ -44,8 +42,8 @@
   --#{$alert}__title--max-lines: 1;
 
   // Action
-  --#{$alert}__action--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$alert}__action--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$alert}__action--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$alert}__action--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$alert}__action--TranslateY: #{pf-size-prem(2px)};
   --#{$alert}__action--MarginRight: calc(var(--pf-t--global--spacer--sm) * -1);
 

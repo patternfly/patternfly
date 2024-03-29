@@ -135,8 +135,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   // Actions
-  --#{$drawer}__actions--MarginTop: calc(var(--pf-t--global--spacer--xs) * -1.5); // TODO: add form element var
-  --#{$drawer}__actions--MarginRight: calc(var(--pf-t--global--spacer--xs) * -1.5); // TODO: add form element var
+  --#{$drawer}__actions--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--compact) * -1.5);
+  --#{$drawer}__actions--MarginRight: calc(var(--pf-t--global--spacer--control--horizontal--compact) * -1.5);
 
   // Box shadow
   --#{$drawer}__panel--BoxShadow: none;
