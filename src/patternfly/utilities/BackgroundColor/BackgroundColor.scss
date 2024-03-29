@@ -2,53 +2,14 @@
 
 // Background color options
 $pf-v6-u-background-color-options: (
-  background-color-100: (
-    background-color var(--#{$pf-global}--BackgroundColor--100)
+  background-color-disabled: (
+    background-color var(--pf-t--global--background--color--disabled--default)
   ),
-  background-color-200: (
-    background-color var(--#{$pf-global}--BackgroundColor--200)
+  background-color-inverse: (
+    background-color var(--pf-t--global--background--color--inverse--default)
   ),
-  background-color-active-color-100: (
-    background-color var(--#{$pf-global}--active-color--100)
-  ),
-  background-color-active-color-300: (
-    background-color var(--#{$pf-global}--active-color--300)
-  ),
-  background-color-primary-color-200: (
-    background-color var(--#{$pf-global}--primary-color--200)
-  ),
-  background-color-dark-100: (
-    background-color var(--#{$pf-global}--BackgroundColor--dark-100)
-  ),
-  background-color-dark-200: (
-    background-color var(--#{$pf-global}--BackgroundColor--dark-200)
-  ),
-  background-color-dark-300: (
-    background-color var(--#{$pf-global}--BackgroundColor--dark-300)
-  ),
-  background-color-dark-400: (
-    background-color var(--#{$pf-global}--BackgroundColor--dark-400)
-  ),
-  background-color-disabled-color-200: (
-    background-color var(--#{$pf-global}--disabled-color--200)
-  ),
-  background-color-disabled-color-300: (
-    background-color var(--#{$pf-global}--disabled-color--300)
-  ),
-  background-color-default: (
-    background-color var(--#{$pf-global}--palette--cyan-50)
-  ),
-  background-color-success: (
-    background-color var(--#{$pf-global}--palette--green-50)
-  ),
-  background-color-info: (
-    background-color var(--#{$pf-global}--palette--blue-50)
-  ),
-  background-color-warning: (
-    background-color var(--#{$pf-global}--palette--gold-50)
-  ),
-  background-color-danger: (
-    background-color var(--#{$pf-global}--palette--red-50)
+  background-color-highlight: (
+    background-color var(--pf-t--global--background--color--highlight--default)
   )
 );
 
