@@ -13,7 +13,7 @@ Below are the steps for adding a custom icon to the [pficon icons](/icons) icon 
 - Remove the existing pficons SVGs from `src/icons/PfIcons/`. Any files there are just used to build the icon font.
 - Run `npm run build:pficons` to create the SVGs (stored in `src/icons/PfIcons/`) from `pficons.json` that will be used to build the icon font.
 - Run `npm run build:pficonfont` to build the icon font files (stored in `src/patternfly/assets/pficon/`) from the SVGs in `src/icons/PfIcons/`.
-- Edit `src/patternfly/assets/pficon/pficon.scss` and prefix the `src: url()` paths for the icon font files with the global icon font path (e.g., `url('#{$pf-v5-global--fonticon-path}/pficon.woff2')`).
+- Edit `src/patternfly/assets/pficon/pficon.scss` and prefix the `src: url()` paths for the icon font files with the global icon font path (e.g., `url('#{$pf-v6-global--fonticon-path}/pficon.woff2')`).
 - Run `./scripts/iconList.sh` to update `src/site/pages/icons.md`, which serves the pficon icon preview page on the dev server served at `/icons`.
 - Restart the dev server and verify the icons look correct on `/icons`.
   - **Note**: This step may require clearing your cache.
