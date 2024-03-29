@@ -9,7 +9,7 @@ cssPrefix: pf-v5-c-tree-view
 ### Single selectable
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Single selectable example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View single selectable example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -103,7 +103,7 @@ A tree view can be setup to allow multiple nodes to be selected. When a tree vie
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--IsMultiselectable=true tree-view-list--AriaLabel="Multiselectable example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--IsMultiselectable=true tree-view-list--AriaLabel="Tree View multiselectable example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -201,7 +201,7 @@ A search input can be used to filter tree view items. It is recommended that a t
     {{> text-input-group--search-input text-input-group-text-input--aria-label="Filter menu items" text-input-group-text-input--placeholder="Search"}}
   {{/tree-view-search}}
   {{> divider}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With search example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View  with search example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -282,7 +282,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### With checkboxes
 ```hbs
 {{#> tree-view tree-view--id="tree-view-checkboxes"}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With checkboxes example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with checkboxes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--HasCheckbox=true}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--id=(concat tree-view--id '-1') }}
@@ -373,7 +373,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### With icons
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With icons example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with icons example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher"}}
@@ -454,7 +454,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### With badges
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With badges example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with badges example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{#> tree-view-node tree-view-node--text="Application launcher"}}
@@ -589,7 +589,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### With action item
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With action item example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with action item example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -688,7 +688,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### With non-expandable top level nodes
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With non-expandable top level nodes example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with non-expandable top level nodes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -779,7 +779,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### With selectable, expandable nodes
 ```hbs
 {{#> tree-view tree-view--id="tree-view-selectable-expandable"}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="With selectable, expandable nodes example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with selectable, expandable nodes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-1')}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -870,7 +870,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ### Guides
 ```hbs
 {{#> tree-view tree-view--modifier="pf-m-guides"}}
-  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Guides example"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View guides example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
@@ -960,12 +960,12 @@ A search input can be used to filter tree view items. It is recommended that a t
 
 ### Compact
 ```hbs
-{{> tree-view--base tree-view-list--AriaLabel="Compact example" tree-view--base--modifier="pf-m-compact"}}
+{{> tree-view--base tree-view-list--AriaLabel="Tree View compact example" tree-view--base--modifier="pf-m-compact"}}
 ```
 
 ### Compact, no background
 ```hbs
-{{> tree-view--base tree-view-list--AriaLabel="Compact no background example" tree-view--base--modifier="pf-m-compact pf-m-no-background"}}
+{{> tree-view--base tree-view-list--AriaLabel="Tree View compact no background example" tree-view--base--modifier="pf-m-compact pf-m-no-background"}}
 ```
 
 ## Documentation
