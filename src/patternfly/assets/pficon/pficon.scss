@@ -1,10 +1,10 @@
 @font-face {
-	font-family: 'pf-v5-pficon';
-	src: url('#{$pf-v5-global--fonticon-path}/pf-v5-pficon.woff2') format('woff2');
+	font-family: 'pf-v6-pficon';
+	src: url('#{$pf-v6-global--fonticon-path}/pf-v6-pficon.woff2') format('woff2');
 }
 
-@mixin pf-v5-pficon-styles {
-	font-family: 'pf-v5-pficon';
+@mixin pf-v6-pficon-styles {
+	font-family: 'pf-v6-pficon';
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	font-style: normal;
@@ -15,11 +15,11 @@
 	text-transform: none;
 }
 
-%pf-v5-pficon {
-	@include pf-v5-pficon-styles;
+%pf-v6-pficon {
+	@include pf-v6-pficon-styles;
 }
 
-@function pf-v5-pficon-char($filename) {
+@function pf-v6-pficon-char($filename) {
 	$char: '';
 
 	@if $filename == add-circle-o {
@@ -416,404 +416,404 @@
 	@return $char;
 }
 
-@mixin pf-v5-pficon($filename, $insert: before, $extend: true) {
+@mixin pf-v6-pficon($filename, $insert: before, $extend: true) {
 	&:#{$insert} {
 		@if $extend {
-			@extend %pf-v5-pficon;
+			@extend %pf-v6-pficon;
 		} @else {
-			@include pf-v5-pficon-styles;
+			@include pf-v6-pficon-styles;
 		}
-		content: pf-v5-pficon-char($filename);
+		content: pf-v6-pficon-char($filename);
 	}
 }
 
-.pf-v5-pficon-add-circle-o {
-	@include pf-v5-pficon(add-circle-o);
+.pf-v6-pficon-add-circle-o {
+	@include pf-v6-pficon(add-circle-o);
 }
-.pf-v5-pficon-ansible-tower {
-	@include pf-v5-pficon(ansible-tower);
+.pf-v6-pficon-ansible-tower {
+	@include pf-v6-pficon(ansible-tower);
 }
-.pf-v5-pficon-applications {
-	@include pf-v5-pficon(applications);
+.pf-v6-pficon-applications {
+	@include pf-v6-pficon(applications);
 }
-.pf-v5-pficon-arrow {
-	@include pf-v5-pficon(arrow);
+.pf-v6-pficon-arrow {
+	@include pf-v6-pficon(arrow);
 }
-.pf-v5-pficon-asleep {
-	@include pf-v5-pficon(asleep);
+.pf-v6-pficon-asleep {
+	@include pf-v6-pficon(asleep);
 }
-.pf-v5-pficon-attention-bell {
-	@include pf-v5-pficon(attention-bell);
+.pf-v6-pficon-attention-bell {
+	@include pf-v6-pficon(attention-bell);
 }
-.pf-v5-pficon-automation {
-	@include pf-v5-pficon(automation);
+.pf-v6-pficon-automation {
+	@include pf-v6-pficon(automation);
 }
-.pf-v5-pficon-bell {
-	@include pf-v5-pficon(bell);
+.pf-v6-pficon-bell {
+	@include pf-v6-pficon(bell);
 }
-.pf-v5-pficon-blueprint {
-	@include pf-v5-pficon(blueprint);
+.pf-v6-pficon-blueprint {
+	@include pf-v6-pficon(blueprint);
 }
-.pf-v5-pficon-build {
-	@include pf-v5-pficon(build);
+.pf-v6-pficon-build {
+	@include pf-v6-pficon(build);
 }
-.pf-v5-pficon-builder-image {
-	@include pf-v5-pficon(builder-image);
+.pf-v6-pficon-builder-image {
+	@include pf-v6-pficon(builder-image);
 }
-.pf-v5-pficon-bundle {
-	@include pf-v5-pficon(bundle);
+.pf-v6-pficon-bundle {
+	@include pf-v6-pficon(bundle);
 }
-.pf-v5-pficon-catalog {
-	@include pf-v5-pficon(catalog);
+.pf-v6-pficon-catalog {
+	@include pf-v6-pficon(catalog);
 }
-.pf-v5-pficon-chat {
-	@include pf-v5-pficon(chat);
+.pf-v6-pficon-chat {
+	@include pf-v6-pficon(chat);
 }
-.pf-v5-pficon-close {
-	@include pf-v5-pficon(close);
+.pf-v6-pficon-close {
+	@include pf-v6-pficon(close);
 }
-.pf-v5-pficon-cloud-security {
-	@include pf-v5-pficon(cloud-security);
+.pf-v6-pficon-cloud-security {
+	@include pf-v6-pficon(cloud-security);
 }
-.pf-v5-pficon-cloud-tenant {
-	@include pf-v5-pficon(cloud-tenant);
+.pf-v6-pficon-cloud-tenant {
+	@include pf-v6-pficon(cloud-tenant);
 }
-.pf-v5-pficon-cluster {
-	@include pf-v5-pficon(cluster);
+.pf-v6-pficon-cluster {
+	@include pf-v6-pficon(cluster);
 }
-.pf-v5-pficon-connected {
-	@include pf-v5-pficon(connected);
+.pf-v6-pficon-connected {
+	@include pf-v6-pficon(connected);
 }
-.pf-v5-pficon-container-node {
-	@include pf-v5-pficon(container-node);
+.pf-v6-pficon-container-node {
+	@include pf-v6-pficon(container-node);
 }
-.pf-v5-pficon-cpu {
-	@include pf-v5-pficon(cpu);
+.pf-v6-pficon-cpu {
+	@include pf-v6-pficon(cpu);
 }
-.pf-v5-pficon-critical-risk {
-	@include pf-v5-pficon(critical-risk);
+.pf-v6-pficon-critical-risk {
+	@include pf-v6-pficon(critical-risk);
 }
-.pf-v5-pficon-data-processor {
-	@include pf-v5-pficon(data-processor);
+.pf-v6-pficon-data-processor {
+	@include pf-v6-pficon(data-processor);
 }
-.pf-v5-pficon-data-sink {
-	@include pf-v5-pficon(data-sink);
+.pf-v6-pficon-data-sink {
+	@include pf-v6-pficon(data-sink);
 }
-.pf-v5-pficon-data-source {
-	@include pf-v5-pficon(data-source);
+.pf-v6-pficon-data-source {
+	@include pf-v6-pficon(data-source);
 }
-.pf-v5-pficon-degraded {
-	@include pf-v5-pficon(degraded);
+.pf-v6-pficon-degraded {
+	@include pf-v6-pficon(degraded);
 }
-.pf-v5-pficon-disconnected {
-	@include pf-v5-pficon(disconnected);
+.pf-v6-pficon-disconnected {
+	@include pf-v6-pficon(disconnected);
 }
-.pf-v5-pficon-domain {
-	@include pf-v5-pficon(domain);
+.pf-v6-pficon-domain {
+	@include pf-v6-pficon(domain);
 }
-.pf-v5-pficon-edit {
-	@include pf-v5-pficon(edit);
+.pf-v6-pficon-edit {
+	@include pf-v6-pficon(edit);
 }
-.pf-v5-pficon-enhancement {
-	@include pf-v5-pficon(enhancement);
+.pf-v6-pficon-enhancement {
+	@include pf-v6-pficon(enhancement);
 }
-.pf-v5-pficon-enterprise {
-	@include pf-v5-pficon(enterprise);
+.pf-v6-pficon-enterprise {
+	@include pf-v6-pficon(enterprise);
 }
-.pf-v5-pficon-equalizer {
-	@include pf-v5-pficon(equalizer);
+.pf-v6-pficon-equalizer {
+	@include pf-v6-pficon(equalizer);
 }
-.pf-v5-pficon-error-circle-o {
-	@include pf-v5-pficon(error-circle-o);
+.pf-v6-pficon-error-circle-o {
+	@include pf-v6-pficon(error-circle-o);
 }
-.pf-v5-pficon-export {
-	@include pf-v5-pficon(export);
+.pf-v6-pficon-export {
+	@include pf-v6-pficon(export);
 }
-.pf-v5-pficon-filter {
-	@include pf-v5-pficon(filter);
+.pf-v6-pficon-filter {
+	@include pf-v6-pficon(filter);
 }
-.pf-v5-pficon-flavor {
-	@include pf-v5-pficon(flavor);
+.pf-v6-pficon-flavor {
+	@include pf-v6-pficon(flavor);
 }
-.pf-v5-pficon-folder-close {
-	@include pf-v5-pficon(folder-close);
+.pf-v6-pficon-folder-close {
+	@include pf-v6-pficon(folder-close);
 }
-.pf-v5-pficon-folder-open {
-	@include pf-v5-pficon(folder-open);
+.pf-v6-pficon-folder-open {
+	@include pf-v6-pficon(folder-open);
 }
-.pf-v5-pficon-globe-route {
-	@include pf-v5-pficon(globe-route);
+.pf-v6-pficon-globe-route {
+	@include pf-v6-pficon(globe-route);
 }
-.pf-v5-pficon-help {
-	@include pf-v5-pficon(help);
+.pf-v6-pficon-help {
+	@include pf-v6-pficon(help);
 }
-.pf-v5-pficon-history {
-	@include pf-v5-pficon(history);
+.pf-v6-pficon-history {
+	@include pf-v6-pficon(history);
 }
-.pf-v5-pficon-home {
-	@include pf-v5-pficon(home);
+.pf-v6-pficon-home {
+	@include pf-v6-pficon(home);
 }
-.pf-v5-pficon-import {
-	@include pf-v5-pficon(import);
+.pf-v6-pficon-import {
+	@include pf-v6-pficon(import);
 }
-.pf-v5-pficon-in-progress {
-	@include pf-v5-pficon(in-progress);
+.pf-v6-pficon-in-progress {
+	@include pf-v6-pficon(in-progress);
 }
-.pf-v5-pficon-info {
-	@include pf-v5-pficon(info);
+.pf-v6-pficon-info {
+	@include pf-v6-pficon(info);
 }
-.pf-v5-pficon-infrastructure {
-	@include pf-v5-pficon(infrastructure);
+.pf-v6-pficon-infrastructure {
+	@include pf-v6-pficon(infrastructure);
 }
-.pf-v5-pficon-integration {
-	@include pf-v5-pficon(integration);
+.pf-v6-pficon-integration {
+	@include pf-v6-pficon(integration);
 }
-.pf-v5-pficon-key {
-	@include pf-v5-pficon(key);
+.pf-v6-pficon-key {
+	@include pf-v6-pficon(key);
 }
-.pf-v5-pficon-locked {
-	@include pf-v5-pficon(locked);
+.pf-v6-pficon-locked {
+	@include pf-v6-pficon(locked);
 }
-.pf-v5-pficon-maintenance {
-	@include pf-v5-pficon(maintenance);
+.pf-v6-pficon-maintenance {
+	@include pf-v6-pficon(maintenance);
 }
-.pf-v5-pficon-memory {
-	@include pf-v5-pficon(memory);
+.pf-v6-pficon-memory {
+	@include pf-v6-pficon(memory);
 }
-.pf-v5-pficon-messages {
-	@include pf-v5-pficon(messages);
+.pf-v6-pficon-messages {
+	@include pf-v6-pficon(messages);
 }
-.pf-v5-pficon-middleware {
-	@include pf-v5-pficon(middleware);
+.pf-v6-pficon-middleware {
+	@include pf-v6-pficon(middleware);
 }
-.pf-v5-pficon-migration {
-	@include pf-v5-pficon(migration);
+.pf-v6-pficon-migration {
+	@include pf-v6-pficon(migration);
 }
-.pf-v5-pficon-module {
-	@include pf-v5-pficon(module);
+.pf-v6-pficon-module {
+	@include pf-v6-pficon(module);
 }
-.pf-v5-pficon-monitoring {
-	@include pf-v5-pficon(monitoring);
+.pf-v6-pficon-monitoring {
+	@include pf-v6-pficon(monitoring);
 }
-.pf-v5-pficon-multicluster {
-	@include pf-v5-pficon(multicluster);
+.pf-v6-pficon-multicluster {
+	@include pf-v6-pficon(multicluster);
 }
-.pf-v5-pficon-namespaces {
-	@include pf-v5-pficon(namespaces);
+.pf-v6-pficon-namespaces {
+	@include pf-v6-pficon(namespaces);
 }
-.pf-v5-pficon-network {
-	@include pf-v5-pficon(network);
+.pf-v6-pficon-network {
+	@include pf-v6-pficon(network);
 }
-.pf-v5-pficon-new-process {
-	@include pf-v5-pficon(new-process);
+.pf-v6-pficon-new-process {
+	@include pf-v6-pficon(new-process);
 }
-.pf-v5-pficon-not-started {
-	@include pf-v5-pficon(not-started);
+.pf-v6-pficon-not-started {
+	@include pf-v6-pficon(not-started);
 }
-.pf-v5-pficon-off {
-	@include pf-v5-pficon(off);
+.pf-v6-pficon-off {
+	@include pf-v6-pficon(off);
 }
-.pf-v5-pficon-ok {
-	@include pf-v5-pficon(ok);
+.pf-v6-pficon-ok {
+	@include pf-v6-pficon(ok);
 }
-.pf-v5-pficon-on-running {
-	@include pf-v5-pficon(on-running);
+.pf-v6-pficon-on-running {
+	@include pf-v6-pficon(on-running);
 }
-.pf-v5-pficon-on {
-	@include pf-v5-pficon(on);
+.pf-v6-pficon-on {
+	@include pf-v6-pficon(on);
 }
-.pf-v5-pficon-open-drawer-right {
-	@include pf-v5-pficon(open-drawer-right);
+.pf-v6-pficon-open-drawer-right {
+	@include pf-v6-pficon(open-drawer-right);
 }
-.pf-v5-pficon-openshift {
-	@include pf-v5-pficon(openshift);
+.pf-v6-pficon-openshift {
+	@include pf-v6-pficon(openshift);
 }
-.pf-v5-pficon-openstack {
-	@include pf-v5-pficon(openstack);
+.pf-v6-pficon-openstack {
+	@include pf-v6-pficon(openstack);
 }
-.pf-v5-pficon-optimize {
-	@include pf-v5-pficon(optimize);
+.pf-v6-pficon-optimize {
+	@include pf-v6-pficon(optimize);
 }
-.pf-v5-pficon-orders {
-	@include pf-v5-pficon(orders);
+.pf-v6-pficon-orders {
+	@include pf-v6-pficon(orders);
 }
-.pf-v5-pficon-os-image {
-	@include pf-v5-pficon(os-image);
+.pf-v6-pficon-os-image {
+	@include pf-v6-pficon(os-image);
 }
-.pf-v5-pficon-package {
-	@include pf-v5-pficon(package);
+.pf-v6-pficon-package {
+	@include pf-v6-pficon(package);
 }
-.pf-v5-pficon-panel-close {
-	@include pf-v5-pficon(panel-close);
+.pf-v6-pficon-panel-close {
+	@include pf-v6-pficon(panel-close);
 }
-.pf-v5-pficon-panel-open {
-	@include pf-v5-pficon(panel-open);
+.pf-v6-pficon-panel-open {
+	@include pf-v6-pficon(panel-open);
 }
-.pf-v5-pficon-paused {
-	@include pf-v5-pficon(paused);
+.pf-v6-pficon-paused {
+	@include pf-v6-pficon(paused);
 }
-.pf-v5-pficon-pending {
-	@include pf-v5-pficon(pending);
+.pf-v6-pficon-pending {
+	@include pf-v6-pficon(pending);
 }
-.pf-v5-pficon-pficon-dragdrop {
-	@include pf-v5-pficon(pficon-dragdrop);
+.pf-v6-pficon-pficon-dragdrop {
+	@include pf-v6-pficon(pficon-dragdrop);
 }
-.pf-v5-pficon-pficon-history {
-	@include pf-v5-pficon(pficon-history);
+.pf-v6-pficon-pficon-history {
+	@include pf-v6-pficon(pficon-history);
 }
-.pf-v5-pficon-pficon-network-range {
-	@include pf-v5-pficon(pficon-network-range);
+.pf-v6-pficon-pficon-network-range {
+	@include pf-v6-pficon(pficon-network-range);
 }
-.pf-v5-pficon-pficon-satellite {
-	@include pf-v5-pficon(pficon-satellite);
+.pf-v6-pficon-pficon-satellite {
+	@include pf-v6-pficon(pficon-satellite);
 }
-.pf-v5-pficon-pficon-sort-common-asc {
-	@include pf-v5-pficon(pficon-sort-common-asc);
+.pf-v6-pficon-pficon-sort-common-asc {
+	@include pf-v6-pficon(pficon-sort-common-asc);
 }
-.pf-v5-pficon-pficon-sort-common-desc {
-	@include pf-v5-pficon(pficon-sort-common-desc);
+.pf-v6-pficon-pficon-sort-common-desc {
+	@include pf-v6-pficon(pficon-sort-common-desc);
 }
-.pf-v5-pficon-pficon-template {
-	@include pf-v5-pficon(pficon-template);
+.pf-v6-pficon-pficon-template {
+	@include pf-v6-pficon(pficon-template);
 }
-.pf-v5-pficon-pficon-vcenter {
-	@include pf-v5-pficon(pficon-vcenter);
+.pf-v6-pficon-pficon-vcenter {
+	@include pf-v6-pficon(pficon-vcenter);
 }
-.pf-v5-pficon-plugged {
-	@include pf-v5-pficon(plugged);
+.pf-v6-pficon-plugged {
+	@include pf-v6-pficon(plugged);
 }
-.pf-v5-pficon-port {
-	@include pf-v5-pficon(port);
+.pf-v6-pficon-port {
+	@include pf-v6-pficon(port);
 }
-.pf-v5-pficon-print {
-	@include pf-v5-pficon(print);
+.pf-v6-pficon-print {
+	@include pf-v6-pficon(print);
 }
-.pf-v5-pficon-private {
-	@include pf-v5-pficon(private);
+.pf-v6-pficon-private {
+	@include pf-v6-pficon(private);
 }
-.pf-v5-pficon-process-automation {
-	@include pf-v5-pficon(process-automation);
+.pf-v6-pficon-process-automation {
+	@include pf-v6-pficon(process-automation);
 }
-.pf-v5-pficon-project {
-	@include pf-v5-pficon(project);
+.pf-v6-pficon-project {
+	@include pf-v6-pficon(project);
 }
-.pf-v5-pficon-rebalance {
-	@include pf-v5-pficon(rebalance);
+.pf-v6-pficon-rebalance {
+	@include pf-v6-pficon(rebalance);
 }
-.pf-v5-pficon-rebooting {
-	@include pf-v5-pficon(rebooting);
+.pf-v6-pficon-rebooting {
+	@include pf-v6-pficon(rebooting);
 }
-.pf-v5-pficon-regions {
-	@include pf-v5-pficon(regions);
+.pf-v6-pficon-regions {
+	@include pf-v6-pficon(regions);
 }
-.pf-v5-pficon-registry {
-	@include pf-v5-pficon(registry);
+.pf-v6-pficon-registry {
+	@include pf-v6-pficon(registry);
 }
-.pf-v5-pficon-remove2 {
-	@include pf-v5-pficon(remove2);
+.pf-v6-pficon-remove2 {
+	@include pf-v6-pficon(remove2);
 }
-.pf-v5-pficon-replicator {
-	@include pf-v5-pficon(replicator);
+.pf-v6-pficon-replicator {
+	@include pf-v6-pficon(replicator);
 }
-.pf-v5-pficon-repository {
-	@include pf-v5-pficon(repository);
+.pf-v6-pficon-repository {
+	@include pf-v6-pficon(repository);
 }
-.pf-v5-pficon-resource-pool {
-	@include pf-v5-pficon(resource-pool);
+.pf-v6-pficon-resource-pool {
+	@include pf-v6-pficon(resource-pool);
 }
-.pf-v5-pficon-resources-almost-empty {
-	@include pf-v5-pficon(resources-almost-empty);
+.pf-v6-pficon-resources-almost-empty {
+	@include pf-v6-pficon(resources-almost-empty);
 }
-.pf-v5-pficon-resources-almost-full {
-	@include pf-v5-pficon(resources-almost-full);
+.pf-v6-pficon-resources-almost-full {
+	@include pf-v6-pficon(resources-almost-full);
 }
-.pf-v5-pficon-resources-empty {
-	@include pf-v5-pficon(resources-empty);
+.pf-v6-pficon-resources-empty {
+	@include pf-v6-pficon(resources-empty);
 }
-.pf-v5-pficon-resources-full {
-	@include pf-v5-pficon(resources-full);
+.pf-v6-pficon-resources-full {
+	@include pf-v6-pficon(resources-full);
 }
-.pf-v5-pficon-running {
-	@include pf-v5-pficon(running);
+.pf-v6-pficon-running {
+	@include pf-v6-pficon(running);
 }
-.pf-v5-pficon-save {
-	@include pf-v5-pficon(save);
+.pf-v6-pficon-save {
+	@include pf-v6-pficon(save);
 }
-.pf-v5-pficon-screen {
-	@include pf-v5-pficon(screen);
+.pf-v6-pficon-screen {
+	@include pf-v6-pficon(screen);
 }
-.pf-v5-pficon-security {
-	@include pf-v5-pficon(security);
+.pf-v6-pficon-security {
+	@include pf-v6-pficon(security);
 }
-.pf-v5-pficon-server-group {
-	@include pf-v5-pficon(server-group);
+.pf-v6-pficon-server-group {
+	@include pf-v6-pficon(server-group);
 }
-.pf-v5-pficon-server {
-	@include pf-v5-pficon(server);
+.pf-v6-pficon-server {
+	@include pf-v6-pficon(server);
 }
-.pf-v5-pficon-service-catalog {
-	@include pf-v5-pficon(service-catalog);
+.pf-v6-pficon-service-catalog {
+	@include pf-v6-pficon(service-catalog);
 }
-.pf-v5-pficon-service {
-	@include pf-v5-pficon(service);
+.pf-v6-pficon-service {
+	@include pf-v6-pficon(service);
 }
-.pf-v5-pficon-services {
-	@include pf-v5-pficon(services);
+.pf-v6-pficon-services {
+	@include pf-v6-pficon(services);
 }
-.pf-v5-pficon-spinner {
-	@include pf-v5-pficon(spinner);
+.pf-v6-pficon-spinner {
+	@include pf-v6-pficon(spinner);
 }
-.pf-v5-pficon-spinner2 {
-	@include pf-v5-pficon(spinner2);
+.pf-v6-pficon-spinner2 {
+	@include pf-v6-pficon(spinner2);
 }
-.pf-v5-pficon-storage-domain {
-	@include pf-v5-pficon(storage-domain);
+.pf-v6-pficon-storage-domain {
+	@include pf-v6-pficon(storage-domain);
 }
-.pf-v5-pficon-task {
-	@include pf-v5-pficon(task);
+.pf-v6-pficon-task {
+	@include pf-v6-pficon(task);
 }
-.pf-v5-pficon-tenant {
-	@include pf-v5-pficon(tenant);
+.pf-v6-pficon-tenant {
+	@include pf-v6-pficon(tenant);
 }
-.pf-v5-pficon-thumb-tack {
-	@include pf-v5-pficon(thumb-tack);
+.pf-v6-pficon-thumb-tack {
+	@include pf-v6-pficon(thumb-tack);
 }
-.pf-v5-pficon-topology {
-	@include pf-v5-pficon(topology);
+.pf-v6-pficon-topology {
+	@include pf-v6-pficon(topology);
 }
-.pf-v5-pficon-treeview {
-	@include pf-v5-pficon(treeview);
+.pf-v6-pficon-treeview {
+	@include pf-v6-pficon(treeview);
 }
-.pf-v5-pficon-trend-down {
-	@include pf-v5-pficon(trend-down);
+.pf-v6-pficon-trend-down {
+	@include pf-v6-pficon(trend-down);
 }
-.pf-v5-pficon-trend-up {
-	@include pf-v5-pficon(trend-up);
+.pf-v6-pficon-trend-up {
+	@include pf-v6-pficon(trend-up);
 }
-.pf-v5-pficon-unknown {
-	@include pf-v5-pficon(unknown);
+.pf-v6-pficon-unknown {
+	@include pf-v6-pficon(unknown);
 }
-.pf-v5-pficon-unlocked {
-	@include pf-v5-pficon(unlocked);
+.pf-v6-pficon-unlocked {
+	@include pf-v6-pficon(unlocked);
 }
-.pf-v5-pficon-unplugged {
-	@include pf-v5-pficon(unplugged);
+.pf-v6-pficon-unplugged {
+	@include pf-v6-pficon(unplugged);
 }
-.pf-v5-pficon-user {
-	@include pf-v5-pficon(user);
+.pf-v6-pficon-user {
+	@include pf-v6-pficon(user);
 }
-.pf-v5-pficon-users {
-	@include pf-v5-pficon(users);
+.pf-v6-pficon-users {
+	@include pf-v6-pficon(users);
 }
-.pf-v5-pficon-virtual-machine {
-	@include pf-v5-pficon(virtual-machine);
+.pf-v6-pficon-virtual-machine {
+	@include pf-v6-pficon(virtual-machine);
 }
-.pf-v5-pficon-volume {
-	@include pf-v5-pficon(volume);
+.pf-v6-pficon-volume {
+	@include pf-v6-pficon(volume);
 }
-.pf-v5-pficon-warning-triangle {
-	@include pf-v5-pficon(warning-triangle);
+.pf-v6-pficon-warning-triangle {
+	@include pf-v6-pficon(warning-triangle);
 }
-.pf-v5-pficon-zone {
-	@include pf-v5-pficon(zone);
+.pf-v6-pficon-zone {
+	@include pf-v6-pficon(zone);
 }
