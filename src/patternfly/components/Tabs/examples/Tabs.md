@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v6-c-tabs
 ---
 
-import './Tabs.css'
-
 # Examples
 
 ## Default
