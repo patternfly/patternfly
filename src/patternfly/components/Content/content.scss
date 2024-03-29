@@ -86,7 +86,7 @@
   --#{$content}--ul--MarginLeft: var(--pf-t--global--spacer--lg);
   --#{$content}--ul--nested--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$content}--ul--nested--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--ListStyle: var(--#{$pf-global}--ListStyle); // TODO
+  --#{$content}--ul--ListStyle: var(--pf-t--global--list-style); // TODO
   --#{$content}--li--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--2xl);
   --#{$content}--dl--RowGap: var(--pf-t--global--spacer--md);

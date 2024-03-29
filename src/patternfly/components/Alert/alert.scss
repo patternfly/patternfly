@@ -25,7 +25,7 @@
 
   // Toggle icon
   --#{$alert}__toggle-icon--Rotate: 0;
-  --#{$alert}__toggle-icon--Transition: var(--#{$pf-global}--Transition);
+  --#{$alert}__toggle-icon--Transition: var(--pf-t--global--transition);
 
   // Icon
   --#{$alert}__icon--Color: var(--pf-t--global--icon--color--regular);

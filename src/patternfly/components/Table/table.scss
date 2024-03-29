@@ -115,7 +115,7 @@
   --#{$table}__action--PaddingRight: var(--pf-t--global--spacer--sm);
 
   // * Table expandable row
-  --#{$table}__expandable-row--Transition: var(--#{$pf-global}--Transition); // TODO: update to token when available
+  --#{$table}__expandable-row--Transition: var(--pf-t--global--transition); // TODO: update to token when available
 
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingTop: var(--pf-t--global--spacer--md);

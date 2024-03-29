@@ -19,7 +19,7 @@
   --#{$nav}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$nav}--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$nav}--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$nav}--OutlineOffset: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$nav}--OutlineOffset: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$nav}--BackgroundColor: transparent;
 
   // * Nav list

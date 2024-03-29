@@ -38,7 +38,7 @@
   }
 
   // Close
-  --#{$about-modal-box}__close--ZIndex: var(--#{$pf-global}--ZIndex--2xl); // TODO zindex token
+  --#{$about-modal-box}__close--ZIndex: var(--pf-t--global--Zindex--2xl); // TODO zindex token
   --#{$about-modal-box}__close--PaddingTop: var(--pf-t--global--spacer--2xl);
   --#{$about-modal-box}__close--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$about-modal-box}__close--PaddingBottom: var(--pf-t--global--spacer--xl);

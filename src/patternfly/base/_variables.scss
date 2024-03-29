@@ -183,12 +183,12 @@
   --#{$pf-global}--gutter--md: #{$pf-v5-global--gutter--md};
 
   // Z-Index
-  --#{$pf-global}--ZIndex--xs: #{$pf-v5-global--ZIndex--xs};
-  --#{$pf-global}--ZIndex--sm: #{$pf-v5-global--ZIndex--sm};
-  --#{$pf-global}--ZIndex--md: #{$pf-v5-global--ZIndex--md};
-  --#{$pf-global}--ZIndex--lg: #{$pf-v5-global--ZIndex--lg};
-  --#{$pf-global}--ZIndex--xl: #{$pf-v5-global--ZIndex--xl};
-  --#{$pf-global}--ZIndex--2xl: #{$pf-v5-global--ZIndex--2xl};
+  --pf-t--global--Zindex--xs: #{$pf-v5-global--ZIndex--xs};
+  --pf-t--global--Zindex--sm: #{$pf-v5-global--ZIndex--sm};
+  --pf-t--global--Zindex--md: #{$pf-v5-global--ZIndex--md};
+  --pf-t--global--Zindex--lg: #{$pf-v5-global--ZIndex--lg};
+  --pf-t--global--Zindex--xl: #{$pf-v5-global--ZIndex--xl};
+  --pf-t--global--Zindex--2xl: #{$pf-v5-global--ZIndex--2xl};
 
   // Grid breakpoints
   --#{$pf-global}--breakpoint--xs: #{$pf-v6-global--breakpoint--xs};
@@ -271,9 +271,9 @@
 
   // List
   --#{$pf-global}--ListStyle: #{$pf-v5-global--ListStyle};
-  --#{$pf-global}--Transition: #{$pf-v5-global--Transition};
-  --#{$pf-global}--TimingFunction: #{$pf-v5-global--TimingFunction};
-  --#{$pf-global}--TransitionDuration: #{$pf-v5-global--TransitionDuration};
+  --pf-t--global--transition: #{$pf-v5-global--Transition};
+  --pf-t--global--transition--timing-function: #{$pf-v5-global--TimingFunction};
+  --pf-t--global--transitionDuration: #{$pf-v5-global--TransitionDuration};
 
   // Arrow size
   --#{$pf-global}--arrow--width: #{$pf-v5-global--arrow--width};

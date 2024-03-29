@@ -49,7 +49,7 @@
   --#{$options-menu}__menu--PaddingTop: var(--#{$pf-global}--spacer--sm);
   --#{$options-menu}__menu--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$options-menu}__menu--Top: calc(100% + var(--#{$pf-global}--spacer--xs));
-  --#{$options-menu}__menu--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$options-menu}__menu--ZIndex: var(--pf-t--global--Zindex--sm);
   --#{$options-menu}--m-top__menu--Top: 0;
   --#{$options-menu}--m-top__menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
