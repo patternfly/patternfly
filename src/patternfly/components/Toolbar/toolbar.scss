@@ -16,6 +16,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--PaddingInline: var(--pf-t--global--spacer--md);
   --#{$toolbar}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$toolbar}--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$toolbar}--BackgroundColor: transparent;
+
+  // * Toolbar background modifiers
+  --#{$toolbar}--m-primary--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$toolbar}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$toolbar}--m-no-background--BackgroundColor: transparent;
 
   // * Toolbar item
   --#{$toolbar}__item--Width: auto;
@@ -36,10 +42,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
-  // * Toolbar chip group
   // * Toolbar sticky
   --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
+  --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Toolbar insets
   --#{$toolbar}--m-page-insets--inset: var(--#{$page}--inset);
@@ -79,9 +85,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   width: var(--#{$toolbar}--Width, auto);
   font-size: var(--#{$toolbar}--FontSize);
   line-height: var(--#{$toolbar}--LineHeight);
+  background-color: var(--#{$toolbar}--BackgroundColor);
 
   // - Toolbar sticky
   &.pf-m-sticky {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
+
     position: sticky;
     inset-block-start: 0;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
@@ -115,6 +124,19 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   &.pf-m-page-insets {
     --#{$toolbar}--PaddingInlineStart: var(--#{$toolbar}--m-page-insets--inset);
     --#{$toolbar}--PaddingInlineEnd: var(--#{$toolbar}--m-page-insets--inset);
+  }
+
+  // - Toolbar background modifiers
+  &.pf-m-primary {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-primary--BackgroundColor);
+  }
+
+  &.pf-m-secondary {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-secondary--BackgroundColor);
+  }
+
+  &.pf-m-no-background {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-no-background--BackgroundColor);
   }
 
   // @include resize-observer-placeholder('md') {
