@@ -1,7 +1,7 @@
 // @debug $page; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 // stylelint-disable
-$pf-page-v5--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-page-v6--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 // stylelint-enable
 
 :root {
@@ -469,7 +469,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
@@ -532,7 +532,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}__main-nav--BackgroundColor);
 
   // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
@@ -564,7 +564,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
@@ -617,7 +617,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-secondary--BackgroundColor);
   }
 
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {

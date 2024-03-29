@@ -14,12 +14,12 @@
   min-height: 175px;
 }
 
-.pf-v5-c-menu-toggle + .pf-v5-c-panel {
+.pf-v6-c-menu-toggle + .pf-v6-c-panel {
   position: absolute;
   top: calc(100% + 2px);
-  z-index: var(--pf-v5-global--ZIndex--sm);
+  z-index: var(--pf-v6-global--ZIndex--sm);
 }
 
-.ws-html-demos-c-toolbar .pf-v5-c-toolbar__item {
+.ws-html-demos-c-toolbar .pf-v6-c-toolbar__item {
   position: relative;
 }
