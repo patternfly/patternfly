@@ -133,7 +133,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderTopWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
   --#{$form}__field-group-toggle-button--MarginTop: calc(var(--#{$button}--m-plain--PaddingTop) * -1);
   --#{$form}__field-group-toggle-button--MarginBottom: calc(var(--#{$button}--m-plain--PaddingBottom) * -1);
-  --#{$form}__field-group-toggle-icon--Transition: var(--#{$pf-global}--Transition);
+  --#{$form}__field-group-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
   --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;

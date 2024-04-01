@@ -32,7 +32,7 @@
   --#{$card}__header-toggle--MarginRight: var(--pf-t--global--spacer--xs);
   --#{$card}__header-toggle--MarginBottom: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
   --#{$card}__header-toggle--MarginLeft: calc(var(--pf-t--global--spacer--md) * -1);
-  --#{$card}__header-toggle-icon--Transition: var(--#{$pf-global}--Transition);
+  --#{$card}__header-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
 
 

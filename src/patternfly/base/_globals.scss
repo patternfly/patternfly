@@ -1,5 +1,5 @@
 // Reset - based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
-@if $pf-v5-global--enable-reset {
+@if $pf-v6-global--enable-reset {
   :where(
     html,
     body,
@@ -31,7 +31,7 @@
 }
 
 // Normalize
-@if $pf-v5-global--enable-normalize {
+@if $pf-v6-global--enable-normalize {
   *,
   *::before,
   *::after {
@@ -125,8 +125,8 @@
   }
 
   :where(a:hover) {
-    --#{$pf-global}--link--Color: var(--pf-t--global--text--color--link--hover);
-    --#{$pf-global}--link--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
+    color: var(--pf-t--global--text--color--link--hover);
+    text-decoration: var(--pf-t--global--link--text-decoration--hover);
   }
 
   :where(
@@ -135,11 +135,4 @@
   ) {
     cursor: pointer;
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "./themes/dark/globals";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-globals;
 }

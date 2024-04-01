@@ -7,409 +7,409 @@ $chart: #{$pf-prefix} + 'chart';
 // Chart colors
 
 // blue
-$pf-v5-chart-color-blue-100: #8bc1f7 !default;
-$pf-v5-chart-color-blue-200: #519de9 !default;
-$pf-v5-chart-color-blue-300: $pf-v5-color-blue-400;
-$pf-v5-chart-color-blue-400: #004b95 !default;
-$pf-v5-chart-color-blue-500: #002f5d !default;
+$pf-v6-chart-color-blue-100: #8bc1f7 !default;
+$pf-v6-chart-color-blue-200: #519de9 !default;
+$pf-v6-chart-color-blue-300: $pf-v6-color-blue-400;
+$pf-v6-chart-color-blue-400: #004b95 !default;
+$pf-v6-chart-color-blue-500: #002f5d !default;
 
 // green
-$pf-v5-chart-color-green-100: #bde2b9 !default;
-$pf-v5-chart-color-green-200: #7cc674 !default;
-$pf-v5-chart-color-green-300: #4cb140 !default;
-$pf-v5-chart-color-green-400: #38812f !default;
-$pf-v5-chart-color-green-500: #23511e !default;
+$pf-v6-chart-color-green-100: #bde2b9 !default;
+$pf-v6-chart-color-green-200: #7cc674 !default;
+$pf-v6-chart-color-green-300: #4cb140 !default;
+$pf-v6-chart-color-green-400: #38812f !default;
+$pf-v6-chart-color-green-500: #23511e !default;
 
 // cyan
-$pf-v5-chart-color-cyan-100: $pf-v5-color-cyan-100;
-$pf-v5-chart-color-cyan-200: $pf-v5-color-cyan-200;
-$pf-v5-chart-color-cyan-300: $pf-v5-color-cyan-300;
-$pf-v5-chart-color-cyan-400: $pf-v5-color-cyan-400;
-$pf-v5-chart-color-cyan-500: $pf-v5-color-cyan-500;
+$pf-v6-chart-color-cyan-100: $pf-v6-color-cyan-100;
+$pf-v6-chart-color-cyan-200: $pf-v6-color-cyan-200;
+$pf-v6-chart-color-cyan-300: $pf-v6-color-cyan-300;
+$pf-v6-chart-color-cyan-400: $pf-v6-color-cyan-400;
+$pf-v6-chart-color-cyan-500: $pf-v6-color-cyan-500;
 
 // purple
-$pf-v5-chart-color-purple-100: #b2b0ea !default;
-$pf-v5-chart-color-purple-200: #8481dd !default;
-$pf-v5-chart-color-purple-300: #5752d1 !default;
-$pf-v5-chart-color-purple-400: #3c3d99 !default;
-$pf-v5-chart-color-purple-500: #2a265f !default;
+$pf-v6-chart-color-purple-100: #b2b0ea !default;
+$pf-v6-chart-color-purple-200: #8481dd !default;
+$pf-v6-chart-color-purple-300: #5752d1 !default;
+$pf-v6-chart-color-purple-400: #3c3d99 !default;
+$pf-v6-chart-color-purple-500: #2a265f !default;
 
 // gold
-$pf-v5-chart-color-gold-100: $pf-v5-color-gold-100;
-$pf-v5-chart-color-gold-200: $pf-v5-color-gold-200;
-$pf-v5-chart-color-gold-300: $pf-v5-color-gold-300;
-$pf-v5-chart-color-gold-400: $pf-v5-color-gold-400;
-$pf-v5-chart-color-gold-500: $pf-v5-color-gold-500;
+$pf-v6-chart-color-gold-100: $pf-v6-color-gold-100;
+$pf-v6-chart-color-gold-200: $pf-v6-color-gold-200;
+$pf-v6-chart-color-gold-300: $pf-v6-color-gold-300;
+$pf-v6-chart-color-gold-400: $pf-v6-color-gold-400;
+$pf-v6-chart-color-gold-500: $pf-v6-color-gold-500;
 
 // orange
-$pf-v5-chart-color-orange-100: $pf-v5-color-orange-100;
-$pf-v5-chart-color-orange-200: $pf-v5-color-orange-200;
-$pf-v5-chart-color-orange-300: $pf-v5-color-orange-300;
-$pf-v5-chart-color-orange-400: $pf-v5-color-orange-400;
-$pf-v5-chart-color-orange-500: $pf-v5-color-orange-500;
+$pf-v6-chart-color-orange-100: $pf-v6-color-orange-100;
+$pf-v6-chart-color-orange-200: $pf-v6-color-orange-200;
+$pf-v6-chart-color-orange-300: $pf-v6-color-orange-300;
+$pf-v6-chart-color-orange-400: $pf-v6-color-orange-400;
+$pf-v6-chart-color-orange-500: $pf-v6-color-orange-500;
 
 // red
-$pf-v5-chart-color-red-100: $pf-v5-color-red-100;
-$pf-v5-chart-color-red-200: $pf-v5-color-red-200;
-$pf-v5-chart-color-red-300: $pf-v5-color-red-300;
-$pf-v5-chart-color-red-400: $pf-v5-color-red-400;
-$pf-v5-chart-color-red-500: $pf-v5-color-red-500;
+$pf-v6-chart-color-red-100: $pf-v6-color-red-100;
+$pf-v6-chart-color-red-200: $pf-v6-color-red-200;
+$pf-v6-chart-color-red-300: $pf-v6-color-red-300;
+$pf-v6-chart-color-red-400: $pf-v6-color-red-400;
+$pf-v6-chart-color-red-500: $pf-v6-color-red-500;
 
 // black
-$pf-v5-chart-color-black-100: $pf-v5-color-black-200;
-$pf-v5-chart-color-black-200: $pf-v5-color-black-300;
-$pf-v5-chart-color-black-300: $pf-v5-color-black-400;
-$pf-v5-chart-color-black-400: $pf-v5-color-black-500;
-$pf-v5-chart-color-black-500: $pf-v5-color-black-600;
-$pf-v5-chart-color-black-600: $pf-v5-color-black-700;
+$pf-v6-chart-color-black-100: $pf-v6-color-black-200;
+$pf-v6-chart-color-black-200: $pf-v6-color-black-300;
+$pf-v6-chart-color-black-300: $pf-v6-color-black-400;
+$pf-v6-chart-color-black-400: $pf-v6-color-black-500;
+$pf-v6-chart-color-black-500: $pf-v6-color-black-600;
+$pf-v6-chart-color-black-600: $pf-v6-color-black-700;
 
 // typography
-$pf-v5-chart-global--FontSize--xs: 12; // Axis Labels
-$pf-v5-chart-global--FontSize--sm: 14;  // Legend
-$pf-v5-chart-global--FontSize--lg: 18; // Small Numbers
-$pf-v5-chart-global--FontSize--2xl: 24; // Large Numbers
-$pf-v5-chart-global--FontFamily: $pf-v5-global--FontFamily--text;
-$pf-v5-chart-global--letter-spacing: "normal";
+$pf-v6-chart-global--FontSize--xs: 12; // Axis Labels
+$pf-v6-chart-global--FontSize--sm: 14;  // Legend
+$pf-v6-chart-global--FontSize--lg: 18; // Small Numbers
+$pf-v6-chart-global--FontSize--2xl: 24; // Large Numbers
+$pf-v6-chart-global--FontFamily: $pf-v6-global--FontFamily--text;
+$pf-v6-chart-global--letter-spacing: "normal";
 
 // label
-$pf-v5-chart-global--label--Padding: 10;
-$pf-v5-chart-global--label--Margin: 8;
-$pf-v5-chart-global--label--stroke: "transparent";
-$pf-v5-chart-global--label--text-anchor: "middle";
-$pf-v5-chart-global--label--stroke--Width: 0;
-$pf-v5-chart-global--label--Fill: $pf-v5-color-black-900;
+$pf-v6-chart-global--label--Padding: 10;
+$pf-v6-chart-global--label--Margin: 8;
+$pf-v6-chart-global--label--stroke: "transparent";
+$pf-v6-chart-global--label--text-anchor: "middle";
+$pf-v6-chart-global--label--stroke--Width: 0;
+$pf-v6-chart-global--label--Fill: $pf-v6-color-black-900;
 
 // Layout Props
-$pf-v5-chart-global--layout--Padding: 50;
-$pf-v5-chart-global--layout--Height: 300;
-$pf-v5-chart-global--layout--Width: 450;
+$pf-v6-chart-global--layout--Padding: 50;
+$pf-v6-chart-global--layout--Height: 300;
+$pf-v6-chart-global--layout--Width: 450;
 
 // Stroke and Border Width
-$pf-v5-chart-global--stroke--Width--xs: 1;
-$pf-v5-chart-global--stroke--Width--sm: 2;
-$pf-v5-chart-global--BorderWidth--xs: 1;
-$pf-v5-chart-global--BorderWidth--sm: 2;
-$pf-v5-chart-global--BorderWidth--lg: 8;
+$pf-v6-chart-global--stroke--Width--xs: 1;
+$pf-v6-chart-global--stroke--Width--sm: 2;
+$pf-v6-chart-global--BorderWidth--xs: 1;
+$pf-v6-chart-global--BorderWidth--sm: 2;
+$pf-v6-chart-global--BorderWidth--lg: 8;
 
 // Stroke
-$pf-v5-chart-global--stroke-line-cap: "round";
-$pf-v5-chart-global--stroke-line-join: "round";
+$pf-v6-chart-global--stroke-line-cap: "round";
+$pf-v6-chart-global--stroke-line-join: "round";
 
 // Fills and Strokes
-$pf-v5-chart-global--danger--Color--100: $pf-v5-global--danger-color--100;
-$pf-v5-chart-global--warning--Color--100: $pf-v5-color-orange-300;
-$pf-v5-chart-global--warning--Color--200: $pf-v5-color-gold-400;
-$pf-v5-chart-global--success--Color--100: $pf-v5-color-blue-400;
-$pf-v5-chart-global--Fill--Color--900: $pf-v5-color-black-900;
-$pf-v5-chart-global--Fill--Color--700: $pf-v5-color-black-700;
-$pf-v5-chart-global--Fill--Color--500: $pf-v5-color-black-500;
-$pf-v5-chart-global--Fill--Color--400: $pf-v5-color-black-400;
-$pf-v5-chart-global--Fill--Color--300: $pf-v5-color-black-300;
-$pf-v5-chart-global--Fill--Color--200: $pf-v5-color-black-200;
-$pf-v5-chart-global--Fill--Color--white: $pf-v5-color-white;
+$pf-v6-chart-global--danger--Color--100: $pf-v6-global--danger-color--100;
+$pf-v6-chart-global--warning--Color--100: $pf-v6-color-orange-300;
+$pf-v6-chart-global--warning--Color--200: $pf-v6-color-gold-400;
+$pf-v6-chart-global--success--Color--100: $pf-v6-color-blue-400;
+$pf-v6-chart-global--Fill--Color--900: $pf-v6-color-black-900;
+$pf-v6-chart-global--Fill--Color--700: $pf-v6-color-black-700;
+$pf-v6-chart-global--Fill--Color--500: $pf-v6-color-black-500;
+$pf-v6-chart-global--Fill--Color--400: $pf-v6-color-black-400;
+$pf-v6-chart-global--Fill--Color--300: $pf-v6-color-black-300;
+$pf-v6-chart-global--Fill--Color--200: $pf-v6-color-black-200;
+$pf-v6-chart-global--Fill--Color--white: $pf-v6-color-white;
 
 // Individual Charts
 
 // Area Chart
-$pf-v5-chart-area--Opacity: .3;
-$pf-v5-chart-area--stroke--Width: $pf-v5-chart-global--stroke--Width--sm;
-$pf-v5-chart-area--data--Fill: $pf-v5-chart-global--Fill--Color--900;
+$pf-v6-chart-area--Opacity: .3;
+$pf-v6-chart-area--stroke--Width: $pf-v6-chart-global--stroke--Width--sm;
+$pf-v6-chart-area--data--Fill: $pf-v6-chart-global--Fill--Color--900;
 
 // Axis Chart
-$pf-v5-chart-axis--axis--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-axis--axis--stroke--Color: $pf-v5-chart-global--Fill--Color--300;
-$pf-v5-chart-axis--axis--Fill: "transparent";
-$pf-v5-chart-axis--axis-label--Padding: 40;
-$pf-v5-chart-axis--axis-label--stroke--Color: "transparent";
-$pf-v5-chart-axis--grid--Fill: "none";
-$pf-v5-chart-axis--grid--stroke--Color: $pf-v5-chart-global--Fill--Color--300;
-$pf-v5-chart-axis--grid--PointerEvents: "painted";
-$pf-v5-chart-axis--tick--Fill: "transparent";
-$pf-v5-chart-axis--tick--Size: 5;
-$pf-v5-chart-axis--tick--Width: 1;
-$pf-v5-chart-axis--tick--stroke--Color: $pf-v5-chart-global--Fill--Color--300;
-$pf-v5-chart-axis--tick-label--Fill: $pf-v5-chart-global--Fill--Color--700;
+$pf-v6-chart-axis--axis--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-axis--axis--stroke--Color: $pf-v6-chart-global--Fill--Color--300;
+$pf-v6-chart-axis--axis--Fill: "transparent";
+$pf-v6-chart-axis--axis-label--Padding: 40;
+$pf-v6-chart-axis--axis-label--stroke--Color: "transparent";
+$pf-v6-chart-axis--grid--Fill: "none";
+$pf-v6-chart-axis--grid--stroke--Color: $pf-v6-chart-global--Fill--Color--300;
+$pf-v6-chart-axis--grid--PointerEvents: "painted";
+$pf-v6-chart-axis--tick--Fill: "transparent";
+$pf-v6-chart-axis--tick--Size: 5;
+$pf-v6-chart-axis--tick--Width: 1;
+$pf-v6-chart-axis--tick--stroke--Color: $pf-v6-chart-global--Fill--Color--300;
+$pf-v6-chart-axis--tick-label--Fill: $pf-v6-chart-global--Fill--Color--700;
 
 // Bar Chart
-$pf-v5-chart-bar--Width: 10;
-$pf-v5-chart-bar--data--stroke: none;
-$pf-v5-chart-bar--data--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-bar--data--Padding: 8;
-$pf-v5-chart-bar--data-stroke--Width: 0;
+$pf-v6-chart-bar--Width: 10;
+$pf-v6-chart-bar--data--stroke: none;
+$pf-v6-chart-bar--data--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-bar--data--Padding: 8;
+$pf-v6-chart-bar--data-stroke--Width: 0;
 
 // Box Plot Chart
-$pf-v5-chart-boxplot--max--Padding: 8;
-$pf-v5-chart-boxplot--max--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-boxplot--max--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-boxplot--median--Padding: 8;
-$pf-v5-chart-boxplot--median--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-boxplot--median--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-boxplot--min--Padding: 8;
-$pf-v5-chart-boxplot--min--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-boxplot--min--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-boxplot--lower-quartile--Padding: 8;
-$pf-v5-chart-boxplot--lower-quartile--Fill: $pf-v5-chart-global--Fill--Color--500;
-$pf-v5-chart-boxplot--upper-quartile--Padding: 8;
-$pf-v5-chart-boxplot--upper-quartile--Fill: $pf-v5-chart-global--Fill--Color--500;
-$pf-v5-chart-boxplot--box--Width: 20;
+$pf-v6-chart-boxplot--max--Padding: 8;
+$pf-v6-chart-boxplot--max--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-boxplot--max--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-boxplot--median--Padding: 8;
+$pf-v6-chart-boxplot--median--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-boxplot--median--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-boxplot--min--Padding: 8;
+$pf-v6-chart-boxplot--min--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-boxplot--min--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-boxplot--lower-quartile--Padding: 8;
+$pf-v6-chart-boxplot--lower-quartile--Fill: $pf-v6-chart-global--Fill--Color--500;
+$pf-v6-chart-boxplot--upper-quartile--Padding: 8;
+$pf-v6-chart-boxplot--upper-quartile--Fill: $pf-v6-chart-global--Fill--Color--500;
+$pf-v6-chart-boxplot--box--Width: 20;
 
 // Bullet Chart
-$pf-v5-chart-bullet--axis--tick--count: 5;
-$pf-v5-chart-bullet--comparative-measure--Fill--Color: $pf-v5-chart-global--Fill--Color--700;
-$pf-v5-chart-bullet--comparative-measure--stroke--Color: $pf-v5-chart-global--Fill--Color--700;
-$pf-v5-chart-bullet--comparative-measure--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-bullet--comparative-measure--Width: 30;
-$pf-v5-chart-bullet--comparative-measure--error--Fill--Color: $pf-v5-chart-global--danger--Color--100;
-$pf-v5-chart-bullet--comparative-measure--error--stroke--Color: $pf-v5-chart-global--danger--Color--100;
-$pf-v5-chart-bullet--comparative-measure--error--stroke--Width: $pf-v5-chart-global--stroke--Width--sm;
-$pf-v5-chart-bullet--comparative-measure--error--Width: 30;
-$pf-v5-chart-bullet--comparative-measure--warning--Fill--Color: $pf-v5-chart-global--warning--Color--100;
-$pf-v5-chart-bullet--comparative-measure--warning--stroke--Color: $pf-v5-chart-global--warning--Color--100;
-$pf-v5-chart-bullet--comparative-measure--warning--stroke--Width: $pf-v5-chart-global--stroke--Width--sm;
-$pf-v5-chart-bullet--comparative-measure--warning--Width: 30;
-$pf-v5-chart-bullet--group-title--divider--Fill--Color: $pf-v5-color-black-200;
-$pf-v5-chart-bullet--group-title--divider--stroke--Color: $pf-v5-color-black-200;
-$pf-v5-chart-bullet--group-title--divider--stroke--Width: $pf-v5-chart-global--stroke--Width--sm;
-$pf-v5-chart-bullet--Height: 140;
-$pf-v5-chart-bullet--label--title--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-bullet--label--grouptitle--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-bullet--label--subtitle--Fill: $pf-v5-chart-global--Fill--Color--400;
-$pf-v5-chart-bullet--primary-measure--dot--size: 6;
-$pf-v5-chart-bullet--primary-measure--segmented--Width: 9;
-$pf-v5-chart-bullet--negative-measure--ColorScale--100: $pf-v5-chart-color-red-100;
-$pf-v5-chart-bullet--negative-measure--ColorScale--200: $pf-v5-chart-color-red-200;
-$pf-v5-chart-bullet--negative-measure--ColorScale--300: $pf-v5-chart-color-red-300;
-$pf-v5-chart-bullet--negative-measure--ColorScale--400: $pf-v5-chart-color-red-400;
-$pf-v5-chart-bullet--negative-measure--ColorScale--500: $pf-v5-chart-color-red-500;
-$pf-v5-chart-bullet--qualitative-range--Width: 30;
-$pf-v5-chart-bullet--qualitative-range--ColorScale--100: $pf-v5-chart-color-black-100;
-$pf-v5-chart-bullet--qualitative-range--ColorScale--200: $pf-v5-chart-color-black-200;
-$pf-v5-chart-bullet--qualitative-range--ColorScale--300: $pf-v5-chart-color-black-300;
-$pf-v5-chart-bullet--qualitative-range--ColorScale--400: $pf-v5-chart-color-black-400;
-$pf-v5-chart-bullet--qualitative-range--ColorScale--500: $pf-v5-chart-color-black-500;
+$pf-v6-chart-bullet--axis--tick--count: 5;
+$pf-v6-chart-bullet--comparative-measure--Fill--Color: $pf-v6-chart-global--Fill--Color--700;
+$pf-v6-chart-bullet--comparative-measure--stroke--Color: $pf-v6-chart-global--Fill--Color--700;
+$pf-v6-chart-bullet--comparative-measure--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-bullet--comparative-measure--Width: 30;
+$pf-v6-chart-bullet--comparative-measure--error--Fill--Color: $pf-v6-chart-global--danger--Color--100;
+$pf-v6-chart-bullet--comparative-measure--error--stroke--Color: $pf-v6-chart-global--danger--Color--100;
+$pf-v6-chart-bullet--comparative-measure--error--stroke--Width: $pf-v6-chart-global--stroke--Width--sm;
+$pf-v6-chart-bullet--comparative-measure--error--Width: 30;
+$pf-v6-chart-bullet--comparative-measure--warning--Fill--Color: $pf-v6-chart-global--warning--Color--100;
+$pf-v6-chart-bullet--comparative-measure--warning--stroke--Color: $pf-v6-chart-global--warning--Color--100;
+$pf-v6-chart-bullet--comparative-measure--warning--stroke--Width: $pf-v6-chart-global--stroke--Width--sm;
+$pf-v6-chart-bullet--comparative-measure--warning--Width: 30;
+$pf-v6-chart-bullet--group-title--divider--Fill--Color: $pf-v6-color-black-200;
+$pf-v6-chart-bullet--group-title--divider--stroke--Color: $pf-v6-color-black-200;
+$pf-v6-chart-bullet--group-title--divider--stroke--Width: $pf-v6-chart-global--stroke--Width--sm;
+$pf-v6-chart-bullet--Height: 140;
+$pf-v6-chart-bullet--label--title--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-bullet--label--grouptitle--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-bullet--label--subtitle--Fill: $pf-v6-chart-global--Fill--Color--400;
+$pf-v6-chart-bullet--primary-measure--dot--size: 6;
+$pf-v6-chart-bullet--primary-measure--segmented--Width: 9;
+$pf-v6-chart-bullet--negative-measure--ColorScale--100: $pf-v6-chart-color-red-100;
+$pf-v6-chart-bullet--negative-measure--ColorScale--200: $pf-v6-chart-color-red-200;
+$pf-v6-chart-bullet--negative-measure--ColorScale--300: $pf-v6-chart-color-red-300;
+$pf-v6-chart-bullet--negative-measure--ColorScale--400: $pf-v6-chart-color-red-400;
+$pf-v6-chart-bullet--negative-measure--ColorScale--500: $pf-v6-chart-color-red-500;
+$pf-v6-chart-bullet--qualitative-range--Width: 30;
+$pf-v6-chart-bullet--qualitative-range--ColorScale--100: $pf-v6-chart-color-black-100;
+$pf-v6-chart-bullet--qualitative-range--ColorScale--200: $pf-v6-chart-color-black-200;
+$pf-v6-chart-bullet--qualitative-range--ColorScale--300: $pf-v6-chart-color-black-300;
+$pf-v6-chart-bullet--qualitative-range--ColorScale--400: $pf-v6-chart-color-black-400;
+$pf-v6-chart-bullet--qualitative-range--ColorScale--500: $pf-v6-chart-color-black-500;
 
 // Candlestick
-$pf-v5-chart-candelstick--data--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-candelstick--data--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-candelstick--candle--positive--Color: $pf-v5-chart-global--Fill--Color--white;
-$pf-v5-chart-candelstick--candle--negative--Color: $pf-v5-chart-global--Fill--Color--900;
+$pf-v6-chart-candelstick--data--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-candelstick--data--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-candelstick--candle--positive--Color: $pf-v6-chart-global--Fill--Color--white;
+$pf-v6-chart-candelstick--candle--negative--Color: $pf-v6-chart-global--Fill--Color--900;
 
 // Container
-$pf-v5-chart-container--cursor--line--Fill: $pf-v5-color-black-900;
+$pf-v6-chart-container--cursor--line--Fill: $pf-v6-color-black-900;
 
 // Simple Donut Chart
-$pf-v5-chart-donut--label--title--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-donut--label--subtitle--Fill: $pf-v5-chart-global--Fill--Color--400;
-$pf-v5-chart-donut--label--subtitle--position: "center";
-$pf-v5-chart-donut--pie--Height: 230;
-$pf-v5-chart-donut--pie--angle--Padding: 1;
-$pf-v5-chart-donut--pie--Padding: 20;
-$pf-v5-chart-donut--pie--Width: 230;
+$pf-v6-chart-donut--label--title--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-donut--label--subtitle--Fill: $pf-v6-chart-global--Fill--Color--400;
+$pf-v6-chart-donut--label--subtitle--position: "center";
+$pf-v6-chart-donut--pie--Height: 230;
+$pf-v6-chart-donut--pie--angle--Padding: 1;
+$pf-v6-chart-donut--pie--Padding: 20;
+$pf-v6-chart-donut--pie--Width: 230;
 
 // Donut Threshold Chart
-$pf-v5-chart-donut--threshold--first--Color: $pf-v5-chart-global--Fill--Color--200;
-$pf-v5-chart-donut--threshold--second--Color: $pf-v5-chart-global--Fill--Color--300;
-$pf-v5-chart-donut--threshold--third--Color: $pf-v5-chart-global--Fill--Color--400;
-$pf-v5-chart-donut--threshold--warning--Color: $pf-v5-chart-global--warning--Color--200;
-$pf-v5-chart-donut--threshold--danger--Color: $pf-v5-chart-global--danger--Color--100;
-$pf-v5-chart-donut--threshold--dynamic--pie--Height: 202;
-$pf-v5-chart-donut--threshold--dynamic--pie--Width: 202;
-$pf-v5-chart-donut--threshold--dynamic--pie--Padding: 20;
-$pf-v5-chart-donut--threshold--static--pie--Height: 230;
-$pf-v5-chart-donut--threshold--static--pie--angle--Padding: 1;
-$pf-v5-chart-donut--threshold--static--pie--Padding: 20;
-$pf-v5-chart-donut--threshold--static--pie--Width: 230;
+$pf-v6-chart-donut--threshold--first--Color: $pf-v6-chart-global--Fill--Color--200;
+$pf-v6-chart-donut--threshold--second--Color: $pf-v6-chart-global--Fill--Color--300;
+$pf-v6-chart-donut--threshold--third--Color: $pf-v6-chart-global--Fill--Color--400;
+$pf-v6-chart-donut--threshold--warning--Color: $pf-v6-chart-global--warning--Color--200;
+$pf-v6-chart-donut--threshold--danger--Color: $pf-v6-chart-global--danger--Color--100;
+$pf-v6-chart-donut--threshold--dynamic--pie--Height: 202;
+$pf-v6-chart-donut--threshold--dynamic--pie--Width: 202;
+$pf-v6-chart-donut--threshold--dynamic--pie--Padding: 20;
+$pf-v6-chart-donut--threshold--static--pie--Height: 230;
+$pf-v6-chart-donut--threshold--static--pie--angle--Padding: 1;
+$pf-v6-chart-donut--threshold--static--pie--Padding: 20;
+$pf-v6-chart-donut--threshold--static--pie--Width: 230;
 
 // Donut Utilization Chart
-$pf-v5-chart-donut--utilization--dynamic--pie--Height: 230;
-$pf-v5-chart-donut--utilization--dynamic--pie--angle--Padding: 1;
-$pf-v5-chart-donut--utilization--dynamic--pie--Padding: 20;
-$pf-v5-chart-donut--utilization--dynamic--pie--Width: 230;
-$pf-v5-chart-donut--utilization--static--pie--Padding: 20;
+$pf-v6-chart-donut--utilization--dynamic--pie--Height: 230;
+$pf-v6-chart-donut--utilization--dynamic--pie--angle--Padding: 1;
+$pf-v6-chart-donut--utilization--dynamic--pie--Padding: 20;
+$pf-v6-chart-donut--utilization--dynamic--pie--Width: 230;
+$pf-v6-chart-donut--utilization--static--pie--Padding: 20;
 
 // Error Bar
-$pf-v5-chart-errorbar--BorderWidth: $pf-v5-chart-global--BorderWidth--lg;
-$pf-v5-chart-errorbar--data--Fill: "transparent";
-$pf-v5-chart-errorbar--data--Opacity: 1;
-$pf-v5-chart-errorbar--data-stroke--Width: $pf-v5-chart-global--stroke--Width--sm;
-$pf-v5-chart-errorbar--data-stroke--Color: $pf-v5-chart-global--Fill--Color--900;
+$pf-v6-chart-errorbar--BorderWidth: $pf-v6-chart-global--BorderWidth--lg;
+$pf-v6-chart-errorbar--data--Fill: "transparent";
+$pf-v6-chart-errorbar--data--Opacity: 1;
+$pf-v6-chart-errorbar--data-stroke--Width: $pf-v6-chart-global--stroke--Width--sm;
+$pf-v6-chart-errorbar--data-stroke--Color: $pf-v6-chart-global--Fill--Color--900;
 
 // Legend
-$pf-v5-chart-legend--gutter--Width: 20;
-$pf-v5-chart-legend--orientation: "horizontal";
-$pf-v5-chart-legend--position: "right";
-$pf-v5-chart-legend--title--orientation: "top";
-$pf-v5-chart-legend--data--type: "square";
-$pf-v5-chart-legend--title--Padding: 2;
-$pf-v5-chart-legend--Margin: 16;
+$pf-v6-chart-legend--gutter--Width: 20;
+$pf-v6-chart-legend--orientation: "horizontal";
+$pf-v6-chart-legend--position: "right";
+$pf-v6-chart-legend--title--orientation: "top";
+$pf-v6-chart-legend--data--type: "square";
+$pf-v6-chart-legend--title--Padding: 2;
+$pf-v6-chart-legend--Margin: 16;
 
 // Line Chart
-$pf-v5-chart-line--data--Fill: "transparent";
-$pf-v5-chart-line--data--Opacity: 1;
-$pf-v5-chart-line--data--stroke--Width: $pf-v5-chart-global--stroke--Width--sm;
-$pf-v5-chart-line--data--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
+$pf-v6-chart-line--data--Fill: "transparent";
+$pf-v6-chart-line--data--Opacity: 1;
+$pf-v6-chart-line--data--stroke--Width: $pf-v6-chart-global--stroke--Width--sm;
+$pf-v6-chart-line--data--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
 
 // Pie Chart
-$pf-v5-chart-pie--Padding: 20;
-$pf-v5-chart-pie--data--Padding: 8;
-$pf-v5-chart-pie--data--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-pie--data--stroke--Color: "transparent";
-$pf-v5-chart-pie--labels--Padding: 8;
-$pf-v5-chart-pie--Height: 230;
-$pf-v5-chart-pie--Width: 230;
+$pf-v6-chart-pie--Padding: 20;
+$pf-v6-chart-pie--data--Padding: 8;
+$pf-v6-chart-pie--data--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-pie--data--stroke--Color: "transparent";
+$pf-v6-chart-pie--labels--Padding: 8;
+$pf-v6-chart-pie--Height: 230;
+$pf-v6-chart-pie--Width: 230;
 
 // Scatter Chart
-$pf-v5-chart-scatter--data--stroke--Color: "transparent";
-$pf-v5-chart-scatter--data--stroke--Width: 0;
-$pf-v5-chart-scatter--data--Opacity: 1;
-$pf-v5-chart-scatter--data--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-scatter--active--size: 5;
-$pf-v5-chart-scatter--size: 3;
+$pf-v6-chart-scatter--data--stroke--Color: "transparent";
+$pf-v6-chart-scatter--data--stroke--Width: 0;
+$pf-v6-chart-scatter--data--Opacity: 1;
+$pf-v6-chart-scatter--data--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-scatter--active--size: 5;
+$pf-v6-chart-scatter--size: 3;
 
 // Scatter Chart
-$pf-v5-chart-stack--data--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
+$pf-v6-chart-stack--data--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
 
 // Threshold
-$pf-v5-chart-threshold--stroke-dash-array: "4,2";
-$pf-v5-chart-threshold--stroke--Width: 1.5;
+$pf-v6-chart-threshold--stroke-dash-array: "4,2";
+$pf-v6-chart-threshold--stroke--Width: 1.5;
 
 // Tooltip
-$pf-v5-chart-tooltip--corner-radius: 0;
-$pf-v5-chart-tooltip--pointer-length: 10;
-$pf-v5-chart-tooltip--Fill: $pf-v5-chart-global--Fill--Color--200;
-$pf-v5-chart-tooltip--flyoutStyle--corner-radius: 0;
-$pf-v5-chart-tooltip--flyoutStyle--stroke--Width: 0;
-$pf-v5-chart-tooltip--flyoutStyle--PointerEvents: "none";
-$pf-v5-chart-tooltip--flyoutStyle--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-tooltip--flyoutStyle--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-tooltip--pointer--Width: 20;
-$pf-v5-chart-tooltip--Padding: 8;
-$pf-v5-chart-tooltip--PointerEvents: "none";
+$pf-v6-chart-tooltip--corner-radius: 0;
+$pf-v6-chart-tooltip--pointer-length: 10;
+$pf-v6-chart-tooltip--Fill: $pf-v6-chart-global--Fill--Color--200;
+$pf-v6-chart-tooltip--flyoutStyle--corner-radius: 0;
+$pf-v6-chart-tooltip--flyoutStyle--stroke--Width: 0;
+$pf-v6-chart-tooltip--flyoutStyle--PointerEvents: "none";
+$pf-v6-chart-tooltip--flyoutStyle--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-tooltip--flyoutStyle--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-tooltip--pointer--Width: 20;
+$pf-v6-chart-tooltip--Padding: 8;
+$pf-v6-chart-tooltip--PointerEvents: "none";
 
 // Voronoi Chart
-$pf-v5-chart-voronoi--data--Fill: "transparent";
-$pf-v5-chart-voronoi--data--stroke--Color: "transparent";
-$pf-v5-chart-voronoi--data--stroke--Width: 0;
-$pf-v5-chart-voronoi--labels--Fill: $pf-v5-chart-global--Fill--Color--200;
-$pf-v5-chart-voronoi--labels--Padding: 8;
-$pf-v5-chart-voronoi--labels--PointerEvents: "none";
-$pf-v5-chart-voronoi--flyout--stroke--Width: $pf-v5-chart-global--stroke--Width--xs;
-$pf-v5-chart-voronoi--flyout--PointerEvents: "none";
-$pf-v5-chart-voronoi--flyout--stroke--Color: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-voronoi--flyout--stroke--Fill: $pf-v5-chart-global--Fill--Color--900;
-$pf-v5-chart-voronoi--flyout--PointerEvents: "none";
+$pf-v6-chart-voronoi--data--Fill: "transparent";
+$pf-v6-chart-voronoi--data--stroke--Color: "transparent";
+$pf-v6-chart-voronoi--data--stroke--Width: 0;
+$pf-v6-chart-voronoi--labels--Fill: $pf-v6-chart-global--Fill--Color--200;
+$pf-v6-chart-voronoi--labels--Padding: 8;
+$pf-v6-chart-voronoi--labels--PointerEvents: "none";
+$pf-v6-chart-voronoi--flyout--stroke--Width: $pf-v6-chart-global--stroke--Width--xs;
+$pf-v6-chart-voronoi--flyout--PointerEvents: "none";
+$pf-v6-chart-voronoi--flyout--stroke--Color: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-voronoi--flyout--stroke--Fill: $pf-v6-chart-global--Fill--Color--900;
+$pf-v6-chart-voronoi--flyout--PointerEvents: "none";
 
 // Theme color scales
 
 // blue
-$pf-v5-chart-theme--blue--ColorScale--100: $pf-v5-chart-color-blue-300;
-$pf-v5-chart-theme--blue--ColorScale--200: $pf-v5-chart-color-blue-100;
-$pf-v5-chart-theme--blue--ColorScale--300: $pf-v5-chart-color-blue-500;
-$pf-v5-chart-theme--blue--ColorScale--400: $pf-v5-chart-color-blue-200;
-$pf-v5-chart-theme--blue--ColorScale--500: $pf-v5-chart-color-blue-400;
+$pf-v6-chart-theme--blue--ColorScale--100: $pf-v6-chart-color-blue-300;
+$pf-v6-chart-theme--blue--ColorScale--200: $pf-v6-chart-color-blue-100;
+$pf-v6-chart-theme--blue--ColorScale--300: $pf-v6-chart-color-blue-500;
+$pf-v6-chart-theme--blue--ColorScale--400: $pf-v6-chart-color-blue-200;
+$pf-v6-chart-theme--blue--ColorScale--500: $pf-v6-chart-color-blue-400;
 
 // cyan
-$pf-v5-chart-theme--cyan--ColorScale--100: $pf-v5-chart-color-cyan-300;
-$pf-v5-chart-theme--cyan--ColorScale--200: $pf-v5-chart-color-cyan-100;
-$pf-v5-chart-theme--cyan--ColorScale--300: $pf-v5-chart-color-cyan-500;
-$pf-v5-chart-theme--cyan--ColorScale--400: $pf-v5-chart-color-cyan-200;
-$pf-v5-chart-theme--cyan--ColorScale--500: $pf-v5-chart-color-cyan-400;
+$pf-v6-chart-theme--cyan--ColorScale--100: $pf-v6-chart-color-cyan-300;
+$pf-v6-chart-theme--cyan--ColorScale--200: $pf-v6-chart-color-cyan-100;
+$pf-v6-chart-theme--cyan--ColorScale--300: $pf-v6-chart-color-cyan-500;
+$pf-v6-chart-theme--cyan--ColorScale--400: $pf-v6-chart-color-cyan-200;
+$pf-v6-chart-theme--cyan--ColorScale--500: $pf-v6-chart-color-cyan-400;
 
 // gold
-$pf-v5-chart-theme--gold--ColorScale--100: $pf-v5-chart-color-gold-300;
-$pf-v5-chart-theme--gold--ColorScale--200: $pf-v5-chart-color-gold-100;
-$pf-v5-chart-theme--gold--ColorScale--300: $pf-v5-chart-color-gold-500;
-$pf-v5-chart-theme--gold--ColorScale--400: $pf-v5-chart-color-gold-200;
-$pf-v5-chart-theme--gold--ColorScale--500: $pf-v5-chart-color-gold-400;
+$pf-v6-chart-theme--gold--ColorScale--100: $pf-v6-chart-color-gold-300;
+$pf-v6-chart-theme--gold--ColorScale--200: $pf-v6-chart-color-gold-100;
+$pf-v6-chart-theme--gold--ColorScale--300: $pf-v6-chart-color-gold-500;
+$pf-v6-chart-theme--gold--ColorScale--400: $pf-v6-chart-color-gold-200;
+$pf-v6-chart-theme--gold--ColorScale--500: $pf-v6-chart-color-gold-400;
 
 // gray
-$pf-v5-chart-theme--gray--ColorScale--100: $pf-v5-chart-color-black-300;
-$pf-v5-chart-theme--gray--ColorScale--200: $pf-v5-chart-color-black-100;
-$pf-v5-chart-theme--gray--ColorScale--300: $pf-v5-chart-color-black-500;
-$pf-v5-chart-theme--gray--ColorScale--400: $pf-v5-chart-color-black-200;
-$pf-v5-chart-theme--gray--ColorScale--500: $pf-v5-chart-color-black-400;
+$pf-v6-chart-theme--gray--ColorScale--100: $pf-v6-chart-color-black-300;
+$pf-v6-chart-theme--gray--ColorScale--200: $pf-v6-chart-color-black-100;
+$pf-v6-chart-theme--gray--ColorScale--300: $pf-v6-chart-color-black-500;
+$pf-v6-chart-theme--gray--ColorScale--400: $pf-v6-chart-color-black-200;
+$pf-v6-chart-theme--gray--ColorScale--500: $pf-v6-chart-color-black-400;
 
 // green
-$pf-v5-chart-theme--green--ColorScale--100: $pf-v5-chart-color-green-300;
-$pf-v5-chart-theme--green--ColorScale--200: $pf-v5-chart-color-green-100;
-$pf-v5-chart-theme--green--ColorScale--300: $pf-v5-chart-color-green-500;
-$pf-v5-chart-theme--green--ColorScale--400: $pf-v5-chart-color-green-200;
-$pf-v5-chart-theme--green--ColorScale--500: $pf-v5-chart-color-green-400;
+$pf-v6-chart-theme--green--ColorScale--100: $pf-v6-chart-color-green-300;
+$pf-v6-chart-theme--green--ColorScale--200: $pf-v6-chart-color-green-100;
+$pf-v6-chart-theme--green--ColorScale--300: $pf-v6-chart-color-green-500;
+$pf-v6-chart-theme--green--ColorScale--400: $pf-v6-chart-color-green-200;
+$pf-v6-chart-theme--green--ColorScale--500: $pf-v6-chart-color-green-400;
 
 // multi ordered
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--100: $pf-v5-chart-color-blue-300;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--200: $pf-v5-chart-color-green-300;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--300: $pf-v5-chart-color-cyan-300;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--400: $pf-v5-chart-color-gold-300;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--500: $pf-v5-chart-color-orange-300;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--600: $pf-v5-chart-color-blue-100;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--700: $pf-v5-chart-color-green-500;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--800: $pf-v5-chart-color-cyan-100;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--900: $pf-v5-chart-color-gold-100;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1000: $pf-v5-chart-color-orange-500;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1100: $pf-v5-chart-color-blue-500;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1200: $pf-v5-chart-color-green-100;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1300: $pf-v5-chart-color-cyan-500;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1400: $pf-v5-chart-color-gold-500;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1500: $pf-v5-chart-color-orange-100;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1600: $pf-v5-chart-color-blue-200;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1700: $pf-v5-chart-color-green-400;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1800: $pf-v5-chart-color-cyan-200;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--1900: $pf-v5-chart-color-gold-200;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--2000: $pf-v5-chart-color-orange-400;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--2100: $pf-v5-chart-color-blue-400;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--2200: $pf-v5-chart-color-green-200;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--2300: $pf-v5-chart-color-cyan-400;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--2400: $pf-v5-chart-color-gold-400;
-$pf-v5-chart-theme--multi-color-ordered--ColorScale--2500: $pf-v5-chart-color-orange-200;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--100: $pf-v6-chart-color-blue-300;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--200: $pf-v6-chart-color-green-300;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--300: $pf-v6-chart-color-cyan-300;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--400: $pf-v6-chart-color-gold-300;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--500: $pf-v6-chart-color-orange-300;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--600: $pf-v6-chart-color-blue-100;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--700: $pf-v6-chart-color-green-500;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--800: $pf-v6-chart-color-cyan-100;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--900: $pf-v6-chart-color-gold-100;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1000: $pf-v6-chart-color-orange-500;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1100: $pf-v6-chart-color-blue-500;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1200: $pf-v6-chart-color-green-100;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1300: $pf-v6-chart-color-cyan-500;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1400: $pf-v6-chart-color-gold-500;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1500: $pf-v6-chart-color-orange-100;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1600: $pf-v6-chart-color-blue-200;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1700: $pf-v6-chart-color-green-400;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1800: $pf-v6-chart-color-cyan-200;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--1900: $pf-v6-chart-color-gold-200;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--2000: $pf-v6-chart-color-orange-400;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--2100: $pf-v6-chart-color-blue-400;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--2200: $pf-v6-chart-color-green-200;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--2300: $pf-v6-chart-color-cyan-400;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--2400: $pf-v6-chart-color-gold-400;
+$pf-v6-chart-theme--multi-color-ordered--ColorScale--2500: $pf-v6-chart-color-orange-200;
 
 // multi unordered
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--100: $pf-v5-chart-color-blue-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--200: $pf-v5-chart-color-gold-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--300: $pf-v5-chart-color-green-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--400: $pf-v5-chart-color-purple-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--500: $pf-v5-chart-color-orange-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--600: $pf-v5-chart-color-cyan-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--700: $pf-v5-chart-color-black-300;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--800: $pf-v5-chart-color-blue-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--900: $pf-v5-chart-color-gold-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1000: $pf-v5-chart-color-green-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1100: $pf-v5-chart-color-purple-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1200: $pf-v5-chart-color-orange-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1300: $pf-v5-chart-color-cyan-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1400: $pf-v5-chart-color-black-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1500: $pf-v5-chart-color-blue-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1600: $pf-v5-chart-color-gold-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1700: $pf-v5-chart-color-green-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1800: $pf-v5-chart-color-purple-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--1900: $pf-v5-chart-color-orange-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2000: $pf-v5-chart-color-cyan-100;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2100: $pf-v5-chart-color-black-500;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2200: $pf-v5-chart-color-blue-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2300: $pf-v5-chart-color-gold-400;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2400: $pf-v5-chart-color-green-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2500: $pf-v5-chart-color-purple-400;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2600: $pf-v5-chart-color-orange-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2700: $pf-v5-chart-color-cyan-400;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2800: $pf-v5-chart-color-black-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--2900: $pf-v5-chart-color-blue-400;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--3000: $pf-v5-chart-color-gold-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--3100: $pf-v5-chart-color-green-400;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--3200: $pf-v5-chart-color-purple-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--3300: $pf-v5-chart-color-orange-400;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--3400: $pf-v5-chart-color-cyan-200;
-$pf-v5-chart-theme--multi-color-unordered--ColorScale--3500: $pf-v5-chart-color-black-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--100: $pf-v6-chart-color-blue-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--200: $pf-v6-chart-color-gold-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--300: $pf-v6-chart-color-green-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--400: $pf-v6-chart-color-purple-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--500: $pf-v6-chart-color-orange-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--600: $pf-v6-chart-color-cyan-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--700: $pf-v6-chart-color-black-300;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--800: $pf-v6-chart-color-blue-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--900: $pf-v6-chart-color-gold-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1000: $pf-v6-chart-color-green-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1100: $pf-v6-chart-color-purple-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1200: $pf-v6-chart-color-orange-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1300: $pf-v6-chart-color-cyan-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1400: $pf-v6-chart-color-black-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1500: $pf-v6-chart-color-blue-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1600: $pf-v6-chart-color-gold-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1700: $pf-v6-chart-color-green-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1800: $pf-v6-chart-color-purple-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--1900: $pf-v6-chart-color-orange-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2000: $pf-v6-chart-color-cyan-100;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2100: $pf-v6-chart-color-black-500;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2200: $pf-v6-chart-color-blue-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2300: $pf-v6-chart-color-gold-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2400: $pf-v6-chart-color-green-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2500: $pf-v6-chart-color-purple-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2600: $pf-v6-chart-color-orange-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2700: $pf-v6-chart-color-cyan-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2800: $pf-v6-chart-color-black-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--2900: $pf-v6-chart-color-blue-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--3000: $pf-v6-chart-color-gold-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--3100: $pf-v6-chart-color-green-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--3200: $pf-v6-chart-color-purple-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--3300: $pf-v6-chart-color-orange-400;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--3400: $pf-v6-chart-color-cyan-200;
+$pf-v6-chart-theme--multi-color-unordered--ColorScale--3500: $pf-v6-chart-color-black-400;
 
 // orange
-$pf-v5-chart-theme--orange--ColorScale--100: $pf-v5-chart-color-orange-300;
-$pf-v5-chart-theme--orange--ColorScale--200: $pf-v5-chart-color-orange-100;
-$pf-v5-chart-theme--orange--ColorScale--300: $pf-v5-chart-color-orange-500;
-$pf-v5-chart-theme--orange--ColorScale--400: $pf-v5-chart-color-orange-200;
-$pf-v5-chart-theme--orange--ColorScale--500: $pf-v5-chart-color-orange-400;
+$pf-v6-chart-theme--orange--ColorScale--100: $pf-v6-chart-color-orange-300;
+$pf-v6-chart-theme--orange--ColorScale--200: $pf-v6-chart-color-orange-100;
+$pf-v6-chart-theme--orange--ColorScale--300: $pf-v6-chart-color-orange-500;
+$pf-v6-chart-theme--orange--ColorScale--400: $pf-v6-chart-color-orange-200;
+$pf-v6-chart-theme--orange--ColorScale--500: $pf-v6-chart-color-orange-400;
 
 // purple
-$pf-v5-chart-theme--purple--ColorScale--100: $pf-v5-chart-color-purple-300;
-$pf-v5-chart-theme--purple--ColorScale--200: $pf-v5-chart-color-purple-100;
-$pf-v5-chart-theme--purple--ColorScale--300: $pf-v5-chart-color-purple-500;
-$pf-v5-chart-theme--purple--ColorScale--400: $pf-v5-chart-color-purple-200;
-$pf-v5-chart-theme--purple--ColorScale--500: $pf-v5-chart-color-purple-400;
+$pf-v6-chart-theme--purple--ColorScale--100: $pf-v6-chart-color-purple-300;
+$pf-v6-chart-theme--purple--ColorScale--200: $pf-v6-chart-color-purple-100;
+$pf-v6-chart-theme--purple--ColorScale--300: $pf-v6-chart-color-purple-500;
+$pf-v6-chart-theme--purple--ColorScale--400: $pf-v6-chart-color-purple-200;
+$pf-v6-chart-theme--purple--ColorScale--500: $pf-v6-chart-color-purple-400;

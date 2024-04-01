@@ -246,7 +246,7 @@
 }
 
 // Animate tab focus removal
-@mixin pf-v6-animate-remove-tab-focus($element, $delay: $pf-v5-global--TransitionDuration) {
+@mixin pf-v6-animate-remove-tab-focus($element, $delay: $pf-v6-global--TransitionDuration) {
   @keyframes pf-remove-tab-focus {
     to {
       visibility: hidden;

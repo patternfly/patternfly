@@ -243,7 +243,7 @@
   --#{$button}__icon--m-end--MarginLeft: var(--pf-t--global--spacer--xs);
 
   // Progress
-  --#{$button}__progress--width: calc(var(--#{$pf-global}--icon--FontSize--md) + var(--#{$pf-global}--spacer--sm)); // matches medium spinner diameter plus a spacer
+  --#{$button}__progress--width: calc(var(--#{$spinner}--m-md--diameter) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
   --#{$button}__progress--Opacity: 0;
   --#{$button}__progress--TranslateY: -50%;
   --#{$button}__progress--TranslateX: 0;
@@ -251,7 +251,7 @@
   --#{$button}__progress--Left: var(--pf-t--global--spacer--md);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
   --#{$button}--m-progress--TransitionProperty: padding;
-  --#{$button}--m-progress--TransitionDuration: var(--#{$pf-global}--TransitionDuration);
+  --#{$button}--m-progress--TransitionDuration: var(--pf-t--global--transitionDuration);
   --#{$button}--m-progress--PaddingRight: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingRight: var(--pf-t--global--spacer--md);
@@ -261,7 +261,7 @@
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
 
   // Count
-  --#{$button}__count--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$button}__count--MarginLeft: var(--pf-t--global--spacer--sm);
   --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);

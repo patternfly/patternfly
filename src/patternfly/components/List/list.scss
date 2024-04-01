@@ -5,7 +5,7 @@
   --#{$list}--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$list}--nested--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$list}--nested--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$list}--ul--ListStyle: var(--#{$pf-global}--ListStyle); // TODO add token?
+  --#{$list}--ul--ListStyle: var(--pf-t--global--list-style);
   --#{$list}--li--MarginTop: var(--pf-t--global--spacer--sm);
 
   // inline

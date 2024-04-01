@@ -65,7 +65,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   // toggle icon
   --#{$jump-links}__toggle-icon--Color: currentcolor;
-  --#{$jump-links}__toggle-icon--Transition: var(--#{$pf-global}--Transition); // TODO
+  --#{$jump-links}__toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$jump-links}__toggle-icon--Rotate: 0;
   --#{$jump-links}--m-expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$jump-links}--m-expanded__toggle-icon--Rotate: 90deg;

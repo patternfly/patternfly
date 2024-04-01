@@ -1,7 +1,7 @@
 // @debug $page; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 // stylelint-disable
-$pf-page-v5--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-page-v6--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 // stylelint-enable
 
 :root {
@@ -11,7 +11,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Header
   --#{$page}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__header--ZIndex: var(--#{$pf-global}--ZIndex--md);
+  --#{$page}__header--ZIndex: var(--pf-t--global--Zindex--md);
   --#{$page}__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
@@ -65,11 +65,11 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Sidebar
-  --#{$page}__sidebar--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$page}__sidebar--ZIndex: var(--pf-t--global--Zindex--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
-  --#{$page}__sidebar--Transition: var(--#{$pf-global}--Transition);
+  --#{$page}__sidebar--Transition: var(--pf-t--global--transition);
   --#{$page}__sidebar--TranslateX: -100%;
   --#{$page}__sidebar--TranslateZ: 0;
   --#{$page}__sidebar--m-expanded--TranslateX: 0;
@@ -105,7 +105,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Container for the main content area (grid area)
-  --#{$page}__main-container--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$page}__main-container--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-container--MarginInlineStart: var(--pf-t--global--spacer--lg);
@@ -130,16 +130,16 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
 
   // Sticky
-  --#{$page}--section--m-sticky-top--ZIndex: var(--#{$pf-global}--ZIndex--md);
+  --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--Zindex--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$page}--section--m-sticky-bottom--ZIndex: var(--#{$pf-global}--ZIndex--md);
+  --#{$page}--section--m-sticky-bottom--ZIndex: var(--pf-t--global--Zindex--md);
   --#{$page}--section--m-sticky-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
 
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$page}--section--m-shadow-bottom--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$page}--section--m-shadow-bottom--ZIndex: var(--pf-t--global--Zindex--xs);
   --#{$page}--section--m-shadow-top--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
-  --#{$page}--section--m-shadow-top--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$page}--section--m-shadow-top--ZIndex: var(--pf-t--global--Zindex--xs);
 
   // Main section horizontal nav
   --#{$page}__main-nav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -469,7 +469,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
@@ -532,7 +532,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}__main-nav--BackgroundColor);
 
   // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
@@ -564,7 +564,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--height-breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
@@ -617,7 +617,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-secondary--BackgroundColor);
   }
 
-  @each $breakpoint, $breakpoint-value in $pf-page-v5--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-page-v6--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {

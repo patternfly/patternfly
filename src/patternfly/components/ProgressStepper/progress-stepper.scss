@@ -360,7 +360,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   // Align pficons with the font awesome icons
   // stylelint-disable
-  .pf-v5-pficon {
+  .pf-v6-pficon {
     margin-block-start: var(--#{$progress-stepper}__pficon--MarginTop);
   }
 

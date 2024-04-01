@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatDisplay/RedHatDisplay-Medium.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplay-Medium.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -12,7 +12,7 @@
   font-style: italic;
   font-weight: 400;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatDisplay/RedHatDisplay-MediumItalic.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplay-MediumItalic.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -21,7 +21,7 @@
   font-style: normal;
   font-weight: 700;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -30,7 +30,7 @@
   font-style: italic;
   font-weight: 700;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatDisplay/RedHatDisplay-BoldItalic.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplay-BoldItalic.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -39,7 +39,7 @@
   font-style: normal;
   font-weight: 400;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatText/RedHatText-Regular.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatText/RedHatText-Regular.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -48,7 +48,7 @@
   font-style: italic;
   font-weight: 400;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatText/RedHatText-Italic.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatText/RedHatText-Italic.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -57,7 +57,7 @@
   font-style: normal;
   font-weight: 700;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatText/RedHatText-Medium.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatText/RedHatText-Medium.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -66,7 +66,7 @@
   font-style: italic;
   font-weight: 700;
   src:
-    url("#{$pf-v5-global--font-path}/RedHatText/RedHatText-MediumItalic.woff2") format("woff2");
+    url("#{$pf-v6-global--font-path}/RedHatText/RedHatText-MediumItalic.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -74,7 +74,7 @@
   font-family: RedHatMono;
   font-style: normal;
   font-weight: 400;
-  src: url("#{$pf-v5-global--font-path}/RedHatMono/RedHatMono-Regular.woff2") format("woff2");
+  src: url("#{$pf-v6-global--font-path}/RedHatMono/RedHatMono-Regular.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -82,7 +82,7 @@
   font-family: RedHatMono;
   font-style: italic;
   font-weight: 400;
-  src: url("#{$pf-v5-global--font-path}/RedHatMono/RedHatMono-Italic.woff2") format("woff2");
+  src: url("#{$pf-v6-global--font-path}/RedHatMono/RedHatMono-Italic.woff2") format("woff2");
   font-display: fallback;
 }
 
@@ -91,7 +91,7 @@
   font-family: RedHatDisplayVF;
   font-style: normal;
   font-weight: 400 700;
-  src: url("#{$pf-v5-global--font-path}/RedHatDisplay/RedHatDisplayVF.woff2") format("woff2-variations");
+  src: url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplayVF.woff2") format("woff2-variations");
   font-display: fallback;
 }
 
@@ -99,7 +99,7 @@
   font-family: RedHatDisplayVF;
   font-style: italic;
   font-weight: 400 700;
-  src: url("#{$pf-v5-global--font-path}/RedHatDisplay/RedHatDisplayVF-Italic.woff2") format("woff2-variations");
+  src: url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplayVF-Italic.woff2") format("woff2-variations");
   font-display: fallback;
 }
 
@@ -107,7 +107,7 @@
   font-family: RedHatTextVF;
   font-style: normal;
   font-weight: 400 500;
-  src: url("#{$pf-v5-global--font-path}/RedHatText/RedHatTextVF.woff2") format("woff2-variations");
+  src: url("#{$pf-v6-global--font-path}/RedHatText/RedHatTextVF.woff2") format("woff2-variations");
   font-display: fallback;
 }
 
@@ -115,7 +115,7 @@
   font-family: RedHatTextVF;
   font-style: italic;
   font-weight: 400 500;
-  src: url("#{$pf-v5-global--font-path}/RedHatText/RedHatTextVF-Italic.woff2") format("woff2-variations");
+  src: url("#{$pf-v6-global--font-path}/RedHatText/RedHatTextVF-Italic.woff2") format("woff2-variations");
   font-display: fallback;
 }
 
@@ -123,7 +123,7 @@
   font-family: RedHatMonoVF;
   font-style: normal;
   font-weight: 400;
-  src: url("#{$pf-v5-global--font-path}/RedHatMono/RedHatMonoVF.woff2") format("woff2-variations");
+  src: url("#{$pf-v6-global--font-path}/RedHatMono/RedHatMonoVF.woff2") format("woff2-variations");
   font-display: fallback;
 }
 
@@ -131,6 +131,6 @@
   font-family: RedHatMonoVF;
   font-style: italic;
   font-weight: 400;
-  src: url("#{$pf-v5-global--font-path}/RedHatMono/RedHatMonoVF-Italic.woff2") format("woff2-variations");
+  src: url("#{$pf-v6-global--font-path}/RedHatMono/RedHatMonoVF-Italic.woff2") format("woff2-variations");
   font-display: fallback;
 }
