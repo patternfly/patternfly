@@ -38,12 +38,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__content--PaddingInline: var(--#{$toolbar}--PaddingInline);
 
   // * Toolbar expandable content
-  --#{$toolbar}__expandable-content--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$toolbar}__expandable-content--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$toolbar}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // * Toolbar sticky
-  --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 

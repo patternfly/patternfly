@@ -3,7 +3,7 @@
 :root,
 .#{$backdrop} {
   --#{$backdrop}--Position: fixed;
-  --#{$backdrop}--ZIndex: var(--pf-t--global--Zindex--lg);
+  --#{$backdrop}--ZIndex: var(--pf-t--global--z-index--lg);
   --#{$backdrop}--BackgroundColor: var(--pf-t--global--background--color--backdrop--default);
 }
 

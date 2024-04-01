@@ -23,7 +23,7 @@
   --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--button--default);
-  --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--Zindex--xs); // add z-index for toggle border to render above other borders
+  --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
 
   // * Menu toggle hover
   --#{$menu-toggle}--hover--Color: var(--pf-t--global--text--color--regular);

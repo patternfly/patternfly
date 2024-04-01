@@ -73,7 +73,7 @@
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__toggle--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$wizard}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__toggle--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$wizard}__toggle--PaddingBottom: var(--pf-t--global--spacer--lg);
@@ -102,7 +102,7 @@
   --#{$wizard}__toggle--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Nav
-  --#{$wizard}__nav--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__nav--Width: 100%;
@@ -142,7 +142,7 @@
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__footer--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__footer--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingBottom: var(--pf-t--global--spacer--md);

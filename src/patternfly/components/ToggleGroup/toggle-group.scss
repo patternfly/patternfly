@@ -13,7 +13,7 @@
   --#{$toggle-group}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$toggle-group}__button--ZIndex: auto;
   --#{$toggle-group}__button--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$toggle-group}__button--hover--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$toggle-group}__button--hover--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$toggle-group}__button--hover--before--BorderColor: var(--pf-t--global--border--color--default);
   --#{$toggle-group}__button--before--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$toggle-group}__button--before--BorderColor: var(--pf-t--global--border--color--default);
@@ -33,14 +33,14 @@
   --#{$toggle-group}__button--m-selected--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$toggle-group}__button--m-selected--before--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$toggle-group}__button--m-selected--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$toggle-group}__button--m-selected--ZIndex: var(--pf-t--global--z-index--xs);
 
   // disabled
   --#{$toggle-group}__button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$toggle-group}__button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$toggle-group}__button--disabled--before--BorderColor: var(--pf-t--global--border--color--disabled);
   --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Compact
   --#{$toggle-group}--m-compact__button--PaddingTop: 0;

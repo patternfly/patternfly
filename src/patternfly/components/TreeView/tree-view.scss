@@ -95,7 +95,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-guides__list-item--before--BackgroundColor: var(--#{$tree-view}--m-guides--guide-color--base);
   --#{$tree-view}--m-guides__list-item--last-child--before--Top: var(--#{$tree-view}--m-guides__node--before--Top);
   --#{$tree-view}--m-guides__list-item--last-child--before--Height: var(--#{$tree-view}--m-guides__list-item--last-child--before--Top);
-  --#{$tree-view}--m-guides__list-item--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$tree-view}--m-guides__list-item--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Node
   --#{$tree-view}--m-guides__node--before--Width: #{pf-size-prem(16px)};

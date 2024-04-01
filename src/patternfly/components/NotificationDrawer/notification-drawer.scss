@@ -10,7 +10,7 @@
   --#{$notification-drawer}__header--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$notification-drawer}__header--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-  --#{$notification-drawer}__header--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$notification-drawer}__header--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$notification-drawer}__header-title--FontSize: var(--pf-t--global--font--size--heading--md);
   --#{$notification-drawer}__header-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
   --#{$notification-drawer}__header-title--LineHeight: var(--pf-t--global--font--line-height--heading);
@@ -21,7 +21,7 @@
   --#{$notification-drawer}__header-status--Color: var(--pf-t--global--text--color--subtle);
 
   // Body
-  --#{$notification-drawer}__body--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$notification-drawer}__body--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$notification-drawer}__body--PaddingBlockStart: 0; // TODO var(--pf-t--global--spacer--sm);
   --#{$notification-drawer}__body--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 

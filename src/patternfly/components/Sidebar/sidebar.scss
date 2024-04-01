@@ -85,7 +85,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__panel--md--FlexBasis: #{pf-size-prem(250px)};
   --#{$sidebar}__panel--m-split--FlexBasis: #{pf-size-prem(250px)};
   --#{$sidebar}__panel--m-stack--FlexBasis: auto;
-  --#{$sidebar}__panel--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$sidebar}__panel--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$sidebar}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$sidebar}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
