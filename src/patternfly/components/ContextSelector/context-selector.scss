@@ -44,7 +44,7 @@
 
   // Menu
   --#{$context-selector}__menu--Top: calc(100% + var(--#{$pf-global}--spacer--xs));
-  --#{$context-selector}__menu--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$context-selector}__menu--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$context-selector}__menu--PaddingTop: var(--#{$pf-global}--spacer--sm); // remove at breaking change
   --#{$context-selector}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$context-selector}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);

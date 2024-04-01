@@ -9,7 +9,7 @@
   --#{$alert-group}--m-toast--Top: var(--pf-t--global--spacer--2xl);
   --#{$alert-group}--m-toast--Right: var(--pf-t--global--spacer--xl);
   --#{$alert-group}--m-toast--MaxWidth: #{pf-size-prem(600px)};
-  --#{$alert-group}--m-toast--ZIndex: var(--pf-t--global--Zindex--2xl);
+  --#{$alert-group}--m-toast--ZIndex: var(--pf-t--global--z-index--2xl);
 
   // Overflow button
   --#{$alert-group}__overflow-button--BorderWidth: 0;

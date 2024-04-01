@@ -183,12 +183,12 @@
   --#{$pf-global}--gutter--md: #{$pf-v6-global--gutter--md};
 
   // Z-Index
-  --pf-t--global--Zindex--xs: #{$pf-v6-global--ZIndex--xs};
-  --pf-t--global--Zindex--sm: #{$pf-v6-global--ZIndex--sm};
-  --pf-t--global--Zindex--md: #{$pf-v6-global--ZIndex--md};
-  --pf-t--global--Zindex--lg: #{$pf-v6-global--ZIndex--lg};
-  --pf-t--global--Zindex--xl: #{$pf-v6-global--ZIndex--xl};
-  --pf-t--global--Zindex--2xl: #{$pf-v6-global--ZIndex--2xl};
+  --pf-t--global--z-index--xs: #{$pf-v6-global--ZIndex--xs};
+  --pf-t--global--z-index--sm: #{$pf-v6-global--ZIndex--sm};
+  --pf-t--global--z-index--md: #{$pf-v6-global--ZIndex--md};
+  --pf-t--global--z-index--lg: #{$pf-v6-global--ZIndex--lg};
+  --pf-t--global--z-index--xl: #{$pf-v6-global--ZIndex--xl};
+  --pf-t--global--z-index--2xl: #{$pf-v6-global--ZIndex--2xl};
 
   // Grid breakpoints
   --#{$pf-global}--breakpoint--xs: #{$pf-v6-global--breakpoint--xs};

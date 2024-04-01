@@ -219,9 +219,9 @@
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // * Table sticky header
-  --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--Zindex--xs);
-  --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--Zindex--xs) + 1);
-  --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--Zindex--xs) + 2);
+  --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
+  --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
 }
 
 // TODO: update grouping comments to // Table {element}

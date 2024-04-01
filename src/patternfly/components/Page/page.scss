@@ -11,7 +11,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Header
   --#{$page}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__header--ZIndex: var(--pf-t--global--Zindex--md);
+  --#{$page}__header--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
@@ -65,7 +65,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Sidebar
-  --#{$page}__sidebar--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
@@ -105,7 +105,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Container for the main content area (grid area)
-  --#{$page}__main-container--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$page}__main-container--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-container--MarginInlineStart: var(--pf-t--global--spacer--lg);
@@ -130,16 +130,16 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
 
   // Sticky
-  --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--Zindex--md);
+  --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$page}--section--m-sticky-bottom--ZIndex: var(--pf-t--global--Zindex--md);
+  --#{$page}--section--m-sticky-bottom--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
 
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
-  --#{$page}--section--m-shadow-bottom--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$page}--section--m-shadow-bottom--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$page}--section--m-shadow-top--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
-  --#{$page}--section--m-shadow-top--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$page}--section--m-shadow-top--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Main section horizontal nav
   --#{$page}__main-nav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);

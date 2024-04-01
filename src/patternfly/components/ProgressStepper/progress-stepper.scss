@@ -139,7 +139,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step-connector--JustifyContent: flex-start;
 
   // Step icon variables
-  --#{$progress-stepper}__step-icon--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$progress-stepper}__step-icon--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$progress-stepper}__step-icon--Width: #{pf-size-prem(24px)};
   --#{$progress-stepper}__step-icon--Height: var(--#{$progress-stepper}__step-icon--Width);
   --#{$progress-stepper}__step-icon--FontSize: var(--pf-t--global--icon--size--font--body--default);

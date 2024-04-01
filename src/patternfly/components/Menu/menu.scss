@@ -11,7 +11,7 @@
   --#{$menu}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
-  --#{$menu}--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$menu}--icon--disabled--Color: var(--pf-t--global--icon--color--disabled);
 
@@ -112,7 +112,7 @@
   --#{$menu}--m-flyout__menu--m-left--right-offset: 0px;
 
   // * Menu flyout
-  --#{$menu}--m-flyout__Zindex: var(--pf-t--global--Zindex--sm);
+  --#{$menu}--m-flyout__Zindex: var(--pf-t--global--z-index--sm);
   --#{$menu}--m-flyout__menu--Top: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
   --#{$menu}--m-flyout__menu--Right: auto;
   --#{$menu}--m-flyout__menu--Bottom: auto;
@@ -135,7 +135,7 @@
   --#{$menu}--m-drilldown__list--Transition: transform var(--#{$menu}--m-drilldown__list--TransitionDuration--transform);
 
   // * Menu drilled in
-  --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--Zindex--xs);
+  --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--z-index--xs);
 }
 
 // - Menu shared display flex

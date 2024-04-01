@@ -7,7 +7,7 @@
   position: absolute;
   inset-block-start: 40px;
   width: 100%;
-  z-index: var(--pf-t--global--Zindex--2xl);
+  z-index: var(--pf-t--global--z-index--2xl);
 }
 
 #ws-core-c-text-input-group-search-input-group-advanced-search-expanded-with-autocomplete {

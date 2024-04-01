@@ -48,7 +48,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-box__item--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$tabs}--m-box--m-secondary__item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$tabs}--m-box--m-secondary__item--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$tabs}__item--m-action--before--ZIndex: var(--pf-t--global--Zindex--sm);
+  --#{$tabs}__item--m-action--before--ZIndex: var(--pf-t--global--z-index--sm);
 
   // Tabs link
   --#{$tabs}__link--Color: var(--pf-t--global--text--color--subtle);
