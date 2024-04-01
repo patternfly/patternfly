@@ -319,19 +319,31 @@ import './Card.css'
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="5 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
+          {{#> icon}}
+            {{#> icon-content icon-content--modifier="pf-m-success"}}
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+            {{/icon-content}}
+          {{/icon}}
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="15 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-exclamation-triangle pf-v6-u-icon-status-warning" aria-hidden="true"></i>
+          {{#> icon}}
+            {{#> icon-content icon-content--modifier="pf-m-warning"}}
+              <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+            {{/icon-content}}
+          {{/icon}}
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="3 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+          {{#> icon}}
+            {{#> icon-content icon-content--modifier="pf-m-danger"}}
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+            {{/icon-content}}
+          {{/icon}}
         {{/card-body}}
       {{/card}}
     {{/gallery}}
@@ -344,7 +356,11 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-success"}}
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">2</a>
@@ -353,7 +369,11 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-warning"}}
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">1</a>
@@ -368,7 +388,11 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-success"}}
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">5</a>
@@ -377,7 +401,11 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">12</a>
@@ -392,7 +420,11 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-warning"}}
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">2</a>
@@ -401,7 +433,11 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">7</a>
@@ -420,7 +456,11 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">2 errors</a>
@@ -429,7 +469,11 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-warning"}}
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">1 warnings</a>
@@ -445,7 +489,11 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-success"}}
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">2 successes</a>
@@ -454,7 +502,11 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-warning"}}
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">3 warnings</a>
@@ -470,7 +522,11 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-v6-u-icon-color-status-warning" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-warning"}}
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">7 warnings</a>
@@ -479,7 +535,11 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">1 error</a>
@@ -735,7 +795,11 @@ import './Card.css'
       {{#> l-flex l-flex--modifier="pf-m-column"}}
         <span>System</span>
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-          <i class="fas fa-exclamation-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+          {{#> icon}}
+            {{#> icon-content icon-content--modifier="pf-m-danger"}}
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+            {{/icon-content}}
+          {{/icon}}
           <a hfer="#">25 incidents detected</a>
         {{/l-flex}}
         {{> card-demo--chart card-demo--chart--IsStackChart="true"}}
@@ -783,7 +847,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v6-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') }}
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-expandable-content}}
@@ -796,7 +860,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v6-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') }}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -804,7 +868,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title"') card-title-text--modifier="pf-v6-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title"') }}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -827,7 +891,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v6-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') }}
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-expandable-content}}
@@ -840,7 +904,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v6-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') }}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -848,7 +912,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v6-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title') }}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -871,9 +935,7 @@ import './Card.css'
     {{#> accordion}}
       {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
         {{#> accordion-toggle-text}}
-          <span class="pf-v6-u-font-weight-light">
             CPU 1
-          </span>
         {{/accordion-toggle-text}}
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
@@ -885,9 +947,7 @@ import './Card.css'
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
         {{#> accordion-toggle-text}}
-          <span class="pf-v6-u-font-weight-light">
             CPU 2
-          </span>
         {{/accordion-toggle-text}}
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
@@ -897,9 +957,7 @@ import './Card.css'
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
         {{#> accordion-toggle-text}}
-          <span class="pf-v6-u-font-weight-light">
             CPU 3
-          </span>
         {{/accordion-toggle-text}}
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
@@ -1006,7 +1064,11 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:02 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:38"'}}
+                Thursday, 21 January 2019, 9:38 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1017,7 +1079,11 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:13 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:34"'}}
+                Thursday, 21 January 2019, 9:34 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1028,7 +1094,11 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:59 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-20T21:14"'}}
+                Thursday, 21 January 2019, 8:14 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1039,7 +1109,11 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:45 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T19:18"'}}
+                Thursday, 21 January 2019, 7:18 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}
@@ -1078,7 +1152,11 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-circle pf-v6-u-icon-color-status-danger" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Readiness probe failed
@@ -1089,14 +1167,22 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:02 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:38"'}}
+                Thursday, 21 January 2019, 9:38 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-success"}}
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Successful assignment
@@ -1107,7 +1193,11 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 11:13 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:34"'}}
+                Thursday, 21 January 2019, 9:34 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1125,14 +1215,22 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:59 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T20:14"'}}
+                Thursday, 21 January 2019, 8:14 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-v6-u-icon-color-status-success" aria-hidden="true"></i>
+                {{#> icon}}
+                  {{#> icon-content icon-content--modifier="pf-m-success"}}
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  {{/icon-content}}
+                {{/icon}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Created container
@@ -1143,7 +1241,11 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-v6-u-text-color-subtle pf-v6-u-font-size-sm">Jun 17, 10:45 am</time>
+            {{#> timestamp}}
+              {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T19:18"'}}
+                Thursday, 21 January 2019, 7:18 PM EST
+              {{/timestamp-text}}
+            {{/timestamp}}
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}

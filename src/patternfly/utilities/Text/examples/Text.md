@@ -51,9 +51,6 @@ section: utility-classes
 ### Font weight
 
 ```hbs
-{{#> text text--modifier="pf-v6-u-font-weight-light"}}
-  Light
-{{/text}}
 {{#> text text--modifier="pf-v6-u-font-weight-normal"}}
   Normal
 {{/text}}
