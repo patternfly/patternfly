@@ -82,7 +82,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   // Icon
   --#{$dual-list-selector}__item-toggle-icon--Rotate: 0;
   --#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
-  --#{$dual-list-selector}__item-toggle-icon--Transition: var(--pf-t--global--transition); // need token
+  --#{$dual-list-selector}__item-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$dual-list-selector}__item-toggle-icon--MinWidth: var(--#{$dual-list-selector}__list-item-row--FontSize);
   --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
 }

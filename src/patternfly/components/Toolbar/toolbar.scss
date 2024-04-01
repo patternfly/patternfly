@@ -52,7 +52,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // * Toolbar expand all
   --#{$toolbar}__expand-all-icon--Rotate: 0;
-  --#{$toolbar}__expand-all-icon--Transition: var(--pf-t--global--transition); // TODO: update when transition is tokenized
+  --#{$toolbar}__expand-all-icon--Transition: var(--pf-t--global--transition);
   --#{$toolbar}__item--m-expand-all--m-expanded__expand-all-icon--Rotate: 90deg;
 
   // * Toolbar filter group

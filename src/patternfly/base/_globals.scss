@@ -136,10 +136,3 @@
     cursor: pointer;
   }
 }
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "./themes/dark/globals";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-globals;
-}
