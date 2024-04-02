@@ -13,9 +13,9 @@
       {{#if tree-view-list-item--IsSelected}} pf-m-current{{/if}}
     {{/unless}}
     {{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
-    {{#unless tree-view-node--type}}
-      tabindex="{{ternary tree-view-node--IsFocusable "0" "-1"}}"
-    {{/unless}}
+    {{#if tree-view-node--type}}
+      tabindex="0"
+    {{/if}}
     {{#if tree-view-list-item--HasCheckbox}}
       for="check-{{tree-view-node--id}}"
     {{else if tree-view-list-item--IsSelectable}}
