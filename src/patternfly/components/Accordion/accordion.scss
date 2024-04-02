@@ -21,7 +21,7 @@
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Accordion toggle toggle-start modifier
-  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--pf-t--global--spacer--control--horizontal--default);
 
   // accordion toggle text
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);
@@ -51,11 +51,11 @@
   --#{$accordion}__expandable-content-body--expandable-content-body--PaddingBlockStart: 0;
 
   // large
-  --#{$accordion}--m-display-lg__toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$accordion}--m-display-lg__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$accordion}--m-display-lg__toggle--PaddingBlockStart: calc(var(--pf-t--global--spacer--button--vertical--default) * 2);
+  --#{$accordion}--m-display-lg__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--button--horizontal--compact);
+  --#{$accordion}--m-display-lg__toggle--PaddingBlockEnd: calc(var(--pf-t--global--spacer--button--vertical--default) * 2);
+  --#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--button--vertical--default);
+  --#{$accordion}--m-display-lg__toggle--PaddingInlineStart: var(--pf-t--global--spacer--button--horizontal--compact);
   --#{$accordion}--m-display-lg__toggle--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$accordion}--m-display-lg__toggle--FontSize: var(--pf-t--global--font--size--heading--sm);
   --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
