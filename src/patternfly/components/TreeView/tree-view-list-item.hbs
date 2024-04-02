@@ -7,13 +7,6 @@
   {{/if}}
   {{#if tree-view-list-item--IsExpandable}}
     aria-expanded="{{#if tree-view-list-item--IsExpanded}}true{{else}}false{{/if}}"
-    {{#if tree-view-list-item--HasCheckbox}}
-      tabindex="-1"
-    {{else}}
-      tabindex="0"
-    {{/if}}
-  {{else}}
-    tabindex="-1"
   {{/if}}
 
   {{#if tree-view-list-item--attribute}}

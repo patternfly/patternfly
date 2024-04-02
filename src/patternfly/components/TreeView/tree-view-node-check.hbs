@@ -3,6 +3,6 @@
     {{{tree-view-node-check--attribute}}}
   {{/if}}>
   {{#> check check--modifier="pf-m-standalone"}}
-    {{> check-input check-input--IsChecked=tree-view-list-item--IsSelected check-input--attribute=(concat 'id="check-' tree-view-node--id '" aria-label="Select" aria-labelledby="check-' tree-view-node--id ' text-' tree-view-node--id '"')}}
+    {{> check-input check-input--IsChecked=tree-view-list-item--IsSelected check-input--attribute=(concat 'id="check-' tree-view-node--id '" aria-label="Select" aria-labelledby="check-' tree-view-node--id ' text-' tree-view-node--id '" tabindex="-1"')}}
   {{/check}}
 </span>

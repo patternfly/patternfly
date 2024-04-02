@@ -2,6 +2,9 @@
   {{#if (concat tree-view-list-item--IsSelectable tree-view-list-item--HasCheckbox)}}
     id="text-{{{tree-view-node--id}}}"
   {{/if}}
+  {{#if tree-view-list-item--IsSelectable}}
+    tabindex="-1"
+  {{/if}}
   {{#if tree-view-node-text--attribute}}
     {{{tree-view-node-text--attribute}}}
   {{/if}}>

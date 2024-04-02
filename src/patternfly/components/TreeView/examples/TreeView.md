@@ -12,7 +12,7 @@ cssPrefix: pf-v5-c-tree-view
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View single selectable example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
@@ -106,7 +106,7 @@ A tree view can be setup to allow multiple nodes to be selected. When a tree vie
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--IsMultiselectable=true tree-view-list--AriaLabel="Tree View multiselectable example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
@@ -204,7 +204,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View  with search example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
@@ -285,7 +285,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with checkboxes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--HasCheckbox=true}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--id=(concat tree-view--id '-1') }}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--id=(concat tree-view--id '-1') tree-view-node--IsFocusable=true }}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--HasCheckbox=true tree-view-list-item--IsSelected=true}}
@@ -376,7 +376,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with icons example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
@@ -457,7 +457,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with badges example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{#> tree-view-node tree-view-node--text="Application launcher"}}
+        {{#> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
           {{#> tree-view-node-count}}
             {{#> badge badge--modifier="pf-m-read"}}
               2
@@ -592,9 +592,9 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with action item example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
         {{#> tree-view-action}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions" tabindex="-1"'}}
             <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
           {{/button}}
         {{/tree-view-action}}
@@ -604,7 +604,7 @@ A search input can be used to filter tree view items. It is recommended that a t
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 1"}}
             {{#> tree-view-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy"'}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy" tabindex="-1"'}}
                 <i class="fas fa-clipboard" aria-hidden="true"></i>
               {{/button}}
             {{/tree-view-action}}
@@ -626,7 +626,7 @@ A search input can be used to filter tree view items. It is recommended that a t
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 2"}}
             {{#> tree-view-action}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Action"'}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Action" tabindex="-1"'}}
                 <i class="fas fa-bars" aria-hidden="true"></i>
               {{/button}}
             {{/tree-view-action}}
@@ -677,7 +677,7 @@ A search input can be used to filter tree view items. It is recommended that a t
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{> dropdown dropdown--id="dropdown-kebab" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+          {{> dropdown dropdown--id="dropdown-kebab" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true" dropdown-toggle--attribute='tabindex="-1"'}}
         {{/tree-view-action}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
@@ -691,7 +691,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with non-expandable top level nodes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
@@ -782,7 +782,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with selectable, expandable nodes example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-1')}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-2')}}
@@ -873,7 +873,7 @@ A search input can be used to filter tree view items. It is recommended that a t
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View guides example"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{> tree-view-node tree-view-node--text="Application launcher"}}
+        {{> tree-view-node tree-view-node--text="Application launcher" tree-view-node--IsFocusable=true}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
