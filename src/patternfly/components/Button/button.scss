@@ -251,7 +251,7 @@
   --#{$button}__progress--Left: var(--pf-t--global--spacer--md);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
   --#{$button}--m-progress--TransitionProperty: padding;
-  --#{$button}--m-progress--TransitionDuration: var(--pf-t--global--transitionDuration);
+  --#{$button}--m-progress--TransitionDuration: var(--pf-t--global--transition--duration);
   --#{$button}--m-progress--PaddingRight: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingLeft: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingRight: var(--pf-t--global--spacer--md);
