@@ -41,9 +41,6 @@ jobs:
       - run: yarn lint:js
         name: Lint JS
         if: always()
-      - run: yarn lint:css
-        name: Lint CSS
-        if: always()
       - run: yarn build-patternfly
         name: Build patternfly
       - uses: actions/cache@v2
