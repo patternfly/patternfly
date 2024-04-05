@@ -6,7 +6,6 @@ import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./script
 import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
 import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
 import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
-import { lintCSSComments, lintCSSFunctions } from'./scripts/gulp/lint.mjs';
 import { generateSnippets } from'./scripts/gulp/snippets.mjs';
 import { start } from '@patternfly/documentation-framework/scripts/cli/start.js';
 import { build as docsFrameworkBuild} from '@patternfly/documentation-framework/scripts/cli/build.js';
@@ -121,5 +120,3 @@ export function pfIconFont() {
 }
 
 export const develop = series(buildPatternfly, watchAll);
-
-export const lintCSS = parallel(lintCSSFunctions, lintCSSComments);
