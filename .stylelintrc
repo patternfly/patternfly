@@ -78,6 +78,7 @@
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/at-mixin-pattern": "^pf-",
     "scss/no-global-function-names": null,
+    "scss/comment-no-loud": true,
     "scss/percent-placeholder-pattern": "^pf-",
     "selector-class-pattern": "pf-",
     "selector-max-attribute": 2,
