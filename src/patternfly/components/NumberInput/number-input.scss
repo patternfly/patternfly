@@ -30,7 +30,7 @@
     > :is(input) {
       text-align: end;
 
-      @extend %pf-v6-remove-num-arrows;
+      @include pf-v6-remove-num-arrows;
     }
   }
 }

@@ -167,21 +167,6 @@
   border: inherit;
 }
 
-// Remove when deprecated components are removed
-@mixin pf-v6-t-light($color: "--#{$pf-global}--Color--100") {
-  @if $color {
-    color: var(#{$color});
-  }
-
-  @extend %pf-v6-t-light;
-}
-
-@mixin pf-v6-t-dark($color: "--#{$pf-global}--Color--100") {
-  color: var(#{$color});
-
-  @extend %pf-v6-t-dark;
-}
-
 @mixin pf-v6-text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -210,7 +195,36 @@
   // stylelint-disable-next-line
   --pf-v6-hidden-visible--visible--Display: #{$val};
 
-  @extend %pf-v6-hidden-visible;
+  // base value for visible display property is set to 'block' by default and passed in to
+  // placeholder via `pf-v6-hidden-visible` mixin
+
+  // set hidden var values
+  // stylelint-disable custom-property-pattern
+  --pf-v6-hidden-visible--hidden--Display: none;
+
+  // set visibile var values
+  --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--visible--Display);
+
+  // set default state to visible
+  display: var(--pf-v6-hidden-visible--Display);
+
+  // toggle values based on state
+  &.pf-m-hidden {
+    --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--hidden--Display);
+  }
+
+  @each $size, $bp in $pf-v6-global--breakpoint-name-map {
+    @media screen and (min-width: $bp) {
+      &.pf-m-hidden-on-#{$size} {
+        --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--hidden--Display);
+      }
+
+      &.pf-m-visible-on-#{$size} {
+        --pf-v6-hidden-visible--Display: var(--pf-v6-hidden-visible--visible--Display);
+      }
+    }
+  }
+  // stylelint-enable
 }
 
 // Apply media query if value is passed
@@ -326,6 +340,18 @@
     @each $name, $val in $map {
       #{$prefix}#{$name}: #{$val};
     }
+  }
+}
+
+@mixin pf-v6-remove-num-arrows {
+  appearance: textfield;
+
+  // stylelint-disable
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+  // stylelint-enable
+    margin: 0;
+    appearance: none;
   }
 }
 

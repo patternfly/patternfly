@@ -323,10 +323,3 @@
   font-weight: var(--#{$options-menu}__group-title--FontWeight);
   color: var(--#{$options-menu}__group-title--Color);
 }
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/options-menu";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-options-menu;
-}

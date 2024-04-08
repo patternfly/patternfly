@@ -1,7 +1,0 @@
-@mixin pf-v6-theme-dark--t-dark($color: "--#{$pf-global}--Color--100") {
-  @if $color {
-    color: var(#{$color});
-  }
-
-  @extend %pf-v6-theme-dark--t-dark;
-}
