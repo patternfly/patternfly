@@ -44,8 +44,6 @@
   // icon
   --#{$chip}__icon--MarginLeft: var(--#{$pf-global}--spacer--sm);
 
-  @include pf-v6-t-light;  // This component always needs to be light
-
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -130,11 +128,4 @@
     margin-inline-end: var(--#{$chip}__actions--c-button--MarginRight);
     line-height: 1;
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/chip";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-chip;
 }

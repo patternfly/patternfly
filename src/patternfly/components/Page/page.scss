@@ -393,8 +393,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       --#{$context-selector}__toggle--BorderLeftColor: transparent;
       --#{$context-selector}__menu--Top: 100%;
 
-      @include pf-v6-t-dark;
-
       width: 100%;
     }
   }

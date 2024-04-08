@@ -15,12 +15,6 @@
   @return div(pf-strip-unit($pxval), $base) * 1rem;
 }
 
-@function pf-bg-svg($svg-coordinates, $viewBox: "512", $svg-color: "currentColor") {
-  $color: str-slice(#{$svg-color}, 2);
-
-  @return url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 #{$viewBox} 512'%3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
-}
-
 // Return (width) breakpoint value if it exists
 @function pf-breakpoint-value($breakpoint, $breakpoint-map: $pf-v6-global--breakpoint-name-map) {
   $breakpoint-value: if(map-has-key($breakpoint-map, #{$breakpoint}), map-get($breakpoint-map, #{$breakpoint}), false);

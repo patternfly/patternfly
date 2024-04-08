@@ -189,7 +189,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     width: var(--#{$pagination}__nav-page-select--c-form-control--Width);
 
     > :is(input) {
-      @extend %pf-v6-remove-num-arrows;
+      @include pf-v6-remove-num-arrows;
     }
   }
 }

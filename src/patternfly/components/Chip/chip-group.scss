@@ -1,8 +1,6 @@
 // @debug $chip-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$chip}-group {
-  @include pf-v6-t-light; // force the container follow the light theme
-
   // Chip group - spaces main and close
   // column-gap spacer supports legacy chip group
   --#{$chip}-group--PaddingTop: 0;

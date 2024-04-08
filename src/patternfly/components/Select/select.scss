@@ -1,8 +1,6 @@
 // @debug $select; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$select} {
-  @include pf-v6-t-light; // force the container follow the light theme
-
   // Toggle
   --#{$select}__toggle--PaddingTop: var(--#{$pf-global}--spacer--form-element);
   --#{$select}__toggle--PaddingRight: var(--#{$pf-global}--spacer--sm);
@@ -703,11 +701,4 @@
   margin-block-start: var(--#{$select}__menu-footer--MarginTop);
   margin-block-end: var(--#{$select}__menu-footer--MarginBottom);
   box-shadow: var(--#{$select}__menu-footer--BoxShadow);
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/select";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-select;
 }

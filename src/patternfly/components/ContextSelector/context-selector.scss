@@ -303,8 +303,6 @@
 }
 
 .#{$context-selector}__menu {
-  @include pf-v6-t-light;
-
   position: absolute;
   inset-block-start: var(--#{$context-selector}__menu--Top);
   z-index: var(--#{$context-selector}__menu--ZIndex);
@@ -374,11 +372,4 @@
 
     pointer-events: none;
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/context-selector";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-context-selector;
 }

@@ -811,10 +811,3 @@ $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   font-weight: var(--#{$dropdown}__group-title--FontWeight);
   color: var(--#{$dropdown}__group-title--Color);
 }
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/dropdown";
-
-@include pf-v6-theme-dark {
-  @include pf-v6-theme-dark-dropdown;
-}
