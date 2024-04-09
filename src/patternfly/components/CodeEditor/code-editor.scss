@@ -1,4 +1,4 @@
-// @debug $code-editor; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :where(:root), :where(.#{$code-editor}) {
   // controls

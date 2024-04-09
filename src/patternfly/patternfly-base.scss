@@ -1,5 +1,1 @@
-@import "./sass-utilities/all";
-@import "base/variables";
-@import "base/fonts";
-@import "base/base";
-@import "base/icons";
+@use './config/base' as *;

@@ -1,4 +1,4 @@
-// @debug $alert; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :root {
   // Alert variables
@@ -186,7 +186,7 @@
 
 .#{$alert}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
-  
+
   display: inline-block;
   transition: var(--#{$alert}__toggle-icon--Transition);
   transform: rotate(var(--#{$alert}__toggle-icon--Rotate));

@@ -1,3 +1,5 @@
+@use '../../config' as *;
+
 // stylelint-disable
 @mixin pf-mobile-layout {
   .pf-m-grid.#{$table} {

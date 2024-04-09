@@ -1,3 +1,5 @@
+@use '../constants' as *;
+
 .#{$pf-prefix}svg {
   // Default icon size
   width: 1em;

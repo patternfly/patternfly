@@ -1,4 +1,5 @@
-// @debug $form; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
+
 $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
 
 @mixin pf-v6-c-form--m-horizontal {
@@ -116,7 +117,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // Section title
   --#{$form}__section-title--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$form}__section-title--FontWeight: var(--pf-t--global--font--weight--heading);
-  --#{$form}__section-title--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1); 
+  --#{$form}__section-title--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1);
 
   // Field groups
   --#{$form}__field-group--border-width-base: var(--pf-t--global--border--width--divider--default);

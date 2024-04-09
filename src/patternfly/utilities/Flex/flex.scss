@@ -1,5 +1,6 @@
-// stylelint-disable
+@use '../../config' as *;
 
+// stylelint-disable
 // Flex direction options
 $pf-v6-u-flex-direction-options: (
   flex-direction-column:            (flex-direction column),

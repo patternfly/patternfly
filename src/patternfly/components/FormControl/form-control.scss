@@ -1,3 +1,5 @@
+@use '../../config' as *;
+
 :root,
 .#{$form-control} {
   --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--sm);
@@ -93,7 +95,7 @@
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
   --#{$form-control}--textarea--Height: auto;
 
-  // Form control icon 
+  // Form control icon
   --#{$form-control}__icon--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
@@ -172,7 +174,7 @@
   > ::placeholder {
     color: var(--#{$form-control}--m-placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
   }
-  
+
   > :is(input, select) {
     text-overflow: ellipsis;
   }
@@ -180,7 +182,7 @@
   &.pf-m-readonly {
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-readonly--BackgroundColor);
     --#{$form-control}--BorderColor: var(--#{$form-control}--m-readonly--BorderColor);
-    
+
     &:hover {
       --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-readonly--hover--after--BorderColor);
     }

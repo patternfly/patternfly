@@ -1,3 +1,5 @@
+@use '../../config' as *;
+
 @mixin pf-v6-c-data-list-responsive-block() {
   // base responsive styles
   @at-root .#{$data-list}:not([class*="pf-m-grid"]) {

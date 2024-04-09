@@ -1,4 +1,6 @@
-$pf-v6-global--enable-reset: false;
-$pf-v6-global--enable-normalize: false;
+@use './config/constants' with (
+  $pf-v6-global--enable-reset: false,
+  $pf-v6-global--enable-normalize: false
+);
+@use './patternfly-base.scss';
 
-@import "./patternfly-base";

@@ -1,4 +1,4 @@
-@import "./sass-utilities/scss-variables";
+@use "config/helpers" as *;
 
 // stylelint-disable-next-line scss/dollar-variable-pattern
 $chart: #{$pf-prefix} + 'chart';

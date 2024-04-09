@@ -1,5 +1,6 @@
-// stylelint-disable
+@use '../../config' as *;
 
+// stylelint-disable
 $pf-v6-u-box-shadow-options: (
   /* small */
   box-shadow-sm:        (box-shadow var(--pf-t--global--box-shadow--sm)),

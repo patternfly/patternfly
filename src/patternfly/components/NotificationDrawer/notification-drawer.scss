@@ -1,6 +1,6 @@
-// @debug $notification-drawer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
-:root, 
+:root,
 .#{$notification-drawer} {
   --#{$notification-drawer}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
