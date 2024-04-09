@@ -1,6 +1,7 @@
 // @debug $content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$content} {
+:where(:root),
+:where(.#{$content}) {
   // Body
   --#{$content}--MarginBottom: var(--pf-t--global--spacer--md);
   --#{$content}--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -97,12 +98,17 @@
   // hr
   --#{$content}--hr--Height: var(--pf-t--global--border--width--divider--default);
   --#{$content}--hr--BackgroundColor: var(--pf-t--global--border--color--default);
+}
 
+.#{$content} {
   font-size: var(--#{$content}--FontSize);
   line-height: var(--#{$content}--LineHeight);
   color: var(--#{$content}--Color);
 
-  a {
+  @at-root :is(
+    .#{$content}--a,
+    & a
+  ) {
     color: var(--#{$content}--a--Color);
     text-decoration: var(--#{$content}--a--TextDecoration);
 
@@ -113,39 +119,64 @@
   }
 
   // stylelint-disable selector-no-qualifying-type
-  &.pf-m-visited a,
-  a.pf-m-visited {
+  @at-root :is(
+    .#{$content}--a.pf-m-visited,
+    &.pf-m-visited a,
+    & a.pf-m-visited
+  ) {
     &:visited {
       color: var(--#{$content}--a--visited--Color);
     }
   }
   // stylelint-enable
 
-  li + li {
+  @at-root :is(
+    .#{$content}--li + .#{$content}--li,
+    & li + li
+  ) {
     margin-block-start: var(--#{$content}--li--MarginTop);
   }
 
-  p,
-  dl,
-  ol,
-  ul,
-  blockquote,
-  small,
-  pre,
-  table,
-  hr {
+  @at-root :is(
+    .#{$content}--p,
+    .#{$content}--dl,
+    .#{$content}--ol,
+    .#{$content}--ul,
+    .#{$content}--blockquote,
+    .#{$content}--small,
+    .#{$content}--pre,
+    .#{$content}--table,
+    .#{$content}--hr,
+    & p,
+    & dl,
+    & ol,
+    & ul,
+    & blockquote,
+    & small,
+    & pre,
+    & table,
+    & hr
+  ) {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
       margin-block-end: var(--#{$content}--MarginBottom);
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  @at-root :is(
+    .#{$content}--h1,
+    .#{$content}--h2,
+    .#{$content}--h3,
+    .#{$content}--h4,
+    .#{$content}--h5,
+    .#{$content}--h6,
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6
+  ) {
     margin: 0;
     font-family: var(--#{$content}--heading--FontFamily);
 
@@ -158,8 +189,12 @@
     }
   }
 
-  ol,
-  ul {
+  @at-root :is(
+    .#{$content}--ol,
+    .#{$content}--ul,
+    & ol,
+    & ul
+  ) {
     margin: 0;
 
     // stylelint-disable selector-no-qualifying-type
@@ -171,7 +206,10 @@
     // stylelint-enable
   }
 
-  h1 {
+  @at-root :is(
+    .#{$content}--h1,
+    & h1
+  ) {
     margin-block-start: var(--#{$content}--h1--MarginTop);
     margin-block-end: var(--#{$content}--h1--MarginBottom);
     font-size: var(--#{$content}--h1--FontSize);
@@ -179,7 +217,10 @@
     line-height: var(--#{$content}--h1--LineHeight);
   }
 
-  h2 {
+  @at-root :is(
+    .#{$content}--h2,
+    & h2
+  ) {
     margin-block-start: var(--#{$content}--h2--MarginTop);
     margin-block-end: var(--#{$content}--h2--MarginBottom);
     font-size: var(--#{$content}--h2--FontSize);
@@ -187,7 +228,10 @@
     line-height: var(--#{$content}--h2--LineHeight);
   }
 
-  h3 {
+  @at-root :is(
+    .#{$content}--h3,
+    & h3
+  ) {
     margin-block-start: var(--#{$content}--h3--MarginTop);
     margin-block-end: var(--#{$content}--h3--MarginBottom);
     font-size: var(--#{$content}--h3--FontSize);
@@ -195,7 +239,10 @@
     line-height: var(--#{$content}--h3--LineHeight);
   }
 
-  h4 {
+  @at-root :is(
+    .#{$content}--h4,
+    & h4
+  ) {
     margin-block-start: var(--#{$content}--h4--MarginTop);
     margin-block-end: var(--#{$content}--h4--MarginBottom);
     font-size: var(--#{$content}--h4--FontSize);
@@ -203,7 +250,10 @@
     line-height: var(--#{$content}--h4--LineHeight);
   }
 
-  h5 {
+  @at-root :is(
+    .#{$content}--h5,
+    & h5
+  ) {
     margin-block-start: var(--#{$content}--h5--MarginTop);
     margin-block-end: var(--#{$content}--h5--MarginBottom);
     font-size: var(--#{$content}--h5--FontSize);
@@ -211,7 +261,10 @@
     line-height: var(--#{$content}--h5--LineHeight);
   }
 
-  h6 {
+  @at-root :is(
+    .#{$content}--h6,
+    & h6
+  ) {
     margin-block-start: var(--#{$content}--h6--MarginTop);
     margin-block-end: var(--#{$content}--h6--MarginBottom);
     font-size: var(--#{$content}--h6--FontSize);
@@ -219,7 +272,10 @@
     line-height: var(--#{$content}--h6--LineHeight);
   }
 
-  small {
+  @at-root :is(
+    .#{$content}--small,
+    & small
+  ) {
     display: block;
     font-size: var(--#{$content}--small--FontSize);
     line-height: var(--#{$content}--small--LineHeight);
@@ -230,7 +286,10 @@
     }
   }
 
-  blockquote {
+  @at-root :is(
+    .#{$content}--blockquote,
+    & blockquote
+  ) {
     padding-block-start: var(--#{$content}--blockquote--PaddingTop);
     padding-block-end: var(--#{$content}--blockquote--PaddingBottom);
     padding-inline-start: var(--#{$content}--blockquote--PaddingLeft);
@@ -239,48 +298,72 @@
     border-inline-start: var(--#{$content}--blockquote--BorderLeftWidth) solid var(--#{$content}--blockquote--BorderLeftColor);
   }
 
-  hr {
+  @at-root :is(
+    .#{$content}--hr,
+    & hr
+  ) {
     height: var(--#{$content}--hr--Height);
     background-color: var(--#{$content}--hr--BackgroundColor);
     border: none;
   }
 
-  ol {
+  @at-root :is(
+    .#{$content}--ol,
+    & ol
+  ) {
     padding-inline-start: var(--#{$content}--ol--PaddingLeft);
     margin-inline-start: var(--#{$content}--ol--MarginLeft);
 
-    ul {
+    :is(
+      .#{$content}--ul,
+      ul
+    ) {
       --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
 
       margin-block-start: var(--#{$content}--ul--nested--MarginTop);
     }
 
-    ol {
+    :is(
+      .#{$content}--ol,
+      ol
+    ) {
       --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
 
       margin-block-start: var(--#{$content}--ol--nested--MarginTop);
     }
   }
 
-  ul {
+  @at-root :is(
+    .#{$content}--ul,
+    & ul
+  ) {
     padding-inline-start: var(--#{$content}--ul--PaddingLeft);
     margin-inline-start: var(--#{$content}--ul--MarginLeft);
     list-style: var(--#{$content}--ul--ListStyle);
 
-    ul {
+    :is(
+      .#{$content}--ul,
+      ul
+    ) {
       --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
 
       margin-block-start: var(--#{$content}--ul--nested--MarginTop);
     }
 
-    ol {
+    :is(
+      .#{$content}--ol,
+      ol
+    ) {
       --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
 
       margin-block-start: var(--#{$content}--ol--nested--MarginTop);
     }
   }
 
-  dl {
+  @at-root :is(
+    .#{$content}--dl,
+    & dl
+  ) {
     display: grid;
     grid-template-columns: 1fr;
 
@@ -291,7 +374,10 @@
     }
   }
 
-  dt {
+  @at-root :is(
+    .#{$content}--dt,
+    & dt
+  ) {
     font-weight: var(--#{$content}--dt--FontWeight);
 
     &:not(:first-child) {
@@ -307,7 +393,10 @@
     }
   }
 
-  dd {
+  @at-root :is(
+    .#{$content}--dd,
+    & dd
+  ) {
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       grid-column: 2;
     }

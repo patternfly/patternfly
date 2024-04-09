@@ -12,6 +12,9 @@ export const removeWhiteSpaceForPrettier = () => {
   return 'removeWhiteSpaceForPrettier';
 };
 
+/** Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS */
+export const inverse = (bool) => (bool ? null : 'true');
+
 /** Using ifEquals else if with helpers
 {{#ifEquals toolbar-toggle--IsExpanded "false"}}
   false
@@ -29,6 +32,17 @@ export const ifEquals = function () {
   });
 
   return allEqual ? options.fn(this) : options.inverse(this);
+};
+
+/** Inverse of ifEquals */
+export const unlessIfEquals = function () {
+  const args = Array.prototype.slice.call(arguments, 0, -1);
+  const options = arguments[arguments.length - 1];
+  const allEqual = args.every(function (expression) {
+    return args[0] === expression;
+  });
+
+  return allEqual ? options.inverse(this) : options.fn(this);
 };
 
 // Using ifAny else if with helpers
@@ -261,9 +275,6 @@ export const setModifiers = function (...mods) {
 
   return modSet;
 };
-
-/** Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS */
-export const inverse = (bool) => (bool ? null : 'true');
 
 export const pfv = (type) => {
   const namespace = patternflyNamespace;

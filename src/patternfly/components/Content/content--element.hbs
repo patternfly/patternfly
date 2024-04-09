@@ -1,0 +1,10 @@
+<{{content--element--type}} class="{{#unless content--element--ExcludeClass}}{{pfv}}content--{{content--element--type}}{{/unless}}{{#if content--element--modifier}} {{content--element--modifier}}{{/if}}"
+  {{#if content--element--attribute}}
+    {{{content--element--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block newcontext}}
+  {{/if}}
+{{#unlessIfEquals content--element--type "hr"}}
+  </{{content--element--type}}>
+{{~/unlessIfEquals}}
