@@ -1,5 +1,6 @@
 // List icons
 // -------------------------
+@use './variables.scss' as *;
 
 .#{$fa-css-prefix}-ul {
   list-style-type: none;
@@ -10,7 +11,7 @@
 }
 
 .#{$fa-css-prefix}-li {
-  left: -$fa-li-width;
+  left: -#{$fa-li-width};
   position: absolute;
   text-align: center;
   width: $fa-li-width;

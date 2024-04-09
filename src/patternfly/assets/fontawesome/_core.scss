@@ -1,5 +1,7 @@
 // Base class definition
 // -------------------------
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
 
 .#{$fa-css-prefix},
 .fas,

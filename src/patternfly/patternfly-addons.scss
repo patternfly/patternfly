@@ -1,13 +1,11 @@
-@import "sass-utilities/all";
-
 // Utilities
-@import "./utilities/Accessibility/accessibility";
-@import "./utilities/Alignment/alignment";
-@import "./utilities/BackgroundColor/BackgroundColor";
-@import "./utilities/BoxShadow/box-shadow";
-@import "./utilities/Display/display";
-@import "./utilities/Flex/flex";
-@import "./utilities/Float/float";
-@import "./utilities/Sizing/sizing";
-@import "./utilities/Spacing/spacing";
-@import "./utilities/Text/text";
+@use './utilities/Accessibility/accessibility';
+@use './utilities/Alignment/alignment';
+@use './utilities/BackgroundColor/background-color';
+@use './utilities/BoxShadow/box-shadow';
+@use './utilities/Display/display';
+@use './utilities/Flex/flex';
+@use './utilities/Float/float';
+@use './utilities/Sizing/sizing';
+@use './utilities/Spacing/spacing';
+@use './utilities/Text/text';

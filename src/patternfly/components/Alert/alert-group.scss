@@ -1,4 +1,4 @@
-// @debug $alert-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 // Tabs
 .#{$alert-group} {

@@ -1,4 +1,3 @@
-// Version
-@import "patternfly-base";
-@import "components/all";
-@import "layouts/all";
+@use './config' as *;
+@use './components';
+@use './layouts';

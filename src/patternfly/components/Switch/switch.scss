@@ -1,4 +1,4 @@
-// @debug $switch; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :root,
 .#{$switch} {

@@ -1,3 +1,5 @@
+@use '../constants' as *;
+
 // Media query used to create responsive classes
 @mixin pf-v6-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
@@ -76,15 +78,14 @@
 // ===============================================================================================
 // Example individual utility:
 // @include pf-v6-utility-builder(flex-fill flex "1 1 auto", $pf-v6-global--breakpoint-list);
-
-@mixin pf-v6-utility-builder($props, $breakpoints: null, $direction: "width") {
+@mixin pf-v6-utility-builder($props, $breakpoints: null, $direction: 'width') {
   // if $class-name is a map
 
   // stylelint-disable
   @if type-of($props) == map {
     @each $class, $val in $props {
       $property: nth($val, 1);
-      $value: #{nth($val, 2) !important};
+      $value: #{nth($val, 2)} !important;
 
       .#{$pf-prefix}u-#{$class} {
         #{$property}: #{$value};
@@ -100,7 +101,7 @@
           @include pf-v6-height-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
-              $value: #{nth($val, 2) !important};
+              $value: #{nth($val, 2)} !important;
 
               .#{$pf-prefix}u-#{$class}#{$suffix}-height {
                 #{$property}: #{$value};
@@ -108,11 +109,11 @@
             }
           }
         }
-        @else if $direction == 'width' {
+        @else if ($direction == 'width') {
           @include pf-v6-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
-              $value: #{nth($val, 2) !important};
+              $value: #{nth($val, 2)} !important;
 
               .#{$pf-prefix}u-#{$class}#{$suffix} {
                 #{$property}: #{$value};
@@ -123,7 +124,6 @@
       }
     }
   }
-
   @else if type-of($props) == list {
     $class: nth($props, 1);
     $property: nth($props, 2);

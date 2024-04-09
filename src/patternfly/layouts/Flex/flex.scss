@@ -1,3 +1,5 @@
+@use '../../config' as *;
+
 // Always keep list of spacers and breakpoints up-to-date
 $pf-v6-l-flex--breakpoint-map: build-breakpoint-map();
 $pf-v6-l-flex--spacer-map: build-spacer-map();
@@ -14,7 +16,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   --#{$flex}--item--Order: 0;
   --#{$flex}--spacer--column--base: var(--pf-t--global--spacer--lg); // default spacer/gap for columns
   --#{$flex}--spacer--row--base: var(--pf-t--global--spacer--sm); // default spacer/gap for rows
-  --#{$flex}--RowGap: var(--#{$flex}--spacer--row--base); 
+  --#{$flex}--RowGap: var(--#{$flex}--spacer--row--base);
   --#{$flex}--ColumnGap: 0;
   --#{$flex}--m-gap--RowGap: var(--#{$flex}--spacer--row--base);
   --#{$flex}--m-gap--ColumnGap: var(--#{$flex}--spacer--column--base);
@@ -346,7 +348,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
           $spacer-column: if($spacer == "base", var(--#{$flex}--m-gap--ColumnGap), $value);
           $selector: ".pf-m-gap#{$spacer-name}#{$breakpoint-name}";
           $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
-  
+
           &#{$selector} {
             --#{$flex}--RowGap: #{$spacer-row};
             --#{$flex}--ColumnGap: #{$spacer-column};

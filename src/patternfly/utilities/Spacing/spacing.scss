@@ -1,6 +1,7 @@
-// stylelint-disable
+@use '../../config' as *;
 
 // Build spacing values
+// stylelint-disable
 @mixin pf-spacer-builder {
 
   // Loop through breakpoints
@@ -46,7 +47,6 @@
     }
   }
 }
-
 // stylelint-enable
 
 // Build spacing values

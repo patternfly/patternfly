@@ -1,4 +1,4 @@
-// @debug $back-to-top; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :root {
   --#{$back-to-top}--Right: var(--pf-t--global--spacer--2xl);

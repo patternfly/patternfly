@@ -1,4 +1,5 @@
-// @debug $avatar; // check your variable names located in src/patternfly/sass-utilities/component-namespaces
+@use '../../config' as *;
+
 $pf-v6-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
 

@@ -1,6 +1,8 @@
 // Font Awesome 5 icons https://fontawesome.com
+@use '../constants' as *;
+
 %pf-fa-local {
-  @import "../assets/fontawesome/fontawesome";
+  @import "../../assets/fontawesome/fontawesome";
 }
 
 @if not($pf-v6-global--disable-fontawesome) {

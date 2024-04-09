@@ -1,3 +1,5 @@
+@use '../../config' as *;
+
 :where(:root),
 :where(.#{$menu}) {
   // * Menu

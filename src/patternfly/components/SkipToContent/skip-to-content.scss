@@ -1,4 +1,4 @@
-// @debug $skip-to-content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :root {
   --#{$skip-to-content}--Top: var(--pf-t--global--spacer--md);

@@ -1,4 +1,4 @@
-// @debug $empty-state; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :root {
   --#{$empty-state}--PaddingTop: var(--pf-t--global--spacer--xl);

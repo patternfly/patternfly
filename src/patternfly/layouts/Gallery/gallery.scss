@@ -1,3 +1,5 @@
+@use '../../config' as *;
+
 $pf-v6-l-gallery--breakpoint-map: build-breakpoint-map();
 
 :where(:root),

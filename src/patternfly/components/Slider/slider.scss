@@ -1,10 +1,10 @@
-// @debug $slider; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :root,
 .#{$slider} {
   --#{$slider}--value: 0; // should always be set inline
   --#{$slider}__step--Left: 0; // should always be set inline
-  
+
   // rail
   --#{$slider}__rail--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$slider}__rail--PaddingBottom: var(--pf-t--global--spacer--md);
@@ -13,11 +13,11 @@
   --#{$slider}__rail-track--before--fill--BackgroundColor: var(--pf-t--global--border--color--hover);
   --#{$slider}__rail-track--before--BorderRadius: var(--pf-t--global--border--radius--tiny);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
-    
+
   // steps
   --#{$slider}__steps--FontSize: var(--pf-t--global--font--size--sm);
   --#{$slider}__steps--Height: var(--#{$slider}__steps--FontSize);
-  
+
   // step tick
   --#{$slider}__step-tick--Top: var(--pf-t--global--spacer--md);
   --#{$slider}__step-tick--Width: #{pf-size-prem(4px)};
@@ -28,13 +28,13 @@
   --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--brand--clicked);
   --#{$slider}__step--first-child__step-tick--TranslateX: 0;
   --#{$slider}__step--last-child__step-tick--TranslateX: -100%;
-  
+
   // step label
   --#{$slider}__step-label--TranslateX: -50%;
   --#{$slider}__step-label--Top: calc(var(--pf-t--global--spacer--xl) + var(--#{$slider}__rail-track--Height));
   --#{$slider}__step--first-child__step-label--TranslateX: 0;
   --#{$slider}__step--last-child__step-label--TranslateX: -100%;
-  
+
   // thumb
   --#{$slider}__thumb--Top: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--pf-t--global--spacer--md));
   --#{$slider}__thumb--Width: #{pf-size-prem(16px)};
@@ -57,7 +57,7 @@
   --#{$slider}__thumb--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$slider}__thumb--before--TranslateX: -50%;
   --#{$slider}__thumb--before--TranslateY: -50%;
-  
+
   // value
   --#{$slider}__value--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$slider}__value--c-form-control--width-base: calc(var(--#{$form-control}--PaddingLeft) + var(--#{$form-control}--PaddingRight) + #{pf-size-prem(20px)}); // form control base width + number input spinner width
@@ -67,11 +67,11 @@
   --#{$slider}__value--m-floating--TranslateY: -100%;
   --#{$slider}__value--m-floating--Left: var(--#{$slider}--value);
   --#{$slider}__value--m-floating--ZIndex: var(--pf-t--global--z-index--sm);
-  
+
   // actions
   --#{$slider}__actions--MarginRight: var(--pf-t--global--spacer--sm);
   --#{$slider}__main--actions--MarginLeft: var(--pf-t--global--spacer--sm);
-  
+
   // disabled
   --#{$slider}--m-disabled__rail-track--before--fill--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$slider}--m-disabled__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--disabled);
@@ -80,11 +80,11 @@
 
 .#{$slider} {
   @include pf-v6-bidirectional-style(
-    $prop: --#{$slider}__rail-track--before--fill--direction, 
+    $prop: --#{$slider}__rail-track--before--fill--direction,
     $ltr-val: right,
     $rtl-val: left
   );
-  
+
   display: flex;
 
   &.pf-m-disabled {

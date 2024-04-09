@@ -1,4 +1,5 @@
-// @debug $data-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
+
 $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
 :where(:root), :where(.#{$description-list}) {
@@ -67,9 +68,9 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   @include pf-v6-build-css-variable-stack("--#{$description-list}__term--width", "--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
 }
 
-.#{$description-list} { 
+.#{$description-list} {
   display: grid;
-  grid-template-columns: repeat(var(--#{$description-list}--GridTemplateColumns--count), var(--#{$description-list}--GridTemplateColumns--width));  
+  grid-template-columns: repeat(var(--#{$description-list}--GridTemplateColumns--count), var(--#{$description-list}--GridTemplateColumns--width));
   row-gap: var(--#{$description-list}--RowGap);
   column-gap: var(--#{$description-list}--ColumnGap);
   align-items: baseline;

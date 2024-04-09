@@ -1,4 +1,5 @@
-// Set common reset styles for patternfly components
+@use '../constants' as *;
+@use '../helpers' as *;
 
 .#{$pf-prefix}screen-reader {
   @include pf-v6-u-screen-reader; // for use with assistive technologies

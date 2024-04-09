@@ -1,3 +1,5 @@
+@use '../../config/constants' as *;
+
 @font-face {
 	font-family: 'pf-v6-pficon';
 	src: url('#{$pf-v6-global--fonticon-path}/pf-v6-pficon.woff2') format('woff2');

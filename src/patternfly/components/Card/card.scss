@@ -1,4 +1,4 @@
-// @debug $card; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../config' as *;
 
 :where(:root),
 :where(.#{$card}) {
@@ -27,7 +27,7 @@
   --#{$card}__actions--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__actions--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 
-  // Expandable 
+  // Expandable
   --#{$card}__header-toggle--MarginTop: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
   --#{$card}__header-toggle--MarginRight: var(--pf-t--global--spacer--xs);
   --#{$card}__header-toggle--MarginBottom: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
@@ -70,7 +70,7 @@
   --#{$card}--m-compact__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$card}--m-compact__body--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$card}--m-compact__footer--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$card}--m-compact--first-child--PaddingTop: var(--pf-t--global--spacer--md);    
+  --#{$card}--m-compact--first-child--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$card}--m-compact--child--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$card}--m-compact--child--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$card}--m-compact--child--PaddingLeft: var(--pf-t--global--spacer--md);

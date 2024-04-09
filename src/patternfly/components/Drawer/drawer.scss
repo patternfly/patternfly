@@ -1,4 +1,6 @@
-// @debug $drawer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use 'sass:math';
+@use '../../config' as *;
+
 $pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
@@ -127,7 +129,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
-  
+
     &.pf-m-panel-bottom {
       --#{$drawer}__panel--MinWidth: auto;
       --#{$drawer}__panel--MinHeight: var(--#{$drawer}--m-panel-bottom__panel--xl--MinHeight);
@@ -157,7 +159,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
     $ltr-val: var(--pf-t--global--box-shadow--lg--left),
     $rtl-val: var(--pf-t--global--box-shadow--lg--right)
-  ); 
+  );
   @include pf-v6-bidirectional-style(
     $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
     $ltr-val: var(--pf-t--global--box-shadow--lg--right),
@@ -185,7 +187,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         $prop: transform,
         $ltr-val: translateX(-100%),
         $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
-      ); 
+      );
     }
 
     > .#{$drawer}__content {
@@ -205,7 +207,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         $prop: transform,
         $ltr-val: translateX(-100%),
         $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
-      ); 
+      );
     }
 
     &.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel {
@@ -266,7 +268,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   flex-basis: var(--#{$drawer}__content--FlexBasis);
   order: 0;
   background-color: var(--#{$drawer}__content--BackgroundColor);
-  
+
   &.pf-m-primary {
     --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-primary--BackgroundColor);
   }
@@ -274,7 +276,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-secondary {
     --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-secondary--BackgroundColor);
   }
-  
+
   > .#{$drawer}__body {
     padding-block-start: var(--#{$drawer}__content__body--PaddingTop);
     padding-block-end: var(--#{$drawer}__content__body--PaddingBottom);
@@ -467,7 +469,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $prop: transform,
     $ltr-val: translate(-50%, -50%),
     $rtl-val: translate(#{pf-v6-calc-inverse(-50%)}, -50%),
-  ); 
+  );
 
 
   &::after {
@@ -635,7 +637,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v6-c-drawer__panel--list--width {
       .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --#{$drawer}__panel--md--FlexBasis: #{percentage(div($width-value, 100))};
+        --#{$drawer}__panel--md--FlexBasis: #{percentage(math.div($width-value, 100))};
       }
     }
   }
@@ -679,7 +681,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
           $prop: transform,
           $ltr-val: translateX(100%),
           $rtl-val: translateX(#{pf-v6-calc-inverse(100%)}),
-        ); 
+        );
       }
 
       // stylelint-disable selector-max-class, selector-max-combinators, selector-max-compound-selectors
@@ -703,7 +705,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
             $prop: transform,
             $ltr-val: translateX(-100%),
             $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
-          ); 
+          );
         }
 
         // Inline, expanded, panel left
