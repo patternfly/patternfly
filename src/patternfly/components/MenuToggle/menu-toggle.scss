@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 // TODO: standardize this layout
 // TODO: add .#{$menu-toggle}__main to house extra elements, like .#{$menu-toggle}__icon, .#{$menu-toggle}__text, .#{$menu-toggle}__count, .#{$menu-toggle}__controls

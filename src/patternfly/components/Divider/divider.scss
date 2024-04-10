@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 $pf-v6-c-divider--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl");

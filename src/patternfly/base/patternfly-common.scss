@@ -1,5 +1,4 @@
-@use '../constants' as *;
-@use '../helpers' as *;
+@use '../sass-utilities' as *;
 
 .#{$pf-prefix}screen-reader {
   @include pf-v6-u-screen-reader; // for use with assistive technologies

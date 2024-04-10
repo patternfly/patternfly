@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 $pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");

@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$title}--FontFamily: var(--pf-t--global--font--family--heading);

@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 .#{$chip}-group {
   // Chip group - spaces main and close

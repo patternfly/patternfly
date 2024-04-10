@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 $pf-v6-c-toolbar--spacer-map: build-spacer-map();
 $pf-v6-c-toolbar--inset-map: build-spacer-map();

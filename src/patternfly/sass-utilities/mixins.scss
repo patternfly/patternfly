@@ -1,4 +1,6 @@
-@use '../constants' as *;
+@use '../sass-utilities/functions.scss' as *;
+@use '../sass-utilities/init.scss' as *;
+@use '../sass-utilities/scss-variables.scss' as *;
 
 // Media query used to create responsive classes
 @mixin pf-v6-media-query($point) {

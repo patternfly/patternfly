@@ -1,5 +1,5 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities/scss-variables.scss' as *;
+@use '../../sass-utilities/init.scss' as *;
 
 @font-face {
 	font-family: 'pf-v6-pficon';

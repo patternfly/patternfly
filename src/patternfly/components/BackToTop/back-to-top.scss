@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$back-to-top}--Right: var(--pf-t--global--spacer--2xl);

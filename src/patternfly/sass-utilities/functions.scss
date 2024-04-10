@@ -1,6 +1,7 @@
 // PatternFly functions
 // --------------------------------------------------
-@use '../constants' as *;
+@use '../sass-utilities/scss-variables.scss' as *;
+@use '../sass-utilities/init.scss' as *;
 @use 'sass:math';
 
 // Transform px to rems

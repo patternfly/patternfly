@@ -1,5 +1,4 @@
-@use './config/helpers' with (
+@use './sass-utilities' with (
   $pf-v6-global--enable-reset: false,
   $pf-v6-global--enable-normalize: false
 );
-@use './patternfly.scss';

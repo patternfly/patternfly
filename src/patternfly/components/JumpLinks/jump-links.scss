@@ -1,5 +1,4 @@
-@use '../../config/constants' as *;
-@use '../../config/helpers' as *;
+@use '../../sass-utilities' as *;
 
 $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
