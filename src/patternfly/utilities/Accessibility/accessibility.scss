@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 // screen-reader - visually hide, but expose to screen readers
 @each $breakpoint, $breakpoint-value in $pf-v6-global--breakpoint-map {

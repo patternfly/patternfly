@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 

@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 // TODO: clean up unused variables
 // TODO: update grouping comments to // * Table {element}

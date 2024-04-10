@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 :root {
   --#{$empty-state}--PaddingTop: var(--pf-t--global--spacer--xl);

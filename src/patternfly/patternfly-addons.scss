@@ -1,11 +1,2 @@
 // Utilities
-@use './utilities/Accessibility/accessibility';
-@use './utilities/Alignment/alignment';
-@use './utilities/BackgroundColor/background-color';
-@use './utilities/BoxShadow/box-shadow';
-@use './utilities/Display/display';
-@use './utilities/Flex/flex';
-@use './utilities/Float/float';
-@use './utilities/Sizing/sizing';
-@use './utilities/Spacing/spacing';
-@use './utilities/Text/text';
+@use './utilities';

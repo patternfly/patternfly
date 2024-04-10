@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 $pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");

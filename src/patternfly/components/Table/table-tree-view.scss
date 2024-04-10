@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 $pf-v6-c-tree-view--MaxDepth: 10;
 

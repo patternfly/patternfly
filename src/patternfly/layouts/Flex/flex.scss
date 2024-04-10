@@ -1,4 +1,5 @@
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 // Always keep list of spacers and breakpoints up-to-date
 $pf-v6-l-flex--breakpoint-map: build-breakpoint-map();

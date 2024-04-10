@@ -1,5 +1,6 @@
 @use 'sass:math';
-@use '../../config' as *;
+@use '../../config/constants' as *;
+@use '../../config/helpers' as *;
 
 $pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
