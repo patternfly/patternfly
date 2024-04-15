@@ -85,10 +85,10 @@
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // * Table button
-  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
@@ -214,8 +214,8 @@
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
   // * Table subhead button
-  --#{$table}__nested-column-header__button--PaddingInlineStart: calc(var(--#{$table}__button--PaddingInlineStart) - var(--pf-t--global--spacer--sm));
-  --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(var(--#{$table}__button--PaddingInlineEnd) - var(--pf-t--global--spacer--xs));
+  --#{$table}__nested-column-header__button--PaddingInlineStart: calc(var(--#{$table}__button--PaddingLeft) - var(--pf-t--global--spacer--control--horizontal--compact));
+  --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(var(--#{$table}__button--PaddingRight) - (var(--pf-t--global--spacer--control--horizontal--compact) / 2));
 
   // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);

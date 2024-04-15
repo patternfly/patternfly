@@ -17,7 +17,7 @@
   // * Radio input
   --#{$radio}__input--first-child--MarginInlineStart: #{pf-size-prem(1px)};
   --#{$radio}__input--last-child--MarginInlineEnd: #{pf-size-prem(1px)};
-  --#{$radio}__body--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$radio}__body--MarginBlockStart: var(--pf-t--global--spacer--control--vertical--default);
 
   // TODO: due to subpixel rendering and this value resolving to 21px, the checkbox vertical centering is off by 1px. Mozilla rounds subpixels up while chrome rounds down. This is a temporary fix until we can find a better solution.
   --#{$radio}__input--TranslateY: calc((var(--#{$radio}__label--LineHeight) * var(--#{$radio}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height

@@ -42,10 +42,10 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   // Toggle icon
   --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--font--body--default);
-  --#{$tree-view}__node-toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$tree-view}__node-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$tree-view}__node-toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$tree-view}__node-toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$tree-view}__node-toggle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$tree-view}__node-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$tree-view}__node-toggle--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$tree-view}__node-toggle--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$tree-view}__node-toggle--MarginBlockStart: calc(var(--#{$tree-view}__node-toggle--PaddingBlockStart) * -1);
   --#{$tree-view}__node-toggle--MarginBlockEnd: calc(var(--#{$tree-view}__node-toggle--PaddingBlockStart) * -1);
 
