@@ -5,7 +5,9 @@ cssPrefix: pf-d-description-list
 ---
 
 ## Examples
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="description-list-basic-example"}}
 
@@ -27,6 +29,7 @@ cssPrefix: pf-d-description-list
 ```
 
 ### In drawer
+
 ```hbs isFullscreen
 {{> page-template page-template--id="description-list-in-drawer-example" page-template--IsDrawer="true" page-template--drawer-panel--IsOpen="true"}}
 
@@ -70,13 +73,13 @@ cssPrefix: pf-d-description-list
         {{/description-list-text}}
       {{/description-list-term}}
       {{#> description-list-description}}
-        {{#> chip}}
-          {{#> chip-content}}
-            {{#> chip-text}}
+        {{#> label label--IsOutlined=true}}
+          {{#> label-content}}
+            {{#> label-text}}
               app=mary-test
-            {{/chip-text}}
-          {{/chip-content}}
-        {{/chip}}
+            {{/label-text}}
+          {{/label-content}}
+        {{/label}}
       {{/description-list-description}}
     {{/description-list-group}}
     {{#> description-list-group}}
@@ -264,6 +267,7 @@ cssPrefix: pf-d-description-list
 ```
 
 ### Complex content
+
 ```hbs isFullscreen
 {{> page-template page-template--id="description-list-complex-content-example"}}
 

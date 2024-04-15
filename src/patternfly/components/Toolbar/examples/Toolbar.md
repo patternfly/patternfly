@@ -368,8 +368,8 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> toolbar-expandable-content}}
       {{#> toolbar-group toolbar-group--modifier='pf-m-chip-container'}}
         {{#> toolbar-group toolbar-group--modifier='pf-m-grow'}}
-          {{> toolbar--item-chip-group chip-group--label="Status" chip-group--id=(concat toolbar--id '-chip-group-status')}}
-          {{> toolbar--item-chip-group chip-group--label="Risk" chip-group--id=(concat toolbar--id '-chip-group-risk')}}
+          {{> toolbar--item-chip-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
+          {{> toolbar--item-chip-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
         {{/toolbar-group}}
         {{> toolbar-item-clear}}
       {{/toolbar-group}}
@@ -415,8 +415,8 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{/toolbar-group}}
       {{#> toolbar-group toolbar-group--modifier='pf-m-chip-container'}}
         {{#> toolbar-group toolbar-group--modifier='pf-m-grow'}}
-          {{> toolbar--item-chip-group chip-group--label="Status" chip-group--id=(concat toolbar--id '-chip-group-status')}}
-          {{> toolbar--item-chip-group chip-group--label="Risk" chip-group--id=(concat toolbar--id '-chip-group-risk')}}
+          {{> toolbar--item-chip-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
+          {{> toolbar--item-chip-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
         {{/toolbar-group}}
         {{> toolbar-item-clear}}
       {{/toolbar-group}}
@@ -455,8 +455,8 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
     {{#> toolbar-group}}
       {{#> toolbar-group}}
-        {{> toolbar--item-chip-group chip-group--label="Status" chip-group--id=(concat toolbar--id '-chip-group-status')}}
-        {{> toolbar--item-chip-group chip-group--label="Risk" chip-group--id=(concat toolbar--id '-chip-group-risk')}}
+        {{> toolbar--item-chip-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
+        {{> toolbar--item-chip-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
       {{/toolbar-group}}
       {{> toolbar-item-clear}}
     {{/toolbar-group}}
