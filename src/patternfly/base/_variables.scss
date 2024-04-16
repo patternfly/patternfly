@@ -12,3 +12,35 @@
 @include pf-v6-rtl {
   @include pf-v6-set-inverse;
 }
+
+// stylelint-disable
+.pf-m-no-motion * {
+  // simplest way of turning off all animation
+  // disadvantage: takes the wildcard selector
+  // transition: none !important;
+  // animation: none !important;
+}
+// styleline-enable
+
+.pf-m-no-motion {
+  // instead we can set all (or just semantic?) motion tokens to 0
+  // disadvantage - need to catch any new tokens created
+  // note - relies on always using tokens
+  --pf-t--global--delay--400: 0s;
+  --pf-t--global--delay--300: 0s;
+  --pf-t--global--delay--200: 0s;
+  --pf-t--global--delay--100: 0s;
+  --pf-t--global--duration--300: 0s;
+  --pf-t--global--duration--200: 0s;
+  --pf-t--global--duration--100: 0s;
+  --pf-t--global--duration--000: 0s;
+  --pf-t--global--motion--delay--long: 0s;
+  --pf-t--global--motion--delay--default: 0s;
+  --pf-t--global--motion--delay--short: 0s;
+  --pf-t--global--motion--delay--none: 0s;
+  --pf-t--global--motion--duration--long: 0s;
+  --pf-t--global--motion--duration--default: 0s;
+  --pf-t--global--motion--duration--short: 0s;
+  // added just for testing purposes
+  --pf-t--global--motion--duration--test: 0s;
+}

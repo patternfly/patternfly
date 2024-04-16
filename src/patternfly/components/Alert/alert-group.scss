@@ -1,9 +1,15 @@
 // @debug $alert-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 // Tabs
+:root, 
 .#{$alert-group} {
   // Alert group variables
   --#{$alert-group}__item--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__item--Opacity: 1;
+  --#{$alert-group}__item--m-remove--Opacity: 0;
+  --#{$alert-group}__item--TranslateX: 0;
+  --#{$alert-group}__item--m-remove--TranslateX: 0;
+  --#{$alert-group}__item--m-remove--Duration: var(--pf-t--global--motion--duration--test);
 
   // Toast variables
   --#{$alert-group}--m-toast--Top: var(--pf-t--global--spacer--2xl);
@@ -28,7 +34,18 @@
   --#{$alert-group}__overflow-button--focus--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
   --#{$alert-group}__overflow-button--active--Color: var(--pf-t--global--text--color--link--hover);
   --#{$alert-group}__overflow-button--active--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
+}
 
+// Variables for full motion - i.e. no preference for reduced motion
+@media screen and (prefers-reduced-motion: no-preference) {
+  :root, 
+  .#{$alert-group} {
+      --#{$alert-group}__item--m-remove--TranslateX: 200%;
+      --#{$alert-group}__item--m-remove--Opacity: 1;
+    }
+}
+
+.#{$alert-group} {
   // Spacing between alerts
   > * + * {
     margin-block-start: var(--#{$alert-group}__item--MarginTop);
@@ -42,6 +59,15 @@
     z-index: var(--#{$alert-group}--m-toast--ZIndex);
     width: calc(100% - calc(var(--#{$alert-group}--m-toast--Right) * 2));
     max-width: var(--#{$alert-group}--m-toast--MaxWidth);
+  }
+}
+
+.#{$alert-group}__item {
+  transition: all var(--#{$alert-group}__item--m-remove--Duration);
+
+  &.pf-m-remove {
+    opacity: var(--#{$alert-group}__item--m-remove--Opacity);
+    transform: translateX(var(--#{$alert-group}__item--m-remove--TranslateX));
   }
 }
 

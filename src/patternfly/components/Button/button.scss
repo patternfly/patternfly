@@ -15,6 +15,9 @@
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
 
+  // This one is super simple, so just one transition duration needed here and no reduced option needed
+  --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--test);
+
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
   --#{$button}--hover--BorderColor: transparent;
@@ -293,6 +296,7 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
+  transition: background-color var(--#{$button}--TransitionDuration);
 
   &::after {
     position: absolute;
@@ -302,6 +306,7 @@
     border: var(--#{$button}--BorderWidth) solid;
     border-color: var(--#{$button}--BorderColor);
     border-radius: inherit;
+    transition: border-color var(--#{$button}--TransitionDuration);
   }
 
   // Primary

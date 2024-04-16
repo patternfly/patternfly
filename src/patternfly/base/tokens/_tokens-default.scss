@@ -4,6 +4,25 @@
 //  */
 
 :root {
+  // motion tokens manually added for testing
+  --pf-t--global--delay--400: 7000ms;
+  --pf-t--global--delay--300: 100ms;
+  --pf-t--global--delay--200: 50ms;
+  --pf-t--global--delay--100: 0ms;
+  --pf-t--global--duration--300: 450ms;
+  --pf-t--global--duration--200: 250ms;
+  --pf-t--global--duration--100: 150ms;
+  --pf-t--global--duration--000: 0ms;
+  --pf-t--global--motion--delay--long: var(--pf-t--global--delay--400);
+  --pf-t--global--motion--delay--default: var(--pf-t--global--delay--300);
+  --pf-t--global--motion--delay--short: var(--pf-t--global--delay--200);
+  --pf-t--global--motion--delay--none: var(--pf-t--global--delay--100);
+  --pf-t--global--motion--duration--long: var(--pf-t--global--duration--300);
+  --pf-t--global--motion--duration--default: var(--pf-t--global--duration--200);
+  --pf-t--global--motion--duration--short: var(--pf-t--global--duration--100);
+  --pf-t--global--motion--duration--test: 1s;  // added just for testing purposes
+
+  // begin generated tokens
   --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0.0000);
   --pf-t--global--background--color--600: rgba(199, 199, 199, 0.2500);
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
