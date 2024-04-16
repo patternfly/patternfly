@@ -162,6 +162,9 @@
   // * Menu toggle small
   --#{$menu-toggle}--m-small--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$menu-toggle}--m-small--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--m-small--ColumnGap: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
+  --#{$menu-toggle}--m-small--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$menu-toggle}--m-small__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--xs) + var(--pf-t--global--spacer--xs));
 
   // Status icon
   --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
@@ -329,6 +332,9 @@
   &.pf-m-small {
     --#{$menu-toggle}--PaddingBlockStart: var(--#{$menu-toggle}--m-small--PaddingBlockStart);
     --#{$menu-toggle}--PaddingBlockEnd: var(--#{$menu-toggle}--m-small--PaddingBlockEnd);
+    --#{$menu-toggle}--FontSize: var(--#{$menu-toggle}--m-small--FontSize);
+    --#{$menu-toggle}--ColumnGap: var(--#{$menu-toggle}--m-small--ColumnGap);
+    --#{$menu-toggle}__controls--MinWidth: var(--#{$menu-toggle}--m-small__controls--MinWidth);
   }
 
   &:has(.#{$button}) {
