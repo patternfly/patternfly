@@ -1,4 +1,4 @@
-// @debug $about-modal-box; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   // Component variables
@@ -20,7 +20,6 @@
     $ltr-val: bottom right,
     $rtl-val: bottom left
   );
-
 
   // Brand
   --#{$about-modal-box}__brand--PaddingTop: var(--pf-t--global--spacer--2xl);

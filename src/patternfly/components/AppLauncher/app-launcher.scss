@@ -1,6 +1,4 @@
-// Don't remove this magic comment. See gulpfile.js.
-// @import "../../sass-utilities/all";
-// @debug $app-launcher; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 .#{$app-launcher} {
   // Menu

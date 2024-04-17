@@ -1,4 +1,5 @@
-// @debug $timestamp; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 :root, .#{$timestamp} {
   --#{$timestamp}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$timestamp}--Color: var(--pf-t--global--text--color--subtle);
@@ -16,7 +17,7 @@
   --#{$timestamp}--m-help-text--focus--TextDecorationColor: var(--pf-t--global--text--color--regular);
 }
 
-.#{$timestamp} { 
+.#{$timestamp} {
   display: inline-block;
   font-size: var(--#{$timestamp}--FontSize);
   color: var(--#{$timestamp}--Color);

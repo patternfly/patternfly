@@ -1,4 +1,5 @@
-// @debug $dual-list-selector; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
 :where(:root), :where(.#{$dual-list-selector}) {
@@ -174,7 +175,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
         $prop: transform,
         $ltr-val: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX)),
         $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
-      ); 
+      );
 
       position: absolute;
       inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);

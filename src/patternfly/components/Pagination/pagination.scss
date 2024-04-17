@@ -1,4 +1,5 @@
-// @debug $pagination; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 $pf-v6-c-pagination--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 

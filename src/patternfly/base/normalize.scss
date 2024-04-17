@@ -1,34 +1,4 @@
-// Reset - based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
-@if $pf-v6-global--enable-reset {
-  :where(
-    html,
-    body,
-    p,
-    ol,
-    ul,
-    li,
-    dl,
-    dt,
-    dd,
-    blockquote,
-    figure,
-    fieldset,
-    legend,
-    textarea,
-    pre,
-    iframe,
-    hr,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6
-   ) {
-    padding: 0;
-    margin: 0;
-  }
-}
+@use '../sass-utilities' as *;
 
 // Normalize
 @if $pf-v6-global--enable-normalize {
@@ -41,7 +11,7 @@
   :where(
     html,
     body
-   ) {
+  ) {
     height: 100%;
   }
 
@@ -60,7 +30,7 @@
     h4,
     h5,
     h6
-   ) {
+  ) {
     font-size: 100%;
     font-weight: var(--pf-t--global--font--weight--body);
   }
@@ -75,7 +45,7 @@
     optgroup,
     select,
     textarea
-   ) {
+  ) {
     margin: 0;
     font-family: inherit;
     font-size: 100%;
@@ -90,7 +60,7 @@
     object,
     audio,
     video
-   ) {
+  ) {
     max-width: 100%;
     height: auto;
   }

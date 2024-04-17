@@ -1,4 +1,4 @@
-// @debug $hint; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$hint}--GridRowGap: var(--pf-t--global--spacer--sm);

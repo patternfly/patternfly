@@ -1,4 +1,5 @@
-// @debug $helper-text; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 :root {
   --#{$helper-text}--Gap: var(--pf-t--global--spacer--xs);
   --#{$helper-text}--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -62,7 +63,7 @@
   &.pf-m-success {
     --#{$helper-text}__item-text--FontWeight: var(--#{$helper-text}__item-text--m-success--FontWeight);
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-success--Color);
-    --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-success__item-icon--Color);  
+    --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-success__item-icon--Color);
   }
 
   &.pf-m-error {

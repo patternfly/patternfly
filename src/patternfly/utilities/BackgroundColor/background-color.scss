@@ -1,4 +1,4 @@
-// stylelint-disable
+@use '../../sass-utilities' as *;
 
 // Background color options
 $pf-v6-u-background-color-options: (
@@ -14,6 +14,3 @@ $pf-v6-u-background-color-options: (
 );
 
 @include pf-v6-utility-builder($pf-v6-u-background-color-options, $pf-v6-global--breakpoint-list);
-
-// stylelint-enable
-

@@ -1,4 +1,4 @@
-// @debug $spinner; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root,
 .#{$spinner} {
@@ -13,13 +13,13 @@
   // path
   --#{$spinner}__path--StrokeWidth: var(--#{$spinner}--StrokeWidth);
   --#{$spinner}__path--AnimationTimingFunction: ease-in-out;
-  
+
   // sizes
   --#{$spinner}--m-sm--diameter: var(--pf-t--global--icon--size--md);
   --#{$spinner}--m-md--diameter: var(--pf-t--global--icon--size--lg);
   --#{$spinner}--m-lg--diameter: var(--pf-t--global--icon--size--xl);
   --#{$spinner}--m-xl--diameter: var(--pf-t--global--icon--size--2xl);
-  
+
   // inline
   --#{$spinner}--m-inline--diameter: 1em;
 }

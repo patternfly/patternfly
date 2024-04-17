@@ -1,4 +1,4 @@
-// @debug $modal-box; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
@@ -49,7 +49,7 @@
   // Description
   --#{$modal-box}__description--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$modal-box}__description--Color: var(--pf-t--global--text--color--subtle);
-  
+
   // Body
   --#{$modal-box}__body--MinHeight: calc(var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)); // Allow for at least 1 line of content in the body
   --#{$modal-box}__body--PaddingTop: var(--pf-t--global--spacer--lg);

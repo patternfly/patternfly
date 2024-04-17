@@ -1,6 +1,7 @@
-// stylelint-disable
+@use '../../sass-utilities' as *;
 
 // Font family options
+// stylelint-disable
 $pf-v6-u-font-family-options: (
   font-family-text: (
     font-family var(--pf-t--global--font--family--body)

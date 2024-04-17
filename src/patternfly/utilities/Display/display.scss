@@ -1,5 +1,6 @@
-// stylelint-disable
+@use '../../sass-utilities' as *;
 
+// stylelint-disable
 // Display options
 $pf-v6-u-display-options: (
   display-none:           (display none),

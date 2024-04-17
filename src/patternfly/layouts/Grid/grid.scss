@@ -1,3 +1,5 @@
+@use '../../sass-utilities' as *;
+
 $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
 
 // URL.com/guidelines#layout

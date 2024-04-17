@@ -1,2 +1,50 @@
-@import "../sass-utilities/all";
-@import "common";
+@use '../sass-utilities' as *;
+
+.#{$pf-prefix}screen-reader {
+  @include pf-v6-u-screen-reader; // for use with assistive technologies
+
+  &.pf-m-full-size {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.pf-m-absolute {
+    position: absolute;
+  }
+}
+
+.#{$pf-prefix}m-tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+// Variable font opt-in
+.#{$pf-prefix}m-legacy-font {
+  --pf-t--global--font--family--body: var(--pf-t--global--font--family--body--legacy);
+  --pf-t--global--font--family--heading: var(--pf-t--global--font--family--heading--legacy);
+  --pf-t--global--font--family--mono: var(--pf-t--global--font--family--mono--legacy);
+  --pf-t--global--font--weight--body: var(--pf-t--global--font--weight--body--legacy);
+  --pf-t--global--font--weight--body--bold: var(--pf-t--global--font--weight--body--bold--legacy);
+  --pf-t--global--font--weight--heading: var(--pf-t--global--font--weight--heading--legacy);
+  --pf-t--global--font--weight--heading--bold: var(--pf-t--global--font--weight--heading--bold--legacy);
+}
+
+// RTL helpers
+
+// Sets a block to RTL
+.#{$pf-prefix}m-dir-rtl {
+  @include pf-v6-set-inverse;
+
+  direction: rtl;
+}
+
+// Sets a block to LTR
+.#{$pf-prefix}m-dir-ltr {
+  @include pf-v6-set-inverse(false);
+
+  direction: ltr;
+}
+
+// Mirrors/flips something horizontally/inline in RTL
+.#{$pf-prefix}m-mirror-inline-rtl {
+  @include pf-v6-mirror-inline-on-rtl;
+}

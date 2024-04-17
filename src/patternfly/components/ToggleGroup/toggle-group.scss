@@ -1,4 +1,4 @@
-// @debug $toggle-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :where(:root),
 :where(.#{$toggle-group}) {
@@ -149,7 +149,7 @@
 .#{$toggle-group}__item:has(.pf-m-selected) + .#{$toggle-group}__item:has(.pf-m-selected) {
   --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor);
 }
-    
+
 // For consecutive disabled items, turn the left border back to what it was
 .#{$toggle-group}__item:has(:disabled, .pf-m-disabled) + .#{$toggle-group}__item:has(:disabled, .pf-m-disabled) {
   --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor);

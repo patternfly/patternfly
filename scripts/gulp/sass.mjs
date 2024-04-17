@@ -24,9 +24,9 @@ function compileSASS0(srcFiles) {
       // in our production patternfly.css BUT still be able to compile individual SCSS files.
       // As soon as node-sass is updated to a libsass version that supports @use rule, we should
       // `@use "../../sass-utilities/all";`
-      if (numDirectories > 0) {
-        scss = `@import "${'../'.repeat(numDirectories)}sass-utilities/all";\n${scss}`;
-      }
+      // if (numDirectories > 0) {
+      //   scss = `@use "${'../'.repeat(numDirectories)}config/_index";\n${scss}`;
+      // }
 
       try {
         const css = sass.renderSync({

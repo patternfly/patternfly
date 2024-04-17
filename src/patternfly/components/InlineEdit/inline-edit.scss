@@ -1,4 +1,4 @@
-// @debug $inline-edit; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :where(:root),
 :where( .#{$inline-edit}) {

@@ -1,10 +1,10 @@
-// @debug $progress; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root,
 .#{$progress} {
   // Component variables
   --#{$progress}--GridGap: var(--pf-t--global--spacer--md);
-  
+
   // Element variables
   --#{$progress}__bar--Height: var(--pf-t--global--spacer--md);
   --#{$progress}__bar--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default); // the bar always needs white under it so that the semi-transparent color shows correctly
@@ -14,7 +14,7 @@
   --#{$progress}__indicator--Height: var(--#{$progress}__bar--Height);
   --#{$progress}__indicator--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$progress}__helper-text--MarginTop: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
-  
+
   // Modifier variables
   --#{$progress}--m-success__indicator--BackgroundColor: var(--pf-t--global--color--status--success--default);
   --#{$progress}--m-warning__indicator--BackgroundColor: var(--pf-t--global--color--status--warning--default);
@@ -135,7 +135,7 @@
     --#{$progress}__status-icon--Color: var(--#{$progress}--m-warning__status-icon--Color);
     --#{$progress}--m-inside__measure--Color: var(--#{$progress}--m-warning--m-inside__measure--Color);
   }
-  
+
   &.pf-m-danger {
     --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-danger__indicator--BackgroundColor);
     --#{$progress}__status-icon--Color: var(--#{$progress}--m-danger__status-icon--Color);

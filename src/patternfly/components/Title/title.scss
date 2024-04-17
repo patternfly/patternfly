@@ -1,4 +1,4 @@
-// @debug $title; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$title}--FontFamily: var(--pf-t--global--font--family--heading);
@@ -34,7 +34,7 @@
   --#{$title}--m-md--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$title}--m-md--FontWeight: var(--pf-t--global--font--weight--heading);
 
-  // HEADING modifiers 
+  // HEADING modifiers
   // h1
   --#{$title}--m-h1--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$title}--m-h1--FontSize: var(--pf-t--global--font--size--heading--h1);

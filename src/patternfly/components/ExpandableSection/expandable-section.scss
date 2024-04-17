@@ -1,4 +1,4 @@
-// @debug $expandable-section; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   // Toggle
@@ -8,7 +8,7 @@
   --#{$expandable-section}__toggle--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__toggle--BackgroundColor: transparent;
   --#{$expandable-section}__toggle--ColumnGap: calc(var(--pf-t--global--spacer--xs) + var(--pf-t--global--spacer--sm));
-  
+
   // Toggle icon
   --#{$expandable-section}__toggle-icon--MinWidth: 1em;
   --#{$expandable-section}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -17,12 +17,11 @@
   --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: 0;
   --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
-  
+
   // Toggle text
   --#{$expandable-section}__toggle-text--Color: var(--pf-t--global--color--brand--default);
   --#{$expandable-section}__toggle-text--hover--Color: var(--pf-t--global--color--brand--hover);
   --#{$expandable-section}--m-expanded__toggle-text--Color: var(--pf-t--global--color--brand--hover);
-
 
   // Content
   --#{$expandable-section}__content--PaddingTop: var(--pf-t--global--spacer--sm);
@@ -30,10 +29,10 @@
   --#{$expandable-section}__content--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__content--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__content--MaxWidth: auto;
-  
+
   // Limit Width
   --#{$expandable-section}--m-limit-width__content--MaxWidth: #{pf-size-prem(750px)};
-  
+
   // Large / Disclosure
   --#{$expandable-section}--m-display-lg--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$expandable-section}--m-display-lg--BorderColor: var(--pf-t--global--border--color--default);
@@ -52,12 +51,11 @@
   --#{$expandable-section}--m-display-lg__content--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$expandable-section}--m-expanded--m-display-lg__toggle--BorderRadius: var(--pf-t--global--border--radius--medium) var(--pf-t--global--border--radius--medium) 0 0;
 
-
   // Indented
   --#{$expandable-section}--m-indented__content--PaddingLeft--base: calc(var(--#{$expandable-section}__toggle--ColumnGap) + var(--#{$expandable-section}__toggle-icon--MinWidth));
   --#{$expandable-section}--m-indented__content--PaddingLeft: calc(var(--#{$expandable-section}--m-indented__content--PaddingLeft--base) + var(--#{$expandable-section}__toggle--PaddingLeft));
   --#{$expandable-section}--m-display-lg--m-indented__content--PaddingLeft: calc(var(--#{$expandable-section}--m-indented__content--PaddingLeft--base) + var(--#{$expandable-section}--m-display-lg__content--PaddingLeft));
-  
+
   // Truncate
   --#{$expandable-section}--m-truncate--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}--m-truncate--PaddingRight: var(--pf-t--global--spacer--md);

@@ -1,3 +1,5 @@
+@use '../../sass-utilities' as *;
+
 :root {
   --#{$overflow-menu}--ColumnGap: var(--pf-t--global--spacer--md);
 

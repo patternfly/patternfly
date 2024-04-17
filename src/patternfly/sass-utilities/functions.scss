@@ -1,18 +1,24 @@
 // PatternFly functions
 // --------------------------------------------------
-@import "./div";
+@use '../sass-utilities/scss-variables.scss' as *;
+@use '../sass-utilities/init.scss' as *;
+@use 'sass:math';
 
 // Transform px to rems
 @function pf-strip-unit($num) {
-  @return div($num, ($num * 0 + 1));
+  @if type-of($num) == 'number' and not unitless($num) {
+    @return math.div($num, ($num * 0 + 1));
+  }
+
+  @return $num;
 }
 
 @function pf-size-prem($pxval, $base: $pf-v6-global--space-size-root) {
-  @return div(pf-strip-unit($pxval), $base) * 1rem;
+  @return math.div(pf-strip-unit($pxval), $base) * 1rem;
 }
 
 @function pf-font-prem($pxval, $base: $pf-v6-global--font-size-root) {
-  @return div(pf-strip-unit($pxval), $base) * 1rem;
+  @return math.div(pf-strip-unit($pxval), $base) * 1rem;
 }
 
 // Return (width) breakpoint value if it exists

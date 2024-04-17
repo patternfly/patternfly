@@ -1,4 +1,5 @@
-// @debug $dropdown; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
 .#{$dropdown} {

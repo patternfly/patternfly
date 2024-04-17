@@ -1,4 +1,5 @@
-// @debug $text-input-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 :where(:root),
 :where(.#{$text-input-group}) {
   --#{$text-input-group}--BackgroundColor: var(--pf-t--global--background--color--control--default);
@@ -53,7 +54,7 @@
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
   border-radius: var(--#{$text-input-group}--BorderRadius);
-  
+
   &::before {
     position: absolute;
     inset: 0;

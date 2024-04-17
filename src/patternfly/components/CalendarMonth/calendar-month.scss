@@ -1,3 +1,5 @@
+@use '../../sass-utilities' as *;
+
 :where(:root),
 :where(.#{$calendar-month}) {
   --#{$calendar-month}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -20,7 +22,7 @@
 
   // day th
   --#{$calendar-month}__day--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$calendar-month}__day--FontWeight: var(--pf-t--global--font--weight--body);  
+  --#{$calendar-month}__day--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$calendar-month}__day--Color: var(--pf-t--global--text--color--regular);
 
 
@@ -156,7 +158,6 @@
     --#{$calendar-month}__date--hover--BorderWidth: var(--#{$calendar-month}__dates-cell--m-in-range__date--hover--BorderWidth);
     --#{$calendar-month}__date--hover--BorderColor: var(--#{$calendar-month}__dates-cell--m-in-range__date--hover--BorderColor);
     --#{$calendar-month}__date--focus--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-in-range__date--focus--BackgroundColor);
-    
   }
 
   &.pf-m-start-range {
@@ -221,7 +222,7 @@
   &:hover,
   &.pf-m-hover {
     --#{$calendar-month}__date--BackgroundColor: var(--#{$calendar-month}__date--hover--BackgroundColor);
-    
+
     border: var(--#{$calendar-month}__date--hover--BorderColor) solid var(--#{$calendar-month}__date--hover--BorderWidth);
   }
 

@@ -1,4 +1,5 @@
-// @debug $page; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 // stylelint-disable
 $pf-page-v6--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");

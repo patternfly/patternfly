@@ -1,4 +1,5 @@
-// @debug $brand; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 $pf-v6-c-brand--breakpoint-map: build-breakpoint-map();
 
 .#{$brand} {

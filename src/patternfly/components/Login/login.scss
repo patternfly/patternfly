@@ -1,4 +1,4 @@
-// @debug $login; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$login}--PaddingTop: var(--pf-t--global--spacer--lg);

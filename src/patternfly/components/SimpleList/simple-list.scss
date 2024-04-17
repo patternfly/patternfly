@@ -1,4 +1,4 @@
-// @debug $simple-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root, .#{$simple-list} {
   // Simple list item link
@@ -47,7 +47,7 @@
   background-color: var(--#{$simple-list}__item-link--BackgroundColor);
   border: none;
   border-radius: var(--#{$simple-list}__item-link--BorderRadius);
-  
+
   &.pf-m-link {
     --#{$simple-list}__item-link--Color: var(--#{$simple-list}__item-link--m-link--Color);
     --#{$simple-list}__item-link--hover--Color: var(--#{$simple-list}__item-link--m-link--m-current--Color);

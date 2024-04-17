@@ -1,3 +1,5 @@
+@use '../../sass-utilities' as *;
+
 :where(:root),
 :where(.#{$menu}) {
   // * Menu

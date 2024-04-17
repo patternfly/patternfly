@@ -1,4 +1,4 @@
-// @debug $banner; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   --#{$banner}--PaddingTop: var(--pf-t--global--spacer--xs);
@@ -99,7 +99,7 @@
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-red--BackgroundColor);
     --#{$banner}--Color: var(--#{$banner}--m-red--Color);
   }
-  
+
   &.pf-m-orangered {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-orangered--BackgroundColor);
     --#{$banner}--Color: var(--#{$banner}--m-orangered--Color);

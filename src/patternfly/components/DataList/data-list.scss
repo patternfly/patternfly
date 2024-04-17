@@ -1,12 +1,12 @@
-// @debug $data-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-@import "./data-list-grid";
+@use '../../sass-utilities' as *;
+@use './data-list-grid' as *;
 
 :root, .#{$data-list} {
-  --#{$data-list}--FontSize: var( --pf-t--global--font--size--body); 
+  --#{$data-list}--FontSize: var( --pf-t--global--font--size--body);
   --#{$data-list}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$data-list}--BorderTopColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--BorderTopWidth: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--sm--BorderTopWidth: var(--pf-t--global--border--width--divider--default); 
+  --#{$data-list}--sm--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
   --#{$data-list}--sm--BorderTopColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--MarginLeft: var(--pf-t--global--spacer--md);
 

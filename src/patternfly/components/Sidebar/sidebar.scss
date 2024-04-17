@@ -1,4 +1,6 @@
-// @debug $sidebar; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use 'sass:math';
+@use '../../sass-utilities' as *;
+
 $pf-v6-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
@@ -243,7 +245,6 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   }
 }
 
-
 // Responsive width modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-sidebar--breakpoint-map--width {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
@@ -254,7 +255,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
         @if $width-value == "default" {
           --pf-v6-c-sidebar__panel--FlexBasis: var(--pf-v6-c-sidebar__panel--FlexBasis--base);
         } @else {
-          --pf-v6-c-sidebar__panel--FlexBasis: #{percentage(div($width-value, 100))};
+          --pf-v6-c-sidebar__panel--FlexBasis: #{percentage(math.div($width-value, 100))};
         }
       }
     }

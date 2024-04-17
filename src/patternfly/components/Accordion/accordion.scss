@@ -1,4 +1,4 @@
-// @debug $accordion; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
 
 :root {
   // accordion
@@ -27,11 +27,11 @@
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__toggle-text--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  
+
   // accordion toggle icon
   --#{$accordion}__toggle-icon--Transition: .2s ease-in 0s;
   --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
-  
+
   // accordion expandable content
   --#{$accordion}__expandable-content--MarginRight: var(--pf-t--global--spacer--md);
   --#{$accordion}__expandable-content--MarginBottom: var(--pf-t--global--spacer--md);
@@ -48,7 +48,7 @@
   --#{$accordion}__expandable-content-body--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$accordion}__expandable-content-body--PaddingLeft: var(--pf-t--global--spacer--sm);
   --#{$accordion}__expandable-content-body--expandable-content-body--PaddingTop: 0;
-  
+
   // large
   --#{$accordion}--m-display-lg__toggle--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$accordion}--m-display-lg__toggle--PaddingRight: var(--pf-t--global--spacer--md);
@@ -61,7 +61,7 @@
   --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--bold);
   --#{$accordion}--m-display-lg__expandable-content--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$accordion}--m-display-lg__expandable-content--Color: var(--pf-t--global--text--color--regular);
-  
+
   // bordered
   --#{$accordion}--m-bordered--RowGap: 0;
   --#{$accordion}__item--m-bordered--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
@@ -105,11 +105,11 @@
 
 .#{$accordion}__item {
   border-radius: var(--#{$accordion}__item--BorderRadius);
-  
+
   &.pf-m-expanded {
     --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}__toggle--m-expanded--PaddingBottom);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
-    
+
     background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
 
     .#{$accordion}__toggle-icon {

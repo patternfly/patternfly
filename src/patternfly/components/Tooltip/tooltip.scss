@@ -1,9 +1,10 @@
-// @debug $tooltip; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+@use '../../sass-utilities' as *;
+
 :root {
   // Component variables
   --#{$tooltip}--MaxWidth: #{pf-size-prem(300px)};
   --#{$tooltip}--BoxShadow: var(--pf-t--global--box-shadow--md);
-  
+
   // Content variables
   --#{$tooltip}__content--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$tooltip}__content--PaddingRight: var(--pf-t--global--spacer--md);
@@ -13,7 +14,7 @@
   --#{$tooltip}__content--BackgroundColor: var(--pf-t--global--background--color--inverse--default);
   --#{$tooltip}__content--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$tooltip}__content--BorderRadius: var(--pf-t--global--border--radius--small);
-  
+
   // Arrow variables
   --#{$tooltip}__arrow--Width: #{pf-size-prem(15px)};
   --#{$tooltip}__arrow--Height: #{pf-size-prem(15px)};

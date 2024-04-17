@@ -1,5 +1,7 @@
 // Stacked icons
 // -------------------------
+@use './variables.scss' as *;
+@use 'sass:math';
 
 .#{$fa-css-prefix}-stack {
   display: inline-block;
@@ -7,7 +9,7 @@
   line-height: 2em;
   position: relative;
   vertical-align: middle;
-  width: ($fa-fw-width*2);
+  width: math.div($fa-fw-width, 2);
 }
 
 .#{$fa-css-prefix}-stack-1x,

@@ -1,5 +1,4 @@
-// @debug $label; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-@import '../../sass-utilities/all';
+@use '../../sass-utilities' as *;
 
 :where(:root),
 :where(.#{$label}) {
