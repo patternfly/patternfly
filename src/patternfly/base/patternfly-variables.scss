@@ -1,0 +1,14 @@
+@use '../sass-utilities' as *;
+@use "./tokens/workspace-overrides" as *;
+@use "./tokens/tokens-font" as *;
+@use "./tokens/tokens-palette" as *;
+@use "./tokens/tokens-default" as *;
+@use "./tokens/tokens-dark" as *;
+
+:where(:root) {
+  @include pf-v6-set-inverse(false);
+}
+
+@include pf-v6-rtl {
+  @include pf-v6-set-inverse;
+}
