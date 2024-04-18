@@ -46,7 +46,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^20.0.2",
-    "@patternfly/documentation-framework": "5.10.0",
+    "@patternfly/documentation-framework": "5.13.0",
     "@patternfly/patternfly-a11y": "4.3.1",
     "@patternfly/react-code-editor": "5.2.3",
     "@patternfly/react-core": "5.2.3",
