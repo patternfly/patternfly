@@ -3,7 +3,6 @@ import fs from 'fs-extra';
 import gulp from 'gulp';
 import * as sass from 'sass';
 import stylelint from 'stylelint';
-import sassGraph from 'sass-graph';
 import postcss from 'gulp-postcss';
 import cssnano from 'cssnano';
 import sourcemaps from 'gulp-sourcemaps';
@@ -89,27 +88,10 @@ function getDocCSSFiles() {
 
 export function watchSASS(sassFiles, cb) {
   const docCSSFiles = getDocCSSFiles();
-  const graph = sassGraph.parseDir('./src/patternfly').index;
   const watcher = watch(sassFiles, { delay: 0 });
 
-  function visit(graphNode, acc) {
-    if (!graphNode) {
-      return acc;
-    }
-    graphNode.importedBy.forEach(file => {
-      acc.push(file);
-      visit(graph[file], acc);
-    });
-
-    return acc;
-  }
-
   function compileDocSASS(sassFile) {
-    // Now find files this file is imported by
-    const fullPath = path.join(process.cwd(), sassFile);
-    const graphNode = graph[fullPath];
-    const dependents = visit(graphNode, []);
-    const toCompile = [fullPath, ...docCSSFiles.filter(file => dependents.includes(file))];
+    const toCompile = docCSSFiles;
     compileSASS0(src(toCompile));
     console.log('Compiled', toCompile.map(file => path.relative(process.cwd(), file)).join(' '));
   }
