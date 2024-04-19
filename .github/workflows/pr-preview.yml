@@ -17,10 +17,10 @@ jobs:
           git checkout tmp
 
       - run: |
-          git rev-parse origin/main
+          git rev-parse origin/5.3.x
           git rev-parse HEAD
-          git rev-parse origin/main..HEAD
-          git log origin/main..HEAD --format="%b"
+          git rev-parse origin/5.3.x..HEADƒ
+          git log origin/5.3.x..HEAD --format="%b"
 
       # Yes, we really want to checkout the PR
       # Injected by generate-workflows.js
