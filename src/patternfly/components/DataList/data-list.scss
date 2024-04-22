@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 @use './data-list-grid' as *;
 
-:root, .#{$data-list} {
+:where(:root, .#{$data-list}) {
   --#{$data-list}--FontSize: var( --pf-t--global--font--size--body);
   --#{$data-list}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$data-list}--BorderTopColor: var(--pf-t--global--border--color--default);

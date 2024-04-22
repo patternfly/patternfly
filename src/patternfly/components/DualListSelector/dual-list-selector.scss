@@ -2,7 +2,7 @@
 
 $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
-:where(:root), :where(.#{$dual-list-selector}) {
+:where(:root, .#{$dual-list-selector}) {
   // Grid
   --#{$dual-list-selector}__header--GridArea: pane-header;
   --#{$dual-list-selector}__tools--GridArea: pane-tools;

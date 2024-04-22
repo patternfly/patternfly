@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$card}) {
+:where(:root, .#{$card}) {
   --#{$card}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$card}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$card}--BorderStyle: solid;

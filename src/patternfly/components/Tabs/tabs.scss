@@ -3,8 +3,7 @@
 $pf-v6-c-tabs--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root),
-:where(.#{$tabs}) {
+:where(:root, .#{$tabs}) {
   --#{$tabs}--inset: 0;
   --#{$tabs}--Width: auto;
   --#{$tabs}--before--BorderColor: var(--pf-t--global--border--color--default);

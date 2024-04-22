@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$date-picker}) {
+:where(:root, .#{$date-picker}) {
   --#{$date-picker}--m-top__calendar--Top: 0;
   --#{$date-picker}--m-top__calendar--TranslateY: calc(-100% - var(--pf-t--global--spacer--xs));
   --#{$date-picker}__helper-text--MarginTop: var(--pf-t--global--spacer--sm);

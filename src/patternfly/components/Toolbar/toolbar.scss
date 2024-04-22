@@ -10,8 +10,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
 }
 
-:where(:root),
-:where(.#{$toolbar}) {
+:where(:root, .#{$toolbar}) {
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingBlock: var(--pf-t--global--spacer--md);

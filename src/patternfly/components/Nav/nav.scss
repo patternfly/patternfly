@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$nav}) {
+:where(:root, .#{$nav}) {
   // * Nav shared values
   --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);

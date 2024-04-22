@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$expandable-section}) {
   // Toggle
   --#{$expandable-section}__toggle--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__toggle--PaddingRight: var(--pf-t--global--spacer--md);

@@ -17,8 +17,7 @@ $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
   height: inherit;
 }
 
-:root,
-:where(.#{$divider}) {
+:where(:root, .#{$divider}) {
   // * Divider
   --#{$divider}--Display: flex;
   --#{$divider}--Color: var(--pf-t--global--border--color--default);

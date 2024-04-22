@@ -6,8 +6,7 @@ $pf-v6-l-flex--spacer-map: build-spacer-map();
 $pf-v6-l-flex--gap-map: build-spacer-map("base", "none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl");
 $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $pf-v6-l-flex--spacer-map);
 
-:where(:root),
-:where(.#{$flex}) {
+:where(:root, .#{$flex}) {
   --#{$flex}--Display: flex;
   --#{$flex}--FlexWrap: wrap;
   --#{$flex}--AlignItems: baseline;

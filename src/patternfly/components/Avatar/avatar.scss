@@ -3,7 +3,7 @@
 $pf-v6-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
 
-:root, .#{$avatar} {
+:where(:root, .#{$avatar}) {
   --#{$avatar}--BorderColor: transparent;
   --#{$avatar}--BorderWidth: 0;
   --#{$avatar}--BorderRadius: var(--pf-t--global--border--radius--pill);

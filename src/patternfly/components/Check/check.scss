@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-.#{$check} {
+:where(:root, .#{$check}) {
   --#{$check}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
   --#{$check}--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));

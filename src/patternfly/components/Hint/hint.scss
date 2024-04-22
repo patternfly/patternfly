@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$hint}) {
   --#{$hint}--GridRowGap: var(--pf-t--global--spacer--sm);
   --#{$hint}--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$hint}--PaddingRight: var(--pf-t--global--spacer--lg);

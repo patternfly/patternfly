@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$bullseye}) {
+:where(:root, .#{$bullseye}) {
   --#{$bullseye}--Padding: 0;
 }
 

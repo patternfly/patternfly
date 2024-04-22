@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$empty-state}) {
   --#{$empty-state}--PaddingTop: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--PaddingBottom: var(--pf-t--global--spacer--xl);

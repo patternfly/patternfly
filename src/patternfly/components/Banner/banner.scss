@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$banner}) {
   --#{$banner}--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$banner}--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$banner}--md--PaddingRight: var(--pf-t--global--spacer--lg);

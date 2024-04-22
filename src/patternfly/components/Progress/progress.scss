@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-.#{$progress} {
+:where(:root, .#{$progress}) {
   // Component variables
   --#{$progress}--GridGap: var(--pf-t--global--spacer--md);
 

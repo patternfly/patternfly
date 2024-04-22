@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$alert}) {
   // Alert variables
   --#{$alert}--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$alert}--BackgroundColor: var(--pf-t--global--background--color--floating--default);

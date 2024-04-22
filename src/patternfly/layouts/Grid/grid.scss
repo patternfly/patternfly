@@ -41,8 +41,7 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
 }
 
 // Grid base
-:where(:root),
-:where(.#{$grid}) {
+:where(:root, .#{$grid}) {
   --#{$grid}--m-gutter--GridGap: var(--pf-t--global--spacer--lg);
   --#{$grid}__item--GridColumnStart: auto;
   --#{$grid}__item--GridColumnEnd: span 12;

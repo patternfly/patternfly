@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$label-group}) {
+:where(:root, .#{$label-group}) {
   // Label group - spaces main with the close button
   --#{$label-group}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$label-group}--ColumnGap: var(--pf-t--global--spacer--xs);

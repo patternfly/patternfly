@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root) {
+:where(:root, .#{$action-list}) {
   --#{$action-list}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$action-list}--ColumnGap: var(--pf-t--global--spacer--2xl);
 

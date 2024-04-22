@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root, :where(.#{$code-block}) {
+:where(:root, .#{$code-block}) {
   --#{$code-block}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-block}--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$code-block}__header--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
