@@ -1,6 +1,6 @@
-{{#if tree-view-node--HasCheckbox}}
-  {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable=tree-view-list-item--IsExpandable}}
-{{else if tree-view-node--IsSelectable}}
+{{#if tree-view-list-item--HasCheckbox}}
+  {{> __tree-view-node tree-view-node--type="label" tree-view-list-item--IsSelectable=tree-view-list-item--IsExpandable}}
+{{else if tree-view-list-item--IsSelectable}}
   {{> __tree-view-node tree-view-node--type="div" tree-view-node-text--type="button"}}
 {{else}}
   {{> __tree-view-node}}
@@ -8,14 +8,17 @@
 
 {{#* inline "__tree-view-node"}}
   <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="{{pfv}}tree-view__node
-    {{~#if tree-view-node--IsSelectable}} pf-m-selectable{{/if}}
+    {{~#if tree-view-list-item--IsSelectable}} pf-m-selectable{{/if}}
+    {{#unless tree-view-list-item--HasCheckbox}}
+      {{#if tree-view-list-item--IsSelected}} pf-m-current{{/if}}
+    {{/unless}}
     {{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
     {{#if tree-view-node--type}}
       tabindex="0"
     {{/if}}
-    {{#if tree-view-node--HasCheckbox}}
+    {{#if tree-view-list-item--HasCheckbox}}
       for="check-{{tree-view-node--id}}"
-    {{else if tree-view-node--IsSelectable}}
+    {{else if tree-view-list-item--IsSelectable}}
       id="node-{{tree-view-node--id}}"
       aria-label="Select"
       aria-labelledby="node-{{tree-view-node--id}} text-{{tree-view-node--id}}"
@@ -25,12 +28,12 @@
     {{/if}}>
     {{#> tree-view-node-container}}
       {{#if tree-view-list-item--IsExpandable}}
-        {{> tree-view-node-toggle tree-view-node-toggle--IsToggle=(concat tree-view-node--IsSelectable tree-view-node--HasCheckbox)}}
+        {{> tree-view-node-toggle tree-view-node-toggle--IsToggle=(concat tree-view-list-item--IsSelectable tree-view-list-item--HasCheckbox)}}
       {{/if}}
       {{#if tree-view-node--HasFolderIcon}}
         {{> tree-view-node-icon tree-view-node-icon--IsFolder="true"}}
       {{/if}}
-      {{#if tree-view-node--HasCheckbox}}
+      {{#if tree-view-list-item--HasCheckbox}}
         {{> tree-view-node-check}}
       {{/if}}
       {{#if tree-view-node--text}}
