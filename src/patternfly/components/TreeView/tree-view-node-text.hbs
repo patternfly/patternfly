@@ -1,5 +1,5 @@
 <{{#if tree-view-node-text--type}}{{tree-view-node-text--type}}{{else}}span{{/if}} class="{{pfv}}tree-view__node-text{{#if tree-view-node-text--modifier}} {{tree-view-node-text--modifier}}{{/if}}"
-  {{#if (concat tree-view-node--IsSelectable tree-view-node--HasCheckbox)}}
+  {{#if (concat tree-view-list-item--IsSelectable tree-view-list-item--HasCheckbox)}}
     id="text-{{{tree-view-node--id}}}"
   {{/if}}
   {{#if tree-view-node-text--attribute}}
