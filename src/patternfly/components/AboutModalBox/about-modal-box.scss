@@ -1,5 +1,6 @@
 @use '../../sass-utilities' as *;
 
+@layer component {
 :root {
   // Component variables
   --#{$about-modal-box}--BackgroundImage: none;
@@ -212,4 +213,5 @@
   .#{$button}.pf-m-plain {
     font-size: var(--#{$about-modal-box}__close--c-button--FontSize);
   }
+}
 }

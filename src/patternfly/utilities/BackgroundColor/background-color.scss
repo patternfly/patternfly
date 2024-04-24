@@ -1,5 +1,6 @@
 @use '../../sass-utilities' as *;
 
+@layer utilities {
 // Background color options
 $pf-v6-u-background-color-options: (
   background-color-disabled: (
@@ -14,3 +15,4 @@ $pf-v6-u-background-color-options: (
 );
 
 @include pf-v6-utility-builder($pf-v6-u-background-color-options, $pf-v6-global--breakpoint-list);
+}

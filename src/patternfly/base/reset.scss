@@ -1,4 +1,4 @@
-@use '../sass-utilities/scss-variables.scss' as *;
+@use '../sass-utilities/scss-variables' as *;
 
 // Reset - based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
 @if $pf-v6-global--enable-reset {

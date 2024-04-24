@@ -1,5 +1,6 @@
 @use '../../sass-utilities' as *;
 
+@layer utilities {
 // screen-reader - visually hide, but expose to screen readers
 @each $breakpoint, $breakpoint-value in $pf-v6-global--breakpoint-map {
   .#{$pf-prefix}u-screen-reader#{$breakpoint-value} {
@@ -21,4 +22,5 @@
       // stylelint-enable
     }
   }
+}
 }

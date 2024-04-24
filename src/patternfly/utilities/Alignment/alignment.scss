@@ -1,5 +1,6 @@
 @use '../../sass-utilities' as *;
 
+@layer utilities {
 // stylelint-disable
 $pf-v6-u-alignment-options: (
   text-align-start:    (text-align start),
@@ -12,3 +13,4 @@ $pf-v6-u-alignment-options: (
 @include pf-v6-utility-builder($pf-v6-u-alignment-options, $pf-v6-global--breakpoint-list);
 
 // stylelint-enable
+}

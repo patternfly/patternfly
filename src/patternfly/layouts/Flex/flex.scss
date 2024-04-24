@@ -1,5 +1,6 @@
 @use '../../sass-utilities' as *;
 
+@layer layouts {
 // Always keep list of spacers and breakpoints up-to-date
 $pf-v6-l-flex--breakpoint-map: build-breakpoint-map();
 $pf-v6-l-flex--spacer-map: build-spacer-map();
@@ -376,7 +377,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         $selector: ".pf-m-row-gap#{$spacer-name}#{$breakpoint-name}";
         $pf-v6-l-flex--row-gap--selectors: append($pf-v6-l-flex--row-gap--selectors, $selector, $separator: comma);
 
-       &#{$selector} {
+        &#{$selector} {
           --#{$flex}--RowGap: #{$spacer-value};
         }
       }
@@ -415,3 +416,4 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   }
 }
 // stylelint-enable
+}

@@ -1,5 +1,6 @@
 @use '../../sass-utilities' as *;
 
+@layer component {
 :root {
   // accordion
   --#{$accordion}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -74,31 +75,33 @@
   row-gap: var(--#{$accordion}--RowGap);
   background-color: var(--#{$accordion}--BackgroundColor);
 
-  &.pf-m-toggle-start {
-    --#{$accordion}__toggle--ColumnGap: var(--#{$accordion}--m-toggle-start__toggle--ColumnGap);
-  }
+  @layer modifiers {
+    &.pf-m-toggle-start {
+      --#{$accordion}__toggle--ColumnGap: var(--#{$accordion}--m-toggle-start__toggle--ColumnGap);
+    }
 
-  &.pf-m-display-lg {
-    --#{$accordion}__toggle--PaddingTop: var(--#{$accordion}--m-display-lg__toggle--PaddingTop);
-    --#{$accordion}__toggle--PaddingRight: var(--#{$accordion}--m-display-lg__toggle--PaddingRight);
-    --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}--m-display-lg__toggle--PaddingBottom);
-    --#{$accordion}__toggle--m-expanded--PaddingBottom: var(--#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBottom);
-    --#{$accordion}__toggle--PaddingLeft: var(--#{$accordion}--m-display-lg__toggle--PaddingLeft);
-    --#{$accordion}__toggle--FontFamily: var(--#{$accordion}--m-display-lg__toggle--FontFamily);
-    --#{$accordion}__toggle--FontSize: var(--#{$accordion}--m-display-lg__toggle--FontSize);
-    --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle-text--FontWeight);
-    --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight);
-    --#{$accordion}__expandable-content--FontSize: var(--#{$accordion}--m-display-lg__expandable-content--FontSize);
-    --#{$accordion}__expandable-content--Color: var(--#{$accordion}--m-display-lg__expandable-content--Color);
-  }
+    &.pf-m-display-lg {
+      --#{$accordion}__toggle--PaddingTop: var(--#{$accordion}--m-display-lg__toggle--PaddingTop);
+      --#{$accordion}__toggle--PaddingRight: var(--#{$accordion}--m-display-lg__toggle--PaddingRight);
+      --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}--m-display-lg__toggle--PaddingBottom);
+      --#{$accordion}__toggle--m-expanded--PaddingBottom: var(--#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBottom);
+      --#{$accordion}__toggle--PaddingLeft: var(--#{$accordion}--m-display-lg__toggle--PaddingLeft);
+      --#{$accordion}__toggle--FontFamily: var(--#{$accordion}--m-display-lg__toggle--FontFamily);
+      --#{$accordion}__toggle--FontSize: var(--#{$accordion}--m-display-lg__toggle--FontSize);
+      --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle-text--FontWeight);
+      --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight);
+      --#{$accordion}__expandable-content--FontSize: var(--#{$accordion}--m-display-lg__expandable-content--FontSize);
+      --#{$accordion}__expandable-content--Color: var(--#{$accordion}--m-display-lg__expandable-content--Color);
+    }
 
-  &.pf-m-bordered {
-    --#{$accordion}--RowGap: var(--#{$accordion}--m-bordered--RowGap);
-    --#{$accordion}__item--BorderRadius: 0;
-    --#{$accordion}__toggle--BorderRadius: 0;
+    &.pf-m-bordered {
+      --#{$accordion}--RowGap: var(--#{$accordion}--m-bordered--RowGap);
+      --#{$accordion}__item--BorderRadius: 0;
+      --#{$accordion}__toggle--BorderRadius: 0;
 
-    .#{$accordion}__item {
-      border-block-end: var(--#{$accordion}__item--m-bordered--BorderBottomWidth) solid var(--#{$accordion}__item--m-bordered--BorderBottomColor);
+      .#{$accordion}__item {
+        border-block-end: var(--#{$accordion}__item--m-bordered--BorderBottomWidth) solid var(--#{$accordion}__item--m-bordered--BorderBottomColor);
+      }
     }
   }
 }
@@ -106,14 +109,16 @@
 .#{$accordion}__item {
   border-radius: var(--#{$accordion}__item--BorderRadius);
 
-  &.pf-m-expanded {
-    --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}__toggle--m-expanded--PaddingBottom);
-    --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
+  @layer modifiers {
+    &.pf-m-expanded {
+      --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}__toggle--m-expanded--PaddingBottom);
+      --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
 
-    background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
+      background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
 
-    .#{$accordion}__toggle-icon {
-      transform: rotate(var(--#{$accordion}__toggle--m-expanded__toggle-icon--Rotate));
+      .#{$accordion}__toggle-icon {
+        transform: rotate(var(--#{$accordion}__toggle--m-expanded__toggle-icon--Rotate));
+      }
     }
   }
 }
@@ -162,9 +167,11 @@
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
 
-  &.pf-m-fixed {
-    max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
-    overflow-y: auto;
+  @layer modifiers {
+    &.pf-m-fixed {
+      max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
+      overflow-y: auto;
+    }
   }
 }
 
@@ -177,4 +184,5 @@
   & + & {
     --#{$accordion}__expandable-content-body--PaddingTop: var(--#{$accordion}__expandable-content-body--expandable-content-body--PaddingTop);
   }
+}
 }
