@@ -156,7 +156,7 @@ import './Toolbar.css'
                 menu-toggle--IsExpanded=true
               }}
             {{#> panel}}
-              {{#> menu menu--width='175px'}}
+              {{#> menu}}
                 {{#> menu-content}}
                   {{#> menu-group}}
                     {{#> menu-list}}
@@ -222,7 +222,7 @@ import './Toolbar.css'
             menu-toggle--IsExpanded=true
           }}
         {{#> panel}}
-          {{#> menu menu--width='175px'}}
+          {{#> menu}}
             {{#> menu-content}}
               {{#> menu-group}}
                 {{#> menu-list}}

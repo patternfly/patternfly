@@ -283,7 +283,6 @@ export const setAttributes = function (...mods) {
   let modSet = '';
 
   for (const prop in mods) {
-    console.log(prop);
     const hash = mods[prop].hash;
     for (const [key, value] of Object.entries(hash)) {
       if (this[key]) {
@@ -313,7 +312,7 @@ export const entry = function (...mods) {
 
 export function entries(...data) {
   data.forEach((element, index) => {
-    console.log(element, data[index]);
+    // console.log(element, data[index]);
     // const val = prependModifierPrefix(element);
     // data[index] = stripWhitespace(val);
   });

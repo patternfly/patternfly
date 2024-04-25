@@ -4,7 +4,8 @@
   // * Menu
   --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$menu}--Width: auto;
-  --#{$menu}--MinWidth: auto;
+  --#{$menu}--MinWidth: max-content;
+  --#{$menu}--MaxWidth: 400ch;
   --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
@@ -193,6 +194,7 @@
   row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
   min-width: var(--#{$menu}--MinWidth);
+  max-width: var(--#{$menu}--MaxWidth);
   padding-block-start: var(--#{$menu}--PaddingBlockStart);
   padding-block-end: var(--#{$menu}--PaddingBlockEnd);
   overflow: hidden;

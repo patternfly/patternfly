@@ -2,11 +2,11 @@
   min-height: 18rem;
 }
 
-#ws-core-c-overflow-menu-additional-options-in-dropdown-hidden {
-  min-height: 24rem;
+#ws-core-c-overflow-menu-additional-options-in-menu-hidden {
+  min-height: 12rem;
 }
 
-#ws-core-c-overflow-menu-additional-options-in-dropdown-visible {
+#ws-core-c-overflow-menu-additional-options-in-menu-visible {
   min-height: 7rem;
 }
 
@@ -18,7 +18,7 @@
   min-height: 8rem;
 }
 
-#ws-core-c-overflow-menu-additional-options-in-dropdown-visible {
+#ws-core-c-overflow-menu-additional-options-in-menu-visible {
   min-height: 8rem;
 }
 

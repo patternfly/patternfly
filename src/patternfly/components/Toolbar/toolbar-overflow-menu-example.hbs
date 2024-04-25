@@ -1,9 +1,10 @@
 {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-overflow-menu ' toolbar-overflow-menu-example-toolbar-item--modifier)}}
   {{#>overflow-menu
       overflow-menu-button--aria-label="Expand button group overflow menu"
-      overflow-menu--id=(concat toolbar--id '-overflow-menu') menu--IsExpanded=toolbar-overflow-menu-example--IsExpanded
+      overflow-menu--id=(concat toolbar--id '-overflow-menu')
       overflow-menu--modifier=toolbar-demo-overflow-menu--modifier
       overflow-menu--attribute=toolbar-demo-overflow-menu--attribute
+      menu--IsExpanded=toolbar-overflow-menu-example--IsExpanded
     }}
 
     {{#if toolbar-overflow-menu-example--content}}
