@@ -27,7 +27,7 @@
             {{/button}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon='cog' menu-toggle--id=(dasherize log-viewer--id 'menu-toggle') menu-toggle--aria-label='Log viewer menu toggle'}}
+            {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon='cog' menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')}}
             {{#if menu-toggle--IsExpanded}}
               {{#> menu menu-toggle--id=(dasherize log-viewer--id 'settings-menu-toggle')}}
                 {{#> menu-content}}

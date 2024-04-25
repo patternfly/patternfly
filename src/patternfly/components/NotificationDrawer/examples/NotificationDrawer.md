@@ -7,7 +7,7 @@ cssPrefix: pf-v6-c-notification-drawer
 ## Examples
 ### Basic
 ```hbs
-{{#> notification-drawer notification-drawer--id="notification-drawer-basic"}}
+{{#> notification-drawer notification-drawer--id="notification-drawer-basic-example"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
       Notifications
@@ -19,20 +19,20 @@ cssPrefix: pf-v6-c-notification-drawer
       {{> menu-toggle
           menu-toggle--IsPlain=true
           menu-toggle--HasKebab=true
-          menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')
+          menu-toggle--id=(dasherize notification-drawer--id 'menu-toggle')
         }}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
   {{#> notification-drawer-body}}
-    {{> notification-drawer-basic-list}}
+    {{> notification-drawer-basic-list menu-toggle--id=(dasherize notification-drawer--id 'body-menu-toggle')}}
   {{/notification-drawer-body}}
 {{/notification-drawer}}
 ```
 
 ### Groups
 ```hbs
-{{#> notification-drawer notification-drawer--id="notification-drawer-groups"}}
+{{#> notification-drawer notification-drawer--id="notification-drawer-groups-example"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
       Notifications
@@ -44,7 +44,7 @@ cssPrefix: pf-v6-c-notification-drawer
       {{> menu-toggle
           menu-toggle--IsPlain=true
           menu-toggle--HasKebab=true
-          menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')
+          menu-toggle--id=(dasherize notification-drawer--id 'menu-toggle')
         }}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}

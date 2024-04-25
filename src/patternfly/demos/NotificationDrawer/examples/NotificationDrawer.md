@@ -8,7 +8,7 @@ section: components
 ### Collapsed
 ```hbs isFullscreen
 {{> notification-drawer-template
-      notification-drawer-template--id="drawer-collapsed-example"
+      notification-drawer--id="drawer-collapsed-example"
       notification-drawer--IsRead="true"
       notification-badge--aria-label="Notifications"
 }}
@@ -17,7 +17,7 @@ section: components
 ### Expanded read
 ```hbs isFullscreen
 {{> notification-drawer-template
-      notification-drawer-template--id="drawer-expanded-read-example"
+      notification-drawer--id="drawer-expanded-read-example"
       notification-drawer--IsExpanded="true"
       notification-drawer--IsRead="true"
       notification-badge--aria-label="Notifications"
@@ -27,7 +27,7 @@ section: components
 ### Expanded unread
 ```hbs isFullscreen
 {{> notification-drawer-template
-      notification-drawer-template--id="drawer-expanded-unread-example"
+      notification-drawer--id="drawer-expanded-unread-example"
       notification-drawer--IsExpanded="true"
       notification-drawer--IsUnread="true"
       notification-badge--aria-label="Unread notifications"
@@ -37,7 +37,7 @@ section: components
 ### Expanded attention
 ```hbs isFullscreen
 {{> notification-drawer-template
-      notification-drawer-template--id="drawer-expanded-attention-example"
+      notification-drawer--id="drawer-expanded-attention-example"
       notification-drawer--IsExpanded="true"
       notification-drawer--IsAttention="true"
       notification-badge--aria-label="Attention notifications"
@@ -47,7 +47,7 @@ section: components
 ### Expanded with groups
 ```hbs isFullscreen
 {{> notification-drawer-template
-      notification-drawer-template--id="drawer-expanded-with-groups-example"
+      notification-drawer--id="drawer-expanded-with-groups-example"
       notification-drawer-template--IsGroup="true"
       notification-drawer--IsExpanded="true"
       notification-drawer--IsUnread="true"

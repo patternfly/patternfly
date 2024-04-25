@@ -7,7 +7,7 @@ cssPrefix: pf-v6-c-hint
 ## Examples
 ### Hint with title
 ```hbs
-{{#> hint hint-menu-toggle--id='hint-with-title-example'}}
+{{#> hint hint--id='hint-with-title-example'}}
   {{#> hint-actions}}
     {{> hint-menu-toggle}}
   {{/hint-actions}}
@@ -21,7 +21,7 @@ cssPrefix: pf-v6-c-hint
 
 <br>
 
-{{#> hint hint-menu-toggle--id='hint-with-title-and-actions-example'}}
+{{#> hint hint--id='hint-with-title-and-actions-example'}}
   {{#> hint-actions}}
     {{> hint-menu-toggle}}
   {{/hint-actions}}
