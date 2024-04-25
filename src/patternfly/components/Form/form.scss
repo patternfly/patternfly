@@ -25,8 +25,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 }
 
-:root,
-.#{$form} {
+:where(:root, .#{$form}) {
   --#{$form}--GridGap: var(--pf-t--global--spacer--lg);
 
   // Group

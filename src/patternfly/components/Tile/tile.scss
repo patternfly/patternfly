@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$tile}) {
+:where(:root, .#{$tile}) {
   --#{$tile}--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$tile}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$tile}--PaddingBottom: var(--pf-t--global--spacer--lg);

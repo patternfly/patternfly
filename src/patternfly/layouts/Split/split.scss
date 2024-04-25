@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$split}) {
+:where(:root, .#{$split}) {
   --#{$stack}--m-gutter--Gap: var(--pf-t--global--spacer--lg);
 }
 

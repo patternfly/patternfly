@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-.#{$slider} {
+:where(:root, .#{$slider}) {
   --#{$slider}--value: 0; // should always be set inline
   --#{$slider}__step--Left: 0; // should always be set inline
 

@@ -5,8 +5,7 @@ $pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl")
 $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
-:where(:root),
-:where(.#{$drawer}) {
+:where(:root, .#{$drawer}) {
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);

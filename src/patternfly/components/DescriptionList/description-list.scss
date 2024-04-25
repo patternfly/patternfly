@@ -2,7 +2,7 @@
 
 $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root), :where(.#{$description-list}) {
+:where(:root, .#{$description-list}) {
   --#{$description-list}--RowGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--GridTemplateColumns--count: 1;

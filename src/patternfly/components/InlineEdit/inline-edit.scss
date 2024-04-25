@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where( .#{$inline-edit}) {
+:where(:root,  .#{$inline-edit}) {
   // Group
   --#{$inline-edit}__group--item--MarginRight: var(--pf-t--global--spacer--sm);
 

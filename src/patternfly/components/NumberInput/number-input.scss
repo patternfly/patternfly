@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-.#{$number-input} {
+:where(:root, .#{$number-input}) {
   // unit
   --#{$number-input}__unit--c-input-group--MarginLeft: var(--pf-t--global--spacer--sm);
 

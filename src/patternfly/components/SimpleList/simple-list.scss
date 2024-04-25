@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root, .#{$simple-list} {
+:where(:root, .#{$simple-list}) {
   // Simple list item link
   --#{$simple-list}__item-link--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$simple-list}__item-link--PaddingRight: var(--pf-t--global--spacer--md);

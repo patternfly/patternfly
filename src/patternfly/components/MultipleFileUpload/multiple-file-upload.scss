@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-:where(.#{$multiple-file-upload}) {
+:where(:root, .#{$multiple-file-upload}) {
   --#{$multiple-file-upload}--GridTemplateColumns: 1fr;
   --#{$multiple-file-upload}--Gap: var(--pf-t--global--spacer--md);
 

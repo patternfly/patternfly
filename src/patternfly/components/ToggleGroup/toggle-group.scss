@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root),
-:where(.#{$toggle-group}) {
+:where(:root, .#{$toggle-group}) {
   // button
   --#{$toggle-group}__button--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$toggle-group}__button--PaddingRight: var(--pf-t--global--spacer--md);

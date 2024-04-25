@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$skip-to-content}) {
   --#{$skip-to-content}--Top: var(--pf-t--global--spacer--md);
   --#{$skip-to-content}--ZIndex: var(--pf-t--global--z-index--2xl);
   --#{$skip-to-content}--focus--Left: var(--pf-t--global--spacer--md);

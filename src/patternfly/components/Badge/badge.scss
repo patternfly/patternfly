@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$badge}) {
   // Component
   --#{$badge}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$badge}--FontSize: var(--pf-t--global--font--size--body--sm);

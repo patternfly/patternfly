@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root {
+:where(:root, .#{$helper-text}) {
   --#{$helper-text}--Gap: var(--pf-t--global--spacer--xs);
   --#{$helper-text}--FontSize: var(--pf-t--global--font--size--body--sm);
 

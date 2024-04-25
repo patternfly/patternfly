@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-.#{$skeleton} {
+:where(:root, .#{$skeleton}) {
   --#{$skeleton}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--Width: auto;
   --#{$skeleton}--Height: auto;

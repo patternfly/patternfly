@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root, .#{$timestamp} {
+:where(:root, .#{$timestamp}) {
   --#{$timestamp}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$timestamp}--Color: var(--pf-t--global--text--color--subtle);
   --#{$timestamp}--OutlineOffset: #{pf-size-prem(3px)};

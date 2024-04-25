@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:root,
-:where(.#{$icon}) {
+:where(:root, .#{$icon}) {
   // Sizes
   --#{$icon}--Width: 1em;
   --#{$icon}--Height: 1em;
