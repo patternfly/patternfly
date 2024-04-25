@@ -2869,13 +2869,13 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.3.0.tgz#9d9347427105307d0f24ad938715900bfd9475e8"
-  integrity sha512-myPZh+POJpnXOrDtAYq83zMa26YCuM6KsAgLeaW6riajLyZ1VE3lHztX300xaJR1sDbIvxrdZCNDqmyoJI2z1g==
+"@patternfly/react-code-editor@5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.3.1.tgz#59d7789442a4ef8c62a31f886416638a48bf8bf2"
+  integrity sha512-XbBXcJpedsCTipeQEpO0982NKibxYRl6rYrfca6kp2t4T0/cXWMy4lWHESm+4enETRvqWIAViC9QUHO9XqOWQw==
   dependencies:
     "@monaco-editor/react" "^4.6.0"
-    "@patternfly/react-core" "^5.3.0"
+    "@patternfly/react-core" "^5.3.1"
     "@patternfly/react-icons" "^5.3.0"
     "@patternfly/react-styles" "^5.3.0"
     react-dropzone "14.2.3"
