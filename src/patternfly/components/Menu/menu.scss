@@ -203,12 +203,16 @@
 
   .#{$menu} {
     min-width: 100%;
-    border-radius: 0;
   }
 
   .#{$menu}__content {
     & & {
       overflow: visible;
+    }
+
+    .#{$menu} {
+      min-width: 100%;
+      border-radius: 0;
     }
   }
 

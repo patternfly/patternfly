@@ -119,9 +119,9 @@ cssPrefix: pf-v6-c-breadcrumb
 {{/breadcrumb}}
 ```
 
-### With dropdown
+### With menu dropdown
 ```hbs
-{{#> breadcrumb breadcrumb--id="breadcrumb-with-dropdown-example"}}
+{{#> breadcrumb breadcrumb--id="breadcrumb-with-menu-toggle-example"}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
       {{> breadcrumb-item-divider}}

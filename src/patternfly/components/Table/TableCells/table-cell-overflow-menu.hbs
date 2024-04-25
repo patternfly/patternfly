@@ -2,9 +2,17 @@
 {{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
 {{!-- TODO: automate attribution --}}
 
-{{#> table-td table-td--IsOverflowMenu=true}}
-  {{#> overflow-menu overflow-menu--id=(concat table--id '-overflow-menu-' table-tr--index) dropdown-menu--modifier="pf-m-align-right"}}
-    {{#if table--overflow-menu--IsExpanded}}
+{{#> table-td}}
+  {{#> overflow-menu overflow-menu--id=(dasherize table--id 'overflow-menu' table-tr--index)}}
+    {{#if table-cell-overflow-menu--IsCondensed}}
+      {{#> overflow-menu-control menu-toggle--aria-label="Actions"}}
+        {{> overflow-menu-toggle}}
+        {{#> overflow-menu-menu}}
+          {{> menu-list-item menu-list-item--text='Start'}}
+          {{> menu-list-item menu-list-item--text='Stop'}}
+        {{/overflow-menu-menu}}
+      {{/overflow-menu-control}}
+    {{else}}
       {{#> overflow-menu-content}}
         {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
           {{#> overflow-menu-item}}
@@ -19,15 +27,6 @@
           {{/overflow-menu-item}}
         {{/overflow-menu-group}}
       {{/overflow-menu-content}}
-    {{else}}
-      {{#> overflow-menu-control dropdown--IsExpanded=table--overflow-menu--dropdown--IsExpanded overflow-menu-button--aria-label="Generic options"}}
-        {{#> overflow-menu-dropdown-item}}
-          Start
-        {{/overflow-menu-dropdown-item}}
-        {{#> overflow-menu-dropdown-item}}
-          Stop
-        {{/overflow-menu-dropdown-item}}
-      {{/overflow-menu-control}}
     {{/if}}
   {{/overflow-menu}}
 {{/table-td}}

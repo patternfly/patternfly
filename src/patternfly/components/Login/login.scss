@@ -192,7 +192,8 @@
   }
 }
 
-.#{$login}__main-header-utilities {
+.#{$login}__main-header-utilities,
+.#{$login}__main-header :is(.#{$menu-toggle}, .#{$dropdown}) {
   grid-row: auto;
   grid-column: auto;
 

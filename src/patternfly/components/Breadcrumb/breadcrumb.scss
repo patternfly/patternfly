@@ -31,7 +31,7 @@
   --#{$breadcrumb}__dropdown--MarginInlineStart: calc(var(--#{$breadcrumb}__item-divider--MarginInlineEnd) * -1);
 
   // breadcrumb toggle
-  --#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$breadcrumb}__dropdown--c-menu-toggle--LineHeight: var(--pf-t--global--font--line-height--body);
 }
 
 .#{$breadcrumb} {
@@ -115,8 +115,8 @@
   margin-inline-start: var(--#{$breadcrumb}__dropdown--MarginInlineStart);
   margin-inline-end: var(--#{$breadcrumb}__dropdown--MarginInlineEnd);
 
-  .#{$menu-toggle} {
-    line-height: var(--#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight);
+  :is(.#{$menu-toggle}, .#{$dropdown}__toggle) {
+    line-height: var(--#{$breadcrumb}__dropdown--c-menu-toggle--LineHeight);
   }
 }
 

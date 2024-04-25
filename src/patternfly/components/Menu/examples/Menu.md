@@ -9,6 +9,17 @@ import './Menu.css'
 
 ## Examples
 
+### New
+```hbs
+{{> menu-new menu--width="200px" menu--items=(
+  entries
+    (entry name='super fun' IsDisabled=true)
+    (entry name='test 1' thing='try me')
+    (entry name='test 2' thing='I\'m here')
+  )
+}}
+```
+
 ### Basic
 ```hbs
 {{#> menu}}

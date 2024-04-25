@@ -292,7 +292,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-cell-overflow-menu table-cell-overflow-menu--IsExpanded=true}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -340,7 +340,7 @@ These classes can be used to ensure that the table changes between the tabular a
         25
       {{/table-td}}
       <!-- TODO: update overflow menu with menu/menu toggle  -->
-      {{> table-cell-overflow-menu table-cell-overflow-menu--IsExpanded=true}}
+      {{> table-cell-overflow-menu table-cell-overflow-menu--IsCondensed=true menu--IsExpanded=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -353,7 +353,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-cell-overflow-menu}}
+      {{> table-cell-overflow-menu table-cell-overflow-menu--IsCondensed=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
@@ -388,7 +388,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-cell-overflow-menu table-td--IsExpanded=true}}
+      {{> table-cell-overflow-menu table-cell-overflow-menu--IsCondensed=true menu--IsExpanded=true}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -401,7 +401,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-cell-overflow-menu}}
+      {{> table-cell-overflow-menu table-cell-overflow-menu--IsCondensed=true}}
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}

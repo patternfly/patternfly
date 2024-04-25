@@ -284,7 +284,7 @@ wrapperTag: div
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
             toolbar-template--modifier="pf-m-page-insets"
-            toolbar-template--HasDropdown=true
+            toolbar-template--HasMenu=true
             toolbar-template--HasOverflowMenu=true
             toolbar-template--HasOverflowMenuSecondButton=true
           }}

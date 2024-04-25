@@ -18,7 +18,7 @@
           {{/button}}
         {{/toolbar-item}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-align-end pf-m-hidden-on-lg pf-m-gap-none"}}
-          {{> __log-viewer-dropdown-menu}}
+          {{> __log-viewer-menu-toggle}}
         {{/toolbar-item}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end pf-m-hidden pf-m-visible-on-lg"}}
           {{#> toolbar-item}}
@@ -27,37 +27,30 @@
             {{/button}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> dropdown dropdown--id=(concat log-viewer--id '-settings-dropdown') dropdown-menu--modifier="pf-m-align-end" dropdown--HasCheckboxes="true"}}
-              {{#> dropdown-toggle dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Settings"' dropdown-toggle--modifier="pf-m-plain"}}
-                <i class="fas fa-cog" aria-hidden="true"></i>
-              {{/dropdown-toggle}}
-              {{#> dropdown-menu}}
-                <li role="menuitem">
-                  {{#> dropdown-menu-item dropdown-menu-item--type="div"}}
-                    {{#> check check--type="label" check--attribute=(concat 'for="' log-viewer--id '-check-wrap-lines"')}}
-                      {{#> check-input check-input--attribute=(concat 'id="' log-viewer--id '-check-wrap-lines" name="' log-viewer--id '-check-wrap-lines"')}}{{/check-input}}
-                      {{#> check-label check-label--type="span"}}Wrap lines{{/check-label}}
-                    {{/check}}
-                  {{/dropdown-menu-item}}
-                </li>
-                <li role="menuitem">
-                  {{#> dropdown-menu-item dropdown-menu-item--type="div"}}
-                    {{#> check check--type="label" check--attribute=(concat 'for="' log-viewer--id '-check-show-timestamps"')}}
-                      {{#> check-input check-input--attribute=(concat 'id="' log-viewer--id '-check-show-timestamps" name="' log-viewer--id '-check-show-timestamps"')}}{{/check-input}}
-                      {{#> check-label check-label--type="span"}}Show timestamps{{/check-label}}
-                    {{/check}}
-                  {{/dropdown-menu-item}}
-                </li>
-                <li role="menuitem">
-                  {{#> dropdown-menu-item dropdown-menu-item--type="div"}}
-                    {{#> check check--type="label" check--attribute=(concat 'for="' log-viewer--id '-check-line-number"')}}
-                      {{#> check-input check-input--attribute=(concat 'id="' log-viewer--id '-check-line-number" name="' log-viewer--id '-check-line-number"')}}{{/check-input}}
-                      {{#> check-label check-label--type="span"}}Display line number{{/check-label}}
-                    {{/check}}
-                  {{/dropdown-menu-item}}
-                </li>
-              {{/dropdown-menu}}
-            {{/dropdown}}
+            {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon='cog' menu-toggle--id=(dasherize log-viewer--id 'menu-toggle') menu-toggle--aria-label='Log viewer menu toggle'}}
+            {{#if menu-toggle--IsExpanded}}
+              {{#> menu menu-toggle--id=(dasherize log-viewer--id 'settings-menu-toggle')}}
+                {{#> menu-content}}
+                  {{#> menu-list check--id=(dasherize log-viewer--id 'check' menu-list-item--id)}}
+                    {{#> menu-list-item menu-list-item--id="1"}}
+                      {{#> menu-item}}
+                        {{> check check-label--text='Wrap lines'}}
+                      {{/menu-item}}
+                    {{/menu-list-item}}
+                    {{#> menu-list-item menu-list-item--id="2"}}
+                      {{#> menu-item}}
+                        {{> check check-label--text='Show timestamps'}}
+                      {{/menu-item}}
+                    {{/menu-list-item}}
+                    {{#> menu-list-item menu-list-item--id="3"}}
+                      {{#> menu-item}}
+                        {{> check check-label--text='Display line number'}}
+                      {{/menu-item}}
+                    {{/menu-list-item}}
+                  {{/menu-list}}
+                {{/menu-content}}
+              {{/menu}}
+            {{/if}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open external link"'}}

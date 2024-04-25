@@ -27,7 +27,7 @@
 
   // Hint Actions
   --#{$hint}__actions--MarginInlineStart: var(--pf-t--global--spacer--2xl);
-  --#{$hint}__actions--c-dropdown--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$hint}__actions--c-menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 }
 
 .#{$hint} {
@@ -59,9 +59,8 @@
   margin-inline-start: var(--#{$hint}__actions--MarginInlineStart);
   text-align: end;
 
-  // Only applies to the plain dropdown
-  .#{$menu-toggle}.pf-m-plain {
-    margin-block-start: var(--#{$hint}__actions--c-dropdown--MarginBlockStart);
+  &:is(.#{$menu-toggle}.pf-m-plain, .#{$dropdown} .#{$dropdown}__toggle.pf-m-plain) {
+    margin-block-start: var(--#{$hint}__actions--c-menu-toggle--MarginBlockStart);
   }
 
   + .#{$hint}__body {

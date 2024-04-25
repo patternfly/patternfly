@@ -350,20 +350,14 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{> toolbar-item-search-filter button--id="content"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
-                menu-toggle--text='Status'
-              }}
+            {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-status') menu-toggle--text='Status'}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
-                menu-toggle--text='Risk'
-              }}
+            {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-risk') menu-toggle--text='Risk'}}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--IsControl=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
       {{#> toolbar-group toolbar-group--modifier='pf-m-label-container'}}
@@ -395,7 +389,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--IsControl=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
       {{> toolbar-item-search-filter button--id="expanded-content"}}
@@ -531,7 +525,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--IsControl=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
       {{#> toolbar-group}}

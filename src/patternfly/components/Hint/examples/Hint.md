@@ -7,9 +7,9 @@ cssPrefix: pf-v6-c-hint
 ## Examples
 ### Hint with title
 ```hbs
-{{#> hint}}
+{{#> hint hint-menu-toggle--id='hint-with-title-example'}}
   {{#> hint-actions}}
-    {{> dropdown dropdown--id="hint-with-title-dropdown-kebab" dropdown-toggle--IsPlain="true"}}
+    {{> hint-menu-toggle}}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -21,9 +21,9 @@ cssPrefix: pf-v6-c-hint
 
 <br>
 
-{{#> hint}}
+{{#> hint hint-menu-toggle--id='hint-with-title-and-actions-example'}}
   {{#> hint-actions}}
-    {{> dropdown dropdown--id="hint-with-title-with-footer-dropdown-kebab" dropdown-toggle--IsPlain="true"}}
+    {{> hint-menu-toggle}}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -49,9 +49,9 @@ cssPrefix: pf-v6-c-hint
 
 <br>
 
-{{#> hint}}
+{{#> hint hint--id="hint-with-no-title-example"}}
   {{#> hint-actions}}
-    {{> dropdown dropdown--id="hint-with-no-title-dropdown-kebab" dropdown-toggle--IsPlain="true"}}
+    {{> hint-menu-toggle}}
   {{/hint-actions}}
   {{#> hint-body}}
     Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.

@@ -5,6 +5,11 @@
     {{/button}}
   {{/dual-list-selector-tools-actions-item}}
   {{#> dual-list-selector-tools-actions-item}}
-    {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
+    {{> menu-toggle
+        menu-toggle--IsPlain=true
+        menu-toggle--HasKebab=true
+        menu-toggle--id=(dasherize dual-list-selector-pane--id 'menu-toggle')
+        menu-toggle--aria-label='Dual list item menu toggle'
+      }}
   {{/dual-list-selector-tools-actions-item}}
 {{/dual-list-selector-tools-actions}}

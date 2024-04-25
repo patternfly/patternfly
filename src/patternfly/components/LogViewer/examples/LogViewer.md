@@ -11,7 +11,7 @@ import './LogViewer.css';
 ### Basic
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-basic-example" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Basic log viewer"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -19,7 +19,7 @@ import './LogViewer.css';
 ### With line numbers
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style=""' log-viewer--aria-label="Log viewer with line numbers"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -27,7 +27,7 @@ import './LogViewer.css';
 ### With line number chars specified
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-line-number-chars-example" log-viewer--HasLineNumbers="true" log-viewer--modifier="pf-m-line-number-chars" log-viewer--attribute='style="--pf-v6-c-log-viewer--line-number-chars: 6"' log-viewer--aria-label="Log viewer with line numbers"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -35,7 +35,7 @@ import './LogViewer.css';
 ### With text wrapping
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-text-wrap-example" log-viewer--HasLineNumbers="true" log-viewer--TextWraps="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with text wrapping"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -43,7 +43,7 @@ import './LogViewer.css';
 ### Without text wrapping
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-text-nowrap-example" log-viewer--HasLineNumbers="true" log-viewer--NoWrap="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer without text wrapping"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -51,7 +51,7 @@ import './LogViewer.css';
 ### With search results
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-search-results-example" log-viewer--HasLineNumbers="true" log-viewer--IsMatch="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px;"' log-viewer--aria-label="Log viewer with search results"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -59,15 +59,20 @@ import './LogViewer.css';
 ### With max height
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-max-height-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px; --pf-v6-c-log-viewer--MaxHeight: 300px;"' log-viewer--aria-label="Log viewer with max height"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
 
-### With dropdown, drilldown, search expanded
+### With menu toggle, drilldown, search expanded
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-dropdowns-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with dropdown, drilldown, search expanded"}}
-  {{> __log-viewer-toolbar dropdown--IsExpanded="true"}}
+{{#>log-viewer
+    log-viewer--id="log-viewer-menu-toggle-expanded-example"
+    log-viewer--HasLineNumbers="true"
+    log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"'
+    log-viewer--aria-label="Log viewer with menu-toggle drilldown, search expanded"
+  }}
+  {{> __log-viewer-toolbar menu-toggle--IsExpanded=true}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -75,7 +80,7 @@ import './LogViewer.css';
 ### With popover open
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-popover-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with popover open"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
@@ -110,7 +115,7 @@ import './LogViewer.css';
 ### Dark
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-dark-example" log-viewer--IsMatch="true" log-viewer--modifier="pf-m-dark" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Dark log viewer"}}
-  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
   {{#> button button--modifier="pf-m-primary"}}Jump to the bottom{{/button}}
 {{/log-viewer}}

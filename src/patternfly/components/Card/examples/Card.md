@@ -28,7 +28,7 @@ import './Card.css'
       {{> pf_logo_white pf_logo_white--attribute='width="300px"'}}
     {{/card-header-main}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
@@ -47,7 +47,7 @@ import './Card.css'
 {{#> card card--id="card-action-example-2"}}
   {{#> card-header}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
@@ -68,7 +68,7 @@ import './Card.css'
 {{#> card card--id="card-action-example-3"}}
   {{#> card-header}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
@@ -742,7 +742,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
@@ -761,7 +761,7 @@ import './Card.css'
       <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" width="27px">
     {{/card-header-main}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
@@ -774,7 +774,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
@@ -797,7 +797,7 @@ import './Card.css'
 {{#> card card--id="card-full-height-example" card--modifier="pf-m-full-height"}}
   {{#> card-header}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
@@ -818,7 +818,7 @@ import './Card.css'
 {{#> card card--id="card-toggle-on-right-example"}}
   {{#> card-header card-header--modifier="pf-m-toggle-right"}}
     {{#> card-actions}}
-      {{> card--dropdown}}
+      {{> card--menu-toggle}}
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}

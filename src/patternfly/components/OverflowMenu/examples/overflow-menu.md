@@ -7,34 +7,21 @@ cssPrefix: pf-v6-c-overflow-menu
 import './overflow-menu.css'
 
 ## Introduction
-The overflow menu component condenses actions inside `.pf-v6-c-overflow-menu__content` container into a single dropdown button wrapped in `.pf-v6-c-overflow-menu__control`.
+The overflow menu component condenses actions inside `.pf-v6-c-overflow-menu__content` container into a single menu button wrapped in `.pf-v6-c-overflow-menu__control`.
 
 The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (`.pf-v6-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-v6-c-toolbar--spacer--base`, whose value is `--pf-v6-global--spacer--md` or 16px.
 
-### Simple collapsed
+### Simple condensed
 ```hbs
-{{#> overflow-menu overflow-menu--id="overflow-menu-simple"}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Generic options"}}
-    {{#> overflow-menu-dropdown-item}}
-      Item 1
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Item 2
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Item 3
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Item 4
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Item 5
-    {{/overflow-menu-dropdown-item}}
+{{#> overflow-menu menu-toggle--IsCondensed=true overflow-menu--IsExpanded=true overflow-menu--id='overflow-menu-simple'}}
+  {{#> overflow-menu-control menu-toggle--IsExpanded=true menu-toggle--aria-label='Generic options'}}
+    {{> overflow-menu-toggle}}
+    {{> overflow-menu-menu}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
 
-### Simple expanded
+### Simple
 ```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-expanded"}}
   {{#> overflow-menu-content}}
@@ -130,7 +117,7 @@ The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (
 {{/overflow-menu}}
 ```
 
-The action group consists of a primary and secondary action. Any additional actions are part of the overflow control dropdown.
+The action group consists of a primary and secondary action. Any additional actions are part of the overflow control menu.
 
 ### Overflow menu group types
 
@@ -140,36 +127,21 @@ The action group consists of a primary and secondary action. Any additional acti
 | `.pf-m-button-group` | `.pf-v6-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-button-group--spacer)`. Child `.pf-v6-c-button` spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-button-group--space-items)`. |
 | `.pf-m-icon-button-group` | `.pf-v6-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-icon-button-group--spacer)`. Child `.pf-v6-c-button.pf-m-button-plain` spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-icon-button-group--space-items)`. |
 
-### Additional options in dropdown (hidden)
+### Additional options in menu (hidden)
 ```hbs
-{{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden"}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options"}}
-    {{#> overflow-menu-dropdown-item}}
-      Primary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Secondary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Tertiary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Align left
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Align center
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Align right
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Action 7
-    {{/overflow-menu-dropdown-item}}
+{{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden" overflow-menu--IsCondensed=true menu--IsExpanded=true}}
+  {{#> overflow-menu-control menu-toggle--aria-label="Additional options in menu toggle"}}
+    {{> overflow-menu-toggle}}
+    {{#> overflow-menu-menu}}
+      {{> menu-list-item menu-list-item--text='Primary'}}
+      {{> menu-list-item menu-list-item--text='Secondary'}}
+      {{> menu-list-item menu-list-item--text='Tertiary'}}
+    {{/overflow-menu-menu}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
 
-### Additional options in dropdown (visible)
+### Additional options in menu (visible)
 ```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-visible"}}
   {{#> overflow-menu-content}}
@@ -208,10 +180,11 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options"}}
-    {{#> overflow-menu-dropdown-item}}
-      Action 7
-    {{/overflow-menu-dropdown-item}}
+  {{#> overflow-menu-control menu--IsExpanded=true menu-toggle--aria-label="Additional options toggle"}}
+    {{> overflow-menu-toggle}}
+    {{#> overflow-menu-menu}}
+      {{> menu-list-item menu-list-item--text='Action 7'}}
+    {{/overflow-menu-menu}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -230,16 +203,13 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown for persistent example"}}
-    {{#> overflow-menu-dropdown-item}}
-      Secondary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Tertiary
-    {{/overflow-menu-dropdown-item}}
-    {{#> overflow-menu-dropdown-item}}
-      Action 4
-    {{/overflow-menu-dropdown-item}}
+  {{#> overflow-menu-control menu--IsExpanded=true menu-toggle--aria-label="menu with additional options"}}
+    {{> overflow-menu-toggle}}
+    {{#> overflow-menu-menu}}
+      {{> menu-list-item menu-list-item--text='Secondary'}}
+      {{> menu-list-item menu-list-item--text='Tertiary'}}
+      {{> menu-list-item menu-list-item--text='Action 4'}}
+    {{/overflow-menu-menu}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -266,10 +236,11 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown for persistent example"}}
-    {{#> overflow-menu-dropdown-item}}
-      Action 4
-    {{/overflow-menu-dropdown-item}}
+  {{#> overflow-menu-control menu--IsExpanded=true menu-toggle--aria-label="Persistent options toggle"}}
+    {{> overflow-menu-toggle}}
+    {{#> overflow-menu-menu}}
+      {{> menu-list-item menu-list-item--text='Action 4'}}
+    {{/overflow-menu-menu}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```

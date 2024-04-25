@@ -16,7 +16,11 @@ cssPrefix: pf-v6-c-notification-drawer
       3 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle
+          menu-toggle--IsPlain=true
+          menu-toggle--HasKebab=true
+          menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')
+        }}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
@@ -37,7 +41,11 @@ cssPrefix: pf-v6-c-notification-drawer
       9 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle
+          menu-toggle--IsPlain=true
+          menu-toggle--HasKebab=true
+          menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')
+        }}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}

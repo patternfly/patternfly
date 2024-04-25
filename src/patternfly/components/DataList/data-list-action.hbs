@@ -5,6 +5,10 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{> dropdown dropdown--id=(concat data-list--id '-' data-list-item--id '-dropdown-kebab') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+    {{> menu-toggle
+        menu-toggle--IsPlain=true
+        menu-toggle--HasKebab=true
+        menu-toggle--id=(dasherize data-list--id data-list-item--id 'menu-toggle')
+        menu-toggle--aria-label='Dual list item menu toggle'}}
   {{/if}}
 </div>
