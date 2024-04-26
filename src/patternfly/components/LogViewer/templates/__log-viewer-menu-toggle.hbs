@@ -1,4 +1,4 @@
-{{> menu-toggle menu-toggle--text='System log' menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')}}
+{{> menu-toggle menu-toggle--text='System log' menu-toggle--id=(dasherize log-viewer--id 'toggle')}}
 {{#> menu menu--modifier="pf-m-drilldown" menu--attribute='style="--pf-v6-c-menu--Width: 200px;"'}}
   {{#> menu-content menu-content--attribute=menu--Drilldown--menu__content--attribute menu--attribute=''}}
     {{#> menu-list menu-content--attribute=''}}
@@ -7,30 +7,21 @@
       {{#> menu-list-item}}
         {{#> menu-item menu-item--type="div"}}
           {{#> menu-item-main}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' log-viewer--id '-desktop-check-wrap-lines" name="' log-viewer--id '-desktop-check-wrap-lines"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' log-viewer--id '-desktop-check-wrap-lines"')}}Wrap lines{{/check-label}}
-            {{/check}}
+            {{> check check--id=(dasherize log-viewer--id 'desktop-check-wrap-lines') check-label--text='Wrap lines'}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
         {{#> menu-item menu-item--type="div"}}
           {{#> menu-item-main}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' log-viewer--id '-desktop-check-show-timestamps" name="' log-viewer--id '-desktop-check-show-timestamps"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' log-viewer--id '-desktop-check-show-timestamps"')}}Show timestamps{{/check-label}}
-            {{/check}}
+            {{> check check--id=(dasherize log-viewer--id 'desktop-check-show-timestamps') check-label--text='Show timestamps'}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
         {{#> menu-item menu-item--type="div"}}
           {{#> menu-item-main}}
-            {{#> check}}
-              {{#> check-input check-input--attribute=(concat 'id="' log-viewer--id '-desktop-check-line-number" name="' log-viewer--id '-desktop-check-line-number"')}}{{/check-input}}
-              {{#> check-label check-label--attribute=(concat 'for="' log-viewer--id '-desktop-check-line-number"')}}Display line number{{/check-label}}
-            {{/check}}
+            {{> check check--id=(dasherize log-viewer--id 'desktop-check-line-number') check-label--text='Display line numbers'}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
