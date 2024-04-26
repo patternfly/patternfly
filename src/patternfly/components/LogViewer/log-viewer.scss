@@ -6,56 +6,56 @@
   --#{$log-viewer}--m-line-numbers__index--Display: inline;
 
   // Header
-  --#{$log-viewer}__header--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$log-viewer}__header--MarginBottom: var(--pf-t--global--spacer--sm);
 
   // Main
-  --#{$log-viewer}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$log-viewer}__main--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$log-viewer}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$log-viewer}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$log-viewer}__main--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$log-viewer}__main--BorderColor: var(--pf-t--global--border--color--default);
 
   // Scroll container
   --#{$log-viewer}__scroll-container--Height: #{pf-size-prem(600px)};
-  --#{$log-viewer}__scroll-container--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$log-viewer}__scroll-container--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$log-viewer}__scroll-container--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$log-viewer}__scroll-container--PaddingBottom: var(--pf-t--global--spacer--sm);
 
   // Main ::after
   --#{$log-viewer}--m-line-numbers__main--before--Top: 0;
   --#{$log-viewer}--m-line-numbers__main--before--Bottom: 0;
-  --#{$log-viewer}--m-line-numbers__main--before--Width: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$log-viewer}--m-line-numbers__main--before--Width: var(--pf-t--global--border--width--divider--default);
+  --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--pf-t--global--border--color--default);
 
   // List
   --#{$log-viewer}__list--Height: auto;
   --#{$log-viewer}--m-line-numbers__list--Left: var(--#{$log-viewer}__index--Width);
-  --#{$log-viewer}__list--FontFamily: var(--#{$pf-global}--FontFamily--monospace);
-  --#{$log-viewer}__list--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$log-viewer}__list--FontFamily: var(--pf-t--global--font--family--mono);
+  --#{$log-viewer}__list--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Index
   --#{$log-viewer}__index--Display: none;
   --#{$log-viewer}__index--Width: #{pf-size-prem(65px)}; // default width
-  --#{$log-viewer}__index--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$log-viewer}__index--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$log-viewer}__index--Color: var(--#{$pf-global}--Color--200);
+  --#{$log-viewer}__index--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$log-viewer}__index--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$log-viewer}__index--Color: var(--pf-t--global--text--color--subtle);
   --#{$log-viewer}__index--BackgroundColor: transparent;
   --#{$log-viewer}--line-number-chars: 4.4; // it's close enough to the existing default
-  --#{$log-viewer}--m-line-number-chars__index--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$log-viewer}--m-line-number-chars__index--PaddingRight: var(--pf-t--global--spacer--xs);
   --#{$log-viewer}--m-line-number-chars__index--Width: calc(1ch * var(--#{$log-viewer}--line-number-chars) + var(--#{$log-viewer}__index--PaddingRight) + var(--#{$log-viewer}__index--PaddingLeft));
 
   // Text
-  --#{$log-viewer}__text--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$log-viewer}__text--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$log-viewer}__text--Color: var(--#{$pf-global}--Color--100);
+  --#{$log-viewer}__text--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$log-viewer}__text--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$log-viewer}__text--Color: var(--pf-t--global--text--color--regular);
   --#{$log-viewer}__text--WordBreak: break-all;
   --#{$log-viewer}__text--WhiteSpace: break-spaces;
   --#{$log-viewer}__text--LineBreak: anywhere;
   --#{$log-viewer}--m-nowrap__text--WhiteSpace: nowrap;
-  --#{$log-viewer}__string--m-match--Color: var(--#{$pf-global}--palette--gold-700);
-  --#{$log-viewer}__string--m-match--BackgroundColor: var(--#{$pf-global}--palette--gold-100);
-  --#{$log-viewer}__string--m-current--Color: var(--#{$pf-global}--palette--gold-700);
-  --#{$log-viewer}__string--m-current--BackgroundColor: var(--#{$pf-global}--palette--gold-400);
+  --#{$log-viewer}__string--m-match--Color: initial;
+  --#{$log-viewer}__string--m-match--BackgroundColor: var(--pf-t--global--background--color--highlight--default);
+  --#{$log-viewer}__string--m-current--Color: initial;
+  --#{$log-viewer}__string--m-current--BackgroundColor: var(--pf-t--global--background--color--highlight--clicked);
 
   // Timestamp
-  --#{$log-viewer}__timestamp--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$log-viewer}__timestamp--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Toolbar
   --#{$log-viewer}--c-toolbar--PaddingTop: 0;
@@ -63,7 +63,7 @@
   --#{$log-viewer}--c-toolbar__content--PaddingRight: 0;
   --#{$log-viewer}--c-toolbar__content--PaddingLeft: 0;
   --#{$log-viewer}--c-toolbar__group--m-toggle-group--spacer: 0;
-  --#{$log-viewer}--c-toolbar__group--m-toggle-group--m-show--spacer: var(--#{$pf-global}--spacer--sm);
+  --#{$log-viewer}--c-toolbar__group--m-toggle-group--m-show--spacer: var(--pf-t--global--spacer--sm);
 
   // Dark theme
   --#{$log-viewer}--m-dark__main--BorderWidth: 0;
@@ -72,11 +72,11 @@
     --#{$log-viewer}__main--BorderWidth: var(--#{$log-viewer}--m-dark__main--BorderWidth);
 
     .#{$log-viewer}__main {
-      --#{$log-viewer}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-      --#{$log-viewer}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
-      --#{$log-viewer}__text--Color: var(--#{$pf-global}--Color--100);
-      --#{$log-viewer}__index--Color: var(--#{$pf-global}--Color--200);
-      --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
+      --#{$log-viewer}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+      --#{$log-viewer}__main--BorderColor: var(--pf-t--global--border--color--default);
+      --#{$log-viewer}__text--Color: var(--pf-t--global--text--color--regular);
+      --#{$log-viewer}__index--Color: var(--pf-t--global--text--color--subtle);
+      --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--pf-t--global--border--color--default);
     }
   }
 
@@ -104,9 +104,9 @@
       // Divider
       &::before {
         position: absolute;
-       inset-block-start: var(--#{$log-viewer}--m-line-numbers__main--before--Top); // rename these vars at a breaking change
-       inset-block-end: var(--#{$log-viewer}--m-line-numbers__main--before--Bottom);
-       inset-inline-start: 0;
+        inset-block-start: var(--#{$log-viewer}--m-line-numbers__main--before--Top); // rename these vars at a breaking change
+        inset-block-end: var(--#{$log-viewer}--m-line-numbers__main--before--Bottom);
+        inset-inline-start: 0;
         width: var(--#{$log-viewer}--m-line-numbers__main--before--Width);
         content: "";
         background: var(--#{$log-viewer}--m-line-numbers__main--before--BackgroundColor);
