@@ -77,7 +77,7 @@ import './Pagination.css'
 ```hbs
 {{#> pagination}}
   {{> pagination-total-items-content}}
-  {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-top-disabled-example" options-menu-toggle--IsDisabled="true"}}
+  {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-top-disabled-example" menu-toggle--IsDisabled="true"}}
   {{> pagination-nav-content pagination-nav-content--IsDisabled="true"  pagination-nav--aria-label="Pagination nav - top disabled example"}}
 {{/pagination}}
 ```

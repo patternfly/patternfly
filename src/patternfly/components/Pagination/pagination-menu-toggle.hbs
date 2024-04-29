@@ -1,0 +1,11 @@
+{{#> menu-toggle
+      menu-toggle--IsPlain=true
+      menu-toggle--IsText=true
+      menu-toggle--modifier=pagination-options-menu--modifier menu-toggle--id=pagination-options-menu--id}}
+  {{#> menu-toggle-text}}
+    <b>1 - 10</b>&nbsp;of&nbsp;<b>{{#if pagination--IsIndeterminate}}many{{else}}36{{/if}}</b>
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
