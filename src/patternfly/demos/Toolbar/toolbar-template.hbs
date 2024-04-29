@@ -168,7 +168,7 @@ Options: [
       {{#unless toolbar-template--HasNoPagination}}
         {{#> toolbar-item toolbar-item--modifier='pf-m-pagination'}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-top-pagination')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-top-pagination')}}
             {{> pagination-nav-content pagination-nav--aria-label="Toolbar top pagination"}}
           {{/pagination}}
         {{/toolbar-item}}
