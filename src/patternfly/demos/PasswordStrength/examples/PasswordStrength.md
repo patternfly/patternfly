@@ -12,7 +12,6 @@ section: components
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
-        {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
       {{/form-group-label-info}}
@@ -47,7 +46,6 @@ section: components
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
-        {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
       {{/form-group-label-info}}
@@ -82,7 +80,6 @@ section: components
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
-        {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
         {{> helper-text helper-text--value='Weak' helper-text-item--HasIcon=true helper-text-item--IsError=true}}
@@ -118,7 +115,6 @@ section: components
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
-        {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
         {{> helper-text helper-text--value="Strong" helper-text-item--HasIcon=true helper-text-item--IsSuccess=true}}
