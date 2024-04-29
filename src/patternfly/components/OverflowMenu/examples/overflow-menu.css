@@ -1,27 +1,3 @@
-#ws-core-c-overflow-menu-simple-collapsed {
-  min-height: 18rem;
-}
-
-#ws-core-c-overflow-menu-additional-options-in-menu-hidden {
-  min-height: 12rem;
-}
-
-#ws-core-c-overflow-menu-additional-options-in-menu-visible {
-  min-height: 7rem;
-}
-
-#ws-core-c-overflow-menu-persistent-additional-options-hidden {
-  min-height: 14rem;
-}
-
-#ws-core-c-overflow-menu-persistent-additional-options-visible {
-  min-height: 8rem;
-}
-
-#ws-core-c-overflow-menu-additional-options-in-menu-visible {
-  min-height: 8rem;
-}
-
 #ws-core-c-overflow-menu-simple .pf-v6-c-overflow-menu__item,
 #ws-core-c-overflow-menu-simple .pf-v6-c-overflow-menu__group,
 #ws-core-c-overflow-menu-group-types .pf-v6-c-overflow-menu__group:not([class*="pf-m-"]) {

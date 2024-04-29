@@ -3,24 +3,11 @@
     {{#>overflow-menu
         overflow-menu-button--aria-label="Expand icon button overflow menu"
         overflow-menu--id=(dasherize toolbar--id 'icon-button-overflow-menu')
-        menu--IsExpanded=toolbar-overflow-menu-example--IsExpanded
         overflow-menu--modifier=toolbar-demo-overflow-menu--modifier
         overflow-menu--attribute=toolbar-demo-overflow-menu--attribute
       }}
 
       {{#if toolbar-icon-button-group-example--control}}
-        {{#if toolbar-overflow-menu-example--IsExpanded}}
-          {{#> overflow-menu-control overflow-menu-button--aria-expanded=true}}
-            {{> menu-toggle menu-toggle--icon='toolbox' menu-toggle--aria-label="Overflow menu"}}
-            {{#> overflow-menu-menu menu--IsExpanded=true}}
-              {{> menu-list-item menu-list-item--text='Edit'}}
-              {{> menu-list-item menu-list-item--text='Clone'}}
-              {{> menu-list-item menu-list-item--text='Sync'}}
-            {{/overflow-menu-menu}}
-          {{/overflow-menu-control}}
-        {{/if}}
-      {{else}}
-
         {{#> overflow-menu-content}}
           {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
             {{#> overflow-menu-item}}

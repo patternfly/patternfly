@@ -9,7 +9,12 @@ cssPrefix: pf-v6-c-hint
 ```hbs
 {{#> hint hint--id='hint-with-title-example'}}
   {{#> hint-actions}}
-    {{> hint-menu-toggle}}
+    {{> menu-toggle
+      menu-toggle--IsPlain=true
+      menu-toggle--HasKebab=true
+      menu-toggle--id=(dasherize hint--id 'hint')
+      menu-toggle--aria-label='Hint menu toggle'
+    }}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -23,8 +28,13 @@ cssPrefix: pf-v6-c-hint
 
 {{#> hint hint--id='hint-with-title-and-actions-example'}}
   {{#> hint-actions}}
-    {{> hint-menu-toggle}}
-  {{/hint-actions}}
+    {{> menu-toggle
+      menu-toggle--IsPlain=true
+      menu-toggle--HasKebab=true
+      menu-toggle--id=(dasherize hint--id 'hint')
+      menu-toggle--aria-label='Hint menu toggle'
+    }}
+ {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
   {{/hint-title}}
@@ -51,8 +61,13 @@ cssPrefix: pf-v6-c-hint
 
 {{#> hint hint--id="hint-with-no-title-example"}}
   {{#> hint-actions}}
-    {{> hint-menu-toggle}}
-  {{/hint-actions}}
+    {{> menu-toggle
+      menu-toggle--IsPlain=true
+      menu-toggle--HasKebab=true
+      menu-toggle--id=(dasherize hint--id 'hint')
+      menu-toggle--aria-label='Hint menu toggle'
+    }}
+ {{/hint-actions}}
   {{#> hint-body}}
     Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
   {{/hint-body}}

@@ -3,7 +3,12 @@
     {{#> toolbar-content}}
       {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
-          {{> __log-viewer-toolbar-select}}
+          {{> menu-toggle
+              menu-toggle--text='System log'
+              menu-toggle--id=(dasherize log-viewer--id 'log-menu-toggle')
+              menu-toggle--aria-label='Log viewer menu toggle'
+            }}
+
         {{/toolbar-item}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
           {{> toolbar-toggle toolbar-toggle--icon="search"}}
@@ -18,7 +23,12 @@
           {{/button}}
         {{/toolbar-item}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-align-end pf-m-hidden-on-lg pf-m-gap-none"}}
-          {{> __log-viewer-menu-toggle}}
+          {{> menu-toggle
+              menu-toggle--IsPlain=true
+              menu-toggle--HasKebab=true
+              menu-toggle--id=(dasherize hint--id 'hint')
+              menu-toggle--aria-label='Hint menu toggle'
+            }}
         {{/toolbar-item}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end pf-m-hidden pf-m-visible-on-lg"}}
           {{#> toolbar-item}}
@@ -28,29 +38,6 @@
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon='cog' menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')}}
-            {{#if menu-toggle--IsExpanded}}
-              {{#> menu menu-toggle--id=(dasherize log-viewer--id 'settings-menu-toggle')}}
-                {{#> menu-content}}
-                  {{#> menu-list check--id=(dasherize log-viewer--id 'check' menu-list-item--id)}}
-                    {{#> menu-list-item menu-list-item--id="1"}}
-                      {{#> menu-item}}
-                        {{> check check--id=(dasherize log-viewer--id 'desktop-check-wrap-lines') check-label--text='Wrap lines'}}
-                      {{/menu-item}}
-                    {{/menu-list-item}}
-                    {{#> menu-list-item menu-list-item--id="2"}}
-                      {{#> menu-item}}
-                        {{> check check--id=(dasherize log-viewer--id 'desktop-check-show-timestamps') check-label--text='Show timestamps'}}
-                      {{/menu-item}}
-                    {{/menu-list-item}}
-                    {{#> menu-list-item menu-list-item--id="3"}}
-                      {{#> menu-item}}
-                        {{> check check--id=(dasherize log-viewer--id 'desktop-check-line-number') check-label--text='Display line numbers'}}
-                      {{/menu-item}}
-                    {{/menu-list-item}}
-                  {{/menu-list}}
-                {{/menu-content}}
-              {{/menu}}
-            {{/if}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open external link"'}}

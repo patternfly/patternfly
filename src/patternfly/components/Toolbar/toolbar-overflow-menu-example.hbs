@@ -4,7 +4,6 @@
       overflow-menu--id=(concat toolbar--id '-overflow-menu')
       overflow-menu--modifier=toolbar-demo-overflow-menu--modifier
       overflow-menu--attribute=toolbar-demo-overflow-menu--attribute
-      menu--IsExpanded=toolbar-overflow-menu-example--IsExpanded
     }}
 
     {{#if toolbar-overflow-menu-example--content}}
@@ -36,30 +35,16 @@
       {{/overflow-menu-content}}
     {{/if}}
 
-    {{#if menu--IsExpanded}}
-      {{#if toolbar-overflow-menu-example--control}}
-        {{#> overflow-menu-control overflow-menu-button--aria-label="Generic options" overflow-menu-button--aria-expanded="true"}}
-          {{#> overflow-menu-menu}}
-            {{#unless toolbar-overflow-menu-example--content}}
-              {{> menu-list-item menu-list-item--text='Start'}}
-              {{> menu-list-item menu-list-item--text='Stop'}}
-            {{/unless}}
-            {{> menu-list-item menu-list-item--text='Tertiary'}}
-          {{/overflow-menu-menu}}
-        {{/overflow-menu-control}}
-      {{/if}}
-    {{else}}
-      {{#if toolbar-overflow-menu-example--control}}
-        {{#> overflow-menu-control overflow-menu-button--aria-label="Overflow menu" overflow-menu-button--aria-expanded="false"}}
-          {{#> overflow-menu-menu}}
-            {{#unless toolbar-overflow-menu-example--content}}
-              {{> menu-list-item menu-list-item--text='Primary'}}
-              {{> menu-list-item menu-list-item--text='Secondary'}}
-            {{/unless}}
-            {{> menu-list-item menu-list-item--text='Tertiary'}}
-          {{/overflow-menu-menu}}
-        {{/overflow-menu-control}}
-      {{/if}}
+    {{#if toolbar-overflow-menu-example--control}}
+      {{#> overflow-menu-control overflow-menu-button--aria-label="Overflow menu"}}
+        {{#> overflow-menu-menu}}
+          {{#unless toolbar-overflow-menu-example--content}}
+            {{> menu-list-item menu-list-item--text='Primary'}}
+            {{> menu-list-item menu-list-item--text='Secondary'}}
+          {{/unless}}
+          {{> menu-list-item menu-list-item--text='Tertiary'}}
+        {{/overflow-menu-menu}}
+      {{/overflow-menu-control}}
     {{/if}}
   {{/overflow-menu}}
 {{/toolbar-item}}

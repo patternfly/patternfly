@@ -64,7 +64,7 @@ import './LogViewer.css';
 {{/log-viewer}}
 ```
 
-### With menu toggle, drilldown, search expanded
+### With menu toggle, drilldown
 ```hbs
 {{#>log-viewer
     log-viewer--id="log-viewer-menu-toggle-expanded-example"
@@ -72,7 +72,7 @@ import './LogViewer.css';
     log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"'
     log-viewer--aria-label="Log viewer with menu-toggle drilldown, search expanded"
   }}
-  {{> __log-viewer-toolbar menu-toggle--IsExpanded=true}}
+  {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```

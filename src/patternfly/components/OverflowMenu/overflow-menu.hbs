@@ -11,23 +11,6 @@
   {{#if menu--IsCondensed}}
     {{#> overflow-menu-control menu-toggle--IsExpanded=true menu-toggle--aria-label='Generic options'}}
       {{> overflow-menu-toggle}}
-      {{#if menu--IsExpanded}}
-        {{#> menu}}
-          {{#> menu-content}}
-            {{#> menu-list}}
-              {{#if @partial-block}}
-                {{> @partial-block}}
-              {{else}}
-                {{> menu-list-item menu-list-item--text='Item 1'}}
-                {{> menu-list-item menu-list-item--text='Item 2'}}
-                {{> menu-list-item menu-list-item--text='Item 3'}}
-                {{> menu-list-item menu-list-item--text='Item 4'}}
-                {{> menu-list-item menu-list-item--text='Item 5'}}
-              {{/if}}
-            {{/menu-list}}
-          {{/menu-content}}
-        {{/menu}}
-      {{/if}}
     {{/overflow-menu-control}}
   {{else if @partial-block}}
     {{> @partial-block}}

@@ -118,10 +118,8 @@ Options: [
 
             {{/overflow-menu-group}}
           {{/overflow-menu-content}}
-          {{#> overflow-menu-control overflow-menu-button--aria-label="Menu with additional options" overflow-menu-button--aria-expanded=false}}
-            {{#> overflow-menu-menu}}
-              {{> menu-list-item menu-list-item--text='Action 7'}}
-            {{/overflow-menu-menu}}
+          {{#> overflow-menu-control overflow-menu-button--aria-label="Menu with additional options"}}
+            {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
           {{/overflow-menu-control}}
         {{/overflow-menu}}
       {{/if}}

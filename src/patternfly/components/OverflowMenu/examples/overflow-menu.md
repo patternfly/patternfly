@@ -13,10 +13,9 @@ The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (
 
 ### Simple condensed
 ```hbs
-{{#> overflow-menu menu-toggle--IsCondensed=true overflow-menu--IsExpanded=true overflow-menu--id='overflow-menu-simple'}}
-  {{#> overflow-menu-control menu-toggle--IsExpanded=true menu-toggle--aria-label='Generic options'}}
-    {{> overflow-menu-toggle}}
-    {{> overflow-menu-menu}}
+{{#> overflow-menu menu-toggle--IsCondensed=true overflow-menu--id='overflow-menu-simple'}}
+  {{#> overflow-menu-control menu-toggle--aria-label='Generic options'}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -129,14 +128,9 @@ The action group consists of a primary and secondary action. Any additional acti
 
 ### Additional options in menu (hidden)
 ```hbs
-{{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden" overflow-menu--IsCondensed=true menu--IsExpanded=true}}
+{{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden" overflow-menu--IsCondensed=true}}
   {{#> overflow-menu-control menu-toggle--aria-label="Additional options in menu toggle"}}
-    {{> overflow-menu-toggle}}
-    {{#> overflow-menu-menu}}
-      {{> menu-list-item menu-list-item--text='Primary'}}
-      {{> menu-list-item menu-list-item--text='Secondary'}}
-      {{> menu-list-item menu-list-item--text='Tertiary'}}
-    {{/overflow-menu-menu}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -180,11 +174,8 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control menu--IsExpanded=true menu-toggle--aria-label="Additional options toggle"}}
-    {{> overflow-menu-toggle}}
-    {{#> overflow-menu-menu}}
-      {{> menu-list-item menu-list-item--text='Action 7'}}
-    {{/overflow-menu-menu}}
+  {{#> overflow-menu-control menu-toggle--aria-label="Additional options toggle"}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -203,13 +194,8 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control menu--IsExpanded=true menu-toggle--aria-label="menu with additional options"}}
-    {{> overflow-menu-toggle}}
-    {{#> overflow-menu-menu}}
-      {{> menu-list-item menu-list-item--text='Secondary'}}
-      {{> menu-list-item menu-list-item--text='Tertiary'}}
-      {{> menu-list-item menu-list-item--text='Action 4'}}
-    {{/overflow-menu-menu}}
+  {{#> overflow-menu-control menu-toggle--aria-label="menu with additional options"}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -236,11 +222,8 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control menu--IsExpanded=true menu-toggle--aria-label="Persistent options toggle"}}
-    {{> overflow-menu-toggle}}
-    {{#> overflow-menu-menu}}
-      {{> menu-list-item menu-list-item--text='Action 4'}}
-    {{/overflow-menu-menu}}
+  {{#> overflow-menu-control menu-toggle--aria-label="Persistent options toggle"}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
