@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v5-c-pagination
 ---
 
-import './Pagination.css'
-
 ## Examples
 ### Top
 ```hbs
@@ -13,15 +11,6 @@ import './Pagination.css'
   {{> pagination-total-items-content}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-top-example"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top example"}}
-{{/pagination}}
-```
-
-### Top expanded
-```hbs
-{{#> pagination}}
-  {{> pagination-total-items-content}}
-  {{> pagination-menu-toggle options-menu--IsExpanded="true" pagination-menu-toggle--id="pagination-menu-toggle-top-expanded-example"}}
-  {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top expanded example"}}
 {{/pagination}}
 ```
 
@@ -95,7 +84,7 @@ import './Pagination.css'
 ```hbs
 {{#> pagination pagination--id="pagination-top-with-summary-modifier" pagination--modifier="pf-m-display-summary"}}
   {{> pagination-total-items-content}}
-  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-menu-toggle')}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top with display summary modifier example"}}
 {{/pagination}}
 ```
@@ -104,7 +93,7 @@ import './Pagination.css'
 ```hbs
 {{#> pagination pagination--id="pagination-top-with-full-modifier" pagination--modifier="pf-m-display-full"}}
   {{> pagination-total-items-content}}
-  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-menu-toggle')}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top with display full modifier example"}}
 {{/pagination}}
 ```
@@ -113,7 +102,7 @@ import './Pagination.css'
 ```hbs
 {{#> pagination pagination--id="pagination-top-with-responsive-summary-navigation-modifiers" pagination--modifier="pf-m-display-summary pf-m-display-full-on-lg pf-m-display-summary-on-xl pf-m-display-full-on-2xl"}}
   {{> pagination-total-items-content}}
-  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-menu-toggle')}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top with responsive display summary and display full modifiers example"}}
 {{/pagination}}
 ```
@@ -122,7 +111,7 @@ import './Pagination.css'
 ```hbs
 {{#> pagination pagination--id="pagination-compact-with-full-modifier" pagination--IsCompact="true" pagination--modifier="pf-m-display-full"}}
   {{> pagination-total-items-content}}
-  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-menu-toggle')}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - compact display full modifier example"}}
 {{/pagination}}
 ```
@@ -131,7 +120,7 @@ import './Pagination.css'
 ```hbs
 {{#> pagination pagination--id="pagination-inset" pagination--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg"}}
   {{> pagination-total-items-content}}
-  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-menu-toggle pagination-menu-toggle--id=(concat pagination--id '-menu-toggle')}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - inset example"}}
 {{/pagination}}
 ```
