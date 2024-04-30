@@ -39,7 +39,7 @@
     {{/overflow-menu-content}}
 
     {{#> overflow-menu-control overflow-menu-button--aria-label="Menu with additional options"}}
-      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon='toolbox'}}
+      {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize toolbar--id 'toggle')}}
     {{/overflow-menu-control}}
   {{/overflow-menu}}
 {{/toolbar-item}}

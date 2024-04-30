@@ -115,11 +115,10 @@ Options: [
                   {{/button}}
                 {{/overflow-menu-item}}
               {{/if}}
-
             {{/overflow-menu-group}}
           {{/overflow-menu-content}}
           {{#> overflow-menu-control overflow-menu-button--aria-label="Menu with additional options"}}
-            {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
+            {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--id=(dasherize overflow-menu--id 'toggle')}}
           {{/overflow-menu-control}}
         {{/overflow-menu}}
       {{/if}}

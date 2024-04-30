@@ -15,7 +15,7 @@ The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (
 ```hbs
 {{#> overflow-menu menu-toggle--IsCondensed=true overflow-menu--id='overflow-menu-simple'}}
   {{#> overflow-menu-control menu-toggle--aria-label='Generic options'}}
-    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize overflow-menu--id 'toggle')}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -130,12 +130,12 @@ The action group consists of a primary and secondary action. Any additional acti
 ```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden" overflow-menu--IsCondensed=true}}
   {{#> overflow-menu-control menu-toggle--aria-label="Additional options in menu toggle"}}
-    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize overflow-menu--id 'toggle')}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
 
-### Additional options in menu (visible)
+### Additional options in menu
 ```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-visible"}}
   {{#> overflow-menu-content}}
@@ -175,7 +175,7 @@ The action group consists of a primary and secondary action. Any additional acti
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
   {{#> overflow-menu-control menu-toggle--aria-label="Additional options toggle"}}
-    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize overflow-menu--id 'toggle')}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -195,7 +195,7 @@ The action group consists of a primary and secondary action. Any additional acti
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
   {{#> overflow-menu-control menu-toggle--aria-label="menu with additional options"}}
-    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize overflow-menu--id 'toggle')}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```
@@ -223,7 +223,7 @@ The action group consists of a primary and secondary action. Any additional acti
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
   {{#> overflow-menu-control menu-toggle--aria-label="Persistent options toggle"}}
-    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true}}
+    {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize overflow-menu--id 'toggle')}}
   {{/overflow-menu-control}}
 {{/overflow-menu}}
 ```

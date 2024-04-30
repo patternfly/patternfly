@@ -36,7 +36,7 @@ With kebab
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
         <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
       {{/button}}
     {{/action-list-item}}
@@ -53,7 +53,7 @@ With kebab
     {{/button}}
   {{/action-list-item}}
   {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
       <i class="fas fa-check" aria-hidden="true"></i>
     {{/button}}
   {{/action-list-item}}
@@ -68,7 +68,7 @@ With group icons wrapper
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
         <i class="fas fa-check" aria-hidden="true"></i>
       {{/button}}
     {{/action-list-item}}
@@ -80,7 +80,7 @@ With group icons wrapper
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Kebab"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
         <i class="fas fa-check" aria-hidden="true"></i>
       {{/button}}
     {{/action-list-item}}
