@@ -24,7 +24,7 @@ section: patterns
   {{/page-main-section}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom pf-m-no-fill"}}
     {{#> pagination pagination--modifier="pf-m-bottom"}}
-      {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-bottom-example" pagination-options-menu--modifier="pf-m-top"}}
+      {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-example" pagination-menu-toggle--modifier="pf-m-top"}}
       {{> pagination-nav-content}}
     {{/pagination}}
   {{/page-main-section}}
