@@ -8,10 +8,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--Width: auto;
   --#{$tabs}--before--BorderColor: var(--pf-t--global--border--color--default);
   --#{$tabs}--before--border-width--base: var(--pf-t--global--border--width--regular);
-  --#{$tabs}--before--BorderTopWidth: 0;
-  --#{$tabs}--before--BorderRightWidth: 0;
-  --#{$tabs}--before--BorderBottomWidth: var(--#{$tabs}--before--border-width--base);
-  --#{$tabs}--before--BorderLeftWidth: 0;
+  --#{$tabs}--before--BorderBlockStartWidth: 0;
+  --#{$tabs}--before--BorderInlineEndWidth: 0;
+  --#{$tabs}--before--BorderBlockEndWidth: var(--#{$tabs}--before--border-width--base);
+  --#{$tabs}--before--BorderInlineStartWidth: 0;
   --#{$tabs}--m-vertical--inset: var(--pf-t--global--spacer--sm);
 
   // Tabs, Page insets modifier
@@ -22,14 +22,14 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --#{$tabs}--m-vertical--m-box--inset: var(--pf-t--global--spacer--md);
   --#{$tabs}--m-vertical__list--before--BorderColor: var(--#{$tabs}--before--BorderColor);
-  --#{$tabs}--m-vertical__list--before--BorderTopWidth: 0;
-  --#{$tabs}--m-vertical__list--before--BorderRightWidth: 0;
-  --#{$tabs}--m-vertical__list--before--BorderBottomWidth: 0;
-  --#{$tabs}--m-vertical__list--before--BorderLeftWidth: var(--#{$tabs}--before--border-width--base);
+  --#{$tabs}--m-vertical__list--before--BorderBlockStartWidth: 0;
+  --#{$tabs}--m-vertical__list--before--BorderInlineEndWidth: 0;
+  --#{$tabs}--m-vertical__list--before--BorderBlockEndWidth: 0;
+  --#{$tabs}--m-vertical__list--before--BorderInlineStartWidth: var(--#{$tabs}--before--border-width--base);
 
   // Tabs, Box modifier
-  --#{$tabs}--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--#{$tabs}__link--before--border-width--base);
-  --#{$tabs}--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--#{$tabs}--before--border-width--base);
+  --#{$tabs}--m-box__item--m-current--first-child__link--before--BorderInlineStartWidth: var(--#{$tabs}__link--before--border-width--base);
+  --#{$tabs}--m-box__item--m-current--last-child__link--before--BorderInlineEndWidth: var(--#{$tabs}--before--border-width--base);
 
   // Tabs List
   --#{$tabs}__list--Display: flex;
@@ -55,18 +55,18 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}__link--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$tabs}__link--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$tabs}__link--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$tabs}__link--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$tabs}__link--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$tabs}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$tabs}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__link--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$tabs}__link--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$tabs}__link--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$tabs}__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}__item--m-current__link--Color: var(--pf-t--global--text--color--regular);
   --#{$tabs}__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$tabs}--m-vertical__link--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$tabs}--m-vertical__link--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$tabs}--m-vertical__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}--m-vertical__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$tabs}--m-box__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-box__link--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$tabs}--m-box__link--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
@@ -82,28 +82,28 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Link before
   --#{$tabs}__link--before--border-color--base: var(--pf-t--global--border--color--default);
   --#{$tabs}__link--before--border-width--base: var(--pf-t--global--border--width--regular);
-  --#{$tabs}__link--before--BorderTopColor: var(--#{$tabs}__link--before--border-color--base);
-  --#{$tabs}__link--before--BorderRightColor: var(--#{$tabs}__link--before--border-color--base);
-  --#{$tabs}__link--before--BorderBottomColor: var(--#{$tabs}__link--before--border-color--base);
-  --#{$tabs}__link--before--BorderLeftColor: var(--#{$tabs}__link--before--border-color--base);
-  --#{$tabs}__link--before--BorderTopWidth: 0;
-  --#{$tabs}__link--before--BorderRightWidth: 0;
-  --#{$tabs}__link--before--BorderBottomWidth: 0;
-  --#{$tabs}__link--before--BorderLeftWidth: 0;
-  --#{$tabs}__link--before--Left: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
-  --#{$tabs}__link--disabled--before--BorderRightWidth: 0;
-  --#{$tabs}__link--disabled--before--BorderBottomWidth: var(--#{$tabs}--before--border-width--base);
-  --#{$tabs}__link--disabled--before--BorderLeftWidth: 0;
+  --#{$tabs}__link--before--BorderBlockStartColor: var(--#{$tabs}__link--before--border-color--base);
+  --#{$tabs}__link--before--BorderInlineEndColor: var(--#{$tabs}__link--before--border-color--base);
+  --#{$tabs}__link--before--BorderBlockEndColor: var(--#{$tabs}__link--before--border-color--base);
+  --#{$tabs}__link--before--BorderInlineStartColor: var(--#{$tabs}__link--before--border-color--base);
+  --#{$tabs}__link--before--BorderBlockStartWidth: 0;
+  --#{$tabs}__link--before--BorderInlineEndWidth: 0;
+  --#{$tabs}__link--before--BorderBlockEndWidth: 0;
+  --#{$tabs}__link--before--BorderInlineStartWidth: 0;
+  --#{$tabs}__link--before--InlineStart: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
+  --#{$tabs}__link--disabled--before--BorderInlineEndWidth: 0;
+  --#{$tabs}__link--disabled--before--BorderBlockEndWidth: var(--#{$tabs}--before--border-width--base);
+  --#{$tabs}__link--disabled--before--BorderInlineStartWidth: 0;
 
   // Link after
-  --#{$tabs}__link--after--Top: auto;
-  --#{$tabs}__link--after--Right: 0;
-  --#{$tabs}__link--after--Bottom: 0;
+  --#{$tabs}__link--after--BlockStart: auto;
+  --#{$tabs}__link--after--InlineEnd: 0;
+  --#{$tabs}__link--after--BlockEnd: 0;
   --#{$tabs}__link--after--BorderColor: var(--pf-t--global--border--color--default);
   --#{$tabs}__link--after--BorderWidth: 0;
-  --#{$tabs}__link--after--BorderTopWidth: 0;
-  --#{$tabs}__link--after--BorderRightWidth: 0;
-  --#{$tabs}__link--after--BorderLeftWidth: 0;
+  --#{$tabs}__link--after--BorderBlockStartWidth: 0;
+  --#{$tabs}__link--after--BorderInlineEndWidth: 0;
+  --#{$tabs}__link--after--BorderInlineStartWidth: 0;
   --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
@@ -120,9 +120,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Scroll buttons before
   --#{$tabs}__scroll-button--before--BorderColor: var(--#{$tabs}--before--BorderColor);
   --#{$tabs}__scroll-button--before--border-width--base: var(--pf-t--global--border--width--regular);
-  --#{$tabs}__scroll-button--before--BorderRightWidth: 0;
-  --#{$tabs}__scroll-button--before--BorderBottomWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
-  --#{$tabs}__scroll-button--before--BorderLeftWidth: 0;
+  --#{$tabs}__scroll-button--before--BorderInlineEndWidth: 0;
+  --#{$tabs}__scroll-button--before--BorderBlockEndWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
+  --#{$tabs}__scroll-button--before--BorderInlineStartWidth: 0;
 
   // Scroll snap
   --#{$tabs}__list--ScrollSnapTypeAxis: x;
@@ -136,8 +136,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__toggle-icon--Color: currentcolor;
   --#{$tabs}__toggle-icon--Transition: all 250ms cubic-bezier(.42, 0, .58, 1);
   --#{$tabs}__toggle-icon--Rotate: 0;
-  --#{$tabs}__toggle-text--MarginLeft: 0;
-  --#{$tabs}__toggle-button__toggle-text--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$tabs}__toggle-text--MarginInlineStart: 0;
+  --#{$tabs}__toggle-button__toggle-text--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$tabs}__toggle-button__toggle-text--Color: var(--pf-t--global--text--color--regular);
   --#{$tabs}--m-expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$tabs}--m-expanded__toggle-icon--Rotate: 90deg;
@@ -150,11 +150,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Item action
   --#{$tabs}__item-action--c-button--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}--m-subtab__item-action--c-button--FontSize: var(--pf-t--global--font--size--xs);
-  --#{$tabs}__item-action-icon--MarginTop: #{pf-size-prem(2px)};
+  --#{$tabs}__item-action-icon--MarginBlockStart: #{pf-size-prem(2px)};
 
   // Add button
   --#{$tabs}__add--before--BorderColor: var(--#{$tabs}__link--before--border-color--base);
-  --#{$tabs}__add--before--BorderLeftWidth: var(--#{$tabs}__link--before--border-width--base);
+  --#{$tabs}__add--before--BorderInlineStartWidth: var(--#{$tabs}__link--before--border-width--base);
   --#{$tabs}__add--c-button--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}--m-subtab__add--c-button--FontSize: var(--pf-t--global--font--size--xs);
   --#{$tabs}__add--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -184,10 +184,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     inset-inline-start: 0;
     inset-inline-end: 0;
     border: solid var(--#{$tabs}--before--BorderColor);
-    border-block-start-width: var(--#{$tabs}--before--BorderTopWidth);
-    border-block-end-width: var(--#{$tabs}--before--BorderBottomWidth);
-    border-inline-start-width: var(--#{$tabs}--before--BorderLeftWidth);
-    border-inline-end-width: var(--#{$tabs}--before--BorderRightWidth);
+    border-block-start-width: var(--#{$tabs}--before--BorderBlockStartWidth);
+    border-block-end-width: var(--#{$tabs}--before--BorderBlockEndWidth);
+    border-inline-start-width: var(--#{$tabs}--before--BorderInlineStartWidth);
+    border-inline-end-width: var(--#{$tabs}--before--BorderInlineEndWidth);
   }
 
   // Filled style
@@ -200,11 +200,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       flex-grow: 1;
 
       &:first-child {
-        --#{$tabs}--m-box__item--m-current--first-child__link--before--BorderLeftWidth: 0;
+        --#{$tabs}--m-box__item--m-current--first-child__link--before--BorderInlineStartWidth: 0;
       }
 
       &:last-child {
-        --#{$tabs}--m-box__item--m-current--last-child__link--before--BorderRightWidth: 0;
+        --#{$tabs}--m-box__item--m-current--last-child__link--before--BorderInlineEndWidth: 0;
       }
     }
 
@@ -233,15 +233,15 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   &.pf-m-no-border-bottom {
-    --#{$tabs}--before--BorderBottomWidth: 0;
-    --#{$tabs}__link--disabled--before--BorderBottomWidth: 0;
+    --#{$tabs}--before--BorderBlockEndWidth: 0;
+    --#{$tabs}__link--disabled--before--BorderBlockEndWidth: 0;
   }
 
   // Remove bottom border for variants
   &.pf-m-box,
   &.pf-m-vertical {
     .#{$tabs}__link {
-      --#{$tabs}__link--after--BorderBottomWidth: 0;
+      --#{$tabs}__link--after--BorderBlockEndWidth: 0;
     }
   }
 
@@ -254,33 +254,33 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__link--disabled--BackgroundColor: var(--#{$tabs}--m-box__link--disabled--BackgroundColor);
     --#{$tabs}__link--hover--BackgroundColor: var(--#{$tabs}--m-box__link--hover--BackgroundColor);
     --#{$tabs}__item--m-current__link--BackgroundColor: var(--#{$tabs}--m-box__item--m-current__link--BackgroundColor);
-    --#{$tabs}__link--before--BorderBottomWidth: var(--#{$tabs}__link--before--border-width--base);
-    --#{$tabs}__link--after--Top: 0;
-    --#{$tabs}__link--after--Bottom: auto;
+    --#{$tabs}__link--before--BorderBlockEndWidth: var(--#{$tabs}__link--before--border-width--base);
+    --#{$tabs}__link--after--BlockStart: 0;
+    --#{$tabs}__link--after--BlockEnd: auto;
 
     .#{$tabs}__link {
-      --#{$tabs}__link--after--BorderTopWidth: var(--#{$tabs}__link--after--BorderWidth);
+      --#{$tabs}__link--after--BorderBlockStartWidth: var(--#{$tabs}__link--after--BorderWidth);
     }
 
     // Remove border from last-child
     .#{$tabs}__item:last-child {
-      --#{$tabs}__link--before--BorderRightWidth: 0;
+      --#{$tabs}__link--before--BorderInlineEndWidth: 0;
     }
 
     .#{$tabs}__item.pf-m-current {
       --#{$tabs}__link--BackgroundColor: var(--#{$tabs}__item--m-current__link--BackgroundColor);
-      --#{$tabs}__link--before--BorderBottomColor: var(--#{$tabs}__link--BackgroundColor);
+      --#{$tabs}__link--before--BorderBlockEndColor: var(--#{$tabs}__link--BackgroundColor);
     }
 
     // stylelint-disable
     // Add border to first-child
     .#{$tabs}__item.pf-m-current:first-child .#{$tabs}__link::before {
-      border-inline-start-width: var(--#{$tabs}--m-box__item--m-current--first-child__link--before--BorderLeftWidth);
+      border-inline-start-width: var(--#{$tabs}--m-box__item--m-current--first-child__link--before--BorderInlineStartWidth);
     }
 
     // Add border to last-child
     .#{$tabs}__item.pf-m-current:last-child .#{$tabs}__link::before {
-      border-inline-end-width: var(--#{$tabs}--m-box__item--m-current--last-child__link--before--BorderRightWidth);
+      border-inline-end-width: var(--#{$tabs}--m-box__item--m-current--last-child__link--before--BorderInlineEndWidth);
     }
 
     // Collapse left border into scroll button when expanded
@@ -297,7 +297,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     // stylelint-disable selector-max-class
     // Remove offset from current adjacent item
     .#{$tabs}__item.pf-m-current + .#{$tabs}__item {
-      --#{$tabs}__link--before--Left: 0;
+      --#{$tabs}__link--before--InlineStart: 0;
     }
     // stylelint-enable
 
@@ -316,17 +316,17 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   &.pf-m-vertical {
     --#{$tabs}--Width: var(--#{$tabs}--m-vertical--Width);
     --#{$tabs}--inset: var(--#{$tabs}--m-vertical--inset);
-    --#{$tabs}--before--BorderBottomWidth: 0;
+    --#{$tabs}--before--BorderBlockEndWidth: 0;
     --#{$tabs}__item--PaddingInlineStart: var(--#{$tabs}--m-vertical__item--PaddingInlineStart);
     --#{$tabs}__item--PaddingInlineEnd: var(--#{$tabs}--m-vertical__item--PaddingInlineEnd);
-    --#{$tabs}__link--PaddingLeft: var(--#{$tabs}--m-vertical__link--PaddingLeft);
-    --#{$tabs}__link--PaddingRight: var(--#{$tabs}--m-vertical__link--PaddingRight);
-    --#{$tabs}__link--before--Left: 0;
-    --#{$tabs}__link--disabled--before--BorderBottomWidth: 0;
-    --#{$tabs}__link--disabled--before--BorderLeftWidth: var(--#{$tabs}--before--border-width--base);
-    --#{$tabs}__link--after--Top: 0;
-    --#{$tabs}__link--after--Bottom: 0;
-    --#{$tabs}__link--after--Right: auto;
+    --#{$tabs}__link--PaddingInlineStart: var(--#{$tabs}--m-vertical__link--PaddingInlineStart);
+    --#{$tabs}__link--PaddingInlineEnd: var(--#{$tabs}--m-vertical__link--PaddingInlineEnd);
+    --#{$tabs}__link--before--InlineStart: 0;
+    --#{$tabs}__link--disabled--before--BorderBlockEndWidth: 0;
+    --#{$tabs}__link--disabled--before--BorderInlineStartWidth: var(--#{$tabs}--before--border-width--base);
+    --#{$tabs}__link--after--BlockStart: 0;
+    --#{$tabs}__link--after--BlockEnd: 0;
+    --#{$tabs}__link--after--InlineEnd: auto;
     --#{$tabs}__list--ScrollSnapTypeAxis: var(--#{$tabs}--m-vertical__list--ScrollSnapTypeAxis);
 
     display: inline-flex;
@@ -345,10 +345,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
         position: absolute;
         inset-inline-end: auto;
         border: solid var(--#{$tabs}--m-vertical__list--before--BorderColor);
-        border-block-start-width: var(--#{$tabs}--m-vertical__list--before--BorderTopWidth);
-        border-block-end-width: var(--#{$tabs}--m-vertical__list--before--BorderBottomWidth);
-        border-inline-start-width: var(--#{$tabs}--m-vertical__list--before--BorderLeftWidth);
-        border-inline-end-width: var(--#{$tabs}--m-vertical__list--before--BorderRightWidth);
+        border-block-start-width: var(--#{$tabs}--m-vertical__list--before--BorderBlockStartWidth);
+        border-block-end-width: var(--#{$tabs}--m-vertical__list--before--BorderBlockEndWidth);
+        border-inline-start-width: var(--#{$tabs}--m-vertical__list--before--BorderInlineStartWidth);
+        border-inline-end-width: var(--#{$tabs}--m-vertical__list--before--BorderInlineEndWidth);
       }
     }
 
@@ -362,8 +362,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
 
     .#{$tabs}__link {
-      --#{$tabs}__link--after--BorderTopWidth: 0;
-      --#{$tabs}__link--after--BorderLeftWidth: var(--#{$tabs}__link--after--BorderWidth);
+      --#{$tabs}__link--after--BorderBlockStartWidth: 0;
+      --#{$tabs}__link--after--BorderInlineStartWidth: var(--#{$tabs}__link--after--BorderWidth);
 
       max-width: 100%;
       text-align: start;
@@ -410,12 +410,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Box, vertical
   &.pf-m-box.pf-m-vertical {
     --#{$tabs}--inset: var(--#{$tabs}--m-vertical--m-box--inset);
-    --#{$tabs}--m-vertical__list--before--BorderLeftWidth: 0;
-    --#{$tabs}--m-vertical__list--before--BorderRightWidth: var(--#{$tabs}--before--border-width--base);
-    --#{$tabs}__link--before--BorderRightWidth: var(--#{$tabs}__link--before--border-width--base);
-    --#{$tabs}__link--disabled--before--BorderRightWidth: var(--#{$tabs}--before--border-width--base);
-    --#{$tabs}__link--disabled--before--BorderBottomWidth: var(--#{$tabs}--before--border-width--base);
-    --#{$tabs}__link--disabled--before--BorderLeftWidth: 0;
+    --#{$tabs}--m-vertical__list--before--BorderInlineStartWidth: 0;
+    --#{$tabs}--m-vertical__list--before--BorderInlineEndWidth: var(--#{$tabs}--before--border-width--base);
+    --#{$tabs}__link--before--BorderInlineEndWidth: var(--#{$tabs}__link--before--border-width--base);
+    --#{$tabs}__link--disabled--before--BorderInlineEndWidth: var(--#{$tabs}--before--border-width--base);
+    --#{$tabs}__link--disabled--before--BorderBlockEndWidth: var(--#{$tabs}--before--border-width--base);
+    --#{$tabs}__link--disabled--before--BorderInlineStartWidth: 0;
 
     .#{$tabs}__list::before {
       inset-inline-start: auto;
@@ -424,21 +424,21 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     // stylelint-disable selector-max-class
     .#{$tabs}__item:last-child {
-      --#{$tabs}__link--before--BorderRightWidth: var(--#{$tabs}__link--before--border-width--base);
+      --#{$tabs}__link--before--BorderInlineEndWidth: var(--#{$tabs}__link--before--border-width--base);
     }
     .#{$tabs}__item:first-child {
-      --#{$tabs}__link--before--BorderTopWidth: var(--#{$tabs}__link--before--border-width--base);
+      --#{$tabs}__link--before--BorderBlockStartWidth: var(--#{$tabs}__link--before--border-width--base);
     }
 
     // Add border right color and weight
     .#{$tabs}__item.pf-m-current {
-      --#{$tabs}__link--before--BorderRightColor: var(--#{$tabs}__item--m-current__link--BackgroundColor);
-      --#{$tabs}__link--before--BorderBottomColor: var(--#{$tabs}__link--before--border-color--base);
+      --#{$tabs}__link--before--BorderInlineEndColor: var(--#{$tabs}__item--m-current__link--BackgroundColor);
+      --#{$tabs}__link--before--BorderBlockEndColor: var(--#{$tabs}__link--before--border-color--base);
     }
 
     // Add border right color and weight
     .#{$tabs}__item:first-child.pf-m-current {
-      --#{$tabs}__link--before--BorderTopWidth: var(--#{$tabs}__link--before--border-width--base);
+      --#{$tabs}__link--before--BorderBlockStartWidth: var(--#{$tabs}__link--before--border-width--base);
     }
 
     // Offset vertical border to overlap horizontal border
@@ -479,7 +479,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-button {
-  --#{$tabs}__toggle-text--MarginLeft: var(--#{$tabs}__toggle-button__toggle-text--MarginLeft);
+  --#{$tabs}__toggle-text--MarginInlineStart: var(--#{$tabs}__toggle-button__toggle-text--MarginInlineStart);
   --#{$tabs}__toggle-text--Color: var(--#{$tabs}__toggle-button__toggle-text--Color);
 
   .#{$button} {
@@ -499,7 +499,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-text {
-  margin-inline-start: var(--#{$tabs}__toggle-text--MarginLeft);
+  margin-inline-start: var(--#{$tabs}__toggle-text--MarginInlineStart);
   color: var(--#{$tabs}__toggle-text--Color, inherit);
 }
 
@@ -590,17 +590,17 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 .#{$tabs}__link {
   @at-root .#{$tabs}__item.pf-m-action,
   & {
-    --#{$tabs}__link--after--BorderBottomWidth: var(--#{$tabs}__link--after--BorderWidth); // Set default border target
+    --#{$tabs}__link--after--BorderBlockEndWidth: var(--#{$tabs}__link--after--BorderWidth); // Set default border target
   }
 
   display: flex;
   flex: 1;
   column-gap: var(--#{$tabs}__link--ColumnGap);
   align-items: center;
-  padding-block-start: var(--#{$tabs}__link--PaddingTop);
-  padding-block-end: var(--#{$tabs}__link--PaddingBottom);
-  padding-inline-start: var(--#{$tabs}__link--PaddingLeft);
-  padding-inline-end: var(--#{$tabs}__link--PaddingRight);
+  padding-block-start: var(--#{$tabs}__link--PaddingBlockStart);
+  padding-block-end: var(--#{$tabs}__link--PaddingBlockEnd);
+  padding-inline-start: var(--#{$tabs}__link--PaddingInlineStart);
+  padding-inline-end: var(--#{$tabs}__link--PaddingInlineEnd);
   font-size: var(--#{$tabs}__link--FontSize);
   color: var(--#{$tabs}__link--Color);
   text-decoration: none;
@@ -611,29 +611,29 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   & {
     &::before {
       pointer-events: none;
-      border-block-start-color: var(--#{$tabs}__link--before--BorderTopColor);
-      border-block-start-width: var(--#{$tabs}__link--before--BorderTopWidth);
-      border-block-end-color: var(--#{$tabs}__link--before--BorderBottomColor);
-      border-block-end-width: var(--#{$tabs}__link--before--BorderBottomWidth);
-      border-inline-start-color: var(--#{$tabs}__link--before--BorderLeftColor);
-      border-inline-start-width: var(--#{$tabs}__link--before--BorderLeftWidth);
-      border-inline-end-color: var(--#{$tabs}__link--before--BorderRightColor);
-      border-inline-end-width: var(--#{$tabs}__link--before--BorderRightWidth);
+      border-block-start-color: var(--#{$tabs}__link--before--BorderBlockStartColor);
+      border-block-start-width: var(--#{$tabs}__link--before--BorderBlockStartWidth);
+      border-block-end-color: var(--#{$tabs}__link--before--BorderBlockEndColor);
+      border-block-end-width: var(--#{$tabs}__link--before--BorderBlockEndWidth);
+      border-inline-start-color: var(--#{$tabs}__link--before--BorderInlineStartColor);
+      border-inline-start-width: var(--#{$tabs}__link--before--BorderInlineStartWidth);
+      border-inline-end-color: var(--#{$tabs}__link--before--BorderInlineEndColor);
+      border-inline-end-width: var(--#{$tabs}__link--before--BorderInlineEndWidth);
     }
   }
 
   @at-root .#{$tabs}__item.pf-m-action,
   & {
     &::after {
-      inset-block-start: var(--#{$tabs}__link--after--Top);
-      inset-block-end: var(--#{$tabs}__link--after--Bottom);
-      inset-inline-start: var(--#{$tabs}__link--before--Left); // use the ::before Left value to offset the top border / overlap left border
-      inset-inline-end: var(--#{$tabs}__link--after--Right);
+      inset-block-start: var(--#{$tabs}__link--after--BlockStart);
+      inset-block-end: var(--#{$tabs}__link--after--BlockEnd);
+      inset-inline-start: var(--#{$tabs}__link--before--InlineStart); // use the ::before Left value to offset the top border / overlap left border
+      inset-inline-end: var(--#{$tabs}__link--after--InlineEnd);
       border-color: var(--#{$tabs}__link--after--BorderColor);
-      border-block-start-width: var(--#{$tabs}__link--after--BorderTopWidth);
-      border-block-end-width: var(--#{$tabs}__link--after--BorderBottomWidth);
-      border-inline-start-width: var(--#{$tabs}__link--after--BorderLeftWidth);
-      border-inline-end-width: var(--#{$tabs}__link--after--BorderRightWidth);
+      border-block-start-width: var(--#{$tabs}__link--after--BorderBlockStartWidth);
+      border-block-end-width: var(--#{$tabs}__link--after--BorderBlockEndWidth);
+      border-inline-start-width: var(--#{$tabs}__link--after--BorderInlineStartWidth);
+      border-inline-end-width: var(--#{$tabs}__link--after--BorderInlineEndWidth);
     }
   }
 
@@ -651,9 +651,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
     --#{$tabs}__link--Color: var(--#{$tabs}__link--disabled--Color);
-    --#{$tabs}__link--before--BorderRightWidth: var(--#{$tabs}__link--disabled--before--BorderRightWidth);
-    --#{$tabs}__link--before--BorderBottomWidth: var(--#{$tabs}__link--disabled--before--BorderBottomWidth);
-    --#{$tabs}__link--before--BorderLeftWidth: var(--#{$tabs}__link--disabled--before--BorderLeftWidth);
+    --#{$tabs}__link--before--BorderInlineEndWidth: var(--#{$tabs}__link--disabled--before--BorderInlineEndWidth);
+    --#{$tabs}__link--before--BorderBlockEndWidth: var(--#{$tabs}__link--disabled--before--BorderBlockEndWidth);
+    --#{$tabs}__link--before--BorderInlineStartWidth: var(--#{$tabs}__link--disabled--before--BorderInlineStartWidth);
     --#{$tabs}__link--after--BorderWidth: 0;
   }
 
@@ -696,7 +696,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 .#{$tabs}__item-action-icon {
   display: inline-block;
-  margin-block-start: var(--#{$tabs}__item-action-icon--MarginTop);
+  margin-block-start: var(--#{$tabs}__item-action-icon--MarginBlockStart);
 }
 
 // Scroll buttons
@@ -711,20 +711,20 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     &::before {
     border-color: var(--#{$tabs}__scroll-button--before--BorderColor);
     border-block-start-width: 0;
-    border-block-end-width: var(--#{$tabs}__scroll-button--before--BorderBottomWidth);
-    border-inline-start-width: var(--#{$tabs}__scroll-button--before--BorderLeftWidth);
-    border-inline-end-width: var(--#{$tabs}__scroll-button--before--BorderRightWidth);
+    border-block-end-width: var(--#{$tabs}__scroll-button--before--BorderBlockEndWidth);
+    border-inline-start-width: var(--#{$tabs}__scroll-button--before--BorderInlineStartWidth);
+    border-inline-end-width: var(--#{$tabs}__scroll-button--before--BorderInlineEndWidth);
   }
 
   &:nth-of-type(1) {
-    --#{$tabs}__scroll-button--before--BorderRightWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
+    --#{$tabs}__scroll-button--before--BorderInlineEndWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
 
     margin-inline-end: calc(var(--#{$tabs}__scroll-button--Width) * -1);
     transform: translateX(-100%);
   }
 
   &:nth-of-type(2) {
-    --#{$tabs}__scroll-button--before--BorderLeftWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
+    --#{$tabs}__scroll-button--before--BorderInlineStartWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
 
     margin-inline-start: calc(var(--#{$tabs}__scroll-button--Width) * -1);
     transform: translateX(100%);
@@ -740,7 +740,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-inline-end: var(--#{$tabs}__add--PaddingInlineEnd);
 
   &::before {
-    border-inline-start: var(--#{$tabs}__add--before--BorderLeftWidth) solid var(--#{$tabs}__add--before--BorderColor);
+    border-inline-start: var(--#{$tabs}__add--before--BorderInlineStartWidth) solid var(--#{$tabs}__add--before--BorderColor);
   }
 
   .#{$button} {

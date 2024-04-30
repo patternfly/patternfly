@@ -2,10 +2,10 @@
 
 :where(:root, .#{$hint}) {
   --#{$hint}--GridRowGap: var(--pf-t--global--spacer--sm);
-  --#{$hint}--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$hint}--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$hint}--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$hint}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$hint}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$hint}--BorderColor: var(--pf-t--global--border--color--status--info--default);
   --#{$hint}--BorderWidth: var(--pf-t--global--border--width--box--status--default);
@@ -22,22 +22,22 @@
   --#{$hint}__body--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Hint Footer
-  --#{$hint}__footer--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$hint}__footer--child--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$hint}__footer--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$hint}__footer--child--MarginInlineEnd: var(--pf-t--global--spacer--md);
 
   // Hint Actions
-  --#{$hint}__actions--MarginLeft: var(--pf-t--global--spacer--2xl);
-  --#{$hint}__actions--c-dropdown--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$hint}__actions--MarginInlineStart: var(--pf-t--global--spacer--2xl);
+  --#{$hint}__actions--c-dropdown--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 }
 
 .#{$hint} {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-row-gap: var(--#{$hint}--GridRowGap);
-  padding-block-start: var(--#{$hint}--PaddingTop);
-  padding-block-end: var(--#{$hint}--PaddingBottom);
-  padding-inline-start: var(--#{$hint}--PaddingLeft);
-  padding-inline-end: var(--#{$hint}--PaddingRight);
+  padding-block-start: var(--#{$hint}--PaddingBlockStart);
+  padding-block-end: var(--#{$hint}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$hint}--PaddingInlineStart);
+  padding-inline-end: var(--#{$hint}--PaddingInlineEnd);
   color: var(--#{$hint}--Color);
   background-color: var(--#{$hint}--BackgroundColor);
   border: var(--#{$hint}--BorderWidth) solid var(--#{$hint}--BorderColor);
@@ -55,12 +55,12 @@
   grid-row: 1;
   grid-column: 2;
   grid-auto-flow: column;
-  margin-inline-start: var(--#{$hint}__actions--MarginLeft);
+  margin-inline-start: var(--#{$hint}__actions--MarginInlineStart);
   text-align: end;
 
   // Only applies to the plain dropdown
   .#{$dropdown} .#{$dropdown}__toggle.pf-m-plain {
-    margin-block-start: var(--#{$hint}__actions--c-dropdown--MarginTop);
+    margin-block-start: var(--#{$hint}__actions--c-dropdown--MarginBlockStart);
   }
 
   + .#{$hint}__body {
@@ -83,9 +83,9 @@
 
 .#{$hint}__footer {
   grid-column: 1 / -1;
-  margin-block-start: var(--#{$hint}__footer--MarginTop);
+  margin-block-start: var(--#{$hint}__footer--MarginBlockStart);
 
   > :not(:last-child) {
-    margin-inline-end: var(--#{$hint}__footer--child--MarginRight);
+    margin-inline-end: var(--#{$hint}__footer--child--MarginInlineEnd);
   }
 }

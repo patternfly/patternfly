@@ -11,15 +11,15 @@
   --#{$input-group}__item--AlignItems: start;
 
   // Input group item, box variant
-  --#{$input-group}__item--m-box--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$input-group}__item--m-box--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$input-group}__item--m-box--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$input-group}__item--m-box--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$input-group}__item--m-box--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$input-group}__item--m-box--BorderWidth: var(--#{$input-group}__item--BorderWidth--base);
   --#{$input-group}__item--m-box--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$input-group}__item--m-box--BorderTopColor: var(--#{$input-group}__item--BorderColor--base);
-  --#{$input-group}__item--m-box--BorderRightColor: var(--#{$input-group}__item--BorderColor--base);
-  --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$input-group}__item--BorderColor--base);
-  --#{$input-group}__item--m-box--BorderLeftColor: var(--#{$input-group}__item--BorderColor--base);
+  --#{$input-group}__item--m-box--BorderBlockStartColor: var(--#{$input-group}__item--BorderColor--base);
+  --#{$input-group}__item--m-box--BorderInlineEndColor: var(--#{$input-group}__item--BorderColor--base);
+  --#{$input-group}__item--m-box--BorderBlockEndColor: var(--#{$input-group}__item--BorderColor--base);
+  --#{$input-group}__item--m-box--BorderInlineStartColor: var(--#{$input-group}__item--BorderColor--base);
 
   // Input group item, plain variant
   --#{$input-group}__item--m-plain--BackgroundColor: transparent;
@@ -46,21 +46,21 @@
   min-width: var(--#{$input-group}__item--MinWidth, revert);
   max-width: var(--#{$input-group}__item--MaxWidth, revert);
   background-color: var(--#{$input-group}__item--BackgroundColor);
-  border-block-start-color: var(--#{$input-group}__item--m-box--BorderTopColor);
-  border-block-end-color: var(--#{$input-group}__item--m-box--BorderBottomColor);
-  border-inline-start-color: var(--#{$input-group}__item--m-box--BorderLeftColor);
-  border-inline-end-color: var(--#{$input-group}__item--m-box--BorderRightColor);
+  border-block-start-color: var(--#{$input-group}__item--m-box--BorderBlockStartColor);
+  border-block-end-color: var(--#{$input-group}__item--m-box--BorderBlockEndColor);
+  border-inline-start-color: var(--#{$input-group}__item--m-box--BorderInlineStartColor);
+  border-inline-end-color: var(--#{$input-group}__item--m-box--BorderInlineEndColor);
 
   &.pf-m-box {
     --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-box--BackgroundColor);
 
-    padding-inline-start: var(--#{$input-group}__item--m-box--PaddingLeft);
-    padding-inline-end: var(--#{$input-group}__item--m-box--PaddingRight);
+    padding-inline-start: var(--#{$input-group}__item--m-box--PaddingInlineStart);
+    padding-inline-end: var(--#{$input-group}__item--m-box--PaddingInlineEnd);
     border: var(--#{$input-group}__item--m-box--BorderWidth) solid;
-    border-block-start-color: var(--#{$input-group}__item--m-box--BorderTopColor);
-    border-block-end-color: var(--#{$input-group}__item--m-box--BorderBottomColor);
-    border-inline-start-color: var(--#{$input-group}__item--m-box--BorderLeftColor);
-    border-inline-end-color: var(--#{$input-group}__item--m-box--BorderRightColor);
+    border-block-start-color: var(--#{$input-group}__item--m-box--BorderBlockStartColor);
+    border-block-end-color: var(--#{$input-group}__item--m-box--BorderBlockEndColor);
+    border-inline-start-color: var(--#{$input-group}__item--m-box--BorderInlineStartColor);
+    border-inline-end-color: var(--#{$input-group}__item--m-box--BorderInlineEndColor);
     border-radius: var(--#{$input-group}__item--m-box--BorderRadius);
   }
 

@@ -4,17 +4,17 @@
   --#{$notification-drawer}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // Header
-  --#{$notification-drawer}__header--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__header--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$notification-drawer}__header--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__header--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__header--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$notification-drawer}__header--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$notification-drawer}__header--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$notification-drawer}__header-title--FontSize: var(--pf-t--global--font--size--heading--md);
   --#{$notification-drawer}__header-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
   --#{$notification-drawer}__header-title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$notification-drawer}__header-title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$notification-drawer}__header-status--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__header-status--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__header-status--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$notification-drawer}__header-status--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$notification-drawer}__header-status--Color: var(--pf-t--global--text--color--subtle);
@@ -30,10 +30,10 @@
   --#{$notification-drawer}__list--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
   // List item
-  --#{$notification-drawer}__list-item--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__list-item--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__list-item--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__list-item--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__list-item--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__list-item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$notification-drawer}__list-item--BorderWidth: var(--pf-t--global--border--width--box--status--default);
   --#{$notification-drawer}__list-item--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -55,11 +55,11 @@
   --#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
   // List item header
-  --#{$notification-drawer}__list-item-header--MarginBottom: var(--pf-t--global--spacer--xs);
+  --#{$notification-drawer}__list-item-header--MarginBlockEnd: var(--pf-t--global--spacer--xs);
 
   // List item header icon
   --#{$notification-drawer}__list-item-header-icon--Color: inherit;
-  --#{$notification-drawer}__list-item-header-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$notification-drawer}__list-item-header-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // List item header title
   --#{$notification-drawer}__list-item-header-title--FontFamily: var(--pf-t--global--font--family--heading);
@@ -69,37 +69,37 @@
   --#{$notification-drawer}__list-item-header-title--max-lines: 1;
 
   // List item description
-  --#{$notification-drawer}__list-item-description--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$notification-drawer}__list-item-description--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
   // List item timestamp
   --#{$notification-drawer}__list-item-timestamp--Color: var(--pf-t--global--text--color--subtle);
   --#{$notification-drawer}__list-item-timestamp--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Group
-  --#{$notification-drawer}__group--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$notification-drawer}__group--m-expanded--group--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$notification-drawer}__group--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$notification-drawer}__group--m-expanded--group--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$notification-drawer}__group--m-expanded--MinHeight: 0; // remove at breaking change
   --#{$notification-drawer}__group--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
 
   // Group toggle
-  --#{$notification-drawer}__group-toggle--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__group-toggle--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$notification-drawer}__group-toggle--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$notification-drawer}__group-toggle--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__group-toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$notification-drawer}__group-toggle--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$notification-drawer}__group-toggle--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$notification-drawer}__group-toggle--OutlineOffset: #{pf-size-prem(-4px)};
 
   // Group toggle title
-  --#{$notification-drawer}__group-toggle-title--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle-title--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__group-toggle-title--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$notification-drawer}__group-toggle-title--max-lines: 1;
 
   // Group toggle count
-  --#{$notification-drawer}__group-toggle-count--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle-count--MarginInlineEnd: var(--pf-t--global--spacer--md);
 
   // Group toggle icon
-  --#{$notification-drawer}__group-toggle-icon--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$notification-drawer}__group-toggle-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__group-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$notification-drawer}__group-toggle-icon--Transition: .2s ease-in 0s;
   --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: 90deg;
@@ -118,10 +118,10 @@
   display: flex;
   flex-shrink: 0;
   align-items: baseline;
-  padding-block-start: var(--#{$notification-drawer}__header--PaddingTop);
-  padding-block-end: var(--#{$notification-drawer}__header--PaddingBottom);
-  padding-inline-start: var(--#{$notification-drawer}__header--PaddingLeft);
-  padding-inline-end: var(--#{$notification-drawer}__header--PaddingRight);
+  padding-block-start: var(--#{$notification-drawer}__header--PaddingBlockStart);
+  padding-block-end: var(--#{$notification-drawer}__header--PaddingBlockEnd);
+  padding-inline-start: var(--#{$notification-drawer}__header--PaddingInlineStart);
+  padding-inline-end: var(--#{$notification-drawer}__header--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__header--BackgroundColor);
 }
 
@@ -133,7 +133,7 @@
 }
 
 .#{$notification-drawer}__header-status {
-  margin-inline-start: var(--#{$notification-drawer}__header-status--MarginLeft);
+  margin-inline-start: var(--#{$notification-drawer}__header-status--MarginInlineStart);
   font-size: var(--#{$notification-drawer}__header-status--FontSize);
   font-weight: var(--#{$notification-drawer}__header-status--FontWeight);
   color: var(--#{$notification-drawer}__header-status--Color);
@@ -164,10 +164,10 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
-  padding-block-start: var(--#{$notification-drawer}__list-item--PaddingTop);
-  padding-block-end: var(--#{$notification-drawer}__list-item--PaddingBottom);
-  padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingLeft);
-  padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingRight);
+  padding-block-start: var(--#{$notification-drawer}__list-item--PaddingBlockStart);
+  padding-block-end: var(--#{$notification-drawer}__list-item--PaddingBlockEnd);
+  padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingInlineStart);
+  padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
   border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
@@ -220,11 +220,11 @@
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   align-items: baseline;
-  margin-block-end: var(--#{$notification-drawer}__list-item-header--MarginBottom);
+  margin-block-end: var(--#{$notification-drawer}__list-item-header--MarginBlockEnd);
 }
 
 .#{$notification-drawer}__list-item-header-icon {
-  margin-inline-end: var(--#{$notification-drawer}__list-item-header-icon--MarginRight);
+  margin-inline-end: var(--#{$notification-drawer}__list-item-header-icon--MarginInlineEnd);
   color: var(--#{$notification-drawer}__list-item-header-icon--Color);
 }
 
@@ -248,7 +248,7 @@
 .#{$notification-drawer}__list-item-description {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  margin-block-end: var(--#{$notification-drawer}__list-item-description--MarginBottom);
+  margin-block-end: var(--#{$notification-drawer}__list-item-description--MarginBlockEnd);
   word-break: break-word;
 }
 
@@ -265,7 +265,7 @@
 }
 
 .#{$notification-drawer}__group {
-  border-block-end: var(--#{$notification-drawer}__group--BorderBottomWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderBottomColor);
+  border-block-end: var(--#{$notification-drawer}__group--BorderBlockEndWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderBlockEndColor);
 
   &.pf-m-expanded {
     min-height: var(--#{$notification-drawer}__group--m-expanded--MinHeight);
@@ -277,10 +277,10 @@
   display: flex;
   align-items: baseline;
   width: 100%;
-  padding-block-start: var(--#{$notification-drawer}__group-toggle--PaddingTop);
-  padding-block-end: var(--#{$notification-drawer}__group-toggle--PaddingBottom);
-  padding-inline-start: var(--#{$notification-drawer}__group-toggle--PaddingLeft);
-  padding-inline-end: var(--#{$notification-drawer}__group-toggle--PaddingRight);
+  padding-block-start: var(--#{$notification-drawer}__group-toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$notification-drawer}__group-toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$notification-drawer}__group-toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$notification-drawer}__group-toggle--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__group-toggle--BackgroundColor);
   border: none;
   outline-offset: var(--#{$notification-drawer}__group-toggle--OutlineOffset);
@@ -290,7 +290,7 @@
   @include pf-v6-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
 
   flex: 1;
-  margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginRight);
+  margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginInlineEnd);
   font-size: var(--#{$notification-drawer}__group-toggle-title--FontSize);
   text-align: start;
   word-break: break-word;
@@ -298,13 +298,13 @@
 
 .#{$notification-drawer}__group-toggle-count {
   margin-inline-start: auto;
-  margin-inline-end: var(--#{$notification-drawer}__group-toggle-count--MarginRight);
+  margin-inline-end: var(--#{$notification-drawer}__group-toggle-count--MarginInlineEnd);
 }
 
 .#{$notification-drawer}__group-toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginRight);
+  margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginInlineEnd);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
   transition: var(--#{$notification-drawer}__group-toggle-icon--Transition);
 

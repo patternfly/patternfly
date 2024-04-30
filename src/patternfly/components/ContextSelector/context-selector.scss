@@ -5,31 +5,31 @@
   --#{$context-selector}--Width: #{pf-size-prem(250px)};
 
   // Toggle
-  --#{$context-selector}__toggle--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$context-selector}__toggle--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$context-selector}__toggle--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$context-selector}__toggle--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__toggle--PaddingBlockStart: var(--#{$pf-global}--spacer--form-element);
+  --#{$context-selector}__toggle--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__toggle--PaddingBlockEnd: var(--#{$pf-global}--spacer--form-element);
+  --#{$context-selector}__toggle--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$context-selector}__toggle--ColumnGap: var(--#{$pf-global}--spacer--sm);
   --#{$context-selector}__toggle--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$context-selector}__toggle--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$context-selector}__toggle--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$context-selector}__toggle--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$context-selector}__toggle--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$context-selector}__toggle--BorderBlockStartColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$context-selector}__toggle--BorderInlineEndColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$context-selector}__toggle--BorderBlockEndColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$context-selector}__toggle--BorderInlineStartColor: var(--#{$pf-global}--BorderColor--300);
   --#{$context-selector}__toggle--Color: var(--#{$pf-global}--Color--100);
-  --#{$context-selector}__toggle--hover--BorderBottomWidth: var(--#{$context-selector}__toggle--BorderWidth);
-  --#{$context-selector}__toggle--hover--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$context-selector}__toggle--active--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$context-selector}__toggle--active--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$context-selector}__toggle--expanded--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$context-selector}__toggle--expanded--BorderBottomColor: var(--#{$pf-global}--active-color--100);
+  --#{$context-selector}__toggle--hover--BorderBlockEndWidth: var(--#{$context-selector}__toggle--BorderWidth);
+  --#{$context-selector}__toggle--hover--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$context-selector}__toggle--active--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$context-selector}__toggle--active--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$context-selector}__toggle--expanded--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$context-selector}__toggle--expanded--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
   --#{$context-selector}__toggle--BackgroundColor: transparent;
   --#{$context-selector}__toggle--m-plain--Color: var(--#{$pf-global}--Color--200);
   --#{$context-selector}__toggle--m-plain--hover--Color: var(--#{$pf-global}--Color--100);
   --#{$context-selector}__toggle--m-plain--disabled--Color: var(--#{$pf-global}--disabled-color--200);
-  --#{$context-selector}__toggle--m-plain--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__toggle--m-plain--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__toggle--m-plain--m-text--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$context-selector}__toggle--m-plain--m-text--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__toggle--m-plain--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__toggle--m-plain--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__toggle--m-plain--m-text--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__toggle--m-plain--m-text--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
 
   // Toggle text
   --#{$context-selector}__toggle-text--FontSize: var(--#{$pf-global}--FontSize--md);
@@ -37,44 +37,44 @@
   --#{$context-selector}__toggle-text--LineHeight: var(--#{$pf-global}--LineHeight--md);
 
   // Toggle icon arrow
-  --#{$context-selector}__toggle-icon--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$context-selector}__toggle-icon--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__toggle-icon--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__toggle-icon--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$context-selector}--m-plain__toggle-icon--Color: var(--#{$pf-global}--Color--200);
   --#{$context-selector}--m-plain--hover__toggle-icon--Color: var(--#{$pf-global}--Color--100);
 
   // Menu
-  --#{$context-selector}__menu--Top: calc(100% + var(--#{$pf-global}--spacer--xs));
+  --#{$context-selector}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
   --#{$context-selector}__menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$context-selector}__menu--PaddingTop: var(--#{$pf-global}--spacer--sm); // remove at breaking change
+  --#{$context-selector}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm); // remove at breaking change
   --#{$context-selector}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$context-selector}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
 
   // Menu input
-  --#{$context-selector}__menu-search--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-search--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-search--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-search--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-search--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$context-selector}__menu-search--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$context-selector}__menu-search--PaddingBlockStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-search--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-search--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-search--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-search--BorderBlockEndColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$context-selector}__menu-search--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Menu footer
   --#{$context-selector}__menu-footer--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
-  --#{$context-selector}__menu-footer--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-footer--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-footer--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}__menu-footer--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-footer--PaddingBlockStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-footer--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-footer--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}__menu-footer--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
 
   // Menu list
   --#{$context-selector}__menu-list--MaxHeight: #{pf-size-prem(200px)};
-  --#{$context-selector}__menu-list--PaddingTop: var(--#{$context-selector}__menu--PaddingTop); // reference spacer directly at breaking change
-  --#{$context-selector}__menu-list--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__menu-list--PaddingBlockStart: var(--#{$context-selector}__menu--PaddingBlockStart); // reference spacer directly at breaking change
+  --#{$context-selector}__menu-list--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
 
   // Menu item
   --#{$context-selector}__menu-list-item--Color: var(--#{$pf-global}--Color--dark-100);
-  --#{$context-selector}__menu-list-item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$context-selector}__menu-list-item--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}__menu-list-item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$context-selector}__menu-list-item--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}__menu-list-item--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__menu-list-item--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}__menu-list-item--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$context-selector}__menu-list-item--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
   --#{$context-selector}__menu-list-item--BackgroundColor: transparent;
   --#{$context-selector}__menu-list-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
   --#{$context-selector}__menu-list-item--disabled--Color: var(--#{$pf-global}--Color--dark-200);
@@ -82,62 +82,62 @@
   // Menu item icon
   --#{$context-selector}__menu-item-icon--Color: var(--#{$pf-global}--active-color--100);
   --#{$context-selector}__menu-item-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$context-selector}__menu-item-icon--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}__menu-item-icon--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
 
   // Full height
-  --#{$context-selector}--m-full-height__toggle--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-full-height__toggle--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-full-height__toggle--before--BorderTopWidth: 0;
-  --#{$context-selector}--m-full-height__toggle--hover--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
-  --#{$context-selector}--m-full-height__toggle--active--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
-  --#{$context-selector}--m-full-height__toggle--expanded--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
+  --#{$context-selector}--m-full-height__toggle--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-full-height__toggle--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-full-height__toggle--before--BorderBlockStartWidth: 0;
+  --#{$context-selector}--m-full-height__toggle--hover--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--xl);
+  --#{$context-selector}--m-full-height__toggle--active--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--xl);
+  --#{$context-selector}--m-full-height__toggle--expanded--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--xl);
 
   // Large
-  --#{$context-selector}--m-large__toggle--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-large__toggle--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-large__toggle--hover--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
-  --#{$context-selector}--m-large__toggle--active--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
-  --#{$context-selector}--m-large__toggle--expanded--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
+  --#{$context-selector}--m-large__toggle--PaddingBlockStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-large__toggle--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-large__toggle--hover--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--xl);
+  --#{$context-selector}--m-large__toggle--active--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--xl);
+  --#{$context-selector}--m-large__toggle--expanded--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--xl);
 
   // Page insets
-  --#{$context-selector}--m-page-insets__toggle--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__toggle--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__toggle--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__toggle--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__menu-list-item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__menu-list-item--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__menu-search--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__menu-search--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__menu-search--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__menu-search--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__menu-footer--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__menu-footer--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__menu-footer--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__menu-footer--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__toggle--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__toggle--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__toggle--xl--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__toggle--xl--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__menu-list-item--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__menu-list-item--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__menu-search--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__menu-search--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__menu-search--xl--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__menu-search--xl--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__menu-footer--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__menu-footer--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__menu-footer--xl--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__menu-footer--xl--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingInlineEnd: var(--#{$pf-global}--spacer--lg);
+  --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$context-selector}--m-page-insets__toggle--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--xl--PaddingRight);
-    --#{$context-selector}--m-page-insets__toggle--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--xl--PaddingLeft);
-    --#{$context-selector}--m-page-insets__menu-list-item--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingRight);
-    --#{$context-selector}--m-page-insets__menu-list-item--PaddingLeft: var(--#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingLeft);
-    --#{$context-selector}--m-page-insets__menu-search--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-search--xl--PaddingRight);
-    --#{$context-selector}--m-page-insets__menu-search--PaddingLeft: var(--#{$context-selector}--m-page-insets__menu-search--xl--PaddingLeft);
-    --#{$context-selector}--m-page-insets__menu-footer--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-footer--xl--PaddingRight);
-    --#{$context-selector}--m-page-insets__menu-footer--PaddingLeft: var(--#{$context-selector}--m-page-insets__menu-footer--xl--PaddingLeft);
-    --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingRight);
-    --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingLeft);
-    --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingRight);
-    --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingLeft);
+    --#{$context-selector}--m-page-insets__toggle--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__toggle--xl--PaddingInlineEnd);
+    --#{$context-selector}--m-page-insets__toggle--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__toggle--xl--PaddingInlineStart);
+    --#{$context-selector}--m-page-insets__menu-list-item--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingInlineEnd);
+    --#{$context-selector}--m-page-insets__menu-list-item--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__menu-list-item--xl--PaddingInlineStart);
+    --#{$context-selector}--m-page-insets__menu-search--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__menu-search--xl--PaddingInlineEnd);
+    --#{$context-selector}--m-page-insets__menu-search--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__menu-search--xl--PaddingInlineStart);
+    --#{$context-selector}--m-page-insets__menu-footer--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__menu-footer--xl--PaddingInlineEnd);
+    --#{$context-selector}--m-page-insets__menu-footer--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__menu-footer--xl--PaddingInlineStart);
+    --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingInlineEnd);
+    --#{$context-selector}--m-page-insets__toggle--m-plain--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__toggle--m-plain--xl--PaddingInlineStart);
+    --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingInlineEnd);
+    --#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--xl--PaddingInlineStart);
   }
 
   position: relative;
@@ -146,10 +146,10 @@
   max-width: 100%;
 
   &.pf-m-full-height {
-    --#{$context-selector}__toggle--active--BorderBottomWidth: var(--#{$context-selector}--m-full-height__toggle--active--BorderBottomWidth);
-    --#{$context-selector}__toggle--expanded--BorderBottomWidth: var(--#{$context-selector}--m-full-height__toggle--expanded--BorderBottomWidth);
-    --#{$context-selector}__toggle--PaddingRight: var(--#{$context-selector}--m-full-height__toggle--PaddingRight);
-    --#{$context-selector}__toggle--PaddingLeft: var(--#{$context-selector}--m-full-height__toggle--PaddingLeft);
+    --#{$context-selector}__toggle--active--BorderBlockEndWidth: var(--#{$context-selector}--m-full-height__toggle--active--BorderBlockEndWidth);
+    --#{$context-selector}__toggle--expanded--BorderBlockEndWidth: var(--#{$context-selector}--m-full-height__toggle--expanded--BorderBlockEndWidth);
+    --#{$context-selector}__toggle--PaddingInlineEnd: var(--#{$context-selector}--m-full-height__toggle--PaddingInlineEnd);
+    --#{$context-selector}__toggle--PaddingInlineStart: var(--#{$context-selector}--m-full-height__toggle--PaddingInlineStart);
 
     display: inline-flex;
     align-items: center;
@@ -159,38 +159,38 @@
       align-self: stretch;
 
       &::before {
-        border-block-start-width: var(--#{$context-selector}--m-full-height__toggle--before--BorderTopWidth);
+        border-block-start-width: var(--#{$context-selector}--m-full-height__toggle--before--BorderBlockStartWidth);
       }
     }
 
     &:hover {
       .#{$context-selector}__toggle::before {
-        border-block-end-width: var(--#{$context-selector}--m-full-height__toggle--hover--BorderBottomWidth);
+        border-block-end-width: var(--#{$context-selector}--m-full-height__toggle--hover--BorderBlockEndWidth);
       }
     }
   }
 
   &.pf-m-large {
-    --#{$context-selector}__toggle--PaddingTop: var(--#{$context-selector}--m-large__toggle--PaddingTop);
-    --#{$context-selector}__toggle--PaddingBottom: var(--#{$context-selector}--m-large__toggle--PaddingBottom);
-    --#{$context-selector}__toggle--hover--BorderBottomWidth: var(--#{$context-selector}--m-large__toggle--hover--BorderBottomWidth);
-    --#{$context-selector}__toggle--active--BorderBottomWidth: var(--#{$context-selector}--m-large__toggle--active--BorderBottomWidth);
-    --#{$context-selector}__toggle--expanded--BorderBottomWidth: var(--#{$context-selector}--m-large__toggle--expanded--BorderBottomWidth);
+    --#{$context-selector}__toggle--PaddingBlockStart: var(--#{$context-selector}--m-large__toggle--PaddingBlockStart);
+    --#{$context-selector}__toggle--PaddingBlockEnd: var(--#{$context-selector}--m-large__toggle--PaddingBlockEnd);
+    --#{$context-selector}__toggle--hover--BorderBlockEndWidth: var(--#{$context-selector}--m-large__toggle--hover--BorderBlockEndWidth);
+    --#{$context-selector}__toggle--active--BorderBlockEndWidth: var(--#{$context-selector}--m-large__toggle--active--BorderBlockEndWidth);
+    --#{$context-selector}__toggle--expanded--BorderBlockEndWidth: var(--#{$context-selector}--m-large__toggle--expanded--BorderBlockEndWidth);
   }
 
   &.pf-m-page-insets {
-    --#{$context-selector}__toggle--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--PaddingRight);
-    --#{$context-selector}__toggle--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--PaddingLeft);
-    --#{$context-selector}__menu-list-item--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-list-item--PaddingRight);
-    --#{$context-selector}__menu-list-item--PaddingLeft: var(--#{$context-selector}--m-page-insets__menu-list-item--PaddingLeft);
-    --#{$context-selector}__menu-search--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-search--PaddingRight);
-    --#{$context-selector}__menu-search--PaddingLeft: var(--#{$context-selector}--m-page-insets__menu-search--PaddingLeft);
-    --#{$context-selector}__menu-footer--PaddingRight: var(--#{$context-selector}--m-page-insets__menu-footer--PaddingRight);
-    --#{$context-selector}__menu-footer--PaddingLeft: var(--#{$context-selector}--m-page-insets__menu-footer--PaddingLeft);
-    --#{$context-selector}__toggle--m-plain--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--m-plain--PaddingRight);
-    --#{$context-selector}__toggle--m-plain--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--m-plain--PaddingLeft);
-    --#{$context-selector}__toggle--m-plain--m-text--PaddingRight: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingRight);
-    --#{$context-selector}__toggle--m-plain--m-text--PaddingLeft: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingLeft);
+    --#{$context-selector}__toggle--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__toggle--PaddingInlineEnd);
+    --#{$context-selector}__toggle--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__toggle--PaddingInlineStart);
+    --#{$context-selector}__menu-list-item--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__menu-list-item--PaddingInlineEnd);
+    --#{$context-selector}__menu-list-item--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__menu-list-item--PaddingInlineStart);
+    --#{$context-selector}__menu-search--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__menu-search--PaddingInlineEnd);
+    --#{$context-selector}__menu-search--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__menu-search--PaddingInlineStart);
+    --#{$context-selector}__menu-footer--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__menu-footer--PaddingInlineEnd);
+    --#{$context-selector}__menu-footer--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__menu-footer--PaddingInlineStart);
+    --#{$context-selector}__toggle--m-plain--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__toggle--m-plain--PaddingInlineEnd);
+    --#{$context-selector}__toggle--m-plain--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__toggle--m-plain--PaddingInlineStart);
+    --#{$context-selector}__toggle--m-plain--m-text--PaddingInlineEnd: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingInlineEnd);
+    --#{$context-selector}__toggle--m-plain--m-text--PaddingInlineStart: var(--#{$context-selector}--m-page-insets__toggle--m-plain--m-text--PaddingInlineStart);
   }
 }
 
@@ -200,10 +200,10 @@
   column-gap: var(--#{$context-selector}__toggle--ColumnGap);
   align-items: center;
   width: 100%;
-  padding-block-start: var(--#{$context-selector}__toggle--PaddingTop);
-  padding-block-end: var(--#{$context-selector}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$context-selector}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$context-selector}__toggle--PaddingRight);
+  padding-block-start: var(--#{$context-selector}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$context-selector}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$context-selector}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$context-selector}__toggle--PaddingInlineEnd);
   color: var(--#{$context-selector}__toggle--Color);
   white-space: nowrap;
   cursor: pointer;
@@ -218,17 +218,17 @@
     inset-inline-end: 0;
     content: "";
     border: var(--#{$context-selector}__toggle--BorderWidth) solid;
-    border-block-start-color: var(--#{$context-selector}__toggle--BorderTopColor);
-    border-block-end-color: var(--#{$context-selector}__toggle--BorderBottomColor);
-    border-inline-start-color: var(--#{$context-selector}__toggle--BorderLeftColor);
-    border-inline-end-color: var(--#{$context-selector}__toggle--BorderRightColor);
+    border-block-start-color: var(--#{$context-selector}__toggle--BorderBlockStartColor);
+    border-block-end-color: var(--#{$context-selector}__toggle--BorderBlockEndColor);
+    border-inline-start-color: var(--#{$context-selector}__toggle--BorderInlineStartColor);
+    border-inline-end-color: var(--#{$context-selector}__toggle--BorderInlineEndColor);
   }
 
   &:hover {
     &::before {
-      --#{$context-selector}__toggle--BorderBottomColor: var(--#{$context-selector}__toggle--hover--BorderBottomColor);
+      --#{$context-selector}__toggle--BorderBlockEndColor: var(--#{$context-selector}__toggle--hover--BorderBlockEndColor);
 
-      border-block-end-width: var(--#{$context-selector}__toggle--hover--BorderBottomWidth);
+      border-block-end-width: var(--#{$context-selector}__toggle--hover--BorderBlockEndWidth);
     }
   }
 
@@ -236,28 +236,28 @@
   &.pf-m-active,
   &:focus-within {
     &::before {
-      --#{$context-selector}__toggle--BorderBottomColor: var(--#{$context-selector}__toggle--active--BorderBottomColor);
+      --#{$context-selector}__toggle--BorderBlockEndColor: var(--#{$context-selector}__toggle--active--BorderBlockEndColor);
 
-      border-block-end-width: var(--#{$context-selector}__toggle--active--BorderBottomWidth);
+      border-block-end-width: var(--#{$context-selector}__toggle--active--BorderBlockEndWidth);
     }
   }
 
   .pf-m-expanded > & {
     &::before {
-      --#{$context-selector}__toggle--BorderBottomColor: var(--#{$context-selector}__toggle--expanded--BorderBottomColor);
+      --#{$context-selector}__toggle--BorderBlockEndColor: var(--#{$context-selector}__toggle--expanded--BorderBlockEndColor);
 
-      border-block-end-width: var(--#{$context-selector}__toggle--expanded--BorderBottomWidth);
+      border-block-end-width: var(--#{$context-selector}__toggle--expanded--BorderBlockEndWidth);
     }
   }
 
   &.pf-m-plain {
-    --#{$context-selector}__toggle--PaddingRight: var(--#{$context-selector}__toggle--m-plain--PaddingRight);
-    --#{$context-selector}__toggle--PaddingLeft: var(--#{$context-selector}__toggle--m-plain--PaddingLeft);
+    --#{$context-selector}__toggle--PaddingInlineEnd: var(--#{$context-selector}__toggle--m-plain--PaddingInlineEnd);
+    --#{$context-selector}__toggle--PaddingInlineStart: var(--#{$context-selector}__toggle--m-plain--PaddingInlineStart);
     --#{$context-selector}__toggle-icon--Color: var(--#{$context-selector}--m-plain__toggle-icon--Color);
 
     &.pf-m-text {
-      --#{$context-selector}__toggle--PaddingRight: var(--#{$context-selector}__toggle--m-plain--m-text--PaddingRight);
-      --#{$context-selector}__toggle--PaddingLeft: var(--#{$context-selector}__toggle--m-plain--m-text--PaddingLeft);
+      --#{$context-selector}__toggle--PaddingInlineEnd: var(--#{$context-selector}__toggle--m-plain--m-text--PaddingInlineEnd);
+      --#{$context-selector}__toggle--PaddingInlineStart: var(--#{$context-selector}__toggle--m-plain--m-text--PaddingInlineStart);
     }
 
     &:not(.pf-m-text) {
@@ -297,14 +297,14 @@
 }
 
 .#{$context-selector}__toggle-icon {
-  padding-inline-start: var(--#{$context-selector}__toggle-icon--PaddingLeft);
-  padding-inline-end: var(--#{$context-selector}__toggle-icon--PaddingRight);
+  padding-inline-start: var(--#{$context-selector}__toggle-icon--PaddingInlineStart);
+  padding-inline-end: var(--#{$context-selector}__toggle-icon--PaddingInlineEnd);
   color: var(--#{$context-selector}__toggle-icon--Color, inherit);
 }
 
 .#{$context-selector}__menu {
   position: absolute;
-  inset-block-start: var(--#{$context-selector}__menu--Top);
+  inset-block-start: var(--#{$context-selector}__menu--BlockStart);
   z-index: var(--#{$context-selector}__menu--ZIndex);
   min-width: 100%;
   background-color: var(--#{$context-selector}__menu--BackgroundColor);
@@ -324,25 +324,25 @@
 
 .#{$context-selector}__menu-search {
   position: relative;
-  padding-block-start: var(--#{$context-selector}__menu-search--PaddingTop);
-  padding-block-end: var(--#{$context-selector}__menu-search--PaddingBottom);
-  padding-inline-start: var(--#{$context-selector}__menu-search--PaddingLeft);
-  padding-inline-end: var(--#{$context-selector}__menu-search--PaddingRight);
-  border-block-end: var(--#{$context-selector}__menu-search--BorderBottomWidth) solid var(--#{$context-selector}__menu-search--BorderBottomColor);
+  padding-block-start: var(--#{$context-selector}__menu-search--PaddingBlockStart);
+  padding-block-end: var(--#{$context-selector}__menu-search--PaddingBlockEnd);
+  padding-inline-start: var(--#{$context-selector}__menu-search--PaddingInlineStart);
+  padding-inline-end: var(--#{$context-selector}__menu-search--PaddingInlineEnd);
+  border-block-end: var(--#{$context-selector}__menu-search--BorderBlockEndWidth) solid var(--#{$context-selector}__menu-search--BorderBlockEndColor);
 }
 
 .#{$context-selector}__menu-footer {
-  padding-block-start: var(--#{$context-selector}__menu-footer--PaddingTop);
-  padding-block-end: var(--#{$context-selector}__menu-footer--PaddingBottom);
-  padding-inline-start: var(--#{$context-selector}__menu-footer--PaddingLeft);
-  padding-inline-end: var(--#{$context-selector}__menu-footer--PaddingRight);
+  padding-block-start: var(--#{$context-selector}__menu-footer--PaddingBlockStart);
+  padding-block-end: var(--#{$context-selector}__menu-footer--PaddingBlockEnd);
+  padding-inline-start: var(--#{$context-selector}__menu-footer--PaddingInlineStart);
+  padding-inline-end: var(--#{$context-selector}__menu-footer--PaddingInlineEnd);
   box-shadow: var(--#{$context-selector}__menu-footer--BoxShadow);
 }
 
 .#{$context-selector}__menu-list {
   max-height: var(--#{$context-selector}__menu-list--MaxHeight);
-  padding-block-start: var(--#{$context-selector}__menu-list--PaddingTop);
-  padding-block-end: var(--#{$context-selector}__menu-list--PaddingBottom);
+  padding-block-start: var(--#{$context-selector}__menu-list--PaddingBlockStart);
+  padding-block-end: var(--#{$context-selector}__menu-list--PaddingBlockEnd);
   overflow-y: auto;
 }
 
@@ -350,10 +350,10 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-block-start: var(--#{$context-selector}__menu-list-item--PaddingTop);
-  padding-block-end: var(--#{$context-selector}__menu-list-item--PaddingBottom);
-  padding-inline-start: var(--#{$context-selector}__menu-list-item--PaddingLeft);
-  padding-inline-end: var(--#{$context-selector}__menu-list-item--PaddingRight);
+  padding-block-start: var(--#{$context-selector}__menu-list-item--PaddingBlockStart);
+  padding-block-end: var(--#{$context-selector}__menu-list-item--PaddingBlockEnd);
+  padding-inline-start: var(--#{$context-selector}__menu-list-item--PaddingInlineStart);
+  padding-inline-end: var(--#{$context-selector}__menu-list-item--PaddingInlineEnd);
   color: var(--#{$context-selector}__menu-list-item--Color);
   white-space: nowrap;
   background-color: var(--#{$context-selector}__menu-list-item--BackgroundColor);

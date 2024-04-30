@@ -11,11 +11,11 @@
 
   // accordion toggle
   --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__toggle--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$accordion}__toggle--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__toggle--m-expanded--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__toggle--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$accordion}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$accordion}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -33,9 +33,9 @@
   --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expandable content
-  --#{$accordion}__expandable-content--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$accordion}__expandable-content--MarginBottom: var(--pf-t--global--spacer--md);
-  --#{$accordion}__expandable-content--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$accordion}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$accordion}__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$accordion}__expandable-content--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$accordion}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__expandable-content--Color: var(--pf-t--global--text--color--regular);
@@ -43,18 +43,18 @@
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   // accordion expandable content body
-  --#{$accordion}__expandable-content-body--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__expandable-content-body--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__expandable-content-body--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__expandable-content-body--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__expandable-content-body--expandable-content-body--PaddingTop: 0;
+  --#{$accordion}__expandable-content-body--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__expandable-content-body--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__expandable-content-body--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__expandable-content-body--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__expandable-content-body--expandable-content-body--PaddingBlockStart: 0;
 
   // large
-  --#{$accordion}--m-display-lg__toggle--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$accordion}--m-display-lg__toggle--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$accordion}--m-display-lg__toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$accordion}--m-display-lg__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$accordion}--m-display-lg__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}--m-display-lg__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}--m-display-lg__toggle--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$accordion}--m-display-lg__toggle--FontSize: var(--pf-t--global--font--size--heading--sm);
   --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading);
@@ -64,8 +64,8 @@
 
   // bordered
   --#{$accordion}--m-bordered--RowGap: 0;
-  --#{$accordion}__item--m-bordered--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$accordion}__item--m-bordered--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$accordion}__item--m-bordered--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$accordion}__item--m-bordered--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 }
 
 .#{$accordion} {
@@ -79,11 +79,11 @@
   }
 
   &.pf-m-display-lg {
-    --#{$accordion}__toggle--PaddingTop: var(--#{$accordion}--m-display-lg__toggle--PaddingTop);
-    --#{$accordion}__toggle--PaddingRight: var(--#{$accordion}--m-display-lg__toggle--PaddingRight);
-    --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}--m-display-lg__toggle--PaddingBottom);
-    --#{$accordion}__toggle--m-expanded--PaddingBottom: var(--#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBottom);
-    --#{$accordion}__toggle--PaddingLeft: var(--#{$accordion}--m-display-lg__toggle--PaddingLeft);
+    --#{$accordion}__toggle--PaddingBlockStart: var(--#{$accordion}--m-display-lg__toggle--PaddingBlockStart);
+    --#{$accordion}__toggle--PaddingInlineEnd: var(--#{$accordion}--m-display-lg__toggle--PaddingInlineEnd);
+    --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}--m-display-lg__toggle--PaddingBlockEnd);
+    --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBlockEnd);
+    --#{$accordion}__toggle--PaddingInlineStart: var(--#{$accordion}--m-display-lg__toggle--PaddingInlineStart);
     --#{$accordion}__toggle--FontFamily: var(--#{$accordion}--m-display-lg__toggle--FontFamily);
     --#{$accordion}__toggle--FontSize: var(--#{$accordion}--m-display-lg__toggle--FontSize);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle-text--FontWeight);
@@ -98,7 +98,7 @@
     --#{$accordion}__toggle--BorderRadius: 0;
 
     .#{$accordion}__item {
-      border-block-end: var(--#{$accordion}__item--m-bordered--BorderBottomWidth) solid var(--#{$accordion}__item--m-bordered--BorderBottomColor);
+      border-block-end: var(--#{$accordion}__item--m-bordered--BorderBlockEndWidth) solid var(--#{$accordion}__item--m-bordered--BorderBlockEndColor);
     }
   }
 }
@@ -107,7 +107,7 @@
   border-radius: var(--#{$accordion}__item--BorderRadius);
 
   &.pf-m-expanded {
-    --#{$accordion}__toggle--PaddingBottom: var(--#{$accordion}__toggle--m-expanded--PaddingBottom);
+    --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}__toggle--m-expanded--PaddingBlockEnd);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
 
     background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
@@ -123,10 +123,10 @@
   column-gap: var(--#{$accordion}__toggle--ColumnGap);
   align-items: center;
   width: 100%;
-  padding-block-start: var(--#{$accordion}__toggle--PaddingTop);
-  padding-block-end: var(--#{$accordion}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$accordion}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$accordion}__toggle--PaddingRight);
+  padding-block-start: var(--#{$accordion}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$accordion}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$accordion}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$accordion}__toggle--PaddingInlineEnd);
   font-family: var(--#{$accordion}__toggle--FontFamily, inherit);
   font-size: var(--#{$accordion}__toggle--FontSize, inherit);
   text-align: start;
@@ -154,9 +154,9 @@
 }
 
 .#{$accordion}__expandable-content {
-  margin-block-end: var(--#{$accordion}__expandable-content--MarginBottom);
-  margin-inline-start: var(--#{$accordion}__expandable-content--MarginLeft);
-  margin-inline-end: var(--#{$accordion}__expandable-content--MarginRight);
+  margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
+  margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
+  margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
@@ -169,12 +169,12 @@
 }
 
 .#{$accordion}__expandable-content-body {
-  padding-block-start: var(--#{$accordion}__expandable-content-body--PaddingTop);
-  padding-block-end: var(--#{$accordion}__expandable-content-body--PaddingBottom);
-  padding-inline-start: var(--#{$accordion}__expandable-content-body--PaddingLeft);
-  padding-inline-end: var(--#{$accordion}__expandable-content-body--PaddingRight);
+  padding-block-start: var(--#{$accordion}__expandable-content-body--PaddingBlockStart);
+  padding-block-end: var(--#{$accordion}__expandable-content-body--PaddingBlockEnd);
+  padding-inline-start: var(--#{$accordion}__expandable-content-body--PaddingInlineStart);
+  padding-inline-end: var(--#{$accordion}__expandable-content-body--PaddingInlineEnd);
 
   & + & {
-    --#{$accordion}__expandable-content-body--PaddingTop: var(--#{$accordion}__expandable-content-body--expandable-content-body--PaddingTop);
+    --#{$accordion}__expandable-content-body--PaddingBlockStart: var(--#{$accordion}__expandable-content-body--expandable-content-body--PaddingBlockStart);
   }
 }

@@ -7,18 +7,18 @@
   // Header
   --#{$wizard}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__header--ZIndex: auto;
-  --#{$wizard}__header--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__header--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__header--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__header--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Close
-  --#{$wizard}__close--Top: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingTop));
-  --#{$wizard}__close--Right: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__close--BlockStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingBlockStart));
+  --#{$wizard}__close--InlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
 
   // Title
-  --#{$wizard}__title--PaddingRight: var(--pf-t--global--spacer--2xl);
+  --#{$wizard}__title--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
 
   // Title text
   --#{$wizard}__title-text--FontSize: var(--pf-t--global--font--size--3xl);
@@ -28,7 +28,7 @@
   --#{$wizard}__title-text--Color: var(--pf-t--global--text--color--regular);
 
   // Description
-  --#{$wizard}__description--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__description--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Nav link
@@ -48,8 +48,8 @@
   --#{$wizard}__nav-link--m-disabled--BackgroundColor: transparent;
 
   // Nav link toggle icon
-  --#{$wizard}__nav-link-toggle--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$wizard}__nav-link-toggle--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__nav-link-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__nav-link-toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-toggle--Color: var(--pf-t--global--icon--color--regular);
   --#{$wizard}__nav-link-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$wizard}__nav-link-toggle-icon--Rotate: 0;
@@ -58,7 +58,7 @@
   // Nav link number
   --#{$wizard}__nav-link--before--Width: 1.5rem;
   --#{$wizard}__nav-link--before--Height: 1.5rem;
-  --#{$wizard}__nav-link--before--Top: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
+  --#{$wizard}__nav-link--before--BlockStart: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
@@ -73,27 +73,27 @@
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
-  --#{$wizard}__toggle--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$wizard}__toggle--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__toggle--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
-  --#{$wizard}__toggle--BorderBottomWidth: var(--pf-t--global--border--width--regular);
-  --#{$wizard}__toggle--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$wizard}--m-in-page__toggle--xl--PaddingLeft: calc(var(--pf-t--global--spacer--xl) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
+  --#{$wizard}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$wizard}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__toggle--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
+  --#{$wizard}__toggle--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__toggle--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  --#{$wizard}--m-in-page__toggle--xl--PaddingInlineStart: calc(var(--pf-t--global--spacer--xl) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
 
   // Toggle number
-  --#{$wizard}__toggle-num--before--Top: #{pf-size-prem(-2px)}; // TODO this should probably be calculated
+  --#{$wizard}__toggle-num--before--BlockStart: #{pf-size-prem(-2px)}; // TODO this should probably be calculated
 
   // Toggle list item
-  --#{$wizard}__toggle-list-item--not-last-child--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$wizard}__toggle-list-item--MarginBottom: var(--pf-t--global--spacer--xs);
+  --#{$wizard}__toggle-list-item--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__toggle-list-item--MarginBlockEnd: var(--pf-t--global--spacer--xs);
 
   // Toggle list
-  --#{$wizard}__toggle-list--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$wizard}__toggle-list--MarginBottom: calc(var(--#{$wizard}__toggle-list-item--MarginBottom) * -1);
+  --#{$wizard}__toggle-list--MarginInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__toggle-list--MarginBlockEnd: calc(var(--#{$wizard}__toggle-list-item--MarginBlockEnd) * -1);
 
   // Toggle separator
-  --#{$wizard}__toggle-separator--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__toggle-separator--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__toggle-separator--Color: var(--pf-t--global--border--color--default);
 
   // Toggle icon
@@ -106,8 +106,8 @@
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__nav--Width: 100%;
   --#{$wizard}__nav--lg--Width: #{pf-size-prem(250px)};
-  --#{$wizard}__nav--lg--BorderRightWidth: var(--pf-t--global--border--width--regular);
-  --#{$wizard}__nav--lg--BorderRightColor: var(--pf-t--global--border--color--default);
+  --#{$wizard}__nav--lg--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__nav--lg--BorderInlineEndColor: var(--pf-t--global--border--color--default);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
@@ -115,42 +115,42 @@
   }
 
   // Nav list (nested)
-  --#{$wizard}__nav-list--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__nav-list--PaddingLeft: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
-  --#{$wizard}__nav-list--nested--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$wizard}__nav-list--nested--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$wizard}__nav-list--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__nav-list--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__nav-list--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__nav-list--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
+  --#{$wizard}__nav-list--nested--MarginInlineStart: var(--pf-t--global--spacer--md);
+  --#{$wizard}__nav-list--nested--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Nav item
-  --#{$wizard}__nav-item--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$wizard}__nav-item--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Outer wrap
   --#{$wizard}__outer-wrap--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__outer-wrap--lg--PaddingLeft: var(--#{$wizard}__nav--Width);
+  --#{$wizard}__outer-wrap--lg--PaddingInlineStart: var(--#{$wizard}__nav--Width);
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
   // Main
   --#{$wizard}__main--ZIndex: auto;
 
   // Body
-  --#{$wizard}__main-body--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__main-body--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__main-body--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__main-body--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__main-body--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
-  --#{$wizard}__footer--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__footer--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__footer--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$wizard}__footer--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$wizard}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__footer--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$wizard}__footer--child--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$wizard}__footer--child--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$wizard}__footer-cancel--MarginLeft: calc(var(--pf-t--global--spacer--2xl) - var(--#{$wizard}__footer--child--MarginRight));
+  --#{$wizard}__footer--child--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$wizard}__footer--child--MarginBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__footer-cancel--MarginInlineStart: calc(var(--pf-t--global--spacer--2xl) - var(--#{$wizard}__footer--child--MarginInlineEnd));
 }
 
 .#{$wizard} {
@@ -172,7 +172,7 @@
   }
 
   &.pf-m-finished {
-    --#{$wizard}__outer-wrap--lg--PaddingLeft: 0;
+    --#{$wizard}__outer-wrap--lg--PaddingInlineStart: 0;
 
     .#{$wizard}__nav,
     .#{$wizard}__footer,
@@ -185,17 +185,17 @@
 .#{$wizard}__header {
   position: relative;
   z-index: var(--#{$wizard}__header--ZIndex);
-  padding-block-start: var(--#{$wizard}__header--PaddingTop);
-  padding-block-end: var(--#{$wizard}__header--PaddingBottom);
-  padding-inline-start: var(--#{$wizard}__header--PaddingLeft);
-  padding-inline-end: var(--#{$wizard}__header--PaddingRight);
+  padding-block-start: var(--#{$wizard}__header--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__header--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__header--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__header--PaddingInlineEnd);
   background-color: var(--#{$wizard}__header--BackgroundColor);
 
   // Nested selector to match button component color specificity
   .#{$wizard}__close {
     position: absolute;
-   inset-block-start: var(--#{$wizard}__close--Top);
-   inset-inline-end: var(--#{$wizard}__close--Right);
+   inset-block-start: var(--#{$wizard}__close--BlockStart);
+   inset-inline-end: var(--#{$wizard}__close--InlineEnd);
 
     button {
       font-size: var(--#{$wizard}__close--FontSize);
@@ -204,7 +204,7 @@
 }
 
 .#{$wizard}__title {
-  padding-inline-end: var(--#{$wizard}__title--PaddingRight);
+  padding-inline-end: var(--#{$wizard}__title--PaddingInlineEnd);
   word-wrap: break-word;
 }
 
@@ -218,7 +218,7 @@
 
 .#{$wizard}__description {
   display: none;
-  padding-block-start: var(--#{$wizard}__description--PaddingTop);
+  padding-block-start: var(--#{$wizard}__description--PaddingBlockStart);
   color: var(--#{$wizard}__description--Color);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
@@ -232,13 +232,13 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-block-start: var(--#{$wizard}__toggle--PaddingTop);
-  padding-block-end: var(--#{$wizard}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$wizard}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$wizard}__toggle--PaddingRight);
+  padding-block-start: var(--#{$wizard}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__toggle--PaddingInlineEnd);
   background-color: var(--#{$wizard}__toggle--BackgroundColor);
   border-block-start: 0;
-  border-block-end: var(--#{$wizard}__toggle--BorderBottomWidth) solid var(--#{$wizard}__toggle--BorderBottomColor);
+  border-block-end: var(--#{$wizard}__toggle--BorderBlockEndWidth) solid var(--#{$wizard}__toggle--BorderBlockEndColor);
   border-inline-start: 0;
   border-inline-end: 0;
 
@@ -258,30 +258,30 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  margin-block-end: var(--#{$wizard}__toggle-list--MarginBottom);
-  margin-inline-end: var(--#{$wizard}__toggle-list--MarginRight);
+  margin-block-end: var(--#{$wizard}__toggle-list--MarginBlockEnd);
+  margin-inline-end: var(--#{$wizard}__toggle-list--MarginInlineEnd);
   list-style: none;
 }
 
 .#{$wizard}__toggle-list-item {
-  margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBottom);
+  margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBlockEnd);
   text-align: start;
   word-break: break-word;
 
   &:not(:last-child) {
-    margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginInlineEnd);
   }
 }
 
 .#{$wizard}__toggle-num {
   --#{$wizard}__nav-link--before--TranslateY: 0;
-  --#{$wizard}__nav-link--before--Top: var(--#{$wizard}__toggle-num--before--Top);
+  --#{$wizard}__nav-link--before--BlockStart: var(--#{$wizard}__toggle-num--before--BlockStart);
 }
 
 .#{$wizard}__toggle-separator {
   @include pf-v6-mirror-inline-on-rtl;
 
-  margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
+  margin-inline-start: var(--#{$wizard}__toggle-separator--MarginInlineStart);
   color: var(--#{$wizard}__toggle-separator--Color);
 }
 
@@ -298,7 +298,7 @@
   background-color: var(--#{$wizard}__outer-wrap--BackgroundColor);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    padding-inline-start: var(--#{$wizard}__outer-wrap--lg--PaddingLeft);
+    padding-inline-start: var(--#{$wizard}__outer-wrap--lg--PaddingInlineStart);
   }
 }
 
@@ -334,23 +334,23 @@
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     display: block;
     height: 100%;
-    border-inline-end: var(--#{$wizard}__nav--lg--BorderRightWidth) solid var(--#{$wizard}__nav--lg--BorderRightColor);
+    border-inline-end: var(--#{$wizard}__nav--lg--BorderInlineEndWidth) solid var(--#{$wizard}__nav--lg--BorderInlineEndColor);
   }
 }
 
 .#{$wizard}__nav-list {
-  padding-block-start: var(--#{$wizard}__nav-list--PaddingTop);
-  padding-block-end: var(--#{$wizard}__nav-list--PaddingBottom);
-  padding-inline-start: var(--#{$wizard}__nav-list--PaddingLeft);
-  padding-inline-end: var(--#{$wizard}__nav-list--PaddingRight);
+  padding-block-start: var(--#{$wizard}__nav-list--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__nav-list--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__nav-list--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__nav-list--PaddingInlineEnd);
   list-style: none;
   counter-reset: wizard-nav-count;
 
   // Nested sub menus
   & & {
     padding: 0;
-    margin-block-start: var(--#{$wizard}__nav-list--nested--MarginTop);
-    margin-inline-start: var(--#{$wizard}__nav-list--nested--MarginLeft);
+    margin-block-start: var(--#{$wizard}__nav-list--nested--MarginBlockStart);
+    margin-inline-start: var(--#{$wizard}__nav-list--nested--MarginInlineStart);
 
     // Reset styles for nested nav links
     .#{$wizard}__nav-link {
@@ -367,7 +367,7 @@
 
 .#{$wizard}__nav-item {
   & + & {
-    margin-block-start: var(--#{$wizard}__nav-item--MarginTop);
+    margin-block-start: var(--#{$wizard}__nav-item--MarginBlockStart);
   }
 
   &.pf-m-expandable {
@@ -422,7 +422,7 @@
     );
 
     position: absolute;
-    inset-block-start: var(--#{$wizard}__nav-link--before--Top);
+    inset-block-start: var(--#{$wizard}__nav-link--before--BlockStart);
     inset-inline-start: 0;
     display: inline-flex;
     align-items: center;
@@ -478,8 +478,8 @@
 }
 
 .#{$wizard}__nav-link-toggle {
-  padding-inline-start: var(--#{$wizard}__nav-link-toggle--PaddingLeft);
-  padding-inline-end: var(--#{$wizard}__nav-link-toggle--PaddingRight);
+  padding-inline-start: var(--#{$wizard}__nav-link-toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__nav-link-toggle--PaddingInlineEnd);
   color: var(--#{$wizard}__nav-link-toggle--Color);
 }
 
@@ -500,10 +500,10 @@
 }
 
 .#{$wizard}__main-body {
-  padding-block-start: var(--#{$wizard}__main-body--PaddingTop);
-  padding-block-end: var(--#{$wizard}__main-body--PaddingBottom);
-  padding-inline-start: var(--#{$wizard}__main-body--PaddingLeft);
-  padding-inline-end: var(--#{$wizard}__main-body--PaddingRight);
+  padding-block-start: var(--#{$wizard}__main-body--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__main-body--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__main-body--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__main-body--PaddingInlineEnd);
 
   &.pf-m-no-padding {
     padding: 0;
@@ -516,24 +516,24 @@
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
-  padding-block-start: var(--#{$wizard}__footer--PaddingTop);
-  padding-block-end: var(--#{$wizard}__footer--PaddingBottom);
-  padding-inline-start: var(--#{$wizard}__footer--PaddingLeft);
-  padding-inline-end: var(--#{$wizard}__footer--PaddingRight);
+  padding-block-start: var(--#{$wizard}__footer--PaddingBlockStart);
+  padding-block-end: var(--#{$wizard}__footer--PaddingBlockEnd);
+  padding-inline-start: var(--#{$wizard}__footer--PaddingInlineStart);
+  padding-inline-end: var(--#{$wizard}__footer--PaddingInlineEnd);
   background-color: var(--#{$wizard}__footer--BackgroundColor);
   border-block-start: var(--#{$wizard}__footer--BorderWidth) solid var(--#{$wizard}__footer--BorderColor);
 
   > * {
-    margin-block-end: var(--#{$wizard}__footer--child--MarginBottom);
+    margin-block-end: var(--#{$wizard}__footer--child--MarginBlockEnd);
 
     &:not(:last-child) {
-      margin-inline-end: var(--#{$wizard}__footer--child--MarginRight);
+      margin-inline-end: var(--#{$wizard}__footer--child--MarginInlineEnd);
     }
   }
 }
 
 .#{$wizard}__footer-cancel {
-  margin-inline-start: var(--#{$wizard}__footer-cancel--MarginLeft);
+  margin-inline-start: var(--#{$wizard}__footer-cancel--MarginInlineStart);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

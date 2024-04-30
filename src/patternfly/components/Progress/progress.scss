@@ -12,7 +12,7 @@
   --#{$progress}__status-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$progress}__indicator--Height: var(--#{$progress}__bar--Height);
   --#{$progress}__indicator--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$progress}__helper-text--MarginTop: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
+  --#{$progress}__helper-text--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
 
   // Modifier variables
   --#{$progress}--m-success__indicator--BackgroundColor: var(--pf-t--global--color--status--success--default);
@@ -201,5 +201,5 @@
 .#{$progress}__helper-text {
   grid-row: 3 / 4;
   grid-column: 1 / 3;
-  margin-block-start: var(--#{$progress}__helper-text--MarginTop);
+  margin-block-start: var(--#{$progress}__helper-text--MarginBlockStart);
 }

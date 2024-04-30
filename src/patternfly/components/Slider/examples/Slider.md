@@ -16,15 +16,15 @@ cssPrefix: pf-v6-c-slider
   {{#> slider-main}}
     {{> slider-rail}}
     {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="12.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="25%" slider-step--label="2" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="37.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="50%" slider-step--label="4" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="62.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="75%" slider-step--label="6"}}
-      {{> slider-step slider-step--Left="87.5%"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="8"}}
+      {{> slider-step slider-step--InlineStart="0%" slider-step--label="0" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="12.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="25%" slider-step--label="2" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="37.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="50%" slider-step--label="4" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="62.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="75%" slider-step--label="6"}}
+      {{> slider-step slider-step--InlineStart="87.5%"}}
+      {{> slider-step slider-step--InlineStart="100%" slider-step--label="8"}}
     {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}
@@ -54,8 +54,8 @@ cssPrefix: pf-v6-c-slider
   {{#> slider-main}}
     {{> slider-rail}}
     {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="100%"}}
+      {{> slider-step slider-step--InlineStart="0%" slider-step--label="0%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="100%" slider-step--label="100%"}}
     {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}
@@ -73,15 +73,15 @@ cssPrefix: pf-v6-c-slider
   {{#> slider-main}}
     {{> slider-rail}}
     {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="12.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="25%" slider-step--label="2" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="37.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="50%" slider-step--label="4" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="62.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="75%" slider-step--label="6"}}
-      {{> slider-step slider-step--Left="87.5%"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="8"}}
+      {{> slider-step slider-step--InlineStart="0%" slider-step--label="0" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="12.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="25%" slider-step--label="2" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="37.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="50%" slider-step--label="4" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="62.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="75%" slider-step--label="6"}}
+      {{> slider-step slider-step--InlineStart="87.5%"}}
+      {{> slider-step slider-step--InlineStart="100%" slider-step--label="8"}}
     {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}
@@ -101,11 +101,11 @@ cssPrefix: pf-v6-c-slider
   {{#> slider-main}}
     {{> slider-rail}}
     {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="25%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="50%" slider-step--label="50%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="75%"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="100%"}}
+      {{> slider-step slider-step--InlineStart="0%" slider-step--label="0%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="25%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="50%" slider-step--label="50%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="75%"}}
+      {{> slider-step slider-step--InlineStart="100%" slider-step--label="100%"}}
     {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}
@@ -266,15 +266,15 @@ cssPrefix: pf-v6-c-slider
   {{#> slider-main}}
     {{> slider-rail}}
     {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="12.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="25%" slider-step--label="2" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="37.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="50%" slider-step--label="4" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="62.5%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="75%" slider-step--label="6"}}
-      {{> slider-step slider-step--Left="87.5%"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="8"}}
+      {{> slider-step slider-step--InlineStart="0%" slider-step--label="0" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="12.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="25%" slider-step--label="2" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="37.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="50%" slider-step--label="4" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="62.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="75%" slider-step--label="6"}}
+      {{> slider-step slider-step--InlineStart="87.5%"}}
+      {{> slider-step slider-step--InlineStart="100%" slider-step--label="8"}}
     {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}
@@ -292,11 +292,11 @@ cssPrefix: pf-v6-c-slider
   {{#> slider-main}}
     {{> slider-rail}}
     {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="25%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="50%" slider-step--label="50%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="75%"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="100%"}}
+      {{> slider-step slider-step--InlineStart="0%" slider-step--label="0%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="25%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="50%" slider-step--label="50%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--InlineStart="75%"}}
+      {{> slider-step slider-step--InlineStart="100%" slider-step--label="100%"}}
     {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}

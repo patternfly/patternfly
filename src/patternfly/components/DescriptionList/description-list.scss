@@ -33,7 +33,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 
   // icon
   --#{$description-list}__term-icon--MinWidth: var(--pf-t--global--font--size--body--sm);
-  --#{$description-list}__term-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$description-list}__term-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$description-list}__term-icon--Color: var(--pf-t--global--icon--color--subtle);
 
   // vertical
@@ -128,10 +128,10 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 
   > .#{$card} {
     align-self: stretch;
-    padding-block-start: var(--#{$card}--first-child--PaddingTop);
-    padding-block-end: var(--#{$card}--child--PaddingBottom);
-    padding-inline-start: var(--#{$card}--child--PaddingLeft);
-    padding-inline-end: var(--#{$card}--child--PaddingRight);
+    padding-block-start: var(--#{$card}--first-child--PaddingBlockStart);
+    padding-block-end: var(--#{$card}--child--PaddingBlockEnd);
+    padding-inline-start: var(--#{$card}--child--PaddingInlineStart);
+    padding-inline-end: var(--#{$card}--child--PaddingInlineEnd);
   }
 }
 
@@ -167,7 +167,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 .#{$description-list}__term-icon {
   flex-shrink: 0;
   min-width: var(--#{$description-list}__term-icon--MinWidth);
-  margin-inline-end: var(--#{$description-list}__term-icon--MarginRight);
+  margin-inline-end: var(--#{$description-list}__term-icon--MarginInlineEnd);
   color: var(--#{$description-list}__term-icon--Color);
 }
 

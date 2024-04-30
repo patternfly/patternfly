@@ -2,74 +2,74 @@
 
 .#{$select} {
   // Toggle
-  --#{$select}__toggle--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$select}__toggle--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__toggle--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$select}__toggle--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle--PaddingBlockStart: var(--#{$pf-global}--spacer--form-element);
+  --#{$select}__toggle--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle--PaddingBlockEnd: var(--#{$pf-global}--spacer--form-element);
+  --#{$select}__toggle--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$select}__toggle--MinWidth: var(--#{$pf-global}--target-size--MinWidth);
   --#{$select}__toggle--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$select}__toggle--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$select}__toggle--LineHeight: var(--#{$pf-global}--LineHeight--md);
   --#{$select}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$select}__toggle--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$select}__toggle--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$select}__toggle--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$select}__toggle--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$select}__toggle--before--BorderBlockStartWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$select}__toggle--before--BorderInlineEndWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$select}__toggle--before--BorderInlineStartWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$select}__toggle--before--BorderWidth: initial; // remove at breaking change
-  --#{$select}__toggle--before--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$select}__toggle--before--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$select}__toggle--before--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$select}__toggle--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$select}__toggle--before--BorderBlockStartColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$select}__toggle--before--BorderInlineEndColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$select}__toggle--before--BorderInlineStartColor: var(--#{$pf-global}--BorderColor--300);
   --#{$select}__toggle--Color: var(--#{$pf-global}--Color--100);
-  --#{$select}__toggle--hover--before--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$select}__toggle--focus--before--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$select}__toggle--focus--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$select}__toggle--active--before--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$select}__toggle--active--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$select}__toggle--m-expanded--before--BorderBottomColor: var(--#{$pf-global}--active-color--100); // rename to c-select--m-expanded at breaking change
-  --#{$select}__toggle--m-expanded--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md); // rename to c-select--m-expanded at breaking change
+  --#{$select}__toggle--hover--before--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$select}__toggle--focus--before--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$select}__toggle--focus--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$select}__toggle--active--before--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$select}__toggle--active--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$select}__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$pf-global}--active-color--100); // rename to c-select--m-expanded at breaking change
+  --#{$select}__toggle--m-expanded--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md); // rename to c-select--m-expanded at breaking change
   --#{$select}__toggle--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
   --#{$select}__toggle--m-plain--before--BorderColor: transparent;
   --#{$select}__toggle--m-placeholder--Color: transparent;
-  --#{$select}--m-invalid__toggle--before--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
-  --#{$select}--m-invalid__toggle--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$select}--m-invalid__toggle--hover--before--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
-  --#{$select}--m-invalid__toggle--focus--before--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
-  --#{$select}--m-invalid__toggle--active--before--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
-  --#{$select}--m-invalid__toggle--m-expanded--before--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
+  --#{$select}--m-invalid__toggle--before--BorderBlockEndColor: var(--#{$pf-global}--danger-color--100);
+  --#{$select}--m-invalid__toggle--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$select}--m-invalid__toggle--hover--before--BorderBlockEndColor: var(--#{$pf-global}--danger-color--100);
+  --#{$select}--m-invalid__toggle--focus--before--BorderBlockEndColor: var(--#{$pf-global}--danger-color--100);
+  --#{$select}--m-invalid__toggle--active--before--BorderBlockEndColor: var(--#{$pf-global}--danger-color--100);
+  --#{$select}--m-invalid__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$pf-global}--danger-color--100);
   --#{$select}--m-invalid__toggle-status-icon--Color: var(--#{$pf-global}--danger-color--100);
-  --#{$select}--m-success__toggle--before--BorderBottomColor: var(--#{$pf-global}--success-color--100);
-  --#{$select}--m-success__toggle--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$select}--m-success__toggle--hover--before--BorderBottomColor: var(--#{$pf-global}--success-color--100);
-  --#{$select}--m-success__toggle--focus--before--BorderBottomColor: var(--#{$pf-global}--success-color--100);
-  --#{$select}--m-success__toggle--active--before--BorderBottomColor: var(--#{$pf-global}--success-color--100);
-  --#{$select}--m-success__toggle--m-expanded--before--BorderBottomColor: var(--#{$pf-global}--success-color--100);
+  --#{$select}--m-success__toggle--before--BorderBlockEndColor: var(--#{$pf-global}--success-color--100);
+  --#{$select}--m-success__toggle--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$select}--m-success__toggle--hover--before--BorderBlockEndColor: var(--#{$pf-global}--success-color--100);
+  --#{$select}--m-success__toggle--focus--before--BorderBlockEndColor: var(--#{$pf-global}--success-color--100);
+  --#{$select}--m-success__toggle--active--before--BorderBlockEndColor: var(--#{$pf-global}--success-color--100);
+  --#{$select}--m-success__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$pf-global}--success-color--100);
   --#{$select}--m-success__toggle-status-icon--Color: var(--#{$pf-global}--success-color--100);
-  --#{$select}--m-warning__toggle--before--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
-  --#{$select}--m-warning__toggle--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$select}--m-warning__toggle--hover--before--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
-  --#{$select}--m-warning__toggle--focus--before--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
-  --#{$select}--m-warning__toggle--active--before--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
-  --#{$select}--m-warning__toggle--m-expanded--before--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
+  --#{$select}--m-warning__toggle--before--BorderBlockEndColor: var(--#{$pf-global}--warning-color--100);
+  --#{$select}--m-warning__toggle--before--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$select}--m-warning__toggle--hover--before--BorderBlockEndColor: var(--#{$pf-global}--warning-color--100);
+  --#{$select}--m-warning__toggle--focus--before--BorderBlockEndColor: var(--#{$pf-global}--warning-color--100);
+  --#{$select}--m-warning__toggle--active--before--BorderBlockEndColor: var(--#{$pf-global}--warning-color--100);
+  --#{$select}--m-warning__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$pf-global}--warning-color--100);
   --#{$select}--m-warning__toggle-status-icon--Color: var(--#{$pf-global}--warning-color--100);
 
   // Space for the children of the toggle
-  --#{$select}__toggle-wrapper--not-last-child--MarginRight: var(--#{$pf-global}--spacer--xs);
+  --#{$select}__toggle-wrapper--not-last-child--MarginInlineEnd: var(--#{$pf-global}--spacer--xs);
 
   // Max-width is needed for ellipsing the text. This leaves enough space for the toggle caret.
   // However, for cases where the clear icon button or a badge are added, the correct width will need to be calculated in script
   --#{$select}__toggle-wrapper--MaxWidth: calc(100% - var(--#{$pf-global}--spacer--lg));
 
   // Chip group within a toggle-wrapper needs a margin-bottom in case it wraps
-  --#{$select}__toggle-wrapper--c-chip-group--MarginTop: #{pf-size-prem(5px)};
-  --#{$select}__toggle-wrapper--c-chip-group--MarginBottom: #{pf-size-prem(5px)};
+  --#{$select}__toggle-wrapper--c-chip-group--MarginBlockStart: #{pf-size-prem(5px)};
+  --#{$select}__toggle-wrapper--c-chip-group--MarginBlockEnd: #{pf-size-prem(5px)};
 
   // Select input for typeahead
   --#{$select}__toggle-typeahead--FlexBasis: 10em;
   --#{$select}__toggle-typeahead--BackgroundColor: transparent;
-  --#{$select}__toggle-typeahead--BorderTop: var(--#{$pf-global}--BorderWidth--sm) solid transparent;
-  --#{$select}__toggle-typeahead--BorderRight: none;
-  --#{$select}__toggle-typeahead--BorderLeft: none;
+  --#{$select}__toggle-typeahead--BorderBlockStart: var(--#{$pf-global}--BorderWidth--sm) solid transparent;
+  --#{$select}__toggle-typeahead--BorderInlineEnd: none;
+  --#{$select}__toggle-typeahead--BorderInlineStart: none;
 
   // Typeahead form
   --#{$select}__toggle-typeahead--MinWidth: #{pf-size-prem(120px)};
@@ -78,49 +78,49 @@
   --#{$select}__toggle--m-placeholder__toggle-text--Color: var(--#{$pf-global}--Color--dark-200);
 
   //  Select toggle icon + toggle text
-  --#{$select}__toggle-icon--toggle-text--MarginLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$select}__toggle-icon--toggle-text--MarginInlineStart: var(--#{$pf-global}--spacer--xs);
 
   // Select toggle badge
-  --#{$select}__toggle-badge--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle-badge--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
 
   // Select toggle status icon
-  --#{$select}__toggle-status-icon--MarginLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$select}__toggle-status-icon--MarginInlineStart: var(--#{$pf-global}--spacer--xs);
   --#{$select}__toggle-status-icon--Color: var(--#{$pf-global}--Color--100);
 
   // Toggle arrow
-  --#{$select}__toggle-arrow--MarginLeft: var(--#{$pf-global}--spacer--md);
-  --#{$select}__toggle-arrow--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__toggle-arrow--with-clear--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle-arrow--MarginInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$select}__toggle-arrow--MarginInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle-arrow--with-clear--MarginInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$select}__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate: 180deg;
   --#{$select}--m-plain__toggle-arrow--Color: var(--#{$pf-global}--Color--200);
   --#{$select}--m-plain--hover__toggle-arrow--Color: var(--#{$pf-global}--Color--100);
 
   // Toggle button
-  --#{$select}__toggle-clear--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__toggle-clear--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$select}__toggle-clear--toggle-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle-clear--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__toggle-clear--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$select}__toggle-clear--toggle-button--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$select}__toggle-button--Color: var(--#{$pf-global}--Color--100);
 
   // Menu
   --#{$select}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$select}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-  --#{$select}__menu--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu--Top: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --#{$select}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --#{$select}__menu--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$select}__menu--Width: auto;
   --#{$select}__menu--MinWidth: 100%;
   --#{$select}__menu--m-top--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu list item
-  --#{$select}__list-item--m-loading--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__list-item--m-loading--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
 
   // Menu item
-  --#{$select}__menu-item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu-item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-item--m-selected--PaddingRight: var(--#{$pf-global}--spacer--2xl);
-  --#{$select}__menu-item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu-item--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-item--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu-item--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-item--m-selected--PaddingInlineEnd: var(--#{$pf-global}--spacer--2xl);
+  --#{$select}__menu-item--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu-item--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
   --#{$select}__menu-item--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$select}__menu-item--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$select}__menu-item--LineHeight: var(--#{$pf-global}--LineHeight--md);
@@ -153,8 +153,8 @@
   // Menu item icon
   --#{$select}__menu-item-icon--Color: var(--#{$pf-global}--active-color--100);
   --#{$select}__menu-item-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$select}__menu-item-icon--Right: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-item-icon--Top: 50%;
+  --#{$select}__menu-item-icon--InlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-item-icon--BlockStart: 50%;
   --#{$select}__menu-item-icon--TranslateY: -50%;
 
   // Menu item action icon
@@ -164,27 +164,27 @@
   --#{$select}__menu-item--match--FontWeight: var(--#{$pf-global}--FontWeight--bold);
 
   // Menu group padding
-  --#{$select}__menu-search--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu-search--PaddingRight: var(--#{$select}__menu-item--PaddingRight);
-  --#{$select}__menu-search--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-search--PaddingLeft: var(--#{$select}__menu-item--PaddingLeft);
+  --#{$select}__menu-search--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu-search--PaddingInlineEnd: var(--#{$select}__menu-item--PaddingInlineEnd);
+  --#{$select}__menu-search--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-search--PaddingInlineStart: var(--#{$select}__menu-item--PaddingInlineStart);
 
   // Menu group
   // add a little space if it's not the first group because the first one also has the menu padding
-  --#{$select}__menu-group--menu-group--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu-group--menu-group--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
 
   // Menu section heading
   // Paddings are set to always line up with the other menu items
-  --#{$select}__menu-group-title--PaddingTop: var(--#{$select}__menu-item--PaddingTop);
-  --#{$select}__menu-group-title--PaddingRight: var(--#{$select}__menu-item--PaddingRight);
-  --#{$select}__menu-group-title--PaddingBottom: var(--#{$select}__menu-item--PaddingBottom);
-  --#{$select}__menu-group-title--PaddingLeft: var(--#{$select}__menu-item--PaddingLeft);
+  --#{$select}__menu-group-title--PaddingBlockStart: var(--#{$select}__menu-item--PaddingBlockStart);
+  --#{$select}__menu-group-title--PaddingInlineEnd: var(--#{$select}__menu-item--PaddingInlineEnd);
+  --#{$select}__menu-group-title--PaddingBlockEnd: var(--#{$select}__menu-item--PaddingBlockEnd);
+  --#{$select}__menu-group-title--PaddingInlineStart: var(--#{$select}__menu-item--PaddingInlineStart);
   --#{$select}__menu-group-title--FontSize: var(--#{$pf-global}--FontSize--xs);
   --#{$select}__menu-group-title--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$select}__menu-group-title--Color: var(--#{$pf-global}--Color--dark-200);
 
   // Menu item count
-  --#{$select}__menu-item-count--MarginLeft: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-item-count--MarginInlineStart: var(--#{$pf-global}--spacer--md);
   --#{$select}__menu-item-count--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$select}__menu-item-count--Color: var(--#{$pf-global}--Color--200);
   --#{$select}__menu-item--disabled__menu-item-count--Color: var(--#{$pf-global}--Color--dark-200);
@@ -192,72 +192,72 @@
   // Menu item description
   --#{$select}__menu-item-description--FontSize: var(--#{$pf-global}--FontSize--xs);
   --#{$select}__menu-item-description--Color: var(--#{$pf-global}--Color--200);
-  --#{$select}__menu-item-description--PaddingRight: var(--#{$select}__menu-item--PaddingRight);
+  --#{$select}__menu-item-description--PaddingInlineEnd: var(--#{$select}__menu-item--PaddingInlineEnd);
 
   // Menu item title
-  --#{$select}__menu-item-main--PaddingRight: var(--#{$select}__menu-item--PaddingRight);
-  --#{$select}__menu-item--m-selected__menu-item-main--PaddingRight: var(--#{$select}__menu-item--m-selected--PaddingRight);
+  --#{$select}__menu-item-main--PaddingInlineEnd: var(--#{$select}__menu-item--PaddingInlineEnd);
+  --#{$select}__menu-item--m-selected__menu-item-main--PaddingInlineEnd: var(--#{$select}__menu-item--m-selected--PaddingInlineEnd);
 
   // Menu footer
   --#{$select}__menu-footer--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
-  --#{$select}__menu-footer--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-footer--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-footer--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-footer--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-footer--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu-footer--MarginBottom: calc(var(--#{$pf-global}--spacer--sm) * -1);
+  --#{$select}__menu-footer--PaddingBlockStart: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-footer--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-footer--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-footer--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-footer--MarginBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$select}__menu-footer--MarginBlockEnd: calc(var(--#{$pf-global}--spacer--sm) * -1);
 
   // Divider
-  --#{$select}-menu--c-divider--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$select}-menu--c-divider--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$select}-menu--c-divider--MarginBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$select}-menu--c-divider--MarginBlockEnd: var(--#{$pf-global}--spacer--sm);
 
   position: relative;
   display: inline-block;
   width: 100%;
 
   .#{$divider} {
-    margin-block-start: var(--#{$select}-menu--c-divider--MarginTop);
-    margin-block-end: var(--#{$select}-menu--c-divider--MarginBottom);
+    margin-block-start: var(--#{$select}-menu--c-divider--MarginBlockStart);
+    margin-block-end: var(--#{$select}-menu--c-divider--MarginBlockEnd);
 
     // Support divider as last item in group to separate groups
     &:last-child {
-      --#{$select}-menu--c-divider--MarginBottom: 0;
+      --#{$select}-menu--c-divider--MarginBlockEnd: 0;
     }
   }
 
   &.pf-m-invalid {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}--m-invalid__toggle--before--BorderBottomColor);
-    --#{$select}__toggle--before--BorderBottomWidth: var(--#{$select}--m-invalid__toggle--before--BorderBottomWidth);
-    --#{$select}__toggle--hover--before--BorderBottomColor: var(--#{$select}--m-invalid__toggle--hover--before--BorderBottomColor);
-    --#{$select}__toggle--focus--before--BorderBottomColor: var(--#{$select}--m-invalid__toggle--focus--before--BorderBottomColor);
-    --#{$select}__toggle--active--before--BorderBottomColor: var(--#{$select}--m-invalid__toggle--active--before--BorderBottomColor);
-    --#{$select}__toggle--m-expanded--before--BorderBottomColor: var(--#{$select}--m-invalid__toggle--m-expanded--before--BorderBottomColor);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}--m-invalid__toggle--before--BorderBlockEndColor);
+    --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$select}--m-invalid__toggle--before--BorderBlockEndWidth);
+    --#{$select}__toggle--hover--before--BorderBlockEndColor: var(--#{$select}--m-invalid__toggle--hover--before--BorderBlockEndColor);
+    --#{$select}__toggle--focus--before--BorderBlockEndColor: var(--#{$select}--m-invalid__toggle--focus--before--BorderBlockEndColor);
+    --#{$select}__toggle--active--before--BorderBlockEndColor: var(--#{$select}--m-invalid__toggle--active--before--BorderBlockEndColor);
+    --#{$select}__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$select}--m-invalid__toggle--m-expanded--before--BorderBlockEndColor);
     --#{$select}__toggle-status-icon--Color: var(--#{$select}--m-invalid__toggle-status-icon--Color);
   }
 
   &.pf-m-success {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}--m-success__toggle--before--BorderBottomColor);
-    --#{$select}__toggle--before--BorderBottomWidth: var(--#{$select}--m-success__toggle--before--BorderBottomWidth);
-    --#{$select}__toggle--hover--before--BorderBottomColor: var(--#{$select}--m-success__toggle--hover--before--BorderBottomColor);
-    --#{$select}__toggle--focus--before--BorderBottomColor: var(--#{$select}--m-success__toggle--focus--before--BorderBottomColor);
-    --#{$select}__toggle--active--before--BorderBottomColor: var(--#{$select}--m-success__toggle--active--before--BorderBottomColor);
-    --#{$select}__toggle--m-expanded--before--BorderBottomColor: var(--#{$select}--m-success__toggle--m-expanded--before--BorderBottomColor);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}--m-success__toggle--before--BorderBlockEndColor);
+    --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$select}--m-success__toggle--before--BorderBlockEndWidth);
+    --#{$select}__toggle--hover--before--BorderBlockEndColor: var(--#{$select}--m-success__toggle--hover--before--BorderBlockEndColor);
+    --#{$select}__toggle--focus--before--BorderBlockEndColor: var(--#{$select}--m-success__toggle--focus--before--BorderBlockEndColor);
+    --#{$select}__toggle--active--before--BorderBlockEndColor: var(--#{$select}--m-success__toggle--active--before--BorderBlockEndColor);
+    --#{$select}__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$select}--m-success__toggle--m-expanded--before--BorderBlockEndColor);
     --#{$select}__toggle-status-icon--Color: var(--#{$select}--m-success__toggle-status-icon--Color);
   }
 
   &.pf-m-warning {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}--m-warning__toggle--before--BorderBottomColor);
-    --#{$select}__toggle--before--BorderBottomWidth: var(--#{$select}--m-warning__toggle--before--BorderBottomWidth);
-    --#{$select}__toggle--hover--before--BorderBottomColor: var(--#{$select}--m-warning__toggle--hover--before--BorderBottomColor);
-    --#{$select}__toggle--focus--before--BorderBottomColor: var(--#{$select}--m-warning__toggle--focus--before--BorderBottomColor);
-    --#{$select}__toggle--active--before--BorderBottomColor: var(--#{$select}--m-warning__toggle--active--before--BorderBottomColor);
-    --#{$select}__toggle--m-expanded--before--BorderBottomColor: var(--#{$select}--m-warning__toggle--m-expanded--before--BorderBottomColor);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}--m-warning__toggle--before--BorderBlockEndColor);
+    --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$select}--m-warning__toggle--before--BorderBlockEndWidth);
+    --#{$select}__toggle--hover--before--BorderBlockEndColor: var(--#{$select}--m-warning__toggle--hover--before--BorderBlockEndColor);
+    --#{$select}__toggle--focus--before--BorderBlockEndColor: var(--#{$select}--m-warning__toggle--focus--before--BorderBlockEndColor);
+    --#{$select}__toggle--active--before--BorderBlockEndColor: var(--#{$select}--m-warning__toggle--active--before--BorderBlockEndColor);
+    --#{$select}__toggle--m-expanded--before--BorderBlockEndColor: var(--#{$select}--m-warning__toggle--m-expanded--before--BorderBlockEndColor);
     --#{$select}__toggle-status-icon--Color: var(--#{$select}--m-warning__toggle-status-icon--Color);
   }
 }
 
 .#{$select}__menu-search + .#{$divider} {
-  --#{$select}-menu--c-divider--MarginTop: 0;
+  --#{$select}-menu--c-divider--MarginBlockStart: 0;
 }
 
 .#{$select}__toggle {
@@ -267,10 +267,10 @@
   justify-content: space-between;
   width: 100%;
   min-width: var(--#{$select}__toggle--MinWidth);
-  padding-block-start: var(--#{$select}__toggle--PaddingTop);
-  padding-block-end: var(--#{$select}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$select}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$select}__toggle--PaddingRight);
+  padding-block-start: var(--#{$select}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$select}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$select}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$select}__toggle--PaddingInlineEnd);
   font-size: var(--#{$select}__toggle--FontSize);
   font-weight: var(--#{$select}__toggle--FontWeight);
   line-height: var(--#{$select}__toggle--LineHeight);
@@ -292,38 +292,38 @@
   }
 
   &::before {
-    --#{$select}__toggle--before--BorderWidth-base: var(--#{$select}__toggle--before--BorderTopWidth) var(--#{$select}__toggle--before--BorderRightWidth) var(--#{$select}__toggle--before--BorderBottomWidth) var(--#{$select}__toggle--before--BorderLeftWidth); // remove at breaking change
+    --#{$select}__toggle--before--BorderWidth-base: var(--#{$select}__toggle--before--BorderBlockStartWidth) var(--#{$select}__toggle--before--BorderInlineEndWidth) var(--#{$select}__toggle--before--BorderBlockEndWidth) var(--#{$select}__toggle--before--BorderInlineStartWidth); // remove at breaking change
 
     position: absolute;
     inset: 0;
     content: "";
     border-style: solid;
     border-width: var(--#{$select}__toggle--before--BorderWidth, var(--#{$select}__toggle--before--BorderWidth-base));
-    border-block-start-color: var(--#{$select}__toggle--before--BorderTopColor);
-    border-block-end-color: var(--#{$select}__toggle--before--BorderBottomColor);
-    border-inline-start-color: var(--#{$select}__toggle--before--BorderLeftColor);
-    border-inline-end-color: var(--#{$select}__toggle--before--BorderRightColor);
+    border-block-start-color: var(--#{$select}__toggle--before--BorderBlockStartColor);
+    border-block-end-color: var(--#{$select}__toggle--before--BorderBlockEndColor);
+    border-inline-start-color: var(--#{$select}__toggle--before--BorderInlineStartColor);
+    border-inline-end-color: var(--#{$select}__toggle--before--BorderInlineEndColor);
   }
 
   &:hover {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}__toggle--hover--before--BorderBottomColor);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}__toggle--hover--before--BorderBlockEndColor);
   }
 
   &:focus,
   &:focus-within {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}__toggle--focus--before--BorderBottomColor);
-    --#{$select}__toggle--before--BorderBottomWidth: var(--#{$select}__toggle--focus--before--BorderBottomWidth);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}__toggle--focus--before--BorderBlockEndColor);
+    --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$select}__toggle--focus--before--BorderBlockEndWidth);
   }
 
   &:active,
   &.pf-m-active {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}__toggle--active--before--BorderBottomColor);
-    --#{$select}__toggle--before--BorderBottomWidth: var(--#{$select}__toggle--active--before--BorderBottomWidth);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}__toggle--active--before--BorderBlockEndColor);
+    --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$select}__toggle--active--before--BorderBlockEndWidth);
   }
 
   .pf-m-expanded > & {
-    --#{$select}__toggle--before--BorderBottomColor: var(--#{$select}__toggle--m-expanded--before--BorderBottomColor);
-    --#{$select}__toggle--before--BorderBottomWidth: var(--#{$select}__toggle--m-expanded--before--BorderBottomWidth);
+    --#{$select}__toggle--before--BorderBlockEndColor: var(--#{$select}__toggle--m-expanded--before--BorderBlockEndColor);
+    --#{$select}__toggle--before--BorderBlockEndWidth: var(--#{$select}__toggle--m-expanded--before--BorderBlockEndWidth);
   }
 
   &.pf-m-plain {
@@ -343,9 +343,9 @@
   }
 
   &.pf-m-typeahead {
-    --#{$select}__toggle--PaddingTop: 0;
-    --#{$select}__toggle--PaddingRight: 0;
-    --#{$select}__toggle--PaddingBottom: 0;
+    --#{$select}__toggle--PaddingBlockStart: 0;
+    --#{$select}__toggle--PaddingInlineEnd: 0;
+    --#{$select}__toggle--PaddingBlockEnd: 0;
 
     .#{$form-control} {
       @include pf-v6-text-overflow;
@@ -357,8 +357,8 @@
   }
 
   .#{$select}__toggle-clear {
-    padding-inline-start: var(--#{$select}__toggle-clear--PaddingLeft);
-    padding-inline-end: var(--#{$select}__toggle-clear--PaddingRight);
+    padding-inline-start: var(--#{$select}__toggle-clear--PaddingInlineStart);
+    padding-inline-end: var(--#{$select}__toggle-clear--PaddingInlineEnd);
     margin-inline-start: auto;
   }
 
@@ -367,7 +367,7 @@
   }
 
   .#{$select}__toggle-clear + .#{$select}__toggle-button {
-    padding-inline-start: var(--#{$select}__toggle-clear--toggle-button--PaddingLeft);
+    padding-inline-start: var(--#{$select}__toggle-clear--toggle-button--PaddingInlineStart);
   }
 
   &.pf-m-placeholder {
@@ -379,8 +379,8 @@
   color: var(--#{$select}__toggle-arrow--Color, inherit);
 
   * + & {
-    margin-inline-start: var(--#{$select}__toggle-arrow--MarginLeft);
-    margin-inline-end: var(--#{$select}__toggle-arrow--MarginRight);
+    margin-inline-start: var(--#{$select}__toggle-arrow--MarginInlineStart);
+    margin-inline-end: var(--#{$select}__toggle-arrow--MarginInlineEnd);
   }
   // stylelint-disable-next-line
   .#{$select}.pf-m-top.pf-m-expanded & {
@@ -409,33 +409,33 @@
 
   // Add space between children
   > :not(:last-child) {
-    margin-inline-end: var(--#{$select}__toggle-wrapper--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$select}__toggle-wrapper--not-last-child--MarginInlineEnd);
   }
 
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
   .#{$chip}-group {
-    margin-block-start: var(--#{$select}__toggle-wrapper--c-chip-group--MarginTop);
-    margin-block-end: var(--#{$select}__toggle-wrapper--c-chip-group--MarginBottom);
+    margin-block-start: var(--#{$select}__toggle-wrapper--c-chip-group--MarginBlockStart);
+    margin-block-end: var(--#{$select}__toggle-wrapper--c-chip-group--MarginBlockEnd);
   }
 
   // When the input is the first thing then use a negative left padding so it matches the toggle container
   > .#{$select}__toggle-typeahead:first-child {
-    margin-inline-start: calc(-1 * var(--#{$select}__toggle--PaddingLeft));
+    margin-inline-start: calc(-1 * var(--#{$select}__toggle--PaddingInlineStart));
   }
 }
 
 .#{$select}__toggle-icon + .#{$select}__toggle-text {
-  margin-inline-start: var(--#{$select}__toggle-icon--toggle-text--MarginLeft);
+  margin-inline-start: var(--#{$select}__toggle-icon--toggle-text--MarginInlineStart);
 }
 
 .#{$select}__toggle-status-icon {
-  margin-inline-start: var(--#{$select}__toggle-status-icon--MarginLeft);
+  margin-inline-start: var(--#{$select}__toggle-status-icon--MarginInlineStart);
   color: var(--#{$select}__toggle-status-icon--Color);
 }
 
 .#{$select}__toggle-badge {
   display: flex;
-  padding-inline-start: var(--#{$select}__toggle-badge--PaddingLeft);
+  padding-inline-start: var(--#{$select}__toggle-badge--PaddingInlineStart);
 }
 
 .#{$select}__toggle-typeahead {
@@ -456,12 +456,12 @@
 
 .#{$select}__menu {
   position: absolute;
- inset-block-start: var(--#{$select}__menu--Top);
+ inset-block-start: var(--#{$select}__menu--BlockStart);
   z-index: var(--#{$select}__menu--ZIndex);
   width: var(--#{$select}__menu--Width);
   min-width: var(--#{$select}__menu--MinWidth);
-  padding-block-start: var(--#{$select}__menu--PaddingTop);
-  padding-block-end: var(--#{$select}__menu--PaddingBottom);
+  padding-block-start: var(--#{$select}__menu--PaddingBlockStart);
+  padding-block-end: var(--#{$select}__menu--PaddingBlockEnd);
   background-color: var(--#{$select}__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--#{$select}__menu--BoxShadow);
@@ -502,10 +502,10 @@
 .#{$select}__menu-item {
   position: relative;
   width: var(--#{$select}__menu-item--Width);
-  padding-block-start: var(--#{$select}__menu-item--PaddingTop);
-  padding-block-end: var(--#{$select}__menu-item--PaddingBottom);
-  padding-inline-start: var(--#{$select}__menu-item--PaddingLeft);
-  padding-inline-end: var(--#{$select}__menu-item--PaddingRight);
+  padding-block-start: var(--#{$select}__menu-item--PaddingBlockStart);
+  padding-block-end: var(--#{$select}__menu-item--PaddingBlockEnd);
+  padding-inline-start: var(--#{$select}__menu-item--PaddingInlineStart);
+  padding-inline-end: var(--#{$select}__menu-item--PaddingInlineEnd);
   font-size: var(--#{$select}__menu-item--FontSize);
   font-weight: var(--#{$select}__menu-item--FontWeight);
   line-height: var(--#{$select}__menu-item--LineHeight);
@@ -539,9 +539,9 @@
   }
 
   &.pf-m-link {
-    --#{$select}__menu-item--PaddingRight: 0;
-    --#{$select}__menu-item-main--PaddingRight: 0;
-    --#{$select}__menu-item-description--PaddingRight: 0;
+    --#{$select}__menu-item--PaddingInlineEnd: 0;
+    --#{$select}__menu-item-main--PaddingInlineEnd: 0;
+    --#{$select}__menu-item-description--PaddingInlineEnd: 0;
     --#{$select}__menu-item--Width: var(--#{$select}__menu-item--m-link--Width);
     --#{$select}__menu-item--hover--BackgroundColor: var(--#{$select}__menu-item--m-link--hover--BackgroundColor);
     --#{$select}__menu-item--focus--BackgroundColor: var(--#{$select}__menu-item--m-link--focus--BackgroundColor);
@@ -579,13 +579,13 @@
   }
 
   &.pf-m-selected {
-    --#{$select}__menu-item--PaddingRight: var(--#{$select}__menu-item--m-selected--PaddingRight);
-    --#{$select}__menu-item-main--PaddingRight: var(--#{$select}__menu-item--m-selected__menu-item-main--PaddingRight);
+    --#{$select}__menu-item--PaddingInlineEnd: var(--#{$select}__menu-item--m-selected--PaddingInlineEnd);
+    --#{$select}__menu-item-main--PaddingInlineEnd: var(--#{$select}__menu-item--m-selected__menu-item-main--PaddingInlineEnd);
   }
 
   &.pf-m-description {
     &:not(.#{$check}) {
-      --#{$select}__menu-item--PaddingRight: 0;
+      --#{$select}__menu-item--PaddingInlineEnd: 0;
     }
 
     .#{$check}__label {
@@ -618,7 +618,7 @@
 
 .#{$select}__list-item {
   &.pf-m-loading {
-    padding-block-start: var(--#{$select}__list-item--m-loading--PaddingTop);
+    padding-block-start: var(--#{$select}__list-item--m-loading--PaddingBlockStart);
     text-align: center;
   }
 }
@@ -626,7 +626,7 @@
 .#{$select}__menu-item-main {
   position: relative;
   display: block;
-  padding-inline-end: var(--#{$select}__menu-item-main--PaddingRight);
+  padding-inline-end: var(--#{$select}__menu-item-main--PaddingInlineEnd);
   white-space: nowrap;
 }
 
@@ -640,22 +640,22 @@
 
 .#{$select}__menu-item-count {
   align-self: center;
-  margin-inline-start: var(--#{$select}__menu-item-count--MarginLeft);
+  margin-inline-start: var(--#{$select}__menu-item-count--MarginInlineStart);
   font-size: var(--#{$select}__menu-item-count--FontSize);
   color: var(--#{$select}__menu-item-count--Color);
 }
 
 .#{$select}__menu-item-description {
   display: block;
-  padding-inline-end: var(--#{$select}__menu-item-description--PaddingRight);
+  padding-inline-end: var(--#{$select}__menu-item-description--PaddingInlineEnd);
   font-size: var(--#{$select}__menu-item-description--FontSize);
   color: var(--#{$select}__menu-item-description--Color);
 }
 
 .#{$select}__menu-item-icon {
   position: absolute;
-  inset-block-start: var(--#{$select}__menu-item-icon--Top);
-  inset-inline-end: var(--#{$select}__menu-item-icon--Right);
+  inset-block-start: var(--#{$select}__menu-item-icon--BlockStart);
+  inset-inline-end: var(--#{$select}__menu-item-icon--InlineEnd);
   font-size: var(--#{$select}__menu-item-icon--FontSize);
   color: var(--#{$select}__menu-item-icon--Color);
   transform: translateY(var(--#{$select}__menu-item-icon--TranslateY));
@@ -673,32 +673,32 @@
 }
 
 .#{$select}__menu-group + .#{$select}__menu-group {
-  padding-block-start: var(--#{$select}__menu-group--menu-group--PaddingTop);
+  padding-block-start: var(--#{$select}__menu-group--menu-group--PaddingBlockStart);
 }
 
 .#{$select}__menu-search {
-  padding-block-start: var(--#{$select}__menu-search--PaddingTop);
-  padding-block-end: var(--#{$select}__menu-search--PaddingBottom);
-  padding-inline-start: var(--#{$select}__menu-search--PaddingLeft);
-  padding-inline-end: var(--#{$select}__menu-search--PaddingRight);
+  padding-block-start: var(--#{$select}__menu-search--PaddingBlockStart);
+  padding-block-end: var(--#{$select}__menu-search--PaddingBlockEnd);
+  padding-inline-start: var(--#{$select}__menu-search--PaddingInlineStart);
+  padding-inline-end: var(--#{$select}__menu-search--PaddingInlineEnd);
 }
 
 .#{$select}__menu-group-title {
-  padding-block-start: var(--#{$select}__menu-group-title--PaddingTop);
-  padding-block-end: var(--#{$select}__menu-group-title--PaddingBottom);
-  padding-inline-start: var(--#{$select}__menu-group-title--PaddingLeft);
-  padding-inline-end: var(--#{$select}__menu-group-title--PaddingRight);
+  padding-block-start: var(--#{$select}__menu-group-title--PaddingBlockStart);
+  padding-block-end: var(--#{$select}__menu-group-title--PaddingBlockEnd);
+  padding-inline-start: var(--#{$select}__menu-group-title--PaddingInlineStart);
+  padding-inline-end: var(--#{$select}__menu-group-title--PaddingInlineEnd);
   font-size: var(--#{$select}__menu-group-title--FontSize);
   font-weight: var(--#{$select}__menu-group-title--FontWeight);
   color: var(--#{$select}__menu-group-title--Color);
 }
 
 .#{$select}__menu-footer {
-  padding-block-start: var(--#{$select}__menu-footer--PaddingTop);
-  padding-block-end: var(--#{$select}__menu-footer--PaddingBottom);
-  padding-inline-start: var(--#{$select}__menu-footer--PaddingLeft);
-  padding-inline-end: var(--#{$select}__menu-footer--PaddingRight);
-  margin-block-start: var(--#{$select}__menu-footer--MarginTop);
-  margin-block-end: var(--#{$select}__menu-footer--MarginBottom);
+  padding-block-start: var(--#{$select}__menu-footer--PaddingBlockStart);
+  padding-block-end: var(--#{$select}__menu-footer--PaddingBlockEnd);
+  padding-inline-start: var(--#{$select}__menu-footer--PaddingInlineStart);
+  padding-inline-end: var(--#{$select}__menu-footer--PaddingInlineEnd);
+  margin-block-start: var(--#{$select}__menu-footer--MarginBlockStart);
+  margin-block-end: var(--#{$select}__menu-footer--MarginBlockEnd);
   box-shadow: var(--#{$select}__menu-footer--BoxShadow);
 }

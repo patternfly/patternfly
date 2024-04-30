@@ -1,25 +1,25 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$back-to-top}) {
-  --#{$back-to-top}--Right: var(--pf-t--global--spacer--2xl);
-  --#{$back-to-top}--Bottom: var(--pf-t--global--spacer--lg);
-  --#{$back-to-top}--md--Bottom: var(--pf-t--global--spacer--2xl);
+  --#{$back-to-top}--InlineEnd: var(--pf-t--global--spacer--2xl);
+  --#{$back-to-top}--BlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$back-to-top}--md--BlockEnd: var(--pf-t--global--spacer--2xl);
   --#{$back-to-top}--c-button--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$back-to-top}--c-button--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$back-to-top}--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$back-to-top}--c-button--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$back-to-top}--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$back-to-top}--c-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$back-to-top}--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$back-to-top}--c-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$back-to-top}--c-button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$back-to-top}--c-button--BoxShadow: var(--pf-t--global--box-shadow--sm);
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$back-to-top}--Bottom: var(--#{$back-to-top}--md--Bottom);
+    --#{$back-to-top}--BlockEnd: var(--#{$back-to-top}--md--BlockEnd);
   }
 }
 
 .#{$back-to-top} {
   position: absolute;
-  inset-block-end: var(--#{$back-to-top}--Bottom);
-  inset-inline-end: var(--#{$back-to-top}--Right);
+  inset-block-end: var(--#{$back-to-top}--BlockEnd);
+  inset-inline-end: var(--#{$back-to-top}--InlineEnd);
 
   &.pf-m-hidden {
     display: none;
@@ -27,10 +27,10 @@
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$back-to-top}--c-button--FontSize);
-    --#{$button}--PaddingTop: var(--#{$back-to-top}--c-button--PaddingTop);
-    --#{$button}--PaddingRight: var(--#{$back-to-top}--c-button--PaddingRight);
-    --#{$button}--PaddingBottom: var(--#{$back-to-top}--c-button--PaddingBottom);
-    --#{$button}--PaddingLeft: var(--#{$back-to-top}--c-button--PaddingLeft);
+    --#{$button}--PaddingBlockStart: var(--#{$back-to-top}--c-button--PaddingBlockStart);
+    --#{$button}--PaddingInlineEnd: var(--#{$back-to-top}--c-button--PaddingInlineEnd);
+    --#{$button}--PaddingBlockEnd: var(--#{$back-to-top}--c-button--PaddingBlockEnd);
+    --#{$button}--PaddingInlineStart: var(--#{$back-to-top}--c-button--PaddingInlineStart);
 
     box-shadow: var(--#{$back-to-top}--c-button--BoxShadow);
   }

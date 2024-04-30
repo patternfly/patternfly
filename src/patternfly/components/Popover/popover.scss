@@ -3,8 +3,8 @@
 .#{$popover} {
   // Component
   --#{$popover}--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingLeft) + var(--#{$popover}__content--PaddingRight) + #{pf-size-prem(300px)});
-  --#{$popover}--MaxWidth: calc(var(--#{$popover}__content--PaddingLeft) + var(--#{$popover}__content--PaddingRight) + #{pf-size-prem(300px)});
+  --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
+  --#{$popover}--MaxWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
   --#{$popover}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$popover}--BorderRadius: var(--pf-t--global--border--radius--medium);
 
@@ -18,10 +18,10 @@
 
   // Content
   --#{$popover}__content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-  --#{$popover}__content--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$popover}__content--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$popover}__content--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$popover}__content--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$popover}__content--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$popover}__content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$popover}__content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$popover}__content--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$popover}__content--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // Arrow
@@ -41,18 +41,18 @@
   --#{$popover}__arrow--m-left--TranslateX: 50%;
   --#{$popover}__arrow--m-left--TranslateY: -50%;
   --#{$popover}__arrow--m-left--Rotate: 45deg;
-  --#{$popover}__arrow--m-inline-top--Top: var(--pf-t--global--border--radius--medium);
-  --#{$popover}__arrow--m-inline-bottom--Bottom: var(--pf-t--global--border--radius--medium);
-  --#{$popover}__arrow--m-block-left--Left: var(--pf-t--global--border--radius--medium);
-  --#{$popover}__arrow--m-block-right--Right: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-inline-top--BlockStart: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-inline-bottom--BlockEnd: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-block-left--InlineStart: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-block-right--InlineEnd: var(--pf-t--global--border--radius--medium);
 
   // Close
-  --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - (var(--pf-t--global--spacer--control--vertical--compact) * 1.5)); // align top of button with top of text
-  --#{$popover}__close--Right: var(--#{$popover}__content--PaddingRight); // align right of content
-  --#{$popover}__close--sibling--PaddingRight: var(--pf-t--global--spacer--2xl);
+  --#{$popover}__close--BlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - (var(--pf-t--global--spacer--control--vertical--compact) * 1.5)); // align top of button with top of text
+  --#{$popover}__close--InlineEnd: var(--#{$popover}__content--PaddingInlineEnd); // align right of content
+  --#{$popover}__close--sibling--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
 
   // Header
-  --#{$popover}__header--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$popover}__header--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
   // Title text
   --#{$popover}__title-text--Color: var(--pf-t--global--text--color--regular);
@@ -61,12 +61,12 @@
   --#{$popover}__title-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Title icon
-  --#{$popover}__title-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$popover}__title-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$popover}__title-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$popover}__title-icon--FontSize: var(--pf-t--global--font--size--heading--xs);
 
   // Footer
-  --#{$popover}__footer--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$popover}__footer--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   position: relative;
   min-width: var(--#{$popover}--MinWidth);
@@ -78,10 +78,10 @@
   &.pf-m-no-padding {
     // Use px values below so the min/max-width calc() doesn't break
     // stylelint-disable length-zero-no-unit
-    --#{$popover}__content--PaddingTop: 0px;
-    --#{$popover}__content--PaddingRight: 0px;
-    --#{$popover}__content--PaddingBottom: 0px;
-    --#{$popover}__content--PaddingLeft: 0px;
+    --#{$popover}__content--PaddingBlockStart: 0px;
+    --#{$popover}__content--PaddingInlineEnd: 0px;
+    --#{$popover}__content--PaddingBlockEnd: 0px;
+    --#{$popover}__content--PaddingInlineStart: 0px;
     // stylelint-enable
   }
 
@@ -95,8 +95,8 @@
     .pf-m-top-left,
     .pf-m-top-right
   ) {
-    --#{$popover}__arrow--Bottom: var(--#{$popover}--m-top--Bottom, 0);
-    --#{$popover}__arrow--Left: var(--#{$popover}--m-top--Left, 50%);
+    --#{$popover}__arrow--BlockEnd: var(--#{$popover}--m-top--BlockEnd, 0);
+    --#{$popover}__arrow--InlineStart: var(--#{$popover}--m-top--InlineStart, 50%);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-top--TranslateX);
     --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
     --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-top--Rotate);
@@ -107,8 +107,8 @@
     .pf-m-bottom-left,
     .pf-m-bottom-right
   ) {
-    --#{$popover}__arrow--Top: var(--#{$popover}--m-bottom--Top, 0);
-    --#{$popover}__arrow--Left: var(--#{$popover}--m-bottom--Left, 50%);
+    --#{$popover}__arrow--BlockStart: var(--#{$popover}--m-bottom--BlockStart, 0);
+    --#{$popover}__arrow--InlineStart: var(--#{$popover}--m-bottom--InlineStart, 50%);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
     --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-bottom--TranslateY);
     --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-bottom--Rotate);
@@ -119,8 +119,8 @@
     .pf-m-left-top,
     .pf-m-left-bottom
   ) {
-    --#{$popover}__arrow--Top: var(--#{$popover}--m-left--Top, 50%);
-    --#{$popover}__arrow--Right: var(--#{$popover}--m-left--Right, 0);
+    --#{$popover}__arrow--BlockStart: var(--#{$popover}--m-left--BlockStart, 50%);
+    --#{$popover}__arrow--InlineEnd: var(--#{$popover}--m-left--InlineEnd, 0);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
     --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-left--TranslateY);
     --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-left--Rotate);
@@ -131,8 +131,8 @@
     .pf-m-right-top,
     .pf-m-right-bottom
   ) {
-    --#{$popover}__arrow--Top: var(--#{$popover}--m-right--Top, 50%);
-    --#{$popover}__arrow--Left: var(--#{$popover}--m-right--Left, 0);
+    --#{$popover}__arrow--BlockStart: var(--#{$popover}--m-right--BlockStart, 50%);
+    --#{$popover}__arrow--InlineStart: var(--#{$popover}--m-right--InlineStart, 0);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-right--TranslateX);
     --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-right--TranslateY);
     --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-right--Rotate);
@@ -142,7 +142,7 @@
     .pf-m-left-top,
     .pf-m-right-top
   ) {
-    --#{$popover}__arrow--Top: var(--#{$popover}__arrow--m-inline-top--Top);
+    --#{$popover}__arrow--BlockStart: var(--#{$popover}__arrow--m-inline-top--BlockStart);
     --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
   }
 
@@ -150,15 +150,15 @@
     .pf-m-left-bottom,
     .pf-m-right-bottom
   ) {
-    --#{$popover}__arrow--Top: auto;
-    --#{$popover}__arrow--Bottom: var(--#{$popover}__arrow--m-inline-bottom--Bottom);
+    --#{$popover}__arrow--BlockStart: auto;
+    --#{$popover}__arrow--BlockEnd: var(--#{$popover}__arrow--m-inline-bottom--BlockEnd);
   }
 
   &:is(
     .pf-m-top-left,
     .pf-m-bottom-left
   ) {
-    --#{$popover}__arrow--Left: var(--#{$popover}__arrow--m-block-left--Left);
+    --#{$popover}__arrow--InlineStart: var(--#{$popover}__arrow--m-block-left--InlineStart);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
   }
 
@@ -166,8 +166,8 @@
     .pf-m-top-right,
     .pf-m-bottom-right
   ) {
-    --#{$popover}__arrow--Right: var(--#{$popover}__arrow--m-block-right--Right);
-    --#{$popover}__arrow--Left: auto;
+    --#{$popover}__arrow--InlineEnd: var(--#{$popover}__arrow--m-block-right--InlineEnd);
+    --#{$popover}__arrow--InlineStart: auto;
   }
 
   &.pf-m-danger {
@@ -193,10 +193,10 @@
 
 .#{$popover}__content {
   position: relative;
-  padding-block-start: var(--#{$popover}__content--PaddingTop);
-  padding-block-end: var(--#{$popover}__content--PaddingBottom);
-  padding-inline-start: var(--#{$popover}__content--PaddingLeft);
-  padding-inline-end: var(--#{$popover}__content--PaddingRight);
+  padding-block-start: var(--#{$popover}__content--PaddingBlockStart);
+  padding-block-end: var(--#{$popover}__content--PaddingBlockEnd);
+  padding-inline-start: var(--#{$popover}__content--PaddingInlineStart);
+  padding-inline-end: var(--#{$popover}__content--PaddingInlineEnd);
   background-color: var(--#{$popover}__content--BackgroundColor);
   border-radius: var(--#{$popover}__content--BorderRadius);
 }
@@ -204,22 +204,22 @@
 // Close button
 .#{$popover}__close {
   position: absolute;
-  inset-block-start: var(--#{$popover}__close--Top);
-  inset-inline-end: var(--#{$popover}__close--Right);
+  inset-block-start: var(--#{$popover}__close--BlockStart);
+  inset-inline-end: var(--#{$popover}__close--InlineEnd);
 
   // Create room for the close button
   + * {
-    padding-inline-end: var(--#{$popover}__close--sibling--PaddingRight);
+    padding-inline-end: var(--#{$popover}__close--sibling--PaddingInlineEnd);
   }
 }
 
 .#{$popover}__arrow {
   position: absolute;
   // stylelint-disable liberty/use-logical-spec
-  top: var(--#{$popover}__arrow--Top, auto);
-  right: var(--#{$popover}__arrow--Right, auto);
-  bottom: var(--#{$popover}__arrow--Bottom, auto);
-  left: var(--#{$popover}__arrow--Left, auto);
+  top: var(--#{$popover}__arrow--BlockStart, auto);
+  right: var(--#{$popover}__arrow--InlineEnd, auto);
+  bottom: var(--#{$popover}__arrow--BlockEnd, auto);
+  left: var(--#{$popover}__arrow--InlineStart, auto);
   // stylelint-enable
   width: var(--#{$popover}__arrow--Width);
   height: var(--#{$popover}__arrow--Height);
@@ -230,7 +230,7 @@
 }
 
 .#{$popover}__header {
-  margin-block-end: var(--#{$popover}__header--MarginBottom);
+  margin-block-end: var(--#{$popover}__header--MarginBlockEnd);
 }
 
 .#{$popover}__title {
@@ -239,7 +239,7 @@
 }
 
 .#{$popover}__title-icon {
-  margin-inline-end: var(--#{$popover}__title-icon--MarginRight);
+  margin-inline-end: var(--#{$popover}__title-icon--MarginInlineEnd);
   font-size: var(--#{$popover}__title-icon--FontSize);
   color: var(--#{$popover}__title-icon--Color);
 }
@@ -257,5 +257,5 @@
 }
 
 .#{$popover}__footer {
-  margin-block-start: var(--#{$popover}__footer--MarginTop);
+  margin-block-start: var(--#{$popover}__footer--MarginBlockStart);
 }

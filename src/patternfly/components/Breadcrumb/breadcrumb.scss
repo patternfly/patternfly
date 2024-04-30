@@ -4,11 +4,11 @@
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$breadcrumb}__item--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$breadcrumb}__item--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Breadcrumb divider
   --#{$breadcrumb}__item-divider--Color: var(--pf-t--global--icon--color--regular);
-  --#{$breadcrumb}__item-divider--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$breadcrumb}__item-divider--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$breadcrumb}__item-divider--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // Breadcrumb link
@@ -25,10 +25,10 @@
   --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // breadcrumb dropdown
-  --#{$breadcrumb}__dropdown--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$breadcrumb}__dropdown--MarginRight: calc(var(--#{$breadcrumb}__item--MarginRight) * -1);
-  --#{$breadcrumb}__dropdown--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$breadcrumb}__dropdown--MarginLeft: calc(var(--#{$breadcrumb}__item-divider--MarginRight) * -1);
+  --#{$breadcrumb}__dropdown--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$breadcrumb}__dropdown--MarginInlineEnd: calc(var(--#{$breadcrumb}__item--MarginInlineEnd) * -1);
+  --#{$breadcrumb}__dropdown--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$breadcrumb}__dropdown--MarginInlineStart: calc(var(--#{$breadcrumb}__item-divider--MarginInlineEnd) * -1);
 
   // breadcrumb toggle
   --#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -60,7 +60,7 @@
   }
 
   &:not(:last-child) {
-    margin-inline-end: var(--#{$breadcrumb}__item--MarginRight);
+    margin-inline-end: var(--#{$breadcrumb}__item--MarginInlineEnd);
   }
 }
 
@@ -68,7 +68,7 @@
 .#{$breadcrumb}__item-divider {
   @include pf-v6-mirror-inline-on-rtl;
 
-  margin-inline-end: var(--#{$breadcrumb}__item-divider--MarginRight);
+  margin-inline-end: var(--#{$breadcrumb}__item-divider--MarginInlineEnd);
   font-size: var(--#{$breadcrumb}__item-divider--FontSize);
   line-height: 1;
   color: var(--#{$breadcrumb}__item-divider--Color);
@@ -110,10 +110,10 @@
 }
 
 .#{$breadcrumb}__dropdown {
-  margin-block-start: var(--#{$breadcrumb}__dropdown--MarginTop);
-  margin-block-end: var(--#{$breadcrumb}__dropdown--MarginBottom);
-  margin-inline-start: var(--#{$breadcrumb}__dropdown--MarginLeft);
-  margin-inline-end: var(--#{$breadcrumb}__dropdown--MarginRight);
+  margin-block-start: var(--#{$breadcrumb}__dropdown--MarginBlockStart);
+  margin-block-end: var(--#{$breadcrumb}__dropdown--MarginBlockEnd);
+  margin-inline-start: var(--#{$breadcrumb}__dropdown--MarginInlineStart);
+  margin-inline-end: var(--#{$breadcrumb}__dropdown--MarginInlineEnd);
 
   .#{$dropdown}__toggle {
     line-height: var(--#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight);

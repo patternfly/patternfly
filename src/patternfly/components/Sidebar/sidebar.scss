@@ -11,37 +11,37 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--BorderColor--base: var(--pf-t--global--border--color--default);
 
   // Panel
-  --#{$sidebar}__panel--PaddingTop: 0;
-  --#{$sidebar}__panel--PaddingRight: 0;
-  --#{$sidebar}__panel--PaddingBottom: 0;
-  --#{$sidebar}__panel--PaddingLeft: 0;
+  --#{$sidebar}__panel--PaddingBlockStart: 0;
+  --#{$sidebar}__panel--PaddingInlineEnd: 0;
+  --#{$sidebar}__panel--PaddingBlockEnd: 0;
+  --#{$sidebar}__panel--PaddingInlineStart: 0;
   --#{$sidebar}__panel--Order: -1;
 
   // Panel padding
-  --#{$sidebar}__panel--m-padding--PaddingTop: var(--#{$sidebar}--inset);
-  --#{$sidebar}__panel--m-padding--PaddingRight: var(--#{$sidebar}--inset);
-  --#{$sidebar}__panel--m-padding--PaddingBottom: var(--#{$sidebar}--inset);
-  --#{$sidebar}__panel--m-padding--PaddingLeft: var(--#{$sidebar}--inset);
+  --#{$sidebar}__panel--m-padding--PaddingBlockStart: var(--#{$sidebar}--inset);
+  --#{$sidebar}__panel--m-padding--PaddingInlineEnd: var(--#{$sidebar}--inset);
+  --#{$sidebar}__panel--m-padding--PaddingBlockEnd: var(--#{$sidebar}--inset);
+  --#{$sidebar}__panel--m-padding--PaddingInlineStart: var(--#{$sidebar}--inset);
 
   // Content
-  --#{$sidebar}__content--PaddingTop: 0;
-  --#{$sidebar}__content--PaddingRight: 0;
-  --#{$sidebar}__content--PaddingBottom: 0;
-  --#{$sidebar}__content--PaddingLeft: 0;
+  --#{$sidebar}__content--PaddingBlockStart: 0;
+  --#{$sidebar}__content--PaddingInlineEnd: 0;
+  --#{$sidebar}__content--PaddingBlockEnd: 0;
+  --#{$sidebar}__content--PaddingInlineStart: 0;
   --#{$sidebar}__content--Order: 1;
 
   // Content padding
-  --#{$sidebar}__content--m-padding--PaddingTop: var(--#{$sidebar}--inset);
-  --#{$sidebar}__content--m-padding--PaddingRight: var(--#{$sidebar}--inset);
-  --#{$sidebar}__content--m-padding--PaddingBottom: var(--#{$sidebar}--inset);
-  --#{$sidebar}__content--m-padding--PaddingLeft: var(--#{$sidebar}--inset);
+  --#{$sidebar}__content--m-padding--PaddingBlockStart: var(--#{$sidebar}--inset);
+  --#{$sidebar}__content--m-padding--PaddingInlineEnd: var(--#{$sidebar}--inset);
+  --#{$sidebar}__content--m-padding--PaddingBlockEnd: var(--#{$sidebar}--inset);
+  --#{$sidebar}__content--m-padding--PaddingInlineStart: var(--#{$sidebar}--inset);
 
   // Main
   --#{$sidebar}__main--FlexDirection: column;
   --#{$sidebar}__main--md--FlexDirection: row;
   --#{$sidebar}__main--AlignItems: stretch;
   --#{$sidebar}__main--md--AlignItems: flex-start;
-  --#{$sidebar}__main--child--MarginTop: 0;
+  --#{$sidebar}__main--child--MarginBlockStart: 0;
 
   // Gutter
   --#{$sidebar}--m-gutter__main--Gap: var(--#{$sidebar}--inset);
@@ -61,7 +61,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-stack__main--FlexDirection: column;
   --#{$sidebar}--m-stack__main--AlignItems: stretch;
   --#{$sidebar}--m-stack__panel--Position: sticky;
-  --#{$sidebar}--m-stack__panel--Top: 0;
+  --#{$sidebar}--m-stack__panel--BlockStart: 0;
   --#{$sidebar}--m-stack__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
   --#{$sidebar}--m-stack--m-panel-right__panel--Order: -1;
 
@@ -69,7 +69,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-split__main--AlignItems: flex-start;
   --#{$sidebar}--m-split__main--FlexDirection: row;
   --#{$sidebar}--m-split__panel--Position: static;
-  --#{$sidebar}--m-split__panel--Top: auto;
+  --#{$sidebar}--m-split__panel--BlockStart: auto;
   --#{$sidebar}--m-split--m-panel-right__panel--Order: 1;
   --#{$sidebar}--m-split__main--m-border--before--Display: block;
 
@@ -77,8 +77,8 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__panel--FlexBasis--base: auto;
   --#{$sidebar}__panel--BoxShadow--base: var(--pf-t--global--box-shadow--md--bottom);
   --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
-  --#{$sidebar}__panel--Top: 0;
-  --#{$sidebar}__panel--md--Top: auto;
+  --#{$sidebar}__panel--BlockStart: 0;
+  --#{$sidebar}__panel--md--BlockStart: auto;
   --#{$sidebar}__panel--Position: sticky;
   --#{$sidebar}__panel--md--Position: static;
   --#{$sidebar}__panel--FlexBasis-base: auto;
@@ -95,7 +95,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__content--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // Sticky
-  --#{$sidebar}__panel--m-sticky--Top: 0;
+  --#{$sidebar}__panel--m-sticky--BlockStart: 0;
   --#{$sidebar}__panel--m-sticky--Position: sticky;
 }
 
@@ -108,7 +108,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}__main--m-border--before--md--Display); // show border starting at md breakpoint
     --#{$sidebar}__panel--BoxShadow: none;
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--md--FlexBasis);
-    --#{$sidebar}__panel--Top: var(--#{$sidebar}__panel--md--Top);
+    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}__panel--md--BlockStart);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}__panel--md--Position);
   }
 
@@ -134,7 +134,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}--m-stack__main--FlexDirection);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}--m-stack__main--AlignItems);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}--m-stack__panel--Position);
-    --#{$sidebar}__panel--Top: var(--#{$sidebar}--m-stack__panel--Top);
+    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}--m-stack__panel--BlockStart);
     --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}--m-stack__panel--BoxShadow);
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--m-stack--FlexBasis);
     --#{$sidebar}__main--m-border--before--Display: none;
@@ -145,7 +145,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}--m-split__main--FlexDirection);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}--m-split__main--AlignItems);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}--m-split__panel--Position);
-    --#{$sidebar}__panel--Top: var(--#{$sidebar}--m-split__panel--Top);
+    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}--m-split__panel--BlockStart);
     --#{$sidebar}__panel--BoxShadow: none;
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--m-split--FlexBasis);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}--m-split__main--m-border--before--Display);
@@ -169,33 +169,33 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 .#{$sidebar}__panel {
   position: var(--#{$sidebar}__panel--Position);
-  inset-block-start: var(--#{$sidebar}__panel--Top);
+  inset-block-start: var(--#{$sidebar}__panel--BlockStart);
   z-index: var(--#{$sidebar}__panel--ZIndex);
   flex-basis: var(--#{$sidebar}__panel--FlexBasis);
   flex-shrink: 0;
   order: var(--#{$sidebar}__panel--Order);
-  padding-block-start: var(--#{$sidebar}__panel--PaddingTop);
-  padding-block-end: var(--#{$sidebar}__panel--PaddingBottom);
-  padding-inline-start: var(--#{$sidebar}__panel--PaddingLeft);
-  padding-inline-end: var(--#{$sidebar}__panel--PaddingRight);
+  padding-block-start: var(--#{$sidebar}__panel--PaddingBlockStart);
+  padding-block-end: var(--#{$sidebar}__panel--PaddingBlockEnd);
+  padding-inline-start: var(--#{$sidebar}__panel--PaddingInlineStart);
+  padding-inline-end: var(--#{$sidebar}__panel--PaddingInlineEnd);
   background-color: var(--#{$sidebar}__panel--BackgroundColor);
   box-shadow: var(--#{$sidebar}__panel--BoxShadow);
 
   &.pf-m-padding {
-    --#{$sidebar}__panel--PaddingTop: var(--#{$sidebar}__panel--m-padding--PaddingTop);
-    --#{$sidebar}__panel--PaddingRight: var(--#{$sidebar}__panel--m-padding--PaddingRight);
-    --#{$sidebar}__panel--PaddingBottom: var(--#{$sidebar}__panel--m-padding--PaddingBottom);
-    --#{$sidebar}__panel--PaddingLeft: var(--#{$sidebar}__panel--m-padding--PaddingLeft);
+    --#{$sidebar}__panel--PaddingBlockStart: var(--#{$sidebar}__panel--m-padding--PaddingBlockStart);
+    --#{$sidebar}__panel--PaddingInlineEnd: var(--#{$sidebar}__panel--m-padding--PaddingInlineEnd);
+    --#{$sidebar}__panel--PaddingBlockEnd: var(--#{$sidebar}__panel--m-padding--PaddingBlockEnd);
+    --#{$sidebar}__panel--PaddingInlineStart: var(--#{$sidebar}__panel--m-padding--PaddingInlineStart);
   }
 
   &.pf-m-sticky {
     --#{$sidebar}__panel--Position: var(--#{$sidebar}__panel--m-sticky--Position);
-    --#{$sidebar}__panel--Top: var(--#{$sidebar}__panel--m-sticky--Top);
+    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}__panel--m-sticky--BlockStart);
   }
 
   &.pf-m-static {
     --#{$sidebar}__panel--Position: static;
-    --#{$sidebar}__panel--Top: auto;
+    --#{$sidebar}__panel--BlockStart: auto;
   }
 
   &.pf-m-secondary {
@@ -206,17 +206,17 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 .#{$sidebar}__content {
   flex-grow: 1;
   order: var(--#{$sidebar}__content--Order);
-  padding-block-start: var(--#{$sidebar}__content--PaddingTop);
-  padding-block-end: var(--#{$sidebar}__content--PaddingBottom);
-  padding-inline-start: var(--#{$sidebar}__content--PaddingLeft);
-  padding-inline-end: var(--#{$sidebar}__content--PaddingRight);
+  padding-block-start: var(--#{$sidebar}__content--PaddingBlockStart);
+  padding-block-end: var(--#{$sidebar}__content--PaddingBlockEnd);
+  padding-inline-start: var(--#{$sidebar}__content--PaddingInlineStart);
+  padding-inline-end: var(--#{$sidebar}__content--PaddingInlineEnd);
   background-color: var(--#{$sidebar}__content--BackgroundColor);
 
   &.pf-m-padding {
-    --#{$sidebar}__content--PaddingTop: var(--#{$sidebar}__content--m-padding--PaddingTop);
-    --#{$sidebar}__content--PaddingRight: var(--#{$sidebar}__content--m-padding--PaddingRight);
-    --#{$sidebar}__content--PaddingBottom: var(--#{$sidebar}__content--m-padding--PaddingBottom);
-    --#{$sidebar}__content--PaddingLeft: var(--#{$sidebar}__content--m-padding--PaddingTop);
+    --#{$sidebar}__content--PaddingBlockStart: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
+    --#{$sidebar}__content--PaddingInlineEnd: var(--#{$sidebar}__content--m-padding--PaddingInlineEnd);
+    --#{$sidebar}__content--PaddingBlockEnd: var(--#{$sidebar}__content--m-padding--PaddingBlockEnd);
+    --#{$sidebar}__content--PaddingInlineStart: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
   }
 
   &.pf-m-no-background {

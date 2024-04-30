@@ -1,14 +1,14 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$empty-state}) {
-  --#{$empty-state}--PaddingTop: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--PaddingBottom: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--PaddingLeft: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--m-xs--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$empty-state}--m-xs--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$empty-state}--m-xs--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$empty-state}--m-xs--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$empty-state}--PaddingBlockStart: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--PaddingInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--m-xs--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$empty-state}--m-xs--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$empty-state}--m-xs--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$empty-state}--m-xs--PaddingInlineStart: var(--pf-t--global--spacer--md);
 
   // Content
   --#{$empty-state}__content--MaxWidth: none;
@@ -17,11 +17,11 @@
   --#{$empty-state}--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
 
   // Icon
-  --#{$empty-state}__icon--MarginBottom: var(--pf-t--global--spacer--lg);
+  --#{$empty-state}__icon--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$empty-state}__icon--FontSize: var(--pf-t--global--icon--size--2xl);
   --#{$empty-state}__icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$empty-state}--m-xs__icon--MarginBottom: var(--pf-t--global--spacer--lg);
-  --#{$empty-state}--m-xl__icon--MarginBottom: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--m-xs__icon--MarginBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$empty-state}--m-xl__icon--MarginBlockEnd: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--m-xl__icon--FontSize: var(--pf-t--global--icon--size--3xl);
 
   // Status variant icon color
@@ -41,18 +41,18 @@
   --#{$empty-state}--m-xl__title-text--LineHeight: var(--pf-t--global--font--line-height--heading);
 
   // Body
-  --#{$empty-state}__body--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$empty-state}__body--MarginBlockStart: var(--pf-t--global--spacer--md);
   --#{$empty-state}__body--Color: var(--pf-t--global--text--color--subtle);
   --#{$empty-state}--body--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$empty-state}--m-xs__body--FontSize: var(--pf-t--global--font--size--body--lg);
-  --#{$empty-state}--m-xs__body--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$empty-state}--m-xs__body--MarginBlockStart: var(--pf-t--global--spacer--md);
   --#{$empty-state}--m-xl__body--FontSize: var(--pf-t--global--font--size--body--lg);
-  --#{$empty-state}--m-xl__body--MarginTop: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--m-xl__body--MarginBlockStart: var(--pf-t--global--spacer--xl);
 
   // Footer
   --#{$empty-state}__footer--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$empty-state}__footer--MarginTop: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--m-xs__footer--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$empty-state}__footer--MarginBlockStart: var(--pf-t--global--spacer--xl);
+  --#{$empty-state}--m-xs__footer--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Actions
   --#{$empty-state}__actions--RowGap: var(--pf-t--global--spacer--sm);
@@ -63,23 +63,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block-start: var(--#{$empty-state}--PaddingTop);
-  padding-block-end: var(--#{$empty-state}--PaddingBottom);
-  padding-inline-start: var(--#{$empty-state}--PaddingLeft);
-  padding-inline-end: var(--#{$empty-state}--PaddingRight);
+  padding-block-start: var(--#{$empty-state}--PaddingBlockStart);
+  padding-block-end: var(--#{$empty-state}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$empty-state}--PaddingInlineStart);
+  padding-inline-end: var(--#{$empty-state}--PaddingInlineEnd);
   text-align: center;
 
   &.pf-m-xs {
-    --#{$empty-state}--PaddingTop: var(--#{$empty-state}--m-xs--PaddingTop);
-    --#{$empty-state}--PaddingRight: var(--#{$empty-state}--m-xs--PaddingRight);
-    --#{$empty-state}--PaddingBottom: var(--#{$empty-state}--m-xs--PaddingBottom);
-    --#{$empty-state}--PaddingLeft: var(--#{$empty-state}--m-xs--PaddingLeft);
+    --#{$empty-state}--PaddingBlockStart: var(--#{$empty-state}--m-xs--PaddingBlockStart);
+    --#{$empty-state}--PaddingInlineEnd: var(--#{$empty-state}--m-xs--PaddingInlineEnd);
+    --#{$empty-state}--PaddingBlockEnd: var(--#{$empty-state}--m-xs--PaddingBlockEnd);
+    --#{$empty-state}--PaddingInlineStart: var(--#{$empty-state}--m-xs--PaddingInlineStart);
     --#{$empty-state}__title-text--FontSize: var(--#{$empty-state}--m-xs__title-text--FontSize);
     --#{$empty-state}__content--MaxWidth: var(--#{$empty-state}--m-xs__content--MaxWidth);
-    --#{$empty-state}__icon--MarginBottom: var(--#{$empty-state}--m-xs__icon--MarginBottom);
-    --#{$empty-state}__body--MarginTop: var(--#{$empty-state}--m-xs__body--MarginTop);
+    --#{$empty-state}__icon--MarginBlockEnd: var(--#{$empty-state}--m-xs__icon--MarginBlockEnd);
+    --#{$empty-state}__body--MarginBlockStart: var(--#{$empty-state}--m-xs__body--MarginBlockStart);
     --#{$empty-state}--body--FontSize: var(--#{$empty-state}--m-xs__body--FontSize);
-    --#{$empty-state}__footer--MarginTop: var(--#{$empty-state}--m-xs__footer--MarginTop);
+    --#{$empty-state}__footer--MarginBlockStart: var(--#{$empty-state}--m-xs__footer--MarginBlockStart);
   }
 
   &.pf-m-sm {
@@ -91,9 +91,9 @@
   }
 
   &.pf-m-xl {
-    --#{$empty-state}__body--MarginTop: var(--#{$empty-state}--m-xl__body--MarginTop);
+    --#{$empty-state}__body--MarginBlockStart: var(--#{$empty-state}--m-xl__body--MarginBlockStart);
     --#{$empty-state}--body--FontSize: var(--#{$empty-state}--m-xl__body--FontSize);
-    --#{$empty-state}__icon--MarginBottom: var(--#{$empty-state}--m-xl__icon--MarginBottom);
+    --#{$empty-state}__icon--MarginBlockEnd: var(--#{$empty-state}--m-xl__icon--MarginBlockEnd);
     --#{$empty-state}__icon--FontSize: var(--#{$empty-state}--m-xl__icon--FontSize);
     --#{$empty-state}__title-text--FontSize: var(--#{$empty-state}--m-xl__title-text--FontSize);
     --#{$empty-state}__title-text--LineHeight: var(--#{$empty-state}--m-xl__title-text--LineHeight);
@@ -129,7 +129,7 @@
 }
 
 .#{$empty-state}__icon {
-  margin-block-end: var(--#{$empty-state}__icon--MarginBottom);
+  margin-block-end: var(--#{$empty-state}__icon--MarginBlockEnd);
   font-size: var(--#{$empty-state}__icon--FontSize);
   line-height: 1;
   color: var(--#{$empty-state}__icon--Color);
@@ -143,7 +143,7 @@
 }
 
 .#{$empty-state}__body {
-  margin-block-start: var(--#{$empty-state}__body--MarginTop);
+  margin-block-start: var(--#{$empty-state}__body--MarginBlockStart);
   font-size: var(--#{$empty-state}--body--FontSize);
   color: var(--#{$empty-state}__body--Color);
 }
@@ -153,7 +153,7 @@
   flex-direction: column;
   row-gap: var(--#{$empty-state}__footer--RowGap);
   align-items: center;
-  margin-block-start: var(--#{$empty-state}__footer--MarginTop);
+  margin-block-start: var(--#{$empty-state}__footer--MarginBlockStart);
 }
 
 .#{$empty-state}__actions {

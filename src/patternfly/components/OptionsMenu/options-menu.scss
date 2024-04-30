@@ -3,64 +3,64 @@
 .#{$options-menu} {
   // Toggle
   --#{$options-menu}__toggle--BackgroundColor: transparent;
-  --#{$options-menu}__toggle--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$options-menu}__toggle--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__toggle--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$options-menu}__toggle--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__toggle--PaddingBlockStart: var(--#{$pf-global}--spacer--form-element);
+  --#{$options-menu}__toggle--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__toggle--PaddingBlockEnd: var(--#{$pf-global}--spacer--form-element);
+  --#{$options-menu}__toggle--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$options-menu}__toggle--ColumnGap: var(--#{$pf-global}--spacer--sm);
   --#{$options-menu}__toggle--MinWidth: 0;
   --#{$options-menu}__toggle--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$options-menu}__toggle--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$options-menu}__toggle--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$options-menu}__toggle--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$options-menu}__toggle--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$options-menu}__toggle--BorderBlockStartColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$options-menu}__toggle--BorderInlineEndColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$options-menu}__toggle--BorderBlockEndColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$options-menu}__toggle--BorderInlineStartColor: var(--#{$pf-global}--BorderColor--300);
   --#{$options-menu}__toggle--Color: var(--#{$pf-global}--Color--100);
-  --#{$options-menu}__toggle--hover--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$options-menu}__toggle--active--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$options-menu}__toggle--active--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$options-menu}__toggle--focus--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$options-menu}__toggle--focus--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$options-menu}__toggle--expanded--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$options-menu}__toggle--expanded--BorderBottomColor: var(--#{$pf-global}--active-color--100);
+  --#{$options-menu}__toggle--hover--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$options-menu}__toggle--active--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$options-menu}__toggle--active--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$options-menu}__toggle--focus--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$options-menu}__toggle--focus--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
+  --#{$options-menu}__toggle--expanded--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$options-menu}__toggle--expanded--BorderBlockEndColor: var(--#{$pf-global}--active-color--100);
   --#{$options-menu}__toggle--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
   --#{$options-menu}__toggle--m-plain--Color: var(--#{$pf-global}--Color--200);
   --#{$options-menu}__toggle--m-plain--hover--Color: var(--#{$pf-global}--Color--100);
   --#{$options-menu}__toggle--m-plain--disabled--Color: var(--#{$pf-global}--disabled-color--200);
-  --#{$options-menu}__toggle--m-plain--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$options-menu}__toggle--m-plain--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$options-menu}__toggle--m-plain--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$options-menu}__toggle--m-plain--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
 
   // Toggle arrow
-  --#{$options-menu}__toggle-icon--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__toggle-icon--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__toggle-icon--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__toggle-icon--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$options-menu}--m-top--m-expanded__toggle-icon--Rotate: 180deg;
   --#{$options-menu}--m-plain__toggle-icon--Color: var(--#{$pf-global}--Color--200);
   --#{$options-menu}--m-plain--hover__toggle-icon--Color: var(--#{$pf-global}--Color--100);
 
   // Text toggle button
   --#{$options-menu}__toggle-button--BackgroundColor: transparent;
-  --#{$options-menu}__toggle-button--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$options-menu}__toggle-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__toggle-button--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$options-menu}__toggle-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__toggle-button--PaddingBlockStart: var(--#{$pf-global}--spacer--form-element);
+  --#{$options-menu}__toggle-button--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__toggle-button--PaddingBlockEnd: var(--#{$pf-global}--spacer--form-element);
+  --#{$options-menu}__toggle-button--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
 
   // Menu
   --#{$options-menu}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$options-menu}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-  --#{$options-menu}__menu--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__menu--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__menu--Top: calc(100% + var(--#{$pf-global}--spacer--xs));
+  --#{$options-menu}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
   --#{$options-menu}__menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$options-menu}--m-top__menu--Top: 0;
+  --#{$options-menu}--m-top__menu--BlockStart: 0;
   --#{$options-menu}--m-top__menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu item
   --#{$options-menu}__menu-item--BackgroundColor: transparent;
   --#{$options-menu}__menu-item--Color: var(--#{$pf-global}--Color--100);
   --#{$options-menu}__menu-item--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$options-menu}__menu-item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__menu-item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$options-menu}__menu-item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__menu-item--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$options-menu}__menu-item--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__menu-item--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$options-menu}__menu-item--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__menu-item--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
   --#{$options-menu}__menu-item--disabled--Color: var(--#{$pf-global}--Color--dark-200);
   --#{$options-menu}__menu-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
   --#{$options-menu}__menu-item--disabled--BackgroundColor: transparent;
@@ -68,33 +68,33 @@
   // Menu item icon
   --#{$options-menu}__menu-item-icon--Color: var(--#{$pf-global}--active-color--100);
   --#{$options-menu}__menu-item-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$options-menu}__menu-item-icon--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$options-menu}__menu-item-icon--PaddingInlineStart: var(--#{$pf-global}--spacer--lg);
 
   // Groups
-  --#{$options-menu}__group--group--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__group-title--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__group-title--PaddingRight: var(--#{$options-menu}__menu-item--PaddingRight);
-  --#{$options-menu}__group-title--PaddingBottom: var(--#{$options-menu}__menu-item--PaddingBottom);
-  --#{$options-menu}__group-title--PaddingLeft: var(--#{$options-menu}__menu-item--PaddingLeft);
+  --#{$options-menu}__group--group--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__group-title--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}__group-title--PaddingInlineEnd: var(--#{$options-menu}__menu-item--PaddingInlineEnd);
+  --#{$options-menu}__group-title--PaddingBlockEnd: var(--#{$options-menu}__menu-item--PaddingBlockEnd);
+  --#{$options-menu}__group-title--PaddingInlineStart: var(--#{$options-menu}__menu-item--PaddingInlineStart);
   --#{$options-menu}__group-title--FontSize: var(--#{$pf-global}--FontSize--xs);
   --#{$options-menu}__group-title--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$options-menu}__group-title--Color: var(--#{$pf-global}--Color--dark-200);
 
   // Divider
-  --#{$options-menu}--c-divider--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}--c-divider--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}--c-divider--MarginBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$options-menu}--c-divider--MarginBlockEnd: var(--#{$pf-global}--spacer--sm);
 
   position: relative;
   display: inline-block;
   max-width: 100%;
 
   .#{$divider} {
-    margin-block-start: var(--#{$options-menu}--c-divider--MarginTop);
-    margin-block-end: var(--#{$options-menu}--c-divider--MarginBottom);
+    margin-block-start: var(--#{$options-menu}--c-divider--MarginBlockStart);
+    margin-block-end: var(--#{$options-menu}--c-divider--MarginBlockEnd);
 
     // Support divider as last item in group to separate groups
     &:last-child {
-      --#{$options-menu}--c-divider--MarginBottom: 0;
+      --#{$options-menu}--c-divider--MarginBlockEnd: 0;
     }
   }
 }
@@ -109,32 +109,32 @@
     inset-inline-end: 0;
     content: "";
     border: var(--#{$options-menu}__toggle--BorderWidth) solid;
-    border-block-start-color: var(--#{$options-menu}__toggle--BorderTopColor);
-    border-block-end-color: var(--#{$options-menu}__toggle--BorderBottomColor);
-    border-inline-start-color: var(--#{$options-menu}__toggle--BorderLeftColor);
-    border-inline-end-color: var(--#{$options-menu}__toggle--BorderRightColor);
+    border-block-start-color: var(--#{$options-menu}__toggle--BorderBlockStartColor);
+    border-block-end-color: var(--#{$options-menu}__toggle--BorderBlockEndColor);
+    border-inline-start-color: var(--#{$options-menu}__toggle--BorderInlineStartColor);
+    border-inline-end-color: var(--#{$options-menu}__toggle--BorderInlineEndColor);
   }
 
   &:hover {
     &::before {
-      --#{$options-menu}__toggle--BorderBottomColor: var(--#{$options-menu}__toggle--hover--BorderBottomColor);
+      --#{$options-menu}__toggle--BorderBlockEndColor: var(--#{$options-menu}__toggle--hover--BorderBlockEndColor);
     }
   }
 
   &:active,
   &.pf-m-active {
     &::before {
-      --#{$options-menu}__toggle--BorderBottomColor: var(--#{$options-menu}__toggle--active--BorderBottomColor);
+      --#{$options-menu}__toggle--BorderBlockEndColor: var(--#{$options-menu}__toggle--active--BorderBlockEndColor);
 
-      border-block-end-width: var(--#{$options-menu}__toggle--active--BorderBottomWidth);
+      border-block-end-width: var(--#{$options-menu}__toggle--active--BorderBlockEndWidth);
     }
   }
 
   &:focus {
     &::before {
-      --#{$options-menu}__toggle--BorderBottomColor: var(--#{$options-menu}__toggle--focus--BorderBottomColor);
+      --#{$options-menu}__toggle--BorderBlockEndColor: var(--#{$options-menu}__toggle--focus--BorderBlockEndColor);
 
-      border-block-end-width: var(--#{$options-menu}__toggle--focus--BorderBottomWidth);
+      border-block-end-width: var(--#{$options-menu}__toggle--focus--BorderBlockEndWidth);
     }
   }
 }
@@ -146,19 +146,19 @@
   align-items: center;
   min-width: var(--#{$options-menu}__toggle--MinWidth);
   max-width: 100%;
-  padding-block-start: var(--#{$options-menu}__toggle--PaddingTop);
-  padding-block-end: var(--#{$options-menu}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$options-menu}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$options-menu}__toggle--PaddingRight);
+  padding-block-start: var(--#{$options-menu}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$options-menu}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$options-menu}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$options-menu}__toggle--PaddingInlineEnd);
   color: var(--#{$options-menu}__toggle--Color);
   background-color: var(--#{$options-menu}__toggle--BackgroundColor);
   border: none;
 
   .#{$options-menu}.pf-m-expanded > & {
     &::before {
-      --#{$options-menu}__toggle--BorderBottomColor: var(--#{$options-menu}__toggle--expanded--BorderBottomColor);
+      --#{$options-menu}__toggle--BorderBlockEndColor: var(--#{$options-menu}__toggle--expanded--BorderBlockEndColor);
 
-      border-block-end-width: var(--#{$options-menu}__toggle--expanded--BorderBottomWidth);
+      border-block-end-width: var(--#{$options-menu}__toggle--expanded--BorderBlockEndWidth);
     }
   }
 
@@ -166,8 +166,8 @@
     --#{$options-menu}__toggle-icon--Color: var(--#{$options-menu}--m-plain__toggle-icon--Color);
 
     &:not(.pf-m-text) {
-      --#{$options-menu}__toggle--PaddingRight: var(--#{$options-menu}__toggle--m-plain--PaddingRight);
-      --#{$options-menu}__toggle--PaddingLeft: var(--#{$options-menu}__toggle--m-plain--PaddingLeft);
+      --#{$options-menu}__toggle--PaddingInlineEnd: var(--#{$options-menu}__toggle--m-plain--PaddingInlineEnd);
+      --#{$options-menu}__toggle--PaddingInlineStart: var(--#{$options-menu}__toggle--m-plain--PaddingInlineStart);
 
       display: inline-block;
       color: var(--#{$options-menu}__toggle--m-plain--Color);
@@ -208,10 +208,10 @@
 }
 
 .#{$options-menu}__toggle-button {
-  padding-block-start: var(--#{$options-menu}__toggle-button--PaddingTop);
-  padding-block-end: var(--#{$options-menu}__toggle-button--PaddingBottom);
-  padding-inline-start: var(--#{$options-menu}__toggle-button--PaddingLeft);
-  padding-inline-end: var(--#{$options-menu}__toggle-button--PaddingRight);
+  padding-block-start: var(--#{$options-menu}__toggle-button--PaddingBlockStart);
+  padding-block-end: var(--#{$options-menu}__toggle-button--PaddingBlockEnd);
+  padding-inline-start: var(--#{$options-menu}__toggle-button--PaddingInlineStart);
+  padding-inline-end: var(--#{$options-menu}__toggle-button--PaddingInlineEnd);
   background-color: var(--#{$options-menu}__toggle-button--BackgroundColor);
   border: 0;
 }
@@ -229,8 +229,8 @@
 }
 
 .#{$options-menu}__toggle-icon {
-  padding-inline-start: var(--#{$options-menu}__toggle-icon--PaddingLeft);
-  padding-inline-end: var(--#{$options-menu}__toggle-icon--PaddingRight);
+  padding-inline-start: var(--#{$options-menu}__toggle-icon--PaddingInlineStart);
+  padding-inline-end: var(--#{$options-menu}__toggle-icon--PaddingInlineEnd);
 
   .#{$options-menu}.pf-m-top.pf-m-expanded & {
     transform: rotate(var(--#{$options-menu}--m-top--m-expanded__toggle-icon--Rotate));
@@ -239,11 +239,11 @@
 
 .#{$options-menu}__menu {
   position: absolute;
- inset-block-start: var(--#{$options-menu}__menu--Top);
+ inset-block-start: var(--#{$options-menu}__menu--BlockStart);
   z-index: var(--#{$options-menu}__menu--ZIndex);
   min-width: 100%;
-  padding-block-start: var(--#{$options-menu}__menu--PaddingTop);
-  padding-block-end: var(--#{$options-menu}__menu--PaddingBottom);
+  padding-block-start: var(--#{$options-menu}__menu--PaddingBlockStart);
+  padding-block-end: var(--#{$options-menu}__menu--PaddingBlockEnd);
   background-color: var(--#{$options-menu}__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--#{$options-menu}__menu--BoxShadow);
@@ -253,7 +253,7 @@
   }
 
   .#{$options-menu}.pf-m-top & {
-    --#{$options-menu}__menu--Top: var(--#{$options-menu}--m-top__menu--Top);
+    --#{$options-menu}__menu--BlockStart: var(--#{$options-menu}--m-top__menu--BlockStart);
 
     transform: translateY(var(--#{$options-menu}--m-top__menu--TranslateY));
   }
@@ -275,10 +275,10 @@
   display: flex;
   align-items: baseline;
   width: 100%;
-  padding-block-start: var(--#{$options-menu}__menu-item--PaddingTop);
-  padding-block-end: var(--#{$options-menu}__menu-item--PaddingBottom);
-  padding-inline-start: var(--#{$options-menu}__menu-item--PaddingLeft);
-  padding-inline-end: var(--#{$options-menu}__menu-item--PaddingRight);
+  padding-block-start: var(--#{$options-menu}__menu-item--PaddingBlockStart);
+  padding-block-end: var(--#{$options-menu}__menu-item--PaddingBlockEnd);
+  padding-inline-start: var(--#{$options-menu}__menu-item--PaddingInlineStart);
+  padding-inline-end: var(--#{$options-menu}__menu-item--PaddingInlineEnd);
   font-size: var(--#{$options-menu}__menu-item--FontSize);
   color: var(--#{$options-menu}__menu-item--Color);
   white-space: nowrap;
@@ -302,7 +302,7 @@
 .#{$options-menu}__menu-item-icon {
   align-self: center;
   width: auto; // this allows the padding to apply when this class is used with an svg element
-  padding-inline-start: var(--#{$options-menu}__menu-item-icon--PaddingLeft);
+  padding-inline-start: var(--#{$options-menu}__menu-item-icon--PaddingInlineStart);
   margin-inline-start: auto;
   font-size: var(--#{$options-menu}__menu-item-icon--FontSize);
   color: var(--#{$options-menu}__menu-item-icon--Color);
@@ -310,15 +310,15 @@
 
 .#{$options-menu}__group {
   & + & {
-    padding-block-start: var(--#{$options-menu}__group--group--PaddingTop);
+    padding-block-start: var(--#{$options-menu}__group--group--PaddingBlockStart);
   }
 }
 
 .#{$options-menu}__group-title {
-  padding-block-start: var(--#{$options-menu}__group-title--PaddingTop);
-  padding-block-end: var(--#{$options-menu}__group-title--PaddingBottom);
-  padding-inline-start: var(--#{$options-menu}__group-title--PaddingLeft);
-  padding-inline-end: var(--#{$options-menu}__group-title--PaddingRight);
+  padding-block-start: var(--#{$options-menu}__group-title--PaddingBlockStart);
+  padding-block-end: var(--#{$options-menu}__group-title--PaddingBlockEnd);
+  padding-inline-start: var(--#{$options-menu}__group-title--PaddingInlineStart);
+  padding-inline-end: var(--#{$options-menu}__group-title--PaddingInlineEnd);
   font-size: var(--#{$options-menu}__group-title--FontSize);
   font-weight: var(--#{$options-menu}__group-title--FontWeight);
   color: var(--#{$options-menu}__group-title--Color);

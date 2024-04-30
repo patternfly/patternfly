@@ -10,21 +10,21 @@
   --#{$text-input-group}--m-hover--BorderColor: var(--pf-t--global--border--color--hover);
 
   // Main
-  --#{$text-input-group}__main--first-child--not--text-input--MarginLeft: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}__main--m-icon__text-input--PaddingLeft: var(--pf-t--global--spacer--xl);
+  --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: var(--pf-t--global--spacer--xl);
   --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
   --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // Chip group
-  --#{$text-input-group}--c-chip-group__main--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}--c-chip-group__main--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}--c-chip-group__main--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}--c-chip-group__main--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}--c-chip-group__main--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}--c-chip-group__main--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
 
   // Text input
-  --#{$text-input-group}__text-input--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$text-input-group}__text-input--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$text-input-group}__text-input--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$text-input-group}__text-input--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__text-input--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__text-input--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__text-input--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__text-input--MinWidth: 12ch;
   --#{$text-input-group}__text-input--m-hint--Color: var(--pf-t--global--text--color--placeholder);
   --#{$text-input-group}__text-input--placeholder--Color: var(--pf-t--global--text--color--placeholder);
@@ -32,14 +32,14 @@
   --#{$text-input-group}__text-input--OutlineOffset: -6px;
 
   // Icon
-  --#{$text-input-group}__icon--Left: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__icon--InlineStart: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$text-input-group}__icon--TranslateY: -50%;
 
   // Utilities
-  --#{$text-input-group}__utilities--child--MarginLeft: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}__utilities--c-button--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}__utilities--c-button--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__utilities--child--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__utilities--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__utilities--c-button--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 
   // input disabled style
   --#{$text-input-group}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);
@@ -95,17 +95,17 @@
   min-width: 0;
 
   &.pf-m-icon {
-    --#{$text-input-group}__text-input--PaddingLeft: var(--#{$text-input-group}__main--m-icon__text-input--PaddingLeft);
+    --#{$text-input-group}__text-input--PaddingInlineStart: var(--#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart);
   }
 
   > :first-child:not(.#{$text-input-group}__text) {
-    margin-inline-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginLeft);
+    margin-inline-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart);
   }
 
   .#{$chip-group}__main {
-    padding-block-start: var(--#{$text-input-group}--c-chip-group__main--PaddingTop);
-    padding-block-end: var(--#{$text-input-group}--c-chip-group__main--PaddingBottom);
-    padding-inline-end: var(--#{$text-input-group}--c-chip-group__main--PaddingRight);
+    padding-block-start: var(--#{$text-input-group}--c-chip-group__main--PaddingBlockStart);
+    padding-block-end: var(--#{$text-input-group}--c-chip-group__main--PaddingBlockEnd);
+    padding-inline-end: var(--#{$text-input-group}--c-chip-group__main--PaddingInlineEnd);
   }
 }
 
@@ -127,7 +127,7 @@
 .#{$text-input-group}__icon {
   position: absolute;
   inset-block-start: 50%;
-  inset-inline-start: var(--#{$text-input-group}__icon--Left);
+  inset-inline-start: var(--#{$text-input-group}__icon--InlineStart);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
 }
@@ -138,10 +138,10 @@
   position: relative;
   width: 100%;
   min-width: var(--#{$text-input-group}__text-input--MinWidth);
-  padding-block-start: var(--#{$text-input-group}__text-input--PaddingTop);
-  padding-block-end: var(--#{$text-input-group}__text-input--PaddingBottom);
-  padding-inline-start: var(--#{$text-input-group}__text-input--PaddingLeft);
-  padding-inline-end: var(--#{$text-input-group}__text-input--PaddingRight);
+  padding-block-start: var(--#{$text-input-group}__text-input--PaddingBlockStart);
+  padding-block-end: var(--#{$text-input-group}__text-input--PaddingBlockEnd);
+  padding-inline-start: var(--#{$text-input-group}__text-input--PaddingInlineStart);
+  padding-inline-end: var(--#{$text-input-group}__text-input--PaddingInlineEnd);
   background-color: var(--#{$text-input-group}__text-input--BackgroundColor);
   border: 0;
   outline-offset: var(--#{$text-input-group}__text-input--OutlineOffset);
@@ -164,11 +164,11 @@
 .#{$text-input-group}__utilities {
   display: flex;
   align-items: center;
-  margin-inline-start: var(--#{$text-input-group}__utilities--MarginLeft);
-  margin-inline-end: var(--#{$text-input-group}__utilities--MarginRight);
+  margin-inline-start: var(--#{$text-input-group}__utilities--MarginInlineStart);
+  margin-inline-end: var(--#{$text-input-group}__utilities--MarginInlineEnd);
 
   > * + * {
-    margin-inline-start: var(--#{$text-input-group}__utilities--child--MarginLeft);
+    margin-inline-start: var(--#{$text-input-group}__utilities--child--MarginInlineStart);
   }
 }
 

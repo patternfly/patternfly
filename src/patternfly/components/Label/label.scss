@@ -1,10 +1,10 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$label}) {
-  --#{$label}--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$label}--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$label}--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$label}--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$label}--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$label}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$label}--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$label}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--MaxWidth: 100%;
   --#{$label}--BorderWidth: 0;
   --#{$label}--BorderColor: transparent;
@@ -196,10 +196,10 @@
   --#{$label}--m-add--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
 
   // Compact
-  --#{$label}--m-compact--PaddingTop: 0;
-  --#{$label}--m-compact--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$label}--m-compact--PaddingBottom: 0;
-  --#{$label}--m-compact--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$label}--m-compact--PaddingBlockStart: 0;
+  --#{$label}--m-compact--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$label}--m-compact--PaddingBlockEnd: 0;
+  --#{$label}--m-compact--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$label}--m-compact--m-editable--TextDecorationOffset: #{pf-size-prem(1px)};
 
@@ -215,17 +215,17 @@
   --#{$label}__text--MaxWidth: 100%;
 
   // Actions
-  --#{$label}__actions--MarginRight: calc(var(--#{$label}__actions--c-button--PaddingRight) * -1);
+  --#{$label}__actions--MarginInlineEnd: calc(var(--#{$label}__actions--c-button--PaddingInlineEnd) * -1);
 
   // Actions button (close)
   --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label}__actions--c-button--OutlineOffset: #{pf-size-prem(-3px)};
-  --#{$label}__actions--c-button--MarginTop: calc(var(--#{$label}__actions--c-button--PaddingTop) * -1);
-  --#{$label}__actions--c-button--MarginBottom: calc(var(--#{$label}__actions--c-button--PaddingBottom) * -1);
-  --#{$label}__actions--c-button--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$label}__actions--c-button--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$label}__actions--c-button--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$label}__actions--c-button--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$label}__actions--c-button--MarginBlockStart: calc(var(--#{$label}__actions--c-button--PaddingBlockStart) * -1);
+  --#{$label}__actions--c-button--MarginBlockEnd: calc(var(--#{$label}__actions--c-button--PaddingBlockEnd) * -1);
+  --#{$label}__actions--c-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$label}__actions--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$label}__actions--c-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$label}__actions--c-button--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 
   // Editable
   --#{$label}--m-editable--TextDecoration: underline;
@@ -252,10 +252,10 @@
 .#{$label} {
   position: relative;
   max-width: var(--#{$label}--MaxWidth);
-  padding-block-start: var(--#{$label}--PaddingTop);
-  padding-block-end: var(--#{$label}--PaddingBottom);
-  padding-inline-start: var(--#{$label}--PaddingLeft);
-  padding-inline-end: var(--#{$label}--PaddingRight);
+  padding-block-start: var(--#{$label}--PaddingBlockStart);
+  padding-block-end: var(--#{$label}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$label}--PaddingInlineStart);
+  padding-inline-end: var(--#{$label}--PaddingInlineEnd);
   font-size: var(--#{$label}--FontSize);
   white-space: nowrap;
   background: transparent;
@@ -417,10 +417,10 @@
   }
 
   &.pf-m-compact {
-    --#{$label}--PaddingTop: var(--#{$label}--m-compact--PaddingTop);
-    --#{$label}--PaddingRight: var(--#{$label}--m-compact--PaddingRight);
-    --#{$label}--PaddingBottom: var(--#{$label}--m-compact--PaddingBottom);
-    --#{$label}--PaddingLeft: var(--#{$label}--m-compact--PaddingLeft);
+    --#{$label}--PaddingBlockStart: var(--#{$label}--m-compact--PaddingBlockStart);
+    --#{$label}--PaddingInlineEnd: var(--#{$label}--m-compact--PaddingInlineEnd);
+    --#{$label}--PaddingBlockEnd: var(--#{$label}--m-compact--PaddingBlockEnd);
+    --#{$label}--PaddingInlineStart: var(--#{$label}--m-compact--PaddingInlineStart);
     --#{$label}--FontSize: var(--#{$label}--m-compact--FontSize);
     --#{$label}--m-editable--TextDecorationOffset: var(--#{$label}--m-compact--m-editable--TextDecorationOffset);
   }
@@ -571,17 +571,17 @@
 }
 
 .#{$label}__actions {
-  margin-inline-end: var(--#{$label}__actions--MarginRight);
+  margin-inline-end: var(--#{$label}__actions--MarginInlineEnd);
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$label}__actions--c-button--FontSize);
-    --#{$button}--m-plain--m-no-padding--PaddingTop: var(--#{$label}__actions--c-button--PaddingTop);
-    --#{$button}--m-plain--m-no-padding--PaddingRight: var(--#{$label}__actions--c-button--PaddingRight);
-    --#{$button}--m-plain--m-no-padding--PaddingBottom: var(--#{$label}__actions--c-button--PaddingBottom);
-    --#{$button}--m-plain--m-no-padding--PaddingLeft: var(--#{$label}__actions--c-button--PaddingLeft);
+    --#{$button}--m-plain--m-no-padding--PaddingBlockStart: var(--#{$label}__actions--c-button--PaddingBlockStart);
+    --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: var(--#{$label}__actions--c-button--PaddingInlineEnd);
+    --#{$button}--m-plain--m-no-padding--PaddingBlockEnd: var(--#{$label}__actions--c-button--PaddingBlockEnd);
+    --#{$button}--m-plain--m-no-padding--PaddingInlineStart: var(--#{$label}__actions--c-button--PaddingInlineStart);
 
-    margin-block-start: var(--#{$label}__actions--c-button--MarginTop);
-    margin-block-end: var(--#{$label}__actions--c-button--MarginBottom);
+    margin-block-start: var(--#{$label}__actions--c-button--MarginBlockStart);
+    margin-block-end: var(--#{$label}__actions--c-button--MarginBlockEnd);
     outline-offset: var(--#{$label}__actions--c-button--OutlineOffset);
   }
 }

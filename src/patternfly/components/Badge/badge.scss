@@ -5,13 +5,13 @@
   --#{$badge}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$badge}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$badge}--FontWeight: var(--pf-t--global--font--weight--body--bold); // TODO - design calls for 500/semi-bold, do we need a token for that or is bold ok
-  --#{$badge}--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$badge}--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$badge}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$badge}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$badge}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
   --#{$badge}--MinWidth: var(--pf-t--global--spacer--xl);
 
   // Toggle icon
-  --#{$badge}__toggle-icon--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$badge}__toggle-icon--MarginInlineStart: var(--pf-t--global--spacer--xs);
   --#{$badge}__toggle-icon--Color: var(--pf-t--global--icon--color--nonstatus--on-gray--default);
 
   // Modifiers
@@ -26,8 +26,8 @@
 .#{$badge} {
   display: inline-block;
   min-width: var(--#{$badge}--MinWidth);
-  padding-inline-start: var(--#{$badge}--PaddingLeft);
-  padding-inline-end: var(--#{$badge}--PaddingRight);
+  padding-inline-start: var(--#{$badge}--PaddingInlineStart);
+  padding-inline-end: var(--#{$badge}--PaddingInlineEnd);
   font-size: var(--#{$badge}--FontSize);
   font-weight: var(--#{$badge}--FontWeight);
   color: var(--#{$badge}--Color);
@@ -50,6 +50,6 @@
 }
 
 .#{$badge}__toggle-icon {
-  margin-inline-start: var(--#{$badge}__toggle-icon--MarginLeft);
+  margin-inline-start: var(--#{$badge}__toggle-icon--MarginInlineStart);
   color: var(--#{$badge}__toggle-icon--Color);
 }

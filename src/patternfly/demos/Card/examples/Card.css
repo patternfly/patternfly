@@ -16,9 +16,9 @@
 }
 
 #ws-html-demos-c-card-status-card-expanded-with-popover .pf-v6-c-table {
-  --pf-v6-c-table__expandable-row--after--BorderLeftWidth: 0;
+  --pf-v6-c-table__expandable-row--after--BorderInlineStartWidth: 0;
   --pf-v6-c-table__expandable-row--after--BorderColor: transparent;
-  --pf-v6-c-table--m-compact--cell--first-last-child--PaddingLeft: var(--pf-v6-global--spacer--sm);
+  --pf-v6-c-table--m-compact--cell--first-last-child--PaddingInlineStart: var(--pf-v6-global--spacer--sm);
 }
 
 .ws-chart {

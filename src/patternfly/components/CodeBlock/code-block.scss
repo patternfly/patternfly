@@ -3,16 +3,16 @@
 :where(:root, .#{$code-block}) {
   --#{$code-block}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-block}--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$code-block}__header--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$code-block}__header--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$code-block}__header--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$code-block}__header--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$code-block}__header--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$code-block}__header--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$code-block}__content--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$code-block}__content--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$code-block}__content--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$code-block}__content--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$code-block}__header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$code-block}__header--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  --#{$code-block}__header--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$code-block}__header--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$code-block}__header--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$code-block}__header--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$code-block}__content--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$code-block}__content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$code-block}__content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$code-block}__content--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$code-block}__pre--FontFamily: var(--pf-t--global--font--family--mono);
   --#{$code-block}__pre--FontSize: var(--pf-t--global--font--size--xs);
 }
@@ -24,11 +24,11 @@
 
 .#{$code-block}__header {
   display: flex;
-  padding-block-start: var(--#{$code-block}__header--PaddingTop);
-  padding-block-end: var(--#{$code-block}__header--PaddingBottom);
-  padding-inline-start: var(--#{$code-block}__header--PaddingLeft);
-  padding-inline-end: var(--#{$code-block}__header--PaddingRight);
-  border-block-end: var(--#{$code-block}__header--BorderBottomWidth) solid var(--#{$code-block}__header--BorderBottomColor);
+  padding-block-start: var(--#{$code-block}__header--PaddingBlockStart);
+  padding-block-end: var(--#{$code-block}__header--PaddingBlockEnd);
+  padding-inline-start: var(--#{$code-block}__header--PaddingInlineStart);
+  padding-inline-end: var(--#{$code-block}__header--PaddingInlineEnd);
+  border-block-end: var(--#{$code-block}__header--BorderBlockEndWidth) solid var(--#{$code-block}__header--BorderBlockEndColor);
 }
 
 .#{$code-block}__actions {
@@ -37,10 +37,10 @@
 }
 
 .#{$code-block}__content {
-  padding-block-start: var(--#{$code-block}__content--PaddingTop);
-  padding-block-end: var(--#{$code-block}__content--PaddingBottom);
-  padding-inline-start: var(--#{$code-block}__content--PaddingLeft);
-  padding-inline-end: var(--#{$code-block}__content--PaddingRight);
+  padding-block-start: var(--#{$code-block}__content--PaddingBlockStart);
+  padding-block-end: var(--#{$code-block}__content--PaddingBlockEnd);
+  padding-inline-start: var(--#{$code-block}__content--PaddingInlineStart);
+  padding-inline-end: var(--#{$code-block}__content--PaddingInlineEnd);
 }
 
 .#{$code-block}__pre {

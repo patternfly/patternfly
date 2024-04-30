@@ -12,16 +12,16 @@
   --#{$alert}--BorderWidth: var(--pf-t--global--border--width--box--status--default);
   --#{$alert}--BorderColor: transparent;
   --#{$alert}--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$alert}--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$alert}--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$alert}--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$alert}--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$alert}--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$alert}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$alert}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$alert}--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$alert}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Toggle
-  --#{$alert}__toggle--MarginTop: calc(-1 * var(--pf-t--global--spacer--button--vertical--default) - #{pf-size-prem(1px)});
-  --#{$alert}__toggle--MarginBottom: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
-  --#{$alert}__toggle--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$alert}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--button--vertical--default) - #{pf-size-prem(1px)});
+  --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
+  --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
   --#{$alert}__toggle-icon--Rotate: 0;
@@ -29,8 +29,8 @@
 
   // Icon
   --#{$alert}__icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$alert}__icon--MarginTop: #{pf-size-prem(4px)};
-  --#{$alert}__icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$alert}__icon--MarginBlockStart: #{pf-size-prem(4px)};
+  --#{$alert}__icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 
   // Title
@@ -42,20 +42,20 @@
   --#{$alert}__title--max-lines: 1;
 
   // Action
-  --#{$alert}__action--MarginTop: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$alert}__action--MarginBottom: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$alert}__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$alert}__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$alert}__action--TranslateY: #{pf-size-prem(2px)};
-  --#{$alert}__action--MarginRight: calc(var(--pf-t--global--spacer--sm) * -1);
+  --#{$alert}__action--MarginInlineEnd: calc(var(--pf-t--global--spacer--sm) * -1);
 
   // Description
-  --#{$alert}__description--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$alert}__description--PaddingBlockStart: var(--pf-t--global--spacer--xs);
 
   // Action group
-  --#{$alert}__action-group--PaddingTop-base: var(--pf-t--global--spacer--xs);
-  --#{$alert}__action-group--PaddingTop: var(--#{$alert}__action-group--PaddingTop-base);
-  --#{$alert}__description--action-group--PaddingTop-base: var(--pf-t--global--spacer--sm);
-  --#{$alert}__description--action-group--PaddingTop: var(--#{$alert}__description--action-group--PaddingTop-base);
-  --#{$alert}__action-group__c-button--not-last-child--MarginRight: var(--pf-t--global--spacer--lg);
+  --#{$alert}__action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--xs);
+  --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__action-group--PaddingBlockStart-base);
+  --#{$alert}__description--action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--sm);
+  --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart-base);
+  --#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--lg);
 
   // Custom
   --#{$alert}--m-custom--BorderColor: var(--pf-t--global--border--color--status--custom--default);
@@ -89,10 +89,10 @@
   // Inline plain
   --#{$alert}--m-inline--m-plain--BorderWidth: 0;
   --#{$alert}--m-inline--m-plain--BackgroundColor: transparent;
-  --#{$alert}--m-inline--m-plain--PaddingTop: 0;
-  --#{$alert}--m-inline--m-plain--PaddingRight: 0;
-  --#{$alert}--m-inline--m-plain--PaddingBottom: 0;
-  --#{$alert}--m-inline--m-plain--PaddingLeft: 0;
+  --#{$alert}--m-inline--m-plain--PaddingBlockStart: 0;
+  --#{$alert}--m-inline--m-plain--PaddingInlineEnd: 0;
+  --#{$alert}--m-inline--m-plain--PaddingBlockEnd: 0;
+  --#{$alert}--m-inline--m-plain--PaddingInlineStart: 0;
 
   // Expandable
   --#{$alert}--m-expandable--GridTemplateColumns: auto max-content 1fr max-content;
@@ -100,11 +100,11 @@
     "toggle icon title action"
     ". . description description"
     ". . actiongroup actiongroup";
-  --#{$alert}--m-expandable__description--action-group--PaddingTop: var(--#{$alert}__action-group--PaddingTop-base);
+  --#{$alert}--m-expandable__description--action-group--PaddingBlockStart: var(--#{$alert}__action-group--PaddingBlockStart-base);
 
   // Expanded
   --#{$alert}--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$alert}--m-expanded__description--action-group--PaddingTop: var(--#{$alert}__description--action-group--PaddingTop-base);
+  --#{$alert}--m-expanded__description--action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart-base);
 }
 
 .#{$alert} {
@@ -112,10 +112,10 @@
   display: grid;
   grid-template-areas: var(--#{$alert}--GridTemplateAreas);
   grid-template-columns: var(--#{$alert}--GridTemplateColumns);
-  padding-block-start: var(--#{$alert}--PaddingTop);
-  padding-block-end: var(--#{$alert}--PaddingBottom);
-  padding-inline-start: var(--#{$alert}--PaddingLeft);
-  padding-inline-end: var(--#{$alert}--PaddingRight);
+  padding-block-start: var(--#{$alert}--PaddingBlockStart);
+  padding-block-end: var(--#{$alert}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$alert}--PaddingInlineStart);
+  padding-inline-end: var(--#{$alert}--PaddingInlineEnd);
   font-size: var(--#{$alert}--FontSize);
   background-color: var(--#{$alert}--BackgroundColor);
   border: var(--#{$alert}--BorderWidth) solid var(--#{$alert}--BorderColor);
@@ -160,28 +160,28 @@
   &.pf-m-plain {
     --#{$alert}--BorderWidth: var(--#{$alert}--m-inline--m-plain--BorderWidth);
     --#{$alert}--BackgroundColor: var(--#{$alert}--m-inline--m-plain--BackgroundColor);
-    --#{$alert}--PaddingTop: var(--#{$alert}--m-inline--m-plain--PaddingTop);
-    --#{$alert}--PaddingRight: var(--#{$alert}--m-inline--m-plain--PaddingRight);
-    --#{$alert}--PaddingBottom: var(--#{$alert}--m-inline--m-plain--PaddingBottom);
-    --#{$alert}--PaddingLeft: var(--#{$alert}--m-inline--m-plain--PaddingLeft);
+    --#{$alert}--PaddingBlockStart: var(--#{$alert}--m-inline--m-plain--PaddingBlockStart);
+    --#{$alert}--PaddingInlineEnd: var(--#{$alert}--m-inline--m-plain--PaddingInlineEnd);
+    --#{$alert}--PaddingBlockEnd: var(--#{$alert}--m-inline--m-plain--PaddingBlockEnd);
+    --#{$alert}--PaddingInlineStart: var(--#{$alert}--m-inline--m-plain--PaddingInlineStart);
   }
 
   &.pf-m-expandable {
     --#{$alert}--GridTemplateColumns: var(--#{$alert}--m-expandable--GridTemplateColumns);
     --#{$alert}--GridTemplateAreas: var(--#{$alert}--m-expandable--GridTemplateAreas);
-    --#{$alert}__description--action-group--PaddingTop: var(--#{$alert}--m-expandable__description--action-group--PaddingTop);
+    --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}--m-expandable__description--action-group--PaddingBlockStart);
   }
 
   &.pf-m-expanded {
     --#{$alert}__toggle-icon--Rotate: var(--#{$alert}--m-expanded__toggle-icon--Rotate);
-    --#{$alert}__description--action-group--PaddingTop: var(--#{$alert}--m-expanded__description--action-group--PaddingTop);
+    --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}--m-expanded__description--action-group--PaddingBlockStart);
   }
 }
 
 .#{$alert}__toggle {
-  margin-block-start: var(--#{$alert}__toggle--MarginTop);
-  margin-block-end: var(--#{$alert}__toggle--MarginBottom);
-  margin-inline-end: var(--#{$alert}__toggle--MarginRight);
+  margin-block-start: var(--#{$alert}__toggle--MarginBlockStart);
+  margin-block-end: var(--#{$alert}__toggle--MarginBlockEnd);
+  margin-inline-end: var(--#{$alert}__toggle--MarginInlineEnd);
 }
 
 .#{$alert}__toggle-icon {
@@ -195,8 +195,8 @@
 .#{$alert}__icon {
   display: flex;
   grid-area: icon;
-  margin-block-start: var(--#{$alert}__icon--MarginTop);
-  margin-inline-end: var(--#{$alert}__icon--MarginRight);
+  margin-block-start: var(--#{$alert}__icon--MarginBlockStart);
+  margin-inline-end: var(--#{$alert}__icon--MarginInlineEnd);
   font-size: var(--#{$alert}__icon--FontSize);
   color: var(--#{$alert}__icon--Color);
 }
@@ -217,19 +217,19 @@
 
 .#{$alert}__description {
   grid-area: description;
-  padding-block-start: var(--#{$alert}__description--PaddingTop);
+  padding-block-start: var(--#{$alert}__description--PaddingBlockStart);
   word-break: break-word;
 
   + .#{$alert}__action-group {
-    --#{$alert}__action-group--PaddingTop: var(--#{$alert}__description--action-group--PaddingTop);
+    --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart);
   }
 }
 
 .#{$alert}__action {
   grid-area: action;
-  margin-block-start: var(--#{$alert}__action--MarginTop);
-  margin-block-end: var(--#{$alert}__action--MarginBottom);
-  margin-inline-end: var(--#{$alert}__action--MarginRight);
+  margin-block-start: var(--#{$alert}__action--MarginBlockStart);
+  margin-block-end: var(--#{$alert}__action--MarginBlockEnd);
+  margin-inline-end: var(--#{$alert}__action--MarginInlineEnd);
   transform: translateY(var(--#{$alert}__action--TranslateY));
 
   > .#{$button} {
@@ -239,13 +239,13 @@
 
 .#{$alert}__action-group {
   grid-area: actiongroup;
-  padding-block-start: var(--#{$alert}__action-group--PaddingTop);
+  padding-block-start: var(--#{$alert}__action-group--PaddingBlockStart);
 
   > .#{$button} {
     --#{$button}--m-link--m-inline--hover--TextDecoration: none;
 
     &:not(:last-child) {
-      margin-inline-end: var(--#{$alert}__action-group__c-button--not-last-child--MarginRight);
+      margin-inline-end: var(--#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd);
     }
   }
 }

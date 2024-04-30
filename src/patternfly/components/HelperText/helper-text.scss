@@ -27,7 +27,7 @@
   --#{$helper-text}--m-dynamic--m-error__item-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
 
   // icon
-  --#{$helper-text}__item-icon--MarginRight: var(--pf-t--global--spacer--xs);
+  --#{$helper-text}__item-icon--MarginInlineEnd: var(--pf-t--global--spacer--xs);
 }
 .#{$helper-text} {
   // text
@@ -78,7 +78,7 @@
 }
 
 .#{$helper-text}__item-icon {
-  margin-inline-end: var(--#{$helper-text}__item-icon--MarginRight);
+  margin-inline-end: var(--#{$helper-text}__item-icon--MarginInlineEnd);
   color: var(--#{$helper-text}__item-icon--Color);
 }
 

@@ -2,7 +2,7 @@
 
 :where(:root, .#{$number-input}) {
   // unit
-  --#{$number-input}__unit--c-input-group--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$number-input}__unit--c-input-group--MarginInlineStart: var(--pf-t--global--spacer--sm);
 
   // icon
   --#{$number-input}__icon--FontSize: var(--pf-t--global--font--size--xs);
@@ -36,7 +36,7 @@
 
 .#{$input-group} + .#{$number-input}__unit,
 .#{$number-input}__unit + .#{$input-group} {
-  margin-inline-start: var(--#{$number-input}__unit--c-input-group--MarginLeft);
+  margin-inline-start: var(--#{$number-input}__unit--c-input-group--MarginInlineStart);
 }
 
 .#{$number-input}__icon {

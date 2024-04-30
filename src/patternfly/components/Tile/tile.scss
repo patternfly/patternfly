@@ -1,10 +1,10 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$tile}) {
-  --#{$tile}--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$tile}--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$tile}--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$tile}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$tile}--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$tile}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$tile}--BorderRadius: var(--pf-t--global--border--radius--medium);
 
@@ -15,7 +15,7 @@
   --#{$tile}--after--BackgroundColor: transparent;
 
   // icon
-  --#{$tile}__icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$tile}__icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$tile}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$tile}__icon--Color: var(--pf-t--global--icon--color--regular);
 
@@ -41,7 +41,7 @@
   --#{$tile}--m-disabled__body--Color: var(--pf-t--global--text--color--on-disabled);
 
   // Stacked variatiion
-  --#{$tile}__header--m-stacked__icon--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$tile}__header--m-stacked__icon--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$tile}__header--m-stacked__icon--FontSize: var(--pf-t--global--icon--size--xl);
 
   // large variation
@@ -52,10 +52,10 @@
   position: relative;
   display: inline-grid;
   grid-template-rows: min-content;
-  padding-block-start: var(--#{$tile}--PaddingTop);
-  padding-block-end: var(--#{$tile}--PaddingBottom);
-  padding-inline-start: var(--#{$tile}--PaddingLeft);
-  padding-inline-end: var(--#{$tile}--PaddingRight);
+  padding-block-start: var(--#{$tile}--PaddingBlockStart);
+  padding-block-end: var(--#{$tile}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$tile}--PaddingInlineStart);
+  padding-inline-end: var(--#{$tile}--PaddingInlineEnd);
   cursor: pointer;
   background-color: var(--#{$tile}--BackgroundColor);
   border-radius: var(--#{$tile}--BorderRadius);
@@ -104,7 +104,7 @@
   align-items: center;
 
   &.pf-m-stacked {
-    --#{$tile}__icon--MarginRight: 0;
+    --#{$tile}__icon--MarginInlineEnd: 0;
     --#{$tile}__icon--FontSize: var(--#{$tile}__header--m-stacked__icon--FontSize);
 
     flex-direction: column;
@@ -113,7 +113,7 @@
     .#{$tile}__icon {
       display: flex;
       align-items: center;
-      margin-block-end: var(--#{$tile}__header--m-stacked__icon--MarginBottom);
+      margin-block-end: var(--#{$tile}__header--m-stacked__icon--MarginBlockEnd);
     }
   }
 }
@@ -129,7 +129,7 @@
 }
 
 .#{$tile}__icon {
-  margin-inline-end: var(--#{$tile}__icon--MarginRight);
+  margin-inline-end: var(--#{$tile}__icon--MarginInlineEnd);
   font-size: var(--#{$tile}__icon--FontSize);
   color: var(--#{$tile}__icon--Color);
 }

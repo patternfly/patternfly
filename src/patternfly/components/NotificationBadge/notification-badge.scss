@@ -4,14 +4,14 @@
   --#{$notification-badge}--BackgroundColor: transparent;
   --#{$notification-badge}--MinWidth: 40px;
   --#{$notification-badge}--Gap: var(--pf-t--global--spacer--xs);
-  --#{$notification-badge}--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--MarginTop: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$notification-badge}--MarginRight: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$notification-badge}--MarginBottom: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$notification-badge}--MarginLeft: calc(-1 * var(--pf-t--global--spacer--sm));
+  --#{$notification-badge}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$notification-badge}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$notification-badge}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$notification-badge}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$notification-badge}--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--sm));
+  --#{$notification-badge}--MarginInlineEnd: calc(-1 * var(--pf-t--global--spacer--sm));
+  --#{$notification-badge}--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--sm));
+  --#{$notification-badge}--MarginInlineStart: calc(-1 * var(--pf-t--global--spacer--sm));
 
   // ::before border treatment
   --#{$notification-badge}--before--BorderColor: transparent;
@@ -45,14 +45,14 @@
   gap: var(--#{$notification-badge}--Gap);
   align-items: center;
   justify-content: center;
-  padding-block-start: var(--#{$notification-badge}--PaddingTop);
-  padding-block-end: var(--#{$notification-badge}--PaddingBottom);
-  padding-inline-start: var(--#{$notification-badge}--PaddingLeft);
-  padding-inline-end: var(--#{$notification-badge}--PaddingRight);
-  margin-block-start: var(--#{$notification-badge}--MarginTop);
-  margin-block-end: var(--#{$notification-badge}--MarginBottom);
-  margin-inline-start: var(--#{$notification-badge}--MarginLeft);
-  margin-inline-end: var(--#{$notification-badge}--MarginRight);
+  padding-block-start: var(--#{$notification-badge}--PaddingBlockStart);
+  padding-block-end: var(--#{$notification-badge}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$notification-badge}--PaddingInlineStart);
+  padding-inline-end: var(--#{$notification-badge}--PaddingInlineEnd);
+  margin-block-start: var(--#{$notification-badge}--MarginBlockStart);
+  margin-block-end: var(--#{$notification-badge}--MarginBlockEnd);
+  margin-inline-start: var(--#{$notification-badge}--MarginInlineStart);
+  margin-inline-end: var(--#{$notification-badge}--MarginInlineEnd);
   background-color: var(--#{$notification-badge}--BackgroundColor);
   border-radius: var(--#{$notification-badge}--BorderRadius);
 

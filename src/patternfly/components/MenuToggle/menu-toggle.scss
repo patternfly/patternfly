@@ -10,11 +10,11 @@
 
 :where(:root, .#{$menu-toggle}) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingTop) + var(--#{$menu-toggle}--PaddingBottom));
+  --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
   --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -55,25 +55,25 @@
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle button
-  --#{$menu-toggle}--m-button--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$menu-toggle}--m-button--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$menu-toggle}--m-button--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu-toggle}--m-button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$menu-toggle}--m-button--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle control
-  --#{$menu-toggle}--m-control--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--m-control--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-control--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-control--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--m-control--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle action
-  --#{$menu-toggle}--m-action--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$menu-toggle}--m-action--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$menu-toggle}--m-action--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$menu-toggle}--m-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$menu-toggle}--m-action--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // * Menu toggle primary
-  --#{$menu-toggle}--m-primary--PaddingLeft: var(--#{$menu-toggle}--m-button--PaddingLeft);
-  --#{$menu-toggle}--m-primary--PaddingRight: var(--#{$menu-toggle}--m-button--PaddingRight);
+  --#{$menu-toggle}--m-primary--PaddingInlineStart: var(--#{$menu-toggle}--m-button--PaddingInlineStart);
+  --#{$menu-toggle}--m-primary--PaddingInlineEnd: var(--#{$menu-toggle}--m-button--PaddingInlineEnd);
   --#{$menu-toggle}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$menu-toggle}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$menu-toggle}--m-primary--BorderRadius: var(--#{$menu-toggle}--m-button--BorderRadius);
@@ -93,8 +93,8 @@
 
 
   // * Menu toggle secondary
-  --#{$menu-toggle}--m-secondary--PaddingLeft: var(--#{$menu-toggle}--m-button--PaddingLeft);
-  --#{$menu-toggle}--m-secondary--PaddingRight: var(--#{$menu-toggle}--m-button--PaddingRight);
+  --#{$menu-toggle}--m-secondary--PaddingInlineStart: var(--#{$menu-toggle}--m-button--PaddingInlineStart);
+  --#{$menu-toggle}--m-secondary--PaddingInlineEnd: var(--#{$menu-toggle}--m-button--PaddingInlineEnd);
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderRadius: var(--#{$menu-toggle}--m-button--BorderRadius);
@@ -115,35 +115,35 @@
   --#{$menu-toggle}__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--sm));
 
   // Full height
-  --#{$menu-toggle}--m-full-height--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$menu-toggle}--m-full-height--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$menu-toggle}--m-full-height--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu-toggle}--m-full-height--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Split button, child
   --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // Split button, action
-  --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftWidth: var(--pf-t--global--border--width--button--default);
-  --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--pf-t--global--border--color--default);
+  --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartWidth: var(--pf-t--global--border--width--button--default);
+  --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
   --#{$menu-toggle}--m-split-button--m-action--child--BorderRadius: var(--#{$menu-toggle}--m-button--BorderRadius);
-  --#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderLeftColor: var(--pf-t--global--icon--color--on-disabled);
+  --#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderInlineStartColor: var(--pf-t--global--icon--color--on-disabled);
 
   // Split button action, primary
   --#{$menu-toggle}--m-split-button--m-action--m-primary--child--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$menu-toggle}--m-split-button--m-action--m-primary--child--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
   --#{$menu-toggle}--m-split-button--m-action--m-primary--child--active--BackgroundColor: var(--pf-t--global--color--brand--clicked);
-  --#{$menu-toggle}--m-split-button--m-action--m-primary--child--BorderLeftColor: var(--pf-t--global--border--color--default);
+  --#{$menu-toggle}--m-split-button--m-action--m-primary--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
   --#{$menu-toggle}--m-split-button--m-action--m-primary--expanded--child--BackgroundColor: var(--pf-t--global--color--brand--clicked);
 
   // Split button action, secondary
-  --#{$menu-toggle}--m-split-button--m-action--m-secondary--child--BorderLeftColor: var(--pf-t--global--color--brand--default);
+  --#{$menu-toggle}--m-split-button--m-action--m-secondary--child--BorderInlineStartColor: var(--pf-t--global--color--brand--default);
 
   // Split button, controls, check
   --#{$menu-toggle}__button--BackgroundColor: transparent;
   --#{$menu-toggle}__button--AlignSelf: baseline;
-  --#{$menu-toggle}__button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}__button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}__button--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingTop) + var(--#{$menu-toggle}--PaddingBottom));
+  --#{$menu-toggle}__button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}__button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}__button--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
 
   // Menu toggle plain
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
@@ -156,12 +156,12 @@
   --#{$menu-toggle}--m-plain--disabled--BackgroundColor: transparent; // picking icon color rather than text...?
 
   // Typeahead
-  --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
 
   // * Menu toggle small
-  --#{$menu-toggle}--m-small--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$menu-toggle}--m-small--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--m-small--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--m-small--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
 
   // Status icon
   --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
@@ -187,10 +187,10 @@
   justify-content: center;
   min-width: var(--#{$menu-toggle}--MinWidth);
   max-width: 100%;
-  padding-block-start: var(--#{$menu-toggle}--PaddingTop);
-  padding-block-end: var(--#{$menu-toggle}--PaddingBottom);
-  padding-inline-start: var(--#{$menu-toggle}--PaddingLeft);
-  padding-inline-end: var(--#{$menu-toggle}--PaddingRight);
+  padding-block-start: var(--#{$menu-toggle}--PaddingBlockStart);
+  padding-block-end: var(--#{$menu-toggle}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu-toggle}--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu-toggle}--PaddingInlineEnd);
   font-size: var(--#{$menu-toggle}--FontSize);
   line-height: var(--#{$menu-toggle}--LineHeight);
   color: var(--#{$menu-toggle}--Color);
@@ -217,8 +217,8 @@
 
   &.pf-m-primary {
     // TODO: abstract padding updates to control/button variant
-    --#{$menu-toggle}--PaddingLeft: var(--#{$menu-toggle}--m-primary--PaddingLeft);
-    --#{$menu-toggle}--PaddingRight: var(--#{$menu-toggle}--m-primary--PaddingRight);
+    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-primary--PaddingInlineStart);
+    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-primary--PaddingInlineEnd);
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-primary--Color);
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-primary--BackgroundColor);
     --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-primary--BorderRadius);
@@ -238,8 +238,8 @@
 
   &.pf-m-secondary {
     // TODO: abstract padding updates to control/button variant
-    --#{$menu-toggle}--PaddingLeft: var(--#{$menu-toggle}--m-secondary--PaddingLeft);
-    --#{$menu-toggle}--PaddingRight: var(--#{$menu-toggle}--m-secondary--PaddingRight);
+    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-secondary--PaddingInlineStart);
+    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-secondary--PaddingInlineEnd);
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-secondary--Color);
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-secondary--BorderColor);
     --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-secondary--BorderRadius);
@@ -256,9 +256,9 @@
   }
 
   &.pf-m-full-height {
-    --#{$menu-toggle}--PaddingRight: var(--#{$menu-toggle}--m-full-height--PaddingRight);
-    --#{$menu-toggle}--PaddingLeft: var(--#{$menu-toggle}--m-full-height--PaddingLeft);
-    --#{$menu-toggle}--BorderTopWidth: var(--#{$menu-toggle}--m-full-height__toggle--BorderTopWidth);
+    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-full-height--PaddingInlineEnd);
+    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-full-height--PaddingInlineStart);
+    --#{$menu-toggle}--BorderBlockStartWidth: var(--#{$menu-toggle}--m-full-height__toggle--BorderBlockStartWidth);
 
     align-items: center;
     height: 100%;
@@ -327,8 +327,8 @@
 
   // - Menu item small
   &.pf-m-small {
-    --#{$menu-toggle}--PaddingTop: var(--#{$menu-toggle}--m-small--PaddingTop);
-    --#{$menu-toggle}--PaddingBottom: var(--#{$menu-toggle}--m-small--PaddingBottom);
+    --#{$menu-toggle}--PaddingBlockStart: var(--#{$menu-toggle}--m-small--PaddingBlockStart);
+    --#{$menu-toggle}--PaddingBlockEnd: var(--#{$menu-toggle}--m-small--PaddingBlockEnd);
   }
 
   &:has(.#{$button}) {
@@ -359,10 +359,10 @@
 
   > * {
     position: relative;
-    padding-block-start: var(--#{$menu-toggle}--PaddingTop);
-    padding-block-end: var(--#{$menu-toggle}--PaddingBottom);
-    padding-inline-start: var(--#{$menu-toggle}--PaddingLeft);
-    padding-inline-end: var(--#{$menu-toggle}--PaddingRight);
+    padding-block-start: var(--#{$menu-toggle}--PaddingBlockStart);
+    padding-block-end: var(--#{$menu-toggle}--PaddingBlockEnd);
+    padding-inline-start: var(--#{$menu-toggle}--PaddingInlineStart);
+    padding-inline-end: var(--#{$menu-toggle}--PaddingInlineEnd);
   }
 
   > :first-child {
@@ -376,7 +376,7 @@
   }
 
   > .#{$check} {
-    --#{$menu-toggle}--PaddingRight: 0;
+    --#{$menu-toggle}--PaddingInlineEnd: 0;
     --#{$check}__label--Color: currentcolor;
     --#{$check}__label--disabled--Color: currentcolor;
 
@@ -397,11 +397,11 @@
 
 // - Menu toggle split button action
 .#{$menu-toggle}.pf-m-split-button.pf-m-action {
-  --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--#{$menu-toggle}--BorderColor);
+  --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--BorderColor);
 
   // all subsequent buttons
   > :not(:first-child) {
-    border-inline-start: var(--#{$menu-toggle}--m-split-button--m-action--child--BorderLeftWidth) solid var(--#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor);
+    border-inline-start: var(--#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartWidth) solid var(--#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor);
   }
 
   > :has(.#{$menu-toggle}__controls) {
@@ -410,7 +410,7 @@
 
   // Split button, primary
   &.pf-m-primary {
-    --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--#{$menu-toggle}--m-split-button--m-action--m-primary--child--BorderLeftColor);
+    --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--m-split-button--m-action--m-primary--child--BorderInlineStartColor);
 
     // stylelint-disable max-nesting-depth, selector-max-class, selector-not-notation
     // update to single :not() in breaking change
@@ -434,12 +434,12 @@
 
   // Split button, secondary
   &.pf-m-secondary {
-    --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--#{$menu-toggle}--m-split-button--m-action--m-secondary--child--BorderLeftColor);
+    --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--m-split-button--m-action--m-secondary--child--BorderInlineStartColor);
   }
 
   // disable accent border
   &:is(.pf-m-disabled, :disabled) {
-    --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderLeftColor);
+    --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderInlineStartColor);
 
     &::before {
       content: none;
@@ -448,7 +448,7 @@
 
   // disabled styles for children
   > :is(.pf-m-disabled, :disabled) {
-    --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: var(--#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderLeftColor);
+    --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderInlineStartColor);
 
     color: var(--#{$menu-toggle}--m-split-button--child--disabled--Color);
     background-color: var(--#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor);
@@ -464,19 +464,19 @@
   padding: 0;
 
   .#{$menu-toggle}__button {
-    --#{$menu-toggle}__button--PaddingRight: 0;
+    --#{$menu-toggle}__button--PaddingInlineEnd: 0;
   }
 
   .#{$menu-toggle}__controls {
-    --#{$menu-toggle}__button--PaddingRight: 0;
+    --#{$menu-toggle}__button--PaddingInlineEnd: 0;
 
     display: flex;
     align-items: stretch;
   }
 
   .#{$text-input-group} {
-    --#{$text-input-group}__utilities--c-button--PaddingRight: var(--#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight);
-    --#{$text-input-group}__utilities--MarginRight: 0;
+    --#{$text-input-group}__utilities--c-button--PaddingInlineEnd: var(--#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingInlineEnd);
+    --#{$text-input-group}__utilities--MarginInlineEnd: 0;
 
     flex: 1;
   }
@@ -486,8 +486,8 @@
 .#{$menu-toggle}__button {
   align-self: var(--#{$menu-toggle}__button--AlignSelf);
   min-width: var(--#{$menu-toggle}__button--MinWidth);
-  padding-inline-start: var(--#{$menu-toggle}__button--PaddingLeft);
-  padding-inline-end: var(--#{$menu-toggle}__button--PaddingRight);
+  padding-inline-start: var(--#{$menu-toggle}__button--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu-toggle}__button--PaddingInlineEnd);
   color: inherit;
   background-color: var(--#{$menu-toggle}__button--BackgroundColor);
   border: 0;

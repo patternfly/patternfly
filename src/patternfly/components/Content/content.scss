@@ -2,7 +2,7 @@
 
 :where(:root, .#{$content}) {
   // Body
-  --#{$content}--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$content}--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$content}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$content}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$content}--FontWeight: var(--pf-t--global--font--weight--body);
@@ -14,49 +14,49 @@
   --#{$content}--heading--FontFamily: var(--pf-t--global--font--family--heading);
 
   // h1
-  --#{$content}--h1--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h1--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$content}--h1--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--h1--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$content}--h1--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$content}--h1--FontSize: var(--pf-t--global--font--size--heading--h1);
   --#{$content}--h1--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h2
-  --#{$content}--h2--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h2--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$content}--h2--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--h2--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$content}--h2--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$content}--h2--FontSize: var(--pf-t--global--font--size--heading--h2);
   --#{$content}--h2--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h3
-  --#{$content}--h3--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h3--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$content}--h3--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--h3--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$content}--h3--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$content}--h3--FontSize: var(--pf-t--global--font--size--heading--h3);
   --#{$content}--h3--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h4
-  --#{$content}--h4--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h4--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$content}--h4--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--h4--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$content}--h4--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$content}--h4--FontSize: var(--pf-t--global--font--size--heading--h4);
   --#{$content}--h4--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h5
-  --#{$content}--h5--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h5--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$content}--h5--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--h5--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$content}--h5--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$content}--h5--FontSize: var(--pf-t--global--font--size--heading--h5);
   --#{$content}--h5--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h6
-  --#{$content}--h6--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h6--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$content}--h6--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--h6--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$content}--h6--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$content}--h6--FontSize: var(--pf-t--global--font--size--heading--h6);
   --#{$content}--h6--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // Small text
-  --#{$content}--small--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$content}--small--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$content}--small--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$content}--small--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$content}--small--Color: var(--pf-t--global--text--color--subtle);
@@ -69,30 +69,30 @@
   --#{$content}--a--visited--Color: var(--pf-t--global--text--color--link--visited);
 
   // Blockquote
-  --#{$content}--blockquote--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$content}--blockquote--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$content}--blockquote--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$content}--blockquote--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$content}--blockquote--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$content}--blockquote--Color: var(--pf-t--global--text--color--subtle);
-  --#{$content}--blockquote--BorderLeftColor: var(--pf-t--global--border--color--default);
-  --#{$content}--blockquote--BorderLeftWidth: var(--pf-t--global--border--width--300); // TODO semantic value?
+  --#{$content}--blockquote--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$content}--blockquote--BorderInlineStartWidth: var(--pf-t--global--border--width--300); // TODO semantic value?
 
   // Lists
-  --#{$content}--ol--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ol--MarginLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ol--nested--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$content}--ol--nested--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ul--MarginLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ul--nested--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--nested--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$content}--ol--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--ol--MarginInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--ol--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$content}--ol--nested--MarginInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$content}--ul--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--ul--MarginInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--ul--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$content}--ul--nested--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$content}--ul--ListStyle: var(--pf-t--global--list-style);
-  --#{$content}--li--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$content}--li--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--2xl);
   --#{$content}--dl--RowGap: var(--pf-t--global--spacer--md);
   --#{$content}--dt--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$content}--dt--MarginTop: var(--pf-t--global--spacer--md);
-  --#{$content}--dt--sm--MarginTop: 0;
+  --#{$content}--dt--MarginBlockStart: var(--pf-t--global--spacer--md);
+  --#{$content}--dt--sm--MarginBlockStart: 0;
 
   // hr
   --#{$content}--hr--Height: var(--pf-t--global--border--width--divider--default);
@@ -133,7 +133,7 @@
     .#{$content}--li + .#{$content}--li,
     & li + li
   ) {
-    margin-block-start: var(--#{$content}--li--MarginTop);
+    margin-block-start: var(--#{$content}--li--MarginBlockStart);
   }
 
   @at-root :is(
@@ -158,7 +158,7 @@
   ) {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-      margin-block-end: var(--#{$content}--MarginBottom);
+      margin-block-end: var(--#{$content}--MarginBlockEnd);
     }
   }
 
@@ -209,8 +209,8 @@
     .#{$content}--h1,
     & h1
   ) {
-    margin-block-start: var(--#{$content}--h1--MarginTop);
-    margin-block-end: var(--#{$content}--h1--MarginBottom);
+    margin-block-start: var(--#{$content}--h1--MarginBlockStart);
+    margin-block-end: var(--#{$content}--h1--MarginBlockEnd);
     font-size: var(--#{$content}--h1--FontSize);
     font-weight: var(--#{$content}--h1--FontWeight);
     line-height: var(--#{$content}--h1--LineHeight);
@@ -220,8 +220,8 @@
     .#{$content}--h2,
     & h2
   ) {
-    margin-block-start: var(--#{$content}--h2--MarginTop);
-    margin-block-end: var(--#{$content}--h2--MarginBottom);
+    margin-block-start: var(--#{$content}--h2--MarginBlockStart);
+    margin-block-end: var(--#{$content}--h2--MarginBlockEnd);
     font-size: var(--#{$content}--h2--FontSize);
     font-weight: var(--#{$content}--h2--FontWeight);
     line-height: var(--#{$content}--h2--LineHeight);
@@ -231,8 +231,8 @@
     .#{$content}--h3,
     & h3
   ) {
-    margin-block-start: var(--#{$content}--h3--MarginTop);
-    margin-block-end: var(--#{$content}--h3--MarginBottom);
+    margin-block-start: var(--#{$content}--h3--MarginBlockStart);
+    margin-block-end: var(--#{$content}--h3--MarginBlockEnd);
     font-size: var(--#{$content}--h3--FontSize);
     font-weight: var(--#{$content}--h3--FontWeight);
     line-height: var(--#{$content}--h3--LineHeight);
@@ -242,8 +242,8 @@
     .#{$content}--h4,
     & h4
   ) {
-    margin-block-start: var(--#{$content}--h4--MarginTop);
-    margin-block-end: var(--#{$content}--h4--MarginBottom);
+    margin-block-start: var(--#{$content}--h4--MarginBlockStart);
+    margin-block-end: var(--#{$content}--h4--MarginBlockEnd);
     font-size: var(--#{$content}--h4--FontSize);
     font-weight: var(--#{$content}--h4--FontWeight);
     line-height: var(--#{$content}--h4--LineHeight);
@@ -253,8 +253,8 @@
     .#{$content}--h5,
     & h5
   ) {
-    margin-block-start: var(--#{$content}--h5--MarginTop);
-    margin-block-end: var(--#{$content}--h5--MarginBottom);
+    margin-block-start: var(--#{$content}--h5--MarginBlockStart);
+    margin-block-end: var(--#{$content}--h5--MarginBlockEnd);
     font-size: var(--#{$content}--h5--FontSize);
     font-weight: var(--#{$content}--h5--FontWeight);
     line-height: var(--#{$content}--h5--LineHeight);
@@ -264,8 +264,8 @@
     .#{$content}--h6,
     & h6
   ) {
-    margin-block-start: var(--#{$content}--h6--MarginTop);
-    margin-block-end: var(--#{$content}--h6--MarginBottom);
+    margin-block-start: var(--#{$content}--h6--MarginBlockStart);
+    margin-block-end: var(--#{$content}--h6--MarginBlockEnd);
     font-size: var(--#{$content}--h6--FontSize);
     font-weight: var(--#{$content}--h6--FontWeight);
     line-height: var(--#{$content}--h6--LineHeight);
@@ -281,7 +281,7 @@
     color: var(--#{$content}--small--Color);
 
     &:not(:last-child) {
-      margin-block-end: var(--#{$content}--small--MarginBottom);
+      margin-block-end: var(--#{$content}--small--MarginBlockEnd);
     }
   }
 
@@ -289,12 +289,12 @@
     .#{$content}--blockquote,
     & blockquote
   ) {
-    padding-block-start: var(--#{$content}--blockquote--PaddingTop);
-    padding-block-end: var(--#{$content}--blockquote--PaddingBottom);
-    padding-inline-start: var(--#{$content}--blockquote--PaddingLeft);
-    padding-inline-end: var(--#{$content}--blockquote--PaddingRight);
+    padding-block-start: var(--#{$content}--blockquote--PaddingBlockStart);
+    padding-block-end: var(--#{$content}--blockquote--PaddingBlockEnd);
+    padding-inline-start: var(--#{$content}--blockquote--PaddingInlineStart);
+    padding-inline-end: var(--#{$content}--blockquote--PaddingInlineEnd);
     color: var(--#{$content}--blockquote--Color);
-    border-inline-start: var(--#{$content}--blockquote--BorderLeftWidth) solid var(--#{$content}--blockquote--BorderLeftColor);
+    border-inline-start: var(--#{$content}--blockquote--BorderInlineStartWidth) solid var(--#{$content}--blockquote--BorderInlineStartColor);
   }
 
   @at-root :is(
@@ -310,25 +310,25 @@
     .#{$content}--ol,
     & ol
   ) {
-    padding-inline-start: var(--#{$content}--ol--PaddingLeft);
-    margin-inline-start: var(--#{$content}--ol--MarginLeft);
+    padding-inline-start: var(--#{$content}--ol--PaddingInlineStart);
+    margin-inline-start: var(--#{$content}--ol--MarginInlineStart);
 
     :is(
       .#{$content}--ul,
       ul
     ) {
-      --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
+      --#{$content}--ul--MarginInlineStart: var(--#{$content}--ul--nested--MarginInlineStart);
 
-      margin-block-start: var(--#{$content}--ul--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ul--nested--MarginBlockStart);
     }
 
     :is(
       .#{$content}--ol,
       ol
     ) {
-      --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
+      --#{$content}--ol--MarginInlineStart: var(--#{$content}--ol--nested--MarginInlineStart);
 
-      margin-block-start: var(--#{$content}--ol--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ol--nested--MarginBlockStart);
     }
   }
 
@@ -336,26 +336,26 @@
     .#{$content}--ul,
     & ul
   ) {
-    padding-inline-start: var(--#{$content}--ul--PaddingLeft);
-    margin-inline-start: var(--#{$content}--ul--MarginLeft);
+    padding-inline-start: var(--#{$content}--ul--PaddingInlineStart);
+    margin-inline-start: var(--#{$content}--ul--MarginInlineStart);
     list-style: var(--#{$content}--ul--ListStyle);
 
     :is(
       .#{$content}--ul,
       ul
     ) {
-      --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
+      --#{$content}--ul--MarginInlineStart: var(--#{$content}--ul--nested--MarginInlineStart);
 
-      margin-block-start: var(--#{$content}--ul--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ul--nested--MarginBlockStart);
     }
 
     :is(
       .#{$content}--ol,
       ol
     ) {
-      --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
+      --#{$content}--ol--MarginInlineStart: var(--#{$content}--ol--nested--MarginInlineStart);
 
-      margin-block-start: var(--#{$content}--ol--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ol--nested--MarginBlockStart);
     }
   }
 
@@ -380,10 +380,10 @@
     font-weight: var(--#{$content}--dt--FontWeight);
 
     &:not(:first-child) {
-      margin-block-start: var(--#{$content}--dt--MarginTop);
+      margin-block-start: var(--#{$content}--dt--MarginBlockStart);
 
       @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-        --#{$content}--dt--MarginTop: var(--#{$content}--dt--sm--MarginTop);
+        --#{$content}--dt--MarginBlockStart: var(--#{$content}--dt--sm--MarginBlockStart);
       }
     }
 

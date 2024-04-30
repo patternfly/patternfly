@@ -2,10 +2,10 @@
 
 :where(:root, .#{$expandable-section}) {
   // Toggle
-  --#{$expandable-section}__toggle--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}__toggle--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$expandable-section}__toggle--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}__toggle--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$expandable-section}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__toggle--BackgroundColor: transparent;
   --#{$expandable-section}__toggle--ColumnGap: calc(var(--pf-t--global--spacer--xs) + var(--pf-t--global--spacer--sm));
 
@@ -24,10 +24,10 @@
   --#{$expandable-section}--m-expanded__toggle-text--Color: var(--pf-t--global--color--brand--hover);
 
   // Content
-  --#{$expandable-section}__content--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}__content--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}__content--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}__content--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__content--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__content--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}__content--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__content--MaxWidth: auto;
 
   // Limit Width
@@ -37,31 +37,31 @@
   --#{$expandable-section}--m-display-lg--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$expandable-section}--m-display-lg--BorderColor: var(--pf-t--global--border--color--default);
   --#{$expandable-section}--m-display-lg--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$expandable-section}--m-display-lg__toggle--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$expandable-section}--m-display-lg__toggle--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$expandable-section}--m-display-lg__toggle--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$expandable-section}--m-display-lg__toggle--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$expandable-section}--m-display-lg__toggle--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$expandable-section}--m-display-lg__toggle--Width: 100%;
   --#{$expandable-section}--m-display-lg__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--secondary--hover);
   --#{$expandable-section}--m-display-lg__toggle--active--BackgroundColor: var(--pf-t--global--background--color--secondary--hover);
   --#{$expandable-section}--m-display-lg__toggle--focus--BackgroundColor: var(--pf-t--global--background--color--secondary--hover);
-  --#{$expandable-section}--m-display-lg__content--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$expandable-section}--m-display-lg__content--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$expandable-section}--m-display-lg__content--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$expandable-section}--m-display-lg__content--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$expandable-section}--m-display-lg__content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$expandable-section}--m-display-lg__content--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$expandable-section}--m-expanded--m-display-lg__toggle--BorderRadius: var(--pf-t--global--border--radius--medium) var(--pf-t--global--border--radius--medium) 0 0;
 
   // Indented
-  --#{$expandable-section}--m-indented__content--PaddingLeft--base: calc(var(--#{$expandable-section}__toggle--ColumnGap) + var(--#{$expandable-section}__toggle-icon--MinWidth));
-  --#{$expandable-section}--m-indented__content--PaddingLeft: calc(var(--#{$expandable-section}--m-indented__content--PaddingLeft--base) + var(--#{$expandable-section}__toggle--PaddingLeft));
-  --#{$expandable-section}--m-display-lg--m-indented__content--PaddingLeft: calc(var(--#{$expandable-section}--m-indented__content--PaddingLeft--base) + var(--#{$expandable-section}--m-display-lg__content--PaddingLeft));
+  --#{$expandable-section}--m-indented__content--PaddingInlineStart--base: calc(var(--#{$expandable-section}__toggle--ColumnGap) + var(--#{$expandable-section}__toggle-icon--MinWidth));
+  --#{$expandable-section}--m-indented__content--PaddingInlineStart: calc(var(--#{$expandable-section}--m-indented__content--PaddingInlineStart--base) + var(--#{$expandable-section}__toggle--PaddingInlineStart));
+  --#{$expandable-section}--m-display-lg--m-indented__content--PaddingInlineStart: calc(var(--#{$expandable-section}--m-indented__content--PaddingInlineStart--base) + var(--#{$expandable-section}--m-display-lg__content--PaddingInlineStart));
 
   // Truncate
-  --#{$expandable-section}--m-truncate--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}--m-truncate--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$expandable-section}--m-truncate--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$expandable-section}--m-truncate--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$expandable-section}--m-truncate__toggle--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}--m-truncate--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}--m-truncate--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$expandable-section}--m-truncate--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$expandable-section}--m-truncate--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$expandable-section}--m-truncate__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}--m-truncate__content--LineClamp: 3;
 }
 
@@ -79,19 +79,19 @@
   }
 
   &.pf-m-display-lg {
-    --#{$expandable-section}__toggle--PaddingTop: var(--#{$expandable-section}--m-display-lg__toggle--PaddingTop);
-    --#{$expandable-section}__toggle--PaddingRight: var(--#{$expandable-section}--m-display-lg__toggle--PaddingRight);
-    --#{$expandable-section}__toggle--PaddingBottom: var(--#{$expandable-section}--m-display-lg__toggle--PaddingBottom);
-    --#{$expandable-section}__toggle--PaddingLeft: var(--#{$expandable-section}--m-display-lg__toggle--PaddingLeft);
+    --#{$expandable-section}__toggle--PaddingBlockStart: var(--#{$expandable-section}--m-display-lg__toggle--PaddingBlockStart);
+    --#{$expandable-section}__toggle--PaddingInlineEnd: var(--#{$expandable-section}--m-display-lg__toggle--PaddingInlineEnd);
+    --#{$expandable-section}__toggle--PaddingBlockEnd: var(--#{$expandable-section}--m-display-lg__toggle--PaddingBlockEnd);
+    --#{$expandable-section}__toggle--PaddingInlineStart: var(--#{$expandable-section}--m-display-lg__toggle--PaddingInlineStart);
     --#{$expandable-section}__toggle--hover--BackgroundColor: var(--#{$expandable-section}--m-display-lg__toggle--hover--BackgroundColor);
     --#{$expandable-section}__toggle--active--BackgroundColor: var(--#{$expandable-section}--m-display-lg__toggle--active--BackgroundColor);
     --#{$expandable-section}__toggle--focus--BackgroundColor: var(--#{$expandable-section}--m-display-lg__toggle--focus--BackgroundColor);
     --#{$expandable-section}__toggle--BorderRadius: var(--#{$expandable-section}--m-display-lg__toggle--BorderRadius);
     --#{$expandable-section}__toggle--Width: var(--#{$expandable-section}--m-display-lg__toggle--Width);
-    --#{$expandable-section}__content--PaddingRight: var(--#{$expandable-section}--m-display-lg__content--PaddingRight);
-    --#{$expandable-section}__content--PaddingBottom: var(--#{$expandable-section}--m-display-lg__content--PaddingBottom);
-    --#{$expandable-section}__content--PaddingLeft: var(--#{$expandable-section}--m-display-lg__content--PaddingLeft);
-    --#{$expandable-section}--m-indented__content--PaddingLeft: var(--#{$expandable-section}--m-display-lg--m-indented__content--PaddingLeft);
+    --#{$expandable-section}__content--PaddingInlineEnd: var(--#{$expandable-section}--m-display-lg__content--PaddingInlineEnd);
+    --#{$expandable-section}__content--PaddingBlockEnd: var(--#{$expandable-section}--m-display-lg__content--PaddingBlockEnd);
+    --#{$expandable-section}__content--PaddingInlineStart: var(--#{$expandable-section}--m-display-lg__content--PaddingInlineStart);
+    --#{$expandable-section}--m-indented__content--PaddingInlineStart: var(--#{$expandable-section}--m-display-lg--m-indented__content--PaddingInlineStart);
 
     background-color: var(--#{$expandable-section}--m-display-lg--BackgroundColor);
     border: solid 1px var(--#{$expandable-section}--m-display-lg--BorderColor);
@@ -99,18 +99,18 @@
   }
 
   &.pf-m-indented {
-    --#{$expandable-section}__content--PaddingLeft: var(--#{$expandable-section}--m-indented__content--PaddingLeft);
+    --#{$expandable-section}__content--PaddingInlineStart: var(--#{$expandable-section}--m-indented__content--PaddingInlineStart);
   }
 
   &.pf-m-truncate {
-    --#{$expandable-section}__toggle--PaddingTop: 0;
-    --#{$expandable-section}__toggle--PaddingRight: 0;
-    --#{$expandable-section}__toggle--PaddingBottom: var(--#{$expandable-section}--m-truncate__toggle--PaddingBottom);
-    --#{$expandable-section}__toggle--PaddingLeft: 0;
-    --#{$expandable-section}__content--PaddingTop: 0;
-    --#{$expandable-section}__content--PaddingRight: 0;
-    --#{$expandable-section}__content--PaddingBottom: 0;
-    --#{$expandable-section}__content--PaddingLeft: 0;
+    --#{$expandable-section}__toggle--PaddingBlockStart: 0;
+    --#{$expandable-section}__toggle--PaddingInlineEnd: 0;
+    --#{$expandable-section}__toggle--PaddingBlockEnd: var(--#{$expandable-section}--m-truncate__toggle--PaddingBlockEnd);
+    --#{$expandable-section}__toggle--PaddingInlineStart: 0;
+    --#{$expandable-section}__content--PaddingBlockStart: 0;
+    --#{$expandable-section}__content--PaddingInlineEnd: 0;
+    --#{$expandable-section}__content--PaddingBlockEnd: 0;
+    --#{$expandable-section}__content--PaddingInlineStart: 0;
 
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
@@ -127,10 +127,10 @@
   display: flex;
   column-gap: var(--#{$expandable-section}__toggle--ColumnGap);
   width: var(--#{$expandable-section}__toggle--Width, initial);
-  padding-block-start: var(--#{$expandable-section}__toggle--PaddingTop);
-  padding-block-end: var(--#{$expandable-section}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$expandable-section}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$expandable-section}__toggle--PaddingRight);
+  padding-block-start: var(--#{$expandable-section}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$expandable-section}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$expandable-section}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$expandable-section}__toggle--PaddingInlineEnd);
   background-color: var(--#{$expandable-section}__toggle--BackgroundColor);
   border: none;
   border-radius: var(--#{$expandable-section}__toggle--BorderRadius, 0);
@@ -160,8 +160,8 @@
 
 .#{$expandable-section}__content {
   max-width: var(--#{$expandable-section}__content--MaxWidth);
-  padding-block-start: var(--#{$expandable-section}__content--PaddingTop);
-  padding-block-end: var(--#{$expandable-section}__content--PaddingBottom);
-  padding-inline-start: var(--#{$expandable-section}__content--PaddingLeft);
-  padding-inline-end: var(--#{$expandable-section}__content--PaddingRight);
+  padding-block-start: var(--#{$expandable-section}__content--PaddingBlockStart);
+  padding-block-end: var(--#{$expandable-section}__content--PaddingBlockEnd);
+  padding-inline-start: var(--#{$expandable-section}__content--PaddingInlineStart);
+  padding-inline-end: var(--#{$expandable-section}__content--PaddingInlineEnd);
 }

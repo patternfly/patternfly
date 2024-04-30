@@ -2,10 +2,10 @@
 
 :where(:root, .#{$simple-list}) {
   // Simple list item link
-  --#{$simple-list}__item-link--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$simple-list}__item-link--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$simple-list}__item-link--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$simple-list}__item-link--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$simple-list}__item-link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$simple-list}__item-link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$simple-list}__item-link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$simple-list}__item-link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$simple-list}__item-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$simple-list}__item-link--Color: var(--pf-t--global--text--color--subtle);
   --#{$simple-list}__item-link--FontSize: var(--pf-t--global--font--size--body--default);
@@ -21,25 +21,25 @@
   --#{$simple-list}__item-link--m-link--hover--Color: var(--pf-t--global--text--color--link--hover);
 
   // Simple list title
-  --#{$simple-list}__title--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$simple-list}__title--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$simple-list}__title--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$simple-list}__title--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$simple-list}__title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$simple-list}__title--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$simple-list}__title--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$simple-list}__title--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$simple-list}__title--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$simple-list}__title--Color: var(--pf-t--global--text--color--regular);
   --#{$simple-list}__title--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Simple list section
-  --#{$simple-list}__section--section--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$simple-list}__section--section--MarginBlockStart: var(--pf-t--global--spacer--sm);
 }
 
 .#{$simple-list}__item-link {
   display: block;
   width: 100%;
-  padding-block-start: var(--#{$simple-list}__item-link--PaddingTop);
-  padding-block-end: var(--#{$simple-list}__item-link--PaddingBottom);
-  padding-inline-start: var(--#{$simple-list}__item-link--PaddingLeft);
-  padding-inline-end: var(--#{$simple-list}__item-link--PaddingRight);
+  padding-block-start: var(--#{$simple-list}__item-link--PaddingBlockStart);
+  padding-block-end: var(--#{$simple-list}__item-link--PaddingBlockEnd);
+  padding-inline-start: var(--#{$simple-list}__item-link--PaddingInlineStart);
+  padding-inline-end: var(--#{$simple-list}__item-link--PaddingInlineEnd);
   font-size: var(--#{$simple-list}__item-link--FontSize);
   color: var(--#{$simple-list}__item-link--Color);
   text-align: start;
@@ -69,15 +69,15 @@
 }
 
 .#{$simple-list}__title {
-  padding-block-start: var(--#{$simple-list}__title--PaddingTop);
-  padding-block-end: var(--#{$simple-list}__title--PaddingBottom);
-  padding-inline-start: var(--#{$simple-list}__title--PaddingLeft);
-  padding-inline-end: var(--#{$simple-list}__title--PaddingRight);
+  padding-block-start: var(--#{$simple-list}__title--PaddingBlockStart);
+  padding-block-end: var(--#{$simple-list}__title--PaddingBlockEnd);
+  padding-inline-start: var(--#{$simple-list}__title--PaddingInlineStart);
+  padding-inline-end: var(--#{$simple-list}__title--PaddingInlineEnd);
   font-size: var(--#{$simple-list}__title--FontSize);
   font-weight: var(--#{$simple-list}__title--FontWeight);
   color: var(--#{$simple-list}__title--Color);
 }
 
 .#{$simple-list}__section + .#{$simple-list}__section {
-  margin-block-start: var(--#{$simple-list}__section--section--MarginTop);
+  margin-block-start: var(--#{$simple-list}__section--section--MarginBlockStart);
 }

@@ -1,20 +1,20 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$date-picker}) {
-  --#{$date-picker}--m-top__calendar--Top: 0;
+  --#{$date-picker}--m-top__calendar--BlockStart: 0;
   --#{$date-picker}--m-top__calendar--TranslateY: calc(-100% - var(--pf-t--global--spacer--xs));
-  --#{$date-picker}__helper-text--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$date-picker}__helper-text--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$date-picker}__input--c-form-control--Width: calc(var(--#{$date-picker}__input--c-form-control--width-chars) * 1ch + var(--#{$date-picker}__input--c-form-control--width-base));
   --#{$date-picker}__input--c-form-control--width-base: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm)); // form control left/right padding + status icon width and spacer
   --#{$date-picker}__input--c-form-control--width-chars: 11;
   --#{$date-picker}__calendar--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$date-picker}__calendar--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$date-picker}__calendar--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$date-picker}__calendar--Top: calc(100% + var(--pf-t--global--spacer--xs));
-  --#{$date-picker}__calendar--Right: auto;
-  --#{$date-picker}__calendar--Left: 0;
-  --#{$date-picker}__calendar--m-align-right--Right: 0;
-  --#{$date-picker}__calendar--m-align-right--Left: auto;
+  --#{$date-picker}__calendar--BlockStart: calc(100% + var(--pf-t--global--spacer--xs));
+  --#{$date-picker}__calendar--InlineEnd: auto;
+  --#{$date-picker}__calendar--InlineStart: 0;
+  --#{$date-picker}__calendar--m-align-right--InlineEnd: 0;
+  --#{$date-picker}__calendar--m-align-right--InlineStart: auto;
 }
 
 .#{$date-picker} {
@@ -23,7 +23,7 @@
 }
 
 .#{$date-picker}__helper-text {
-  margin-block-start: var(--#{$date-picker}__helper-text--MarginTop);
+  margin-block-start: var(--#{$date-picker}__helper-text--MarginBlockStart);
 }
 
 .#{$date-picker}__input {
@@ -34,20 +34,20 @@
 
 .#{$date-picker}__calendar {
   position: absolute;
-  inset-block-start: var(--#{$date-picker}__calendar--Top);
-  inset-inline-start: var(--#{$date-picker}__calendar--Left);
-  inset-inline-end: var(--#{$date-picker}__calendar--Right);
+  inset-block-start: var(--#{$date-picker}__calendar--BlockStart);
+  inset-inline-start: var(--#{$date-picker}__calendar--InlineStart);
+  inset-inline-end: var(--#{$date-picker}__calendar--InlineEnd);
   z-index: var(--#{$date-picker}__calendar--ZIndex);
   background-color: var(--#{$date-picker}__calendar--BackgroundColor);
   box-shadow: var(--#{$date-picker}__calendar--BoxShadow);
 
   &.pf-m-align-right {
-    --#{$date-picker}__calendar--Right: var(--#{$date-picker}__calendar--m-align-right--Right);
-    --#{$date-picker}__calendar--Left: var(--#{$date-picker}__calendar--m-align-right--Left);
+    --#{$date-picker}__calendar--InlineEnd: var(--#{$date-picker}__calendar--m-align-right--InlineEnd);
+    --#{$date-picker}__calendar--InlineStart: var(--#{$date-picker}__calendar--m-align-right--InlineStart);
   }
 
   .#{$date-picker}.pf-m-top & {
-    --#{$date-picker}__calendar--Top: var(--#{$date-picker}--m-top__calendar--Top);
+    --#{$date-picker}__calendar--BlockStart: var(--#{$date-picker}--m-top__calendar--BlockStart);
 
     transform: translateY(var(--#{$date-picker}--m-top__calendar--TranslateY));
   }
