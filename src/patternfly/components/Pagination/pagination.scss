@@ -17,9 +17,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--child--md--MarginRight: var(--#{$pf-global}--spacer--lg);
   --#{$pagination}--m-compact--child--MarginRight: var(--#{$pf-global}--spacer--sm);
 
-  // dropdown
-  --#{$pagination}--c-menu-toggle--FontSize: var(--#{$pf-global}--FontSize--sm);
-
   // nav
   --#{$pagination}__nav--Display: none;
   --#{$pagination}--m-display-summary__nav--Display: none;
@@ -75,10 +72,14 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
 
-  // options menu
+  // per page menu
+  --#{$pagination}--c-menu-toggle--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$pagination}--c-menu-toggle--Display--base: inline-flex;
   --#{$pagination}--c-menu-toggle--Display: none;
+  --#{$pagination}--c-menu-toggle--md--Display: var(--#{$pagination}--c-menu-toggle--Display--base);
   --#{$pagination}--m-display-summary--c-menu-toggle--Display: none;
-  --#{$pagination}--m-display-full--c-menu-toggle--Display: inline-flex;
+  --#{$pagination}--m-display-full--c-menu-toggle--Display: var(--#{$pagination}--c-menu-toggle--Display--base);
+  --#{$pagination}--m-bottom--c-menu-toggle--Display: var(--#{$pagination}--c-menu-toggle--Display--base);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--md) {
     --#{$pagination}--m-bottom__nav-control--c-button--PaddingTop: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingTop);
@@ -88,7 +89,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom--child--MarginRight: var(--#{$pagination}--m-bottom--child--md--MarginRight);
     --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --#{$pagination}--m-bottom--BoxShadow: none;
-    --#{$pagination}--c-menu-toggle--Display: inline-flex;
+    --#{$pagination}--c-menu-toggle--Display: var(--#{$pagination}--c-menu-toggle--md--Display);
     --#{$pagination}__nav--Display: inline-flex;
     --#{$pagination}__total-items--Display: none;
   }
@@ -135,7 +136,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     }
 
     position: sticky;
-   inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
+    inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
     justify-content: center;
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
@@ -156,7 +157,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
     .#{$menu-toggle} {
       position: absolute;
-      display: block;
+      display: var(--#{$pagination}--m-bottom--c-menu-toggle--Display);
     }
 
     .#{$pagination}__nav {
