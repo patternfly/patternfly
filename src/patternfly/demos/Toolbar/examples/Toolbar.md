@@ -23,7 +23,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -121,7 +121,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -177,7 +177,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -200,7 +200,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -294,7 +294,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -373,7 +373,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
-            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -495,7 +495,7 @@ import './Toolbar.css'
           {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
             {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
               {{#> pagination pagination--IsCompact=true}}
-                {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
+                {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
                 {{> pagination-nav-content}}
               {{/pagination}}
             {{/pagination}}
@@ -507,7 +507,7 @@ import './Toolbar.css'
     <div>
       {{> table-simple-table page--id="toolbar-and-table-static-search-overflow-menu-collapsed"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}
-        {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-bottom-collapsed-example" pagination-options-menu--modifier="pf-m-top"}}
+        {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-collapsed-example" pagination-menu-toggle--modifier="pf-m-top"}}
         {{> pagination-nav-content}}
       {{/pagination}}
     </div>
