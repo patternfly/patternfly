@@ -11,60 +11,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--xl--inset: var(--pf-t--global--spacer--xl);
 
   // Header
-  --#{$page}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__header--ZIndex: var(--pf-t--global--z-index--md);
-  --#{$page}__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
-
-  // Header brand
-  --#{$page}__header-brand--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$page}__header-brand--xl--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
-  --#{$page}__header-brand--xl--PaddingInlineStart: var(--pf-t--global--spacer--xl);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__header-brand--PaddingInlineStart: var(--#{$page}__header-brand--xl--PaddingInlineStart);
     --#{$page}--inset: var(--#{$page}--xl--inset);
   }
 
-  // Toggle
-  --#{$page}__header-sidebar-toggle__c-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--MarginInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$page}__header-sidebar-toggle__c-button--MarginInlineStart: calc(var(--#{$page}__header-sidebar-toggle__c-button--PaddingInlineStart) * -1);
-  --#{$page}__header-sidebar-toggle__c-button--FontSize: var(--pf-t--global--icon--size--lg);
-
-  // Header brand link
-  --#{$page}__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
-
-  // Header nav
-  --#{$page}__header-nav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__header-nav--xl--BackgroundColor: transparent;
-  --#{$page}__header-nav--xl--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
-  --#{$page}__header-nav--xl--PaddingInlineStart: var(--pf-t--global--spacer--xl);
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__header-nav--BackgroundColor: var(--#{$page}__header-nav--xl--BackgroundColor);
-    --#{$page}__header-nav--PaddingInlineEnd: var(--#{$page}__header-nav--xl--PaddingInlineEnd);
-    --#{$page}__header-nav--PaddingInlineStart: var(--#{$page}__header-nav--xl--PaddingInlineStart);
-  }
-
-  // Header tools
-  --#{$page}__header-tools--MarginInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$page}__header-tools--xl--MarginInlineEnd: var(--pf-t--global--spacer--lg);
-  --#{$page}__header-tools--c-avatar--MarginInlineStart: var(--pf-t--global--spacer--md);
-  --#{$page}__header-tools-group--MarginInlineStart: var(--pf-t--global--spacer--xl);
-  --#{$page}__header-tools-group--Display: flex;
-  --#{$page}__header-tools-item--Display: block;
-
-  // Header tools group button
-  --#{$page}__header-tools--c-button--m-selected--before--Width: auto;
-  --#{$page}__header-tools--c-button--m-selected--before--Height: auto;
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__header-tools--MarginInlineEnd: var(--#{$page}__header-tools--xl--MarginInlineEnd);
-  }
-
+ 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
@@ -199,117 +152,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 // Header
-.#{$page}__header,
 .#{$page} > .#{$masthead} {
   z-index: var(--#{$page}__header--ZIndex);
   grid-area: header;
-}
-
-.#{$page}__header {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  min-width: 0;
-  min-height: var(--#{$page}__header--MinHeight);
-  background-color: var(--#{$page}__header--BackgroundColor);
-
-  > * {
-    display: flex;
-    align-items: center;
-  }
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    grid-template-columns: auto 1fr auto;
-  }
-
-  .#{$masthead} {
-    grid-column: span 2;
-    align-self: stretch;
-  }
-}
-
-// Brand
-.#{$page}__header-brand {
-  grid-column: 1 / 2;
-  padding-inline-start: var(--#{$page}__header-brand--PaddingInlineStart);
-
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    padding-inline-end: var(--#{$page}__header-brand--xl--PaddingInlineEnd); // set padding right here to allow mobile view to accomodate tools
-  }
-}
-
-// Link
-.#{$page}__header-brand-link {
-  display: flex;
-  flex: 1;
-  align-items: center;
-
-  .#{$brand} {
-    max-height: var(--#{$page}__header-brand-link--c-brand--MaxHeight); // Hardcode brand image max-height so it always aligns with everthing else.
-  }
-}
-
-// Sidebar toggle
-.#{$page}__header-brand-toggle {
-  .#{$button} {
-    padding-block-start: var(--#{$page}__header-sidebar-toggle__c-button--PaddingBlockStart);
-    padding-block-end: var(--#{$page}__header-sidebar-toggle__c-button--PaddingBlockEnd);
-    padding-inline-start: var(--#{$page}__header-sidebar-toggle__c-button--PaddingInlineStart);
-    padding-inline-end: var(--#{$page}__header-sidebar-toggle__c-button--PaddingInlineEnd);
-    margin-inline-start: var(--#{$page}__header-sidebar-toggle__c-button--MarginInlineStart);
-    margin-inline-end: var(--#{$page}__header-sidebar-toggle__c-button--MarginInlineEnd);
-    font-size: var(--#{$page}__header-sidebar-toggle__c-button--FontSize);
-    line-height: 1;
-  }
-}
-
-// Header navigation
-.#{$page}__header-nav {
-  grid-row: 2 / 3;
-  grid-column: 1 / -1;
-  align-self: stretch;
-  min-width: 0;
-  padding-inline-start: var(--#{$page}__header-nav--PaddingInlineStart);
-  padding-inline-end: var(--#{$page}__header-nav--PaddingInlineEnd);
-  background-color: var(--#{$page}__header-nav--BackgroundColor);
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  .#{$nav} {
-    align-self: stretch;
-  }
-}
-
-// Header tools
-.#{$page}__header-tools {
-  grid-column: 2 / 3;
-  margin-inline-start: auto; // to push it to the right
-  margin-inline-end: var(--#{$page}__header-tools--MarginInlineEnd);
-
-  .#{$avatar} {
-    margin-inline-start: var(--#{$page}__header-tools--c-avatar--MarginInlineStart);
-  }
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    grid-column: 3 / 4;
-  }
-}
-
-.#{$page}__header-tools-group {
-  @include pf-v6-hidden-visible(var(--#{$page}__header-tools-group--Display));
-
-  align-items: center;
-
-  & + & {
-    margin-inline-start: var(--#{$page}__header-tools-group--MarginInlineStart);
-  }
-}
-
-.#{$page}__header-tools-item {
-  @include pf-v6-hidden-visible(var(--#{$page}__header-tools-item--Display));
 }
 
 // Sidebar
