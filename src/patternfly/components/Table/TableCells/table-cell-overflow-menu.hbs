@@ -2,15 +2,11 @@
 {{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
 {{!-- TODO: automate attribution --}}
 
-{{#> table-td}}
+{{#> table-td table-td--IsOverflowMenu=true}}
   {{#> overflow-menu overflow-menu--id=(dasherize table--id 'overflow-menu' table-tr--index)}}
     {{#if table-cell-overflow-menu--IsCondensed}}
       {{#> overflow-menu-control menu-toggle--aria-label="Actions"}}
-        {{> overflow-menu-toggle}}
-        {{#> overflow-menu-menu}}
-          {{> menu-list-item menu-list-item--text='Start'}}
-          {{> menu-list-item menu-list-item--text='Stop'}}
-        {{/overflow-menu-menu}}
+        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--aria-label='Menu toggle' menu-toggle--IsPlain--id=(dasherize overflow-menu--id 'toggle')}}
       {{/overflow-menu-control}}
     {{else}}
       {{#> overflow-menu-content}}

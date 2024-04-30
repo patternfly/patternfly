@@ -7,10 +7,9 @@
   {{#if overflow-menu--attribute}}
     {{{overflow-menu--attribute}}}
   {{/if}}>
-
   {{#if menu--IsCondensed}}
     {{#> overflow-menu-control menu-toggle--IsExpanded=true menu-toggle--aria-label='Generic options'}}
-      {{> overflow-menu-toggle}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--aria-label='Menu toggle'}}
     {{/overflow-menu-control}}
   {{else if @partial-block}}
     {{> @partial-block}}
