@@ -29,8 +29,8 @@
   --#{$app-launcher}__menu-search--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
   --#{$app-launcher}__menu-search--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
   --#{$app-launcher}__menu-search--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
-  --#{$app-launcher}__menu-search--BlockEndBorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$app-launcher}__menu-search--BlockEndBorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$app-launcher}__menu-search--BorderBlockEndColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$app-launcher}__menu-search--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$app-launcher}__menu-search--MarginBlockEnd: var(--#{$pf-global}--spacer--sm);
 
   // Menu item
@@ -170,7 +170,7 @@
   padding-inline-start: var(--#{$app-launcher}__menu-search--PaddingInlineStart);
   padding-inline-end: var(--#{$app-launcher}__menu-search--PaddingInlineEnd);
   margin-block-end: var(--#{$app-launcher}__menu-search--MarginBlockEnd);
-  border-block-end: var(--#{$app-launcher}__menu-search--BlockEndBorderWidth) solid var(--#{$app-launcher}__menu-search--BlockEndBorderColor);
+  border-block-end: var(--#{$app-launcher}__menu-search--BorderBlockEndWidth) solid var(--#{$app-launcher}__menu-search--BorderBlockEndColor);
 }
 
 .#{$app-launcher}__menu-wrapper {
