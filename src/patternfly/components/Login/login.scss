@@ -1,15 +1,15 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$login}) {
-  --#{$login}--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$login}--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$login}--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$login}--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
 
   // container
   --#{$login}__container--xl--GridColumnGap: var(--pf-t--global--spacer--3xl);
   --#{$login}__container--MaxWidth: #{pf-size-prem(500px)}; // This is a magic number to prevent the login layout grow more than what's defined in the specs.
   --#{$login}__container--xl--MaxWidth: none;
-  --#{$login}__container--PaddingLeft: #{pf-size-prem(98px)};
-  --#{$login}__container--PaddingRight: #{pf-size-prem(98px)};
+  --#{$login}__container--PaddingInlineStart: #{pf-size-prem(98px)};
+  --#{$login}__container--PaddingInlineEnd: #{pf-size-prem(98px)};
   --#{$login}__container--xl--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)}); // unique to the login layout
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
@@ -17,99 +17,99 @@
   }
 
   // header
-  --#{$login}__header--MarginBottom: var(--pf-t--global--spacer--md);
-  --#{$login}__header--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$login}__header--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$login}__header--MarginBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$login}__header--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$login}__header--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   @media (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$login}__header--PaddingRight: 0;
-    --#{$login}__header--PaddingLeft: 0;
+    --#{$login}__header--PaddingInlineEnd: 0;
+    --#{$login}__header--PaddingInlineStart: 0;
   }
 
-  --#{$login}__header--xl--MarginBottom: var(--pf-t--global--spacer--2xl);
-  --#{$login}__header--xl--MarginTop: var(--pf-t--global--spacer--3xl);
-  --#{$login}__header--c-brand--MarginBottom: var(--pf-t--global--spacer--lg);
-  --#{$login}__header--c-brand--xl--MarginBottom: var(--pf-t--global--spacer--2xl);
+  --#{$login}__header--xl--MarginBlockEnd: var(--pf-t--global--spacer--2xl);
+  --#{$login}__header--xl--MarginBlockStart: var(--pf-t--global--spacer--3xl);
+  --#{$login}__header--c-brand--MarginBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$login}__header--c-brand--xl--MarginBlockEnd: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$login}__header--MarginBottom: var(--#{$login}__header--xl--MarginBottom);
-    --#{$login}__header--c-brand--MarginBottom: var(--#{$login}__header--c-brand--xl--MarginBottom);
+    --#{$login}__header--MarginBlockEnd: var(--#{$login}__header--xl--MarginBlockEnd);
+    --#{$login}__header--c-brand--MarginBlockEnd: var(--#{$login}__header--c-brand--xl--MarginBlockEnd);
   }
 
   // main
   --#{$login}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$login}__main--MarginBottom: var(--pf-t--global--spacer--lg);
+  --#{$login}__main--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__main--BorderRadius: var(--pf-t--global--border--radius--large);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$login}__main--MarginBottom: 0;
+    --#{$login}__main--MarginBlockEnd: 0;
   }
 
   // main header
-  --#{$login}__main-header--PaddingTop: var(--pf-t--global--spacer--2xl);
-  --#{$login}__main-header--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$login}__main-header--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$login}__main-header--PaddingLeft: var(--pf-t--global--spacer--xl);
-  --#{$login}__main-header--md--PaddingRight: var(--pf-t--global--spacer--2xl);
-  --#{$login}__main-header--md--PaddingLeft: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-header--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-header--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-header--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$login}__main-header--PaddingInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-header--md--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-header--md--PaddingInlineStart: var(--pf-t--global--spacer--2xl);
   --#{$login}__main-header--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$login}__main-header--RowGap: var(--pf-t--global--spacer--md);
 
   // main header desc
-  --#{$login}__main-header-desc--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$login}__main-header-desc--md--MarginBottom: 0;
+  --#{$login}__main-header-desc--MarginBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$login}__main-header-desc--md--MarginBlockEnd: 0;
   --#{$login}__main-header-desc--FontSize: var(--pf-t--global--font--size--body--default);
 
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$login}__main-header--PaddingRight: var(--#{$login}__main-header--md--PaddingRight);
-    --#{$login}__main-header--PaddingLeft: var(--#{$login}__main-header--md--PaddingLeft);
-    --#{$login}__main-header-desc--MarginBottom: var(--#{$login}__main-header-desc--md--MarginBottom);
+    --#{$login}__main-header--PaddingInlineEnd: var(--#{$login}__main-header--md--PaddingInlineEnd);
+    --#{$login}__main-header--PaddingInlineStart: var(--#{$login}__main-header--md--PaddingInlineStart);
+    --#{$login}__main-header-desc--MarginBlockEnd: var(--#{$login}__main-header-desc--md--MarginBlockEnd);
   }
 
   // main body
-  --#{$login}__main-body--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$login}__main-body--PaddingBottom: var(--pf-t--global--spacer--xl);
-  --#{$login}__main-body--PaddingLeft: var(--pf-t--global--spacer--xl);
-  --#{$login}__main-body--md--PaddingRight: var(--pf-t--global--spacer--2xl);
-  --#{$login}__main-body--md--PaddingLeft: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-body--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-body--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-body--PaddingInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-body--md--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-body--md--PaddingInlineStart: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$login}__main-body--PaddingRight: var(--#{$login}__main-body--md--PaddingRight);
-    --#{$login}__main-body--PaddingLeft: var(--#{$login}__main-body--md--PaddingLeft);
+    --#{$login}__main-body--PaddingInlineEnd: var(--#{$login}__main-body--md--PaddingInlineEnd);
+    --#{$login}__main-body--PaddingInlineStart: var(--#{$login}__main-body--md--PaddingInlineStart);
   }
 
   // main footer
-  --#{$login}__main-footer--PaddingBottom: var(--pf-t--global--spacer--3xl);
-  --#{$login}__main-footer--c-title--MarginBottom: var(--pf-t--global--spacer--md);
-  --#{$login}__main-footer-links--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$login}__main-footer-links--PaddingRight: var(--pf-t--global--spacer--3xl);
-  --#{$login}__main-footer-links--PaddingBottom: var(--pf-t--global--spacer--xl);
-  --#{$login}__main-footer-links--PaddingLeft: var(--pf-t--global--spacer--3xl);
+  --#{$login}__main-footer--PaddingBlockEnd: var(--pf-t--global--spacer--3xl);
+  --#{$login}__main-footer--c-title--MarginBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-links--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$login}__main-footer-links--PaddingInlineEnd: var(--pf-t--global--spacer--3xl);
+  --#{$login}__main-footer-links--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-footer-links--PaddingInlineStart: var(--pf-t--global--spacer--3xl);
   --#{$login}__main-footer-links--Gap: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-links-item--c-button--FontSize: var(--pf-t--global--icon--size--xl);
-  --#{$login}__main-footer-band--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$login}__main-footer-band--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$login}__main-footer-band--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$login}__main-footer-band--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$login}__main-footer-band--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$login}__main-footer-band--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$login}__main-footer-band-item--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-band--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$login}__main-footer-band--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-band--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$login}__main-footer-band--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-band--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+  --#{$login}__main-footer-band--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$login}__main-footer-band-item--PaddingBlockStart: var(--pf-t--global--spacer--md);
 
   // footer
-  --#{$login}__footer--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$login}__footer--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   @media (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$login}__footer--PaddingRight: 0;
-    --#{$login}__footer--PaddingLeft: 0;
+    --#{$login}__footer--PaddingInlineEnd: 0;
+    --#{$login}__footer--PaddingInlineStart: 0;
   }
 
-  --#{$login}__footer--c-list--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$login}__footer--c-list--xl--PaddingTop: var(--pf-t--global--spacer--2xl);
+  --#{$login}__footer--c-list--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--c-list--xl--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$login}__footer--c-list--PaddingTop: var(--#{$login}__footer--c-list--xl--PaddingTop);
+    --#{$login}__footer--c-list--PaddingBlockStart: var(--#{$login}__footer--c-list--xl--PaddingBlockStart);
   }
 }
 
@@ -117,8 +117,8 @@
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  padding-block-start: var(--#{$login}--PaddingTop);
-  padding-block-end: var(--#{$login}--PaddingBottom);
+  padding-block-start: var(--#{$login}--PaddingBlockStart);
+  padding-block-end: var(--#{$login}--PaddingBlockEnd);
 
   @media (min-width: $pf-v6-global--breakpoint--sm) {
     align-items: center;
@@ -139,40 +139,40 @@
     grid-template-columns: var(--#{$login}__container--xl--GridTemplateColumns);
     grid-column-gap: var(--#{$login}__container--xl--GridColumnGap);
     justify-content: center;
-    padding-inline-start: var(--#{$login}__container--PaddingLeft);
-    padding-inline-end: var(--#{$login}__container--PaddingRight);
+    padding-inline-start: var(--#{$login}__container--PaddingInlineStart);
+    padding-inline-end: var(--#{$login}__container--PaddingInlineEnd);
   }
 }
 
 .#{$login}__header {
   grid-area: header;
-  padding-inline-start: var(--#{$login}__header--PaddingLeft);
-  padding-inline-end: var(--#{$login}__header--PaddingRight);
+  padding-inline-start: var(--#{$login}__header--PaddingInlineStart);
+  padding-inline-end: var(--#{$login}__header--PaddingInlineEnd);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    margin-block-start: var(--#{$login}__header--xl--MarginTop);
+    margin-block-start: var(--#{$login}__header--xl--MarginBlockStart);
   }
 
   .#{$brand} {
-    margin-block-end: var(--#{$login}__header--c-brand--MarginBottom);
+    margin-block-end: var(--#{$login}__header--c-brand--MarginBlockEnd);
   }
 }
 
 .#{$login}__main {
   grid-area: main;
   align-self: start;
-  margin-block-end: var(--#{$login}__main--MarginBottom);
+  margin-block-end: var(--#{$login}__main--MarginBlockEnd);
   background-color: var(--#{$login}__main--BackgroundColor);
   border-radius: var(--#{$login}__main--BorderRadius);
 
   // If the first child isn't a header, then we need to put the header's top padding there
   > :first-child:not(.#{$login}__main-header) {
-    padding-block-start: var(--#{$login}__main-header--PaddingTop);
+    padding-block-start: var(--#{$login}__main-header--PaddingBlockStart);
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child:not(.#{$login}__main-footer) {
-    padding-block-end: var(--#{$login}__main-footer--PaddingBottom);
+    padding-block-end: var(--#{$login}__main-footer--PaddingBlockEnd);
   }
 }
 
@@ -182,10 +182,10 @@
   row-gap: var(--#{$login}__main-header--RowGap);
   column-gap: var(--#{$login}__main-header--ColumnGap);
   align-items: center;
-  padding-block-start: var(--#{$login}__main-header--PaddingTop);
-  padding-block-end: var(--#{$login}__main-header--PaddingBottom);
-  padding-inline-start: var(--#{$login}__main-header--PaddingLeft);
-  padding-inline-end: var(--#{$login}__main-header--PaddingRight);
+  padding-block-start: var(--#{$login}__main-header--PaddingBlockStart);
+  padding-block-end: var(--#{$login}__main-header--PaddingBlockEnd);
+  padding-inline-start: var(--#{$login}__main-header--PaddingInlineStart);
+  padding-inline-end: var(--#{$login}__main-header--PaddingInlineEnd);
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
     grid-template-columns: 1fr auto;
@@ -212,14 +212,14 @@
 
 .#{$login}__main-header-desc {
   grid-column: 1 / -1;
-  margin-block-end: var(--#{$login}__main-header-desc--MarginBottom);
+  margin-block-end: var(--#{$login}__main-header-desc--MarginBlockEnd);
   font-size: var(--#{$login}__main-header-desc--FontSize);
 }
 
 .#{$login}__main-body {
-  padding-block-end: var(--#{$login}__main-body--PaddingBottom);
-  padding-inline-start: var(--#{$login}__main-body--PaddingLeft);
-  padding-inline-end: var(--#{$login}__main-body--PaddingRight);
+  padding-block-end: var(--#{$login}__main-body--PaddingBlockEnd);
+  padding-inline-start: var(--#{$login}__main-body--PaddingInlineStart);
+  padding-inline-end: var(--#{$login}__main-body--PaddingInlineEnd);
 }
 
 .#{$login}__main-footer {
@@ -227,7 +227,7 @@
   flex-wrap: wrap;
 
   .#{$title} {
-    margin-block-end: var(--#{$login}__main-footer--c-title--MarginBottom);
+    margin-block-end: var(--#{$login}__main-footer--c-title--MarginBlockEnd);
     text-align: center;
   }
 
@@ -241,10 +241,10 @@
   flex-wrap: wrap;
   gap: var(--#{$login}__main-footer-links--Gap);
   justify-content: center;
-  padding-block-start: var(--#{$login}__main-footer-links--PaddingTop);
-  padding-block-end: var(--#{$login}__main-footer-links--PaddingBottom);
-  padding-inline-start: var(--#{$login}__main-footer-links--PaddingLeft);
-  padding-inline-end: var(--#{$login}__main-footer-links--PaddingRight);
+  padding-block-start: var(--#{$login}__main-footer-links--PaddingBlockStart);
+  padding-block-end: var(--#{$login}__main-footer-links--PaddingBlockEnd);
+  padding-inline-start: var(--#{$login}__main-footer-links--PaddingInlineStart);
+  padding-inline-end: var(--#{$login}__main-footer-links--PaddingInlineEnd);
 }
 
 .#{$login}__main-footer-links-item {
@@ -254,22 +254,22 @@
 }
 
 .#{$login}__main-footer-band {
-  padding-block-start: var(--#{$login}__main-footer-band--PaddingTop);
-  padding-block-end: var(--#{$login}__main-footer-band--PaddingBottom);
-  padding-inline-start: var(--#{$login}__main-footer-band--PaddingLeft);
-  padding-inline-end: var(--#{$login}__main-footer-band--PaddingRight);
+  padding-block-start: var(--#{$login}__main-footer-band--PaddingBlockStart);
+  padding-block-end: var(--#{$login}__main-footer-band--PaddingBlockEnd);
+  padding-inline-start: var(--#{$login}__main-footer-band--PaddingInlineStart);
+  padding-inline-end: var(--#{$login}__main-footer-band--PaddingInlineEnd);
   text-align: center;
-  border-block-start: var(--#{$login}__main-footer-band--BorderTopWidth) solid var(--#{$login}__main-footer-band--BorderTopColor);
+  border-block-start: var(--#{$login}__main-footer-band--BorderBlockStartWidth) solid var(--#{$login}__main-footer-band--BorderBlockStartColor);
 
   > * + * {
-    padding-block-start: var(--#{$login}__main-footer-band-item--PaddingTop);
+    padding-block-start: var(--#{$login}__main-footer-band-item--PaddingBlockStart);
   }
 }
 
 .#{$login}__footer {
   grid-area: footer;
-  padding-inline-start: var(--#{$login}__footer--PaddingLeft);
-  padding-inline-end: var(--#{$login}__footer--PaddingRight);
+  padding-inline-start: var(--#{$login}__footer--PaddingInlineStart);
+  padding-inline-end: var(--#{$login}__footer--PaddingInlineEnd);
 
   .#{$list} {
     a {
@@ -277,7 +277,7 @@
     }
 
     &:not(:only-child) { // paragraph text might not always be included.
-      padding-block-start: var(--#{$login}__footer--c-list--PaddingTop);
+      padding-block-start: var(--#{$login}__footer--c-list--PaddingBlockStart);
     }
   }
 }

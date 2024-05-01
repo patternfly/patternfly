@@ -20,31 +20,31 @@
   --#{$label-group}--m-vertical__list--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // Category
-  --#{$label-group}--m-category--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$label-group}--m-category--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$label-group}--m-category--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$label-group}--m-category--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-category--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-category--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-category--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--m-category--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label-group}--m-category--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$label-group}--m-category--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$label-group}--m-category--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$label-group}--m-vertical--m-category--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$label-group}--m-vertical--m-category--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Label
   --#{$label-group}__label--MaxWidth: 18ch;
 
   // Close
   --#{$label-group}__close--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
-  --#{$label-group}__close--c-button--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$label-group}__close--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$label-group}__close--c-button--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$label-group}__close--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$label-group}__close--c-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__close--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$label-group}__close--c-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__close--c-button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
 
   // Textarea
   --#{$label-group}__textarea--MinWidth: #{pf-size-prem(200px)};
-  --#{$label-group}__textarea--PaddingTop: #{pf-size-prem(2px)};
-  --#{$label-group}__textarea--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$label-group}__textarea--PaddingBottom: 0;
-  --#{$label-group}__textarea--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__textarea--PaddingBlockStart: #{pf-size-prem(2px)};
+  --#{$label-group}__textarea--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__textarea--PaddingBlockEnd: 0;
+  --#{$label-group}__textarea--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 }
 
 .#{$label-group} {
@@ -54,10 +54,10 @@
   align-items: center;
 
   &.pf-m-category {
-    padding-block-start: var(--#{$label-group}--m-category--PaddingTop);
-    padding-block-end: var(--#{$label-group}--m-category--PaddingBottom);
-    padding-inline-start: var(--#{$label-group}--m-category--PaddingLeft);
-    padding-inline-end: var(--#{$label-group}--m-category--PaddingRight);
+    padding-block-start: var(--#{$label-group}--m-category--PaddingBlockStart);
+    padding-block-end: var(--#{$label-group}--m-category--PaddingBlockEnd);
+    padding-inline-start: var(--#{$label-group}--m-category--PaddingInlineStart);
+    padding-inline-end: var(--#{$label-group}--m-category--PaddingInlineEnd);
     background-color: var(--#{$label-group}--m-category--BackgroundColor);
     border: var(--#{$label-group}--m-category--BorderWidth) solid var(--#{$label-group}--m-category--BorderColor);
     border-radius: var(--#{$label-group}--m-category--BorderRadius);
@@ -70,7 +70,7 @@
     --#{$label-group}__main--ColumnGap: var(--#{$label-group}--m-vertical__main--ColumnGap);
     --#{$label-group}__list--RowGap: var(--#{$label-group}--m-vertical__list--RowGap);
     --#{$label-group}__list--ColumnGap: var(--#{$label-group}--m-vertical__list--ColumnGap);
-    --#{$label-group}--m-category--PaddingRight: var(--#{$label-group}--m-vertical--m-category--PaddingRight);
+    --#{$label-group}--m-category--PaddingInlineEnd: var(--#{$label-group}--m-vertical--m-category--PaddingInlineEnd);
 
     &.#{$label-group} {
       align-items: flex-start;
@@ -134,19 +134,19 @@
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$label-group}__close--c-button--FontSize);
-    --#{$button}--m-plain--m-no-padding--PaddingTop: var(--#{$label-group}__close--c-button--PaddingTop);
-    --#{$button}--m-plain--m-no-padding--PaddingRight: var(--#{$label-group}__close--c-button--PaddingRight);
-    --#{$button}--m-plain--m-no-padding--PaddingBottom: var(--#{$label-group}__close--c-button--PaddingBottom);
-    --#{$button}--m-plain--m-no-padding--PaddingLeft: var(--#{$label-group}__close--c-button--PaddingLeft);
+    --#{$button}--m-plain--m-no-padding--PaddingBlockStart: var(--#{$label-group}__close--c-button--PaddingBlockStart);
+    --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: var(--#{$label-group}__close--c-button--PaddingInlineEnd);
+    --#{$button}--m-plain--m-no-padding--PaddingBlockEnd: var(--#{$label-group}__close--c-button--PaddingBlockEnd);
+    --#{$button}--m-plain--m-no-padding--PaddingInlineStart: var(--#{$label-group}__close--c-button--PaddingInlineStart);
   }
 }
 
 .#{$label-group}__textarea {
   min-width: var(--#{$label-group}__textarea--MinWidth);
-  padding-block-start: var(--#{$label-group}__textarea--PaddingTop);
-  padding-block-end: var(--#{$label-group}__textarea--PaddingBottom);
-  padding-inline-start: var(--#{$label-group}__textarea--PaddingLeft);
-  padding-inline-end: var(--#{$label-group}__textarea--PaddingRight);
+  padding-block-start: var(--#{$label-group}__textarea--PaddingBlockStart);
+  padding-block-end: var(--#{$label-group}__textarea--PaddingBlockEnd);
+  padding-inline-start: var(--#{$label-group}__textarea--PaddingInlineStart);
+  padding-inline-end: var(--#{$label-group}__textarea--PaddingInlineEnd);
   white-space: nowrap;
   resize: none;
   border: 0;

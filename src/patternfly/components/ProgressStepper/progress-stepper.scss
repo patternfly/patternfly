@@ -6,24 +6,24 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 @mixin pf-v6-c-progress-stepper--m-vertical {
   --#{$progress-stepper}--GridAutoFlow: var(--#{$progress-stepper}--m-vertical--GridAutoFlow);
   --#{$progress-stepper}--GridTemplateColumns: var(--#{$progress-stepper}--m-vertical--GridTemplateColumns);
-  --#{$progress-stepper}__step-connector--before--Top: var(--#{$progress-stepper}--m-vertical__step-connector--before--Top);
-  --#{$progress-stepper}__step-connector--before--Left: var(--#{$progress-stepper}--m-vertical__step-connector--before--Left);
+  --#{$progress-stepper}__step-connector--before--InsetBlockStart: var(--#{$progress-stepper}--m-vertical__step-connector--before--InsetBlockStart);
+  --#{$progress-stepper}__step-connector--before--InsetInlineStart: var(--#{$progress-stepper}--m-vertical__step-connector--before--InsetInlineStart);
   --#{$progress-stepper}__step-connector--before--Width: var(--#{$progress-stepper}--m-vertical__step-connector--before--Width);
   --#{$progress-stepper}__step-connector--before--Height: var(--#{$progress-stepper}--m-vertical__step-connector--before--Height);
-  --#{$progress-stepper}__step-connector--before--BorderRightWidth: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderRightWidth);
-  --#{$progress-stepper}__step-connector--before--BorderRightColor: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderRightColor);
-  --#{$progress-stepper}__step-connector--before--BorderBottomWidth: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderBottomWidth);
-  --#{$progress-stepper}__step-connector--before--BorderBottomColor: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderBottomColor);
+  --#{$progress-stepper}__step-connector--before--BorderInlineEndWidth: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderInlineEndWidth);
+  --#{$progress-stepper}__step-connector--before--BorderInlineEndColor: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderInlineEndColor);
+  --#{$progress-stepper}__step-connector--before--BorderBlockEndWidth: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderBlockEndWidth);
+  --#{$progress-stepper}__step-connector--before--BorderBlockEndColor: var(--#{$progress-stepper}--m-vertical__step-connector--before--BorderBlockEndColor);
   --#{$progress-stepper}__step-connector--before--Transform: var(--#{$progress-stepper}--m-vertical__step-connector--before--Transform);
-  --#{$progress-stepper}__step-main--MarginTop: var(--#{$progress-stepper}--m-vertical__step-main--MarginTop);
-  --#{$progress-stepper}__step-main--MarginRight: var(--#{$progress-stepper}--m-vertical__step-main--MarginRight);
-  --#{$progress-stepper}__step-main--MarginBottom: var(--#{$progress-stepper}--m-vertical__step-main--MarginBottom);
-  --#{$progress-stepper}__step-main--MarginLeft: var(--#{$progress-stepper}--m-vertical__step-main--MarginLeft);
+  --#{$progress-stepper}__step-main--MarginBlockStart: var(--#{$progress-stepper}--m-vertical__step-main--MarginBlockStart);
+  --#{$progress-stepper}__step-main--MarginInlineEnd: var(--#{$progress-stepper}--m-vertical__step-main--MarginInlineEnd);
+  --#{$progress-stepper}__step-main--MarginBlockEnd: var(--#{$progress-stepper}--m-vertical__step-main--MarginBlockEnd);
+  --#{$progress-stepper}__step-main--MarginInlineStart: var(--#{$progress-stepper}--m-vertical__step-main--MarginInlineStart);
 
   // Compact vertical
   --#{$progress-stepper}--m-compact--GridTemplateColumns: var(--#{$progress-stepper}--m-vertical--m-compact--GridTemplateColumns);
   --#{$progress-stepper}--m-compact__step-connector--GridRow: var(--#{$progress-stepper}--m-vertical--m-compact__step-connector--GridRow);
-  --#{$progress-stepper}--m-compact__step-connector--PaddingBottom: var(--#{$progress-stepper}--m-vertical--m-compact__step-connector--PaddingBottom);
+  --#{$progress-stepper}--m-compact__step-connector--PaddingBlockEnd: var(--#{$progress-stepper}--m-vertical--m-compact__step-connector--PaddingBlockEnd);
 
   // Center
   --#{$progress-stepper}--m-center__step-connector--before--Content: none; // border swap
@@ -33,24 +33,24 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 @mixin pf-v6-c-progress-stepper--m-horizontal {
   --#{$progress-stepper}--GridAutoFlow: var(--#{$progress-stepper}--m-horizontal--GridAutoFlow);
   --#{$progress-stepper}--GridTemplateColumns: var(--#{$progress-stepper}--m-horizontal--GridTemplateColumns);
-  --#{$progress-stepper}__step-connector--before--Top: var(--#{$progress-stepper}--m-horizontal__step-connector--before--Top);
-  --#{$progress-stepper}__step-connector--before--Left: var(--#{$progress-stepper}--m-horizontal__step-connector--before--Left);
+  --#{$progress-stepper}__step-connector--before--InsetBlockStart: var(--#{$progress-stepper}--m-horizontal__step-connector--before--InsetBlockStart);
+  --#{$progress-stepper}__step-connector--before--InsetInlineStart: var(--#{$progress-stepper}--m-horizontal__step-connector--before--InsetInlineStart);
   --#{$progress-stepper}__step-connector--before--Width: var(--#{$progress-stepper}--m-horizontal__step-connector--before--Width);
   --#{$progress-stepper}__step-connector--before--Height: var(--#{$progress-stepper}--m-horizontal__step-connector--before--Height);
-  --#{$progress-stepper}__step-connector--before--BorderRightWidth: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderRightWidth);
-  --#{$progress-stepper}__step-connector--before--BorderRightColor: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderRightColor);
-  --#{$progress-stepper}__step-connector--before--BorderBottomWidth: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomWidth);
-  --#{$progress-stepper}__step-connector--before--BorderBottomColor: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomColor);
+  --#{$progress-stepper}__step-connector--before--BorderInlineEndWidth: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderInlineEndWidth);
+  --#{$progress-stepper}__step-connector--before--BorderInlineEndColor: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderInlineEndColor);
+  --#{$progress-stepper}__step-connector--before--BorderBlockEndWidth: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderBlockEndWidth);
+  --#{$progress-stepper}__step-connector--before--BorderBlockEndColor: var(--#{$progress-stepper}--m-horizontal__step-connector--before--BorderBlockEndColor);
   --#{$progress-stepper}__step-connector--before--Transform: var(--#{$progress-stepper}--m-horizontal__step-connector--before--Transform);
-  --#{$progress-stepper}__step-main--MarginTop: var(--#{$progress-stepper}--m-horizontal__step-main--MarginTop);
-  --#{$progress-stepper}__step-main--MarginRight: var(--#{$progress-stepper}--m-horizontal__step-main--MarginRight);
-  --#{$progress-stepper}__step-main--MarginBottom: var(--#{$progress-stepper}--m-horizontal__step-main--MarginBottom);
-  --#{$progress-stepper}__step-main--MarginLeft: var(--#{$progress-stepper}--m-horizontal__step-main--MarginLeft);
+  --#{$progress-stepper}__step-main--MarginBlockStart: var(--#{$progress-stepper}--m-horizontal__step-main--MarginBlockStart);
+  --#{$progress-stepper}__step-main--MarginInlineEnd: var(--#{$progress-stepper}--m-horizontal__step-main--MarginInlineEnd);
+  --#{$progress-stepper}__step-main--MarginBlockEnd: var(--#{$progress-stepper}--m-horizontal__step-main--MarginBlockEnd);
+  --#{$progress-stepper}__step-main--MarginInlineStart: var(--#{$progress-stepper}--m-horizontal__step-main--MarginInlineStart);
 
   // Compact horizontal
   --#{$progress-stepper}--m-compact--GridTemplateColumns: var(--#{$progress-stepper}--m-horizontal--m-compact--GridTemplateColumns);
   --#{$progress-stepper}--m-compact__step-connector--GridRow: var(--#{$progress-stepper}--m-horizontal--m-compact__step-connector--GridRow);
-  --#{$progress-stepper}--m-compact__step-connector--PaddingBottom: var(--#{$progress-stepper}--m-horizontal--m-compact__step-connector--PaddingBottom);
+  --#{$progress-stepper}--m-compact__step-connector--PaddingBlockEnd: var(--#{$progress-stepper}--m-horizontal--m-compact__step-connector--PaddingBlockEnd);
 
   // Center
   --#{$progress-stepper}--m-center__step-connector--before--Content: ""; // border swap
@@ -62,75 +62,75 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   // Vertical - these are the default settings
   --#{$progress-stepper}--m-vertical--GridAutoFlow: row;
   --#{$progress-stepper}--m-vertical--GridTemplateColumns: auto 1fr;
-  --#{$progress-stepper}--m-vertical__step-connector--before--Top: 0;
-  --#{$progress-stepper}--m-vertical__step-connector--before--Left: calc(var(--#{$progress-stepper}__step-icon--Width) / 2);
+  --#{$progress-stepper}--m-vertical__step-connector--before--InsetBlockStart: 0;
+  --#{$progress-stepper}--m-vertical__step-connector--before--InsetInlineStart: calc(var(--#{$progress-stepper}__step-icon--Width) / 2);
   --#{$progress-stepper}--m-vertical__step-connector--before--Width: auto;
   --#{$progress-stepper}--m-vertical__step-connector--before--Height: 100%;
-  --#{$progress-stepper}--m-vertical__step-connector--before--BorderRightWidth: var(--pf-t--global--border--width--box--default);
-  --#{$progress-stepper}--m-vertical__step-connector--before--BorderRightColor: var(--pf-t--global--border--color--default);
-  --#{$progress-stepper}--m-vertical__step-connector--before--BorderBottomWidth: 0;
-  --#{$progress-stepper}--m-vertical__step-connector--before--BorderBottomColor: transparent;
+  --#{$progress-stepper}--m-vertical__step-connector--before--BorderInlineEndWidth: var(--pf-t--global--border--width--box--default);
+  --#{$progress-stepper}--m-vertical__step-connector--before--BorderInlineEndColor: var(--pf-t--global--border--color--default);
+  --#{$progress-stepper}--m-vertical__step-connector--before--BorderBlockEndWidth: 0;
+  --#{$progress-stepper}--m-vertical__step-connector--before--BorderBlockEndColor: transparent;
   --#{$progress-stepper}--m-vertical__step-connector--before--Transform: translateX(-50%);
-  --#{$progress-stepper}--m-vertical__step-main--MarginTop: 0px; // needs px for calc
-  --#{$progress-stepper}--m-vertical__step-main--MarginRight: 0;
-  --#{$progress-stepper}--m-vertical__step-main--MarginBottom: var(--pf-t--global--spacer--xl);
-  --#{$progress-stepper}--m-vertical__step-main--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$progress-stepper}--m-vertical__step-main--MarginBlockStart: 0px; // needs px for calc
+  --#{$progress-stepper}--m-vertical__step-main--MarginInlineEnd: 0;
+  --#{$progress-stepper}--m-vertical__step-main--MarginBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$progress-stepper}--m-vertical__step-main--MarginInlineStart: var(--pf-t--global--spacer--sm);
 
   // Compact, vertical
   --#{$progress-stepper}--m-vertical--m-compact--GridTemplateColumns: 1fr;
-  --#{$progress-stepper}--m-vertical--m-compact__step-connector--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$progress-stepper}--m-vertical--m-compact__step-connector--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$progress-stepper}--m-vertical--m-compact__step-connector--GridRow: auto;
-  --#{$progress-stepper}--m-vertical--m-compact__step-main--MarginTop: 0;
-  --#{$progress-stepper}--m-vertical--m-compact__step-main--MarginRight: 0;
-  --#{$progress-stepper}--m-vertical--m-compact__step-main--MarginLeft: 0;
+  --#{$progress-stepper}--m-vertical--m-compact__step-main--MarginBlockStart: 0;
+  --#{$progress-stepper}--m-vertical--m-compact__step-main--MarginInlineEnd: 0;
+  --#{$progress-stepper}--m-vertical--m-compact__step-main--MarginInlineStart: 0;
 
   // Center, vertical
-  --#{$progress-stepper}--m-vertical--m-center__step-main--MarginRight: 0;
-  --#{$progress-stepper}--m-vertical--m-center__step-main--MarginLeft: 0;
+  --#{$progress-stepper}--m-vertical--m-center__step-main--MarginInlineEnd: 0;
+  --#{$progress-stepper}--m-vertical--m-center__step-main--MarginInlineStart: 0;
 
   // Horizontal
   --#{$progress-stepper}--m-horizontal--GridAutoFlow: column;
   --#{$progress-stepper}--m-horizontal--GridTemplateColumns: initial;
-  --#{$progress-stepper}--m-horizontal__step-connector--before--Top: calc(var(--#{$progress-stepper}__step-icon--Height) / 2);
-  --#{$progress-stepper}--m-horizontal__step-connector--before--Left: 0;
+  --#{$progress-stepper}--m-horizontal__step-connector--before--InsetBlockStart: calc(var(--#{$progress-stepper}__step-icon--Height) / 2);
+  --#{$progress-stepper}--m-horizontal__step-connector--before--InsetInlineStart: 0;
   --#{$progress-stepper}--m-horizontal__step-connector--before--Width: 100%;
   --#{$progress-stepper}--m-horizontal__step-connector--before--Height: auto;
-  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderRightWidth: 0;
-  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderRightColor: unset;
-  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderInlineEndWidth: 0;
+  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderInlineEndColor: unset;
+  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$progress-stepper}--m-horizontal__step-connector--before--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$progress-stepper}--m-horizontal__step-connector--before--Transform: translateY(-50%);
-  --#{$progress-stepper}--m-horizontal__step-main--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$progress-stepper}--m-horizontal__step-main--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$progress-stepper}--m-horizontal__step-main--MarginBottom: 0;
-  --#{$progress-stepper}--m-horizontal__step-main--MarginLeft: 0;
+  --#{$progress-stepper}--m-horizontal__step-main--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$progress-stepper}--m-horizontal__step-main--MarginInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$progress-stepper}--m-horizontal__step-main--MarginBlockEnd: 0;
+  --#{$progress-stepper}--m-horizontal__step-main--MarginInlineStart: 0;
 
   // Compact, horizontal
   --#{$progress-stepper}--m-horizontal--m-compact--GridTemplateColumns: repeat(auto-fill, #{pf-size-prem(28px)});
-  --#{$progress-stepper}--m-horizontal--m-compact__step-connector--PaddingBottom: 0;
+  --#{$progress-stepper}--m-horizontal--m-compact__step-connector--PaddingBlockEnd: 0;
   --#{$progress-stepper}--m-horizontal--m-compact__step-connector--GridRow: 2;
 
   // Compact
   --#{$progress-stepper}--m-compact--GridAutoFlow: row;
-  --#{$progress-stepper}--m-compact__step-main--MarginTop: 0;
-  --#{$progress-stepper}--m-compact__step-main--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$progress-stepper}--m-compact__step-main--MarginBlockStart: 0;
+  --#{$progress-stepper}--m-compact__step-main--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$progress-stepper}--m-compact__step-connector--MinWidth: #{pf-size-prem(28px)};
   --#{$progress-stepper}--m-compact__step-icon--Width: #{pf-size-prem(18px)};
   --#{$progress-stepper}--m-compact__step-icon--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$progress-stepper}--m-compact__step-title--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$progress-stepper}--m-compact__step-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$progress-stepper}--m-compact__pficon--MarginTop: 2px;
-  --#{$progress-stepper}--m-compact__fa-exclamation-triangle--MarginTop: -3px;
+  --#{$progress-stepper}--m-compact__pficon--MarginBlockStart: 2px;
+  --#{$progress-stepper}--m-compact__fa-exclamation-triangle--MarginBlockStart: -3px;
 
   // Center
-  --#{$progress-stepper}--m-center__step-connector--before--Left: 50%;
+  --#{$progress-stepper}--m-center__step-connector--before--InsetInlineStart: 50%;
   --#{$progress-stepper}--m-center--GridTemplateColumns: 1fr;
   --#{$progress-stepper}--m-center__step-connector--JustifyContent: center;
-  --#{$progress-stepper}--m-center__step-main--MarginRight: var(--pf-t--global--spacer--xs);
-  --#{$progress-stepper}--m-center__step-main--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$progress-stepper}--m-center__step-main--MarginInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$progress-stepper}--m-center__step-main--MarginInlineStart: var(--pf-t--global--spacer--xs);
   --#{$progress-stepper}--m-center__step-main--TextAlign: center;
-  --#{$progress-stepper}--m-center__step-description--MarginRight: 0;
-  --#{$progress-stepper}--m-center__step-description--MarginLeft: 0;
+  --#{$progress-stepper}--m-center__step-description--MarginInlineEnd: 0;
+  --#{$progress-stepper}--m-center__step-description--MarginInlineStart: 0;
 
   // Stepper variables
   --#{$progress-stepper}--GridTemplateRows: auto 1fr;
@@ -155,8 +155,8 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step--m-custom__step-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
 
   // Icon adjustments to fix differences in alignment
-  --#{$progress-stepper}__pficon--MarginTop: 3px;
-  --#{$progress-stepper}__fa-exclamation-triangle--MarginTop: -2px;
+  --#{$progress-stepper}__pficon--MarginBlockStart: 3px;
+  --#{$progress-stepper}__fa-exclamation-triangle--MarginBlockStart: -2px;
 
   // Step Title variables
   --#{$progress-stepper}__step-title--Color: var(--pf-t--global--text--color--regular);
@@ -180,7 +180,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step--m-danger__step-title--m-help-text--hover--Color: var(--pf-t--global--text--color--status--danger--hover);
 
   // Step Description variables
-  --#{$progress-stepper}__step-description--MarginTop: var(--pf-t--global--spacer--xs);
+  --#{$progress-stepper}__step-description--MarginBlockStart: var(--pf-t--global--spacer--xs);
   --#{$progress-stepper}__step-description--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$progress-stepper}__step-description--Color: var(--pf-t--global--text--color--subtle);
   --#{$progress-stepper}__step-description--TextAlign: start;
@@ -205,15 +205,15 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   // Progress stepper Modifiers
   &.pf-m-center {
     --#{$progress-stepper}__step-connector--JustifyContent: var(--#{$progress-stepper}--m-center__step-connector--JustifyContent);
-    --#{$progress-stepper}__step-main--MarginRight: var(--#{$progress-stepper}--m-center__step-main--MarginRight);
-    --#{$progress-stepper}__step-main--MarginLeft: var(--#{$progress-stepper}--m-center__step-main--MarginLeft);
+    --#{$progress-stepper}__step-main--MarginInlineEnd: var(--#{$progress-stepper}--m-center__step-main--MarginInlineEnd);
+    --#{$progress-stepper}__step-main--MarginInlineStart: var(--#{$progress-stepper}--m-center__step-main--MarginInlineStart);
     --#{$progress-stepper}--step-main--TextAlign: var(--#{$progress-stepper}--m-center__step-main--TextAlign, auto);
     --#{$progress-stepper}__step-title--TextAlign: var(--#{$progress-stepper}--m-center__step-title--TextAlign, auto);
-    --#{$progress-stepper}__step-description--MarginRight: var(--#{$progress-stepper}--m-center__step-description--MarginRight);
-    --#{$progress-stepper}__step-description--MarginLeft: var(--#{$progress-stepper}--m-center__step-description--MarginLeft);
+    --#{$progress-stepper}__step-description--MarginInlineEnd: var(--#{$progress-stepper}--m-center__step-description--MarginInlineEnd);
+    --#{$progress-stepper}__step-description--MarginInlineStart: var(--#{$progress-stepper}--m-center__step-description--MarginInlineStart);
     --#{$progress-stepper}__step-description--TextAlign: var(--#{$progress-stepper}--m-center__step-description--TextAlign, auto);
-    --#{$progress-stepper}--m-vertical__step-main--MarginRight: var(--#{$progress-stepper}--m-vertical--m-center__step-main--MarginRight);
-    --#{$progress-stepper}--m-vertical__step-main--MarginLeft: var(--#{$progress-stepper}--m-vertical--m-center__step-main--MarginLeft);
+    --#{$progress-stepper}--m-vertical__step-main--MarginInlineEnd: var(--#{$progress-stepper}--m-vertical--m-center__step-main--MarginInlineEnd);
+    --#{$progress-stepper}--m-vertical__step-main--MarginInlineStart: var(--#{$progress-stepper}--m-vertical--m-center__step-main--MarginInlineStart);
 
     grid-template-columns: var(--#{$progress-stepper}--m-center--GridTemplateColumns);
 
@@ -222,7 +222,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     }
 
     .#{$progress-stepper}__step:not(:last-of-type) > .#{$progress-stepper}__step-connector::before {
-     inset-inline-start: var(--#{$progress-stepper}--m-center__step-connector--before--Left);
+     inset-inline-start: var(--#{$progress-stepper}--m-center__step-connector--before--InsetInlineStart);
     }
 
     // If not compact variant, swap borders from connector to main
@@ -238,17 +238,17 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   }
 
   &.pf-m-compact {
-    --#{$progress-stepper}__step-main--MarginTop: var(--#{$progress-stepper}--m-compact__step-main--MarginTop);
-    --#{$progress-stepper}__step-main--MarginBottom: var(--#{$progress-stepper}--m-compact__step-main--MarginBottom);
+    --#{$progress-stepper}__step-main--MarginBlockStart: var(--#{$progress-stepper}--m-compact__step-main--MarginBlockStart);
+    --#{$progress-stepper}__step-main--MarginBlockEnd: var(--#{$progress-stepper}--m-compact__step-main--MarginBlockEnd);
     --#{$progress-stepper}__step-icon--Width: var(--#{$progress-stepper}--m-compact__step-icon--Width);
     --#{$progress-stepper}__step-icon--FontSize: var(--#{$progress-stepper}--m-compact__step-icon--FontSize);
     --#{$progress-stepper}__step-title--FontSize: var(--#{$progress-stepper}--m-compact__step-title--FontSize);
     --#{$progress-stepper}__step--m-current__step-title--FontWeight: var(--#{$progress-stepper}--m-compact__step-title--FontWeight);
-    --#{$progress-stepper}__pficon--MarginTop: var(--#{$progress-stepper}--m-compact__pficon--MarginTop);
-    --#{$progress-stepper}__fa-exclamation-triangle--MarginTop: var(--#{$progress-stepper}--m-compact__fa-exclamation-triangle--MarginTop);
-    --#{$progress-stepper}--m-vertical__step-main--MarginTop: var(--#{$progress-stepper}--m-vertical--m-compact__step-main--MarginTop);
-    --#{$progress-stepper}--m-vertical__step-main--MarginRight: var(--#{$progress-stepper}--m-vertical--m-compact__step-main--MarginRight);
-    --#{$progress-stepper}--m-vertical__step-main--MarginLeft: var(--#{$progress-stepper}--m-vertical--m-compact__step-main--MarginLeft);
+    --#{$progress-stepper}__pficon--MarginBlockStart: var(--#{$progress-stepper}--m-compact__pficon--MarginBlockStart);
+    --#{$progress-stepper}__fa-exclamation-triangle--MarginBlockStart: var(--#{$progress-stepper}--m-compact__fa-exclamation-triangle--MarginBlockStart);
+    --#{$progress-stepper}--m-vertical__step-main--MarginBlockStart: var(--#{$progress-stepper}--m-vertical--m-compact__step-main--MarginBlockStart);
+    --#{$progress-stepper}--m-vertical__step-main--MarginInlineEnd: var(--#{$progress-stepper}--m-vertical--m-compact__step-main--MarginInlineEnd);
+    --#{$progress-stepper}--m-vertical__step-main--MarginInlineStart: var(--#{$progress-stepper}--m-vertical--m-compact__step-main--MarginInlineStart);
 
     display: inline-grid;
     grid-template-columns: var(--#{$progress-stepper}--m-compact--GridTemplateColumns);
@@ -257,11 +257,11 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     .#{$progress-stepper}__step-connector {
       grid-row: var(--#{$progress-stepper}--m-compact__step-connector--GridRow);
       min-width: var(--#{$progress-stepper}--m-compact__step-connector--MinWidth);
-      padding-block-end: var(--#{$progress-stepper}--m-compact__step-connector--PaddingBottom);
+      padding-block-end: var(--#{$progress-stepper}--m-compact__step-connector--PaddingBlockEnd);
     }
 
     .#{$progress-stepper}__step-main {
-      margin-block-end: var(--#{$progress-stepper}--m-compact__step-main--MarginBottom);
+      margin-block-end: var(--#{$progress-stepper}--m-compact__step-main--MarginBlockEnd);
     }
 
     .#{$progress-stepper}__step:not(.pf-m-current) .#{$progress-stepper}__step-main {
@@ -320,7 +320,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   }
 
   &:last-child {
-    --#{$progress-stepper}__step-main--MarginBottom: 0;
+    --#{$progress-stepper}__step-main--MarginBlockEnd: 0;
   }
 }
 
@@ -333,13 +333,13 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   .#{$progress-stepper}__step:not(:last-of-type) > &::before {
     position: absolute;
-    inset-block-start: var(--#{$progress-stepper}__step-connector--before--Top); // half the height
-    inset-inline-start: var(--#{$progress-stepper}__step-connector--before--Left);
+    inset-block-start: var(--#{$progress-stepper}__step-connector--before--InsetBlockStart); // half the height
+    inset-inline-start: var(--#{$progress-stepper}__step-connector--before--InsetInlineStart);
     width: var(--#{$progress-stepper}__step-connector--before--Width);
     height: var(--#{$progress-stepper}__step-connector--before--Height);
     content: "";
-    border-block-end: var(--#{$progress-stepper}__step-connector--before--BorderBottomWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderBottomColor);
-    border-inline-end: var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderRightColor);
+    border-block-end: var(--#{$progress-stepper}__step-connector--before--BorderBlockEndWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderBlockEndColor);
+    border-inline-end: var(--#{$progress-stepper}__step-connector--before--BorderInlineEndWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderInlineEndColor);
     transform: var(--#{$progress-stepper}__step-connector--before--Transform);
   }
 }
@@ -361,12 +361,12 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   // Align pficons with the font awesome icons
   // stylelint-disable
   .pf-v6-pficon {
-    margin-block-start: var(--#{$progress-stepper}__pficon--MarginTop);
+    margin-block-start: var(--#{$progress-stepper}__pficon--MarginBlockStart);
   }
 
   // Push the triangle up to fit inside the circle
   .fa-exclamation-triangle {
-    margin-block-start: var(--#{$progress-stepper}__fa-exclamation-triangle--MarginTop);
+    margin-block-start: var(--#{$progress-stepper}__fa-exclamation-triangle--MarginBlockStart);
   }
   // stylelint-enable
 }
@@ -374,21 +374,21 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 // Step main
 .#{$progress-stepper}__step-main {
   min-width: 0;
-  margin-block-start: var(--#{$progress-stepper}__step-main--MarginTop);
-  margin-block-end: var(--#{$progress-stepper}__step-main--MarginBottom);
-  margin-inline-start: var(--#{$progress-stepper}__step-main--MarginLeft);
-  margin-inline-end: var(--#{$progress-stepper}__step-main--MarginRight);
+  margin-block-start: var(--#{$progress-stepper}__step-main--MarginBlockStart);
+  margin-block-end: var(--#{$progress-stepper}__step-main--MarginBlockEnd);
+  margin-inline-start: var(--#{$progress-stepper}__step-main--MarginInlineStart);
+  margin-inline-end: var(--#{$progress-stepper}__step-main--MarginInlineEnd);
   text-align: var(--#{$progress-stepper}--step-main--TextAlign, auto);
   overflow-wrap: anywhere;
 
   // Draw a new border for vertical alignment using step main
   .#{$progress-stepper}__step:not(:last-of-type) > &::before {
     position: absolute;
-    inset-block-start: calc(100% + var(--#{$progress-stepper}__step-main--MarginTop));
-    inset-inline-start: calc(50% - calc(var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) / 2));
+    inset-block-start: calc(100% + var(--#{$progress-stepper}__step-main--MarginBlockStart));
+    inset-inline-start: calc(50% - calc(var(--#{$progress-stepper}__step-connector--before--BorderInlineEndWidth) / 2));
     width: auto;
-    height: calc(var(--#{$progress-stepper}__step-main--MarginTop) + var(--#{$progress-stepper}__step-main--MarginBottom));
-    border-inline-end: var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderRightColor);
+    height: calc(var(--#{$progress-stepper}__step-main--MarginBlockStart) + var(--#{$progress-stepper}__step-main--MarginBlockEnd));
+    border-inline-end: var(--#{$progress-stepper}__step-connector--before--BorderInlineEndWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderInlineEndColor);
   }
 }
 
@@ -420,7 +420,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
 // Step description
 .#{$progress-stepper}__step-description {
-  margin-block-start: var(--#{$progress-stepper}__step-description--MarginTop);
+  margin-block-start: var(--#{$progress-stepper}__step-description--MarginBlockStart);
   font-size: var(--#{$progress-stepper}__step-description--FontSize);
   color: var(--#{$progress-stepper}__step-description--Color);
   text-align: var(--#{$progress-stepper}__step-description--TextAlign);

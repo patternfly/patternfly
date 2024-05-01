@@ -4,18 +4,18 @@
   // Menu
   --#{$app-launcher}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$app-launcher}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-  --#{$app-launcher}__menu--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__menu--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__menu--Top: calc(100% + var(--#{$pf-global}--spacer--xs));
+  --#{$app-launcher}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
   --#{$app-launcher}__menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$app-launcher}--m-top__menu--Top: 0;
+  --#{$app-launcher}--m-top__menu--InsetBlockStart: 0;
   --#{$app-launcher}--m-top__menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Expanded
-  --#{$app-launcher}__toggle--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$app-launcher}__toggle--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$app-launcher}__toggle--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$app-launcher}__toggle--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__toggle--PaddingBlockStart: var(--#{$pf-global}--spacer--form-element);
+  --#{$app-launcher}__toggle--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__toggle--PaddingBlockEnd: var(--#{$pf-global}--spacer--form-element);
+  --#{$app-launcher}__toggle--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
   --#{$app-launcher}__toggle--Color: var(--#{$pf-global}--Color--200);
   --#{$app-launcher}__toggle--hover--Color: var(--#{$pf-global}--Color--100);
   --#{$app-launcher}__toggle--active--Color: var(--#{$pf-global}--Color--100);
@@ -25,25 +25,25 @@
   --#{$app-launcher}__toggle--BackgroundColor: transparent;
 
   // Menu input
-  --#{$app-launcher}__menu-search--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__menu-search--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$app-launcher}__menu-search--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$app-launcher}__menu-search--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$app-launcher}__menu-search--BottomBorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$app-launcher}__menu-search--BottomBorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$app-launcher}__menu-search--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu-search--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu-search--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__menu-search--PaddingBlockEnd: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__menu-search--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__menu-search--BorderBlockEndColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$app-launcher}__menu-search--BorderBlockEndWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$app-launcher}__menu-search--MarginBlockEnd: var(--#{$pf-global}--spacer--sm);
 
   // Menu item
-  --#{$app-launcher}__menu-item--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__menu-item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$app-launcher}__menu-item--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__menu-item--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__menu-item--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu-item--PaddingInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__menu-item--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu-item--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
   --#{$app-launcher}__menu-item--Color: var(--#{$pf-global}--Color--dark-100);
   --#{$app-launcher}__menu-item--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$app-launcher}__menu-item--Width: 100%;
   --#{$app-launcher}__menu-item--disabled--Color: var(--#{$pf-global}--Color--dark-200);
   --#{$app-launcher}__menu-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
-  --#{$app-launcher}__menu-item--m-link--PaddingRight: 0;
+  --#{$app-launcher}__menu-item--m-link--PaddingInlineEnd: 0;
   --#{$app-launcher}__menu-item--m-link--hover--BackgroundColor: transparent;
   --#{$app-launcher}__menu-item--m-action--Color: var(--#{$pf-global}--Color--200);
   --#{$app-launcher}__menu-item--m-action--Width: auto;
@@ -56,29 +56,29 @@
   --#{$app-launcher}__menu-item--m-favorite__menu-item--m-action--hover--Color: var(--#{$pf-global}--palette--gold-500);
 
   // Menu item icon
-  --#{$app-launcher}__menu-item-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__menu-item-icon--MarginInlineEnd: var(--#{$pf-global}--spacer--sm);
   --#{$app-launcher}__menu-item-icon--Width: var(--#{$pf-global}--icon--FontSize--lg);
   --#{$app-launcher}__menu-item-icon--Height: var(--#{$pf-global}--icon--FontSize--lg);
 
   // Menu item external icon
   --#{$app-launcher}__menu-item-external-icon--Color: var(--#{$pf-global}--link--Color);
-  --#{$app-launcher}__menu-item-external-icon--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$app-launcher}__menu-item-external-icon--PaddingInlineStart: var(--#{$pf-global}--spacer--md);
   --#{$app-launcher}__menu-item-external-icon--TranslateY: #{pf-size-prem(-1px)};
   --#{$app-launcher}__menu-item-external-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
 
   // Groups
-  --#{$app-launcher}__group--group--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__group-title--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__group-title--PaddingRight: var(--#{$app-launcher}__menu-item--PaddingRight);
-  --#{$app-launcher}__group-title--PaddingBottom: var(--#{$app-launcher}__menu-item--PaddingBottom);
-  --#{$app-launcher}__group-title--PaddingLeft: var(--#{$app-launcher}__menu-item--PaddingLeft);
+  --#{$app-launcher}__group--group--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__group-title--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}__group-title--PaddingInlineEnd: var(--#{$app-launcher}__menu-item--PaddingInlineEnd);
+  --#{$app-launcher}__group-title--PaddingBlockEnd: var(--#{$app-launcher}__menu-item--PaddingBlockEnd);
+  --#{$app-launcher}__group-title--PaddingInlineStart: var(--#{$app-launcher}__menu-item--PaddingInlineStart);
   --#{$app-launcher}__group-title--FontSize: var(--#{$pf-global}--FontSize--xs);
   --#{$app-launcher}__group-title--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$app-launcher}__group-title--Color: var(--#{$pf-global}--Color--dark-200);
 
   // Divider
-  --#{$app-launcher}--c-divider--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}--c-divider--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}--c-divider--MarginBlockStart: var(--#{$pf-global}--spacer--sm);
+  --#{$app-launcher}--c-divider--MarginBlockEnd: var(--#{$pf-global}--spacer--sm);
 
   position: relative;
   display: inline-block;
@@ -91,21 +91,21 @@
   }
 
   .#{$divider} {
-    margin-block-start: var(--#{$app-launcher}--c-divider--MarginTop);
-    margin-block-end: var(--#{$app-launcher}--c-divider--MarginBottom);
+    margin-block-start: var(--#{$app-launcher}--c-divider--MarginBlockStart);
+    margin-block-end: var(--#{$app-launcher}--c-divider--MarginBlockEnd);
 
     // Support divider as last item in group to separate groups
     &:last-child {
-      --#{$app-launcher}--c-divider--MarginBottom: 0;
+      --#{$app-launcher}--c-divider--MarginBlockEnd: 0;
     }
   }
 }
 
 .#{$app-launcher}__toggle {
-  padding-block-start: var(--#{$app-launcher}__toggle--PaddingTop);
-  padding-block-end: var(--#{$app-launcher}__toggle--PaddingBottom);
-  padding-inline-start: var(--#{$app-launcher}__toggle--PaddingLeft);
-  padding-inline-end: var(--#{$app-launcher}__toggle--PaddingRight);
+  padding-block-start: var(--#{$app-launcher}__toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$app-launcher}__toggle--PaddingBlockEnd);
+  padding-inline-start: var(--#{$app-launcher}__toggle--PaddingInlineStart);
+  padding-inline-end: var(--#{$app-launcher}__toggle--PaddingInlineEnd);
   color: var(--#{$app-launcher}__toggle--Color);
   background-color: var(--#{$app-launcher}__toggle--BackgroundColor);
   border: none;
@@ -132,11 +132,11 @@
 
 .#{$app-launcher}__menu {
   position: absolute;
-  inset-block-start: var(--#{$app-launcher}__menu--Top);
+  inset-block-start: var(--#{$app-launcher}__menu--InsetBlockStart);
   z-index: var(--#{$app-launcher}__menu--ZIndex);
   min-width: 100%;
-  padding-block-start: var(--#{$app-launcher}__menu--PaddingTop);
-  padding-block-end: var(--#{$app-launcher}__menu--PaddingBottom);
+  padding-block-start: var(--#{$app-launcher}__menu--PaddingBlockStart);
+  padding-block-end: var(--#{$app-launcher}__menu--PaddingBlockEnd);
   background-color: var(--#{$app-launcher}__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--#{$app-launcher}__menu--BoxShadow);
@@ -146,7 +146,7 @@
   }
 
   .#{$app-launcher}.pf-m-top & {
-    --#{$app-launcher}__menu--Top: var(--#{$app-launcher}--m-top__menu--Top);
+    --#{$app-launcher}__menu--InsetBlockStart: var(--#{$app-launcher}--m-top__menu--InsetBlockStart);
 
     transform: translateY(var(--#{$app-launcher}--m-top__menu--TranslateY));
   }
@@ -165,12 +165,12 @@
 }
 
 .#{$app-launcher}__menu-search {
-  padding-block-start: var(--#{$app-launcher}__menu-search--PaddingTop);
-  padding-block-end: var(--#{$app-launcher}__menu-search--PaddingBottom);
-  padding-inline-start: var(--#{$app-launcher}__menu-search--PaddingLeft);
-  padding-inline-end: var(--#{$app-launcher}__menu-search--PaddingRight);
-  margin-block-end: var(--#{$app-launcher}__menu-search--MarginBottom);
-  border-block-end: var(--#{$app-launcher}__menu-search--BottomBorderWidth) solid var(--#{$app-launcher}__menu-search--BottomBorderColor);
+  padding-block-start: var(--#{$app-launcher}__menu-search--PaddingBlockStart);
+  padding-block-end: var(--#{$app-launcher}__menu-search--PaddingBlockEnd);
+  padding-inline-start: var(--#{$app-launcher}__menu-search--PaddingInlineStart);
+  padding-inline-end: var(--#{$app-launcher}__menu-search--PaddingInlineEnd);
+  margin-block-end: var(--#{$app-launcher}__menu-search--MarginBlockEnd);
+  border-block-end: var(--#{$app-launcher}__menu-search--BorderBlockEndWidth) solid var(--#{$app-launcher}__menu-search--BorderBlockEndColor);
 }
 
 .#{$app-launcher}__menu-wrapper {
@@ -186,10 +186,10 @@
   display: flex;
   align-items: center;
   width: var(--#{$app-launcher}__menu-item--Width);
-  padding-block-start: var(--#{$app-launcher}__menu-item--PaddingTop);
-  padding-block-end: var(--#{$app-launcher}__menu-item--PaddingBottom);
-  padding-inline-start: var(--#{$app-launcher}__menu-item--PaddingLeft);
-  padding-inline-end: var(--#{$app-launcher}__menu-item--PaddingRight);
+  padding-block-start: var(--#{$app-launcher}__menu-item--PaddingBlockStart);
+  padding-block-end: var(--#{$app-launcher}__menu-item--PaddingBlockEnd);
+  padding-inline-start: var(--#{$app-launcher}__menu-item--PaddingInlineStart);
+  padding-inline-end: var(--#{$app-launcher}__menu-item--PaddingInlineEnd);
   font-weight: var(--#{$app-launcher}__menu-item--FontWeight);
   color: var(--#{$app-launcher}__menu-item--Color);
   white-space: nowrap;
@@ -241,7 +241,7 @@
   }
 
   &.pf-m-link {
-    --#{$app-launcher}__menu-item--PaddingRight: var(--#{$app-launcher}__menu-item--m-link--PaddingRight);
+    --#{$app-launcher}__menu-item--PaddingInlineEnd: var(--#{$app-launcher}__menu-item--m-link--PaddingInlineEnd);
     --#{$app-launcher}__menu-item--hover--BackgroundColor: var(--#{$app-launcher}__menu-item--m-link--hover--BackgroundColor);
   }
 
@@ -265,7 +265,7 @@
   justify-content: center;
   width: var(--#{$app-launcher}__menu-item-icon--Width);
   height: var(--#{$app-launcher}__menu-item-icon--Height);
-  margin-inline-end: var(--#{$app-launcher}__menu-item-icon--MarginRight);
+  margin-inline-end: var(--#{$app-launcher}__menu-item-icon--MarginInlineEnd);
 
   > * {
     max-width: 100%;
@@ -274,7 +274,7 @@
 }
 
 .#{$app-launcher}__menu-item-external-icon {
-  padding-inline-start: var(--#{$app-launcher}__menu-item-external-icon--PaddingLeft);
+  padding-inline-start: var(--#{$app-launcher}__menu-item-external-icon--PaddingInlineStart);
   margin-inline-start: auto;
   font-size: var(--#{$app-launcher}__menu-item-external-icon--FontSize);
   color: var(--#{$app-launcher}__menu-item-external-icon--Color);
@@ -284,15 +284,15 @@
 
 .#{$app-launcher}__group {
   & + & {
-    padding-block-start: var(--#{$app-launcher}__group--group--PaddingTop);
+    padding-block-start: var(--#{$app-launcher}__group--group--PaddingBlockStart);
   }
 }
 
 .#{$app-launcher}__group-title {
-  padding-block-start: var(--#{$app-launcher}__group-title--PaddingTop);
-  padding-block-end: var(--#{$app-launcher}__group-title--PaddingBottom);
-  padding-inline-start: var(--#{$app-launcher}__group-title--PaddingLeft);
-  padding-inline-end: var(--#{$app-launcher}__group-title--PaddingRight);
+  padding-block-start: var(--#{$app-launcher}__group-title--PaddingBlockStart);
+  padding-block-end: var(--#{$app-launcher}__group-title--PaddingBlockEnd);
+  padding-inline-start: var(--#{$app-launcher}__group-title--PaddingInlineStart);
+  padding-inline-end: var(--#{$app-launcher}__group-title--PaddingInlineEnd);
   font-size: var(--#{$app-launcher}__group-title--FontSize);
   font-weight: var(--#{$app-launcher}__group-title--FontWeight);
   color: var(--#{$app-launcher}__group-title--Color);

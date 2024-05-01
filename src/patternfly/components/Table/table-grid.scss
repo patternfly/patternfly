@@ -46,80 +46,80 @@
   // * Table body
   --#{$table}__tbody--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$table}__tbody--after--border-width--base: var(--pf-t--global--border--width--extra-strong);
-  --#{$table}__tbody--after--BorderLeftWidth: 0;
+  --#{$table}__tbody--after--BorderInlineStartWidth: 0;
   --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // * Table tr responsive
   --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__tr--responsive--last-child--BorderBottomWidth: var(--#{$table}__tbody--responsive--border-width--base);
+  --#{$table}__tr--responsive--last-child--BorderBlockEndWidth: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__tr--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
-  --#{$table}__tr--responsive--MarginTop: var(--#{$table}__tbody--responsive--border-width--base);
-  --#{$table}__tr--responsive--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$table}__tr--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$table}__tr--responsive--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$table}__tr--responsive--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--MarginBlockStart: var(--#{$table}__tbody--responsive--border-width--base);
+  --#{$table}__tr--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$table}__tr--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$table}__tr--responsive--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // * Table tr responsive nested table
-  --#{$table}__tr--responsive--nested-table--PaddingTop: var(--pf-t--global--spacer--xl);
-  --#{$table}__tr--responsive--nested-table--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$table}__tr--responsive--nested-table--PaddingBottom: var(--pf-t--global--spacer--xl);
-  --#{$table}__tr--responsive--nested-table--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--nested-table--PaddingBlockStart: var(--pf-t--global--spacer--xl);
+  --#{$table}__tr--responsive--nested-table--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--nested-table--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$table}__tr--responsive--nested-table--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // * Table tbody
-  --#{$table}__tbody--after__tr--BorderLeftWidth: 0;
-  --#{$table}__tbody--after__tr--BorderLeftColor: transparent;
-  --#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
+  --#{$table}__tbody--after__tr--BorderInlineStartWidth: 0;
+  --#{$table}__tbody--after__tr--BorderInlineStartColor: transparent;
+  --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartColor: var(--pf-t--global--border--color--clicked);
 
   // * Table tbody selected
-  --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--pf-t--global--border--color--clicked);
+  --#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor: var(--pf-t--global--border--color--clicked);
 
   // * Table grid cell
   --#{$table}--m-grid--cell--hidden-visible--Display: grid;
 
   // * Table grid cell
-  --#{$table}--m-grid--cell--PaddingTop: 0;
-  --#{$table}--m-grid--cell--PaddingRight: 0;
-  --#{$table}--m-grid--cell--PaddingBottom: 0;
-  --#{$table}--m-grid--cell--PaddingLeft: 0;
+  --#{$table}--m-grid--cell--PaddingBlockStart: 0;
+  --#{$table}--m-grid--cell--PaddingInlineEnd: 0;
+  --#{$table}--m-grid--cell--PaddingBlockEnd: 0;
+  --#{$table}--m-grid--cell--PaddingInlineStart: 0;
 
   // * Table td responsive
   --#{$table}-td--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--responsive--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--responsive--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$table}--cell--first-child--responsive--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$table}--cell--responsive--PaddingRight: 0;
-  --#{$table}--cell--responsive--PaddingLeft: 0;
+  --#{$table}--cell--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$table}--cell--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--responsive--PaddingInlineEnd: 0;
+  --#{$table}--cell--responsive--PaddingInlineStart: 0;
 
   // * Table grid compact table
-  --#{$table}--m-compact__tr--responsive--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$table}--m-compact__tr--responsive--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$table}--m-compact__tr__td--responsive--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$table}--m-compact__tr__td--responsive--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$table}--m-compact__check--responsive--MarginTop: #{pf-size-prem(7px)};
-  --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--pf-t--global--spacer--xs) * -1);
-  --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--pf-t--global--spacer--xs) * -1);
-  --#{$table}--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-compact__tr--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--m-compact__tr--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}--m-compact__tr__td--responsive--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact__tr__td--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact__check--responsive--MarginBlockStart: #{pf-size-prem(7px)};
+  --#{$table}--m-compact__action--responsive--MarginBlockStart: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$table}--m-compact__action--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
 
   // * Table grid expandable row content
-  --#{$table}__expandable-row-content--responsive--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table check
-  --#{$table}__check--responsive--MarginLeft: var(--#{$table}__tbody--responsive--border-width--base);
-  --#{$table}__check--responsive--MarginTop: #{pf-size-prem(14px)};
+  --#{$table}__check--responsive--MarginInlineStart: var(--#{$table}__tbody--responsive--border-width--base);
+  --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(14px)};
 
   // * Table grid favorite
-  --#{$table}--m-grid__favorite--MarginTop: #{pf-size-prem(8px)};
-  --#{$table}--m-grid__check--favorite--MarginLeft: var(--pf-t--global--spacer--xl);
+  --#{$table}--m-grid__favorite--MarginBlockStart: #{pf-size-prem(8px)};
+  --#{$table}--m-grid__check--favorite--MarginInlineStart: var(--pf-t--global--spacer--xl);
 
   // * Table grid action
-  --#{$table}--m-grid__action--MarginTop: #{pf-size-prem(6px)};
-  --#{$table}__action--responsive--MarginLeft: var(--pf-t--global--spacer--xl);
-  --#{$table}--m-grid__favorite--action--MarginLeft: var(--pf-t--global--spacer--2xl);
-  --#{$table}--m-grid__check--favorite--action--MarginLeft: calc(var(--#{$table}--m-grid__check--favorite--MarginLeft) + var(--#{$table}--m-grid__favorite--action--MarginLeft));
+  --#{$table}--m-grid__action--MarginBlockStart: #{pf-size-prem(6px)};
+  --#{$table}__action--responsive--MarginInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$table}--m-grid__favorite--action--MarginInlineStart: var(--pf-t--global--spacer--2xl);
+  --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
 
   // * Table grid toggle icon
   --#{$table}__toggle__icon--Transition: .2s ease-in 0s;
@@ -128,16 +128,16 @@
 
 // - Table mobile layout
 @include pf-mobile-layout {
-  --#{$table}--cell--PaddingTop: var(--#{$table}--m-grid--cell--PaddingTop);
-  --#{$table}--cell--PaddingRight: var(--#{$table}--m-grid--cell--PaddingRight);
-  --#{$table}--cell--PaddingBottom: var(--#{$table}--m-grid--cell--PaddingBottom);
-  --#{$table}--cell--PaddingLeft: var(--#{$table}--m-grid--cell--PaddingLeft);
+  --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-grid--cell--PaddingBlockStart);
+  --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--m-grid--cell--PaddingInlineEnd);
+  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-grid--cell--PaddingBlockEnd);
+  --#{$table}--cell--PaddingInlineStart: var(--#{$table}--m-grid--cell--PaddingInlineStart);
 
   // - Table favorite
-  --#{$table}__favorite--c-button--MarginTop: auto;
-  --#{$table}__favorite--c-button--MarginRight: auto;
-  --#{$table}__favorite--c-button--MarginBottom: auto;
-  --#{$table}__favorite--c-button--MarginLeft: auto;
+  --#{$table}__favorite--c-button--MarginBlockStart: auto;
+  --#{$table}__favorite--c-button--MarginInlineEnd: auto;
+  --#{$table}__favorite--c-button--MarginBlockEnd: auto;
+  --#{$table}__favorite--c-button--MarginInlineStart: auto;
 
   display: grid;
   border: none;
@@ -190,7 +190,7 @@
   // The last tr should always have a border width of 1px
   tr:where(.#{$table}__tr):last-child,
   tbody:where(.#{$table}__tbody):last-of-type:not(:only-of-type) > tr:where(.#{$table}__tr) {
-    border-block-end-width: var(--#{$table}__tr--responsive--last-child--BorderBottomWidth);
+    border-block-end-width: var(--#{$table}__tr--responsive--last-child--BorderBlockEndWidth);
   }
 
   // - Table grid tbody expanded
@@ -208,7 +208,7 @@
 
   // - Table grid tr selected
   tr:where(.#{$table}__tr).pf-m-selected {
-    --#{$table}__expandable-row--after--BorderLeftWidth: 0;
+    --#{$table}__expandable-row--after--BorderInlineStartWidth: 0;
     --#{$table}__expandable-row--after--BorderColor: transparent;
   }
 
@@ -225,41 +225,41 @@
     grid-column-gap: var(--#{$table}__tr--responsive--GridColumnGap);
 
     // set base variables to reset later
-    padding-block-start: var(--#{$table}__tr--responsive--PaddingTop);
-    padding-inline-end: var(--#{$table}__tr--responsive--PaddingRight);
-    padding-block-end: var(--#{$table}__tr--responsive--PaddingBottom);
-    padding-inline-start: var(--#{$table}__tr--responsive--PaddingLeft);
+    padding-block-start: var(--#{$table}__tr--responsive--PaddingBlockStart);
+    padding-inline-end: var(--#{$table}__tr--responsive--PaddingInlineEnd);
+    padding-block-end: var(--#{$table}__tr--responsive--PaddingBlockEnd);
+    padding-inline-start: var(--#{$table}__tr--responsive--PaddingInlineStart);
 
     // Reset td padding
     & > :where(th, td) {
-      padding-block-start: var(--#{$table}--cell--responsive--PaddingTop);
-      padding-inline-end: var(--#{$table}--cell--responsive--PaddingRight);
-      padding-block-end: var(--#{$table}--cell--responsive--PaddingBottom);
-      padding-inline-start: var(--#{$table}--cell--responsive--PaddingLeft);
+      padding-block-start: var(--#{$table}--cell--responsive--PaddingBlockStart);
+      padding-inline-end: var(--#{$table}--cell--responsive--PaddingInlineEnd);
+      padding-block-end: var(--#{$table}--cell--responsive--PaddingBlockEnd);
+      padding-inline-start: var(--#{$table}--cell--responsive--PaddingInlineStart);
 
       // remove padding from first child to align with kebab
       &:first-child {
-        --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--cell--first-child--responsive--PaddingTop);
+        --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
       }
     }
   }
 
   // - Table grid compact
   &.pf-m-compact {
-    --#{$table}__tr--responsive--PaddingTop: var(--#{$table}--m-compact__tr--responsive--PaddingTop);
-    --#{$table}__tr--responsive--PaddingBottom: var(--#{$table}--m-compact__tr--responsive--PaddingBottom);
-    --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--m-compact__tr__td--responsive--PaddingTop);
-    --#{$table}--cell--responsive--PaddingBottom: var(--#{$table}--m-compact__tr__td--responsive--PaddingBottom);
-    --#{$table}__check--responsive--MarginTop: var(--#{$table}--m-compact__check--responsive--MarginTop);
-    --#{$table}__check--input--MarginTop: 0;
+    --#{$table}__tr--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr--responsive--PaddingBlockStart);
+    --#{$table}__tr--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr--responsive--PaddingBlockEnd);
+    --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockStart);
+    --#{$table}--cell--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockEnd);
+    --#{$table}__check--responsive--MarginBlockStart: var(--#{$table}--m-compact__check--responsive--MarginBlockStart);
+    --#{$table}__check--input--MarginBlockStart: 0;
 
     .#{$table}__action {
-      margin-block-start: var(--#{$table}--m-compact__action--responsive--MarginTop);
-      margin-block-end: var(--#{$table}--m-compact__action--responsive--MarginTop);
+      margin-block-start: var(--#{$table}--m-compact__action--responsive--MarginBlockStart);
+      margin-block-end: var(--#{$table}--m-compact__action--responsive--MarginBlockStart);
     }
 
     .#{$table}__toggle .#{$button} {
-      margin-block-end: var(--#{$table}--m-compact__toggle--c-button--responsive--MarginBottom);
+      margin-block-end: var(--#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd);
     }
   }
 
@@ -294,34 +294,34 @@
   tr:where(.#{$table}__tr) > :where(th, td) {
     // Remove first child padding left
     &:first-child {
-      --#{$table}--cell--PaddingLeft: 0;
+      --#{$table}--cell--PaddingInlineStart: 0;
     }
 
     // Remove last child padding right
     &:last-child {
-      --#{$table}--cell--PaddingRight: 0;
+      --#{$table}--cell--PaddingInlineEnd: 0;
     }
   }
 
   // - Table grid table
   .#{$table} {
-    --#{$table}__tr--responsive--PaddingTop: var(--#{$table}__tr--responsive--nested-table--PaddingTop);
-    --#{$table}__tr--responsive--PaddingRight: var(--#{$table}__tr--responsive--nested-table--PaddingRight);
-    --#{$table}__tr--responsive--PaddingBottom: var(--#{$table}__tr--responsive--nested-table--PaddingBottom);
-    --#{$table}__tr--responsive--PaddingLeft: var(--#{$table}__tr--responsive--nested-table--PaddingLeft);
+    --#{$table}__tr--responsive--PaddingBlockStart: var(--#{$table}__tr--responsive--nested-table--PaddingBlockStart);
+    --#{$table}__tr--responsive--PaddingInlineEnd: var(--#{$table}__tr--responsive--nested-table--PaddingInlineEnd);
+    --#{$table}__tr--responsive--PaddingBlockEnd: var(--#{$table}__tr--responsive--nested-table--PaddingBlockEnd);
+    --#{$table}__tr--responsive--PaddingInlineStart: var(--#{$table}__tr--responsive--nested-table--PaddingInlineStart);
 
     border: 0;
 
     tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) + tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-      --#{$table}__tr--responsive--PaddingTop: 0;
+      --#{$table}__tr--responsive--PaddingBlockStart: 0;
     }
   }
 
   // - Table grid compound expansion toggle
   .#{$table}__compound-expansion-toggle {
-    --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: 0;
-    --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
-    --#{$table}__compound-expansion-toggle__button--after--Top: 100%;
+    --#{$table}__compound-expansion-toggle__button--before--BorderInlineEndWidth: 0;
+    --#{$table}__compound-expansion-toggle__button--before--BorderInlineStartWidth: 0;
+    --#{$table}__compound-expansion-toggle__button--after--InsetBlockStart: 100%;
   }
 
   // Compound expansion responsive
@@ -336,19 +336,19 @@
       inset-inline-start: 0;
       content: "";
       border: 0;
-      border-inline-start: var(--#{$table}__tbody--after--BorderLeftWidth) solid var(--#{$table}__tbody--after--BorderColor);
+      border-inline-start: var(--#{$table}__tbody--after--BorderInlineStartWidth) solid var(--#{$table}__tbody--after--BorderColor);
     }
 
     &.pf-m-expanded {
-      --#{$table}__tbody--after--BorderLeftWidth: var(--#{$table}__tbody--after--border-width--base);
+      --#{$table}__tbody--after--BorderInlineStartWidth: var(--#{$table}__tbody--after--border-width--base);
 
       & tbody:where(.#{$table}__tbody) {
-        --#{$table}__tbody--after--BorderLeftWidth: 0;
+        --#{$table}__tbody--after--BorderInlineStartWidth: 0;
       }
     }
 
     > tr:where(.#{$table}__tr) > :first-child:not(.#{$table}__check)::after {
-      --#{$table}__expandable-row--after--BorderLeftWidth: 0;
+      --#{$table}__expandable-row--after--BorderInlineStartWidth: 0;
 
       position: static;
       width: auto;
@@ -358,12 +358,12 @@
 
   // - Table grid expandable row
   .#{$table}__expandable-row {
-    --#{$table}--cell--responsive--PaddingTop: 0;
-    --#{$table}--cell--responsive--PaddingRight: 0;
-    --#{$table}--cell--responsive--PaddingBottom: 0;
-    --#{$table}--cell--responsive--PaddingLeft: 0;
-    --#{$table}--cell--PaddingRight: 0;
-    --#{$table}--cell--PaddingLeft: 0;
+    --#{$table}--cell--responsive--PaddingBlockStart: 0;
+    --#{$table}--cell--responsive--PaddingInlineEnd: 0;
+    --#{$table}--cell--responsive--PaddingBlockEnd: 0;
+    --#{$table}--cell--responsive--PaddingInlineStart: 0;
+    --#{$table}--cell--PaddingInlineEnd: 0;
+    --#{$table}--cell--PaddingInlineStart: 0;
 
     display: block;
     max-height: var(--#{$table}__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
@@ -400,15 +400,15 @@
     }
 
     .#{$table}__expandable-row-content {
-      padding-inline-end: var(--#{$table}__expandable-row-content--responsive--PaddingRight);
-      padding-inline-start: var(--#{$table}__expandable-row-content--responsive--PaddingLeft);
+      padding-inline-end: var(--#{$table}__expandable-row-content--responsive--PaddingInlineEnd);
+      padding-inline-start: var(--#{$table}__expandable-row-content--responsive--PaddingInlineStart);
     }
   }
 
   // - Table grid tbody hoverable
   tbody:where(.#{$table}__tbody).pf-m-hoverable {
-    --#{$table}__tbody--after--BorderLeftWidth: 0;
-    --#{$table}__tbody--after--BorderLeftColor: transparent;
+    --#{$table}__tbody--after--BorderInlineStartWidth: 0;
+    --#{$table}__tbody--after--BorderInlineStartColor: transparent;
 
     &,
     > tr:where(.#{$table}__tr) {
@@ -421,18 +421,18 @@
       inset-block-start: 0;
       inset-block-end: 0;
       inset-inline-start: 0;
-      width: var(--#{$table}__tbody--after__tr--BorderLeftWidth);
-      background-color: var(--#{$table}__tbody--after__tr--BorderLeftColor);
+      width: var(--#{$table}__tbody--after__tr--BorderInlineStartWidth);
+      background-color: var(--#{$table}__tbody--after__tr--BorderInlineStartColor);
     }
 
     &.pf-m-expanded {
-      --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth);
-      --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftColor);
+      --#{$table}__tbody--after__tr--BorderInlineStartWidth: var(--#{$table}__tbody--m-expanded--after__tr--BorderInlineStartWidth);
+      --#{$table}__tbody--after__tr--BorderInlineStartColor: var(--#{$table}__tbody--m-expanded--after__tr--BorderInlineStartColor);
     }
 
     &.pf-m-selected {
-      --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftWidth);
-      --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftColor);
+      --#{$table}__tbody--after__tr--BorderInlineStartWidth: var(--#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth);
+      --#{$table}__tbody--after__tr--BorderInlineStartColor: var(--#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor);
     }
   }
 
@@ -445,8 +445,8 @@
       inset-block-start: 0;
       inset-block-end: 0;
       inset-inline-start: 0;
-      width: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
-      background-color: var(--#{$table}__tr--m-selected--after--BorderLeftColor);
+      width: var(--#{$table}__tr--m-selected--after--BorderInlineStartWidth);
+      background-color: var(--#{$table}__tr--m-selected--after--BorderInlineStartColor);
     }
   }
 
@@ -475,10 +475,10 @@
 
   // - Table grid button
   .#{$table}__button {
-    --#{$table}--cell--PaddingTop: var(--#{$table}--m-grid--cell--PaddingTop);
-    --#{$table}--cell--PaddingRight: var(--#{$table}--m-grid--cell--PaddingRight);
-    --#{$table}--cell--PaddingBottom: var(--#{$table}--m-grid--cell--PaddingBottom);
-    --#{$table}--cell--PaddingLeft: var(--#{$table}--m-grid--cell--PaddingLeft);
+    --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-grid--cell--PaddingBlockStart);
+    --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--m-grid--cell--PaddingInlineEnd);
+    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-grid--cell--PaddingBlockEnd);
+    --#{$table}--cell--PaddingInlineStart: var(--#{$table}--m-grid--cell--PaddingInlineStart);
   }
 
   // - Table grid check - Table grid favorite - Table grid action
@@ -491,20 +491,20 @@
 
   // - Table grid check
   .#{$table}__check {
-    margin-block-start: var(--#{$table}__check--responsive--MarginTop);
-    margin-inline-start: var(--#{$table}__check--responsive--MarginLeft);
+    margin-block-start: var(--#{$table}__check--responsive--MarginBlockStart);
+    margin-inline-start: var(--#{$table}__check--responsive--MarginInlineStart);
     line-height: 1;
 
     ~ .#{$table}__favorite {
-      margin-inline-start: var(--#{$table}--m-grid__check--favorite--MarginLeft);
+      margin-inline-start: var(--#{$table}--m-grid__check--favorite--MarginInlineStart);
 
       ~ .#{$table}__action {
-        margin-inline-start: var(--#{$table}--m-grid__check--favorite--action--MarginLeft);
+        margin-inline-start: var(--#{$table}--m-grid__check--favorite--action--MarginInlineStart);
       }
     }
 
     ~ .#{$table}__action {
-      margin-inline-start: var(--#{$table}__action--responsive--MarginLeft);
+      margin-inline-start: var(--#{$table}__action--responsive--MarginInlineStart);
     }
 
     label {
@@ -515,16 +515,16 @@
 
   // - Table grid favorite
   .#{$table}__favorite {
-    margin-block-start: var(--#{$table}--m-grid__favorite--MarginTop);
+    margin-block-start: var(--#{$table}--m-grid__favorite--MarginBlockStart);
 
     ~ .#{$table}__action {
-      margin-inline-start: var(--#{$table}--m-grid__favorite--action--MarginLeft);
+      margin-inline-start: var(--#{$table}--m-grid__favorite--action--MarginInlineStart);
     }
   }
 
   // - Table grid action
   .#{$table}__action {
-    margin-block-start: var(--#{$table}--m-grid__action--MarginTop);
+    margin-block-start: var(--#{$table}--m-grid__action--MarginBlockStart);
     text-align: end;
 
     // @smallest breakpoint

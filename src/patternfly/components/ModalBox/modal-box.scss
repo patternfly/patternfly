@@ -13,7 +13,7 @@
   --#{$modal-box}--MaxHeight: calc(100% - var(--pf-t--global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
   --#{$modal-box}--m-align-top--spacer: var(--pf-t--global--spacer--sm);
   --#{$modal-box}--m-align-top--xl--spacer: var(--pf-t--global--spacer--xl);
-  --#{$modal-box}--m-align-top--Top: var(--#{$modal-box}--m-align-top--spacer);
+  --#{$modal-box}--m-align-top--InsetBlockStart: var(--#{$modal-box}--m-align-top--spacer);
   --#{$modal-box}--m-align-top--MaxHeight: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer), var(--pf-t--global--spacer--2xl)) - var(--#{$modal-box}--m-align-top--spacer));
   --#{$modal-box}--m-align-top--MaxWidth: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer) * 2, var(--pf-t--global--spacer--xl)));
 
@@ -29,9 +29,9 @@
   }
 
   // Header
-  --#{$modal-box}__header--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__header--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--Gap: var(--pf-t--global--spacer--md);
 
   // Header main
@@ -43,7 +43,7 @@
   --#{$modal-box}__title--FontSize: var(--pf-t--global--font--size--heading--md);
 
   // Title icon
-  --#{$modal-box}__title-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$modal-box}__title-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$modal-box}__title-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Description
@@ -52,26 +52,26 @@
 
   // Body
   --#{$modal-box}__body--MinHeight: calc(var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)); // Allow for at least 1 line of content in the body
-  --#{$modal-box}__body--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__body--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__body--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__body--last-child--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__header--body--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$modal-box}__body--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__body--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__body--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__body--last-child--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--body--PaddingBlockStart: var(--pf-t--global--spacer--md);
 
   // Close
-  --#{$modal-box}__close--Top: var(--#{$modal-box}__header--PaddingTop);
-  --#{$modal-box}__close--Right: var(--#{$modal-box}__header--PaddingRight);
-  --#{$modal-box}__close--sibling--MarginRight: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
+  --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
+  --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
+  --#{$modal-box}__close--sibling--MarginInlineEnd: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
-  --#{$modal-box}__footer--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__footer--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__footer--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__footer--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginRight: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
-  --#{$modal-box}__footer--c-button--sm--MarginRight: calc(var(--#{$modal-box}__footer--c-button--MarginRight) / 2);
+  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
+  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2);
 }
 
 .#{$modal-box} {
@@ -100,7 +100,7 @@
   }
 
   &.pf-m-align-top {
-    inset-block-start: var(--#{$modal-box}--m-align-top--Top);
+    inset-block-start: var(--#{$modal-box}--m-align-top--InsetBlockStart);
     align-self: flex-start;
     max-width: var(--#{$modal-box}--m-align-top--MaxWidth);
     max-height: var(--#{$modal-box}--m-align-top--MaxHeight);
@@ -145,11 +145,11 @@
 // Close button
 .#{$modal-box}__close {
   position: absolute;
- inset-block-start: var(--#{$modal-box}__close--Top);
- inset-inline-end: var(--#{$modal-box}__close--Right);
+ inset-block-start: var(--#{$modal-box}__close--InsetBlockStart);
+ inset-inline-end: var(--#{$modal-box}__close--InsetInlineEnd);
 
   + * {
-    margin-inline-end: var(--#{$modal-box}__close--sibling--MarginRight); // Create room for the close button
+    margin-inline-end: var(--#{$modal-box}__close--sibling--MarginInlineEnd); // Create room for the close button
   }
 }
 
@@ -158,9 +158,9 @@
   flex-direction: column;
   flex-shrink: 0;
   gap: var(--#{$modal-box}__header--Gap);
-  padding-block-start: var(--#{$modal-box}__header--PaddingTop);
-  padding-inline-start: var(--#{$modal-box}__header--PaddingLeft);
-  padding-inline-end: var(--#{$modal-box}__header--PaddingRight);
+  padding-block-start: var(--#{$modal-box}__header--PaddingBlockStart);
+  padding-inline-start: var(--#{$modal-box}__header--PaddingInlineStart);
+  padding-inline-end: var(--#{$modal-box}__header--PaddingInlineEnd);
 
   &.pf-m-help {
     display: flex;
@@ -168,7 +168,7 @@
   }
 
   + .#{$modal-box}__body {
-    --#{$modal-box}__body--PaddingTop: var(--#{$modal-box}__header--body--PaddingTop);
+    --#{$modal-box}__body--PaddingBlockStart: var(--#{$modal-box}__header--body--PaddingBlockStart);
   }
 }
 
@@ -197,12 +197,12 @@
 }
 
 .#{$modal-box}__title-icon {
-  margin-inline-end: var(--#{$modal-box}__title-icon--MarginRight);
+  margin-inline-end: var(--#{$modal-box}__title-icon--MarginInlineEnd);
   color: var(--#{$modal-box}__title-icon--Color);
 }
 
 .#{$modal-box}__description {
-  padding-block-start: var(--#{$modal-box}__description--PaddingTop);
+  padding-block-start: var(--#{$modal-box}__description--PaddingBlockStart);
   font-size: var(--#{$modal-box}__description--FontSize);
   color: var(--#{$modal-box}__description--Color);
 }
@@ -211,9 +211,9 @@
 .#{$modal-box}__body {
   flex: 1 1 auto;
   min-height: var(--#{$modal-box}__body--MinHeight);
-  padding-block-start: var(--#{$modal-box}__body--PaddingTop);
-  padding-inline-start: var(--#{$modal-box}__body--PaddingLeft);
-  padding-inline-end: var(--#{$modal-box}__body--PaddingRight);
+  padding-block-start: var(--#{$modal-box}__body--PaddingBlockStart);
+  padding-inline-start: var(--#{$modal-box}__body--PaddingInlineStart);
+  padding-inline-end: var(--#{$modal-box}__body--PaddingInlineEnd);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -221,7 +221,7 @@
   -webkit-overflow-scrolling: touch;
 
   &:last-child {
-    padding-block-end: var(--#{$modal-box}__body--last-child--PaddingBottom);
+    padding-block-end: var(--#{$modal-box}__body--last-child--PaddingBlockEnd);
   }
 }
 
@@ -230,17 +230,17 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  padding-block-start: var(--#{$modal-box}__footer--PaddingTop);
-  padding-block-end: var(--#{$modal-box}__footer--PaddingBottom);
-  padding-inline-start: var(--#{$modal-box}__footer--PaddingLeft);
-  padding-inline-end: var(--#{$modal-box}__footer--PaddingRight);
+  padding-block-start: var(--#{$modal-box}__footer--PaddingBlockStart);
+  padding-block-end: var(--#{$modal-box}__footer--PaddingBlockEnd);
+  padding-inline-start: var(--#{$modal-box}__footer--PaddingInlineStart);
+  padding-inline-end: var(--#{$modal-box}__footer--PaddingInlineEnd);
 
   // Base margin left and right equal for buttons when wrapped
   > .#{$button}:not(:last-child) {
-    margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginRight);
+    margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginInlineEnd);
 
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      --#{$modal-box}__footer--c-button--MarginRight: var(--#{$modal-box}__footer--c-button--sm--MarginRight);
+      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--sm--MarginInlineEnd);
     }
   }
 }

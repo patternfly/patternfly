@@ -3,21 +3,21 @@
 // Tabs
 .#{$alert-group} {
   // Alert group variables
-  --#{$alert-group}__item--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Toast variables
-  --#{$alert-group}--m-toast--Top: var(--pf-t--global--spacer--2xl);
-  --#{$alert-group}--m-toast--Right: var(--pf-t--global--spacer--xl);
+  --#{$alert-group}--m-toast--InsetBlockStart: var(--pf-t--global--spacer--2xl);
+  --#{$alert-group}--m-toast--InsetInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$alert-group}--m-toast--MaxWidth: #{pf-size-prem(600px)};
   --#{$alert-group}--m-toast--ZIndex: var(--pf-t--global--z-index--2xl);
 
   // Overflow button
   --#{$alert-group}__overflow-button--BorderWidth: 0;
   --#{$alert-group}__overflow-button--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$alert-group}__overflow-button--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$alert-group}__overflow-button--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$alert-group}__overflow-button--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$alert-group}__overflow-button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__overflow-button--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__overflow-button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__overflow-button--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__overflow-button--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$alert-group}__overflow-button--Color: var(--pf-t--global--text--color--link--default);
   --#{$alert-group}__overflow-button--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$alert-group}__overflow-button--BackgroundColor: var(--pf-t--global--background--color--floating--default);
@@ -31,16 +31,16 @@
 
   // Spacing between alerts
   > * + * {
-    margin-block-start: var(--#{$alert-group}__item--MarginTop);
+    margin-block-start: var(--#{$alert-group}__item--MarginBlockStart);
   }
 
   // Toast positioning modifier
   &.pf-m-toast {
     position: fixed;
-    inset-block-start: var(--#{$alert-group}--m-toast--Top);
-    inset-inline-end: var(--#{$alert-group}--m-toast--Right);
+    inset-block-start: var(--#{$alert-group}--m-toast--InsetBlockStart);
+    inset-inline-end: var(--#{$alert-group}--m-toast--InsetInlineEnd);
     z-index: var(--#{$alert-group}--m-toast--ZIndex);
-    width: calc(100% - calc(var(--#{$alert-group}--m-toast--Right) * 2));
+    width: calc(100% - calc(var(--#{$alert-group}--m-toast--InsetInlineEnd) * 2));
     max-width: var(--#{$alert-group}--m-toast--MaxWidth);
   }
 }
@@ -48,10 +48,10 @@
 .#{$alert-group}__overflow-button {
   position: relative;
   width: 100%;
-  padding-block-start: var(--#{$alert-group}__overflow-button--PaddingTop);
-  padding-block-end: var(--#{$alert-group}__overflow-button--PaddingBottom);
-  padding-inline-start: var(--#{$alert-group}__overflow-button--PaddingLeft);
-  padding-inline-end: var(--#{$alert-group}__overflow-button--PaddingRight);
+  padding-block-start: var(--#{$alert-group}__overflow-button--PaddingBlockStart);
+  padding-block-end: var(--#{$alert-group}__overflow-button--PaddingBlockEnd);
+  padding-inline-start: var(--#{$alert-group}__overflow-button--PaddingInlineStart);
+  padding-inline-end: var(--#{$alert-group}__overflow-button--PaddingInlineEnd);
   color: var(--#{$alert-group}__overflow-button--Color);
   background-color: var(--#{$alert-group}__overflow-button--BackgroundColor);
   border-width: var(--#{$alert-group}__overflow-button--BorderWidth);

@@ -5,23 +5,23 @@
   --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(140px)};
   --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
   --#{$table}__sticky-cell--ZIndex: var(--pf-t--global--z-index--xs);
-  --#{$table}__sticky-cell--Right: auto;
-  --#{$table}__sticky-cell--Left: auto;
+  --#{$table}__sticky-cell--InsetInlineEnd: auto;
+  --#{$table}__sticky-cell--InsetInlineStart: auto;
   --#{$table}__sticky-cell--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__sticky-cell--m-border-right--before--BorderRightWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__sticky-cell--m-border-right--before--BorderRightColor: var(--pf-t--global--border--color--default);
-  --#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__sticky-cell--m-border-left--before--BorderLeftColor: var(--pf-t--global--border--color--default);
-  --#{$table}__sticky-cell--m-right--Right: 0;
-  --#{$table}__sticky-cell--m-left--Left: 0;
+  --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndColor: var(--pf-t--global--border--color--default);
+  --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$table}__sticky-cell--m-right--InsetInlineEnd: 0;
+  --#{$table}__sticky-cell--m-left--InsetInlineStart: 0;
   --#{$table}--m-sticky-header__sticky-cell--ZIndex: calc(var(--#{$table}__sticky-cell--ZIndex) + 1);
 }
 
 // - Table sticky cell
 .#{$table} .#{$table}__sticky-cell {
   position: sticky;
-  inset-inline-start: var(--#{$table}__sticky-cell--Left);
-  inset-inline-end: var(--#{$table}__sticky-cell--Right);
+  inset-inline-start: var(--#{$table}__sticky-cell--InsetInlineStart);
+  inset-inline-end: var(--#{$table}__sticky-cell--InsetInlineEnd);
   z-index: var(--#{$table}__sticky-cell--ZIndex);
   min-width: var(--#{$table}__sticky-cell--MinWidth);
 }
@@ -34,23 +34,23 @@
   background-clip: padding-box;
 
   &.pf-m-border-right::before {
-    --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightWidth);
-    --#{$table}--cell--m-border-right--before--BorderRightColor: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightColor);
+    --#{$table}--cell--m-border-right--before--BorderInlineEndWidth: var(--#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth);
+    --#{$table}--cell--m-border-right--before--BorderInlineEndColor: var(--#{$table}__sticky-cell--m-border-right--before--BorderInlineEndColor);
   }
 
   &.pf-m-border-left::before {
-    --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth);
-    --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftColor);
+    --#{$table}--cell--m-border-left--before--BorderInlineStartWidth: var(--#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth);
+    --#{$table}--cell--m-border-left--before--BorderInlineStartColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderInlineStartColor);
   }
 
   &.pf-m-right,
   &.pf-m-inline-end {
-    --#{$table}__sticky-cell--Right: var(--#{$table}__sticky-cell--m-right--Right);
+    --#{$table}__sticky-cell--InsetInlineEnd: var(--#{$table}__sticky-cell--m-right--InsetInlineEnd);
   }
 
   &.pf-m-left,
   &.pf-m-inline-start {
-    --#{$table}__sticky-cell--Left: var(--#{$table}__sticky-cell--m-left--Left);
+    --#{$table}__sticky-cell--InsetInlineStart: var(--#{$table}__sticky-cell--m-left--InsetInlineStart);
   }
 }
 

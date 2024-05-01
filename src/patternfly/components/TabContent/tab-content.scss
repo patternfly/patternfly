@@ -1,23 +1,23 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$tab-content}) {
-  --#{$tab-content}__body--PaddingTop: 0;
-  --#{$tab-content}__body--PaddingRight: 0;
-  --#{$tab-content}__body--PaddingBottom: 0;
-  --#{$tab-content}__body--PaddingLeft: 0;
+  --#{$tab-content}__body--PaddingBlockStart: 0;
+  --#{$tab-content}__body--PaddingInlineEnd: 0;
+  --#{$tab-content}__body--PaddingBlockEnd: 0;
+  --#{$tab-content}__body--PaddingInlineStart: 0;
   --#{$tab-content}--BackgroundColor: transparent;
 
   // Padding
-  --#{$tab-content}__body--m-padding--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$tab-content}__body--m-padding--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$tab-content}__body--m-padding--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$tab-content}__body--m-padding--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$tab-content}__body--m-padding--PaddingInlineStart: var(--pf-t--global--spacer--md);
 
   // Match page padding
-  --#{$tab-content}__body--m-padding--xl--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$tab-content}__body--m-padding--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$tab-content}__body--m-padding--xl--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$tab-content}__body--m-padding--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$tab-content}__body--m-padding--xl--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Secondary modifier
   --#{$tab-content}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -27,10 +27,10 @@
   background-color: var(--#{$tab-content}--BackgroundColor);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$tab-content}__body--m-padding--PaddingTop: var(--#{$tab-content}__body--m-padding--xl--PaddingTop);
-    --#{$tab-content}__body--m-padding--PaddingRight: var(--#{$tab-content}__body--m-padding--xl--PaddingRight);
-    --#{$tab-content}__body--m-padding--PaddingBottom: var(--#{$tab-content}__body--m-padding--xl--PaddingBottom);
-    --#{$tab-content}__body--m-padding--PaddingLeft: var(--#{$tab-content}__body--m-padding--xl--PaddingLeft);
+    --#{$tab-content}__body--m-padding--PaddingBlockStart: var(--#{$tab-content}__body--m-padding--xl--PaddingBlockStart);
+    --#{$tab-content}__body--m-padding--PaddingInlineEnd: var(--#{$tab-content}__body--m-padding--xl--PaddingInlineEnd);
+    --#{$tab-content}__body--m-padding--PaddingBlockEnd: var(--#{$tab-content}__body--m-padding--xl--PaddingBlockEnd);
+    --#{$tab-content}__body--m-padding--PaddingInlineStart: var(--#{$tab-content}__body--m-padding--xl--PaddingInlineStart);
   }
 
   &.pf-m-secondary {
@@ -40,15 +40,15 @@
 
 // Body
 .#{$tab-content}__body {
-  padding-block-start: var(--#{$tab-content}__body--PaddingTop);
-  padding-block-end: var(--#{$tab-content}__body--PaddingBottom);
-  padding-inline-start: var(--#{$tab-content}__body--PaddingLeft);
-  padding-inline-end: var(--#{$tab-content}__body--PaddingRight);
+  padding-block-start: var(--#{$tab-content}__body--PaddingBlockStart);
+  padding-block-end: var(--#{$tab-content}__body--PaddingBlockEnd);
+  padding-inline-start: var(--#{$tab-content}__body--PaddingInlineStart);
+  padding-inline-end: var(--#{$tab-content}__body--PaddingInlineEnd);
 
   &.pf-m-padding {
-    --#{$tab-content}__body--PaddingTop: var(--#{$tab-content}__body--m-padding--PaddingTop);
-    --#{$tab-content}__body--PaddingRight: var(--#{$tab-content}__body--m-padding--PaddingRight);
-    --#{$tab-content}__body--PaddingBottom: var(--#{$tab-content}__body--m-padding--PaddingBottom);
-    --#{$tab-content}__body--PaddingLeft: var(--#{$tab-content}__body--m-padding--PaddingLeft);
+    --#{$tab-content}__body--PaddingBlockStart: var(--#{$tab-content}__body--m-padding--PaddingBlockStart);
+    --#{$tab-content}__body--PaddingInlineEnd: var(--#{$tab-content}__body--m-padding--PaddingInlineEnd);
+    --#{$tab-content}__body--PaddingBlockEnd: var(--#{$tab-content}__body--m-padding--PaddingBlockEnd);
+    --#{$tab-content}__body--PaddingInlineStart: var(--#{$tab-content}__body--m-padding--PaddingInlineStart);
   }
 }

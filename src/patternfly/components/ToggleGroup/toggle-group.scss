@@ -2,10 +2,10 @@
 
 :where(:root, .#{$toggle-group}) {
   // button
-  --#{$toggle-group}__button--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$toggle-group}__button--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$toggle-group}__button--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$toggle-group}__button--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$toggle-group}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$toggle-group}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$toggle-group}__button--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$toggle-group}__button--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$toggle-group}__button--Color: var(--pf-t--global--text--color--regular);
@@ -18,14 +18,14 @@
   --#{$toggle-group}__button--before--BorderColor: var(--pf-t--global--border--color--default);
 
   // item
-  --#{$toggle-group}__item--item--MarginLeft: calc(-1 * var(--pf-t--global--border--width--control--default));
-  --#{$toggle-group}__item--first-child__button--BorderTopLeftRadius: var(--pf-t--global--border--radius--tiny);
-  --#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius: var(--pf-t--global--border--radius--tiny);
-  --#{$toggle-group}__item--last-child__button--BorderTopRightRadius: var(--pf-t--global--border--radius--tiny);
-  --#{$toggle-group}__item--last-child__button--BorderBottomRightRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--item--MarginInlineStart: calc(-1 * var(--pf-t--global--border--width--control--default));
+  --#{$toggle-group}__item--first-child__button--BorderStartStartRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--first-child__button--BorderEndStartRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--last-child__button--BorderStartEndRadius: var(--pf-t--global--border--radius--tiny);
+  --#{$toggle-group}__item--last-child__button--BorderEndEndRadius: var(--pf-t--global--border--radius--tiny);
 
   // icon
-  --#{$toggle-group}__icon--text--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}__icon--text--MarginInlineStart: var(--pf-t--global--spacer--sm);
 
   // Selected
   --#{$toggle-group}__button--m-selected--BackgroundColor: var(--pf-t--global--color--brand--default);
@@ -42,10 +42,10 @@
   --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Compact
-  --#{$toggle-group}--m-compact__button--PaddingTop: 0;
-  --#{$toggle-group}--m-compact__button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$toggle-group}--m-compact__button--PaddingBottom: 0;
-  --#{$toggle-group}--m-compact__button--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}--m-compact__button--PaddingBlockStart: 0;
+  --#{$toggle-group}--m-compact__button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$toggle-group}--m-compact__button--PaddingBlockEnd: 0;
+  --#{$toggle-group}--m-compact__button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$toggle-group}--m-compact__button--FontSize: var(--pf-t--global--font--size--body--default);
 }
 
@@ -53,25 +53,25 @@
   display: flex;
 
   &.pf-m-compact {
-    --#{$toggle-group}__button--PaddingTop: var(--#{$toggle-group}--m-compact__button--PaddingTop);
-    --#{$toggle-group}__button--PaddingRight: var(--#{$toggle-group}--m-compact__button--PaddingRight);
-    --#{$toggle-group}__button--PaddingBottom: var(--#{$toggle-group}--m-compact__button--PaddingBottom);
-    --#{$toggle-group}__button--PaddingLeft: var(--#{$toggle-group}--m-compact__button--PaddingLeft);
+    --#{$toggle-group}__button--PaddingBlockStart: var(--#{$toggle-group}--m-compact__button--PaddingBlockStart);
+    --#{$toggle-group}__button--PaddingInlineEnd: var(--#{$toggle-group}--m-compact__button--PaddingInlineEnd);
+    --#{$toggle-group}__button--PaddingBlockEnd: var(--#{$toggle-group}--m-compact__button--PaddingBlockEnd);
+    --#{$toggle-group}__button--PaddingInlineStart: var(--#{$toggle-group}--m-compact__button--PaddingInlineStart);
     --#{$toggle-group}__button--FontSize: var(--#{$toggle-group}--m-compact__button--FontSize);
   }
 }
 
 .#{$toggle-group}__item {
   & + & {
-    margin-inline-start: var(--#{$toggle-group}__item--item--MarginLeft);
+    margin-inline-start: var(--#{$toggle-group}__item--item--MarginInlineStart);
   }
 
   &:first-child {
     .#{$toggle-group}__button {
       &,
       &::before {
-        border-start-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderTopLeftRadius);
-        border-end-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius);
+        border-start-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderStartStartRadius);
+        border-end-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderEndStartRadius);
       }
     }
   }
@@ -80,8 +80,8 @@
     .#{$toggle-group}__button {
       &,
       &::before {
-        border-start-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderTopRightRadius);
-        border-end-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderBottomRightRadius);
+        border-start-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderStartEndRadius);
+        border-end-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderEndEndRadius);
       }
     }
   }
@@ -91,10 +91,10 @@
   position: relative;
   z-index: var(--#{$toggle-group}__button--ZIndex);
   display: inline-flex;
-  padding-block-start: var(--#{$toggle-group}__button--PaddingTop);
-  padding-block-end: var(--#{$toggle-group}__button--PaddingBottom);
-  padding-inline-start: var(--#{$toggle-group}__button--PaddingLeft);
-  padding-inline-end: var(--#{$toggle-group}__button--PaddingRight);
+  padding-block-start: var(--#{$toggle-group}__button--PaddingBlockStart);
+  padding-block-end: var(--#{$toggle-group}__button--PaddingBlockEnd);
+  padding-inline-start: var(--#{$toggle-group}__button--PaddingInlineStart);
+  padding-inline-end: var(--#{$toggle-group}__button--PaddingInlineEnd);
   font-size: var(--#{$toggle-group}__button--FontSize);
   line-height: var(--#{$toggle-group}__button--LineHeight);
   color: var(--#{$toggle-group}__button--Color);
@@ -156,6 +156,6 @@
 
 .#{$toggle-group}__icon + .#{$toggle-group}__text,
 .#{$toggle-group}__text + .#{$toggle-group}__icon {
-  margin-inline-start: var(--#{$toggle-group}__icon--text--MarginLeft);
+  margin-inline-start: var(--#{$toggle-group}__icon--text--MarginInlineStart);
 }
 

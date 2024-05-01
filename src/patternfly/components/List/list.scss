@@ -2,40 +2,40 @@
 
 .#{$list} {
   // list
-  --#{$list}--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$list}--nested--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$list}--nested--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$list}--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$list}--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$list}--nested--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$list}--ul--ListStyle: var(--pf-t--global--list-style);
-  --#{$list}--li--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$list}--li--MarginBlockStart: var(--pf-t--global--spacer--sm);
 
   // inline
-  --#{$list}--m-inline--li--MarginRight: var(--pf-t--global--spacer--lg);
+  --#{$list}--m-inline--li--MarginInlineEnd: var(--pf-t--global--spacer--lg);
 
   // bordered
-  --#{$list}--m-bordered--li--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$list}--m-bordered--li--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$list}--m-bordered--li--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$list}--m-bordered--li--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$list}--m-bordered--li--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  --#{$list}--m-bordered--li--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
 
   // icon
   --#{$list}__item-icon--MinWidth: var(--pf-t--global--icon--size--sm);
-  --#{$list}__item-icon--MarginTop: var(--pf-t--global--spacer--xs);
-  --#{$list}__item-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$list}__item-icon--MarginBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$list}__item-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$list}__item-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$list}__item-icon--FontSize: var(--pf-t--global--icon--size--sm);
   --#{$list}--m-icon-lg__item-icon--MinWidth: var(--pf-t--global--icon--size--lg);
-  --#{$list}--m-icon-lg__item-icon--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$list}--m-icon-lg__item-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$list}--m-icon-lg__item-icon--FontSize: var(--pf-t--global--icon--size--lg);
 
-  padding-inline-start: var(--#{$list}--PaddingLeft);
+  padding-inline-start: var(--#{$list}--PaddingInlineStart);
 
   ol,
   ul {
-    margin-block-start: var(--#{$list}--nested--MarginTop);
-    margin-inline-start: var(--#{$list}--nested--MarginLeft);
+    margin-block-start: var(--#{$list}--nested--MarginBlockStart);
+    margin-inline-start: var(--#{$list}--nested--MarginInlineStart);
   }
 
   li + li {
-    margin-block-start: var(--#{$list}--li--MarginTop);
+    margin-block-start: var(--#{$list}--li--MarginBlockStart);
   }
 
   @at-root ul#{&} {
@@ -49,8 +49,8 @@
   .#{$list}__item-icon {
     flex-shrink: 0;
     min-width: var(--#{$list}__item-icon--MinWidth);
-    margin-block-start: var(--#{$list}__item-icon--MarginTop);
-    margin-inline-end: var(--#{$list}__item-icon--MarginRight);
+    margin-block-start: var(--#{$list}__item-icon--MarginBlockStart);
+    margin-inline-end: var(--#{$list}__item-icon--MarginInlineEnd);
     font-size: var(--#{$list}__item-icon--FontSize);
     line-height: 1;
     color: var(--#{$list}__item-icon--Color);
@@ -58,42 +58,42 @@
 
   &.pf-m-icon-lg {
     --#{$list}__item-icon--MinWidth: var(--#{$list}--m-icon-lg__item-icon--MinWidth);
-    --#{$list}__item-icon--MarginTop: 0;
-    --#{$list}__item-icon--MarginRight: var(--#{$list}--m-icon-lg__item-icon--MarginRight);
+    --#{$list}__item-icon--MarginBlockStart: 0;
+    --#{$list}__item-icon--MarginInlineEnd: var(--#{$list}--m-icon-lg__item-icon--MarginInlineEnd);
     --#{$list}__item-icon--FontSize: var(--#{$list}--m-icon-lg__item-icon--FontSize);
   }
 
   &.pf-m-plain {
-    --#{$list}--PaddingLeft: 0;
+    --#{$list}--PaddingInlineStart: 0;
 
     list-style: none;
   }
 
   &.pf-m-inline {
-    --#{$list}--PaddingLeft: 0;
+    --#{$list}--PaddingInlineStart: 0;
 
     display: flex;
     flex-wrap: wrap;
     list-style: none;
 
     li {
-      --#{$list}--li--MarginTop: 0;
+      --#{$list}--li--MarginBlockStart: 0;
 
       &:not(:last-child) {
-        margin-inline-end: var(--#{$list}--m-inline--li--MarginRight);
+        margin-inline-end: var(--#{$list}--m-inline--li--MarginInlineEnd);
       }
     }
   }
 
   &.pf-m-bordered {
     > * {
-      padding-block-end: var(--#{$list}--m-bordered--li--PaddingBottom);
-      border-block-end: var(--#{$list}--m-bordered--li--BorderBottomWidth) solid var(--#{$list}--m-bordered--li--BorderBottomColor);
+      padding-block-end: var(--#{$list}--m-bordered--li--PaddingBlockEnd);
+      border-block-end: var(--#{$list}--m-bordered--li--BorderBlockEndWidth) solid var(--#{$list}--m-bordered--li--BorderBlockEndColor);
     }
 
     > :last-child {
-      --#{$list}--m-bordered--li--PaddingBottom: 0;
-      --#{$list}--m-bordered--li--BorderBottomWidth: 0;
+      --#{$list}--m-bordered--li--PaddingBlockEnd: 0;
+      --#{$list}--m-bordered--li--BorderBlockEndWidth: 0;
     }
   }
 }

@@ -1,10 +1,10 @@
 @use '../../sass-utilities' as *;
 
 .#{$chip} {
-  --#{$chip}--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$chip}--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$chip}--PaddingBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$chip}--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}--PaddingBlockStart: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}--PaddingBlockEnd: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
   --#{$chip}--BackgroundColor: var(--#{$pf-global}--Color--light-100);
   --#{$chip}--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
   --#{$chip}--before--BorderColor: var(--#{$pf-global}--BorderColor--300);
@@ -26,32 +26,32 @@
   // chip text
   --#{$chip}__text--Color: var(--#{$pf-global}--Color--100);
   --#{$chip}__text--MaxWidth: 16ch;
-  --#{$chip}__c-badge--MarginLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}__c-badge--MarginInlineStart: var(--#{$pf-global}--spacer--xs);
 
   // chip actions
   --#{$chip}__actions--FontSize: var(--#{$pf-global}--FontSize--xs);
 
   // buttons within chip actions
-  --#{$chip}__actions--c-button--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$chip}__actions--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$chip}__actions--c-button--PaddingBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$chip}__actions--c-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$chip}__actions--c-button--MarginTop: calc(var(--#{$chip}--PaddingTop) * -1);
-  --#{$chip}__actions--c-button--MarginRight: calc(var(--#{$chip}--PaddingRight) / 2 * -1);
-  --#{$chip}__actions--c-button--MarginBottom: calc(var(--#{$chip}--PaddingBottom) * -1);
+  --#{$chip}__actions--c-button--PaddingBlockStart: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}__actions--c-button--PaddingInlineEnd: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}__actions--c-button--PaddingBlockEnd: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}__actions--c-button--PaddingInlineStart: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}__actions--c-button--MarginBlockStart: calc(var(--#{$chip}--PaddingBlockStart) * -1);
+  --#{$chip}__actions--c-button--MarginInlineEnd: calc(var(--#{$chip}--PaddingInlineEnd) / 2 * -1);
+  --#{$chip}__actions--c-button--MarginBlockEnd: calc(var(--#{$chip}--PaddingBlockEnd) * -1);
   --#{$chip}__actions--c-button--FontSize: var(--#{$pf-global}--FontSize--xs);
 
   // icon
-  --#{$chip}__icon--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}__icon--MarginInlineStart: var(--#{$pf-global}--spacer--sm);
 
   position: relative;
   display: inline-flex;
   align-items: center;
   min-width: 0;
-  padding-block-start: var(--#{$chip}--PaddingTop);
-  padding-block-end: var(--#{$chip}--PaddingBottom);
-  padding-inline-start: var(--#{$chip}--PaddingLeft);
-  padding-inline-end: var(--#{$chip}--PaddingRight);
+  padding-block-start: var(--#{$chip}--PaddingBlockStart);
+  padding-block-end: var(--#{$chip}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$chip}--PaddingInlineStart);
+  padding-inline-end: var(--#{$chip}--PaddingInlineEnd);
   list-style: none;
   background-color: var(--#{$chip}--BackgroundColor);
   border-radius: var(--#{$chip}--BorderRadius);
@@ -96,13 +96,13 @@
   color: var(--#{$chip}__text--Color);
 
   .#{$badge} {
-    margin-inline-start: var(--#{$chip}__c-badge--MarginLeft); // remove in breaking change
+    margin-inline-start: var(--#{$chip}__c-badge--MarginInlineStart); // remove in breaking change
   }
 }
 
 .#{$chip}__icon + .#{$chip}__text,
 .#{$chip}__text + .#{$chip}__icon {
-  margin-inline-start: var(--#{$chip}__icon--MarginLeft);
+  margin-inline-start: var(--#{$chip}__icon--MarginInlineStart);
 }
 
 .#{$chip}__content {
@@ -117,15 +117,15 @@
 
   // Actions Button
   .#{$button} {
-    --#{$button}--PaddingTop: var(--#{$chip}__actions--c-button--PaddingTop);
-    --#{$button}--PaddingRight: var(--#{$chip}__actions--c-button--PaddingRight);
-    --#{$button}--PaddingBottom: var(--#{$chip}__actions--c-button--PaddingBottom);
-    --#{$button}--PaddingLeft: var(--#{$chip}__actions--c-button--PaddingLeft);
+    --#{$button}--PaddingBlockStart: var(--#{$chip}__actions--c-button--PaddingBlockStart);
+    --#{$button}--PaddingInlineEnd: var(--#{$chip}__actions--c-button--PaddingInlineEnd);
+    --#{$button}--PaddingBlockEnd: var(--#{$chip}__actions--c-button--PaddingBlockEnd);
+    --#{$button}--PaddingInlineStart: var(--#{$chip}__actions--c-button--PaddingInlineStart);
     --#{$button}--FontSize: var(--#{$chip}__actions--c-button--FontSize);
 
-    margin-block-start: var(--#{$chip}__actions--c-button--MarginTop);
-    margin-block-end: var(--#{$chip}__actions--c-button--MarginBottom);
-    margin-inline-end: var(--#{$chip}__actions--c-button--MarginRight);
+    margin-block-start: var(--#{$chip}__actions--c-button--MarginBlockStart);
+    margin-block-end: var(--#{$chip}__actions--c-button--MarginBlockEnd);
+    margin-inline-end: var(--#{$chip}__actions--c-button--MarginInlineEnd);
     line-height: 1;
   }
 }

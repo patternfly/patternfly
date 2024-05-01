@@ -15,7 +15,7 @@
   --#{$check}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Required checkbox
-  --#{$check}__label-required--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$check}__label-required--MarginInlineStart: var(--pf-t--global--spacer--xs);
   --#{$check}__label-required--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$check}__label-required--Color: var(--pf-t--global--color--status--danger--default);
 
@@ -87,7 +87,7 @@
 }
 
 .#{$check}__label-required {
-  margin-inline-start: var(--#{$check}__label-required--MarginLeft);
+  margin-inline-start: var(--#{$check}__label-required--MarginInlineStart);
   font-size: var(--#{$check}__label-required--FontSize);
   color: var(--#{$check}__label-required--Color);
 }

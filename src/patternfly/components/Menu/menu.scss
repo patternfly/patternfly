@@ -44,8 +44,8 @@
   --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
   // * Menu li divider
-  --#{$menu}__list--divider--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$menu}__list--divider--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$menu}__list--divider--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$menu}__list--divider--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Menu item
   --#{$menu}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -114,12 +114,12 @@
 
   // * Menu flyout
   --#{$menu}--m-flyout__Zindex: var(--pf-t--global--z-index--sm);
-  --#{$menu}--m-flyout__menu--Top: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
-  --#{$menu}--m-flyout__menu--Right: auto;
-  --#{$menu}--m-flyout__menu--Bottom: auto;
-  --#{$menu}--m-flyout__menu--Left: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
-  --#{$menu}--m-flyout__menu--m-top--Bottom: calc(var(--#{$menu}__list--PaddingBlockStart) * -1);
-  --#{$menu}--m-flyout__menu--m-left--Right: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
+  --#{$menu}--m-flyout__menu--InsetBlockStart: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
+  --#{$menu}--m-flyout__menu--InsetInlineEnd: auto;
+  --#{$menu}--m-flyout__menu--InsetBlockEnd: auto;
+  --#{$menu}--m-flyout__menu--InsetInlineStart: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
+  --#{$menu}--m-flyout__menu--m-top--InsetBlockEnd: calc(var(--#{$menu}__list--PaddingBlockStart) * -1);
+  --#{$menu}--m-flyout__menu--m-left--InsetInlineEnd: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
 
   // * Menu drilldown content
   --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--pf-t--global--transition--duration);
@@ -127,7 +127,7 @@
   --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
 
   // * Menu drilldown menu
-  --#{$menu}--m-drilldown--c-menu--Top: 0;
+  --#{$menu}--m-drilldown--c-menu--InsetBlockStart: 0;
   --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--transition--duration);
   --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
 
@@ -223,10 +223,10 @@
   & &.pf-m-flyout,
   &.pf-m-flyout & {
     position: absolute;
-    inset-block-start: var(--#{$menu}--m-flyout__menu--Top);
-    inset-block-end: var(--#{$menu}--m-flyout__menu--Bottom);
-    inset-inline-start: var(--#{$menu}--m-flyout__menu--Left);
-    inset-inline-end: var(--#{$menu}--m-flyout__menu--Right);
+    inset-block-start: var(--#{$menu}--m-flyout__menu--InsetBlockStart);
+    inset-block-end: var(--#{$menu}--m-flyout__menu--InsetBlockEnd);
+    inset-inline-start: var(--#{$menu}--m-flyout__menu--InsetInlineStart);
+    inset-inline-end: var(--#{$menu}--m-flyout__menu--InsetInlineEnd);
     z-index: var(--#{$menu}--m-flyout__Zindex);
     border-radius: var(--#{$menu}--BorderRadius);
 
@@ -236,13 +236,13 @@
   }
 
   &.pf-m-top {
-    --#{$menu}--m-flyout__menu--Top: auto;
-    --#{$menu}--m-flyout__menu--Bottom: var(--#{$menu}--m-flyout__menu--m-top--Bottom);
+    --#{$menu}--m-flyout__menu--InsetBlockStart: auto;
+    --#{$menu}--m-flyout__menu--InsetBlockEnd: var(--#{$menu}--m-flyout__menu--m-top--InsetBlockEnd);
   }
 
   &.pf-m-left {
-    --#{$menu}--m-flyout__menu--Right: var(--#{$menu}--m-flyout__menu--m-left--Right);
-    --#{$menu}--m-flyout__menu--Left: auto;
+    --#{$menu}--m-flyout__menu--InsetInlineEnd: var(--#{$menu}--m-flyout__menu--m-left--InsetInlineEnd);
+    --#{$menu}--m-flyout__menu--InsetInlineStart: auto;
   }
 
   &.pf-m-drilldown {
@@ -272,7 +272,7 @@
     // - Menu nested menu
     > .#{$menu}__content .#{$menu} {
       position: absolute;
-      inset-block-start: var(--#{$menu}--m-drilldown--c-menu--Top);
+      inset-block-start: var(--#{$menu}--m-drilldown--c-menu--InsetBlockStart);
       inset-inline-start: 100%;
       width: 100%;
       box-shadow: none;
@@ -425,8 +425,8 @@
 
 // - Menu list
 .#{$menu}__list :where(.#{$divider}:is(li)) {
-  margin-block-start: var(--#{$menu}__list--divider--MarginTop);
-  margin-block-end: var(--#{$menu}__list--divider--MarginBottom);
+  margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
+  margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
 }
 
 // - Menu list item

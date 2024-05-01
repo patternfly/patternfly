@@ -185,7 +185,7 @@ import './Drawer.css'
       {{#> drawer-body}}
         Drawer panel body content
       {{/drawer-body}}
-      {{#> drawer-body drawer-body--HasPadding=true drawer-body--attribute="style='--pf-v6-c-drawer__panel__body--PaddingLeft: 48px;'"}}
+      {{#> drawer-body drawer-body--HasPadding=true drawer-body--attribute="style='--pf-v6-c-drawer__panel__body--PaddingInlineStart: 48px;'"}}
         Drawer panel body content with modified inline start padding
       {{/drawer-body}}
     {{/drawer-panel}}

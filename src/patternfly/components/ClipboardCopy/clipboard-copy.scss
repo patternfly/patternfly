@@ -6,16 +6,16 @@
   --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Clipboard copy expanded content
-  --#{$clipboard-copy}__expandable-content--MarginTop: var(--pf-t--global--spacer--xs);
-  --#{$clipboard-copy}__expandable-content--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$clipboard-copy}__expandable-content--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$clipboard-copy}__expandable-content--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$clipboard-copy}__expandable-content--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$clipboard-copy}__expandable-content--MarginBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__expandable-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$clipboard-copy}__expandable-content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$clipboard-copy}__expandable-content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$clipboard-copy}__expandable-content--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$clipboard-copy}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$clipboard-copy}__expandable-content--BorderTopWidth: var(--pf-t--global--border--width--control--default);
-  --#{$clipboard-copy}__expandable-content--BorderRightWidth: var(--pf-t--global--border--width--control--default);
-  --#{$clipboard-copy}__expandable-content--BorderBottomWidth: var(--pf-t--global--border--width--control--default);
-  --#{$clipboard-copy}__expandable-content--BorderLeftWidth: var(--pf-t--global--border--width--control--default);
+  --#{$clipboard-copy}__expandable-content--BorderBlockStartWidth: var(--pf-t--global--border--width--control--default);
+  --#{$clipboard-copy}__expandable-content--BorderInlineEndWidth: var(--pf-t--global--border--width--control--default);
+  --#{$clipboard-copy}__expandable-content--BorderBlockEndWidth: var(--pf-t--global--border--width--control--default);
+  --#{$clipboard-copy}__expandable-content--BorderInlineStartWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderColor: var(--pf-t--global--border--color--default);
   --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
@@ -24,9 +24,9 @@
   --#{$clipboard-copy}__group--Gap: var(--pf-t--global--spacer--xs);
 
   // Inline
-  --#{$clipboard-copy}--m-inline--PaddingTop: 0; // remove at breaking change
-  --#{$clipboard-copy}--m-inline--PaddingBottom: 0; // remove at breaking change
-  --#{$clipboard-copy}--m-inline--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}--m-inline--PaddingBlockStart: 0; // remove at breaking change
+  --#{$clipboard-copy}--m-inline--PaddingBlockEnd: 0; // remove at breaking change
+  --#{$clipboard-copy}--m-inline--PaddingInlineStart: var(--pf-t--global--spacer--xs);
   --#{$clipboard-copy}--m-inline--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // Text
@@ -34,12 +34,12 @@
   --#{$clipboard-copy}__text--m-code--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Actions
-  --#{$clipboard-copy}__actions-item--MarginTop: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$clipboard-copy}__actions-item--MarginBottom: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$clipboard-copy}__actions-item--button--PaddingTop: var(--pf-t--global--spacer--xs);
-  --#{$clipboard-copy}__actions-item--button--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$clipboard-copy}__actions-item--button--PaddingBottom: var(--pf-t--global--spacer--xs);
-  --#{$clipboard-copy}__actions-item--button--PaddingLeft: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__actions-item--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--xs));
+  --#{$clipboard-copy}__actions-item--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--xs));
+  --#{$clipboard-copy}__actions-item--button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__actions-item--button--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__actions-item--button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__actions-item--button--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 }
 
 .#{$clipboard-copy} {
@@ -52,9 +52,9 @@
 
   &.pf-m-inline {
     display: inline;
-    padding-block-start: var(--#{$clipboard-copy}--m-inline--PaddingTop);
-    padding-block-end: var(--#{$clipboard-copy}--m-inline--PaddingBottom);
-    padding-inline-start: var(--#{$clipboard-copy}--m-inline--PaddingLeft);
+    padding-block-start: var(--#{$clipboard-copy}--m-inline--PaddingBlockStart);
+    padding-block-end: var(--#{$clipboard-copy}--m-inline--PaddingBlockEnd);
+    padding-inline-start: var(--#{$clipboard-copy}--m-inline--PaddingInlineStart);
     white-space: nowrap;
     background-color: var(--#{$clipboard-copy}--m-inline--BackgroundColor);
 
@@ -81,19 +81,19 @@
 }
 
 .#{$clipboard-copy}__expandable-content {
-  padding-block-start: var(--#{$clipboard-copy}__expandable-content--PaddingTop);
-  padding-block-end: var(--#{$clipboard-copy}__expandable-content--PaddingBottom);
-  padding-inline-start: var(--#{$clipboard-copy}__expandable-content--PaddingLeft);
-  padding-inline-end: var(--#{$clipboard-copy}__expandable-content--PaddingRight);
-  margin-block-start: var(--#{$clipboard-copy}__expandable-content--MarginTop);
+  padding-block-start: var(--#{$clipboard-copy}__expandable-content--PaddingBlockStart);
+  padding-block-end: var(--#{$clipboard-copy}__expandable-content--PaddingBlockEnd);
+  padding-inline-start: var(--#{$clipboard-copy}__expandable-content--PaddingInlineStart);
+  padding-inline-end: var(--#{$clipboard-copy}__expandable-content--PaddingInlineEnd);
+  margin-block-start: var(--#{$clipboard-copy}__expandable-content--MarginBlockStart);
   word-wrap: break-word;
   background-color: var(--#{$clipboard-copy}__expandable-content--BackgroundColor);
   background-clip: padding-box;
   border: solid var(--#{$clipboard-copy}__expandable-content--BorderColor);
-  border-block-start-width: var(--#{$clipboard-copy}__expandable-content--BorderTopWidth);
-  border-block-end-width: var(--#{$clipboard-copy}__expandable-content--BorderBottomWidth);
-  border-inline-start-width: var(--#{$clipboard-copy}__expandable-content--BorderLeftWidth);
-  border-inline-end-width: var(--#{$clipboard-copy}__expandable-content--BorderRightWidth);
+  border-block-start-width: var(--#{$clipboard-copy}__expandable-content--BorderBlockStartWidth);
+  border-block-end-width: var(--#{$clipboard-copy}__expandable-content--BorderBlockEndWidth);
+  border-inline-start-width: var(--#{$clipboard-copy}__expandable-content--BorderInlineStartWidth);
+  border-inline-end-width: var(--#{$clipboard-copy}__expandable-content--BorderInlineEndWidth);
   border-radius: var(--#{$clipboard-copy}__expandable-content--BorderRadius);
   box-shadow: var(--#{$clipboard-copy}__expandable-content--BoxShadow);
 
@@ -117,14 +117,14 @@
 }
 
 .#{$clipboard-copy}__actions-item {
-  margin-block-start: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingTop));
-  margin-block-end: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingBottom));
+  margin-block-start: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingBlockStart));
+  margin-block-end: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingBlockEnd));
 
   .#{$button} {
-    --#{$button}--PaddingTop: var(--#{$clipboard-copy}__actions-item--button--PaddingTop);
-    --#{$button}--PaddingRight: var(--#{$clipboard-copy}__actions-item--button--PaddingRight);
-    --#{$button}--PaddingBottom: var(--#{$clipboard-copy}__actions-item--button--PaddingBottom);
-    --#{$button}--PaddingLeft: var(--#{$clipboard-copy}__actions-item--button--PaddingLeft);
+    --#{$button}--PaddingBlockStart: var(--#{$clipboard-copy}__actions-item--button--PaddingBlockStart);
+    --#{$button}--PaddingInlineEnd: var(--#{$clipboard-copy}__actions-item--button--PaddingInlineEnd);
+    --#{$button}--PaddingBlockEnd: var(--#{$clipboard-copy}__actions-item--button--PaddingBlockEnd);
+    --#{$button}--PaddingInlineStart: var(--#{$clipboard-copy}__actions-item--button--PaddingInlineStart);
   }
 }
 

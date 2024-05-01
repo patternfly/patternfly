@@ -4,15 +4,15 @@
 :where(:root, .#{$data-list}) {
   --#{$data-list}--FontSize: var( --pf-t--global--font--size--body);
   --#{$data-list}--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$data-list}--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$data-list}--BorderTopWidth: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--sm--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$data-list}--sm--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$data-list}--MarginLeft: var(--pf-t--global--spacer--md);
+  --#{$data-list}--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+  --#{$data-list}--BorderBlockStartWidth: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--sm--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$data-list}--sm--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+  --#{$data-list}--MarginInlineStart: var(--pf-t--global--spacer--md);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$data-list}--BorderTopColor: var(--#{$data-list}--sm--BorderTopColor);
-    --#{$data-list}--BorderTopWidth: var(--#{$data-list}--sm--BorderTopWidth);
+    --#{$data-list}--BorderBlockStartColor: var(--#{$data-list}--sm--BorderBlockStartColor);
+    --#{$data-list}--BorderBlockStartWidth: var(--#{$data-list}--sm--BorderBlockStartWidth);
   }
 
   // item
@@ -20,34 +20,34 @@
   --#{$data-list}__item--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$data-list}__item--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$data-list}__item--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$data-list}__item--BorderBottomWidth: var(--pf-t--global--spacer--sm);
-  --#{$data-list}__item--sm--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$data-list}__item--sm--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$data-list}__item--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  --#{$data-list}__item--BorderBlockEndWidth: var(--pf-t--global--spacer--sm);
+  --#{$data-list}__item--sm--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$data-list}__item--sm--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$data-list}__item--BorderBottomWidth: var(--#{$data-list}__item--sm--BorderBottomWidth);
-    --#{$data-list}__item--BorderBottomColor: var(--#{$data-list}__item--sm--BorderBottomColor);
+    --#{$data-list}__item--BorderBlockEndWidth: var(--#{$data-list}__item--sm--BorderBlockEndWidth);
+    --#{$data-list}__item--BorderBlockEndColor: var(--#{$data-list}__item--sm--BorderBlockEndColor);
   }
 
   // data list item row
-  --#{$data-list}__item-row--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-row--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-row--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-row--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-row--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-row--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-row--xl--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-row--xl--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // data list item content
-  --#{$data-list}__item-content--md--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-content--md--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
 
   // cell
-  --#{$data-list}__cell--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__cell--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__cell--MarginRight: var(--pf-t--global--spacer--xl);
-  --#{$data-list}__cell--md--PaddingBottom: 0;
-  --#{$data-list}__cell--m-icon--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}__cell--cell--PaddingTop: 0;
-  --#{$data-list}__cell--cell--md--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__cell--m-icon--cell--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__cell--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__cell--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__cell--MarginInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$data-list}__cell--md--PaddingBlockEnd: 0;
+  --#{$data-list}__cell--m-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__cell--cell--PaddingBlockStart: 0;
+  --#{$data-list}__cell--cell--md--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__cell--m-icon--cell--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$data-list}--cell--MinWidth: initial;
   --#{$data-list}--cell--Overflow: visible;
   --#{$data-list}--cell--TextOverflow: clip;
@@ -56,9 +56,9 @@
   --#{$data-list}--cell--m-truncate--MinWidth: 5ch;
 
   // toggle
-  --#{$data-list}__toggle--MarginLeft: calc(var(--pf-t--global--spacer--sm) * -1); // offset toggle to align left
-  --#{$data-list}__toggle--MarginTop: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
-  --#{$data-list}__toggle--MarginBottom: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
+  --#{$data-list}__toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--sm) * -1); // offset toggle to align left
+  --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
+  --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
   --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
   --#{$data-list}__toggle-icon--Transition: .2s ease-in 0s;
   --#{$data-list}__toggle-icon--Rotate: 0;
@@ -66,13 +66,13 @@
 
   // draggable button/icon
   --#{$data-list}__item-draggable-button--BackgroundColor: transparent;
-  --#{$data-list}__item-draggable-button--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-draggable-button--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-draggable-button--MarginTop: calc(var(--pf-t--global--spacer--lg) * -1);
-  --#{$data-list}__item-draggable-button--MarginBottom: calc(var(--pf-t--global--spacer--lg) * -1);
-  --#{$data-list}__item-draggable-button--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-draggable-button--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-draggable-button--MarginLeft: calc(var(--pf-t--global--spacer--md) * -1);
+  --#{$data-list}__item-draggable-button--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-draggable-button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--lg) * -1);
+  --#{$data-list}__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--lg) * -1);
+  --#{$data-list}__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-draggable-button--MarginInlineStart: calc(var(--pf-t--global--spacer--md) * -1);
   --#{$data-list}__item-draggable-button-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$data-list}__item-draggable-button--hover__draggable-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -81,27 +81,27 @@
   --#{$data-list}__item--m-ghost-row--after--Opacity: .6;
 
   // controls
-  --#{$data-list}__item-control--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-control--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-control--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-control--md--MarginRight: var(--pf-t--global--spacer--xl);
-  --#{$data-list}__item-control--not-last-child--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-control--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-control--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-control--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-control--md--MarginInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$data-list}__item-control--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--md);
 
   // check
   --#{$data-list}__check--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
-  --#{$data-list}__check--MarginTop: #{pf-size-prem(-1px)}; // slightly offset input
+  --#{$data-list}__check--MarginBlockStart: #{pf-size-prem(-1px)}; // slightly offset input
 
 
   // actions
   --#{$data-list}__item-action--Display: flex;
-  --#{$data-list}__item-action--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-action--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-action--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-action--md--MarginLeft: var(--pf-t--global--spacer--xl);
-  --#{$data-list}__item-action--not-last-child--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-action__action--MarginTop: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
-  --#{$data-list}__action--MarginTop: var(--#{$data-list}__item-action__action--MarginTop); // update at breaking change
-  --#{$data-list}__item-action__action--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
+  --#{$data-list}__item-action--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-action--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-action--md--MarginInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$data-list}__item-action--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-action__action--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
+  --#{$data-list}__action--MarginBlockStart: var(--#{$data-list}__item-action__action--MarginBlockStart); // update at breaking change
+  --#{$data-list}__item-action__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
 
   // expandable content
   --#{$data-list}__expandable-content--BackgroundColor: var( --pf-t--global--background--color--primary--default);
@@ -109,75 +109,75 @@
   --#{$data-list}__expandable-content--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$data-list}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$data-list}__expandable-content--MaxHeight: #{pf-size-prem(600px)};
-  --#{$data-list}__expandable-content-body--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$data-list}__expandable-content-body--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}__expandable-content-body--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$data-list}__expandable-content-body--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$data-list}__expandable-content-body--md--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__expandable-content-body--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__expandable-content-body--md--PaddingBottom: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__expandable-content-body--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__expandable-content-body--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}__expandable-content-body--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__expandable-content-body--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__expandable-content-body--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}__expandable-content-body--md--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__expandable-content-body--xl--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__expandable-content-body--md--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__expandable-content-body--xl--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$data-list}__expandable-content-body--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // compact
   --#{$data-list}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$data-list}--m-compact--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$data-list}--m-compact__check--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$data-list}--m-compact__cell--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__cell--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__cell--md--PaddingBottom: 0;
-  --#{$data-list}--m-compact__cell-cell--PaddingTop: 0;
-  --#{$data-list}--m-compact__cell-cell--md--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__cell--cell--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}--m-compact__item-control--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-control--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-control--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$data-list}--m-compact__item-action--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-action--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-action--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$data-list}--m-compact__item-action__action--MarginTop: calc(var(--#{$data-list}--m-compact__item-action--PaddingTop) * -1);
-  --#{$data-list}--m-compact__item-action__action--MarginBottom: calc(var(--#{$data-list}--m-compact__item-action--PaddingBottom) * -1);
-  --#{$data-list}--m-compact__action--MarginTop: var(--#{$data-list}--m-compact__item-action__action--MarginTop);
-  --#{$data-list}--m-compact__item-content--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-draggable-button--MarginTop: calc(var(--pf-t--global--spacer--sm) * -1);
-  --#{$data-list}--m-compact__item-draggable-button--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1);
-  --#{$data-list}--m-compact__item-draggable-button--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-draggable-button--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__cell--m-icon--cell--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__cell--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__cell--md--PaddingBlockEnd: 0;
+  --#{$data-list}--m-compact__cell-cell--PaddingBlockStart: 0;
+  --#{$data-list}--m-compact__cell-cell--md--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__cell--cell--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}--m-compact__item-control--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-control--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-control--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}--m-compact__item-action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
+  --#{$data-list}--m-compact__item-action__action--MarginBlockStart: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockStart) * -1);
+  --#{$data-list}--m-compact__item-action__action--MarginBlockEnd: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd) * -1);
+  --#{$data-list}--m-compact__action--MarginBlockStart: var(--#{$data-list}--m-compact__item-action__action--MarginBlockStart);
+  --#{$data-list}--m-compact__item-content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1);
+  --#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1);
+  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 }
 
 .#{$data-list} {
   font-size: var(--#{$data-list}--FontSize);
   line-height: var(--#{$data-list}--LineHeight);
   overflow-wrap: break-word;
-  border-block-start: var(--#{$data-list}--BorderTopWidth) solid var(--#{$data-list}--BorderTopColor);
+  border-block-start: var(--#{$data-list}--BorderBlockStartWidth) solid var(--#{$data-list}--BorderBlockStartColor);
 
   &.pf-m-compact {
     --#{$data-list}__check--FontSize: var(--#{$data-list}--m-compact__check--FontSize);
-    --#{$data-list}__action--MarginTop: var(--#{$data-list}--m-compact__action--MarginTop);
+    --#{$data-list}__action--MarginBlockStart: var(--#{$data-list}--m-compact__action--MarginBlockStart);
     --#{$data-list}--FontSize: var(--#{$data-list}--m-compact--FontSize);
-    --#{$data-list}__item-action--MarginLeft: var(--#{$data-list}--m-compact__item-action--MarginLeft);
-    --#{$data-list}__item-action--PaddingTop: var(--#{$data-list}--m-compact__item-action--PaddingTop);
-    --#{$data-list}__item-action--PaddingBottom: var(--#{$data-list}--m-compact__item-action--PaddingBottom);
-    --#{$data-list}__item-action__action--MarginTop: var(--#{$data-list}--m-compact__item-action__action--MarginTop);
-    --#{$data-list}__item-action__action--MarginBottom: var(--#{$data-list}--m-compact__item-action__action--MarginBottom);
-    --#{$data-list}__item-control--MarginRight: var(--#{$data-list}--m-compact__item-control--MarginRight);
-    --#{$data-list}__item-control--PaddingTop: var(--#{$data-list}--m-compact__item-control--PaddingTop);
-    --#{$data-list}__item-control--PaddingBottom: var(--#{$data-list}--m-compact__item-control--PaddingBottom);
-    --#{$data-list}__item-content--md--PaddingBottom: var(--#{$data-list}--m-compact__item-content--PaddingBottom);
-    --#{$data-list}__item-draggable-button--MarginTop: var(--#{$data-list}--m-compact__item-draggable-button--MarginTop);
-    --#{$data-list}__item-draggable-button--MarginBottom: var(--#{$data-list}--m-compact__item-draggable-button--MarginBottom);
-    --#{$data-list}__item-draggable-button--PaddingTop: var(--#{$data-list}--m-compact__item-draggable-button--PaddingTop);
-    --#{$data-list}__item-draggable-button--PaddingBottom: var(--#{$data-list}--m-compact__item-draggable-button--PaddingBottom);
-    --#{$data-list}__cell--m-icon--cell--PaddingTop: var(--#{$data-list}--m-compact__cell--m-icon--cell--PaddingTop);
+    --#{$data-list}__item-action--MarginInlineStart: var(--#{$data-list}--m-compact__item-action--MarginInlineStart);
+    --#{$data-list}__item-action--PaddingBlockStart: var(--#{$data-list}--m-compact__item-action--PaddingBlockStart);
+    --#{$data-list}__item-action--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd);
+    --#{$data-list}__item-action__action--MarginBlockStart: var(--#{$data-list}--m-compact__item-action__action--MarginBlockStart);
+    --#{$data-list}__item-action__action--MarginBlockEnd: var(--#{$data-list}--m-compact__item-action__action--MarginBlockEnd);
+    --#{$data-list}__item-control--MarginInlineEnd: var(--#{$data-list}--m-compact__item-control--MarginInlineEnd);
+    --#{$data-list}__item-control--PaddingBlockStart: var(--#{$data-list}--m-compact__item-control--PaddingBlockStart);
+    --#{$data-list}__item-control--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-control--PaddingBlockEnd);
+    --#{$data-list}__item-content--md--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-content--PaddingBlockEnd);
+    --#{$data-list}__item-draggable-button--MarginBlockStart: var(--#{$data-list}--m-compact__item-draggable-button--MarginBlockStart);
+    --#{$data-list}__item-draggable-button--MarginBlockEnd: var(--#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd);
+    --#{$data-list}__item-draggable-button--PaddingBlockStart: var(--#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart);
+    --#{$data-list}__item-draggable-button--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd);
+    --#{$data-list}__cell--m-icon--cell--PaddingBlockStart: var(--#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart);
 
     font-size: var(--#{$data-list}--m-compact--FontSize);
 
     .#{$data-list}__cell {
-      --#{$data-list}__cell--PaddingTop: var(--#{$data-list}--m-compact__cell--PaddingTop);
-      --#{$data-list}__cell--PaddingBottom: var(--#{$data-list}--m-compact__cell--PaddingBottom);
-      --#{$data-list}__cell--MarginRight: var(--#{$data-list}--m-compact__cell--cell--MarginRight);
-      --#{$data-list}__cell--cell--PaddingTop: var(--#{$data-list}--m-compact__cell-cell--PaddingTop);
+      --#{$data-list}__cell--PaddingBlockStart: var(--#{$data-list}--m-compact__cell--PaddingBlockStart);
+      --#{$data-list}__cell--PaddingBlockEnd: var(--#{$data-list}--m-compact__cell--PaddingBlockEnd);
+      --#{$data-list}__cell--MarginInlineEnd: var(--#{$data-list}--m-compact__cell--cell--MarginInlineEnd);
+      --#{$data-list}__cell--cell--PaddingBlockStart: var(--#{$data-list}--m-compact__cell-cell--PaddingBlockStart);
     }
 
     .#{$data-list}__check {
@@ -216,7 +216,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--#{$data-list}__item--BackgroundColor);
-  border-block-end: var(--#{$data-list}__item--BorderBottomWidth) solid var(--#{$data-list}__item--BorderBottomColor);
+  border-block-end: var(--#{$data-list}__item--BorderBlockEndWidth) solid var(--#{$data-list}__item--BorderBlockEndColor);
 
   &.pf-m-clickable {
     cursor: pointer;
@@ -253,19 +253,19 @@
 .#{$data-list}__item-row {
   display: flex;
   flex-wrap: nowrap;
-  padding-inline-start: var(--#{$data-list}__item-row--PaddingLeft);
-  padding-inline-end: var(--#{$data-list}__item-row--PaddingRight);
+  padding-inline-start: var(--#{$data-list}__item-row--PaddingInlineStart);
+  padding-inline-end: var(--#{$data-list}__item-row--PaddingInlineEnd);
 }
 
 .#{$data-list}__item-control {
   display: flex;
   flex-wrap: nowrap;
-  padding-block-start: var(--#{$data-list}__item-control--PaddingTop);
-  padding-block-end: var(--#{$data-list}__item-control--PaddingBottom);
-  margin-inline-end: var(--#{$data-list}__item-control--MarginRight);
+  padding-block-start: var(--#{$data-list}__item-control--PaddingBlockStart);
+  padding-block-end: var(--#{$data-list}__item-control--PaddingBlockEnd);
+  margin-inline-end: var(--#{$data-list}__item-control--MarginInlineEnd);
 
   > *:not(:last-child) {
-    margin-inline-end: var(--#{$data-list}__item-control--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$data-list}__item-control--not-last-child--MarginInlineEnd);
   }
 }
 
@@ -274,7 +274,7 @@
   align-items: center;
   align-self: flex-start;
   height: var(--#{$data-list}__check--Height);
-  margin-block-start: var(--#{$data-list}__check--MarginTop);
+  margin-block-start: var(--#{$data-list}__check--MarginBlockStart);
 
   > input {
     cursor: pointer;
@@ -284,13 +284,13 @@
 .#{$data-list}__item-draggable-button {
   display: flex;
   flex-direction: column; // fixes safari alignment
-  padding-block-start: var(--#{$data-list}__item-draggable-button--PaddingTop);
-  padding-block-end: var(--#{$data-list}__item-draggable-button--PaddingBottom);
-  padding-inline-start: var(--#{$data-list}__item-draggable-button--PaddingLeft);
-  padding-inline-end: var(--#{$data-list}__item-draggable-button--PaddingRight);
-  margin-block-start: var(--#{$data-list}__item-draggable-button--MarginTop);
-  margin-block-end: var(--#{$data-list}__item-draggable-button--MarginBottom);
-  margin-inline-start: var(--#{$data-list}__item-draggable-button--MarginLeft);
+  padding-block-start: var(--#{$data-list}__item-draggable-button--PaddingBlockStart);
+  padding-block-end: var(--#{$data-list}__item-draggable-button--PaddingBlockEnd);
+  padding-inline-start: var(--#{$data-list}__item-draggable-button--PaddingInlineStart);
+  padding-inline-end: var(--#{$data-list}__item-draggable-button--PaddingInlineEnd);
+  margin-block-start: var(--#{$data-list}__item-draggable-button--MarginBlockStart);
+  margin-block-end: var(--#{$data-list}__item-draggable-button--MarginBlockEnd);
+  margin-inline-start: var(--#{$data-list}__item-draggable-button--MarginInlineStart);
   background-color: var(--#{$data-list}__item-draggable-button--BackgroundColor);
   border: 0;
 
@@ -324,26 +324,26 @@
 
   align-content: flex-start;
   align-items: flex-start;
-  padding-block-start: var(--#{$data-list}__item-action--PaddingTop);
-  padding-block-end: var(--#{$data-list}__item-action--PaddingBottom);
-  margin-inline-start: var(--#{$data-list}__item-action--MarginLeft);
+  padding-block-start: var(--#{$data-list}__item-action--PaddingBlockStart);
+  padding-block-end: var(--#{$data-list}__item-action--PaddingBlockEnd);
+  margin-inline-start: var(--#{$data-list}__item-action--MarginInlineStart);
 
   > *:not(:last-child) {
-    margin-inline-end: var(--#{$data-list}__item-action--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$data-list}__item-action--not-last-child--MarginInlineEnd);
   }
 
   // offset action button
   .#{$data-list}__action {
-    margin-block-start: var(--#{$data-list}__action--MarginTop);
-    margin-block-end: var(--#{$data-list}__item-action__action--MarginBottom);
+    margin-block-start: var(--#{$data-list}__action--MarginBlockStart);
+    margin-block-end: var(--#{$data-list}__item-action__action--MarginBlockEnd);
   }
 }
 
 // toggle
 .#{$data-list}__toggle {
-  margin-block-start: var(--#{$data-list}__toggle--MarginTop);
-  margin-block-end: var(--#{$data-list}__toggle--MarginBottom);
-  margin-inline-start: var(--#{$data-list}__toggle--MarginLeft);
+  margin-block-start: var(--#{$data-list}__toggle--MarginBlockStart);
+  margin-block-end: var(--#{$data-list}__toggle--MarginBlockEnd);
+  margin-inline-start: var(--#{$data-list}__toggle--MarginInlineStart);
 }
 
 // toggle icon rotate
@@ -366,25 +366,25 @@
 .#{$data-list}__cell {
   flex: 1;
   grid-column: 1 / -1;
-  padding-block-start: var(--#{$data-list}__cell--PaddingTop);
-  padding-block-end: var(--#{$data-list}__cell--PaddingBottom);
+  padding-block-start: var(--#{$data-list}__cell--PaddingBlockStart);
+  padding-block-end: var(--#{$data-list}__cell--PaddingBlockEnd);
 
   // for all subsequent .#{$data-list}__cell's, set to full width
   & + & {
     flex: 1 0 100%;
     order: 1;
-    padding-block-start: var(--#{$data-list}__cell--cell--PaddingTop);
+    padding-block-start: var(--#{$data-list}__cell--cell--PaddingBlockStart);
   }
 
   &.pf-m-icon {
     flex-grow: 0;
     grid-column: 1 / 2;
-    margin-inline-end: var(--#{$data-list}__cell--m-icon--MarginRight);
+    margin-inline-end: var(--#{$data-list}__cell--m-icon--MarginInlineEnd);
   }
 
   &.pf-m-icon + & {
     grid-column: 2 / 3;
-    padding-block-start: var(--#{$data-list}__cell--m-icon--cell--PaddingTop);
+    padding-block-start: var(--#{$data-list}__cell--m-icon--cell--PaddingBlockStart);
   }
 
   &.pf-m-align-right {
@@ -418,13 +418,13 @@
   border-radius: var(--#{$data-list}__expandable-content-body--BorderRadius);
 
   .#{$data-list}__expandable-content-body {
-    padding-block-start: var(--#{$data-list}__expandable-content-body--PaddingTop);
-    padding-block-end: var(--#{$data-list}__expandable-content-body--PaddingBottom);
-    padding-inline-start: var(--#{$data-list}__expandable-content-body--PaddingLeft);
-    padding-inline-end: var(--#{$data-list}__expandable-content-body--PaddingRight);
+    padding-block-start: var(--#{$data-list}__expandable-content-body--PaddingBlockStart);
+    padding-block-end: var(--#{$data-list}__expandable-content-body--PaddingBlockEnd);
+    padding-inline-start: var(--#{$data-list}__expandable-content-body--PaddingInlineStart);
+    padding-inline-end: var(--#{$data-list}__expandable-content-body--PaddingInlineEnd);
 
     > .#{$data-list} {
-      margin-inline-start: var(--#{$data-list}--MarginLeft);
+      margin-inline-start: var(--#{$data-list}--MarginInlineStart);
     }
 
     .#{$data-list}__item:last-child {
@@ -432,11 +432,11 @@
     }
 
     .#{$data-list}__item-row {
-      --#{$data-list}__item-row--PaddingLeft: 0;
+      --#{$data-list}__item-row--PaddingInlineStart: 0;
     }
 
     .#{$data-list}__expandable-content-body {
-      --#{$data-list}__expandable-content-body--PaddingLeft: 0;
+      --#{$data-list}__expandable-content-body--PaddingInlineStart: 0;
     }
 
     &.pf-m-no-padding {
