@@ -6,7 +6,7 @@
   --#{$log-viewer}--m-line-numbers__index--Display: inline;
 
   // Header
-  --#{$log-viewer}__header--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$log-viewer}__header--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
   // Main
   --#{$log-viewer}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -15,35 +15,35 @@
 
   // Scroll container
   --#{$log-viewer}__scroll-container--Height: #{pf-size-prem(600px)};
-  --#{$log-viewer}__scroll-container--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$log-viewer}__scroll-container--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$log-viewer}__scroll-container--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$log-viewer}__scroll-container--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // Main ::after
-  --#{$log-viewer}--m-line-numbers__main--before--Top: 0;
-  --#{$log-viewer}--m-line-numbers__main--before--Bottom: 0;
-  --#{$log-viewer}--m-line-numbers__main--before--Width: var(--pf-t--global--border--width--divider--default);
-  --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--pf-t--global--border--color--default);
+  --#{$log-viewer}--m-line-numbers__list--before--InsetBlockStart: 0;
+  --#{$log-viewer}--m-line-numbers__list--before--InsetBlockEnd: 0;
+  --#{$log-viewer}--m-line-numbers__list--before--Width: var(--pf-t--global--border--width--divider--default);
+  --#{$log-viewer}--m-line-numbers__list--before--BackgroundColor: var(--pf-t--global--border--color--default);
 
   // List
   --#{$log-viewer}__list--Height: auto;
-  --#{$log-viewer}--m-line-numbers__list--Left: var(--#{$log-viewer}__index--Width);
+  --#{$log-viewer}--m-line-numbers__list--InsetInlineStart: var(--#{$log-viewer}__index--Width);
   --#{$log-viewer}__list--FontFamily: var(--pf-t--global--font--family--mono);
   --#{$log-viewer}__list--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Index
   --#{$log-viewer}__index--Display: none;
   --#{$log-viewer}__index--Width: #{pf-size-prem(65px)}; // default width
-  --#{$log-viewer}__index--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$log-viewer}__index--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$log-viewer}__index--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$log-viewer}__index--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$log-viewer}__index--Color: var(--pf-t--global--text--color--subtle);
   --#{$log-viewer}__index--BackgroundColor: transparent;
   --#{$log-viewer}--line-number-chars: 4.4; // it's close enough to the existing default
-  --#{$log-viewer}--m-line-number-chars__index--PaddingRight: var(--pf-t--global--spacer--xs);
-  --#{$log-viewer}--m-line-number-chars__index--Width: calc(1ch * var(--#{$log-viewer}--line-number-chars) + var(--#{$log-viewer}__index--PaddingRight) + var(--#{$log-viewer}__index--PaddingLeft));
+  --#{$log-viewer}--m-line-number-chars__index--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$log-viewer}--m-line-number-chars__index--Width: calc(1ch * var(--#{$log-viewer}--line-number-chars) + var(--#{$log-viewer}__index--PaddingInlineEnd) + var(--#{$log-viewer}__index--PaddingInlineStart));
 
   // Text
-  --#{$log-viewer}__text--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$log-viewer}__text--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$log-viewer}__text--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$log-viewer}__text--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$log-viewer}__text--Color: var(--pf-t--global--text--color--regular);
   --#{$log-viewer}__text--WordBreak: break-all;
   --#{$log-viewer}__text--WhiteSpace: break-spaces;
@@ -58,10 +58,10 @@
   --#{$log-viewer}__timestamp--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Toolbar
-  --#{$log-viewer}--c-toolbar--PaddingTop: 0;
-  --#{$log-viewer}--c-toolbar--PaddingBottom: 0;
-  --#{$log-viewer}--c-toolbar__content--PaddingRight: 0;
-  --#{$log-viewer}--c-toolbar__content--PaddingLeft: 0;
+  --#{$log-viewer}--c-toolbar--PaddingBlockStart: 0;
+  --#{$log-viewer}--c-toolbar--PaddingBlockEnd: 0;
+  --#{$log-viewer}--c-toolbar__content--PaddingInlineEnd: 0;
+  --#{$log-viewer}--c-toolbar__content--PaddingInlineStart: 0;
   --#{$log-viewer}--c-toolbar__group--m-toggle-group--spacer: 0;
   --#{$log-viewer}--c-toolbar__group--m-toggle-group--m-show--spacer: var(--pf-t--global--spacer--sm);
 
@@ -76,7 +76,7 @@
       --#{$log-viewer}__main--BorderColor: var(--pf-t--global--border--color--default);
       --#{$log-viewer}__text--Color: var(--pf-t--global--text--color--regular);
       --#{$log-viewer}__index--Color: var(--pf-t--global--text--color--subtle);
-      --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--pf-t--global--border--color--default);
+      --#{$log-viewer}--m-line-numbers__list--before--BackgroundColor: var(--pf-t--global--border--color--default);
     }
   }
 
@@ -98,33 +98,33 @@
 
     .#{$log-viewer}__list {
       position: absolute;
-      inset-inline-start: var(--#{$log-viewer}--m-line-numbers__list--Left);
+      inset-inline-start: var(--#{$log-viewer}--m-line-numbers__list--InsetInlineStart);
       inset-inline-end: 0;
 
       // Divider
       &::before {
         position: absolute;
-        inset-block-start: var(--#{$log-viewer}--m-line-numbers__main--before--Top); // rename these vars at a breaking change
-        inset-block-end: var(--#{$log-viewer}--m-line-numbers__main--before--Bottom);
+        inset-block-start: var(--#{$log-viewer}--m-line-numbers__list--before--InsetBlockStart);
+        inset-block-end: var(--#{$log-viewer}--m-line-numbers__list--before--InsetBlockEnd);
         inset-inline-start: 0;
-        width: var(--#{$log-viewer}--m-line-numbers__main--before--Width);
+        width: var(--#{$log-viewer}--m-line-numbers__list--before--Width);
         content: "";
-        background: var(--#{$log-viewer}--m-line-numbers__main--before--BackgroundColor);
+        background: var(--#{$log-viewer}--m-line-numbers__list--before--BackgroundColor);
       }
     }
   }
 
   &.pf-m-line-number-chars {
-    --#{$log-viewer}__index--PaddingRight: var(--#{$log-viewer}--m-line-number-chars__index--PaddingRight);
+    --#{$log-viewer}__index--PaddingInlineEnd: var(--#{$log-viewer}--m-line-number-chars__index--PaddingInlineEnd);
     --#{$log-viewer}__index--Width: var(--#{$log-viewer}--m-line-number-chars__index--Width);
   }
 
   // Nested toolbar
   .#{$toolbar} {
-    --#{$toolbar}--PaddingTop: var(--#{$log-viewer}--c-toolbar--PaddingTop);
-    --#{$toolbar}--PaddingBottom: var(--#{$log-viewer}--c-toolbar--PaddingBottom);
-    --#{$toolbar}__content--PaddingRight: var(--#{$log-viewer}--c-toolbar__content--PaddingRight);
-    --#{$toolbar}__content--PaddingLeft: var(--#{$log-viewer}--c-toolbar__content--PaddingLeft);
+    --#{$toolbar}--PaddingBlockStart: var(--#{$log-viewer}--c-toolbar--PaddingBlockStart);
+    --#{$toolbar}--PaddingBlockEnd: var(--#{$log-viewer}--c-toolbar--PaddingBlockEnd);
+    --#{$toolbar}__content--PaddingInlineEnd: var(--#{$log-viewer}--c-toolbar__content--PaddingInlineEnd);
+    --#{$toolbar}__content--PaddingInlineStart: var(--#{$log-viewer}--c-toolbar__content--PaddingInlineStart);
     --#{$toolbar}__group--m-toggle-group--spacer: 0;
     --#{$toolbar}__group--m-toggle-group--m-show--spacer: var(--#{$log-viewer}--c-toolbar__group--m-toggle-group--m-show--spacer);
   }
@@ -136,7 +136,7 @@
 
 // Header
 .#{$log-viewer}__header {
-  margin-block-end: var(--#{$log-viewer}__header--MarginBottom);
+  margin-block-end: var(--#{$log-viewer}__header--MarginBlockEnd);
 }
 
 // Main
@@ -151,8 +151,8 @@
 .#{$log-viewer}__scroll-container {
   position: relative;
   height: var(--#{$log-viewer}__scroll-container--Height);
-  padding-block-start: var(--#{$log-viewer}__scroll-container--PaddingTop);
-  padding-block-end: var(--#{$log-viewer}__scroll-container--PaddingBottom);
+  padding-block-start: var(--#{$log-viewer}__scroll-container--PaddingBlockStart);
+  padding-block-end: var(--#{$log-viewer}__scroll-container--PaddingBlockEnd);
   overflow: auto;
   will-change: transform;
   direction: ltr;
@@ -167,7 +167,7 @@
 }
 
 .#{$log-viewer}__list-item {
- inset-inline-start: 0;
+  inset-inline-start: 0;
   width: 100%;
 }
 
@@ -189,8 +189,8 @@
   inset-inline-start: 0;
   display: var(--#{$log-viewer}__index--Display);
   width: var(--#{$log-viewer}__index--Width);
-  padding-inline-start: var(--#{$log-viewer}__index--PaddingLeft);
-  padding-inline-end: var(--#{$log-viewer}__index--PaddingRight);
+  padding-inline-start: var(--#{$log-viewer}__index--PaddingInlineStart);
+  padding-inline-end: var(--#{$log-viewer}__index--PaddingInlineEnd);
   font-family: var(--#{$log-viewer}__index--FontFamily, inherit);
   font-size: var(--#{$log-viewer}__index--FontSize, inherit);
   color: var(--#{$log-viewer}__index--Color);
@@ -201,8 +201,8 @@
 // Text
 .#{$log-viewer}__text {
   display: block;
-  padding-inline-start: var(--#{$log-viewer}__text--PaddingLeft);
-  padding-inline-end: var(--#{$log-viewer}__text--PaddingRight);
+  padding-inline-start: var(--#{$log-viewer}__text--PaddingInlineStart);
+  padding-inline-end: var(--#{$log-viewer}__text--PaddingInlineEnd);
   font-family: var(--#{$log-viewer}__text--FontFamily, inherit);
   font-size: var(--#{$log-viewer}__text--FontSize, inherit);
   color: var(--#{$log-viewer}__text--Color);
