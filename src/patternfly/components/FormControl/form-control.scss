@@ -322,12 +322,8 @@
 }
 
 .#{$form-control}__icon {
-<<<<<<< HEAD
   padding-block-start: var(--#{$form-control}__icon--PaddingBlockStart);
-=======
-  padding-block-start: var(--#{$form-control}__icon--PaddingTop);
   font-size: var(--#{$form-control}__icon--FontSize);
->>>>>>> 95805d9f (chore(tokens): reverted gap, updated semantic spacers, added icon fontsize vars)
   color: var(--#{$form-control}__icon--Color);
 
   &.pf-m-status {
