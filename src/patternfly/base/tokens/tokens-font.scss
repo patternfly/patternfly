@@ -3,7 +3,7 @@
 // Currently not being exported from Figma because they are styles rather than variables
 // The ability to make font variables is reportedly coming by the end of the year
 
-:root {
+@mixin pf-v6-tokens {
   // Base tokens for fonts
   --pf-t--global--font--family--100: redhattextvf, redhattext, helvetica, arial, sans-serif;
   --pf-t--global--font--family--200: redhatdisplayvf, redhatdisplay, helvetica, arial, sans-serif;

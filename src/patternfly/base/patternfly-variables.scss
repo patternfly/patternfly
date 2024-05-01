@@ -1,12 +1,18 @@
 @use '../sass-utilities' as *;
-@use "./tokens/workspace-overrides" as *;
-@use "./tokens/tokens-font" as *;
-@use "./tokens/tokens-palette" as *;
-@use "./tokens/tokens-default" as *;
-@use "./tokens/tokens-dark" as *;
+@use "./tokens/tokens-font" as font;
+@use "./tokens/tokens-palette" as palette;
+@use "./tokens/tokens-default" as default;
+@use "./tokens/tokens-dark" as dark;
 
 :where(:root) {
   @include pf-v6-set-inverse(false);
+  @include font.pf-v6-tokens;
+  @include palette.pf-v6-tokens;
+  @include default.pf-v6-tokens;
+}
+
+:where(.pf-v6-theme-dark) {
+  @include dark.pf-v6-tokens;
 }
 
 @include pf-v6-rtl {
