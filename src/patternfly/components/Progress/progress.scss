@@ -175,8 +175,8 @@
 .#{$progress}__indicator {
   // disable linter as the indicator element should always grow ltr
   // stylelint-disable liberty/use-logical-spec
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
   // stylelint-enable
 }
 

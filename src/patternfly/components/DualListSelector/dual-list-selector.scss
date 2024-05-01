@@ -78,6 +78,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__item-check--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Badge
+  --#{$dual-list-selector}__item-count--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
 
   // Icon
@@ -281,7 +282,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__item-count {
-  margin-inline-start: var(--#{$dual-list-selector}__item-count--Marginleft);
+  margin-inline-start: var(--#{$dual-list-selector}__item-count--MarginInlineStart);
 
   .#{$badge}.pf-m-read {
     --#{$badge}--m-read--BackgroundColor: var(--#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor);

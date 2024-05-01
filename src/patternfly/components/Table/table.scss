@@ -935,7 +935,7 @@
   // stylelint-disable
   > td,
   > th {
-    padding-top: 0;
+    padding-block-start: 0;
   }
 
   td:where(.#{$table}__td),
