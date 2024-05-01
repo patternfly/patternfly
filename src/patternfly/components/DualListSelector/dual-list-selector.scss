@@ -71,7 +71,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   // Toggle
   --#{$dual-list-selector}__item-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$dual-list-selector}__list__list__item-toggle--InlineStart: 0;
+  --#{$dual-list-selector}__list__list__item-toggle--InsetInlineStart: 0;
   --#{$dual-list-selector}__list__list__item-toggle--TranslateX: -100%;
 
   // Check
@@ -178,7 +178,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
       );
 
       position: absolute;
-      inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--InlineStart);
+      inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--InsetInlineStart);
     }
   }
 
@@ -349,7 +349,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   @for $i from 1 through $pf-v6-c-dual-list-selector__item--MaxNesting {
     #{$nested-item} {
       --#{$dual-list-selector}__item--PaddingInlineStart: calc(var(--#{$dual-list-selector}__item--nested-indent--base) * #{$i} + var(--#{$dual-list-selector}__item--indent--base));
-      --#{$dual-list-selector}__list__list__item-toggle--InlineStart: var(--#{$dual-list-selector}__item--PaddingInlineStart);
+      --#{$dual-list-selector}__list__list__item-toggle--InsetInlineStart: var(--#{$dual-list-selector}__item--PaddingInlineStart);
     }
 
     $nested-item: $nested-item + " " + $root;

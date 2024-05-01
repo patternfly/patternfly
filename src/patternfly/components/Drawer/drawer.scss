@@ -99,16 +99,16 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
-  --#{$drawer}--m-inline__splitter-handle--InlineStart: 50%;
+  --#{$drawer}--m-inline__splitter-handle--InsetInlineStart: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
-  --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--BlockStart: 50%;
+  --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--InsetBlockStart: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(--#{$drawer}__splitter--after--border-width--base);
 
   // Splitter handle
-  --#{$drawer}__splitter-handle--BlockStart: 50%;
-  --#{$drawer}__splitter-handle--InlineStart: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
-  --#{$drawer}--m-panel-left__splitter-handle--InlineStart: 50%;
-  --#{$drawer}--m-panel-bottom__splitter-handle--BlockStart: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
+  --#{$drawer}__splitter-handle--InsetBlockStart: 50%;
+  --#{$drawer}__splitter-handle--InsetInlineStart: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
+  --#{$drawer}--m-panel-left__splitter-handle--InsetInlineStart: 50%;
+  --#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
 
   // Splitter handle line
   --#{$drawer}__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--default);
@@ -461,8 +461,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 .#{$drawer}__splitter-handle {
   position: absolute;
-  inset-block-start: var(--#{$drawer}__splitter-handle--BlockStart);
-  inset-inline-start: var(--#{$drawer}__splitter-handle--InlineStart);
+  inset-block-start: var(--#{$drawer}__splitter-handle--InsetBlockStart);
+  inset-inline-start: var(--#{$drawer}__splitter-handle--InsetInlineStart);
 
   @include pf-v6-bidirectional-style(
     $prop: transform,
@@ -543,7 +543,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
       > .#{$drawer}__splitter {
-        --#{$drawer}__splitter-handle--InlineStart: var(--#{$drawer}--m-panel-left__splitter-handle--InlineStart);
+        --#{$drawer}__splitter-handle--InsetInlineStart: var(--#{$drawer}--m-panel-left__splitter-handle--InsetInlineStart);
 
         order: 1;
       }
@@ -581,7 +581,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       min-height: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight);
 
       > .#{$drawer}__splitter {
-        --#{$drawer}__splitter-handle--BlockStart: var(--#{$drawer}--m-panel-bottom__splitter-handle--BlockStart);
+        --#{$drawer}__splitter-handle--InsetBlockStart: var(--#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart);
         --#{$drawer}__splitter--after--BorderBlockStartWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth);
         --#{$drawer}__splitter--after--BorderInlineEndWidth: 0;
         --#{$drawer}__splitter--after--BorderBlockEndWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth);
@@ -594,7 +594,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
       > .#{$drawer}__splitter {
         --#{$drawer}__splitter--m-vertical--Width: var(--#{$drawer}--m-inline__splitter--m-vertical--Width);
-        --#{$drawer}__splitter-handle--InlineStart: var(--#{$drawer}--m-inline__splitter-handle--InlineStart);
+        --#{$drawer}__splitter-handle--InsetInlineStart: var(--#{$drawer}--m-inline__splitter-handle--InsetInlineStart);
 
         outline-offset: var(--#{$drawer}--m-inline__splitter--focus--OutlineOffset);
       }
@@ -604,7 +604,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
         > .#{$drawer}__splitter {
           --#{$drawer}__splitter--Height: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--Height);
-          --#{$drawer}__splitter-handle--BlockStart: var(--#{$drawer}--m-inline--m-panel-bottom__splitter-handle--BlockStart);
+          --#{$drawer}__splitter-handle--InsetBlockStart: var(--#{$drawer}--m-inline--m-panel-bottom__splitter-handle--InsetBlockStart);
           --#{$drawer}__splitter--after--BorderBlockStartWidth: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth);
           --#{$drawer}__splitter--after--BorderInlineEndWidth: 0;
           --#{$drawer}__splitter--after--BorderInlineStartWidth: 0;

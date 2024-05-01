@@ -114,12 +114,12 @@
 
   // * Menu flyout
   --#{$menu}--m-flyout__Zindex: var(--pf-t--global--z-index--sm);
-  --#{$menu}--m-flyout__menu--BlockStart: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
-  --#{$menu}--m-flyout__menu--InlineEnd: auto;
-  --#{$menu}--m-flyout__menu--BlockEnd: auto;
-  --#{$menu}--m-flyout__menu--InlineStart: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
-  --#{$menu}--m-flyout__menu--m-top--BlockEnd: calc(var(--#{$menu}__list--PaddingBlockStart) * -1);
-  --#{$menu}--m-flyout__menu--m-left--InlineEnd: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
+  --#{$menu}--m-flyout__menu--InsetBlockStart: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
+  --#{$menu}--m-flyout__menu--InsetInlineEnd: auto;
+  --#{$menu}--m-flyout__menu--InsetBlockEnd: auto;
+  --#{$menu}--m-flyout__menu--InsetInlineStart: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
+  --#{$menu}--m-flyout__menu--m-top--InsetBlockEnd: calc(var(--#{$menu}__list--PaddingBlockStart) * -1);
+  --#{$menu}--m-flyout__menu--m-left--InsetInlineEnd: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
 
   // * Menu drilldown content
   --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--pf-t--global--transition--duration);
@@ -127,7 +127,7 @@
   --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
 
   // * Menu drilldown menu
-  --#{$menu}--m-drilldown--c-menu--BlockStart: 0;
+  --#{$menu}--m-drilldown--c-menu--InsetBlockStart: 0;
   --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--transition--duration);
   --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
 
@@ -223,10 +223,10 @@
   & &.pf-m-flyout,
   &.pf-m-flyout & {
     position: absolute;
-    inset-block-start: var(--#{$menu}--m-flyout__menu--BlockStart);
-    inset-block-end: var(--#{$menu}--m-flyout__menu--BlockEnd);
-    inset-inline-start: var(--#{$menu}--m-flyout__menu--InlineStart);
-    inset-inline-end: var(--#{$menu}--m-flyout__menu--InlineEnd);
+    inset-block-start: var(--#{$menu}--m-flyout__menu--InsetBlockStart);
+    inset-block-end: var(--#{$menu}--m-flyout__menu--InsetBlockEnd);
+    inset-inline-start: var(--#{$menu}--m-flyout__menu--InsetInlineStart);
+    inset-inline-end: var(--#{$menu}--m-flyout__menu--InsetInlineEnd);
     z-index: var(--#{$menu}--m-flyout__Zindex);
     border-radius: var(--#{$menu}--BorderRadius);
 
@@ -236,13 +236,13 @@
   }
 
   &.pf-m-top {
-    --#{$menu}--m-flyout__menu--BlockStart: auto;
-    --#{$menu}--m-flyout__menu--BlockEnd: var(--#{$menu}--m-flyout__menu--m-top--BlockEnd);
+    --#{$menu}--m-flyout__menu--InsetBlockStart: auto;
+    --#{$menu}--m-flyout__menu--InsetBlockEnd: var(--#{$menu}--m-flyout__menu--m-top--InsetBlockEnd);
   }
 
   &.pf-m-left {
-    --#{$menu}--m-flyout__menu--InlineEnd: var(--#{$menu}--m-flyout__menu--m-left--InlineEnd);
-    --#{$menu}--m-flyout__menu--InlineStart: auto;
+    --#{$menu}--m-flyout__menu--InsetInlineEnd: var(--#{$menu}--m-flyout__menu--m-left--InsetInlineEnd);
+    --#{$menu}--m-flyout__menu--InsetInlineStart: auto;
   }
 
   &.pf-m-drilldown {
@@ -272,7 +272,7 @@
     // - Menu nested menu
     > .#{$menu}__content .#{$menu} {
       position: absolute;
-      inset-block-start: var(--#{$menu}--m-drilldown--c-menu--BlockStart);
+      inset-block-start: var(--#{$menu}--m-drilldown--c-menu--InsetBlockStart);
       inset-inline-start: 100%;
       width: 100%;
       box-shadow: none;

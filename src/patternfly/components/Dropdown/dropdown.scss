@@ -124,9 +124,9 @@ $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
   --#{$dropdown}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
-  --#{$dropdown}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --#{$dropdown}__menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --#{$dropdown}__menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$dropdown}--m-top__menu--BlockStart: 0;
+  --#{$dropdown}--m-top__menu--InsetBlockStart: 0;
   --#{$dropdown}--m-top__menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
@@ -175,9 +175,9 @@ $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}__toggle--c-badge__toggle-icon--MarginInlineEnd: 0;
 
   // menu
-  --#{$dropdown}--c-menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --#{$dropdown}--c-menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --#{$dropdown}--c-menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$dropdown}--m-top--c-menu--BlockStart: 0;
+  --#{$dropdown}--m-top--c-menu--InsetBlockStart: 0;
   --#{$dropdown}--m-top--c-menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Dropdown
@@ -206,7 +206,7 @@ $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   > .#{$menu} {
     position: absolute;
-   inset-block-start: var(--#{$dropdown}--c-menu--BlockStart);
+   inset-block-start: var(--#{$dropdown}--c-menu--InsetBlockStart);
     z-index: var(--#{$dropdown}--c-menu--ZIndex);
   }
 
@@ -660,7 +660,7 @@ $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 .#{$dropdown}__menu {
   position: absolute;
- inset-block-start: var(--#{$dropdown}__menu--BlockStart);
+ inset-block-start: var(--#{$dropdown}__menu--InsetBlockStart);
   z-index: var(--#{$dropdown}__menu--ZIndex);
   padding-block-start: var(--#{$dropdown}__menu--PaddingBlockStart);
   padding-block-end: var(--#{$dropdown}__menu--PaddingBlockEnd);
@@ -703,13 +703,13 @@ $pf-v6-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 .#{$dropdown}.pf-m-top {
   .#{$dropdown}__menu {
-    --#{$dropdown}__menu--BlockStart: var(--#{$dropdown}--m-top__menu--BlockStart);
+    --#{$dropdown}__menu--InsetBlockStart: var(--#{$dropdown}--m-top__menu--InsetBlockStart);
 
     transform: translateY(var(--#{$dropdown}--m-top__menu--TranslateY));
   }
 
   > .#{$menu} {
-    --#{$dropdown}--c-menu--BlockStart: var(--#{$dropdown}--m-top--c-menu--BlockStart);
+    --#{$dropdown}--c-menu--InsetBlockStart: var(--#{$dropdown}--m-top--c-menu--InsetBlockStart);
 
     transform: translateY(var(--#{$dropdown}--m-top--c-menu--TranslateY));
   }

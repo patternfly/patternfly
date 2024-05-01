@@ -6,8 +6,8 @@
   --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Toast variables
-  --#{$alert-group}--m-toast--BlockStart: var(--pf-t--global--spacer--2xl);
-  --#{$alert-group}--m-toast--InlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$alert-group}--m-toast--InsetBlockStart: var(--pf-t--global--spacer--2xl);
+  --#{$alert-group}--m-toast--InsetInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$alert-group}--m-toast--MaxWidth: #{pf-size-prem(600px)};
   --#{$alert-group}--m-toast--ZIndex: var(--pf-t--global--z-index--2xl);
 
@@ -37,10 +37,10 @@
   // Toast positioning modifier
   &.pf-m-toast {
     position: fixed;
-    inset-block-start: var(--#{$alert-group}--m-toast--BlockStart);
-    inset-inline-end: var(--#{$alert-group}--m-toast--InlineEnd);
+    inset-block-start: var(--#{$alert-group}--m-toast--InsetBlockStart);
+    inset-inline-end: var(--#{$alert-group}--m-toast--InsetInlineEnd);
     z-index: var(--#{$alert-group}--m-toast--ZIndex);
-    width: calc(100% - calc(var(--#{$alert-group}--m-toast--InlineEnd) * 2));
+    width: calc(100% - calc(var(--#{$alert-group}--m-toast--InsetInlineEnd) * 2));
     max-width: var(--#{$alert-group}--m-toast--MaxWidth);
   }
 }

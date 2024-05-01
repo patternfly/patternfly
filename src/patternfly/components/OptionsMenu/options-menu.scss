@@ -48,9 +48,9 @@
   --#{$options-menu}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
   --#{$options-menu}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
   --#{$options-menu}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
-  --#{$options-menu}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
+  --#{$options-menu}__menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
   --#{$options-menu}__menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$options-menu}--m-top__menu--BlockStart: 0;
+  --#{$options-menu}--m-top__menu--InsetBlockStart: 0;
   --#{$options-menu}--m-top__menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu item
@@ -239,7 +239,7 @@
 
 .#{$options-menu}__menu {
   position: absolute;
- inset-block-start: var(--#{$options-menu}__menu--BlockStart);
+ inset-block-start: var(--#{$options-menu}__menu--InsetBlockStart);
   z-index: var(--#{$options-menu}__menu--ZIndex);
   min-width: 100%;
   padding-block-start: var(--#{$options-menu}__menu--PaddingBlockStart);
@@ -253,7 +253,7 @@
   }
 
   .#{$options-menu}.pf-m-top & {
-    --#{$options-menu}__menu--BlockStart: var(--#{$options-menu}--m-top__menu--BlockStart);
+    --#{$options-menu}__menu--InsetBlockStart: var(--#{$options-menu}--m-top__menu--InsetBlockStart);
 
     transform: translateY(var(--#{$options-menu}--m-top__menu--TranslateY));
   }

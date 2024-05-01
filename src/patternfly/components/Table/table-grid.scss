@@ -321,7 +321,7 @@
   .#{$table}__compound-expansion-toggle {
     --#{$table}__compound-expansion-toggle__button--before--BorderInlineEndWidth: 0;
     --#{$table}__compound-expansion-toggle__button--before--BorderInlineStartWidth: 0;
-    --#{$table}__compound-expansion-toggle__button--after--BlockStart: 100%;
+    --#{$table}__compound-expansion-toggle__button--after--InsetBlockStart: 100%;
   }
 
   // Compound expansion responsive

@@ -90,15 +90,15 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--before--BorderInlineEndWidth: 0;
   --#{$tabs}__link--before--BorderBlockEndWidth: 0;
   --#{$tabs}__link--before--BorderInlineStartWidth: 0;
-  --#{$tabs}__link--before--InlineStart: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
+  --#{$tabs}__link--before--InsetInlineStart: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
   --#{$tabs}__link--disabled--before--BorderInlineEndWidth: 0;
   --#{$tabs}__link--disabled--before--BorderBlockEndWidth: var(--#{$tabs}--before--border-width--base);
   --#{$tabs}__link--disabled--before--BorderInlineStartWidth: 0;
 
   // Link after
-  --#{$tabs}__link--after--BlockStart: auto;
-  --#{$tabs}__link--after--InlineEnd: 0;
-  --#{$tabs}__link--after--BlockEnd: 0;
+  --#{$tabs}__link--after--InsetBlockStart: auto;
+  --#{$tabs}__link--after--InsetInlineEnd: 0;
+  --#{$tabs}__link--after--InsetBlockEnd: 0;
   --#{$tabs}__link--after--BorderColor: var(--pf-t--global--border--color--default);
   --#{$tabs}__link--after--BorderWidth: 0;
   --#{$tabs}__link--after--BorderBlockStartWidth: 0;
@@ -255,8 +255,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__link--hover--BackgroundColor: var(--#{$tabs}--m-box__link--hover--BackgroundColor);
     --#{$tabs}__item--m-current__link--BackgroundColor: var(--#{$tabs}--m-box__item--m-current__link--BackgroundColor);
     --#{$tabs}__link--before--BorderBlockEndWidth: var(--#{$tabs}__link--before--border-width--base);
-    --#{$tabs}__link--after--BlockStart: 0;
-    --#{$tabs}__link--after--BlockEnd: auto;
+    --#{$tabs}__link--after--InsetBlockStart: 0;
+    --#{$tabs}__link--after--InsetBlockEnd: auto;
 
     .#{$tabs}__link {
       --#{$tabs}__link--after--BorderBlockStartWidth: var(--#{$tabs}__link--after--BorderWidth);
@@ -297,7 +297,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     // stylelint-disable selector-max-class
     // Remove offset from current adjacent item
     .#{$tabs}__item.pf-m-current + .#{$tabs}__item {
-      --#{$tabs}__link--before--InlineStart: 0;
+      --#{$tabs}__link--before--InsetInlineStart: 0;
     }
     // stylelint-enable
 
@@ -321,12 +321,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__item--PaddingInlineEnd: var(--#{$tabs}--m-vertical__item--PaddingInlineEnd);
     --#{$tabs}__link--PaddingInlineStart: var(--#{$tabs}--m-vertical__link--PaddingInlineStart);
     --#{$tabs}__link--PaddingInlineEnd: var(--#{$tabs}--m-vertical__link--PaddingInlineEnd);
-    --#{$tabs}__link--before--InlineStart: 0;
+    --#{$tabs}__link--before--InsetInlineStart: 0;
     --#{$tabs}__link--disabled--before--BorderBlockEndWidth: 0;
     --#{$tabs}__link--disabled--before--BorderInlineStartWidth: var(--#{$tabs}--before--border-width--base);
-    --#{$tabs}__link--after--BlockStart: 0;
-    --#{$tabs}__link--after--BlockEnd: 0;
-    --#{$tabs}__link--after--InlineEnd: auto;
+    --#{$tabs}__link--after--InsetBlockStart: 0;
+    --#{$tabs}__link--after--InsetBlockEnd: 0;
+    --#{$tabs}__link--after--InsetInlineEnd: auto;
     --#{$tabs}__list--ScrollSnapTypeAxis: var(--#{$tabs}--m-vertical__list--ScrollSnapTypeAxis);
 
     display: inline-flex;
@@ -625,10 +625,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @at-root .#{$tabs}__item.pf-m-action,
   & {
     &::after {
-      inset-block-start: var(--#{$tabs}__link--after--BlockStart);
-      inset-block-end: var(--#{$tabs}__link--after--BlockEnd);
-      inset-inline-start: var(--#{$tabs}__link--before--InlineStart); // use the ::before Left value to offset the top border / overlap left border
-      inset-inline-end: var(--#{$tabs}__link--after--InlineEnd);
+      inset-block-start: var(--#{$tabs}__link--after--InsetBlockStart);
+      inset-block-end: var(--#{$tabs}__link--after--InsetBlockEnd);
+      inset-inline-start: var(--#{$tabs}__link--before--InsetInlineStart); // use the ::before Left value to offset the top border / overlap left border
+      inset-inline-end: var(--#{$tabs}__link--after--InsetInlineEnd);
       border-color: var(--#{$tabs}__link--after--BorderColor);
       border-block-start-width: var(--#{$tabs}__link--after--BorderBlockStartWidth);
       border-block-end-width: var(--#{$tabs}__link--after--BorderBlockEndWidth);

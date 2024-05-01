@@ -36,12 +36,12 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$pagination}--m-sticky--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-sticky--ZIndex: 100; // TODO: replace with z-index token
-  --#{$pagination}--m-sticky--BlockStart: 0;
+  --#{$pagination}--m-sticky--InsetBlockStart: 0;
 
   // bottom
   --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
-  --#{$pagination}--m-bottom--BlockEnd: 0;
+  --#{$pagination}--m-bottom--InsetBlockEnd: 0;
   --#{$pagination}--m-bottom--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
@@ -78,10 +78,10 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
   &.pf-m-bottom {
     --#{$pagination}--m-sticky--BoxShadow: var(--#{$pagination}--m-bottom--m-sticky--BoxShadow);
-    --#{$pagination}--m-sticky--BlockStart: auto;
+    --#{$pagination}--m-sticky--InsetBlockStart: auto;
 
     position: sticky;
-    inset-block-end: var(--#{$pagination}--m-bottom--BlockEnd);
+    inset-block-end: var(--#{$pagination}--m-bottom--InsetBlockEnd);
     justify-content: center;
     padding-inline-start: var(--#{$pagination}--m-bottom--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--PaddingInlineEnd);
@@ -116,7 +116,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       --#{$pagination}--m-bottom--BorderBlockStartWidth: 0;
       --#{$pagination}--m-bottom--MarginBlockStart: 0;
-      --#{$pagination}--m-bottom--BlockEnd: auto;
+      --#{$pagination}--m-bottom--InsetBlockEnd: auto;
 
       position: relative;
       justify-content: flex-end;
@@ -143,10 +143,10 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 
   &.pf-m-sticky {
-    --#{$pagination}--m-bottom--BlockEnd: 0;
+    --#{$pagination}--m-bottom--InsetBlockEnd: 0;
 
     position: sticky;
-    inset-block-start: var(--#{$pagination}--m-sticky--BlockStart);
+    inset-block-start: var(--#{$pagination}--m-sticky--InsetBlockStart);
     z-index: var(--#{$pagination}--m-sticky--ZIndex);
     padding-block-start: var(--#{$pagination}--m-sticky--PaddingBlockStart);
     padding-block-end: var(--#{$pagination}--m-sticky--PaddingBlockEnd);

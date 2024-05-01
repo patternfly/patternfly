@@ -106,7 +106,7 @@
   --#{$select}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
   --#{$select}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
   --#{$select}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
-  --#{$select}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+  --#{$select}__menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
   --#{$select}__menu--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$select}__menu--Width: auto;
   --#{$select}__menu--MinWidth: 100%;
@@ -153,8 +153,8 @@
   // Menu item icon
   --#{$select}__menu-item-icon--Color: var(--#{$pf-global}--active-color--100);
   --#{$select}__menu-item-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$select}__menu-item-icon--InlineEnd: var(--#{$pf-global}--spacer--md);
-  --#{$select}__menu-item-icon--BlockStart: 50%;
+  --#{$select}__menu-item-icon--InsetInlineEnd: var(--#{$pf-global}--spacer--md);
+  --#{$select}__menu-item-icon--InsetBlockStart: 50%;
   --#{$select}__menu-item-icon--TranslateY: -50%;
 
   // Menu item action icon
@@ -456,7 +456,7 @@
 
 .#{$select}__menu {
   position: absolute;
- inset-block-start: var(--#{$select}__menu--BlockStart);
+ inset-block-start: var(--#{$select}__menu--InsetBlockStart);
   z-index: var(--#{$select}__menu--ZIndex);
   width: var(--#{$select}__menu--Width);
   min-width: var(--#{$select}__menu--MinWidth);
@@ -654,8 +654,8 @@
 
 .#{$select}__menu-item-icon {
   position: absolute;
-  inset-block-start: var(--#{$select}__menu-item-icon--BlockStart);
-  inset-inline-end: var(--#{$select}__menu-item-icon--InlineEnd);
+  inset-block-start: var(--#{$select}__menu-item-icon--InsetBlockStart);
+  inset-inline-end: var(--#{$select}__menu-item-icon--InsetInlineEnd);
   font-size: var(--#{$select}__menu-item-icon--FontSize);
   color: var(--#{$select}__menu-item-icon--Color);
   transform: translateY(var(--#{$select}__menu-item-icon--TranslateY));

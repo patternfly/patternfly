@@ -43,7 +43,7 @@
   --#{$context-selector}--m-plain--hover__toggle-icon--Color: var(--#{$pf-global}--Color--100);
 
   // Menu
-  --#{$context-selector}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
+  --#{$context-selector}__menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
   --#{$context-selector}__menu--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$context-selector}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm); // remove at breaking change
   --#{$context-selector}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
@@ -304,7 +304,7 @@
 
 .#{$context-selector}__menu {
   position: absolute;
-  inset-block-start: var(--#{$context-selector}__menu--BlockStart);
+  inset-block-start: var(--#{$context-selector}__menu--InsetBlockStart);
   z-index: var(--#{$context-selector}__menu--ZIndex);
   min-width: 100%;
   background-color: var(--#{$context-selector}__menu--BackgroundColor);

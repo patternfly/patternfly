@@ -44,8 +44,8 @@
     .pf-m-top-left,
     .pf-m-top-right
   ) {
-    --#{$tooltip}__arrow--BlockEnd: var(--#{$tooltip}--m-top--BlockEnd, 0);
-    --#{$tooltip}__arrow--InlineStart: var(--#{$tooltip}--m-top--InlineStart, 50%);
+    --#{$tooltip}__arrow--InsetBlockEnd: var(--#{$tooltip}--m-top--InsetBlockEnd, 0);
+    --#{$tooltip}__arrow--InsetInlineStart: var(--#{$tooltip}--m-top--InsetInlineStart, 50%);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-top--TranslateX);
     --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-top--TranslateY);
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-top--Rotate);
@@ -56,8 +56,8 @@
     .pf-m-bottom-left,
     .pf-m-bottom-right
     ) {
-    --#{$tooltip}__arrow--BlockStart: var(--#{$tooltip}--m-bottom--BlockStart, 0);
-    --#{$tooltip}__arrow--InlineStart: var(--#{$tooltip}--m-bottom--InlineStart, 50%);
+    --#{$tooltip}__arrow--InsetBlockStart: var(--#{$tooltip}--m-bottom--InsetBlockStart, 0);
+    --#{$tooltip}__arrow--InsetInlineStart: var(--#{$tooltip}--m-bottom--InsetInlineStart, 50%);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-bottom--TranslateX);
     --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-bottom--TranslateY);
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-bottom--Rotate);
@@ -68,8 +68,8 @@
     .pf-m-left-top,
     .pf-m-left-bottom
   ) {
-    --#{$tooltip}__arrow--BlockStart: var(--#{$tooltip}--m-left--BlockStart, 50%);
-    --#{$tooltip}__arrow--InlineEnd: var(--#{$tooltip}--m-left--InlineEnd, 0);
+    --#{$tooltip}__arrow--InsetBlockStart: var(--#{$tooltip}--m-left--InsetBlockStart, 50%);
+    --#{$tooltip}__arrow--InsetInlineEnd: var(--#{$tooltip}--m-left--InsetInlineEnd, 0);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-left--TranslateX);
     --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-left--TranslateY);
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-left--Rotate);
@@ -80,8 +80,8 @@
     .pf-m-right-top,
     .pf-m-right-bottom
   ) {
-    --#{$tooltip}__arrow--BlockStart: var(--#{$tooltip}--m-right--BlockStart, 50%);
-    --#{$tooltip}__arrow--InlineStart: var(--#{$tooltip}--m-right--InlineStart, 0);
+    --#{$tooltip}__arrow--InsetBlockStart: var(--#{$tooltip}--m-right--InsetBlockStart, 50%);
+    --#{$tooltip}__arrow--InsetInlineStart: var(--#{$tooltip}--m-right--InsetInlineStart, 0);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-right--TranslateX);
     --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-right--TranslateY);
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-right--Rotate);
@@ -91,7 +91,7 @@
     .pf-m-left-top,
     .pf-m-right-top
   ) {
-    --#{$tooltip}__arrow--BlockStart: 0;
+    --#{$tooltip}__arrow--InsetBlockStart: 0;
     --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-top--TranslateY);
   }
 
@@ -99,15 +99,15 @@
     .pf-m-left-bottom,
     .pf-m-right-bottom
   ) {
-    --#{$tooltip}__arrow--BlockStart: auto;
-    --#{$tooltip}__arrow--BlockEnd: 0;
+    --#{$tooltip}__arrow--InsetBlockStart: auto;
+    --#{$tooltip}__arrow--InsetBlockEnd: 0;
   }
 
   &:is(
     .pf-m-top-left,
     .pf-m-bottom-left
   ) {
-    --#{$tooltip}__arrow--InlineStart: 0;
+    --#{$tooltip}__arrow--InsetInlineStart: 0;
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-left--TranslateX);
   }
 
@@ -115,8 +115,8 @@
     .pf-m-top-right,
     .pf-m-bottom-right
   ) {
-    --#{$tooltip}__arrow--InlineEnd: 0;
-    --#{$tooltip}__arrow--InlineStart: auto;
+    --#{$tooltip}__arrow--InsetInlineEnd: 0;
+    --#{$tooltip}__arrow--InsetInlineStart: auto;
   }
 }
 
@@ -141,10 +141,10 @@
 .#{$tooltip}__arrow {
   position: absolute;
   // stylelint-disable liberty/use-logical-spec
-  top: var(--#{$tooltip}__arrow--BlockStart, auto);
-  right: var(--#{$tooltip}__arrow--InlineEnd, auto);
-  bottom: var(--#{$tooltip}__arrow--BlockEnd, auto);
-  left: var(--#{$tooltip}__arrow--InlineStart, auto);
+  top: var(--#{$tooltip}__arrow--InsetBlockStart, auto);
+  right: var(--#{$tooltip}__arrow--InsetInlineEnd, auto);
+  bottom: var(--#{$tooltip}__arrow--InsetBlockEnd, auto);
+  left: var(--#{$tooltip}__arrow--InsetInlineStart, auto);
   // stylelint-enable
   width: var(--#{$tooltip}__arrow--Width);
   height: var(--#{$tooltip}__arrow--Height);

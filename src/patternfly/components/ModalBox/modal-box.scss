@@ -13,7 +13,7 @@
   --#{$modal-box}--MaxHeight: calc(100% - var(--pf-t--global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
   --#{$modal-box}--m-align-top--spacer: var(--pf-t--global--spacer--sm);
   --#{$modal-box}--m-align-top--xl--spacer: var(--pf-t--global--spacer--xl);
-  --#{$modal-box}--m-align-top--BlockStart: var(--#{$modal-box}--m-align-top--spacer);
+  --#{$modal-box}--m-align-top--InsetBlockStart: var(--#{$modal-box}--m-align-top--spacer);
   --#{$modal-box}--m-align-top--MaxHeight: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer), var(--pf-t--global--spacer--2xl)) - var(--#{$modal-box}--m-align-top--spacer));
   --#{$modal-box}--m-align-top--MaxWidth: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer) * 2, var(--pf-t--global--spacer--xl)));
 
@@ -59,8 +59,8 @@
   --#{$modal-box}__header--body--PaddingBlockStart: var(--pf-t--global--spacer--md);
 
   // Close
-  --#{$modal-box}__close--BlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
-  --#{$modal-box}__close--InlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
+  --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
+  --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
   --#{$modal-box}__close--sibling--MarginInlineEnd: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
@@ -100,7 +100,7 @@
   }
 
   &.pf-m-align-top {
-    inset-block-start: var(--#{$modal-box}--m-align-top--BlockStart);
+    inset-block-start: var(--#{$modal-box}--m-align-top--InsetBlockStart);
     align-self: flex-start;
     max-width: var(--#{$modal-box}--m-align-top--MaxWidth);
     max-height: var(--#{$modal-box}--m-align-top--MaxHeight);
@@ -145,8 +145,8 @@
 // Close button
 .#{$modal-box}__close {
   position: absolute;
- inset-block-start: var(--#{$modal-box}__close--BlockStart);
- inset-inline-end: var(--#{$modal-box}__close--InlineEnd);
+ inset-block-start: var(--#{$modal-box}__close--InsetBlockStart);
+ inset-inline-end: var(--#{$modal-box}__close--InsetInlineEnd);
 
   + * {
     margin-inline-end: var(--#{$modal-box}__close--sibling--MarginInlineEnd); // Create room for the close button

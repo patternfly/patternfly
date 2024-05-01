@@ -13,8 +13,8 @@
   --#{$wizard}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Close
-  --#{$wizard}__close--BlockStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingBlockStart));
-  --#{$wizard}__close--InlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingBlockStart));
+  --#{$wizard}__close--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
 
   // Title
@@ -58,7 +58,7 @@
   // Nav link number
   --#{$wizard}__nav-link--before--Width: 1.5rem;
   --#{$wizard}__nav-link--before--Height: 1.5rem;
-  --#{$wizard}__nav-link--before--BlockStart: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
+  --#{$wizard}__nav-link--before--InsetBlockStart: calc(calc(var(--#{$wizard}__nav-link--PaddingBlockStart) + var(--#{$wizard}__nav-link--PaddingBlockEnd) + 1em * var(--pf-t--global--font--line-height--body)) / 2); // half of the link button it's beside
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
@@ -82,7 +82,7 @@
   --#{$wizard}--m-in-page__toggle--xl--PaddingInlineStart: calc(var(--pf-t--global--spacer--xl) + var(--#{$wizard}__nav-link--before--Width) + var(--pf-t--global--spacer--sm));
 
   // Toggle number
-  --#{$wizard}__toggle-num--before--BlockStart: #{pf-size-prem(-2px)}; // TODO this should probably be calculated
+  --#{$wizard}__toggle-num--before--InsetBlockStart: #{pf-size-prem(-2px)}; // TODO this should probably be calculated
 
   // Toggle list item
   --#{$wizard}__toggle-list-item--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--sm);
@@ -194,8 +194,8 @@
   // Nested selector to match button component color specificity
   .#{$wizard}__close {
     position: absolute;
-   inset-block-start: var(--#{$wizard}__close--BlockStart);
-   inset-inline-end: var(--#{$wizard}__close--InlineEnd);
+   inset-block-start: var(--#{$wizard}__close--InsetBlockStart);
+   inset-inline-end: var(--#{$wizard}__close--InsetInlineEnd);
 
     button {
       font-size: var(--#{$wizard}__close--FontSize);
@@ -275,7 +275,7 @@
 
 .#{$wizard}__toggle-num {
   --#{$wizard}__nav-link--before--TranslateY: 0;
-  --#{$wizard}__nav-link--before--BlockStart: var(--#{$wizard}__toggle-num--before--BlockStart);
+  --#{$wizard}__nav-link--before--InsetBlockStart: var(--#{$wizard}__toggle-num--before--InsetBlockStart);
 }
 
 .#{$wizard}__toggle-separator {
@@ -422,7 +422,7 @@
     );
 
     position: absolute;
-    inset-block-start: var(--#{$wizard}__nav-link--before--BlockStart);
+    inset-block-start: var(--#{$wizard}__nav-link--before--InsetBlockStart);
     inset-inline-start: 0;
     display: inline-flex;
     align-items: center;

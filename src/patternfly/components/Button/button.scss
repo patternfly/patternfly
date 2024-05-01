@@ -103,8 +103,8 @@
   --#{$button}--m-link--m-inline--PaddingBlockEnd: 0;
   --#{$button}--m-link--m-inline--PaddingInlineStart: 0;
   --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
-  --#{$button}--m-link--m-inline__progress--InlineStart: var(--pf-t--global--spacer--xs);
-  --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InlineStart) + 1rem + var(--pf-t--global--spacer--sm));
+  --#{$button}--m-link--m-inline__progress--InsetInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
 
@@ -248,8 +248,8 @@
   --#{$button}__progress--Opacity: 0;
   --#{$button}__progress--TranslateY: -50%;
   --#{$button}__progress--TranslateX: 0;
-  --#{$button}__progress--BlockStart: 50%;
-  --#{$button}__progress--InlineStart: var(--pf-t--global--spacer--md);
+  --#{$button}__progress--InsetBlockStart: 50%;
+  --#{$button}__progress--InsetInlineStart: var(--pf-t--global--spacer--md);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
   --#{$button}--m-progress--TransitionProperty: padding;
   --#{$button}--m-progress--TransitionDuration: var(--pf-t--global--transition--duration);
@@ -258,7 +258,7 @@
   --#{$button}--m-in-progress--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$button}--m-in-progress--PaddingInlineStart: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width));
   --#{$button}--m-in-progress--m-plain--Color: var(--#{$spinner}--Color);
-  --#{$button}--m-in-progress--m-plain__progress--InlineStart: 50%;
+  --#{$button}--m-in-progress--m-plain__progress--InsetInlineStart: 50%;
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
 
   // Count
@@ -387,7 +387,7 @@
       --#{$button}--PaddingBlockEnd: var(--#{$button}--m-link--m-inline--PaddingBlockEnd);
       --#{$button}--PaddingInlineStart: var(--#{$button}--m-link--m-inline--PaddingInlineStart);
       --#{$button}--BackgroundColor: transparent;
-      --#{$button}__progress--InlineStart: var(--#{$button}--m-link--m-inline__progress--InlineStart);
+      --#{$button}__progress--InsetInlineStart: var(--#{$button}--m-link--m-inline__progress--InsetInlineStart);
       --#{$button}--hover--TextDecoration: var(--#{$button}--m-link--m-inline--hover--TextDecoration);
       --#{$button}--hover--BackgroundColor: transparent;
       --#{$button}--m-clicked--BackgroundColor: transparent;
@@ -631,7 +631,7 @@
     }
 
     &.pf-m-plain {
-      --#{$button}__progress--InlineStart: var(--#{$button}--m-in-progress--m-plain__progress--InlineStart);
+      --#{$button}__progress--InsetInlineStart: var(--#{$button}--m-in-progress--m-plain__progress--InsetInlineStart);
       --#{$button}__progress--TranslateX: var(--#{$button}--m-in-progress--m-plain__progress--TranslateX);
 
       > :not(.#{$button}__progress) {
@@ -655,8 +655,8 @@
 
 .#{$button}__progress {
   position: absolute;
-  inset-block-start: var(--#{$button}__progress--BlockStart);
-  inset-inline-start: var(--#{$button}__progress--InlineStart);
+  inset-block-start: var(--#{$button}__progress--InsetBlockStart);
+  inset-inline-start: var(--#{$button}__progress--InsetInlineStart);
   line-height: 1;
   color: var(--#{$button}__progress--Color);
   transform: translate(var(--#{$button}__progress--TranslateX), var(--#{$button}__progress--TranslateY));

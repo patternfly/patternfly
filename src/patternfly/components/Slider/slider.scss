@@ -2,7 +2,7 @@
 
 :where(:root, .#{$slider}) {
   --#{$slider}--value: 0; // should always be set inline
-  --#{$slider}__step--InlineStart: 0; // should always be set inline
+  --#{$slider}__step--InsetInlineStart: 0; // should always be set inline
 
   // rail
   --#{$slider}__rail--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -18,7 +18,7 @@
   --#{$slider}__steps--Height: var(--#{$slider}__steps--FontSize);
 
   // step tick
-  --#{$slider}__step-tick--BlockStart: var(--pf-t--global--spacer--md);
+  --#{$slider}__step-tick--InsetBlockStart: var(--pf-t--global--spacer--md);
   --#{$slider}__step-tick--Width: #{pf-size-prem(4px)};
   --#{$slider}__step-tick--Height: #{pf-size-prem(4px)};
   --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--subtle);
@@ -30,15 +30,15 @@
 
   // step label
   --#{$slider}__step-label--TranslateX: -50%;
-  --#{$slider}__step-label--BlockStart: calc(var(--pf-t--global--spacer--xl) + var(--#{$slider}__rail-track--Height));
+  --#{$slider}__step-label--InsetBlockStart: calc(var(--pf-t--global--spacer--xl) + var(--#{$slider}__rail-track--Height));
   --#{$slider}__step--first-child__step-label--TranslateX: 0;
   --#{$slider}__step--last-child__step-label--TranslateX: -100%;
 
   // thumb
-  --#{$slider}__thumb--BlockStart: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--pf-t--global--spacer--md));
+  --#{$slider}__thumb--InsetBlockStart: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--pf-t--global--spacer--md));
   --#{$slider}__thumb--Width: #{pf-size-prem(16px)};
   --#{$slider}__thumb--Height: #{pf-size-prem(16px)};
-  --#{$slider}__thumb--InlineStart: var(--#{$slider}--value);
+  --#{$slider}__thumb--InsetInlineStart: var(--#{$slider}--value);
   --#{$slider}__thumb--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$slider}__thumb--TranslateX: -50%;
   --#{$slider}__thumb--TranslateY: -50%;
@@ -64,7 +64,7 @@
   --#{$slider}__value--c-form-control--Width: calc(var(--#{$slider}__value--c-form-control--width-base) + var(--#{$slider}__value--c-form-control--width-chars) * 1ch);
   --#{$slider}__value--m-floating--TranslateX: -50%;
   --#{$slider}__value--m-floating--TranslateY: -100%;
-  --#{$slider}__value--m-floating--InlineStart: var(--#{$slider}--value);
+  --#{$slider}__value--m-floating--InsetInlineStart: var(--#{$slider}--value);
   --#{$slider}__value--m-floating--ZIndex: var(--pf-t--global--z-index--sm);
 
   // actions
@@ -140,7 +140,7 @@
 .#{$slider}__step {
   position: absolute;
   inset-block-start: 0;
-  inset-inline-start: var(--#{$slider}__step--InlineStart); // set programmatically as an inline style
+  inset-inline-start: var(--#{$slider}__step--InsetInlineStart); // set programmatically as an inline style
   content: "";
 
   &.pf-m-active {
@@ -166,7 +166,7 @@
   );
 
   position: absolute;
-  inset-block-start: var(--#{$slider}__step-tick--BlockStart);
+  inset-block-start: var(--#{$slider}__step-tick--InsetBlockStart);
   inset-inline-start: 0;
   width: var(--#{$slider}__step-tick--Width);
   height: var(--#{$slider}__step-tick--Height);
@@ -182,7 +182,7 @@
   );
 
   position: absolute;
-  inset-block-start: var(--#{$slider}__step-label--BlockStart);
+  inset-block-start: var(--#{$slider}__step-label--InsetBlockStart);
   word-break: normal;
 }
 
@@ -194,8 +194,8 @@
   );
 
   position: absolute;
-  inset-block-start: var(--#{$slider}__thumb--BlockStart);
-  inset-inline-start: var(--#{$slider}__thumb--InlineStart);
+  inset-block-start: var(--#{$slider}__thumb--InsetBlockStart);
+  inset-inline-start: var(--#{$slider}__thumb--InsetInlineStart);
   width: var(--#{$slider}__thumb--Width);
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
@@ -248,7 +248,7 @@
 
     position: absolute;
     inset-block-start: 0;
-    inset-inline-start: var(--#{$slider}__value--m-floating--InlineStart);
+    inset-inline-start: var(--#{$slider}__value--m-floating--InsetInlineStart);
     z-index: var(--#{$slider}__value--m-floating--ZIndex);
   }
 

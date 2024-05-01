@@ -24,7 +24,7 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
   // * Table tree view toggle
   --#{$table}--m-tree-view__toggle--Position: absolute;
-  --#{$table}--m-tree-view__toggle--InlineStart: var(--#{$table}__tree-view-main--PaddingInlineStart);
+  --#{$table}--m-tree-view__toggle--InsetInlineStart: var(--#{$table}__tree-view-main--PaddingInlineStart);
   --#{$table}--m-tree-view__toggle--TranslateX: -100%;
 
   // * Table tree view toggle toggle icon
@@ -38,7 +38,7 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 // - Table tree view
 .#{$table}.pf-m-tree-view {
   > tbody > tr {
-    --#{$table}--m-tree-view__toggle--InlineStart: var(--#{$table}__tree-view-main--PaddingInlineStart);
+    --#{$table}--m-tree-view__toggle--InsetInlineStart: var(--#{$table}__tree-view-main--PaddingInlineStart);
 
     &.pf-m-no-inset {
       --#{$table}__tree-view-main--PaddingInlineStart: var(--#{$table}--m-no-inset__tree-view-main--PaddingInlineStart);
@@ -77,7 +77,7 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     );
 
     position: var(--#{$table}--m-tree-view__toggle--Position);
-    inset-inline-start: var(--#{$table}--m-tree-view__toggle--InlineStart);
+    inset-inline-start: var(--#{$table}--m-tree-view__toggle--InsetInlineStart);
 
     .#{$table}__toggle-icon {
       min-width: var(--#{$table}--m-tree-view__toggle__toggle-icon--MinWidth);

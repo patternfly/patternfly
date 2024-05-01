@@ -5,23 +5,23 @@
   --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(140px)};
   --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
   --#{$table}__sticky-cell--ZIndex: var(--pf-t--global--z-index--xs);
-  --#{$table}__sticky-cell--InlineEnd: auto;
-  --#{$table}__sticky-cell--InlineStart: auto;
+  --#{$table}__sticky-cell--InsetInlineEnd: auto;
+  --#{$table}__sticky-cell--InsetInlineStart: auto;
   --#{$table}__sticky-cell--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndColor: var(--pf-t--global--border--color--default);
   --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$table}__sticky-cell--m-right--InlineEnd: 0;
-  --#{$table}__sticky-cell--m-left--InlineStart: 0;
+  --#{$table}__sticky-cell--m-right--InsetInlineEnd: 0;
+  --#{$table}__sticky-cell--m-left--InsetInlineStart: 0;
   --#{$table}--m-sticky-header__sticky-cell--ZIndex: calc(var(--#{$table}__sticky-cell--ZIndex) + 1);
 }
 
 // - Table sticky cell
 .#{$table} .#{$table}__sticky-cell {
   position: sticky;
-  inset-inline-start: var(--#{$table}__sticky-cell--InlineStart);
-  inset-inline-end: var(--#{$table}__sticky-cell--InlineEnd);
+  inset-inline-start: var(--#{$table}__sticky-cell--InsetInlineStart);
+  inset-inline-end: var(--#{$table}__sticky-cell--InsetInlineEnd);
   z-index: var(--#{$table}__sticky-cell--ZIndex);
   min-width: var(--#{$table}__sticky-cell--MinWidth);
 }
@@ -45,12 +45,12 @@
 
   &.pf-m-right,
   &.pf-m-inline-end {
-    --#{$table}__sticky-cell--InlineEnd: var(--#{$table}__sticky-cell--m-right--InlineEnd);
+    --#{$table}__sticky-cell--InsetInlineEnd: var(--#{$table}__sticky-cell--m-right--InsetInlineEnd);
   }
 
   &.pf-m-left,
   &.pf-m-inline-start {
-    --#{$table}__sticky-cell--InlineStart: var(--#{$table}__sticky-cell--m-left--InlineStart);
+    --#{$table}__sticky-cell--InsetInlineStart: var(--#{$table}__sticky-cell--m-left--InsetInlineStart);
   }
 }
 

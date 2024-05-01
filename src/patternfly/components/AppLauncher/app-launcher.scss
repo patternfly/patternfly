@@ -6,9 +6,9 @@
   --#{$app-launcher}__menu--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
   --#{$app-launcher}__menu--PaddingBlockStart: var(--#{$pf-global}--spacer--sm);
   --#{$app-launcher}__menu--PaddingBlockEnd: var(--#{$pf-global}--spacer--sm);
-  --#{$app-launcher}__menu--BlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
+  --#{$app-launcher}__menu--InsetBlockStart: calc(100% + var(--#{$pf-global}--spacer--xs));
   --#{$app-launcher}__menu--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$app-launcher}--m-top__menu--BlockStart: 0;
+  --#{$app-launcher}--m-top__menu--InsetBlockStart: 0;
   --#{$app-launcher}--m-top__menu--TranslateY: calc(-100% - var(--#{$pf-global}--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Expanded
@@ -132,7 +132,7 @@
 
 .#{$app-launcher}__menu {
   position: absolute;
-  inset-block-start: var(--#{$app-launcher}__menu--BlockStart);
+  inset-block-start: var(--#{$app-launcher}__menu--InsetBlockStart);
   z-index: var(--#{$app-launcher}__menu--ZIndex);
   min-width: 100%;
   padding-block-start: var(--#{$app-launcher}__menu--PaddingBlockStart);
@@ -146,7 +146,7 @@
   }
 
   .#{$app-launcher}.pf-m-top & {
-    --#{$app-launcher}__menu--BlockStart: var(--#{$app-launcher}--m-top__menu--BlockStart);
+    --#{$app-launcher}__menu--InsetBlockStart: var(--#{$app-launcher}--m-top__menu--InsetBlockStart);
 
     transform: translateY(var(--#{$app-launcher}--m-top__menu--TranslateY));
   }

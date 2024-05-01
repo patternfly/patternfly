@@ -32,7 +32,7 @@
   --#{$text-input-group}__text-input--OutlineOffset: -6px;
 
   // Icon
-  --#{$text-input-group}__icon--InlineStart: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__icon--InsetInlineStart: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$text-input-group}__icon--TranslateY: -50%;
 
@@ -127,7 +127,7 @@
 .#{$text-input-group}__icon {
   position: absolute;
   inset-block-start: 50%;
-  inset-inline-start: var(--#{$text-input-group}__icon--InlineStart);
+  inset-inline-start: var(--#{$text-input-group}__icon--InsetInlineStart);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
 }

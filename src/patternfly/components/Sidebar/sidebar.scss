@@ -61,7 +61,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-stack__main--FlexDirection: column;
   --#{$sidebar}--m-stack__main--AlignItems: stretch;
   --#{$sidebar}--m-stack__panel--Position: sticky;
-  --#{$sidebar}--m-stack__panel--BlockStart: 0;
+  --#{$sidebar}--m-stack__panel--InsetBlockStart: 0;
   --#{$sidebar}--m-stack__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
   --#{$sidebar}--m-stack--m-panel-right__panel--Order: -1;
 
@@ -69,7 +69,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-split__main--AlignItems: flex-start;
   --#{$sidebar}--m-split__main--FlexDirection: row;
   --#{$sidebar}--m-split__panel--Position: static;
-  --#{$sidebar}--m-split__panel--BlockStart: auto;
+  --#{$sidebar}--m-split__panel--InsetBlockStart: auto;
   --#{$sidebar}--m-split--m-panel-right__panel--Order: 1;
   --#{$sidebar}--m-split__main--m-border--before--Display: block;
 
@@ -77,8 +77,8 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__panel--FlexBasis--base: auto;
   --#{$sidebar}__panel--BoxShadow--base: var(--pf-t--global--box-shadow--md--bottom);
   --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
-  --#{$sidebar}__panel--BlockStart: 0;
-  --#{$sidebar}__panel--md--BlockStart: auto;
+  --#{$sidebar}__panel--InsetBlockStart: 0;
+  --#{$sidebar}__panel--md--InsetBlockStart: auto;
   --#{$sidebar}__panel--Position: sticky;
   --#{$sidebar}__panel--md--Position: static;
   --#{$sidebar}__panel--FlexBasis-base: auto;
@@ -95,7 +95,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__content--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // Sticky
-  --#{$sidebar}__panel--m-sticky--BlockStart: 0;
+  --#{$sidebar}__panel--m-sticky--InsetBlockStart: 0;
   --#{$sidebar}__panel--m-sticky--Position: sticky;
 }
 
@@ -108,7 +108,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}__main--m-border--before--md--Display); // show border starting at md breakpoint
     --#{$sidebar}__panel--BoxShadow: none;
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--md--FlexBasis);
-    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}__panel--md--BlockStart);
+    --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}__panel--md--InsetBlockStart);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}__panel--md--Position);
   }
 
@@ -134,7 +134,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}--m-stack__main--FlexDirection);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}--m-stack__main--AlignItems);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}--m-stack__panel--Position);
-    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}--m-stack__panel--BlockStart);
+    --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}--m-stack__panel--InsetBlockStart);
     --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}--m-stack__panel--BoxShadow);
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--m-stack--FlexBasis);
     --#{$sidebar}__main--m-border--before--Display: none;
@@ -145,7 +145,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}--m-split__main--FlexDirection);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}--m-split__main--AlignItems);
     --#{$sidebar}__panel--Position: var(--#{$sidebar}--m-split__panel--Position);
-    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}--m-split__panel--BlockStart);
+    --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}--m-split__panel--InsetBlockStart);
     --#{$sidebar}__panel--BoxShadow: none;
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--m-split--FlexBasis);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}--m-split__main--m-border--before--Display);
@@ -169,7 +169,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 .#{$sidebar}__panel {
   position: var(--#{$sidebar}__panel--Position);
-  inset-block-start: var(--#{$sidebar}__panel--BlockStart);
+  inset-block-start: var(--#{$sidebar}__panel--InsetBlockStart);
   z-index: var(--#{$sidebar}__panel--ZIndex);
   flex-basis: var(--#{$sidebar}__panel--FlexBasis);
   flex-shrink: 0;
@@ -190,12 +190,12 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   &.pf-m-sticky {
     --#{$sidebar}__panel--Position: var(--#{$sidebar}__panel--m-sticky--Position);
-    --#{$sidebar}__panel--BlockStart: var(--#{$sidebar}__panel--m-sticky--BlockStart);
+    --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}__panel--m-sticky--InsetBlockStart);
   }
 
   &.pf-m-static {
     --#{$sidebar}__panel--Position: static;
-    --#{$sidebar}__panel--BlockStart: auto;
+    --#{$sidebar}__panel--InsetBlockStart: auto;
   }
 
   &.pf-m-secondary {
