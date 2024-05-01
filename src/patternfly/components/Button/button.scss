@@ -141,9 +141,9 @@
   --#{$button}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--m-plain--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
-  --#{$button}--m-plain--m-small--PaddingBlockStart: calc(var(--pf-t--global--spacer--button--vertical--plain) / 2);
+  --#{$button}--m-plain--m-small--PaddingBlockStart: var(--pf-t--global--spacer--button--vertical--compact);
   --#{$button}--m-plain--m-small--PaddingInlineEnd: calc(var(--pf-t--global--spacer--button--horizontal--plain) / 2);
-  --#{$button}--m-plain--m-small--PaddingBlockEnd: calc(var(--pf-t--global--spacer--button--vertical--plain) / 2);
+  --#{$button}--m-plain--m-small--PaddingBlockEnd: var(--pf-t--global--spacer--button--vertical--compact);
   --#{$button}--m-plain--m-small--PaddingInlineStart: calc(var(--pf-t--global--spacer--button--horizontal--plain) / 2);
 
   // Plain no padding

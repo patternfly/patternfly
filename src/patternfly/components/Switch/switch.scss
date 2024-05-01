@@ -3,7 +3,7 @@
 :where(:root, .#{$switch}) {
   // Switch - the vars for this file don't follow our normal order so that the IE11 script can convert the vars correctly
   --#{$switch}--FontSize: var(--pf-t--global--font--size--sm);
-  --#{$switch}--ColumnGap: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$switch}--ColumnGap: var(--pf-t--global--spacer--sm);
 
   // Switch icon
   --#{$switch}__toggle-icon--FontSize: calc(var(--#{$switch}--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.

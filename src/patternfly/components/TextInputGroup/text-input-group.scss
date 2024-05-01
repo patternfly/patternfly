@@ -19,10 +19,10 @@
 
   // Main
   --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
-  --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) * 2);
+  --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: calc(var(--#{$text-input-group}__icon--FontSize) * 2)
   --#{$text-input-group}--status__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
-  --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--control--vertical--compact);
-  --#{$text-input-group}__main--ColumnGap:   --#{$text-input-group}__main--ColumnGap: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
+  --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // Text wrapper
   --#{$text-input-group}__text--BorderRadius--base: var(--pf-t--global--border--radius--small);
@@ -48,6 +48,7 @@
   --#{$text-input-group}__text-input--OutlineOffset: -6px;
 
   // Icon
+  --#{$text-input-group}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$text-input-group}__icon--InsetInlineStart: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -180,6 +181,7 @@
   position: absolute;
   inset-block-start: 50%;
   inset-inline-start: var(--#{$text-input-group}__icon--InsetInlineStart);
+  font-size: var(--#{$text-input-group}__icon--FontSize);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
 

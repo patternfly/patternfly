@@ -60,17 +60,17 @@
   // success
   --#{$form-control}--m-success--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-success--after--BorderColor: var(--pf-t--global--border--color--status--success--default);
-  --#{$form-control}--m-success--PaddingInlineEnd: calc((var(--pf-t--global--spacer--control--horizontal--default) * 2) + var(--#{$form-control}--ColumnGap));
+  --#{$form-control}--m-success--PaddingInlineEnd: calc(var(--#{$form-control}__icon--FontSize) + var(--#{$form-control}--inset--base) + var(--#{$form-control}--ColumnGap));
 
   // warning
   --#{$form-control}--m-warning--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-warning--after--BorderColor: var(--pf-t--global--border--color--status--warning--default);
-  --#{$form-control}--m-warning--PaddingInlineEnd: calc((var(--pf-t--global--spacer--control--horizontal--default) * 2) + var(--#{$form-control}--ColumnGap));
+  --#{$form-control}--m-warning--PaddingInlineEnd: calc(var(--#{$form-control}__icon--FontSize) + var(--#{$form-control}--inset--base) + var(--#{$form-control}--ColumnGap));
 
   // error
   --#{$form-control}--m-error--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-error--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
-  --#{$form-control}--m-error--PaddingInlineEnd: calc((var(--pf-t--global--spacer--control--horizontal--default) * 2) + var(--#{$form-control}--ColumnGap));
+  --#{$form-control}--m-error--PaddingInlineEnd: calc(var(--#{$form-control}__icon--FontSize) + var(--#{$form-control}--inset--base) + var(--#{$form-control}--ColumnGap));
   --#{$form-control}--m-error--icon--width: var(--#{$form-control}--FontSize);
 
   // custom icon
@@ -82,13 +82,13 @@
   --#{$form-control}__select--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
 
   // Select success
-  --#{$form-control}__select--m-success--m-status--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) * 4);
+  --#{$form-control}__select--m-success--m-status--PaddingInlineEnd: calc((var(--#{$form-control}__icon--FontSize) * 2) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}__toggle-icon--PaddingInlineEnd) + var(--#{$form-control}__toggle-icon--PaddingInlineStart));
 
   // Select warning
-  --#{$form-control}__select--m-warning--m-status--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) * 4);
+  --#{$form-control}__select--m-warning--m-status--PaddingInlineEnd: calc((var(--#{$form-control}__icon--FontSize) * 2) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}__toggle-icon--PaddingInlineEnd) + var(--#{$form-control}__toggle-icon--PaddingInlineStart));
 
   // Select invalid
-  --#{$form-control}__select--m-error--m-status--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) * 4);
+  --#{$form-control}__select--m-error--m-status--PaddingInlineEnd: calc((var(--#{$form-control}__icon--FontSize) * 2) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}__toggle-icon--PaddingInlineEnd) + var(--#{$form-control}__toggle-icon--PaddingInlineStart));
 
   // Textarea
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
@@ -97,13 +97,14 @@
   // Form control icon
   --#{$form-control}__icon--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$form-control}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$form-control}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$form-control}--m-warning__icon--m-status--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$form-control}--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
 
   // Form control utilities
-  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--sm);
   --#{$form-control}__utilities--PaddingBlockStart: var(--#{$form-control}--inset--base);
   --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}--inset--base);
 
@@ -321,7 +322,12 @@
 }
 
 .#{$form-control}__icon {
+<<<<<<< HEAD
   padding-block-start: var(--#{$form-control}__icon--PaddingBlockStart);
+=======
+  padding-block-start: var(--#{$form-control}__icon--PaddingTop);
+  font-size: var(--#{$form-control}__icon--FontSize);
+>>>>>>> 95805d9f (chore(tokens): reverted gap, updated semantic spacers, added icon fontsize vars)
   color: var(--#{$form-control}__icon--Color);
 
   &.pf-m-status {
