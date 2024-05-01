@@ -95,7 +95,7 @@ cssPrefix: pf-v5-c-panel
 ### Scrollable
 ```hbs
 {{#> panel panel--modifier="pf-m-scrollable"}}
-  {{#> panel-main}}
+  {{#> panel-main panel-main--attribute="tabindex=0"}}
     {{#> panel-main-body}}
       Main content<br><br>
       Main content<br><br>
@@ -117,7 +117,7 @@ cssPrefix: pf-v5-c-panel
   {{#> panel-header}}
     Header content
   {{/panel-header}}
-  {{#> panel-main}}
+  {{#> panel-main panel-main--attribute="tabindex=0"}}
     {{#> panel-main-body}}
       Main content<br><br>
       Main content<br><br>

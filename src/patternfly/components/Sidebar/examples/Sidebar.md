@@ -105,7 +105,7 @@ import './Sidebar.css'
 
 ### Sticky panel
 ```hbs
-{{#> sidebar}}
+{{#> sidebar sidebar--attribute="tabindex=0"}}
   {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky"}}
     Sidebar panel
   {{/sidebar-panel}}
@@ -121,7 +121,7 @@ import './Sidebar.css'
 
 ### Static panel
 ```hbs
-{{#> sidebar}}
+{{#> sidebar sidebar--attribute="tabindex=0"}}
   {{#> sidebar-panel sidebar-panel--modifier="pf-m-static"}}
     Sidebar panel
   {{/sidebar-panel}}
@@ -137,7 +137,7 @@ import './Sidebar.css'
 
 ### Responsive panel width
 ```hbs
-{{#> sidebar}}
+{{#> sidebar sidebar--attribute="tabindex=0"}}
   {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-width-50 pf-m-width-33-on-lg pf-m-width-75-on-xl"}}
     Sidebar panel
   {{/sidebar-panel}}
