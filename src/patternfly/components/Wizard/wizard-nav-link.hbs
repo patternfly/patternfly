@@ -2,6 +2,9 @@
   {{~#if wizard-nav-link--IsCurrent}}
     pf-m-current
   {{/if}}
+  {{~#if wizard-nav-item--IsDanger}}
+    pf-m-danger
+  {{/if}}
   {{~#if wizard-nav-link--IsDisabled}}
     {{~#if wizard-nav-link--IsLink}}
       pf-m-disabled
@@ -34,14 +37,19 @@
   {{#if wizard-nav-link--attribute}}
     {{{wizard-nav-link--attribute}}}
   {{/if}}>
-  {{#if wizard-nav-item--IsExpandable}}
+  {{#if wizard-nav-item--IsDanger}}
+    {{#> wizard-nav-link-status-icon}}
+      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{/wizard-nav-link-status-icon}}
+  {{/if}}
+  {{#> wizard-nav-link-main}}
     {{#> wizard-nav-link-text}}
       {{> @partial-block}}
     {{/wizard-nav-link-text}}
-    {{#> wizard-nav-link-toggle}}
-      {{> wizard-nav-link-toggle-icon}}
-    {{/wizard-nav-link-toggle}}
-  {{else}}
-    {{> @partial-block}}
-  {{/if}}
+    {{#if wizard-nav-item--IsExpandable}}
+      {{#> wizard-nav-link-toggle}}
+        {{> wizard-nav-link-toggle-icon}}
+      {{/wizard-nav-link-toggle}}
+    {{/if}}
+  {{/wizard-nav-link-main}}
 </{{#if wizard-nav-link--IsLink}}a{{else}}button{{/if}}>
