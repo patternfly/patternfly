@@ -1,6 +1,9 @@
-<span class="{{pfv}}wizard__toggle-list-item{{#if wizard-toggle-list-item--modifier}} {{wizard-toggle-list-item--modifier}}{{/if}}"
+<span class="{{pfv}}wizard__toggle-list-item{{#if wizard-toggle-list-item--modifier}} {{wizard-toggle-list-item--modifier}}{{/if}}{{#if wizard-toggle-list-item--IsDanger}} pf-m-danger{{/if}}"
   {{#if wizard-toggle-list-item--attribute}}
     {{{wizard-toggle-list-item--attribute}}}
   {{/if}}>
+  {{#if wizard-toggle-list-item--IsDanger}}
+    {{#> wizard-toggle-status-icon}}<i class="fas fa-exclamation-circle" aria-hidden="true"></i>{{/wizard-toggle-status-icon}}
+  {{/if}}
   {{> @partial-block}}
 </span>
