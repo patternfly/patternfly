@@ -11,7 +11,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--xl--inset: var(--pf-t--global--spacer--xl);
 
   // Header
-  --#{$page}__header--ZIndex: var(--pf-t--global--z-index--md);
+  --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}--inset: var(--#{$page}--xl--inset);
@@ -153,7 +153,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Header
 .#{$page} > .#{$masthead} {
-  z-index: var(--#{$page}__header--ZIndex);
+  z-index: var(--#{$page}--c-masthead--ZIndex);
   grid-area: header;
 }
 
