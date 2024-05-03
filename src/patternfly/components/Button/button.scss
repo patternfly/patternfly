@@ -264,6 +264,8 @@
   // Count
   --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled);
+  --#{$button}--disabled__c-badge--BorderColor: var(--pf-t--global--border--color--disabled);
+  --#{$button}--disabled__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
   --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
@@ -606,6 +608,10 @@
 
     .#{$button}__icon {
       color: var(--#{$button}--disabled__icon--Color);
+    }
+
+    .#{$badge} {
+      border: var(--#{$button}--disabled__c-badge--BorderWidth) solid var(--#{$button}--disabled__c-badge--BorderColor);
     }
   }
 
