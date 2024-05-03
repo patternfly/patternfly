@@ -4,21 +4,28 @@
   --#{$text-input-group}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$text-input-group}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$text-input-group}--BorderWidth: var(--pf-t--global--border--width--control--default);
-  --#{$text-input-group}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$text-input-group}--BorderRadius--base: var(--pf-t--global--border--radius--small);
+
+  // Actual logical properties don't exist for border-radius, but the naming fits the intent
+  --#{$text-input-group}--BorderBlockStartInlineStartRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderBlockStartInlineEndRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderBlockEndInlineEndRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderBlockEndInlineStartRadius: var(--#{$text-input-group}--BorderRadius--base);
 
   // Border hover
   --#{$text-input-group}--m-hover--BorderColor: var(--pf-t--global--border--color--hover);
 
   // Main
-  --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__main--first-child--not--text-input--inset--base: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__main--first-child--not--text-input--MarginBlockStart: calc(var(--#{$text-input-group}__main--first-child--not--text-input--inset--base) * 1.5);
+  --#{$text-input-group}__main--first-child--not--text-input--MarginBlockEnd: calc(var(--#{$text-input-group}__main--first-child--not--text-input--inset--base) * 1.5);
+  --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: var(--#{$text-input-group}__main--first-child--not--text-input--inset--base);
   --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: var(--pf-t--global--spacer--xl);
   --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
   --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
-  // Chip group
-  --#{$text-input-group}--c-chip-group__main--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}--c-chip-group__main--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
-  --#{$text-input-group}--c-chip-group__main--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  // Label group
+  --#{$text-input-group}--c-label-group__main--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
 
   // Text input
   --#{$text-input-group}__text-input--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -52,7 +59,10 @@
   width: 100%; // when child of flex layout, take up space
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
-  border-radius: var(--#{$text-input-group}--BorderRadius);
+  border-start-start-radius: var(--#{$text-input-group}--BorderBlockStartInlineStartRadius);
+  border-start-end-radius: var(--#{$text-input-group}--BorderBlockStartInlineEndRadius);
+  border-end-start-radius: var(--#{$text-input-group}--BorderBlockEndInlineStartRadius);
+  border-end-end-radius: var(--#{$text-input-group}--BorderBlockEndInlineEndRadius);
 
   &::before {
     position: absolute;
@@ -60,7 +70,10 @@
     pointer-events: none;
     content: "";
     border: var(--#{$text-input-group}--BorderWidth) solid var(--#{$text-input-group}--BorderColor);
-    border-radius: var(--#{$text-input-group}--BorderRadius);
+    border-start-start-radius: var(--#{$text-input-group}--BorderBlockStartInlineStartRadius);
+    border-start-end-radius: var(--#{$text-input-group}--BorderBlockStartInlineEndRadius);
+    border-end-start-radius: var(--#{$text-input-group}--BorderBlockEndInlineStartRadius);
+    border-end-end-radius: var(--#{$text-input-group}--BorderBlockEndInlineEndRadius);
   }
 
   &:hover {
@@ -99,13 +112,13 @@
   }
 
   > :first-child:not(.#{$text-input-group}__text) {
+    margin-block-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginBlockStart);
+    margin-block-end: var(--#{$text-input-group}__main--first-child--not--text-input--MarginBlockEnd);
     margin-inline-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart);
   }
 
   .#{$label-group}__main {
-    padding-block-start: var(--#{$text-input-group}--c-chip-group__main--PaddingBlockStart);
-    padding-block-end: var(--#{$text-input-group}--c-chip-group__main--PaddingBlockEnd);
-    padding-inline-end: var(--#{$text-input-group}--c-chip-group__main--PaddingInlineEnd);
+    padding-inline-end: var(--#{$text-input-group}--c-label-group__main--PaddingInlineEnd);
   }
 }
 

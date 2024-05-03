@@ -481,6 +481,11 @@
   }
 
   .#{$text-input-group} {
+    @include pf-v6-bidirectional-style(--#{$text-input-group}--BorderBlockStartInlineStartRadius, var(--#{$text-input-group}--BorderRadius--base), 0);
+    @include pf-v6-bidirectional-style(--#{$text-input-group}--BorderBlockStartInlineEndRadius, 0, var(--#{$text-input-group}--BorderRadius--base));
+    @include pf-v6-bidirectional-style(--#{$text-input-group}--BorderBlockEndInlineEndRadius, 0, var(--#{$text-input-group}--BorderRadius--base));
+    @include pf-v6-bidirectional-style(--#{$text-input-group}--BorderBlockEndInlineStartRadius, var(--#{$text-input-group}--BorderRadius--base), 0);
+
     --#{$text-input-group}__utilities--c-button--PaddingInlineEnd: var(--#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingInlineEnd);
     --#{$text-input-group}__utilities--MarginInlineEnd: 0;
 
