@@ -6,6 +6,6 @@
 .ws-core-u-display .pf-v6-u-display-inline,
 .ws-core-u-display .pf-v6-u-display-table,
 .ws-core-u-display .pf-v6-u-display-table-cell {
-  padding: .5rem !important;
-  border: 2px dashed #393f44;
+  padding: var(--pf-t--global--spacer--sm);
+  border: var(--pf-t--global--border--width--box--default) dashed var(--pf-t--global--border--color--default);
 }
