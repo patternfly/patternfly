@@ -6,11 +6,10 @@
   --#{$text-input-group}--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$text-input-group}--BorderRadius--base: var(--pf-t--global--border--radius--small);
 
-  // Actual logical properties don't exist for border-radius, but the naming fits the intent
-  --#{$text-input-group}--BorderBlockStartInlineStartRadius: var(--#{$text-input-group}--BorderRadius--base);
-  --#{$text-input-group}--BorderBlockStartInlineEndRadius: var(--#{$text-input-group}--BorderRadius--base);
-  --#{$text-input-group}--BorderBlockEndInlineEndRadius: var(--#{$text-input-group}--BorderRadius--base);
-  --#{$text-input-group}--BorderBlockEndInlineStartRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderStartStartRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderStartEndRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderEndEndRadius: var(--#{$text-input-group}--BorderRadius--base);
+  --#{$text-input-group}--BorderEndStartRadius: var(--#{$text-input-group}--BorderRadius--base);
 
   // Border hover
   --#{$text-input-group}--m-hover--BorderColor: var(--pf-t--global--border--color--hover);
@@ -59,10 +58,10 @@
   width: 100%; // when child of flex layout, take up space
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
-  border-start-start-radius: var(--#{$text-input-group}--BorderBlockStartInlineStartRadius);
-  border-start-end-radius: var(--#{$text-input-group}--BorderBlockStartInlineEndRadius);
-  border-end-start-radius: var(--#{$text-input-group}--BorderBlockEndInlineStartRadius);
-  border-end-end-radius: var(--#{$text-input-group}--BorderBlockEndInlineEndRadius);
+  border-start-start-radius: var(--#{$text-input-group}--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$text-input-group}--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$text-input-group}--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$text-input-group}--BorderEndEndRadius);
 
   &::before {
     position: absolute;
@@ -70,10 +69,10 @@
     pointer-events: none;
     content: "";
     border: var(--#{$text-input-group}--BorderWidth) solid var(--#{$text-input-group}--BorderColor);
-    border-start-start-radius: var(--#{$text-input-group}--BorderBlockStartInlineStartRadius);
-    border-start-end-radius: var(--#{$text-input-group}--BorderBlockStartInlineEndRadius);
-    border-end-start-radius: var(--#{$text-input-group}--BorderBlockEndInlineStartRadius);
-    border-end-end-radius: var(--#{$text-input-group}--BorderBlockEndInlineEndRadius);
+    border-start-start-radius: var(--#{$text-input-group}--BorderStartStartRadius);
+    border-start-end-radius: var(--#{$text-input-group}--BorderStartEndRadius);
+    border-end-start-radius: var(--#{$text-input-group}--BorderEndStartRadius);
+    border-end-end-radius: var(--#{$text-input-group}--BorderEndEndRadius);
   }
 
   &:hover {
