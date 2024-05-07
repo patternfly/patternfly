@@ -2869,15 +2869,15 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@5.3.1":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.3.1.tgz#59d7789442a4ef8c62a31f886416638a48bf8bf2"
-  integrity sha512-XbBXcJpedsCTipeQEpO0982NKibxYRl6rYrfca6kp2t4T0/cXWMy4lWHESm+4enETRvqWIAViC9QUHO9XqOWQw==
+"@patternfly/react-code-editor@5.3.3":
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.3.3.tgz#346728f9912df9d39193364fc5486aa3f0af3fda"
+  integrity sha512-yXKzqNzztLw1PuujQArhRM0PktU5LFuUuR9anUpzaNXMiI/n+A5JXLI1i1E3NBWg+4hs1qpjMRdWd74o0QnjEQ==
   dependencies:
     "@monaco-editor/react" "^4.6.0"
-    "@patternfly/react-core" "^5.3.1"
-    "@patternfly/react-icons" "^5.3.0"
-    "@patternfly/react-styles" "^5.3.0"
+    "@patternfly/react-core" "^5.3.3"
+    "@patternfly/react-icons" "^5.3.2"
+    "@patternfly/react-styles" "^5.3.1"
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
@@ -2893,15 +2893,37 @@
     react-dropzone "^14.2.3"
     tslib "^2.5.0"
 
+"@patternfly/react-core@^5.3.3":
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.3.3.tgz#06f589f5b0bb95dd231a0ca9379fa68d242899ab"
+  integrity sha512-qq3j0M+Vi+Xmd+a/MhRhGgjdRh9Hnm79iA+L935HwMIVDcIWRYp6Isib/Ha4+Jk+f3Qdl0RT3dBDvr/4m6OpVQ==
+  dependencies:
+    "@patternfly/react-icons" "^5.3.2"
+    "@patternfly/react-styles" "^5.3.1"
+    "@patternfly/react-tokens" "^5.3.1"
+    focus-trap "7.5.2"
+    react-dropzone "^14.2.3"
+    tslib "^2.5.0"
+
 "@patternfly/react-icons@^5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.3.0.tgz#04ac990fe539799a69da6de2e7b615a15a80ce87"
   integrity sha512-oBdaK4Gz7yivNE7jQg46sPzfZakg7oxo5aSMLc0N6haOmDEegiTurNex+h+/z0oBPqzZC+cIQRaBeXEgXGwc9Q==
 
+"@patternfly/react-icons@^5.3.2":
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.3.2.tgz#f594ed67b0d39f486ea0f0367de058d4bd056605"
+  integrity sha512-GEygYbl0H4zD8nZuTQy2dayKIrV2bMMeWKSOEZ16Y3EYNgYVUOUnN+J0naAEuEGH39Xb1DE9n+XUbE1PC4CxPA==
+
 "@patternfly/react-styles@^5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-5.3.0.tgz#4f34cfe557d9dad30c0add8dc92bfa3c6794dd91"
   integrity sha512-/EdkURW+v7Rzw/CiEqL+NfGtLvLMGIwOEyDhvlMDbRip2usGw4HLZv3Bep0cJe29zOeY27cDVZDM1HfyXLebtw==
+
+"@patternfly/react-styles@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-5.3.1.tgz#4bc42f98c48e117df5d956ee3f551d0f57ef1b35"
+  integrity sha512-H6uBoFH3bJjD6PP75qZ4k+2TtF59vxf9sIVerPpwrGJcRgBZbvbMZCniSC3+S2LQ8DgXLnDvieq78jJzHz0hiA==
 
 "@patternfly/react-table@5.3.1":
   version "5.3.1"
@@ -2919,6 +2941,11 @@
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-5.3.0.tgz#580e7c6a53f5056c317677ca98842fbdd04dcc7d"
   integrity sha512-24ZY5hgwt11InW3XtINM5p9Fo1hDiVor6Q4uphPZh8Mt89AsZZw1UweTaGg54I0Ah2Wzv6rkQy51LX7tZtIwjQ==
+
+"@patternfly/react-tokens@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-5.3.1.tgz#b0f840ee3ee3bcf72b5fbf35dc3fd5559666744d"
+  integrity sha512-VYK0uVP2/2RJ7ZshJCCLeq0Boih5I1bv+9Z/Bg6h12dCkLs85XsxAX9Ve+BGIo5DF54/mzcRHE1RKYap4ISXuw==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"

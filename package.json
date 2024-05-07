@@ -48,7 +48,7 @@
     "@octokit/rest": "^20.0.2",
     "@patternfly/documentation-framework": "5.14.1",
     "@patternfly/patternfly-a11y": "4.3.1",
-    "@patternfly/react-code-editor": "5.3.1",
+    "@patternfly/react-code-editor": "5.3.3",
     "@patternfly/react-core": "5.3.1",
     "@patternfly/react-table": "5.3.1",
     "@starptech/prettyhtml": "^0.10.0",
