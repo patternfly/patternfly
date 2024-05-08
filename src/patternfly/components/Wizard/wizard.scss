@@ -2,6 +2,7 @@
 
 :where(:root, .#{$wizard}) {
   --#{$wizard}--Height: 100%;
+  --#{$modal-box}--c-wizard--Height: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal
 
   // Header
   --#{$wizard}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -160,6 +161,8 @@
 
   // When the wizard is used in a modal
   .#{$modal-box} & {
+    --#{$wizard}--Height: var(--#{$modal-box}--c-wizard--Height);
+
     flex: 1 1 var(--#{$wizard}--Height);
     min-height: 0;
   }
