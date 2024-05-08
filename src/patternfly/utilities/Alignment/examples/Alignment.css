@@ -2,6 +2,6 @@
 .ws-core-u-alignment .pf-v6-u-text-align-center,
 .ws-core-u-alignment .pf-v6-u-text-align-end,
 .ws-core-u-alignment .pf-v6-u-text-align-justify {
-  padding: .5rem !important;
-  border: 2px dashed #393f44;
+  padding: var(--pf-t--global--spacer--sm);
+  border: var(--pf-t--global--border--width--box--default) dashed var(--pf-t--global--border--color--default);
 }
