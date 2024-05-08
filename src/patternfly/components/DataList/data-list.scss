@@ -5,7 +5,7 @@
   --#{$data-list}--FontSize: var( --pf-t--global--font--size--body);
   --#{$data-list}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$data-list}--BorderBlockStartColor: var(--pf-t--global--border--color--default);
-  --#{$data-list}--BorderBlockStartWidth: var(--pf-t--global--border--width--200);
+  --#{$data-list}--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
   --#{$data-list}--sm--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$data-list}--sm--BorderBlockStartColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--MarginInlineStart: var(--pf-t--global--spacer--md);
@@ -21,7 +21,7 @@
   --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$data-list}__item--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$data-list}__item--BorderBlockEndColor: var(--pf-t--global--border--color--default);
-  --#{$data-list}__item--BorderBlockEndWidth: var(--pf-t--global--border--width--200);
+  --#{$data-list}__item--BorderBlockEndWidth: var(--pf-t--global--border--width--strong);
   --#{$data-list}__item--sm--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$data-list}__item--sm--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
