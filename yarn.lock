@@ -2836,7 +2836,7 @@
   dependencies:
     "@octokit/openapi-types" "^20.0.0"
 
-"@patternfly/ast-helpers@^1.4.0-alpha.14":
+"@patternfly/ast-helpers@^1.4.0-alpha.13":
   version "1.4.0-alpha.14"
   resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.4.0-alpha.14.tgz#c7e19bfc2b82f4819d9f27e0c9431a99cf384652"
   integrity sha512-Iaw5HDR9q6p2OIuZAEtuxjh6xoLWjQ7QbDVmOkko7IffMZGMHDoOSUjhSAP1HsV9Dcf+TLs2uCgBID240XmdjQ==
@@ -2847,16 +2847,16 @@
     acorn-static-class-features "^1.0.0"
     astring "^1.7.5"
 
-"@patternfly/documentation-framework@6.0.0-alpha.25":
-  version "6.0.0-alpha.25"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.25.tgz#0eb95a01fdfdf4e5f461a0bfe00d8971bc491226"
-  integrity sha512-D7bbB2GJiiOvjQjLZfuqEpuuNF3cCoFIOovRZTKNYPaERDi/EYgp8Ll/IznlW9lI/9Q0HDhOKubG7G7DEbOmQA==
+"@patternfly/documentation-framework@6.0.0-alpha.24":
+  version "6.0.0-alpha.24"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.24.tgz#3349a23ca5680a674ea39efe33d48ca467457037"
+  integrity sha512-Bm5g3f8ecuW39bGmPZUYF8P+N96HsK+imqC8ckOu3ySlTIksw4U5qisrtgKo0P7O76VFoHsuIgPAE/KFRFLCEA==
   dependencies:
     "@babel/core" "^7.24.3"
     "@babel/preset-env" "^7.24.3"
     "@babel/preset-react" "^7.24.1"
     "@mdx-js/util" "1.6.16"
-    "@patternfly/ast-helpers" "^1.4.0-alpha.14"
+    "@patternfly/ast-helpers" "^1.4.0-alpha.13"
     "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer "9.8.6"
     babel-loader "^9.1.3"
@@ -2903,7 +2903,7 @@
     style-to-object "0.3.0"
     to-vfile "6.1.0"
     typedoc "0.23.0"
-    typescript "4.7.4"
+    typescript "4.3.5"
     unified "9.1.0"
     unist-util-remove "2.0.0"
     unist-util-visit "2.0.3"
@@ -16853,10 +16853,10 @@ typedoc@0.23.0:
     minimatch "^5.1.0"
     shiki "^0.10.1"
 
-typescript@4.7.4:
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
-  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
+typescript@4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
+  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
 
 uglify-js@^3.1.4:
   version "3.16.1"
