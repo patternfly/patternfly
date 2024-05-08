@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$wizard}) {
-  --#{$wizard}--height: initial;
+  --#{$wizard}--Height: initial;
   --#{$wizard}--Height--base: 100%;
   --#{$modal-box}--c-wizard--Height--base: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal
 
@@ -158,11 +158,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: var(--#{$wizard}--height, var(--#{$wizard}--Height--base));
+  height: var(--#{$wizard}--Height, var(--#{$wizard}--Height--base));
 
   // When the wizard is used in a modal
   .#{$modal-box} & {
-    flex: 1 1 var(--#{$wizard}--height, var(--#{$modal-box}--c-wizard--Height--base));
+    flex: 1 1 var(--#{$wizard}--Height, var(--#{$modal-box}--c-wizard--Height--base));
     min-height: 0;
   }
 
