@@ -111,6 +111,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-container--MarginInlineStart: var(--pf-t--global--spacer--lg);
   --#{$page}__main-container--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$page}__main-container--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$page}__main-container--BorderWidth: var(--pf-t--global--spacer--sm); // TODO Change to be a page outline token
   --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
@@ -494,6 +495,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-container {
   align-self: start;
   max-height: var(--#{$page}__main-container--MaxHeight);
+  padding-block-end: var(--#{$page}__main-container--PaddingBlockEnd);
   margin-block-start: 0;
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
