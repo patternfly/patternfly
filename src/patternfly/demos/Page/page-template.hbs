@@ -1,9 +1,5 @@
 {{#> page page--id=page-template--id page--modifier=page-template--modifier page-template-masthead-drilldown--IsHidden="true"}}
-  {{#if page-template--IsLegacyHeader}}
-    {{> page-template-header}}
-  {{else}}
-    {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
-  {{/if}}
+  {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
   {{#unless page-template--HasNoSidebar}}
     {{> page-template-sidebar}}
   {{/unless}}
