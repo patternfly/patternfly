@@ -1,11 +1,17 @@
 
 // Do not edit directly
-// Generated on Tue, 07 May 2024 18:55:08 GMT
+// Generated on Thu, 09 May 2024 17:55:04 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0.0000);
   --pf-t--global--background--color--600: rgba(199, 199, 199, 0.2500);
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
+  --pf-t--global--breakpoint--600: 1450px;
+  --pf-t--global--breakpoint--500: 1200px;
+  --pf-t--global--breakpoint--400: 992px;
+  --pf-t--global--breakpoint--300: 768px;
+  --pf-t--global--breakpoint--200: 576px;
+  --pf-t--global--breakpoint--100: 0px;
   --pf-t--global--box-shadow--color--200: rgba(0, 0, 0, 0.1200);
   --pf-t--global--box-shadow--color--100: rgba(0, 0, 0, 0.1600);
   --pf-t--global--box-shadow--spread--100: 0px;
@@ -132,6 +138,12 @@
   --pf-t--global--background--color--300: var(--pf-t--color--gray--20);
   --pf-t--global--background--color--200: var(--pf-t--color--gray--10);
   --pf-t--global--background--color--100: var(--pf-t--color--white);
+  --pf-t--global--breakpoint--2xl: var(--pf-t--global--breakpoint--600);
+  --pf-t--global--breakpoint--xl: var(--pf-t--global--breakpoint--500);
+  --pf-t--global--breakpoint--lg: var(--pf-t--global--breakpoint--400);
+  --pf-t--global--breakpoint--md: var(--pf-t--global--breakpoint--300);
+  --pf-t--global--breakpoint--sm: var(--pf-t--global--breakpoint--200);
+  --pf-t--global--breakpoint--xs: var(--pf-t--global--breakpoint--100);
   --pf-t--global--box-shadow--color--lg: var(--pf-t--global--box-shadow--color--200);
   --pf-t--global--box-shadow--color--md: var(--pf-t--global--box-shadow--color--200);
   --pf-t--global--box-shadow--color--sm: var(--pf-t--global--box-shadow--color--100);
@@ -542,14 +554,14 @@
   --pf-t--global--icon--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--icon--color--brand--hover: var(--pf-t--global--color--brand--hover);
   --pf-t--global--icon--color--brand--default: var(--pf-t--global--color--brand--default);
+  --pf-t--global--icon--size--font--body--lg: var(--pf-t--global--font--size--body--lg);
+  --pf-t--global--icon--size--font--body--default: var(--pf-t--global--font--size--body--default);
+  --pf-t--global--icon--size--font--body--sm: var(--pf-t--global--font--size--body--sm);
   --pf-t--global--icon--size--font--heading--h6: var(--pf-t--global--font--size--heading--h6);
   --pf-t--global--icon--size--font--heading--h5: var(--pf-t--global--font--size--heading--h5);
   --pf-t--global--icon--size--font--heading--h4: var(--pf-t--global--font--size--heading--h4);
   --pf-t--global--icon--size--font--heading--h3: var(--pf-t--global--font--size--heading--h3);
   --pf-t--global--icon--size--font--heading--h2: var(--pf-t--global--font--size--heading--h2);
   --pf-t--global--icon--size--font--heading--h1: var(--pf-t--global--font--size--heading--h1);
-  --pf-t--global--icon--size--font--body--lg: var(--pf-t--global--font--size--body--lg);
-  --pf-t--global--icon--size--font--body--default: var(--pf-t--global--font--size--body--default);
-  --pf-t--global--icon--size--font--body--sm: var(--pf-t--global--font--size--body--sm);
   --pf-t--global--color--status--read--on-secondary: var(--pf-t--global--background--color--control--default);
 }

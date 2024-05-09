@@ -27,6 +27,7 @@ $fa-font-path: "./assets/fonts/webfonts" !default;
 $pf-v6-global--fonticon-path: "./assets/pficon" !default;
 
 // Grid breakpoints
+// Note that these duplicate and should match breakpoint tokens
 $pf-v6-global--breakpoint--xs: 0 !default;
 $pf-v6-global--breakpoint--sm: 576px !default;
 $pf-v6-global--breakpoint--md: 768px !default;
