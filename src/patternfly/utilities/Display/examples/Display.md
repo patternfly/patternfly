@@ -6,10 +6,10 @@ section: utility-classes
 import './Display.css'
 
 ## Examples
-### Inline block
+### Inline
 ```hbs
-{{#> display display--type="inline-block"}}
-  .pf-v6-u-display-inline-block
+{{#> display display--type="inline"}}
+  .pf-v6-u-display-inline
 {{/display}}
 ```
 
@@ -17,6 +17,13 @@ import './Display.css'
 ```hbs
 {{#> display display--type="block"}}
   .pf-v6-u-display-block
+{{/display}}
+```
+
+### Inline block
+```hbs
+{{#> display display--type="inline-block"}}
+  .pf-v6-u-display-inline-block
 {{/display}}
 ```
 
@@ -41,14 +48,14 @@ import './Display.css'
 {{/display}}
 ```
 
-### Inline
+### Inline grid
 ```hbs
-{{#> display display--type="inline"}}
-  .pf-v6-u-display-inline
+{{#> display display--type="inline-grid"}}
+  .pf-v6-u-display-inline-grid
 {{/display}}
 ```
 
-### Table
+### Table, table row, table cell
 ```hbs
 {{#> display display--type="table"}}
   {{#> display display--type="table-row"}}
@@ -90,11 +97,13 @@ import './Display.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
-| `.pf-v6-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |
 | `.pf-v6-u-display-inline{-on-[breakpoint]}` | `*` |  Sets display: inline |
+| `.pf-v6-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |
+| `.pf-v6-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
 | `.pf-v6-u-display-flex{-on-[breakpoint]}` | `*` |  Sets display: flex |
 | `.pf-v6-u-display-inline-flex{-on-[breakpoint]}` | `*` |  Sets display: inline-flex |
+| `.pf-v6-u-display-grid{-on-[breakpoint]}` | `*` |  Sets display: grid |
+| `.pf-v6-u-display-inline-grid{-on-[breakpoint]}` | `*` |  Sets display: inline-grid |
 | `.pf-v6-u-display-table{-on-[breakpoint]}` | `*` |  Sets display: table |
 | `.pf-v6-u-display-table-row{-on-[breakpoint]}` | `*` |  Sets display: table-row |
 | `.pf-v6-u-display-table-cell{-on-[breakpoint]}` | `*` |  Sets display: table-cell |

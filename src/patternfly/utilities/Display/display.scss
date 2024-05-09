@@ -11,7 +11,9 @@ $pf-v6-u-display-options: (
   display-table-cell:     (display table-cell),
   display-table-row:      (display table-row),
   display-flex:           (display flex),
-  display-inline-flex:    (display inline-flex)
+  display-inline-flex:    (display inline-flex),
+  display-grid:           (display grid),
+  display-inline-grid:    (display inline-grid)
 );
 
 @include pf-v6-utility-builder($pf-v6-u-display-options, $pf-v6-global--breakpoint-list);
