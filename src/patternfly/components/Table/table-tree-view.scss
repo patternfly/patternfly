@@ -190,8 +190,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
   --#{$table}__tree-view-details-toggle--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
 
   // toggle
-  --#{$table}--m-tree-view-grid--c-dropdown--MarginBlockStart: calc(#{pf-size-prem(6px)} * -1);
-  --#{$table}--m-tree-view-grid--c-dropdown--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockStart: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
 
   tbody:where(.#{$table}__tbody) tr:where(.#{$table}__tr) {
     position: relative;
@@ -293,9 +293,9 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     grid-row: 1;
     grid-column: 2;
 
-    > .#{$dropdown} {
-      margin-block-start: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginBlockStart);
-      margin-block-end: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginBlockEnd);
+    > .#{$menu-toggle} {
+      margin-block-start: var(--#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockStart);
+      margin-block-end: var(--#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockEnd);
     }
   }
 

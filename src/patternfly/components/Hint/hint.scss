@@ -60,7 +60,7 @@
   text-align: end;
 
   // Only applies to the plain dropdown
-  .#{$dropdown} .#{$dropdown}__toggle.pf-m-plain {
+  .#{$menu-toggle}.pf-m-plain {
     margin-block-start: var(--#{$hint}__actions--c-dropdown--MarginBlockStart);
   }
 

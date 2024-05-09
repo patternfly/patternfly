@@ -192,21 +192,13 @@
   }
 }
 
-.#{$login}__main-header-utilities,
-.#{$login}__main-header .#{$dropdown} {
+.#{$login}__main-header-utilities {
   grid-row: auto;
   grid-column: auto;
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
     grid-row: 1;
     grid-column: 2 / 3;
-  }
-}
-
-.#{$login}__main-header-utilities {
-  .#{$dropdown} {
-    grid-row: auto;
-    grid-column: auto;
   }
 }
 
