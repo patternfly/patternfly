@@ -263,12 +263,9 @@
 
   // Count
   --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--disabled__c-badge--BorderColor: var(--pf-t--global--border--color--disabled);
-  --#{$button}--disabled__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
 }
 
 .#{$button} {
@@ -319,8 +316,8 @@
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-primary--m-clicked--BackgroundColor);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-primary--m-clicked__icon--Color);
 
-    .#{$badge}.pf-m-unread {
-      border: var(--#{$button}--m-primary__c-badge--BorderWidth) solid var(--#{$button}--m-primary__c-badge--BorderColor);
+    .#{$badge}.pf-m-unread::after {
+      border-color: var(--#{$button}--m-primary__c-badge--BorderColor);
     }
   }
 
@@ -597,7 +594,6 @@
   &.pf-m-aria-disabled {
     --#{$badge}--m-unread--Color: var(--#{$button}--disabled__c-badge--Color);
     --#{$badge}--m-unread--BackgroundColor: var(--#{$button}--disabled__c-badge--BackgroundColor);
-    --#{$button}--m-primary__c-badge--BorderWidth: 0;
 
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
@@ -611,7 +607,10 @@
     }
 
     .#{$badge} {
-      border: var(--#{$button}--disabled__c-badge--BorderWidth) solid var(--#{$button}--disabled__c-badge--BorderColor);
+      &.pf-m-read::after,
+      &.pf-m-unread::after {
+        border-color: var(--#{$button}--disabled__c-badge--BorderColor);
+      }
     }
   }
 

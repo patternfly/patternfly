@@ -2,6 +2,8 @@
 
 :where(:root, .#{$badge}) {
   // Component
+  --#{$badge}--BorderColor: transparent;
+  --#{$badge}--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$badge}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$badge}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$badge}--FontWeight: var(--pf-t--global--font--weight--body--bold); // TODO - design calls for 500/semi-bold, do we need a token for that or is bold ok
@@ -24,6 +26,7 @@
 }
 
 .#{$badge} {
+  position: relative;
   display: inline-block;
   min-width: var(--#{$badge}--MinWidth);
   padding-inline-start: var(--#{$badge}--PaddingInlineStart);
@@ -35,6 +38,16 @@
   white-space: nowrap;
   background-color: var(--#{$badge}--BackgroundColor);
   border-radius: var(--#{$badge}--BorderRadius);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$badge}--BorderWidth) solid;
+    border-color: var(--#{$badge}--BorderColor);
+    border-radius: inherit;
+  }
 
   &.pf-m-read {
     --#{$badge}--Color: var(--#{$badge}--m-read--Color);
