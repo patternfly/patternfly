@@ -302,8 +302,8 @@ import './Toolbar.css'
     {{/toolbar-content-section}}
     {{> toolbar-expandable-content}}
   {{/toolbar-content}}
-  {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
-    {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
+  {{#> toolbar-content toolbar-content--modifier="pf-m-label-container"}}
+    {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-label-group ' toolbar-item-label-group--modifier)}}
       {{#> label-group label-group--modifier="pf-m-category" label-group--id=(concat toolbar--id "-label-group")}}
         {{#> label-group-main}}
           {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label-group-label"')}}
@@ -418,7 +418,7 @@ import './Toolbar.css'
             {{/menu}}
           {{/panel}}
         {{/toolbar-item}}
-        {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
+        {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-label-group ' toolbar-item-label-group--modifier)}}
            {{#> label-group label-group--modifier="pf-m-category" label-group--id=(concat toolbar--id "-label-group")}}
             {{#> label-group-main}}
               {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label-group-label"')}}

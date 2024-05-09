@@ -50,7 +50,7 @@ import './TextInputGroup.css'
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters"}}
   {{#> text-input-group-main}}
-    {{> text-input-group--chip-group}}
+    {{> text-input-group--label-group}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
@@ -67,7 +67,7 @@ import './TextInputGroup.css'
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters-expanded" text-input-group--label-group--IsLong="true"}}
   {{#> text-input-group-main}}
-    {{> text-input-group--chip-group}}
+    {{> text-input-group--label-group}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
