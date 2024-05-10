@@ -115,7 +115,7 @@
   margin-inline-start: var(--#{$breadcrumb}__dropdown--MarginInlineStart);
   margin-inline-end: var(--#{$breadcrumb}__dropdown--MarginInlineEnd);
 
-  .#{$dropdown}__toggle {
+  .#{$menu-toggle} {
     line-height: var(--#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight);
   }
 }

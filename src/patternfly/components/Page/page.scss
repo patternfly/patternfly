@@ -49,10 +49,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-body--PaddingInlineStart: 0;
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineEnd: var(--#{$page}--inset);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineStart: var(--#{$page}--inset);
-  --#{$page}__sidebar-body--m-menu--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__sidebar-body--m-menu--BorderBlockStartColor: var(--pf-t--global--border--color--default);
-  --#{$page}__sidebar-body--m-menu--BorderBlockStartWidth: var(--pf-t--global--border--width--button--default);
-  --#{$page}__sidebar-body--m-menu--c-context-selector--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
@@ -222,25 +218,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   &:last-child {
     flex-grow: 1;
-  }
-
-  &.pf-m-menu {
-    background-color: var(--#{$page}__sidebar-body--m-menu--BackgroundColor);
-    border-block-start: var(--#{$page}__sidebar-body--m-menu--BorderBlockStartWidth) solid var(--#{$page}__sidebar-body--m-menu--BorderBlockStartColor);
-
-    & + & {
-      --#{$page}__sidebar-body--m-menu--BorderBlockStartWidth: 0;
-    }
-
-    .#{$context-selector} {
-      --#{$context-selector}__toggle--BorderBlockStartColor: transparent;
-      --#{$context-selector}__toggle--BorderInlineEndColor: transparent;
-      --#{$context-selector}__toggle--BorderBlockEndColor: var(--#{$page}__sidebar-body--m-menu--c-context-selector--BorderBlockEndColor);
-      --#{$context-selector}__toggle--BorderInlineStartColor: transparent;
-      --#{$context-selector}__menu--InsetBlockStart: 100%;
-
-      width: 100%;
-    }
   }
 
   &.pf-m-page-insets {
