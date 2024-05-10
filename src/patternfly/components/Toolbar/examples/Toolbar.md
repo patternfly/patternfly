@@ -334,7 +334,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element visibility. |
-| `.pf-m-chip-container` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
+| `.pf-m-label-container` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Selected
@@ -366,10 +366,10 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
-      {{#> toolbar-group toolbar-group--modifier='pf-m-chip-container'}}
+      {{#> toolbar-group toolbar-group--modifier='pf-m-label-container'}}
         {{#> toolbar-group toolbar-group--modifier='pf-m-grow'}}
-          {{> toolbar--item-chip-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
-          {{> toolbar--item-chip-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
+          {{> toolbar--item-label-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
+          {{> toolbar--item-label-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
         {{/toolbar-group}}
         {{> toolbar-item-clear}}
       {{/toolbar-group}}
@@ -413,10 +413,10 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
             }}
         {{/toolbar-item}}
       {{/toolbar-group}}
-      {{#> toolbar-group toolbar-group--modifier='pf-m-chip-container'}}
+      {{#> toolbar-group toolbar-group--modifier='pf-m-label-container'}}
         {{#> toolbar-group toolbar-group--modifier='pf-m-grow'}}
-          {{> toolbar--item-chip-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
-          {{> toolbar--item-chip-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
+          {{> toolbar--item-label-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
+          {{> toolbar--item-label-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
         {{/toolbar-group}}
         {{> toolbar-item-clear}}
       {{/toolbar-group}}
@@ -452,11 +452,11 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content=true toolbar-overflow-menu-example--control=true}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
-  {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
+  {{#> toolbar-content toolbar-content--modifier="pf-m-label-container"}}
     {{#> toolbar-group}}
       {{#> toolbar-group}}
-        {{> toolbar--item-chip-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
-        {{> toolbar--item-chip-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
+        {{> toolbar--item-label-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
+        {{> toolbar--item-label-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
       {{/toolbar-group}}
       {{> toolbar-item-clear}}
     {{/toolbar-group}}
@@ -788,7 +788,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-icon-button-group` | `.pf-v6-c-toolbar__group` | Initiates icon button group spacing. |
 | `.pf-m-filter-group` | `.pf-v6-c-toolbar__group` | Initiates filter group spacing. |
-| `.pf-m-chip-container` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
+| `.pf-m-label-container` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-overflow-container` | `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
 | `.pf-m-[wrap/nowrap]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies the toolbar element to wrap/not wrap. |

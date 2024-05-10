@@ -102,7 +102,7 @@
     margin-inline-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart);
   }
 
-  .#{$chip-group}__main {
+  .#{$label-group}__main {
     padding-block-start: var(--#{$text-input-group}--c-chip-group__main--PaddingBlockStart);
     padding-block-end: var(--#{$text-input-group}--c-chip-group__main--PaddingBlockEnd);
     padding-inline-end: var(--#{$text-input-group}--c-chip-group__main--PaddingInlineEnd);

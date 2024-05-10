@@ -63,12 +63,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__item--m-label--FontWeight: var(--pf-t--global--font--weight--body--bold);
 }
 
-// - Toolbar content - Toolbar group - Toolbar item - Toolbar group chip container - Toolbar group chip group
+// - Toolbar content - Toolbar group - Toolbar item - Toolbar group label container - Toolbar group label group
 .#{$toolbar}__content-section,
 .#{$toolbar}__group,
 .#{$toolbar}__item,
-.#{$toolbar}__group.pf-m-chip-group-container,
-.#{$toolbar}__group.pf-m-chip-group {
+.#{$toolbar}__group.pf-m-label-group-container,
+.#{$toolbar}__group.pf-m-label-group {
   @include pf-v6-hidden-visible(flex);
 
   flex-wrap: wrap;
@@ -230,14 +230,14 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     column-gap: var(--#{$toolbar}__group--m-filter-group--ColumnGap);
   }
 
-  // - Toolbar filter group - Toolbar chip container
+  // - Toolbar filter group - Toolbar label container
   &.pf-m-filter-group,
-  &.pf-m-chip-group-container {
+  &.pf-m-label-group-container {
     flex-wrap: nowrap;
   }
 
-  // - Toolbar chip group
-  &.pf-m-chip-group {
+  // - Toolbar label group
+  &.pf-m-label-group {
     flex: 1;
   }
 
