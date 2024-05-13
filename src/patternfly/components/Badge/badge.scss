@@ -23,7 +23,9 @@
   --#{$badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$badge}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$badge}--m-unread__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--default);
+  --#{$badge}--m-disabled--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
   --#{$badge}--m-disabled--BorderColor: var(--pf-t--global--border--color--disabled);
+  --#{$badge}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 }
 
 .#{$badge} {
@@ -61,8 +63,13 @@
     --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-unread__toggle-icon--Color);
   }
 
-  &.pf-m-disabled::after {
-    border-color: var(--#{$badge}--m-disabled--BorderColor);
+  &.pf-m-disabled {
+    --#{$badge}--Color: var(--#{$badge}--m-disabled--Color);
+    --#{$badge}--BackgroundColor: var(--#{$badge}--m-disabled--BackgroundColor);
+
+    &::after {
+      border-color: var(--#{$badge}--m-disabled--BorderColor);
+    }
   }
 }
 
