@@ -11,5 +11,411 @@ $chart: #{$pf-prefix} + 'chart';
 }
 
 :where(:root) {
-  // TODO update with tokens
+  // Chart colors
+  // blue
+  --#{$chart}-color-blue-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-blue-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-blue-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-blue-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-blue-500: var(--pf-t--chart--color--blue--100);
+
+  // green
+  --#{$chart}-color-green-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-green-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-green-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-green-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-green-500: var(--pf-t--chart--color--blue--100);
+
+  // cyan
+  --#{$chart}-color-cyan-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-cyan-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-cyan-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-cyan-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-cyan-500: var(--pf-t--chart--color--blue--100);
+
+  // purple
+  --#{$chart}-color-purple-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-purple-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-purple-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-purple-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-purple-500: var(--pf-t--chart--color--blue--100);
+
+  // gold
+  --#{$chart}-color-gold-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-gold-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-gold-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-gold-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-gold-500: var(--pf-t--chart--color--blue--100);
+
+  // orange
+  --#{$chart}-color-orange-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-orange-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-orange-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-orange-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-orange-500: var(--pf-t--chart--color--blue--100);
+
+  // red
+  --#{$chart}-color-red-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-red-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-red-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-red-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-red-500: var(--pf-t--chart--color--blue--100);
+
+  // black
+  --#{$chart}-color-black-100: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-black-200: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-black-300: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-black-400: var(--pf-t--chart--color--blue--100);
+  --#{$chart}-color-black-500: var(--pf-t--chart--color--blue--100);
+
+  // typography
+  --#{$chart}-global--FontSize--xs: var(--pf-t--chart--global--FontSize--xs);
+  --#{$chart}-global--FontSize--sm: var(--pf-t--chart--global--FontSize--sm);
+  --#{$chart}-global--FontSize--lg: var(--pf-t--chart--global--FontSize--lg);
+  --#{$chart}-global--FontSize--2xl: var(--pf-t--chart--global--FontSize--2xl);
+  --#{$chart}-global--FontFamily: var(--pf-t--global--font--family--body);
+  --#{$chart}-global--letter-spacing: normal;
+
+  // label
+  --#{$chart}-global--label--Padding: var(--pf-t--chart--global--label--padding);
+  --#{$chart}-global--label--Margin: var(--pf-t--chart--global--label--margin);
+  --#{$chart}-global--label--stroke: transparent;
+  --#{$chart}-global--label--text-anchor: middle;
+  --#{$chart}-global--label--stroke--Width: var(--pf-t--chart--global--label--stroke--width);
+  --#{$chart}-global--label--Fill: var(--pf-t--chart--global--label--fill);
+
+  // Layout Props
+  --#{$chart}-global--layout--Padding: var(--pf-t--chart--global--layout--padding);
+  --#{$chart}-global--layout--Height: var(--pf-t--chart--global--layout--height);
+  --#{$chart}-global--layout--Width: var(--pf-t--chart--global--layout--width);
+
+  // Stroke and Border Width
+  --#{$chart}-global--stroke--Width--xs: var(--pf-t--chart--global--stroke--width--xs);
+  --#{$chart}-global--stroke--Width--sm: var(--pf-t--chart--global--stroke--width--sm);
+  --#{$chart}-global--BorderWidth--xs: var(--pf-t--chart--global--BorderWidth--xs);
+  --#{$chart}-global--BorderWidth--sm: var(--pf-t--chart--global--BorderWidth--sm);
+  --#{$chart}-global--BorderWidth--lg: var(--pf-t--chart--global--BorderWidth--lg);
+
+  // Stroke
+  --#{$chart}-global--stroke-line-cap: round;
+  --#{$chart}-global--stroke-line-join: round;
+
+  // Fills and Strokes
+  --#{$chart}-global--danger--Color--100: var(--pf-t--chart--global--danger--color--100);
+  --#{$chart}-global--warning--Color--100: var(--pf-t--chart--global--warning--color--100);
+  --#{$chart}-global--warning--Color--200: var(--pf-t--chart--global--warning--color--200);
+  --#{$chart}-global--success--Color--100: var(--pf-t--chart--global--success--color--100);
+  --#{$chart}-global--Fill--Color--900: var(--pf-t--chart--global--fill--color--900:);
+  --#{$chart}-global--Fill--Color--700: var(--pf-t--chart--global--fill--color--700:);
+  --#{$chart}-global--Fill--Color--500: var(--pf-t--chart--global--fill--color--500:);
+  --#{$chart}-global--Fill--Color--400: var(--pf-t--chart--global--fill--color--400:);
+  --#{$chart}-global--Fill--Color--300: var(--pf-t--chart--global--fill--color--300:);
+  --#{$chart}-global--Fill--Color--200: var(--pf-t--chart--global--fill--color--200:);
+  --#{$chart}-global--Fill--Color--white: var(--pf-t--chart--global--fill--color--white:);
+
+  // Individual Charts
+
+  // Area Chart
+  --#{$chart}-area--Opacity: .3;
+  --#{$chart}-area--stroke--Width: var(--#{$chart}-global--stroke--Width--sm);
+  --#{$chart}-area--data--Fill: var(--#{$chart}-global--Fill--Color--900);
+
+  // Axis Chart
+  --#{$chart}-axis--axis--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-axis--axis--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--axis--Fill: transparent;
+  --#{$chart}-axis--axis-label--Padding: 40;
+  --#{$chart}-axis--axis-label--stroke--Color: transparent;
+  --#{$chart}-axis--grid--Fill: none;
+  --#{$chart}-axis--grid--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--grid--PointerEvents: painted;
+  --#{$chart}-axis--tick--Fill: transparent;
+  --#{$chart}-axis--tick--Size: 5;
+  --#{$chart}-axis--tick--Width: 1;
+  --#{$chart}-axis--tick--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--tick-label--Fill: var(--#{$chart}-global--Fill--Color--700);
+
+  // Bar Chart
+  --#{$chart}-bar--Width: 10;
+  --#{$chart}-bar--data--stroke: none;
+  --#{$chart}-bar--data--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-bar--data--Padding: 8;
+  --#{$chart}-bar--data-stroke--Width: 0;
+
+  // Box Plot Chart
+  --#{$chart}-boxplot--max--Padding: 8;
+  --#{$chart}-boxplot--max--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-boxplot--max--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-boxplot--median--Padding: 8;
+  --#{$chart}-boxplot--median--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-boxplot--median--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-boxplot--min--Padding: 8;
+  --#{$chart}-boxplot--min--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-boxplot--min--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-boxplot--lower-quartile--Padding: 8;
+  --#{$chart}-boxplot--lower-quartile--Fill: var(--#{$chart}-global--Fill--Color--500);
+  --#{$chart}-boxplot--upper-quartile--Padding: 8;
+  --#{$chart}-boxplot--upper-quartile--Fill: var(--#{$chart}-global--Fill--Color--500);
+  --#{$chart}-boxplot--box--Width: 20;
+
+  // Bullet Chart
+  --#{$chart}-bullet--axis--tick--count: 5;
+  --#{$chart}-bullet--comparative-measure--Fill--Color: var(--#{$chart}-global--Fill--Color--700);
+  --#{$chart}-bullet--comparative-measure--stroke--Color: var(--#{$chart}-global--Fill--Color--700);
+  --#{$chart}-bullet--comparative-measure--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-bullet--comparative-measure--Width: 30;
+  --#{$chart}-bullet--comparative-measure--error--Fill--Color: var(--#{$chart}-global--danger--Color--100);
+  --#{$chart}-bullet--comparative-measure--error--stroke--Color: var(--#{$chart}-global--danger--Color--100);
+  --#{$chart}-bullet--comparative-measure--error--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-bullet--comparative-measure--error--Width: 30;
+  --#{$chart}-bullet--comparative-measure--warning--Fill--Color: var(--#{$chart}-global--warning--Color--100);
+  --#{$chart}-bullet--comparative-measure--warning--stroke--Color: var(--#{$chart}-global--warning--Color--100);
+  --#{$chart}-bullet--comparative-measure--warning--stroke--Width: var(--pf-t--chart--global--stroke--width--sm);
+  --#{$chart}-bullet--comparative-measure--warning--Width: 30;
+  --#{$chart}-bullet--group-title--divider--Fill--Color: var(--pf-t--global--border--color--default); // TODO review
+  --#{$chart}-bullet--group-title--divider--stroke--Color: var(--pf-t--global--border--color--default); // TODO review
+  --#{$chart}-bullet--group-title--divider--stroke--Width: var(--pf-t--chart--global--stroke--width--sm);
+  --#{$chart}-bullet--Height: 140;
+  --#{$chart}-bullet--label--title--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-bullet--label--grouptitle--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-bullet--label--subtitle--Fill: var(--#{$chart}-global--Fill--Color--400);
+  --#{$chart}-bullet--primary-measure--dot--size: 6;
+  --#{$chart}-bullet--primary-measure--segmented--Width: 9;
+  --#{$chart}-bullet--negative-measure--ColorScale--100: var(--#{$chart}-color-red-100);
+  --#{$chart}-bullet--negative-measure--ColorScale--200: var(--#{$chart}-color-red-200);
+  --#{$chart}-bullet--negative-measure--ColorScale--300: var(--#{$chart}-color-red-300);
+  --#{$chart}-bullet--negative-measure--ColorScale--400: var(--#{$chart}-color-red-400);
+  --#{$chart}-bullet--negative-measure--ColorScale--500: var(--#{$chart}-color-red-500);
+  --#{$chart}-bullet--qualitative-range--Width: 30;
+  --#{$chart}-bullet--qualitative-range--ColorScale--100: var(--#{$chart}-color-black-100);
+  --#{$chart}-bullet--qualitative-range--ColorScale--200: var(--#{$chart}-color-black-200);
+  --#{$chart}-bullet--qualitative-range--ColorScale--300: var(--#{$chart}-color-black-300);
+  --#{$chart}-bullet--qualitative-range--ColorScale--400: var(--#{$chart}-color-black-400);
+  --#{$chart}-bullet--qualitative-range--ColorScale--500: var(--#{$chart}-color-black-500);
+
+  // Candlestick
+  --#{$chart}-candelstick--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-candelstick--data--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-candelstick--candle--positive--Color: var(--#{$chart}-global--Fill--Color--white);
+  --#{$chart}-candelstick--candle--negative--Color: var(--#{$chart}-global--Fill--Color--900);
+
+  // Container
+  --#{$chart}-container--cursor--line--Fill: var(--pf-t--global--border--color--default); // TODO review
+
+  // Simple Donut Chart
+  --#{$chart}-donut--label--title--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-donut--label--subtitle--Fill: var(--#{$chart}-global--Fill--Color--400);
+  --#{$chart}-donut--label--subtitle--position: center;
+  --#{$chart}-donut--pie--Height: 230;
+  --#{$chart}-donut--pie--angle--Padding: 1;
+  --#{$chart}-donut--pie--Padding: 20;
+  --#{$chart}-donut--pie--Width: 230;
+
+  // Donut Threshold Chart
+  --#{$chart}-donut--threshold--first--Color: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-donut--threshold--second--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-donut--threshold--third--Color: var(--#{$chart}-global--Fill--Color--400);
+  --#{$chart}-donut--threshold--warning--Color: var(--#{$chart}-global--warning--Color--200);
+  --#{$chart}-donut--threshold--danger--Color: var(--#{$chart}-global--danger--Color--100);
+  --#{$chart}-donut--threshold--dynamic--pie--Height: 202;
+  --#{$chart}-donut--threshold--dynamic--pie--Padding: 202;
+  --#{$chart}-donut--threshold--dynamic--pie--Width: 20;
+  --#{$chart}-donut--threshold--static--pie--Height: 230;
+  --#{$chart}-donut--threshold--static--pie--angle--Padding: 1;
+  --#{$chart}-donut--threshold--static--pie--Padding: 20;
+  --#{$chart}-donut--threshold--static--pie--Width: 230;
+
+  // Donut Utilization Chart
+  --#{$chart}-donut--utilization--dynamic--pie--Height: 230;
+  --#{$chart}-donut--utilization--dynamic--pie--angle--Padding: 1;
+  --#{$chart}-donut--utilization--dynamic--pie--Padding: 20;
+  --#{$chart}-donut--utilization--dynamic--pie--Width: 230;
+  --#{$chart}-donut--utilization--static--pie--Padding: 20;
+
+  // Error Bar
+  --#{$chart}-errorbar--BorderWidth: var(--#{$chart}-global--BorderWidth--lg);
+  --#{$chart}-errorbar--data--Fill: transparent;
+  --#{$chart}-errorbar--data--Opacity: 1;
+  --#{$chart}-errorbar--data-stroke--Width: var(--#{$chart}-global--stroke--Width--sm);
+  --#{$chart}-errorbar--data-stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+
+  // Legend
+  --#{$chart}-legend--gutter--Width: 20;
+  --#{$chart}-legend--orientation: horizontal;
+  --#{$chart}-legend--position: right;
+  --#{$chart}-legend--title--orientation: top;
+  --#{$chart}-legend--data--type: square;
+  --#{$chart}-legend--title--Padding: 2;
+  --#{$chart}-legend--Margin: 16;
+
+  // Line Chart
+  --#{$chart}-line--data--Fill: transparent;
+  --#{$chart}-line--data--Opacity: 1;
+  --#{$chart}-line--data--stroke--Width: var(--#{$chart}-global--stroke--Width--sm);
+  --#{$chart}-line--data--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+
+  // Pie Chart
+  --#{$chart}-pie--Padding: 20;
+  --#{$chart}-pie--data--Padding: 8;
+  --#{$chart}-pie--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-pie--data--stroke--Color: transparent;
+  --#{$chart}-pie--labels--Padding: 8;
+  --#{$chart}-pie--Height: 230;
+  --#{$chart}-pie--Width: 230;
+
+  // Scatter Chart
+  --#{$chart}-scatter--data--stroke--Color: transparent;
+  --#{$chart}-scatter--data--stroke--Width: 0;
+  --#{$chart}-scatter--data--Opacity: 1;
+  --#{$chart}-scatter--data--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-scatter--active--size: 5;
+  --#{$chart}-scatter--size: 3;
+
+  // Scatter Chart
+  --#{$chart}-stack--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+
+  // Threshold
+  --#{$chart}-threshold--stroke-dash-array: 4,2;
+  --#{$chart}-threshold--stroke--Width: 1.5;
+
+  // Tooltip
+  --#{$chart}-tooltip--corner-radius: 0;
+  --#{$chart}-tooltip--pointer-length: 10;
+  --#{$chart}-tooltip--Fill: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-tooltip--flyoutStyle--corner-radius: 0;
+  --#{$chart}-tooltip--flyoutStyle--stroke--Width: 0;
+  --#{$chart}-tooltip--flyoutStyle--PointerEvents: none;
+  --#{$chart}-tooltip--flyoutStyle--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-tooltip--flyoutStyle--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-tooltip--pointer--Width: 20;
+  --#{$chart}-tooltip--Padding: 8;
+  --#{$chart}-tooltip--PointerEvents: none;
+
+  // Voronoi Chart
+  --#{$chart}-voronoi--data--Fill: transparent;
+  --#{$chart}-voronoi--data--stroke--Color: transparent;
+  --#{$chart}-voronoi--data--stroke--Width: 0;
+  --#{$chart}-voronoi--labels--Padding: 8;
+  --#{$chart}-voronoi--labels--Fill: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-voronoi--labels--PointerEvents: none;
+  --#{$chart}-voronoi--flyout--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
+  --#{$chart}-voronoi--flyout--PointerEvents: none;
+  --#{$chart}-voronoi--flyout--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-voronoi--flyout--stroke--Fill: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-voronoi--flyout--PointerEvents: none;
+
+  // Theme color scales
+
+  // blue
+  --#{$chart}-theme--blue--ColorScale--100: var(--pf-t--chart--theme--colorscales--blue--colorscale--100);
+  --#{$chart}-theme--blue--ColorScale--200: var(--pf-t--chart--theme--colorscales--blue--colorscale--200);
+  --#{$chart}-theme--blue--ColorScale--300: var(--pf-t--chart--theme--colorscales--blue--colorscale--300);
+  --#{$chart}-theme--blue--ColorScale--400: var(--pf-t--chart--theme--colorscales--blue--colorscale--400);
+  --#{$chart}-theme--blue--ColorScale--500: var(--pf-t--chart--theme--colorscales--blue--colorscale--500);
+
+  // cyan
+  --#{$chart}-theme--cyan--ColorScale--100: var(--pf-t--chart--theme--colorscales--cyan--colorscale--100);
+  --#{$chart}-theme--cyan--ColorScale--200: var(--pf-t--chart--theme--colorscales--cyan--colorscale--200);
+  --#{$chart}-theme--cyan--ColorScale--300: var(--pf-t--chart--theme--colorscales--cyan--colorscale--300);
+  --#{$chart}-theme--cyan--ColorScale--400: var(--pf-t--chart--theme--colorscales--cyan--colorscale--400);
+  --#{$chart}-theme--cyan--ColorScale--500: var(--pf-t--chart--theme--colorscales--cyan--colorscale--500);
+
+  // gold
+  --#{$chart}-theme--gold--ColorScale--100: var(--pf-t--chart--theme--colorscales--yellow--colorscale--100);
+  --#{$chart}-theme--gold--ColorScale--200: var(--pf-t--chart--theme--colorscales--yellow--colorscale--200);
+  --#{$chart}-theme--gold--ColorScale--300: var(--pf-t--chart--theme--colorscales--yellow--colorscale--300);
+  --#{$chart}-theme--gold--ColorScale--400: var(--pf-t--chart--theme--colorscales--yellow--colorscale--400);
+  --#{$chart}-theme--gold--ColorScale--500: var(--pf-t--chart--theme--colorscales--yellow--colorscale--500);
+
+    // gray
+  --#{$chart}-theme--gray--ColorScale--100: var(--pf-t--chart--theme--colorscales--gray--colorscale--100);
+  --#{$chart}-theme--gray--ColorScale--200: var(--pf-t--chart--theme--colorscales--gray--colorscale--200);
+  --#{$chart}-theme--gray--ColorScale--300: var(--pf-t--chart--theme--colorscales--gray--colorscale--300);
+  --#{$chart}-theme--gray--ColorScale--400: var(--pf-t--chart--theme--colorscales--gray--colorscale--400);
+  --#{$chart}-theme--gray--ColorScale--500: var(--pf-t--chart--theme--colorscales--gray--colorscale--500);
+
+  // green
+  --#{$chart}-theme--green--ColorScale--100: var(--pf-t--chart--theme--colorscales--green--colorscale--100);
+  --#{$chart}-theme--green--ColorScale--200: var(--pf-t--chart--theme--colorscales--green--colorscale--200);
+  --#{$chart}-theme--green--ColorScale--300: var(--pf-t--chart--theme--colorscales--green--colorscale--300);
+  --#{$chart}-theme--green--ColorScale--400: var(--pf-t--chart--theme--colorscales--green--colorscale--400);
+  --#{$chart}-theme--green--ColorScale--500: var(--pf-t--chart--theme--colorscales--green--colorscale--500);
+
+  // orange
+  --#{$chart}-theme--orange--ColorScale--100: var(--pf-t--chart--theme--colorscales--orange--colorscale--100);
+  --#{$chart}-theme--orange--ColorScale--200: var(--pf-t--chart--theme--colorscales--orange--colorscale--200);
+  --#{$chart}-theme--orange--ColorScale--300: var(--pf-t--chart--theme--colorscales--orange--colorscale--300);
+  --#{$chart}-theme--orange--ColorScale--400: var(--pf-t--chart--theme--colorscales--orange--colorscale--400);
+  --#{$chart}-theme--orange--ColorScale--500: var(--pf-t--chart--theme--colorscales--orange--colorscale--500);
+
+  // purple
+  --#{$chart}-theme--purple--ColorScale--100: var(--pf-t--chart--theme--colorscales--purple--colorscale--100);
+  --#{$chart}-theme--purple--ColorScale--200: var(--pf-t--chart--theme--colorscales--purple--colorscale--200);
+  --#{$chart}-theme--purple--ColorScale--300: var(--pf-t--chart--theme--colorscales--purple--colorscale--300);
+  --#{$chart}-theme--purple--ColorScale--400: var(--pf-t--chart--theme--colorscales--purple--colorscale--400);
+  --#{$chart}-theme--purple--ColorScale--500: var(--pf-t--chart--theme--colorscales--purple--colorscale--500);
+
+  // multi ordered
+  --#{$chart}-theme--multi-color-ordered--ColorScale--100: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--100);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--200: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--200);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--300: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--300);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--400: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--400);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--500: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--500);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--600: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--600);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--700: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--700);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--800: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--800);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--900: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--900);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1000: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1000);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1100: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1100);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1200: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1200);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1300: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1300);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1400: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1400);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1500: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1500);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1600: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1600);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1700: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1700);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1800: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1800);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1900: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1900);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2000: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2000);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2100: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2100);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2200: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2200);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2300: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2300);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2400: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2400);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2500: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2500);
+
+  // multi unordered
+  --#{$chart}-theme--multi-color-unordered--ColorScale--100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--100);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--200);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--300);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--400);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--500);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--600: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--600);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--700: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--700);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--800: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--800);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--900: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--900);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1000: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1000);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1100);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1200);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1300);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1400);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1500);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1600: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1600);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1700: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1700);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1800: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1800);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1900: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1900);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2000: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2000);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2100);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2200);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2300);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2400);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2500);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2600: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2600);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2700: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2700);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2800: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2800);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2900: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2900);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3000: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3000);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3100);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3200);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3300);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3400);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3500);
 }
