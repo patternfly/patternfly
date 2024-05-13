@@ -217,7 +217,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 <br>
 <strong>disabled</strong>
 <br>
-{{> button-counts button--IsDisabled=true}}
+{{> button-counts button--IsDisabled=true badge--IsDisabled=true}}
 ```
 
 ### Plain with no padding

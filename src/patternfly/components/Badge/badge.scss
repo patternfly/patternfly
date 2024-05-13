@@ -23,6 +23,7 @@
   --#{$badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$badge}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$badge}--m-unread__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--default);
+  --#{$badge}--m-disabled--BorderColor: var(--pf-t--global--border--color--disabled);
 }
 
 .#{$badge} {
@@ -44,8 +45,7 @@
     inset: 0;
     pointer-events: none;
     content: "";
-    border: var(--#{$badge}--BorderWidth) solid;
-    border-color: var(--#{$badge}--BorderColor);
+    border: var(--#{$badge}--BorderWidth) solid var(--#{$badge}--BorderColor);
     border-radius: inherit;
   }
 
@@ -59,6 +59,10 @@
     --#{$badge}--Color: var(--#{$badge}--m-unread--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-unread--BackgroundColor);
     --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-unread__toggle-icon--Color);
+  }
+
+  &.pf-m-disabled::after {
+    border-color: var(--#{$badge}--m-disabled--BorderColor);
   }
 }
 

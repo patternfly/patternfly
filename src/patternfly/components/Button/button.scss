@@ -263,7 +263,6 @@
 
   // Count
   --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$button}--disabled__c-badge--BorderColor: var(--pf-t--global--border--color--disabled);
   --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
 }
@@ -317,7 +316,7 @@
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-primary--m-clicked__icon--Color);
 
     .#{$badge}.pf-m-unread::after {
-      border-color: var(--#{$button}--m-primary__c-badge--BorderColor);
+      --#{$badge}--BorderColor: var(--#{$button}--m-primary__c-badge--BorderColor);
     }
   }
 
@@ -604,13 +603,6 @@
 
     .#{$button}__icon {
       color: var(--#{$button}--disabled__icon--Color);
-    }
-
-    .#{$badge} {
-      &.pf-m-read::after,
-      &.pf-m-unread::after {
-        border-color: var(--#{$button}--disabled__c-badge--BorderColor);
-      }
     }
   }
 
