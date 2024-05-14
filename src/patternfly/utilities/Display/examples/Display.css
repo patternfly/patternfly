@@ -1,11 +1,4 @@
-.ws-core-u-display .pf-v6-u-display-inline-block,
-.ws-core-u-display .pf-v6-u-display-block,
-.ws-core-u-display .pf-v6-u-display-flex,
-.ws-core-u-display .pf-v6-u-display-inline-flex,
-.ws-core-u-display .pf-v6-u-display-grid,
-.ws-core-u-display .pf-v6-u-display-inline,
-.ws-core-u-display .pf-v6-u-display-table,
-.ws-core-u-display .pf-v6-u-display-table-cell {
+.ws-core-u-display [class*="pf-v6-u-display-"] {
   padding: var(--pf-t--global--spacer--sm);
   border: var(--pf-t--global--border--width--box--default) dashed var(--pf-t--global--border--color--default);
 }
