@@ -1,5 +1,5 @@
 {{#> table-tbody table-tbody--IsExpanded=table-tbody--expandable--IsExpanded}}
-  {{#> table-tr table-tr--IsExpanded=true table-tr--IsExpanded=table-tbody--expandable--IsExpanded table-tr--index=table-tbody--expandable--index}}
+  {{#> table-tr table-tr--index=table-tbody--expandable--index}}
     {{> table-cell-toggle}}
     {{> table-cell-check}}
     {{#> table-th table-th--data-label="Repository name"}}
@@ -24,7 +24,7 @@
     {{> table-cell-action}}
   {{/table-tr}}
 
-  {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=table-tbody--expandable--IsExpanded}}
+  {{#> table-tr table-tr--IsExpandable=true}}
     {{> table-cell-empty}}
     {{> table-cell-empty}}
     {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tbody--expandable--index '"')}}
