@@ -20,8 +20,3 @@
 .pf-v6-c-menu__breadcrumb .pf-v6-c-menu {
   z-index: 1;
 }
-
-[class*="ws-core-c-menu"] {
-  padding-block-start: var(--pf-t--global--spacer--md);
-  padding-block-end: var(--pf-t--global--spacer--md);
-}

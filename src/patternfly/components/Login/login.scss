@@ -193,7 +193,7 @@
 }
 
 .#{$login}__main-header-utilities,
-.#{$login}__main-header :is(.#{$menu-toggle}, .#{$dropdown}) {
+.#{$login}__main-header .#{$menu-toggle} {
   grid-row: auto;
   grid-column: auto;
 

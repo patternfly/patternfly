@@ -25,13 +25,13 @@
   --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // breadcrumb dropdown
-  --#{$breadcrumb}__dropdown--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$breadcrumb}__dropdown--MarginInlineEnd: calc(var(--#{$breadcrumb}__item--MarginInlineEnd) * -1);
-  --#{$breadcrumb}__dropdown--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$breadcrumb}__dropdown--MarginInlineStart: calc(var(--#{$breadcrumb}__item-divider--MarginInlineEnd) * -1);
+  --#{$breadcrumb}__menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$breadcrumb}__menu-toggle--MarginInlineEnd: calc(var(--#{$breadcrumb}__item--MarginInlineEnd) * -1);
+  --#{$breadcrumb}__menu-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$breadcrumb}__menu-toggle--MarginInlineStart: calc(var(--#{$breadcrumb}__item-divider--MarginInlineEnd) * -1);
 
   // breadcrumb toggle
-  --#{$breadcrumb}__dropdown--c-menu-toggle--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$breadcrumb}__menu-toggle--c-menu-toggle--LineHeight: var(--pf-t--global--font--line-height--body);
 }
 
 .#{$breadcrumb} {
@@ -110,13 +110,13 @@
 }
 
 .#{$breadcrumb}__dropdown {
-  margin-block-start: var(--#{$breadcrumb}__dropdown--MarginBlockStart);
-  margin-block-end: var(--#{$breadcrumb}__dropdown--MarginBlockEnd);
-  margin-inline-start: var(--#{$breadcrumb}__dropdown--MarginInlineStart);
-  margin-inline-end: var(--#{$breadcrumb}__dropdown--MarginInlineEnd);
+  margin-block-start: var(--#{$breadcrumb}__menu-toggle--MarginBlockStart);
+  margin-block-end: var(--#{$breadcrumb}__menu-toggle--MarginBlockEnd);
+  margin-inline-start: var(--#{$breadcrumb}__menu-toggle--MarginInlineStart);
+  margin-inline-end: var(--#{$breadcrumb}__menu-toggle--MarginInlineEnd);
 
-  :is(.#{$menu-toggle}, .#{$dropdown}__toggle) {
-    line-height: var(--#{$breadcrumb}__dropdown--c-menu-toggle--LineHeight);
+  .#{$menu-toggle} {
+    line-height: var(--#{$breadcrumb}__menu-toggle--c-menu-toggle--LineHeight);
   }
 }
 
