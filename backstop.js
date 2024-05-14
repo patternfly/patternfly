@@ -32,7 +32,7 @@ module.exports = {
   report: ['browser'],
   engine: 'puppeteer',
   engineOptions: {
-    executablePath: '/Users/cmichael/Desktop/browsers/chrome-124/Chromium.app/Contents/MacOS/Chromium', // tells puppeteer to use a specific browser instead of the default that comes with puppeteer
+    // executablePath: '/Users/cmichael/Desktop/browsers/chrome-124/Chromium.app/Contents/MacOS/Chromium', // tells puppeteer to use a specific browser instead of the default that comes with puppeteer
     headless: 'new',
     args: [
       '--no-sandbox',

@@ -276,6 +276,61 @@ export const setModifiers = function (...mods) {
   return modSet;
 };
 
+// ======================================================================================
+// setAttributes: setModifiers is a helper function that returns a string of all partials parameters that are true
+// ======================================================================================
+export const setAttributes = function (...mods) {
+  let modSet = '';
+
+  for (const prop in mods) {
+    const hash = mods[prop].hash;
+    for (const [key, value] of Object.entries(hash)) {
+      if (this[key]) {
+        modSet += ` ${value}`;
+      }
+    }
+  };
+
+  return modSet;
+};
+
+// ======================================================================================
+export const entry = function (...mods) {
+  const modSet = {};
+
+  mods.forEach((element, index) => {
+    // modSet[element] = element.index;
+    const hash = element.hash;
+
+    for (const [key, value] of Object.entries(hash)) {
+      modSet[key] = value;
+    }
+  });
+
+  return modSet;
+};
+
+export function entries(...data) {
+  data.forEach((element, index) => {
+    // console.log(element, data[index]);
+    // const val = prependModifierPrefix(element);
+    // data[index] = stripWhitespace(val);
+  });
+  // data.forEach((element, index) => {
+  //   this.index = index;
+  //   for (const [key, value] of Object.entries(element)) {
+  //     // console.log(`${key}: ${value}`);
+  //     this[key] = value;
+  //   }
+  //   console.log(element);
+  //   // const val = prependModifierPrefix(element);
+  //   // data[index] = stripWhitespace(val);
+  //   // console.log(this);
+  // });
+
+  return data;
+}
+
 export const pfv = (type) => {
   const namespace = patternflyNamespace;
   let version = patternflyVersion;

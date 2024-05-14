@@ -292,7 +292,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-cell-overflow-menu table-cell-overflow-menu--IsExpanded=true}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -312,7 +312,12 @@ These classes can be used to ensure that the table changes between the tabular a
 ```
 ### Overflow menu usage, overflow menu collapsed
 ```hbs
-{{#> table table--id="table-with-overflow-menu-collapsed" table--IsGrid=true table--attribute='aria-label="This is a simple table example"'}}
+{{#>table
+    table--id="table-with-overflow-menu-collapsed"
+    table--IsGrid=true
+    table--attribute='aria-label="This is a simple table example"'
+    table-cell-overflow-menu--IsCondensed=true
+  }}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -340,7 +345,7 @@ These classes can be used to ensure that the table changes between the tabular a
         25
       {{/table-td}}
       <!-- TODO: update overflow menu with menu/menu toggle  -->
-      {{> table-cell-overflow-menu table-cell-overflow-menu--IsExpanded=true}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
@@ -361,7 +366,13 @@ These classes can be used to ensure that the table changes between the tabular a
 
 ### Overflow menu usage, mobile
 ```hbs
-{{#> table table--id="table-with-overflow-menu-collapsed-mobile" table--IsGrid=true table--modifier="pf-m-grid" table--attribute='aria-label="This is a simple table example"'}}
+{{#>table
+    table--id="table-with-overflow-menu-collapsed-mobile"
+    table--IsGrid=true
+    table--modifier="pf-m-grid"
+    table--attribute='aria-label="This is a simple table example"'
+    table-cell-overflow-menu--IsCondensed=true
+  }}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -388,7 +399,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      {{> table-cell-overflow-menu table-td--IsExpanded=true}}
+      {{> table-cell-overflow-menu}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}

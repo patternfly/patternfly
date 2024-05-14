@@ -55,9 +55,13 @@
       disabled
     {{/if}}
   {{/unless}}
-  {{#if menu-toggle--aria-label}}
-    aria-label="{{menu-toggle--aria-label}}"
+
+  {{#if menu-toggle--IsPlain}}
+    {{#unless menu-toggle--text}}
+      aria-label='Menu toggle'
+    {{/unless}}
   {{/if}}
+
   {{#if menu-toggle--id}}
     id="{{menu-toggle--id}}"
   {{/if}}

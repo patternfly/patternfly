@@ -11,7 +11,7 @@
     {{/if}}
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--id=(dasherize notification-drawer--id 'header-action')}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
   {{#> notification-drawer-body}}

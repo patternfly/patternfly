@@ -35,12 +35,12 @@
       {{#if table-tr--tree--HasActions}}
         {{#> table-td table-td--IsAction=true}}
           {{> menu-toggle
-            menu-toggle--id=(concat table--id '-actions-main')
-            menu-toggle--IsPlain=true
-            menu-toggle--IsSmall=table--IsCompact
-            menu-toggle--HasKebab=(ternary menu-toggle--icon false true)
-            menu-toggle--aria-label='Table actions'
-          }}
+              menu-toggle--id=(concat table--id '-actions-main')
+              menu-toggle--IsPlain=true
+              menu-toggle--IsSmall=table--IsCompact
+              menu-toggle--HasKebab=(ternary menu-toggle--icon false true)
+              menu-toggle--aria-label='Table actions'
+            }}
         {{/table-td}}
       {{/if}}
 

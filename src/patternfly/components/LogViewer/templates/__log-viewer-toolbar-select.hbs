@@ -1,16 +1,5 @@
-{{#> select select--id=(concat log-viewer--id '-select-menu') select--IsCustom="true"}}
-  {{#> select-toggle}}
-    System log
-  {{/select-toggle}}
-  {{#> select-menu}}
-    <li role="presentation">
-      {{#> select-menu-item}}Dataset 1{{/select-menu-item}}
-    </li>
-    <li role="presentation">
-      {{#> select-menu-item select-menu-item--IsSelected="true"}}System log{{/select-menu-item}}
-    </li>
-    <li role="presentation">
-      {{#> select-menu-item}}Dataset 3{{/select-menu-item}}
-    </li>
-  {{/select-menu}}
-{{/select}}
+{{> menu-toggle
+    menu-toggle--text='System log'
+    menu-toggle--id=(dasherize log-viewer--id 'log-menu-toggle')
+    menu-toggle--aria-label='Log viewer menu toggle'
+  }}

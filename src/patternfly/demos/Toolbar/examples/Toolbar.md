@@ -150,26 +150,7 @@ import './Toolbar.css'
               }}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-stopped')
-                menu-toggle--text='Stopped'
-                menu-toggle--IsExpanded=true
-              }}
-            {{#> panel}}
-              {{#> menu menu--width='175px'}}
-                {{#> menu-content}}
-                  {{#> menu-group}}
-                    {{#> menu-list}}
-                      {{> menu-list-item menu-item--text='Running'}}
-                      {{> menu-list-item menu-item--text='Stopped' menu-item--IsSelected=true}}
-                      {{> menu-list-item menu-item--text='Down'}}
-                      {{> menu-list-item menu-item--text='Degraded'}}
-                      {{> menu-list-item menu-item--text='Needs maintenance'}}
-                    {{/menu-list}}
-                  {{/menu-group}}
-                {{/menu-content}}
-              {{/menu}}
-            {{/panel}}
+            {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-stopped') menu-toggle--text='Stopped'}}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
@@ -216,26 +197,7 @@ import './Toolbar.css'
           }}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> menu-toggle
-            menu-toggle--id=(concat toolbar--id '-menu-toggle-stopped')
-            menu-toggle--text='Stopped'
-            menu-toggle--IsExpanded=true
-          }}
-        {{#> panel}}
-          {{#> menu menu--width='175px'}}
-            {{#> menu-content}}
-              {{#> menu-group}}
-                {{#> menu-list}}
-                  {{> menu-list-item menu-item--text='Running'}}
-                  {{> menu-list-item menu-item--text='Stopped' menu-item--IsSelected=true}}
-                  {{> menu-list-item menu-item--text='Down'}}
-                  {{> menu-list-item menu-item--text='Degraded'}}
-                  {{> menu-list-item menu-item--text='Needs maintenance'}}
-                {{/menu-list}}
-              {{/menu-group}}
-            {{/menu-content}}
-          {{/menu}}
-        {{/panel}}
+        {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-stopped') menu-toggle--text='Stopped'}}
       {{/toolbar-item}}
     {{/toolbar-group}}
     {{/toolbar-expandable-content}}
@@ -259,34 +221,7 @@ import './Toolbar.css'
               }}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-filter-by-status')
-                menu-toggle--text='Filter by status'
-                menu-toggle--IsExpanded=true
-              }}
-            {{#> panel}}
-              {{#> menu menu--id=(concat toolbar--id '-status-menu')}}
-                {{#> menu-content}}
-                  {{#> menu-list}}
-                    {{#> menu-list-item menu-list-item--id=(concat menu--id '-check1') menu-list-item--IsCheckbox=true}}
-                      {{> menu-item menu-item--text='Active'}}
-                    {{/menu-list-item}}
-                    {{#> menu-list-item menu-list-item--id=(concat menu--id '-check2') menu-list-item--IsCheckbox=true menu-list-item--IsChecked=true}}
-                      {{> menu-item menu-item--text='Cancelled'}}
-                    {{/menu-list-item}}
-                    {{#> menu-list-item menu-list-item--id=(concat menu--id '-check3') menu-list-item--IsCheckbox=true menu-list-item--IsChecked=true}}
-                      {{> menu-item menu-item--text='Paused'}}
-                    {{/menu-list-item}}
-                    {{#> menu-list-item menu-list-item--id=(concat menu--id '-check4') menu-list-item--IsCheckbox=true}}
-                      {{> menu-item menu-item--text='Warning'}}
-                    {{/menu-list-item}}
-                    {{#> menu-list-item menu-list-item--id=(concat menu--id '-check5') menu-list-item--IsCheckbox=true}}
-                      {{> menu-item menu-item--text='Restarted'}}
-                    {{/menu-list-item}}
-                  {{/menu-list}}
-                {{/menu-content}}
-              {{/menu}}
-            {{/panel}}
+            {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-filter-by-status') menu-toggle--text='Filter by status'}}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
@@ -392,31 +327,7 @@ import './Toolbar.css'
           {{> menu-toggle
               menu-toggle--id=(concat toolbar--id '-menu-toggle-filter-by-status')
               menu-toggle--text='Filter by status'
-              menu-toggle--IsExpanded=true
             }}
-          {{#> panel}}
-            {{#> menu menu--id=(concat toolbar--id '-status-menu')}}
-              {{#> menu-content}}
-                {{#> menu-list}}
-                  {{#> menu-list-item menu-list-item--id=(concat menu--id '-check1') menu-list-item--IsCheckbox=true}}
-                    {{> menu-item menu-item--text='Active'}}
-                  {{/menu-list-item}}
-                  {{#> menu-list-item menu-list-item--id=(concat menu--id '-check2') menu-list-item--IsCheckbox=true menu-list-item--IsChecked=true}}
-                    {{> menu-item menu-item--text='Cancelled'}}
-                  {{/menu-list-item}}
-                  {{#> menu-list-item menu-list-item--id=(concat menu--id '-check3') menu-list-item--IsCheckbox=true menu-list-item--IsChecked=true}}
-                    {{> menu-item menu-item--text='Paused'}}
-                  {{/menu-list-item}}
-                  {{#> menu-list-item menu-list-item--id=(concat menu--id '-check4') menu-list-item--IsCheckbox=true}}
-                    {{> menu-item menu-item--text='Warning'}}
-                  {{/menu-list-item}}
-                  {{#> menu-list-item menu-list-item--id=(concat menu--id '-check5') menu-list-item--IsCheckbox=true}}
-                    {{> menu-item menu-item--text='Restarted'}}
-                  {{/menu-list-item}}
-                {{/menu-list}}
-              {{/menu-content}}
-            {{/menu}}
-          {{/panel}}
         {{/toolbar-item}}
         {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-label-group ' toolbar-item-label-group--modifier)}}
            {{#> label-group label-group--modifier="pf-m-category" label-group--id=(concat toolbar--id "-label-group")}}

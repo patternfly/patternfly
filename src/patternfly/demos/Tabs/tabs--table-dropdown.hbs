@@ -1,6 +1,4 @@
-{{#> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true" dropdown-menu-item--type="a"}}
-  {{> dropdown-toggle}}
-  {{#> dropdown-menu}}
-    {{> dropdown-menu-list-item dropdown-menu-item--text="Action Link"}}
-  {{/dropdown-menu}}
-{{/dropdown}}
+{{> menu-toggle menu-toggle--IsPlain=true  menu-toggle--HasKebab=true}}
+{{#> menu}}
+  {{> menu-item menu-item--text=Action link}}
+{{/menu}}
