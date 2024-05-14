@@ -118,12 +118,9 @@
   margin-inline-end: var(--#{$breadcrumb}__menu-toggle--MarginInlineEnd);
 
   .#{$menu-toggle} {
-    line-height: var(--#{$breadcrumb}__menu-toggle--c-menu-toggle--LineHeight);
-  }
-
-  .#{$menu-toggle} {
     padding-block-start: var(--#{$breadcrumb}__dropdown--c-menu-toggle--PaddingBlockStart);
     padding-block-end: var(--#{$breadcrumb}__dropdown--c-menu-toggle--PaddingBlockEnd);
+    line-height: var(--#{$breadcrumb}__menu-toggle--c-menu-toggle--LineHeight);
   }
 }
 
