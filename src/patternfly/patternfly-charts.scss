@@ -1,4 +1,6 @@
 @use './sass-utilities' as *;
+@use "./base/tokens/tokens-charts" as charts;
+@use "./base/tokens/tokens-charts-dark" as charts-dark;
 
 // stylelint-disable-next-line scss/dollar-variable-pattern
 $chart: #{$pf-prefix} + 'chart';
@@ -10,6 +12,18 @@ $chart: #{$pf-prefix} + 'chart';
   }
 }
 
+// Charts tokens
+:where(:root) {
+  @include charts.pf-v6-tokens;
+}
+
+// Charts dark tokens
+:where(.pf-v6-theme-dark) {
+  @include charts-dark.pf-v6-tokens;
+}
+
+// Charts styles
+// stylelint-disable-next-line no-duplicate-selectors
 :where(:root) {
   // Chart colors
   // blue
@@ -105,13 +119,13 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-global--warning--Color--100: var(--pf-t--chart--global--warning--color--100);
   --#{$chart}-global--warning--Color--200: var(--pf-t--chart--global--warning--color--200);
   --#{$chart}-global--success--Color--100: var(--pf-t--chart--global--success--color--100);
-  --#{$chart}-global--Fill--Color--900: var(--pf-t--chart--global--fill--color--900:);
-  --#{$chart}-global--Fill--Color--700: var(--pf-t--chart--global--fill--color--700:);
-  --#{$chart}-global--Fill--Color--500: var(--pf-t--chart--global--fill--color--500:);
-  --#{$chart}-global--Fill--Color--400: var(--pf-t--chart--global--fill--color--400:);
-  --#{$chart}-global--Fill--Color--300: var(--pf-t--chart--global--fill--color--300:);
-  --#{$chart}-global--Fill--Color--200: var(--pf-t--chart--global--fill--color--200:);
-  --#{$chart}-global--Fill--Color--white: var(--pf-t--chart--global--fill--color--white:);
+  --#{$chart}-global--Fill--Color--900: var(--pf-t--chart--global--fill--color--900);
+  --#{$chart}-global--Fill--Color--700: var(--pf-t--chart--global--fill--color--700);
+  --#{$chart}-global--Fill--Color--500: var(--pf-t--chart--global--fill--color--500);
+  --#{$chart}-global--Fill--Color--400: var(--pf-t--chart--global--fill--color--400);
+  --#{$chart}-global--Fill--Color--300: var(--pf-t--chart--global--fill--color--300);
+  --#{$chart}-global--Fill--Color--200: var(--pf-t--chart--global--fill--color--200);
+  --#{$chart}-global--Fill--Color--white: var(--pf-t--chart--global--fill--color--white);
 
   // Individual Charts
 
@@ -299,7 +313,6 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-voronoi--labels--Fill: var(--#{$chart}-global--Fill--Color--200);
   --#{$chart}-voronoi--labels--PointerEvents: none;
   --#{$chart}-voronoi--flyout--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
-  --#{$chart}-voronoi--flyout--PointerEvents: none;
   --#{$chart}-voronoi--flyout--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-voronoi--flyout--stroke--Fill: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-voronoi--flyout--PointerEvents: none;
