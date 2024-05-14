@@ -26,12 +26,12 @@
 
   // breadcrumb dropdown
   --#{$breadcrumb}__menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$breadcrumb}__menu-toggle--MarginInlineEnd: calc(var(--#{$breadcrumb}__item--MarginInlineEnd) * -1);
+  --#{$breadcrumb}__menu-toggle--MarginInlineEnd: var(--pf-t--global--spacer--xs);
   --#{$breadcrumb}__menu-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$breadcrumb}__menu-toggle--MarginInlineStart: calc(var(--#{$breadcrumb}__item-divider--MarginInlineEnd) * -1);
+  --#{$breadcrumb}__menu-toggle--MarginInlineStart: var(--pf-t--global--spacer--xs);
   --#{$breadcrumb}__dropdown--c-menu-toggle--PaddingBlockStart: 0;
   --#{$breadcrumb}__dropdown--c-menu-toggle--PaddingBlockEnd: 0;
-  
+
   // breadcrumb toggle
   --#{$breadcrumb}__menu-toggle--c-menu-toggle--LineHeight: var(--pf-t--global--font--line-height--body);
 }
