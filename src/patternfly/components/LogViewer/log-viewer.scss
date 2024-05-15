@@ -49,9 +49,9 @@
   --#{$log-viewer}__text--WhiteSpace: break-spaces;
   --#{$log-viewer}__text--LineBreak: anywhere;
   --#{$log-viewer}--m-nowrap__text--WhiteSpace: nowrap;
-  --#{$log-viewer}__string--m-match--Color: initial;
+  --#{$log-viewer}__string--m-match--Color: var(--pf-t--global--text--color--on-highlight);
   --#{$log-viewer}__string--m-match--BackgroundColor: var(--pf-t--global--background--color--highlight--default);
-  --#{$log-viewer}__string--m-current--Color: initial;
+  --#{$log-viewer}__string--m-current--Color: var(--pf-t--global--text--color--on-highlight);
   --#{$log-viewer}__string--m-current--BackgroundColor: var(--pf-t--global--background--color--highlight--clicked);
 
   // Timestamp
