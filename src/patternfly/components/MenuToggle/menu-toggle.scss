@@ -118,6 +118,7 @@
 
   // Split button
   --#{$menu-toggle}--m-split-button--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$menu-toggle}--m-split-button--PaddingInlineStart: var(--#{$pf-global}--spacer--xs);
 
   // Split button, child
   --#{$menu-toggle}--m-split-button--child--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
@@ -410,6 +411,11 @@
 
         align-self: center;
       }
+    }
+
+    .pf-m-split-toggle-button {
+      display: flex;
+      padding-inline-start: var(--#{$menu-toggle}--m-split-button--PaddingInlineStart);
     }
 
     // Split button, active
