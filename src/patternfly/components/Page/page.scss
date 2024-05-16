@@ -314,7 +314,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Main & Drawer
 .#{$page}__main-container {
-  align-self: start;
+  display: flex;
+  flex-direction: column;
   max-height: var(--#{$page}__main-container--MaxHeight);
   margin-block-start: 0;
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);

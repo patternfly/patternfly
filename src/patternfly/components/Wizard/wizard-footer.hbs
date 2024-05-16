@@ -2,15 +2,25 @@
   {{#if wizard-footer--attribute}}
     {{{wizard-footer--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-secondary"}}
-    Back
-  {{/button}}
-  {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-    Next
-  {{/button}}
-  {{#> wizard-footer-cancel}}
-    {{#> button button--modifier="pf-m-link"}}
-      Cancel
-    {{/button}}
-  {{/wizard-footer-cancel}}
+  {{#> action-list}}
+    {{#> action-list-group}}
+      {{#> action-list-item}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Back
+        {{/button}}
+      {{/action-list-item}}
+      {{#> action-list-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Next
+        {{/button}}
+      {{/action-list-item}}
+    {{/action-list-group}}
+    {{#> action-list-group}}
+      {{#> action-list-item}}
+        {{#> button button--modifier="pf-m-link"}}
+          Cancel
+        {{/button}}
+      {{/action-list-item}}
+    {{/action-list-group}}
+  {{/action-list}}
 </footer>
