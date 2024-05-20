@@ -7,58 +7,26 @@ cssPrefix: pf-v6-c-badge
 ## Examples
 ### Read
 ```hbs
-{{#> badge badge--modifier="pf-m-read"}}
-  7
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read"}}
-  24
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read"}}
-  240
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read"}}
-  999+
-{{/badge}}
+{{> badge badge--text="7"}}
+{{> badge badge--text="24"}}
+{{> badge badge--text="240"}}
+{{> badge badge--text="999+"}}
 ```
 
 ### Unread
 ```hbs
-{{#> badge badge--modifier="pf-m-unread"}}
-  7
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread"}}
-  24
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread"}}
-  240
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread"}}
-  999+
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
+{{> badge badge--IsUnread=true badge--text="7"}}
+{{> badge badge--IsUnread=true badge--text="24"}}
+{{> badge badge--IsUnread=true badge--text="240"}}
+{{> badge badge--IsUnread=true badge--text="999+"}}
 ```
 
 ### Disabled
 ```hbs
-{{#> badge badge--modifier="pf-m-unread pf-m-disabled"}}
-  7
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread pf-m-disabled"}}
-  24
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read pf-m-disabled"}}
-  240
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read pf-m-disabled"}}
-  999+
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
+{{> badge badge--IsUnread=true badge--IsDisabled=true badge--text="7"}}
+{{> badge badge--IsUnread=true badge--IsDisabled=true badge--text="24"}}
+{{> badge badge--IsDisabled=true badge--text="240"}}
+{{> badge badge--IsDisabled=true badge--text="999+"}}
 ```
 
 ## Documentation
