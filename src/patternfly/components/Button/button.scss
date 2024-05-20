@@ -15,17 +15,24 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
+  --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
   --#{$button}--hover--BorderColor: transparent;
   --#{$button}--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
   --#{$button}--hover--TextDecoration: none;
+  --#{$button}--hover--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$button}--hover--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  
 
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
   --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--button--clicked);
+  --#{$button}--m-clicked--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$button}--m-clicked--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -294,6 +301,9 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
+  transition-timing-function: var(--#{$button}--TransitionTimingFunction);
+  transition-duration: var(--#{$button}--TransitionDuration);
+  transition-property: background-color;
 
   &::after {
     position: absolute;
@@ -303,6 +313,9 @@
     border: var(--#{$button}--BorderWidth) solid;
     border-color: var(--#{$button}--BorderColor);
     border-radius: inherit;
+    transition-timing-function: var(--#{$button}--TransitionTimingFunction);
+    transition-duration: var(--#{$button}--TransitionDuration);
+    transition-property: border-color, border-width;
   }
 
   // Primary
@@ -573,6 +586,8 @@
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
     --#{$button}--TextDecoration: var(--#{$button}--hover--TextDecoration);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
+    --#{$button}--TransitionTimingFunction: var(--#{$button}--hover--TransitionTimingFunction);
+    --#{$button}--TransitionDuration: var(--#{$button}--hover--TransitionDuration);
   }
 
   &.pf-m-clicked {
@@ -581,6 +596,8 @@
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
+    --#{$button}--TransitionTimingFunction: var(--#{$button}--m-clicked--TransitionTimingFunction);
+    --#{$button}--TransitionDuration: var(--#{$button}--m-clicked--TransitionDuration);
   }
 
   // Disabled buttons
