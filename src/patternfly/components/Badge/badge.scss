@@ -63,9 +63,12 @@
     --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-unread__toggle-icon--Color);
   }
 
+  &:disabled,
   &.pf-m-disabled {
     --#{$badge}--Color: var(--#{$badge}--m-disabled--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-disabled--BackgroundColor);
+
+    pointer-events: none;
 
     &::after {
       border-color: var(--#{$badge}--m-disabled--BorderColor);
