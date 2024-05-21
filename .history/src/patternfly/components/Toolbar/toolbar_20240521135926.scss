@@ -63,7 +63,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__item--m-label--FontWeight: var(--pf-t--global--font--weight--body--bold);
 }
 
-// - Toolbar content - Toolbar content section - Toolbar group - Toolbar item - Toolbar group label container - Toolbar group label group
+// - Toolbar content - Toolbar group - Toolbar item - Toolbar group label container - Toolbar group label group
 .#{$toolbar}__content,
 .#{$toolbar}__content-section,
 .#{$toolbar}__group,
