@@ -355,6 +355,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
       @each $gap, $gap-value in $pf-v6-c-toolbar--spacer-map {
         &.pf-m-gap-#{$gap}#{$breakpoint-name} {
+          row-gap: #{$gap-value};
           column-gap: #{$gap-value};
         }
       }
@@ -366,7 +367,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
         }
 
         &.pf-m-row-gap-#{$spacer}#{$breakpoint-name} {
-          column-gap: #{$spacer-value};
+          row-gap: #{$spacer-value};
         }
 
         &.pf-m-margin-inline-start#{$spacer}#{$breakpoint-name} {
