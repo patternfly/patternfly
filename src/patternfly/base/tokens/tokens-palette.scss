@@ -5,7 +5,7 @@
 @mixin pf-v6-tokens {
   --pf-t--color--red--70: #5f0000;
   --pf-t--color--red--60: #a60000;
-  --pf-t--color--red--50: #ee0000;
+  --pf-t--color--red--50: #e00;
   --pf-t--color--red--40: #f56e6e;
   --pf-t--color--red--30: #f9a8a8;
   --pf-t--color--red--20: #fbc5c5;
@@ -52,14 +52,14 @@
   --pf-t--color--teal--30: #9ad8d8;
   --pf-t--color--teal--20: #b9e5e5;
   --pf-t--color--teal--10: #daf2f2;
-  --pf-t--color--blue--70: #003366;
+  --pf-t--color--blue--70: #036;
   --pf-t--color--blue--60: #004d99;
-  --pf-t--color--blue--50: #0066cc;
+  --pf-t--color--blue--50: #06c;
   --pf-t--color--blue--40: #4394e5;
   --pf-t--color--blue--30: #92c5f9;
   --pf-t--color--blue--20: #b9dafc;
   --pf-t--color--blue--10: #e0f0ff;
-  --pf-t--color--black: #000000;
+  --pf-t--color--black: #000;
   --pf-t--color--gray--95: #151515;
   --pf-t--color--gray--90: #1f1f1f;
   --pf-t--color--gray--80: #292929;
@@ -70,5 +70,5 @@
   --pf-t--color--gray--30: #c7c7c7;
   --pf-t--color--gray--20: #e0e0e0;
   --pf-t--color--gray--10: #f2f2f2;
-  --pf-t--color--white: #ffffff;
+  --pf-t--color--white: #fff;
 }
