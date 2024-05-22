@@ -86,6 +86,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar
 .#{$toolbar} {
+  display: grid;
   width: var(--#{$toolbar}--Width, auto);
   font-size: var(--#{$toolbar}--FontSize);
   line-height: var(--#{$toolbar}--LineHeight);
