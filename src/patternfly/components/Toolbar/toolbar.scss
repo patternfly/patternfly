@@ -370,11 +370,11 @@ $pf-v6--include-toolbar-breakpoints: true !default;
           row-gap: #{$spacer-value};
         }
 
-        &.pf-m-margin-inline-start#{$spacer}#{$breakpoint-name} {
+        &.pf-m-margin-inline-start-#{$spacer}#{$breakpoint-name} {
           margin-inline-start: #{$spacer-value};
         }
 
-        &.pf-m-margin-inline-end#{$spacer}#{$breakpoint-name} {
+        &.pf-m-margin-inline-end-#{$spacer}#{$breakpoint-name} {
           margin-inline-end: #{$spacer-value};
         }
       }
