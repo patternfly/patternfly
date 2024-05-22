@@ -574,7 +574,7 @@
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
 
-      .#{$table}__tr.pf-m-expanded:not(.pf-v6-c-table__expandable-row) {
+      .#{$table}__tr.pf-m-expanded:not(.#{$table}__expandable-row) {
         border: none;
       }
     }
