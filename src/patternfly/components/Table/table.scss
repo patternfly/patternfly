@@ -593,6 +593,14 @@
       border-block-end: 0;
     }
   }
+
+  .#{$action-list}.pf-m-icons {
+    --#{$action-list}--m-icons--ColumnGap: 0;
+  }
+
+  .#{$button} .#{$table}__sort-indicator {
+    --pf-v6-c-table__sort-indicator--MarginInlineStart: 0;
+  }
 }
 
 // - Table text
@@ -900,11 +908,13 @@
     }
   }
 
-  &.pf-m-selected .#{$table}__button {
+  &.pf-m-selected :is(.#{$table}__button, .#{$button}) {
     --#{$table}__sort-indicator--Color: var(--#{$table}__sort--m-selected__sort-indicator--Color);
 
     // override state colors on text
-    color: var(--#{$table}__sort--m-selected__button--Color);
+    .#{$table}__text {
+      color: var(--#{$table}__sort--m-selected__button--Color);
+    }
   }
 
   &.pf-m-help {

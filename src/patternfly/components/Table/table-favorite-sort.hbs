@@ -1,0 +1,18 @@
+{{#> action-list action-list--modifier='pf-m-icons'}}
+  {{#>button
+      button--IsPlain=true
+      button--id=(dasherize table--id 'favorite-button' table-tr--index)
+      button--aria-label=(ternary table-td--IsFavorited 'Starred' 'Not starred')
+      button--aria-labelledby=(dasherize table--id 'node' table-tr--index table--id 'favorite-button' table-tr--index)
+    }}
+      <i class="fas fa-star" aria-hidden="true"></i>
+  {{/button}}
+  {{#>button
+      button--IsPlain=true
+      button--id=(dasherize table--id 'sort-button' table-tr--index)
+      button--aria-label=(ternary table-td--IsFavorited 'Starred' 'Not starred')
+      button--aria-labelledby=(dasherize table--id 'node' table-tr--index table--id 'favorite-button' table-tr--index)
+    }}
+    {{> table-sort-indicator}}
+  {{/button}}
+{{/action-list}}
