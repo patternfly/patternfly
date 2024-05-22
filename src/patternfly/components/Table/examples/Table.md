@@ -1784,7 +1784,13 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Clickable and expandable example
 ```hbs
-{{#> table table--id="table-expandable-clickable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable and clickable table example"'}}
+{{#>table
+    table--IsGrid=true
+    table--IsExpandable=true
+    table--id='table-expandable-clickable'
+    table--modifier='pf-m-grid-lg'
+    table--attribute='aria-label="Expandable and clickable table example"'
+  }}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table-cell-empty}}
@@ -1802,11 +1808,20 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
-  {{#> wrapper table-tbody--IsClickable="true" table-tbody--expandable--title="Clickable and not expanded"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="1"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="2" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true" table-tbody--expandable--title="<b>Clicked and expanded</b>"}}
+  {{#> wrapper table-tbody--IsClickable=true table-tbody--expandable--title='Clickable and not expanded'}}
+    {{> table-tbody--expandable table-tbody--expandable--index='1'}}
+    {{> table-tbody--expandable
+        table-tbody--IsSelected=true
+        table-tbody--expandable--index='2'
+        table-tbody--expandable--title='<b>Clicked and expanded</b>'
+        table-tr--IsExpanded=true
+      }}
     {{> table-tbody--expandable table-tbody--expandable--index="3"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="4" table-tbody--expandable--IsExpanded="true" table-tbody--expandable--title="Clickable and expanded"}}
+    {{> table-tbody--expandable
+        table-tbody--expandable--index='4'
+        table-tbody--expandable--title='Clickable and expanded'
+        table-tr--IsExpanded=true
+      }}
   {{/wrapper}}
 {{/table}}
 ```

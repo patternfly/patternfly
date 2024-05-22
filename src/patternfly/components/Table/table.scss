@@ -124,6 +124,7 @@
   --#{$table}__expandable-row-content--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table control row
   --#{$table}__control-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -572,6 +573,10 @@
     &.pf-m-selected {
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
+
+      .#{$table}__tr.pf-m-expanded:not(.#{$table}__expandable-row) {
+        border: none;
+      }
     }
   }
 
@@ -959,6 +964,7 @@
     padding-block-end: var(--#{$table}__expandable-row-content--PaddingBlockEnd);
     padding-inline-start: var(--#{$table}__expandable-row-content--PaddingInlineStart);
     padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
+    background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
     border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
   }
 
