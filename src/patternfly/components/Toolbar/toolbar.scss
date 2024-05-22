@@ -74,15 +74,19 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   flex-wrap: wrap;
 }
 
+.#{$toolbar}__content {
+  @include pf-v6-hidden-visible(grid);
+}
+
 // - Toolbar - Toolbar content
 .#{$toolbar},
 .#{$toolbar}__content {
   position: relative;
-  display: grid;
 }
 
 // - Toolbar
 .#{$toolbar} {
+  display: grid;
   width: var(--#{$toolbar}--Width, auto);
   font-size: var(--#{$toolbar}--FontSize);
   line-height: var(--#{$toolbar}--LineHeight);
