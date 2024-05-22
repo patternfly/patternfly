@@ -1,9 +1,5 @@
 <span class="{{pfv}}badge
-  {{#if badge--IsUnread}}
-    pf-m-unread 
-  {{else}}
-    pf-m-read 
-  {{/if}}
+  {{#if badge--IsUnread}}pf-m-unread {{/if}}
   {{#if badge--IsDisabled}}pf-m-disabled {{/if}}
   {{#if badge--modifier}} {{badge--modifier}}{{/if}}"
   {{#if badge--attribute}}
@@ -15,6 +11,8 @@
     {{> @partial-block}}
   {{/if}}
   {{#if badge--IsUnread}}
-    {{#> screen-reader}}unread messages{{/screen-reader}}
+    {{#unless badge--IsDisabled}}
+      {{#> screen-reader}}unread messages{{/screen-reader}}
+    {{/unless}}
   {{/if}}
 </span>
