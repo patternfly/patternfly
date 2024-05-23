@@ -1,7 +1,3 @@
-{{!-- TODO: update `table-td` to `table-cell` --}}
-{{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
-{{!-- TODO: automate attribution --}}
-
-{{#> table-td table-td--IsEmpty=true}}
-  {{> screen-reader screen-reader--text=table-cell--text}}
-{{/table-td}}
+{{#> table-cell table-cell--classname='__cell-empty'}}
+  {{> screen-reader screen-reader--text=(ternary table-cell--text table-cell--text 'Actions')}}
+{{/table-cell}}

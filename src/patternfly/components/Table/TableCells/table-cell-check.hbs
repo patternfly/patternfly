@@ -1,11 +1,7 @@
-{{!-- TODO: update `table-td` to `table-cell` --}}
-{{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
-{{!-- TODO: automate attribution --}}
-
-{{#> table-td table-td--IsCheckbox=true}}
+{{#> table-cell table-cell--classname='__check' table-cell--aria-label=(ternary IsThead 'Check all rows' 'Check row')}}
   {{> check
       check--IsStandalone=true
       check--IsLabelWrapped=true
       check--id=(ternary table-cell-check--id table-cell-check--id (dasherize table--id 'checkrow' table-tr--index 'check'))
     }}
-{{/table-td}}
+{{/table-cell}}

@@ -1,0 +1,7 @@
+{{#> table-cell table-cell--classname='__check'}}
+  {{#if table-cell--IsEmpty}}
+    {{> screen-reader screen-reader--text=(ternary table-cell--text table-cell--text 'Row select')}}
+  {{else}}
+    {{> radio radio--id=(concat table--id '-node' table-tr--index '-radio') radio--IsStandalone=true radio--IsLabelWrapped=true}}
+  {{/if}}
+{{/table-cell}}
