@@ -142,7 +142,7 @@ cssPrefix: pf-v6-c-pagination
 | `.pf-v6-c-pagination` | `<div>` |  Initiates pagination. |
 | `.pf-v6-c-pagination__current` | `<div>` |  Initiates element to display currently displayed items for use in responsive view. Only needed for default pagination, not `.pf-m-bottom`. |
 | `.pf-v6-c-pagination__total-items` | `<div>` | Initiates element to replace the menu toggle on summary. |
-| `pf-v6-c-pagination__page-menu` | `<div>` | Initiates wrapper element for the pagination menu toggle. **Required** when a menu toggle is intended or expected to be rendered. |
+| `.pf-v6-c-pagination__page-menu` | `<div>` | Initiates wrapper element for the pagination menu toggle. **Required** when a menu toggle is intended or expected to be rendered. |
 | `.pf-v6-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-v6-c-pagination__nav-control` | `<div>` |  Initiates pagination nav control. |
 | `.pf-v6-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |

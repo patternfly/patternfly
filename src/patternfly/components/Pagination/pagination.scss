@@ -47,7 +47,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
 
   // options menu
-  --#{$pagination}__page-menu--Display--base: inline-flex;
+  --#{$pagination}__page-menu--Display--base: block;
   --#{$pagination}__page-menu--Display: none;
   --#{$pagination}--m-display-summary__page-menu--Display: none;
   --#{$pagination}--m-display-full__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
