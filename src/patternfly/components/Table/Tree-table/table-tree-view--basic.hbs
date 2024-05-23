@@ -21,9 +21,7 @@
 
       {{!-- TODO: fix this after merge --}}
       {{#if table--HasActions}}
-        {{#> table-th table-th--IsEmpty=true}}
-          {{> screen-reader screen-reader--text=table-cell--text}}
-        {{/table-th}}
+        {{> table-cell-empty}}
       {{/if}}
     {{/table-tr}}
   {{/table-thead}}
