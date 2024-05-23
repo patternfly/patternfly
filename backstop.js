@@ -2,26 +2,26 @@ const config = require('./backstop.config');
 const scenarios = [];
 const viewports = [];
 
-config.relativeUrls.map(relativeUrl => {
-  const url = (relativeUrl.url || relativeUrl);
+config.relativeUrls.map((relativeUrl) => {
+  const url = relativeUrl.url || relativeUrl;
   const fullUrl = `${config.baseUrl}${url}`;
   return scenarios.push({
     label: url,
     url: fullUrl,
-    delay: (relativeUrl.delay || 100), // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
-    readySelector: '.ws-full-page-utils',
+    delay: relativeUrl.delay || 100, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
+    readySelector: '.page-loaded',
     removeSelectors: ['.ws-full-page-utils'],
     misMatchThreshold: 0.1
-  })
+  });
 });
 
-Object.keys(config.viewports).map(viewport => (
+Object.keys(config.viewports).map((viewport) =>
   viewports.push({
     name: viewport,
     width: config.viewports[viewport].width,
     height: config.viewports[viewport].height
   })
-));
+);
 
 module.exports = {
   id: 'pf-core',
@@ -34,10 +34,7 @@ module.exports = {
   engineOptions: {
     // executablePath: '/Users/cmichael/Desktop/browsers/chrome-124/Chromium.app/Contents/MacOS/Chromium', // tells puppeteer to use a specific browser instead of the default that comes with puppeteer
     headless: 'new',
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox'
-    ]
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   },
   paths: {
     bitmaps_reference: 'backstop_data/bitmaps_reference',
