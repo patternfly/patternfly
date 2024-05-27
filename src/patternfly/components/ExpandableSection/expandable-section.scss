@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$expandable-section}) {
+@include pf-root($expandable-section) {
   --#{$expandable-section}--Gap: var(--pf-t--global--spacer--sm);
 
   // Toggle icon

@@ -9,7 +9,7 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
   @for $col-num from 1 through 12 {
     &.pf-m-all-#{$col-num}-col#{$suffix} {
       > * {
-        --#{$grid}__item--GridColumnEnd: span #{$col-num};
+        grid-column-end: span #{$col-num};
       }
     }
   }
@@ -21,14 +21,14 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
   // generate column span modifier
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
-      --#{$grid}__item--GridColumnEnd: span #{$col-num};
+      grid-column-end: span #{$col-num};
     }
   }
 
   // generate column offset modfiers
   @for $col-num from 1 through 12 {
     > .pf-m-offset-#{$col-num}-col#{$suffix} {
-      --#{$grid}__item--GridColumnStart: col-start calc(#{$col-num} + 1);
+      grid-column-start: col-start calc(#{$col-num} + 1);
     }
   }
 
@@ -41,7 +41,7 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
 }
 
 // Grid base
-:where(:root, .#{$grid}) {
+@include pf-root($grid) {
   --#{$grid}--m-gutter--GridGap: var(--pf-t--global--spacer--gutter--default);
   --#{$grid}__item--GridColumnStart: auto;
   --#{$grid}__item--GridColumnEnd: span 12;

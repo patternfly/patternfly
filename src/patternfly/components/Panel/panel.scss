@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$panel}) {
+@include pf-root($panel) {
   --#{$panel}--Width: auto;
   --#{$panel}--MinWidth: auto;
   --#{$panel}--MaxWidth: none;

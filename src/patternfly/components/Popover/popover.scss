@@ -1,10 +1,8 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$popover}) {
+@include pf-root($popover) {
   // Component
   --#{$popover}--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
-  --#{$popover}--MaxWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
   --#{$popover}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$popover}--BorderRadius: var(--pf-t--global--border--radius--medium);
 
@@ -47,7 +45,7 @@
   --#{$popover}__arrow--m-block-right--InsetInlineEnd: var(--pf-t--global--border--radius--medium);
 
   // Close
-  --#{$popover}__close--InsetBlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - var(--pf-t--global--spacer--control--vertical--default)); // align top of button with top of text 
+  --#{$popover}__close--InsetBlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - var(--pf-t--global--spacer--control--vertical--default)); // align top of button with top of text
   --#{$popover}__close--InsetInlineEnd: var(--#{$popover}__content--PaddingInlineEnd); // align right of content
   --#{$popover}__close--sibling--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
 
@@ -70,20 +68,22 @@
 
 .#{$popover} {
   position: relative;
-  min-width: var(--#{$popover}--MinWidth);
-  max-width: var(--#{$popover}--MaxWidth);
+  min-width: var(--#{$popover}--MinWidth, calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)}));
+  max-width: var(--#{$popover}--MaxWidth, calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)}));
   font-size: var(--#{$popover}--FontSize);
   border-radius: var(--#{$popover}--BorderRadius);
   box-shadow: var(--#{$popover}--BoxShadow);
 
   &.pf-m-no-padding {
-    // Use px values below so the min/max-width calc() doesn't break
-    // stylelint-disable length-zero-no-unit
-    --#{$popover}__content--PaddingBlockStart: 0px;
-    --#{$popover}__content--PaddingInlineEnd: 0px;
-    --#{$popover}__content--PaddingBlockEnd: 0px;
-    --#{$popover}__content--PaddingInlineStart: 0px;
-    // stylelint-enable
+    min-width: #{pf-size-prem(300px)};
+    max-width: #{pf-size-prem(300px)};
+
+    .#{$popover}__content {
+      padding-block-start: 0;
+      padding-block-end: 0;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+    }
   }
 
   &.pf-m-width-auto {
@@ -205,7 +205,7 @@
 // Close button
 .#{$popover}__close {
   position: absolute;
-  inset-block-start: var(--#{$popover}__close--InsetBlockStart);
+  inset-block-start: calc(var(--#{$popover}__content--PaddingBlockStart) - var(--pf-t--global--spacer--control--vertical--default)); // align top of button with top of text
   inset-inline-end: var(--#{$popover}__close--InsetInlineEnd);
 
   // Create room for the close button

@@ -1,8 +1,9 @@
 @use '../../sass-utilities' as *;
 
 $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-description-list--term-width: 12ch;
 
-:where(:root, .#{$description-list}) {
+@include pf-root($description-list) {
   --#{$description-list}--RowGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--lg);
   --#{$description-list}--GridTemplateColumns--count: 1;
@@ -12,7 +13,6 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   // group
   --#{$description-list}__group--RowGap: var(--pf-t--global--spacer--sm);
   --#{$description-list}__group--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$description-list}__group--GridTemplateColumns: auto;
   --#{$description-list}__group--GridTemplateRows: auto 1fr;
   --#{$description-list}__group--GridColumn: auto;
 
@@ -26,6 +26,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}__term--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$description-list}__term--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$description-list}__term--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$description-list}__term--width--base: 12ch;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
     --#{$description-list}__term--Display: var(--#{$description-list}__term--sm--Display);
@@ -36,22 +37,11 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}__term-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$description-list}__term-icon--Color: var(--pf-t--global--icon--color--subtle);
 
-  // vertical
-  --#{$description-list}--m-vertical__group--GridTemplateColumns: repeat(var(--#{$description-list}--GridTemplateColumns--count));
-  --#{$description-list}--m-vertical__group--GridTemplateRows: auto 1fr;
-
   // horizontal
-  --#{$description-list}--m-horizontal__term--width: 12ch;
-  --#{$description-list}--m-horizontal__description--width: minmax(10ch, auto);
-  --#{$description-list}--m-horizontal__group--GridTemplateColumns: var(--#{$description-list}__term--width) var(--#{$description-list}--m-horizontal__description--width); // use --#{$description-list}__term--width here as it is re-defined on line 45
-  --#{$description-list}--m-horizontal__group--GridTemplateRows: auto;
-  --#{$description-list}--m-1-col--GridTemplateColumns--count: 1;
-  --#{$description-list}--m-2-col--GridTemplateColumns--count: 2;
-  --#{$description-list}--m-3-col--GridTemplateColumns--count: 3;
+  --#{$description-list}__description--width: minmax(10ch, auto);
 
   // auto-fit
-  --#{$description-list}--m-auto-fit--GridTemplateColumns--min: #{pf-size-prem(250px)};
-  --#{$description-list}--m-auto-fit--GridTemplateColumns--minmax--min: var(--#{$description-list}--m-auto-fit--GridTemplateColumns--min);
+  --#{$description-list}--m-auto-fit--GridTemplateColumns--min--base: #{pf-size-prem(250px)};
 
   // help text
   --#{$description-list}__text--m-help-text--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--default);
@@ -64,8 +54,9 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}--m-display-lg__description--FontSize: var(--pf-t--global--font--size--body--lg); // TODO replace with new font tokens when available
   --#{$description-list}--m-display-2xl__description--FontSize: var(--pf-t--global--font--size--heading--lg); // TODO replace with new font tokens when available
 
-  @include pf-v6-output-root-variables("--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
-  @include pf-v6-build-css-variable-stack("--#{$description-list}__term--width", "--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
+  @include pf-v6-output-root-variables("--#{$description-list}__term--width", $breakpoint-map: $pf-v6-c-description-list--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$description-list}__term--width", "--#{$description-list}__term--width--base", $breakpoint-map: $pf-v6-c-description-list--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$description-list}--m-auto-fit--GridTemplateColumns--min", "--#{$description-list}--m-auto-fit--GridTemplateColumns--min--base", $pf-v6-c-description-list--breakpoint-map);
 }
 
 .#{$description-list} {
@@ -79,23 +70,9 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
     display: inline-grid;
   }
 
-  &.pf-m-auto-column-widths {
-    --#{$description-list}--GridTemplateColumns--width: minmax(8ch, max-content);
-  }
-
-  &.pf-m-auto-fit {
-    grid-template-columns: repeat(auto-fit, minmax(var(--#{$description-list}--m-auto-fit--GridTemplateColumns--minmax--min), 1fr));
-
-    @include pf-v6-build-css-variable-stack("--#{$description-list}--GridTemplateColumns--minmax--min", "--#{$description-list}--GridTemplateColumns--min", $pf-v6-c-description-list--breakpoint-map);
-  }
-
   &.pf-m-compact {
     --#{$description-list}--RowGap: var(--#{$description-list}--m-compact--RowGap);
     --#{$description-list}--ColumnGap: var(--#{$description-list}--m-compact--ColumnGap);
-  }
-
-  &.pf-m-fluid {
-    --#{$description-list}--m-horizontal__term--width: fit-content(20ch);
   }
 
   &.pf-m-fill-columns {
@@ -103,8 +80,8 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
     column-count: var(--#{$description-list}--GridTemplateColumns--count);
     margin-block-end: calc(var(--#{$description-list}--RowGap) * -1);
 
-    .#{$description-list}__group,
-    > .#{$card} {
+    > .#{$card},
+    > .#{$description-list}__group {
       display: inline-grid;
       width: 100%;
       margin-block-end: var(--#{$description-list}--RowGap);
@@ -139,7 +116,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 .#{$description-list} > .#{$card} {
   display: grid;
   grid-template-rows: var(--#{$description-list}__group--GridTemplateRows);
-  grid-template-columns: var(--#{$description-list}__group--GridTemplateColumns);
+  grid-template-columns: auto;
   grid-column: var(--#{$description-list}__group--GridColumn);
   row-gap: var(--#{$description-list}__group--RowGap);
   column-gap: var(--#{$description-list}__group--ColumnGap);
@@ -198,26 +175,47 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-1-col#{$breakpoint-name} {
-        --#{$description-list}--GridTemplateColumns--count: var(--#{$description-list}--m-1-col--GridTemplateColumns--count);
+        --#{$description-list}--GridTemplateColumns--count: 1;
       }
 
       &.pf-m-2-col#{$breakpoint-name} {
-        --#{$description-list}--GridTemplateColumns--count: var(--#{$description-list}--m-2-col--GridTemplateColumns--count);
+        --#{$description-list}--GridTemplateColumns--count: 2;
       }
 
       &.pf-m-3-col#{$breakpoint-name} {
-        --#{$description-list}--GridTemplateColumns--count: var(--#{$description-list}--m-3-col--GridTemplateColumns--count);
+        --#{$description-list}--GridTemplateColumns--count: 3;
       }
 
       &.pf-m-horizontal#{$breakpoint-name} {
-        --#{$description-list}__group--GridTemplateColumns: var(--#{$description-list}--m-horizontal__group--GridTemplateColumns);
-        --#{$description-list}__group--GridTemplateRows: var(--#{$description-list}--m-horizontal__group--GridTemplateRows);
+        > .#{$card},
+        > .#{$description-list}__group {
+          grid-template-rows: auto;
+          grid-template-columns: var(--#{$description-list}__term--width) var(--#{$description-list}__description--width); // use --#{$description-list}__term--width here as it is re-defined on line 45
+        }
       }
 
       &.pf-m-vertical#{$breakpoint-name} {
-        --#{$description-list}__group--GridTemplateColumns: var(--#{$description-list}--m-vertical__group--GridTemplateColumns);
-        --#{$description-list}__group--GridTemplateRows: var(--#{$description-list}--m-vertical__group--GridTemplateRows);
+        > .#{$card},
+        > .#{$description-list}__group {
+          grid-template-rows: auto 1fr;
+          grid-template-columns: repeat(var(--#{$description-list}--GridTemplateColumns--count));
+        }
       }
+    }
+  }
+
+  &.pf-m-auto-column-widths {
+    grid-template-columns: repeat(var(--#{$description-list}--GridTemplateColumns--count), minmax(8ch, max-content));
+  }
+
+  &.pf-m-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(var(--#{$description-list}--m-auto-fit--GridTemplateColumns--min), 1fr));
+  }
+
+  &.pf-m-fluid {
+    > .#{$card},
+    > .#{$description-list}__group {
+      grid-template-columns: fit-content(20ch) auto;
     }
   }
 }

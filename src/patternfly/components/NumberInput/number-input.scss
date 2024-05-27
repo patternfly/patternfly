@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$number-input}) {
+@include pf-root($number-input) {
   // unit
   --#{$number-input}__unit--c-input-group--MarginInlineStart: var(--pf-t--global--spacer--sm);
 
@@ -11,12 +11,6 @@
   --#{$number-input}--c-form-control--width-base: calc(var(--pf-t--global--spacer--md) * 2 + var(--pf-t--global--border--width--box--default) * 2); // form controls's padding
   --#{$number-input}--c-form-control--width-icon: var(--pf-t--global--spacer--xl); // extra width to accommodate a status icon
   --#{$number-input}--c-form-control--width-chars: 4;
-  --#{$number-input}--c-form-control--Width:
-    calc(
-      calc(
-        var(--#{$number-input}--c-form-control--width-base) + var(--#{$number-input}--c-form-control--width-chars) * 1ch
-      ) + var(--#{$number-input}--c-form-control--width-icon)
-    );
 }
 
 .#{$number-input} {
@@ -24,7 +18,11 @@
   align-items: center;
 
   .#{$form-control} {
-    width: var(--#{$number-input}--c-form-control--Width);
+    width: calc(
+      calc(
+        var(--#{$number-input}--c-form-control--width-base) + var(--#{$number-input}--c-form-control--width-chars) * 1ch
+      ) + var(--#{$number-input}--c-form-control--width-icon)
+    );
 
     > :is(input) {
       text-align: end;

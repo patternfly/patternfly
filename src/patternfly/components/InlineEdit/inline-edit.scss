@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$inline-edit}) {
+@include pf-root($inline-edit) {
   // Group
   --#{$inline-edit}__group--item--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
 

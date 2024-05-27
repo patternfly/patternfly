@@ -21,14 +21,8 @@ cssPrefix: pf-d-dashboard
         {{/l-flex}}
       {{/grid-item}}
       {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:2"'}}
-        {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md pf-m-column-on-lg"}}
-          {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-            {{> card-template-details card-template-details--id=(concat page-template--id '-details-card-1')}}
-          {{/l-flex-item}}
-          {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-            {{> card-template-data-list card-template-data-list--id=(concat page-template--id '-data-list-card-1')}}
-          {{/l-flex-item}}
-        {{/l-flex}}
+        {{> card-template-details card-template-details--id=(concat page-template--id '-details-card-1')}}
+        {{> card-template-data-list card-template-data-list--id=(concat page-template--id '-data-list-card-1')}}
       {{/grid-item}}
       {{#> grid-item grid-item--modifier="pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:4"'}}
         {{#> l-flex l-flex--modifier="pf-m-column"}}

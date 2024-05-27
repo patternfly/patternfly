@@ -1,0 +1,26 @@
+@use '../../sass-utilities' as *;
+@use './progress-stepper-layout';
+
+$pf-v6--include-progress-stepper-breakpoints: true !default;
+$pf-v6-c-progress-stepper--breakpoint-map: "base";
+
+@if $pf-v6--include-progress-stepper-breakpoints {
+  $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map('sm', 'md', 'lg', 'xl', '2xl');
+}
+
+// stylelint-disable
+.#{$progress-stepper} {
+  @each $breakpoint, $breakpoint-value in $pf-v6-c-progress-stepper--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-v6-apply-breakpoint($breakpoint) {
+      &.pf-m-horizontal#{$breakpoint-name} {
+        @include progress-stepper-layout.pf-v6-c-progress-stepper--m-horizontal;
+      }
+
+      &.pf-m-vertical#{$breakpoint-name} {
+        @include progress-stepper-layout.pf-v6-c-progress-stepper--m-vertical;
+      }
+    }
+  }
+}

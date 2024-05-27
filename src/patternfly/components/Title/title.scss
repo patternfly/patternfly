@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$title}) {
+@include pf-root($title) {
   --#{$title}--FontFamily: var(--pf-t--global--font--family--heading);
 
   // SIZE modifiers (note that the modifier names match PF5 sizes but use tokens that don't match in name

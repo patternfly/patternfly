@@ -10,8 +10,9 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map();
 }
 
-:where(:root, .#{$toolbar}) {
+@include pf-root($toolbar) {
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingBlockStart: 0;
   --#{$toolbar}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingInlineStart: 0;
@@ -392,7 +393,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     }
 
     // - Toolbar toggle group
-    .#{$toolbar}__group:where(.pf-m-toggle-group) {
+    .#{$toolbar}__group.pf-m-toggle-group {
       &.pf-m-show#{$breakpoint-name} {
         .#{$toolbar}__group,
         .#{$toolbar}__item {

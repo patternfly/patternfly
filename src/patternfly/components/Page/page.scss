@@ -5,7 +5,7 @@ $pf-page-v6--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl"
 $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 // stylelint-enable
 
-:where(:root, .#{$page}) {
+@include pf-root($page) {
   --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
 
@@ -57,7 +57,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--masthead--main-container--GridArea: sidebar / sidebar / main / main; // no sidebar
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset); 
+  --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$page}__main-container--BorderWidth: var(--pf-t--global--spacer--sm); // TODO Change to be a page outline token
@@ -76,7 +76,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
-  
+
   // Sticky
   --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);

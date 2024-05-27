@@ -4,7 +4,7 @@
 $pf-v6-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
-:where(:root, .#{$sidebar}) {
+@include pf-root($sidebar) {
   --#{$sidebar}--inset: var(--pf-t--global--spacer--md);
   --#{$sidebar}--xl--inset: var(--pf-t--global--spacer--lg);
   --#{$sidebar}--BorderWidth--base: var(--pf-t--global--border--width--regular);
@@ -44,7 +44,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__main--child--MarginBlockStart: 0;
 
   // Gutter
-  --#{$sidebar}--m-gutter__main--Gap: var(--#{$sidebar}--inset);
+  --#{$sidebar}--m-gutter__main--Gap: var(--pf-t--global--spacer--gutter--default);
 
   // Border
   --#{$sidebar}__main--m-border--before--Display: none;
@@ -182,24 +182,24 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   box-shadow: var(--#{$sidebar}__panel--BoxShadow);
 
   &.pf-m-padding {
-    --#{$sidebar}__panel--PaddingBlockStart: var(--#{$sidebar}__panel--m-padding--PaddingBlockStart);
-    --#{$sidebar}__panel--PaddingInlineEnd: var(--#{$sidebar}__panel--m-padding--PaddingInlineEnd);
-    --#{$sidebar}__panel--PaddingBlockEnd: var(--#{$sidebar}__panel--m-padding--PaddingBlockEnd);
-    --#{$sidebar}__panel--PaddingInlineStart: var(--#{$sidebar}__panel--m-padding--PaddingInlineStart);
+    padding-block-start: var(--#{$sidebar}__panel--m-padding--PaddingBlockStart);
+    padding-block-end: var(--#{$sidebar}__panel--m-padding--PaddingBlockEnd);
+    padding-inline-start: var(--#{$sidebar}__panel--m-padding--PaddingInlineStart);
+    padding-inline-end: var(--#{$sidebar}__panel--m-padding--PaddingInlineEnd);
   }
 
   &.pf-m-sticky {
-    --#{$sidebar}__panel--Position: var(--#{$sidebar}__panel--m-sticky--Position);
-    --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}__panel--m-sticky--InsetBlockStart);
+    position: var(--#{$sidebar}__panel--m-sticky--Position);
+    inset-block-start: var(--#{$sidebar}__panel--m-sticky--InsetBlockStart);
   }
 
   &.pf-m-static {
-    --#{$sidebar}__panel--Position: static;
-    --#{$sidebar}__panel--InsetBlockStart: auto;
+    position: static;
+    inset-block-start: auto;
   }
 
   &.pf-m-secondary {
-    --#{$sidebar}__panel--BackgroundColor: var(--#{$sidebar}__panel--m-secondary--BackgroundColor);
+    background-color: var(--#{$sidebar}__panel--m-secondary--BackgroundColor);
   }
 }
 
@@ -213,26 +213,26 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   background-color: var(--#{$sidebar}__content--BackgroundColor);
 
   &.pf-m-padding {
-    --#{$sidebar}__content--PaddingBlockStart: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
-    --#{$sidebar}__content--PaddingInlineEnd: var(--#{$sidebar}__content--m-padding--PaddingInlineEnd);
-    --#{$sidebar}__content--PaddingBlockEnd: var(--#{$sidebar}__content--m-padding--PaddingBlockEnd);
-    --#{$sidebar}__content--PaddingInlineStart: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
+    padding-block-start: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
+    padding-block-end: var(--#{$sidebar}__content--m-padding--PaddingBlockEnd);
+    padding-inline-start: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
+    padding-inline-end: var(--#{$sidebar}__content--m-padding--PaddingInlineEnd);
   }
 
   &.pf-m-no-background {
-    --#{$sidebar}__content--BackgroundColor: transparent;
+    background-color: transparent;
   }
 
   &.pf-m-secondary {
-    --#{$sidebar}__content--BackgroundColor: var(--#{$sidebar}__content--m-secondary--BackgroundColor);
+    background-color: var(--#{$sidebar}__content--m-secondary--BackgroundColor);
   }
 
   & + .#{$sidebar}__panel {
-    --#{$sidebar}__panel--Order: 1;
+    order: 1;
   }
 
-  :where(&:first-child) {
-    --#{$sidebar}__content--Order: -1;
+  &:first-child {
+    order: -1;
   }
 }
 

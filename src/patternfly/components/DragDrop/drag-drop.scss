@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$draggable}) {
+@include pf-root($draggable) {
   --#{$draggable}--Cursor: auto;
   --#{$draggable}--m-dragging--Cursor: grabbing;
   --#{$draggable}--m-dragging--BoxShadow: var(--pf-t--global--box-shadow--md);
@@ -40,7 +40,7 @@
   }
 }
 
-:where(:root, .#{$droppable}) {
+@include pf-root($droppable) {
   --#{$droppable}--before--BackgroundColor: transparent;
   --#{$droppable}--before--Opacity: 0;
   --#{$droppable}--after--BorderWidth: 0;

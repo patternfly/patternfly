@@ -3,7 +3,7 @@
 $pf-v6-c-pagination--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root, .#{$pagination}) {
+@include pf-root($pagination) {
   --#{$pagination}--inset: 0;
   --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
 

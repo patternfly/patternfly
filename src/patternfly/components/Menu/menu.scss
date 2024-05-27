@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$menu}) {
+@include pf-root($menu) {
   // * Menu
   --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$menu}--Width: auto;
@@ -264,7 +264,7 @@
       transition: var(--#{$menu}--m-drilldown__content--Transition);
     }
 
-    :where(.#{$menu}) {
+    .#{$menu} {
       padding: 0;
     }
 
@@ -437,7 +437,7 @@
 }
 
 // - Menu list
-.#{$menu}__list :where(.#{$divider}:is(li)) {
+.#{$menu}__list .#{$divider}:is(li) {
   margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
   margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
 }
@@ -463,8 +463,8 @@
   }
 
   // - Menu item load
-  &.pf-m-load {
-    --#{$menu}__item--Color: var(--#{$menu}__list-item--m-load__item--Color);
+  &.pf-m-load .#{$menu}__item {
+    color: var(--#{$menu}__list-item--m-load__item--Color);
   }
 
   // - Menu item loading
@@ -480,10 +480,10 @@
 
   // - Menu item danger
   &.pf-m-danger {
-    --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--Color);
+    color: var(--#{$menu}__list-item--m-danger--Color);
 
-    &:is(:hover, :focus) {
-      --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--hover--Color, var(--#{$menu}__list-item--m-danger--Color));
+    &:is(:hover, :focus) .#{$menu}__item {
+      color: var(--#{$menu}__list-item--m-danger--hover--Color, var(--#{$menu}__list-item--m-danger--Color));
     }
   }
 
@@ -494,7 +494,7 @@
   &.pf-m-focus,
   &:focus-within,
   &:has(> :hover) {
-    --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
+    background-color: var(--#{$menu}__list-item--hover--BackgroundColor);
 
     .#{$menu}__item-select-icon,
     .#{$menu}__item-external-icon {
@@ -516,21 +516,21 @@
   font-size: var(--#{$menu}__item--FontSize);
   font-weight: var(--#{$menu}__item--FontWeight);
   line-height: var(--#{$menu}__item--LineHeight);
-  color: var(--#{$menu}__item--Color);
   text-align: start;
-  text-decoration: none;
   background-color: var(--#{$menu}__item--BackgroundColor);
   border: 0;
   outline-offset: var(--#{$menu}--OutlineOffset);
 
   @include pf-v6-hidden-visible(flex);
 
-  @at-root :where(label)#{&} {
-    cursor: pointer;
-  }
 
   &.pf-m-selected {
     --#{$menu}__item-select-icon--Color: var(--#{$menu}__item--m-selected__item-select-icon--Color);
+  }
+
+  &, &:hover, &:focus, &.pf-m-selected {
+    color: var(--#{$menu}__item--Color);
+    text-decoration: none;
   }
 
   &:is(:hover, :focus, .pf-m-selected) {
@@ -543,6 +543,10 @@
       color: var(--#{$menu}__item-external--Color);
     }
   }
+}
+
+label.#{$menu}__item {
+  cursor: pointer;
 }
 
 // - Menu item select icon
@@ -619,12 +623,11 @@
 
 // - Menu breadcrumb
 .#{$menu}__breadcrumb {
-  --#{$breadcrumb}__item--FontSize: var(--#{$menu}__breadcrumb--FontSize);
-
   padding-block-start: var(--#{$menu}__breadcrumb--PaddingBlockStart);
   padding-block-end: var(--#{$menu}__breadcrumb--PaddingBlockEnd);
   padding-inline-start: var(--#{$menu}__breadcrumb--PaddingInlineStart);
   padding-inline-end: var(--#{$menu}__breadcrumb--PaddingInlineEnd);
+  font-size: var(--#{$menu}__breadcrumb--FontSize);
 
   .#{$menu} {
     min-width: auto;

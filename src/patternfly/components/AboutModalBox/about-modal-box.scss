@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$about-modal-box}) {
+@include pf-root($about-modal-box) {
     // Component variables
   --#{$about-modal-box}--BackgroundImage: none;
   --#{$about-modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$wizard}) {
+@include pf-root($wizard) {
   --#{$wizard}--Height: initial;
   --#{$wizard}--Height--base: 100%;
   --#{$modal-box}--c-wizard--Height--base: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal
@@ -493,7 +493,8 @@
     --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
   }
 
-  &:where(:hover, :focus) {
+  &:hover,
+  &:focus {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
     --#{$wizard}__nav-link-main--BackgroundColor: var(--#{$wizard}__nav-link--hover--BackgroundColor);
   }
@@ -570,8 +571,8 @@
     padding: 0;
   }
 
-  &:last-child { 
-    flex-grow: 1; 
+  &:last-child {
+    flex-grow: 1;
   }
 }
 

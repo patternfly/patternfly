@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$slider}) {
+@include pf-root($slider) {
   --#{$slider}--value: 0; // should always be set inline
   --#{$slider}__step--InsetInlineStart: 0; // should always be set inline
 
@@ -11,7 +11,6 @@
   --#{$slider}__rail-track--before--base--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
   --#{$slider}__rail-track--before--fill--BackgroundColor: var(--pf-t--global--border--color--hover);
   --#{$slider}__rail-track--before--BorderRadius: var(--pf-t--global--border--radius--tiny);
-  --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
 
   // steps
   --#{$slider}__steps--FontSize: var(--pf-t--global--font--size--sm);
@@ -38,7 +37,6 @@
   --#{$slider}__thumb--InsetBlockStart: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--pf-t--global--spacer--md));
   --#{$slider}__thumb--Width: #{pf-size-prem(16px)};
   --#{$slider}__thumb--Height: #{pf-size-prem(16px)};
-  --#{$slider}__thumb--InsetInlineStart: var(--#{$slider}--value);
   --#{$slider}__thumb--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$slider}__thumb--TranslateX: -50%;
   --#{$slider}__thumb--TranslateY: -50%;
@@ -64,7 +62,6 @@
   --#{$slider}__value--c-form-control--Width: calc(var(--#{$slider}__value--c-form-control--width-base) + var(--#{$slider}__value--c-form-control--width-chars) * 1ch);
   --#{$slider}__value--m-floating--TranslateX: -50%;
   --#{$slider}__value--m-floating--TranslateY: -100%;
-  --#{$slider}__value--m-floating--InsetInlineStart: var(--#{$slider}--value);
   --#{$slider}__value--m-floating--ZIndex: var(--pf-t--global--z-index--sm);
 
   // actions
@@ -88,8 +85,11 @@
 
   &.pf-m-disabled {
     --#{$slider}__rail-track--before--fill--BackgroundColor: var(--#{$slider}--m-disabled__rail-track--before--fill--BackgroundColor);
-    --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--#{$slider}--m-disabled__step--m-active__slider-tick--BackgroundColor);
     --#{$slider}__thumb--BackgroundColor: var(--#{$slider}--m-disabled__thumb--BackgroundColor);
+
+    .#{$slider}__step-tick {
+      background-color: var(--#{$slider}--m-disabled__step--m-active__slider-tick--BackgroundColor);
+    }
 
     .#{$slider}__rail,
     .#{$slider}__thumb {
@@ -124,8 +124,8 @@
       linear-gradient(
         to var(--#{$slider}__rail-track--before--fill--direction),
         var(--#{$slider}__rail-track--before--fill--BackgroundColor),
-        var(--#{$slider}__rail-track--before--fill--BackgroundColor) var(--#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop),
-        var(--#{$slider}__rail-track--before--base--BackgroundColor) var(--#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop)
+        var(--#{$slider}__rail-track--before--fill--BackgroundColor) var(--#{$slider}--value),
+        var(--#{$slider}__rail-track--before--base--BackgroundColor) var(--#{$slider}--value)
       );
     border-radius: var(--#{$slider}__rail-track--before--BorderRadius);
   }
@@ -144,7 +144,7 @@
   content: "";
 
   &.pf-m-active {
-    --#{$slider}__step-tick--BackgroundColor: var(--#{$slider}__step--m-active__slider-tick--BackgroundColor);
+    background-color: var(--#{$slider}__step--m-active__slider-tick--BackgroundColor);
   }
 
   &:first-child {
@@ -195,7 +195,7 @@
 
   position: absolute;
   inset-block-start: var(--#{$slider}__thumb--InsetBlockStart);
-  inset-inline-start: var(--#{$slider}__thumb--InsetInlineStart);
+  inset-inline-start: var(--#{$slider}--value);
   width: var(--#{$slider}__thumb--Width);
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
@@ -244,16 +244,15 @@
       $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
     );
 
-    --#{$slider}__value--MarginInlineStart: 0;
-
     position: absolute;
     inset-block-start: 0;
-    inset-inline-start: var(--#{$slider}__value--m-floating--InsetInlineStart);
+    inset-inline-start: var(--#{$slider}--value);
     z-index: var(--#{$slider}__value--m-floating--ZIndex);
+    margin-inline-start: 0;
   }
 
   .#{$form-control} {
-    width: var(--#{$slider}__value--c-form-control--Width);
+    width: calc(var(--#{$slider}__value--c-form-control--width-base) + var(--#{$slider}__value--c-form-control--width-chars) * 1ch);
   }
 }
 
@@ -262,8 +261,7 @@
   margin-inline-end: var(--#{$slider}__actions--MarginInlineEnd);
 
   .#{$slider}__main ~ & {
-    --#{$slider}__actions--MarginInlineEnd: 0;
-
     margin-inline-start: var(--#{$slider}__main--actions--MarginInlineStart);
+    margin-inline-end: 0;
   }
 }

@@ -1,8 +1,8 @@
 @use '../../sass-utilities' as *;
 @use './data-list-grid' as *;
 
-:where(:root, .#{$data-list}) {
-  --#{$data-list}--FontSize: var( --pf-t--global--font--size--body);
+@include pf-root($data-list) {
+  --#{$data-list}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$data-list}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$data-list}--BorderBlockStartColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
@@ -59,7 +59,6 @@
   --#{$data-list}__toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1); // offset toggle to align left
   --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
   --#{$data-list}__toggle-icon--Transition: .2s ease-in 0s;
   --#{$data-list}__toggle-icon--Rotate: 0;
   --#{$data-list}__item--m-expanded__toggle-icon--Rotate: 90deg;
@@ -133,8 +132,6 @@
   --#{$data-list}--m-compact__item-action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
-  --#{$data-list}--m-compact__action--MarginBlockStart: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockStart) * -1);
-  --#{$data-list}--m-compact__action--MarginBlockEnd: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd) * -1);
   --#{$data-list}--m-compact__item-content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1);
@@ -150,13 +147,9 @@
   border-block-start: var(--#{$data-list}--BorderBlockStartWidth) solid var(--#{$data-list}--BorderBlockStartColor);
 
   &.pf-m-compact {
-    --#{$data-list}__check--FontSize: var(--#{$data-list}--m-compact__check--FontSize);
-    --#{$data-list}--FontSize: var(--#{$data-list}--m-compact--FontSize);
     --#{$data-list}__item-action--MarginInlineStart: var(--#{$data-list}--m-compact__item-action--MarginInlineStart);
     --#{$data-list}__item-action--PaddingBlockStart: var(--#{$data-list}--m-compact__item-action--PaddingBlockStart);
     --#{$data-list}__item-action--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd);
-    --#{$data-list}__action--MarginBlockStart: var(--#{$data-list}--m-compact__action--MarginBlockStart);
-    --#{$data-list}__action--MarginBlockEnd: var(--#{$data-list}--m-compact__action--MarginBlockEnd);
     --#{$data-list}__item-control--MarginInlineEnd: var(--#{$data-list}--m-compact__item-control--MarginInlineEnd);
     --#{$data-list}__item-control--PaddingBlockStart: var(--#{$data-list}--m-compact__item-control--PaddingBlockStart);
     --#{$data-list}__item-control--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-control--PaddingBlockEnd);
@@ -169,6 +162,11 @@
 
     font-size: var(--#{$data-list}--m-compact--FontSize);
 
+    .#{$data-list}__action {
+      margin-block-start: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockStart) * -1);
+      margin-block-end: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd) * -1);
+    }
+
     .#{$data-list}__cell {
       --#{$data-list}__cell--PaddingBlockStart: var(--#{$data-list}--m-compact__cell--PaddingBlockStart);
       --#{$data-list}__cell--PaddingBlockEnd: var(--#{$data-list}--m-compact__cell--PaddingBlockEnd);
@@ -177,6 +175,7 @@
     }
 
     .#{$data-list}__check {
+      height: calc(var(--#{$data-list}--m-compact--FontSize) * var(--#{$data-list}--m-compact--LineHeight));
       font-size: var(--#{$data-list}--m-compact__check--FontSize);
     }
   }
@@ -343,7 +342,7 @@
 .#{$data-list}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  height: var(--#{$data-list}__toggle-icon--Height);
+  height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
   pointer-events: none;
   transition: var(--#{$data-list}__toggle-icon--Transition);
   transform: rotate(var(--#{$data-list}__toggle-icon--Rotate));

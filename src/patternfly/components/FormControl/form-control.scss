@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$form-control}) {
+@include pf-root($form-control) {
   --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$form-control}--Color: var(--pf-t--global--text--color--regular);
   --#{$form-control}--FontSize: var(--pf-t--global--font--size--body--default);
@@ -189,7 +189,8 @@
 
     &.pf-m-plain {
       --#{$form-control}--m-readonly--BackgroundColor: var(--#{$form-control}--m-readonly--m-plain--BackgroundColor);
-      --#{$form-control}--inset--base: var(--#{$form-control}--m-readonly--m-plain--inset--base);
+      --#{$form-control}--PaddingInlineStart: var(--#{$form-control}--m-readonly--m-plain--inset--base);
+      --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}--m-readonly--m-plain--inset--base);
       --#{$form-control}--before--BorderStyle: none;
       --#{$form-control}--after--BorderStyle: none;
       --#{$form-control}--OutlineOffset: var(--#{$form-control}--m-readonly--m-plain--OutlineOffset);

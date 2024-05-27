@@ -5,7 +5,6 @@ cssPrefix: pf-v6-c-toolbar
 ---
 
 import './Toolbar.css'
-
 <!-- TODO: add documentation for resize observer/responsive variable usage -->
 
 Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolbar__item`), with default col/row gap values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. The default `column-gap` value for items and groups is set to `--pf-v6-c--ColumnGap`, whose value is `--pf-t--global--spacer--md` or 16px. The default `row-gap` value for items and groups is set to `--pf-v6-c--RowGap`, whose value is `--pf-t--global--spacer--sm` or 8px.

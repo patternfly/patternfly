@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$bullseye}) {
+@include pf-root($bullseye) {
   --#{$bullseye}--Padding: 0;
 }
 

@@ -1,12 +1,11 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$date-picker}) {
+@include pf-root($date-picker) {
   --#{$date-picker}--m-top__calendar--InsetBlockStart: 0;
   --#{$date-picker}--m-top__calendar--TranslateY: calc(-100% - var(--pf-t--global--spacer--xs));
   --#{$date-picker}__helper-text--MarginBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$date-picker}__input--c-form-control--Width: calc(var(--#{$date-picker}__input--c-form-control--width-chars) * 1ch + var(--#{$date-picker}__input--c-form-control--width-base));
-  --#{$date-picker}__input--c-form-control--width-base: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm)); // form control left/right padding + status icon width and spacer
-  --#{$date-picker}__input--c-form-control--width-chars: 11;
+  --#{$date-picker}__input--c-form-control--width-base: calc(var(--#{$form-control}--PaddingInlineStart) + var(--#{$form-control}--PaddingInlineEnd)); // form control left/right padding + status icon width and spacer
+  --#{$date-picker}__input--c-form-control--width-chars-base: 11ch;
   --#{$date-picker}__calendar--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$date-picker}__calendar--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$date-picker}__calendar--ZIndex: var(--pf-t--global--z-index--sm);
@@ -28,7 +27,7 @@
 
 .#{$date-picker}__input {
   .#{$form-control} {
-    width: var(--#{$date-picker}__input--c-form-control--Width);
+    width: var(--#{$date-picker}__input--c-form-control--Width, calc(var(--#{$date-picker}__input--c-form-control--width-chars-base) + var(--#{$date-picker}__input--c-form-control--width-base)));
   }
 }
 

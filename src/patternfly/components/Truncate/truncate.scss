@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$truncate}) {
+@include pf-root($truncate) {
   --#{$truncate}--MinWidth: 6ch;
   --#{$truncate}__start--MinWidth: 6ch;
 }

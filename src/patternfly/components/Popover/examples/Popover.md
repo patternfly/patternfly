@@ -7,7 +7,10 @@ cssPrefix: pf-v6-c-popover
 import './Popover.css'
 
 ## Examples
-    {{> popover-close}}
+```hbs isFullscreen
+{{> popover-close}}
+```
+
 ### Top
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$progress}) {
+@include pf-root($progress) {
   // Component variables
   --#{$progress}--GridGap: var(--pf-t--global--spacer--md);
 
@@ -10,7 +10,7 @@
   --#{$progress}__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
   --#{$progress}__status--Gap: var(--pf-t--global--spacer--sm);
   --#{$progress}__status-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$progress}__indicator--Height: var(--#{$progress}__bar--Height);
+  --#{$progress}__indicator--Height: 100%;
   --#{$progress}__indicator--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$progress}__helper-text--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
 

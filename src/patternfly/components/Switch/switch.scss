@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$switch}) {
+@include pf-root($switch) {
   // Switch - the vars for this file don't follow our normal order so that the IE11 script can convert the vars correctly
   --#{$switch}--FontSize: var(--pf-t--global--font--size--sm);
   --#{$switch}--ColumnGap: var(--pf-t--global--spacer--sm);
