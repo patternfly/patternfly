@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$empty-state}) {
+@include pf-root($empty-state) {
   --#{$empty-state}--PaddingBlockStart: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--PaddingBlockEnd: var(--pf-t--global--spacer--xl);

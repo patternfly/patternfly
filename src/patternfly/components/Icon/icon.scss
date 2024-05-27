@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$icon}) {
+@include pf-root($icon) {
   // Sizes
   --#{$icon}--Width: var(--pf-t--global--icon--size--font--body--default);
   --#{$icon}--Height: var(--pf-t--global--icon--size--font--body--default);
@@ -99,12 +99,6 @@
     --#{$icon}--Height: var(--#{$icon}--m-inline--Height);
     --#{$icon}__content--FontSize: var(--#{$icon}--m-inline__content--FontSize);
     --#{$icon}__content--Color: var(--#{$icon}--m-inline__content--Color);
-
-    line-height: 1;
-
-    .#{$spinner} {
-      --#{$spinner}--diameter: 1em;
-    }
   }
 
   // Standalone size modifiers

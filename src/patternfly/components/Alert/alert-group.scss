@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 // Tabs
-:where(:root, .#{$alert-group}) {
+@include pf-root($alert-group) {
   // Alert group variables
   --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
 
@@ -70,7 +70,7 @@
   // This transition will happen when the item is added (.pf-m-offstage-top is removed)
   // Reduced motion by default
   // transparency change only
-  transition: 
+  transition:
   opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
   transform: translateX(0) translateY(0);
 
@@ -78,10 +78,10 @@
   // give it height, then slide it down into place
   // These values are for regular motion
   @media screen and (prefers-reduced-motion: no-preference) {
-    transition: 
-      opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
-      transform var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
-      grid-template-rows var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s, 
+    transition:
+      opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default),
+      transform var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default),
+      grid-template-rows var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s,
       margin-block var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
 
       & .pf-v6-c-alert {
@@ -118,7 +118,7 @@
     // This transition will happen when the item is removed
     // Reduced motion by default
     // transparency change only
-    transition: 
+    transition:
       opacity var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) 0s;
     transform: translateX(100%);
 
@@ -133,10 +133,10 @@
     // give it height, then slide it down into place
     // These values are for regular motion
     @media screen and (prefers-reduced-motion: no-preference) {
-      transition: 
-        transform var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s, 
+      transition:
+        transform var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s,
         opacity var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s,
-        margin-block var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short), 
+        margin-block var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short),
         grid-template-rows var(--pf-t--global--motion--duration--slide-in--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
 
         & .pf-v6-c-alert {

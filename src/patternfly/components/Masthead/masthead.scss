@@ -3,7 +3,7 @@
 $pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root, .#{$masthead}) {
+@include pf-root($masthead) {
   // * Masthead
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--gutter--default);
@@ -44,11 +44,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline--ColumnGap: 0;
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
-  --#{$masthead}--m-display-inline__brand--GridColumn: initial; 
+  --#{$masthead}--m-display-inline__brand--GridColumn: initial;
   --#{$masthead}--m-display-inline__brand--Order: initial;
   --#{$masthead}--m-display-inline__brand--PaddingBlockEnd: 0;
   --#{$masthead}--m-display-inline__brand--BorderBlockEnd: 0;
-  --#{$masthead}--m-display-inline__main--GridColumn: 1; 
+  --#{$masthead}--m-display-inline__main--GridColumn: 1;
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
   --#{$masthead}--m-display-inline__main--toggle--content--GridColumn: 2;
@@ -92,7 +92,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
   --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-inline__main--toggle--content--GridColumn);
-  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display); 
+  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display);
   --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-inline__main--ColumnGap);
 }
 
@@ -108,7 +108,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   @include pf-v6-c-masthead--m-display-stack;
 
   // Set layout to inline at medium breakpoint
-  :where(:not(.pf-m-resize-observer)) & {
+  :not(.pf-m-resize-observer) & {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @include pf-v6-c-masthead--m-display-inline;
     }
@@ -215,11 +215,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     max-height: 100%;
     vertical-align: middle;
  }
-}
-
-// - Masthead toggle
-.#{$masthead}__toggle {
-  --#{$button}--FontSize: var(--#{$masthead}__toggle--Size);
 }
 
 // - Masthead expandable content

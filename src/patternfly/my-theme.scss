@@ -1,0 +1,37 @@
+@use './sass-utilities' as *;
+
+// stylelint-disable
+// Global customizations
+.mui-theme {
+  --pf-t--global--text--color--regular: #525252;
+  --pf-t--global--color--brand--default: #0f62fe;
+
+  // * MUI primary button
+  // --#{$button}--m-primary--BackgroundColor: lightsalmon;
+  // --#{$button}--m-primary--hover--BackgroundColor: red;
+  // --#{$button}--m-primary--Color: rgb(57, 36, 27);
+
+  // // * MUI secondary button
+  // --#{$button}--m-secondary--BackgroundColor: lightblue;
+
+  // // * MUI page
+  // --#{$content}--Color: #fff;
+  // // --#{$page}__main-section--BackgroundColor: #4d586d;
+  // --#{$page}__main-section--BorderColor: red;
+  // --#{$page}__main-container--BorderColor: goldenrod;
+}
+
+// Targeted customizations
+:root {
+  // --#{$page}--BackgroundColor: lightsalmon;
+  // --#{masthead}--BackgroundColor: #fff;
+}
+
+// .#{$page} {
+//   --pf-v6-c-page__main-section--m-secondary--BackgroundColor: lightsalmon;
+// }
+
+.my-theme {
+  // --pf-v6-c-page__main-section--m-secondary--BackgroundColor: lightblue;
+}
+// stylelint-enable

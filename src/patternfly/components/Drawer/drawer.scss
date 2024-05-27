@@ -5,7 +5,7 @@ $pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl")
 $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
-:where(:root, .#{$drawer}) {
+@include pf-root($drawer) {
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -358,20 +358,19 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 // Remove tab focus
 @include pf-v6-animate-remove-tab-focus(".#{$drawer}__panel", var(--#{$drawer}__panel--TransitionDuration));
 
+
+// TODO: figure
 // Panel head
 .#{$drawer}__head {
   display: grid;
   grid-template-columns: auto;
   grid-auto-columns: max-content;
+  grid-auto-flow: column;
   column-gap: var(--#{$drawer}__head--ColumnGap);
   padding-block-start: var(--#{$drawer}__head--PaddingBlockStart);
   padding-block-end: var(--#{$drawer}__head--PaddingBlockEnd);
   padding-inline-start: var(--#{$drawer}__head--PaddingInlineStart);
   padding-inline-end: var(--#{$drawer}__head--PaddingInlineEnd);
-
-  > * {
-    grid-column: 1;
-  }
 }
 
 // Panel actions

@@ -2,7 +2,7 @@
 
 $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root, .#{$jump-links}) {
+@include pf-root($jump-links) {
   // list
   --#{$jump-links}__list--Display: flex;
   --#{$jump-links}__list--PaddingBlockStart: 0;

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$file-upload}) {
+@include pf-root($file-upload) {
   --#{$file-upload}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$file-upload}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$file-upload}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);

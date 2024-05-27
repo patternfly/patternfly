@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$expandable-section}) {
+@include pf-root($expandable-section) {
   // Toggle
   --#{$expandable-section}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$expandable-section}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);

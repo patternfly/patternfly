@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$notification-drawer}) {
+@include pf-root($notification-drawer) {
   --#{$notification-drawer}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // Header

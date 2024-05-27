@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$breadcrumb}) {
+@include pf-root($breadcrumb) {
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);

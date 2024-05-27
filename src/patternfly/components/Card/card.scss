@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$card}) {
+@include pf-root($card) {
   --#{$card}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$card}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$card}--BorderStyle: solid;
@@ -36,10 +36,6 @@
 
   // Selectable/Clickable
   --#{$card}--m-selectable--BorderWidth: var(--#{$card}--BorderWidth);
-
-  // Clickable clicked
-  --#{$card}--m-clickable--m-current--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$card}--m-clickable--m-current--BorderWidth: var(--pf-t--global--border--width--box--clicked);
 
   // Selected state (checked) of selectable card
   --#{$card}--m-selectable--m-selected--BorderColor: var(--pf-t--global--border--color--clicked);
@@ -135,6 +131,8 @@
   // SELECTABLE or CLICKABLE CARDS
   &.pf-m-selectable,
   &.pf-m-clickable {
+    // --#{$card}--m-selectable--m-clickable--m-current--BorderWidth: 0;
+
     isolation: isolate;
 
     &::before {
@@ -142,35 +140,31 @@
     }
   }
 
-  // CLICKABLE is clicked
-  &.pf-m-current {
-    --#{$card}--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
-    --#{$card}--BorderWidth: var(--#{$card}--m-clickable--m-current--BorderWidth);
-    --#{$card}--m-selectable--hover--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
-    --#{$card}--m-selectable--focus--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
-  }
-
   // stylelint-disable selector-max-class
   // Cards that are BOTH SELECTABLE AND CLICKABLE
   &.pf-m-selectable.pf-m-clickable {
-    .#{$card}__selectable-actions :is(.#{$check}__label, .#{$radio}__label) {
+    .#{$card}__selectable-actions .#{$check}__label,
+    .#{$card}__selectable-actions .#{$radio}__label {
       position: unset;
 
       &::before {
         position: absolute;
         inset: 0;
         cursor: pointer;
+        border: var(--#{$card}--BorderColor, transparent) solid var(--#{$card}--BorderWidth);
       }
     }
 
     // When SELECTABLE and CLICKABLE card is focused, don't show change of background or border on the card
-    .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:focus-visible) ~ :is(.#{$check}__label, .#{$radio}__label) {
+    .#{$card}__selectable-actions .#{$check}__input:focus-visible ~ .#{$check}__label,
+    .#{$card}__selectable-actions .#{$radio}__input:focus-visible ~ .#{$radio}__label {
       --#{$card}--BackgroundColor: revert;
       --#{$card}--BorderColor: revert;
     }
 
     // SELECTABLE and CLICKABLE card is selected (Check box checked or marked .pf-m-selected)
-    .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:checked) ~ :is(.#{$check}__label, .#{$radio}__label),
+    .#{$card}__selectable-actions .#{$check}__input:checked ~ .#{$check}__label,
+    .#{$card}__selectable-actions .#{$radio}__input:checked ~ .#{$radio}__label,
     &.pf-m-selected {
       --#{$card}--BorderColor: revert;
       --#{$card}--m-selectable--BorderWidth: revert;
@@ -183,7 +177,8 @@
     }
 
     // SELECTABLE and CLICKABLE but DISABLED card
-    .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:disabled) ~ :is(.#{$check}__label, .#{$radio}__label),
+    .#{$card}__selectable-actions .#{$check}__input:disabled ~ .#{$check}__label,
+    .#{$card}__selectable-actions .#{$radio}__input:disabled ~ .#{$radio}__label,
     &.pf-m-disabled {
       --#{$card}--BackgroundColor: var(--#{$card}--m-selectable--m-disabled--BackgroundColor);
     }
@@ -317,7 +312,8 @@
 }
 
 // Labels are used to handle states of selectable and clickable cards
-.#{$card}__selectable-actions :is(.#{$check}__label, .#{$radio}__label, .#{$card}__clickable-action) {
+.#{$card}__selectable-actions .#{$check}__label,
+.#{$card}__selectable-actions .#{$radio}__label {
   position: absolute;
   inset: 0;
   justify-self: auto;
@@ -339,44 +335,36 @@
 }
 
 // Selected card (checked)
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:checked) ~ :is(.#{$radio}__label, .#{$check}__label),
+.#{$card}__selectable-actions .#{$check}__input:checked ~ .#{$check}__label,
+.#{$card}__selectable-actions .#{$radio}__input:checked ~ .#{$radio}__label,
 .#{$card}.pf-m-selected {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-selected--BorderColor);
   --#{$card}--m-selectable--BorderWidth: var(--#{$card}--m-selectable--m-selected--BorderWidth); // this line used to be just BorderWidth, not m-selectable
 }
 
 // Focus on the card (focus on label but not checked)
-.#{$card}__selectable-actions .#{$card}__clickable-action:where(:focus-visible),
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input, .#{$card}__clickable-action):where(:focus-visible) ~ :is(.#{$check}__label, .#{$radio}__label) {
+.#{$card}__selectable-actions .#{$check}__input:focus-visible ~ .#{$check}__label,
+.#{$card}__selectable-actions .#{$radio}__input:focus-visible ~ .#{$radio}__label {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--focus--BorderColor);
   --#{$card}--BorderWidth: var(--#{$card}--m-selectable--focus--BorderWidth);
 }
 
 // Focus on a selected card (focus + checked)
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:focus-visible):where(:checked) ~ :is(.#{$check}__label, .#{$radio}__label) {
+.#{$card}__selectable-actions .#{$check}__input:focus-visible:checked ~ .#{$check}__label,
+.#{$card}__selectable-actions .#{$radio}__input:focus-visible:checked ~ .#{$radio}__label {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-selected--focus--BorderColor);
   --#{$card}--BorderWidth: var(--#{$card}--m-selectable--m-selected--focus--BorderWidth);
 }
 
 // Disabled card
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:disabled) ~ :is(.#{$check}__label, .#{$radio}__label),
+.#{$card}__selectable-actions .#{$check}__input:disabled ~ .#{$check}__label,
+.#{$card}__selectable-actions .#{$radio}__input:disabled ~ .#{$radio}__label,
 .#{$card}.pf-m-disabled {
   --#{$card}__title-text--Color: var(--#{$card}--m-selectable--m-disabled__title-text--Color);
   --#{$card}__body--Color: var(--#{$card}--m-selectable--m-disabled__body--Color);
   --#{$card}__footer--Color: var(--#{$card}--m-selectable--m-disabled__footer--Color);
   --#{$card}--BackgroundColor: var(--#{$card}--m-selectable--m-disabled--BackgroundColor);
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-disabled--BorderColor);
-}
-
-.#{$card}__clickable-action {
-  background: none;
-  border: 0;
-  outline: 0;
-
-  &:disabled,
-  &.pf-m-disabled {
-    pointer-events: none;
-  }
 }
 
 .#{$card}__header,
@@ -402,10 +390,6 @@
   .#{$button}.pf-m-inline:disabled {
     --#{$button}--disabled--Color: var(--#{$card}--c-button--disabled--Color);
   }
-}
-
-.#{$card}__expandable-content {
-  --#{$card}--first-child--PaddingBlockStart: 0;
 }
 
 .#{$card}__body:not(.pf-m-no-fill) {

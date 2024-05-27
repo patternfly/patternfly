@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$list}) {
+@include pf-root($list) {
   // list
   --#{$list}--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$list}--ul--ListStyle: var(--pf-t--global--list-style);
@@ -55,8 +55,7 @@
   }
 
   &.pf-m-plain {
-    --#{$list}--PaddingInlineStart: var(--#{$list}--m-plain--PaddingInlineStart);
-
+    padding-inline-start: var(--#{$list}--m-plain--PaddingInlineStart);
     list-style: none;
   }
 

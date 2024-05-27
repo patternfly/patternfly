@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$radio}) {
+@include pf-root($radio) {
   --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
   --#{$radio}--Height: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));

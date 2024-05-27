@@ -9,6 +9,46 @@ import './Page.css'
 
 ## Examples
 
+### Theming example
+```hbs
+{{#> page page--modifier='mui-theme'}}
+  {{#> masthead}}
+    {{#> masthead-main}}
+      {{> masthead-toggle}}
+      {{#> masthead-brand}}
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
+      {{/masthead-brand}}
+    {{/masthead-main}}
+    {{> masthead-content}}
+  {{/masthead}}
+  {{#> page-sidebar}}
+    Navigation
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section}}
+      {{#> content--element content--element--type="h2"}}Apply MUI theme to page{{/content--element}}
+      {{#> button button--IsPrimary=true}}
+        Mui button
+      {{/button}}
+      {{#> button button--IsSecondary=true}}
+        PatternFly button
+      {{/button}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-v6-c-page-reset pf-v6-c-content-reset pf-v6-c-button-reset"}}
+      {{#> content--element content--element--type="h2"}}Let's reset this section to PF default page{{/content--element}}
+      {{#> button button--IsPrimary=true}}
+        Mui button
+      {{/button}}
+      {{#> button button--IsSecondary=true button--modifier='pf-v6-c-button-reset'}}
+        PatternFly button
+      {{/button}}
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
 ### Vertical nav
 ```hbs
 {{#> page}}

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$nav}) {
+@include pf-root($nav) {
   // * Nav shared values
   --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -128,7 +128,7 @@
 
   &.pf-m-inset {
     --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
-    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);  
+    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   }
 
   &.pf-m-fill {
@@ -282,11 +282,11 @@
 
   @include pf-v6-mirror-inline-on-rtl;
 
-  .#{$nav}__item:where(.pf-m-flyout) & {
+  .#{$nav}__item.pf-m-flyout & {
     --#{$nav}__item--m-expanded__toggle-icon--Rotate: 0;
   }
 
-  .#{$nav}__link:where([aria-expanded="true"]) & {
+  .#{$nav}__link[aria-expanded="true"] & {
     transform: rotate(var(--#{$nav}__item--m-expanded__toggle-icon--Rotate));
   }
 }
@@ -334,7 +334,7 @@
 }
 
 // - Nav horizontal
-.#{$nav}:where(.pf-m-horizontal) {
+.#{$nav}.pf-m-horizontal {
   padding: 0;
   overflow: hidden;
 

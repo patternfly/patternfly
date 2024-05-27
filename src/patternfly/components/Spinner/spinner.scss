@@ -1,9 +1,7 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$spinner}) {
+@include pf-root($spinner) {
   --#{$spinner}--diameter: var(--pf-t--global--icon--size--2xl);
-  --#{$spinner}--Width: var(--#{$spinner}--diameter);
-  --#{$spinner}--Height: var(--#{$spinner}--diameter);
   --#{$spinner}--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$spinner}--AnimationDuration: 1.4s;
   --#{$spinner}--AnimationTimingFunction: linear;
@@ -24,8 +22,8 @@
 }
 
 .#{$spinner} {
-  width: var(--#{$spinner}--Width);
-  height: var(--#{$spinner}--Height);
+  width: var(--#{$spinner}--diameter);
+  height: var(--#{$spinner}--diameter);
   overflow: hidden;
   animation: #{$spinner}-animation-rotate calc(var(--#{$spinner}--AnimationDuration) * 2) var(--#{$spinner}--AnimationTimingFunction) infinite;
 

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$toggle-group}) {
+@include pf-root($toggle-group) {
   // button
   --#{$toggle-group}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$toggle-group}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
