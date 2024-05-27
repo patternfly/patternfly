@@ -1,6 +1,5 @@
 @use '../../sass-utilities' as *;
-
-:where(:root, .#{$list}) {
+:root, .#{$list}-reset {
   // list
   --#{$list}--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$list}--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);

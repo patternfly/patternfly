@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$overflow-menu}) {
+:root, .#{$overflow-menu}-reset {
   --#{$overflow-menu}--ColumnGap: var(--pf-t--global--spacer--md);
 
   // * Overflow menu group

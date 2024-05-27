@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$button}) {
+:root, .#{$button}-reset {
   --#{$button}--Display: inline-block;
   --#{$button}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
