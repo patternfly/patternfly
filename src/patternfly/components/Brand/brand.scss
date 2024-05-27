@@ -2,7 +2,7 @@
 
 $pf-v6-c-brand--breakpoint-map: build-breakpoint-map();
 
-:where(:root, .#{$brand}) {
+:root, .#{$brand}-reset {
   --#{$brand}--Width: auto;
   --#{$brand}--Height: auto;
 }

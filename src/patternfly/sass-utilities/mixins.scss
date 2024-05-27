@@ -313,7 +313,7 @@
 }
 
 // Build variable stack
-@mixin pf-v6-output-root-variables($css-var, $breakpoint-map: $pf-v6-global--breakpoint-map) {
+@mixin pf-v6-output-root-variables($css-var, $value: inherit, $breakpoint-map: $pf-v6-global--breakpoint-map) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -332,7 +332,7 @@
 
 // Dark theme style block
 @mixin pf-v6-theme-dark($theme-dark-class: $pf-v6--theme-dark--class, $theme-dark-target: $pf-v6--theme-dark--target) {
-  #{$theme-dark-target}:where(#{$theme-dark-class}) {
+  #{$theme-dark-target}#{$theme-dark-class} {
     @content;
   }
 }
@@ -371,14 +371,14 @@
 //   background: red;
 // }
 @mixin pf-v6-rtl {
-  @at-root :where(.#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+  @at-root .#{$pf-prefix}m-dir-rtl, [dir="rtl"] #{&} {
     @content;
   }
 }
 
 // Used to create the LTR selector for LTR specific styles
 @mixin pf-v6-ltr {
-  @at-root :where(.#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
+  @at-root .#{$pf-prefix}m-dir-ltr, [dir="ltr"] #{&} {
     @content;
   }
 }

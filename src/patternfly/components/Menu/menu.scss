@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$menu}) {
+:root, .#{$menu}-reset {
   // * Menu
   --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$menu}--Width: auto;
@@ -264,7 +264,7 @@
       transition: var(--#{$menu}--m-drilldown__content--Transition);
     }
 
-    :where(.#{$menu}) {
+    .#{$menu} {
       padding: 0;
     }
 
@@ -437,7 +437,7 @@
 }
 
 // - Menu list
-.#{$menu}__list :where(.#{$divider}:is(li)) {
+.#{$menu}__list .#{$divider}:is(li) {
   margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
   margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
 }
@@ -525,10 +525,6 @@
 
   @include pf-v6-hidden-visible(flex);
 
-  @at-root :where(label)#{&} {
-    cursor: pointer;
-  }
-
   &.pf-m-selected {
     --#{$menu}__item-select-icon--Color: var(--#{$menu}__item--m-selected__item-select-icon--Color);
   }
@@ -543,6 +539,10 @@
       color: var(--#{$menu}__item-external--Color);
     }
   }
+}
+
+label.#{$menu}__item {
+  cursor: pointer;
 }
 
 // - Menu item select icon

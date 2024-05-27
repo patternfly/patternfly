@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$breadcrumb}) {
+:root, .#{$breadcrumb}-reset {
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);

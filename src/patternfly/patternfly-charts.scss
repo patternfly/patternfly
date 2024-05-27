@@ -13,18 +13,18 @@ $chart: #{$pf-prefix} + 'chart';
 }
 
 // Charts tokens
-:where(:root) {
+:root {
   @include charts.pf-v6-tokens;
 }
 
 // Charts dark tokens
-:where(.pf-v6-theme-dark) {
+.pf-v6-theme-dark {
   @include charts-dark.pf-v6-tokens;
 }
 
 // Charts styles
 // stylelint-disable-next-line no-duplicate-selectors
-:where(:root) {
+:root {
   // Chart colors
   // blue
   --#{$chart}-color-blue-100: var(--pf-t--chart--color--blue--100);

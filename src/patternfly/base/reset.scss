@@ -2,7 +2,6 @@
 
 // Reset - based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
 @if $pf-v6-global--enable-reset {
-  :where(
     html,
     body,
     p,
@@ -26,7 +25,7 @@
     h4,
     h5,
     h6
-    ) {
+     {
     padding: 0;
     margin: 0;
   }

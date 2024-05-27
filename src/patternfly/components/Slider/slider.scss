@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$slider}) {
+:root, .#{$slider}-reset {
   --#{$slider}--value: 0; // should always be set inline
   --#{$slider}__step--InsetInlineStart: 0; // should always be set inline
 
@@ -38,7 +38,6 @@
   --#{$slider}__thumb--InsetBlockStart: calc(var(--#{$slider}__rail-track--Height) / 2 + var(--pf-t--global--spacer--md));
   --#{$slider}__thumb--Width: #{pf-size-prem(16px)};
   --#{$slider}__thumb--Height: #{pf-size-prem(16px)};
-  --#{$slider}__thumb--InsetInlineStart: var(--#{$slider}--value);
   --#{$slider}__thumb--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$slider}__thumb--TranslateX: -50%;
   --#{$slider}__thumb--TranslateY: -50%;
@@ -64,7 +63,6 @@
   --#{$slider}__value--c-form-control--Width: calc(var(--#{$slider}__value--c-form-control--width-base) + var(--#{$slider}__value--c-form-control--width-chars) * 1ch);
   --#{$slider}__value--m-floating--TranslateX: -50%;
   --#{$slider}__value--m-floating--TranslateY: -100%;
-  --#{$slider}__value--m-floating--InsetInlineStart: var(--#{$slider}--value);
   --#{$slider}__value--m-floating--ZIndex: var(--pf-t--global--z-index--sm);
 
   // actions
@@ -195,7 +193,7 @@
 
   position: absolute;
   inset-block-start: var(--#{$slider}__thumb--InsetBlockStart);
-  inset-inline-start: var(--#{$slider}__thumb--InsetInlineStart);
+  inset-inline-start: var(--#{$slider}--value);
   width: var(--#{$slider}__thumb--Width);
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
@@ -248,7 +246,7 @@
 
     position: absolute;
     inset-block-start: 0;
-    inset-inline-start: var(--#{$slider}__value--m-floating--InsetInlineStart);
+    inset-inline-start: var(--#{$slider}--value);
     z-index: var(--#{$slider}__value--m-floating--ZIndex);
   }
 

@@ -8,7 +8,7 @@
 // TODO: update text-input-button to use gap
 // TODO: label all variables group - // * Menu toggle (vars) // - Menu toggle (selectors)
 
-:where(:root, .#{$menu-toggle}) {
+:root, .#{$menu-toggle}-reset {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
@@ -180,7 +180,7 @@
   transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
   transition-duration: var(--#{$menu-toggle}--TransitionDuration);
   transition-property: var(--#{$menu-toggle}--TransitionProperty);
-  
+
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);
@@ -385,7 +385,7 @@
 
     // stylelint-disable max-nesting-depth, selector-max-class, selector-not-notation
     // update to single :not() in breaking change
-    > :where(:not(.pf-m-disabled):not([disabled])) {
+    > :not(.pf-m-disabled):not([disabled]) {
       background-color: var(--#{$menu-toggle}--m-split-button--m-action--m-primary--child--BackgroundColor);
 
       &:is(:hover, :focus) {
