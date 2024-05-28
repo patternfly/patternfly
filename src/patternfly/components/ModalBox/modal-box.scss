@@ -30,6 +30,7 @@
 
   // Header
   --#{$modal-box}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$modal-box}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--Gap: var(--pf-t--global--spacer--md);
@@ -56,7 +57,7 @@
   --#{$modal-box}__body--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__body--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__body--last-child--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__header--body--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$modal-box}__header--body--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 
   // Close
   --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
@@ -159,6 +160,7 @@
   flex-shrink: 0;
   gap: var(--#{$modal-box}__header--Gap);
   padding-block-start: var(--#{$modal-box}__header--PaddingBlockStart);
+  padding-block-end: var(--#{$modal-box}__header--PaddingBlockEnd);
   padding-inline-start: var(--#{$modal-box}__header--PaddingInlineStart);
   padding-inline-end: var(--#{$modal-box}__header--PaddingInlineEnd);
 
