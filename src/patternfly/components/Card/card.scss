@@ -248,7 +248,7 @@
 }
 
 .#{$card}__header-main {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .#{$card}__header-toggle {
