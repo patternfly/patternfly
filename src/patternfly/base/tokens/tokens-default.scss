@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Wed, 22 May 2024 20:26:40 GMT
+// Generated on Wed, 29 May 2024 15:57:12 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--timing-function--300: cubic-bezier(0, 0, .2, 1);
@@ -268,18 +268,8 @@
   --pf-t--global--icon--size--lg: var(--pf-t--global--icon--size--250);
   --pf-t--global--icon--size--md: var(--pf-t--global--icon--size--200);
   --pf-t--global--icon--size--sm: var(--pf-t--global--icon--size--100);
-  --pf-t--global--spacer--button--horizontal--plain: var(--pf-t--global--spacer--200);
-  --pf-t--global--spacer--button--horizontal--compact: var(--pf-t--global--spacer--300);
-  --pf-t--global--spacer--button--horizontal--default: var(--pf-t--global--spacer--400);
-  --pf-t--global--spacer--button--vertical--plain: var(--pf-t--global--spacer--200);
   --pf-t--global--spacer--button--vertical--compact: var(--pf-t--global--spacer--100);
-  --pf-t--global--spacer--button--vertical--default: var(--pf-t--global--spacer--200);
-  --pf-t--global--spacer--control--horizontal--plain: var(--pf-t--global--spacer--200);
-  --pf-t--global--spacer--control--horizontal--compact: var(--pf-t--global--spacer--200);
-  --pf-t--global--spacer--control--horizontal--default: var(--pf-t--global--spacer--300);
-  --pf-t--global--spacer--control--vertical--plain: var(--pf-t--global--spacer--200);
-  --pf-t--global--spacer--control--vertical--compact: var(--pf-t--global--spacer--100);
-  --pf-t--global--spacer--control--vertical--default: var(--pf-t--global--spacer--200);
+  --pf-t--global--spacer--button--horizontal--compact: var(--pf-t--global--spacer--300);
   --pf-t--global--spacer--4xl: var(--pf-t--global--spacer--800);
   --pf-t--global--spacer--3xl: var(--pf-t--global--spacer--700);
   --pf-t--global--spacer--2xl: var(--pf-t--global--spacer--600);
@@ -442,6 +432,22 @@
   --pf-t--global--icon--size--font--md: var(--pf-t--global--font--size--md);
   --pf-t--global--icon--size--font--sm: var(--pf-t--global--font--size--sm);
   --pf-t--global--icon--size--font--xs: var(--pf-t--global--font--size--xs);
+  --pf-t--global--spacer--gap--action-to-action--plain: var(--pf-t--global--spacer--xs);
+  --pf-t--global--spacer--gap--action-to-action--default: var(--pf-t--global--spacer--md);
+  --pf-t--global--spacer--gap--group-to-group--vertical: var(--pf-t--global--spacer--lg);
+  --pf-t--global--spacer--gap--group-to-group--horizontal: var(--pf-t--global--spacer--2xl);
+  --pf-t--global--spacer--gap--group--horizontal: var(--pf-t--global--spacer--md);
+  --pf-t--global--spacer--gap--group--vertical: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--gap--control-to-control--default: var(--pf-t--global--spacer--xs);
+  --pf-t--global--spacer--gap--text-to-element--default: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--control--horizontal--plain: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--control--horizontal--default: var(--pf-t--global--spacer--md);
+  --pf-t--global--spacer--control--vertical--plain: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--control--vertical--default: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--action--horizontal--plain: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--action--horizontal--default: var(--pf-t--global--spacer--lg);
+  --pf-t--global--spacer--action--vertical--plain: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--action--vertical--default: var(--pf-t--global--spacer--sm);
   --pf-t--global--text--color--nonstatus--on-gray--clicked: var(--pf-t--global--text--color--regular);
   --pf-t--global--text--color--nonstatus--on-gray--hover: var(--pf-t--global--text--color--regular);
   --pf-t--global--text--color--nonstatus--on-gray--default: var(--pf-t--global--text--color--regular);
