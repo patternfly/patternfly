@@ -115,6 +115,7 @@
   &::before {
     position: absolute;
     inset: 0;
+    pointer-events: none;
     content: "";
     border: var(--#{$card}--BorderColor) var(--#{$card}--BorderStyle) var(--#{$card}--BorderWidth);
     border-radius: inherit;
