@@ -28,6 +28,7 @@
   // Hint Actions
   --#{$hint}__actions--MarginInlineStart: var(--pf-t--global--spacer--2xl);
   --#{$hint}__actions--c-menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$hint}__actions--c-menu-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 }
 
 .#{$hint} {
@@ -60,7 +61,9 @@
   text-align: end;
 
   .#{$menu-toggle}.pf-m-plain {
+    // --pf-v6-c-menu-toggle--PaddingBlockEnd: 0;
     margin-block-start: var(--#{$hint}__actions--c-menu-toggle--MarginBlockStart);
+    margin-block-end: var(--#{$hint}__actions--c-menu-toggle--MarginBlockEnd);
   }
 
   + .#{$hint}__body {
