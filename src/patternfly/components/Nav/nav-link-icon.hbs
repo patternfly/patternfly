@@ -1,0 +1,10 @@
+<span class="{{pfv}}nav__link-icon{{#if nav-link-icon--modifier}} {{nav-link-icon--modifier}}{{/if}}"
+  {{#if nav-link-icon--attribute}}
+    {{{nav-link-icon--attribute}}}
+  {{/if}}>
+  {{#if nav-link--icon}}
+    <i class="fas fa-fw fa-{{nav-link--icon}}" aria-hidden="true"></i>
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</span>

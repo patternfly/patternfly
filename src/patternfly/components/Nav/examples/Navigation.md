@@ -531,58 +531,29 @@ import './Navigation.css'
 {{> nav--drilldown nav--drilldown--id="level-three-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true"  menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 284px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
-### Nav link text
-When using anything other than a text node for the link text, wrap the link text in an element with `.pf-v6-c-nav__link-text`.
-
+### Nav item icons
 ```hbs isBeta
-{{#> nav nav--attribute='aria-label="Global"' nav-item--HasTextWrapper=true}}
+{{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
-        Link 1 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      {{#> nav-link nav-link--href="#" nav-link--icon="cube"}}
+        Link 1
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-link-text-link2"'}}
-        Link 2 <small>(small text)</small>
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
+        Current link
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-link-text-link2"'}}
-        {{#> nav-item nav-item--HasTextWrapper=true}}
-          {{#> nav-link nav-link--href="#"}}
-            <i class="fas fa-user" aria-hidden="true"></i>
-            Subnav link 1
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item nav-item--HasTextWrapper=true}}
-          {{#> nav-link nav-link--href="#"}}
-            <i class="fas fa-user" aria-hidden="true"></i>
-            Subnav link 2
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-link-text-link4"'}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="cloud"}}
         Link 3
-        <strong>(strong text)</strong>
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-link-text-link4"'}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Subnav link 1
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Subnav link 2
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Subnav link 3
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="code"}}
+        Link 4
+      {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
 {{/nav}}
@@ -620,6 +591,7 @@ The navigation system relies on several different sub-components:
 | `.pf-v6-c-nav__list` | `<ul>` | Initiates nav list. |
 | `.pf-v6-c-nav__item` | `<li>` | Initiates nav list item. |
 | `.pf-v6-c-nav__link` | `<a>` | Initiates nav list link. |
+| `.pf-v6-c-nav__link-icon` | `<span>` | Initiates nav list link icon. |
 | `.pf-v6-c-nav__link-text` | `<span>` | Initiates nav list link text. |
 | `.pf-v6-c-nav__section` | `<section>` | Initiates a nav section element. |
 | `.pf-v6-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
