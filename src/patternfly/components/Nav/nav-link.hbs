@@ -23,12 +23,15 @@
   {{#if nav-link--attribute}}
     {{{nav-link--attribute}}}
   {{/if}}>
+  {{#if nav-link--icon}}
+    {{> nav-link-icon}}
+  {{/if}}
   {{#if nav-link--text}}
-    {{{nav-link--text}}}
-  {{else if nav-item--HasTextWrapper}}
     {{> nav-link-text}}
   {{else if @partial-block}}
-    {{> @partial-block}}
+    {{#> nav-link-text}}
+      {{> @partial-block}}
+    {{/nav-link-text}}
   {{/if}}
   {{#ifAny nav-item--IsExpandable nav-item--IsExpandable nav-item--IsFlyout nav-item--IsDrilldown}}
     {{> nav-toggle}}

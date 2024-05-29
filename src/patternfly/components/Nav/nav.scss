@@ -54,6 +54,10 @@
   --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
 
+  // * Nav link icon
+  --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
+
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -230,9 +234,16 @@
 
   &.pf-m-current,
   &.pf-m-current:hover {
+    --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);
+
     color: var(--#{$nav}__link--m-current--Color);
     background-color: var(--#{$nav}__link--m-current--BackgroundColor);
   }
+}
+
+// - Nav toggle caret
+.#{$nav}__link-icon {
+  color: var(--#{$nav}__link-icon--Color);
 }
 
 // - Nav toggle caret
