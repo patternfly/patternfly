@@ -303,7 +303,7 @@
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
   transition-timing-function: var(--#{$button}--TransitionTimingFunction);
   transition-duration: var(--#{$button}--TransitionDuration);
-  transition-property: background-color;
+  transition-property: background-color, color;
 
   &::after {
     position: absolute;
@@ -315,7 +315,7 @@
     border-radius: inherit;
     transition-timing-function: var(--#{$button}--TransitionTimingFunction);
     transition-duration: var(--#{$button}--TransitionDuration);
-    transition-property: border-color, border-width;
+    transition-property: border-color, border-width, color;
   }
 
   // Primary
