@@ -146,22 +146,6 @@
     var(--pf-t--global--box-shadow--spread--lg)
     var(--pf-t--global--box-shadow--color--lg);
 
-  // Motion
-  .pf-m-no-motion {
-    // Set all motion tokens to 0 for testing purposes
-    --pf-t--global--delay--400: 0ms;
-    --pf-t--global--delay--300: 0ms;
-    --pf-t--global--delay--200: 0ms;
-    --pf-t--global--delay--100: 0ms;
-    --pf-t--global--duration--600: 0ms;
-    --pf-t--global--duration--500: 0ms;
-    --pf-t--global--duration--400: 0ms;
-    --pf-t--global--duration--300: 0ms;
-    --pf-t--global--duration--200: 0ms;
-    --pf-t--global--duration--100: 0ms;
-    --pf-t--global--duration--50: 0ms;
-  }
-
   // old transitions to be removed in future pr
   --pf-t--global--transition: all 250ms cubic-bezier(.42, 0, .58, 1);
   --pf-t--global--transition--timing-function: cubic-bezier(.645, .045, .355, 1);

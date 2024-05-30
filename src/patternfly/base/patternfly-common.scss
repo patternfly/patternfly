@@ -48,3 +48,21 @@
 .#{$pf-prefix}m-mirror-inline-rtl {
   @include pf-v6-mirror-inline-on-rtl;
 }
+
+// Turn off all motion (for testing purposes) by setting all motion tokens to 0
+.#{$pf-prefix}m-no-motion {
+  // stylelint-disable declaration-no-important
+  --pf-t--global--delay--400: 0ms !important;
+  --pf-t--global--delay--300: 0ms !important;
+  --pf-t--global--delay--200: 0ms !important;
+  --pf-t--global--delay--100: 0ms !important;
+  --pf-t--global--duration--600: 0ms !important;
+  --pf-t--global--duration--500: 0ms !important;
+  --pf-t--global--duration--400: 0ms !important;
+  --pf-t--global--duration--300: 0ms !important;
+  --pf-t--global--duration--200: 0ms !important;
+  --pf-t--global--duration--100: 0ms !important;
+  --pf-t--global--duration--50: 0ms !important;
+  
+  // stylelink-enable declaration-no-important
+}
