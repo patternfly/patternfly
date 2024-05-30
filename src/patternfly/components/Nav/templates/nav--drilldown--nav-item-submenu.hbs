@@ -1,5 +1,5 @@
 {{#> nav-subnav}}
-  {{#> nav-list nav-item--IsDrilldown=reset nav-item--expanded=reset}}
+  {{#> nav-list nav-item--IsDrilldown=reset nav-item--IsExpanded=reset}}
     {{#> nav-item nav-item--IsDrillup="true"}}
       {{#> nav-link nav-link--href="#"}}
         Subscriptions
@@ -10,12 +10,12 @@
         Container platform
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsDrilldown="true" nav-item--expanded=nav--drilldown--level-3}}
+    {{#> nav-item nav-item--IsDrilldown="true" nav-item--IsExpanded=nav--drilldown--level-3}}
       {{#> nav-link nav-link--href="#"}}
         Dedicated
       {{/nav-link}}
       {{#> nav-subnav}}
-        {{#> nav-list nav-item--expanded=reset nav-item--IsDrilldown=reset}}
+        {{#> nav-list nav-item--IsExpanded=reset nav-item--IsDrilldown=reset}}
           {{#> nav-item nav-item--IsDrillup="true"}}
             {{#> nav-link nav-link--href="#"}}
               Dedicated

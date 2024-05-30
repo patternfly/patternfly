@@ -14,11 +14,11 @@
     aria-haspopup="true"
   {{/if}}
   {{#ifAny nav-item--IsFlyout nav-item--IsDrilldown nav-item--IsExpandable}}
-    {{#ifAny nav-item--expanded nav-item--IsExpanded}}
+    {{#if nav-item--IsExpanded}}
       aria-expanded="true"
     {{else}}
       aria-expanded="false"
-    {{/ifAny}}
+    {{/if}}
   {{/ifAny}}
   {{#if nav-link--attribute}}
     {{{nav-link--attribute}}}

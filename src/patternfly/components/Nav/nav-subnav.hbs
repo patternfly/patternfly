@@ -1,13 +1,13 @@
 <section class="{{pfv}}nav__subnav{{#if nav-subnav--modifier}} {{nav-subnav--modifier}}{{/if}}"
   aria-labelledby="{{ternary nav-subnav--aria-labelledby nav-subnav--aria-labelledby nav-item--id}}"
-  {{ternary (concat nav-item--expanded nav-item--IsExpanded) '' 'hidden'}}
+  {{ternary nav-item--IsExpanded '' 'hidden'}}
   {{#if nav-subnav--attribute}}
     {{{nav-subnav--attribute}}}
   {{/if}}>
   {{#if nav-section-title--text}}
     {{> nav-section-title nav-section-title--id=(dasherize nav--id nav-section--id nav-section-title--text)}}
   {{/if}}
-  {{#> nav-list (reset nav-item--expanded nav-item--IsExpandable nav-item--IsExpanded)}}
+  {{#> nav-list (reset nav-item--IsExpanded nav-item--IsExpandable)}}
     {{#if @partial-block}}
       {{> @partial-block}}
     {{/if}}

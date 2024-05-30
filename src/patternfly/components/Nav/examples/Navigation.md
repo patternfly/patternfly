@@ -135,7 +135,7 @@ import './Navigation.css'
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true" nav-item--current="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
         Link 1 (current and expanded example)
       {{/nav-link}}
@@ -157,7 +157,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
@@ -199,7 +199,7 @@ import './Navigation.css'
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true" nav-item--current="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true" nav-item--current="true"}}
       {{#> nav-link nav-link--href="#"}}
         Link 1
       {{/nav-link}}
@@ -221,7 +221,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true"}}
       {{#> nav-link nav-link--href="#"}}
         Link 2
       {{/nav-link}}
@@ -251,7 +251,7 @@ import './Navigation.css'
         Link 1 (not expandable)
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
@@ -330,7 +330,7 @@ import './Navigation.css'
         {{/nav-item}}
       {{/nav-subnav}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true"}}
       {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-example-2"')}}
         Cost management
       {{/nav-link}}
@@ -345,7 +345,7 @@ import './Navigation.css'
             Openshift
           {{/nav-link}}
         {{/nav-item}}
-        {{#> nav-item nav-item--IsExpandable="true" nav-item--expanded="true"}}
+        {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-sub-example-1"')}}
             Public clouds
           {{/nav-link}}
