@@ -603,7 +603,6 @@ The navigation system relies on several different sub-components:
 | `.pf-m-full-width` | `.pf-v6-c-nav` | Modifies nav for to full width of parent. |
 | `.pf-m-flyout` | `.pf-v6-c-nav__item` | Modifies nav item for the flyout variation. |
 | `.pf-m-scrollable` | `.pf-v6-c-nav` | Modifies nav for the scrollable state. |
-| `.pf-m-expandable` | `.pf-v6-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-v6-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-nav__link` | Modifies for the current state. |
 | `.pf-m-hover` | `.pf-v6-c-nav__link` | Modifies for the hover state. |

@@ -7,7 +7,7 @@
   {{#if nav-section-title--text}}
     {{> nav-section-title nav-section-title--id=(dasherize nav--id nav-section--id nav-section-title--text)}}
   {{/if}}
-  {{#> nav-list (reset nav-item--IsExpandable nav-item--expanded nav-item--IsExpandable nav-item--IsExpanded)}}
+  {{#> nav-list (reset nav-item--expanded nav-item--IsExpandable nav-item--IsExpanded)}}
     {{#if @partial-block}}
       {{> @partial-block}}
     {{/if}}
