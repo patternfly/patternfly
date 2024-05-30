@@ -98,8 +98,8 @@
   --#{$card}--m-plain--BackgroundColor: transparent;
 
   // Toggle right
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--compact) * -1);
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc((var(--pf-t--global--spacer--action--horizontal--default) - var(--pf-t--global--spacer--sm)) * -1);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain) / 2);
 }
 
 .#{$card} {
