@@ -79,6 +79,21 @@ cssPrefix: pf-v6-c-hint
 {{/hint}}
 ```
 
+### Actions with no offset
+```hbs
+{{#> hint hint--id='hint-actions-with-no-offset'}}
+  {{#> hint-actions hint-actions--modifier='pf-m-no-offset'}}
+    {{#> button button--modifier="pf-m-primary"}}Action{{/button}}
+ {{/hint-actions}}
+  {{#> hint-title}}
+    Do more with Find it Fix it capabilities
+  {{/hint-title}}
+  {{#> hint-body}}
+    Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
+  {{/hint-body}}
+{{/hint}}
+```
+
 ## Documentation
 
 
@@ -90,3 +105,4 @@ cssPrefix: pf-v6-c-hint
 | `.pf-v6-c-hint__body` | `<div>` | Initiates the hint body element. |
 | `.pf-v6-c-hint__footer` | `<div>` | Initiates the hint footer element. |
 | `.pf-v6-c-hint__actions` | `<div>` | Initiates the hint actions element. |
+| `.pf-m-no-offset` | `.pf-v6-c-hint__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the hint title. |

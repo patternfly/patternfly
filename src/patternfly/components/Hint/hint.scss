@@ -28,6 +28,7 @@
   // Hint Actions
   --#{$hint}__actions--MarginInlineStart: var(--pf-t--global--spacer--2xl);
   --#{$hint}__actions--c-menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$hint}__actions--c-menu-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 }
 
 .#{$hint} {
@@ -56,11 +57,14 @@
   grid-column: 2;
   grid-auto-flow: column;
   align-self: start;
+  margin-block-start: var(--#{$hint}__actions--c-menu-toggle--MarginBlockStart);
+  margin-block-end: var(--#{$hint}__actions--c-menu-toggle--MarginBlockEnd);
   margin-inline-start: var(--#{$hint}__actions--MarginInlineStart);
   text-align: end;
 
-  .#{$menu-toggle}.pf-m-plain {
-    margin-block-start: var(--#{$hint}__actions--c-menu-toggle--MarginBlockStart);
+  &.pf-m-no-offset {
+    --#{$hint}__actions--c-menu-toggle--MarginBlockStart: 0;
+    --#{$hint}__actions--c-menu-toggle--MarginBlockEnd: 0;
   }
 
   + .#{$hint}__body {
