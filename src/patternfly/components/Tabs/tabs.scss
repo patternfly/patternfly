@@ -27,10 +27,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical__list--before--BorderBlockEndWidth: 0;
   --#{$tabs}--m-vertical__list--before--BorderInlineStartWidth: var(--#{$tabs}--before--border-width--base);
 
-  // Tabs, Box modifier
-  --#{$tabs}--m-box__item--m-current--first-child__link--before--BorderInlineStartWidth: var(--#{$tabs}__link--before--border-width--base);
-  --#{$tabs}--m-box__item--m-current--last-child__link--before--BorderInlineEndWidth: var(--#{$tabs}--before--border-width--base);
-
   // Tabs List
   --#{$tabs}__list--Display: flex;
 
@@ -273,15 +269,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
 
     // stylelint-disable
-    // Add border to first-child
-    .#{$tabs}__item.pf-m-current:first-child .#{$tabs}__link::before {
-      border-inline-start-width: var(--#{$tabs}--m-box__item--m-current--first-child__link--before--BorderInlineStartWidth);
-    }
-
-    // Add border to last-child
-    .#{$tabs}__item.pf-m-current:last-child .#{$tabs}__link::before {
-      border-inline-end-width: var(--#{$tabs}--m-box__item--m-current--last-child__link--before--BorderInlineEndWidth);
-    }
 
     // Collapse left border into scroll button when expanded
     &.pf-m-scrollable .#{$tabs}__item.pf-m-current:first-child .#{$tabs}__link::before {
