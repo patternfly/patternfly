@@ -79,6 +79,21 @@ cssPrefix: pf-v6-c-hint
 {{/hint}}
 ```
 
+### Actions with no offset
+```hbs
+{{#> hint hint--id='hint-actions-with-no-offset'}}
+  {{#> hint-actions hint-actions--modifier='pf-m-no-offset'}}
+    {{#> button button--modifier="pf-m-primary"}}Action{{/button}}
+ {{/hint-actions}}
+  {{#> hint-title}}
+    Do more with Find it Fix it capabilities
+  {{/hint-title}}
+  {{#> hint-body}}
+    Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
+  {{/hint-body}}
+{{/hint}}
+```
+
 ## Documentation
 
 
