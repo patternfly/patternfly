@@ -76,7 +76,7 @@
   // custom icon
   --#{$form-control}--m-icon--PaddingInlineEnd: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer));
   --#{$form-control}--m-icon--icon--width: var(--#{$form-control}--FontSize);
-  --#{$form-control}--m-icon--icon--spacer: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$form-control}--m-icon--icon--spacer: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
   --#{$form-control}--m-icon--icon--PaddingInlineEnd: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-error--icon--width) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer));
   --#{$form-control}__select--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$form-control}__select--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);

@@ -18,7 +18,7 @@
   
 
   // Main
-  --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
+  --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
   --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: calc(var(--#{$text-input-group}__icon--FontSize) * 2)
   --#{$text-input-group}--status__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
@@ -32,15 +32,15 @@
   --#{$text-input-group}__text--BorderEndStartRadius: var(--#{$text-input-group}__text--BorderRadius--base);
 
   // Label group
-  --#{$text-input-group}--c-label-group__main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
-  --#{$text-input-group}--c-label-group__main--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
-  --#{$text-input-group}--c-label-group__main--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
+  --#{$text-input-group}--c-label-group__main--PaddingBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) / 2);
+  --#{$text-input-group}--c-label-group__main--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
+  --#{$text-input-group}--c-label-group__main--PaddingBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) / 2);
 
   // Text input
   --#{$text-input-group}__text-input--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$text-input-group}__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$text-input-group}__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--plain);
   --#{$text-input-group}__text-input--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$text-input-group}__text-input--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$text-input-group}__text-input--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--plain);
   --#{$text-input-group}__text-input--MinWidth: 12ch;
   --#{$text-input-group}__text-input--m-hint--Color: var(--pf-t--global--text--color--placeholder);
   --#{$text-input-group}__text-input--placeholder--Color: var(--pf-t--global--text--color--placeholder);
@@ -61,9 +61,9 @@
   --#{$text-input-group}__icon--TranslateY: -50%;
 
   // Utilities
-  --#{$text-input-group}__utilities--child--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
-  --#{$text-input-group}__utilities--c-button--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
-  --#{$text-input-group}__utilities--c-button--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
+  --#{$text-input-group}__utilities--child--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
+  --#{$text-input-group}__utilities--c-button--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
+  --#{$text-input-group}__utilities--c-button--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
 
   // input disabled style
   --#{$text-input-group}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);

@@ -15,7 +15,7 @@
   --#{$check}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Required checkbox
-  --#{$check}__label-required--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
+  --#{$check}__label-required--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
   --#{$check}__label-required--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$check}__label-required--Color: var(--pf-t--global--color--status--danger--default);
 
