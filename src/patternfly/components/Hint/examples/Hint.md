@@ -90,3 +90,4 @@ cssPrefix: pf-v6-c-hint
 | `.pf-v6-c-hint__body` | `<div>` | Initiates the hint body element. |
 | `.pf-v6-c-hint__footer` | `<div>` | Initiates the hint footer element. |
 | `.pf-v6-c-hint__actions` | `<div>` | Initiates the hint actions element. |
+| `.pf-m-no-offset` | `.pf-v6-c-hint__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the hint title. |
