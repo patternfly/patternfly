@@ -95,13 +95,13 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-global--FontSize--lg: var(--pf-t--chart--global--FontSize--lg);
   --#{$chart}-global--FontSize--2xl: var(--pf-t--chart--global--FontSize--2xl);
   --#{$chart}-global--FontFamily: var(--pf-t--global--font--family--body);
-  --#{$chart}-global--letter-spacing: normal;
+  --#{$chart}-global--letter-spacing: var(--pf-t--chart--global--letter-spacing);
 
   // label
   --#{$chart}-global--label--Padding: var(--pf-t--chart--global--label--padding);
   --#{$chart}-global--label--Margin: var(--pf-t--chart--global--label--margin);
-  --#{$chart}-global--label--stroke: transparent;
-  --#{$chart}-global--label--text-anchor: middle;
+  --#{$chart}-global--label--stroke: var(--pf-t--chart--global--label--stroke);
+  --#{$chart}-global--label--text-anchor: var(--pf-t--chart--global--label--text-anchor);
   --#{$chart}-global--label--stroke--Width: var(--pf-t--chart--global--label--stroke--width);
   --#{$chart}-global--label--Fill: var(--pf-t--chart--global--label--fill);
 
@@ -118,8 +118,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-global--BorderWidth--lg: var(--pf-t--chart--global--BorderWidth--lg);
 
   // Stroke
-  --#{$chart}-global--stroke-line-cap: round;
-  --#{$chart}-global--stroke-line-join: round;
+  --#{$chart}-global--stroke-line-cap: var(--pf-t--chart--global--stroke-line-cap);
+  --#{$chart}-global--stroke-line-join: var(--pf-t--chart--global--stroke-line-join);
 
   // Fills and Strokes
   --#{$chart}-global--danger--Color--100: var(--pf-t--chart--global--danger--color--100);
@@ -193,8 +193,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-bullet--comparative-measure--warning--stroke--Color: var(--#{$chart}-global--warning--Color--100);
   --#{$chart}-bullet--comparative-measure--warning--stroke--Width: var(--pf-t--chart--global--stroke--width--sm);
   --#{$chart}-bullet--comparative-measure--warning--Width: 30;
-  --#{$chart}-bullet--group-title--divider--Fill--Color: var(--pf-t--global--border--color--default); // TODO review
-  --#{$chart}-bullet--group-title--divider--stroke--Color: var(--pf-t--global--border--color--default); // TODO review
+  --#{$chart}-bullet--group-title--divider--Fill--Color: var(--pf-t--global--border--color--default);
+  --#{$chart}-bullet--group-title--divider--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-bullet--group-title--divider--stroke--Width: var(--pf-t--chart--global--stroke--width--sm);
   --#{$chart}-bullet--Height: 140;
   --#{$chart}-bullet--label--title--Fill: var(--#{$chart}-global--Fill--Color--900);
@@ -221,7 +221,7 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-candelstick--candle--negative--Color: var(--#{$chart}-global--Fill--Color--900);
 
   // Container
-  --#{$chart}-container--cursor--line--Fill: var(--pf-t--global--border--color--default); // TODO review
+  --#{$chart}-container--cursor--line--Fill: var(--pf-t--global--border--color--default);
 
   // Simple Donut Chart
   --#{$chart}-donut--label--title--Fill: var(--#{$chart}-global--Fill--Color--900);
