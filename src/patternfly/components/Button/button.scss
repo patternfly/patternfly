@@ -264,10 +264,7 @@
 
   // Count
   --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$button}--disabled__c-badge--Color: var(--pf-t--global--text--color--disabled);
-  --#{$button}--disabled__c-badge--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--regular);
 }
 
 .#{$button} {
@@ -323,7 +320,7 @@
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-primary--m-clicked__icon--Color);
 
     .#{$badge}.pf-m-unread {
-      border: var(--#{$button}--m-primary__c-badge--BorderWidth) solid var(--#{$button}--m-primary__c-badge--BorderColor);
+      --#{$badge}--BorderColor: var(--#{$button}--m-primary__c-badge--BorderColor);
     }
   }
 
@@ -598,10 +595,6 @@
   &:disabled,
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
-    --#{$badge}--m-unread--Color: var(--#{$button}--disabled__c-badge--Color);
-    --#{$badge}--m-unread--BackgroundColor: var(--#{$button}--disabled__c-badge--BackgroundColor);
-    --#{$button}--m-primary__c-badge--BorderWidth: 0;
-
     color: var(--#{$button}--disabled--Color);
     background-color: var(--#{$button}--disabled--BackgroundColor);
 

@@ -2,6 +2,8 @@
 
 :where(:root, .#{$badge}) {
   // Component
+  --#{$badge}--BorderColor: transparent;
+  --#{$badge}--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$badge}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$badge}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$badge}--FontWeight: var(--pf-t--global--font--weight--body--bold); // TODO - design calls for 500/semi-bold, do we need a token for that or is bold ok
@@ -21,9 +23,13 @@
   --#{$badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$badge}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$badge}--m-unread__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--default);
+  --#{$badge}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$badge}--m-disabled--BorderColor: var(--pf-t--global--border--color--disabled);
+  --#{$badge}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 }
 
 .#{$badge} {
+  position: relative;
   display: inline-block;
   min-width: var(--#{$badge}--MinWidth);
   padding-inline-start: var(--#{$badge}--PaddingInlineStart);
@@ -36,6 +42,15 @@
   background-color: var(--#{$badge}--BackgroundColor);
   border-radius: var(--#{$badge}--BorderRadius);
 
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$badge}--BorderWidth) solid var(--#{$badge}--BorderColor);
+    border-radius: inherit;
+  }
+
   &.pf-m-read {
     --#{$badge}--Color: var(--#{$badge}--m-read--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-read--BackgroundColor);
@@ -46,6 +61,15 @@
     --#{$badge}--Color: var(--#{$badge}--m-unread--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-unread--BackgroundColor);
     --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-unread__toggle-icon--Color);
+  }
+
+  &.pf-m-disabled {
+    --#{$badge}--Color: var(--#{$badge}--m-disabled--Color);
+    --#{$badge}--BackgroundColor: var(--#{$badge}--m-disabled--BackgroundColor);
+
+    &::after {
+      border-color: var(--#{$badge}--m-disabled--BorderColor);
+    }
   }
 }
 
