@@ -2,6 +2,10 @@ const config = require('./backstop.config');
 const scenarios = [];
 const viewports = [];
 
+// check for --dark flag to trigger separate reference & test images, html report
+const isDarkTheme = process.argv.includes('--dark');
+const themeSuffix = isDarkTheme ? '_dark' : '';
+
 config.relativeUrls.map((relativeUrl) => {
   const url = relativeUrl.url || relativeUrl;
   const fullUrl = `${config.baseUrl}${url}`;
@@ -37,10 +41,10 @@ module.exports = {
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   },
   paths: {
-    bitmaps_reference: 'backstop_data/bitmaps_reference',
-    bitmaps_test: 'backstop_data/bitmaps_test',
+    bitmaps_reference: `backstop_data/bitmaps_reference${themeSuffix}`,
+    bitmaps_test: `backstop_data/bitmaps_test${themeSuffix}`,
     engine_scripts: 'backstop_data/engine_scripts',
-    html_report: 'backstop_data/html_report',
+    html_report: `backstop_data/html_report${themeSuffix}`,
     ci_report: 'backstop_data/ci_report'
   },
   asyncCaptureLimit: 5,

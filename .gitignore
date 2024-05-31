@@ -19,7 +19,7 @@ package-lock.json
 /scripts/sizeReport/package-lock.json
 /scripts/sizeReport/report.html
 patternfly-docs/generated/**/*.js
-backstop_data/bitmaps_test
-backstop_data/html_report
+backstop_data/bitmaps_test*
+backstop_data/html_report*
 backstop_data/reports
 .history
