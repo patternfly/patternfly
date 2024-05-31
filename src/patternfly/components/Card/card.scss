@@ -156,6 +156,7 @@
     // When SELECTABLE and CLICKABLE card is focused, don't show change of background or border on the card
     .#{$card}__selectable-actions .#{$check}__input:where(:focus-visible) ~ .#{$check}__label,
     .#{$card}__selectable-actions .#{$radio}__input:where(:focus-visible) ~ .#{$radio}__label {
+      --#{$card}--BackgroundColor: revert;
       --#{$card}--BorderColor: revert;
     }
 
@@ -163,6 +164,7 @@
     .#{$card}__selectable-actions .#{$check}__input:where(:checked) ~ .#{$check}__label,
     .#{$card}__selectable-actions .#{$radio}__input:where(:checked) ~ .#{$radio}__label,
     &.pf-m-selected {
+      --#{$card}--BorderColor: revert;
       --#{$card}--m-selectable--BorderWidth: revert;
     }
 
