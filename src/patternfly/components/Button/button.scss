@@ -15,13 +15,16 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
+  --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
   --#{$button}--hover--BorderColor: transparent;
   --#{$button}--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
   --#{$button}--hover--TextDecoration: none;
-
+  
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
@@ -251,8 +254,6 @@
   --#{$button}__progress--InsetBlockStart: 50%;
   --#{$button}__progress--InsetInlineStart: var(--pf-t--global--spacer--md);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
-  --#{$button}--m-progress--TransitionProperty: padding;
-  --#{$button}--m-progress--TransitionDuration: var(--pf-t--global--transition--duration);
   --#{$button}--m-progress--PaddingInlineEnd: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingInlineStart: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -294,6 +295,9 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
+  transition-timing-function: var(--#{$button}--TransitionTimingFunction);
+  transition-duration: var(--#{$button}--TransitionDuration);
+  transition-property: var(--#{$button}--TransitionProperty);
 
   &::after {
     position: absolute;
@@ -303,6 +307,7 @@
     border: var(--#{$button}--BorderWidth) solid;
     border-color: var(--#{$button}--BorderColor);
     border-radius: inherit;
+    transition: inherit;
   }
 
   // Primary
@@ -618,8 +623,6 @@
   &.pf-m-progress {
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-progress--PaddingInlineEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-progress--PaddingInlineStart);
-
-    transition: var(--#{$button}--m-progress--TransitionProperty) var(--#{$button}--m-progress--TransitionDuration);
   }
 
   &.pf-m-in-progress {
