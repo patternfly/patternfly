@@ -254,8 +254,6 @@
   --#{$button}__progress--InsetBlockStart: 50%;
   --#{$button}__progress--InsetInlineStart: var(--pf-t--global--spacer--md);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
-  --#{$button}--m-progress--TransitionProperty: padding;
-  --#{$button}--m-progress--TransitionDuration: var(--pf-t--global--transition--duration);
   --#{$button}--m-progress--PaddingInlineEnd: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingInlineStart: calc(var(--pf-t--global--spacer--md) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingInlineEnd: var(--pf-t--global--spacer--md);
