@@ -309,9 +309,7 @@
     border: var(--#{$button}--BorderWidth) solid;
     border-color: var(--#{$button}--BorderColor);
     border-radius: inherit;
-    transition-timing-function: inherit;
-    transition-duration: inherit;
-    transition-property: inherit;
+    transition: inherit;
   }
 
   // Primary
