@@ -113,6 +113,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     .#{$pagination}__nav {
       display: flex;
       flex-basis: 100%;
+      justify-content: space-between;
     }
 
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
