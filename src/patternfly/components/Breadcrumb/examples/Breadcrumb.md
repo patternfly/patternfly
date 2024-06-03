@@ -138,7 +138,7 @@ cssPrefix: pf-v6-c-breadcrumb
     {{#> breadcrumb-item}}
       {{> breadcrumb-item-divider}}
       {{#> breadcrumb-dropdown}}
-        {{#> menu-toggle menu-toggle--IsPlain=true}}
+        {{#> menu-toggle menu-toggle--IsText=true menu-toggle--IsPlain=true menu-toggle--IsSmall=true}}
           {{#> menu-toggle-count}}
             {{#> badge badge--modifier="pf-m-unread"}}
               4

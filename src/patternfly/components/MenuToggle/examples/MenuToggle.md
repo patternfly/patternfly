@@ -63,7 +63,7 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--IsPlain=true}}
+{{#> menu-toggle menu-toggle--IsText=true menu-toggle--IsPlain=true menu-toggle--IsSmall=true}}
   {{#> menu-toggle-count}}
     {{#> badge badge--modifier="pf-m-unread"}}
       4
