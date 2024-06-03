@@ -3632,7 +3632,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 {{#> table table--id="table-favorites-sortable" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--IsSortable=true table-th--IsSelected="true" table-button--attribute='aria-label="Favorite"'}}
+      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite=true table-th--IsSortable=true table-th--IsSelected=true table-button--attribute='aria-label="Favorite"'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}

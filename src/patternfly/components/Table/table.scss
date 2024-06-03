@@ -908,7 +908,8 @@
     }
   }
 
-  &.pf-m-selected :is(.#{$table}__button, .#{$button}) {
+  &.pf-m-selected .#{$table}__button,
+  &.pf-m-selected .#{$button} {
     --#{$table}__sort-indicator--Color: var(--#{$table}__sort--m-selected__sort-indicator--Color);
 
     // override state colors on text
