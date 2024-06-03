@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$truncate}) {
-  --#{$truncate}--MinWidth: 12ch;
+  --#{$truncate}--MinWidth: 6ch;
   --#{$truncate}__start--MinWidth: 6ch;
 }
 
