@@ -29,6 +29,23 @@ import './TextInputGroup.css'
 {{/text-input-group}}
 ```
 
+### Plain
+
+The following example shows a `TextInputGroup` with the `.pf-m-plain` class applied. A plain `TextInputGroup` must only be used when contained in an ancestor that has its own border or background color styling.
+<br/>
+<br/>
+For the purposes of this example, the `TextInputGroup` is contained in a wrapper with dashed border styling to show where the component is.
+
+```hbs
+{{#> text-input-group text-input-group--id="text-input-group-plain" text-input-group--modifier="pf-m-plain" text-input-group--value="Text input group with plain styling"}}
+  {{#> text-input-group-main}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-text-input}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+{{/text-input-group}}
+```
+
 ### Utilities and icon with placeholder text
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-utilities-and-icon-with-placeholder-text"}}

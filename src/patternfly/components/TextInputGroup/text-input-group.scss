@@ -67,11 +67,6 @@
     inset: 0;
     pointer-events: none;
     content: "";
-    border: var(--#{$text-input-group}--BorderWidth) solid var(--#{$text-input-group}--BorderColor);
-    border-start-start-radius: var(--#{$text-input-group}--BorderStartStartRadius);
-    border-start-end-radius: var(--#{$text-input-group}--BorderStartEndRadius);
-    border-end-start-radius: var(--#{$text-input-group}--BorderEndStartRadius);
-    border-end-end-radius: var(--#{$text-input-group}--BorderEndEndRadius);
   }
 
   &:hover {
@@ -126,12 +121,16 @@
   grid-template-areas: "text-input";
   grid-template-columns: 1fr;
 
-  &::before,
-  &::after {
+  &::before {
     position: absolute;
     inset: 0;
     pointer-events: none;
     content: "";
+    border: var(--#{$text-input-group}--BorderWidth) solid var(--#{$text-input-group}--BorderColor);
+    border-start-start-radius: var(--#{$text-input-group}--BorderStartStartRadius);
+    border-start-end-radius: var(--#{$text-input-group}--BorderStartEndRadius);
+    border-end-start-radius: var(--#{$text-input-group}--BorderEndStartRadius);
+    border-end-end-radius: var(--#{$text-input-group}--BorderEndEndRadius);
   }
 }
 
