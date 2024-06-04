@@ -15,6 +15,8 @@
   --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$menu}--icon--disabled--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$menu}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$menu}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   // * Menu plain
   --#{$menu}--m-plain--BoxShadow: none;
@@ -38,6 +40,9 @@
   // * Menu list item
   --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__list-item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$menu}__list-item--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$menu}__list-item--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$menu}__list-item--TransitionProperty: background-color;
   --#{$menu}__list-item--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu}__list-item--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
@@ -200,6 +205,10 @@
   background-color: var(--#{$menu}--BackgroundColor);
   border-radius: var(--#{$menu}--BorderRadius);
   box-shadow: var(--#{$menu}--BoxShadow);
+  // stylelint-disable declaration-no-important
+  transition-timing-function: var(--#{$menu}--TransitionTimingFunction) !important; // Note that this timing function is overriding the default that Popper is using
+  transition-duration: var(--#{$menu}--TransitionDuration) !important; // Note that this duration is overriding whatever value is supplied as a prop to Popper
+  // stylelint-enable declaration-no-important
 
   .#{$menu} {
     min-width: 100%;
@@ -437,6 +446,9 @@
 .#{$menu}__list-item {
   align-items: baseline;
   min-width: 0; // allow list item to shrink for text overflow
+  transition-timing-function: var(--#{$menu}__list-item--TransitionTimingFunction);
+  transition-duration: var(--#{$menu}__list-item--TransitionDuration);
+  transition-property: var(--#{$menu}__list-item--TransitionProperty);
 
   > * {
     position: relative;
@@ -447,6 +459,7 @@
     inset: 0;
     content: "";
     background-color: var(--#{$menu}__list-item--BackgroundColor);
+    transition: inherit;
   }
 
   // - Menu item load
