@@ -1,6 +1,6 @@
 {{setTag nav-item--IsExpandable 'button' 'a'}}
 
-<{{tag}}{{#unless (concat nav-item--IsExpandable nav-item--IsExpandable)}} href="{{ternary nav-link--href nav-link--href '#'}}"{{/unless}} class="{{pfv}}nav__link
+<{{tag}}{{#unless nav-item--IsExpandable}} href="{{ternary nav-link--href nav-link--href '#'}}"{{/unless}} class="{{pfv}}nav__link
   {{setModifiers
     nav-link--current='pf-m-current'
     nav-link--IsCurrent='pf-m-current'
@@ -13,12 +13,12 @@
   {{#if nav-item--IsFlyout}}
     aria-haspopup="true"
   {{/if}}
-  {{#ifAny nav-item--IsFlyout nav-item--IsDrilldown nav-item--IsExpandable nav-item--IsExpandable}}
-    {{#ifAny nav-item--expanded nav-item--IsExpanded}}
+  {{#ifAny nav-item--IsFlyout nav-item--IsDrilldown nav-item--IsExpandable}}
+    {{#if nav-item--IsExpanded}}
       aria-expanded="true"
     {{else}}
       aria-expanded="false"
-    {{/ifAny}}
+    {{/if}}
   {{/ifAny}}
   {{#if nav-link--attribute}}
     {{{nav-link--attribute}}}
@@ -33,7 +33,7 @@
       {{> @partial-block}}
     {{/nav-link-text}}
   {{/if}}
-  {{#ifAny nav-item--IsExpandable nav-item--IsExpandable nav-item--IsFlyout nav-item--IsDrilldown}}
+  {{#ifAny nav-item--IsExpandable nav-item--IsFlyout nav-item--IsDrilldown}}
     {{> nav-toggle}}
   {{/ifAny}}
 </{{tag}}>
