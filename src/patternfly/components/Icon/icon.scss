@@ -50,11 +50,11 @@
 
   // Content color
   --#{$icon}__content--Color: initial;
-  --#{$icon}__content--m-danger--Color: var(--pf-t--global--color--status--danger--default);
-  --#{$icon}__content--m-warning--Color: var(--pf-t--global--color--status--warning--default);
-  --#{$icon}__content--m-success--Color: var(--pf-t--global--color--status--success--default);
-  --#{$icon}__content--m-info--Color: var(--pf-t--global--color--status--info--default);
-  --#{$icon}__content--m-custom--Color: var(--pf-t--global--color--status--custom--default);
+  --#{$icon}__content--m-danger--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$icon}__content--m-warning--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$icon}__content--m-success--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$icon}__content--m-info--Color: var(--pf-t--global--icon--color--status--info--default);
+  --#{$icon}__content--m-custom--Color: var(--pf-t--global--icon--color--status--custom--default);
   --#{$icon}--m-inline__content--Color: initial;
 
   // Content sizes
