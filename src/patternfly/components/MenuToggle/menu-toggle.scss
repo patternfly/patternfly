@@ -23,6 +23,9 @@
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
+  --#{$menu-toggle}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$menu-toggle}--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$menu-toggle}--TransitionProperty: color, background-color, border-width, border-color;
 
   // * Menu toggle hover
   --#{$menu-toggle}--hover--Color: var(--pf-t--global--text--color--regular);
@@ -200,7 +203,10 @@
   cursor: pointer;
   background-color: var(--#{$menu-toggle}--BackgroundColor);
   border: 0;
-
+  transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
+  transition-duration: var(--#{$menu-toggle}--TransitionDuration);
+  transition-property: var(--#{$menu-toggle}--TransitionProperty);
+  
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);
@@ -216,6 +222,7 @@
     pointer-events: none;
     content: "";
     border: var(--#{$menu-toggle}--BorderWidth) solid var(--#{$menu-toggle}--BorderColor);
+    transition: inherit;
   }
 
   &.pf-m-primary {
