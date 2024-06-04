@@ -50,7 +50,7 @@
   --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // * Table tr responsive
-  --#{$table}__tr--responsive--border-width--base: 0;
+  --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$table}__tr--responsive--last-child--BorderBlockEndWidth: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__tr--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
   --#{$table}__tr--responsive--MarginBlockStart: var(--#{$table}__tbody--responsive--border-width--base);
@@ -175,6 +175,11 @@
     &:first-of-type {
       border-block-start: var(--#{$table}__tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
     }
+  }
+
+  // Remove border on tr inside non-expanded tbody in of expandable tables
+  &.pf-m-expandable tbody:not(.pf-m-expanded) tr {
+    border-block-end: 0;
   }
 
   // Remove the border from the body inside of the nested table
