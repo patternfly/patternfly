@@ -7,6 +7,7 @@
   --#{$panel}--ZIndex: auto;
   --#{$panel}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$panel}--BoxShadow: none;
+  --#{$panel}--BorderRadius: var(--pf-t--global--spacer--md);
 
   // border
   --#{$panel}--before--BorderWidth: 0;
@@ -59,6 +60,7 @@
   min-width: var(--#{$panel}--MinWidth);
   max-width: var(--#{$panel}--MaxWidth);
   background-color: var(--#{$panel}--BackgroundColor);
+  border-radius: var(--#{$panel}--BorderRadius);
   box-shadow: var(--#{$panel}--BoxShadow);
 
   &::before {
@@ -67,6 +69,7 @@
     pointer-events: none;
     content: "";
     border: var(--#{$panel}--before--BorderWidth) solid var(--#{$panel}--before--BorderColor);
+    border-radius: var(--#{$panel}--BorderRadius);
   }
 
   &.pf-m-bordered {
