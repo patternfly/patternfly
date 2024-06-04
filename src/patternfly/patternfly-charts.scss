@@ -40,12 +40,12 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-color-green-400: var(--pf-t--chart--color--green--400);
   --#{$chart}-color-green-500: var(--pf-t--chart--color--green--500);
 
-  // cyan
-  --#{$chart}-color-cyan-100: var(--pf-t--chart--color--teal--100);
-  --#{$chart}-color-cyan-200: var(--pf-t--chart--color--teal--200);
-  --#{$chart}-color-cyan-300: var(--pf-t--chart--color--teal--300);
-  --#{$chart}-color-cyan-400: var(--pf-t--chart--color--teal--400);
-  --#{$chart}-color-cyan-500: var(--pf-t--chart--color--teal--500);
+  // teal
+  --#{$chart}-color-teal-100: var(--pf-t--chart--color--teal--100);
+  --#{$chart}-color-teal-200: var(--pf-t--chart--color--teal--200);
+  --#{$chart}-color-teal-300: var(--pf-t--chart--color--teal--300);
+  --#{$chart}-color-teal-400: var(--pf-t--chart--color--teal--400);
+  --#{$chart}-color-teal-500: var(--pf-t--chart--color--teal--500);
 
   // purple
   --#{$chart}-color-purple-100: var(--pf-t--chart--color--purple--100);
@@ -54,12 +54,12 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-color-purple-400: var(--pf-t--chart--color--purple--400);
   --#{$chart}-color-purple-500: var(--pf-t--chart--color--purple--500);
 
-  // gold
-  --#{$chart}-color-gold-100: var(--pf-t--chart--color--yellow--100);
-  --#{$chart}-color-gold-200: var(--pf-t--chart--color--yellow--200);
-  --#{$chart}-color-gold-300: var(--pf-t--chart--color--yellow--300);
-  --#{$chart}-color-gold-400: var(--pf-t--chart--color--yellow--400);
-  --#{$chart}-color-gold-500: var(--pf-t--chart--color--yellow--500);
+  // yellow
+  --#{$chart}-color-yellow-100: var(--pf-t--chart--color--yellow--100);
+  --#{$chart}-color-yellow-200: var(--pf-t--chart--color--yellow--200);
+  --#{$chart}-color-yellow-300: var(--pf-t--chart--color--yellow--300);
+  --#{$chart}-color-yellow-400: var(--pf-t--chart--color--yellow--400);
+  --#{$chart}-color-yellow-500: var(--pf-t--chart--color--yellow--500);
 
   // orange
   --#{$chart}-color-orange-100: var(--pf-t--chart--color--orange--100);
@@ -333,19 +333,19 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-theme--blue--ColorScale--400: var(--pf-t--chart--theme--colorscales--blue--colorscale--400);
   --#{$chart}-theme--blue--ColorScale--500: var(--pf-t--chart--theme--colorscales--blue--colorscale--500);
 
-  // cyan
-  --#{$chart}-theme--cyan--ColorScale--100: var(--pf-t--chart--theme--colorscales--teal--colorscale--100);
-  --#{$chart}-theme--cyan--ColorScale--200: var(--pf-t--chart--theme--colorscales--teal--colorscale--200);
-  --#{$chart}-theme--cyan--ColorScale--300: var(--pf-t--chart--theme--colorscales--teal--colorscale--300);
-  --#{$chart}-theme--cyan--ColorScale--400: var(--pf-t--chart--theme--colorscales--teal--colorscale--400);
-  --#{$chart}-theme--cyan--ColorScale--500: var(--pf-t--chart--theme--colorscales--teal--colorscale--500);
+  // teal
+  --#{$chart}-theme--teal--ColorScale--100: var(--pf-t--chart--theme--colorscales--teal--colorscale--100);
+  --#{$chart}-theme--teal--ColorScale--200: var(--pf-t--chart--theme--colorscales--teal--colorscale--200);
+  --#{$chart}-theme--teal--ColorScale--300: var(--pf-t--chart--theme--colorscales--teal--colorscale--300);
+  --#{$chart}-theme--teal--ColorScale--400: var(--pf-t--chart--theme--colorscales--teal--colorscale--400);
+  --#{$chart}-theme--teal--ColorScale--500: var(--pf-t--chart--theme--colorscales--teal--colorscale--500);
 
-  // gold
-  --#{$chart}-theme--gold--ColorScale--100: var(--pf-t--chart--theme--colorscales--yellow--colorscale--100);
-  --#{$chart}-theme--gold--ColorScale--200: var(--pf-t--chart--theme--colorscales--yellow--colorscale--200);
-  --#{$chart}-theme--gold--ColorScale--300: var(--pf-t--chart--theme--colorscales--yellow--colorscale--300);
-  --#{$chart}-theme--gold--ColorScale--400: var(--pf-t--chart--theme--colorscales--yellow--colorscale--400);
-  --#{$chart}-theme--gold--ColorScale--500: var(--pf-t--chart--theme--colorscales--yellow--colorscale--500);
+  // yellow
+  --#{$chart}-theme--yellow--ColorScale--100: var(--pf-t--chart--theme--colorscales--yellow--colorscale--100);
+  --#{$chart}-theme--yellow--ColorScale--200: var(--pf-t--chart--theme--colorscales--yellow--colorscale--200);
+  --#{$chart}-theme--yellow--ColorScale--300: var(--pf-t--chart--theme--colorscales--yellow--colorscale--300);
+  --#{$chart}-theme--yellow--ColorScale--400: var(--pf-t--chart--theme--colorscales--yellow--colorscale--400);
+  --#{$chart}-theme--yellow--ColorScale--500: var(--pf-t--chart--theme--colorscales--yellow--colorscale--500);
 
   // gray
   --#{$chart}-theme--gray--ColorScale--100: var(--pf-t--chart--theme--colorscales--gray--colorscale--100);
