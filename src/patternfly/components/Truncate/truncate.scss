@@ -16,7 +16,7 @@
 .#{$truncate}__end {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .#{$truncate}__start {
