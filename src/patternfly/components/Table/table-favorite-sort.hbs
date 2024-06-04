@@ -1,8 +1,12 @@
 {{#> action-list action-list--modifier='pf-m-icons'}}
-  {{#> button button--IsPlain=true button--aria-label='Favorite all'}}
-      <i class="fas fa-star" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--IsPlain=true button--aria-label='Sort favorites'}}
-    {{> table-sort-indicator}}
-  {{/button}}
+  {{#> action-list-item}}
+    {{#> button button--IsPlain=true button--aria-label='Favorite all'}}
+        <i class="fas fa-star" aria-hidden="true"></i>
+    {{/button}}
+  {{/action-list-item}}
+  {{#> action-list-item}}
+    {{#> button button--IsPlain=true button--aria-label='Sort favorites'}}
+      {{> table-sort-indicator}}
+    {{/button}}
+  {{/action-list-item}}
 {{/action-list}}
