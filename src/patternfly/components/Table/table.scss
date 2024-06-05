@@ -594,10 +594,6 @@
     }
   }
 
-  .#{$action-list}.pf-m-icons {
-    --#{$action-list}--m-icons--ColumnGap: 0;
-  }
-
   .#{$button} .#{$table}__sort-indicator {
     --pf-v6-c-table__sort-indicator--MarginInlineStart: 0;
   }
@@ -714,14 +710,16 @@
 .#{$table} .#{$table}__check,
 .#{$table} .#{$table}__toggle,
 .#{$table} .#{$table}__action,
-.#{$table} .#{$table}__favorite,
-.#{$table} th:where(.#{$table}__th).pf-m-favorite,
 .#{$table} .#{$table}__inline-edit-action,
 .#{$table} .#{$table}__draggable {
   --#{$table}--cell--MinWidth: 0;
   --#{$table}--cell--Width: 1%;
 }
 // stylelint-enable
+
+.#{$table} .#{$table}__favorite {
+  --#{$table}--cell--MaxWidth: auto;
+}
 
 // - Table toggle
 .#{$table}__toggle {
