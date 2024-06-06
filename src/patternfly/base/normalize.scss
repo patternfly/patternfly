@@ -105,4 +105,8 @@
   ) {
     cursor: pointer;
   }
+
+  :where(.pf-v6-theme-dark) {
+    color-scheme: dark;
+  }
 }

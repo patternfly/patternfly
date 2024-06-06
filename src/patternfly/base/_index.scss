@@ -1,7 +1,7 @@
 // @use '../sass-utilities' as *;
 
-@forward './normalize';
 @forward './reset';
+@forward './normalize';
 @forward './patternfly-common';
 @forward './patternfly-fonts';
 @forward './patternfly-fa-icons';
