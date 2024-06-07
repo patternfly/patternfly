@@ -108,7 +108,7 @@
   --#{$wizard}__toggle--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$wizard}__toggle-status-icon--InsetBlockStart: 2px; // not spacer-based but needed to align
   --#{$wizard}__toggle-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
-  
+
   // Toggle list
   --#{$wizard}__toggle-list--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__toggle-list--MarginBlockEnd: calc(var(--#{$wizard}__toggle-list-item--MarginBlockEnd) * -1);
@@ -145,7 +145,7 @@
   // Nav item
   --#{$wizard}__nav-item--MarginBlockStart: var(--pf-t--global--spacer--md);
 
-  // Outer wrap 
+  // Outer wrap
   --#{$wizard}__outer-wrap--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__outer-wrap--lg--PaddingInlineStart: var(--#{$wizard}__nav--Width);
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
@@ -477,7 +477,7 @@
     &::before {
       display: none;
     }
-  }    
+  }
 
   &:where(:hover, :focus) {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);

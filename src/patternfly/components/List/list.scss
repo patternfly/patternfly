@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-.#{$list} {
+:where(:root, .#{$list}) {
   // list
   --#{$list}--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$list}--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);
@@ -25,7 +25,9 @@
   --#{$list}--m-icon-lg__item-icon--MinWidth: var(--pf-t--global--icon--size--lg);
   --#{$list}--m-icon-lg__item-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$list}--m-icon-lg__item-icon--FontSize: var(--pf-t--global--icon--size--lg);
+}
 
+.#{$list} {
   padding-inline-start: var(--#{$list}--PaddingInlineStart);
 
   ol,

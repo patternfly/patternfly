@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-.#{$log-viewer} {
+:where(:root, .#{$log-viewer}) {
   --#{$log-viewer}--Height: 100%;
   --#{$log-viewer}--MaxHeight: auto;
   --#{$log-viewer}--m-line-numbers__index--Display: inline;
@@ -67,7 +67,9 @@
 
   // Dark theme
   --#{$log-viewer}--m-dark__main--BorderWidth: 0;
+}
 
+.#{$log-viewer} {
   &.pf-m-dark {
     --#{$log-viewer}__main--BorderWidth: var(--#{$log-viewer}--m-dark__main--BorderWidth);
 

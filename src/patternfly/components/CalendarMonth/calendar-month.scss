@@ -24,7 +24,6 @@
   --#{$calendar-month}__day--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$calendar-month}__day--Color: var(--pf-t--global--text--color--regular);
 
-
   // dates td
   --#{$calendar-month}__dates-cell--PaddingBlockStart: #{pf-size-prem(2px)};
   --#{$calendar-month}__dates-cell--PaddingInlineEnd: #{pf-size-prem(2px)};
@@ -71,7 +70,7 @@
   --#{$calendar-month}__date--after--focus--OutlineOffset: -2px;
 }
 
-:where(.#{$calendar-month}) {
+.#{$calendar-month} {
   display: inline-flex;
   flex-direction: column;
   padding-block-start: var(--#{$calendar-month}--PaddingBlockStart);
