@@ -52,7 +52,7 @@ This style of label is used to indicate overflow within a label group.
 
 **Note: Editable label behavior must be handled with JavaScript.**
 
-```hbs isBeta
+```hbs
 {{> label
     label--id="editable-label"
     label--color="blue"
@@ -96,7 +96,7 @@ This style of label is used to indicate overflow within a label group.
 
 This style of label is used to add new labels to a label group.
 
-```hbs isBeta
+```hbs
 {{> label label--IsAdd=true label-text--value="Add Label"}}
 ```
 
@@ -367,7 +367,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 * `.pf-v6-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-v6-c-label-group__textarea`
 
 ### Editable labels, dynamic label group
-``` hbs isBeta
+``` hbs
 {{#> label-group label-group--id="editable-labels-editable-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -404,7 +404,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Editable labels, label active, dynamic label group
-``` hbs isBeta
+``` hbs
 {{#> label-group label-group--id="editable-labels-label-active-editable-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -448,7 +448,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Mixed labels (static / editable), dynamic label group
-``` hbs isBeta
+``` hbs
 {{#> label-group label-group--id="mixed-labels-dynamic-label-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}

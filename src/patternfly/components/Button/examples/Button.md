@@ -176,7 +176,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 ```
 
 ### Counts
-```hbs isBeta
+```hbs
 {{#*inline "button-counts"}}
 {{#> button button--modifier="pf-m-primary" button--attribute='aria-label="View 7 issues"'}}
   View issues
