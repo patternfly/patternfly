@@ -2,11 +2,11 @@
   {{#if page-main-section--attribute}}
     {{{page-main-section--attribute}}}
   {{/if}}>
-  {{#if page-main-section--IsLimitWidth}}
+  {{#if page-main-section--ExcludeMainBody}}
+    {{> @partial-block}}
+  {{else}}
     {{#> page-main-body}}
       {{> @partial-block}}
     {{/page-main-body}}
-  {{else}}
-    {{> @partial-block}}
   {{/if}}
 </section>
