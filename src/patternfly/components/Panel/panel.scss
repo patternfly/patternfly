@@ -4,10 +4,9 @@
   --#{$panel}--Width: auto;
   --#{$panel}--MinWidth: auto;
   --#{$panel}--MaxWidth: none;
-  --#{$panel}--ZIndex: auto;
   --#{$panel}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$panel}--BoxShadow: none;
-  --#{$panel}--BorderRadius: var(--pf-t--global--spacer--md);
+  --#{$panel}--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // border
   --#{$panel}--before--BorderWidth: 0;
@@ -17,18 +16,17 @@
   --#{$panel}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // bordered
-  --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--box--default);
 
   // raised
   --#{$panel}--m-raised--BoxShadow: var(--pf-t--global--box-shadow--md);
-  --#{$panel}--m-raised--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
   // header
   --#{$panel}__header--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$panel}__header--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$panel}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$panel}__header--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$panel}__header--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$panel}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // main
   --#{$panel}__main--MaxHeight: none;
@@ -36,26 +34,27 @@
 
   // body
   --#{$panel}__main-body--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$panel}__main-body--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$panel}__main-body--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$panel}__main-body--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$panel}__main-body--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$panel}__main-body--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // footer
-  --#{$panel}__footer--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$panel}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$panel}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$panel}__footer--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$panel}__footer--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$panel}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$panel}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$panel}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$panel}__footer--BoxShadow: none;
 
   // scrollable
   --#{$panel}--m-scrollable__main--MaxHeight: #{pf-size-prem(300px)};
   --#{$panel}--m-scrollable__main--Overflow: auto;
-  --#{$panel}--m-scrollable__footer--BoxShadow: 0 #{pf-size-prem(-5px)} #{pf-size-prem(4px)} #{pf-size-prem(-4px)} rgba(0 0 0 / 16%); // insets the shadow so it doesn't show on left/right sides
+  --#{$panel}--m-scrollable__footer--BoxShadow: var(--pf-t--global--box-shadow--md--top);
+  --#{$panel}--m-scrollable__footer--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$panel}--m-scrollable__footer--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 }
 
 .#{$panel} {
   position: relative;
-  z-index: var(--#{$panel}--ZIndex);
   width: var(--#{$panel}--Width);
   min-width: var(--#{$panel}--MinWidth);
   max-width: var(--#{$panel}--MaxWidth);
@@ -83,13 +82,14 @@
   &.pf-m-raised {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-raised--BackgroundColor);
     --#{$panel}--BoxShadow: var(--#{$panel}--m-raised--BoxShadow);
-    --#{$panel}--ZIndex: var(--#{$panel}--m-raised--ZIndex);
   }
 
   &.pf-m-scrollable {
     --#{$panel}__main--MaxHeight: var(--#{$panel}--m-scrollable__main--MaxHeight);
     --#{$panel}__main--Overflow: var(--#{$panel}--m-scrollable__main--Overflow);
     --#{$panel}__footer--BoxShadow: var(--#{$panel}--m-scrollable__footer--BoxShadow);
+    --#{$panel}__footer--PaddingBlockStart: var(--#{$panel}--m-scrollable__footer--PaddingBlockStart);
+    --#{$panel}__footer--PaddingBlockEnd: var(--#{$panel}--m-scrollable__footer--PaddingBlockEnd);
   }
 }
 
@@ -110,6 +110,13 @@
   padding-block-end: var(--#{$panel}__main-body--PaddingBlockEnd);
   padding-inline-start: var(--#{$panel}__main-body--PaddingInlineStart);
   padding-inline-end: var(--#{$panel}__main-body--PaddingInlineEnd);
+
+  &:has(.#{$panel}__menu) {
+    --#{$panel}__main-body--PaddingBlockStart: 0;
+    --#{$panel}__main-body--PaddingBlockEnd: 0;
+    --#{$panel}__main-body--PaddingInlineStart: 0;
+    --#{$panel}__main-body--PaddingInlineEnd: 0;
+  }
 }
 
 .#{$panel}__footer {
