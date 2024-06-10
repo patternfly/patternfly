@@ -17,7 +17,7 @@
   {{#if table-th--IsSelected}} pf-m-selected{{/if}}
   {{#if table-th--IsSubhead}} {{pfPrefix 'table__subhead'}}{{/if}}
   {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}
-  {{#if table-th--IsFavorite}} pf-m-favorite{{/if}}"
+  {{#if table-th--IsFavorite}} {{pfv}}table__favorite{{/if}}"
   {{#if table--IsGrid}}
     {{#if table-th--IsRowHeader}}
       role="rowheader"
@@ -51,27 +51,17 @@
   {{#if table-th--IsColumnHelp}}
     <div class="{{pfv}}table__column-help">
   {{/if}}
-  {{#if table-th--IsSortable}}
+  {{#if table-th--IsFavorite}}
+    {{> table-favorite-sort}}
+  {{else if table-th--IsSortable}}
     {{#> table-button}}
       {{#> table-button-content}}
         {{#> table-text}}
-          {{#if table-th--IsFavorite}}
-            <i class="fas fa-star" aria-hidden="true"></i>
-          {{else if @partial-block}}
+          {{#if @partial-block}}
             {{> @partial-block}}
           {{/if}}
         {{/table-text}}
-        {{#> table-sort-indicator}}
-          {{#if table-th--IsSelected}}
-            {{#if table-th--IsAsc}}
-              <i class="fas fa-long-arrow-alt-up"></i>
-            {{else}}
-              <i class="fas fa-long-arrow-alt-down"></i>
-            {{/if}}
-          {{else}}
-            <i class="fas fa-arrows-alt-v"></i>
-          {{/if}}
-        {{/table-sort-indicator}}
+        {{> table-sort-indicator}}
       {{/table-button-content}}
     {{/table-button}}
   {{else if table-th--IsCompoundExpansionToggle}}

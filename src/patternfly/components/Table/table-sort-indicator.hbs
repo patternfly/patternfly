@@ -2,5 +2,13 @@
   {{#if table-sort-indicator--attribute}}
     {{{table-sort-indicator--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if table-th--IsSelected}}
+    {{#if table-th--IsAsc}}
+      <i class="fas fa-long-arrow-alt-up"></i>
+    {{else}}
+      <i class="fas fa-long-arrow-alt-down"></i>
+    {{/if}}
+  {{else}}
+    <i class="fas fa-arrows-alt-v"></i>
+  {{/if}}
 </span>
