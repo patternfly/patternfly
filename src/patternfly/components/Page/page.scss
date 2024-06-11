@@ -65,9 +65,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
 
   // Main section
-  --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md); // TODO trying 16
+  --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--PaddingInlineEnd: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
-  --#{$page}__main-section--PaddingBlockEnd: var(--pf-t--global--spacer--md); // TODO trying 16
+  --#{$page}__main-section--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--PaddingInlineStart: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
   --#{$page}__main-section--RowGap: var(--pf-t--global--spacer--lg);
   --#{$page}__main-breadcrumb--main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
