@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-.#{$popover} {
+:where(:root, .#{$popover}) {
   // Component
   --#{$popover}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
@@ -67,7 +67,9 @@
 
   // Footer
   --#{$popover}__footer--MarginBlockStart: var(--pf-t--global--spacer--md);
+}
 
+.#{$popover} {
   position: relative;
   min-width: var(--#{$popover}--MinWidth);
   max-width: var(--#{$popover}--MaxWidth);

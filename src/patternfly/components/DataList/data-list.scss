@@ -91,7 +91,6 @@
   --#{$data-list}__check--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
   --#{$data-list}__check--MarginBlockStart: #{pf-size-prem(-1px)}; // slightly offset input
 
-
   // actions
   --#{$data-list}__item-action--Display: flex;
   --#{$data-list}__item-action--PaddingBlockStart: var(--pf-t--global--spacer--lg);

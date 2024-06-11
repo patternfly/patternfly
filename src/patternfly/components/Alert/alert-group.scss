@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 // Tabs
-.#{$alert-group} {
+:where(:root, .#{$alert-group}) {
   // Alert group variables
   --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--md);
 
@@ -28,7 +28,9 @@
   --#{$alert-group}__overflow-button--focus--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
   --#{$alert-group}__overflow-button--active--Color: var(--pf-t--global--text--color--link--hover);
   --#{$alert-group}__overflow-button--active--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
+}
 
+.#{$alert-group} {
   // Spacing between alerts
   > * + * {
     margin-block-start: var(--#{$alert-group}__item--MarginBlockStart);
