@@ -34,9 +34,9 @@
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 
   // Title
-  --#{$alert}__title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$alert}__title--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$alert}__title--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$alert}__title--FontFamily: var(--pf-t--global--font--family--body);
+  --#{$alert}__title--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$alert}__title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$alert}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$alert}__title--Color: var(--pf-t--global--text--color--regular);
   --#{$alert}__title--max-lines: 1;
