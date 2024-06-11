@@ -7,7 +7,7 @@
     {{#> check check--type="label" check--attribute=(concat 'for="' menu-toggle--check--id '-input"') check--IsDisabled=menu-toggle--IsDisabled}}
       {{> check-input check-input--attribute=(concat 'id="' menu-toggle--check--id '-input" name="' menu-toggle--check--id '-input"')}}
       {{#if menu-toggle--check--text}}
-        {{#> check-label check-label--IsDisabled=menu-toggle--IsDisabled check-label--type="span"}}{{menu-toggle--check--text}}{{/check-label}}
+        {{#> check-label check-label--type="span" check-label--IsDisabled=menu-toggle--IsDisabled}}{{menu-toggle--check--text}}{{/check-label}}
       {{/if}}
     {{/check}}
   {{/if}}
