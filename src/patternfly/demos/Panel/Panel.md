@@ -15,7 +15,7 @@ section: components
   {{#> panel-main}}
     {{#> panel-main-body}}
       {{#> panel-menu}}
-        {{#> menu}}
+        {{#> menu menu--modifier="pf-m-plain"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
