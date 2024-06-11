@@ -13,9 +13,9 @@
   --#{$hint}--Color: var(--pf-t--global--text--color--regular);
 
   // Hint Title
-  --#{$hint}__title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$hint}__title--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$hint}__title--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$hint}__title--FontFamily: var(--pf-t--global--font--family--body);
+  --#{$hint}__title--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$hint}__title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$hint}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
 
   // Hint Body
