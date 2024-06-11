@@ -108,8 +108,17 @@
   flex-direction: column;
   overflow: auto;
   background-color: var(--#{$card}--BackgroundColor);
-  border: var(--#{$card}--BorderColor) var(--#{$card}--BorderStyle) var(--#{$card}--BorderWidth);
+  border: 0;
   border-radius: var(--#{$card}--BorderRadius);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$card}--BorderColor) var(--#{$card}--BorderStyle) var(--#{$card}--BorderWidth);
+    border-radius: inherit;
+  }
 
   // SELECTABLE CARDS
   &.pf-m-selectable {
@@ -123,7 +132,10 @@
   &.pf-m-selectable,
   &.pf-m-clickable {
     isolation: isolate;
-    border: none; // border will come from the input's ::before instead of the card so remove this so there's isn't a double border
+
+    &::before {
+      border: none; // border will come from the input's ::before instead of the card so remove this so there's isn't a double border
+    }
   }
 
   // stylelint-disable selector-max-class
