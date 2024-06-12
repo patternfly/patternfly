@@ -62,10 +62,7 @@
   --#{$notification-drawer}__list-item-header-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // List item header title
-  --#{$notification-drawer}__list-item-header-title--FontFamily: var(--pf-t--global--font--family--body);
-  --#{$notification-drawer}__list-item-header-title--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$notification-drawer}__list-item-header-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$notification-drawer}__list-item-header-title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$notification-drawer}__list-item-header-title--max-lines: 1;
 
   // List item description
@@ -126,10 +123,7 @@
 }
 
 .#{$notification-drawer}__header-title {
-  font-family: var(--#{$notification-drawer}__header-title--FontFamily);
-  font-size: var(--#{$notification-drawer}__header-title--FontSize);
   font-weight: var(--#{$notification-drawer}__header-title--FontWeight);
-  line-height: var(--#{$notification-drawer}__header-title--LineHeight);
 }
 
 .#{$notification-drawer}__header-status {
