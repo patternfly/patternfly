@@ -11,7 +11,7 @@
 :where(:root, .#{$menu-toggle}) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$menu-toggle}--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
+  --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
   --#{$menu-toggle}--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
   --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
