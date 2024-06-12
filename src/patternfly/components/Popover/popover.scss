@@ -47,7 +47,8 @@
   --#{$popover}__arrow--m-block-right--InsetInlineEnd: var(--pf-t--global--border--radius--medium);
 
   // Close
-  --#{$popover}__close--InsetBlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - (var(--pf-t--global--spacer--control--vertical--compact) * 1.5)); // align top of button with top of text
+  --#{$popover}__close--InsetBlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - var(--pf-t--global--spacer--action--vertical--plain)); // align top of button with top of text
+
   --#{$popover}__close--InsetInlineEnd: var(--#{$popover}__content--PaddingInlineEnd); // align right of content
   --#{$popover}__close--sibling--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
 
@@ -56,8 +57,6 @@
 
   // Title text
   --#{$popover}__title-text--Color: var(--pf-t--global--text--color--regular);
-  --#{$popover}__title-text--FontFamily: var(--pf-t--global--font--family--body);
-  --#{$popover}__title-text--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$popover}__title-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Title icon
@@ -247,8 +246,6 @@
 }
 
 .#{$popover}__title-text {
-  font-family: var(--#{$popover}__title-text--FontFamily);
-  font-size: var(--#{$popover}__title-text--FontSize);
   font-weight: var(--#{$popover}__title-text--FontWeight);
   color: var(--#{$popover}__title-text--Color);
 }
