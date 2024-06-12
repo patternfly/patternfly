@@ -47,13 +47,16 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
 
   // options menu
+  --#{$pagination}__page-menu--Display--base: block;
   --#{$pagination}__page-menu--Display: none;
   --#{$pagination}--m-display-summary__page-menu--Display: none;
-  --#{$pagination}--m-display-full__page-menu--Display: inline-flex;
+  --#{$pagination}--m-display-full__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
+  --#{$pagination}--m-bottom__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
+  --#{$pagination}__page-menu--md--Display: var(--#{$pagination}__page-menu--Display--base);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--md) {
     --#{$pagination}--m-bottom--BoxShadow: none;
-    --#{$pagination}__page-menu--Display: inline-flex;
+    --#{$pagination}__page-menu--Display: var(--#{$pagination}__page-menu--md--Display);
     --#{$pagination}__nav--Display: inline-flex;
     --#{$pagination}__total-items--Display: none;
   }
@@ -104,7 +107,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
     .#{$pagination}__page-menu {
       position: absolute;
-      display: block;
+      display: var(--#{$pagination}--m-bottom__page-menu--Display);
     }
 
     .#{$pagination}__nav {
