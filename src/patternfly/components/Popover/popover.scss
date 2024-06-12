@@ -47,8 +47,7 @@
   --#{$popover}__arrow--m-block-right--InsetInlineEnd: var(--pf-t--global--border--radius--medium);
 
   // Close
-  --#{$popover}__close--InsetBlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - var(--pf-t--global--spacer--action--vertical--plain)); // align top of button with top of text
-
+  --#{$popover}__close--InsetBlockStart: calc(var(--#{$popover}__content--PaddingBlockStart) - var(--pf-t--global--spacer--action--vertical--plain)); // align top of button with top of text 
   --#{$popover}__close--InsetInlineEnd: var(--#{$popover}__content--PaddingInlineEnd); // align right of content
   --#{$popover}__close--sibling--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
 
