@@ -29,7 +29,7 @@
 
   // Icon
   --#{$alert}__icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$alert}__icon--MarginBlockStart: #{pf-size-prem(4px)};
+  --#{$alert}__icon--MarginBlockStart: #{pf-size-prem(2px)};
   --#{$alert}__icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 
