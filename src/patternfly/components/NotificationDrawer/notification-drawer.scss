@@ -123,7 +123,10 @@
 }
 
 .#{$notification-drawer}__header-title {
+  font-family: var(--#{$notification-drawer}__header-title--FontFamily);
+  font-size: var(--#{$notification-drawer}__header-title--FontSize);
   font-weight: var(--#{$notification-drawer}__header-title--FontWeight);
+  line-height: var(--#{$notification-drawer}__header-title--LineHeight);
 }
 
 .#{$notification-drawer}__header-status {
