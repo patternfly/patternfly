@@ -1,5 +1,5 @@
 ---
-id: Text
+id: Content
 section: components
 cssPrefix: pf-v6-c-content
 ---
