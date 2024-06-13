@@ -158,6 +158,7 @@
   --#{$menu-toggle}__button--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}__button__controls--MarginRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}__button__controls--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$menu-toggle}__button--m-text--PaddingInlineStart: var(--#{$pf-global}--spacer--xs);
 
   // Typeahead
   --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--#{$pf-global}--spacer--sm);
@@ -570,6 +571,14 @@
   color: inherit;
   background-color: var(--#{$menu-toggle}__button--BackgroundColor);
   border: 0;
+
+  &.pf-m-text {
+    --#{$menu-toggle}--m-split-button--last-child--PaddingLeft: var(--#{$menu-toggle}__button--m-text--PaddingInlineStart);
+
+    display: inline-flex;
+    align-items: baseline;
+    padding-inline-start: var(--#{$menu-toggle}__button--m-text--PaddingInlineStart);
+  }
 }
 
 .#{$menu-toggle}__icon {
