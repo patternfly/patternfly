@@ -158,7 +158,7 @@ Use a label group to display multiple labels at once.
         {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="cyan" label-text--value="Label 4" label-icon--value="info-circle"}}
+        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--color="purple" label-text--value="Label 5" label-icon--value="info-circle"}}
@@ -235,7 +235,7 @@ The contents of a label group can be modified by removing labels or adding new o
         {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="cyan" label-text--value="Label 4" label-icon--value="info-circle"}}
+        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--color="orange" label-text--value="Label 5" label-icon--value="info-circle"}}
@@ -305,7 +305,7 @@ The contents of a label group can be modified by removing labels or adding new o
         {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="cyan" label-text--value="Label 4" label-icon--value="info-circle"}}
+        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--color="purple" label-text--value="Label 5" label-icon--value="info-circle"}}
@@ -584,8 +584,8 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `.pf-m-orange` | `.pf-v6-c-label` | Modifies the label to have orange colored styling. |
 | `.pf-m-red` | `.pf-v6-c-label` | Modifies the label to have red colored styling. |
 | `.pf-m-purple` | `.pf-v6-c-label` | Modifies the label to have purple colored styling. |
-| `.pf-m-cyan` | `.pf-v6-c-label` | Modifies the label to have cyan colored styling. |
-| `.pf-m-gold` | `.pf-v6-c-label` | Modifies the label to have gold colored styling. |
+| `.pf-m-teal` | `.pf-v6-c-label` | Modifies the label to have teal colored styling. |
+| `.pf-m-yellow` | `.pf-v6-c-label` | Modifies the label to have yellow colored styling. |
 | `.pf-m-success` | `.pf-v6-c-label` | Modifies the label to have success colored styling. |
 | `.pf-m-warning` | `.pf-v6-c-label` | Modifies the label to have warning colored styling. |
 | `.pf-m-danger` | `.pf-v6-c-label` | Modifies the label to have danger colored styling. |

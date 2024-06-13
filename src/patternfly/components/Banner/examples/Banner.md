@@ -33,8 +33,8 @@ Banners can be styled with one of 9 different nonstatus colors. A nonstatus bann
 
 <br>
 
-{{#> banner banner--modifier="pf-m-gold"}}
-  Gold banner
+{{#> banner banner--modifier="pf-m-yellow"}}
+  Yellow banner
 {{/banner}}
 
 <br>
@@ -45,8 +45,8 @@ Banners can be styled with one of 9 different nonstatus colors. A nonstatus bann
 
 <br>
 
-{{#> banner banner--modifier="pf-m-cyan"}}
-  Cyan banner
+{{#> banner banner--modifier="pf-m-teal"}}
+  Teal banner
 {{/banner}}
 
 <br>
@@ -84,8 +84,8 @@ Banners can be styled with one of 9 different nonstatus colors. A nonstatus bann
   {{/button}}
 {{/banner}}
 <br>
-{{#> banner banner--modifier="pf-m-gold"}}
-  Gold banner with an
+{{#> banner banner--modifier="pf-m-yellow"}}
+  Yellow banner with an
   {{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-inline pf-m-link"}}
   inline link button (anchor){{/button}}
 {{/banner}}
@@ -180,9 +180,9 @@ When a banner is used to convey status, it is advised to add an icon that also c
 | `.pf-m-red` | `.pf-v6-c-banner` |  Modifies banner for red styling. |
 | `.pf-m-orangered` | `.pf-v6-c-banner` |  Modifies banner for orangered styling. |
 | `.pf-m-orange` | `.pf-v6-c-banner` |  Modifies banner for orange styling. |
-| `.pf-m-gold` | `.pf-v6-c-banner` |  Modifies banner for gold styling. |
+| `.pf-m-yellow` | `.pf-v6-c-banner` |  Modifies banner for yellow styling. |
 | `.pf-m-green` | `.pf-v6-c-banner` |  Modifies banner for green styling. |
-| `.pf-m-cyan` | `.pf-v6-c-banner` |  Modifies banner for cyan styling. |
+| `.pf-m-teal` | `.pf-v6-c-banner` |  Modifies banner for teal styling. |
 | `.pf-m-blue` | `.pf-v6-c-banner` |  Modifies banner for blue styling. |
 | `.pf-m-purple` | `.pf-v6-c-banner` |  Modifies banner for purple styling. |
 | `.pf-m-success` | `.pf-v6-c-banner` |  Modifies banner for success status styling. |
