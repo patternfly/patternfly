@@ -6,9 +6,9 @@
 
 :where(:root) {
   @include pf-v6-set-inverse(false);
-  @include local.pf-v6-tokens;
   @include palette.pf-v6-tokens;
   @include default.pf-v6-tokens;
+  @include local.pf-v6-tokens;
 }
 
 :where(.pf-v6-theme-dark) {

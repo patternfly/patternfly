@@ -55,7 +55,7 @@ section: components
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{> label label--id="cyan-icon" label--color="cyan" label-text--value="NS"}}
+                      {{> label label--id="teal-icon" label--color="teal" label-text--value="NS"}}
                     {{/l-flex-item}}
                     {{#> l-flex-item}}
                       <a href="#">knative-serving-ingress</a>
@@ -200,7 +200,7 @@ section: components
                   {{#> description-list-description}}
                     {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                       {{#> l-flex-item}}
-                        {{> label label--id="cyan-icon" label--color="cyan" label-text--value="NS"}}
+                        {{> label label--id="teal-icon" label--color="teal" label-text--value="NS"}}
                       {{/l-flex-item}}
                       {{#> l-flex-item}}
                         <a href="#">knative-serving-ingress</a>

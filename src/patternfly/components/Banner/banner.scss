@@ -47,12 +47,12 @@
   --#{$banner}--m-orangered--Color: var(--pf-t--global--text--color--nonstatus--on-orangered--default);
   --#{$banner}--m-orange--BackgroundColor: var(--pf-t--global--color--nonstatus--orange--default);
   --#{$banner}--m-orange--Color: var(--pf-t--global--text--color--nonstatus--on-orange--default);
-  --#{$banner}--m-gold--BackgroundColor: var(--pf-t--global--color--nonstatus--gold--default);
-  --#{$banner}--m-gold--Color: var(--pf-t--global--text--color--nonstatus--on-gold--default);
+  --#{$banner}--m-yellow--BackgroundColor: var(--pf-t--global--color--nonstatus--yellow--default);
+  --#{$banner}--m-yellow--Color: var(--pf-t--global--text--color--nonstatus--on-yellow--default);
   --#{$banner}--m-green--BackgroundColor: var(--pf-t--global--color--nonstatus--green--default);
   --#{$banner}--m-green--Color: var(--pf-t--global--text--color--nonstatus--on-green--default);
-  --#{$banner}--m-cyan--BackgroundColor: var(--pf-t--global--color--nonstatus--cyan--default);
-  --#{$banner}--m-cyan--Color: var(--pf-t--global--text--color--nonstatus--on-cyan--default);
+  --#{$banner}--m-teal--BackgroundColor: var(--pf-t--global--color--nonstatus--teal--default);
+  --#{$banner}--m-teal--Color: var(--pf-t--global--text--color--nonstatus--on-teal--default);
   --#{$banner}--m-blue--BackgroundColor: var(--pf-t--global--color--nonstatus--blue--default);
   --#{$banner}--m-blue--Color: var(--pf-t--global--text--color--nonstatus--on-blue--default);
   --#{$banner}--m-purple--BackgroundColor: var(--pf-t--global--color--nonstatus--purple--default);
@@ -110,9 +110,9 @@
     --#{$banner}--Color: var(--#{$banner}--m-orange--Color);
   }
 
-  &.pf-m-gold {
-    --#{$banner}--BackgroundColor: var(--#{$banner}--m-gold--BackgroundColor);
-    --#{$banner}--Color: var(--#{$banner}--m-gold--Color);
+  &.pf-m-yellow {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-yellow--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-yellow--Color);
   }
 
   &.pf-m-green {
@@ -120,9 +120,9 @@
     --#{$banner}--Color: var(--#{$banner}--m-green--Color);
   }
 
-  &.pf-m-cyan {
-    --#{$banner}--BackgroundColor: var(--#{$banner}--m-cyan--BackgroundColor);
-    --#{$banner}--Color: var(--#{$banner}--m-cyan--Color);
+  &.pf-m-teal {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-teal--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-teal--Color);
   }
 
   &.pf-m-blue {

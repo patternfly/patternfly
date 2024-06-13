@@ -471,7 +471,7 @@ cssPrefix: pf-d-description-list
                         {{#> table-td table-td--data-label="Pod port or name"}}
                           {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                             {{#> l-flex-item}}
-                              {{> label label--id="default-cyan" label--color="cyan" label-text--value="P" label--IsCompact=true}}
+                              {{> label label--id="default-teal" label--color="teal" label-text--value="P" label--IsCompact=true}}
                             {{/l-flex-item}}
                             {{#> l-flex-item}}
                               80
