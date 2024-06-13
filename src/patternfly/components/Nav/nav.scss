@@ -229,6 +229,7 @@
   &.pf-m-hover,
   &:focus {
     color: var(--#{$nav}__link--hover--Color);
+    text-decoration: none;
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 
