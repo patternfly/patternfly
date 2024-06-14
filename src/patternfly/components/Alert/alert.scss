@@ -21,7 +21,7 @@
   // Toggle
   --#{$alert}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--action--vertical--default) - #{pf-size-prem(1px)});
   --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--action--vertical--default));
-  --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--action--vertical--default);
+  --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
   --#{$alert}__toggle-icon--Rotate: 0;
@@ -30,7 +30,7 @@
   // Icon
   --#{$alert}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$alert}__icon--MarginBlockStart: #{pf-size-prem(4px)};
-  --#{$alert}__icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$alert}__icon--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 
   // Title

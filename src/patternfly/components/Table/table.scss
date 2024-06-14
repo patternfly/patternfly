@@ -85,10 +85,10 @@
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // * Table button
-  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
-  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
