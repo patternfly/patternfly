@@ -399,6 +399,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   border: 0;
 
   &.pf-m-help-text {
+    padding: 0;
     text-decoration: underline;
     text-decoration-thickness: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness);
     text-decoration-style: dashed;
