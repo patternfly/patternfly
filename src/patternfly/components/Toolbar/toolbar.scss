@@ -37,6 +37,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$toolbar}__content--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$toolbar}__content--PaddingInline: var(--#{$toolbar}--PaddingInline);
+  --#{$toolbar}__content--PaddingBlockStart: 0;
 
   // * Toolbar expandable content
   --#{$toolbar}__expandable-content--ZIndex: var(--pf-t--global--z-index--sm);

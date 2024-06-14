@@ -78,12 +78,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
-
-  // Page main body
-  --#{$page}__main-body--MarginBlockStart: 0;
-  --#{$page}__main-body--MarginBlockEnd: 0;
-  --#{$page}__main-body--PaddingInlineEnd: 0;
-  --#{$page}__main-body--PaddingInlineStart: 0;
   
   // Sticky
   --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
@@ -252,11 +246,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-section,
 .#{$page}__main-wizard {
   &.pf-m-limit-width {
-    display: flex;
-    flex-direction: column;
-
     > .#{$page}__main-body {
-      flex: 1;
       max-width: var(--#{$page}--section--m-limit-width--MaxWidth);
     }
 
@@ -277,6 +267,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-wizard,
 .#{$page}__main-group,
 .#{$page}__main-subnav {
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
 
   &.pf-m-overflow-scroll {
@@ -511,13 +503,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   .#{$page}__main-breadcrumb & {
     padding-inline-start: 0;
     padding-inline-end: 0;
-  }
-
-  .#{$page}__main-section & {
-    padding-inline-start: var(--#{$page}__main-body--PaddingInlineStart);
-    padding-inline-end: var(--#{$page}__main-body--PaddingInlineEnd);
-    margin-block-start: var(--#{$page}__main-body--MarginBlockStart);
-    margin-block-end: var(--#{$page}__main-body--MarginBlockEnd);
   }
 
   .#{$page}__main-tabs & {
