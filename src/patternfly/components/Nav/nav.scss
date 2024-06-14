@@ -215,6 +215,7 @@
   line-height: var(--#{$nav}__link--LineHeight, inherit); // default to nav line height if no custom value is set
   color: var(--#{$nav}__link--Color);
   text-align: start;
+  text-decoration: none;
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
@@ -229,7 +230,6 @@
   &.pf-m-hover,
   &:focus {
     color: var(--#{$nav}__link--hover--Color);
-    text-decoration: none;
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 
