@@ -8,12 +8,13 @@
 // TODO: update text-input-button to use gap
 // TODO: label all variables group - // * Menu toggle (vars) // - Menu toggle (selectors)
 
+// Remove all other calcs?
 :where(:root, .#{$menu-toggle}) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$menu-toggle}--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
+  --#{$menu-toggle}--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
   --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
@@ -151,14 +152,14 @@
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
 
   // * Menu toggle small
-  --#{$menu-toggle}--m-small--PaddingBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) / 2);
-  --#{$menu-toggle}--m-small--PaddingBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) / 2);
+  --#{$menu-toggle}--m-small--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
+  --#{$menu-toggle}--m-small--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
   --#{$menu-toggle}--m-small--ColumnGap: calc(var(--pf-t--global--spacer--control--horizontal--compact) / 2);
   --#{$menu-toggle}--m-small--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$menu-toggle}--m-small__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--xs) + var(--pf-t--global--spacer--xs));
 
   // Status icon
-  --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
 
   // Success
   --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
@@ -457,7 +458,6 @@
   }
 
   .#{$text-input-group} {
-    --#{$text-input-group}__utilities--c-button--PaddingInlineEnd: var(--#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingInlineEnd);
     --#{$text-input-group}__utilities--MarginInlineEnd: 0;
 
     flex: 1;

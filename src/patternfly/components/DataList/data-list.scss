@@ -56,7 +56,7 @@
   --#{$data-list}--cell--m-truncate--MinWidth: 5ch;
 
   // toggle
-  --#{$data-list}__toggle--MarginInlineStart: calc(--pf-t--global--spacer--action--horizontal--plain) * -1); // offset toggle to align left
+  --#{$data-list}__toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) * -1); // offset toggle to align left
   --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
