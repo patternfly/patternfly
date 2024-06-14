@@ -56,22 +56,18 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__label--Display: block;
 
   // toggle
-  --#{$jump-links}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
-  --#{$jump-links}__toggle--MarginBlockEnd--base: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
-  --#{$jump-links}__toggle--MarginBlockEnd: var(--#{$jump-links}__toggle--MarginBlockEnd--base);
-  --#{$jump-links}--m-expanded__toggle--MarginBlockEnd: calc(var(--#{$jump-links}__toggle--MarginBlockEnd--base) + var(--pf-t--global--spacer--md));
-  --#{$jump-links}__toggle--MarginInlineStart: calc(-1 * var(--pf-t--global--spacer--md));
+  --#{$jump-links}__toggle--MarginBlockEnd: 0;
+  --#{$jump-links}--m-expanded__toggle--MarginBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$jump-links}__toggle--Display: none;
 
   // toggle icon
-  --#{$jump-links}__toggle-icon--Color: currentcolor;
+  --#{$jump-links}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$jump-links}__toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$jump-links}__toggle-icon--Rotate: 0;
-  --#{$jump-links}--m-expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$jump-links}--m-expanded__toggle-icon--Rotate: 90deg;
 
   // toggle text
-  --#{$jump-links}__toggle-text--MarginInlineStart: var(--pf-t--global--spacer--md);
+  --#{$jump-links}__toggle-text--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$jump-links}__toggle-text--Color: var(--pf-t--global--text--color--regular);
 }
 
@@ -218,14 +214,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
 .#{$jump-links}__toggle {
   display: var(--#{$jump-links}__toggle--Display);
-  margin-block-start: var(--#{$jump-links}__toggle--MarginBlockStart);
   margin-block-end: var(--#{$jump-links}__toggle--MarginBlockEnd);
-  margin-inline-start: var(--#{$jump-links}__toggle--MarginInlineStart);
-
-  .#{$button} {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .#{$jump-links}__toggle-icon {
