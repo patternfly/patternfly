@@ -57,7 +57,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   // toggle
   --#{$jump-links}__toggle--MarginBlockEnd: 0;
-  --#{$jump-links}--m-expanded__toggle--MarginBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$jump-links}--m-expanded__toggle--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$jump-links}__toggle--Display: none;
 
   // toggle icon
