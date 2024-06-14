@@ -8,7 +8,6 @@
 // TODO: update text-input-button to use gap
 // TODO: label all variables group - // * Menu toggle (vars) // - Menu toggle (selectors)
 
-// Remove all other calcs?
 :where(:root, .#{$menu-toggle}) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
@@ -60,14 +59,14 @@
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle control
-  --#{$menu-toggle}--m-control--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
-  --#{$menu-toggle}--m-control--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
+  --#{$menu-toggle}--m-control--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--plain);
+  --#{$menu-toggle}--m-control--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--plain);
   --#{$menu-toggle}--m-control--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle action
-  --#{$menu-toggle}--m-action--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--sm));
-  --#{$menu-toggle}--m-action--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--sm));
+  --#{$menu-toggle}--m-action--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--spacious);
+  --#{$menu-toggle}--m-action--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--spacious);
   --#{$menu-toggle}--m-action--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // * Menu toggle primary
@@ -108,8 +107,8 @@
   --#{$menu-toggle}__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--sm));
 
   // Full height
-  --#{$menu-toggle}--m-full-height--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--sm));
-  --#{$menu-toggle}--m-full-height--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--sm));
+  --#{$menu-toggle}--m-full-height--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--spacious);
+  --#{$menu-toggle}--m-full-height--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--spacious);
 
   // Split button, child
   --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--pf-t--global--text--color--on-disabled);
