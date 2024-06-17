@@ -428,8 +428,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-section {
-  display: flex;
-  flex-direction: column;
   gap: var(--#{$page}__main-section--RowGap);
   padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
   padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
