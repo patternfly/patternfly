@@ -34,6 +34,17 @@ import './Page.css'
     {{#> page-main-section}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--ExcludeMainBody="true"}}
+      {{#> page-main-body}}
+        This is a page__main-body, one of three within one page__main-section.
+      {{/ page-main-body}}
+      {{#> page-main-body}}
+        This is a page__main-body, one of three within one page__main-section.
+      {{/ page-main-body}}
+      {{#> page-main-body}}
+        This is a page__main-body, one of three within one page__main-section.
+      {{/ page-main-body}}
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -238,10 +249,10 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__main-nav` | `<section>` | Creates a container to nest the (deprecated) tertiary navigation component in the main page area. |
 | `.pf-v6-c-page__main-subnav` | `<section>` | Creates a container to nest the horizontal subnav navigation component in the main page area. |
 | `.pf-v6-c-page__main-breadcrumb` | `<section>` | Creates a container to nest the breadcrumb component in the main page area. |
-| `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: The last/only `.pf-v6-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
+| `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: The last/only `.pf-v6-c-page__main-section` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
 | `.pf-v6-c-page__main-tabs` | `<section>` | Creates a container to nest the tabs component in the main page area. |
 | `.pf-v6-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the main page area. |
-| `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required when using `.pf-m-limit-width` on `.pf-v6-c-page__main-section`** |
+| `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required** |
 | `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
 | `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |

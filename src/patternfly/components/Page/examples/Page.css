@@ -1,9 +1,5 @@
-#ws-core-c-page-with-or-without-fill .ws-preview-html,
-#ws-core-c-page-multiple-sidebar-body-elements-padding-and-fill .ws-preview-html {
-  height: 500px;
-}
-
-#ws-core-c-page-multiple-sidebar-body-elements .ws-preview-html,
-#ws-core-c-page-using-flex-layout .ws-preview-html {
-  height: 100%;
+/* Because the page component has height:100dvh, override it just for the embedded examples */
+.ws-mdx-content-content [id^=ws-core-c-page-] .ws-preview-html .pf-v6-c-page {
+  height: min-content;
+  min-height: 30em;
 }

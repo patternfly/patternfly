@@ -64,11 +64,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
 
   // Main section
-  --#{$page}__main-section--MarginBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--lg);
-  --#{$page}__main-section--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section - TODO, see if we can remove the need for this calc(), or possibly move it down to the property definition so a user can theme this without a calc()
-  --#{$page}__main-section--PaddingBlockEnd: 0;
-  --#{$page}__main-section--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$page}__main-section--PaddingInlineEnd: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
+  --#{$page}__main-section--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$page}__main-section--PaddingInlineStart: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
+  --#{$page}__main-section--RowGap: var(--pf-t--global--spacer--lg);
   --#{$page}__main-breadcrumb--main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -77,7 +77,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
-
+  
   // Sticky
   --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
@@ -117,6 +117,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-tabs--PaddingBlockStart: 0;
   --#{$page}__main-tabs--PaddingInlineEnd: 0;
   --#{$page}__main-tabs--PaddingBlockEnd: 0;
+  --#{$page}__main-tabs--PaddingInlineStart: 0;
   --#{$page}__main-tabs--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // Wizard main section
@@ -244,12 +245,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-section,
 .#{$page}__main-wizard {
   &.pf-m-limit-width {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-
     > .#{$page}__main-body {
-      flex: 1;
       max-width: var(--#{$page}--section--m-limit-width--MaxWidth);
     }
 
@@ -270,6 +266,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-wizard,
 .#{$page}__main-group,
 .#{$page}__main-subnav {
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
 
   &.pf-m-overflow-scroll {
@@ -344,6 +342,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-list {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .#{$page}__main-nav {
@@ -428,10 +427,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-section {
+  gap: var(--#{$page}__main-section--RowGap);
   padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
   padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-  padding-inline-start: var(--#{$page}__main-section--PaddingInlineStart);
-  padding-inline-end: var(--#{$page}__main-section--PaddingInlineEnd);
+  padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
+  padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
   background-color: var(--#{$page}__main-section--BackgroundColor);
 
   &.pf-m-secondary {
@@ -446,8 +446,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       &.pf-m-padding#{$breakpoint-name} {
         padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
         padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-        padding-inline-start: var(--#{$page}__main-section--PaddingInlineStart);
-        padding-inline-end: var(--#{$page}__main-section--PaddingInlineEnd);
+        padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
+        padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
 
         &.pf-m-limit-width {
           padding: 0;
@@ -455,8 +455,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
           .#{$page}__main-body {
             padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
             padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-            padding-inline-start: var(--#{$page}__main-section--PaddingInlineStart);
-            padding-inline-end: var(--#{$page}__main-section--PaddingInlineEnd);
+            padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
+            padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
           }
         }
       }
@@ -493,28 +493,16 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__main-body {
   .#{$page}__main-nav & {
-    padding-block-start: var(--#{$page}__main-nav--PaddingBlockStart);
     padding-inline-start: var(--#{$page}__main-nav--PaddingInlineStart);
     padding-inline-end: var(--#{$page}__main-nav--PaddingInlineEnd);
   }
 
   .#{$page}__main-breadcrumb & {
-    padding-block-start: var(--#{$page}__main-breadcrumb--PaddingBlockStart);
-    padding-block-end: var(--#{$page}__main-breadcrumb--PaddingBlockEnd);
-    padding-inline-start: var(--#{$page}__main-breadcrumb--PaddingInlineStart);
-    padding-inline-end: var(--#{$page}__main-breadcrumb--PaddingInlineEnd);
-  }
-
-  .#{$page}__main-section & {
-    padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
-    padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-    padding-inline-start: var(--#{$page}__main-section--PaddingInlineStart);
-    padding-inline-end: var(--#{$page}__main-section--PaddingInlineEnd);
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
 
   .#{$page}__main-tabs & {
-    padding-block-start: var(--#{$page}__main-tabs--PaddingBlockStart);
-    padding-block-end: var(--#{$page}__main-tabs--PaddingBlockEnd);
     padding-inline-start: var(--#{$page}__main-tabs--PaddingInlineStart);
     padding-inline-end: var(--#{$page}__main-tabs--PaddingInlineEnd);
   }
@@ -527,4 +515,3 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     flex: 1 0 auto;
   }
 }
-
