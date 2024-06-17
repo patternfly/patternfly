@@ -59,6 +59,89 @@
   border-width: var(--#{$alert-group}__overflow-button--BorderWidth);
   border-radius: var(--#{$alert-group}__overflow-button--BorderRadius);
   box-shadow: var(--#{$alert-group}__overflow-button--BoxShadow);
+}
+
+.#{$alert-group}__item {
+  // Properties to be transitioned on entry/exit
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+
+  // This transition will happen when the item is added (.pf-m-offstage-top is removed)
+  // Reduced motion by default
+  // transparency change only
+  transition: 
+  opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
+  transform: translateX(0) translateY(0);
+
+  // This transition will happen when the item is added (.pf-m-offstage-top is removed)
+  // give it height, then slide it down into place
+  // These values are for regular motion
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: 
+      opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
+      transform var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
+      grid-template-rows var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s, 
+      margin-block var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
+
+      & .pf-v6-c-alert {
+        transition: all var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate);
+      }
+  }
+
+  // This class is used BEFORE the alert item comes into the list
+  &.pf-m-offstage-top {
+    // make the item have no height and position it up above
+    grid-template-rows: 0fr;
+    margin-block: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+
+    & .pf-v6-c-alert {
+      // make it small when it's first created off to the top
+      min-height: 0;
+      padding-block-start: 0;
+      padding-block-end: 0;
+      border-width: 0;
+    }
+  }
+
+  // Add this class before removing an alert
+  // TODO auto dismissal should be the same motion, but has a different duration
+  &.pf-m-offstage-right {
+    grid-template-rows: 0fr; // collapse vertically to bring up the items below
+    margin-block: 0;
+    opacity: 0;
+
+    // This transition will happen when the item is removed
+    // Reduced motion by default
+    // transparency change only
+    transition: 
+      opacity var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) 0s;
+    transform: translateX(100%);
+
+    & .pf-v6-c-alert {
+      min-height: 0;
+      padding-block-start: 0;
+      padding-block-end: 0;
+      border-width: 0;
+    }
+
+    // This transition will happen when the item is added (.pf-m-offstage-top is removed)
+    // give it height, then slide it down into place
+    // These values are for regular motion
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transition: 
+        transform var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s, 
+        opacity var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s,
+        margin-block var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short), 
+        grid-template-rows var(--pf-t--global--motion--duration--slide-in--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
+
+        & .pf-v6-c-alert {
+          transition: all var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
+        }
+    }
+  }
 
   &:hover {
     --#{$alert-group}__overflow-button--Color: var(--#{$alert-group}__overflow-button--hover--Color);
