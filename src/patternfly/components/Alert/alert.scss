@@ -116,7 +116,6 @@
   padding-block-end: var(--#{$alert}--PaddingBlockEnd);
   padding-inline-start: var(--#{$alert}--PaddingInlineStart);
   padding-inline-end: var(--#{$alert}--PaddingInlineEnd);
-  overflow: hidden; // required for animation slide in
   font-size: var(--#{$alert}--FontSize);
   background-color: var(--#{$alert}--BackgroundColor);
   border: var(--#{$alert}--BorderWidth) solid var(--#{$alert}--BorderColor);
