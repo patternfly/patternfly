@@ -1,4 +1,10 @@
-<span class="{{pfv}}button__icon{{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
+<span class="{{pfv}}button__icon
+  {{#if button-icon--IsEnd}}
+    pf-m-end
+  {{else}}
+    pf-m-start
+  {{/if}}
+  {{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
   {{#if button-icon--attribute}}
     {{{button-icon--attribute}}}
   {{/if}}>

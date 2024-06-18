@@ -115,6 +115,8 @@
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$button}--span--m-link--m-inline--Display: inline;
+  --#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart: var(--pf-t--global--spacer--xs);
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -248,6 +250,10 @@
   --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--hover__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}__icon--MarginInlineStart: 0;
+  --#{$button}__icon--MarginInlineEnd: 0;
+  --#{$button}__icon--m-start--MarginInlineEnd: 0;
+  --#{$button}__icon--m-end--MarginInlineStart: 0;
 
   // Progress
   --#{$button}__progress--width: calc(var(--#{$spinner}--m-md--diameter) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
@@ -390,6 +396,8 @@
     &.pf-m-inline {
       @at-root span#{&} {
         --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
+        --#{$button}__icon--m-start--MarginInlineEnd: var(--#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd);
+        --#{$button}__icon--m-end--MarginInlineStart: var(--#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart);
       }
 
       --#{$button}--Display: var(--#{$button}--m-link--m-inline--Display);
@@ -650,7 +658,17 @@
 }
 
 .#{$button}__icon {
+  margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
+  margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
+
+  &.pf-m-start {
+    --#{$button}__icon--MarginInlineEnd: var(--#{$button}__icon--m-start--MarginInlineEnd);
+  }
+
+  &.pf-m-end {
+    --#{$button}__icon--MarginInlineStart: var(--#{$button}__icon--m-end--MarginInlineStart);
+  }
 }
 
 .#{$button}__progress {
