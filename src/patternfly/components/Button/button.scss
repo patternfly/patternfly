@@ -272,7 +272,6 @@
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
 
   // Count
-  --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
 
   // Block
@@ -687,5 +686,4 @@
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
-  margin-inline-start: var(--#{$button}__count--MarginInlineStart);
 }
