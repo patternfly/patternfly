@@ -8,7 +8,7 @@ section: components
 ### With a menu
 
 ```hbs
-{{#> panel}}
+{{#> panel panel--modifier="pf-m-raised"}}
   {{#> panel-header}}
     Header content
   {{/panel-header}}
