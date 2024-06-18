@@ -158,7 +158,7 @@ cssPrefix: pf-v6-c-clipboard-copy
   {{/clipboard-copy-text}}
   {{#> clipboard-copy-actions}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Copy to clipboard"}}
         <i class="fas fa-copy" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
@@ -174,7 +174,7 @@ cssPrefix: pf-v6-c-clipboard-copy
   {{/clipboard-copy-text}}
   {{#> clipboard-copy-actions}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Copy to clipboard"}}
         <i class="fas fa-copy" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
@@ -190,12 +190,12 @@ cssPrefix: pf-v6-c-clipboard-copy
   {{/clipboard-copy-text}}
   {{#> clipboard-copy-actions}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Copy to clipboard"}}
         <i class="fas fa-copy" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Run in web terminal"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Run in web terminal"}}
         <i class="fas fa-play" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
@@ -213,7 +213,7 @@ Lorem ipsum&nbsp;
   {{/clipboard-copy-text}}
   {{#> clipboard-copy-actions}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Copy to clipboard"}}
         <i class="fas fa-copy" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
@@ -231,7 +231,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
   {{/clipboard-copy-text}}
   {{#> clipboard-copy-actions}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Copy to clipboard"}}
         <i class="fas fa-copy" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
@@ -248,7 +248,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
   {{/clipboard-copy-text}}
   {{#> clipboard-copy-actions}}
     {{#> clipboard-copy-actions-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+      {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label="Copy to clipboard"}}
         <i class="fas fa-copy" aria-hidden="true"></i>
       {{/button}}
     {{/clipboard-copy-actions-item}}
