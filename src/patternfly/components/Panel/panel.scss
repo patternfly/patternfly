@@ -110,13 +110,6 @@
   padding-block-end: var(--#{$panel}__main-body--PaddingBlockEnd);
   padding-inline-start: var(--#{$panel}__main-body--PaddingInlineStart);
   padding-inline-end: var(--#{$panel}__main-body--PaddingInlineEnd);
-
-  &:has(.#{$panel}__menu) {
-    --#{$panel}__main-body--PaddingBlockStart: 0;
-    --#{$panel}__main-body--PaddingBlockEnd: 0;
-    --#{$panel}__main-body--PaddingInlineStart: 0;
-    --#{$panel}__main-body--PaddingInlineEnd: 0;
-  }
 }
 
 .#{$panel}__footer {
