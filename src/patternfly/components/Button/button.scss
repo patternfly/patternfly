@@ -1,7 +1,10 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$button}) {
-  --#{$button}--Display: inline-block;
+  --#{$button}--Display: inline-flex;
+  --#{$button}--AlignItems: baseline;
+  --#{$button}--JustifyContent: center;
+  --#{$button}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$button}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -243,8 +246,6 @@
   --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--hover__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$button}__icon--m-start--MarginInlineEnd: var(--pf-t--global--spacer--xs);
-  --#{$button}__icon--m-end--MarginInlineStart: var(--pf-t--global--spacer--xs);
 
   // Progress
   --#{$button}__progress--width: calc(var(--#{$spinner}--m-md--diameter) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
@@ -265,14 +266,18 @@
   // Count
   --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
+
+  // Block
+  --#{$button}--m-block--Display: flex;
+  --#{$button}--m-block--Width: 100%;
 }
 
 .#{$button} {
   position: relative;
   display: var(--#{$button}--Display);
-  flex: var(--#{$button}--Flex, initial);
-  align-items: var(--#{$button}--AlignItems, initial);
-  justify-content: var(--#{$button}--JustifyContent, initial);
+  gap: var(--#{$button}--Gap);
+  align-items: var(--#{$button}--AlignItems);
+  justify-content: var(--#{$button}--JustifyContent);
   padding-block-start: var(--#{$button}--PaddingBlockStart);
   padding-block-end: var(--#{$button}--PaddingBlockEnd);
   padding-inline-start: var(--#{$button}--PaddingInlineStart);
@@ -548,8 +553,9 @@
   }
 
   &.pf-m-block {
-    display: block;
-    width: 100%;
+    --#{$button}--Display: var(--#{$button}--m-block--Display);
+
+    width: var(--#{$button}--m-block--Width);
   }
 
   &.pf-m-small {
@@ -639,14 +645,6 @@
 
 .#{$button}__icon {
   color: var(--#{$button}__icon--Color);
-
-  &.pf-m-start {
-    margin-inline-end: var(--#{$button}__icon--m-start--MarginInlineEnd);
-  }
-
-  &.pf-m-end {
-    margin-inline-start: var(--#{$button}__icon--m-end--MarginInlineStart);
-  }
 }
 
 .#{$button}__progress {
