@@ -94,6 +94,7 @@
     // make the item have no height and position it up above
     grid-template-rows: 0fr;
     margin-block: 0;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(-100%);
 
@@ -102,7 +103,6 @@
       min-height: 0;
       padding-block-start: 0;
       padding-block-end: 0;
-      overflow: hidden;
       border-width: 0;
     }
   }
@@ -112,6 +112,7 @@
   &.pf-m-offstage-right {
     grid-template-rows: 0fr; // collapse vertically to bring up the items below
     margin-block: 0;
+    overflow: hidden;
     opacity: 0;
 
     // This transition will happen when the item is removed
@@ -125,7 +126,6 @@
       min-height: 0;
       padding-block-start: 0;
       padding-block-end: 0;
-      overflow: hidden;
       border-width: 0;
     }
 
