@@ -155,6 +155,7 @@ cssPrefix: pf-v6-c-panel
 | `.pf-v6-c-panel__header` | `<div>` | Initiates the panel header. |
 | `.pf-v6-c-panel__main` | `<div>` | Initiates the panel main content. |
 | `.pf-v6-c-panel__main-body` | `<div>` | Initiates a panel content body container. |
+| `.pf-v6-c-panel__menu` | `<div>` | Initiates a panel menu container. |
 | `.pf-v6-c-panel__footer` | `<div>` | Initiates the panel footer. |
 | `.pf-m-bordered` | `.pf-v6-c-panel` | Modifies the panel for bordered styles. |
 | `.pf-m-raised` | `.pf-v6-c-panel` | Modifies the panel for raised styles. |
