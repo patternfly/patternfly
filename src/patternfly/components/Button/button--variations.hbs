@@ -3,12 +3,12 @@
 <br><br>
 
 <div><strong>Icon</strong></div>
-{{> button-list button--HasIcon=true}}
+{{> button-list button--icon="plus-circle"}}
 
 <br><br>
 
 <div><strong>Icon end</strong></div>
-{{> button-list button--HasIconEnd=true}}
+{{> button-list button-icon--IsEnd=true button--icon="plus-circle"}}
 
 {{#*inline "button-list"}}
   {{#> button button--IsPrimary=true}}
@@ -49,9 +49,7 @@
     Inline link
   {{/button}}
 
-  {{#> button button--IsPlain=true button--attribute='aria-label="Remove"' button--HasIcon=false button--HasIconEnd=false}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsPlain=true button--aria-label="Remove" button--icon="times"}}
 
   <br><br>
 
@@ -59,7 +57,5 @@
     Control
   {{/button}}
 
-  {{#> button button--IsControl=true button--HasIcon=false button--HasIconEnd=false button--attribute='aria-label="Copy input"'}}
-    <i class="fas fa-copy" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsControl=true button--aria-label="Copy input" button--icon="copy"}}
 {{/inline}}
