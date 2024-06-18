@@ -19,8 +19,8 @@
   --#{$alert}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Toggle
-  --#{$alert}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--button--vertical--default) - #{pf-size-prem(1px)});
-  --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
+  --#{$alert}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$alert}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
@@ -29,7 +29,7 @@
 
   // Icon
   --#{$alert}__icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$alert}__icon--MarginBlockStart: #{pf-size-prem(2px)};
+  --#{$alert}__icon--MarginBlockStart: #{pf-size-prem(4px)};
   --#{$alert}__icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 

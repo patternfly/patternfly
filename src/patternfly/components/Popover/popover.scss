@@ -57,6 +57,8 @@
   // Title text
   --#{$popover}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$popover}__title-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$popover}__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
+
 
   // Title icon
   --#{$popover}__title-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
@@ -236,6 +238,7 @@
 .#{$popover}__title {
   display: flex;
   flex: 0 0 auto;
+
 }
 
 .#{$popover}__title-icon {
@@ -245,6 +248,7 @@
 }
 
 .#{$popover}__title-text {
+  font-size: var(--#{$popover}__title-text--FontSize);
   font-weight: var(--#{$popover}__title-text--FontWeight);
   color: var(--#{$popover}__title-text--Color);
 }
