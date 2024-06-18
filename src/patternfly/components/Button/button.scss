@@ -101,6 +101,7 @@
   --#{$button}--m-link--m-danger--m-clicked__icon--Color: var(--pf-t--global--text--color--status--danger--clicked);
 
   // Link inline
+  --#{$button}--m-link--m-inline--Display: inline-flex;
   --#{$button}--m-link--m-inline--FontSize: initial;
   --#{$button}--m-link--m-inline--LineHeight: initial;
   --#{$button}--m-link--m-inline--FontWeight: initial;
@@ -113,6 +114,7 @@
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$button}--span--m-link--m-inline--Display: inline;
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -386,6 +388,11 @@
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-link--m-clicked__icon--Color);
 
     &.pf-m-inline {
+      @at-root span#{&} {
+        --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
+      }
+
+      --#{$button}--Display: var(--#{$button}--m-link--m-inline--Display);
       --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
       --#{$button}--LineHeight: var(--#{$button}--m-link--m-inline--LineHeight);
       --#{$button}--FontWeight: var(--#{$button}--m-link--m-inline--FontWeight);
@@ -402,7 +409,6 @@
       --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
       --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
 
-      display: inline;
       text-align: start;
       white-space: normal;
       outline-offset: #{pf-size-prem(2px)};
