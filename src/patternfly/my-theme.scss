@@ -1,0 +1,21 @@
+@use './sass-utilities' as *;
+
+// // Global customizations
+// :root, .pf-theme-ibm {
+//   // --pf-t--global--background--color--secondary--default: var(--pf-t--color--green--60);
+
+//   --pf-t--global--text--color--regular: #525252;
+//   --pf-t--global--color--brand--default: #0f62fe;
+
+//   --#{$button}--m-primary--BackgroundColor: #0f62fe;
+// }
+
+// // Targeted customizations
+// :root {
+//   // --#{$page}--BackgroundColor: lightsalmon;
+//   --#{masthead}--BackgroundColor: #fff;
+// }
+
+// .#{$page} {
+//   // --#{$page}--BackgroundColor: lightsalmon;
+// }

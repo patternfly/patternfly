@@ -6,6 +6,43 @@ wrapperTag: div
 
 ## Demos
 
+### POC
+```hbs isFullscreen
+{{> page-template page-template--id="poc"}}
+
+{{#*inline "page-template-sidebar"}}
+  {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true" page-sidebar--modifier="pf-m-expanded"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets pf-theme-ibm"}}
+      {{#> content}}
+        <p>My IBM sidebar</p>
+        {{#> button button--IsPrimary=true}}
+          Primary
+        {{/button}}
+        {{#> button button--IsSecondary=true}}
+          Secondary
+        {{/button}}
+        {{#> button button--IsPlain=true}}
+          Plain
+        {{/button}}
+      {{/content}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body}}
+      {{> page-template-sidebar-nav}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-page-insets"}}
+      {{#> content}}
+        <p>Custom sidebar content</p>
+      {{/content}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-no-fill pf-m-page-insets"}}
+      {{#> content}}
+        <p>&copy;&nbsp;Copyright</p>
+      {{/content}}
+    {{/page-sidebar-body}}
+  {{/page-sidebar}}
+{{/inline}}
+```
+
 ### Basic
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-basic"}}

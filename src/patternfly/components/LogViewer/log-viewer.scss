@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$log-viewer}) {
+:root, .#{$log-viewer}-reset {
   --#{$log-viewer}--Height: 100%;
   --#{$log-viewer}--MaxHeight: auto;
   --#{$log-viewer}--m-line-numbers__index--Display: inline;
@@ -70,6 +70,11 @@
 }
 
 .#{$log-viewer} {
+  display: flex;
+  flex-direction: column;
+  height: var(--#{$log-viewer}--Height);
+  max-height: var(--#{$log-viewer}--MaxHeight);
+
   &.pf-m-dark {
     --#{$log-viewer}__main--BorderWidth: var(--#{$log-viewer}--m-dark__main--BorderWidth);
 
@@ -81,11 +86,6 @@
       --#{$log-viewer}--m-line-numbers__list--before--BackgroundColor: var(--pf-t--global--border--color--default);
     }
   }
-
-  display: flex;
-  flex-direction: column;
-  height: var(--#{$log-viewer}--Height);
-  max-height: var(--#{$log-viewer}--MaxHeight);
 
   &.pf-m-wrap-text {
     word-break: break-all;

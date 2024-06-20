@@ -3,7 +3,7 @@
 $pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root, .#{$masthead}) {
+:root, .#{$masthead}-reset {
   // * Masthead
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--md);
@@ -83,7 +83,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   @include pf-v6-c-masthead--m-display-stack;
 
   // Set layout to inline at medium breakpoint
-  :where(:not(.pf-m-resize-observer)) & {
+  :not(.pf-m-resize-observer) & {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @include pf-v6-c-masthead--m-display-inline;
     }
