@@ -508,7 +508,7 @@ import './MenuToggle.css'
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}
-    {{> avatar}}
+    {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -522,7 +522,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar}}
+    {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -536,7 +536,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar}}
+    {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
