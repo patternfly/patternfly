@@ -1,7 +1,10 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$button}) {
-  --#{$button}--Display: inline-block;
+  --#{$button}--Display: inline-flex;
+  --#{$button}--AlignItems: baseline;
+  --#{$button}--JustifyContent: center;
+  --#{$button}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$button}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -98,6 +101,7 @@
   --#{$button}--m-link--m-danger--m-clicked__icon--Color: var(--pf-t--global--text--color--status--danger--clicked);
 
   // Link inline
+  --#{$button}--m-link--m-inline--Display: inline-flex;
   --#{$button}--m-link--m-inline--FontSize: initial;
   --#{$button}--m-link--m-inline--LineHeight: initial;
   --#{$button}--m-link--m-inline--FontWeight: initial;
@@ -110,6 +114,9 @@
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$button}--span--m-link--m-inline--Display: inline;
+  --#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart: var(--pf-t--global--spacer--xs);
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -124,7 +131,8 @@
   --#{$button}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$button}--m-plain--m-clicked--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
-  --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$button}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$button}--m-plain--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
   --#{$button}--m-plain--m-small--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$button}--m-plain--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
@@ -243,8 +251,10 @@
   --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--hover__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$button}__icon--m-start--MarginInlineEnd: var(--pf-t--global--spacer--xs);
-  --#{$button}__icon--m-end--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$button}__icon--MarginInlineStart: 0;
+  --#{$button}__icon--MarginInlineEnd: 0;
+  --#{$button}__icon--m-start--MarginInlineEnd: 0;
+  --#{$button}__icon--m-end--MarginInlineStart: 0;
 
   // Progress
   --#{$button}__progress--width: calc(var(--#{$spinner}--m-md--diameter) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
@@ -263,16 +273,19 @@
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
 
   // Count
-  --#{$button}__count--MarginInlineStart: var(--pf-t--global--spacer--sm);
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
+
+  // Block
+  --#{$button}--m-block--Display: flex;
+  --#{$button}--m-block--Width: 100%;
 }
 
 .#{$button} {
   position: relative;
   display: var(--#{$button}--Display);
-  flex: var(--#{$button}--Flex, initial);
-  align-items: var(--#{$button}--AlignItems, initial);
-  justify-content: var(--#{$button}--JustifyContent, initial);
+  gap: var(--#{$button}--Gap);
+  align-items: var(--#{$button}--AlignItems);
+  justify-content: var(--#{$button}--JustifyContent);
   padding-block-start: var(--#{$button}--PaddingBlockStart);
   padding-block-end: var(--#{$button}--PaddingBlockEnd);
   padding-inline-start: var(--#{$button}--PaddingInlineStart);
@@ -381,6 +394,13 @@
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-link--m-clicked__icon--Color);
 
     &.pf-m-inline {
+      @at-root span#{&} {
+        --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
+        --#{$button}__icon--m-start--MarginInlineEnd: var(--#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd);
+        --#{$button}__icon--m-end--MarginInlineStart: var(--#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart);
+      }
+
+      --#{$button}--Display: var(--#{$button}--m-link--m-inline--Display);
       --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
       --#{$button}--LineHeight: var(--#{$button}--m-link--m-inline--LineHeight);
       --#{$button}--FontWeight: var(--#{$button}--m-link--m-inline--FontWeight);
@@ -397,7 +417,6 @@
       --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
       --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
 
-      display: inline;
       text-align: start;
       white-space: normal;
       outline-offset: #{pf-size-prem(2px)};
@@ -526,6 +545,7 @@
     --#{$button}--m-clicked--Color: var(--#{$button}--m-plain--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-clicked--BackgroundColor);
     --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
+    --#{$button}--disabled__icon--Color: var(--#{$button}--m-plain--disabled__icon--Color);
     --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
     --#{$button}--m-small--PaddingBlockStart: var(--#{$button}--m-plain--m-small--PaddingBlockStart);
     --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-plain--m-small--PaddingInlineEnd);
@@ -548,8 +568,9 @@
   }
 
   &.pf-m-block {
-    display: block;
-    width: 100%;
+    --#{$button}--Display: var(--#{$button}--m-block--Display);
+
+    width: var(--#{$button}--m-block--Width);
   }
 
   &.pf-m-small {
@@ -638,14 +659,16 @@
 }
 
 .#{$button}__icon {
+  margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
+  margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
 
   &.pf-m-start {
-    margin-inline-end: var(--#{$button}__icon--m-start--MarginInlineEnd);
+    --#{$button}__icon--MarginInlineEnd: var(--#{$button}__icon--m-start--MarginInlineEnd);
   }
 
   &.pf-m-end {
-    margin-inline-start: var(--#{$button}__icon--m-end--MarginInlineStart);
+    --#{$button}__icon--MarginInlineStart: var(--#{$button}__icon--m-end--MarginInlineStart);
   }
 }
 
@@ -665,5 +688,4 @@
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
-  margin-inline-start: var(--#{$button}__count--MarginInlineStart);
 }

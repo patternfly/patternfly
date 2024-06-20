@@ -2,5 +2,11 @@
   {{#if button-count--attribute}}
     {{{button-count--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if button--count}}
+    {{#> badge badge--IsRead=button-count--IsRead badge--IsUnread=button-count--IsUnread}}
+      {{button--count}}
+    {{/badge}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

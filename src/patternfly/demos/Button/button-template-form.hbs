@@ -26,10 +26,7 @@
           Linking account
         {{/button}}
       {{else if button-template-form--IsComplete}}
-        {{#> button button--modifier="pf-m-primary pf-m-start" button--IsSubmit="true"}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-check-circle" aria-hidden="true"></i>
-          {{/button-icon}}
+        {{#> button button--IsPrimary=true button--IsSubmit="true" button--icon="check-circle"}}
           Logged in
         {{/button}}
       {{else}}

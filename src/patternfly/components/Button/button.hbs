@@ -18,6 +18,12 @@
     button--HasNoPadding='pf-m-no-padding'
     button--IsSmall='pf-m-small'
     button--IsClicked='pf-m-clicked'
+    button--IsStateful='pf-m-stateful'
+    button--IsRead='pf-m-read'
+    button--IsUnread='pf-m-unread'
+    button--IsAttention='pf-m-attention'
+    button--IsDisplayLg='pf-m-display-lg'
+    button--IsBlock='pf-m-block'
     button--modifier=button--modifier
   }}
   {{#if button--IsDisabled}}
@@ -74,16 +80,21 @@
     {{> button-progress}}
   {{/if}}
   {{#if button--icon}}
-    <i class="fas fa-{{button--icon}}" aria-hidden="true"></i>
-  {{else if button--HasIcon}}
-    {{#> button-icon button-icon--modifier="pf-m-start"}}
-      <i class="fas fa-plus-circle" aria-hidden="true"></i>
-    {{/button-icon}}
+    {{#unless button-icon--IsEnd}}
+      {{> button-icon}}
+    {{/unless}}
   {{/if}}
-  {{> @partial-block}}
-  {{#if button--HasIconEnd}}
-    {{#> button-icon button-icon--modifier="pf-m-end"}}
-      <i class="fas fa-plus-circle" aria-hidden="true"></i>
-    {{/button-icon}}
+  {{#if @partial-block}}
+    {{#> button-text}}
+      {{> @partial-block}}
+    {{/button-text}}
+  {{/if}}
+  {{#if button--icon}}
+    {{#if button-icon--IsEnd}}
+      {{> button-icon}}
+    {{/if}}
+  {{/if}}
+  {{#if button--count}}
+    {{> button-count}}
   {{/if}}
 </{{#if button--type}}{{button--type}}{{else if button--IsSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}}>

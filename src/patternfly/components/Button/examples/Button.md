@@ -34,27 +34,27 @@ import './Button.css'
 
 ### Links as buttons
 ```hbs
-{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-primary"}}
+{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsPrimary=true}}
   Primary link to W3.org
 {{/button}}
 
-{{#> button button--IsAnchor="true" button--url="#overview" button--attribute='aria-label="Read more about button documentation"' button--modifier="pf-m-secondary"}}
+{{#> button button--IsAnchor=true button--url="#overview" button--aria-label="Read more about button documentation" button--IsSecondary=true}}
   Secondary link to anchor
 {{/button}}
 
-{{#> button button--IsAnchor="true" button--url="#overview" button--attribute='aria-label="Read more about button documentation"' button--modifier="pf-m-secondary pf-m-danger"}}
+{{#> button button--IsAnchor=true button--url="#overview" button--aria-label="Read more about button documentation" button--IsSecondary=true button--IsDanger=true}}
   Secondary danger link to anchor
 {{/button}}
 
-{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--attribute='aria-disabled="true" tabindex="-1"' button--modifier="pf-m-tertiary pf-m-disabled"}}
+{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--attribute='aria-disabled=true tabindex="-1"' button--IsDisabled=true button--IsTertiary=true}}
   Tertiary link to W3.org
 {{/button}}
 
-{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-link"}}
+{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsLink=true}}
   Link to W3.org
 {{/button}}
 
-{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-link pf-m-danger"}}
+{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsLink=true button--IsDanger=true}}
   Link danger to W3.org
 {{/button}}
 ```
@@ -63,20 +63,16 @@ import './Button.css'
 ```hbs
 <strong>Plain</strong>
 <br>
-{{#> button button--attribute='aria-label="Remove"' button--IsSpan=true button--IsPlain=true}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--icon="times"}}
 <br><br>
 <strong>Plain no padding</strong>
 <br>
-{{#> button button--attribute='aria-label="Remove"' button--IsSpan=true button--IsPlain=true button--HasNoPadding=true}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--icon="times"}}
 <br><br>
 <strong>Inline link</strong>
 <br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-{{#> button button--IsSpan="true" button--modifier="pf-m-link pf-m-inline"}}
+{{#> button button--IsSpan=true button--IsLink=true button--IsInline=true}}
   This is long button text that needs to be a span so that it will wrap inline with the text around it.
 {{/button}}
 Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum velit elementum non.
@@ -84,22 +80,22 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 ### Block level
 ```hbs
-{{#> button button--modifier="pf-m-primary pf-m-block"}}
+{{#> button button--IsPrimary=true button--IsBlock=true}}
   Block level button
 {{/button}}
 ```
 
 ### Types
 ```hbs
-{{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+{{#> button button--IsPrimary=true button--IsSubmit=true}}
   Submit
 {{/button}}
 
-{{#> button button--modifier="pf-m-primary" button--IsReset="true"}}
+{{#> button button--IsPrimary=true button--IsReset=true}}
   Reset
 {{/button}}
 
-{{#> button button--modifier="pf-m-primary"}}
+{{#> button button--IsPrimary=true}}
   Default
 {{/button}}
 ```
@@ -107,70 +103,60 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 ### Call to action
 ```hbs
 {{#*inline "cta-buttons"}}
-  {{#> button button--modifier="pf-m-primary pf-m-display-lg"}}
+  {{#> button button--IsPrimary=true }}
     Call to action
   {{/button}}
 
-  {{#> button button--modifier="pf-m-secondary pf-m-display-lg"}}
+  {{#> button button--IsSecondary=true}}
     Call to action
   {{/button}}
 
-  {{#> button button--modifier="pf-m-tertiary pf-m-display-lg"}}
+  {{#> button button--IsTertiary=true}}
     Call to action
   {{/button}}
 
-  {{#> button button--modifier="pf-m-link pf-m-display-lg"}}
+  {{#> button button--IsLink=true button--IsDisplayLg=true button--icon="arrow-right" button-icon--IsEnd=true}}
     Call to action
-    {{#> button-icon button-icon--modifier="pf-m-end"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button-icon}}
   {{/button}}
 
-  {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
+  {{#> button button--IsLink=true button--IsInline=true button--IsDisplayLg=true button--icon="arrow-right" button-icon--IsEnd=true}}
     Call to action
-    {{#> button-icon button-icon--modifier="pf-m-end"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button-icon}}
   {{/button}}
 {{/inline}}
-{{> cta-buttons}}
+{{> cta-buttons button--IsDisplayLg=true}}
 <br><br>
 <strong>disabled</strong>
 <br>
-{{> cta-buttons button--IsDisabled=true}}
+{{> cta-buttons button--IsDisabled=true button--IsDisplayLg=true}}
 ```
 
 ### Progress
 ```hbs
-{{#> button button--modifier="pf-m-primary" button--IsProgress="true"}}
+{{#> button button--IsPrimary=true button--IsProgress=true}}
   Primary loader
 {{/button}}
 
-{{#> button button--modifier="pf-m-primary" button--IsProgress="true" button--IsInProgress="true"}}
+{{#> button button--IsPrimary=true button--IsProgress=true button--IsInProgress=true}}
   Primary loading
 {{/button}}
 <br/>
-{{#> button button--modifier="pf-m-secondary" button--IsProgress="true"}}
+{{#> button button--IsSecondary=true button--IsProgress=true}}
   Secondary loader
 {{/button}}
 
-{{#> button button--modifier="pf-m-secondary" button--IsProgress="true" button--IsInProgress="true"}}
+{{#> button button--IsSecondary=true button--IsProgress=true button--IsInProgress=true}}
   Secondary loading
 {{/button}}
 <br/>
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload"'}}
-  <i class="fas fa-upload" aria-hidden="true"></i>
-{{/button}}
+{{> button button--IsPlain=true button--aria-label="Upload" button--icon="upload"}}
 
-{{#> button button--modifier="pf-m-plain" button--IsInProgress="true" button--progress-text="Uploading..."}}
-  <i class="fas fa-upload" aria-hidden="true"></i>
-{{/button}}
+{{> button button--IsPlain=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading..."}}
 <br/>
-{{#> button button--modifier="pf-m-link" button--IsInline="true" button--IsProgress="true"}}
+{{#> button button--IsLink=true button--IsInline=true button--IsProgress=true}}
   Inline loader
 {{/button}}
 
-{{#> button button--modifier="pf-m-link" button--IsInline="true" button--IsProgress="true" button--IsInProgress="true"}}
+{{#> button button--IsLink=true button--IsInline=true button--IsProgress=true button--IsInProgress=true}}
   Inline loading
 {{/button}}
 ```
@@ -178,87 +164,66 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 ### Counts
 ```hbs isBeta
 {{#*inline "button-counts"}}
-{{#> button button--modifier="pf-m-primary" button--attribute='aria-label="View 7 issues"'}}
-  View issues
-  {{#> button-count}}
-    {{#> badge badge--modifier="pf-m-unread"}}
-      7
-    {{/badge}}
-  {{/button-count}}
-{{/button}}
-{{#> button button--modifier="pf-m-primary" button--attribute='aria-label="View 7 issues"'}}
-  View issues
-  {{#> button-count}}
-    {{#> badge badge--modifier="pf-m-read"}}
-      7
-    {{/badge}}
-  {{/button-count}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
-  View issues
-  {{#> button-count}}
-    {{#> badge badge--modifier="pf-m-unread"}}
-      7
-    {{/badge}}
-  {{/button-count}}
-{{/button}}
-{{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
-  View issues
-  {{#> button-count}}
-    {{#> badge badge--modifier="pf-m-read"}}
-      7
-    {{/badge}}
-  {{/button-count}}
-{{/button}}
+  {{#> button button--IsPrimary=true button-count--IsUnread=true}}
+    View issues
+  {{/button}}
+  {{#> button button--IsPrimary=true button-count--IsRead=true}}
+    View issues
+  {{/button}}
+  {{#> button button--IsLink=true button-count--IsUnread=true}}
+    View issues
+  {{/button}}
+  {{#> button button--IsLink=true button-count--IsRead=true}}
+    View issues
+  {{/button}}
 {{/inline}}
 
-{{> button-counts}}
+{{> button-counts button--count="7"}}
 <br>
 <strong>disabled</strong>
 <br>
-{{> button-counts button--IsDisabled=true badge--IsDisabled=true}}
+{{> button-counts button--IsDisabled=true badge--IsDisabled=true button--count="7"}}
 ```
 
 ### Plain with no padding
 ```hbs
-For when a plain/icon button is placed inline with text {{#> button button--modifier="pf-m-plain pf-m-no-padding" button--attribute='aria-label="More info"'}}<i class="fas fa-question-circle" aria-hidden="true"></i>{{/button}}.
+For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--icon="question-circle"}}.
 ```
 
 ### Stateful
 ```hbs
 <strong>Read</strong>
 <br>
-{{#> button button--modifier="pf-m-stateful pf-m-read"}}
-  <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}items{{/screen-reader}}
+{{#> button button--IsStateful=true button--IsRead=true button--icon="bell"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 
-{{#> button button--modifier="pf-m-stateful pf-m-read pf-m-clicked"}}
-  <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}items{{/screen-reader}}
+{{#> button button--IsStateful=true button--IsRead=true button--IsClicked=true button--icon="bell"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 
 <br><br>
 
 <strong>Unread</strong>
 <br>
-{{#> button button--modifier="pf-m-stateful pf-m-unread"}}
-  <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items{{/screen-reader}}
+{{#> button button--IsStateful=true button--IsUnread=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
 
-{{#> button button--modifier="pf-m-stateful pf-m-unread pf-m-clicked"}}
-  <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items{{/screen-reader}}
+{{#> button button--IsStateful=true button--IsUnread=true button--IsClicked=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
 
 <br><br>
 
 <strong>Attention</strong>
 <br>
-{{#> button button--modifier="pf-m-stateful pf-m-attention"}}
-  <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{#> button button--IsStateful=true button--IsAttention=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 
-{{#> button button--modifier="pf-m-stateful pf-m-attention pf-m-clicked"}}
-  <i class="fas fa-bell" aria-hidden="true"></i> 10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 ```
 
@@ -272,13 +237,13 @@ Semantic buttons and links are important for usability as well as accessibility.
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-pressed="true or false"` | `.pf-v6-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
+| `aria-pressed="true or false"` | `.pf-v6-c-button` | Indicates that the button is a toggle. When set to true, `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
 | `aria-label="[button label text]"` | `.pf-v6-c-button.pf-m-plain` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 | `aria-label="[descriptive text]"` | `a.pf-v6-c-button`, `span.pf-v6-c-button.pf-m-link.pf-m-inline` | The button component's text should adequately describe its purpose. If it does not, `aria-label` can provide more detailed interaction information. |
 | `disabled` | `button.pf-v6-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
-| `aria-disabled="true"` | `button.pf-v6-c-button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
-| `aria-disabled="true"` | `a.pf-v6-c-button.pf-m-disabled`, `span.pf-v6-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, indicates that it is unavailable. **Required when element is disabled** |
-| `aria-expanded="true"` | `.pf-v6-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required** |
+| `aria-disabled=true` | `button.pf-v6-c-button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
+| `aria-disabled=true` | `a.pf-v6-c-button.pf-m-disabled`, `span.pf-v6-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, indicates that it is unavailable. **Required when element is disabled** |
+| `aria-expanded=true` | `.pf-v6-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required** |
 | `tabindex="-1"` | `a.pf-v6-c-button.pf-m-disabled`, `span.pf-v6-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, removes it from keyboard focus. **Required when element is disabled** |
 | `tabindex="0"` | `span.pf-v6-c-button.pf-m-link.pf-m-inline` | Inserts the span into the tab order of the page so that it is focusable. **Required when the element is a span** |
 

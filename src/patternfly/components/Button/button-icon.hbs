@@ -1,10 +1,16 @@
-<span class="{{pfv}}button__icon{{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
+<span class="{{pfv}}button__icon
+  {{#if button-icon--IsEnd}}
+    pf-m-end
+  {{else}}
+    pf-m-start
+  {{/if}}
+  {{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
   {{#if button-icon--attribute}}
     {{{button-icon--attribute}}}
   {{/if}}>
-  {{#if button-icon--name}}
-    <i class="{{{button-icon--name}}}" aria-hidden="true"></i>
-  {{else}}
+  {{#if button--icon}}
+    <i class="fas fa-{{button--icon}}" aria-hidden="true"></i>
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
 </span>
