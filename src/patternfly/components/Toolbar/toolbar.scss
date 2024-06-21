@@ -67,14 +67,13 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar content - Toolbar group - Toolbar item - Toolbar group label container - Toolbar group label group
 .#{$toolbar}__content-section,
 .#{$toolbar}__group,
-.#{$toolbar}__item,
-.#{$toolbar}__group.pf-m-label-group-container,
-.#{$toolbar}__group.pf-m-label-group {
+.#{$toolbar}__item {
   @include pf-v6-hidden-visible(flex);
 
   flex-wrap: wrap;
 }
 
+// - Toolbar content
 .#{$toolbar}__content {
   @include pf-v6-hidden-visible(grid);
 }
@@ -158,7 +157,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   column-gap: var(--#{$toolbar}--ColumnGap);
 }
 
-// - Toolbar content expandable content
+// - Toolbar content - Toolbar expandable content
 .#{$toolbar}__content,
 .#{$toolbar}__expandable-content {
   padding-block-start: var(--#{$toolbar}__content--PaddingBlockStart, var(--#{$toolbar}__content--PaddingBlock));
@@ -360,8 +359,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
       @each $gap, $gap-value in $pf-v6-c-toolbar--spacer-map {
         &.pf-m-gap-#{$gap}#{$breakpoint-name} {
-          row-gap: #{$gap-value};
-          column-gap: #{$gap-value};
+          gap: #{$gap-value};
         }
       }
 
@@ -373,14 +371,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
         &.pf-m-row-gap-#{$spacer}#{$breakpoint-name} {
           row-gap: #{$spacer-value};
-        }
-
-        &.pf-m-margin-inline-start#{$spacer}#{$breakpoint-name} {
-          margin-inline-start: #{$spacer-value};
-        }
-
-        &.pf-m-margin-inline-end#{$spacer}#{$breakpoint-name} {
-          margin-inline-end: #{$spacer-value};
         }
       }
     }
