@@ -123,7 +123,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Wizard main section
   --#{$page}__main-wizard--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-wizard--BorderBlockStartColor: var(--pf-t--global--border--color--default);
-  --#{$page}__main-wizard--BorderBlockStartWidth: var(--pf-t--global--border--width--button--default);
+  --#{$page}__main-wizard--BorderBlockStartWidth: var(--pf-t--global--border--width--action--default);
 }
 
 .#{$page} {
