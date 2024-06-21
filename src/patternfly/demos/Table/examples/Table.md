@@ -33,21 +33,19 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasOverflowMenu=true
-          toolbar-template--HasOverflowMenuSecondButton=true
-          toolbar-template--HasIconButtonGroup=true
-          toolbar-template--HasSortButtonMobile=true
-        }}
-      {{> table-sortable-table}}
-      {{> table-pagination-footer}}
-    {{/card}}
-  {{/page-main-section}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasOverflowMenu=true
+        toolbar-template--HasOverflowMenuSecondButton=true
+        toolbar-template--HasIconButtonGroup=true
+        toolbar-template--HasSortButtonMobile=true
+      }}
+    {{> table-sortable-table}}
+    {{> table-pagination-footer}}
+    {{/page-main-section}}
 {{/inline}}
 ```
 
@@ -57,18 +55,16 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasFilterGroup=true
-          toolbar-template--HasSortButton=true
-        }}
-      {{> table-expandable-table}}
-      {{> table-pagination-footer}}
-    {{/card}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasFilterGroup=true
+        toolbar-template--HasSortButton=true
+      }}
+    {{> table-expandable-table}}
+    {{> table-pagination-footer}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -79,18 +75,16 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasFilterGroup=true
-          toolbar-template--HasSortButton=true
-        }}
-      {{> table-compact-table}}
-      {{> table-pagination-footer}}
-    {{/card}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasFilterGroup=true
+        toolbar-template--HasSortButton=true
+      }}
+    {{> table-compact-table}}
+    {{> table-pagination-footer}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -101,18 +95,16 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasFilterGroup=true
-          toolbar-template--HasSortButton=true
-        }}
-      {{> table-compound-expansion-table}}
-      {{> table-pagination-footer}}
-    {{/card}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasFilterGroup=true
+        toolbar-template--HasSortButton=true
+      }}
+    {{> table-compound-expansion-table}}
+    {{> table-pagination-footer}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -123,9 +115,7 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> table-loading-table}}
-    {{/card}}
+    {{> table-loading-table}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -137,9 +127,7 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> table-empty-state-table}}
-    {{/card}}
+    {{> table-empty-state-table}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -150,18 +138,16 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasFilterGroup=true
-          toolbar-template--HasSortButton=true
-        }}
-      {{> table-simple-table}}
-      {{> table-pagination-footer-static}}
-    {{/card}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasFilterGroup=true
+        toolbar-template--HasSortButton=true
+      }}
+    {{> table-simple-table}}
+    {{> table-pagination-footer-static}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -202,17 +188,15 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasFilterGroup=true
-          toolbar-template--HasSortButton=true
-        }}
-      {{> table-simple-table}}
-    {{/card}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasFilterGroup=true
+        toolbar-template--HasSortButton=true
+      }}
+    {{> table-simple-table}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -223,18 +207,16 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar-template
-          toolbar-template--id=(concat page--id '-toolbar')
-          toolbar-template--HasBulkSelect=true
-          toolbar-template--HasToggleGroup=true
-          toolbar-template--HasSearchFilter=true
-          toolbar-template--HasFilterGroup=true
-          toolbar-template--HasSortButton=true
-        }}
-      {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
-      {{> table-pagination-footer}}
-    {{/card}}
+    {{> toolbar-template
+        toolbar-template--id=(concat page--id '-toolbar')
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasSearchFilter=true
+        toolbar-template--HasFilterGroup=true
+        toolbar-template--HasSortButton=true
+      }}
+    {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
+    {{> table-pagination-footer}}
   {{/page-main-section}}
 {{/inline}}
 ```
