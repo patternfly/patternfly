@@ -13,7 +13,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle menu-toggle--id=(concat card--id "-dropdown-kebab-right-aligned") menu-toggle--IsPlain=true menu-toggle--HasKebab=true}}
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
@@ -56,7 +56,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle menu-toggle--id=(concat card--id "-dropdown-kebab-right-aligned") menu-toggle--IsPlain=true menu-toggle--HasKebab=true}}
     {{/card-actions}}
     {{#> card-header-main}}
       {{> card-title card-title-text--value="Getting started" card-title-text--id=(concat card--id '-title')}}
