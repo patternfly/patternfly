@@ -11,22 +11,14 @@
 {{!-- dropdown --}}
 {{#if toolbar-template--HasMenu}}
   {{#> toolbar-item}}
-    {{#> select select--attribute="style='width: 150px'" select--id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-bookmark"}}
-      Status
-    {{/select}}
+    {{> menu-toggle menu-toggle--text="Status" menu-toggle--attribute="style='width: 150px'" menu-toggle--id=(concat toolbar--id '-select-status') menu-toggle--icon="bookmark"}}
   {{/toolbar-item}}
 {{/if}}
 
 {{!-- filter --}}
 {{#if toolbar-template--HasFilter}}
   {{#> toolbar-item}}
-    {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-      {{#if toolbar-template--filterText}}
-        {{toolbar-template--filterText}}
-      {{else}}
-        Status
-      {{/if}}
-    {{/select}}
+    {{> menu-toggle menu-toggle--text=(ternary toolbar-template--filterText toolbar-template--filterText "Status") menu-toggle--id=(concat toolbar--id '-select-checkbox-status')}}
   {{/toolbar-item}}
 {{/if}}
 
@@ -34,14 +26,10 @@
 {{#if toolbar-template--HasFilterGroup}}
   {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
     {{#> toolbar-item}}
-      {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-        Status
-      {{/select}}
+      {{> menu-toggle menu-toggle--text="Status" menu-toggle--id=(concat toolbar--id '-select-checkbox-status')}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> select select--id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
-        Risk
-      {{/select}}
+      {{> menu-toggle menu-toggle--text="Risk" menu-toggle--id=(concat toolbar--id '-select-checkbox-risk')}}
     {{/toolbar-item}}
   {{/toolbar-group}}
 {{/if}}
