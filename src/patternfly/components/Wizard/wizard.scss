@@ -12,6 +12,8 @@
   --#{$wizard}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__header--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__header--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   // Close
   --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingBlockStart));
@@ -207,6 +209,7 @@
   padding-inline-start: var(--#{$wizard}__header--PaddingInlineStart);
   padding-inline-end: var(--#{$wizard}__header--PaddingInlineEnd);
   background-color: var(--#{$wizard}__header--BackgroundColor);
+  border-block-end: var(--#{$wizard}__header--BorderBlockEndWidth) solid var(--#{$wizard}__header--BorderBlockEndColor);
 
   // Nested selector to match button component color specificity
   .#{$wizard}__close {
