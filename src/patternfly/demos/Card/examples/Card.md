@@ -13,7 +13,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle menu-toggle--id=(concat card--id "-dropdown-kebab-right-aligned") menu-toggle--IsPlain=true menu-toggle--HasKebab=true}}
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
@@ -56,7 +56,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
+      {{> menu-toggle menu-toggle--id=(concat card--id "-dropdown-kebab-right-aligned") menu-toggle--IsPlain=true menu-toggle--HasKebab=true}}
     {{/card-actions}}
     {{#> card-header-main}}
       {{> card-title card-title-text--value="Getting started" card-title-text--id=(concat card--id '-title')}}
@@ -786,9 +786,7 @@ import './Card.css'
         {{/card-title}}
       {{/card-header-main}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
-          Filter
-        {{/select}}
+        {{> menu-toggle menu-toggle--id=(concat card--id '-select-dropdown') menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--text="Filter"}}
       {{/card-actions}}
     {{/card-header}}
     {{#> card-body}}
@@ -987,9 +985,7 @@ import './Card.css'
         </span>
       {{/card-header-main}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-block-start: 1px;"'}}
-        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
-          Filter
-        {{/select}}
+        {{> menu-toggle menu-toggle--id=(concat card--id '-select-dropdown') menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--text="Filter"}}
       {{/card-actions}}
     {{/card-header}}
     {{#> card-body}}
@@ -1042,9 +1038,7 @@ import './Card.css'
   {{#> card card--id="card-log-view-example"}}
     {{#> card-header card-header--modifier="pf-v6-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
-          Most recent
-        {{/select}}
+        {{> menu-toggle menu-toggle--id=(concat card--id '-select-dropdown') menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--text="Most recent"}}
       {{/card-actions}}
       {{#> card-header-main}}
         {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-block-start: 3px;"')}}
@@ -1134,9 +1128,7 @@ import './Card.css'
   {{#> card card--id="card-events-view-example"}}
     {{#> card-header card-header--modifier="pf-v6-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
-          Status
-        {{/select}}
+        {{> menu-toggle menu-toggle--id=(concat card--id '-select-dropdown') menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--text="Status"}}
       {{/card-actions}}
       {{#> card-header-main}}
         {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-block-start: 3px;"')}}

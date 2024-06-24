@@ -27,10 +27,10 @@
   --#{$card}__actions--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 
   // Expandable
-  --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
+  --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--xs);
-  --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
-  --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--md) * -1);
+  --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain) * -1);
   --#{$card}__header-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
 

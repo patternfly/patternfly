@@ -2,9 +2,7 @@
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
-        {{#> select select--attribute="style='width: 150px'" select--id=(concat toolbar--id '-select-dropdown')}}
-          Dropdown
-        {{/select}}
+        {{> menu-toggle menu-toggle--text="Dropdown" menu-toggle--attribute="style='width: 150px'" menu-toggle--id=(concat toolbar--id '-select-dropdown')}}
       {{/toolbar-item}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination}}

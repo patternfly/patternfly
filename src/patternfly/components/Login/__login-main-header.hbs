@@ -7,14 +7,7 @@
   {{/login-main-header-desc}}
   {{#if __login-main-header--HasLangaugeSelector}}
     {{#> login-main-header-utilities}}
-      {{#> select select--id="login-select" select--toggle-text="English" select--IsCustom="true"}}
-        {{> select-toggle}}
-        {{#> select-menu}}
-          <li role="presentation">{{#> select-menu-item select-menu-item--IsSelected="true"}}English{{/select-menu-item}}</li>
-          <li role="presentation">{{#> select-menu-item}}Español{{/select-menu-item}}</li>
-          <li role="presentation">{{#> select-menu-item}}Français{{/select-menu-item}}</li>
-        {{/select-menu}}
-      {{/select}}
+      {{> menu-toggle menu-toggle--id="login-select" menu-toggle--text="English"}}
     {{/login-main-header-utilities}}
   {{/if}}
 {{/login-main-header}}

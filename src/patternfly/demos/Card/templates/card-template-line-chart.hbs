@@ -2,9 +2,7 @@
   {{#> card card--id=card-template-line-chart--id}}
     {{#> card-header}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
-          24 hours
-        {{/select}}
+        {{> menu-toggle menu-toggle--text="24 hours" menu-toggle--id=(concat card--id '-select-dropdown') menu-toggle--IsPlain=true menu-toggle--IsText=true}}
       {{/card-actions}}
       {{#> card-title card-title--id=(concat card--id '-title')}}
         {{#> title title--modifier="pf-m-xl" titleType="h2"}}

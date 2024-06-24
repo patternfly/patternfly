@@ -1,12 +1,8 @@
 {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
   {{#> toolbar-item}}
-    {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-      Status
-    {{/select}}
+    {{> menu-toggle menu-toggle--text="Status" menu-toggle--id=(concat toolbar--id '-select-checkbox-status')}}
   {{/toolbar-item}}
   {{#> toolbar-item}}
-    {{#> select select--id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
-      Risk
-    {{/select}}
+    {{> menu-toggle menu-toggle--text="Risk" menu-toggle--id=(concat toolbar--id '-select-checkbox-risk')}}
   {{/toolbar-item}}
 {{/toolbar-group}}
