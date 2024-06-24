@@ -57,13 +57,12 @@
   // Title text
   --#{$popover}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$popover}__title-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$popover}__title-text--FontSize: var(--pf-t--global--font--size--body--lg);
-
+  --#{$popover}__title-text--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Title icon
   --#{$popover}__title-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$popover}__title-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$popover}__title-icon--FontSize: var(--pf-t--global--font--size--body--lg);
+  --#{$popover}__title-icon--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Footer
   --#{$popover}__footer--MarginBlockStart: var(--pf-t--global--spacer--md);
