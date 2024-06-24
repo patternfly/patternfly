@@ -538,7 +538,9 @@
 
 .#{$wizard}__main {
   z-index: var(--#{$wizard}__main--ZIndex);
-  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   overflow-x: hidden;
   overflow-y: auto;
   word-break: break-word;
@@ -552,6 +554,10 @@
 
   &.pf-m-no-padding {
     padding: 0;
+  }
+
+  &:last-child { 
+    flex-grow: 1; 
   }
 }
 
