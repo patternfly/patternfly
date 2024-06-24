@@ -3,20 +3,7 @@
     {{#> table-tree-view-main}}
       {{!-- TODO: fix this after merge --}}
       {{#unless (concat table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
-        {{#> table-td table-td--IsToggle=true table-td--type='span'}}
-          {{> button
-            button--aria-label='Toggle row'
-            button--IsSmall=table--IsCompact
-            button--IsPlain=true
-            button--IsIcon=true
-            button--icon-template="table-toggle-icon"
-            button--IsExpanded=table-tr--IsExpanded
-            button--IsAriaExpanded=table-tr--IsExpanded
-            button--aria-describedby=table-tr--IsExpanded
-            button--aria-labelledby=(concat table--id '-node-' table-tr--index)
-            button--aria-control=(concat table--id '-content-' table-tr--index)
-            button--id=(concat table--id '-expandable-toggle' table-tr--index)}}
-        {{/table-td}}
+        {{> table-td table-td--IsToggle=true table-td--type='span'}}
       {{/unless}}
       {{!-- TODO: fix this after merge --}}
       {{#unless table-tr--tree--HasNoCheckbox}}

@@ -2,5 +2,12 @@
   {{#if alert-toggle--attribute}}
     {{{alert-toggle--attribute}}}
   {{/if}}>
-  {{> button button--IsPlain=true button--IsIcon=true button--IsExpanded=alert--IsExpanded button--icon-template="alert-toggle-icon"}}
+  {{> button
+    button--IsPlain=true
+    button--IsIcon=true
+    button--IsExpanded=alert--IsExpanded
+    button--id=(concat alert--id '-toggle')
+    button--aria-label="Details"
+    button--aria-labelledby=(concat alert--id '-title ' alert--id '-toggle')
+    button--icon-template="alert-toggle-icon"}}
 </div>
