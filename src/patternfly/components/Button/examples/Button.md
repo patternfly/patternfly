@@ -162,7 +162,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 ```
 
 ### Counts
-```hbs isBeta
+```hbs
 {{#*inline "button-counts"}}
   {{#> button button--IsPrimary=true button-count--IsUnread=true}}
     View issues

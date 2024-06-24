@@ -25,7 +25,7 @@ cssPrefix: pf-v6-c-spinner
 ### Inline
 An inline spinner inherits its font-size, so its size will match the content around it.
 
-```hbs isBeta
+```hbs
 {{#> spinner spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
 ```
 

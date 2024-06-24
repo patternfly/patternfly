@@ -1,6 +1,5 @@
 ---
 id: Timestamp
-beta: true
 section: components
 cssPrefix: pf-v6-c-timestamp
 ---

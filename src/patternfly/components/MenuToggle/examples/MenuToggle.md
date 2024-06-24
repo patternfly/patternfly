@@ -610,7 +610,7 @@ import './MenuToggle.css'
 ```
 
 ### Status
-```hbs isBeta
+```hbs
 {{> menu-toggle menu-toggle--IsSuccess=true menu-toggle--text="Success"}}
 
 <br/><br/>
