@@ -227,7 +227,6 @@
 
 .#{$notification-drawer}__list-item-header-title {
   font-weight: var(--#{$notification-drawer}__list-item-header-title--FontWeight);
-  line-height: var(--#{$notification-drawer}__list-item-header-title--LineHeight);
   word-break: break-word;
 
   &.pf-m-truncate {
