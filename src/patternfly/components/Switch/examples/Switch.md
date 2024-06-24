@@ -8,76 +8,36 @@ cssPrefix: pf-v6-c-switch
 ### Basic
 ```hbs
 {{#> switch switch--attribute='for="switch-with-label-1"'}}
-  {{#> switch-input switch-input--id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" switch-input--attribute='checked'}}{{/switch-input}}
+  {{#> switch-input switch-input--id="switch-with-label-1" aria-labelledby="switch-with-label-1-text" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-with-label-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-with-label-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
-{{/switch}}
-<br/>
-<br/>
-{{#> switch switch--attribute='for="switch-with-label-2"'}}
-  {{#> switch-input switch-input--id="switch-with-label-2" aria-labelledby="switch-with-label-2-on"}}
-  {{/switch-input}}
-  {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-with-label-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-with-label-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+  {{#> switch-label switch-label--id="switch-with-label-1-text" switch-label--attribute='aria-hidden="true"'}}Togglable option in basic example{{/switch-label}}
 {{/switch}}
 ```
 
 ### Reverse (toggle on right)
 ```hbs
 {{#> switch switch--attribute='for="switch-reverse-1"' switch--modifier="pf-m-reverse"}}
-  {{#> switch-input switch-input--id="switch-reverse-1" aria-labelledby="switch-reverse-1-on" switch-input--attribute='checked'}}{{/switch-input}}
+  {{#> switch-input switch-input--id="switch-reverse-1" aria-labelledby="switch-reverse-1-text" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-reverse-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-reverse-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
-{{/switch}}
-<br/>
-<br/>
-{{#> switch switch--attribute='for="switch-reverse-2"' switch--modifier="pf-m-reverse"}}
-  {{#> switch-input switch-input--id="switch-reverse-2" aria-labelledby="switch-reverse-2-on"}}
-  {{/switch-input}}
-  {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-reverse-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-reverse-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+  {{#> switch-label switch-label--id="switch-reverse-1-text" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Togglable option in reverse example{{/switch-label}}
 {{/switch}}
 ```
 
-### Label and check
+### Label and check icon
 ```hbs
 {{#> switch switch--attribute='for="switch-label-check-1"'}}
-  {{#> switch-input switch-input--id="switch-label-check-1" aria-labelledby="switch-label-check-1-on" switch-input--attribute='checked'}}{{/switch-input}}
+  {{#> switch-input switch-input--id="switch-label-check-1" aria-labelledby="switch-label-check-1-text" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}
     {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-label-check-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-label-check-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
-{{/switch}}
-<br/>
-<br/>
-{{#> switch switch--attribute='for="switch-label-check-2"'}}
-  {{#> switch-input switch-input--id="switch-label-check-2" aria-labelledby="switch-label-check-2-off"}}{{/switch-input}}
-  {{#> switch-toggle}}
-    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
-  {{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-label-check-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-label-check-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+  {{#> switch-label switch-label--id="switch-label-check-1-text" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Togglable option in check icon example{{/switch-label}}
 {{/switch}}
 ```
 
-### Without label
+### Without visible text label
 ```hbs
 {{#> switch switch--attribute='for="switch-with-icon-1"'}}
-  {{#> switch-input switch-input--id="switch-with-icon-1" switch-input--attribute='checked'}}{{/switch-input}}
-  {{#> switch-toggle}}
-    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
-  {{/switch-toggle}}
-{{/switch}}
-<br/>
-<br/>
-{{#> switch switch--attribute='for="switch-with-icon-2"'}}
-  {{#> switch-input switch-input--id="switch-with-icon-2"}}
-  {{/switch-input}}
+  {{#> switch-input aria-label="Togglable option in no text label example" switch-input--id="switch-with-icon-1" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}
     {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
@@ -87,23 +47,21 @@ cssPrefix: pf-v6-c-switch
 ### Disabled
 ```hbs
 {{#> switch switch--attribute='for="switch-disabled-1"'}}
-  {{#> switch-input switch-input--id="switch-disabled-1" aria-labelledby="switch-disabled-1-on" switch-input--attribute='disabled checked'}}{{/switch-input}}
+  {{#> switch-input switch-input--id="switch-disabled-1" aria-labelledby="switch-disabled-1-text" switch-input--attribute='disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-disabled-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-disabled-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+  {{#> switch-label switch-label--id="switch-disabled-1-text" switch-label--attribute='aria-hidden="true"'}}Togglable option in disabled example{{/switch-label}}
 {{/switch}}
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-disabled-2"'}}
-  {{#> switch-input switch-input--id="switch-disabled-2" aria-labelledby="switch-disabled-2-on" switch-input--attribute='disabled'}}{{/switch-input}}
+  {{#> switch-input switch-input--id="switch-disabled-2" aria-labelledby="switch-disabled-2-text" switch-input--attribute='disabled'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
-  {{#> switch-label switch-label--id="switch-disabled-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
-  {{#> switch-label switch-label--id="switch-disabled-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+  {{#> switch-label switch-label--id="switch-disabled-2-text" switch-label--attribute='aria-hidden="true"'}}Togglable option in basic example{{/switch-label}}
 {{/switch}}
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-with-icon-disabled-1"'}}
-  {{#> switch-input switch-input--id="switch-with-icon-disabled-1" switch-input--attribute='disabled checked'}}{{/switch-input}}
+  {{#> switch-input aria-label="Togglable option in disabled icon example" switch-input--id="switch-with-icon-disabled-1" switch-input--attribute='disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}
     {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
@@ -111,7 +69,7 @@ cssPrefix: pf-v6-c-switch
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-with-icon-disabled-2"'}}
-  {{#> switch-input switch-input--id="switch-with-icon-disabled-2" switch-input--attribute='disabled'}}
+  {{#> switch-input aria-label="Togglable option in disabled icon example" switch-input--id="switch-with-icon-disabled-2" switch-input--attribute='disabled'}}
   {{/switch-input}}
   {{#> switch-toggle}}
     {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
@@ -130,9 +88,10 @@ Use checkbox if your user has to perform additional steps for changes to become 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-labelledby="..."` or `aria-label="..."` | `.pf-v6-c-switch__input` | Indicates the action triggered by the switch. If an additional text label is included with the switch besides `.pf-v6-c-switch__label.pf-m-on`, then `aria-labelledby` can reference the `id` of this text, or this text can be used as the value for `aria-label`. If the text included for `.pf-v6-c-switch__label.pf-m-on` provides additional meaning to the primary label that's referenced, then it can also be represented as part of the `aria-labelledby` or `aria-label` attribute. **Required** |
+| `aria-labelledby="..."` or `aria-label="..."` | `.pf-v6-c-switch__input` | Indicates the behavior of the switch. This label should never dynamically change, and should always describe the behavior of the switch when its checked state is true. If an additional text label is included with the switch besides `.pf-v6-c-switch__label`, then `aria-labelledby` can reference the `id` of this text, but it must be in addition to the text of `.pf-v6-c-switch__label`. If there is no visible text label provided, then an `aria-label` must be provided. **Required** |
 | `for` | `<label>` | Each `<label>` must have a `for` attribute that matches its input id. **Required** |
 | `id` | `<input type="checkbox">` | Each `<input>` must have an `id` attribute that matches its label's `for` value. **Required** |
+| `role="switch"` | `<input type="checkbox">` | Exposes the element as a switch for assistive technologies. **Required** |
 | `id` | `.pf-v6-c-switch__label` | Each `.pf-v6-c-switch__label` must have an `id` attribute that matches the `aria-labelledby` on `.pf-v6-c-switch__input`. |
 | `checked` | `.pf-v6-c-switch__input` |  Indicates that the input is checked |
 | `disabled` | `.pf-v6-c-switch__input` |  Indicates that the input is disabled |
@@ -146,6 +105,4 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `.pf-v6-c-switch__toggle` | `<span>` |  Initiates the toggle inside the switch. **Required**  |
 | `.pf-v6-c-switch__toggle-icon` | `<span>` | Initiates the switch toggle icon wrapper. **Required when the switch is used without a label** |
 | `.pf-v6-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
-| `.pf-m-on` | `.pf-v6-c-switch__label` | Modifies the switch label to display the on message. |
-| `.pf-m-off` | `.pf-v6-c-switch__label` | Modifies the switch label to display the off message. |
 | `.pf-m-reverse` | `.pf-v6-c-switch` | Positions the switch toggle to the right of the label. |
