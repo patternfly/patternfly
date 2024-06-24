@@ -384,7 +384,7 @@
   }
 
   // Normal disabled button color won't show on the disabled card
-  button.pf-m-inline.pf-m-disabled {
+  .#{$button}.pf-m-inline:disabled {
     --#{$button}--disabled--Color: var(--#{$card}--c-button--disabled--Color);
   }
 }

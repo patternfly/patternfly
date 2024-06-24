@@ -25,9 +25,7 @@ Options: [
       {{!-- expand all --}}
       {{#if toolbar-template--HasExpandAll}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-expand-all"}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Expand all rows"'}}
-            {{> toolbar-expand-all-icon}}
-          {{/button}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon-template="toolbar-expand-all-icon" button--aria-label="Expand all rows"}}
         {{/toolbar-item}}
       {{/if}}
 
@@ -44,9 +42,7 @@ Options: [
       {{!-- sort --}}
       {{#if toolbar-template--HasSortButton}}
         {{#> toolbar-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon=(concat "sort-amount-down " (pfv "unset-prefix") "m-mirror-inline-rtl") button--aria-label="Sort"}}
         {{/toolbar-item}}
       {{/if}}
 
@@ -63,7 +59,7 @@ Options: [
           {{#> overflow-menu-content overflow-menu-content--modifier="pf-v6-u-display-none pf-v6-u-display-flex-on-lg"}}
             {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
               {{#> overflow-menu-item}}
-                {{#> button button--modifier="pf-m-primary"}}
+                {{#> button button--IsPrimary=true}}
                   {{#if toolbar-template--OverflowButton1Text}}
                     {{toolbar-template--OverflowButton1Text}}
                   {{else}}
@@ -75,7 +71,7 @@ Options: [
               {{!-- second button --}}
               {{#if toolbar-template--HasOverflowMenuSecondButton}}
                 {{#> overflow-menu-item}}
-                  {{#> button button--modifier="pf-m-secondary"}}
+                  {{#> button button--IsSecondary=true}}
                     {{#if toolbar-template--OverflowButton2Text}}
                       {{toolbar-template--OverflowButton2Text}}
                     {{else}}
@@ -96,19 +92,13 @@ Options: [
       {{#if toolbar-template--HasIconButtonGroup}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
-              <i class="fas fa-edit" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="edit" button--aria-label="Edit"}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
-              <i class="fas fa-clone" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="clone" button--aria-label="Clone"}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
-              <i class="fas fa-sync" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="sync" button--aria-label="Sync"}}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/if}}
@@ -117,14 +107,10 @@ Options: [
       {{#if toolbar-template--HasViewToggle}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end"}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Grid view"'}}
-              <i class="fas fa-th" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="th" button--aria-label="Grid view"}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="List view"'}}
-              <i class="fas fa-list-ul" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="list-ul" button--aria-label="List view"}}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/if}}

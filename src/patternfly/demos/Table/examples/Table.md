@@ -167,7 +167,7 @@ import './Table.css'
         {{#> modal-box-description}}
           {{#> content}}
             <p>Selected categories will be displayed in the table.</p>
-            {{#> button button--modifier="pf-m-link pf-m-inline"}}Select all{{/button}}
+            {{#> button button--IsLink=true button--IsInline=true}}Select all{{/button}}
           {{/content}}
         {{/modal-box-description}}
       {{/modal-box-header}}
@@ -175,10 +175,10 @@ import './Table.css'
         {{> table-manage-cols-data-list}}
       {{/modal-box-body}}
       {{#> modal-box-footer}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
           Save
         {{/button}}
-        {{#> button button--modifier="pf-m-link"}}
+        {{#> button button--IsLink=true}}
           Cancel
         {{/button}}
       {{/modal-box-footer}}

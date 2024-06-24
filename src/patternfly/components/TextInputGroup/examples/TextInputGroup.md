@@ -56,9 +56,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -73,9 +71,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -90,9 +86,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -135,9 +129,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 <br>
 {{#> input-group input-group--IsPlain=true}}
   {{#> input-group-item input-group-item--IsPlain=true}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
-      <i class="fas fa-fw fa-search" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -149,9 +141,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 
 {{/input-group}}
@@ -164,9 +154,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -178,14 +166,10 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="caret-down" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 
@@ -198,14 +182,20 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded" text-input-group--value="username:root firstname:ned"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
+    {{> button
+      button--IsControl=true
+      button--IsIcon=true
+      button--icon="caret-down"
+      button--IsExpanded=true
+      button--aria-label="Advanced search"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
+    {{> button
+      button--IsControl=true
+      button--IsIcon=true
+      button--icon="arrow-right"
+      button--aria-label="Search"
+      button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 
@@ -255,10 +245,10 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
               Submit
             {{/button}}
-            {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
+            {{#> button button--IsLink=true button--IsReset=true}}
               Reset
             {{/button}}
           {{/form-actions}}
@@ -346,14 +336,20 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete" text-input-group--value="username:root firstname:n"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
+    {{> button
+      button--IsControl=true
+      button--IsIcon=true
+      button--icon="caret-down"
+      button--IsExpanded=true
+      button--aria-label="Advanced search"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
+    {{> button
+      button--IsControl=true
+      button--IsIcon=true
+      button--icon="arrow-right"
+      button--aria-label="Search"
+      button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 
@@ -403,10 +399,10 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
               Submit
             {{/button}}
-            {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
+            {{#> button button--IsLink=true button--IsReset=true}}
               Reset
             {{/button}}
           {{/form-actions}}

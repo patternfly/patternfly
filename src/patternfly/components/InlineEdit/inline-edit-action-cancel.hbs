@@ -1,12 +1,10 @@
 {{#if inline-edit-action-cancel--IsIcon}}
   {{#> inline-edit-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Cancel edits"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Cancel edits"' button--IsIcon=true button--icon="times"}}
   {{/inline-edit-action}}
 {{else}}
   {{#> inline-edit-action}}
-    {{#> button button--modifier="pf-m-secondary"}}
+    {{#> button button--IsSecondary=true}}
       Cancel
     {{/button}}
   {{/inline-edit-action}}

@@ -11,19 +11,13 @@
         {{#> overflow-menu-content}}
           {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
             {{#> overflow-menu-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
-                <i class="fas fa-edit" aria-hidden="true"></i>
-              {{/button}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="edit" button--aria-label="Edit"}}
             {{/overflow-menu-item}}
             {{#> overflow-menu-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
-                <i class="fas fa-clone" aria-hidden="true"></i>
-              {{/button}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="clone" button--aria-label="Clone"}}
             {{/overflow-menu-item}}
             {{#> overflow-menu-item}}
-              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
-                <i class="fas fa-sync" aria-hidden="true"></i>
-              {{/button}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="sync" button--aria-label="Sync"}}
             {{/overflow-menu-item}}
           {{/overflow-menu-group}}
         {{/overflow-menu-content}}
@@ -33,19 +27,13 @@
 {{else}}
   {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
     {{#> toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
-        <i class="fas fa-edit" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="edit" button--aria-label="Edit"}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
-        <i class="fas fa-clone" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="clone" button--aria-label="Clone"}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
-        <i class="fas fa-sync" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="sync" button--aria-label="Sync"}}
     {{/toolbar-item}}
   {{/toolbar-group}}
 {{/if}}

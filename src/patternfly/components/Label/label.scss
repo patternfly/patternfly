@@ -246,7 +246,7 @@
   --#{$label}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$label}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$label}--m-disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
-  --#{$label}--m-disabled--c-button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$label}--m-disabled--c-button--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
 }
 
 .#{$label} {
@@ -522,7 +522,7 @@
     pointer-events: none;
 
     .#{$button} {
-      --#{$button}--m-plain--disabled--Color: var(--#{$label}--m-disabled--c-button--disabled--Color);
+      --#{$button}--m-plain--disabled__icon--Color: var(--#{$label}--m-disabled--c-button--disabled__icon--Color);
     }
   }
 }

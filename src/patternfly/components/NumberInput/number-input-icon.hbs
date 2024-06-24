@@ -1,6 +1,14 @@
-<span class="{{pfv}}number-input__icon{{#if number-input-icon--modifier}} {{number-input-icon--modifier}}{{/if}}"
-  {{#if number-input-icon--attribute}}
-    {{{number-input-icon--attribute}}}
-  {{/if}}>
-  {{> @partial-block}}
-</span>
+{{#> button
+  button--IsControl=true
+  button--IsIcon=true
+  button--IsDisabled=number-input-icon--IsDisabled
+  button--aria-label=(ternary number-input-icon--IsMinus "Minus" "Plus")}}
+  <span class="{{pfv}}number-input__icon{{#if number-input-icon--modifier}} {{number-input-icon--modifier}}{{/if}}"
+    {{#if number-input-icon--attribute}}
+      {{{number-input-icon--attribute}}}
+    {{/if}}>
+    <i class="fas fa-{{ternary number-input-icon--IsMinus "minus" "plus"}}" aria-hidden="true"></i>
+  </span>
+{{/button}}
+
+

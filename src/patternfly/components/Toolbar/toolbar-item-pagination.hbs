@@ -8,14 +8,20 @@
 
     {{#> pagination-nav}}
       {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-first"}}
-        {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to first page" aria-disabled="true"'}}
-          <i class="fas fa-angle-double-left" aria-hidden="true"></i>
-        {{/button}}
+        {{> button
+          button--IsPlain=true
+          button--IsIcon=true
+          button--icon="angle-double-left"
+          button--IsDisabled=true
+          button--aria-label="Go to first page"}}
       {{/pagination-nav-control}}
       {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-prev"}}
-        {{#> button button--modifier="pf-m-plain pf-m-disabled" button--attribute='aria-label="Go to previous page" aria-disabled="true"'}}
-          <i class="fas fa-angle-left" aria-hidden="true"></i>
-        {{/button}}
+        {{> button
+          button--IsPlain=true
+          button--IsIcon=true
+          button--icon="angle-left"
+          button--IsDisabled=true
+          button--aria-label="Go to previous page"}}
       {{/pagination-nav-control}}
 
       {{#> pagination-nav-page-select pagination-nav-page-select--attribute='aria-label="Current page 1 of 4"'}}
@@ -24,14 +30,18 @@
       {{/pagination-nav-page-select}}
 
       {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-next"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to next page"'}}
-          <i class="fas fa-angle-right" aria-hidden="true"></i>
-        {{/button}}
+        {{> button
+          button--IsPlain=true
+          button--IsIcon=true
+          button--icon="angle-right"
+          button--aria-label="Go to next page"}}
       {{/pagination-nav-control}}
       {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-last"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Go to last page"'}}
-          <i class="fas fa-angle-double-right" aria-hidden="true"></i>
-        {{/button}}
+        {{> button
+          button--IsPlain=true
+          button--IsIcon=true
+          button--icon="angle-double-right"
+          button--aria-label="Go to last page"}}
       {{/pagination-nav-control}}
     {{/pagination-nav}}
   {{/pagination}}

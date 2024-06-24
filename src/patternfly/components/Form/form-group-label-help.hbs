@@ -2,13 +2,12 @@
   {{#if form-group-label-help--attribute}}
     {{{form-group-label-help--attribute}}}
   {{/if}}>
-  {{#> button
+  {{> button
     button--IsPlain=true
     button--HasNoPadding=true
+    button--IsIcon=true
+    button--icon="question-circle"
     button--IsSpan=true
     button--aria-label=(ternary form-group-label-help--aria-label form-group-label-help--aria-label (concat 'More information for ' form-group--id))
-    button--aria-describedby=(ternary form-group-label-help--aria-describedby form-group-label-help--aria-describedby false)
-  }}
-    <i class="fas fa-question-circle" aria-hidden="true"></i>
-  {{/button}}
+    button--aria-describedby=(ternary form-group-label-help--aria-describedby form-group-label-help--aria-describedby false)}}
 {{removeWhiteSpaceForPrettier}} </span>

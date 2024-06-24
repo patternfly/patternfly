@@ -5,14 +5,12 @@
   {{#if jump-links--IsExpandable}}
     {{#> jump-links-toggle}}
       {{#if jump-links--IsExpanded}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="true"')}}
-          {{> jump-links-toggle-icon}}
-          {{> jump-links-toggle-text}}
+        {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="true"')}}
+          Jump to section
         {{/button}}
       {{else}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="false"')}}
-          {{> jump-links-toggle-icon}}
-          {{> jump-links-toggle-text}}
+        {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="false"')}}
+          Jump to section
         {{/button}}
       {{/if}}
     {{/jump-links-toggle}}

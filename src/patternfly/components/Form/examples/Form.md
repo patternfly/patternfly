@@ -231,10 +231,10 @@ cssPrefix: pf-v6-c-form
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-actions}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+      {{#> button button--IsPrimary=true button--IsSubmit=true}}
         Submit form
       {{/button}}
-      {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
+      {{#> button button--IsLink=true button--IsReset=true}}
         Reset form
       {{/button}}
     {{/form-actions}}
@@ -256,7 +256,7 @@ cssPrefix: pf-v6-c-form
         {{/form-field-group-header-description}}
       {{/form-field-group-header-main}}
       {{#> form-field-group-header-actions}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
           Action
         {{/button}}
       {{/form-field-group-header-actions}}
@@ -300,7 +300,7 @@ cssPrefix: pf-v6-c-form
         {{/form-field-group-header-description}}
       {{/form-field-group-header-main}}
       {{#> form-field-group-header-actions}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
           Action
         {{/button}}
       {{/form-field-group-header-actions}}

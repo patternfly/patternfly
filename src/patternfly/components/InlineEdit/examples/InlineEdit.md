@@ -24,9 +24,7 @@ Inline edit **toggle** can be placed anywhere within `.pf-v6-c-inline-edit`. It 
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-toggle-example"}}
   {{#> inline-edit-toggle}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-      <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
   {{/inline-edit-toggle}}
 {{/inline-edit}}
 ```
@@ -72,9 +70,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       Static value
     {{/inline-edit-value}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
   {{#> inline-edit-group}}
@@ -97,9 +93,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       Static value
     {{/inline-edit-value}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
   {{#> inline-edit-group}}
@@ -131,9 +125,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       Single inline edit group
     {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
   {{#> inline-edit-value}}
@@ -159,9 +151,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       Valid example
     {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
   {{#> inline-edit-value}}
@@ -187,9 +177,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       Invalid example
     {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
-      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
   {{#> inline-edit-value}}
@@ -307,9 +295,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
           {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
-            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-              <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
           {{/inline-edit-action}}
         {{/table-td}}
         {{> table-cell-action}}
@@ -384,9 +370,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
           {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
-            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-              <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
           {{/inline-edit-action}}
         {{/table-td}}
         {{> table-cell-action}}

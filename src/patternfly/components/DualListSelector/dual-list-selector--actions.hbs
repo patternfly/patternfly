@@ -1,8 +1,6 @@
 {{#> dual-list-selector-tools-actions}}
   {{#> dual-list-selector-tools-actions-item}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-      <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Sort"' button--icon=(concat "sort-amount-down " (pfv "unset-prefix") "m-mirror-inline-rtl")}}
   {{/dual-list-selector-tools-actions-item}}
   {{#> dual-list-selector-tools-actions-item}}
     {{> menu-toggle

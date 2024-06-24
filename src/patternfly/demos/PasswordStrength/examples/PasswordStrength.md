@@ -22,9 +22,7 @@ section: components
           {{> form-control controlType="input" input="true"  form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-            <i class="fas fa-eye-slash" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
         {{/input-group-item}}
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
@@ -56,9 +54,7 @@ section: components
           {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="Marie$RedHat78" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-            <i class="fas fa-eye-slash" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
         {{/input-group-item}}
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
@@ -91,9 +87,7 @@ section: components
           {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="Marie$Can3Read" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-            <i class="fas fa-eye-slash" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
         {{/input-group-item}}
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
@@ -126,9 +120,7 @@ section: components
           {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="Marie$Can8Read3Pass@Word" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-            <i class="fas fa-eye-slash" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
         {{/input-group-item}}
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}

@@ -81,15 +81,8 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
-            View all set up cluster steps
-            {{#> button-icon button-icon--modifier="pf-m-end"}}
-              {{#> icon icon--modifier="pf-v6-m-mirror-inline-rtl"}}
-                {{#> icon-content}}
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                {{/icon-content}}
-              {{/icon}}
-            {{/button-icon}}
+          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+            View all set up cluster steps {{! TODO - fix the icon in this button in RTL}}
           {{/button}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
@@ -105,15 +98,8 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-         {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
-            View all guided tours
-            {{#> button-icon button-icon--modifier="pf-m-end"}}
-              {{#> icon icon--modifier="pf-v6-m-mirror-inline-rtl"}}
-                {{#> icon-content}}
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                {{/icon-content}}
-              {{/icon}}
-            {{/button-icon}}
+         {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+            View all guided tours {{! TODO - fix the icon in this button in RTL}}
           {{/button}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
@@ -132,15 +118,8 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
-            View all quick starts
-            {{#> button-icon button-icon--modifier="pf-m-end"}}
-              {{#> icon icon--modifier="pf-v6-m-mirror-inline-rtl"}}
-                {{#> icon-content}}
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                {{/icon-content}}
-              {{/icon}}
-            {{/button-icon}}
+          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+            View all quick starts {{! TODO - fix the icon in this button in RTL}}
           {{/button}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
@@ -159,15 +138,8 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
-            View all learning resources
-            {{#> button-icon button-icon--modifier="pf-m-end"}}
-              {{#> icon icon--modifier="pf-v6-m-mirror-inline-rtl"}}
-                {{#> icon-content}}
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                {{/icon-content}}
-              {{/icon}}
-            {{/button-icon}}
+          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+            View all learning resources {{! TODO - fix the icon in this button in RTL}}
           {{/button}}
         {{/l-flex}}
       {{/grid}}
@@ -188,7 +160,7 @@ import './Card.css'
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu purus, lobortis nec euismod eu, tristique ut sapien. Nullam turpis lectus, aliquet sit amet volutpat eu, semper eget quam. Maecenas in tempus diam. Aenean interdum velit sed massa aliquet, sit amet malesuada nulla hendrerit. Aenean non faucibus odio. Etiam non metus turpis. Praesent sollicitudin elit neque, id ullamcorper nibh faucibus eget.
       {{/card-body}}
       {{#> card-footer}}
-        {{#> button button--modifier="pf-m-tertiary"}}Call to action{{/button}}
+        {{#> button button--IsTertiary=true}}Call to action{{/button}}
       {{/card-footer}}
     {{/grid-item}}
   {{/grid}}

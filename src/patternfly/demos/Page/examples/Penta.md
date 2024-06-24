@@ -189,18 +189,14 @@ wrapperTag: div
             {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
               {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
                 {{#> toolbar-item}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                    <i class="fas fa-columns" aria-hidden="true"></i>
-                  {{/button}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="columns" button--aria-label="Remove"}}
                 {{/toolbar-item}}
                 {{#> toolbar-item}}
-                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                    <i class="fas fa-cog" aria-hidden="true"></i>
-                  {{/button}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="cog" button--aria-label="Remove"}}
                 {{/toolbar-item}}
               {{/toolbar-group}}
               {{#> toolbar-item}}
-                {{#> button button--modifier="pf-m-primary"}}
+                {{#> button button--IsPrimary=true}}
                   Primary
                 {{/button}}
               {{/toolbar-item}}

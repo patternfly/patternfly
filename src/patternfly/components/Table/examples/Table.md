@@ -3292,7 +3292,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Kaliq Ray
         {{/table-td}}
         {{#> table-td table-td--data-label="Last commit"}}
-          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+          {{#> button button--IsLink=true button--IsInline=true}}
             Message us!
           {{/button}}
         {{/table-td}}
@@ -3326,7 +3326,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Kaliq Ray
         {{/table-td}}
         {{#> table-td table-td--data-label="Last commit"}}
-          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+          {{#> button button--IsLink=true button--IsInline=true}}
             Message us!
           {{/button}}
         {{/table-td}}
@@ -3360,7 +3360,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Kaliq Ray
         {{/table-td}}
         {{#> table-td table-td--data-label="Last commit"}}
-          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+          {{#> button button--IsLink=true button--IsInline=true}}
             Message us!
           {{/button}}
         {{/table-td}}

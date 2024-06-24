@@ -11,14 +11,10 @@ cssPrefix: pf-v6-c-code-block
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
       {{/code-block-actions-item}}
       {{#> code-block-actions-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Run in Web Terminal"'}}
-          <i class="fas fa-play" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Run in Web Terminal"' button--IsIcon=true button--icon="play"}}
       {{/code-block-actions-item}}
     {{/code-block-actions}}
   {{/code-block-header}}
@@ -40,14 +36,10 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs{{~/
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
       {{/code-block-actions-item}}
       {{#> code-block-actions-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Run in Web Terminal"'}}
-          <i class="fas fa-play" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Run in Web Terminal"' button--IsIcon=true button--icon="play"}}
       {{/code-block-actions-item}}
     {{/code-block-actions}}
   {{/code-block-header}}
@@ -85,14 +77,10 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
       {{/code-block-actions-item}}
       {{#> code-block-actions-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Run in Web Terminal"'}}
-          <i class="fas fa-play" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Run in Web Terminal"' button--IsIcon=true button--icon="play"}}
       {{/code-block-actions-item}}
     {{/code-block-actions}}
   {{/code-block-header}}

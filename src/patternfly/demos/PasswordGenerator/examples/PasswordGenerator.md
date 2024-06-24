@@ -24,9 +24,7 @@ section: components
           {{> form-control controlType="input" input="true"  form-control--IsRequired='true' form-control--attribute=(concat 'type="password" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-            <i class="fas fa-eye" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsControl=true button--IsIcon=true button--icon="eye" button--aria-label="Show password"}}
         {{/input-group-item}}
       {{/input-group}}
       {{#> menu}}

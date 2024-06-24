@@ -42,7 +42,7 @@ cssPrefix: pf-v6-c-hint
     Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
   {{/hint-body}}
   {{#> hint-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Try it for 90 days
     {{/button}}
   {{/hint-footer}}
@@ -72,7 +72,7 @@ cssPrefix: pf-v6-c-hint
     Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
   {{/hint-body}}
   {{#> hint-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Try it for 90 days
     {{/button}}
   {{/hint-footer}}
@@ -83,7 +83,7 @@ cssPrefix: pf-v6-c-hint
 ```hbs
 {{#> hint hint--id='hint-actions-with-no-offset'}}
   {{#> hint-actions hint-actions--modifier='pf-m-no-offset'}}
-    {{#> button button--modifier="pf-m-primary"}}Action{{/button}}
+    {{#> button button--IsPrimary=true}}Action{{/button}}
  {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities

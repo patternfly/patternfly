@@ -85,11 +85,7 @@ import './LogViewer.css';
 {{/log-viewer}}
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-bottom-header"}}
         {{#> popover-title-text}}
@@ -101,10 +97,10 @@ import './LogViewer.css';
       Any current log data will be lost.
     {{/popover-body}}
     {{#> popover-footer}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Clear
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/popover-footer}}
@@ -117,7 +113,7 @@ import './LogViewer.css';
 {{#> log-viewer log-viewer--id="log-viewer-dark-example" log-viewer--IsMatch="true" log-viewer--modifier="pf-m-dark" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v6-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Dark log viewer"}}
   {{> __log-viewer-toolbar}}
   {{> __log-viewer-main}}
-  {{#> button button--modifier="pf-m-primary"}}Jump to the bottom{{/button}}
+  {{#> button button--IsPrimary=true}}Jump to the bottom{{/button}}
 {{/log-viewer}}
 ```
 

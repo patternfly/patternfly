@@ -102,6 +102,7 @@
 
   // Link inline
   --#{$button}--m-link--m-inline--Display: inline-flex;
+  --#{$button}--m-link--m-inline--JustifyContent: flex-start;
   --#{$button}--m-link--m-inline--FontSize: initial;
   --#{$button}--m-link--m-inline--LineHeight: initial;
   --#{$button}--m-link--m-inline--FontWeight: initial;
@@ -124,7 +125,8 @@
   --#{$button}--m-plain--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$button}--m-plain--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$button}--m-plain--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--m-plain--Color: var(--pf-t--global--text--color--regular);
+  --#{$button}--m-plain__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$button}--m-plain--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--m-plain--PaddingBlockStart) + var(--#{$button}--m-plain--PaddingBlockEnd));
   --#{$button}--m-plain--hover--Color: var(--pf-t--global--icon--color--regular);
@@ -401,6 +403,7 @@
       }
 
       --#{$button}--Display: var(--#{$button}--m-link--m-inline--Display);
+      --#{$button}--JustifyContent: var(--#{$button}--m-link--m-inline--JustifyContent);
       --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
       --#{$button}--LineHeight: var(--#{$button}--m-link--m-inline--LineHeight);
       --#{$button}--FontWeight: var(--#{$button}--m-link--m-inline--FontWeight);
@@ -534,6 +537,7 @@
   &.pf-m-plain {
     --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
     --#{$button}--Color: var(--#{$button}--m-plain--Color);
+    --#{$button}__icon--Color: var(--#{$button}--m-plain__icon--Color);
     --#{$button}--BackgroundColor: var(--#{$button}--m-plain--BackgroundColor);
     --#{$button}--PaddingBlockStart: var(--#{$button}--m-plain--PaddingBlockStart);
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-plain--PaddingInlineEnd);

@@ -115,8 +115,8 @@
 .#{$clipboard-copy}__actions-item {
 
   .#{$button}.pf-m-plain {
-    --#{$button}--m-plain--Color: var(--#{$clipboard-copy}__actions-item--button--Color);
-    --#{$button}--m-plain--hover--Color: var(--#{$clipboard-copy}__actions-item--button--hover--Color);
+    --#{$button}--m-plain__icon--Color: var(--#{$clipboard-copy}__actions-item--button--Color);
+    --#{$button}--m-plain--hover__icon--Color: var(--#{$clipboard-copy}__actions-item--button--hover--Color);
   }
 }
 

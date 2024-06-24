@@ -41,10 +41,7 @@
         {{/description-list-text}}
       {{/description-list-term}}
       {{#> description-list-description}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-plus-circle" aria-hidden="true"></i>
-          {{/button-icon}}
+        {{#> button button--IsLink=true button--icon="plus-circle" button--IsInline=true}}
           app=MyApp
         {{/button}}
       {{/description-list-description}}

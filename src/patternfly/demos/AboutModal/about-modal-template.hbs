@@ -6,9 +6,7 @@
         {{/about-modal-box-brand-image}}
       {{/about-modal-box-brand}}
       {{#> about-modal-box-close}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close dialog"}}
       {{/about-modal-box-close}}
       {{#> about-modal-box-header}}
         {{#> title titleType="h1" title--modifier="pf-m-4xl" title--attribute='id="about-modal-title"'}}

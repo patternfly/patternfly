@@ -38,16 +38,16 @@
     {{else if table-td--IsDraggable}}
       {{> table-draggable-button}}
     {{else if table-td--IsToggle}}
-      {{#> button
+      {{> button
           button--aria-label='Toggle row'
           button--IsSmall=table--IsCompact
           button--IsPlain=true
+          button--IsIcon=true
+          button--icon-template="table-toggle-icon"
           button--IsExpanded=table-tr--IsExpanded
           button--IsAriaExpanded=table-tr--IsExpanded
           button--id=(dasherize table--id 'toggle' table-tr--index)
       }}
-        {{> table-toggle-icon}}
-      {{/button}}
     {{else if @partial-block}}
       {{> @partial-block}}
     {{/if}}

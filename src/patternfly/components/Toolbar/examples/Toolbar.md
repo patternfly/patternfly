@@ -226,17 +226,17 @@ Several components in the following examples do not include functional and/or ac
       {{> toolbar-icon-button-group-example}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-button-group"}}
         {{#> toolbar-item}}
-          {{#> button button--modifier="pf-m-primary"}}
+          {{#> button button--IsPrimary=true}}
             Action
           {{/button}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> button button--modifier="pf-m-secondary"}}
+          {{#> button button--IsSecondary=true}}
             Secondary
           {{/button}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> button button--modifier="pf-m-tertiary"}}
+          {{#> button button--IsTertiary=true}}
             Tertiary
           {{/button}}
         {{/toolbar-item}}

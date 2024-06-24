@@ -31,6 +31,9 @@
       pf-m-disabled
     {{/if}}
   {{/if}}"
+  {{#if button--id}}
+    id="{{button--id}}"
+  {{/if}}
   {{#if button--IsSubmit}}
     type="submit"
   {{else if button--IsReset}}
@@ -79,20 +82,34 @@
   {{#if button--IsInProgress}}
     {{> button-progress}}
   {{/if}}
-  {{#if button--icon}}
-    {{#unless button-icon--IsEnd}}
+  {{#if button--IsIcon}} {{! button only has an icon - eg, no text}}
+    {{#ifAny button--icon button--icon-template}}
       {{> button-icon}}
-    {{/unless}}
-  {{/if}}
-  {{#if @partial-block}}
-    {{#> button-text}}
-      {{> @partial-block}}
-    {{/button-text}}
-  {{/if}}
-  {{#if button--icon}}
-    {{#if button-icon--IsEnd}}
-      {{> button-icon}}
+    {{else if @partial-block}}
+      {{#> button-icon}}
+        {{> @partial-block}}
+      {{/button-icon}}
+    {{/ifAny}}
+  {{else}}
+    {{#ifAny button--icon button--icon-template}}
+      {{#unless button-icon--IsEnd}}
+        {{> button-icon}}
+      {{/unless}}
+    {{/ifAny}}
+    {{#if @partial-block}}
+      {{#if button--ExcludeTextWrapper}}
+        {{> @partial-block}}
+      {{else}}
+        {{#> button-text}}
+          {{> @partial-block}}
+        {{/button-text}}
+      {{/if}}
     {{/if}}
+    {{#ifAny button--icon button--icon-template}}
+      {{#if button-icon--IsEnd}}
+        {{> button-icon}}
+      {{/if}}
+    {{/ifAny}}
   {{/if}}
   {{#if button--count}}
     {{> button-count}}

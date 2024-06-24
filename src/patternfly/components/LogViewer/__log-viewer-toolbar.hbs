@@ -15,10 +15,7 @@
           {{> __log-viewer-toolbar-search-filter __log-viewer-toolbar-search-filter--Width="268px"}}
         {{/toolbar-group}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-gap-none"}}
-          {{#> button button--modifier="pf-m-link"}}
-            {{#> button-icon button-icon--modifier="pf-m-start"}}
-              <i class="fas fa-pause" aria-hidden="true"></i>
-            {{/button-icon}}
+          {{#> button button--IsLink=true button--icon="pause"}}
             Pause
           {{/button}}
         {{/toolbar-item}}
@@ -32,7 +29,7 @@
         {{/toolbar-item}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end pf-m-hidden pf-m-visible-on-lg"}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-link"}}
+            {{#> button button--IsLink=true}}
               Clear log
             {{/button}}
           {{/toolbar-item}}
@@ -40,19 +37,13 @@
             {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon='cog' menu-toggle--id=(dasherize log-viewer--id 'menu-toggle')}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open external link"'}}
-              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="external-link-alt" button--attribute='aria-label="Open external link"'}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Download"'}}
-              <i class="fas fa-download" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="download" button--attribute='aria-label="Download"'}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Full screen"'}}
-              <i class="fas fa-expand" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="expand" button--attribute='aria-label="Full screen"'}}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-content-section}}

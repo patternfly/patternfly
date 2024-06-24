@@ -2,7 +2,5 @@
   {{#if modal-box-header-help--attribute}}
     {{{modal-box-header-help--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Help"'}}
-      <i class="pf-v6-pficon pf-v6-pficon-help" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsPlain=true button--icon="question-circle" button--IsIcon=true button--attribute='aria-label="Help"'}}
 </div>

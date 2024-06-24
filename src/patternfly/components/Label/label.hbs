@@ -31,10 +31,8 @@
   {{/label-content}}
   {{#if label--IsRemovable}}
     {{#> label-actions}}
-      {{#> button button--IsDisabled=label--IsDisabled button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
+      {{> button button--IsDisabled=label--IsDisabled button--IsIcon=true button--icon="times fa-fw" button--IsPlain=true button--HasNoPadding=true button--attribute=(concat 'id="' label--id '-button"
     aria-label="Remove" aria-labelledby="' label--id '-button ' label--id '-text"')}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
     {{/label-actions}}
   {{/if}}
 </{{#if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}}>

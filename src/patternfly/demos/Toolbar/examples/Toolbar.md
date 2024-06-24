@@ -65,9 +65,7 @@ import './Toolbar.css'
                             input=true
                             form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')
                           }}
-                        {{#> button button--modifier='pf-m-control' button--attribute='aria-label="Toggle date picker"'}}
-                          <i class="fas fa-calendar-alt" aria-hidden=true></i>
-                        {{/button}}
+                        {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
                       {{/input-group}}
                     {{/date-picker}}
                   {{/input-group-item}}
@@ -83,9 +81,7 @@ import './Toolbar.css'
                             date-picker--id '-input" name="'
                             date-picker--id '-input" aria-label="Date picker"')
                           }}
-                        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-                          <i class="fas fa-calendar-alt" aria-hidden=true></i>
-                        {{/button}}
+                        {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
                       {{/input-group}}
                       {{> date-picker-helper-text helper-text--value="MM/DD/YYYY" helper-text--IsError=false}}
                     {{/date-picker}}
@@ -95,7 +91,7 @@ import './Toolbar.css'
             {{/toolbar-group}}
             {{> toolbar-item-search-filter toolbar-items-search-filter--text="Description" menu-toggle--id=(concat toolbar--id '-description')}}
           {{/toolbar-group}}
-          {{#> button button--modifier="pf-m-primary"}}
+          {{#> button button--IsPrimary=true}}
             Download
           {{/button}}
         {{/toolbar-content-section}}
@@ -253,9 +249,7 @@ import './Toolbar.css'
                   {{/label-text}}
                 {{/label-content}}
                 {{#> label-actions}}
-                  {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-one ' label-group--id 'label-one" aria-label="Remove" id="' label-group--id 'remove-label-one"')}}
-                    <i class="fas fa-times" aria-hidden=true></i>
-                  {{/button}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-one ' label-group--id 'label-one" aria-label="Remove" id="' label-group--id 'remove-label-one"')}}
                 {{/label-actions}}
               {{/label}}
             {{/label-group-list-item}}
@@ -267,9 +261,7 @@ import './Toolbar.css'
                   {{/label-text}}
                 {{/label-content}}
                 {{#> label-actions}}
-                  {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-two ' label-group--id 'label-two" aria-label="Remove" id="' label-group--id 'remove-label-two"')}}
-                    <i class="fas fa-times" aria-hidden=true></i>
-                  {{/button}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-two ' label-group--id 'label-two" aria-label="Remove" id="' label-group--id 'remove-label-two"')}}
                 {{/label-actions}}
               {{/label}}
             {{/label-group-list-item}}
@@ -281,9 +273,7 @@ import './Toolbar.css'
                   {{/label-text}}
                 {{/label-content}}
                 {{#> label-actions}}
-                  {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-three ' label-group--id 'label-three" aria-label="Remove" id="' label-group--id 'remove-label-three"')}}
-                    <i class="fas fa-times" aria-hidden=true></i>
-                  {{/button}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-three ' label-group--id 'label-three" aria-label="Remove" id="' label-group--id 'remove-label-three"')}}
                 {{/label-actions}}
               {{/label}}
             {{/label-group-list-item}}
@@ -344,9 +334,7 @@ import './Toolbar.css'
                       {{/label-text}}
                     {{/label-content}}
                     {{#> label-actions}}
-                      {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-one ' label-group--id 'label-one" aria-label="Remove" id="' label-group--id 'remove-label-one"')}}
-                        <i class="fas fa-times" aria-hidden=true></i>
-                      {{/button}}
+                      {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-one ' label-group--id 'label-one" aria-label="Remove" id="' label-group--id 'remove-label-one"')}}
                     {{/label-actions}}
                   {{/label}}
                 {{/label-group-list-item}}
@@ -358,9 +346,7 @@ import './Toolbar.css'
                       {{/label-text}}
                     {{/label-content}}
                     {{#> label-actions}}
-                      {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-two ' label-group--id 'label-two" aria-label="Remove" id="' label-group--id 'remove-label-two"')}}
-                        <i class="fas fa-times" aria-hidden=true></i>
-                      {{/button}}
+                      {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-two ' label-group--id 'label-two" aria-label="Remove" id="' label-group--id 'remove-label-two"')}}
                     {{/label-actions}}
                   {{/label}}
                 {{/label-group-list-item}}
@@ -372,9 +358,7 @@ import './Toolbar.css'
                       {{/label-text}}
                     {{/label-content}}
                     {{#> label-actions}}
-                      {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-three ' label-group--id 'label-three" aria-label="Remove" id="' label-group--id 'remove-label-three"')}}
-                        <i class="fas fa-times" aria-hidden=true></i>
-                      {{/button}}
+                      {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-three ' label-group--id 'label-three" aria-label="Remove" id="' label-group--id 'remove-label-three"')}}
                     {{/label-actions}}
                   {{/label}}
                 {{/label-group-list-item}}

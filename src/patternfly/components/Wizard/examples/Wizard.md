@@ -446,7 +446,7 @@ import './Wizard.css'
               Description can be used to further elaborate on the validation step, or give the user a better idea of how long the process will take.
             {{/empty-state-body}}
             {{#> empty-state-secondary}}
-              {{#> button button--modifier="pf-m-link"}}
+              {{#> button button--IsLink=true}}
                 Cancel
               {{/button}}
             {{/empty-state-secondary}}

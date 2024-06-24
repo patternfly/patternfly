@@ -80,36 +80,30 @@ The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (
     {{/overflow-menu-group}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
           Primary
         {{/button}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
           Secondary
         {{/button}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-tertiary"}}
+        {{#> button button--IsTertiary=true}}
           Tertiary
         {{/button}}
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align left"'}}
-          <i class="fas fa-align-left" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--icon="align-left" button--IsIcon=true button--attribute='aria-label="Align left"'}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align center"'}}
-          <i class="fas fa-align-center" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--icon="align-center" button--IsIcon=true button--attribute='aria-label="Align center"'}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align right"'}}
-          <i class="fas fa-align-right" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--icon="align-right" button--IsIcon=true button--attribute='aria-label="Align right"'}}
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
@@ -141,36 +135,30 @@ The action group consists of a primary and secondary action. Any additional acti
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
           Primary
         {{/button}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
           Secondary
         {{/button}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-tertiary"}}
+        {{#> button button--IsTertiary=true}}
           Tertiary
         {{/button}}
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-icon-button-group"}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align left"'}}
-          <i class="fas fa-align-left" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--icon="align-left" button--IsIcon=true button--attribute='aria-label="Align left"'}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align center"'}}
-          <i class="fas fa-align-center" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--icon="align-center" button--IsIcon=true button--attribute='aria-label="Align center"'}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Align right"'}}
-          <i class="fas fa-align-right" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--icon="align-right" button--IsIcon=true button--attribute='aria-label="Align right"'}}
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
@@ -188,7 +176,7 @@ The action group consists of a primary and secondary action. Any additional acti
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
           Primary
         {{/button}}
       {{/overflow-menu-item}}
@@ -206,17 +194,17 @@ The action group consists of a primary and secondary action. Any additional acti
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
           Primary
         {{/button}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
           Secondary
         {{/button}}
       {{/overflow-menu-item}}
       {{#> overflow-menu-item}}
-        {{#> button button--modifier="pf-m-tertiary"}}
+        {{#> button button--IsTertiary=true}}
           Tertiary
         {{/button}}
       {{/overflow-menu-item}}
