@@ -99,10 +99,6 @@
         background-color: var(--#{$switch}__input--checked__toggle--before--BackgroundColor);
       }
     }
-
-    ~ .pf-m-off {
-      display: none;
-    }
   }
 
   &:not(:checked) {
@@ -114,10 +110,6 @@
       .#{$switch}__toggle-icon {
         display: none;
       }
-    }
-
-    ~ .pf-m-on {
-      display: none;
     }
   }
 
