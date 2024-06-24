@@ -539,8 +539,8 @@
 .#{$wizard}__main {
   z-index: var(--#{$wizard}__main--ZIndex);
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
+  flex-grow: 1;
   overflow-x: hidden;
   overflow-y: auto;
   word-break: break-word;
