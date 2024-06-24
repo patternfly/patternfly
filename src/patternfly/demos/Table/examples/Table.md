@@ -45,7 +45,7 @@ import './Table.css'
       }}
     {{> table-sortable-table}}
     {{> table-pagination-footer}}
-    {{/page-main-section}}
+  {{/page-main-section}}
 {{/inline}}
 ```
 
