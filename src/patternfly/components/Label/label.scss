@@ -170,12 +170,12 @@
   --#{$label}--m-filled__actions--c-button--Color: var(--#{$label}__icon--Color);
 
   // Outline
-  --#{$label}--m-outline--BorderWidth: var(--pf-t--global--border--width--button--default);
+  --#{$label}--m-outline--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$label}--m-outline--BackgroundColor: transparent;
   --#{$label}--m-outline--Color: var(--pf-t--global--text--color--regular);
   --#{$label}--m-outline__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$label}--m-outline--m-clickable--hover--BackgroundColor: transparent;
-  --#{$label}--m-outline--m-clickable--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
+  --#{$label}--m-outline--m-clickable--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$label}--m-outline--m-clickable--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$label}--m-outline--m-clickable--hover__icon--Color: var(--pf-t--global--icon--color--regular);
 
@@ -189,11 +189,11 @@
   --#{$label}--m-add--Color: var(--pf-t--global--text--color--brand--default);
   --#{$label}--m-add--BackgroundColor: transparent;
   --#{$label}--m-add--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$label}--m-add--BorderWidth: var(--pf-t--global--border--width--button--default);
+  --#{$label}--m-add--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$label}--m-add--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$label}--m-add--hover--BackgroundColor: transparent;
   --#{$label}--m-add--hover--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$label}--m-add--hover--BorderWidth: var(--pf-t--global--border--width--button--hover);
+  --#{$label}--m-add--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
 
   // Compact
   --#{$label}--m-compact--PaddingBlockStart: 0;
