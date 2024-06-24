@@ -649,7 +649,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 ```hbs
 {{#> table table--id="table-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--index="thead"}}
+    {{#> table-tr table-tr--index="thead" table-tr--index="thead"}}
       {{> table-cell-toggle}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}

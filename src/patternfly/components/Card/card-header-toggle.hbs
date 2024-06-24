@@ -2,5 +2,10 @@
   {{#if card-header-toggle--attribute}}
     {{{card-header-toggle--attribute}}}
   {{/if}}>
-  {{> button button--IsPlain=true button--attribute=(concat 'aria-label="Details" id="' card--id '-toggle" aria-labelledby="' card--id '-title ' card--id '-toggle"') button--icon-template="card-header-toggle-icon"}}
+  {{> button
+    button--IsPlain=true
+    button--aria-label="Details"
+    button--id=(concat card--id '-toggle')
+    button--aria-labelledby=(concat card--id '-title ' card--id '-toggle')
+    button--icon-template="card-header-toggle-icon"}}
 </div>
