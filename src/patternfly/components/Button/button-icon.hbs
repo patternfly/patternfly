@@ -1,10 +1,6 @@
 <span class="{{pfv}}button__icon
   {{#unless button--IsIcon}}
-    {{#if button-icon--IsEnd}}
-      pf-m-end
-    {{else}}
-      pf-m-start
-    {{/if}}
+    {{ternary button-icon--IsEnd 'pf-m-end' 'pf-m-start'}}
   {{/unless}}
   {{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
   {{#if button-icon--attribute}}
