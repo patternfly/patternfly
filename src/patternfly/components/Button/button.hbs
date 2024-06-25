@@ -30,9 +30,7 @@
       pf-m-disabled
     {{/if}}
   {{/if}}"
-  {{#if button--id}}
-    id="{{button--id}}"
-  {{/if}}
+  {{ternary button--id button--id null}}
   {{#if button--IsSubmit}}
     type="submit"
   {{else if button--IsReset}}
