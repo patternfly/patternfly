@@ -310,14 +310,6 @@
     --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--expanded__toggle-icon--Color);
   }
 
-  &:is(:active, .pf-m-active) {
-    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--active--Color);
-    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--active--BackgroundColor);
-    --#{$menu-toggle}--BorderWidth: var(--#{$menu-toggle}--active--BorderWidth);
-    --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--active--BorderColor);
-    --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--active__toggle-icon--Color);
-  }
-
   &:is(:disabled, .pf-m-disabled) {
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--disabled--Color);
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--disabled--BackgroundColor);
