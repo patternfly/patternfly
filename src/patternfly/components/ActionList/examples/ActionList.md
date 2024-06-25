@@ -36,7 +36,7 @@ With kebab
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--attribute='aria-label="Toggle"' button--IsIcon=true button--icon="ellipsis-v"}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="ellipsis-v"}}
     {{/action-list-item}}
   {{/action-list-group}}
 {{/action-list}}
@@ -46,10 +46,10 @@ With kebab
 ```hbs
 {{#> action-list action-list--modifier="pf-m-icons"}}
   {{#> action-list-item}}
-    {{> button button--IsPlain=true button--attribute='aria-label="Close"' button--IsIcon=true button--icon="times"}}
+    {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
   {{/action-list-item}}
   {{#> action-list-item}}
-    {{> button button--IsPlain=true button--attribute='aria-label="Toggle"' button--IsIcon=true button--icon="check"}}
+    {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
   {{/action-list-item}}
 {{/action-list}}
 <br>
@@ -57,18 +57,18 @@ With group icons wrapper
 {{#> action-list}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--attribute='aria-label="Close"' button--icon="times"}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--icon="times"}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--attribute='aria-label="Toggle"' button--IsIcon=true button--icon="check"}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
     {{/action-list-item}}
   {{/action-list-group}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--attribute='aria-label="Close"' button--IsIcon=true button--icon="times"}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--attribute='aria-label="Toggle"' button--IsIcon=true button--icon="check"}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
     {{/action-list-item}}
   {{/action-list-group}}
 {{/action-list}}
