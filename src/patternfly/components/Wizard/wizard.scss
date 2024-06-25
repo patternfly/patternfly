@@ -12,6 +12,8 @@
   --#{$wizard}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$wizard}__header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$wizard}__header--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   // Close
   --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingBlockStart));
@@ -91,7 +93,7 @@
   --#{$wizard}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$wizard}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$wizard}__toggle--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__toggle--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__toggle--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   // Toggle number
@@ -126,7 +128,7 @@
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__nav--Width: 100%;
   --#{$wizard}__nav--lg--Width: #{pf-size-prem(250px)};
-  --#{$wizard}__nav--lg--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__nav--lg--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__nav--lg--BorderInlineEndColor: var(--pf-t--global--border--color--default);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
@@ -207,6 +209,7 @@
   padding-inline-start: var(--#{$wizard}__header--PaddingInlineStart);
   padding-inline-end: var(--#{$wizard}__header--PaddingInlineEnd);
   background-color: var(--#{$wizard}__header--BackgroundColor);
+  border-block-end: var(--#{$wizard}__header--BorderBlockEndWidth) solid var(--#{$wizard}__header--BorderBlockEndColor);
 
   // Nested selector to match button component color specificity
   .#{$wizard}__close {
