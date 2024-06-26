@@ -8,7 +8,7 @@
   {{#if table-tr--IsBorderRow}} pf-m-border-row{{/if}}
   {{#if table-tr--HasNoInset}} pf-m-no-inset{{/if}}
   {{#if table-tr--modifier}} {{table-tr--modifier}}{{/if}}"
-  {{#unless (concat table-tr--HasNoPosinset table--HasNoPosinset)}}
+  {{#unless (concat IsThead table-tr--HasNoPosinset table--HasNoPosinset)}}
     {{#if table--IsTree-view}}
       aria-level="{{table--IsTree-view--level}}"
       aria-setsize="{{table--IsTree-view--setsize}}"

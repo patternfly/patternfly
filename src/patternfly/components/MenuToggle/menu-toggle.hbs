@@ -73,14 +73,14 @@
   {{/if}}>
   {{#if menu-toggle--IsCheck}}
     {{> check
-        check--id=(concat menu-toggle--id '-check')
+        check--id=(dasherize menu-toggle--id 'check')
         check--IsLabelWrapped=true
         check--IsStandalone=true
       }}
   {{/if}}
-  {{#if menu-toggle--icon}}
+  {{!-- {{#if menu-toggle--icon}}
     {{> menu-toggle-icon}}
-  {{/if}}
+  {{/if}} --}}
   {{#if menu-toggle--text}}
     {{> menu-toggle-text}}
   {{/if}}

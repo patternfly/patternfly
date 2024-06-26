@@ -1,7 +1,8 @@
-{{#> table-cell table-cell--classname='__check' table-cell--aria-label=(ternary IsThead 'Check all rows' 'Check row')}}
+{{#> table-cell table-cell--classname='__check' table-cell--aria-label=(ternary IsThead 'Row select' 'Check row')}}
   {{> check
       check--IsStandalone=true
       check--IsLabelWrapped=true
+      check--aria-label=(ternary IsThead 'Select all rows' 'Select row')
       check--id=(ternary table-cell-check--id table-cell-check--id (dasherize table--id 'checkrow' table-tr--index 'check'))
     }}
 {{/table-cell}}
