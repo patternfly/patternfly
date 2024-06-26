@@ -1,6 +1,9 @@
-#ws-core-e-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded,
-#ws-core-c-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded {
+#ws-core-e-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded {
   min-height: 19rem;
+}
+
+#ws-core-c-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded {
+  min-height: 14rem;
 }
 
 #ws-core-e-toolbar-expanded-elements,
@@ -13,9 +16,12 @@
   min-height: 18rem;
 }
 
-#ws-core-e-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded,
-#ws-core-c-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded {
+#ws-core-e-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded {
   min-height: 28rem;
+}
+
+#ws-core-c-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded {
+  min-height: 21rem;
 }
 
 #ws-core-c-toolbar-adjusted-group-column-gap .pf-v6-c-toolbar,

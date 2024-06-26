@@ -111,11 +111,11 @@ export const dasherize = (...params) => {
 
   params.forEach(function(element) {
     if (typeof element === 'string') {
-      newString += element.replace(/[A-Z]/g, m => '-' + m.toLowerCase());
+      newString += element.toLowerCase() + '-';
     }
   });
 
-  return newString.replace(' ', '-');
+  return newString.slice(0, -1);
 };
 
 // ======================================================================================
@@ -231,6 +231,13 @@ export const setModifier = function (param, className) {
 // ======================================================================================
 export const setAttribute = function (param, attribute) {
   return param ? attribute : null;
+};
+
+// ======================================================================================
+// setAttribute: is a helper function that sets an attribute
+// ======================================================================================
+export const setProp = function (context, el) {
+  this[context] = el;
 };
 
 // ======================================================================================

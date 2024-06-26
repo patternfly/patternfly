@@ -1,5 +1,3 @@
-  {{!-- {{ternary overflow-menu--id '\id="\{{overflow-menu--id}}\"' ''}}
-  {{ternary overflow-menu--attribute overflow-menu--attribute ''}}> --}}
 <div class="{{pfv}}overflow-menu{{#if overflow-menu--modifier}} {{overflow-menu--modifier}}{{/if}}"
   {{#if overflow-menu--id}}
     id="{{overflow-menu--id}}"
@@ -7,11 +5,5 @@
   {{#if overflow-menu--attribute}}
     {{{overflow-menu--attribute}}}
   {{/if}}>
-  {{#if menu--IsCondensed}}
-    {{#> overflow-menu-control menu-toggle--IsExpanded=true menu-toggle--aria-label='Generic options'}}
-      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--aria-label='Menu toggle'}}
-    {{/overflow-menu-control}}
-  {{else if @partial-block}}
-    {{> @partial-block}}
-  {{/if}}
+  {{> @partial-block}}
 </div>

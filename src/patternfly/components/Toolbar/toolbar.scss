@@ -7,14 +7,15 @@ $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map('base');
 $pf-v6--include-toolbar-breakpoints: true !default;
 
 @if $pf-v6--include-toolbar-breakpoints {
-  $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
+  $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map();
 }
 
 :where(:root, .#{$toolbar}) {
-  --#{$toolbar}--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$toolbar}--ColumnGap: var(--pf-t--global--spacer--md);
-  --#{$toolbar}--PaddingBlock: var(--pf-t--global--spacer--md);
-  --#{$toolbar}--PaddingInline: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--RowGap: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--PaddingBlockStart: 0;
+  --#{$toolbar}--PaddingBlockEnd: 0;
+  --#{$toolbar}--PaddingInlineStart: 0;
+  --#{$toolbar}--PaddingInlineEnd: 0;
   --#{$toolbar}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$toolbar}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$toolbar}--BackgroundColor: transparent;
@@ -27,20 +28,33 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // * Toolbar item
   --#{$toolbar}__item--Width: auto;
   --#{$toolbar}__item--MinWidth: auto;
-  --#{$toolbar}__item--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}__item--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$toolbar}__item--ColumnGap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$toolbar}__item--m-overflow-container--MinWidth: 0;
 
   // * Toolbar group
+  --#{$toolbar}__group--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$toolbar}__group--ColumnGap: var(--pf-t--global--spacer--gap--group--horizontal);
+
+  // * Toolbar group overflow container
   --#{$toolbar}__group--m-overflow-container--MinWidth: 0;
 
-  // * Toolbar content * Toolbar expandable content
-  --#{$toolbar}__content--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$toolbar}__content--PaddingBlock: var(--pf-t--global--spacer--md);
-  --#{$toolbar}__content--PaddingInline: var(--#{$toolbar}--PaddingInline);
-  --#{$toolbar}__content--PaddingBlockStart: 0;
+  // * Toolbar content
+  --#{$toolbar}__content--RowGap: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__content--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // * Toolbar content section
+  --#{$toolbar}__content-section--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$toolbar}__content-section--ColumnGap: var(--pf-t--global--spacer--gap--group--horizontal);
 
   // * Toolbar expandable content
   --#{$toolbar}__expandable-content--ZIndex: var(--pf-t--global--z-index--sm);
+  --#{$toolbar}__expandable-content--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$toolbar}__expandable-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__expandable-content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__expandable-content--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__expandable-content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
 
@@ -49,33 +63,35 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
-  // * Toolbar insets
-  --#{$toolbar}--m-page-insets--inset: var(--#{$page}--inset);
-
   // * Toolbar expand all
   --#{$toolbar}__expand-all-icon--Rotate: 0;
   --#{$toolbar}__expand-all-icon--Transition: var(--pf-t--global--transition);
   --#{$toolbar}__item--m-expand-all--m-expanded__expand-all-icon--Rotate: 90deg;
 
   // * Toolbar filter group
-  --#{$toolbar}__group--m-filter-group--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$toolbar}__group--m-filter-group--ColumnGap: var(--pf-t--global--spacer--gap--control-to-control--default);
 
   // * Toolbar label
   --#{$toolbar}__item--m-label--FontWeight: var(--pf-t--global--font--weight--body--bold);
+
+  // * Toolbar group label group
+  --#{$toolbar}__group--m-label-group--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
+
+  // * Toolbar group action group
+  --#{$toolbar}__group--m-action-group--ColumnGap: var(--pf-t--global--spacer--control--horizontal--compact);
+
+  // * Toolbar group action group plain
+  --#{$toolbar}__group--m-action-group-plain--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
+
+  // * Toolbar group action group inline
+  --#{$toolbar}__group--m-action-group-inline--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
-// - Toolbar content - Toolbar group - Toolbar item - Toolbar group label container - Toolbar group label group
+// - Toolbar content section - Toolbar group - Toolbar item
 .#{$toolbar}__content-section,
 .#{$toolbar}__group,
 .#{$toolbar}__item {
   @include pf-v6-hidden-visible(flex);
-
-  flex-wrap: wrap;
-}
-
-// - Toolbar content
-.#{$toolbar}__content {
-  @include pf-v6-hidden-visible(grid);
 }
 
 // - Toolbar - Toolbar content
@@ -84,10 +100,46 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   position: relative;
 }
 
+// - Toolbar content - Toolbar content section - Toolbar expandable content
+.#{$toolbar}__content {
+  @include pf-v6-hidden-visible(grid);
+
+  row-gap: var(--#{$toolbar}__content--RowGap);
+  padding-inline-start: var(--#{$toolbar}__content--PaddingInlineStart);
+  padding-inline-end: var(--#{$toolbar}__content--PaddingInlineEnd);
+}
+
+// Toolbar content section
+.#{$toolbar}__content-section {
+  flex-wrap: wrap;
+  row-gap: var(--#{$toolbar}__content-section--RowGap);
+  column-gap: var(--#{$toolbar}__content-section--ColumnGap);
+  align-items: start;
+
+  // push pagination to inline-end when flex items are not wrapped
+  &:has(.pf-m-pagination:last-child) {
+    .#{$toolbar}__item.pf-m-pagination {
+      margin-inline-start: revert;
+    }
+
+    > .#{$toolbar}__group,
+    > .#{$toolbar}__item {
+      &:nth-last-child(2) {
+        flex: 1;
+      }
+    }
+  }
+}
+
 // - Toolbar
 .#{$toolbar} {
   display: grid;
+  row-gap: var(--#{$toolbar}--RowGap);
   width: var(--#{$toolbar}--Width, auto);
+  padding-block-start: var(--#{$toolbar}--PaddingBlockStart);
+  padding-block-end: var(--#{$toolbar}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$toolbar}--PaddingInlineStart);
+  padding-inline-end: var(--#{$toolbar}--PaddingInlineEnd);
   font-size: var(--#{$toolbar}--FontSize);
   line-height: var(--#{$toolbar}--LineHeight);
   background-color: var(--#{$toolbar}--BackgroundColor);
@@ -125,12 +177,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     }
   }
 
-  // - Toolbar page insets
-  &.pf-m-page-insets {
-    --#{$toolbar}--PaddingInlineStart: var(--#{$toolbar}--m-page-insets--inset);
-    --#{$toolbar}--PaddingInlineEnd: var(--#{$toolbar}--m-page-insets--inset);
-  }
-
   // - Toolbar background modifiers
   &.pf-m-primary {
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-primary--BackgroundColor);
@@ -149,48 +195,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // }
 }
 
-// - Toolbar content - Toolbar content section - Toolbar expandable content
-.#{$toolbar}__content,
-.#{$toolbar}__content-section,
-.#{$toolbar}__expandable-content {
-  row-gap: var(--#{$toolbar}__content--RowGap);
-  column-gap: var(--#{$toolbar}--ColumnGap);
-}
-
-// - Toolbar content - Toolbar expandable content
-.#{$toolbar}__content,
-.#{$toolbar}__expandable-content {
-  padding-block-start: var(--#{$toolbar}__content--PaddingBlockStart, var(--#{$toolbar}__content--PaddingBlock));
-  padding-block-end: var(--#{$toolbar}__content--PaddingBlockEnd, var(--#{$toolbar}__content--PaddingBlock));
-  padding-inline-start: var(--#{$toolbar}__content--PaddingInlineStart, var(--#{$toolbar}__content--PaddingInline));
-  padding-inline-end: var(--#{$toolbar}__content--PaddingInlineEnd, var(--#{$toolbar}__content--PaddingInline));
-}
-
-// - Toolbar content section
-.#{$toolbar}__content-section {
-  align-items: start;
-
-  // push pagination to inline-end when flex items are not wrapped
-  &:has(.#{$toolbar}__item.pf-m-pagination:not(:only-child):last-child) {
-    .#{$toolbar}__item.pf-m-pagination {
-      margin-inline-start: revert;
-    }
-
-    > .#{$toolbar}__group,
-    > .#{$toolbar}__item {
-      &:nth-last-child(2) {
-        flex: 1;
-      }
-    }
-  }
-}
-
 // - Toolbar item
 .#{$toolbar}__item {
   @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map);
   @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map);
 
-  row-gap: var(--#{$toolbar}__item--RowGap, var(--#{$toolbar}--RowGap));
+  row-gap: var(--#{$toolbar}__item--RowGap);
   column-gap: var(--#{$toolbar}__item--ColumnGap);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
@@ -221,30 +231,36 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar group
 .#{$toolbar}__group {
-  row-gap: var(--#{$toolbar}__group--RowGap, var(--#{$toolbar}--RowGap));
-  column-gap: var(--#{$toolbar}__group--ColumnGap, var(--#{$toolbar}--ColumnGap));
-  align-items: baseline;
+  row-gap: var(--#{$toolbar}__group--RowGap);
+  column-gap: var(--#{$toolbar}__group--ColumnGap);
 
-  // - Toolbar icon button group - Toolbar filter group
-  &.pf-m-icon-button-group {
-    column-gap: var(--#{$toolbar}__group--m-icon-button-group--ColumnGap, 0);
-  }
-
+  // - Toolbar filter group
   &.pf-m-filter-group {
     column-gap: var(--#{$toolbar}__group--m-filter-group--ColumnGap);
-  }
-
-  // - Toolbar filter group - Toolbar label container
-  &.pf-m-filter-group,
-  &.pf-m-label-group-container {
-    flex-wrap: nowrap;
   }
 
   // - Toolbar label group
   &.pf-m-label-group {
     flex: 1;
+    column-gap: var(--#{$toolbar}__group--m-label-group--ColumnGap);
   }
 
+  // - Toolbar action group
+  &.pf-m-action-group {
+    column-gap: var(--#{$toolbar}__group--m-action-group--ColumnGap);
+  }
+
+  // - Toolbar action group plain
+  &.pf-m-action-group-plain {
+    column-gap: var(--#{$toolbar}__group--m-action-group-plain--ColumnGap);
+  }
+
+  // - Toolbar action group inline
+  &.pf-m-action-group-inline {
+    column-gap: var(--#{$toolbar}__group--m-action-group-inline--ColumnGap);
+  }
+
+  // - Toolbar overflow container
   &.pf-m-overflow-container {
     min-width: var(--#{$toolbar}__group--m-overflow-container--MinWidth);
   }
@@ -256,7 +272,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   inset-block-start: 100%;
   z-index: var(--#{$toolbar}__expandable-content--ZIndex);
   display: none;
+  row-gap: var(--#{$toolbar}__expandable-content--RowGap);
   width: 100%;
+  padding-block-start: var(--#{$toolbar}__expandable-content--PaddingBlockStart);
+  padding-block-end: var(--#{$toolbar}__expandable-content--PaddingBlockEnd);
+  padding-inline-start: var(--#{$toolbar}__expandable-content--PaddingInlineStart);
+  padding-inline-end: var(--#{$toolbar}__expandable-content--PaddingInlineEnd);
   background-color: var(--#{$toolbar}__expandable-content--BackgroundColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
@@ -274,11 +295,16 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   .#{$toolbar}__item > * {
     flex-basis: 100%;
   }
+
+  .#{$toolbar}__group.pf-m-action-group-inline {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 // - Toolbar expand all
 .#{$toolbar}__expand-all-icon {
-  display: inline-block;
+  display: inline-flex;
   transition: var(--#{$toolbar}__expand-all-icon--Transition);
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
@@ -288,7 +314,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar group - Toolbar item
 .#{$toolbar}__group,
 .#{$toolbar}__item {
-  align-self: baseline;
+  align-items: baseline;
 
   &.pf-m-overflow-container {
     flex: 1;
@@ -333,7 +359,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       // Inset modifiers
       @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
         &.pf-m-inset-#{$inset}#{$breakpoint-name} {
-          --#{$toolbar}__content--PaddingInline: #{$inset-value};
+          padding-inline: #{$inset-value};
         }
       }
     }
@@ -341,7 +367,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     // - Toolbar group - Toolbar item - Toolbar content - Toolbar content section
     .#{$toolbar}__group,
     .#{$toolbar}__item,
-    .#{$toolbar}__content,
     .#{$toolbar}__content-section {
       &.pf-m-wrap#{$breakpoint-name} {
         flex-wrap: wrap;
@@ -397,7 +422,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
         }
 
         .#{$toolbar}__toggle {
-          display: inline-block;
+          display: inline-flex;
         }
       }
     }
