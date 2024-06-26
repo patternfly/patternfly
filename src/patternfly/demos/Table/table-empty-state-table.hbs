@@ -1,11 +1,7 @@
 {{#> table table--id="empty-state-table-demo" table--IsGrid=true table--modifier="pf-m-grid-xl" table--attribute='aria-label="This is a table showing an empty state"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td table-td--IsCheckbox=true}}
-        {{#> check check--modifier="pf-m-standalone"}}
-          {{#> check-input check-input--attribute='name="check-all" aria-label="Select all rows"'}}{{/check-input}}
-        {{/check}}
-      {{/table-td}}
+      {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -29,20 +25,20 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--attribute='colspan="8"'}}
-          {{#> empty-state empty-state--modifier="pf-m-sm"}}
-            {{#> empty-state-icon empty-state-icon--type="search"}}{{/empty-state-icon}}
-            {{#> title titleType="h2" title--modifier="pf-m-lg"}}
-              No results found
-            {{/title}}
-            {{#> empty-state-body}}
-              No results match the filter criteria. Remove all filters or clear all filters to show results.
-            {{/empty-state-body}}
-            {{#> empty-state-primary}}
-              {{#> button button--IsLink=true}}
-                Clear all filters
-              {{/button}}
-            {{/empty-state-primary}}
-          {{/empty-state}}
+        {{#> empty-state empty-state--modifier="pf-m-sm"}}
+          {{#> empty-state-icon empty-state-icon--type="search"}}{{/empty-state-icon}}
+          {{#> title titleType="h2" title--modifier="pf-m-lg"}}
+            No results found
+          {{/title}}
+          {{#> empty-state-body}}
+            No results match the filter criteria. Remove all filters or clear all filters to show results.
+          {{/empty-state-body}}
+          {{#> empty-state-primary}}
+            {{#> button button--IsLink=true}}
+              Clear all filters
+            {{/button}}
+          {{/empty-state-primary}}
+        {{/empty-state}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

@@ -466,8 +466,8 @@
 
   // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
   :where([class*='#{$table}']),
-  :where(&) > :is(thead, tbody) {
-    @at-root .#{$table} > thead,
+  :where(&) > :is(thead, tbody),
+  &.#{$table}__thead {
     &.pf-m-truncate {
       --#{$table}--cell--MinWidth: var(--#{$table}--m-truncate--cell--MinWidth);
       --#{$table}--cell--MaxWidth: var(--#{$table}--m-truncate--cell--MaxWidth);

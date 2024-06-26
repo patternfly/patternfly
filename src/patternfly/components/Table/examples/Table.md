@@ -344,7 +344,6 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      <!-- TODO: update overflow menu with menu/menu toggle  -->
       {{> table-cell-overflow-menu}}
     {{/table-tr}}
 
@@ -566,7 +565,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -584,7 +583,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -602,7 +601,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -3502,6 +3501,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 </div>
 ```
 ### Nested column header modifier usage
+## Favorites
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -3509,15 +3509,14 @@ For sticky columns to function correctly, the parent table's width must be contr
 | `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
 | `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 
-## Favorites
 
 ### Favorites examples
 ```hbs
 {{#> table table--id="table-favorites" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-check}}
-      {{> table-cell-empty}}
+      {{> table-cell-check table-cell--aria-label=''}}
+      {{> table-cell-empty table-cell--text='Row favorited'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
