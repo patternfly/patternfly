@@ -2,7 +2,5 @@
   {{#if drawer-close--attribute}}
     {{{drawer-close--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close drawer panel"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsPlain=true button--attribute='aria-label="Close drawer panel"' button--IsIcon=true button--icon="times"}}
 </div>

@@ -129,13 +129,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   // Expandable
   --#{$tabs}__toggle--Display: flex;
-  --#{$tabs}__toggle-icon--Color: currentcolor;
   --#{$tabs}__toggle-icon--Transition: all 250ms cubic-bezier(.42, 0, .58, 1);
   --#{$tabs}__toggle-icon--Rotate: 0;
-  --#{$tabs}__toggle-text--MarginInlineStart: 0;
-  --#{$tabs}__toggle-button__toggle-text--MarginInlineStart: var(--pf-t--global--spacer--md);
-  --#{$tabs}__toggle-button__toggle-text--Color: var(--pf-t--global--text--color--regular);
-  --#{$tabs}--m-expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$tabs}--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$tabs}--m-expandable--RowGap: var(--pf-t--global--spacer--sm);
   --#{$tabs}--m-expandable--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -389,7 +384,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     &.pf-m-expanded {
       --#{$tabs}__list--Display: flex;
-      --#{$tabs}__toggle-icon--Color: var(--#{$tabs}--m-expanded__toggle-icon--Color);
       --#{$tabs}__toggle-icon--Rotate: var(--#{$tabs}--m-expanded__toggle-icon--Rotate);
     }
   }
@@ -466,12 +460,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-button {
-  --#{$tabs}__toggle-text--MarginInlineStart: var(--#{$tabs}__toggle-button__toggle-text--MarginInlineStart);
-  --#{$tabs}__toggle-text--Color: var(--#{$tabs}__toggle-button__toggle-text--Color);
-
   .#{$button} {
-    display: flex;
-    text-align: start;
+    justify-content: start;
     white-space: normal;
   }
 }
@@ -480,16 +470,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  color: var(--#{$tabs}__toggle-icon--Color);
   transition: var(--#{$tabs}__toggle-icon--Transition);
   transform: rotate(var(--#{$tabs}__toggle-icon--Rotate));
 }
-
-.#{$tabs}__toggle-text {
-  margin-inline-start: var(--#{$tabs}__toggle-text--MarginInlineStart);
-  color: var(--#{$tabs}__toggle-text--Color, inherit);
-}
-
 
 // Tab list
 .#{$tabs}__list {

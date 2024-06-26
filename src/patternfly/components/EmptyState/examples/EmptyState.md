@@ -24,27 +24,27 @@ cssPrefix: pf-v6-c-empty-state
 
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Primary action
       {{/button}}
     {{/empty-state-actions}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Multiple
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action buttons
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Can
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Go here
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         In the second
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action area
       {{/button}}
     {{/empty-state-actions}}
@@ -70,22 +70,22 @@ cssPrefix: pf-v6-c-empty-state
 
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-link pf-m-small"}}
+      {{#> button button--IsLink=true button--IsSmall=true}}
         Multiple
       {{/button}}
-      {{#> button button--modifier="pf-m-link pf-m-small"}}
+      {{#> button button--IsLink=true button--IsSmall=true}}
         Action buttons
       {{/button}}
-      {{#> button button--modifier="pf-m-link pf-m-small"}}
+      {{#> button button--IsLink=true button--IsSmall=true}}
         Can
       {{/button}}
-      {{#> button button--modifier="pf-m-link pf-m-small"}}
+      {{#> button button--IsLink=true button--IsSmall=true}}
         Go here
       {{/button}}
-      {{#> button button--modifier="pf-m-link pf-m-small"}}
+      {{#> button button--IsLink=true button--IsSmall=true}}
         In the
       {{/button}}
-      {{#> button button--modifier="pf-m-link pf-m-small"}}
+      {{#> button button--IsLink=true button--IsSmall=true}}
         Action area
       {{/button}}
     {{/empty-state-actions}}
@@ -111,28 +111,28 @@ cssPrefix: pf-v6-c-empty-state
 
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Primary action
       {{/button}}
     {{/empty-state-actions}}
 
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Multiple
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action buttons
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Can
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Go here
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         In the second
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action area
       {{/button}}
     {{/empty-state-actions}}
@@ -158,27 +158,27 @@ cssPrefix: pf-v6-c-empty-state
 
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Primary action
       {{/button}}
     {{/empty-state-actions}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Multiple
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action buttons
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Can
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Go here
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         In the second
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action area
       {{/button}}
     {{/empty-state-actions}}
@@ -203,27 +203,27 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-body}}
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Primary action
       {{/button}}
     {{/empty-state-actions}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Multiple
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action buttons
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Can
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Go here
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         In the second
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action area
       {{/button}}
     {{/empty-state-actions}}
@@ -249,27 +249,27 @@ cssPrefix: pf-v6-c-empty-state
 
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Primary action
       {{/button}}
     {{/empty-state-actions}}
     {{#> empty-state-actions}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Multiple
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action buttons
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Can
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Go here
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         In the second
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Action area
       {{/button}}
     {{/empty-state-actions}}

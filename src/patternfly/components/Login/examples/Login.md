@@ -32,7 +32,7 @@ wrapperTag: div
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}
-            {{#> button button--modifier="pf-m-primary pf-m-block" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsBlock=true button--IsSubmit=true}}
               Log in
             {{/button}}
           {{/form-group}}
@@ -71,7 +71,7 @@ wrapperTag: div
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}
-            {{#> button button--modifier="pf-m-primary pf-m-block" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsBlock=true button--IsSubmit=true}}
               Log in
             {{/button}}
           {{/form-group}}
@@ -103,9 +103,7 @@ wrapperTag: div
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
             {{#> input-group}}
               {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="password" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
-              {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-                <i class="fas fa-eye" aria-hidden="true"></i>
-              {{/button}}
+              {{> button button--IsControl=true buton--IsIcon=true button--icon="eye" button--aria-label="Show password"}}
             {{/input-group}}
           {{/form-group}}
           {{#> form-group}}
@@ -115,7 +113,7 @@ wrapperTag: div
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}
-            {{#> button button--modifier="pf-m-primary pf-m-block" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsBlock=true button--IsSubmit=true}}
               Log in
             {{/button}}
           {{/form-group}}
@@ -153,9 +151,7 @@ wrapperTag: div
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
             {{#> input-group}}
               {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
-              {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Hide password"'}}
-                <i class="fas fa-eye-slash" aria-hidden="true"></i>
-              {{/button}}
+             {{> button button--IsControl=true buton--IsIcon=true button--icon="eye-slash" button--aria-label="Hide password"}}
             {{/input-group}}
           {{/form-group}}
           {{#> form-group}}
@@ -165,7 +161,7 @@ wrapperTag: div
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}
-            {{#> button button--modifier="pf-m-primary pf-m-block" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsBlock=true button--IsSubmit=true}}
               Log in
             {{/button}}
           {{/form-group}}
@@ -204,7 +200,7 @@ wrapperTag: div
             {{/check}}
           {{/form-group}}
           {{#> form-group form-group--modifier="pf-m-action"}}
-            {{#> button button--modifier="pf-m-primary pf-m-block" button--IsSubmit="true"}}
+            {{#> button button--IsPrimary=true button--IsBlock=true button--IsSubmit=true}}
               Log in
             {{/button}}
           {{/form-group}}

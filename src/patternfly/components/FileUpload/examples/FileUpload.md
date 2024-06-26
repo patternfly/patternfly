@@ -20,12 +20,12 @@ cssPrefix: pf-v6-c-file-upload
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+        {{#> button button--IsControl=true button--attribute=(concat 'id="' file-upload--id '-browse"')}}
           Upload
         {{/button}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
+        {{#> button button--IsControl=true button--IsDisabled=true}}
           Clear
         {{/button}}
       {{/input-group-item}}
@@ -50,12 +50,12 @@ cssPrefix: pf-v6-c-file-upload
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse" aria-describedby="helper-text-example"')}}
+        {{#> button button--IsControl=true button--attribute=(concat 'id="' file-upload--id '-browse" aria-describedby="helper-text-example"')}}
           Upload
         {{/button}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
+        {{#> button button--IsControl=true button--IsDisabled=true}}
           Clear
         {{/button}}
       {{/input-group-item}}
@@ -82,12 +82,12 @@ cssPrefix: pf-v6-c-file-upload
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+        {{#> button button--IsControl=true button--attribute=(concat 'id="' file-upload--id '-browse"')}}
           Upload
         {{/button}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control"}}
+        {{#> button button--IsControl=true}}
           Clear
         {{/button}}
       {{/input-group-item}}
@@ -111,12 +111,12 @@ cssPrefix: pf-v6-c-file-upload
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+        {{#> button button--IsControl=true button--attribute=(concat 'id="' file-upload--id '-browse"')}}
           Upload
         {{/button}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control"}}
+        {{#> button button--IsControl=true}}
           Clear
         {{/button}}
       {{/input-group-item}}
@@ -139,12 +139,12 @@ cssPrefix: pf-v6-c-file-upload
           file-upload-text-input--attribute=(concat 'placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+        {{#> button button--IsControl=true button--attribute=(concat 'id="' file-upload--id '-browse"')}}
           Upload
         {{/button}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
+        {{#> button button--IsControl=true button--IsDisabled=true}}
           Clear
         {{/button}}
       {{/input-group-item}}
@@ -171,12 +171,12 @@ cssPrefix: pf-v6-c-file-upload
                 }}
             {{/input-group-item}}
             {{#> input-group-item}}
-              {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse" aria-describedby="with-error-example-helper-text"')}}
+              {{#> button button--IsControl=true button--attribute=(concat 'id="' file-upload--id '-browse" aria-describedby="with-error-example-helper-text"')}}
                 Upload
               {{/button}}
             {{/input-group-item}}
             {{#> input-group-item}}
-              {{#> button button--modifier="pf-m-control"}}
+              {{#> button button--IsControl=true}}
                 Clear
               {{/button}}
             {{/input-group-item}}
@@ -208,12 +208,12 @@ cssPrefix: pf-v6-c-file-upload
         }}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'disabled id="' file-upload--id '-browse"')}}
+        {{#> button button--IsControl=true button--attribute=(concat 'disabled id="' file-upload--id '-browse"')}}
           Upload
         {{/button}}
       {{/input-group-item}}
       {{#> input-group-item}}
-        {{#> button button--modifier="pf-m-control"}}
+        {{#> button button--IsControl=true}}
           Clear
         {{/button}}
       {{/input-group-item}}

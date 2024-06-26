@@ -3,7 +3,5 @@
     {{{data-list-toggle--attribute}}}
   {{/if}}>
   {{!-- use 'button--attribute' param on parent to set attributes on button --}}
-  {{#> button button--modifier="pf-m-plain"}}
-    {{#> data-list-toggle-icon}}{{/data-list-toggle-icon}}
-  {{/button}}
+  {{> button button--IsPlain=true button--icon-template="data-list-toggle-icon"}}
 </div>

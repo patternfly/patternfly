@@ -1,15 +1,16 @@
 <span class="{{pfv}}button__icon
-  {{#if button-icon--IsEnd}}
-    pf-m-end
-  {{else}}
-    pf-m-start
-  {{/if}}
+  {{#unless button--IsIcon}}
+    {{ternary button-icon--IsEnd 'pf-m-end' 'pf-m-start'}}
+  {{/unless}}
   {{#if button-icon--modifier}} {{button-icon--modifier}}{{/if}}"
   {{#if button-icon--attribute}}
     {{{button-icon--attribute}}}
   {{/if}}>
   {{#if button--icon}}
     <i class="fas fa-{{button--icon}}" aria-hidden="true"></i>
+  {{else if button--icon-template}}
+    {{! renders a hbs partial if passed as the value for button--icon-template}}
+    {{> (lookup . "button--icon-template")}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

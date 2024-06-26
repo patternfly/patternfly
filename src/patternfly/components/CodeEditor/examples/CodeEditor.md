@@ -13,15 +13,7 @@ cssPrefix: pf-v6-c-code-editor
   {{#> code-editor-header}}
     {{#> code-editor-header-content}}
       {{#> code-editor-controls}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Download code"'}}
-          <i class="fas fa-download"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload code"'}}
-          <i class="fas fa-upload"></i>
-        {{/button}}
+        {{> code-editor-controls--buttons}}
       {{/code-editor-controls}}
       {{> code-editor-header-main}}
     {{/code-editor-header-content}}
@@ -51,15 +43,7 @@ cssPrefix: pf-v6-c-code-editor
   {{#> code-editor-header}}
     {{#> code-editor-header-content}}
       {{#> code-editor-controls}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Download code"'}}
-          <i class="fas fa-download"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload code" disabled'}}
-          <i class="fas fa-upload"></i>
-        {{/button}}
+        {{> code-editor-controls--buttons}}
       {{/code-editor-controls}}
       {{> code-editor-header-main}}
     {{/code-editor-header-content}}
@@ -101,22 +85,11 @@ cssPrefix: pf-v6-c-code-editor
   {{#> code-editor-header}}
     {{#> code-editor-header-content}}
       {{#> code-editor-controls}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Download code"'}}
-          <i class="fas fa-download"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload code"'}}
-          <i class="fas fa-upload"></i>
-        {{/button}}
+        {{> code-editor-controls--buttons}}
       {{/code-editor-controls}}
       {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
       {{#> code-editor-keyboard-shortcuts}}
-        {{#> button button--modifier="pf-m-link"}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="pf-v6-pficon pf-v6-pficon-help" aria-hidden="true"></i>
-          {{/button-icon}}
+        {{#> button button--IsLink=true button--icon="question-circle"}}
           View shortcuts
         {{/button}}
       {{/code-editor-keyboard-shortcuts}}

@@ -13,9 +13,12 @@
               {{/label-text}}
             {{/label-content}}
             {{#> label-actions}}
-              {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-one ' label-group--id 'label-one" aria-label="Remove" id="' label-group--id 'remove-label-one"')}}
-                <i class="fas fa-times" aria-hidden="true"></i>
-              {{/button}}
+              {{> button
+                button--IsPlain=true
+                button--IsIcon=true
+                button--icon="times"
+                button--HasNoPadding=true
+                button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-one ' label-group--id 'label-one" aria-label="Remove" id="' label-group--id 'remove-label-one"')}}
           {{/label-actions}}
           {{/label}}
         {{/label-group-list-item}}
@@ -27,9 +30,12 @@
               {{/label-text}}
             {{/label-content}}
             {{#> label-actions}}
-              {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-two ' label-group--id 'label-two" aria-label="Remove" id="' label-group--id 'remove-label-two"')}}
-                <i class="fas fa-times" aria-hidden="true"></i>
-              {{/button}}
+              {{> button
+                button--IsPlain=true
+                button--IsIcon=true
+                button--icon="times"
+                button--HasNoPadding=true
+                button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-two ' label-group--id 'label-two" aria-label="Remove" id="' label-group--id 'remove-label-two"')}}
           {{/label-actions}}
           {{/label}}
         {{/label-group-list-item}}
@@ -41,9 +47,12 @@
               {{/label-text}}
             {{/label-content}}
             {{#> label-actions}}
-              {{#> button button--modifier="pf-m-plain" button--HasNoPadding=true button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-three ' label-group--id 'label-three" aria-label="Remove" id="' label-group--id 'remove-label-three"')}}
-                <i class="fas fa-times" aria-hidden="true"></i>
-              {{/button}}
+              {{> button
+                button--IsPlain=true
+                button--IsIcon=true
+                button--icon="times"
+                button--HasNoPadding=true
+                button--attribute=(concat 'aria-labelledby="' label-group--id 'remove-label-three ' label-group--id 'label-three" aria-label="Remove" id="' label-group--id 'remove-label-three"')}}
           {{/label-actions}}
           {{/label}}
         {{/label-group-list-item}}

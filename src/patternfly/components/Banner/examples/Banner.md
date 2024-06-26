@@ -79,20 +79,21 @@ Banners can be styled with one of 9 different nonstatus colors. A nonstatus bann
 <br>
 {{#> banner banner--modifier="pf-m-blue"}}
   Blue banner with an
-  {{#> button button--modifier="pf-m-inline pf-m-link"}}
+  {{#> button button--IsLink=true button--IsInline=true}}
     inline link button
   {{/button}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-yellow"}}
   Yellow banner with an
-  {{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-inline pf-m-link"}}
-  inline link button (anchor){{/button}}
+  {{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsInline=true button--IsLink=true}}
+    inline link button (anchor)
+  {{/button}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-red"}}
   Red banner with a
-  {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
+  {{#> button button--IsLink=true button--IsInline=true button--IsDisabled=true}}
     disabled inline link button
   {{/button}}
 {{/banner}}

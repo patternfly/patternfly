@@ -16,8 +16,12 @@
 </span>
 
 {{#*inline "tabs-item-action-button"}}
-  {{#> button button--modifier="pf-m-plain"
-    button--aria-label=tabs-item-action-button--aria-label button--IsDisabled=tabs-item-action-button--IsDisabled button--IsAriaDisabled=tabs-item-action-button--IsAriaDisabled}}
+  {{#> button
+    button--IsPlain=true
+    button--IsIcon=true
+    button--aria-label=tabs-item-action-button--aria-label
+    button--IsDisabled=tabs-item-action-button--IsDisabled
+    button--IsAriaDisabled=tabs-item-action-button--IsAriaDisabled}}
     {{#> tabs-item-action-icon}}
       {{> @partial-block}}
     {{/tabs-item-action-icon}}

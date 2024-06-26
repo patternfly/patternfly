@@ -2,7 +2,5 @@
   {{#if table-column-help-action--attribute}}
     {{{table-column-help-action--attribute}}}
   {{/if}}>
-  {{#> button button--IsPlain=true button--HasNoPadding=true button--aria-label='aria-label="More info"'}}
-    <i class="pf-v6-pficon pf-v6-pficon-help" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsPlain=true button--IsIcon=true button--icon="question-circle" button--HasNoPadding=true button--aria-label='aria-label="More info"'}}
 </span>

@@ -63,11 +63,11 @@ import './Button.css'
 ```hbs
 <strong>Plain</strong>
 <br>
-{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--icon="times"}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--IsIcon=true button--icon="times"}}
 <br><br>
 <strong>Plain no padding</strong>
 <br>
-{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--icon="times"}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--IsIcon=true button--icon="times"}}
 <br><br>
 <strong>Inline link</strong>
 <br>
@@ -148,9 +148,9 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
   Secondary loading
 {{/button}}
 <br/>
-{{> button button--IsPlain=true button--aria-label="Upload" button--icon="upload"}}
+{{> button button--IsPlain=true button--aria-label="Upload" button--IsIcon=true button--icon="upload"}}
 
-{{> button button--IsPlain=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading..."}}
+{{> button button--IsPlain=true button--IsIcon=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading..."}}
 <br/>
 {{#> button button--IsLink=true button--IsInline=true button--IsProgress=true}}
   Inline loader
@@ -187,7 +187,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 ### Plain with no padding
 ```hbs
-For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--icon="question-circle"}}.
+For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--IsIcon=true button--icon="question-circle"}}.
 ```
 
 ### Stateful

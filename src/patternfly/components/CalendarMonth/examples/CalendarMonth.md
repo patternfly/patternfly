@@ -10,11 +10,7 @@ cssPrefix: pf-v6-c-calendar-month
 ```hbs
 {{#> calendar-month calendar-month--id="calendar-month-date-selected" calendar-month--month="October" calendar-month--year="2020"}}
   {{#> calendar-month-header}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-prev-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Previous month"'}}
-        <i class="fas fa-angle-left" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsPrevMonth=true}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> calendar-month-header-month}}
@@ -25,11 +21,7 @@ cssPrefix: pf-v6-c-calendar-month
         {{/calendar-month-header-year}}
       {{/input-group-item}}
     {{/input-group}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsNextMonth=true}}
   {{/calendar-month-header}}
   {{#> calendar-month-calendar}}
     {{#> calendar-month-days}}
@@ -90,11 +82,7 @@ cssPrefix: pf-v6-c-calendar-month
 ```hbs
 {{#> calendar-month calendar-month--id="calendar-month-range-start-date-selected" calendar-month--month="October" calendar-month--year="2020"}}
   {{#> calendar-month-header}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-prev-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Previous month"'}}
-        <i class="fas fa-angle-left" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsPrevMonth=true}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> calendar-month-header-month}}
@@ -105,11 +93,7 @@ cssPrefix: pf-v6-c-calendar-month
         {{/calendar-month-header-year}}
       {{/input-group-item}}
     {{/input-group}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsNextMonth=true}}
   {{/calendar-month-header}}
   {{#> calendar-month-calendar}}
     {{#> calendar-month-days}}
@@ -170,11 +154,7 @@ cssPrefix: pf-v6-c-calendar-month
 ```hbs
 {{#> calendar-month calendar-month--id="calendar-month-range-end-date-selected" calendar-month--month="October" calendar-month--year="2020"}}
   {{#> calendar-month-header}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-prev-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Previous month"'}}
-        <i class="fas fa-angle-left" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsPrevMonth=true}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> calendar-month-header-month}}
@@ -185,11 +165,7 @@ cssPrefix: pf-v6-c-calendar-month
         {{/calendar-month-header-year}}
       {{/input-group-item}}
     {{/input-group}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsNextMonth=true}}
   {{/calendar-month-header}}
   {{#> calendar-month-calendar}}
     {{#> calendar-month-days}}
@@ -250,11 +226,7 @@ cssPrefix: pf-v6-c-calendar-month
 ```hbs
 {{#> calendar-month calendar-month--id="calendar-month-range-start-and-end-dates-selected" calendar-month--month="October" calendar-month--year="2020"}}
   {{#> calendar-month-header}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-prev-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Previous month"'}}
-        <i class="fas fa-angle-left" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsPrevMonth=true}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> calendar-month-header-month}}
@@ -265,11 +237,7 @@ cssPrefix: pf-v6-c-calendar-month
         {{/calendar-month-header-year}}
       {{/input-group-item}}
     {{/input-group}}
-    {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-      {{/button}}
-    {{/calendar-month-header-nav-control}}
+    {{> calendar-month-header-nav-control calendar-month-header-nav-control--IsNextMonth=true}}
   {{/calendar-month-header}}
   {{#> calendar-month-calendar}}
     {{#> calendar-month-days}}

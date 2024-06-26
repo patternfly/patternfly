@@ -62,11 +62,8 @@
       {{/l-flex}}
     {{/card-body}}
     {{#> card-footer}}
-      {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
-        View pathway
-        {{#> button-icon button-icon--modifier="pf-m-end"}}
-          <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        {{/button-icon}}
+      {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+        View pathway {{! TODO - fix icon in RTL}}
       {{/button}}
     {{/card-footer}}
   {{/card}}

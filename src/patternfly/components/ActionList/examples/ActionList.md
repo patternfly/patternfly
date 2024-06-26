@@ -10,12 +10,12 @@ cssPrefix: pf-v6-c-action-list
 {{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Next
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
+      {{#> button button--IsSecondary=true}}
         Back
       {{/button}}
     {{/action-list-item}}
@@ -26,19 +26,17 @@ With kebab
 {{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Next
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
+      {{#> button button--IsSecondary=true}}
         Back
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
-        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="ellipsis-v"}}
     {{/action-list-item}}
   {{/action-list-group}}
 {{/action-list}}
@@ -48,14 +46,10 @@ With kebab
 ```hbs
 {{#> action-list action-list--modifier="pf-m-icons"}}
   {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-       <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
   {{/action-list-item}}
   {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
-      <i class="fas fa-check" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
   {{/action-list-item}}
 {{/action-list}}
 <br>
@@ -63,26 +57,18 @@ With group icons wrapper
 {{#> action-list}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--icon="times"}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
-        <i class="fas fa-check" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
     {{/action-list-item}}
   {{/action-list-group}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Toggle"'}}
-        <i class="fas fa-check" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
     {{/action-list-item}}
   {{/action-list-group}}
 {{/action-list}}
@@ -93,24 +79,24 @@ With group icons wrapper
 {{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Next
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
+      {{#> button button--IsSecondary=true}}
         Back
       {{/button}}
     {{/action-list-item}}
   {{/action-list-group}}
   {{#> action-list-group}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Submit
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/action-list-item}}
@@ -124,12 +110,12 @@ In modals, forms, data lists
 {{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Save
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/action-list-item}}
@@ -140,17 +126,17 @@ In wizards
 {{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Next
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
+      {{#> button button--IsSecondary=true}}
         Back
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/action-list-item}}

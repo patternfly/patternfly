@@ -48,26 +48,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -139,26 +123,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -230,26 +198,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -321,26 +273,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -415,26 +351,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -536,26 +456,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -646,26 +550,10 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
   {{#> dual-list-selector-controls}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
-        <i class="fas fa-fw fa-angle-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-        <i class="fas fa-fw fa-angle-double-right"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
-        <i class="fas fa-fw fa-angle-double-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
-    {{#> dual-list-selector-controls-item}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-        <i class="fas fa-fw fa-angle-left"></i>
-      {{/button}}
-    {{/dual-list-selector-controls-item}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
+    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
   {{/dual-list-selector-controls}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
     {{#> dual-list-selector-header}}
@@ -744,26 +632,10 @@ cssPrefix: pf-v6-c-dual-list-selector
       {{/dual-list-selector-menu}}
     {{/dual-list-selector-pane}}
     {{#> dual-list-selector-controls}}
-      {{#> dual-list-selector-controls-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
-          <i class="fas fa-fw fa-angle-right"></i>
-        {{/button}}
-      {{/dual-list-selector-controls-item}}
-      {{#> dual-list-selector-controls-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
-          <i class="fas fa-fw fa-angle-double-right"></i>
-        {{/button}}
-      {{/dual-list-selector-controls-item}}
-      {{#> dual-list-selector-controls-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
-          <i class="fas fa-fw fa-angle-double-left"></i>
-        {{/button}}
-      {{/dual-list-selector-controls-item}}
-      {{#> dual-list-selector-controls-item}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
-          <i class="fas fa-fw fa-angle-left"></i>
-        {{/button}}
-      {{/dual-list-selector-controls-item}}
+      {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
+      {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
+      {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
+      {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
     {{/dual-list-selector-controls}}
     {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
       {{#> dual-list-selector-header}}

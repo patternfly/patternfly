@@ -872,7 +872,7 @@ import './Menu.css'
     {{> menu--long-list}}
   {{/menu-content}}
   {{#> menu-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Footer
     {{/button}}
   {{/menu-footer}}
@@ -892,7 +892,7 @@ import './Menu.css'
     {{> menu--long-list}}
   {{/menu-content}}
   {{#> menu-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Footer
     {{/button}}
   {{/menu-footer}}
@@ -1573,7 +1573,7 @@ import './Menu.css'
   {{/menu-content}}
   {{> divider}}
   {{#> menu-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Action
     {{/button}}
   {{/menu-footer}}
@@ -1640,7 +1640,7 @@ import './Menu.css'
   {{/menu-content}}
   {{> divider}}
   {{#> menu-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Footer
     {{/button}}
   {{/menu-footer}}
@@ -1660,7 +1660,7 @@ import './Menu.css'
     {{> menu--long-list}}
   {{/menu-content}}
   {{#> menu-footer}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Footer
     {{/button}}
   {{/menu-footer}}

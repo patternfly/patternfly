@@ -2,19 +2,15 @@
   {{#if tabs-toggle-button--attribute}}
     {{{tabs-toggle-button--attribute}}}
   {{/if}}>
-  {{#if tabs--IsExpanded}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="true" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
-      {{> tabs-toggle-icon}}
-      {{#unless tabs--IsLegacy}}
-        {{> tabs-toggle-text}}
-      {{/unless}}
-    {{/button}}
-  {{else}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="false" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
-      {{> tabs-toggle-icon}}
-      {{#unless tabs--IsLegacy}}
-        {{> tabs-toggle-text}}
-      {{/unless}}
-    {{/button}}
-  {{/if}}
+  {{#> button
+    button--IsPlain=true
+    button--icon-template="tabs-toggle-icon"
+    button--IsIcon=tabs--IsLegacy
+    button--aria-label="Details"
+    button--IsAriaExpanded=tabs--IsExpanded
+    button--attribute=(concat 'aria-label="Details" aria-expanded="true" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
+    {{#unless tabs--IsLegacy}}
+      {{> tabs-toggle-text}}
+    {{/unless}}
+  {{/button}}
 </div>

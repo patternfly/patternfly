@@ -24,13 +24,13 @@ cssPrefix: pf-v6-c-masthead
     {{> masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    {{#> button button--modifier="pf-m-primary"}}
+    {{#> button button--IsPrimary=true}}
       Primary
     {{/button}}
-    {{#> button button--modifier="pf-m-secondary"}}
+    {{#> button button--IsSecondary=true}}
       Secondary
     {{/button}}
-    {{#> button button--modifier="pf-m-tertiary"}}
+    {{#> button button--IsTertiary=true}}
       Tertiary
     {{/button}}
   {{/masthead-content}}

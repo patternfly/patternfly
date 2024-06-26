@@ -75,10 +75,10 @@ subsection: forms
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
       {{#> form-actions}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        {{#> button button--IsPrimary=true button--IsSubmit=true}}
           Submit
         {{/button}}
-        {{#> button button--modifier="pf-m-link"}}
+        {{#> button button--IsLink=true}}
           Cancel
         {{/button}}
       {{/form-actions}}
@@ -141,10 +141,10 @@ subsection: forms
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
       {{#> form-actions}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        {{#> button button--IsPrimary=true button--IsSubmit=true}}
           Submit
         {{/button}}
-        {{#> button button--modifier="pf-m-link"}}
+        {{#> button button--IsLink=true}}
           Cancel
         {{/button}}
       {{/form-actions}}
@@ -271,10 +271,10 @@ subsection: forms
     {{#> form-group form-group--modifier="pf-m-action"}}
       {{#> form-group-control}}
         {{#> form-actions}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+          {{#> button button--IsPrimary=true button--IsSubmit=true}}
             Submit
           {{/button}}
-          {{#> button button--modifier="pf-m-link"}}
+          {{#> button button--IsLink=true}}
             Cancel
           {{/button}}
         {{/form-actions}}
@@ -343,9 +343,7 @@ subsection: forms
             {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '-input-1" name="' form-group--id '-input-1" aria-labelledby="' form-group--id ' ' form-group--id '-input-1"')}}
           {{/input-group-item}}
           {{#> input-group-item input-group-item--IsPlain=true}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-              <i class="fas fa-minus-circle" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="minus-circle" button--aria-label="Remove"}}
           {{/input-group-item}}
         {{/input-group}}
         {{#> input-group}}
@@ -353,9 +351,7 @@ subsection: forms
             {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '-input-2" name="' form-group--id '-input-2" aria-labelledby="' form-group--id ' ' form-group--id '-input-2"')}}
           {{/input-group-item}}
           {{#> input-group-item input-group-item--IsPlain=true}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-              <i class="fas fa-minus-circle" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="minus-circle" button--aria-label="Remove"}}
           {{/input-group-item}}
         {{/input-group}}
         {{#> input-group}}
@@ -363,15 +359,10 @@ subsection: forms
             {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '-input-3" name="' form-group--id '-input-3" aria-labelledby="' form-group--id ' ' form-group--id '-input-3"')}}
           {{/input-group-item}}
           {{#> input-group-item input-group-item--IsPlain=true}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-              <i class="fas fa-minus-circle" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="minus-circle" button--aria-label="Remove"}}
           {{/input-group-item}}
         {{/input-group}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}
-          {{#> button-icon button-icon--modifier="pf-m-start"}}
-            <i class="fas fa-plus-circle" aria-hidden="true"></i>
-          {{/button-icon}}
+        {{#> button button--IsLink=true button--IsInline=true button--icon="plus-circle"}}
           Add valid redirect URI
         {{/button}}
       {{/form-group-control}}
@@ -536,15 +527,10 @@ subsection: forms
                         {{!-- {{/form-helper-text}} --}}
                       {{/input-group-item}}
                       {{#> input-group-item input-group-item--IsPlain=true}}
-                        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                          <i class="fas fa-minus-circle" aria-hidden="true"></i>
-                        {{/button}}
+                        {{> button button--IsPlain=true button--IsIcon=true button--icon="minus-circle" button--aria-label="Remove"}}
                       {{/input-group-item}}
                     {{/input-group}}
-                    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-                      {{#> button-icon button-icon--modifier="pf-m-start"}}
-                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                      {{/button-icon}}
+                    {{#> button button--IsLink=true button--IsInline=true button--icon="plus-circle"}}
                       Add valid redirect URI
                     {{/button}}
                   {{/form-group-control}}
@@ -654,10 +640,7 @@ subsection: forms
         {{#> form-field-group-body}}
           {{#> form-group form-group--id=(concat form-field-group--id "-add-readiness")}}
             {{#> form-group-control}}
-              {{#> button button--modifier="pf-m-link pf-m-inline"}}
-                {{#> button-icon button-icon--modifier="pf-m-start"}}
-                  <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                {{/button-icon}}
+              {{#> button button--IsLink=true button--IsInline=true button--icon="plus-circle"}}
                 Add liveness probe
               {{/button}}
             {{/form-group-control}}
@@ -679,10 +662,7 @@ subsection: forms
         {{#> form-field-group-body}}
           {{#> form-group form-group--id=(concat form-field-group--id "-add-startup")}}
             {{#> form-group-control}}
-              {{#> button button--modifier="pf-m-link pf-m-inline"}}
-                {{#> button-icon button-icon--modifier="pf-m-start"}}
-                  <i class="fas fa-plus-circle" aria-hidden="true"></i>
-                {{/button-icon}}
+              {{#> button button--IsLink=true button--IsInline=true button--icon="plus-circle"}}
                 Add startup probe
               {{/button}}
             {{/form-group-control}}
@@ -701,7 +681,7 @@ subsection: forms
         {{/form-field-group-title}}
       {{/form-field-group-header-main}}
       {{#> form-field-group-header-actions}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
           Import
         {{/button}}
       {{/form-field-group-header-actions}}
@@ -721,10 +701,10 @@ subsection: forms
 
   {{!-- Form action buttons --}}
   {{#> form-actions}}
-    {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+    {{#> button button--IsPrimary=true button--IsSubmit=true}}
       Save
     {{/button}}
-    {{#> button button--modifier="pf-m-secondary" button--IsReset="true"}}
+    {{#> button button--IsSecondary=true button--IsReset=true}}
       Cancel
     {{/button}}
   {{/form-actions}}

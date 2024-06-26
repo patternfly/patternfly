@@ -2,13 +2,12 @@
   {{#if alert-toggle--attribute}}
     {{{alert-toggle--attribute}}}
   {{/if}}>
-  {{#if alert--IsExpanded}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-expanded="true" id="' alert--id '-toggle" aria-label="Details" aria-labelledby="' alert--id '-title ' alert--id '-toggle"')}}
-      {{> alert-toggle-icon}}
-    {{/button}}
-  {{else}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-expanded="false" id="' alert--id '-toggle" aria-label="Details" aria-labelledby="' alert--id '-title ' alert--id '-toggle"')}}
-      {{> alert-toggle-icon}}
-    {{/button}}
-  {{/if}}
+  {{> button
+    button--IsPlain=true
+    button--IsIcon=true
+    button--IsExpanded=alert--IsExpanded
+    button--id=(concat alert--id '-toggle')
+    button--aria-label="Details"
+    button--aria-labelledby=(concat alert--id '-title ' alert--id '-toggle')
+    button--icon-template="alert-toggle-icon"}}
 </div>

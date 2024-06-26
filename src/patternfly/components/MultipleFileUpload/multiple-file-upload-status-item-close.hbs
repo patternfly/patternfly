@@ -2,7 +2,5 @@
   {{#if multiple-file-upload-status-item-close--attribute}}
     {{{multiple-file-upload-status-item-close--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove from list"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsPlain=true button--icon="times" button--IsIcon=true button--attribute='aria-label="Remove from list"'}}
 </div>

@@ -83,7 +83,7 @@ import './Card.css'
 {{#> card card--id="card-action-no-offset"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-      {{#> button button--modifier="pf-m-primary"}}Action{{/button}}
+      {{#> button button--IsPrimary=true}}Action{{/button}}
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> title title--modifier="pf-m-2xl" title--attribute=(concat 'id="' card--id '-check-label"')}}This is a card title{{/title}}

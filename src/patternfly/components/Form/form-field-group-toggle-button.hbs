@@ -2,13 +2,12 @@
   {{#if form-field-group-toggle-button--attribute}}
     {{{form-field-group-toggle-button--attribute}}}
   {{/if}}>
-  {{#if form-field-group--IsExpanded}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-expanded="true" aria-label="Details" id="' form-field-group--id '-toggle" aria-labelledby="' form-field-group--id '-title ' form-field-group--id '-toggle"')}}
-      {{> form-field-group-toggle-icon}}
-    {{/button}}
-  {{else}}
-    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-expanded="false" aria-label="Details" id="' form-field-group--id '-toggle" aria-labelledby="' form-field-group--id '-title ' form-field-group--id '-toggle"')}}
-      {{> form-field-group-toggle-icon}}
-    {{/button}}
-  {{/if}}
+  {{> button
+    button--IsPlain=true
+    button--IsIcon=true
+    button--icon-template="form-field-group-toggle-icon"
+    button--IsExpanded=form-field-group--IsExpanded
+    button--aria-label="Details"
+    button--aria-labelledby=(concat form-field-group--id '-title ' form-field-group--id '-toggle')
+    button--id=(concat form-field-group--id '-toggle')}}
 </div>

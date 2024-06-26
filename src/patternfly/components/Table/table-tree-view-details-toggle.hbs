@@ -2,7 +2,10 @@
   {{#if table-tree-view-details-toggle--attribute}}
     {{{table-tree-view-details-toggle--attribute}}}
   {{/if}}>
-  <button class="{{pfv}}button pf-m-plain{{#if table-tr--details--IsExpanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--details--IsExpanded}}aria-expanded="true"{{/if}} type="button" aria-label="{{table--id}}-{{table-tr--tree--index}}--tree-table--details-toggle">
-    {{> table-details-toggle-icon}}
-  </button>
+  {{> button
+    button--IsPlain=true
+    button--IsIcon=true
+    button--IsExpanded=table-tr--details--IsExpanded
+    button--icon-template="table-details-toggle-icon"
+    button--aria-label=(concat table--id '-' table-tr--tree--index '--tree-table--details-toggle')}}
 </span>

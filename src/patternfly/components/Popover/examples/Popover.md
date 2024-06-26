@@ -7,15 +7,12 @@ cssPrefix: pf-v6-c-popover
 import './Popover.css'
 
 ## Examples
+    {{> popover-close}}
 ### Top
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-top-header"}}
         {{#> popover-title-text}}
@@ -37,11 +34,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-labelledby="popover-right-header" aria-describedby="popover-right-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-right-header"}}
         {{#> popover-title-text}}
@@ -63,11 +56,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-bottom-header"}}
         {{#> popover-title-text}}
@@ -89,11 +78,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-left-header"}}
         {{#> popover-title-text}}
@@ -115,11 +100,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-top" popover--attribute='aria-labelledby="popover-left-start-header" aria-describedby="popover-left-start-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-left-start-header"}}
         {{#> popover-title-text}}
@@ -141,11 +122,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-bottom" popover--attribute='aria-labelledby="popover-left-end-header" aria-describedby="popover-left-end-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-left-end-header"}}
         {{#> popover-title-text}}
@@ -167,11 +144,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-left" popover--attribute='aria-labelledby="popover-bottom-start-header" aria-describedby="popover-bottom-start-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-bottom-start-header"}}
         {{#> popover-title-text}}
@@ -193,11 +166,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-right" popover--attribute='aria-labelledby="popover-bottom-end-header" aria-describedby="popover-bottom-end-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-bottom-end-header"}}
         {{#> popover-title-text}}
@@ -219,11 +188,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-label="Popover with no header example" aria-describedby="popover-no-header-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-body popover-body--attribute='id="popover-no-header-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
@@ -246,11 +211,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right pf-m-width-auto" popover--attribute='aria-labelledby="popover-width-auto-header" aria-describedby="popover-width-auto-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-width-auto-header"}}
         {{#> popover-title-text}}
@@ -272,11 +233,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-icon-title-header" aria-describedby="popover-icon-title-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id='popover-icon-title-header' popover-title-icon--type="bullhorn"}}
         {{#> popover-title-text}}
@@ -297,11 +254,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsCustomAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-custom-alert-header" aria-describedby="popover-custom-alert-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-custom-alert-header"}}
         {{#> popover-title-text}}
@@ -323,11 +276,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsInfoAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-info-alert-header" aria-describedby="popover-info-alert-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-info-alert-header"}}
         {{#> popover-title-text}}
@@ -349,11 +298,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsSuccessAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-success-alert-header" aria-describedby="popover-success-alert-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-success-alert-header"}}
         {{#> popover-title-text}}
@@ -375,11 +320,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsWarningAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-warning-alert-header" aria-describedby="popover-warning-alert-body"'}}
   {{#> popover-content}}
-    {{# popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-warning-alert-header"}}
         {{#> popover-title-text}}
@@ -401,11 +342,7 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsDangerAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-danger-alert-header" aria-describedby="popover-danger-alert-body"'}}
   {{#> popover-content}}
-    {{#> popover-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/popover-close}}
+    {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-danger-alert-header"}}
         {{#> popover-title-text}}

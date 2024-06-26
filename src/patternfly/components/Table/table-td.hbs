@@ -38,16 +38,19 @@
     {{else if table-td--IsDraggable}}
       {{> table-draggable-button}}
     {{else if table-td--IsToggle}}
-      {{#> button
+      {{#> wrapper table-td--row-index=(ternary table-tr--tree--index table-tr--tree--index table-tr--index)}}
+      {{> button
           button--aria-label='Toggle row'
           button--IsSmall=table--IsCompact
           button--IsPlain=true
+          button--IsIcon=true
+          button--icon-template="table-toggle-icon"
           button--IsExpanded=table-tr--IsExpanded
-          button--IsAriaExpanded=table-tr--IsExpanded
-          button--id=(dasherize table--id 'toggle' table-tr--index)
-      }}
-        {{> table-toggle-icon}}
-      {{/button}}
+          button--id=(concat table--id '-expandable-toggle-' table-td--row-index)
+          button--aria-label="Details"
+          button--aria-labelledby=(concat table--id '-node-' table-td--row-index ' ' table--id '-expandable-toggle-' table-td--row-index)
+          button--id=(dasherize table--id 'toggle' table-td--row-index)}}
+        {{/wrapper}}
     {{else if @partial-block}}
       {{> @partial-block}}
     {{/if}}

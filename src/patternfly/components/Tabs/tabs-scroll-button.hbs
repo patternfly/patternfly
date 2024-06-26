@@ -5,11 +5,10 @@
   {{#if tabs-scroll-button--IsHidden}}
     aria-hidden="true"
   {{/if}}>
-  {{#> button button--IsPlain=true button--IsDisabled=tabs-scroll-button--IsDisabled button--aria-label=(ternary tabs-scroll-button--IsLeft "Scroll left" "Scroll right")}}
-    {{#if tabs-scroll-button--IsLeft}}
-      <i class="fas fa-angle-left" aria-hidden="true"></i>
-    {{else }}
-      <i class="fas fa-angle-right" aria-hidden="true"></i>
-    {{/if}}
-  {{/button}}
+  {{> button
+    button--IsPlain=true
+    button--IsDisabled=tabs-scroll-button--IsDisabled
+    button--IsIcon=true
+    button--icon=(ternary tabs-scroll-button--IsLeft "angle-left" "angle-right")
+    button--aria-label=(ternary tabs-scroll-button--IsLeft "Scroll left" "Scroll right")}}
 </div>
