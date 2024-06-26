@@ -78,16 +78,10 @@
   --#{$content}--blockquote--BorderInlineStartWidth: var(--pf-t--global--border--width--300); // TODO semantic value?
 
   // Lists
-  --#{$content}--ol--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$content}--ol--MarginInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$content}--ol--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$content}--ol--nested--MarginInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$content}--ul--MarginInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$content}--ul--nested--MarginBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--nested--MarginInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$content}--list--Gap: var(--pf-t--global--spacer--sm);
+  --#{$content}--list--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$content}--list--nested--MarginBlockStart: var(--#{$content}--list--Gap);
   --#{$content}--ul--ListStyle: var(--pf-t--global--list-style);
-  --#{$content}--li--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--2xl);
   --#{$content}--dl--RowGap: var(--pf-t--global--spacer--md);
   --#{$content}--dt--FontWeight: var(--pf-t--global--font--weight--body--bold);
@@ -186,23 +180,6 @@
     &:last-child {
       margin-block-end: 0;
     }
-  }
-
-  @at-root :is(
-    .#{$content}--ol,
-    .#{$content}--ul,
-    & ol,
-    & ul
-  ) {
-    margin: 0;
-
-    // stylelint-disable selector-no-qualifying-type
-    &.pf-m-plain {
-      padding-inline-start: 0;
-      margin-inline-start: 0;
-      list-style: none;
-    }
-    // stylelint-enable
   }
 
   @at-root :is(
@@ -308,27 +285,27 @@
 
   @at-root :is(
     .#{$content}--ol,
-    & ol
+    .#{$content}--ul,
+    & ol,
+    & ul
   ) {
-    padding-inline-start: var(--#{$content}--ol--PaddingInlineStart);
-    margin-inline-start: var(--#{$content}--ol--MarginInlineStart);
+    display: flex;
+    flex-direction: column;
+    gap: var(--#{$content}--list--Gap);
+    padding-inline-start: var(--#{$content}--list--PaddingInlineStart);
 
-    :is(
-      .#{$content}--ul,
-      ul
-    ) {
-      --#{$content}--ul--MarginInlineStart: var(--#{$content}--ul--nested--MarginInlineStart);
-
-      margin-block-start: var(--#{$content}--ul--nested--MarginBlockStart);
+    &.pf-m-plain {
+      padding-inline-start: 0;
+      list-style: none;
     }
 
     :is(
       .#{$content}--ol,
-      ol
+      .#{$content}--ul,
+      ol,
+      ul
     ) {
-      --#{$content}--ol--MarginInlineStart: var(--#{$content}--ol--nested--MarginInlineStart);
-
-      margin-block-start: var(--#{$content}--ol--nested--MarginBlockStart);
+      margin-block-start: var(--#{$content}--list--nested--MarginBlockStart);
     }
   }
 
@@ -336,27 +313,7 @@
     .#{$content}--ul,
     & ul
   ) {
-    padding-inline-start: var(--#{$content}--ul--PaddingInlineStart);
-    margin-inline-start: var(--#{$content}--ul--MarginInlineStart);
     list-style: var(--#{$content}--ul--ListStyle);
-
-    :is(
-      .#{$content}--ul,
-      ul
-    ) {
-      --#{$content}--ul--MarginInlineStart: var(--#{$content}--ul--nested--MarginInlineStart);
-
-      margin-block-start: var(--#{$content}--ul--nested--MarginBlockStart);
-    }
-
-    :is(
-      .#{$content}--ol,
-      ol
-    ) {
-      --#{$content}--ol--MarginInlineStart: var(--#{$content}--ol--nested--MarginInlineStart);
-
-      margin-block-start: var(--#{$content}--ol--nested--MarginBlockStart);
-    }
   }
 
   @at-root :is(
