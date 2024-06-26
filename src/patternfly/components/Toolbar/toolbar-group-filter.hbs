@@ -1,0 +1,10 @@
+{{#unless toolbar-toggle-group--HasNoFilters}}
+  {{#> toolbar-group toolbar-group--IsFilterGroup=true}}
+    {{#> toolbar-item}}
+      {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-status' (ternary IsExpandableContentSection 'expandable' null)) menu-toggle--text='Status'}}
+    {{/toolbar-item}}
+    {{#> toolbar-item}}
+      {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-risk' (ternary IsExpandableContentSection 'expandable' null)) menu-toggle--text='Risk'}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+{{/unless}}

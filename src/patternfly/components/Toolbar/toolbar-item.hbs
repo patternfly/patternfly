@@ -1,10 +1,8 @@
 <div class="{{pfv}}toolbar__item
-  {{#if toolbar-item--IsLabel}}
-    pf-m-label
-  {{/if}}
-  {{#if toolbar-item--IsFormElement}}
-    pf-m-form-element
-  {{/if}}
+  {{setModifiers
+    toolbar-item--IsLabel='pf-m-label'
+    toolbar-item--IsFormElement='pf-m-form-element'
+  }}
   {{#if toolbar-item--modifier}}
     {{toolbar-item--modifier}}
   {{/if}}"
