@@ -4,7 +4,7 @@
 
 {{#> config table-cell--tag=(ternary IsThead 'th' 'td')}}
 
-<{{table-cell--tag}} class="{{concat (pfv) 'table__' table-cell--tag ' ' (concat (pfv) 'table' table-cell--classname) ' ' table-cell--modifier}}{{ternary table-cell--IsEmpty (concat (pfv) 'table__cell-empty') null}}"
+<{{table-cell--tag}} class="{{concat (pfv) 'table__' table-cell--tag ' ' (concat (pfv) 'table' table-cell--classname) ' ' table-cell--modifier}}"
   {{{ternary table-cell--aria-label (concat 'aria-label="' table-cell--aria-label '"') null}}}
   {{{ternary table-cell--attribute table-cell--attribute null}}}>
 
