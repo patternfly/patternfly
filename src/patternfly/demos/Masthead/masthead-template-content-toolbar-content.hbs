@@ -1,26 +1,10 @@
 {{!-- TODO: update toolbar content when all other components are ready --}}
 {{#> toolbar-content-section}}
-  {{#> toolbar-item}}
-    {{#> menu-toggle}}
-      {{#> menu-toggle-text}}
-        Overview
-      {{/menu-toggle-text}}
-      {{#> menu-toggle-controls}}
-        {{> menu-toggle-toggle-icon}}
-      {{/menu-toggle-controls}}
-    {{/menu-toggle}}
-  {{/toolbar-item}}
-
-  {{#> toolbar-item}}
-    {{#> menu-toggle}}
-      {{#> menu-toggle-text}}
-        Services
-      {{/menu-toggle-text}}
-      {{#> menu-toggle-controls}}
-        {{> menu-toggle-toggle-icon}}
-      {{/menu-toggle-controls}}
-    {{/menu-toggle}}
-  {{/toolbar-item}}
+  {{#if menu-template--HasContextSelector}}
+    {{#> toolbar-item}}
+      {{> masthead-template-context-selector}}
+    {{/toolbar-item}}
+  {{/if}}
 
   {{#if masthead-template--HasHorizontalNav}}
     {{#> toolbar-item toolbar-item--modifier="pf-m-overflow-container" toolbar-item--attribute='style="--pf-v6-c-toolbar__item--MinWidth: 18ch;"'}}
