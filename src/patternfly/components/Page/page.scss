@@ -423,7 +423,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-section,
 .#{$page}__main-group,
 .#{$page}__main-wizard {
-  &:last-child,
   &:only-child,
   &.pf-m-fill {
     flex-grow: 1;
