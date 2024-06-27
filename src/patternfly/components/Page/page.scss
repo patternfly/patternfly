@@ -326,7 +326,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   &.pf-m-fill,
   &:has(.#{$page}__main-section.pf-m-fill,
     .#{$page}__main-group.pf-m-fill,
-    .#{$page}__main-wizard.pf-m-fill) {
+    .#{$page}__main-wizard,
+    .#{$drawer}) {
     align-self: stretch;
   }
 }
