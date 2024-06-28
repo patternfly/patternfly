@@ -14,7 +14,7 @@
   --#{$card}__title--not--last-child--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$card}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$card}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$card}__title-text--FontSize: var(--pf-t--global--font--size--heading--sm);
+  --#{$card}__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$card}__title-text--FontWeight: var(--pf-t--global--font--weight--heading);
   --#{$card}__title-text--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$card}--c-button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
@@ -27,10 +27,10 @@
   --#{$card}__actions--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 
   // Expandable
-  --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
+  --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--xs);
-  --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--button--vertical--default) * -1);
-  --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--md) * -1);
+  --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain) * -1);
   --#{$card}__header-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
 
@@ -98,7 +98,7 @@
   --#{$card}--m-plain--BackgroundColor: transparent;
 
   // Toggle right
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--button--horizontal--compact) * -1);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--compact) * -1);
   --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--xs);
 }
 
@@ -384,7 +384,7 @@
   }
 
   // Normal disabled button color won't show on the disabled card
-  button.pf-m-inline.pf-m-disabled {
+  .#{$button}.pf-m-inline:disabled {
     --#{$button}--disabled--Color: var(--#{$card}--c-button--disabled--Color);
   }
 }

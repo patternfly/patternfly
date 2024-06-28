@@ -510,29 +510,29 @@ import './Navigation.css'
 ```
 
 ### Nav with flyout
-```hbs isBeta
+```hbs
 {{#> nav--flyout nav--flyout--id="nav-flyout-example" nav--flyout--submenu--IsExpanded="true"}}
   {{> nav--menu--submenu}}
 {{/nav--flyout}}
 ```
 
 ### Nav with drilldown menu
-```hbs isBeta
+```hbs
 {{> nav--drilldown nav--drilldown--id="basic-drilldown-example" menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
 ### Nav with drilldown menu level two
-```hbs isBeta
+```hbs
 {{> nav--drilldown nav--drilldown--id="level-two-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 228px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
 ### Nav with drilldown menu level three
-```hbs isBeta
+```hbs
 {{> nav--drilldown nav--drilldown--id="level-three-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true"  menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 284px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
 ### Nav item icons
-```hbs isBeta
+```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}

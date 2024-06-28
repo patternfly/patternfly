@@ -1,6 +1,21 @@
-<div class="{{pfv}}calendar-month__header-nav-control{{#if calendar-month-header-nav-control--modifier}} {{calendar-month-header-nav-control--modifier}}{{/if}}"
+<div class="{{pfv}}calendar-month__header-nav-control
+  {{#if calendar-month-header-nav-control--IsPrevMonth}}
+    pf-m-prev-month
+  {{/if}}
+  {{#if calendar-month-header-nav-control--IsNextMonth}}
+    pf-m-next-month
+  {{/if}}
+  {{#if calendar-month-header-nav-control--modifier}}
+    {{calendar-month-header-nav-control--modifier}}
+  {{/if}}"
   {{#if calendar-month-header-nav-control--attribute}}
     {{{calendar-month-header-nav-control--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if calendar-month-header-nav-control--IsPrevMonth}}
+    {{> button button--IsPlain=true button--aria-label="Previous month" button--IsIcon=true button--icon="angle-left"}}
+  {{else if calendar-month-header-nav-control--IsNextMonth}}
+    {{> button button--IsPlain=true button--aria-label="Next month" button--IsIcon=true button--icon="angle-right"}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

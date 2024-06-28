@@ -2,10 +2,7 @@
   {{#if back-to-top--attribute}}
     {{{back-to-top--attribute}}}
   {{/if}}>
-  {{#> button button--IsAnchor="true" button--url=(concat '#' back-to-top--target) button--modifier="pf-m-primary"}}
+  {{#> button button--IsAnchor=true button--icon="angle-up" button-icon--IsEnd=true button--url=(concat '#' back-to-top--target) button--IsPrimary=true}}
     Back to top
-    {{#> button-icon button-icon--modifier="pf-m-end"}}
-      <i class="fas fa-angle-up" aria-hidden="true"></i>
-    {{/button-icon}}
   {{/button}}
 </div>

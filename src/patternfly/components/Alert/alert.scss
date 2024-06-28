@@ -20,7 +20,7 @@
 
   // Toggle
   --#{$alert}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--button--vertical--default));
+  --#{$alert}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
@@ -34,10 +34,7 @@
   --#{$alert}__icon--FontSize: var(--pf-t--global--icon--size--md);
 
   // Title
-  --#{$alert}__title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$alert}__title--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$alert}__title--FontWeight: var(--pf-t--global--font--weight--heading);
-  --#{$alert}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --#{$alert}__title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$alert}__title--Color: var(--pf-t--global--text--color--regular);
   --#{$alert}__title--max-lines: 1;
 
@@ -203,10 +200,7 @@
 
 .#{$alert}__title {
   grid-area: title;
-  font-family: var(--#{$alert}__title--FontFamily);
-  font-size: var(--#{$alert}__title--FontSize);
   font-weight: var(--#{$alert}__title--FontWeight);
-  line-height: var(--#{$alert}__title--LineHeight);
   color: var(--#{$alert}__title--Color);
   word-break: break-word;
 

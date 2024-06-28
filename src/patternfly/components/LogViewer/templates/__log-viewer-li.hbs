@@ -1,9 +1,0 @@
-{{#> log-viewer-list-item}}
-  {{#if log-viewer--HasLineNumbers}}
-    {{> log-viewer-index log-viewer-index--index=__log-viewer-li--index}}
-  {{/if}}
-  {{#> log-viewer-text}}
-    {{> log-viewer-timestamp log-viewer-timestamp--text=__log-viewer-li--timestamp}}
-    {{__log-viewer-li--text}}
-  {{/log-viewer-text}}
-{{/log-viewer-list-item}}

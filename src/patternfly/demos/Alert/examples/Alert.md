@@ -19,9 +19,7 @@ section: components
         Newest notification
       {{/alert-title}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Newest notification"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close success alert: Newest notification"}}
       {{/alert-action}}
       {{#> alert-description}}
         This is a description of the notification content.
@@ -37,9 +35,7 @@ section: components
         Second newest notification
       {{/alert-title}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close warning alert: second newest notification"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close warning alert: second newest notification"}}
       {{/alert-action}}
       {{#> alert-description}}
         This is a description of the notification content.
@@ -55,9 +51,7 @@ section: components
         Last notification
       {{/alert-title}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close danger alert: Last notification"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close danger alert: Last notification"}}
       {{/alert-action}}
       {{#> alert-description}}
         This is a description of the notification content.

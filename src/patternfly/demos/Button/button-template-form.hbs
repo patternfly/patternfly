@@ -22,15 +22,15 @@
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-actions}}
       {{#if button-template-form--IsLoading}}
-        {{#> button button--modifier="pf-m-primary" button--IsProgress="true" button--IsInProgress="true" button--IsSubmit="true"}}
+        {{#> button button--IsPrimary=true button--IsProgress=true button--IsInProgress=true button--IsSubmit=true}}
           Linking account
         {{/button}}
       {{else if button-template-form--IsComplete}}
-        {{#> button button--IsPrimary=true button--IsSubmit="true" button--icon="check-circle"}}
+        {{#> button button--IsPrimary=true button--IsSubmit=true button--icon="check-circle"}}
           Logged in
         {{/button}}
       {{else}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        {{#> button button--IsPrimary=true button--IsSubmit=true}}
           Link account and log in
         {{/button}}
       {{/if}}

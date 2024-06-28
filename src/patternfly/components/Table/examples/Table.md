@@ -649,7 +649,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 ```hbs
 {{#> table table--id="table-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr table-tr--index="thead"}}
+    {{#> table-tr table-tr--index="thead" table-tr--index="thead"}}
       {{> table-cell-toggle}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
@@ -3292,7 +3292,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Kaliq Ray
         {{/table-td}}
         {{#> table-td table-td--data-label="Last commit"}}
-          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+          {{#> button button--IsLink=true button--IsInline=true}}
             Message us!
           {{/button}}
         {{/table-td}}
@@ -3326,7 +3326,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Kaliq Ray
         {{/table-td}}
         {{#> table-td table-td--data-label="Last commit"}}
-          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+          {{#> button button--IsLink=true button--IsInline=true}}
             Message us!
           {{/button}}
         {{/table-td}}
@@ -3360,7 +3360,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Kaliq Ray
         {{/table-td}}
         {{#> table-td table-td--data-label="Last commit"}}
-          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+          {{#> button button--IsLink=true button--IsInline=true}}
             Message us!
           {{/button}}
         {{/table-td}}

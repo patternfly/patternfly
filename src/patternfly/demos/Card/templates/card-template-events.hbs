@@ -2,9 +2,7 @@
   {{#> card card--id=card-template-events--id}}
     {{#> card-header card-header00--modifier="pf-v6-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
-          Status
-        {{/select}}
+        {{> menu-toggle menu-toggle--text="Status" menu-toggle--id=(concat card--id '-select-dropdown') menu-toggle--IsPlain=true menu-toggle--IsText=true}}
       {{/card-actions}}
       {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute='style="padding-block-start: 3px;"'}}
         {{#> title title--modifier="pf-m-xl" titleType="h2"}}

@@ -17,9 +17,7 @@ import './DatePicker.css'
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
-      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
     {{/input-group-item}}
   {{/input-group}}
 {{/date-picker}}
@@ -33,9 +31,7 @@ import './DatePicker.css'
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
-      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
     {{/input-group-item}}
   {{/input-group}}
 {{/date-picker}}
@@ -49,9 +45,7 @@ import './DatePicker.css'
       {{> form-control controlType="input" input="true" form-control--IsError="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
-      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
     {{/input-group-item}}
   {{/input-group}}
 {{/date-picker}}
@@ -65,9 +59,7 @@ import './DatePicker.css'
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
-      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
     {{/input-group-item}}
   {{/input-group}}
 {{/date-picker}}
@@ -81,9 +73,7 @@ import './DatePicker.css'
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
-      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
     {{/input-group-item}}
   {{/input-group}}
 {{/date-picker}}
@@ -97,9 +87,7 @@ import './DatePicker.css'
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
-      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsControl=true button--IsIcon=true button--icon="calendar-alt" button--aria-label="Toggle date picker"}}
     {{/input-group-item}}
   {{/input-group}}
 {{/date-picker}}

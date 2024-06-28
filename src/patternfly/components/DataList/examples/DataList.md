@@ -140,10 +140,10 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
             Primary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
       {{/data-list-item-action}}
@@ -165,16 +165,16 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
             Primary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
       {{/data-list-item-action}}
@@ -575,10 +575,10 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
             Primary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
       {{/data-list-item-action}}
@@ -600,16 +600,16 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
-        {{#> button button--modifier="pf-m-primary"}}
+        {{#> button button--IsPrimary=true}}
             Primary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
+        {{#> button button--IsSecondary=true}}
             Secondary
         {{/button}}
       {{/data-list-item-action}}

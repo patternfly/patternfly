@@ -497,9 +497,7 @@ cssPrefix: pf-v6-c-tree-view
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
         {{#> tree-view-action}}
-          {{#> button button--IsPlain=true button--aria-label="Actions"}}
-            <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions"}}
         {{/tree-view-action}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
@@ -507,9 +505,7 @@ cssPrefix: pf-v6-c-tree-view
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 1"}}
             {{#> tree-view-action}}
-              {{#> button button--IsPlain=true button--aria-label="Copy"}}
-                <i class="fas fa-clipboard" aria-hidden="true"></i>
-              {{/button}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="clipboard" button--aria-label="Copy"}}
             {{/tree-view-action}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
@@ -529,9 +525,7 @@ cssPrefix: pf-v6-c-tree-view
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 2"}}
             {{#> tree-view-action}}
-              {{#> button button--IsPlain=true button--aria-label="Action"}}
-                <i class="fas fa-bars" aria-hidden="true"></i>
-              {{/button}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="bars" button--aria-label="Action"}}
             {{/tree-view-action}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
@@ -580,9 +574,7 @@ cssPrefix: pf-v6-c-tree-view
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{#> button button--IsPlain=true button--aria-label="Actions"}}
-            <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-          {{/button}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions"}}
         {{/tree-view-action}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}

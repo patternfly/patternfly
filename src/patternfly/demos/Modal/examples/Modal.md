@@ -21,10 +21,10 @@ section: components
       <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Overwrite
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Save a copy
       {{/button}}
     {{/modal-box-footer}}
@@ -59,10 +59,10 @@ section: components
       </p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Overwrite
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Save a copy
       {{/button}}
     {{/modal-box-footer}}
@@ -87,10 +87,10 @@ section: components
       <p>Form here</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Save
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/modal-box-footer}}
@@ -115,10 +115,10 @@ section: components
       <p>Form here</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Save
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/modal-box-footer}}
@@ -143,10 +143,10 @@ section: components
       <p>Form here</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
-      {{#> button button--modifier="pf-m-primary"}}
+      {{#> button button--IsPrimary=true}}
         Save
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/modal-box-footer}}
@@ -207,10 +207,10 @@ section: components
       {{/form}}
     {{/modal-box-body}}
     {{#> modal-box-footer}}
-      {{#> button button--modifier="pf-m-primary" button--attribute=(concat 'form="' form--id '"')}}
+      {{#> button button--IsPrimary=true button--attribute=(concat 'form="' form--id '"')}}
         Create
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--IsLink=true}}
         Cancel
       {{/button}}
     {{/modal-box-footer}}

@@ -13,10 +13,7 @@
   --#{$hint}--Color: var(--pf-t--global--text--color--regular);
 
   // Hint Title
-  --#{$hint}__title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$hint}__title--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$hint}__title--FontWeight: var(--pf-t--global--font--weight--heading);
-  --#{$hint}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --#{$hint}__title--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Hint Body
   --#{$hint}__body--FontSize: var(--pf-t--global--font--size--body--default);
@@ -74,10 +71,7 @@
 
 .#{$hint}__title {
   align-self: center;
-  font-family: var(--#{$hint}__title--FontFamily);
-  font-size: var(--#{$hint}__title--FontSize);
   font-weight: var(--#{$hint}__title--FontWeight);
-  line-height: var(--#{$hint}__title--LineHeight);
 }
 
 .#{$hint}__body {

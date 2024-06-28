@@ -57,18 +57,16 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
    {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -81,9 +79,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
       Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
@@ -97,15 +93,13 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -118,9 +112,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
 {{/alert}}
 <br>
@@ -207,18 +199,16 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -231,9 +221,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
       Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert. <a href="#">This is a link.</a>
@@ -247,15 +235,13 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -310,18 +296,16 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -335,18 +319,16 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title (expanded)
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -360,18 +342,16 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -385,18 +365,16 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
     Success alert title (expanded)
   {{/alert-title}}
   {{#> alert-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
   {{/alert-action}}
   {{#> alert-description}}
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+    {{#> button button--IsLink=true button--IsInline=true}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -471,9 +449,7 @@ For sighted users, interactive elements can be included in this message in one o
         Success toast alert title
       {{/alert-title}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
@@ -487,9 +463,7 @@ For sighted users, interactive elements can be included in this message in one o
         Danger toast alert title
       {{/alert-title}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
@@ -506,9 +480,7 @@ For sighted users, interactive elements can be included in this message in one o
         Info toast alert description. From the settings tab, click <a href="#">View logs</a>&nbsp;to review the details.
       {{/alert-description}}
       {{#> alert-action}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}

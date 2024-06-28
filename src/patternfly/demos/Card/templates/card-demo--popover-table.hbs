@@ -12,14 +12,9 @@
   {{/table-thead}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--IsExpanded=true}}
-      {{> table-cell-toggle
-          menu-toggle--aria-labelledby=(concat table--id '-node1 expandable-toggle1')
-          menu-toggle--id="expandable-toggle1"
-          menu-toggle--aria-label="Details"
-          menu-toggle--aria-controls=(concat table--id '-content1')}}
-
-      {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node1"'}}
+    {{#> table-tr table-tr--IsExpanded=true table-tr--index="1"}}
+      {{> table-cell-toggle}}
+      {{#> table-td table-td--data-label="Branches" table-td--attribute=(concat 'id="' table--id '-node1"')}}
         {{#> table-text}}
           API Servers
         {{/table-text}}
@@ -48,12 +43,8 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
-      {{> table-cell-toggle
-          menu-toggle--aria-labelledby=(concat table--id '-node2 expandable-toggle')
-          menu-toggle--id="expandable-toggle2"
-          menu-toggle--aria-label="Details"
-          menu-toggle--aria-controls=(concat table--id '-content2')}}
+    {{#> table-tr table-tr--index="2"}}
+      {{> table-cell-toggle}}
 
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node2"'}}
         {{#> table-text}}
@@ -77,12 +68,8 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
-      {{> table-cell-toggle
-          menu-toggle--aria-labelledby=(concat table--id '-node2 expandable-toggle')
-          menu-toggle--id="expandable-toggle2"
-          menu-toggle--aria-label="Details"
-          menu-toggle--aria-controls=(concat table--id '-content3')}}
+    {{#> table-tr table-tr--index="3"}}
+      {{> table-cell-toggle}}
 
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node3"'}}
         {{#> table-text}}
@@ -106,12 +93,8 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
-      {{> table-cell-toggle
-          menu-toggle--aria-labelledby=(concat table--id '-node3 expandable-toggle')
-          menu-toggle--id="expandable-toggle3"
-          menu-toggle--aria-label="Details"
-          menu-toggle--aria-controls=(concat table--id '-content3')}}
+    {{#> table-tr table-tr--index="4"}}
+      {{> table-cell-toggle}}
 
       {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node4"'}}
         {{#> table-text}}

@@ -2,10 +2,7 @@
   Bulk edit description list title
 {{/title}}
 {{#> inline-edit-toggle}}
-  {{#> button button--modifier="pf-m-link" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-    {{#> button-icon button-icon--modifier="pf-m-start"}}
-      <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-    {{/button-icon}}
+  {{#> button button--IsLink=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
     Edit
   {{/button}}
 {{/inline-edit-toggle}}

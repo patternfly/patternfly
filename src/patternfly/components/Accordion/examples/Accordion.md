@@ -339,7 +339,7 @@ cssPrefix: pf-v6-c-accordion
 
 ### Toggle icon at start
 
-```hbs isBeta
+```hbs
 {{#> accordion accordion--IsStartAligned=true}}
   {{#> accordion-item}}
     {{#> accordion-toggle}}

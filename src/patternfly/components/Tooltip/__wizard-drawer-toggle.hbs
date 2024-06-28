@@ -1,4 +1,8 @@
-{{#> button button--modifier=(concat __wizard-drawer-toggle--modifier ' pf-m-link pf-m-inline pf-v6-u-float-right pf-v6-u-ml-md') button--attribute=__wizard-drawer-toggle--attribute}}
+{{#> button
+  button--IsLink=true
+  button--IsInline=true
+  button--modifier=(concat __wizard-drawer-toggle--modifier ' pf-v6-u-float-right pf-v6-u-ml-md')
+  button--attribute=__wizard-drawer-toggle--attribute}}
   {{#if wizard-drawer-toggle--text}}
     {{wizard-drawer-toggle--text}}
   {{else}}

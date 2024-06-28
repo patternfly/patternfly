@@ -12,9 +12,7 @@ cssPrefix: pf-v6-c-about-modal-box
     {{> about-modal-box-brand-image about-modal-box-brand-image--attribute='src="/assets/images/PF-IconLogo.svg" alt="PatternFly brand logo"'}}
   {{/about-modal-box-brand}}
   {{#> about-modal-box-close}}
-    {{#> button button--attribute='aria-label="Close dialog"' button--modifier="pf-m-plain"}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--attribute='aria-label="Close dialog"' button--IsPlain=true button--IsIcon=true button--icon="times"}}
   {{/about-modal-box-close}}
   {{#> about-modal-box-header}}
     {{#> title titleType="h1" title--modifier="pf-m-4xl" title--attribute='id="about-modal-title"'}}

@@ -5,12 +5,6 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Global navigation"' button--attribute='aria-expanded="false"'}}
-      {{#if masthead-toggle--icon}}
-        <i class="fas fa-{{masthead-toggle--icon}}" aria-hidden="true"></i>
-      {{else}}
-        <i class="fas fa-bars" aria-hidden="true"></i>
-      {{/if}}
-    {{/button}}
+    {{> button button--IsPlain=true button--icon="bars" button--IsIcon=true button--aria-label="Global navigation"}}
   {{/if}}
 </span>

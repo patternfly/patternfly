@@ -94,9 +94,7 @@ wrapperTag: div
       {{#> toolbar-item}}
         {{#> input-group input-group--IsPlain=true}}
           {{#> input-group-item input-group-item--IsPlain=true}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
-              <i class="fas fa-fw fa-search" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--aria-label="Open search"}}
           {{/input-group-item}}
         {{/input-group}}
       {{/toolbar-item}}
@@ -124,9 +122,7 @@ wrapperTag: div
             {{/text-input-group}}
           {{/input-group-item}}
           {{#> input-group-item input-group-item--IsPlain=true}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-              <i class="fas fa-times" aria-hidden="true"></i>
-            {{/button}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close"}}
           {{/input-group-item}}
         {{/input-group}}
       {{/toolbar-item}}

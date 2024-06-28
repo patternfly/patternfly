@@ -2,7 +2,5 @@
   {{#if tabs-add--attribute}}
     {{{tabs-add--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add tab"'}}
-    <i class="fas fa-plus" aria-hidden="true"></i>
-  {{/button}}
+  {{> button button--IsPlain=true button--IsIcon=true button--icon="plus" button--attribute='aria-label="Add tab"'}}
 </span>

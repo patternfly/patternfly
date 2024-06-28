@@ -522,7 +522,7 @@ import './MenuToggle.css'
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}
-    {{> avatar}}
+    {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -536,7 +536,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar}}
+    {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -550,7 +550,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar}}
+    {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -596,9 +596,7 @@ import './MenuToggle.css'
       {{/text-input-group-text}}
     {{/text-input-group-main}}
     {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
     {{/text-input-group-utilities}}
   {{/text-input-group}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
@@ -610,7 +608,7 @@ import './MenuToggle.css'
 ```
 
 ### Status
-```hbs isBeta
+```hbs
 {{> menu-toggle menu-toggle--IsSuccess=true menu-toggle--text="Success"}}
 
 <br/><br/>

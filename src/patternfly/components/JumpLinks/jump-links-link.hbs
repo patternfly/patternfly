@@ -2,7 +2,7 @@
   {{#if jump-links-link--attribute}}
     {{{jump-links-link--attribute}}}
   {{/if}}>
-  {{#> button button--IsAnchor="true" button--url=(concat '#' jump-links-link--target ) button--modifier="pf-m-link"}}
+  {{#> button button--IsAnchor="true" button--url=(concat '#' jump-links-link--target ) button--IsLink=true}}
     {{> @partial-block}}
   {{/button}}
 </span>
