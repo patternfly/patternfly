@@ -258,6 +258,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the collapsed state. |
 | `.pf-m-page-insets` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body padding/inset to visually match padding of page elements. |
+| `.pf-m-context-selector` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body to contain a context selector. |
 | `.pf-m-inset-none` | `.pf-v6-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
 | `.pf-m-light` | `.pf-v6-c-page__sidebar` | Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
 | `.pf-m-light` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a light theme. |

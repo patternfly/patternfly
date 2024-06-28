@@ -1,0 +1,55 @@
+{{#> menu-toggle menu-toggle--modifier="pf-m-full-width" menu-toggle--IsExpanded=page-template-sidebar--hasContextSelectorExpanded}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-fw fa-cogs" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Administrator
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+{{#if page-template-sidebar--hasContextSelectorExpanded}}
+  {{#> menu}}
+    {{#> menu-content}}
+      {{#> menu-list}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-icon}}
+                <i class="fas fa-fw fa-cogs" aria-hidden="true"></i>
+              {{/menu-item-icon}}
+              {{#> menu-item-text}}
+                Administrator
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-icon}}
+                <i class="fas fa-fw fa-code" aria-hidden="true"></i>
+              {{/menu-item-icon}}
+              {{#> menu-item-text}}
+                Developer
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-icon}}
+              <i class="fas fa-fw fa-cube" aria-hidden="true"></i>
+              {{/menu-item-icon}}
+              {{#> menu-item-text}}
+                User
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+      {{/menu-list}}
+    {{/menu-content}}
+  {{/menu}}
+{{/if}}
