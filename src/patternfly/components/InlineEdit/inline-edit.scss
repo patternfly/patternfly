@@ -2,7 +2,7 @@
 
 :where(:root, .#{$inline-edit}) {
   // Group
-  --#{$inline-edit}__group--item--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--plain);
+  --#{$inline-edit}__group--item--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
 
   // Valid action
   --#{$inline-edit}__action--c-button--m-valid--m-plain--Color: var(--pf-t--global--icon--color--brand--default);

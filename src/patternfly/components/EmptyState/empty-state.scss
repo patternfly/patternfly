@@ -55,7 +55,7 @@
   --#{$empty-state}--m-xs__footer--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Actions
-  --#{$empty-state}__actions--RowGap: var(--pf-t--global--spacer--action--vertical--default);
+  --#{$empty-state}__actions--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$empty-state}__actions--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
