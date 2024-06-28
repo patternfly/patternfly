@@ -1,7 +1,7 @@
 // Viewports to test against
 const viewports = {
   mobile: {
-    width: 320,
+    width: 360,
     height: 480
   },
   tablet: {
