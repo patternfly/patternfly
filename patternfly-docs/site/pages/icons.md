@@ -114,6 +114,12 @@ id: Icons
 | service-catalog | <i class="pf-v5-pficon pf-v5-pficon-service-catalog"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-service-catalog&quot;&gt;&lt;/i&gt;
 | service | <i class="pf-v5-pficon pf-v5-pficon-service"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-service&quot;&gt;&lt;/i&gt;
 | services | <i class="pf-v5-pficon pf-v5-pficon-services"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-services&quot;&gt;&lt;/i&gt;
+| severity-critical | <i class="pf-v5-pficon pf-v5-pficon-severity-critical"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-severity-critical&quot;&gt;&lt;/i&gt;
+| severity-important | <i class="pf-v5-pficon pf-v5-pficon-severity-important"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-severity-important&quot;&gt;&lt;/i&gt;
+| severity-minor | <i class="pf-v5-pficon pf-v5-pficon-severity-minor"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-severity-minor&quot;&gt;&lt;/i&gt;
+| severity-moderate | <i class="pf-v5-pficon pf-v5-pficon-severity-moderate"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-severity-moderate&quot;&gt;&lt;/i&gt;
+| severity-none | <i class="pf-v5-pficon pf-v5-pficon-severity-none"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-severity-none&quot;&gt;&lt;/i&gt;
+| severity-undefined | <i class="pf-v5-pficon pf-v5-pficon-severity-undefined"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-severity-undefined&quot;&gt;&lt;/i&gt;
 | spinner | <i class="pf-v5-pficon pf-v5-pficon-spinner"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-spinner&quot;&gt;&lt;/i&gt;
 | spinner2 | <i class="pf-v5-pficon pf-v5-pficon-spinner2"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-spinner2&quot;&gt;&lt;/i&gt;
 | storage-domain | <i class="pf-v5-pficon pf-v5-pficon-storage-domain"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-storage-domain&quot;&gt;&lt;/i&gt;
