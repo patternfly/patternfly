@@ -1,15 +1,9 @@
-{{#> menu-toggle menu-toggle--modifier="pf-m-full-width" menu-toggle--IsExpanded=page-template-sidebar--hasContextSelectorExpanded}}
-  {{#> menu-toggle-icon}}
-    <i class="fas fa-fw fa-cogs" aria-hidden="true"></i>
-  {{/menu-toggle-icon}}
-  {{#> menu-toggle-text}}
-    Administrator
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-{{#if page-template-sidebar--hasContextSelectorExpanded}}
+{{> menu-toggle
+  menu-toggle--modifier="pf-m-full-width"
+  menu-toggle--IsExpanded=page-template-context-selector--IsExpanded
+  menu-toggle--text="Administrator"
+  menu-toggle--icon="cogs fa-fw"}}
+{{#if page-template-context-selector--IsExpanded}}
   {{#> menu}}
     {{#> menu-content}}
       {{#> menu-list}}

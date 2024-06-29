@@ -141,10 +141,10 @@ import './Page.css'
 
 ### Context selector in sidebar
 ```hbs isFullscreen
-{{> page-template page-template--id="nav-basic-example" page-template-sidebar--hasContextSelector='true'}}
+{{> page-template page-template--id="page-context-selector" page-template-sidebar--HasContextSelector=true}}
 ```
 
 ### Context selector expanded in sidebar
 ```hbs isFullscreen
-{{> page-template page-template--id="nav-basic-example" page-template-sidebar--hasContextSelector='true' page-template-sidebar--hasContextSelectorExpanded='true'}}
+{{> page-template page-template--id="page-context-selector-expanded" page-template-sidebar--HasContextSelector=true page-template-context-selector--IsExpanded=true}}
 ```
