@@ -1,3 +1,6 @@
+@use '../../sass-utilities/scss-variables.scss' as *;
+@use '../../sass-utilities/init.scss' as *;
+
 @font-face {
 	font-family: '<%= fontName %>';
 	src: url('#{$pf-v6-global--fonticon-path}/<%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2');
