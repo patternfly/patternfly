@@ -295,10 +295,6 @@
     --#{$table}__tr--responsive--PaddingInlineStart: var(--#{$table}__tr--responsive--nested-table--PaddingInlineStart);
 
     border: 0;
-
-    tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) + tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-      --#{$table}__tr--responsive--PaddingBlockStart: 0;
-    }
   }
 
   // - Table grid compound expansion toggle
