@@ -1,8 +1,4 @@
-{{!-- TODO: update `table-td` to `table-cell` --}}
-{{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
-{{!-- TODO: automate attribution --}}
-
-{{#> table-td table-td--IsOverflowMenu=true}}
+{{#> table-cell table-cell--classname='__action'}}
   {{#> overflow-menu overflow-menu--id=(dasherize table--id 'overflow-menu' table-tr--index)}}
     {{#if table-cell-overflow-menu--IsCondensed}}
       {{#> overflow-menu-control menu-toggle--aria-label="Actions"}}
@@ -25,4 +21,4 @@
       {{/overflow-menu-content}}
     {{/if}}
   {{/overflow-menu}}
-{{/table-td}}
+{{/table-cell}}

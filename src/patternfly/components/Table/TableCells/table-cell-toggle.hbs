@@ -1,9 +1,5 @@
-{{!-- TODO: update `table-td` to `table-cell` --}}
-{{!-- TODO: automate `td/th` based up `IsThead/IsTbody` and make overridable --}}
-{{!-- TODO: automate attribution --}}
-
-{{#> table-td table-td--IsToggle=true}}
-  {{> button
+{{#> table-cell table-cell--classname='__toggle' table-cell--aria-label=(ternary IsThead 'Toggle all rows' 'Toggle all row')}}
+  {{#> button
     button--IsSmall=table--IsCompact
     button--IsPlain=true
     button--IsIcon=true
@@ -15,4 +11,7 @@
     button--aria-labelledby=(dasherize table--id 'node' table-tr--index)
     button--aria-controls=(dasherize table--id 'content' table-tr--index)
     button--id=(dasherize table--id 'expandable-toggle' table-tr--index)}}
-{{/table-td}}
+
+    {{> table-toggle-icon}}
+  {{/button}}
+{{/table-cell}}
