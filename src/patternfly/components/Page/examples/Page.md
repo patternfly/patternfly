@@ -125,7 +125,7 @@ import './Page.css'
       This section uses <code>.pf-m-fill</code> to fill the available space.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
-      This section uses <code>.pf-m-no-fill</code> to not fill the available space.
+      This section uses <code>.pf-m-no-fill</code> not to fill the available space.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -244,12 +244,12 @@ This component provides the basic chrome for a page, including sidebar and main 
 | -- | -- | -- |
 | `.pf-v6-c-page` | `<div>` | Declares the page component. |
 | `.pf-v6-c-page__sidebar` | `<aside>` | Declares the page sidebar. |
-| `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
+| `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-v6-c-page__main` | `<main>` | Declares the main page area. |
 | `.pf-v6-c-page__main-nav` | `<section>` | Creates a container to nest the (deprecated) tertiary navigation component in the main page area. |
 | `.pf-v6-c-page__main-subnav` | `<section>` | Creates a container to nest the horizontal subnav navigation component in the main page area. |
 | `.pf-v6-c-page__main-breadcrumb` | `<section>` | Creates a container to nest the breadcrumb component in the main page area. |
-| `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: The last/only `.pf-v6-c-page__main-section` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
+| `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: This section will not fill the vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
 | `.pf-v6-c-page__main-tabs` | `<section>` | Creates a container to nest the tabs component in the main page area. |
 | `.pf-v6-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the main page area. |
 | `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required** |
@@ -267,8 +267,8 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-light-200` | `.pf-v6-c-page__main-wizard` | Modifies a wizard page section to have a light 200 theme. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
 | `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-fill` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |
-| `.pf-m-no-fill` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__sidebar-body` | Modifies the element to not grow to fill the available vertical space. |
+| `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |
+| `.pf-m-no-fill` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element not to grow to fill the available vertical space. |
 | `.pf-m-limit-width` | `.pf-v6-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
 | `.pf-m-align-center` | `.pf-v6-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |
 | `.pf-m-sticky-top{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the top of its container at an optional height breakpoint. |
