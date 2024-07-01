@@ -4,6 +4,8 @@ section: components
 wrapperTag: div
 ---
 
+import './Page.css'
+
 ## Demos
 
 ### Basic
@@ -135,4 +137,14 @@ wrapperTag: div
     {{/card}}
   {{/page-main-section}}
 {{/inline}}
+```
+
+### Context selector in sidebar
+```hbs isFullscreen
+{{> page-template page-template--id="page-context-selector" page-template-sidebar--HasContextSelector=true}}
+```
+
+### Context selector expanded in sidebar
+```hbs isFullscreen
+{{> page-template page-template--id="page-context-selector-expanded" page-template-sidebar--HasContextSelector=true page-template-context-selector--IsExpanded=true}}
 ```

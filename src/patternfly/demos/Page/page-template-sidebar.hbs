@@ -1,4 +1,9 @@
 {{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
+  {{#if page-template-sidebar--HasContextSelector}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-context-selector"}}
+      {{> page-template-context-selector}}
+    {{/page-sidebar-body}}
+  {{/if}}
   {{#if page-template-sidebar--nav--IsExpandable}}
     {{#> page-sidebar-body}}
       {{> page-template-expandable-nav}}
