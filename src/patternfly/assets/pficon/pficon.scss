@@ -358,6 +358,24 @@
 	@if $filename == services {
 		$char: '\E947';
 	}
+	@if $filename == severity-critical {
+		$char: '\E97E';
+	}
+	@if $filename == severity-important {
+		$char: '\E97F';
+	}
+	@if $filename == severity-minor {
+		$char: '\E980';
+	}
+	@if $filename == severity-moderate {
+		$char: '\E981';
+	}
+	@if $filename == severity-none {
+		$char: '\E982';
+	}
+	@if $filename == severity-undefined {
+		$char: '\E983';
+	}
 	@if $filename == spinner {
 		$char: '\E973';
 	}
@@ -762,6 +780,24 @@
 }
 .pf-v6-pficon-services {
 	@include pf-v6-pficon(services);
+}
+.pf-v6-pficon-severity-critical {
+	@include pf-v6-pficon(severity-critical);
+}
+.pf-v6-pficon-severity-important {
+	@include pf-v6-pficon(severity-important);
+}
+.pf-v6-pficon-severity-minor {
+	@include pf-v6-pficon(severity-minor);
+}
+.pf-v6-pficon-severity-moderate {
+	@include pf-v6-pficon(severity-moderate);
+}
+.pf-v6-pficon-severity-none {
+	@include pf-v6-pficon(severity-none);
+}
+.pf-v6-pficon-severity-undefined {
+	@include pf-v6-pficon(severity-undefined);
 }
 .pf-v6-pficon-spinner {
 	@include pf-v6-pficon(spinner);
