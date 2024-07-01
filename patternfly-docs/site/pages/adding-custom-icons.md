@@ -8,7 +8,7 @@ title: Custom icon guidelines
 Below are the steps for adding a custom icon to the [pficon icons](/icons) icon font. Adding this icon in core will also add the icon to the [react-icons](https://github.com/patternfly/patternfly-react/tree/main/packages/react-icons) library as an SVG.
 
 - Get the new source SVG from design.
-- Edit `src/icons/definitions/pficons.json` to add the new icon.
+- Edit `src/icons/definitions/pficons.mjs` to add the new icon.
   - Add a new entry with a unique name (placed in alphabetical order) and the height, width, and path from the source SVG.
 - Remove the existing pficons SVGs from `src/icons/PfIcons/`. Any files there are just used to build the icon font.
 - Run `npm run build:pficons` to create the SVGs (stored in `src/icons/PfIcons/`) from `pficons.json` that will be used to build the icon font.
