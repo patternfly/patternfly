@@ -46,7 +46,7 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Drawer with jump links
+### Collapsed drawer with jump links
 ```hbs isFullscreen
 {{> drawer-jump-links drawer-jump-links--id="drawer-jump-links"}}
 ```

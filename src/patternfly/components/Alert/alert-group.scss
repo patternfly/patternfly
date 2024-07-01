@@ -3,7 +3,7 @@
 // Tabs
 :where(:root, .#{$alert-group}) {
   // Alert group variables
-  --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--md);
+  --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
 
   // Toast variables
   --#{$alert-group}--m-toast--InsetBlockStart: var(--pf-t--global--spacer--2xl);

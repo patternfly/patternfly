@@ -21,7 +21,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --#{$drawer}__panel--MaxHeight: auto;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$drawer}__panel--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$drawer}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -141,7 +141,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Box shadow
   --#{$drawer}__panel--BoxShadow: none;
-  --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-t--global--box-shadow--lg--top);
+  --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-t--global--box-shadow--md--top);
 
   // Divider
   --#{$drawer}__panel--after--Width: var(--pf-t--global--border--width--divider--default);
@@ -156,13 +156,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .#{$drawer} {
   @include pf-v6-bidirectional-style(
     $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
-    $ltr-val: var(--pf-t--global--box-shadow--lg--left),
-    $rtl-val: var(--pf-t--global--box-shadow--lg--right)
+    $ltr-val: var(--pf-t--global--box-shadow--md--left),
+    $rtl-val: var(--pf-t--global--box-shadow--md--right)
   );
   @include pf-v6-bidirectional-style(
     $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
-    $ltr-val: var(--pf-t--global--box-shadow--lg--right),
-    $rtl-val: var(--pf-t--global--box-shadow--lg--left)
+    $ltr-val: var(--pf-t--global--box-shadow--md--right),
+    $rtl-val: var(--pf-t--global--box-shadow--md--left)
   );
 
   display: flex;
