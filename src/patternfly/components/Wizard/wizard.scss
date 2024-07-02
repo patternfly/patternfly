@@ -298,12 +298,10 @@
   }
 
   &.pf-m-danger {
-    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
     --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-danger__status-icon--Color);
   }
 
   &.pf-m-success {
-    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-success__status-icon--Color);
     --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-success__status-icon--Color);
   }
 }
