@@ -49,6 +49,9 @@
   --#{$table}__tbody--after--BorderInlineStartWidth: 0;
   --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--clicked);
 
+  // * Table body responsive
+  --#{$table}__tbody--responsive--m-expandable--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+
   // * Table tr responsive
   --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$table}__tr--responsive--last-child--BorderBlockEndWidth: var(--#{$table}__tbody--responsive--border-width--base);
@@ -177,32 +180,13 @@
     }
   }
 
-  // Remove the border from the body inside of the nested table
-  .#{$table}.pf-m-compact > tbody:where(.#{$table}__tbody) {
-    border-block-start: 0;
-  }
+  // Remove border on tr inside non-expanded tbody in of expandable tables
+  &.pf-m-expandable {
+    --#{$table}__tr--BorderBlockEndWidth: 0; // nested table rows have no border
 
-  // - Table grid not expandable row
-  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-    border-block-end: var(--#{$table}__tr--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
-  }
-
-  // The last tr should always have a border width of 1px
-  tr:where(.#{$table}__tr):last-child,
-  tbody:where(.#{$table}__tbody):last-of-type:not(:only-of-type) > tr:where(.#{$table}__tr) {
-    border-block-end-width: var(--#{$table}__tr--responsive--last-child--BorderBlockEndWidth);
-  }
-
-  // - Table grid tbody expanded
-  tbody:where(.#{$table}__tbody).pf-m-expanded {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-
-    tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-      border-block-end: 0;
-    }
-
-    &:not(:last-of-type) {
-      border-block-end: var(--#{$table}__tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+    .#{$table}__tbody,
+    .#{$table}__tbody.pf-m-expanded {
+      border-block-end: var(--#{$table}__tbody--responsive--m-expandable--BorderBlockEndWidth) solid var(--#{$table}--responsive--BorderColor);
     }
   }
 
@@ -311,10 +295,6 @@
     --#{$table}__tr--responsive--PaddingInlineStart: var(--#{$table}__tr--responsive--nested-table--PaddingInlineStart);
 
     border: 0;
-
-    tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) + tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-      --#{$table}__tr--responsive--PaddingBlockStart: 0;
-    }
   }
 
   // - Table grid compound expansion toggle
