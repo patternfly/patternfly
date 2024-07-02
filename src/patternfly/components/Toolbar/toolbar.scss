@@ -60,6 +60,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // * Toolbar sticky
   --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$toolbar}--m-sticky--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
@@ -151,6 +153,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     position: sticky;
     inset-block-start: 0;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
+    padding-block-start: var(--#{$toolbar}--m-sticky--PaddingBlockStart);
+    padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
   }
 
@@ -352,15 +356,27 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       }
     }
 
-    // - Toolbar - Toolbar content - Toolbar content section
-    .#{$toolbar},
-    .#{$toolbar}__content,
-    .#{$toolbar}__content-section {
-      // Inset modifiers
-      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
-        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
-          padding-inline: #{$inset-value};
-        }
+    // - Toolbar inset
+    @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
+      .#{$toolbar}.pf-m-inset-#{$inset}#{$breakpoint-name} {
+        --#{$toolbar}--PaddingInlineStart: #{$inset-value};
+        --#{$toolbar}--PaddingInlineEnd: #{$inset-value};
+      }
+    }
+
+    // - Toolbar content section
+    @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
+      .#{$toolbar}__content.pf-m-inset-#{$inset}#{$breakpoint-name} {
+        --#{$toolbar}__content--PaddingInlineStart: #{$inset-value};
+        --#{$toolbar}__content--PaddingInlineStart: #{$inset-value};
+      }
+    }
+
+    // - Toolbar content section inset
+    @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
+      .#{$toolbar}__content-section.pf-m-inset-#{$inset}#{$breakpoint-name} {
+        --#{$toolbar}__content-section--PaddingInlineStart: #{$inset-value};
+        --#{$toolbar}__content-section--PaddingInlineStart: #{$inset-value};
       }
     }
 

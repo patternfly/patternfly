@@ -1,4 +1,4 @@
-{{#unless toolbar-toggle-group--HasNoFilters}}
+{{#unless toolbar-toggle-group--HasNoFilter}}
   {{#> toolbar-group toolbar-group--IsFilterGroup=true}}
     {{#> toolbar-item}}
       {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-status' (ternary IsExpandableContentSection 'expandable' null)) menu-toggle--text='Status'}}
