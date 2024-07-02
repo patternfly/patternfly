@@ -148,7 +148,7 @@ Several components in the following examples do not include functional and/or ac
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-column-gap-[none/sm/md/lg]` | `.pf-v6-c-toolbar__group` | Modifies toolbar group child spacing. |
-| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar` | Modifies toolbar horizontal. |
+| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar`, `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section` | Modifies toolbar horizontal. |
 
 ### Width control
 ```hbs
@@ -358,7 +358,7 @@ Several components in the following examples do not include functional and/or ac
 {{#> toolbar toolbar--id="toolbar-stacked-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
-      {{> toolbar-group-label-container}}
+
       {{> toolbar-group-action-overflow-menu overflow-menu--IsVisible=true}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
@@ -380,7 +380,7 @@ Several components in the following examples do not include functional and/or ac
       {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
-      {{> toolbar-group-label-container}}
+      {{> toolbar-group-label-group}}
     {{/toolbar-expandable-content}}
   {{/toolbar-content}}
   {{> divider}}

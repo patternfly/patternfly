@@ -2,7 +2,6 @@
 {{#ifEquals context 'IsExpandableContentSection'}}
   {{> toolbar-group-search}}
   {{> toolbar-group-filter}}
-{{!-- if toggle group is in content --}}
 {{else}}
   {{#> toolbar-group toolbar-group--IsToggleGroup=true toolbar-group--modifier=toggle--Show}}
     {{> toolbar-toggle}}
