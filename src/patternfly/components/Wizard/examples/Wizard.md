@@ -461,150 +461,22 @@ import './Wizard.css'
 
 ### Error on step
 ```hbs isFullscreen
-{{#> wizard wizard--id="wizard-error-on-step"}}
-  {{#> wizard-header}}
-    {{> wizard-close}}
-    {{> wizard-title wizard-title-text--value="Wizard title"}}
-    {{#> wizard-description}}
-      Here is where the description goes
-    {{/wizard-description}}
-  {{/wizard-header}}
-  {{#> wizard-toggle}}
-    {{#> wizard-toggle-list}}
-        {{#> wizard-toggle-list-item wizard-toggle-list-item--IsDanger='true'}}
-          Configuration
-          {{> wizard-toggle-separator}}
-        {{/wizard-toggle-list-item}}
-        {{#> wizard-toggle-list-item}}
-          Substep B
-        {{/wizard-toggle-list-item}}
-      {{/wizard-toggle-list}}
-      {{> wizard-toggle-icon}}
-    {{/wizard-toggle}}
-    {{#> wizard-outer-wrap}}
-      {{#> wizard-inner-wrap}}
-        {{#> wizard-nav}}
-          {{#> wizard-nav-list}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Information
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"  wizard-nav-item--IsDanger='true'}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
-                Configuration
-              {{/wizard-nav-link}}
-              {{#> wizard-nav-list}}
-                {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link}}
-                    Substep A
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
-                    Substep B
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link}}
-                    Substep C
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-              {{/wizard-nav-list}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Additional
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
-                Review
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-          {{/wizard-nav-list}}
-        {{/wizard-nav}}
-      {{#> wizard-main}}
-        {{> __wizard-form}}
-      {{/wizard-main}}
-    {{/wizard-inner-wrap}}
-    {{> wizard-footer}}
-  {{/wizard-outer-wrap}}
-{{/wizard}}
+{{> wizard--status wizard--status--id="error-on-step" wizard--status--IsDanger=true}}
 ```
 
 ### Nav expanded with error (mobile)
 ```hbs isFullscreen
-{{#> wizard wizard--id="wizard-nav-expanded-error-mobile" wizard--IsExpanded="true"}}
-  {{#> wizard-header}}
-    {{> wizard-close}}
-    {{> wizard-title wizard-title-text--value="Wizard title"}}
-    {{#> wizard-description}}
-      Here is where the description goes
-    {{/wizard-description}}
-  {{/wizard-header}}
-  {{#> wizard-toggle}}
-    {{#> wizard-toggle-list}}
-      {{#> wizard-toggle-list-item wizard-toggle-list-item--IsDanger='true'}}
-        Configuration
-        {{> wizard-toggle-separator}}
-      {{/wizard-toggle-list-item}}
-      {{#> wizard-toggle-list-item}}
-        Substep B
-      {{/wizard-toggle-list-item}}
-    {{/wizard-toggle-list}}
-    {{> wizard-toggle-icon}}
-  {{/wizard-toggle}}
-  {{#> wizard-outer-wrap}}
-    {{#> wizard-inner-wrap}}
-      {{#> wizard-nav}}
-        {{#> wizard-nav-list}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link}}
-              Information
-            {{/wizard-nav-link}}
-          {{/wizard-nav-item}}
-          {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true" wizard-nav-item--IsDanger='true'}}
-            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
-              Configuration
-            {{/wizard-nav-link}}
-            {{#> wizard-nav-list}}
-              {{#> wizard-nav-item newcontext}}
-                {{#> wizard-nav-link}}
-                  Substep A
-                {{/wizard-nav-link}}
-              {{/wizard-nav-item}}
-              {{#> wizard-nav-item newcontext}}
-                {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
-                  Substep B
-                {{/wizard-nav-link}}
-              {{/wizard-nav-item}}
-              {{#> wizard-nav-item newcontext}}
-                {{#> wizard-nav-link}}
-                  Substep C
-                {{/wizard-nav-link}}
-              {{/wizard-nav-item}}
-            {{/wizard-nav-list}}
-          {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link}}
-              Additional
-            {{/wizard-nav-link}}
-          {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
-              Review
-            {{/wizard-nav-link}}
-          {{/wizard-nav-item}}
-        {{/wizard-nav-list}}
-      {{/wizard-nav}}
-      {{#> wizard-main}}
-        {{> __wizard-form}}
-      {{/wizard-main}}
-    {{/wizard-inner-wrap}}
-    {{> wizard-footer}}
-  {{/wizard-outer-wrap}}
-{{/wizard}}
+{{> wizard--status wizard--status--IsExpanded=true  wizard--status--id="error-on-step-nav-expanded" wizard--status--IsDanger=true}}
+```
+
+### Success on step
+```hbs isFullscreen
+{{> wizard--status wizard--status--id="success-on-step" wizard--status--IsSuccess=true}}
+```
+
+### Nav expanded with success (mobile)
+```hbs isFullscreen
+{{> wizard--status wizard--status--IsExpanded=true  wizard--status--id="success-on-step-nav-expanded" wizard--status--IsSuccess=true}}
 ```
 
 
@@ -661,5 +533,6 @@ import './Wizard.css'
 | `.pf-m-expanded` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the disabled state. |
+| `.pf-m-success` | `.pf-v6-c-wizard__nav-link`, `.pf-v6-c-wizard__toggle-list-item` | Modifies a step link to indicate success status. |
 | `.pf-m-danger` | `.pf-v6-c-wizard__nav-link`, `.pf-v6-c-wizard__toggle-list-item` | Modifies a step link to indicate danger status. |
 | `.pf-m-no-padding` | `.pf-v6-c-wizard__main-body` | Modifies the main container body to remove the padding. |
