@@ -48,11 +48,11 @@
   --#{$alert}__description--PaddingBlockStart: var(--pf-t--global--spacer--xs);
 
   // Action group
-  --#{$alert}__action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--xs);
+  --#{$alert}__action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--sm);
   --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__action-group--PaddingBlockStart-base);
   --#{$alert}__description--action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--sm);
   --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart-base);
-  --#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
 
   // Custom
   --#{$alert}--m-custom--BorderColor: var(--pf-t--global--border--color--status--custom--default);
@@ -236,8 +236,6 @@
   padding-block-start: var(--#{$alert}__action-group--PaddingBlockStart);
 
   > .#{$button} {
-    --#{$button}--m-link--m-inline--hover--TextDecoration: none;
-
     &:not(:last-child) {
       margin-inline-end: var(--#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd);
     }

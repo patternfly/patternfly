@@ -50,13 +50,13 @@
   --#{$empty-state}--m-xl__body--MarginBlockStart: var(--pf-t--global--spacer--xl);
 
   // Footer
-  --#{$empty-state}__footer--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$empty-state}__footer--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
   --#{$empty-state}__footer--MarginBlockStart: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--m-xs__footer--MarginBlockStart: var(--pf-t--global--spacer--md);
 
   // Actions
-  --#{$empty-state}__actions--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$empty-state}__actions--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$empty-state}__actions--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$empty-state}__actions--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
 .#{$empty-state} {
