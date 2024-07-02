@@ -1,0 +1,26 @@
+{{#> toolbar-group}}
+  {{#> toolbar-group toolbar-group--IsLabelGroup=true}}
+    {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-resource-label')}}
+      Resource
+    {{/toolbar-item}}
+    {{#> toolbar-item}}
+      {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-resource') menu-toggle--text='Pod'}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  {{#> toolbar-group toolbar-group--IsLabelGroup=true}}
+    {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-status-label')}}
+      Status
+    {{/toolbar-item}}
+    {{#> toolbar-item}}
+      {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-status') menu-toggle--text='Running'}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+  {{#> toolbar-group toolbar-group--IsLabelGroup=true}}
+    {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-type-label')}}
+      Type
+    {{/toolbar-item}}
+    {{#> toolbar-item}}
+      {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-type') menu-toggle--text='Any'}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+{{/toolbar-group}}

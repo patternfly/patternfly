@@ -1,0 +1,12 @@
+{{#unless toolbar-group--HasNoSearch}}
+  {{#> toolbar-item toolbar-item--IsSearchFilter=true}}
+    {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
+      {{#> input-group-item}}
+        {{> menu-toggle menu-toggle--id=(dasherize toolbar--id (ternary IsExpandableContentSection 'expandable' null) 'search-filter-menu') menu-toggle--text=(ternary toolbar-items-search-filter--text toolbar-items-search-filter--text 'Name')}}
+      {{/input-group-item}}
+      {{#> input-group-item input-group-item--IsFill=true}}
+        {{> text-input-group--search-input text-input-group--id=(ternary IsExpandableContentSection 'expandable' null) text-input-group-text-input--placeholder="Find by name"}}
+      {{/input-group-item}}
+    {{/input-group}}
+  {{/toolbar-item}}
+{{/unless}}

@@ -1,11 +1,26 @@
-<div class="{{pfv}}toolbar__group
-  {{setModifiers
-    toolbar-group--IsLabelGroupContainer='pf-m-label-group-container'
-    toolbar-group--IsLabelGroup='pf-m-label-group'
-    toolbar-group--modifier=toolbar-group--modifier
-  }}"
-  {{#if toolbar-group--attribute}}
-    {{{toolbar-group--attribute}}}
-  {{/if}}>
-  {{> @partial-block}}
-</div>
+{{#>config toolbar-toggle-group--IsShown=(concat toolbar-toggle-group--Show toolbar-toggle-group--ShowOn)}}
+
+  <div class="{{pfv}}toolbar__group
+    {{#if toolbar-toggle-group--IsShown}}
+      pf-m-show{{ternary toolbar-toggle-group--ShowOn (dasherize 'on' toolbar-toggle-group--ShowOn) null}}
+    {{/if}}
+    {{setModifiers
+      toolbar-group--IsLabelGroupContainer='pf-m-label-group-container'
+      toolbar-group--IsLabelGroup='pf-m-label-group'
+      toolbar-group--IsToggleGroup='pf-m-toggle-group'
+      toolbar-group--IsActionGroup='pf-m-action-group'
+      toolbar-group--IsActionGroupPlain='pf-m-action-group-plain'
+      toolbar-group--IsActionGroupInline='pf-m-action-group-inline'
+      toolbar-group--IsFilterGroup='pf-m-filter-group'
+      toolbar-group--IsLabelContainer='pf-m-label-group'
+      toolbar-group--modifier=toolbar-group--modifier
+    }}"
+    {{#if toolbar-group--attribute}}
+      {{{toolbar-group--attribute}}}
+    {{/if}}>
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+  </div>
+
+{{/config}}
