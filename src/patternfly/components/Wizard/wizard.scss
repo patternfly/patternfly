@@ -83,6 +83,7 @@
   // Nav link status icon
   --#{$wizard}__nav-link-status-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__nav-link--m-success__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$wizard}__nav-link-status-icon--InsetBlockStart: 4px; // not spacer-based but needed to align
   --#{$wizard}__nav-link-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
 
@@ -107,7 +108,8 @@
   // Toggle status icon
   --#{$wizard}__nav-link-status-icon--LineHeight: 1;
   --#{$wizard}__toggle-status-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$wizard}__toggle--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__toggle-list-item--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__toggle-list-item--m-success__status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$wizard}__toggle-status-icon--InsetBlockStart: 2px; // not spacer-based but needed to align
   --#{$wizard}__toggle-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
 
@@ -297,7 +299,12 @@
 
   &.pf-m-danger {
     --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
-    --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
+    --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-danger__status-icon--Color);
+  }
+
+  &.pf-m-success {
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-success__status-icon--Color);
+    --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-success__status-icon--Color);
   }
 }
 
@@ -474,12 +481,18 @@
     }
   }
 
-  &.pf-m-danger {
-    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
-
+  &:is(.pf-m-success, .pf-m-danger) {
     &::before {
       display: none;
     }
+  }
+
+  &.pf-m-success {
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-success__nav-link-status-icon--Color);
+  }
+
+  &.pf-m-danger {
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color);
   }
 
   &:where(:hover, :focus) {
