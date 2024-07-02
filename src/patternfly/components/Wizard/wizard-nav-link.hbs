@@ -2,6 +2,9 @@
   {{~#if wizard-nav-link--IsCurrent}}
     pf-m-current
   {{/if}}
+  {{~#if wizard-nav-item--IsSuccess}}
+    pf-m-success
+  {{/if}}
   {{~#if wizard-nav-item--IsDanger}}
     pf-m-danger
   {{/if}}
@@ -37,11 +40,9 @@
   {{#if wizard-nav-link--attribute}}
     {{{wizard-nav-link--attribute}}}
   {{/if}}>
-  {{#if wizard-nav-item--IsDanger}}
-    {{#> wizard-nav-link-status-icon}}
-      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-    {{/wizard-nav-link-status-icon}}
-  {{/if}}
+  {{#ifAny wizard-nav-item--IsSuccess wizard-nav-item--IsDanger}}
+    {{> wizard-nav-link-status-icon}}
+  {{/ifAny}}
   {{#> wizard-nav-link-main}}
     {{#> wizard-nav-link-text}}
       {{> @partial-block}}

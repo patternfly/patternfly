@@ -2,5 +2,5 @@
   {{#if wizard-nav-link-status-icon--attribute}}
     {{{wizard-nav-link-status-icon--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  <i class="fas fa-{{ternary wizard-nav-item--IsSuccess 'check-circle' 'exclamation-circle'}}" aria-hidden="true"></i>
 </span>
