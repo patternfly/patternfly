@@ -154,3 +154,4 @@ cssPrefix: pf-v6-c-notification-drawer
 | `.pf-m-hoverable` | `.pf-v6-c-notification-drawer__list-item` | Modifies a notification list item hover states to inidicate it is clickable. |
 | `.pf-m-expanded` | `.pf-v6-c-notification-drawer__group` | Modifies a notification group for the expanded state. |
 | `.pf-m-truncate` | `.pf-v6-c-notification-drawer__list-item-header-title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-v6-c-notification-drawer__list-item-header-title--max-lines` (the default value is `1`). |
+| `.pf-m-no-offset` | `.pf-v6-c-notification-drawer__list-item-action` | Modifies a notification item action to remove the vertical offset for action alignment. |
