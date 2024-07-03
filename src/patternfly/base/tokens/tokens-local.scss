@@ -124,12 +124,5 @@
   --pf-t--global--list-style: disc outside;
 
   // Compact/Spacious spacers - TO BE DELETED ONCE FIGMA IS UPDATED
-  --pf-t--global--spacer--action--vertical--spacious: var(--pf-t--global--spacer--md);
-  --pf-t--global--spacer--action--horizontal--spacious: var(--pf-t--global--spacer--xl);
-  --pf-t--global--spacer--action--vertical--compact: var(--pf-t--global--spacer--xs);
-  --pf-t--global--spacer--action--horizontal--compact: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--action--horizontal--plain--compact: var(--pf-t--global--spacer--xs);
-  --pf-t--global--spacer--control--vertical--compact: var(--pf-t--global--spacer--xs);
-  --pf-t--global--spacer--control--horizontal--compact: var(--pf-t--global--spacer--md);
-  --pf-t--global--spacer--control--horizontal--spacious: var(--pf-t--global--spacer--lg);
 }
