@@ -357,26 +357,11 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     }
 
     // - Toolbar inset
-    @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
-      .#{$toolbar}.pf-m-inset-#{$inset}#{$breakpoint-name} {
-        --#{$toolbar}--PaddingInlineStart: #{$inset-value};
-        --#{$toolbar}--PaddingInlineEnd: #{$inset-value};
-      }
-    }
-
-    // - Toolbar content section
-    @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
-      .#{$toolbar}__content.pf-m-inset-#{$inset}#{$breakpoint-name} {
-        --#{$toolbar}__content--PaddingInlineStart: #{$inset-value};
-        --#{$toolbar}__content--PaddingInlineStart: #{$inset-value};
-      }
-    }
-
-    // - Toolbar content section inset
-    @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
-      .#{$toolbar}__content-section.pf-m-inset-#{$inset}#{$breakpoint-name} {
-        --#{$toolbar}__content-section--PaddingInlineStart: #{$inset-value};
-        --#{$toolbar}__content-section--PaddingInlineStart: #{$inset-value};
+    .#{$toolbar} {
+      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
+        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
+          padding-inline: #{$inset-value};
+        }
       }
     }
 

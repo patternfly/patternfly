@@ -148,7 +148,7 @@ Several components in the following examples do not include functional and/or ac
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-column-gap-[none/sm/md/lg]` | `.pf-v6-c-toolbar__group` | Modifies toolbar group child spacing. |
-| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar`, `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section` | Modifies toolbar horizontal. |
+| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar` | Modifies toolbar horizontal. |
 
 ### Width control
 ```hbs
