@@ -98,9 +98,8 @@
   --#{$data-list}__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$data-list}__item-action--md--MarginInlineStart: var(--pf-t--global--spacer--xl);
   --#{$data-list}__item-action--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$data-list}__item-action__action--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
-  --#{$data-list}__action--MarginBlockStart: var(--#{$data-list}__item-action__action--MarginBlockStart); // update at breaking change
-  --#{$data-list}__item-action__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1); // former form-element
+  --#{$data-list}__item-action__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$data-list}__item-action__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
 
   // expandable content
   --#{$data-list}__expandable-content--BackgroundColor: var( --pf-t--global--background--color--primary--default);
@@ -333,7 +332,7 @@
 
   // offset action button
   .#{$data-list}__action {
-    margin-block-start: var(--#{$data-list}__action--MarginBlockStart);
+    margin-block-start: var(--#{$data-list}__item-action__action--MarginBlockEnd);
     margin-block-end: var(--#{$data-list}__item-action__action--MarginBlockEnd);
   }
 }

@@ -103,7 +103,7 @@
   --#{$table}--m-compact__check--responsive--MarginBlockStart: #{pf-size-prem(7px)};
   --#{$table}--m-compact__action--responsive--MarginBlockStart: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$table}--m-compact__action--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
-  --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
 
   // * Table grid expandable row content
   --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -119,7 +119,6 @@
   --#{$table}--m-grid__check--favorite--MarginInlineStart: var(--pf-t--global--spacer--xl);
 
   // * Table grid action
-  --#{$table}--m-grid__action--MarginBlockStart: #{pf-size-prem(6px)};
   --#{$table}__action--responsive--MarginInlineStart: var(--pf-t--global--spacer--xl);
   --#{$table}--m-grid__favorite--action--MarginInlineStart: var(--pf-t--global--spacer--2xl);
   --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
@@ -504,7 +503,6 @@
 
   // - Table grid action
   .#{$table}__action {
-    margin-block-start: var(--#{$table}--m-grid__action--MarginBlockStart);
     text-align: end;
 
     // @smallest breakpoint
