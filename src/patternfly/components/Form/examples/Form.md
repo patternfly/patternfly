@@ -226,6 +226,28 @@ cssPrefix: pf-v6-c-form
 {{/form}}
 ```
 
+### Label with additional info (horizontal form)
+```hbs
+{{#> form form--modifier="pf-m-horizontal" form--id="form-additional-info-horizontal"}}
+  {{#> form-group form-group--id=(concat form--id '-name')}}
+    {{#> form-group-label form-group-label-info="true"}}
+      {{#> form-group-label-main}}
+        {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required=true}}
+          Name
+        {{/form-label}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+      {{/form-group-label-main}}
+      {{#> form-group-label-info}}
+        info
+      {{/form-group-label-info}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+{{/form}}
+```
+
 ### Action group
 ```hbs
 {{#> form}}
