@@ -98,6 +98,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // Form group label info
   --#{$form}__group-label-info--MarginLeft: var(--#{$pf-global}--spacer--sm);
   --#{$form}__group-label-info--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$form}--m-horizontal__group-label--m-info--Gap: var(--#{$pf-global}--spacer--sm);
 
   // Group control
   --#{$form}__group-control--m-inline--child--MarginRight: var(--#{$pf-global}--spacer--lg);
@@ -253,11 +254,23 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   &.pf-m-info {
     display: flex;
     align-items: flex-end;
+
+    .#{$form}.pf-m-horizontal & {
+      --#{$form}__group-label-info--MarginLeft: 0;
+
+      flex-direction: column;
+      gap: var(--#{$form}--m-horizontal__group-label--m-info--Gap);
+      align-items: flex-start;
+    }
   }
 }
 
 .#{$form}__group-label-main {
   flex-grow: 1;
+
+  .#{$form}.pf-m-horizontal & {
+    flex-grow: 0;
+  }
 }
 
 .#{$form}__group-label-info {
