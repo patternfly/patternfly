@@ -7,6 +7,8 @@
   --#{$text-input-group}__main--m-warning--BorderColor: var(--pf-t--global--border--color--status--warning--default);
   --#{$text-input-group}__main--m-error--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$text-input-group}--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$text-input-group}__LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$text-input-group}__FontSize: var(--pf-t--global--font--size--body--default);
 
   // Border hover
   --#{$text-input-group}--m-hover--BorderColor: var(--pf-t--global--border--color--hover);
@@ -28,7 +30,7 @@
   --#{$text-input-group}__text--BorderStartEndRadius: var(--#{$text-input-group}__text--BorderRadius--base);
   --#{$text-input-group}__text--BorderEndEndRadius: var(--#{$text-input-group}__text--BorderRadius--base);
   --#{$text-input-group}__text--BorderEndStartRadius: var(--#{$text-input-group}__text--BorderRadius--base);
-  --#{$text-input-group}__text--Position: initial;
+  --#{$text-input-group}__text--Position: revert;
 
   // Label group
   --#{$text-input-group}--c-label-group__main--PaddingBlockStart: var(--pf-t--global--spacer--xs);
@@ -50,7 +52,9 @@
   --#{$text-input-group}__icon--InsetInlineStart: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$text-input-group}--m-disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$text-input-group}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
+  --#{$text-input-group}--m-disabled__icon--m-status--Color: var(--pf-t--global--icon--color--disabled);
   --#{$text-input-group}__main--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$text-input-group}__main--m-warning__icon--m-status--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$text-input-group}__main--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
@@ -70,39 +74,10 @@
   position: relative;
   display: flex;
   width: 100%; // when child of flex layout, take up space
+  font-size: var(--#{$text-input-group}__FontSize);
+  line-height: var(--#{$text-input-group}__LineHeight);
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
-
-  &:hover {
-    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-hover--BorderColor);
-  }
-
-  &.pf-m-disabled {
-    --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
-    --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled--Color);
-    --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}--m-disabled--Color);
-    --#{$text-input-group}--BackgroundColor: var(--#{$text-input-group}--m-disabled--BackgroundColor);
-
-    pointer-events: none;
-  }
-
-  &.pf-m-plain {
-    --#{$text-input-group}--BackgroundColor: transparent;
-
-    .#{$text-input-group}__main {
-      &::before {
-        border: 0;
-      }
-    }
-  }
-}
-
-.#{$text-input-group}__main {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  gap: var(--#{$text-input-group}__main--RowGap) var(--#{$text-input-group}__main--ColumnGap);
-  min-width: 0;
 
   &::before {
     position: absolute;
@@ -115,13 +90,26 @@
     border-end-start-radius: var(--#{$text-input-group}__text--BorderEndStartRadius);
     border-end-end-radius: var(--#{$text-input-group}__text--BorderEndEndRadius);
   }
-  
-  &:where(.pf-m-icon, .pf-m-succes, .pf-m-warning, .pf-m-error) {
-    --#{$text-input-group}__text--Position: relative;
+
+  &:hover {
+    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-hover--BorderColor);
   }
 
-  &.pf-m-icon {
-    --#{$text-input-group}__text-input--PaddingInlineStart: var(--#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart);
+  &.pf-m-disabled {
+    --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
+    --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled__icon--Color);
+    --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}--m-disabled__icon--m-status--Color);
+    --#{$text-input-group}--BackgroundColor: var(--#{$text-input-group}--m-disabled--BackgroundColor);
+
+    pointer-events: none;
+  }
+
+  &.pf-m-plain {
+    --#{$text-input-group}--BackgroundColor: transparent;
+
+    &::before {
+      border: 0;
+    }    
   }
 
   &.pf-m-success {
@@ -141,9 +129,27 @@
     --#{$text-input-group}--m-hover--BorderColor: var(--#{$text-input-group}--m-hover__main--m-error--BorderColor);
     --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-error__icon--m-status--Color);  
   }
-
+  
   &:where(.pf-m-success, .pf-m-warning, .pf-m-error) {
     --#{$text-input-group}__text-input--PaddingInlineEnd: var(--#{$text-input-group}__main--m-status__text-input--PaddingInlineEnd);
+  }
+}
+
+.#{$text-input-group}__main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: var(--#{$text-input-group}__main--RowGap) var(--#{$text-input-group}__main--ColumnGap);
+  min-width: 0;
+  
+  &.pf-m-icon {
+    --#{$text-input-group}__text--Position: relative;
+    --#{$text-input-group}__text-input--PaddingInlineStart: var(--#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: calc(var(--#{$text-input-group}__LineHeight) * var(--#{$text-input-group}__FontSize));
   }
 
   > :first-child:not(.#{$text-input-group}__text) {

@@ -1,7 +1,7 @@
-{{#if text-input-group-main--IsSuccess }}
-  <i class="fas fa-check-circle"></i>
-{{else if text-input-group-main--IsWarning }}
-  <i class="fas fa-exclamation-triangle"></i>
-{{else if text-input-group-main--IsError }}
-  <i class="fas fa-exclamation-circle"></i>
+{{#if text-input-group--IsSuccess }}
+  <i aria-hidden="true" class="fas fa-check-circle"></i>
+{{else if text-input-group--IsWarning }}
+  <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
+{{else if text-input-group--IsError }}
+  <i aria-hidden="true" class="fas fa-exclamation-circle"></i>
 {{/if}}
