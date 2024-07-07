@@ -80,7 +80,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__group--m-label-group--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
 
   // * Toolbar group action group
-  --#{$toolbar}__group--m-action-group--ColumnGap: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$toolbar}__group--m-action-group--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 
   // * Toolbar group action group plain
   --#{$toolbar}__group--m-action-group-plain--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
