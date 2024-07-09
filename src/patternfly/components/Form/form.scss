@@ -96,7 +96,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__group-label-help--focus--Color: var(--#{$pf-global}--Color--100);
 
   // Form group label info
-  --#{$form}__group-label-info--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$form}__group-label--m-info--Gap: var(--#{$pf-global}--spacer--sm);
   --#{$form}__group-label-info--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$form}--m-horizontal__group-label--m-info--Gap: var(--#{$pf-global}--spacer--sm);
 
@@ -202,12 +202,23 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
       .#{$form}__group-label {
         padding-block-start: var(--#{$form}--m-horizontal__group-label--md--PaddingTop);
 
-        // stylelint-disable-next-line
+        // stylelint-disable max-nesting-depth
         &.pf-m-no-padding-top {
           --#{$form}--m-horizontal__group-label--md--PaddingTop: var(--#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingTop);
 
           transform: translateY(var(--#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY));
         }
+
+        &.pf-m-info {
+          flex-direction: column;
+          gap: var(--#{$form}--m-horizontal__group-label--m-info--Gap);
+          align-items: flex-start;
+        }
+        // stylelint-enable
+      }
+
+      .#{$form}__group-label-main {
+        flex-grow: 0;
       }
 
       .#{$form}__group-control {
@@ -253,28 +264,16 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   &.pf-m-info {
     display: flex;
+    gap: var(--#{$form}__group-label--m-info--Gap);
     align-items: flex-end;
-
-    .#{$form}.pf-m-horizontal & {
-      --#{$form}__group-label-info--MarginLeft: 0;
-
-      flex-direction: column;
-      gap: var(--#{$form}--m-horizontal__group-label--m-info--Gap);
-      align-items: flex-start;
-    }
   }
 }
 
 .#{$form}__group-label-main {
   flex-grow: 1;
-
-  .#{$form}.pf-m-horizontal & {
-    flex-grow: 0;
-  }
 }
 
 .#{$form}__group-label-info {
-  margin-inline-start: var(--#{$form}__group-label-info--MarginLeft);
   font-size: var(--#{$form}__group-label-info--FontSize);
 }
 
