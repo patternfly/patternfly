@@ -3,7 +3,7 @@
 $pf-v6-l-gallery--breakpoint-map: build-breakpoint-map();
 
 :where(:root, .#{$gallery}) {
-  --#{$gallery}--m-gutter--GridGap: var(--pf-t--global--spacer--lg);
+  --#{$gallery}--m-gutter--GridGap: var(--pf-t--global--spacer--gutter--default);
   --#{$gallery}--GridTemplateColumns--min: 250px;
   --#{$gallery}--GridTemplateColumns--minmax--min: var(--#{$gallery}--GridTemplateColumns--min);
   --#{$gallery}--GridTemplateColumns--max: 1fr;
