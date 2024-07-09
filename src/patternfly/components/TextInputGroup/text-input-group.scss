@@ -94,10 +94,6 @@
     border-end-end-radius: var(--#{$text-input-group}__text--BorderEndEndRadius);
   }
 
-  &:hover {
-    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-hover--BorderColor);
-  }
-
   &.pf-m-disabled {
     --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
     --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled__icon--Color);
@@ -133,6 +129,10 @@
     --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-error__icon--m-status--Color);  
   }
   
+  &:hover {
+    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-hover--BorderColor);
+  }
+
   &:where(.pf-m-success, .pf-m-warning, .pf-m-error) {
     --#{$text-input-group}__text-input--PaddingInlineEnd: var(--#{$text-input-group}--status__text-input--PaddingInlineEnd);
   }
