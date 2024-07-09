@@ -257,10 +257,15 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     }
 
     &::before {
+      position: revert;
       font-weight: var(--pf-t--global--font--weight--body--bold);
       text-align: start;
       content: attr(data-label);
     }
+  }
+
+  .#{$table}__tr > :where(th, td).pf-m-border-right::before {
+    border-inline-end: 0;
   }
 
   // - Table tree view tr tree view details expanded
