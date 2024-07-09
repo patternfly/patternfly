@@ -269,6 +269,7 @@
     }
 
     &::before {
+      position: revert;
       font-weight: bold;
       text-align: start;
       content: attr(data-label);
