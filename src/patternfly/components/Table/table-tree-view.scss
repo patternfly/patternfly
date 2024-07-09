@@ -279,7 +279,10 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
   // - Table tree view title header cell
   .#{$table}__tree-view-title-header-cell {
-    display: block;
+    display: flex;
+    width: auto;
+    min-width: auto;
+    max-width: none;
   }
 
   // - Table tree view details toggle - Table tree view action
