@@ -3,14 +3,24 @@
 :where(:root, .#{$text-input-group}) {
   --#{$text-input-group}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$text-input-group}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$text-input-group}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
+  --#{$text-input-group}--m-warning--BorderColor: var(--pf-t--global--border--color--status--warning--default);
+  --#{$text-input-group}--m-error--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$text-input-group}--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$text-input-group}__LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$text-input-group}__FontSize: var(--pf-t--global--font--size--body--default);
 
   // Border hover
   --#{$text-input-group}--m-hover--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$text-input-group}--m-hover--m-success--BorderColor: var(--pf-t--global--border--color--status--success--hover);
+  --#{$text-input-group}--m-hover--m-warning--BorderColor: var(--pf-t--global--border--color--status--warning--hover);
+  --#{$text-input-group}--m-hover--m-error--BorderColor: var(--pf-t--global--border--color--status--danger--hover);
+  
 
   // Main
   --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: var(--pf-t--global--spacer--xs);
   --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$text-input-group}--status__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
   --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
@@ -39,7 +49,14 @@
 
   // Icon
   --#{$text-input-group}__icon--InsetInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$text-input-group}--m-disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$text-input-group}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
+  --#{$text-input-group}--m-disabled__icon--m-status--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$text-input-group}__main--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$text-input-group}__main--m-warning__icon--m-status--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$text-input-group}__main--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$text-input-group}__icon--TranslateY: -50%;
 
   // Utilities
@@ -56,16 +73,31 @@
   position: relative;
   display: flex;
   width: 100%; // when child of flex layout, take up space
+  font-size: var(--#{$text-input-group}__FontSize);
+  line-height: var(--#{$text-input-group}__LineHeight);
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
+  border-start-start-radius: var(--#{$text-input-group}__text--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$text-input-group}__text--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$text-input-group}__text--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$text-input-group}__text--BorderEndEndRadius);
 
-  &:hover {
-    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-hover--BorderColor);
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$text-input-group}--BorderWidth) solid var(--#{$text-input-group}--BorderColor);
+    border-start-start-radius: var(--#{$text-input-group}__text--BorderStartStartRadius);
+    border-start-end-radius: var(--#{$text-input-group}__text--BorderStartEndRadius);
+    border-end-start-radius: var(--#{$text-input-group}__text--BorderEndStartRadius);
+    border-end-end-radius: var(--#{$text-input-group}__text--BorderEndEndRadius);
   }
 
   &.pf-m-disabled {
     --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
-    --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled--Color);
+    --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled__icon--Color);
+    --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}--m-disabled__icon--m-status--Color);
     --#{$text-input-group}--BackgroundColor: var(--#{$text-input-group}--m-disabled--BackgroundColor);
 
     pointer-events: none;
@@ -74,11 +106,35 @@
   &.pf-m-plain {
     --#{$text-input-group}--BackgroundColor: transparent;
 
-    .#{$text-input-group}__text {
-      &::before {
-        border: 0;
-      }
-    }
+    &::before {
+      border: 0;
+    }    
+  }
+
+  &.pf-m-success {
+    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-success--BorderColor);
+    --#{$text-input-group}--m-hover--BorderColor: var(--#{$text-input-group}--m-hover--m-success--BorderColor);
+    --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-success__icon--m-status--Color);  
+  }
+
+  &.pf-m-warning {
+    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-warning--BorderColor);
+    --#{$text-input-group}--m-hover--BorderColor: var(--#{$text-input-group}--m-hover--m-warning--BorderColor);
+    --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-warning__icon--m-status--Color);  
+  }
+
+  &.pf-m-error {
+    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-error--BorderColor);
+    --#{$text-input-group}--m-hover--BorderColor: var(--#{$text-input-group}--m-hover--m-error--BorderColor);
+    --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-error__icon--m-status--Color);  
+  }
+  
+  &:hover {
+    --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-hover--BorderColor);
+  }
+
+  &:where(.pf-m-success, .pf-m-warning, .pf-m-error) {
+    --#{$text-input-group}__text-input--PaddingInlineEnd: var(--#{$text-input-group}--status__text-input--PaddingInlineEnd);
   }
 }
 
@@ -88,9 +144,15 @@
   flex-wrap: wrap;
   gap: var(--#{$text-input-group}__main--RowGap) var(--#{$text-input-group}__main--ColumnGap);
   min-width: 0;
-
+  
   &.pf-m-icon {
+    --#{$text-input-group}__text--Position: relative;
     --#{$text-input-group}__text-input--PaddingInlineStart: var(--#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: calc(var(--#{$text-input-group}__LineHeight) * var(--#{$text-input-group}__FontSize));
   }
 
   > :first-child:not(.#{$text-input-group}__text) {
@@ -107,22 +169,11 @@
 }
 
 .#{$text-input-group}__text {
+  position: var(--#{$text-input-group}__text--Position, revert);
   display: inline-grid;
   flex: 1;
   grid-template-areas: "text-input";
   grid-template-columns: 1fr;
-
-  &::before {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    content: "";
-    border: var(--#{$text-input-group}--BorderWidth) solid var(--#{$text-input-group}--BorderColor);
-    border-start-start-radius: var(--#{$text-input-group}__text--BorderStartStartRadius);
-    border-start-end-radius: var(--#{$text-input-group}__text--BorderStartEndRadius);
-    border-end-start-radius: var(--#{$text-input-group}__text--BorderEndStartRadius);
-    border-end-end-radius: var(--#{$text-input-group}__text--BorderEndEndRadius);
-  }
 }
 
 .#{$text-input-group}__icon {
@@ -131,6 +182,12 @@
   inset-inline-start: var(--#{$text-input-group}__icon--InsetInlineStart);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
+
+  &.pf-m-status {
+    inset-inline-start: auto;
+    inset-inline-end: var(--#{$text-input-group}__icon--m-status--InsetInlineEnd);
+    color: var(--#{$text-input-group}__icon--m-status--Color);
+  }
 }
 
 .#{$text-input-group}__text-input {

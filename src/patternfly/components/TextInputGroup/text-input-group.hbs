@@ -1,4 +1,7 @@
 <div class="{{pfv}}text-input-group
+  {{#if text-input-group--IsSuccess}} pf-m-success{{/if}}
+  {{#if text-input-group--IsWarning}} pf-m-warning{{/if}}
+  {{#if text-input-group--IsError}} pf-m-error{{/if}}
   {{~#if text-input-group--IsDisabled}}
     pf-m-disabled
   {{/if}}

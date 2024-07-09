@@ -61,6 +61,44 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{/text-input-group}}
 ```
 
+### With validation
+
+```hbs
+{{#> text-input-group text-input-group--IsSuccess=true text-input-group--id="text-input-group-validation-success"}}
+  {{#> text-input-group-main}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-text-input text-input-group--value="Success validation"}}
+      {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+{{/text-input-group}}
+<br/>
+{{#> text-input-group text-input-group--IsWarning=true text-input-group--id="text-input-group-validation-warning"}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-icon}}
+      {{> text-input-group-text-input text-input-group--value="Warning validation with icon at start"}}
+      {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+{{/text-input-group}}
+<br/>
+{{#> text-input-group text-input-group--IsError=true text-input-group--id="text-input-group-validation-error"}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-icon}}
+      {{> text-input-group-text-input text-input-group--value="Error validation with icon at start and utilities"}}
+      {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+  {{#> text-input-group-utilities}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+    {{/button}}
+  {{/text-input-group-utilities}}
+{{/text-input-group}}
+```
+
 ### Filters
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters"}}
@@ -456,3 +494,12 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{/menu}}
 </div>
 ```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-success` | `.pf-v6-c-text-input-group` | Applies success validation styling. |
+| `.pf-m-warning` | `.pf-v6-c-text-input-group` | Applies warning validation styling. |
+| `.pf-m-error` | `.pf-v6-c-text-input-group` | Applies error validation styling. |
+| `.pf-m-icon` | `.pf-v6-c-text-input-group__main` | Applies styling when icons are included in the container. |
+| `.pf-m-status` | `.pf-v6-c-text-input-group__icon` | Applies status styling to the icon, matching the status modifier applied to `.pf-v6-c-text-input-group`. |

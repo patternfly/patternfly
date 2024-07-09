@@ -1,6 +1,14 @@
-<span class="{{pfv}}text-input-group__icon{{#if text-input-group-icon--modifier}} {{text-input-group-icon--modifier}}{{/if}}"
+<span class="{{pfv}}text-input-group__icon
+  {{#if text-input-group-icon--IsStatus}} pf-m-status{{/if}}
+  {{#if text-input-group-icon--modifier}} {{text-input-group-icon--modifier}}{{/if}}"
   {{#if text-input-group-icon--attribute}}
     {{{text-input-group-icon--attribute}}}
   {{/if}}>
-  <i class="fas fa-fw fa-search"></i>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else if text-input-group-icon--IsStatus }}
+    {{> text-input-group-template-status}}
+  {{else}}
+    <i class="fas fa-fw fa-search"></i>
+  {{/if}}
 </span>
