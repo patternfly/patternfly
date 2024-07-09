@@ -2,8 +2,8 @@
 
 :where(:root, .#{$icon}) {
   // Sizes
-  --#{$icon}--Width: 1em;
-  --#{$icon}--Height: 1em;
+  --#{$icon}--Width: var(--pf-t--global--icon--size--font--body--default);
+  --#{$icon}--Height: var(--pf-t--global--icon--size--font--body--default);
 
   // Standalone icon sizes
   --#{$icon}--m-sm--Width: var(--pf-t--global--icon--size--sm);
@@ -49,7 +49,7 @@
   --#{$icon}__content--svg--VerticalAlign: -.125em;
 
   // Content color
-  --#{$icon}__content--Color: initial;
+  --#{$icon}__content--Color: var(--pf-t--global--icon--color--regular);
   --#{$icon}__content--m-danger--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$icon}__content--m-warning--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$icon}__content--m-success--Color: var(--pf-t--global--icon--color--status--success--default);
@@ -58,7 +58,7 @@
   --#{$icon}--m-inline__content--Color: initial;
 
   // Content sizes
-  --#{$icon}__content--FontSize: 1em;
+  --#{$icon}__content--FontSize: var(--pf-t--global--icon--size--font--body--default);;
 
   // Standalone content sizes
   --#{$icon}--m-sm__content--FontSize: var(--pf-t--global--icon--size--sm);
