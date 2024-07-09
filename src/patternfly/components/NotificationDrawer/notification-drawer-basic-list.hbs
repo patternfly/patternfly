@@ -155,4 +155,23 @@
       50 minutes ago
     {{/notification-drawer-list-item-timestamp}}
   {{/notification-drawer-list-item}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsSuccess="true" notification-drawer-list-item--IsRead="true"}}
+    {{#> notification-drawer-list-item-header}}
+      {{> notification-drawer-list-item-header-icon}}
+      {{#> notification-drawer-list-item-header-title}}
+        Notification drawer item title
+      {{/notification-drawer-list-item-header-title}}
+    {{/notification-drawer-list-item-header}}
+    {{#> notification-drawer-list-item-action notification-drawer-list-item-action--modifier="pf-m-no-offset"}}
+      {{#> button button--IsPrimary=true}}
+        Action
+      {{/button}}
+    {{/notification-drawer-list-item-action}}
+    {{#> notification-drawer-list-item-description}}
+      This example uses ".pf-m-no-offset" on the action wrapper to disable the default offset for button alignment.
+    {{/notification-drawer-list-item-description}}
+    {{#> notification-drawer-list-item-timestamp}}
+      55 minutes ago
+    {{/notification-drawer-list-item-timestamp}}
+  {{/notification-drawer-list-item}}
 {{/notification-drawer-list}}
