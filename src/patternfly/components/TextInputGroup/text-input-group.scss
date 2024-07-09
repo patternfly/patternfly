@@ -78,6 +78,10 @@
   line-height: var(--#{$text-input-group}__LineHeight);
   color: var(--#{$text-input-group}--Color, inherit);
   background-color: var(--#{$text-input-group}--BackgroundColor);
+  border-start-start-radius: var(--#{$text-input-group}__text--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$text-input-group}__text--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$text-input-group}__text--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$text-input-group}__text--BorderEndEndRadius);
 
   &::before {
     position: absolute;
