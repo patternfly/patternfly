@@ -117,6 +117,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   row-gap: var(--#{$toolbar}__content-section--RowGap);
   column-gap: var(--#{$toolbar}__content-section--ColumnGap);
   align-items: start;
+}
 
 // - Toolbar
 .#{$toolbar} {
