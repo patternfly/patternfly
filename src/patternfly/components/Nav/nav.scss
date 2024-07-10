@@ -126,8 +126,9 @@
     overflow: hidden;
   }
 
-  &.pf-m-full-width {
-    width: 100%;
+  &.pf-m-inset {
+    --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
+    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);  
   }
 
   &.pf-m-fill {
