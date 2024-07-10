@@ -16,8 +16,8 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 | -- | -- | -- |
 | `.pf-v6-c-toolbar__group` | `--pf-v6-c-toolbar__group--ColumnGap` | `16px` |
 | `.pf-v6-c-toolbar__item` | `--pf-v6-c-toolbar__item--ColumnGap` | `16px` |
-| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies both column gap and row gap for toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` |  `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` |  `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies both column gap and row gap for toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ### Toolbar item types
 
@@ -32,7 +32,7 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 | `.pf-m-[hidden/visible]` | `.pf-v6-c-toolbar > *` | Modifies toolbar element to be hidden/visible. |
 | `.pf-m-flex-grow` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element to `flex-grow: 1`, allowing it to consume available main-axis space. |
 | `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
-| `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
+| `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
 | `.pf-m-align-self-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) self alignment. |
 
 ### Special notes
@@ -143,31 +143,6 @@ Several components in the following examples do not include functional and/or ac
 {{/toolbar}}
 ```
 
-### Page insets
-```hbs
-{{#> toolbar toolbar--modifier="pf-m-page-insets" toolbar--id="toolbar-page-insets-example"}}
-  {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
-      {{#> toolbar-group}}
-        {{#> toolbar-item}}
-          Item
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          Item
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-    {{/toolbar-content-section}}
-  {{/toolbar-content}}
-{{/toolbar}}
-```
-
 ### Toolbar spacers and insets
 
 | Class | Applied to | Outcome |
@@ -207,41 +182,84 @@ Several components in the following examples do not include functional and/or ac
 | `--pf-v6-c-toolbar__item--Width: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `--pf-v6-c-toolbar__item--MinWidth: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the min width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
-### Group types
+## Group types
+
+### Filter group
 ```hbs
-{{#> toolbar toolbar--id="toolbar-group-types-example"}}
+{{#> content--element content--element--type="h4"}}Standard filters{{/content--element}}
+{{#> toolbar toolbar--id="toolbar-group-types-standard-filter"}}
+  {{> toolbar-group-filter}}
+{{/toolbar}}
+{{> divider}}
+{{#> content--element content--element--type="h4"}}Input groups and filters{{/content--element}}
+{{#> toolbar toolbar--id="toolbar-group-types-input-group-filter"}}
+  {{#> toolbar-group}}
+    {{#> toolbar-item}}
+      {{> toolbar-group-search}}
+    {{/toolbar-item}}
+    {{#> toolbar-item}}
+      {{> menu-toggle menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status') menu-toggle--text='Status'}}
+    {{/toolbar-item}}
+  {{/toolbar-group}}
+{{/toolbar}}
+```
+
+### Action group
+```hbs
+{{#> toolbar toolbar--id="toolbar-group-types-action"}}
+  {{> toolbar-group-action}}
+{{/toolbar}}
+```
+
+### Action group plain
+```hbs
+{{#> toolbar toolbar--id="toolbar-group-types-plain"}}
+  {{> toolbar-group-action-plain}}
+{{/toolbar}}
+```
+
+### Action group inline
+```hbs
+{{#> toolbar toolbar--id="toolbar-group-types-inline"}}
+  {{> toolbar-group-action-inline}}
+{{/toolbar}}
+```
+
+### Label group
+```hbs
+{{#> toolbar toolbar--id="toolbar-group-label-group"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> toolbar-item}}
-          {{> menu-toggle menu-toggle--id=(concat toolbar--id '-toggle-1') menu-toggle--text='Filter 1'}}
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{> menu-toggle menu-toggle--id=(concat toolbar--id '-toggle-2') menu-toggle--text='Filter 2'}}
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{> menu-toggle menu-toggle--id=(concat toolbar--id '-toggle-3') menu-toggle--text='Filter 3'}}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-button-group"}}
-        {{#> toolbar-item}}
-          {{#> button button--IsPrimary=true}}
-            Action
-          {{/button}}
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{#> button button--IsSecondary=true}}
-            Secondary
-          {{/button}}
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{#> button button--IsTertiary=true}}
-            Tertiary
-          {{/button}}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
+      {{> toolbar-group-label-group}}
     {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+### Toggle group on mobile (filters collapsed, expandable content expanded)
+```hbs
+{{#> toolbar toolbar--id="toolbar-toggle-group-on-mobile" toolbar-expandable-content--IsExpanded=true}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content}}
+      {{> toolbar-toggle-group}}
+    {{/toolbar-expandable-content}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+### Toggle group on desktop
+```hbs
+{{#> toolbar toolbar--id="toolbar-toggle-group-desktop"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{> toolbar-toggle-group toolbar-toggle-group--Show=true}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content}}
+      {{> toolbar-toggle-group}}
+    {{/toolbar-expandable-content}}
   {{/toolbar-content}}
 {{/toolbar}}
 ```
@@ -251,70 +269,10 @@ Several components in the following examples do not include functional and/or ac
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-filter-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap. |
-| `.pf-m-icon-button-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap. |
-
-### Toggle group
-```hbs
-{{#> toolbar toolbar--id="toolbar-toggle-group-example"}}
-  {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
-        {{> toolbar-toggle}}
-        {{> toolbar-item-search-filter}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
-                menu-toggle--text='Status'
-              }}
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
-                menu-toggle--text='Risk'
-              }}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar-group}}
-    {{/toolbar-content-section}}
-    {{> toolbar-expandable-content}}
-  {{/toolbar-content}}
-{{/toolbar}}
-```
-
-### Toggle group on mobile (filters collapsed, expandable content expanded)
-```hbs
-{{#> toolbar toolbar--id="toolbar-toggle-group-collapsed-example"}}
-  {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
-      {{/toolbar-group}}
-    {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
-      {{> toolbar-item-search-filter button--id="expandable-content"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
-              menu-toggle--text='Status'
-            }}
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
-              menu-toggle--text='Risk'
-            }}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-    {{/toolbar-expandable-content}}
-  {{/toolbar-content}}
-{{/toolbar}}
-```
-
-### Toggle group modifier
-
-The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. `.pf-m-show-on-{md, lg, xl}` controls when filters are shown and when the toggle button is hidden.
+| `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap for action group. |
+| `.pf-m-action-group-plain` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap for action plain group. |
+| `.pf-m-action-group-inline` | `.pf-v6-c-toolbar__group` | Modifies toolbar group column gap for action inline group. |
+| `.pf-m-toggle-group` | `.pf-v6-c-toolbar__group` | The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. `.pf-m-show-on-{md, lg, xl}` controls when filters are shown and when the toggle button is hidden. |
 
 ### Accessibility
 
@@ -335,8 +293,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element visibility. |
-| `.pf-m-label-container` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
+| `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element visibility. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Selected
@@ -347,75 +304,31 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle}}
-        {{> toolbar-item-search-filter button--id="content"}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-          {{#> toolbar-item}}
-            {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-status') menu-toggle--text='Status'}}
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{> menu-toggle menu-toggle--id=(dasherize toolbar--id 'menu-toggle-checkbox-risk') menu-toggle--text='Risk'}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--IsControl=true}}
+      {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
-      {{#> toolbar-group toolbar-group--modifier='pf-m-label-container'}}
-        {{#> toolbar-group toolbar-group--modifier='pf-m-grow'}}
-          {{> toolbar--item-label-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
-          {{> toolbar--item-label-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
-        {{/toolbar-group}}
-        {{> toolbar-item-clear}}
-      {{/toolbar-group}}
+      {{> toolbar-group-action-inline}}
     {{/toolbar-expandable-content}}
   {{/toolbar-content}}
   {{#> toolbar-content}}
-    {{#> toolbar-group}}
-      {{#> toolbar-item}}
-        6 filters applied
-      {{/toolbar-item}}
-      {{> toolbar-item-clear}}
-    {{/toolbar-group}}
+    {{> toolbar-group-action-inline}}
   {{/toolbar-content}}
 {{/toolbar}}
 ```
 
 ### Selected filters on mobile (filters collapsed, expandable content expanded)
 ```hbs
-{{#> toolbar toolbar--id="toolbar-selected-filters-toggle-group-expanded-example"}}
+{{#> toolbar toolbar--id="toolbar-selected-filters-toggle-group-expanded-example" toolbar-expandable-content--IsExpanded=true}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--IsControl=true}}
+      {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
-      {{> toolbar-item-search-filter button--id="expanded-content"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
-              menu-toggle--text='Status'
-            }}
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
-              menu-toggle--text='Risk'
-            }}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{#> toolbar-group toolbar-group--modifier='pf-m-label-container'}}
-        {{#> toolbar-group toolbar-group--modifier='pf-m-grow'}}
-          {{> toolbar--item-label-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
-          {{> toolbar--item-label-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
-        {{/toolbar-group}}
-        {{> toolbar-item-clear}}
-      {{/toolbar-group}}
+      {{> toolbar-group-search}}
+      {{> toolbar-group-filter}}
+      {{> toolbar-group-label-group}}
+      {{> toolbar-group-action-inline}}
     {{/toolbar-expandable-content}}
   {{/toolbar-content}}
 {{/toolbar}}
@@ -427,35 +340,13 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
-        {{> toolbar-toggle}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
-                menu-toggle--text='Status'
-              }}
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
-                menu-toggle--text='Risk'
-              }}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true}}
-      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content=true toolbar-overflow-menu-example--control=true}}
+      {{> toolbar-group-filter}}
+      {{> toolbar-group-action-overflow-menu overflow-menu--IsVisible=true}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
-  {{#> toolbar-content toolbar-content--modifier="pf-m-label-container"}}
-    {{#> toolbar-group}}
-      {{#> toolbar-group}}
-        {{> toolbar--item-label-group label-group--label="Status" label-group--id=(concat toolbar--id '-label-group-status')}}
-        {{> toolbar--item-label-group label-group--label="Risk" label-group--id=(concat toolbar--id '-label-group-risk')}}
-      {{/toolbar-group}}
-      {{> toolbar-item-clear}}
-    {{/toolbar-group}}
+  {{#> toolbar-content}}
+    {{> toolbar-group-label-group}}
+    {{> toolbar-group-action-inline}}
   {{/toolbar-content}}
 {{/toolbar}}
 ```
@@ -467,47 +358,9 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{#> toolbar toolbar--id="toolbar-stacked-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
-        {{> toolbar-toggle}}
-        {{#> toolbar-group toolbar-group--modifier=reset}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-resource-label')}}
-            Resource
-          {{/toolbar-item}}
 
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-resource')
-                menu-toggle--text='Pod'
-              }}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{#> toolbar-group toolbar-group--modifier=reset}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-status-label')}}
-            Status
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-status')
-                menu-toggle--text='Running'
-              }}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-        {{#> toolbar-group toolbar-group--modifier=reset}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-type-label')}}
-            Type
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-type')
-                menu-toggle--text='Any'
-              }}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true}}
-      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content=true toolbar-overflow-menu-example--control=true}}
+      {{> toolbar-group-action-overflow-menu overflow-menu--IsVisible=true}}
     {{/toolbar-content-section}}
-    {{> toolbar-expandable-content}}
   {{/toolbar-content}}
   {{#> divider}}{{/divider}}
   {{#> toolbar-content}}
@@ -521,52 +374,16 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 ### Stacked on mobile (filters collapsed, expandable content expanded)
 ```hbs
-{{#> toolbar toolbar--id="toolbar-stacked-collapsed-example"}}
+{{#> toolbar toolbar--id="toolbar-stacked-collapsed-example" toolbar-expandable-content--IsExpanded=true}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--IsControl=true}}
+      {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
-      {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-resource-label')}}
-          Resource
-        {{/toolbar-item}}
-
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-resource')
-              menu-toggle--text='Pod'
-            }}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{#> toolbar-group newcontext}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-status-label')}}
-          Status
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-status')
-              menu-toggle--text='Running'
-            }}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{#> toolbar-group newcontext}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-type-label')}}
-          Type
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-type')
-              menu-toggle--text='Any'
-            }}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
+    {{#> toolbar-expandable-content}}
+      {{> toolbar-group-label-group}}
     {{/toolbar-expandable-content}}
   {{/toolbar-content}}
-  {{#> divider}}{{/divider}}
+  {{> divider}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
@@ -774,6 +591,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-v6-c-toolbar__content` | `<div>` | Initiates a toolbar content container. **Required** |
 | `.pf-v6-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-v6-c-toolbar__content-section` per `.pf-v6-c-toolbar__content` **Required** |
 | `.pf-v6-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
+| `.pf-v6-c-toolbar__expand-all-icon` | `<div>` | Initiates a toolbar expand all icon. |
 | `.pf-m-sticky` | `.pf-v6-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
 | `.pf-m-full-height` | `.pf-v6-c-toolbar`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies toolbar component to full height of its container and removes vertical padding. |
 | `.pf-m-static` | `.pf-v6-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
@@ -782,15 +600,19 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
-| `.pf-m-icon-button-group` | `.pf-v6-c-toolbar__group` | Initiates icon button group spacing. |
+| `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
+| `.pf-m-action-group-inline` | `.pf-v6-c-toolbar__group` | Initiates inline action group spacing. |
+| `.pf-m-action-group-plain` | `.pf-v6-c-toolbar__group` | Initiates plain action group spacing. |
 | `.pf-m-filter-group` | `.pf-v6-c-toolbar__group` | Initiates filter group spacing. |
-| `.pf-m-label-container` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
+| `.pf-m-label` | `.pf-v6-c-toolbar__item` | Initiates label item presenatation. |
+| `.pf-m-label-group` | `.pf-v6-c-toolbar__group` | Initiates label group spacing. |
 | `.pf-m-overflow-container` | `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
 | `.pf-m-[wrap/nowrap]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies the toolbar element to wrap/not wrap. |
-| `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
+| `.pf-m-align-[start/center/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
 | `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
 | `.pf-m-align-self-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) self alignment. |
+| `.pf-m-inset-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar` | Modifies toolbar horizontal. |
 
 ### Accessibility
 

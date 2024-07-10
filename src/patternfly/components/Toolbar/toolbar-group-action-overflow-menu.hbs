@@ -1,0 +1,23 @@
+{{#> toolbar-item}}
+  {{#> overflow-menu overflow-menu--id=(dasherize toolbar--id '-overflow-menu')}}
+    {{#if overflow-menu--IsVisible}}
+      {{#> overflow-menu-content}}
+        {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+          {{#> overflow-menu-item}}
+            {{#> button button--IsPrimary=true}}
+              Primary
+            {{/button}}
+          {{/overflow-menu-item}}
+          {{#> overflow-menu-item}}
+            {{#> button button--IsSecondary=true}}
+              Secondary
+            {{/button}}
+          {{/overflow-menu-item}}
+        {{/overflow-menu-group}}
+      {{/overflow-menu-content}}
+    {{/if}}
+    {{#> overflow-menu-control menu-toggle--aria-label="Toggle options"}}
+      {{> menu-toggle menu-toggle--HasKebab=true menu-toggle--IsPlain=true menu-toggle--id=(dasherize toolbar--id 'overflow-toggle')}}
+    {{/overflow-menu-control}}
+  {{/overflow-menu}}
+{{/toolbar-item}}

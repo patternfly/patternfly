@@ -1,0 +1,8 @@
+{{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
+  {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
+    {{#> pagination pagination--IsCompact=true}}
+      {{> pagination-menu-toggle pagination-menu-toggle--id=(concat toolbar--id '-pagination-menu-toggle')}}
+      {{> pagination-nav-content}}
+    {{/pagination}}
+  {{/pagination}}
+{{/toolbar-item}}
