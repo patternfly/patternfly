@@ -118,21 +118,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   column-gap: var(--#{$toolbar}__content-section--ColumnGap);
   align-items: start;
 
-  // push pagination to inline-end when flex items are not wrapped
-  &:has(.pf-m-pagination:last-child) {
-    .#{$toolbar}__item.pf-m-pagination {
-      margin-inline-start: revert;
-    }
-
-    > .#{$toolbar}__group,
-    > .#{$toolbar}__item {
-      &:nth-last-child(2) {
-        flex: 1;
-      }
-    }
-  }
-}
-
 // - Toolbar
 .#{$toolbar} {
   display: grid;
