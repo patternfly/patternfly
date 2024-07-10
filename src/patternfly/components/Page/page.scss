@@ -19,7 +19,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
+  --#{$page}__sidebar--Width: #{pf-size-prem(226px)}; // This needs to be sidebar minus toggle width
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
   --#{$page}__sidebar--Transition: var(--pf-t--global--transition);
