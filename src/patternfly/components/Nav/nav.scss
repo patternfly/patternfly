@@ -12,8 +12,8 @@
   // * Nav // default to row gap if no custom value is set
   --#{$nav}--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$nav}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$nav}--PaddingInlineStart: 0; // var(--pf-t--global--spacer--md);
+  --#{$nav}--PaddingInlineEnd: 0; // var(--pf-t--global--spacer--md);
   --#{$nav}--RowGap: var(--pf-t--global--spacer--lg);
   --#{$nav}--ColumnGap: 0;
   --#{$nav}--AlignItems: baseline;
