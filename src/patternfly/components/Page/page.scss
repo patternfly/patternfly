@@ -158,7 +158,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   z-index: var(--#{$page}__sidebar--ZIndex);
   display: flex;
   flex-direction: column;
-  grid-area: sidebar;
   grid-row-start: 2;
   grid-column-start: 1;
   width: var(--#{$page}__sidebar--Width);
@@ -171,6 +170,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
   transition: var(--#{$page}__sidebar--Transition);
+
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
+    grid-area: sidebar;
+  }
 
   @include pf-v6-bidirectional-style(
     $prop: transform,
