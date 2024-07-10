@@ -85,8 +85,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Form group label info
-  --#{$form}__group-label-info--MarginInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$form}__group-label--m-info--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group-label-info--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}--m-horizontal__group-label--m-info--Gap: var(--pf-t--global--spacer--sm);
 
   // Group control
   --#{$form}__group-control--m-inline--child--MarginInlineEnd: var(--pf-t--global--spacer--lg);
@@ -179,12 +180,23 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
       .#{$form}__group-label {
         padding-block-start: var(--#{$form}--m-horizontal__group-label--md--PaddingBlockStart);
 
-        // stylelint-disable-next-line
+        // stylelint-disable max-nesting-depth
         &.pf-m-no-padding-top {
           --#{$form}--m-horizontal__group-label--md--PaddingBlockStart: var(--#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingBlockStart);
 
           transform: translateY(var(--#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY));
         }
+
+        &.pf-m-info {
+          flex-direction: column;
+          gap: var(--#{$form}--m-horizontal__group-label--m-info--Gap);
+          align-items: flex-start;
+        }
+        // stylelint-enable
+      }
+
+      .#{$form}__group-label-main {
+        flex-grow: 0;
       }
 
       .#{$form}__group-control {
