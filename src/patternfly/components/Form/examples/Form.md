@@ -216,7 +216,7 @@ cssPrefix: pf-v6-c-form
         {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
-        info
+        More info about the name field
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
@@ -238,7 +238,7 @@ cssPrefix: pf-v6-c-form
         {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
-        info
+        More info about the name field
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
