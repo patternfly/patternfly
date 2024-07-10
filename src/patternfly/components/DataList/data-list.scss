@@ -97,7 +97,7 @@
   --#{$data-list}__item-action--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$data-list}__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$data-list}__item-action--md--MarginInlineStart: var(--pf-t--global--spacer--xl);
-  --#{$data-list}__item-action--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$data-list}__item-action--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);
   --#{$data-list}__item-action__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$data-list}__item-action__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
 
@@ -320,21 +320,18 @@
 .#{$data-list}__item-action {
   @include pf-v6-hidden-visible(var(--#{$data-list}__item-action--Display));
 
+  gap: var(--#{$data-list}__item-action--Gap);
   align-content: flex-start;
   align-items: flex-start;
   padding-block-start: var(--#{$data-list}__item-action--PaddingBlockStart);
   padding-block-end: var(--#{$data-list}__item-action--PaddingBlockEnd);
   margin-inline-start: var(--#{$data-list}__item-action--MarginInlineStart);
+}
 
-  > *:not(:last-child) {
-    margin-inline-end: var(--#{$data-list}__item-action--not-last-child--MarginInlineEnd);
-  }
-
-  // offset action button
-  .#{$data-list}__action {
-    margin-block-start: var(--#{$data-list}__item-action__action--MarginBlockEnd);
-    margin-block-end: var(--#{$data-list}__item-action__action--MarginBlockEnd);
-  }
+// offset action button
+.#{$data-list}__action {
+  margin-block-start: var(--#{$data-list}__item-action__action--MarginBlockStart);
+  margin-block-end: var(--#{$data-list}__item-action__action--MarginBlockEnd);
 }
 
 // toggle
