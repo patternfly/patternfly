@@ -98,8 +98,8 @@
   --#{$data-list}__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$data-list}__item-action--md--MarginInlineStart: var(--pf-t--global--spacer--xl);
   --#{$data-list}__item-action--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);
-  --#{$data-list}__item-action__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
-  --#{$data-list}__item-action__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$data-list}__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$data-list}__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
 
   // expandable content
   --#{$data-list}__expandable-content--BackgroundColor: var( --pf-t--global--background--color--primary--default);
@@ -133,9 +133,8 @@
   --#{$data-list}--m-compact__item-action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
-  --#{$data-list}--m-compact__item-action__action--MarginBlockStart: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockStart) * -1);
-  --#{$data-list}--m-compact__item-action__action--MarginBlockEnd: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd) * -1);
-  --#{$data-list}--m-compact__action--MarginBlockStart: var(--#{$data-list}--m-compact__item-action__action--MarginBlockStart);
+  --#{$data-list}--m-compact__action--MarginBlockStart: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockStart) * -1);
+  --#{$data-list}--m-compact__action--MarginBlockEnd: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd) * -1);
   --#{$data-list}--m-compact__item-content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1);
@@ -152,13 +151,12 @@
 
   &.pf-m-compact {
     --#{$data-list}__check--FontSize: var(--#{$data-list}--m-compact__check--FontSize);
-    --#{$data-list}__action--MarginBlockStart: var(--#{$data-list}--m-compact__action--MarginBlockStart);
     --#{$data-list}--FontSize: var(--#{$data-list}--m-compact--FontSize);
     --#{$data-list}__item-action--MarginInlineStart: var(--#{$data-list}--m-compact__item-action--MarginInlineStart);
     --#{$data-list}__item-action--PaddingBlockStart: var(--#{$data-list}--m-compact__item-action--PaddingBlockStart);
     --#{$data-list}__item-action--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd);
-    --#{$data-list}__item-action__action--MarginBlockStart: var(--#{$data-list}--m-compact__item-action__action--MarginBlockStart);
-    --#{$data-list}__item-action__action--MarginBlockEnd: var(--#{$data-list}--m-compact__item-action__action--MarginBlockEnd);
+    --#{$data-list}__action--MarginBlockStart: var(--#{$data-list}--m-compact__action--MarginBlockStart);
+    --#{$data-list}__action--MarginBlockEnd: var(--#{$data-list}--m-compact__action--MarginBlockEnd);
     --#{$data-list}__item-control--MarginInlineEnd: var(--#{$data-list}--m-compact__item-control--MarginInlineEnd);
     --#{$data-list}__item-control--PaddingBlockStart: var(--#{$data-list}--m-compact__item-control--PaddingBlockStart);
     --#{$data-list}__item-control--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-control--PaddingBlockEnd);
@@ -330,8 +328,8 @@
 
 // offset action button
 .#{$data-list}__action {
-  margin-block-start: var(--#{$data-list}__item-action__action--MarginBlockStart);
-  margin-block-end: var(--#{$data-list}__item-action__action--MarginBlockEnd);
+  margin-block-start: var(--#{$data-list}__action--MarginBlockStart);
+  margin-block-end: var(--#{$data-list}__action--MarginBlockEnd);
 }
 
 // toggle
