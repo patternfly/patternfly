@@ -1,6 +1,6 @@
 {{#if inline-edit-action-cancel--IsIcon}}
   {{#> inline-edit-action}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Cancel edits"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Cancel edits for row ' inline-edit-row '"')}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/inline-edit-action}}

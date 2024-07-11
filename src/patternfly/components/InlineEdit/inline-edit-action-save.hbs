@@ -1,7 +1,7 @@
 {{#if inline-edit-action-save--IsIcon}}
   {{#if inline-edit-action-save--IsInvalid}}
     {{#> inline-edit-action}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Save edits"'}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Save edits for row ' inline-edit-row '"')}}
         <i class="fas fa-check" aria-hidden="true"></i>
       {{/button}}
     {{/inline-edit-action}}
