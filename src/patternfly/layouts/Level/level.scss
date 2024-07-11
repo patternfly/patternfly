@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$level}) {
-  --#{$level}--m-gutter--Gap: var(--pf-t--global--spacer--lg);
+  --#{$level}--m-gutter--Gap: var(--pf-t--global--spacer--gutter--default);
 }
 
 .#{$level} {

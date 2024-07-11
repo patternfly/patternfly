@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 :where(:root, .#{$stack}) {
-  --#{$stack}--m-gutter--Gap: var(--pf-t--global--spacer--lg);
+  --#{$stack}--m-gutter--Gap: var(--pf-t--global--spacer--gutter--default);
 }
 
 .#{$stack} {

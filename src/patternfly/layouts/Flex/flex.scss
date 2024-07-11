@@ -13,7 +13,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   --#{$flex}--m-row--AlignItems: baseline;
   --#{$flex}--m-row-reverse--AlignItems: baseline;
   --#{$flex}--item--Order: 0;
-  --#{$flex}--spacer--column--base: var(--pf-t--global--spacer--lg); // default spacer/gap for columns
+  --#{$flex}--spacer--column--base: var(--pf-t--global--spacer--gutter--default); // default spacer/gap for columns
   --#{$flex}--spacer--row--base: var(--pf-t--global--spacer--sm); // default spacer/gap for rows
   --#{$flex}--RowGap: var(--#{$flex}--spacer--row--base);
   --#{$flex}--ColumnGap: 0;
