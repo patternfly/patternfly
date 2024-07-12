@@ -18,7 +18,7 @@
   :where(body) {
     font-family: var(--pf-t--global--font--family--body);
     font-size: var(--pf-t--global--font--size--body--default);
-    font-weight: var(--pf-t--global--font--weight--body);
+    font-weight: var(--pf-t--global--font--weight--body--default);
     line-height: var(--pf-t--global--font--line-height--body);
     color: var(--pf-t--global--text--color--regular);
   }
@@ -32,7 +32,7 @@
     h6
   ) {
     font-size: 100%;
-    font-weight: var(--pf-t--global--font--weight--body);
+    font-weight: var(--pf-t--global--font--weight--body--default);
   }
 
   :where(ul) {

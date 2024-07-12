@@ -30,7 +30,7 @@
   --#{$multiple-file-upload}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$multiple-file-upload}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$multiple-file-upload}__title-text--FontSize: var(--pf-t--global--font--size--heading--sm);
-  --#{$multiple-file-upload}__title-text--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$multiple-file-upload}__title-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // title icon
   --#{$multiple-file-upload}__title-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -43,7 +43,7 @@
   --#{$multiple-file-upload}__title-text-separator--Color: var(--pf-t--global--text--color--regular);
   --#{$multiple-file-upload}__title-text-separator--FontFamily: var(--pf-t--global--font--family--body);
   --#{$multiple-file-upload}__title-text-separator--FontSize: var(--pf-t--global--font--size--body--lg);
-  --#{$multiple-file-upload}__title-text-separator--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$multiple-file-upload}__title-text-separator--FontWeight: var(--pf-t--global--font--weight--body--default);
 
   // info
   --#{$multiple-file-upload}__info--FontSize: var(--pf-t--global--font--size--body--default);
@@ -73,7 +73,7 @@
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginBlockStart: 0;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$multiple-file-upload}--m-horizontal__info--MarginBlockStart: 0;
 
   // status container

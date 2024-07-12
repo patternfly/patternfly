@@ -25,7 +25,7 @@
 
   // accordion toggle text
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);
-  --#{$accordion}__toggle-text--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$accordion}__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // accordion toggle icon
@@ -57,8 +57,7 @@
   --#{$accordion}--m-display-lg__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}--m-display-lg__toggle--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$accordion}--m-display-lg__toggle--FontSize: var(--pf-t--global--font--size--heading--sm);
-  --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading);
-  --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--bold);
+  --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$accordion}--m-display-lg__expandable-content--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$accordion}--m-display-lg__expandable-content--Color: var(--pf-t--global--text--color--regular);
 
@@ -87,7 +86,6 @@
     --#{$accordion}__toggle--FontFamily: var(--#{$accordion}--m-display-lg__toggle--FontFamily);
     --#{$accordion}__toggle--FontSize: var(--#{$accordion}--m-display-lg__toggle--FontSize);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle-text--FontWeight);
-    --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight);
     --#{$accordion}__expandable-content--FontSize: var(--#{$accordion}--m-display-lg__expandable-content--FontSize);
     --#{$accordion}__expandable-content--Color: var(--#{$accordion}--m-display-lg__expandable-content--Color);
   }

@@ -21,7 +21,7 @@
 
   // day th
   --#{$calendar-month}__day--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$calendar-month}__day--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$calendar-month}__day--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$calendar-month}__day--Color: var(--pf-t--global--text--color--regular);
 
   // dates td

@@ -34,7 +34,7 @@
   // Title text
   --#{$empty-state}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$empty-state}__title-text--FontSize: var(--pf-t--global--font--size--heading--md);
-  --#{$empty-state}__title-text--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$empty-state}__title-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$empty-state}__title-text--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$empty-state}--m-xs__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$empty-state}--m-xl__title-text--FontSize: var(--pf-t--global--font--size--heading--2xl);

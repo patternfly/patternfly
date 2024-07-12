@@ -162,7 +162,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step-title--Color: var(--pf-t--global--text--color--regular);
   --#{$progress-stepper}__step-title--TextAlign: start;
   --#{$progress-stepper}__step-title--FontSize: var(--pf-t--global--font--size--body--lg);
-  --#{$progress-stepper}__step-title--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$progress-stepper}__step-title--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$progress-stepper}__step--m-current__step-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$progress-stepper}__step--m-current__step-title--Color: var(--pf-t--global--text--color--regular);
   --#{$progress-stepper}__step--m-pending__step-title--Color: var(--pf-t--global--text--color--subtle);

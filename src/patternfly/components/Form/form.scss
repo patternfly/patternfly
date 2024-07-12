@@ -116,7 +116,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   // Section title
   --#{$form}__section-title--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$form}__section-title--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$form}__section-title--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$form}__section-title--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1);
 
   // Field groups

@@ -49,7 +49,7 @@ $pf-v6-u-font-size-options: (
 // Font weight options
 $pf-v6-u-font-weight-options: (
   font-weight-normal: (
-    font-weight var(--pf-t--global--font--weight--body)
+    font-weight var(--pf-t--global--font--weight--body--default)
   ),
   font-weight-bold: (
     font-weight var(--pf-t--global--font--weight--body--bold)

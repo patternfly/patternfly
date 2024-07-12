@@ -6,7 +6,7 @@
   --#{$badge}--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$badge}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$badge}--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$badge}--FontWeight: var(--pf-t--global--font--weight--body--bold); // TODO - design calls for 500/semi-bold, do we need a token for that or is bold ok
+  --#{$badge}--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$badge}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$badge}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$badge}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
