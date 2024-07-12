@@ -1,10 +1,6 @@
 // LOCAL TOKENS
 
 @mixin pf-v6-tokens {
-  // TODO Missing semantic font tokens not getting exported from Figma properly
-  --pf-t--global--font--weight--body--bold: var(--pf-t--global--font--weight--200);
-  --pf-t--global--font--weight--heading--bold: var(--pf-t--global--font--weight--400);
-
   // TODO Maintaining these in addition to the h1-h6 sizes
   --pf-t--global--font--size--heading--xs: var(--pf-t--global--font--size--md);
   --pf-t--global--font--size--heading--sm: var(--pf-t--global--font--size--lg);
