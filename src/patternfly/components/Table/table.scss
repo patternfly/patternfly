@@ -41,7 +41,7 @@
   --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
-  --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$table}--cell--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
   --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--sm);

@@ -8,7 +8,7 @@
   // TODO: update to `--#{$check}--FontSize` `--#{$check}--LineHeight`
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$check}__label--Color: var(--pf-t--global--text--color--regular);
-  --#{$check}__label--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$check}__label--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$check}__label--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$check}__label--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$check}__description--FontSize: var(--pf-t--global--font--size--body--sm);

@@ -41,7 +41,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-title--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$page}__sidebar-title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$page}__sidebar-title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // Sidebar body
   --#{$page}__sidebar-body--PaddingInlineEnd: 0;
