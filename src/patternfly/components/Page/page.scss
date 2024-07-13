@@ -320,6 +320,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-container {
   display: flex;
   flex-direction: column;
+  align-self: start;
   max-height: var(--#{$page}__main-container--MaxHeight);
   margin-block-start: 0;
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
@@ -328,6 +329,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background: var(--#{$page}__main-container--BackgroundColor);
   border: var(--#{$page}__main-container--BorderWidth) solid var(--#{$page}__main-container--BorderColor);
   border-radius: var(--#{$page}__main-container--BorderRadius);
+
+  &.pf-m-fill,
+  &:has(.#{$page}__main-wizard) {
+    align-self: stretch;
+  }
 }
 
 .#{$page}__main-container,
@@ -422,8 +428,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-section,
 .#{$page}__main-group,
 .#{$page}__main-wizard {
-  &:last-child,
-  &:only-child,
   &.pf-m-fill {
     flex-grow: 1;
   }
