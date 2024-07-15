@@ -7,7 +7,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 :where(:root, .#{$page}) {
   --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome); //  var(--pf-t--global--spacer--md);
+  --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}--xl--inset: var(--pf-t--global--spacer--xl); // TODO do we need this? If so, sidebar body needs to adjust also
 
   // Header
@@ -136,7 +136,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       "header header header"
       "main main main";
     grid-template-columns: min-content max-content 1fr;
-    column-gap: var(--pf-t--global--spacer--gutter--default); // TODO good use of gutter or no?
+    column-gap: var(--pf-t--global--spacer--gutter--default); // TODO good use of gutter or no? (make a variable)
     }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
@@ -149,7 +149,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Header
 .#{$page} > .#{$masthead} {
-  --#{$masthead}--m-display-inline--GridTemplateColumns: subgrid;
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
+  }
 
   z-index: var(--#{$page}--c-masthead--ZIndex);
   grid-area: header;
