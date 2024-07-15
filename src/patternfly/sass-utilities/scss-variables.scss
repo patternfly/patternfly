@@ -12,7 +12,7 @@ $pf-v6-global--disable-fontawesome: false !default;
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
-// transformation from px to rem.730033
+// transformation from px to rem.
 $pf-v6-global--font-size-root: 16 !default; // for fonts
 $pf-v6-global--space-size-root: 16 !default; // for spaces
 
@@ -29,11 +29,11 @@ $pf-v6-global--fonticon-path: "./assets/pficon" !default;
 // Grid breakpoints
 // Note that these duplicate and should match breakpoint tokens
 $pf-v6-global--breakpoint--xs: 0 !default;
-$pf-v6-global--breakpoint--sm: 576px !default;
-$pf-v6-global--breakpoint--md: 768px !default;
-$pf-v6-global--breakpoint--lg: 992px !default;
-$pf-v6-global--breakpoint--xl: 1200px !default;
-$pf-v6-global--breakpoint--2xl: 1450px !default;
+$pf-v6-global--breakpoint--sm: 36rem !default; // 576px
+$pf-v6-global--breakpoint--md: 48rem !default; // 768px
+$pf-v6-global--breakpoint--lg: 62rem !default; // 992px
+$pf-v6-global--breakpoint--xl: 75rem !default; // 1200px
+$pf-v6-global--breakpoint--2xl: 90.625rem !default; // 1450px
 
 // Height breakpoints
 $pf-v6-global--height-breakpoint--sm: 0 !default;
