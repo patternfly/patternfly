@@ -23,7 +23,6 @@ wrapperTag: div
         {{#> drawer-content}}
           {{> toolbar-template
               toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--modifier="pf-m-page-insets"
               toolbar-template--HasFilterGroup=true
               toolbar-template--HasOverflowMenu=true
               toolbar-template--HasSearchFilter=true
@@ -72,7 +71,6 @@ wrapperTag: div
         {{#> drawer-content}}
           {{> toolbar-template
               toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--modifier="pf-m-page-insets"
               toolbar-template--HasFilterGroup=true
               toolbar-template--HasOverflowMenu=true
               toolbar-template--HasSearchFilter=true
@@ -117,7 +115,6 @@ wrapperTag: div
         {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
           {{> toolbar-template
               toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--modifier="pf-m-page-insets"
               toolbar-template--HasFilterGroup=true
               toolbar-template--HasOverflowMenu=true
               toolbar-template--HasSortButton=true
@@ -157,7 +154,6 @@ wrapperTag: div
       {{#> drawer-section}}
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
-            toolbar-template--modifier="pf-m-page-insets"
             toolbar-template--HasBulkSelect=true
             toolbar-template--HasSearchFilter=true
             toolbar-template--HasSortButton=true
@@ -283,7 +279,6 @@ wrapperTag: div
       {{#> drawer-content}}
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
-            toolbar-template--modifier="pf-m-page-insets"
             toolbar-template--HasMenu=true
             toolbar-template--HasOverflowMenu=true
             toolbar-template--HasOverflowMenuSecondButton=true

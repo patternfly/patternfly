@@ -26,7 +26,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+    {{#> toolbar-group toolbar--IsFilterGroup=true}}
       {{#> toolbar-item}}
         {{> masthead-template-context-selector}}
       {{/toolbar-item}}
@@ -54,7 +54,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-end"}}
+    {{#> toolbar-group toolbar-group--IsToggleGroup=true toolbar-group--modifier="pf-m-show pf-m-align-end"}}
       {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{> toolbar-item-search-filter button--id=(concat masthead--id '-content')}}
     {{/toolbar-group}}
@@ -72,7 +72,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg pf-m-align-end"}}
+    {{#> toolbar-group toolbar-group--IsToggleGroup=true toolbar-group--modifier="pf-m-show-on-lg pf-m-align-end"}}
       {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{> toolbar-item-search-filter button--id=(concat masthead--id '-content')}}
     {{/toolbar-group}}
@@ -160,7 +160,7 @@ wrapperTag: div
       {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
     {{/toolbar-item}}
   {{/toolbar-content-section}}
-  {{#> toolbar-expandable-content toolbar--id=(concat masthead--id '-toolbar') toolbar-expandable-content--IsExpanded="true"}}
+  {{#> toolbar-expandable-content toolbar--id=(concat masthead--id '-toolbar') toolbar-expandable-content--IsExpanded=true}}
     {{> toolbar-item-search-filter button--id=(concat masthead--id '-expandable-content')}}
   {{/toolbar-expandable-content}}
 {{/inline}}

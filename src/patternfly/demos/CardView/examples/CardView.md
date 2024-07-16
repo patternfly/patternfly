@@ -9,10 +9,9 @@ section: patterns
 {{> page-template page-template--id="card-view-basic-example" page-template-sidebar--nav--IsExpandable="true"}}
 
 {{#* inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+  {{#> page-main-section page-main-section--modifier="pf-m-light"}}
     {{> toolbar-template
         toolbar-template--id=(concat page-template--id '-toolbar')
-        toolbar-template--modifier="pf-m-page-insets"
         toolbar-template--HasToggleGroup=true
         toolbar-template--HasBulkSelect=true
         toolbar-template--HasOverflowMenu=true

@@ -13,7 +13,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 :where(:root, .#{$toolbar}) {
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingBlockStart: 0;
-  --#{$toolbar}--PaddingBlockEnd: 0;
+  --#{$toolbar}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingInlineStart: 0;
   --#{$toolbar}--PaddingInlineEnd: 0;
   --#{$toolbar}--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -41,8 +41,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // * Toolbar content
   --#{$toolbar}__content--RowGap: var(--pf-t--global--spacer--md);
-  --#{$toolbar}__content--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$toolbar}__content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$toolbar}__content--PaddingInlineStart: 0;
+  --#{$toolbar}__content--PaddingInlineEnd: 0;
 
   // * Toolbar content section
   --#{$toolbar}__content-section--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
@@ -131,6 +131,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   font-size: var(--#{$toolbar}--FontSize);
   line-height: var(--#{$toolbar}--LineHeight);
   background-color: var(--#{$toolbar}--BackgroundColor);
+
+  &:only-child {
+    padding-block-end: 0;
+  }
 
   // - Toolbar sticky
   &.pf-m-sticky {
@@ -247,6 +251,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // - Toolbar action group inline
   &.pf-m-action-group-inline {
+    flex-wrap: wrap;
     column-gap: var(--#{$toolbar}__group--m-action-group-inline--ColumnGap);
   }
 
