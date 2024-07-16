@@ -135,7 +135,7 @@
   --#{$menu-toggle}__button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}__button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}__button--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
-  --#{$menu-toggle}__button--m-text--PaddingInlineStart: var(--#{$pf-global}--spacer--xs);
+  --#{$menu-toggle}__button--m-text--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 
   // Menu toggle plain
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
