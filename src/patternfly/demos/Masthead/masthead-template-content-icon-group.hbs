@@ -1,10 +1,10 @@
-{{#> toolbar-group toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end pf-m-spacer-none pf-m-spacer-md-on-md"}}
+{{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-align-end pf-m-spacer-none pf-m-spacer-md-on-md"}}
   {{#if masthead-template--HasNotificationDrawer}}
     {{#> toolbar-item}}
       {{> notification-badge notification-badge--IsExpanded=notification-drawer--IsExpanded notification-badge--IsAttention=notification-drawer--IsAttention notification-badge--IsUnread=notification-drawer--IsUnread}}
     {{/toolbar-item}}
   {{/if}}
-  {{#> toolbar-group toolbar-group--modifier=(concat 'pf-m-icon-button-group pf-m-hidden pf-m-visible-on-' masthead-template-content-icon-group--breakpoint)}}
+  {{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--modifier=(concat 'pf-m-hidden pf-m-visible-on-' masthead-template-content-icon-group--breakpoint)}}
     {{#> toolbar-item}}
       {{> masthead-template-application-launcher app-launcher--id=(concat toolbar-group--id '-app-launcher')}}
     {{/toolbar-item}}

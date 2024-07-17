@@ -27,6 +27,7 @@
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // accordion toggle icon
   --#{$accordion}__toggle-icon--Transition: .2s ease-in 0s;
@@ -86,6 +87,7 @@
     --#{$accordion}__toggle--FontFamily: var(--#{$accordion}--m-display-lg__toggle--FontFamily);
     --#{$accordion}__toggle--FontSize: var(--#{$accordion}--m-display-lg__toggle--FontSize);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle-text--FontWeight);
+    --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight);
     --#{$accordion}__expandable-content--FontSize: var(--#{$accordion}--m-display-lg__expandable-content--FontSize);
     --#{$accordion}__expandable-content--Color: var(--#{$accordion}--m-display-lg__expandable-content--Color);
   }

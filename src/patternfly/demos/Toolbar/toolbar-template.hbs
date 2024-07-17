@@ -90,7 +90,7 @@ Options: [
 
       {{!-- icon button group --}}
       {{#if toolbar-template--HasIconButtonGroup}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
+        {{#> toolbar-group toolbar-group--IsActionGroupPlain=true}}
           {{#> toolbar-item}}
             {{> button button--IsPlain=true button--IsIcon=true button--icon="edit" button--aria-label="Edit"}}
           {{/toolbar-item}}
@@ -105,7 +105,7 @@ Options: [
 
       {{!-- view toggle --}}
       {{#if toolbar-template--HasViewToggle}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-end"}}
+        {{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--modifier="pf-m-align-end"}}
           {{#> toolbar-item}}
             {{> button button--IsPlain=true button--IsIcon=true button--icon="th" button--aria-label="Grid view"}}
           {{/toolbar-item}}
