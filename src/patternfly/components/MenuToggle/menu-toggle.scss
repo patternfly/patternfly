@@ -479,8 +479,6 @@
   }
 
   &.pf-m-text {
-    --#{$menu-toggle}--m-split-button--last-child--PaddingLeft: var(--#{$menu-toggle}__button--m-text--PaddingInlineStart);
-
     display: inline-flex;
     align-items: baseline;
     padding-inline-start: var(--#{$menu-toggle}__button--m-text--PaddingInlineStart);
