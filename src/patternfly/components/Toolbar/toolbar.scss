@@ -132,10 +132,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   line-height: var(--#{$toolbar}--LineHeight);
   background-color: var(--#{$toolbar}--BackgroundColor);
 
-  &:only-child {
-    padding-block-end: 0;
-  }
-
   // - Toolbar sticky
   &.pf-m-sticky {
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
