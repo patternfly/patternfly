@@ -23,6 +23,7 @@ import './Label.css'
 
 ```hbs
 {{> label--variants
+    label--IsFilled=true
     label--variants--title="Compact"
     label--variants--id="compact"
     label--IsCompact=true}}
