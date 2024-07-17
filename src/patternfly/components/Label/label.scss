@@ -167,7 +167,7 @@
   --#{$label}--m-clickable__content--Cursor: pointer;
 
   // Filled
-  --#{$label}--m-filled__actions--c-button--Color: var(--#{$label}__icon--Color);
+  --#{$label}--m-filled__actions--c-button__icon--Color: var(--#{$label}__icon--Color);
 
   // Outline
   --#{$label}--m-outline--BorderWidth: var(--pf-t--global--border--width--action--default);
@@ -427,7 +427,7 @@
 
   &.pf-m-filled {
     .#{$label}__actions .#{$button} {
-      --#{$button}--Color: var(--#{$label}--m-filled__actions--c-button--Color);
+      --#{$button}__icon--Color: var(--#{$label}--m-filled__actions--c-button__icon--Color);
     }
   }
 
@@ -507,7 +507,7 @@
         --#{$label}--m-outline--BorderColor: var(--#{$label}--m-outline--m-clickable--hover--BorderColor);
 
         ~ .#{$label}__actions .#{$button} {
-          --#{$label}--m-filled__actions--c-button--Color: var(--#{$label}--m-clickable--hover__icon--Color);
+          --#{$label}--m-filled__actions--c-button__icon--Color: var(--#{$label}--m-clickable--hover__icon--Color);
         }
       }
     }
