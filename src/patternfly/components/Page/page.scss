@@ -423,24 +423,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
         padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
         padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
-
-        &.pf-m-limit-width {
-          padding: 0;
-
-          .#{$page}__main-body {
-            padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
-            padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-            padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
-            padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
-          }
-        }
       }
 
       &.pf-m-no-padding#{$breakpoint-name} {
-        &,
-        &.pf-m-limit-width .#{$page}__main-body {
-          padding: 0;
-        }
+        padding: 0;
       }
       // stylelint-enable
     }
@@ -464,18 +450,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__main-group {
   flex-shrink: 0;
-}
-
-.#{$page}__main-body {
-  .#{$page}__main-breadcrumb & {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-  }
-
-  .#{$page}__main-tabs & {
-    padding-inline-start: var(--#{$page}__main-tabs--PaddingInlineStart);
-    padding-inline-end: var(--#{$page}__main-tabs--PaddingInlineEnd);
-  }
 }
 
 .#{$page}__drawer {
