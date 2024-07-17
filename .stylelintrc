@@ -32,6 +32,7 @@
     }],
     "color-function-notation": null,
     "color-named": "never",
+    "color-hex-length": null,
     "comment-empty-line-before": ["always", {
       "except": ["first-nested"],
       "ignore": [
@@ -88,6 +89,7 @@
     "selector-max-id": 0,
     "selector-max-type": 2,
     "selector-nested-pattern": "^(?!.*&[-_])",
-    "selector-no-qualifying-type": true
+    "selector-no-qualifying-type": true,
+    "value-keyword-case": ["lower", { "ignoreKeywords": ["Helvetica", "Arial", "Courier"] }]
   }
 }
