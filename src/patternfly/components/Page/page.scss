@@ -131,7 +131,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-areas:
       "header header"
       "sidebar main";
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
     }
   }
 
@@ -154,7 +154,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-area: sidebar;
   grid-row-start: 2;
   grid-column-start: 1;
-  width: var(--#{$page}__sidebar--Width);
   padding-block-start: 0;
   padding-block-end: var(--#{$page}__sidebar--PaddingBlockEnd);
   padding-inline-start: var(--#{$page}__sidebar--PaddingInlineStart);

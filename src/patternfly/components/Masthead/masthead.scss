@@ -15,6 +15,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // * Masthead main container holds the toggle and brand
   --#{$masthead}__main--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$masthead}__main--MarginInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
 
   // * Masthead brand
   --#{$masthead}__logo--MarginInlineEnd: var(--pf-t--global--spacer--md);
@@ -153,6 +154,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead}__main {
   display: var(--#{$masthead}__main--Display);
   column-gap: var(--#{$masthead}__main--ColumnGap);
+  align-items: center;
+  margin-inline-end: var(--#{$masthead}__main--MarginInlineEnd);
 }
 
 // - Masthead main masthead content masthead logo
@@ -163,7 +166,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // - Masthead brand, logo, content
 .#{$masthead}__brand,
-.#{$masthead}__logo,
+// .#{$masthead}__logo,
 .#{$masthead}__content {
   display: flex;
   align-self: stretch;
@@ -174,7 +177,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead}__brand {
   grid-column: var(--#{$masthead}__brand--GridColumn);
   row-gap: var(--#{$masthead}__brand--RowGap, var(--#{$masthead}--RowGap));
-  align-items: var(--#{$masthead}__brand--AlignItems, var(--#{$masthead}--AlignItems));
+  
+  // align-items: var(--#{$masthead}__brand--AlignItems); // TODO
   order: var(--#{$masthead}__brand--Order);
   padding-block-end: var(--#{$masthead}__brand--PaddingBlockEnd);
   border-block-end: var(--#{$masthead}__brand--BorderBlockEnd);
@@ -187,15 +191,22 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   grid-column-end: -1; // force content to right edge or full available width
   row-gap: var(--#{$masthead}__content-RowGap, var(--#{$masthead}--RowGap));
   column-gap: var(--#{$masthead}__content--ColumnGap, var(--#{$masthead}--ColumnGap));
-  align-items: var(--#{$masthead}__content--AlignItems, var(--#{$masthead}--AlignItems));
+
+  // align-items: var(--#{$masthead}__content--AlignItems); // TODO
   order: var(--#{$masthead}__content--Order);
 }
 
 // - Masthead logo
 .#{$masthead}__logo {
-  align-items: var(--#{$masthead}__logo--AlignItems, var(--#{$masthead}--AlignItems));
+  // align-items: var(--#{$masthead}__logo--AlignItems, var(--#{$masthead}--AlignItems));
+  // align-self: center;
   max-height: var(--#{$masthead}__logo--MaxHeight);
-  margin-inline-end: var(--#{$masthead}__logo--MarginInlineEnd);
+
+  > * {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+ }
 }
 
 // - Masthead toggle
