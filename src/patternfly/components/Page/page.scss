@@ -75,7 +75,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__main-breadcrumb--page__main-tabs--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-nav--page__main-tabs--PaddingBlockStart: var(--pf-t--global--spacer--md);
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
@@ -91,15 +90,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-shadow-bottom--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$page}--section--m-shadow-top--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$page}--section--m-shadow-top--ZIndex: var(--pf-t--global--z-index--xs);
-
-  // Main section horizontal nav
-  --#{$page}__main-nav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__main-nav--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-nav--PaddingInlineEnd: 0;
-  --#{$page}__main-nav--PaddingInlineStart: 0;
-  --#{$page}__main-nav--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$page}__main-nav--xl--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$page}__main-nav--xl--PaddingInlineStart: var(--pf-t--global--spacer--sm);
 
   // Main section horizontal subnav
   --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -246,7 +236,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 }
 
-.#{$page}__main-nav,
 .#{$page}__main-breadcrumb,
 .#{$page}__main-tabs,
 .#{$page}__main-section,
@@ -266,7 +255,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 }
 
-.#{$page}__main-nav,
 .#{$page}__main-breadcrumb,
 .#{$page}__main-tabs,
 .#{$page}__main-section,
@@ -351,30 +339,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__main,
 .#{$page}__main-drawer,
-.#{$page}__main-group,
-.#{$page}__main-list {
+.#{$page}__main-group {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-
-.#{$page}__main-nav {
-  padding-block-start: var(--#{$page}__main-nav--PaddingBlockStart);
-  padding-inline-start: var(--#{$page}__main-nav--PaddingInlineStart);
-  padding-inline-end: var(--#{$page}__main-nav--PaddingInlineEnd);
-  background-color: var(--#{$page}__main-nav--BackgroundColor);
-
-  // Responsive height modifiers for sticky top/bottom
-  @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
-
-    @include pf-v6-apply-height-breakpoint($breakpoint) {
-      &.pf-m-sticky-top#{$breakpoint-name},
-      .#{$page}__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
-        padding-block-end: var(--#{$page}__main-nav--m-sticky-top--PaddingBlockEnd);
-      }
-    }
-  }
 }
 
 .#{$page}__main-subnav {
@@ -415,10 +383,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-inline-start: var(--#{$page}__main-tabs--PaddingInlineStart);
   padding-inline-end: var(--#{$page}__main-tabs--PaddingInlineEnd);
   background-color: var(--#{$page}__main-tabs--BackgroundColor);
-
-  .#{$page}__main-nav + & {
-    --#{$page}__main-tabs--PaddingBlockStart: var(--#{$page}__main-nav--page__main-tabs--PaddingBlockStart);
-  }
 
   .#{$page}__main-breadcrumb + & {
     --#{$page}__main-tabs--PaddingBlockStart: var(--#{$page}__main-breadcrumb--page__main-tabs--PaddingBlockStart);
@@ -503,11 +467,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-body {
-  .#{$page}__main-nav & {
-    padding-inline-start: var(--#{$page}__main-nav--PaddingInlineStart);
-    padding-inline-end: var(--#{$page}__main-nav--PaddingInlineEnd);
-  }
-
   .#{$page}__main-breadcrumb & {
     padding-inline-start: 0;
     padding-inline-end: 0;

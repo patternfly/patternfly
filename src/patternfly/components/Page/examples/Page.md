@@ -179,9 +179,6 @@ import './Page.css'
     {{#> page-main-subnav}}
       <code>.pf-v6-c-page__main-subnav</code> for horizontal subnav navigation
     {{/page-main-subnav}}
-    {{#> page-main-nav}}
-      <code>.pf-v6-c-page__main-nav</code> for tertiary navigation
-    {{/page-main-nav}}
     {{#> page-main-tabs}}
       <code>.pf-v6-c-page__main-tabs</code> for tabs
     {{/page-main-tabs}}
@@ -246,7 +243,6 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__sidebar` | `<aside>` | Declares the page sidebar. |
 | `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-v6-c-page__main` | `<main>` | Declares the main page area. |
-| `.pf-v6-c-page__main-nav` | `<section>` | Creates a container to nest the (deprecated) tertiary navigation component in the main page area. |
 | `.pf-v6-c-page__main-subnav` | `<section>` | Creates a container to nest the horizontal subnav navigation component in the main page area. |
 | `.pf-v6-c-page__main-breadcrumb` | `<section>` | Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: This section will not fill the vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
