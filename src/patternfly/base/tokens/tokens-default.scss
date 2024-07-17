@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Fri, 12 Jul 2024 15:40:40 GMT
+// Generated on Tue, 16 Jul 2024 23:44:44 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
@@ -55,9 +55,9 @@
   --pf-t--global--duration--50: 50ms;
   --pf-t--global--duration--500: 500ms;
   --pf-t--global--duration--600: 600ms;
-  --pf-t--global--font--family--100: "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", helvetica, arial, sans-serif;
-  --pf-t--global--font--family--200: "Red Hat Display", "RedHatDisplay", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", helvetica, arial, sans-serif;
-  --pf-t--global--font--family--300: "Red Hat Mono", "RedHatMono", "Courier New", courier, monospace;
+  --pf-t--global--font--family--100: "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
+  --pf-t--global--font--family--200: "Red Hat Display", "RedHatDisplay", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
+  --pf-t--global--font--family--300: "Red Hat Mono", "RedHatMono", "Courier New", Courier, monospace;
   --pf-t--global--font--line-height--100: 1.3;
   --pf-t--global--font--line-height--200: 1.5;
   --pf-t--global--font--size--100: 0.75rem;
@@ -453,10 +453,9 @@
   --pf-t--global--motion--duration--slide-out--short: var(--pf-t--global--motion--duration--lg);
   --pf-t--global--spacer--action--horizontal--compact: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--action--horizontal--default: var(--pf-t--global--spacer--lg);
-  --pf-t--global--spacer--action--horizontal--plain: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--action--horizontal--plain--compact: var(--pf-t--global--spacer--xs);
+  --pf-t--global--spacer--action--horizontal--plain--default: var(--pf-t--global--spacer--sm);
   --pf-t--global--spacer--action--horizontal--spacious: var(--pf-t--global--spacer--xl);
-  --pf-t--global--spacer--action--vertical--compact: var(--pf-t--global--spacer--xs);
-  --pf-t--global--spacer--action--vertical--spacious: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--control--horizontal--compact: var(--pf-t--global--spacer--sm);
   --pf-t--global--spacer--control--horizontal--default: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--control--horizontal--plain: var(--pf-t--global--spacer--sm);
@@ -464,6 +463,7 @@
   --pf-t--global--spacer--control--vertical--compact: var(--pf-t--global--spacer--xs);
   --pf-t--global--spacer--control--vertical--default: var(--pf-t--global--spacer--sm);
   --pf-t--global--spacer--control--vertical--plain: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--control--vertical--spacious: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--gap--action-to-action--default: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--gap--action-to-action--plain: var(--pf-t--global--spacer--xs);
   --pf-t--global--spacer--gap--control-to-control--default: var(--pf-t--global--spacer--xs);
