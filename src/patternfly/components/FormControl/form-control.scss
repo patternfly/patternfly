@@ -78,8 +78,8 @@
   --#{$form-control}--m-icon--icon--width: var(--#{$form-control}--FontSize);
   --#{$form-control}--m-icon--icon--spacer: calc(var(--pf-t--global--spacer--control--horizontal--default) / 2);
   --#{$form-control}--m-icon--icon--PaddingInlineEnd: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-error--icon--width) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer));
-  --#{$form-control}__select--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
-  --#{$form-control}__select--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$form-control}__select--PaddingInlineEnd: var(--#{$form-control}--inset--base);
+  --#{$form-control}__select--PaddingInlineStart: var(--#{$form-control}--inset--base);
 
   // Select success
   --#{$form-control}__select--m-success--m-status--PaddingInlineEnd: calc((var(--#{$form-control}__icon--FontSize) * 2) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}__toggle-icon--PaddingInlineEnd) + var(--#{$form-control}__toggle-icon--PaddingInlineStart));
@@ -95,7 +95,6 @@
   --#{$form-control}--textarea--Height: auto;
 
   // Form control icon
-  --#{$form-control}__icon--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$form-control}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
@@ -105,11 +104,10 @@
 
   // Form control utilities
   --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--sm);
-  --#{$form-control}__utilities--PaddingBlockStart: var(--#{$form-control}--inset--base);
+  --#{$form-control}__utilities--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}--inset--base);
 
   // Form control select toggle icon
-  --#{$form-control}__toggle-icon--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}__toggle-icon--PaddingInlineEnd: var(--#{$form-control}--inset--base);
   --#{$form-control}__toggle-icon--PaddingInlineStart: var(--#{$form-control}--inset--base);
   --#{$form-control}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -322,7 +320,6 @@
 }
 
 .#{$form-control}__icon {
-  padding-block-start: var(--#{$form-control}__icon--PaddingBlockStart);
   font-size: var(--#{$form-control}__icon--FontSize);
   color: var(--#{$form-control}__icon--Color);
 
@@ -334,7 +331,6 @@
 .#{$form-control}__toggle-icon {
   grid-row: 1 / 2;
   grid-column: 3;
-  padding-block-start: var(--#{$form-control}__toggle-icon--PaddingBlockStart);
   padding-inline-start: var(--#{$form-control}__toggle-icon--PaddingInlineStart);
   padding-inline-end: var(--#{$form-control}__toggle-icon--PaddingInlineEnd);
   color: var(--#{$form-control}__toggle-icon--Color);
@@ -347,6 +343,7 @@
   grid-row: 1 / 2;
   grid-column: 2;
   gap: var(--#{$form-control}__utilities--Gap);
+  padding-block-start: var(--#{$form-control}__utilities--PaddingBlockStart);
   padding-inline-end: var(--#{$form-control}__utilities--PaddingInlineEnd);
   pointer-events: none;
 }
