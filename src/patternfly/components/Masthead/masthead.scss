@@ -41,10 +41,12 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // * Masthead inline
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
+  --#{$masthead}--m-display-inline__brand--GridColumn: unset; 
+  --#{$masthead}--m-display-inline__brand--Order: unset;
+  --#{$masthead}--m-display-inline__brand--PaddingBlockEnd: 0;
+  --#{$masthead}--m-display-inline__brand--BorderBlockEnd: 0;
   --#{$masthead}--m-display-inline__main--GridColumn: 1; 
   --#{$masthead}--m-display-inline__main--Order: 0;
-  --#{$masthead}--m-display-inline__main--PaddingBlockEnd: 0;
-  --#{$masthead}--m-display-inline__main--BorderBlockEnd: 0;
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
   --#{$masthead}--m-display-inline__main--Display: flex;
@@ -67,6 +69,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-stack__brand--Order);
   --#{$masthead}__brand--PaddingBlockEnd: var(--#{$masthead}--m-display-stack__brand--PaddingBlockEnd);
   --#{$masthead}__brand--BorderBlockEnd: var(--#{$masthead}--m-display-stack__brand--BorderBlockEnd);
+  --#{$masthead}__main--GridColumn: unset;
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-stack__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-stack__content--Order);
   --#{$masthead}__main--Display: var(--#{$masthead}--m-display-stack__main--Display);
@@ -80,6 +83,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-inline__brand--Order);
   --#{$masthead}__brand--PaddingBlockEnd: var(--#{$masthead}--m-display-inline__brand--PaddingBlockEnd);
   --#{$masthead}__brand--BorderBlockEnd: var(--#{$masthead}--m-display-inline__brand--BorderBlockEnd);
+  --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
   --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display); 
@@ -153,6 +157,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 .#{$masthead}__main {
   display: var(--#{$masthead}__main--Display);
+  grid-column: var(--#{$masthead}__main--GridColumn);
   column-gap: var(--#{$masthead}__main--ColumnGap);
   align-items: center;
   margin-inline-end: var(--#{$masthead}__main--MarginInlineEnd);
@@ -196,7 +201,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   max-height: var(--#{$masthead}__logo--MaxHeight);
 
   > * {
-    max-width: 100%;
+    // max-width: 100%; // This causes the logo to shrink
     max-height: 100%;
     vertical-align: middle;
  }
