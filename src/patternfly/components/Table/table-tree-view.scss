@@ -56,6 +56,10 @@ $pf-v6-c-tree-view--MaxDepth: 10;
       --#{$table}__tree-view-main--PaddingInlineStart: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base));
     }
   }
+
+  .#{$table}.pf-m-tree-view .#{$table}__thead {
+    display: none;
+  }
 }
 
 // - Table tree vew main
