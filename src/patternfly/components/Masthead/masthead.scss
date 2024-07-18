@@ -74,7 +74,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead} {
   .#{$toolbar} {
     --#{$toolbar}--Width: var(--#{$masthead}--c-toolbar--Width);
-    --#{$toolbar}__content--PaddingBlock: var(--#{$masthead}--c-toolbar--PaddingBlock);
+    --#{$toolbar}--PaddingBlockEnd: 0;
     --#{$toolbar}__content--PaddingInline: var(--#{$masthead}--c-toolbar--PaddingInline);
     --#{$toolbar}__content--MinWidth: 0;
   }

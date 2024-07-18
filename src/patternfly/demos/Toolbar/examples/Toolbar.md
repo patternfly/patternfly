@@ -35,7 +35,7 @@ import './Toolbar.css'
           {{#> toolbar-content-section}}
             {{#> toolbar-group toolbar-group--IsToggleGroup=true toolbar-group--modifier="pf-m-show-on-lg"}}
               {{> toolbar-toggle}}
-              {{#> toolbar-group reset='toolbar-group--IsToggleGroup' toolbar-group--modifier="pf-m-filter-group"}}
+              {{#> toolbar-group  toolbar-group--IsFilterGroup=true reset='toolbar-group--IsToggleGroup'}}
                 {{#> toolbar-item}}
                   {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
                     {{#> input-group-item}}

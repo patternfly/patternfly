@@ -308,10 +308,9 @@ section: components
 
 {{#* inline 'page-template-section'}}
   {{#> tabs-template tabs-template--id=(concat page-template--id '-tabs')}}
-    {{#> page-main-section page-main-section--modifier='pf-m-no-padding pf-m-light' tab-content--id=(concat tabs-template--id '-tabs')}}
+    {{#> page-main-section page-main-section--modifier='pf-m-light' tab-content--id=(concat tabs-template--id '-tabs')}}
       {{> toolbar-template
           toolbar-template--id=(concat tabs-template--id '-toolbar')
-          toolbar-template--modifier='pf-m-page-insets'
           toolbar-template--HasToggleGroup=true
           toolbar-template--HasFilter=true
           toolbar-template--HasNoPagination=true
