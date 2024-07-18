@@ -11,9 +11,9 @@
 :where(:root, .#{$menu-toggle}) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$menu-toggle}--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$menu-toggle}--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
   --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
@@ -95,8 +95,8 @@
   --#{$menu-toggle}__controls--MinWidth: calc(var(--#{$menu-toggle}--FontSize) + var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--sm));
 
   // Full height
-  --#{$menu-toggle}--m-full-height--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--spacious);
-  --#{$menu-toggle}--m-full-height--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--spacious);
+  --#{$menu-toggle}--m-full-height--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--spacious);
+  --#{$menu-toggle}--m-full-height--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--spacious);
 
   // Split button, child
   --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--pf-t--global--text--color--on-disabled);
