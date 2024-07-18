@@ -186,12 +186,12 @@ $pf-v6-c-tree-view--MaxDepth: 10;
   --#{$table}__tbody--cell--PaddingBlockEnd: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingBlockEnd);
 
   // toggle
-  --#{$table}__tree-view-details-toggle--MarginBlockStart: calc(#{pf-size-prem(6px)} * -1);
-  --#{$table}__tree-view-details-toggle--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}__tree-view-details-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$table}__tree-view-details-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
 
   // toggle
-  --#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockStart: calc(#{pf-size-prem(6px)} * -1);
-  --#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockEnd: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-tree-view-grid__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$table}--m-tree-view-grid__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
 
   tbody:where(.#{$table}__tbody) tr:where(.#{$table}__tr) {
     position: relative;
@@ -297,11 +297,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
     grid-row: 1;
     grid-column: 2;
-
-    > .#{$menu-toggle} {
-      margin-block-start: var(--#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockStart);
-      margin-block-end: var(--#{$table}--m-tree-view-grid--c-menu-toggle--MarginBlockEnd);
-    }
+    margin-block-start: var(--#{$table}--m-tree-view-grid__action--MarginBlockStart);
+    margin-block-end: var(--#{$table}--m-tree-view-grid__action--MarginBlockEnd);
   }
 
   // - Table tree view table check
