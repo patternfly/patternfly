@@ -26,7 +26,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar--IsFilterGroup=true}}
+    {{#> toolbar-group toolbar-group--IsFilterGroup=true}}
       {{#> toolbar-item}}
         {{> masthead-template-context-selector}}
       {{/toolbar-item}}
