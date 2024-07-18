@@ -277,9 +277,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     }
   }
 
-  // - Table tree view title header cell
-  .#{$table}__tree-view-title-header-cell {
-    display: block;
+  .#{$table}__thead {
+    display: none;
   }
 
   // - Table tree view details toggle - Table tree view action
