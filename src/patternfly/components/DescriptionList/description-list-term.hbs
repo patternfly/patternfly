@@ -1,8 +1,8 @@
-{{#> wrapper description-list-text--type="span"}}{{!-- in a term, always make the text a span --}}
+{{#> wrapper description-list-text--type="span" description-list-text--IsHelp=description-list-term--IsHelp}}{{!-- in a term, always make the text a span --}}
   <dt class="{{pfv}}description-list__term{{#if description-list-term--modifier}} {{description-list-term--modifier}}{{/if}}"
     {{#if description-list-term--attribute}}
       {{{description-list-term--attribute}}}
     {{/if}}>
-      {{> @partial-block}}
+    {{> @partial-block}}
   </dt>
 {{/wrapper}}

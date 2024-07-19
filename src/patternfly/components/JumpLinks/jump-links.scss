@@ -162,8 +162,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   text-decoration: none;
   outline-offset: var(--#{$jump-links}__link--OutlineOffset);
 
-  &:hover,
-  &:focus {
+  &:is(:hover, :focus) {
     --#{$jump-links}__link-text--Color: var(--#{$jump-links}__link--hover__link-text--Color);
   }
 

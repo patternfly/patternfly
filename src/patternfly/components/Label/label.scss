@@ -201,7 +201,7 @@
   --#{$label}--m-compact--PaddingBlockEnd: 0;
   --#{$label}--m-compact--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$label}--m-compact--m-editable--TextDecorationOffset: #{pf-size-prem(1px)};
+  --#{$label}--m-compact--m-editable--TextUnderlineOffset: #{pf-size-prem(1px)};
 
   // Content
   --#{$label}__content--MaxWidth: 100%;
@@ -228,16 +228,16 @@
   --#{$label}__actions--c-button--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 
   // Editable
-  --#{$label}--m-editable--TextDecoration: underline;
-  --#{$label}--m-editable--TextDecorationStyle: dashed;
-  --#{$label}--m-editable--TextDecorationThickness: var(--pf-t--global--border--width--regular);
-  --#{$label}--m-editable--TextDecorationOffset: #{pf-size-prem(4px)};
-  --#{$label}--m-editable--TextDecorationColor: currentcolor;
+  --#{$label}--m-editable--TextDecorationLine: var(--pf-t--global--text-decoration--editable-text--line--default);
+  --#{$label}--m-editable--TextDecorationStyle: var(--pf-t--global--text-decoration--editable-text--style--default);
+  --#{$label}--m-editable--hover--TextDecorationLine: var(--pf-t--global--text-decoration--editable-text--line--hover);
+  --#{$label}--m-editable--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--editable-text--style--hover);
+  --#{$label}--m-editable--TextUnderlineOffset: #{pf-size-prem(4px)};
   --#{$label}--m-editable__content--MaxWidth: 16ch;
   --#{$label}--m-editable__content--Cursor: pointer;
 
   // Editable active
-  --#{$label}--m-editable--m-editable-active--TextDecoration: none;
+  --#{$label}--m-editable--m-editable-active--TextDecorationLine: none;
   --#{$label}--m-editable--m-editable-active--BackgroundColor: transparent;
   --#{$label}--m-editable--m-editable-active--Color: var(--pf-t--global--text--color--regular);
   --#{$label}--m-editable--m-editable-active__content--Cursor: initial;
@@ -422,7 +422,7 @@
     --#{$label}--PaddingBlockEnd: var(--#{$label}--m-compact--PaddingBlockEnd);
     --#{$label}--PaddingInlineStart: var(--#{$label}--m-compact--PaddingInlineStart);
     --#{$label}--FontSize: var(--#{$label}--m-compact--FontSize);
-    --#{$label}--m-editable--TextDecorationOffset: var(--#{$label}--m-compact--m-editable--TextDecorationOffset);
+    --#{$label}--m-editable--TextUnderlineOffset: var(--#{$label}--m-compact--m-editable--TextUnderlineOffset);
   }
 
   &.pf-m-filled {
@@ -448,17 +448,19 @@
     --#{$label}__content--MaxWidth: var(--#{$label}--m-editable__content--MaxWidth);
     --#{$label}__content--Cursor: var(--#{$label}--m-editable__content--Cursor);
 
+    .#{$label}__content:is(:hover, :focus) {
+      --#{$label}--m-editable--TextDecorationLine: var(--#{$label}--m-editable--hover--TextDecorationLine);
+      --#{$label}--m-editable--TextDecorationStyle: var(--#{$label}--m-editable--hover--TextDecorationStyle);
+    }
+
     .#{$label}__text {
-      text-decoration: var(--#{$label}--m-editable--TextDecoration);
-      text-decoration-thickness: var(--#{$label}--m-editable--TextDecorationThickness);
-      text-decoration-style: var(--#{$label}--m-editable--TextDecorationStyle);
-      text-decoration-color: var(--#{$label}--m-editable--TextDecorationColor);
-      text-underline-offset: var(--#{$label}--m-editable--TextDecorationOffset);
+      text-decoration: var(--#{$label}--m-editable--TextDecorationLine) var(--#{$label}--m-editable--TextDecorationStyle);
+      text-underline-offset: var(--#{$label}--m-editable--TextUnderlineOffset);
     }
   }
 
   &.pf-m-editable-active {
-    --#{$label}--m-editable--TextDecoration: var(--#{$label}--m-editable--m-editable-active--TextDecoration);
+    --#{$label}--m-editable--TextDecorationLine: var(--#{$label}--m-editable--m-editable-active--TextDecorationLine);
     --#{$label}--BackgroundColor: var(--#{$label}--m-editable--m-editable-active--BackgroundColor);
     --#{$label}--Color: var(--#{$label}--m-editable--m-editable-active--Color);
     --#{$label}__content--Cursor: var(--#{$label}--m-editable--m-editable-active__content--Cursor);

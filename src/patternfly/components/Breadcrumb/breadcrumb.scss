@@ -15,9 +15,11 @@
   --#{$breadcrumb}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
   --#{$breadcrumb}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
   --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
-  --#{$breadcrumb}__link--TextDecoration: var(--pf-t--global--link--text-decoration);
+  --#{$breadcrumb}__link--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--default);
+  --#{$breadcrumb}__link--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--default);
   --#{$breadcrumb}__link--hover--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$breadcrumb}__link--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
+  --#{$breadcrumb}__link--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
+  --#{$breadcrumb}__link--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
   --#{$breadcrumb}__link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$breadcrumb}__link--BackgroundColor: transparent;
 
@@ -79,13 +81,14 @@
   font-weight: var(--#{$breadcrumb}__link--FontWeight);
   line-height: inherit;
   color: var(--#{$breadcrumb}__link--Color);
-  text-decoration: var(--#{$breadcrumb}__link--TextDecoration);
+  text-decoration: var(--#{$breadcrumb}__link--TextDecorationLine) var(--#{$breadcrumb}__link--TextDecorationStyle);
   word-break: break-word;
   background-color: var(--#{$breadcrumb}__link--BackgroundColor);
 
-  &:hover {
+  &:is(:hover, :focus) {
     --#{$breadcrumb}__link--Color: var(--#{$breadcrumb}__link--hover--Color);
-    --#{$breadcrumb}__link--TextDecoration: var(--#{$breadcrumb}__link--hover--TextDecoration);
+    --#{$breadcrumb}__link--TextDecorationLine: var(--#{$breadcrumb}__link--hover--TextDecorationLine);
+    --#{$breadcrumb}__link--TextDecorationStyle: var(--#{$breadcrumb}__link--hover--TextDecorationStyle);
   }
 
 
@@ -94,7 +97,7 @@
     cursor: default;
 
     &,
-    &:hover {
+    &:is(:hover, :focus) {
       color: var(--#{$breadcrumb}__link--m-current--Color);
       text-decoration: none;
     }
