@@ -3,7 +3,7 @@
     {{#> card-header card--id=card-template-expandable-status--id}}
       {{> card-header-toggle}}
       {{#> card-actions}}
-        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--id=(dasherize card--id 'toggle')}}
+        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--HasKebab=true menu-toggle--id=(dasherize card--id 'action-kebab')}}
       {{/card-actions}}
       {{#> card-title card-title--id=(concat card--id '-title')}}
         {{#> title titleType="h2" title--modifier="pf-m-xl"}}

@@ -30,7 +30,7 @@
       pf-m-disabled
     {{/if}}
   {{/if}}"
-  {{ternary  button--id (concat 'id="' button--id '"') null}}
+  {{{ternary  button--id (concat 'id="' button--id '"') null}}}
   {{#if button--IsSubmit}}
     type="submit"
   {{else if button--IsReset}}
