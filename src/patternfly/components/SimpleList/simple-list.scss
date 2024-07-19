@@ -54,8 +54,7 @@
     --#{$simple-list}__item-link--m-current--Color:  var(--#{$simple-list}__item-link--m-link--hover--Color);
   }
 
-  &:hover,
-  &:focus {
+  &:is(:hover, :focus) {
     --#{$simple-list}__item-link--BackgroundColor: var(--#{$simple-list}__item-link--hover--BackgroundColor);
     --#{$simple-list}__item-link--Color: var(--#{$simple-list}__item-link--hover--Color);
 

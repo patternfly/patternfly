@@ -627,9 +627,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__link--after--BorderWidth: 0;
   }
 
-  &:disabled,
-  &.pf-m-disabled,
-  &.pf-m-aria-disabled {
+  &:is(:disabled, .pf-m-disabled, .pf-m-aria-disabled) {
     --#{$tabs}__link--BackgroundColor: var(--#{$tabs}__link--disabled--BackgroundColor);
   }
 

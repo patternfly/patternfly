@@ -6,15 +6,12 @@
   --#{$timestamp}--OutlineOffset: #{pf-size-prem(3px)};
 
   // Help text variables for the timestamp
-  --#{$timestamp}--m-help-text--TextDecorationLine: underline;
-  --#{$timestamp}--m-help-text--TextDecorationStyle: dashed;
-  --#{$timestamp}--m-help-text--TextDecorationThickness: var(--pf-t--global--border--width--regular);
+  --#{$timestamp}--m-help-text--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--default);
+  --#{$timestamp}--m-help-text--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--default);
   --#{$timestamp}--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
-  --#{$timestamp}--m-help-text--TextDecorationColor: var(--pf-t--global--border--color--default);
   --#{$timestamp}--m-help-text--hover--Color: var(--pf-t--global--text--color--regular);
-  --#{$timestamp}--m-help-text--focus--Color: var(--pf-t--global--text--color--regular);
-  --#{$timestamp}--m-help-text--hover--TextDecorationColor: var(--pf-t--global--text--color--regular);
-  --#{$timestamp}--m-help-text--focus--TextDecorationColor: var(--pf-t--global--text--color--regular);
+  --#{$timestamp}--m-help-text--hover--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--hover);
+  --#{$timestamp}--m-help-text--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--hover);
 }
 
 .#{$timestamp} {
@@ -24,21 +21,14 @@
   outline-offset: var(--#{$timestamp}--OutlineOffset);
 
   &.pf-m-help-text {
-    text-decoration-line: var(--#{$timestamp}--m-help-text--TextDecorationLine);
-    text-decoration-thickness: var(--#{$timestamp}--m-help-text--TextDecorationThickness);
-    text-decoration-style: var(--#{$timestamp}--m-help-text--TextDecorationStyle);
-    text-decoration-color: var(--#{$timestamp}--m-help-text--TextDecorationColor);
+    text-decoration: var(--#{$timestamp}--m-help-text--TextDecorationLine) var(--#{$timestamp}--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$timestamp}--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 
-    &:hover {
+    &:is(:hover, :focus) {
       --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--hover--Color);
-      --#{$timestamp}--m-help-text--TextDecorationColor: var(--#{$timestamp}--m-help-text--hover--TextDecorationColor);
-    }
-
-    &:focus {
-      --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--focus--Color);
-      --#{$timestamp}--m-help-text--TextDecorationColor: var(--#{$timestamp}--m-help-text--focus--TextDecorationColor);
+      --#{$timestamp}--m-help-text--TextDecorationLine: var(--#{$timestamp}--m-help-text--hover--TextDecorationLine);
+      --#{$timestamp}--m-help-text--TextDecorationStyle: var(--#{$timestamp}--m-help-text--hover--TextDecorationStyle);
     }
   }
 }

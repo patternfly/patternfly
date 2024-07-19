@@ -17,7 +17,8 @@
   --#{$button}--BorderColor: transparent;
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$button}--TextDecoration: none;
+  --#{$button}--TextDecorationLine: none;
+  --#{$button}--TextDecorationStyle: none;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
@@ -26,7 +27,8 @@
   --#{$button}--hover--BackgroundColor: transparent;
   --#{$button}--hover--BorderColor: transparent;
   --#{$button}--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
-  --#{$button}--hover--TextDecoration: none;
+  --#{$button}--hover--TextDecorationLine: none;
+  --#{$button}--hover--TextDecorationStyle: none;
 
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
@@ -110,7 +112,10 @@
   --#{$button}--m-link--m-inline--PaddingInlineEnd: 0;
   --#{$button}--m-link--m-inline--PaddingBlockEnd: 0;
   --#{$button}--m-link--m-inline--PaddingInlineStart: 0;
-  --#{$button}--m-link--m-inline--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
+  --#{$button}--m-link--m-inline--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--default);
+  --#{$button}--m-link--m-inline--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--default);
+  --#{$button}--m-link--m-inline--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
+  --#{$button}--m-link--m-inline--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
   --#{$button}--m-link--m-inline__progress--InsetInlineStart: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -297,7 +302,7 @@
   line-height: var(--#{$button}--LineHeight, inherit);
   color: var(--#{$button}--Color);
   text-align: center;
-  text-decoration: var(--#{$button}--TextDecoration);
+  text-decoration: var(--#{$button}--TextDecorationLine) var(--#{$button}--TextDecorationStyle);
   white-space: nowrap;
   cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   user-select: none;
@@ -413,7 +418,10 @@
       --#{$button}--PaddingInlineStart: var(--#{$button}--m-link--m-inline--PaddingInlineStart);
       --#{$button}--BackgroundColor: transparent;
       --#{$button}__progress--InsetInlineStart: var(--#{$button}--m-link--m-inline__progress--InsetInlineStart);
-      --#{$button}--hover--TextDecoration: var(--#{$button}--m-link--m-inline--hover--TextDecoration);
+      --#{$button}--TextDecorationLine: var(--#{$button}--m-link--m-inline--TextDecorationLine);
+      --#{$button}--TextDecorationStyle: var(--#{$button}--m-link--m-inline--TextDecorationStyle);
+      --#{$button}--hover--TextDecorationLine: var(--#{$button}--m-link--m-inline--hover--TextDecorationLine);
+      --#{$button}--hover--TextDecorationStyle: var(--#{$button}--m-link--m-inline--hover--TextDecorationStyle);
       --#{$button}--hover--BackgroundColor: transparent;
       --#{$button}--m-clicked--BackgroundColor: transparent;
       --#{$button}--disabled--BackgroundColor: transparent;
@@ -598,8 +606,9 @@
     --#{$button}--BackgroundColor: var(--#{$button}--hover--BackgroundColor);
     --#{$button}--BorderColor: var(--#{$button}--hover--BorderColor);
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
-    --#{$button}--TextDecoration: var(--#{$button}--hover--TextDecoration);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
+
+    text-decoration: var(--#{$button}--hover--TextDecorationLine) var(--#{$button}--hover--TextDecorationStyle);
   }
 
   &.pf-m-clicked {
@@ -633,7 +642,8 @@
   }
 
   &.pf-m-aria-disabled {
-    --#{$button}--m-link--m-inline--hover--TextDecoration: none;
+    --#{$button}--m-link--m-inline--hover--TextDecorationLine: var(--#{$button}--TextDecorationLine);
+    --#{$button}--m-link--m-inline--hover--TextDecorationStyle: var(--#{$button}--TextDecorationStyle);
 
     cursor: default;
   }

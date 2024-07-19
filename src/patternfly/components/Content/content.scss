@@ -63,9 +63,11 @@
 
   // Links
   --#{$content}--a--Color: var(--pf-t--global--text--color--link--default);
-  --#{$content}--a--TextDecoration: var(--pf-t--global--link--text-decoration);
+  --#{$content}--a--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--default);
+  --#{$content}--a--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--default);
   --#{$content}--a--hover--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$content}--a--hover--TextDecoration: var(--pf-t--global--link--text-decoration);
+  --#{$content}--a--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
+  --#{$content}--a--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
   --#{$content}--a--visited--Color: var(--pf-t--global--text--color--link--visited);
 
   // Blockquote
@@ -103,11 +105,12 @@
     & a
   ) {
     color: var(--#{$content}--a--Color);
-    text-decoration: var(--#{$content}--a--TextDecoration);
+    text-decoration: var(--#{$content}--a--TextDecorationLine) var(--#{$content}--a--TextDecorationStyle);
 
-    &:hover {
+    &:is(:hover, :focus) {
       --#{$content}--a--Color: var(--#{$content}--a--hover--Color);
-      --#{$content}--a--TextDecoration: var(--#{$content}--a--hover--TextDecoration);
+      --#{$content}--a--TextDecorationLine: var(--#{$content}--a--hover--TextDecorationLine);
+      --#{$content}--a--TextDecorationStyle: var(--#{$content}--a--hover--TextDecorationStyle);
     }
   }
 

@@ -171,9 +171,11 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   // Help text variables for the step title
   --#{$progress-stepper}__step-title--m-help-text--PaddingInlineStart: 0;
   --#{$progress-stepper}__step-title--m-help-text--PaddingInlineEnd: 0;
-  --#{$progress-stepper}__step-title--m-help-text--TextDecorationColor: currentcolor;
-  --#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness: var(--pf-t--global--link--text-decoration);
+  --#{$progress-stepper}__step-title--m-help-text--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--default);
+  --#{$progress-stepper}__step-title--m-help-text--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--default);
   --#{$progress-stepper}__step-title--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
+  --#{$progress-stepper}__step-title--m-help-text--hover--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--hover);
+  --#{$progress-stepper}__step-title--m-help-text--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--hover);
   --#{$progress-stepper}__step-title--m-help-text--hover--Color: var(--pf-t--global--text--color--brand--hover);
 
   // Help text variables the step title for failure state
@@ -404,15 +406,13 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   &.pf-m-help-text {
     padding-inline-start: var(--#{$progress-stepper}__step-title--m-help-text--PaddingInlineStart);
     padding-inline-end: var(--#{$progress-stepper}__step-title--m-help-text--PaddingInlineEnd);
-    text-decoration: underline;
-    text-decoration-thickness: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationThickness);
-    text-decoration-style: dashed;
-    text-decoration-color: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationColor);
+    text-decoration: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationLine) var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$progress-stepper}__step-title--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:is(:hover, :focus) {
+      --#{$progress-stepper}__step-title--m-help-text--TextDecorationLine: var(--#{$progress-stepper}__step-title--m-help-text--hover--TextDecorationLine);
+      --#{$progress-stepper}__step-title--m-help-text--TextDecorationStyle: var(--#{$progress-stepper}__step-title--m-help-text--hover--TextDecorationStyle);
       --#{$progress-stepper}__step-title--Color: var(--#{$progress-stepper}__step-title--m-help-text--hover--Color);
     }
   }

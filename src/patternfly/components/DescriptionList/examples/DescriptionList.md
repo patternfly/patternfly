@@ -13,7 +13,7 @@ cssPrefix: pf-v6-c-description-list
 
 ### Term help text
 ```hbs
-{{> description-list__example description-list--title="Term help text" description-list-term--TextIsHelp="true"}}
+{{> description-list__example description-list--title="Term help text" description-list-term--IsHelp="true"}}
 ```
 
 ### Default, two column
