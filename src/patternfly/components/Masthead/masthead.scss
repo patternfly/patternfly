@@ -18,8 +18,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__main--MarginInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
 
   // * Masthead brand
-  --#{$masthead}__logo--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$masthead}__logo--MaxHeight: #{pf-size-prem(38px)};
+  --#{$masthead}__logo--Width: #{pf-size-prem(189px)}; // width of sidebar - toggle - inline padding - gutter = 189
 
   // * Masthead toggle
   --#{$masthead}__toggle--Size: var(--pf-t--global--icon--size--xl);
@@ -198,10 +198,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // - Masthead logo
 .#{$masthead}__logo {
   position: relative;
+  width: var(--#{$masthead}__logo--Width);
   max-height: var(--#{$masthead}__logo--MaxHeight);
 
   > * {
-    // max-width: 100%; // This causes the logo to shrink
+    max-width: 100%;
     max-height: 100%;
     vertical-align: middle;
  }
