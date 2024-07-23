@@ -2,5 +2,8 @@
   {{#if data-list-check--attribute}}
     {{{data-list-check--attribute}}}
   {{/if}}>
-  {{> check check--IsStandalone=true check--IsLabelWrapped=true check--id=(dasherize data-list--id data-list-item--id)}}
+  {{> check
+      check--IsStandalone=true
+      check--IsLabelWrapped=true
+      check--id=(concat data-list--id '-' data-list-item--id '"' data-list-check-checkbox--attribute)}}
 </div>

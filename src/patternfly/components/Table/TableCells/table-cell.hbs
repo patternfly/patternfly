@@ -4,9 +4,22 @@
 
 {{#> config table-cell--tag=(ternary IsThead 'th' 'td')}}
 
-<{{table-cell--tag}} class="{{concat (pfv) 'table__' table-cell--tag ' ' (concat (pfv) 'table' table-cell--classname) ' ' table-cell--modifier}}"
+<{{table-cell--tag}} class="{{concat (pfv) 'table__' table-cell--tag}}
+  {{setModifiers
+    table-cell--classname=(concat (pfv) 'table' table-cell--classname)
+    table-cell--IsFavorite=(concat (pfv) 'table__favorite')
+    table-cell--IsSortable=(concat (pfv) 'table__sort')
+    table-cell--modifier=table-cell--modifier
+  }}"
   {{{ternary table-cell--aria-label (concat 'aria-label="' table-cell--aria-label '"') null}}}
-  {{{ternary table-cell--attribute table-cell--attribute null}}}>
+  {{{ternary table-cell--attribute table-cell--attribute null}}}
+  {{{ternary IsThead 'role="columnheader" scope="col"' null}}}
+  {{{ternary table-cell--IsSortable (concat 'aria-sort="' (ternary table-cell--IsAsc 'ascending' (ternary table-cell--desc 'descending' 'none')) '"') null}}}>
+
+
+  {{#if (hasAll table-cell--IsFavorite table-cell--IsSortable)}}
+    {{> table-favorite-sort}}
+  {{/if}}
 
   {{#if @partial-block}}
     {{> @partial-block}}

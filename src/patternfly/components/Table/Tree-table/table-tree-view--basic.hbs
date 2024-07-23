@@ -20,8 +20,8 @@
       {{/table-th}}
 
       {{!-- TODO: fix this after merge --}}
-      {{#if table--HasActions}}
-        {{> table-cell-empty}}
+      {{#if table-tree-view--HasActions}}
+        {{> table-cell-empty table-cell--text='Actions'}}
       {{/if}}
     {{/table-tr}}
   {{/table-thead}}
