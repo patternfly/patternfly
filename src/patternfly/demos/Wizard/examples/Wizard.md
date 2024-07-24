@@ -206,7 +206,7 @@ wrapperTag: div
                     {{> __wizard-form}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
-                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
                   {{#> drawer-body}}
                     {{#> drawer-head}}
                       {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
@@ -287,7 +287,7 @@ wrapperTag: div
                     {{> __wizard-form}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
-                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
                   {{#> drawer-body}}
                     {{#> drawer-head}}
                       {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
@@ -368,7 +368,7 @@ wrapperTag: div
                     {{> __wizard-info}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
-                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
                   {{#> drawer-body}}
                     {{#> drawer-head}}
                       {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
@@ -563,7 +563,7 @@ wrapperTag: div
 {{> page-template page-template--id="wizard-with-drawer-in-page-example"}}
 
 {{#* inline "page-template-section"}}
-  {{#> page-main-wizard page-main-wizard--modifier="pf-m-light-200"}}
+  {{#> page-main-wizard}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-toggle}}
         {{#> wizard-toggle-list}}
@@ -589,7 +589,7 @@ wrapperTag: div
                     {{> __wizard-form}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
-                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
                   {{#> drawer-body}}
                     {{#> drawer-head}}
                       {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
@@ -634,7 +634,7 @@ wrapperTag: div
 {{> page-template page-template--id="wizard-with-drawer-in-page-expanded-example"}}
 
 {{#* inline "page-template-section"}}
-  {{#> page-main-wizard page-main-wizard--modifier="pf-m-light-200"}}
+  {{#> page-main-wizard}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-toggle}}
         {{#> wizard-toggle-list}}
@@ -660,7 +660,7 @@ wrapperTag: div
                     {{> __wizard-form}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
-                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
                   {{#> drawer-body}}
                     {{#> drawer-head}}
                       {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}

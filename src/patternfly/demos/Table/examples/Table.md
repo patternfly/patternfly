@@ -12,7 +12,7 @@ import './Table.css'
 {{> page-template page-template--id="basic-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth=true}}
+  {{#> page-main-section page-main-section--IsLimitWidth=true}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -32,7 +32,7 @@ import './Table.css'
 {{> page-template page-template--id="sortable-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -54,7 +54,7 @@ import './Table.css'
 {{> page-template page-template--id="expandable-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -74,7 +74,7 @@ import './Table.css'
 {{> page-template page-template--id="compact-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -94,7 +94,7 @@ import './Table.css'
 {{> page-template page-template--id="compound-expansion-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -114,7 +114,7 @@ import './Table.css'
 {{> page-template page-template--id="loading-state-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> table-loading-table}}
   {{/page-main-section}}
 {{/inline}}
@@ -126,7 +126,7 @@ import './Table.css'
 {{> page-template page-template--id="empty-state-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> table-empty-state-table}}
   {{/page-main-section}}
 {{/inline}}
@@ -137,7 +137,7 @@ import './Table.css'
 {{> page-template page-template--id="static-bottom-pagination-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -187,7 +187,7 @@ import './Table.css'
 {{/backdrop}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -206,7 +206,7 @@ import './Table.css'
 {{> page-template page-template--id="sticky-header-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id=(concat page--id '-toolbar')
         toolbar-template--HasBulkSelect=true
@@ -226,7 +226,7 @@ import './Table.css'
 {{> page-template page-template--id="sticky-first-column-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth=true}}
+  {{#> page-main-section page-main-section--IsLimitWidth=true}}
     <div class="pf-v6-c-scroll-outer-wrapper">
       {{> toolbar-template
           toolbar-template--id=(concat page--id '-toolbar')
@@ -253,7 +253,7 @@ import './Table.css'
 {{> page-template page-template--id="sticky-multiple-columns-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidth=true}}
+  {{#> page-main-section page-main-section--modifier="pf-m-overflow-scroll" page-main-section--IsLimitWidth=true}}
     <div class="pf-v6-c-scroll-outer-wrapper">
       {{> toolbar-template
           toolbar-template--id=(concat page--id '-toolbar')
@@ -282,7 +282,7 @@ import './Table.css'
 {{> page-template page-template--id="sticky-header-and-multiple columns-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidths=true}}
+  {{#> page-main-section page-main-section--modifier="pf-m-overflow-scroll" page-main-section--IsLimitWidths=true}}
     <div class="pf-v6-c-scroll-outer-wrapper">
       {{> toolbar-template
           toolbar-template--id=(concat page--id '-toolbar')
@@ -311,7 +311,7 @@ import './Table.css'
 {{> page-template page-template--id="sticky-header-and-multiple columns-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidths=true}}
+  {{#> page-main-section page-main-section--modifier="pf-m-overflow-scroll" page-main-section--IsLimitWidths=true}}
     <div class="pf-v6-c-scroll-outer-wrapper">
       {{> toolbar-template
           toolbar-template--id=(concat page--id '-toolbar')
@@ -341,7 +341,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
 {{> page-template page-template--id="image-alignment-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth=true}}
+  {{#> page-main-section page-main-section--IsLimitWidth=true}}
     {{#> table table--id="image-alignment-demo-table" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is an example of how to control image and text alignment in table cells."'}}
       {{#> table-thead}}
         {{#> table-tr table-th--modifier="pf-m-fit-content"}}

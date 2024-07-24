@@ -17,7 +17,7 @@ section: components
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
     {{/page-main-tabs}}
 
-    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
       {{#> tabs-template-pod-tab-content}}
         {{#> l-flex l-flex--modifier="pf-m-column"}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
@@ -163,7 +163,7 @@ section: components
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
     {{/page-main-tabs}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs-template-pod-tab-list--modifier="pf-m-page-insets" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
       {{#> tabs-template-pod-tab-content tab-content-body--modifier="pf-m-padding"}}
         {{#> tabs-template-pod-tab-content tab-content-body--modifier=reset tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
@@ -308,7 +308,7 @@ section: components
 
 {{#* inline 'page-template-section'}}
   {{#> tabs-template tabs-template--id=(concat page-template--id '-tabs')}}
-    {{#> page-main-section page-main-section--modifier='pf-m-light' tab-content--id=(concat tabs-template--id '-tabs')}}
+    {{#> page-main-section tab-content--id=(concat tabs-template--id '-tabs')}}
       {{> toolbar-template
           toolbar-template--id=(concat tabs-template--id '-toolbar')
           toolbar-template--HasToggleGroup=true
@@ -455,7 +455,7 @@ section: components
         {{/tabs-list}}
       {{/tabs}}
     {{/page-main-tabs}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true" tab-content--id=(concat tabs-template--id '-tabs') page-main-section--modifier="pf-m-light"}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" tab-content--id=(concat tabs-template--id '-tabs')}}
       {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-new-link" id="' tab-content--id '-new-panel"')}}
         What's new content
       {{/tab-content}}

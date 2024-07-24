@@ -11,8 +11,7 @@ wrapperTag: div
 {{> page-template page-template--id="primary-detail-expanded-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
 {{#* inline "page-template-section"}}
-  {{> divider divider--type="div"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+  {{#> page-main-section}}
 
     <!-- Drawer -->
     {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
@@ -60,7 +59,7 @@ wrapperTag: div
 
 {{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+  {{#> page-main-section}}
 
     <!-- Drawer -->
     {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl"}}
