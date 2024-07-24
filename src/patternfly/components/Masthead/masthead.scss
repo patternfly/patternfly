@@ -6,7 +6,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 :where(:root, .#{$masthead}) {
   // * Masthead
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$masthead}--ColumnGap: 0;
+  --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--gutter--default);
   --#{$masthead}--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
@@ -28,6 +28,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__content--ColumnGap: var(--pf-t--global--spacer--md);
 
   // * Masthead stack
+  --#{$masthead}--m-display-stack--ColumnGap: var(--pf-t--global--spacer--gutter--default);
   --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
   --#{$masthead}--m-display-stack__brand--GridColumn: -1 / 1;
   --#{$masthead}--m-display-stack__brand--Order: -1;
@@ -39,6 +40,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-stack__main--ColumnGap: unset; // no column gap needed until it's flex display
 
   // * Masthead inline
+  --#{$masthead}--m-display-inline--ColumnGap: 0;
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
   --#{$masthead}--m-display-inline__brand--GridColumn: initial; 
@@ -62,6 +64,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // * Masthead display stack
 @mixin pf-v6-c-masthead--m-display-stack {
+  --#{$masthead}--ColumnGap: var(--#{$masthead}--m-display-stack--ColumnGap);
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-stack--GridTemplateColumns);
   --#{$masthead}__brand--GridColumn: var(--#{$masthead}--m-display-stack__brand--GridColumn);
   --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-stack__brand--Order);
@@ -76,6 +79,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // * Masthead display inline
 @mixin pf-v6-c-masthead--m-display-inline {
+  --#{$masthead}--ColumnGap: var(--#{$masthead}--m-display-inline--ColumnGap);
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-inline--GridTemplateColumns);
   --#{$masthead}__brand--GridColumn: var(--#{$masthead}--m-display-inline__brand--GridColumn);
   --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-inline__brand--Order);
