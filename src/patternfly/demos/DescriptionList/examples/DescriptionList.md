@@ -273,7 +273,7 @@ cssPrefix: pf-d-description-list
 
 {{#*inline "page-template-section"}}
   {{> divider}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true"}}
     {{#> grid grid--modifier="pf-m-gutter" l-flex-item--modifier=reset}}
       {{#> grid-item grid-item--modifier="pf-m-5-col-on-lg pf-m-4-col-on-xl"}}
         {{#> grid grid--modifier="pf-m-gutter" grid-item--modifier=reset}}

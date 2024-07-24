@@ -66,7 +66,7 @@ section: components
 {{> page-template page-template--id="alert-horizontal-example"}}
 
 {{#* inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+  {{#> page-main-section}}
     {{> alert-template-horizontal-form alert-template-horizontal-form--id=(concat page-template--id "-form")}}
   {{/page-main-section}}
 {{/inline}}
@@ -77,7 +77,7 @@ section: components
 {{> page-template page-template--id="alert-stacked-example"}}
 
 {{#* inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+  {{#> page-main-section}}
     {{> alert-template-stacked-form alert-template-stacked-form--id=(concat page-template--id "-form")}}
   {{/page-main-section}}
 {{/inline}}

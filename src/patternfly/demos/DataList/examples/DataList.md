@@ -10,7 +10,7 @@ wrapperTag: div
 {{> page-template page-template--id='data-list-basic-example'}}
 
 {{#* inline 'page-template-section'}}
-  {{#> page-main-section page-main-section--modifier='pf-m-no-padding pf-m-padding-on-xl'}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id='data-list-basic-example-toolbar'
         toolbar-template--HasBulkSelect=true
@@ -28,7 +28,7 @@ wrapperTag: div
 {{> page-template page-template--id='data-list-actionable-example'}}
 
 {{#* inline 'page-template-section'}}
-  {{#> page-main-section page-main-section--modifier='pf-m-no-padding pf-m-padding-on-xl'}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id='data-list-actionable-example-toolbar'
         toolbar-template--HasToggleGroup=true
@@ -47,7 +47,7 @@ wrapperTag: div
 {{> page-template page-template--id='data-list-expandable-example'}}
 
 {{#* inline 'page-template-section'}}
-  {{#> page-main-section page-main-section--modifier='pf-m-no-padding pf-m-padding-on-xl'}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id='data-list-expandable-example-toolbar'
         toolbar-template--HasToggleGroup=true
@@ -67,7 +67,7 @@ wrapperTag: div
 {{> page-template page-template--id='data-list-static-bottom-example'}}
 
 {{#* inline 'page-template-section'}}
-  {{#> page-main-section page-main-section--modifier='pf-m-no-padding pf-m-padding-on-xl'}}
+  {{#> page-main-section}}
     {{> toolbar-template
         toolbar-template--id='data-list-static-bottom-example-toolbar'
         toolbar-template--HasToggleGroup=true

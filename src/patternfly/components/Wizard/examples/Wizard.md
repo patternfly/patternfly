@@ -193,7 +193,7 @@ import './Wizard.css'
                 {{> __wizard-form}}
               {{/wizard-main-body}}
             {{/drawer-content}}
-            {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+            {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
               {{#> drawer-body}}
                 {{#> drawer-head}}
                   {{#> drawer-actions}}

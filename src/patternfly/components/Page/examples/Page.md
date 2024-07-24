@@ -256,11 +256,6 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-page-insets` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body padding/inset to visually match padding of page elements. |
 | `.pf-m-context-selector` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body to contain a context selector. |
 | `.pf-m-inset-none` | `.pf-v6-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
-| `.pf-m-light` | `.pf-v6-c-page__sidebar` | Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
-| `.pf-m-light` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a light theme. |
-| `.pf-m-dark-200` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a dark theme and a dark transparent background. |
-| `.pf-m-dark-100` | `.pf-v6-c-page__main-section` | Modifies a main page section to have a dark theme and a darker transparent background. |
-| `.pf-m-light-200` | `.pf-v6-c-page__main-wizard` | Modifies a wizard page section to have a light 200 theme. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
 | `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |

@@ -117,7 +117,7 @@ import './Page.css'
 }}
 
 {{#*inline "page-template-main-content"}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-m-light"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
     {{#> content}}
       <h1>Centering page sections</h1>
       <p>When a width limited page section is wider than the value of <code>--pf-v6-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
