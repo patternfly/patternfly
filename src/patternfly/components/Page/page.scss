@@ -25,6 +25,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--MarginInlineEnd: 0;
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar--PaddingInlineStart: 0;
+  --#{$page}__sidebar--PaddingInlineEnd: 0;
 
 
   // Sidebar header
@@ -39,8 +40,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // Sidebar body
-  --#{$page}__sidebar-body--PaddingInlineEnd: var(--pf-t--global--spacer--gutter--default);
-  --#{$page}__sidebar-body--breakpoint--xl--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__sidebar-body--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-body--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineEnd: var(--#{$page}--inset);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineStart: var(--#{$page}--inset);
@@ -154,6 +154,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-area: sidebar;
   grid-row-start: 2;
   grid-column-start: 1;
+  width: var(--#{$page}__sidebar--Width);
   padding-block-start: 0;
   padding-block-end: var(--#{$page}__sidebar--PaddingBlockEnd);
   padding-inline-start: var(--#{$page}__sidebar--PaddingInlineStart);
@@ -164,10 +165,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
   transition: var(--#{$page}__sidebar--Transition);
-
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__sidebar-body--PaddingInlineEnd: var(--#{$page}__sidebar-body--breakpoint--xl--PaddingInlineEnd);
-  }
 
   @include pf-v6-bidirectional-style(
     $prop: transform,

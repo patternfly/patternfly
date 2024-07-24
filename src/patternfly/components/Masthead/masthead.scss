@@ -41,8 +41,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // * Masthead inline
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
-  --#{$masthead}--m-display-inline__brand--GridColumn: unset; 
-  --#{$masthead}--m-display-inline__brand--Order: unset;
+  --#{$masthead}--m-display-inline__brand--GridColumn: initial; 
+  --#{$masthead}--m-display-inline__brand--Order: initial;
   --#{$masthead}--m-display-inline__brand--PaddingBlockEnd: 0;
   --#{$masthead}--m-display-inline__brand--BorderBlockEnd: 0;
   --#{$masthead}--m-display-inline__main--GridColumn: 1; 
@@ -170,10 +170,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead}__brand {
   display: flex;
   flex-shrink: 0;
-  grid-column: var(--#{$masthead}__brand--GridColumn);
+  grid-column: var(--#{$masthead}__brand--GridColumn, revert);
   row-gap: var(--#{$masthead}__brand--RowGap, var(--#{$masthead}--RowGap));
   align-self: stretch;
-  order: var(--#{$masthead}__brand--Order);
+  order: var(--#{$masthead}__brand--Order, revert);
   min-width: #{pf-size-prem(4ch)}; // allow flex containers to shrink to fit possible overflow
   padding-block-end: var(--#{$masthead}__brand--PaddingBlockEnd);
   border-block-end: var(--#{$masthead}__brand--BorderBlockEnd);
