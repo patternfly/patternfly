@@ -7,15 +7,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 :where(:root, .#{$page}) {
   --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}--inset: var(--pf-t--global--spacer--md);
-  --#{$page}--xl--inset: var(--pf-t--global--spacer--xl);
+  --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
 
   // Header
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
-
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}--inset: var(--#{$page}--xl--inset);
-  }
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
@@ -30,6 +25,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--MarginInlineEnd: 0;
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar--PaddingInlineStart: 0;
+  --#{$page}__sidebar--PaddingInlineEnd: 0;
 
 
   // Sidebar header
@@ -44,8 +40,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // Sidebar body
-  --#{$page}__sidebar-body--PaddingInlineEnd: 0;
-  --#{$page}__sidebar-body--PaddingInlineStart: 0;
+  --#{$page}__sidebar-body--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__sidebar-body--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineEnd: var(--#{$page}--inset);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineStart: var(--#{$page}--inset);
   --#{$page}__sidebar-body--m-context-selector--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -59,8 +55,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$page}__main-container--MarginInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$page}__main-container--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset); 
+  --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$page}__main-container--BorderWidth: var(--pf-t--global--spacer--sm); // TODO Change to be a page outline token
   --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
@@ -135,14 +131,19 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-areas:
       "header header"
       "sidebar main";
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
     }
-}
+  }
 
 // Header
 .#{$page} > .#{$masthead} {
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
+  }
+
   z-index: var(--#{$page}--c-masthead--ZIndex);
   grid-area: header;
+
 }
 
 // Sidebar
@@ -157,6 +158,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-block-start: 0;
   padding-block-end: var(--#{$page}__sidebar--PaddingBlockEnd);
   padding-inline-start: var(--#{$page}__sidebar--PaddingInlineStart);
+  padding-inline-end: var(--#{$page}__sidebar--PaddingInlineEnd);
   margin-inline-end: var(--#{$page}__sidebar--MarginInlineEnd);
   overflow-x: hidden;
   overflow-y: auto;
@@ -317,6 +319,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background: var(--#{$page}__main-container--BackgroundColor);
   border: var(--#{$page}__main-container--BorderWidth) solid var(--#{$page}__main-container--BorderColor);
   border-radius: var(--#{$page}__main-container--BorderRadius);
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$page}__main-container--MarginInlineStart: 0;
+  }
 
   &.pf-m-fill,
   &:has(.#{$page}__main-wizard) {

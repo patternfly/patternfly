@@ -13,10 +13,12 @@ import './Page.css'
 ```hbs
 {{#> page}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}
@@ -53,10 +55,12 @@ import './Page.css'
 ```hbs
 {{#> page page--nav-direction="vertical"}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}
@@ -79,10 +83,12 @@ import './Page.css'
 ```hbs
 {{#> page}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}
@@ -109,10 +115,12 @@ import './Page.css'
 ```hbs
 {{#> page page--nav-direction="vertical"}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}
@@ -135,10 +143,12 @@ import './Page.css'
 ```hbs
 {{#> page}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}
@@ -164,10 +174,12 @@ import './Page.css'
 ```hbs
 {{#> page}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}
@@ -202,10 +214,12 @@ import './Page.css'
 ```hbs
 {{#> page}}
   {{#> masthead}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
+      {{> masthead-toggle}}
       {{#> masthead-brand}}
-        Logo
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
       {{/masthead-brand}}
     {{/masthead-main}}
     {{> masthead-content}}

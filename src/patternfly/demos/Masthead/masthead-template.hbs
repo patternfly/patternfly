@@ -7,11 +7,13 @@
   {{> page-template-skip-to-content}}
 {{/unless}}
 {{#> masthead masthead--id=masthead-template--id masthead--modifier=masthead-template--modifier masthead-template-content-icon-group--breakpoint="lg"}} {{!-- set default breakpoint --}}
-  {{#unless masthead-template--HasNoToggle}}
-    {{> masthead-toggle}}
-  {{/unless}}
   {{#> masthead-main}}
-    {{> masthead-brand}}
+    {{#unless masthead-template--HasNoToggle}}
+      {{> masthead-toggle}}
+    {{/unless}}
+    {{#> masthead-brand}}
+      {{> masthead-logo}}
+    {{/masthead-brand}}
   {{/masthead-main}}
   {{> masthead-template-content}}
 {{/masthead}}
