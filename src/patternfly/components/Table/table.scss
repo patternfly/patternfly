@@ -786,10 +786,10 @@
   }
 
   &.pf-m-favorited .#{$button} {
-    --#{$button}--m-plain--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+    --#{$button}--m-plain__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
 
     &:is(:hover, :focus) {
-      --#{$button}--m-plain--hover--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+      --#{$button}--hover__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
     }
   }
 }
