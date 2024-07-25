@@ -148,3 +148,13 @@ import './Page.css'
 ```hbs isFullscreen
 {{> page-template page-template--id="page-context-selector-expanded" page-template-sidebar--HasContextSelector=true page-template-context-selector--IsExpanded=true}}
 ```
+
+### Sidebar collapsed
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-sidebar-collapsed" page-sidebar--modifier="pf-m-collapsed"}}
+```
+
+### Sidebar expanded
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-sidebar-expanded" page-sidebar--modifier="pf-m-expanded"}}
+```

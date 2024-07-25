@@ -313,24 +313,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-direction: column;
   align-self: start;
   max-height: var(--#{$page}__main-container--MaxHeight);
-  margin-block-start: 0;
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
-  overflow: auto;
   background: var(--#{$page}__main-container--BackgroundColor);
   border: var(--#{$page}__main-container--BorderWidth) solid var(--#{$page}__main-container--BorderColor);
   border-radius: var(--#{$page}__main-container--BorderRadius);
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    .#{$page}__sidebar:not(.pf-m-collapsed) + & {
-      --#{$page}__main-container--MarginInlineStart: 0;
-    }
-  }
-
-  &.pf-m-fill,
-  &:has(.#{$page}__main-wizard) {
-    align-self: stretch;
-  }
 }
 
 .#{$page}__main-container,
@@ -346,7 +333,17 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     .#{$page}__sidebar.pf-m-collapsed + & {
       --#{$page}__main-container--GridArea: var(--#{$page}--masthead--main-container--GridArea);
     }
+
+    .#{$page}__sidebar:not(.pf-m-collapsed) + & {
+      --#{$page}__main-container--MarginInlineStart: 0;
+    }
   }
+
+  &.pf-m-fill,
+  &:has(.#{$page}__main-wizard) {
+    align-self: stretch;
+  }
+
 
   &:focus {
     outline: 0;

@@ -565,6 +565,8 @@ const relativeUrls = [
   '/components/page/html-demos/context-selector-in-sidebar',
   '/components/page/html-demos/multiple-sidebar-body-elements',
   '/components/page/html-demos/overflow-scroll',
+  '/components/page/html-demos/sidebar-collapsed',
+  '/components/page/html-demos/sidebar-expanded',
   '/components/page/html-demos/sticky-breadcrumb',
   '/components/page/html-demos/sticky-breadcrumb-on-medium',
   '/components/page/html-demos/sticky-horizontal-subnav',
