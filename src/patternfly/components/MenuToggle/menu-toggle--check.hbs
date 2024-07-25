@@ -1,13 +1,15 @@
 {{#> id-wrapper menu-toggle--check--id=menu-toggle--id check-input--IsChecked=(ternary check--IsChecked true check-input--IsChecked)}}
   {{#if menu-toggle--check--IsStandalone}}
     {{#> check check--type="label" check--modifier="pf-m-standalone" check--IsDisabled=menu-toggle--IsDisabled}}
-      {{> check-input check-input--attribute=(concat 'id="' menu-toggle--check--id '-input" name="' menu-toggle--check--id '-input" aria-label="Standalone input"')}}
+      {{> check-input check-input--attribute=(concat 'id="' menu-toggle--check--id '-input" name="' menu-toggle--check--id '-input" aria-label="Select all items"')}}
     {{/check}}
   {{else}}
     {{#> check check--type="label" check--attribute=(concat 'for="' menu-toggle--check--id '-input"') check--IsDisabled=menu-toggle--IsDisabled}}
       {{> check-input check-input--attribute=(concat 'id="' menu-toggle--check--id '-input" name="' menu-toggle--check--id '-input"')}}
       {{#if menu-toggle--check--text}}
-        {{#> check-label check-label--type="span" check-label--IsDisabled=menu-toggle--IsDisabled}}{{menu-toggle--check--text}}{{/check-label}}
+        {{#> check-label check--IsLabelWrapped=true check-label--IsDisabled=menu-toggle--IsDisabled}}
+          {{menu-toggle--check--text}}
+        {{/check-label}}
       {{/if}}
     {{/check}}
   {{/if}}

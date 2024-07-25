@@ -215,10 +215,10 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### Split button (checkbox)
+### Split toggle with checkbox
 ```hbs
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-example" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check check--IsStandalone=true}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -229,7 +229,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check check--IsStandalone=true}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -239,8 +239,8 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check check--IsStandalone=true check--IsDisabled=true}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true" check--standalone--label="Select all items"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone=true check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -249,10 +249,13 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### Split button (checkbox with label)
+### Split toggle with labeled checkbox
+
+To add a label to a split toggle that will be linked to the checkbox, pass the text wrapped in `span.pf-v6-c-check__label` as a child to `label.pf-v6-c-check`. Clicking the text will update the checked state of the split toggle's checkbox.
+
 ```hbs
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-example" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check check-label--text="10 selected"}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -263,7 +266,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
-  {{> menu-toggle--check check-label--text="10 selected"}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -274,7 +277,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
-  {{> menu-toggle--check check-label--text="10 selected" check--IsDisabled=true}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items" check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -283,20 +286,11 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### Split button (checkbox with toggle button text)
+### Split toggle with checkbox and toggle text
+
+To add a label to a split toggle that will be linked to the toggle button, pass the text wrapped in `span.pf-v6-c-menu-toggle__text` as a child to `button.pf-v6-c-menu-toggle__button.pf-m-text`. Clicking the text should trigger any click action on the toggle.
+
 ```hbs
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
-  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
-  {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
-    {{#> menu-toggle-text}}
-      Toggle button text
-    {{/menu-toggle-text}}
-    {{#> menu-toggle-controls}}
-      {{> menu-toggle-toggle-icon}}
-    {{/menu-toggle-controls}}
-  {{/menu-toggle-button}}
-{{/menu-toggle}}
-&nbsp;
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
@@ -310,6 +304,18 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 &nbsp;
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
+    {{#> menu-toggle-text}}
+      Toggle button text
+    {{/menu-toggle-text}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+&nbsp;
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -343,7 +349,7 @@ import './MenuToggle.css'
 ### Split button, primary
 ```hbs
 {{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-primary-example" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check check-label--text="10 selected"}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -354,7 +360,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-primary-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
-  {{> menu-toggle--check check-label--text="10 selected"}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -365,7 +371,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-primary-disabled-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
-  {{> menu-toggle--check check-label--text="10 selected" check--IsDisabled=true}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items" check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -377,7 +383,7 @@ import './MenuToggle.css'
 ### Split button, secondary
 ```hbs
 {{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-secondary-example" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check check-label--text="10 selected"}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -388,7 +394,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-secondary-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
-  {{> menu-toggle--check check-label--text="10 selected"}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
@@ -399,7 +405,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-secondary-disabled-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
-  {{> menu-toggle--check check-label--text="10 selected" check--IsDisabled=true}}
+  {{> menu-toggle--check menu-toggle--check--text="Select all items" check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
