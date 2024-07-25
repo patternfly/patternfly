@@ -53,6 +53,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Container for the main content area (grid area)
   --#{$page}__main-container--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$page}__main-container--GridArea: main;
+  --#{$page}--masthead--main-container--GridArea: sidebar / sidebar / main / main; // no sidebar
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset); 
@@ -143,7 +145,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   z-index: var(--#{$page}--c-masthead--ZIndex);
   grid-area: header;
-
 }
 
 // Sidebar
@@ -321,7 +322,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   border-radius: var(--#{$page}__main-container--BorderRadius);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__main-container--MarginInlineStart: 0;
+    .#{$page}__sidebar:not(.pf-m-collapsed) + & {
+      --#{$page}__main-container--MarginInlineStart: 0;
+    }
   }
 
   &.pf-m-fill,
@@ -333,10 +336,17 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-container,
 .#{$page}__drawer {
   z-index: var(--#{$page}__main-container--ZIndex);
-  grid-area: main;
+  grid-area: var(--#{$page}__main-container--GridArea);
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+    .#{$masthead} + &,
+    .#{$page}__sidebar.pf-m-collapsed + & {
+      --#{$page}__main-container--GridArea: var(--#{$page}--masthead--main-container--GridArea);
+    }
+  }
 
   &:focus {
     outline: 0;
