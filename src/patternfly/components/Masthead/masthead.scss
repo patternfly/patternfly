@@ -34,8 +34,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-stack__brand--Order: -1;
   --#{$masthead}--m-display-stack__brand--PaddingBlockEnd: var(--#{$masthead}--RowGap);
   --#{$masthead}--m-display-stack__brand--BorderBlockEnd: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
-  --#{$masthead}--m-display-stack__content--GridColumn: 2;
+  --#{$masthead}--m-display-stack__content--GridColumn: 1;
   --#{$masthead}--m-display-stack__content--Order: 1;
+  --#{$masthead}--m-display-stack__main--toggle--content--GridColumn: 2;
   --#{$masthead}--m-display-stack__main--Display: contents;
   --#{$masthead}--m-display-stack__main--ColumnGap: unset; // no column gap needed until it's flex display
 
@@ -50,6 +51,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline__main--GridColumn: 1; 
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
+  --#{$masthead}--m-display-stack__main--toggle--content--GridColumn: 2;
   --#{$masthead}--m-display-inline__main--Display: flex;
   --#{$masthead}--m-display-inline__main--ColumnGap: var(--pf-t--global--spacer--md);
 
@@ -73,6 +75,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__main--GridColumn: unset;
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-stack__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-stack__content--Order);
+  --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-stack__main--toggle--content--GridColumn);
   --#{$masthead}__main--Display: var(--#{$masthead}--m-display-stack__main--Display);
   --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-stack__main--ColumnGap);
 }
@@ -88,6 +91,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
+  --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-inline__main--toggle--content--GridColumn);
   --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display); 
   --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-inline__main--ColumnGap);
 }
@@ -162,6 +166,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   column-gap: var(--#{$masthead}__main--ColumnGap);
   align-items: center;
   margin-inline-end: var(--#{$masthead}__main--MarginInlineEnd);
+
+  &:has(.#{$masthead}__toggle) ~ .#{$masthead}__content {
+    --#{$masthead}__content--GridColumn: var(--#{$masthead}__main--toggle--content--GridColumn);
+  }
 }
 
 // - Masthead main masthead content masthead logo
