@@ -155,8 +155,6 @@
   }
 
   > :first-child:not(.#{$text-input-group}__text) {
-    padding-block-start: var(--#{$text-input-group}__main--first-child--not--text-input--PaddingBlockStart);
-    padding-block-end: var(--#{$text-input-group}__main--first-child--not--text-input--PaddingBlockEnd);
     margin-inline-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart);
   }
 
