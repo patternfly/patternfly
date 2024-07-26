@@ -132,8 +132,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group__field-group__field-group-toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$form}__field-group-header-toggle--BorderWidth--base: var(--pf-t--global--border--width--divider--default);
   --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderBlockStartWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
-  --#{$form}__field-group-toggle-button--MarginBlockStart: calc(var(--#{$button}--m-plain--PaddingBlockStart) * -1);
-  --#{$form}__field-group-toggle-button--MarginBlockEnd: calc(var(--#{$button}--m-plain--PaddingBlockEnd) * -1);
+  --#{$form}__field-group-toggle-button--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$form}__field-group-toggle-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$form}__field-group-toggle-icon--Transition: var(--pf-t--global--transition);
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
