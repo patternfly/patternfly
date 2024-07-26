@@ -8,7 +8,8 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
 @mixin pf-smart-grid($suffix: null) {
   @for $col-num from 1 through 12 {
     &.pf-m-all-#{$col-num}-col#{$suffix} {
-      > * {
+      > .#{$grid},
+      > .#{$grid}__item {
         grid-column-end: span #{$col-num};
       }
     }
@@ -43,8 +44,6 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
 // Grid base
 @include pf-root($grid) {
   --#{$grid}--m-gutter--GridGap: var(--pf-t--global--spacer--gutter--default);
-  --#{$grid}__item--GridColumnStart: auto;
-  --#{$grid}__item--GridColumnEnd: span 12;
   --#{$grid}--item--Order: 0;
 }
 
@@ -52,10 +51,10 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
-  > *,
+  .#{$grid},
   .#{$grid}__item {
-    grid-column-start: var(--#{$grid}__item--GridColumnStart);
-    grid-column-end: var(--#{$grid}__item--GridColumnEnd);
+    grid-column-start: auto;
+    grid-column-end: span 12;
     min-width: 0;
     min-height: 0;
 
