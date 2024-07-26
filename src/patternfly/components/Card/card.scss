@@ -98,7 +98,7 @@
   --#{$card}--m-plain--BackgroundColor: transparent;
 
   // Toggle right
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain) * -1);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
 }
 

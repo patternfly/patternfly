@@ -79,8 +79,8 @@
 
   // Link
   --#{$button}--m-link--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$button}--m-link--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain);
-  --#{$button}--m-link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain);
+  --#{$button}--m-link--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$button}--m-link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$button}--m-link--Color: var(--pf-t--global--text--color--brand--default);
   --#{$button}--m-link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$button}--m-link__icon--Color: var(--pf-t--global--icon--color--brand--default);
@@ -126,8 +126,8 @@
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$button}--m-plain--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain);
-  --#{$button}--m-plain--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain);
+  --#{$button}--m-plain--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$button}--m-plain--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$button}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain__icon--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
