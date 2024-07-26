@@ -51,7 +51,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline__main--GridColumn: 1; 
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
-  --#{$masthead}--m-display-stack__main--toggle--content--GridColumn: 2;
+  --#{$masthead}--m-display-inline__main--toggle--content--GridColumn: 2;
   --#{$masthead}--m-display-inline__main--Display: flex;
   --#{$masthead}--m-display-inline__main--ColumnGap: var(--pf-t--global--spacer--md);
 
