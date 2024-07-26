@@ -16,7 +16,7 @@
   --#{$wizard}__header--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   // Close
-  --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$button}--m-plain--PaddingBlockStart));
+  --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--spacer--control--vertical--plain));
   --#{$wizard}__close--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
 

@@ -28,7 +28,7 @@
 
   // Expandable
   --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header-toggle-icon--Transition: var(--pf-t--global--transition);
@@ -98,8 +98,8 @@
   --#{$card}--m-plain--BackgroundColor: transparent;
 
   // Toggle right
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--compact) * -1);
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
 }
 
 .#{$card} {

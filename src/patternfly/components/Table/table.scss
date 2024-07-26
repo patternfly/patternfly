@@ -214,8 +214,8 @@
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
   // * Table subhead button
-  --#{$table}__nested-column-header__button--PaddingInlineStart: calc(var(--#{$table}__button--PaddingInlineStart) - var(--pf-t--global--spacer--sm));
-  --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(var(--#{$table}__button--PaddingInlineEnd) - var(--pf-t--global--spacer--xs));
+  --#{$table}__nested-column-header__button--PaddingInlineStart: calc(var(--#{$table}__button--PaddingInlineStart) - var(--pf-t--global--spacer--control--horizontal--plain));
+  --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(var(--#{$table}__button--PaddingInlineEnd) - (var(--pf-t--global--spacer--control--horizontal--plain) / 2));
 
   // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
