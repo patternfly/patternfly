@@ -36,6 +36,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 // stylelint-disable no-duplicate-selectors, max-nesting-depth
 
 // Item
+.#{$flex} .#{$flex},
 .#{$flex}__group,
 .#{$flex}__item {
   // set/reset layout spacers on children, since the parent flex layout can be a child of another flex layout and needs these values from its parent
@@ -96,6 +97,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         flex-direction: column;
         align-items: normal;
 
+        > .#{$flex} > .#{$flex},
         > .#{$flex}__group,
         > .#{$flex}__item {
           margin-block-start: 0;
@@ -110,6 +112,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         flex-direction: column-reverse;
         align-items: normal;
 
+        > .#{$flex} > .#{$flex},
         > .#{$flex}__group,
         > .#{$flex}__item {
           margin-block-start: var(--#{$flex}--spacer--row);
@@ -125,6 +128,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         align-items: var(--#{$flex}--m-row--AlignItems);
 
         // unset styling set for .pf-m-column
+        > .#{$flex} > .#{$flex},
         > .#{$flex}__group,
         > .#{$flex}__item {
           margin-block-start: 0;
@@ -140,6 +144,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         align-items: var(--#{$flex}--m-row-reverse--AlignItems);
 
         // unset styling set for .pf-m-column
+        > .#{$flex} > .#{$flex},
         > .#{$flex}__group,
         > .#{$flex}__item {
           margin-block-start: 0;
@@ -311,7 +316,9 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
     @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
         &.pf-m-space-items-#{$spacer}#{$breakpoint-name} {
-          > * {
+          > .#{$flex} > .#{$flex},
+          > .#{$flex}__group,
+          > .#{$flex}__item {
             --#{$flex}--spacer: var(#{map-get($pf-v6-l-flex--variable-map, $spacer-value)});
           }
 
@@ -354,15 +361,16 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
           $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
 
           &#{$selector} {
-            --#{$flex}--RowGap: #{$spacer-row};
-            --#{$flex}--ColumnGap: #{$spacer-column};
+            row-gap: #{$spacer-row};
+            column-gap: #{$spacer-column};
           }
         }
 
-        &:is(#{$pf-v6-l-flex--gap--selectors}) {
-          > * {
-            --#{$flex}--spacer--row: 0;
-            --#{$flex}--spacer--column: 0;
+        &#{$pf-v6-l-flex--gap--selectors} {
+          > .#{$flex} > .#{$flex},
+          > .#{$flex}__group,
+          > .#{$flex}__item {
+            margin: 0;
           }
         }
       }
@@ -381,13 +389,15 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         $pf-v6-l-flex--row-gap--selectors: append($pf-v6-l-flex--row-gap--selectors, $selector, $separator: comma);
 
        &#{$selector} {
-          --#{$flex}--RowGap: #{$spacer-value};
+          row-gap: #{$spacer-value};
         }
       }
 
-      &:is(#{$pf-v6-l-flex--row-gap--selectors}) {
-        > * {
-          --#{$flex}--spacer--row: 0;
+      &#{$pf-v6-l-flex--row-gap--selectors} {
+        > .#{$flex} > .#{$flex},
+        > .#{$flex}__group,
+        > .#{$flex}__item {
+          margin: 0;
         }
       }
     }
@@ -410,9 +420,11 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         }
       }
 
-      &:is(#{$pf-v6-l-flex--column-gap--selectors}) {
-        > * {
-          --#{$flex}--spacer--column: 0;
+      &#{$pf-v6-l-flex--column-gap--selectors} {
+        > .#{$flex} > .#{$flex},
+        > .#{$flex}__group,
+        > .#{$flex}__item {
+          margin: 0;
         }
       }
     }
