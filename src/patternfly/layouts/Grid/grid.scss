@@ -2,49 +2,9 @@
 
 $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
 
-// URL.com/guidelines#layout
-// Generate smart grid layout
-// @parameter {Suffix} xs, sm, md, lg, xl, null
-@mixin pf-smart-grid($suffix: null) {
-  @for $col-num from 1 through 12 {
-    &.pf-m-all-#{$col-num}-col#{$suffix} {
-      > * {
-        --#{$grid}__item--GridColumnEnd: span #{$col-num};
-      }
-    }
-  }
-}
-
-// Creates grid item
-// @parameter {Suffix} xs, sm, md, lg, xl, null
-@mixin pf-grid-item-modifier($suffix: null) {
-  // generate column span modifier
-  @for $col-num from 1 through 12 {
-    > .pf-m-#{$col-num}-col#{$suffix} {
-      --#{$grid}__item--GridColumnEnd: span #{$col-num};
-    }
-  }
-
-  // generate column offset modfiers
-  @for $col-num from 1 through 12 {
-    > .pf-m-offset-#{$col-num}-col#{$suffix} {
-      --#{$grid}__item--GridColumnStart: col-start calc(#{$col-num} + 1);
-    }
-  }
-
-  // generate row span modfiers
-  @for $row-num from 1 through 12 {
-    > .pf-m-#{$row-num}-row#{$suffix} {
-      grid-row: span #{$row-num};
-    }
-  }
-}
-
 // Grid base
 @include pf-root($grid) {
   --#{$grid}--m-gutter--GridGap: var(--pf-t--global--spacer--gutter--default);
-  --#{$grid}__item--GridColumnStart: auto;
-  --#{$grid}__item--GridColumnEnd: span 12;
   --#{$grid}--item--Order: 0;
 }
 
@@ -52,10 +12,10 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
-  > *,
+  .#{$grid},
   .#{$grid}__item {
-    grid-column-start: var(--#{$grid}__item--GridColumnStart);
-    grid-column-end: var(--#{$grid}__item--GridColumnEnd);
+    grid-column-start: auto;
+    grid-column-end: span 12;
     min-width: 0;
     min-height: 0;
 
@@ -65,14 +25,40 @@ $pf-v6-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used fo
   // Loop through $breakpoints map to generate responsive classes
   @each $breakpoint, $value in $pf-v6-global--breakpoint-map {
     @include pf-v6-media-query($breakpoint) {
-      @include pf-smart-grid($value);
+      @for $col-num from 1 through 12 {
+        &.pf-m-all-#{$col-num}-col#{$value} {
+          > .#{$grid},
+          > .#{$grid}__item {
+            grid-column-end: span #{$col-num};
+          }
+        }
+      }
     }
   }
 
   // Loop through $breakpoints map to generate responsive classes
   @each $breakpoint, $value in $pf-v6-global--breakpoint-map {
     @include pf-v6-media-query($breakpoint) {
-      @include pf-grid-item-modifier($value);
+      @for $col-num from 1 through 12 {
+        > .#{$grid}.pf-m-#{$col-num}-col#{$value},
+        > .#{$grid}__item.pf-m-#{$col-num}-col#{$value} {
+          grid-column-end: span #{$col-num};
+        }
+      }
+
+      // generate column offset modfiers
+      @for $col-num from 1 through 12 {
+        > .pf-m-offset-#{$col-num}-col#{$value} {
+          grid-column-start: col-start calc(#{$col-num} + 1);
+        }
+      }
+
+      // generate row span modfiers
+      @for $row-num from 1 through 12 {
+        > .pf-m-#{$row-num}-row#{$value} {
+          grid-row: span #{$row-num};
+        }
+      }
     }
   }
 
