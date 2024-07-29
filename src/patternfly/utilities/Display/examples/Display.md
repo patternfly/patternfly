@@ -27,6 +27,13 @@ import './Display.css'
 {{/display}}
 ```
 
+### Inline block
+```hbs
+{{#> display display--type="inline-block"}}
+  .pf-v5-u-display-inline-block
+{{/display}}
+```
+
 ### Flex
 ```hbs
 {{#> display display--type="flex"}}

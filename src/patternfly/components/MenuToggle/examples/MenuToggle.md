@@ -320,6 +320,51 @@ import './MenuToggle.css'
     {{/menu-toggle-controls}}
   {{/menu-toggle-button}}
 {{/menu-toggle}}
+
+&nbsp;
+```
+
+### Split button (checkbox with toggle button text)
+```hbs
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
+    {{#> menu-toggle-text}}
+      Toggle button text
+    {{/menu-toggle-text}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
+    {{#> menu-toggle-text}}
+      Toggle button text
+    {{/menu-toggle-text}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
+    {{#> menu-toggle-text}}
+      Toggle button text
+    {{/menu-toggle-text}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
 ```
 
 ### Small

@@ -243,6 +243,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   &.pf-m-info {
     display: flex;
+    gap: var(--#{$form}__group-label--m-info--Gap);
     align-items: flex-end;
   }
 }
