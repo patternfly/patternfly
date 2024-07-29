@@ -320,8 +320,6 @@ import './MenuToggle.css'
     {{/menu-toggle-controls}}
   {{/menu-toggle-button}}
 {{/menu-toggle}}
-
-&nbsp;
 ```
 
 ### Small
