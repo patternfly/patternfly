@@ -37,7 +37,7 @@
     {{#> menu-item-main}}
       {{#> menu-item-check}}
         {{#> check
-          check--id=(concat menu--id '-check-' menu-list-item--id)
+          check--id=(dasherize menu--id 'check' menu-list-item--id)
           check--IsStandalone=true
           check--IsDisabled=menu-list-item--IsDisabled
           check-input--IsChecked=(ternary menu-item--IsChecked true menu-list-item--IsChecked)}}

@@ -4,8 +4,8 @@
     table--HasIcons=table-tree-view--HasIcons
     table--HasNoPosinset=table-tree-view--HasNoPosinset
   }}
-  {{#> table-thead table-tr--IsExpanded=true}}
-    {{#> table-tr newcontext table--HasActions=table-tree-view--HasActions}}
+  {{#> table-thead}}
+    {{#> table-tr table--HasActions=table-tree-view--HasActions}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier=(prefix 'table__tree-view-title-header-cell')}}
         Name
       {{/table-th}}
@@ -21,9 +21,7 @@
 
       {{!-- TODO: fix this after merge --}}
       {{#if table--HasActions}}
-        {{#> table-th table-th--IsEmpty=true}}
-          {{> screen-reader screen-reader--text=table-cell--text}}
-        {{/table-th}}
+        {{> table-cell-empty}}
       {{/if}}
     {{/table-tr}}
   {{/table-thead}}

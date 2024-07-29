@@ -4,12 +4,12 @@
     aria-describedby="{{check--id}}-description"
   {{/if}}
   {{#if check--id}}
-    id="{{check--id}}-input"
-    name="{{check--id}}-input"
+    id="{{dasherize check--id 'input'}}"
+    name="{{dasherize check--id 'input'}}"
   {{/if}}
-  {{#if check--IsStandalone}}
-    aria-label="{{#if check--standalone--label}}{{check--standalone--label}}{{else}}Standalone check{{/if}}"
-  {{/if}}
+  {{#ifAny check--aria-label check--IsStandalone}}
+    aria-label="{{ternary check--aria-label check--aria-label 'Standalone check'}}"
+  {{/ifAny}}
   {{#if check-input--IsChecked}}
     checked
   {{/if}}
