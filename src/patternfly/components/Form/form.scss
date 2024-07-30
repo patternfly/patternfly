@@ -188,8 +188,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
         }
 
         &.pf-m-info {
+          --#{$form}__group-label--m-info--Gap: var(--#{$form}--m-horizontal__group-label--m-info--Gap);
+
           flex-direction: column;
-          gap: var(--#{$form}--m-horizontal__group-label--m-info--Gap);
           align-items: flex-start;
         }
         // stylelint-enable
@@ -253,7 +254,6 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-label-info {
-  margin-inline-start: var(--#{$form}__group-label-info--MarginInlineStart);
   font-size: var(--#{$form}__group-label-info--FontSize);
 }
 
