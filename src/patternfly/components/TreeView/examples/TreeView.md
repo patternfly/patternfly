@@ -594,7 +594,7 @@ A search input can be used to filter tree view items. It is recommended that a t
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
         {{#> tree-view-action}}
-          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions"}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions" button--attribute='tabindex="-1"'}}
         {{/tree-view-action}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
@@ -602,7 +602,7 @@ A search input can be used to filter tree view items. It is recommended that a t
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 1"}}
             {{#> tree-view-action}}
-              {{> button button--IsPlain=true button--IsIcon=true button--icon="clipboard" button--aria-label="Copy"}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="clipboard" button--aria-label="Copy" button--attribute='tabindex="-1"'}}
             {{/tree-view-action}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
@@ -622,7 +622,7 @@ A search input can be used to filter tree view items. It is recommended that a t
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 2"}}
             {{#> tree-view-action}}
-              {{> button button--IsPlain=true button--IsIcon=true button--icon="bars" button--aria-label="Action"}}
+              {{> button button--IsPlain=true button--IsIcon=true button--icon="bars" button--aria-label="Action" button--attribute='tabindex="-1"'}}
             {{/tree-view-action}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
@@ -671,7 +671,7 @@ A search input can be used to filter tree view items. It is recommended that a t
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions"}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions" button--attribute='tabindex="-1"'}}
         {{/tree-view-action}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
@@ -963,20 +963,6 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ## Documentation
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role="tree"` | `.pf-v6-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
-| `role="group"` | `.pf-v6-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
-| `role="treeitem"` | `.pf-v6-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
-| `aria-expanded="false"` | `.pf-v6-c-tree-view__list-item` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
-| `aria-expanded="true"` | `.pf-v6-c-tree-view__list-item.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
-| `tabindex="-1"` | `.pf-v6-c-tree-view__list-item` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
-| `tabindex="0"` | `.pf-v6-c-tree-view__list-item` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
-| `aria-label="[button label text]"` | `.pf-v6-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
-
 ### Usage
 
 | Class | Applied | Outcome |
