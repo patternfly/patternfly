@@ -232,7 +232,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             Text input description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id inline-edit--row 'text-input"  aria-label="Text input"')}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id inline-edit--row 'text-input"  aria-label="Text input for row 1"')}}
           {{/inline-edit-input}}
         {{/table-th}}
         {{#> table-td table-td--data-label="Disabled text input"}}
@@ -240,14 +240,14 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             Text input disabled, description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled" aria-label="Disabled text input"')}}
+            {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled" aria-label="Disabled text input for row 1"')}}
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Checkboxes"}}
           {{#> inline-edit-value}}
             Check 1, Check 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--attribute='role="group" aria-label="Checkbox group for row 1"' inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> check}}
                 {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
@@ -266,7 +266,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{#> inline-edit-value}}
             Radio 1, Radio 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group for row 1"' inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> radio}}
                 {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio"')}}{{/radio-input}}
@@ -286,13 +286,13 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             2
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input"')}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input for row 1"')}}
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--modifier="pf-v6-c-table__inline-edit-action"}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
-            {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
-            {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+            {{> inline-edit-action-save inline-edit-row="1" inline-edit-action-save--IsIcon="true"}}
+            {{> inline-edit-action-cancel inline-edit-row="1" inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
           {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
             {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
@@ -307,7 +307,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             Text input description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id inline-edit--row 'text-input"  aria-label="Text input"')}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id inline-edit--row 'text-input"  aria-label="Text input for row 2"')}}
           {{/inline-edit-input}}
         {{/table-th}}
         {{#> table-td table-td--data-label="Disabled text input"}}
@@ -315,14 +315,14 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             Text input disabled, description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled" aria-label="Disabled text input"')}}
+            {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled" aria-label="Disabled text input for row 2"')}}
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Checkboxes"}}
           {{#> inline-edit-value}}
             Check 1, Check 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--modifier="pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--attribute='role="group" aria-label="Checkbox group for row 2"' inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> check}}
                 {{#> check-input check-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'check-1" name="' inline-edit--id inline-edit--row 'example-check"')}}{{/check-input}}
@@ -341,7 +341,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{#> inline-edit-value}}
             Radio 1, Radio 2
           {{/inline-edit-value}}
-          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
+          {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group for row 2"' inline-edit-group--modifier="pf-m-column"}}
             {{#> inline-edit-input}}
               {{#> radio}}
                 {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id inline-edit--row 'radio-1" name="' inline-edit--id inline-edit--row 'example-radio-1"')}}{{/radio-input}}
@@ -361,13 +361,13 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             2
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input"')}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="2" id="' inline-edit--id inline-edit--row 'number-input"  aria-label="Number input for row 2"')}}
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--modifier="pf-v6-c-table__inline-edit-action"}}
           {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
-            {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
-            {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
+            {{> inline-edit-action-save inline-edit-row="2" inline-edit-action-save--IsIcon="true"}}
+            {{> inline-edit-action-cancel inline-edit-row="2" inline-edit-action-cancel--IsIcon="true"}}
           {{/inline-edit-group}}
           {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
             {{> button button--IsPlain=true button--IsIcon=true button--icon="pencil-alt" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
