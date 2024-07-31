@@ -180,7 +180,7 @@
   transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
   transition-duration: var(--#{$menu-toggle}--TransitionDuration);
   transition-property: var(--#{$menu-toggle}--TransitionProperty);
-  
+
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);
@@ -302,10 +302,6 @@
     --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-small--PaddingInlineEnd);
   }
 
-  &:has(.#{$button}) {
-    background-color: transparent;
-  }
-
   &.pf-m-success {
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-success--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-success__status-icon--Color);
@@ -369,6 +365,8 @@
 // - Menu toggle split button action
 .#{$menu-toggle}.pf-m-split-button.pf-m-action {
   --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--BorderColor);
+
+  background-color: transparent;
 
   // all subsequent buttons
   > :not(:first-child) {

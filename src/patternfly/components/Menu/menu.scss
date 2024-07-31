@@ -46,13 +46,13 @@
   --#{$menu}__list-item--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu}__list-item--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
   --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
-  --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
   // * Menu li divider
   --#{$menu}__list--divider--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__list--divider--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Menu item
+  --#{$menu}__item--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--lg);
@@ -373,8 +373,8 @@
 
     overflow: hidden; // hide scrollbars
 
-    &:has(.#{$menu}__footer) {
-      --#{$menu}--PaddingBlockEnd: 0;
+    .#{$menu}__footer:last-child {
+      margin-block-end: calc(var(--#{$menu}--PaddingBlockEnd) * -1);
     }
 
     .#{$menu}__content,
@@ -444,6 +444,7 @@
 
 // - Menu list item
 .#{$menu}__list-item {
+  column-gap: var(--#{$menu}__item--ColumnGap);
   align-items: baseline;
   min-width: 0; // allow list item to shrink for text overflow
   transition-timing-function: var(--#{$menu}__list-item--TransitionTimingFunction);
@@ -487,13 +488,13 @@
     }
   }
 
-  &:has(.#{$menu}__item-action) {
-    padding-inline-end: var(--#{$menu}__list-item--has--menu-action--PaddingInlineEnd);
+  .#{$menu}__item-action:last-child {
+    padding-inline-end: var(--#{$menu}__item--PaddingInlineEnd);
   }
 
   &.pf-m-focus,
   &:focus-within,
-  &:has(> :hover) {
+  &:hover {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
 
     .#{$menu}__item-select-icon,
