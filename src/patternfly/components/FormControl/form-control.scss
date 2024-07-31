@@ -27,9 +27,9 @@
   // hover
   --#{$form-control}--hover--after--BorderWidth: var(--pf-t--global--border--width--control--hover);
   --#{$form-control}--hover--after--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$form-control}--hover--m-success--after--BorderColor: var(--pf-t--global--border--color--status--success--hover);
-  --#{$form-control}--hover--m-warning--after--BorderColor: var(--pf-t--global--border--color--status--warning--hover);
-  --#{$form-control}--hover--m-error--after--BorderColor: var(--pf-t--global--border--color--status--danger--hover);
+  --#{$form-control}--m-success--hover--after--BorderColor: var(--pf-t--global--border--color--status--success--hover);
+  --#{$form-control}--m-warning--hover--after--BorderColor: var(--pf-t--global--border--color--status--warning--hover);
+  --#{$form-control}--m-error--hover--after--BorderColor: var(--pf-t--global--border--color--status--danger--hover);
 
   // expanded
   --#{$form-control}--m-expanded--after--BorderWidth: var(--pf-t--global--border--width--control--clicked);
@@ -215,7 +215,7 @@
   &.pf-m-error {
     --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}--m-error--PaddingInlineEnd);
     --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-error--after--BorderColor);
-    --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--hover--m-error--after--BorderColor);
+    --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-error--hover--after--BorderColor);
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--m-status--Color);
     --#{$form-control}__select--PaddingInlineEnd: var(--#{$form-control}__select--m-error--m-status--PaddingInlineEnd);
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-error--after--BorderWidth);
@@ -228,7 +228,7 @@
   &.pf-m-success {
     --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}--m-success--PaddingInlineEnd);
     --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-success--after--BorderColor);
-    --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--hover--m-success--after--BorderColor);
+    --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-success--hover--after--BorderColor);
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--m-status--Color);
     --#{$form-control}__select--PaddingInlineEnd: var(--#{$form-control}__select--m-success--m-status--PaddingInlineEnd);
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-success--after--BorderWidth);
@@ -241,7 +241,7 @@
   &.pf-m-warning {
     --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}--m-warning--PaddingInlineEnd);
     --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-warning--after--BorderColor);
-    --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--hover--m-warning--after--BorderColor);
+    --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-warning--hover--after--BorderColor);
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--m-status--Color);
     --#{$form-control}__select--PaddingInlineEnd: var(--#{$form-control}__select--m-warning--m-status--PaddingInlineEnd);
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-warning--after--BorderWidth);
