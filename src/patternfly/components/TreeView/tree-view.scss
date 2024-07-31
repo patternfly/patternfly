@@ -369,6 +369,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   &.pf-m-current {
     --#{$tree-view}__node--Color: var(--#{$tree-view}__node--m-current--Color);
+
+    background-color: var(--#{$tree-view}__node--m-current--BackgroundColor);
   }
 
   .#{$tree-view}__node-count {
@@ -479,11 +481,6 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
 .#{$tree-view}__action {
   margin-inline-end: var(--#{$tree-view}__action--MarginInlineEnd);
-}
-
-// TODO - make sure we can use :has(), maybe move pf-m-current modifier to __content
-.#{$tree-view}__content:has(> .#{$tree-view}__node.pf-m-current) {
-  --#{$tree-view}__content--BackgroundColor: var(--#{$tree-view}__node--m-current--BackgroundColor);
 }
 
 // stylelint-disable no-duplicate-selectors

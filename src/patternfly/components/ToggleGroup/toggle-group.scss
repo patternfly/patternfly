@@ -130,6 +130,7 @@
     --#{$toggle-group}__button--Color: var(--#{$toggle-group}__button--m-selected--Color, inherit);
     --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--m-selected--ZIndex);
     --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--m-selected--before--BorderColor);
+    --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor);
   }
 
   &:is(:disabled, .pf-m-disabled) {
@@ -137,6 +138,7 @@
     --#{$toggle-group}__button--Color: var(--#{$toggle-group}__button--disabled--Color);
     --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--disabled--ZIndex);
     --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--disabled--before--BorderColor);
+    --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor);
 
     pointer-events: none;
   }
@@ -156,4 +158,3 @@
 .#{$toggle-group}__text + .#{$toggle-group}__icon {
   margin-inline-start: var(--#{$toggle-group}__icon--text--MarginInlineStart);
 }
-

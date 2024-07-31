@@ -491,9 +491,13 @@
     padding-inline-end: var(--#{$menu}__list-item--has--menu-action--PaddingInlineEnd);
   }
 
+  .#{$menu}__item-action:last-child {
+    padding-inline-end: var(--#{$menu}__item--PaddingInlineEnd);
+  }
+
   &.pf-m-focus,
   &:focus-within,
-  &:has(> :hover) {
+  &:hover {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
 
     .#{$menu}__item-select-icon,
