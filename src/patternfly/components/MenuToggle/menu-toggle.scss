@@ -373,12 +373,14 @@
 .#{$menu-toggle}.pf-m-split-button.pf-m-action {
   --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--BorderColor);
 
+  background-color: transparent;
+
   // all subsequent buttons
   > :not(:first-child) {
     border-inline-start: var(--#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartWidth) solid var(--#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor);
   }
 
-  > :has(.#{$menu-toggle}__controls) {
+  .#{$menu-toggle}__button:has(.#{$menu-toggle}__controls) {
     padding-inline-end: 0;
   }
 
@@ -437,12 +439,12 @@
     padding-inline-end: 0;
   }
 
+
   .#{$menu-toggle}__controls {
     display: flex;
     align-items: stretch;
     padding-inline-end: 0;
   }
-
   .#{$text-input-group} {
     flex: 1;
     margin-inline-end: 0;
