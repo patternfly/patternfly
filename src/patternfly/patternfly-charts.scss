@@ -68,13 +68,6 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-color-orange-400: var(--pf-t--chart--color--orange--400);
   --#{$chart}-color-orange-500: var(--pf-t--chart--color--orange--500);
 
-  // red
-  --#{$chart}-color-red-100: var(--pf-t--chart--color--red--100);
-  --#{$chart}-color-red-200: var(--pf-t--chart--color--red--200);
-  --#{$chart}-color-red-300: var(--pf-t--chart--color--red--300);
-  --#{$chart}-color-red-400: var(--pf-t--chart--color--red--400);
-  --#{$chart}-color-red-500: var(--pf-t--chart--color--red--500);
-
   // black
   --#{$chart}-color-black-100: var(--pf-t--chart--color--black--100);
   --#{$chart}-color-black-200: var(--pf-t--chart--color--black--200);
@@ -202,11 +195,11 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-bullet--label--subtitle--Fill: var(--#{$chart}-global--Fill--Color--400);
   --#{$chart}-bullet--primary-measure--dot--size: 6;
   --#{$chart}-bullet--primary-measure--segmented--Width: 9;
-  --#{$chart}-bullet--negative-measure--ColorScale--100: var(--#{$chart}-color-red-100);
-  --#{$chart}-bullet--negative-measure--ColorScale--200: var(--#{$chart}-color-red-200);
-  --#{$chart}-bullet--negative-measure--ColorScale--300: var(--#{$chart}-color-red-300);
-  --#{$chart}-bullet--negative-measure--ColorScale--400: var(--#{$chart}-color-red-400);
-  --#{$chart}-bullet--negative-measure--ColorScale--500: var(--#{$chart}-color-red-500);
+  --#{$chart}-bullet--negative-measure--ColorScale--100: var(--#{$chart}-color-red-orange-100);
+  --#{$chart}-bullet--negative-measure--ColorScale--200: var(--#{$chart}-color-red-orange-200);
+  --#{$chart}-bullet--negative-measure--ColorScale--300: var(--#{$chart}-color-red-orange-300);
+  --#{$chart}-bullet--negative-measure--ColorScale--400: var(--#{$chart}-color-red-orange-400);
+  --#{$chart}-bullet--negative-measure--ColorScale--500: var(--#{$chart}-color-red-orange-500);
   --#{$chart}-bullet--qualitative-range--Width: 30;
   --#{$chart}-bullet--qualitative-range--ColorScale--100: var(--#{$chart}-color-black-100);
   --#{$chart}-bullet--qualitative-range--ColorScale--200: var(--#{$chart}-color-black-200);
