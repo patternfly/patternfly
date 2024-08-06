@@ -1,0 +1,5 @@
+{{#if card--actionable--IsLink}}
+  <a class="{{pfv}}card__clickable-action{{#if card--actionable--IsDisabled}} pf-m-disabled{{/if}}" {{#if card--actionable--IsDisabled}}tabindex="-1"{{/if}} href="{{ternary card--actionable--href card--actionable--href '#'}}"></a>
+{{else}}
+  <button {{#if card--actionable--IsDisabled}}disabled{{/if}} type="button" class="{{pfv}}card__clickable-action"></button>
+{{/if}}
