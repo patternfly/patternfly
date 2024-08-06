@@ -95,7 +95,7 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-global--label--Margin: var(--pf-t--chart--global--label--margin);
   --#{$chart}-global--label--stroke: var(--pf-t--chart--global--label--stroke);
   --#{$chart}-global--label--text-anchor: var(--pf-t--chart--global--label--text-anchor);
-  --#{$chart}-global--label--stroke--Width: var(--pf-t--chart--global--label--stroke--width);
+  --#{$chart}-global--label--stroke--Width: 0;
   --#{$chart}-global--label--Fill: var(--pf-t--chart--global--label--fill);
 
   // Layout Props
