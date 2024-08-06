@@ -37,6 +37,10 @@
   // Selectable/Clickable
   --#{$card}--m-selectable--BorderWidth: var(--#{$card}--BorderWidth);
 
+  // Clickable clicked
+  --#{$card}--m-clickable--m-current--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$card}--m-clickable--m-current--BorderWidth: var(--pf-t--global--border--width--box--clicked);
+
   // Selected state (checked) of selectable card
   --#{$card}--m-selectable--m-selected--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$card}--m-selectable--m-selected--BorderWidth: var(--pf-t--global--border--width--box--clicked);
@@ -136,6 +140,12 @@
     &::before {
       border: none; // border will come from the input's ::before instead of the card so remove this so there's isn't a double border
     }
+  }
+
+  // CLICKABLE is clicked
+  &.pf-m-current {
+    --#{$card}--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
+    --#{$card}--BorderWidth: var(--#{$card}--m-clickable--m-current--BorderWidth);
   }
 
   // stylelint-disable selector-max-class
@@ -335,6 +345,7 @@
 
 // Focus on the card (focus on label but not checked)
 .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input, .#{$card}__clickable-action):where(:focus-visible) {
+  &,
   ~ :is(.#{$check}__label, .#{$radio}__label) {
     --#{$card}--BorderColor: var(--#{$card}--m-selectable--focus--BorderColor);
     --#{$card}--BorderWidth: var(--#{$card}--m-selectable--focus--BorderWidth);
@@ -360,6 +371,7 @@
 .#{$card}__clickable-action {
   background: none;
   border: 0;
+  outline: 0;
 
   &:disabled,
   &.pf-m-disabled {

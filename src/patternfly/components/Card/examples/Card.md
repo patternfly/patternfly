@@ -423,6 +423,25 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
+{{#> card card--id="card-actionable-button-example-clicked" card--modifier="pf-m-clickable pf-m-current" card--IsClickable="true"}}
+  {{#> card-header}}
+    {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+      {{#> card-selectable-actions}}
+        {{> card--actionable}}
+      {{/card-selectable-actions}}
+    {{/card-actions}}
+    {{#> card-header-main}}
+      {{> card-title card-title-text--value="Title (clicked)" card-title--attribute=(concat 'id="' card--id '-title"')}}
+    {{/card-header-main}}
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+
 {{#> card card--id="card-actionable-button-example-disabled" card--modifier="pf-m-clickable pf-m-disabled" card--IsClickable="true"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
@@ -467,7 +486,7 @@ import './Card.css'
 ### Actionable (link)
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter"}}
-{{#> card card--id="card-actionable-button-example" card--modifier="pf-m-clickable" card--IsClickable="true"}}
+{{#> card card--id="card-actionable-link-example" card--modifier="pf-m-clickable" card--IsClickable="true"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
       {{#> card-selectable-actions}}
@@ -486,7 +505,7 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-actionable-button-example-disabled" card--modifier="pf-m-clickable pf-m-disabled" card--IsClickable="true"}}
+{{#> card card--id="card-actionable-link-example-disabled" card--modifier="pf-m-clickable pf-m-disabled" card--IsClickable="true"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
       {{#> card-selectable-actions}}
@@ -505,7 +524,7 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-actionable-button-example-selected-disabled" card--modifier="pf-m-clickable pf-m-selected pf-m-disabled" card--IsClickable="true"}}
+{{#> card card--id="card-actionable-link-example-selected-disabled" card--modifier="pf-m-clickable pf-m-selected pf-m-disabled" card--IsClickable="true"}}
   {{#> card-header}}
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
       {{#> card-selectable-actions}}
