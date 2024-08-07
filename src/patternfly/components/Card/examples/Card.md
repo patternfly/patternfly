@@ -549,25 +549,6 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-clickable-secondary-example-selected-disabled" card--modifier="pf-m-clickable pf-m-selected pf-m-disabled pf-m-secondary" card--IsClickable="true"}}
-  {{#> card-header}}
-    {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-      {{#> card-selectable-actions}}
-        {{> card--hidden-input card--hidden-input--IsDisabled="disabled "}}
-      {{/card-selectable-actions}}
-    {{/card-actions}}
-    {{#> card-header-main}}
-      {{> card-title card-title-text--value="Selected but disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
-    {{/card-header-main}}
-  {{/card-header}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}}
-
 {{/gallery}}
 ```
 
