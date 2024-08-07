@@ -1,4 +1,6 @@
-<div class="{{pfv}}content{{#if content--modifier}} {{content--modifier}}{{/if}}"
+<div class="{{pfv}}content
+  {{~#if content--IsEditorial}} pf-m-editorial{{/if}}
+  {{~#if content--modifier}} {{content--modifier}}{{/if}}"
   {{#if content--attribute}}
     {{{content--attribute}}}
   {{/if}}>
