@@ -461,25 +461,6 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-actionable-button-example-selected-disabled" card--modifier="pf-m-clickable pf-m-selected pf-m-disabled" card--IsClickable="true"}}
-  {{#> card-header}}
-    {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-      {{#> card-selectable-actions}}
-        {{> card--actionable card--actionable--IsDisabled=true}}
-      {{/card-selectable-actions}}
-    {{/card-actions}}
-    {{#> card-header-main}}
-      {{> card-title card-title-text--value="Selected but disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
-    {{/card-header-main}}
-  {{/card-header}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}}
-
 {{/gallery}}
 ```
 
@@ -514,25 +495,6 @@ import './Card.css'
     {{/card-actions}}
     {{#> card-header-main}}
       {{> card-title card-title-text--value="Disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
-    {{/card-header-main}}
-  {{/card-header}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}}
-
-{{#> card card--id="card-actionable-link-example-selected-disabled" card--modifier="pf-m-clickable pf-m-selected pf-m-disabled" card--IsClickable="true"}}
-  {{#> card-header}}
-    {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-      {{#> card-selectable-actions}}
-        {{> card--actionable card--actionable--IsLink=true card--actionable--IsDisabled=true}}
-      {{/card-selectable-actions}}
-    {{/card-actions}}
-    {{#> card-header-main}}
-      {{> card-title card-title-text--value="Selected but disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
