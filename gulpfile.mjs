@@ -3,7 +3,7 @@ import path from 'path';
 import gulp from'gulp';
 import rimraf from'rimraf';
 import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
-import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
+import { compileSASS, minifyPF, minifyPFAddons, watchSASS } from'./scripts/gulp/sass.mjs';
 import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
 import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
 import { generateSnippets } from'./scripts/gulp/snippets.mjs';
@@ -104,10 +104,11 @@ async function startWebpackDevServer() {
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));
 const buildDocs = series(buildSrc, copyDocs);
+console.log(buildDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, watchSrcHelpers, startWebpackDevServer);
 
 // Builds `dist` folder
-export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
+export const buildPatternfly = parallel(series(buildDocs, minifyPF, minifyPFAddons), pfIcons, copyFA, copySourceFiles);
 
 export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
 

@@ -99,9 +99,17 @@ const postcssOptions = {
   preset: ['default', { mergeLonghand: false }]
 };
 
-export function minifyCSS() {
+export function minifyPF() {
   return src('./dist/patternfly.css')
-    .pipe(rename('patternfly.min.css'))
+    .pipe(sourcemaps.init())
+    .pipe(postcss([cssnano(postcssOptions)]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist'));
+}
+
+export function minifyPFAddons() {
+  return src('./dist/patternfly-addons.css')
+    .pipe(rename('patternfly-addons.css'))
     .pipe(sourcemaps.init())
     .pipe(postcss([cssnano(postcssOptions)]))
     .pipe(sourcemaps.write('.'))
