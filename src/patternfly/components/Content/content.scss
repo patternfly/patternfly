@@ -5,6 +5,7 @@
   --#{$content}--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$content}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$content}--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$content}--m-editorial--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$content}--FontWeight: var(--pf-t--global--font--weight--body--default);
 
   // this ensures color is not overridden
@@ -59,6 +60,7 @@
   --#{$content}--small--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$content}--small--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$content}--small--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$content}--m-editorial--small--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$content}--small--Color: var(--pf-t--global--text--color--subtle);
 
   // Links
@@ -95,11 +97,18 @@
   --#{$content}--hr--BackgroundColor: var(--pf-t--global--border--color--default);
 }
 
-.#{$content} {
+[class*="#{$content}"] {
   font-size: var(--#{$content}--FontSize);
   line-height: var(--#{$content}--LineHeight);
   color: var(--#{$content}--Color);
 
+  &.pf-m-editorial {
+    --#{$content}--FontSize: var(--#{$content}--m-editorial--FontSize);
+    --#{$content}--small--FontSize: var(--#{$content}--m-editorial--small--FontSize);
+  }
+}
+
+.#{$content} {
   @at-root :is(
     .#{$content}--a,
     & a
