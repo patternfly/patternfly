@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$code-editor}) {
+:root, .#{$code-editor}-reset {
   // controls
   --#{$code-editor}__controls--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__controls--Gap: var(--pf-t--global--spacer--xs);

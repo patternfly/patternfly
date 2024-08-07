@@ -58,7 +58,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 }
 
 // Progress stepper is vertically oriented by default
-:where(:root, .#{$progress-stepper}) {
+:root, .#{$progress-stepper}-reset {
   // Vertical - these are the default settings
   --#{$progress-stepper}--m-vertical--GridAutoFlow: row;
   --#{$progress-stepper}--m-vertical--GridTemplateColumns: auto 1fr;
@@ -242,7 +242,6 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   &.pf-m-compact {
     --#{$progress-stepper}__step-main--MarginBlockStart: var(--#{$progress-stepper}--m-compact__step-main--MarginBlockStart);
     --#{$progress-stepper}__step-main--MarginBlockEnd: var(--#{$progress-stepper}--m-compact__step-main--MarginBlockEnd);
-    --#{$progress-stepper}__step-icon--Width: var(--#{$progress-stepper}--m-compact__step-icon--Width);
     --#{$progress-stepper}__step-icon--FontSize: var(--#{$progress-stepper}--m-compact__step-icon--FontSize);
     --#{$progress-stepper}__step-title--FontSize: var(--#{$progress-stepper}--m-compact__step-title--FontSize);
     --#{$progress-stepper}__step--m-current__step-title--FontWeight: var(--#{$progress-stepper}--m-compact__step-title--FontWeight);
@@ -278,6 +277,10 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
     .#{$progress-stepper}__step-description {
       display: none;
+    }
+
+    .#{$progress-stepper}__step-icon {
+      width: var(--#{$progress-stepper}--m-compact__step-icon--Width);
     }
   }
 }

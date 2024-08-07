@@ -8,14 +8,13 @@
     box-sizing: border-box;
   }
 
-  :where(
-    html,
-    body
-  ) {
+
+  html,
+  body {
     height: 100%;
   }
 
-  :where(body) {
+  body {
     font-family: var(--pf-t--global--font--family--body);
     font-size: var(--pf-t--global--font--size--body--default);
     font-weight: var(--pf-t--global--font--weight--body--default);
@@ -23,29 +22,27 @@
     color: var(--pf-t--global--text--color--regular);
   }
 
-  :where(
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6
-  ) {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 100%;
     font-weight: var(--pf-t--global--font--weight--body--default);
   }
 
-  :where(ul) {
+  ul {
     list-style: none;
   }
 
-  :where(
-    button,
-    input,
-    optgroup,
-    select,
-    textarea
-  ) {
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
     margin: 0;
     font-family: inherit;
     font-size: 100%;
@@ -53,60 +50,55 @@
     color: var(--pf-t--global--text--color--regular);
   }
 
-  :where(
-    img,
-    embed,
-    iframe,
-    object,
-    audio,
-    video
-  ) {
+
+  img,
+  embed,
+  iframe,
+  object,
+  audio,
+  video {
     max-width: 100%;
     height: auto;
   }
 
-  :where(iframe) {
+  iframe {
     border: 0;
   }
 
-  :where(table) {
+  table {
     border-spacing: 0;
     border-collapse: collapse;
   }
 
-  :where(
-    td,
-    th
-  ) {
+
+  td,
+  th {
     padding: 0;
     text-align: start;
   }
 
-  :where(
-    code,
-    pre
-  ) {
+
+  code,
+  pre {
     font-family: var(--pf-t--global--font--family--mono);
   }
 
-  :where(a) {
+  a {
     color: var(--pf-t--global--text--color--link--default);
     text-decoration: var(--pf-t--global--text-decoration--link--line--default);
   }
 
-  :where(a:hover, a:focus) {
+  a:hover, a:focus {
     color: var(--pf-t--global--text--color--link--hover);
     text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
   }
 
-  :where(
-    a,
-    button
-  ) {
+  a,
+  button {
     cursor: pointer;
   }
 
-  :where(.pf-v6-theme-dark) {
+  .pf-v6-theme-dark {
     color-scheme: dark;
   }
 }

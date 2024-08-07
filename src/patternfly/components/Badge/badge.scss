@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$badge}) {
+:root, .#{$badge}-reset {
   // Component
   --#{$badge}--BorderColor: transparent;
   --#{$badge}--BorderWidth: var(--pf-t--global--border--width--regular);

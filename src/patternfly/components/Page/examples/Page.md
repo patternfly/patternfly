@@ -9,6 +9,26 @@ import './Page.css'
 
 ## Examples
 
+### Theming example
+```hbs
+{{#> page page--modifier='mui-theme'}}
+  {{#> masthead}}
+    {{#> masthead-main}}
+      {{> masthead-toggle}}
+      {{#> masthead-brand}}
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
+      {{/masthead-brand}}
+    {{/masthead-main}}
+    {{> masthead-content}}
+  {{/masthead}}
+  {{#> button button--IsPrimary=true}}
+    Mui button
+  {{/button}}
+{{/page}}
+```
+
 ### Vertical nav
 ```hbs
 {{#> page}}

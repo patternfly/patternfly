@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$number-input}) {
+:root, .#{$number-input}-reset {
   // unit
   --#{$number-input}__unit--c-input-group--MarginInlineStart: var(--pf-t--global--spacer--sm);
 

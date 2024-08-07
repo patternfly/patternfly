@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$stack}) {
+:root, .#{$stack}-reset {
   --#{$stack}--m-gutter--Gap: var(--pf-t--global--spacer--gutter--default);
 }
 
