@@ -20,9 +20,7 @@
   --#{$banner}--link--Color: var(--#{$banner}--Color);
   --#{$banner}--link--TextDecoration: underline;
   --#{$banner}--link--hover--Color: var(--#{$banner}--Color);
-  --#{$banner}--link--hover--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$banner}--link--disabled--Color: var(--#{$banner}--Color);
-  --#{$banner}--link--disabled--TextDecoration: none;
+  --#{$banner}--link--disabled--Color: var(--pf-t--global--text--color--disabled);
 
   // modifier variables
   --#{$banner}--m-sticky--ZIndex: var(--pf-t--global--z-index--md);
@@ -148,14 +146,11 @@
 
     &:hover:not(.pf-m-disabled) {
       --#{$banner}--link--Color: var(--#{$banner}--link--hover--Color);
-
-      font-weight: var(--#{$banner}--link--hover--FontWeight);
     }
 
     // stylelint-disable selector-no-qualifying-type
     &.pf-m-disabled {
       --#{$banner}--link--Color: var(--#{$banner}--link--disabled--Color);
-      --#{$banner}--link--TextDecoration: var(--#{$banner}--link--disabled--TextDecoration);
 
       cursor: not-allowed;
     }
@@ -171,14 +166,10 @@
 
     &:hover {
       --#{$banner}--link--Color: var(--#{$banner}--link--hover--Color);
-
-      font-weight: var(--#{$banner}--link--hover--FontWeight);
     }
 
     &:disabled,
     &.pf-m-disabled {
-      --#{$banner}--link--TextDecoration: var(--#{$banner}--link--disabled--TextDecoration);
-
       cursor: not-allowed;
     }
   }
