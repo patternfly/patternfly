@@ -23,6 +23,7 @@
 
   &.pf-m-help-text {
     --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--Color);
+    
     text-decoration: var(--#{$timestamp}--m-help-text--TextDecorationLine) var(--#{$timestamp}--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$timestamp}--m-help-text--TextUnderlineOffset);
     cursor: pointer;

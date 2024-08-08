@@ -327,7 +327,7 @@
     grid-template-columns: 1fr;
 
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      grid-template: auto / auto 1fr;
+      grid-template: auto / minmax(min-content, max-content);
       grid-row-gap: var(--#{$content}--dl--RowGap);
       grid-column-gap: var(--#{$content}--dl--ColumnGap);
     }
