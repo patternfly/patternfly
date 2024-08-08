@@ -9,6 +9,7 @@
   --#{$timestamp}--m-help-text--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--default);
   --#{$timestamp}--m-help-text--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--default);
   --#{$timestamp}--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
+  --#{$timestamp}--m-help-text--Color: var(--pf-t--global--text--color--subtle);
   --#{$timestamp}--m-help-text--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$timestamp}--m-help-text--hover--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--hover);
   --#{$timestamp}--m-help-text--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--hover);
@@ -21,6 +22,7 @@
   outline-offset: var(--#{$timestamp}--OutlineOffset);
 
   &.pf-m-help-text {
+    --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--Color);
     text-decoration: var(--#{$timestamp}--m-help-text--TextDecorationLine) var(--#{$timestamp}--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$timestamp}--m-help-text--TextUnderlineOffset);
     cursor: pointer;
