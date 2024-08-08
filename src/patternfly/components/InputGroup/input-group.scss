@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($input-group) {
-  --#{$input-group}--Gap: var(--pf-t--global--spacer--xs);
+  --#{$input-group}--Gap: var(--pf-t--global--spacer--gap--control-to-control--default);
 
   // Input group item
   --#{$input-group}__item--offset: var(--pf-t--global--border--width--control--default);

@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($file-upload) {
-  --#{$file-upload}--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$file-upload}--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$file-upload}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$file-upload}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$file-upload}--PaddingInlineStart: var(--pf-t--global--spacer--sm);

@@ -205,7 +205,7 @@
 
   // Content
   --#{$label}__content--MaxWidth: 100%;
-  --#{$label}__content--Gap: var(--pf-t--global--spacer--xs);
+  --#{$label}__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
   --#{$label}__content--Cursor: initial;
 
   // Icon

@@ -23,7 +23,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$drawer}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--TransitionDuration: 250ms;
@@ -45,7 +45,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
 
   // Drawer panel head
-  --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$drawer}__head--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$drawer}__head--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$drawer}__head--PaddingInlineStart: var(--pf-t--global--spacer--md);

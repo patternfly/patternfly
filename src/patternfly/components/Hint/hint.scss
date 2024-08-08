@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($hint) {
-  --#{$hint}--GridRowGap: var(--pf-t--global--spacer--sm);
+  --#{$hint}--GridRowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$hint}--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$hint}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$hint}--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
