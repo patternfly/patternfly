@@ -2,7 +2,7 @@
 name: PF6 beta bug
 about: Report a bug discovered while testing the PatternFly 6 betas
 title: "[short description]"
-labels: ''
+labels: v6 Beta bug
 assignees: ''
 
 ---
