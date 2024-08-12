@@ -67,7 +67,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // * Toolbar expand all
   --#{$toolbar}__expand-all-icon--Rotate: 0;
-  --#{$toolbar}__expand-all-icon--Transition: var(--pf-t--global--transition);
+  --#{$toolbar}__expand-all-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$toolbar}__expand-all-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$toolbar}__item--m-expand-all--m-expanded__expand-all-icon--Rotate: 90deg;
 
   // * Toolbar filter group
@@ -296,7 +297,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar expand all
 .#{$toolbar}__expand-all-icon {
   display: inline-flex;
-  transition: var(--#{$toolbar}__expand-all-icon--Transition);
+  transition: transform var(--#{$toolbar}--#{$toolbar}__expand-all-icon--TransitionDuration) var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change

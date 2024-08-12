@@ -115,11 +115,6 @@
     var(--pf-t--global--box-shadow--spread--lg)
     var(--pf-t--global--box-shadow--color--lg);
 
-  // old transitions to be removed in future pr
-  --pf-t--global--transition: all 250ms cubic-bezier(.42, 0, .58, 1);
-  --pf-t--global--transition--timing-function: cubic-bezier(.645, .045, .355, 1);
-  --pf-t--global--transition--duration: 250ms;
-
   // List bullet/marker
   --pf-t--global--list-style: disc outside;
 }
