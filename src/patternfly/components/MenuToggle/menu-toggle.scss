@@ -43,6 +43,8 @@
 
   // * Menu toggle disabled
   --#{$menu-toggle}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$menu-toggle}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$menu-toggle}--disabled__status-icon--Color: var(--pf-t--global--icon--color--on-disabled);
   --#{$menu-toggle}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // * Menu toggle icon
@@ -157,6 +159,9 @@
   // Danger
   --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+
+  // Placeholder
+  --#{$menu-toggle}--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
 }
 
 .#{$menu-toggle} {
@@ -277,16 +282,6 @@
     --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--expanded__toggle-icon--Color);
   }
 
-  &:is(:disabled, .pf-m-disabled) {
-    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--disabled--Color);
-    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--disabled--BackgroundColor);
-
-    &,
-    .#{$button} {
-      pointer-events: none;
-    }
-  }
-
   &.pf-m-primary,
   &:is(:disabled, .pf-m-disabled) {
     &::before {
@@ -319,6 +314,22 @@
   &.pf-m-danger {
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
+  }
+
+  &.pf-m-placeholder {
+    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-placeholder--Color);
+  }
+
+  &:is(:disabled, .pf-m-disabled) {
+    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--disabled--Color);
+    --#{$menu-toggle}__icon--Color: var(--#{$menu-toggle}--disabled__icon--Color);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--disabled__status-icon--Color);
+    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--disabled--BackgroundColor);
+
+    &,
+    .#{$button} {
+      pointer-events: none;
+    }
   }
 }
 
