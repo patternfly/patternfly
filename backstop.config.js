@@ -160,6 +160,8 @@ const relativeUrls = [
   '/components/code-editor/html/with-optional-header-content-and-keyboard-shortcuts',
   '/components/code-editor/html/without-actions',
   '/components/content/html/basic',
+  '/components/content/html/long-formeditorial-content',
+  '/components/content/html/long-formeditorial-content-in-content-wrapper',
   '/components/content/html/plain-html-in-content-wrapper',
   '/components/data-list/html-demos/actionable',
   '/components/data-list/html-demos/basic',
