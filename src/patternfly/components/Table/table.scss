@@ -567,13 +567,6 @@
       &.pf-m-expanded {
         --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--m-expanded--BackgroundColor);
       }
-
-      .#{$table}__expandable-row { // - Table tr clickable and expandable
-        > .#{$table}__thead, 
-        > .#{$table}__td {
-          padding-block-start: 0;
-        }
-      }
     }
 
     // - Table tbody expanded
@@ -951,6 +944,13 @@
   &,
   td:where(.#{$table}__td):first-child::after {
     transition: var(--#{$table}__expandable-row--Transition);
+  }
+
+  @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
+    > .#{$table}__th, 
+    > .#{$table}__td {
+      padding-block-start: 0;
+    }
   }
 
   td:where(.#{$table}__td),
