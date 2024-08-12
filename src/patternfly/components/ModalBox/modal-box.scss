@@ -61,7 +61,7 @@
   --#{$modal-box}__header--body--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 
   // Close
-  --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
+  --#{$modal-box}__close--InsetBlockStart: var(--pf-t--global--spacer--md);
   --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
   --#{$modal-box}__close--sibling--MarginInlineEnd: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
