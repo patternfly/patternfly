@@ -1,4 +1,6 @@
-<{{content--element--type}} class="{{#unless content--element--ExcludeClass}}{{pfv}}content--{{content--element--type}}{{/unless}}{{#if content--element--modifier}} {{content--element--modifier}}{{/if}}"
+<{{content--element--type}} class="{{#unless content--element--ExcludeClass}}{{pfv}}content--{{content--element--type}}{{/unless}}
+  {{~#if content--element--IsEditorial}} pf-m-editorial{{/if}}
+  {{~#if content--element--modifier}} {{content--element--modifier}}{{/if}}"
   {{#if content--element--attribute}}
     {{{content--element--attribute}}}
   {{/if}}>
