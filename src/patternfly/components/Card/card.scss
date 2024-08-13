@@ -146,6 +146,8 @@
   &.pf-m-current {
     --#{$card}--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
     --#{$card}--BorderWidth: var(--#{$card}--m-clickable--m-current--BorderWidth);
+    --#{$card}--m-selectable--hover--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
+    --#{$card}--m-selectable--focus--BorderColor: var(--#{$card}--m-clickable--m-current--BorderColor);
   }
 
   // stylelint-disable selector-max-class
