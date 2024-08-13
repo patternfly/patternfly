@@ -758,7 +758,7 @@ import './Card.css'
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-header-main}}
-      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" width="27px">
+      <img src="/assets/images/PF-IconLogo.svg" alt="PatternFly logo" width="27px">
     {{/card-header-main}}
     {{#> card-actions}}
       {{> card--menu-toggle}}
