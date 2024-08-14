@@ -665,6 +665,18 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 {{> menu-toggle menu-toggle--IsDanger=true menu-toggle--text="Danger"}}
 ```
 
+### Placeholder
+```hbs
+{{#> menu-toggle menu-toggle--IsPlaceholder=true}}
+  {{#> menu-toggle-text}}
+    Placeholder text
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ## Documentation
 
 ### Accessibility
@@ -700,3 +712,4 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 | `.pf-m-success` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the success state. |
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
+| `.pf-m-placeholder` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle text for placeholder styles. |
