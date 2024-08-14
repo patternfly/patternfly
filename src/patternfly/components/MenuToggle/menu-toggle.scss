@@ -43,13 +43,18 @@
 
   // * Menu toggle disabled
   --#{$menu-toggle}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$menu-toggle}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$menu-toggle}--disabled__toggle-icon--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$menu-toggle}--disabled__status-icon--Color: var(--pf-t--global--icon--color--on-disabled);
   --#{$menu-toggle}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // * Menu toggle icon
   --#{$menu-toggle}__icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__icon--Color: var(--pf-t--global--icon--color--regular);
 
   // * Menu toggle toggle icon
   --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // TODO: add pf-m-button modifier here
   // * Menu toggle button
@@ -74,7 +79,6 @@
   --#{$menu-toggle}--m-primary--hover__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--hover);
   --#{$menu-toggle}--m-primary--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--clicked);
 
-
   // * Menu toggle secondary
   --#{$menu-toggle}--m-secondary--PaddingInlineStart: var(--#{$menu-toggle}--m-button--PaddingInlineStart);
   --#{$menu-toggle}--m-secondary--PaddingInlineEnd: var(--#{$menu-toggle}--m-button--PaddingInlineEnd);
@@ -88,7 +92,7 @@
   --#{$menu-toggle}--m-secondary--expanded--BorderWidth: var(--pf-t--global--border--width--action--clicked);
   --#{$menu-toggle}--m-secondary--expanded--BorderColor: var(--pf-t--global--border--color--brand--clicked);
   --#{$menu-toggle}--m-secondary__toggle-icon--Color: var(--pf-t--global--icon--color--brand--default);
-  --#{$menu-toggle}--m-secondary--hover__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
+  --#{$menu-toggle}--m-secondary--hover__toggle-icon--Color: var(--pf-t--global--icon--color--brand--hover);
   --#{$menu-toggle}--m-secondary--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--brand--clicked);
 
   // Controls
@@ -145,6 +149,7 @@
 
   // Status icon
   --#{$menu-toggle}__status-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$menu-toggle}__status-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Success
   --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
@@ -157,6 +162,9 @@
   // Danger
   --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+
+  // Placeholder
+  --#{$menu-toggle}--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
 }
 
 .#{$menu-toggle} {
@@ -215,6 +223,7 @@
     --#{$menu-toggle}--expanded--BorderColor: var(--#{$menu-toggle}--m-primary--expanded--BorderColor);
     --#{$menu-toggle}--hover__toggle-icon--Color: var(--#{$menu-toggle}--m-primary--hover__toggle-icon--Color);
     --#{$menu-toggle}--expanded__toggle-icon--Color: var(--#{$menu-toggle}--m-primary--expanded__toggle-icon--Color);
+    --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--m-primary__toggle-icon--Color);
   }
 
   &.pf-m-secondary {
@@ -231,6 +240,7 @@
     --#{$menu-toggle}--expanded--BorderWidth: var(--#{$menu-toggle}--m-secondary--expanded--BorderWidth);
     --#{$menu-toggle}--hover__toggle-icon--Color: var(--#{$menu-toggle}--m-secondary--hover__toggle-icon--Color);
     --#{$menu-toggle}--expanded__toggle-icon--Color: var(--#{$menu-toggle}--m-secondary--expanded__toggle-icon--Color);
+    --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--m-secondary__toggle-icon--Color);
   }
 
   &.pf-m-full-height {
@@ -277,16 +287,6 @@
     --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--expanded__toggle-icon--Color);
   }
 
-  &:is(:disabled, .pf-m-disabled) {
-    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--disabled--Color);
-    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--disabled--BackgroundColor);
-
-    &,
-    .#{$button} {
-      pointer-events: none;
-    }
-  }
-
   &.pf-m-primary,
   &:is(:disabled, .pf-m-disabled) {
     &::before {
@@ -319,6 +319,23 @@
   &.pf-m-danger {
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
+  }
+
+  &.pf-m-placeholder {
+    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-placeholder--Color);
+  }
+
+  &:is(:disabled, .pf-m-disabled) {
+    --#{$menu-toggle}--Color: var(--#{$menu-toggle}--disabled--Color);
+    --#{$menu-toggle}__icon--Color: var(--#{$menu-toggle}--disabled__icon--Color);
+    --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--disabled__toggle-icon--Color);
+    --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--disabled__status-icon--Color);
+    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--disabled--BackgroundColor);
+
+    &,
+    .#{$button} {
+      pointer-events: none;
+    }
   }
 }
 
