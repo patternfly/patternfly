@@ -25,7 +25,7 @@ import './Card.css'
 {{#> card card--id="card-action-example-1"}}
   {{#> card-header}}
     {{#> card-header-main}}
-      <img src="/assets/images/PF-HorizontalLogo-Color.svg" width="300px" alt="PatternFly logo">
+      {{> masthead-image masthead--id=card--id masthead-image--height="70px"}}
     {{/card-header-main}}
     {{#> card-actions}}
       {{> card--menu-toggle}}
@@ -103,7 +103,7 @@ import './Card.css'
 {{#> card card--id="card-image-head-example"}}
   {{#> card-header}}
     {{#> card-header-main}}
-      <img src="/assets/images/PF-HorizontalLogo-Color.svg" width="300px" alt="PatternFly logo">
+      {{> masthead-image masthead--id=card--id masthead-image--height="70px"}}
     {{/card-header-main}}
   {{/card-header}}
   {{> card-title card-title-text--value="Title"}}
