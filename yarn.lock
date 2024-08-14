@@ -2836,10 +2836,10 @@
   dependencies:
     "@octokit/openapi-types" "^20.0.0"
 
-"@patternfly/ast-helpers@^1.4.0-alpha.59":
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.19.1.tgz#c3dbf09e2bd3c9d9f8ce51e348a1890d4b21e944"
-  integrity sha512-FQIUalqh8LPfX/hPDeC5EtWAYs4z6Ng68eHbsLJuL5Dr8rLtF0IU3SpIM1oPzaku6mALlAYV8N3ZM96XO4s8aA==
+"@patternfly/ast-helpers@^1.4.0-alpha.63":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.20.0.tgz#b5fa44da868740f08a5f621367d8d9d331c5a5a1"
+  integrity sha512-j/M1A8o/l/vopSJml6gGhfQYVaqwWEPJWZ4DENEfYGVDrS9PLJh6EA8kmHi4s0+ZLaovloFkpiaweOQIF7nD4g==
   dependencies:
     acorn "^8.4.1"
     acorn-class-fields "^1.0.0"
@@ -2847,16 +2847,16 @@
     acorn-static-class-features "^1.0.0"
     astring "^1.7.5"
 
-"@patternfly/documentation-framework@6.0.0-alpha.70":
-  version "6.0.0-alpha.70"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.70.tgz#29d902d27d51ddc1a8867ac0e069392f57850477"
-  integrity sha512-ccfjQbqj54szfHisREAEsJUdd6RsqEyTH8ylQmuNqRgZG8lycutjewvDLNbEoezBmTC2MHU7Zsacuxvk5W2JLg==
+"@patternfly/documentation-framework@6.0.0-alpha.74":
+  version "6.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.74.tgz#62acaa5855bfb0180bb26c64cd6cc6ac46fc517f"
+  integrity sha512-55lcu3hFJo1NW9fUd6bTxv/kJ6WUKOQTkBQS695bf36Z2MSlI32b8eSsgGCEO1pL74NYUmxbiFHVXeF/3Hf6Nw==
   dependencies:
     "@babel/core" "^7.24.3"
     "@babel/preset-env" "^7.24.3"
     "@babel/preset-react" "^7.24.1"
     "@mdx-js/util" "1.6.16"
-    "@patternfly/ast-helpers" "^1.4.0-alpha.59"
+    "@patternfly/ast-helpers" "^1.4.0-alpha.63"
     "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer "9.8.6"
     babel-loader "^9.1.3"
@@ -15713,7 +15713,7 @@ string-argv@0.3.2:
   resolved "https://registry.yarnpkg.com/string-argv/-/string-argv-0.3.2.tgz#2b6d0ef24b656274d957d54e0a4bbf6153dc02b6"
   integrity sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==
 
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0":
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -15747,6 +15747,15 @@ string-width@^3.0.0:
     emoji-regex "^7.0.1"
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^5.1.0"
+
+string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
 
 string-width@^5.0.1, string-width@^5.1.2:
   version "5.1.2"
@@ -15908,7 +15917,7 @@ stringify-entities@^3.0.0, stringify-entities@^3.0.1:
     character-entities-legacy "^1.0.0"
     xtend "^4.0.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -15935,6 +15944,13 @@ strip-ansi@^5.1.0:
   integrity sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==
   dependencies:
     ansi-regex "^4.1.0"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
 
 strip-ansi@^7.0.1, strip-ansi@^7.1.0:
   version "7.1.0"
@@ -17953,7 +17969,7 @@ wordwrap@^1.0.0:
   resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz"
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -17974,6 +17990,15 @@ wrap-ansi@^6.2.0:
   version "6.2.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
