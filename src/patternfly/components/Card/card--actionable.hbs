@@ -1,7 +1,7 @@
 {{#if card--actionable--IsLink}}
   <a class="{{pfv}}card__clickable-action
     {{~#if card--actionable--IsDisabled}} pf-m-disabled{{/if}}"
-    {{#if card--actionable--IsDisabled}}tabindex="-1"{{/if}}
+    {{#if card--actionable--IsDisabled}}tabindex="-1" aria-disabled="true"{{/if}}
     aria-labelledby="{{card--id}}"
     href="{{ternary card--actionable--href card--actionable--href '#'}}"></a>
 {{else}}
