@@ -149,7 +149,7 @@ import './ModalBox.css'
 ### Custom title
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-custom-title" aria-describedby="modal-custom-description"'}}
-  {{> modal-box-close}}
+  {{> modal-box-close modal-box-close--modifier='pf-m-no-offset'}}
   {{#> modal-box-header}}
     {{#> title title--modifier="pf-m-4xl" title--attribute='id="modal-custom-title"'}}Custom title{{/title}}
   {{/modal-box-header}}

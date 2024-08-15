@@ -62,7 +62,9 @@
 
   // Close
   --#{$modal-box}__close--InsetBlockStart: calc(var(--#{$modal-box}__header--PaddingBlockStart) - var(--pf-t--global--spacer--control--vertical--default));
+  --#{$modal-box}__close--m-no-offset--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
   --#{$modal-box}__close--InsetInlineEnd: calc(var(--#{$modal-box}__header--PaddingInlineEnd) - var(--pf-t--global--spacer--control--vertical--default));
+  --#{$modal-box}__close--m-no-offset--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
   --#{$modal-box}__close--sibling--MarginInlineEnd: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
@@ -152,6 +154,11 @@
 
   + * {
     margin-inline-end: var(--#{$modal-box}__close--sibling--MarginInlineEnd); // Create room for the close button
+  }
+
+  &.pf-m-no-offset {
+    --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__close--m-no-offset--InsetBlockStart);
+    --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__close--m-no-offset--InsetInlineEnd);
   }
 }
 
