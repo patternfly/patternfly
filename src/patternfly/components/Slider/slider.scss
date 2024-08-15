@@ -8,7 +8,7 @@
   --#{$slider}__rail--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$slider}__rail--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$slider}__rail-track--Height: #{pf-size-prem(4px)};
-  --#{$slider}__rail-track--before--base--BackgroundColor: var(--pf-t--global--border--color--default);
+  --#{$slider}__rail-track--before--base--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
   --#{$slider}__rail-track--before--fill--BackgroundColor: var(--pf-t--global--border--color--hover);
   --#{$slider}__rail-track--before--BorderRadius: var(--pf-t--global--border--radius--tiny);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
@@ -19,12 +19,12 @@
 
   // step tick
   --#{$slider}__step-tick--InsetBlockStart: var(--pf-t--global--spacer--md);
-  --#{$slider}__step-tick--Width: #{pf-size-prem(4px)};
+  --#{$slider}__step-tick--Width: 0.15rem;
   --#{$slider}__step-tick--Height: #{pf-size-prem(4px)};
-  --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--subtle);
+  --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--on-disabled);
   --#{$slider}__step-tick--TranslateX: -50%;
-  --#{$slider}__step-tick--BorderRadius: var(--pf-t--global--border--radius--large);
-  --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--brand--clicked);
+  --#{$slider}__step-tick--BorderRadius: var(--pf-t--global--border--radius--sharp);
+  --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--on-brand--default);
   --#{$slider}__step--first-child__step-tick--TranslateX: 0;
   --#{$slider}__step--last-child__step-tick--TranslateX: -100%;
 
