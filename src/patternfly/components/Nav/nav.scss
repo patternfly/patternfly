@@ -135,9 +135,34 @@
     flex-grow: 1;
   }
 
+  // stylelint-disable max-nesting-depth
   .#{$menu} {
     --#{$menu}--MinWidth: 100%;
+
+    &.pf-m-drilldown {
+      --#{$menu}--BackgroundColor: var(--#{$nav}--BackgroundColor);
+      --#{$menu}--BoxShadow: none;
+      --#{$menu}__list-item--Color: var(--#{$nav}__link--Color);
+      --#{$menu}__list-item--BackgroundColor: transparent;
+      --#{$menu}__list-item--hover--BackgroundColor: var(--#{$nav}__link--hover--BackgroundColor);
+      --#{$menu}__list-item--hover--BackgroundColor: transparent;
+      --#{$menu}__item--BackgroundColor: var(--#{$nav}__link--BackgroundColor);
+
+      .#{$menu}__list {
+        gap: var(--#{$nav}__subnav--RowGap);
+      }
+    
+      .#{$menu}__item {
+        border-radius: var(--#{$nav}__link--BorderRadius);
+    
+        &:hover,
+        &:focus {
+          --#{$menu}__item--BackgroundColor: var(--#{$nav}__link--hover--BackgroundColor);
+        }
+      }
+    }
   }
+  // stylelint-enable max-nesting-depth
 }
 
 [class^="#{$nav}"][hidden] {
