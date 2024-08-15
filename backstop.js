@@ -15,7 +15,7 @@ config.relativeUrls.map((relativeUrl) => {
     delay: relativeUrl.delay || 100, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
     readySelector: '.page-loaded',
     removeSelectors: ['.ws-full-page-utils'],
-    misMatchThreshold: 0.1
+    misMatchThreshold: 0.001
   });
 });
 
