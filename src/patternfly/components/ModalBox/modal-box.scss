@@ -39,6 +39,7 @@
   --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
 
   // Title
+  --#{$modal-box}__title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$modal-box}__title--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$modal-box}__title--FontWeight: var(--pf-t--global--font--weight--heading--default);
@@ -61,10 +62,8 @@
   --#{$modal-box}__header--body--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 
   // Close
-  --#{$modal-box}__close--InsetBlockStart: calc(var(--#{$modal-box}__header--PaddingBlockStart) - var(--pf-t--global--spacer--control--vertical--default));
-  --#{$modal-box}__close--m-no-offset--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
-  --#{$modal-box}__close--InsetInlineEnd: calc(var(--#{$modal-box}__header--PaddingInlineEnd) - var(--pf-t--global--spacer--control--vertical--default));
-  --#{$modal-box}__close--m-no-offset--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
+  --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
+  --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
   --#{$modal-box}__close--sibling--MarginInlineEnd: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
@@ -155,11 +154,6 @@
   + * {
     margin-inline-end: var(--#{$modal-box}__close--sibling--MarginInlineEnd); // Create room for the close button
   }
-
-  &.pf-m-no-offset {
-    --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__close--m-no-offset--InsetBlockStart);
-    --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__close--m-no-offset--InsetInlineEnd);
-  }
 }
 
 .#{$modal-box}__header {
@@ -197,6 +191,7 @@
 
 .#{$modal-box}__title {
   flex: 0 0 auto;
+  padding-block-start: var(--#{$modal-box}__title--PaddingBlockStart);
   font-family: var(--#{$modal-box}__title--FontFamily);
   font-size: var(--#{$modal-box}__title--FontSize);
   font-weight: var(--#{$modal-box}__title--FontWeight);
