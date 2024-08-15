@@ -140,6 +140,8 @@
     --#{$menu}--MinWidth: 100%;
 
     &.pf-m-drilldown {
+      --#{$menu}--PaddingBlockStart: 0;
+      --#{$menu}--PaddingBlockEnd: 0;
       --#{$menu}--BackgroundColor: var(--#{$nav}--BackgroundColor);
       --#{$menu}--BoxShadow: none;
       --#{$menu}__list-item--Color: var(--#{$nav}__link--Color);
