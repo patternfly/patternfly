@@ -56,18 +56,12 @@
   --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
   --#{$menu-toggle}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
 
-  // TODO: add pf-m-button modifier here
-  // * Menu toggle button
-  --#{$menu-toggle}--m-button--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
-  --#{$menu-toggle}--m-button--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
-  --#{$menu-toggle}--m-button--BorderRadius: var(--pf-t--global--border--radius--pill);
-
   // * Menu toggle primary
-  --#{$menu-toggle}--m-primary--PaddingInlineStart: var(--#{$menu-toggle}--m-button--PaddingInlineStart);
-  --#{$menu-toggle}--m-primary--PaddingInlineEnd: var(--#{$menu-toggle}--m-button--PaddingInlineEnd);
+  --#{$menu-toggle}--m-primary--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$menu-toggle}--m-primary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$menu-toggle}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$menu-toggle}--m-primary--BorderRadius: var(--#{$menu-toggle}--m-button--BorderRadius);
+  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$menu-toggle}--m-primary--BorderColor: transparent;
   --#{$menu-toggle}--m-primary--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
   --#{$menu-toggle}--m-primary--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
@@ -80,11 +74,11 @@
   --#{$menu-toggle}--m-primary--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--clicked);
 
   // * Menu toggle secondary
-  --#{$menu-toggle}--m-secondary--PaddingInlineStart: var(--#{$menu-toggle}--m-button--PaddingInlineStart);
-  --#{$menu-toggle}--m-secondary--PaddingInlineEnd: var(--#{$menu-toggle}--m-button--PaddingInlineEnd);
+  --#{$menu-toggle}--m-secondary--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$menu-toggle}--m-secondary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
-  --#{$menu-toggle}--m-secondary--BorderRadius: var(--#{$menu-toggle}--m-button--BorderRadius);
+  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$menu-toggle}--m-secondary--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
@@ -109,7 +103,7 @@
   // Split button, action
   --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartWidth: var(--pf-t--global--border--width--action--default);
   --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--m-split-button--m-action--child--BorderRadius: var(--#{$menu-toggle}--m-button--BorderRadius);
+  --#{$menu-toggle}--m-split-button--m-action--child--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderInlineStartColor: var(--pf-t--global--icon--color--on-disabled);
 
   // Split button action, primary
@@ -130,6 +124,8 @@
   --#{$menu-toggle}__button--m-text--PaddingInlineStart: var(--pf-t--global--spacer--sm);
 
   // Menu toggle plain
+  --#{$menu-toggle}--m-plain--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$menu-toggle}--m-plain--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu-toggle}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu-toggle}--m-plain--BorderColor: transparent;
@@ -257,6 +253,8 @@
   }
 
   &.pf-m-plain {
+    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-plain--PaddingInlineStart);
+    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-plain--PaddingInlineEnd);
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-plain--Color);
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-plain--BackgroundColor);
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-plain--BorderColor);
