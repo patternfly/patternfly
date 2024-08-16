@@ -50,6 +50,15 @@ cssPrefix: pf-v6-c-timestamp
     Tomorrow
   {{/timestamp-text}}
 {{/timestamp}}
+
+<br/>
+<br/>
+
+{{#> timestamp timestamp--IsHelp=true}}
+  {{#> timestamp-text timestamp-text--attribute='datetime="2022-07-21"'}}
+    Tomorrow
+  {{/timestamp-text}}
+{{/timestamp}}
 ```
 
 ## Documentation
