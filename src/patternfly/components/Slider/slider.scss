@@ -21,7 +21,7 @@
   --#{$slider}__step-tick--InsetBlockStart: var(--pf-t--global--spacer--md);
   --#{$slider}__step-tick--Width: 0.15rem;
   --#{$slider}__step-tick--Height: #{pf-size-prem(4px)};
-  --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--on-disabled);
+  --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--nonstatus--on-gray--default);
   --#{$slider}__step-tick--TranslateX: -50%;
   --#{$slider}__step-tick--BorderRadius: var(--pf-t--global--border--radius--sharp);
   --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--on-brand--default);
