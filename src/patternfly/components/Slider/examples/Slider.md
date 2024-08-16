@@ -194,6 +194,7 @@ cssPrefix: pf-v6-c-slider
 <br><br>
 
 {{#> slider
+  slider--IsDisabled="true"
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
