@@ -146,12 +146,11 @@
       --#{$menu}--BoxShadow: none;
       --#{$menu}__list-item--Color: var(--#{$nav}__link--Color);
       --#{$menu}__list-item--BackgroundColor: transparent;
-      --#{$menu}__list-item--hover--BackgroundColor: var(--#{$nav}__link--hover--BackgroundColor);
       --#{$menu}__list-item--hover--BackgroundColor: transparent;
       --#{$menu}__item--BackgroundColor: var(--#{$nav}__link--BackgroundColor);
 
       .#{$menu}__list {
-        gap: var(--#{$nav}__subnav--RowGap);
+        row-gap: var(--#{$nav}__subnav--RowGap);
       }
     
       .#{$menu}__item {
