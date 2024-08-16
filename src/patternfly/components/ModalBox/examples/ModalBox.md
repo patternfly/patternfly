@@ -29,16 +29,13 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-help-title" aria-describedby="modal-help-description"'}}
   {{> modal-box-close}}
-  {{#> modal-box-header modal-box-header--modifier="pf-m-help"}}
-    {{#> modal-box-header-main}}
+  {{#> modal-box-header modal-box-header--HasHelp='true'}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-help-title"'}}
         Modal title Modal title Modal title Modal title Modal title Modal title Modal title Modal title
       {{/modal-box-title}}
       {{#> modal-box-description modal-box-description--attribute='id="modal-help-description"'}}
         A description is used when you want to provide more info about the modal than the title is able to describe. The content in the description is static and will not scroll with the rest of the modal body.
       {{/modal-box-description}}
-    {{/modal-box-header-main}}
-    {{> modal-box-header-help}}
   {{/modal-box-header}}
   {{#> modal-box-body}}
     To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
@@ -336,7 +333,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-v6-c-modal-box__close` | `<div>` | Creates a container for the modal box close button. **Required** if there is a close button. |
 | `.pf-v6-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. |
 | `.pf-v6-c-modal-box__header` | `<header>` | Initiates a modal box header. **Required** if using a `.pf-v6-c-modal-box__title`. |
-| `.pf-v6-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when `pf-v6-c-modal-box__header-help` is used. |
+| `.pf-v6-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when using a modal header. |
 | `.pf-v6-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
 | `.pf-v6-c-modal-box__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` | Initiates a modal box title. **Required** if using a modal description. |
 | `.pf-v6-c-modal-box__title-icon` | `<span>` | Initiates a container for the modal box title icon. |

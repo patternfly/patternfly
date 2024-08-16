@@ -37,9 +37,9 @@
 
   // Header main
   --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
+  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 
   // Title
-  --#{$modal-box}__title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$modal-box}__title--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$modal-box}__title--FontWeight: var(--pf-t--global--font--weight--heading--default);
@@ -182,6 +182,7 @@
   flex-grow: 1;
   gap: var(--#{$modal-box}__header-main--Gap);
   min-width: 0;
+  padding-block-start: var(--#{$modal-box}__header-main--PaddingBlockStart);
 }
 
 .#{$modal-box}__title,
@@ -191,7 +192,6 @@
 
 .#{$modal-box}__title {
   flex: 0 0 auto;
-  padding-block-start: var(--#{$modal-box}__title--PaddingBlockStart);
   font-family: var(--#{$modal-box}__title--FontFamily);
   font-size: var(--#{$modal-box}__title--FontSize);
   font-weight: var(--#{$modal-box}__title--FontWeight);
