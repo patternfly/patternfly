@@ -146,6 +146,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   //  - Toolbar static
   &.pf-m-static {
+    &,
     .#{$toolbar}__content {
       position: static;
     }
@@ -261,6 +262,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 .#{$toolbar}__expandable-content {
   position: absolute;
   inset-block-start: 100%;
+  inset-inline-start: 0;
   z-index: var(--#{$toolbar}__expandable-content--ZIndex);
   display: none;
   row-gap: var(--#{$toolbar}__expandable-content--RowGap);
