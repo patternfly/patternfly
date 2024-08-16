@@ -203,3 +203,7 @@
   grid-column: 1 / 3;
   margin-block-start: var(--#{$progress}__helper-text--MarginBlockStart);
 }
+
+.#{$progress}__measure {
+  font-variant-numeric: tabular-nums;
+}
