@@ -137,6 +137,23 @@
 
   .#{$menu} {
     --#{$menu}--MinWidth: 100%;
+
+    &.pf-m-drilldown,
+    &.pf-m-drilldown .#{$menu} {
+      --#{$menu}--PaddingBlockStart: 0;
+      --#{$menu}--PaddingBlockEnd: 0;
+      --#{$menu}--BackgroundColor: var(--#{$nav}--BackgroundColor);
+      --#{$menu}--BoxShadow: none;
+      --#{$menu}__list-item--hover--BackgroundColor: var(--pf-v6-c-nav__link--hover--BackgroundColor);
+
+      .#{$menu}__list {
+        row-gap: var(--#{$nav}__subnav--RowGap);
+      }
+    
+      .#{$menu}__list-item::before {
+        border-radius: var(--#{$nav}__link--BorderRadius);
+      }
+    }
   }
 }
 
