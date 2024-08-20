@@ -37,6 +37,7 @@
 
   // Header main
   --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
+  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
 
   // Title
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
@@ -181,6 +182,7 @@
   flex-grow: 1;
   gap: var(--#{$modal-box}__header-main--Gap);
   min-width: 0;
+  padding-block-start: var(--#{$modal-box}__header-main--PaddingBlockStart);
 }
 
 .#{$modal-box}__title,
