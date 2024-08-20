@@ -233,6 +233,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // - Toolbar label group
   &.pf-m-label-group {
     flex: 1;
+    flex-wrap: wrap;
     column-gap: var(--#{$toolbar}__group--m-label-group--ColumnGap);
   }
 
