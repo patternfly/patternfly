@@ -309,7 +309,8 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   margin-block-start: var(--#{$dual-list-selector}__controls--MarginBlockStart);
 }
 
-:is(.#{$dual-list-selector}__controls-item, .#{$dual-list-selector}__item-toggle-icon) {
+.#{$dual-list-selector}__controls-item,
+.#{$dual-list-selector}__item-toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 }
 
@@ -319,9 +320,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__item-toggle {
-  padding-block-start: var(--#{$dual-list-selector}__item-toggle--PaddingBlockStart);
-  padding-block-end: var(--#{$dual-list-selector}__item-toggle--PaddingBlockEnd);
-  padding-inline-start: var(--#{$dual-list-selector}__item-toggle--PaddingInlineStart);
+  padding-block-start: var(--#{$dual-list-selector}__item-toggle--PaddingBlockStart); // TODO: define this
+  padding-block-end: var(--#{$dual-list-selector}__item-toggle--PaddingBlockEnd); // TODO: define this
+  padding-inline-start: var(--#{$dual-list-selector}__item-toggle--PaddingInlineStart); // TODO: define this
   padding-inline-end: var(--#{$dual-list-selector}__item-toggle--PaddingInlineEnd);
   margin-block-start: var(--#{$dual-list-selector}__item-toggle--MarginBlockStart);
   margin-block-end: var(--#{$dual-list-selector}__item-toggle--MarginBlockEnd);

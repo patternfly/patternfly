@@ -24,7 +24,7 @@
       ) + var(--#{$number-input}--c-form-control--width-icon)
     );
 
-    > :is(input) {
+    > input {
       text-align: end;
 
       @include pf-v6-remove-num-arrows;

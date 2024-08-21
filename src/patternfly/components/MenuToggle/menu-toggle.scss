@@ -417,7 +417,7 @@
   }
 
   // disabled styles for children
-  > :is(.pf-m-disabled, :disabled) {
+  > .pf-m-disabled, :disabled {
     --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderInlineStartColor);
 
     color: var(--#{$menu-toggle}--m-split-button--child--disabled--Color);

@@ -123,7 +123,8 @@
   // SELECTABLE CARDS
   &.pf-m-selectable {
     // disables the gap since these have an empty label
-    .#{$card}__selectable-actions :is(.#{$check}, .#{$radio}) {
+    .#{$card}__selectable-actions .#{$check},
+    .#{$card}__selectable-actions .#{$radio} {
       gap: 0;
     }
   }
@@ -312,8 +313,8 @@
 }
 
 // Labels are used to handle states of selectable and clickable cards
-.#{$card}__selectable-actions .#{$check}__label,
-.#{$card}__selectable-actions .#{$radio}__label {
+.#{$card}__selectable-actions .#{$radio}__label,
+.#{$card}__selectable-actions .#{$card}__clickable-action {
   position: absolute;
   inset: 0;
   justify-self: auto;
@@ -343,6 +344,7 @@
 }
 
 // Focus on the card (focus on label but not checked)
+.#{$card}__selectable-actions .#{$card}__clickable-action:focus-visible,
 .#{$card}__selectable-actions .#{$check}__input:focus-visible ~ .#{$check}__label,
 .#{$card}__selectable-actions .#{$radio}__input:focus-visible ~ .#{$radio}__label {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--focus--BorderColor);
