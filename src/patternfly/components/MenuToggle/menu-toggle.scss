@@ -184,7 +184,7 @@
   transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
   transition-duration: var(--#{$menu-toggle}--TransitionDuration);
   transition-property: var(--#{$menu-toggle}--TransitionProperty);
-  
+
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);
@@ -429,7 +429,7 @@
   }
 
   // disabled styles for children
-  > :is(.pf-m-disabled, :disabled) {
+  > .pf-m-disabled, :disabled {
     --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--m-split-button--m-action--child--disabled--BorderInlineStartColor);
 
     color: var(--#{$menu-toggle}--m-split-button--child--disabled--Color);
