@@ -416,3 +416,10 @@
 @mixin pf-v6-set-inverse($val: true) {
   --#{$pf-global}--inverse--multiplier: #{if($val, -1, 1)};
 }
+
+@mixin pf-root($selector) {
+  :root,
+  .#{$selector}-reset {
+    @content
+  }
+}
