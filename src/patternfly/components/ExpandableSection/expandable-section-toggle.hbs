@@ -1,19 +1,13 @@
-<button type="button" class="{{pfv}}expandable-section__toggle{{#if expandable-section-toggle--modifier}} {{expandable-section-toggle--modifier}}{{/if}}"
+<div class="{{pfv}}expandable-section__toggle{{#if expandable-section-toggle--modifier}} {{expandable-section-toggle--modifier}}{{/if}}"
   {{#if expandable-section-toggle--attribute}}
     {{{expandable-section-toggle--attribute}}}
-  {{/if}}
-  {{#if expandable-section--IsExpanded}}
-    aria-expanded="true"
-  {{else}}
-    aria-expanded="false"
-  {{/if}}
-  {{#if expandable-section--IsDetached}}
-    aria-controls="{{expandable-section--id}}-content"
   {{/if}}>
-  {{#unless expandable-section--IsTruncate}}
-    {{> expandable-section-toggle-icon}}
-  {{/unless}}
-  {{#> expandable-section-toggle-text}}
+  {{#> button
+    button--IsLink=true
+    button--IsInline=expandable-section--IsTruncate
+    button--IsAriaExpanded=expandable-section--IsExpanded
+    button--aria-controls=(ternary expandable-section--IsDetached (concat expandable-section--id '-content') null)
+    button--icon-template=(ternary expandable-section--IsTruncate null "expandable-section-toggle-icon")}}
     {{#if @partial-block}}
       {{> @partial-block}}
     {{else if expandable-section--IsExpanded}}
@@ -21,5 +15,5 @@
     {{else}}
       Show more
     {{/if}}
-  {{/expandable-section-toggle-text}}
-</button>
+  {{/button}}
+</div>
