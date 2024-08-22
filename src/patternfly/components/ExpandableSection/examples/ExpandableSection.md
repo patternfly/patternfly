@@ -112,19 +112,18 @@ cssPrefix: pf-v6-c-expandable-section
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-v6-c-expandable-section__toggle` | Indicates that the expandable section content is visible. **Required** |
-| `aria-expanded="false"` | `.pf-v6-c-expandable-section__toggle` | Indicates the the expandable section content is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-v6-c-expandable-section__toggle .pf-v6-c-button` | Indicates that the expandable section content is visible. **Required** |
+| `aria-expanded="false"` | `.pf-v6-c-expandable-section__toggle .pf-v6-c-button` | Indicates the the expandable section content is hidden. **Required** |
 | `hidden` | `.pf-v6-c-expandable-section__content` | Indicates that the expandable section content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-v6-c-expandable-section__toggle-icon` | Hides the icon from screen readers. **Required** |
-| `aria-controls="[id of content element]"` | `.pf-v6-c-expandable-section.pf-m-detached .pf-v6-c-expandable-section__toggle` | Identifies the element controlled by the toggle button. **Required** |
-| `id` | `.pf-v6-c-expandable-section.pf-m-detached .pf-v6-c-expandable-section__content` | Gives the content an `id` for use with `aria-controls` on `.pf-v6-c-expandable-section__toggle`. **Required** |
+| `aria-controls="[id of content element]"` | `.pf-v6-c-expandable-section.pf-m-detached .pf-v6-c-expandable-section__toggle .pf-v6-c-button` | Identifies the element controlled by the toggle button. **Required** |
+| `id` | `.pf-v6-c-expandable-section.pf-m-detached .pf-v6-c-expandable-section__content` | Gives the content an `id` for use with `aria-controls` on `.pf-v6-c-expandable-section__toggle .pf-v6-c-button`. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-expandable-section` | `<div>` | Initiates the expandable section component. **Required** |
-| `.pf-v6-c-expandable-section__toggle` | `<button>` | Initiates the expandable section toggle. **Required** |
-| `.pf-v6-c-expandable-section__toggle-text` | `<span>` | Initiates the expandable toggle text. **Required** |
+| `.pf-v6-c-expandable-section__toggle` | `<div>` | Initiates the expandable toggle wrapper. **Required** |
 | `.pf-v6-c-expandable-section__toggle-icon` | `<span>` | Initiates the expandable toggle icon. **Required** |
 | `.pf-v6-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
 | `.pf-m-expanded` | `.pf-v6-c-expandable-section` | Modifies the component for the expanded state. |
