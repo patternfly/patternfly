@@ -38,10 +38,8 @@
 }
 
 .#{$expandable-section} {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--#{$expandable-section}--Gap);
-  align-items: start;
 
   &.pf-m-expanded {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);

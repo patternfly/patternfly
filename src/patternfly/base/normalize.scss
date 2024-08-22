@@ -50,15 +50,16 @@
     color: var(--pf-t--global--text--color--regular);
   }
 
-
   img,
   embed,
   iframe,
   object,
   audio,
-  video {
+  video,
+  svg {
     max-width: 100%;
     height: auto;
+    max-height: 100%;
   }
 
   iframe {

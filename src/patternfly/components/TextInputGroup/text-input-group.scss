@@ -63,7 +63,7 @@
   --#{$text-input-group}__icon--TranslateY: -50%;
 
   // Utilities
-  --#{$text-input-group}__utilities--child--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$text-input-group}__utilities--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // input disabled style
   --#{$text-input-group}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);
@@ -228,13 +228,8 @@
 // TODO: update to use gap
 .#{$text-input-group}__utilities {
   display: flex;
+  column-gap: var(--#{$text-input-group}__utilities--ColumnGap);
   align-items: center;
-  margin-inline-start: var(--#{$text-input-group}__utilities--MarginInlineStart);
-  margin-inline-end: var(--#{$text-input-group}__utilities--MarginInlineEnd);
-
-  > * + * {
-    margin-inline-start: var(--#{$text-input-group}__utilities--child--MarginInlineStart);
-  }
 }
 
 .#{$text-input-group}__group {

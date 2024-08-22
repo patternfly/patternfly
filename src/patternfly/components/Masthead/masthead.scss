@@ -10,6 +10,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$masthead}--FontWeight: var(--pf-t--global--font--weight--body--default);
+  --#{$masthead}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
@@ -127,6 +130,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-block-end: var(--#{$masthead}--PaddingBlockEnd, var(--#{$masthead}--PaddingBlock));
   padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
+  font-size: var(--#{$masthead}--FontSize);
+  font-weight: var(--#{$masthead}--FontWeight);
+  line-height: var(--#{$masthead}--LineHeight);
   background-color: var(--#{$masthead}--BackgroundColor);
 
   .#{$toolbar}__content-section {
@@ -208,13 +214,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead}__logo {
   position: relative;
   width: var(--#{$masthead}__logo--Width);
-  max-height: var(--#{$masthead}__logo--MaxHeight);
-
-  > * {
-    max-width: 100%;
-    max-height: 100%;
-    vertical-align: middle;
- }
+  max-height: calc(var(--#{$masthead}--FontSize) * var(--#{$masthead}--LineHeight) + var(--pf-t--global--spacer--control--vertical--default) * 2);
 }
 
 // - Masthead expandable content

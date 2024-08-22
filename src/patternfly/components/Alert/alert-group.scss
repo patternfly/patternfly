@@ -3,7 +3,7 @@
 // Tabs
 @include pf-root($alert-group) {
   // Alert group variables
-  --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$alert-group}--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
 
   // Toast variables
   --#{$alert-group}--m-toast--InsetBlockStart: var(--pf-t--global--spacer--2xl);
@@ -32,9 +32,8 @@
 
 .#{$alert-group} {
   // Spacing between alerts
-  > * + * {
-    margin-block-start: var(--#{$alert-group}__item--MarginBlockStart);
-  }
+  display: grid;
+  row-gap: var(--#{$alert-group}--RowGap);
 
   // Toast positioning modifier
   &.pf-m-toast {
