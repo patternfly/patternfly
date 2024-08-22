@@ -385,12 +385,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 .#{$tree-view}__node-content {
   display: flex;
   flex-direction: column;
+  row-gap: var(--#{$tree-view}__node-content--RowGap);
   overflow: var(--#{$tree-view}__node-content--Overflow);
-
-  // row-gap: var(--#{$tree-view}__node-content--RowGap); update when gap for flex is supported
-  > * + * {
-    margin-block-start: var(--#{$tree-view}__node-content--RowGap);
-  }
 }
 
 .#{$tree-view}__node-check {

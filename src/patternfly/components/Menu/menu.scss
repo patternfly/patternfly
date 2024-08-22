@@ -450,10 +450,6 @@
   transition-duration: var(--#{$menu}__list-item--TransitionDuration);
   transition-property: var(--#{$menu}__list-item--TransitionProperty);
 
-  > * {
-    position: relative;
-  }
-
   &::before {
     position: absolute;
     inset: 0;

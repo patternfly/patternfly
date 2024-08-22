@@ -368,10 +368,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   padding-block-end: var(--#{$drawer}__head--PaddingBlockEnd);
   padding-inline-start: var(--#{$drawer}__head--PaddingInlineStart);
   padding-inline-end: var(--#{$drawer}__head--PaddingInlineEnd);
-
-  > * {
-    grid-column: 1;
-  }
 }
 
 // Panel actions

@@ -10,6 +10,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$masthead}--FontWeight: var(--pf-t--global--font--weight--body--default);
+  --#{$masthead}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
@@ -44,11 +47,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline--ColumnGap: 0;
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
-  --#{$masthead}--m-display-inline__brand--GridColumn: initial; 
+  --#{$masthead}--m-display-inline__brand--GridColumn: initial;
   --#{$masthead}--m-display-inline__brand--Order: initial;
   --#{$masthead}--m-display-inline__brand--PaddingBlockEnd: 0;
   --#{$masthead}--m-display-inline__brand--BorderBlockEnd: 0;
-  --#{$masthead}--m-display-inline__main--GridColumn: 1; 
+  --#{$masthead}--m-display-inline__main--GridColumn: 1;
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
   --#{$masthead}--m-display-inline__main--toggle--content--GridColumn: 2;
@@ -92,7 +95,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
   --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-inline__main--toggle--content--GridColumn);
-  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display); 
+  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display);
   --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-inline__main--ColumnGap);
 }
 
@@ -127,6 +130,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-block-end: var(--#{$masthead}--PaddingBlockEnd, var(--#{$masthead}--PaddingBlock));
   padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
+  font-size: var(--#{$masthead}--FontSize);
+  font-weight: var(--#{$masthead}--FontWeight);
+  line-height: var(--#{$masthead}--LineHeight);
   background-color: var(--#{$masthead}--BackgroundColor);
 
   .#{$toolbar}__content-section {
@@ -208,13 +214,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead}__logo {
   position: relative;
   width: var(--#{$masthead}__logo--Width);
-  max-height: var(--#{$masthead}__logo--MaxHeight);
-
-  > * {
-    max-width: 100%;
-    max-height: 100%;
-    vertical-align: middle;
- }
+  max-height: calc(var(--#{$masthead}--FontSize) * var(--#{$masthead}--LineHeight) + var(--pf-t--global--spacer--control--vertical--default) * 2);
 }
 
 // - Masthead toggle

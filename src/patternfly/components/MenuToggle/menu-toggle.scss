@@ -184,7 +184,7 @@
   transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
   transition-duration: var(--#{$menu-toggle}--TransitionDuration);
   transition-property: var(--#{$menu-toggle}--TransitionProperty);
-  
+
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);

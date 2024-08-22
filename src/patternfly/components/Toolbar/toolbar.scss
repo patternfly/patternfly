@@ -282,12 +282,9 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   &.pf-m-expanded,
-  .#{$toolbar}__group {
-    display: grid;
-  }
-
-  .#{$toolbar}__item > * {
-    flex-basis: 100%;
+  .#{$toolbar}__group,
+  .#{$toolbar}__item {
+    display: grid; // display grid for item content to strech full width
   }
 
   .#{$toolbar}__group.pf-m-action-group-inline {

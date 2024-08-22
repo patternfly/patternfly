@@ -55,8 +55,7 @@
   }
 
   &.pf-m-plain {
-    --#{$list}--PaddingInlineStart: var(--#{$list}--m-plain--PaddingInlineStart);
-
+    padding-inline-start: var(--#{$list}--m-plain--PaddingInlineStart);
     list-style: none;
   }
 

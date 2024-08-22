@@ -90,21 +90,14 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}--m-horizontal__group-label--m-info--Gap: var(--pf-t--global--spacer--sm);
 
   // Group control
-  --#{$form}__group-control--m-inline--child--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$form}__group-control--m-inline--ColumnGap: var(--pf-t--global--spacer--lg);
   --#{$form}__group-control__helper-text--MarginBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$form}__group-control--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group-control--m-stack--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group-control--m-stack__helper-text--MarginBlockStart: calc(var(--#{$form}__group-control--m-stack--Gap) * -1 + var(--#{$form}__helper-text--MarginBlockStart--base));
 
   // Actions
-  --#{$form}__actions--child--MarginBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$form}__actions--child--MarginInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$form}__actions--child--MarginBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$form}__actions--child--MarginInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$form}__actions--MarginBlockStart: calc(var(--#{$form}__actions--child--MarginBlockStart) * -1);
-  --#{$form}__actions--MarginInlineEnd: calc(var(--#{$form}__actions--child--MarginInlineEnd) * -1);
-  --#{$form}__actions--MarginBlockEnd: calc(var(--#{$form}__actions--child--MarginBlockEnd) * -1);
-  --#{$form}__actions--MarginInlineStart: calc(var(--#{$form}__actions--child--MarginInlineStart) * -1);
+  --#{$form}__actions--ColumnGap: var(--pf-t--global--spacer--md);
 
   // Helper text
   --#{$form}__helper-text--MarginBlockStart--base: var(--pf-t--global--spacer--xs);
@@ -300,14 +293,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   &.pf-m-inline {
     display: flex;
     flex-flow: row wrap;
-
-    > * {
-      margin-inline-end: var(--#{$form}__group-control--m-inline--child--MarginInlineEnd);
-    }
-
-    > :last-child {
-      --#{$form}__group-control--m-inline--child--MarginInlineEnd: 0;
-    }
+    column-gap: var(--#{$form}__group-control--m-inline--childColumnGap);
   }
 
   &.pf-m-stack {
@@ -345,17 +331,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__actions {
   display: flex;
   flex-wrap: wrap;
-  margin-block-start: var(--#{$form}__actions--MarginBlockStart);
-  margin-block-end: var(--#{$form}__actions--MarginBlockEnd);
-  margin-inline-start: var(--#{$form}__actions--MarginInlineStart);
-  margin-inline-end: var(--#{$form}__actions--MarginInlineEnd);
-
-  > * {
-    margin-block-start: var(--#{$form}__actions--child--MarginBlockStart);
-    margin-block-end: var(--#{$form}__actions--child--MarginBlockEnd);
-    margin-inline-start: var(--#{$form}__actions--child--MarginInlineStart);
-    margin-inline-end: var(--#{$form}__actions--child--MarginInlineEnd);
-  }
+  column-gap: var(--#{$form}__actions--ColumnGap);
 }
 
 .#{$form}__field-group {
