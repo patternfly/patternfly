@@ -1,10 +1,11 @@
-{{#> table table--IsTree-view="true"
+{{#>table
+    table--IsTree-view=true
     table--HasActions=table-tree-view--HasActions
     table--HasCheckboxes=table-tree-view--HasCheckboxes
     table--HasIcons=table-tree-view--HasIcons
     table--HasNoPosinset=table-tree-view--HasNoPosinset
   }}
-  {{#> table-thead}}
+  {{#> table-thead table-tr--HasNoPosinset=true}}
     {{#> table-tr table--HasActions=table-tree-view--HasActions}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier=(prefix 'table__tree-view-title-header-cell')}}
         Name
