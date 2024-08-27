@@ -150,9 +150,9 @@ import './Card.css'
 
 ### Horizontal split
 ```hbs
-{{#> card card--id="card-demo-horizontal-split-example" card--modifier="pf-m-flat"}}
+{{#> card card--id="card-demo-horizontal-split-example"}}
   {{#> grid grid--modifier="pf-m-all-6-col-on-md"}}
-    {{#> grid-item grid-item--attribute='style="min-height: 200px; background: no-repeat bottom right / auto 75% url(/assets/images/pfbg-icon.svg) black;"'}}
+    {{#> grid-item grid-item--attribute='style="min-height: 200px; background: no-repeat bottom right / auto 75% url(/assets/images/pf-background.svg) black;"'}}
     {{/grid-item}}
     {{#> grid-item}}
       {{> card-title card-title-text--value="Headline"}}

@@ -43,6 +43,9 @@
   {{#if menu-toggle--IsDanger}}
     pf-m-danger
   {{/if}}
+  {{#if menu-toggle--IsPlaceholder}}
+    pf-m-placeholder
+  {{/if}}
   {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
   {{#unless (concat menu-toggle--IsDiv menu-toggle--IsSplitButton)}}
     type="button"

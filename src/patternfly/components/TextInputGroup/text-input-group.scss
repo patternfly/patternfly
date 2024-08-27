@@ -20,7 +20,8 @@
   // Main
   --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
   --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-v6-c-text-input-group__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
-  --#{$text-input-group}--status__text-input--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$text-input-group}--status__text-input--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-v6-c-text-input-group__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
+  --#{$text-input-group}--utilities--status__text-input--PaddingInlineEnd: calc(var(--pf-t--global--spacer--sm) + var(--pf-v6-c-text-input-group__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
   --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
   --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
@@ -49,8 +50,9 @@
 
   // Icon
   --#{$text-input-group}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
-  --#{$text-input-group}__icon--InsetInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$text-input-group}__icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$text-input-group}__icon--InsetInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$text-input-group}__icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$text-input-group}--utilities--icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$text-input-group}--m-disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$text-input-group}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
@@ -134,6 +136,11 @@
 
   &:where(.pf-m-success, .pf-m-warning, .pf-m-error) {
     --#{$text-input-group}__text-input--PaddingInlineEnd: var(--#{$text-input-group}--status__text-input--PaddingInlineEnd);
+  }
+
+  &:has(> .#{$text-input-group}__utilities) {
+    --#{$text-input-group}__icon--m-status--InsetInlineEnd: var(--#{$text-input-group}--utilities--icon--m-status--InsetInlineEnd);
+    --#{$text-input-group}--status__text-input--PaddingInlineEnd: var(--#{$text-input-group}--utilities--status__text-input--PaddingInlineEnd);
   }
 }
 

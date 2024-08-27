@@ -17,6 +17,18 @@ cssPrefix: pf-v6-c-content
 {{/content}}
 ```
 
+### Long-form/editorial content
+```hbs
+{{> content--kitchen-sink content--element--IsEditorial=true}}
+```
+
+### Long-form/editorial content in content wrapper
+```hbs
+{{#> content content--IsEditorial=true}}
+  {{> content--kitchen-sink content--element--ExcludeClass=true}}
+{{/content}}
+```
+
 ## Documentation
 ### Overview
 When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-v6-c-content` as container. It can handle almost any HTML tag:
@@ -37,3 +49,4 @@ This component is an exception to the variable system since we style type select
 | `.pf-v6-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rhythm and typographic treatment to html elements. |
 | `.pf-m-visited` | `.pf-v6-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
 | `.pf-m-plain` | `<ul>`, `<ol>` | Removes the list marker and indentation. |
+| `.pf-m-editorial` | `.pf-v6-c-content*` | Applies long-form, editorial content styles to a block of content or individual content elements. |

@@ -939,11 +939,11 @@
   position: relative;
   border-block-end: 0 solid transparent;
 
-  // stylelint-disable
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
     > .#{$table}__th, 
     > .#{$table}__td {
     padding-block-start: 0;
+
     }
   }
 
@@ -951,16 +951,15 @@
   th:where(.#{$table}__th) {
     &.pf-m-no-padding {
       padding-block-start: 0;
-      padding-inline-end: 0;
       padding-block-end: 0;
       padding-inline-start: 0;
+      padding-inline-end: 0;
 
       .#{$table}__expandable-row-content {
         padding: 0;
       }
     }
   }
-  // stylelint-enable
 
   // - Table expandable row content
   .#{$table}__expandable-row-content {
