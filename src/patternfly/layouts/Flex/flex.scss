@@ -321,7 +321,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
             --#{$flex}--spacer: var(#{map-get($pf-v6-l-flex--variable-map, $spacer-value)});
           }
 
-          > :last-child {
+          > &:last-child {
             --#{$flex}--spacer: 0;
           }
         }
