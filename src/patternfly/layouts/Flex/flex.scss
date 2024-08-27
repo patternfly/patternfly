@@ -369,12 +369,12 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         > .#{$flex} > .#{$flex},
         > .#{$flex}__group,
         > .#{$flex}__item {
-          margin: 0;
+          margin-block: 0;
+          margin-inline: 0;
         }
       }
     }
   }
-
 
   // .pf-m-row-gap{-[size]}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
@@ -397,7 +397,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         > .#{$flex} > .#{$flex},
         > .#{$flex}__group,
         > .#{$flex}__item {
-          margin: 0;
+          margin-block: 0;
         }
       }
     }

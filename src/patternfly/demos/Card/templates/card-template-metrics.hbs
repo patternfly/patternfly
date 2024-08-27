@@ -9,23 +9,39 @@
       {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
         {{#> grid grid--modifier="pf-m-gutter pf-m-all-3-col"}}
           {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
-            <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">2</span>
-            <span class="{{pfv 'u'}}font-color-200">Critical</span>
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">2</span>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-color-200">Critical</span>
+            {{/l-flex-item}}
           {{/l-flex}}
           {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
-            <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">5</span>
-            <span class="{{pfv 'u'}}font-color-200">Important</span>
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">5</span>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-color-200">Important</span>
+            {{/l-flex-item}}
           {{/l-flex}}
           {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
-            <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">7</span>
-            <span class="{{pfv 'u'}}font-color-200">Moderate</span>
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">7</span>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-color-200">Moderate</span>
+            {{/l-flex-item}}
           {{/l-flex}}
           {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
-            <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">12</span>
-            <span class="{{pfv 'u'}}font-color-200">Low</span>
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-size-2xl {{pfv 'u'}}primary-color-100">12</span>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="{{pfv 'u'}}font-color-200">Low</span>
+            {{/l-flex-item}}
           {{/l-flex}}
         {{/grid}}
-        {{/l-flex}}
+      {{/l-flex}}
     {{/card-body}}
     {{#> card-title}}
       {{#> title titleType="h2" title--modifier="pf-m-xl"}}

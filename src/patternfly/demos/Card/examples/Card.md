@@ -67,40 +67,56 @@ import './Card.css'
       {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-all-3-col-on-lg pf-m-gutter"}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="blue" label-text--value="Set up your cluster" label-icon--value="info-circle"}}
-            <p>Continue setting up your cluster to access all you can in the Console</p>
-            {{#> list list--modifier="pf-m-plain"}}
-              <li>
-                <a href="#">Add identity provider</a>
-              </li>
-              <li>
-                <a href="#">Configure alert receivers</a>
-              </li>
-              <li>
-                <a href="#">Configure default ingress certificate</a>
-              </li>
-            {{/list}}
+            {{#> l-flex-item}}
+              {{> label label--color="blue" label-text--value="Set up your cluster" label-icon--value="info-circle"}}
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <p>Continue setting up your cluster to access all you can in the Console</p>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              {{#> list list--modifier="pf-m-plain"}}
+                <li>
+                  <a href="#">Add identity provider</a>
+                </li>
+                <li>
+                  <a href="#">Configure alert receivers</a>
+                </li>
+                <li>
+                  <a href="#">Configure default ingress certificate</a>
+                </li>
+              {{/list}}
+            {{/l-flex-item}}
           {{/l-flex}}
-          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
-            View all set up cluster steps {{! TODO - fix the icon in this button in RTL}}
-          {{/button}}
+          {{#> l-flex-item}}
+            {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+              View all set up cluster steps {{! TODO - fix the icon in this button in RTL}}
+            {{/button}}
+          {{/l-flex-item}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="purple" label-text--value="Guided tours" label-icon--value="info-circle"}}
-            <p>Tour some of the key features around the console</p>
-            {{#> list list--modifier="pf-m-plain"}}
-              <li>
-                <a href="#">Tour the console</a>
-              </li>
-              <li>
-                <a href="#">Explore the Developer perspective</a>
-              </li>
-            {{/list}}
+            {{#> l-flex-item}}
+              {{> label label--color="purple" label-text--value="Guided tours" label-icon--value="info-circle"}}
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <p>Tour some of the key features around the console</p>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              {{#> list list--modifier="pf-m-plain"}}
+                <li>
+                  <a href="#">Tour the console</a>
+                </li>
+                <li>
+                  <a href="#">Explore the Developer perspective</a>
+                </li>
+              {{/list}}
+            {{/l-flex-item}}
           {{/l-flex}}
-         {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
-            View all guided tours {{! TODO - fix the icon in this button in RTL}}
-          {{/button}}
+          {{#> l-flex-item}}
+          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+              View all guided tours {{! TODO - fix the icon in this button in RTL}}
+            {{/button}}
+          {{/l-flex-item}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
@@ -118,29 +134,39 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
-            View all quick starts {{! TODO - fix the icon in this button in RTL}}
-          {{/button}}
+          {{#> l-flex-item}}
+            {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+              View all quick starts {{! TODO - fix the icon in this button in RTL}}
+            {{/button}}
+          {{/l-flex-item}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="orange" label-text--value="Learning resources" label-icon--value="info-circle"}}
-            <p>Learn about new features within the Console and get started with demo apps</p>
-            {{#> list list--modifier="pf-m-plain"}}
-              <li>
-                <a href="#">See what's possible with the Explore page</a>
-              </li>
-              <li>
-                <a href="#">OpenShift 4.5: Top Tasks <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-              </li>
-              <li>
-                <a href="#">Try a demo app</a>
-              </li>
-            {{/list}}
+            {{#> l-flex-item}}
+              {{> label label--color="orange" label-text--value="Learning resources" label-icon--value="info-circle"}}
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <p>Learn about new features within the Console and get started with demo apps</p>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              {{#> list list--modifier="pf-m-plain"}}
+                <li>
+                  <a href="#">See what's possible with the Explore page</a>
+                </li>
+                <li>
+                  <a href="#">OpenShift 4.5: Top Tasks <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                </li>©
+                <li>
+                  <a href="#">Try a demo app</a>
+                </li>
+              {{/list}}
+            {{/l-flex-item}}
           {{/l-flex}}
-          {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
-            View all learning resources {{! TODO - fix the icon in this button in RTL}}
-          {{/button}}
+          {{#> l-flex-item}}
+            {{#> button button--IsAnchor=true button--IsLink=true button--IsInline=true button-icon--IsEnd=true button--icon="arrow-right" button--url="#"}}
+              View all learning resources {{! TODO - fix the icon in this button in RTL}}
+            {{/button}}
+          {{/l-flex-item}}
         {{/l-flex}}
       {{/grid}}
     {{/card-body}}
@@ -325,7 +351,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="10 Hosts"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md pf-m-align-items-stretch"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 {{#> icon}}
@@ -338,7 +364,9 @@ import './Card.css'
                 <a href="#">2</a>
               {{/l-flex-item}}
             {{/l-flex}}
-            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> l-flex-item}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+            {{/l-flex-item}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 {{#> icon}}
@@ -513,10 +541,12 @@ import './Card.css'
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
-              {{#> stack}}
-                <a href="#">1 error</a>
-                <span>subtitle</span>
-              {{/stack}}
+              {{#> l-flex-item}}
+                {{#> stack}}
+                  <a href="#">1 error</a>
+                  <span>subtitle</span>
+                {{/stack}}
+              {{/l-flex-item}}
             {{/l-flex}}
           {{/l-flex}}
         {{/card-body}}
@@ -682,22 +712,34 @@ import './Card.css'
     {{/card-title}}
     {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> stack}}
-          <b>Cluster-1204</b>
-          <span>27.3 cores available</span>
-        {{/stack}}
-        {{> card-demo--chart}}
-        <a href="#">View details</a>
+        {{#> l-flex-item}}
+          {{#> stack}}
+            <b>Cluster-1204</b>
+            <span>27.3 cores available</span>
+          {{/stack}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> card-demo--chart}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          <a href="#">View details</a>
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> stack}}
-          <b>Abcdef-1204</b>
-          <span>50.6 cores available</span>
-        {{/stack}}
-        {{> card-demo--chart}}
-        <a href="#">View details</a>
+        {{#> l-flex-item}}
+          {{#> stack}}
+            <b>Abcdef-1204</b>
+            <span>50.6 cores available</span>
+          {{/stack}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> card-demo--chart}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          <a href="#">View details</a>
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-body}}
     {{> divider}}
@@ -719,20 +761,28 @@ import './Card.css'
     {{/card-title}}
     {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> stack}}
-          <a href="#">Cluster-1204</a>
-          <span>27.3 cores available</span>
-        {{/stack}}
-        {{> card-demo--chart}}
+        {{#> l-flex-item}}
+          {{#> stack}}
+            <a href="#">Cluster-1204</a>
+            <span>27.3 cores available</span>
+          {{/stack}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> card-demo--chart}}
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> stack}}
-          <a href="#">Abcdef-1204</a>
-          <span>50.6 cores available</span>
-        {{/stack}}
-        {{> card-demo--chart}}
+        {{#> l-flex-item}}
+          {{#> stack}}
+            <a href="#">Abcdef-1204</a>
+            <span>50.6 cores available</span>
+          {{/stack}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> card-demo--chart}}
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-body}}
     {{> divider}}
@@ -763,16 +813,24 @@ import './Card.css'
     {{/card-header}}
     {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
-        <span>System</span>
+        {{#> l-flex-item}}
+          <span>System</span>
+        {{/l-flex-item}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-          {{#> icon}}
-            {{#> icon-content icon-content--modifier="pf-m-danger"}}
-              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-            {{/icon-content}}
-          {{/icon}}
-          <a hfer="#">25 incidents detected</a>
+          {{#> l-flex-item}}
+            {{#> icon}}
+              {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+              {{/icon-content}}
+            {{/icon}}
+          {{/l-flex-item}}
+          {{#> l-flex-item}}
+            <a hfer="#">25 incidents detected</a>
+          {{/l-flex-item}}
         {{/l-flex}}
-        {{> card-demo--chart card-demo--chart--IsStackChart="true"}}
+        {{#> l-flex-item}}
+          {{> card-demo--chart card-demo--chart--IsStackChart="true"}}
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-footer}}
@@ -976,14 +1034,18 @@ import './Card.css'
         {{#> l-flex l-flex--modifier="pf-m-align-items-center"}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-flex-none"}}
             {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-              {{#> card-title card-title--id=(concat card--id '-title')}}
-                {{#> title title--modifier="pf-m-2xl"}}
-                  842 TB
-                {{/title}}
-              {{/card-title}}
-              <span>
-                Storage capacity
-              </span>
+              {{#> l-flex-item}}
+                {{#> card-title card-title--id=(concat card--id '-title')}}
+                  {{#> title title--modifier="pf-m-2xl"}}
+                    842 TB
+                  {{/title}}
+                {{/card-title}}
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <span>
+                  Storage capacity
+                </span>
+              {{/l-flex-item}}
             {{/l-flex}}
           {{/l-flex-item}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
