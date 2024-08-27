@@ -86,8 +86,10 @@
   --#{$content}--list--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$content}--list--nested--MarginBlockStart: var(--#{$content}--list--Gap);
   --#{$content}--ul--ListStyle: var(--pf-t--global--list-style);
-  --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--2xl);
-  --#{$content}--dl--RowGap: var(--pf-t--global--spacer--md);
+  --#{$content}--dl--GridTemplateColumns--dt: 12ch;
+  --#{$content}--dl--GridTemplateColumns--dd: 1fr;
+  --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--gap--group--horizontal);
+  --#{$content}--dl--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
   --#{$content}--dt--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$content}--dt--MarginBlockStart: var(--pf-t--global--spacer--md);
   --#{$content}--dt--sm--MarginBlockStart: 0;
@@ -336,7 +338,7 @@
     grid-template-columns: 1fr;
 
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      grid-template: auto / auto 1fr;
+      grid-template: auto / var(--#{$content}--dl--GridTemplateColumns--dt) var(--#{$content}--dl--GridTemplateColumns--dd);
       grid-row-gap: var(--#{$content}--dl--RowGap);
       grid-column-gap: var(--#{$content}--dl--ColumnGap);
     }
