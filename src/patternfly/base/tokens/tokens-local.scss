@@ -122,4 +122,12 @@
 
   // List bullet/marker
   --pf-t--global--list-style: disc outside;
+
+  // Token to be used temporarily as a placeholder for a color to be determined
+  // Used by code mods to provide a valid value without guessing at the correct color
+
+  // stylelint-disable custom-property-pattern
+  --pf-t--temp--dev--tbd: #BC11E0;
+  
+  // styleline-enable custom-property-pattern
 }
