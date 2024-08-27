@@ -994,8 +994,12 @@ import './Card.css'
     {{/card-header}}
     {{#> card-footer}}
       {{#> l-flex}}
-        <a href="#">Action 1</a>
-        <a href="#">Action 2</a>
+        {{#> l-flex-item}}
+          <a href="#">Action 1</a>
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          <a href="#">Action 2</a>
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-footer}}
   {{/card}}
