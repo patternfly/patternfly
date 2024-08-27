@@ -32,7 +32,7 @@
   --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$card}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$card}__header-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
 
   // Selectable/Clickable
@@ -275,7 +275,7 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: transform var(--#{$card}__header-toggle-icon--TransitionDuration) var(--#{$card}--#{$card}__header-toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$card}__header-toggle-icon--TransitionDuration) var(--#{$card}__header-toggle-icon--TransitionTimingFunction);
 }
 
 .#{$card}__title-text {

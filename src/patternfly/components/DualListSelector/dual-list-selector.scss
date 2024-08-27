@@ -339,7 +339,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   min-width: var(--#{$dual-list-selector}__item-toggle-icon--MinWidth);
   color: var(--#{$dual-list-selector}__item-toggle-icon--Color, inherit);
   text-align: center;
-  transition: transform var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration) var(--#{$dual-list-selector}--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration) var(--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$dual-list-selector}__item-toggle-icon--Rotate));
 }
 

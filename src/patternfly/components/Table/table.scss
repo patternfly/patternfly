@@ -940,9 +940,11 @@
   border-block-end: 0 solid transparent;
 
   // stylelint-disable
-  > td,
-  > th {
+  @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
+    > .#{$table}__th, 
+    > .#{$table}__td {
     padding-block-start: 0;
+    }
   }
 
   td:where(.#{$table}__td),

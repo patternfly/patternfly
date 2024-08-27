@@ -297,7 +297,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar expand all
 .#{$toolbar}__expand-all-icon {
   display: inline-flex;
-  transition: transform var(--#{$toolbar}--#{$toolbar}__expand-all-icon--TransitionDuration) var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
+  transition: transform var(--#{$toolbar}__expand-all-icon--TransitionDuration) var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change
