@@ -3,7 +3,7 @@
 // TODO: clean up unused variables
 // TODO: update grouping comments to // * Table {element}
 
-:where(:root, .#{$table}) {
+@include pf-root($table) {
   --#{$table}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$table}--border-width--base: var(--pf-t--global--border--width--divider--default);

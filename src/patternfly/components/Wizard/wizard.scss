@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$wizard}) {
+@include pf-root($wizard) {
   --#{$wizard}--Height: initial;
   --#{$wizard}--Height--base: 100%;
   --#{$modal-box}--c-wizard--Height--base: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal

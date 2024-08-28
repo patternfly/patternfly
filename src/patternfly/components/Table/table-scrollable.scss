@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 // * Table scrollable
-:where(:root, .#{$table}) {
+@include pf-root($table) {
   --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(140px)};
   --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
   --#{$table}__sticky-cell--ZIndex: var(--pf-t--global--z-index--xs);

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$level}) {
+@include pf-root($level) {
   --#{$level}--m-gutter--Gap: var(--pf-t--global--spacer--gutter--default);
 }
 

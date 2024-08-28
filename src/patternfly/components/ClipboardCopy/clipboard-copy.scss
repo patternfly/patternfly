@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$clipboard-copy}) {
+@include pf-root($clipboard-copy) {
   // Toggle icon
   --#{$clipboard-copy}__toggle-icon--Transition: .2s ease-in 0s;
   --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;

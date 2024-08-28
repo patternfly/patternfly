@@ -5,7 +5,7 @@ $pf-page-v6--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl"
 $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 // stylelint-enable
 
-:where(:root, .#{$page}) {
+@include pf-root($page) {
   --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
 

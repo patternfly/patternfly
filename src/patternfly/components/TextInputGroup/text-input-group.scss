@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$text-input-group}) {
+@include pf-root($text-input-group) {
   --#{$text-input-group}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$text-input-group}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$text-input-group}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);

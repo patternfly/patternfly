@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$number-input}) {
+@include pf-root($number-input) {
   // unit
   --#{$number-input}__unit--c-input-group--MarginInlineStart: var(--pf-t--global--spacer--sm);
 

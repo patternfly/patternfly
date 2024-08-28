@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$input-group}) {
+@include pf-root($input-group) {
   --#{$input-group}--Gap: var(--pf-t--global--spacer--xs);
 
   // Input group item

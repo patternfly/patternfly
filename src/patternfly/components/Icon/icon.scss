@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$icon}) {
+@include pf-root($icon) {
   // Sizes
   --#{$icon}--Width: var(--pf-t--global--icon--size--font--body--default);
   --#{$icon}--Height: var(--pf-t--global--icon--size--font--body--default);

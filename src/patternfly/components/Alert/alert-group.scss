@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 // Tabs
-:where(:root, .#{$alert-group}) {
+@include pf-root($alert-group) {
   // Alert group variables
   --#{$alert-group}__item--MarginBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
 
