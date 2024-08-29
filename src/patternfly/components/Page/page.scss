@@ -358,6 +358,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-grow: 1;
 }
 
+.#{$page}__main {
+  overflow: hidden;
+}
+
 .#{$page}__main-subnav {
   padding-block-start: var(--#{$page}__main-subnav--PaddingBlockStart);
   padding-block-end: var(--#{$page}__main-subnav--PaddingBlockEnd);
