@@ -1,0 +1,130 @@
+@use '../../sass-utilities' as *;
+
+// - Progress stepper vertical
+@mixin pf-v6-c-progress-stepper--m-vertical {
+  grid-auto-flow: row;
+
+  // - Progress stepper step
+  .#{$progress-stepper}__step {
+    grid-template-columns: max-content 1fr;
+  }
+
+  // - Progress stepper - Progress stepper compact
+  &,
+  &.pf-m-compact {
+    // - Progress stepper step
+    .#{$progress-stepper}__step {
+      // show first-child border -/ hide last child border
+      &:first-child .#{$progress-stepper}__step-connector::before { content: ""; }
+      &:last-child .#{$progress-stepper}__step-connector::before { content: none; }
+    }
+
+    // - Progress stepper step connector
+    .#{$progress-stepper}__step-connector::before {
+      inset-block: var(--#{$progress-stepper}__step-icon--size);
+      inset-inline: calc(var(--#{$progress-stepper}__step-icon--size) / 2) 100%;
+      height: calc(100% + var(--#{$progress-stepper}--RowGap));
+    }
+  }
+
+  // - Progress stepper compact
+  &.pf-m-compact {
+    // - Progress stepper step connector
+    .#{$progress-stepper}__step-connector {
+      grid-row: auto;
+      grid-column: 1;
+    }
+
+    // - Progress stepper step connector before
+    .#{$progress-stepper}__step-connector::before {
+      inset-block: 0 -100%;
+      inset-inline: calc(var(--#{$progress-stepper}--m-compact__step-icon--size) / 2) 100%;
+      height: auto;
+    }
+  }
+
+  // - Progress stepper center
+  &.pf-m-center {
+    // - Progress stepper step
+    .#{$progress-stepper}__step {
+      grid-template-columns: 1fr;
+
+      // hide first-child border -/ shoe last child border
+      &:first-child .#{$progress-stepper}__step-connector::before { content: none; }
+      &:last-child .#{$progress-stepper}__step-connector::before { content: ""; }
+    }
+
+     // - Progress stepper step connector
+    .#{$progress-stepper}__step-connector::before {
+      inset-block: -100% 0;
+      inset-inline: 50%;
+      height: auto;
+    }
+  }
+
+  &.pf-m-compact.pf-m-center {
+    grid-template-columns: 1fr;
+  }
+}
+
+// - Progress stepper horizontal
+@mixin pf-v6-c-progress-stepper--m-horizontal {
+  grid-auto-flow: column;
+
+  // - Progress stepper step
+  .#{$progress-stepper}__step {
+    grid-template-columns: 1fr;
+  }
+
+  // - Progress stepper step connector
+  .#{$progress-stepper}__step-connector::before {
+    inset-inline: 0 calc(var(--#{$progress-stepper}--ColumnGap) * -1);
+  }
+
+  // - Progress stepper - Progress stepper center - Progress stepper compact
+  &,
+  &.pf-m-center,
+  &.pf-m-compact {
+    // - Progress stepper step
+    .#{$progress-stepper}__step {
+      // show first child / hide last child
+      &:first-child .#{$progress-stepper}__step-connector::before { content: ""; }
+      &:last-child .#{$progress-stepper}__step-connector::before { content: none; }
+    }
+
+    // - Progress stepper step connector
+    .#{$progress-stepper}__step-connector::before {
+      inset-block: 50%;
+      height: auto;
+    }
+  }
+
+  // - Progress stepper compact
+  &.pf-m-compact,
+  &.pf-m-compact.pf-m-center {
+    grid-template-columns: repeat(auto-fit, var(--#{$progress-stepper}--m-compact__step-icon--size));
+  }
+
+  &.pf-m-compact {
+    // - Progress stepper step connector
+    .#{$progress-stepper}__step-connector {
+      grid-row: 2;
+      grid-column: auto;
+    }
+
+    // connector positioning
+    .#{$progress-stepper}__step-connector::before {
+      inset-block: 50%;
+      inset-inline: 100% -100%;
+    }
+  }
+
+  // - Progress stepper center
+  &.pf-m-center {
+    // connector positioning
+    .#{$progress-stepper}__step-connector::before {
+      inset-block: 50%;
+      inset-inline: 50% -50%;
+    }
+  }
+}
