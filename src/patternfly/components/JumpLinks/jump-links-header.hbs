@@ -4,15 +4,9 @@
   {{/if}}>
   {{#if jump-links--IsExpandable}}
     {{#> jump-links-toggle}}
-      {{#if jump-links--IsExpanded}}
-        {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="true"')}}
-          Jump to section
-        {{/button}}
-      {{else}}
-        {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="false"')}}
-          Jump to section
-        {{/button}}
-      {{/if}}
+      {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--aria-label="Toggle jump links" button--IsAriaExpanded=jump-links--IsExpanded}}
+        Jump to section
+      {{/button}}
     {{/jump-links-toggle}}
   {{/if}}
   {{#unless jump-links--HasNoLabel}}
