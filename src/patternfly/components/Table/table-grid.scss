@@ -32,7 +32,7 @@
 }
 
 // - Table grid
-:where(:root, .#{$table}[class*="pf-m-grid"]) {
+@include pf-root($table, '[class*="pf-m-grid"]') {
   // ============================================================ //
   // Start non-conformant variables
   //

@@ -4,14 +4,14 @@
 @use "./tokens/tokens-dark" as dark;
 @use "./tokens/tokens-local" as local;
 
-:where(:root) {
+:root {
   @include pf-v6-set-inverse(false);
   @include palette.pf-v6-tokens;
   @include default.pf-v6-tokens;
   @include local.pf-v6-tokens;
 }
 
-:where(.pf-v6-theme-dark) {
+:root:where(.pf-v6-theme-dark) {
   @include dark.pf-v6-tokens;
 }
 

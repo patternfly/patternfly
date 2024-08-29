@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$button}) {
+@include pf-root($button) {
   --#{$button}--Display: inline-flex;
   --#{$button}--AlignItems: baseline;
   --#{$button}--JustifyContent: center;

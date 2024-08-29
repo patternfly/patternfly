@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$skeleton}) {
+@include pf-root($skeleton) {
   --#{$skeleton}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--Width: auto;
   --#{$skeleton}--Height: auto;

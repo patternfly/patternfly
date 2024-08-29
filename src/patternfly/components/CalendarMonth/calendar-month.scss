@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$calendar-month}) {
+@include pf-root($calendar-month) {
   --#{$calendar-month}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$calendar-month}--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$calendar-month}--PaddingInlineEnd: var(--pf-t--global--spacer--lg);

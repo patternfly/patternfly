@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$nav}) {
+@include pf-root($nav) {
   // * Nav shared values
   --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$slider}) {
+@include pf-root($slider) {
   --#{$slider}--value: 0; // should always be set inline
   --#{$slider}__step--InsetInlineStart: 0; // should always be set inline
 

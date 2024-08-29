@@ -8,7 +8,7 @@
 // TODO: update text-input-button to use gap
 // TODO: label all variables group - // * Menu toggle (vars) // - Menu toggle (selectors)
 
-:where(:root, .#{$menu-toggle}) {
+@include pf-root($menu-toggle) {
   --#{$menu-toggle}--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$menu-toggle}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
