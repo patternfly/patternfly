@@ -19,9 +19,9 @@
 
   // Main
   --#{$text-input-group}__main--first-child--not--text-input--MarginInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--plain) / 2);
-  --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-v6-c-text-input-group__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
-  --#{$text-input-group}--status__text-input--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-v6-c-text-input-group__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
-  --#{$text-input-group}--utilities--status__text-input--PaddingInlineEnd: calc(var(--pf-t--global--spacer--sm) + var(--pf-v6-c-text-input-group__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
+  --#{$text-input-group}__main--m-icon__text-input--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--#{$text-input-group}__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
+  --#{$text-input-group}--status__text-input--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--#{$text-input-group}__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
+  --#{$text-input-group}--utilities--status__text-input--PaddingInlineEnd: calc(var(--pf-t--global--spacer--sm) + var(--#{$text-input-group}__icon--FontSize) + var(--pf-t--global--spacer--gap--text-to-element--default));
   --#{$text-input-group}__main--RowGap: var(--pf-t--global--spacer--xs);
   --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 

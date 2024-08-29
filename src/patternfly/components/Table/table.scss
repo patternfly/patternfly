@@ -556,7 +556,7 @@
   }
 
   .#{$button} .#{$table}__sort-indicator {
-    --pf-v6-c-table__sort-indicator--MarginInlineStart: 0;
+    --#{$table}__sort-indicator--MarginInlineStart: 0;
   }
 }
 
