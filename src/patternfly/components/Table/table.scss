@@ -1092,6 +1092,10 @@
   .#{$table}__thead & {
     border-block-end: 0;
   }
+
+  &.pf-m-border-row {
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+  }
 }
 
 // - Table icon inline
