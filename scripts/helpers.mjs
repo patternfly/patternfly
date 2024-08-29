@@ -1,5 +1,7 @@
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
 
+// TODO: TODO: update ternary to not escape chars
+
 /** Ignore the object appended by handlebars. */
 export const concat = (...params) => {
   if (typeof params[params.length - 1] === 'object') {

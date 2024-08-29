@@ -1,7 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier="pf-m-grid-xl" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr  table-tr--index='1'}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Row select'}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
       {{/table-th}}

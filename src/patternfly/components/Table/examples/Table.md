@@ -344,7 +344,6 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Pull requests"}}
         25
       {{/table-td}}
-      <!-- TODO: update overflow menu with menu/menu toggle  -->
       {{> table-cell-overflow-menu}}
     {{/table-tr}}
 
@@ -526,7 +525,7 @@ These classes can be used to ensure that the table changes between the tabular a
 {{#> table table--id="table-single-select-radio" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is single select table with radio inputs"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{> table-cell-empty}}
+      {{> table-cell-radio table-cell--IsEmpty=true}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -548,7 +547,7 @@ These classes can be used to ensure that the table changes between the tabular a
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -566,7 +565,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="2"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -584,7 +583,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="3"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -602,7 +601,7 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
 
     {{#> table-tr table-tr--index="4"}}
-      {{> table--radio}}
+      {{> table-cell-radio}}
       {{> table--node}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -661,7 +660,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -941,7 +940,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -1191,7 +1190,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
        Last commit
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -1374,7 +1373,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -1495,7 +1494,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -1804,7 +1803,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -1913,7 +1912,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -2042,7 +2041,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"' table-th--IsIcon=true}}
         Icons
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -2152,7 +2151,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 {{#> table table--id="borderless-table-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg pf-m-no-border-rows" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Expand rows'}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
@@ -2163,7 +2162,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -2298,7 +2297,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-th table-th--attribute='scope="col"'}}
        Last commit
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
@@ -2736,7 +2735,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
         Fit content
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Wrapping'}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -3248,8 +3247,8 @@ For sticky columns to function correctly, the parent table's width must be contr
   {{#> table table--id="nested-columns-expandable-example" table--attribute='aria-label="This is a nested column header table example"' table--IsExpandable=true table--IsGrid=true table--HasToggles=true table--HasChecks=true table--HasActions=true}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
-        {{> table-cell-empty table-td--attribute='rowspan="2"'}}
-        {{> table-cell-check table-td--attribute='rowspan="2"'}}
+        {{> table-cell-empty table-cell--attribute='rowspan="2"' table-cell--text='Expandable toggle'}}
+        {{> table-cell-check table-cell--attribute='rowspan="2"'}}
         {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right"}}
           Team
         {{/table-th}}
@@ -3502,6 +3501,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 </div>
 ```
 ### Nested column header modifier usage
+## Favorites
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -3509,15 +3509,14 @@ For sticky columns to function correctly, the parent table's width must be contr
 | `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
 | `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 
-## Favorites
 
 ### Favorites examples
 ```hbs
 {{#> table table--id="table-favorites" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-check}}
-      {{> table-cell-empty}}
+      {{> table-cell-check table-cell--aria-label=''}}
+      {{> table-cell-empty table-cell--text='Row favorited'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -3632,7 +3631,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 {{#> table table--id="table-favorites-sortable" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="1"}}
-      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--IsSortable=true table-th--IsSelected="true" table-button--attribute='aria-label="Favorite"'}}
+      {{> table-cell table-cell--IsFavorite=true table-cell--IsSortable=true table-cell--aria-label='Row favorited'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -3781,7 +3780,7 @@ For sticky columns to function correctly, the parent table's width must be contr
     {{/table-caption}}
     {{#> table-thead}}
       {{#> table-tr}}
-        {{> table-cell-empty}}
+        {{> table-cell-empty table-cell--text='Drag row'}}
         {{#> table-th table-th--attribute='scope="col"'}}
           Repositories
         {{/table-th}}
@@ -4010,7 +4009,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 {{#> table table--id="table-striped-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg pf-m-striped" table--IsExpandable=true table--attribute='aria-label="Striped expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Expand row'}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
@@ -4021,7 +4020,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
         Pull requests
       {{/table-th}}
-      {{> table-cell-empty}}
+      {{> table-cell-empty table-cell--text='Links'}}
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}

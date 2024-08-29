@@ -400,6 +400,11 @@
   thead:where(.#{$table}__thead) {
     --#{$table}--cell--FontSize: var(--#{$table}__thead--cell--FontSize);
     --#{$table}--cell--FontWeight: var(--#{$table}__thead--cell--FontWeight);
+    --#{$table}--cell--MinWidth: var(--#{$table}--m-truncate--cell--MinWidth);
+    --#{$table}--cell--MaxWidth: var(--#{$table}--m-truncate--cell--MaxWidth);
+    --#{$table}--cell--Overflow: hidden;
+    --#{$table}--cell--TextOverflow: ellipsis;
+    --#{$table}--cell--WhiteSpace: nowrap;
 
     // stylelint-disable
     &.pf-m-nested-column-header {
@@ -461,50 +466,6 @@
   :where(.#{$table}__th, .#{$table}__td) {
     &.pf-m-help {
       min-width: var(--#{$table}__th--m-help--MinWidth);
-    }
-  }
-
-  // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
-  :where([class*='#{$table}']),
-  :where(&) > :is(thead, tbody) {
-    @at-root .#{$table} > thead,
-    &.pf-m-truncate {
-      --#{$table}--cell--MinWidth: var(--#{$table}--m-truncate--cell--MinWidth);
-      --#{$table}--cell--MaxWidth: var(--#{$table}--m-truncate--cell--MaxWidth);
-      --#{$table}--cell--Overflow: hidden;
-      --#{$table}--cell--TextOverflow: ellipsis;
-      --#{$table}--cell--WhiteSpace: nowrap;
-    }
-
-    &.pf-m-wrap {
-      --#{$table}--cell--MinWidth: 0;
-      --#{$table}--cell--MaxWidth: none;
-      --#{$table}--cell--Overflow: visible;
-      --#{$table}--cell--TextOverflow: clip;
-      --#{$table}--cell--WhiteSpace: normal;
-    }
-
-    &.pf-m-nowrap {
-      --#{$table}--cell--MinWidth: 0;
-      --#{$table}--cell--MaxWidth: none;
-      --#{$table}--cell--Overflow: visible;
-      --#{$table}--cell--TextOverflow: clip;
-      --#{$table}--cell--WhiteSpace: nowrap;
-    }
-
-    .#{$table}__icon,
-    &.pf-m-fit-content {
-      --#{$table}--cell--MinWidth: fit-content;
-      --#{$table}--cell--MaxWidth: none;
-      --#{$table}--cell--Width: 1%;
-      --#{$table}--cell--Overflow: visible;
-      --#{$table}--cell--TextOverflow: clip;
-      --#{$table}--cell--WhiteSpace: nowrap;
-    }
-
-    &.pf-m-break-word {
-      --#{$table}--cell--WordBreak: break-word;
-      --#{$table}--cell--WhiteSpace: normal;
     }
   }
 
@@ -596,6 +557,48 @@
 
   .#{$button} .#{$table}__sort-indicator {
     --pf-v6-c-table__sort-indicator--MarginInlineStart: 0;
+  }
+}
+
+// - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
+[class*='#{$table}'] {
+  &.pf-m-truncate {
+    --#{$table}--cell--MinWidth: var(--#{$table}--m-truncate--cell--MinWidth);
+    --#{$table}--cell--MaxWidth: var(--#{$table}--m-truncate--cell--MaxWidth);
+    --#{$table}--cell--Overflow: hidden;
+    --#{$table}--cell--TextOverflow: ellipsis;
+    --#{$table}--cell--WhiteSpace: nowrap;
+  }
+
+  &.pf-m-wrap {
+    --#{$table}--cell--MinWidth: 0;
+    --#{$table}--cell--MaxWidth: none;
+    --#{$table}--cell--Overflow: visible;
+    --#{$table}--cell--TextOverflow: clip;
+    --#{$table}--cell--WhiteSpace: normal;
+  }
+
+  &.pf-m-nowrap {
+    --#{$table}--cell--MinWidth: 0;
+    --#{$table}--cell--MaxWidth: none;
+    --#{$table}--cell--Overflow: visible;
+    --#{$table}--cell--TextOverflow: clip;
+    --#{$table}--cell--WhiteSpace: nowrap;
+  }
+
+  .#{$table}__icon,
+  &.pf-m-fit-content {
+    --#{$table}--cell--MinWidth: fit-content;
+    --#{$table}--cell--MaxWidth: none;
+    --#{$table}--cell--Width: 1%;
+    --#{$table}--cell--Overflow: visible;
+    --#{$table}--cell--TextOverflow: clip;
+    --#{$table}--cell--WhiteSpace: nowrap;
+  }
+
+  &.pf-m-break-word {
+    --#{$table}--cell--WordBreak: break-word;
+    --#{$table}--cell--WhiteSpace: normal;
   }
 }
 
@@ -947,7 +950,7 @@
   }
 
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
-    > .#{$table}__th, 
+    > .#{$table}__th,
     > .#{$table}__td {
       padding-block-start: 0;
     }

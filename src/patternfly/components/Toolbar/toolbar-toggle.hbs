@@ -3,7 +3,7 @@
     {{{toolbar-toggle--attribute}}}
   {{/if}}>
   {{> menu-toggle
-      menu-toggle--icon=(ternary toolbar-toggle--icon toolbar-toggle--icon 'filter')
+      menu-toggle--icon='filter'
       menu-toggle--IsPlain=true
       menu-toggle--IsExpanded=toolbar-expandable-content--IsExpanded
       menu-toggle--attribute=(concat 'aria-label="Show filters" aria-controls="' toolbar--id '-expandable-content"')
