@@ -62,7 +62,8 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   // toggle icon
   --#{$jump-links}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$jump-links}__toggle-icon--Transition: var(--pf-t--global--transition);
+  --#{$jump-links}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$jump-links}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$jump-links}__toggle-icon--Rotate: 0;
   --#{$jump-links}--m-expanded__toggle-icon--Rotate: 90deg;
 }
@@ -217,6 +218,6 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
-  transition: var(--#{$jump-links}__toggle-icon--Transition);
+  transition: transform var(--#{$jump-links}__toggle-icon--TransitionDuration) var(--#{$jump-links}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$jump-links}__toggle-icon--Rotate));
 }

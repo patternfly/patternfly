@@ -25,7 +25,8 @@
 
   // Toggle icon
   --#{$alert}__toggle-icon--Rotate: 0;
-  --#{$alert}__toggle-icon--Transition: var(--pf-t--global--transition);
+  --#{$alert}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$alert}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
 
   // Icon
   --#{$alert}__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -185,7 +186,7 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: var(--#{$alert}__toggle-icon--Transition);
+  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$alert}__toggle-icon--Rotate));
 }
 
