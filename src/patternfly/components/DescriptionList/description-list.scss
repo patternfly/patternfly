@@ -4,7 +4,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 
 @include pf-root($description-list) {
   --#{$description-list}--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
-  --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--gap--group-to-group--horizontal); /
+  --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--gap--group-to-group--horizontal);
   --#{$description-list}--GridTemplateColumns--count: 1;
   --#{$description-list}--GridTemplateColumns--width: 1fr;
   --#{$description-list}--GridTemplateColumns--min: 0;
