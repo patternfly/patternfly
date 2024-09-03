@@ -19,7 +19,6 @@ $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 
 @include pf-root($divider) {
   // * Divider
-  --#{$divider}--Display: flex;
   --#{$divider}--Color: var(--pf-t--global--border--color--default);
   --#{$divider}--Size: var(--pf-t--global--border--width--divider--default);
 
@@ -30,7 +29,7 @@ $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 // - Divider
 .#{$divider} {
   @include pf-v6-c-divider--m-horizontal; // default, set to orientation to horizontal
-  @include pf-v6-hidden-visible(var(--#{$divider}--Display));
+  @include pf-v6-hidden-visible('flex');
 
   flex-shrink: 0;
   align-items: stretch;

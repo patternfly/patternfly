@@ -73,7 +73,7 @@
   --#{$table}--m-truncate__text--MinWidth: 5ch;
 
   // * Table cell hidden visible
-  --#{$table}--cell--hidden-visible--Display: table-cell;
+  // --#{$table}--cell--hidden-visible--Display: table-cell;
 
   // * Table toggle
   --#{$table}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -314,7 +314,7 @@
 
   // - Table th - Table td
   tr:where(.#{$table}__tr) > :where(th, td) {
-    @include pf-v6-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
+    @include pf-v6-hidden-visible('table-cell');
 
     position: relative;
     width: var(--#{$table}--cell--Width);

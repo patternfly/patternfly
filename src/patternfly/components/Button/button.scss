@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($button) {
-  --#{$button}--Display: inline-flex;
   --#{$button}--AlignItems: baseline;
   --#{$button}--JustifyContent: center;
   --#{$button}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -103,7 +102,6 @@
   --#{$button}--m-link--m-danger--m-clicked__icon--Color: var(--pf-t--global--text--color--status--danger--clicked);
 
   // Link inline
-  --#{$button}--m-link--m-inline--Display: inline-flex;
   --#{$button}--m-link--m-inline--JustifyContent: flex-start;
   --#{$button}--m-link--m-inline--FontSize: initial;
   --#{$button}--m-link--m-inline--LineHeight: initial;
@@ -120,7 +118,6 @@
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$button}--m-link--m-inline--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
-  --#{$button}--span--m-link--m-inline--Display: inline;
   --#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
 
@@ -279,13 +276,12 @@
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
 
   // Block
-  --#{$button}--m-block--Display: flex;
   --#{$button}--m-block--Width: 100%;
 }
 
 .#{$button} {
   position: relative;
-  display: var(--#{$button}--Display);
+  display: inline-flex;
   gap: var(--#{$button}--Gap);
   align-items: var(--#{$button}--AlignItems);
   justify-content: var(--#{$button}--JustifyContent);
@@ -398,12 +394,12 @@
 
     &.pf-m-inline {
       @at-root span#{&} {
-        --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
         --#{$button}__icon--m-start--MarginInlineEnd: var(--#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd);
         --#{$button}__icon--m-end--MarginInlineStart: var(--#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart);
+
+        display: inline;
       }
 
-      --#{$button}--Display: var(--#{$button}--m-link--m-inline--Display);
       --#{$button}--JustifyContent: var(--#{$button}--m-link--m-inline--JustifyContent);
       --#{$button}--FontSize: var(--#{$button}--m-link--m-inline--FontSize);
       --#{$button}--LineHeight: var(--#{$button}--m-link--m-inline--LineHeight);
@@ -572,8 +568,7 @@
   }
 
   &.pf-m-block {
-    --#{$button}--Display: var(--#{$button}--m-block--Display);
-
+    display: flex;
     width: var(--#{$button}--m-block--Width);
   }
 

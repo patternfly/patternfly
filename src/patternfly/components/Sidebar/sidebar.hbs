@@ -1,4 +1,8 @@
-<div class="{{pfv}}sidebar{{#if sidebar--modifier}} {{sidebar--modifier}}{{/if}}"
+<div class="{{pfv}}sidebar
+  {{setModifiers
+    sidebar--HasBorder='pf-m-border'
+    sidebar--modifier=sidebar--modifier
+  }}"
   {{#if sidebar--attribute}}
     {{{sidebar--attribute}}}
   {{/if}}>

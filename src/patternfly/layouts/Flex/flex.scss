@@ -7,7 +7,6 @@ $pf-v6-l-flex--gap-map: build-spacer-map("base", "none", "xs", "sm", "md", "lg",
 $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $pf-v6-l-flex--spacer-map);
 
 @include pf-root($flex) {
-  --#{$flex}--Display: flex;
   --#{$flex}--FlexWrap: wrap;
   --#{$flex}--AlignItems: baseline;
   --#{$flex}--m-row--AlignItems: baseline;
@@ -27,7 +26,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   // Emit spacer css variables that map to requested spacer values
   @include pf-v6-emit-properties($pf-v6-l-flex--variable-map);
 
-  display: var(--#{$flex}--Display);
+  display: flex;
   flex-wrap: var(--#{$flex}--FlexWrap);
   gap: var(--#{$flex}--RowGap) var(--#{$flex}--ColumnGap);
   align-items: var(--#{$flex}--AlignItems);
@@ -79,12 +78,12 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
     @include pf-v6-apply-breakpoint($breakpoint) {
       // display
       &.pf-m-flex#{$breakpoint-name} {
-        display: var(--#{$flex}--Display);
+        display: flex;
       }
 
       // inline flex
       &.pf-m-inline-flex#{$breakpoint-name} {
-        --#{$flex}--Display: inline-flex;
+        display: inline-flex;
       }
 
       // flex-direction

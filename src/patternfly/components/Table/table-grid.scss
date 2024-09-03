@@ -79,9 +79,6 @@
   --#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor: var(--pf-t--global--border--color--clicked);
 
   // * Table grid cell
-  --#{$table}--m-grid--cell--hidden-visible--Display: grid;
-
-  // * Table grid cell
   --#{$table}--m-grid--cell--PaddingBlockStart: 0;
   --#{$table}--m-grid--cell--PaddingInlineEnd: 0;
   --#{$table}--m-grid--cell--PaddingBlockEnd: 0;
@@ -252,8 +249,7 @@
 
   // - Table grid th td data label
   :where(.#{$table}__th, .#{$table}__td)[data-label] {
-    // default pf-v6-hidden-visible() mixin is called in table.scss. redefining variable here
-    --#{$table}--cell--hidden-visible--Display: var(--#{$table}--m-grid--cell--hidden-visible--Display);
+    @include pf-v6-hidden-visible('grid');
 
     grid-column: 1;
     grid-column-gap: var(--#{$table}-td--responsive--GridColumnGap);
