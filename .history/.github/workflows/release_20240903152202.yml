@@ -3,6 +3,7 @@ name: release
 on:
   push:
     branches:
+      - main
       - v5
 jobs:
   build-deploy:
