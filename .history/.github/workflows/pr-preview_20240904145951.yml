@@ -20,7 +20,7 @@ jobs:
           git rev-parse origin/v5
           git rev-parse HEAD
           git rev-parse origin/v5..HEAD
-          git log origin/v5..HEAD --format="%b"
+          git log origin/main..HEAD --format="%b"
 
       # Yes, we really want to checkout the PR
       # Injected by generate-workflows.js
