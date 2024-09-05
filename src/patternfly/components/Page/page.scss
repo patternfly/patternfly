@@ -315,6 +315,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   max-height: var(--#{$page}__main-container--MaxHeight);
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
+  overflow: hidden;
   background: var(--#{$page}__main-container--BackgroundColor);
   border: var(--#{$page}__main-container--BorderWidth) solid var(--#{$page}__main-container--BorderColor);
   border-radius: var(--#{$page}__main-container--BorderRadius);
@@ -359,7 +360,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .#{$page}__main-subnav {
