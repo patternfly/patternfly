@@ -1,6 +1,6 @@
 // Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 // readers do not read off random characters that represent icons
-@use './variables' as *;
+@use './variables.scss' as *;
 
 @mixin pf-fa-icon-vars {
   .#{$fa-css-prefix}-500px:before { content: fa-content($fa-var-500px); }

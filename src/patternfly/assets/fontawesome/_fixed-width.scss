@@ -4,5 +4,7 @@
 
 .#{$fa-css-prefix}-fw {
   text-align: center;
-  width: $fa-fw-width;
+  width: #{$fa-fw-width};
 }
+
+@debug $fa-css-prefix;
