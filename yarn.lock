@@ -2941,31 +2941,7 @@
     react-dropzone "14.2.3"
     tslib "^2.6.2"
 
-"@patternfly/react-core@6.0.0-alpha.101":
-  version "6.0.0-alpha.101"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-alpha.101.tgz#6a726528885ac1560dbc4f920a1833f20da636e4"
-  integrity sha512-kHN25sFJ5BAWXcXs2MDJ39MhylJzJXmxkJC9vGUzdu1LbIkH1EWY3S8YFJKP5sQV12ZHZomBEoCKuR6PYg/RaQ==
-  dependencies:
-    "@patternfly/react-icons" "^6.0.0-alpha.36"
-    "@patternfly/react-styles" "^6.0.0-alpha.35"
-    "@patternfly/react-tokens" "^6.0.0-alpha.35"
-    focus-trap "7.5.4"
-    react-dropzone "^14.2.3"
-    tslib "^2.6.2"
-
-"@patternfly/react-core@^6.0.0-alpha.101":
-  version "6.0.0-alpha.102"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-alpha.102.tgz#dbf70f741bd471b0a1e0a08176dbb04d5db12272"
-  integrity sha512-NjnLhgYwJ3LuA3/DDwzM10X9dlZyR9ICAKOXI2FlxRM0kTAnAK0kLx7MuQjZ7wboIjxpRaA3lG8c9zlHDrCWdQ==
-  dependencies:
-    "@patternfly/react-icons" "^6.0.0-alpha.36"
-    "@patternfly/react-styles" "^6.0.0-alpha.35"
-    "@patternfly/react-tokens" "^6.0.0-alpha.35"
-    focus-trap "7.5.4"
-    react-dropzone "^14.2.3"
-    tslib "^2.6.2"
-
-"@patternfly/react-core@^6.0.0-alpha.106":
+"@patternfly/react-core@6.0.0-alpha.106", "@patternfly/react-core@^6.0.0-alpha.106":
   version "6.0.0-alpha.106"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-alpha.106.tgz#a1aa6427b7208f8daf1573822f940d3fc0300437"
   integrity sha512-KbBiXo55zgCIIPvD0GNEzzaMUemh89OkE0ZDZ4AsyRZg+5nyc4OuUZnqx2hK89MYETy66HEiCJPvcBfMVlbFfQ==
@@ -2976,11 +2952,6 @@
     focus-trap "7.5.4"
     react-dropzone "^14.2.3"
     tslib "^2.6.2"
-
-"@patternfly/react-icons@^6.0.0-alpha.36":
-  version "6.0.0-alpha.36"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-alpha.36.tgz#a5674a49a0702fe4f6699425a7e12bee6833df6d"
-  integrity sha512-9gxJr3UxqZnUKwtPfV1JrzcH76hN/5hHM5CL5HJVWnAhI6WjRm3oQ9dA/PLo91Kyo3tN6TQKV1b2x/LhPiBscw==
 
 "@patternfly/react-icons@^6.0.0-alpha.37":
   version "6.0.0-alpha.37"
@@ -3003,11 +2974,6 @@
     "@patternfly/react-tokens" "^6.0.0-alpha.36"
     lodash "^4.17.21"
     tslib "^2.6.3"
-
-"@patternfly/react-tokens@^6.0.0-alpha.35":
-  version "6.0.0-alpha.35"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-alpha.35.tgz#4379c6ed20058f38f51f69285cafa2f77cad37d8"
-  integrity sha512-TYLYxyx7tDVRYeso+72eGZbM/O3G90brLzHQai2JtKI66XE3T2R89N0VxPT65gbc1cnqNkiTtUKkpUUHmOK9qg==
 
 "@patternfly/react-tokens@^6.0.0-alpha.36":
   version "6.0.0-alpha.36"
