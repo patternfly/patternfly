@@ -360,7 +360,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .#{$page}__main-subnav {
