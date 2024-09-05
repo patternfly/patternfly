@@ -1,7 +1,7 @@
 // Rotated & flipped icons
 // -------------------------
-@use './variables.scss' as *;
-@use './mixins.scss' as *;
+@use './variables' as *;
+@use './mixins' as *;
 
 .#{$fa-css-prefix}-rotate-90  { @include fa-icon-rotate(90deg, 1);  }
 .#{$fa-css-prefix}-rotate-180 { @include fa-icon-rotate(180deg, 2); }
