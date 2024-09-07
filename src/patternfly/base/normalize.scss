@@ -59,10 +59,12 @@
     iframe,
     object,
     audio,
-    video
+    video,
+    svg
   ) {
     max-width: 100%;
     height: auto;
+    max-height: 100%;
   }
 
   :where(iframe) {

@@ -2,14 +2,14 @@
 
 @include pf-root($inline-edit) {
   // Group
-  --#{$inline-edit}__group--item--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
+  --#{$inline-edit}__group--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 
   // Valid action
   --#{$inline-edit}__action--c-button--m-valid--m-plain--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$inline-edit}__action--c-button--m-valid--m-plain--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Icon button
-  --#{$inline-edit}__action--m-icon-group--item--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--plain);
+  --#{$inline-edit}__action--m-icon-group--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
 
   // Footer group
   --#{$inline-edit}__group--m-footer--MarginBlockStart: var(--pf-t--global--spacer--xl);
@@ -21,14 +21,11 @@
 // Group
 .#{$inline-edit}__group {
   display: flex;
+  column-gap: var(--#{$inline-edit}__group--ColumnGap);
   align-items: baseline;
 
-  > * {
-    margin-inline-end: var(--#{$inline-edit}__group--item--MarginInlineEnd);
-  }
-
   &.pf-m-icon-group {
-    --#{$inline-edit}__group--item--MarginInlineEnd: var(--#{$inline-edit}__action--m-icon-group--item--MarginInlineEnd);
+    column-gap: var(--#{$inline-edit}__action--m-icon-group--ColumnGap);
   }
 
   // Footer
@@ -38,13 +35,7 @@
 
   // Column
   &.pf-m-column {
-    --#{$inline-edit}__group--item--MarginInlineEnd: 0;
-
     flex-direction: column;
-  }
-
-  > :last-child {
-    --#{$inline-edit}__group--item--MarginInlineEnd: 0;
   }
 }
 

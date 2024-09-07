@@ -38,8 +38,7 @@
 }
 
 .#{$expandable-section} {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--#{$expandable-section}--Gap);
 
   &.pf-m-expanded {

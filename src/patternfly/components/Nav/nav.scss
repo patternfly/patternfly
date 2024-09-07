@@ -128,7 +128,7 @@
 
   &.pf-m-inset {
     --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
-    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);  
+    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   }
 
   &.pf-m-fill {
@@ -149,7 +149,7 @@
       .#{$menu}__list {
         row-gap: var(--#{$nav}__subnav--RowGap);
       }
-    
+
       .#{$menu}__list-item::before {
         border-radius: var(--#{$nav}__link--BorderRadius);
       }
@@ -320,15 +320,6 @@
 
     &::before {
       border-inline-start: var(--#{$nav}__scroll-button--BorderWidth) solid var(--#{$nav}__scroll-button--BorderColor);
-    }
-  }
-
-  // TODO - update this selector to the $pf-button__icon once that is introduced
-  .#{$button} {
-    outline-offset: var(--#{$nav}--OutlineOffset);
-
-    > * {
-      @include pf-v6-mirror-inline-on-rtl;
     }
   }
 }

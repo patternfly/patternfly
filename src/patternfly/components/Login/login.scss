@@ -88,13 +88,13 @@
   --#{$login}__main-footer-links--PaddingInlineStart: var(--pf-t--global--spacer--3xl);
   --#{$login}__main-footer-links--Gap: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-links-item--c-button--FontSize: var(--pf-t--global--icon--size--xl);
+  --#{$login}__main-footer-band--RowGap: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-band--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$login}__main-footer-band--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-band--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__main-footer-band--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$login}__main-footer-band--BorderBlockStartColor: var(--pf-t--global--border--color--default);
   --#{$login}__main-footer-band--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$login}__main-footer-band-item--PaddingBlockStart: var(--pf-t--global--spacer--md);
 
   // footer
   --#{$login}__footer--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -216,16 +216,11 @@
 }
 
 .#{$login}__main-footer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
 
   .#{$title} {
     margin-block-end: var(--#{$login}__main-footer--c-title--MarginBlockEnd);
     text-align: center;
-  }
-
-  > * {
-    flex-basis: 100%;
   }
 }
 
@@ -247,16 +242,14 @@
 }
 
 .#{$login}__main-footer-band {
+  display: grid;
+  row-gap: var(--#{$login}__main-footer-band--RowGap);
   padding-block-start: var(--#{$login}__main-footer-band--PaddingBlockStart);
   padding-block-end: var(--#{$login}__main-footer-band--PaddingBlockEnd);
   padding-inline-start: var(--#{$login}__main-footer-band--PaddingInlineStart);
   padding-inline-end: var(--#{$login}__main-footer-band--PaddingInlineEnd);
   text-align: center;
   border-block-start: var(--#{$login}__main-footer-band--BorderBlockStartWidth) solid var(--#{$login}__main-footer-band--BorderBlockStartColor);
-
-  > * + * {
-    padding-block-start: var(--#{$login}__main-footer-band-item--PaddingBlockStart);
-  }
 }
 
 .#{$login}__footer {

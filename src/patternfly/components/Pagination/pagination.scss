@@ -183,11 +183,6 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   column-gap: var(--#{$pagination}__nav-page-select--ColumnGap);
   align-items: center;
 
-  > * {
-    font-size: var(--#{$pagination}__nav-page-select--FontSize);
-    white-space: nowrap;
-  }
-
   .#{$form-control} {
     width: var(--#{$pagination}__nav-page-select--c-form-control--Width);
 
