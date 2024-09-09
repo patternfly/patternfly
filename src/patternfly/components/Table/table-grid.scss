@@ -78,6 +78,10 @@
   --#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth: var(--#{$table}__expandable-row--after--border-width--base);
   --#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor: var(--pf-t--global--border--color--clicked);
 
+  // * Table caption selected
+  --#{$table}--m-grid__caption--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}--m-grid__caption--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+
   // * Table grid cell
   --#{$table}--m-grid--cell--hidden-visible--Display: grid;
 
@@ -152,6 +156,12 @@
     overflow: visible;
     text-overflow: clip;
     white-space: normal;
+  }
+
+  // - Table caption
+  .#{$table}__caption {
+    padding-inline-start: var(--#{$table}--m-grid__caption--PaddingInlineStart);
+    padding-inline-end: var(--#{$table}--m-grid__caption--PaddingInlineEnd);
   }
 
   // apply modifications to text

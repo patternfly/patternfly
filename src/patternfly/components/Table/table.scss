@@ -12,9 +12,9 @@
   --#{$table}__caption--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__caption--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__caption--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$table}__caption--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$table}__caption--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$table}__caption--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--md);
 
   // * Table thead cell
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -44,7 +44,10 @@
   --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$table}--cell--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-last-child--PaddingInline--sm: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-last-child--PaddingInline--md: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-last-child--PaddingInline--lg: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-last-child--PaddingInline--xl: var(--pf-t--global--spacer--sm);
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart: var(--#{$table}--cell--Padding--base);
 
   // * Table cell - default variables
@@ -334,16 +337,6 @@
     text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
-
-    // First child padding left
-    &:first-child {
-      padding-inline-start: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingInlineStart));
-    }
-
-    // Last child padding right
-    &:last-child {
-      padding-inline-end: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingInlineEnd));
-    }
 
     &.pf-m-center {
       text-align: center;
@@ -1098,6 +1091,57 @@
 
   > :not(:last-child) {
     margin-inline-end: var(--#{$table}__icon-inline--MarginInlineEnd);
+  }
+}
+
+.#{$table}__th,
+.#{$table}__td {
+  &.pf-m-inset-sm {
+    // First child padding left
+    &:first-child {
+      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--sm);
+    }
+
+    // Last child padding right
+    &:last-child {
+      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--sm);
+    }
+  }
+
+  &.pf-m-inset-md {
+    // First child padding left
+    &:first-child {
+      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--md);
+    }
+
+    // Last child padding right
+    &:last-child {
+      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--md);
+    }
+  }
+
+  &.pf-m-inset-lg {
+    // First child padding left
+    &:first-child {
+      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--lg);
+    }
+
+    // Last child padding right
+    &:last-child {
+      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--lg);
+    }
+  }
+
+  &.pf-m-inset-xl {
+    // First child padding left
+    &:first-child {
+      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--xl);
+    }
+
+    // Last child padding right
+    &:last-child {
+      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--xl);
+    }
   }
 }
 
