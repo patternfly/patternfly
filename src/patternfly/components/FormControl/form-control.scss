@@ -100,7 +100,7 @@
   --#{$form-control}--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
 
   // Form control utilities
-  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--gap--horizontal);
   --#{$form-control}__utilities--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}--inset--base);
 

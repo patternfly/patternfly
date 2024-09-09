@@ -3,7 +3,7 @@
 @include pf-root($code-editor) {
   // controls
   --#{$code-editor}__controls--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$code-editor}__controls--Gap: var(--pf-t--global--spacer--gap--control-to-control--default);
+  --#{$code-editor}__controls--Gap: var(--pf-t--global--spacer--gap--control-to-control--plain);
 
   // header
   --#{$code-editor}__header--before--BorderBlockEndWidth: var(--pf-t--global--border--width--box--default);

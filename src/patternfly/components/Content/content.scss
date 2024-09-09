@@ -82,7 +82,7 @@
   --#{$content}--blockquote--BorderInlineStartWidth: var(--pf-t--global--border--width--300); // TODO semantic value?
 
   // Lists
-  --#{$content}--list--Gap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$content}--list--Gap: var(--pf-t--global--spacer--sm);
   --#{$content}--list--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$content}--list--nested--MarginBlockStart: var(--#{$content}--list--Gap);
   --#{$content}--ul--ListStyle: var(--pf-t--global--list-style);

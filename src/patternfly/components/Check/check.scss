@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($check) {
-  --#{$check}--GridGap: var(--pf-t--global--spacer--gap--text-to-element--default) var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$check}--GridGap: var(--pf-t--global--spacer--gap--group--vertical) var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
   --#{$check}--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
 

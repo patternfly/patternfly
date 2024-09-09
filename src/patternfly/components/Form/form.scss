@@ -29,7 +29,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}--GridGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
 
   // Group
-  --#{$form}__group--Gap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$form}__group--Gap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$form}__group--m-action--MarginBlockStart: var(--pf-t--global--spacer--xl);
   --#{$form}--m-horizontal__group-label--md--GridColumnWidth: #{pf-size-prem(150px)};
   --#{$form}--m-horizontal__group-label--md--GridColumnGap: var(--pf-t--global--spacer--md);
@@ -85,9 +85,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Form group label info
-  --#{$form}__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$form}__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--horizontal);
   --#{$form}__group-label-info--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$form}--m-horizontal__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$form}--m-horizontal__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--vertical);
 
   // Group control
   --#{$form}__group-control--m-inline--Gap: var(--pf-t--global--spacer--gap--group--horizontal);
