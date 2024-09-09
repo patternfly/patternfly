@@ -119,43 +119,43 @@ cssPrefix: pf-v6-c-form-control
 
 ### Textarea
 ```hbs
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea-standard" id="textarea-standard" aria-label="Standard textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--attribute='name="textarea-standard" id="textarea-standard" aria-label="Standard textarea example"'}}
 Standard
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsReadonly="true" form-control--attribute='name="textarea-readonly" id="textarea-readonly" aria-label="Readonly textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--IsReadonly="true" form-control--attribute='name="textarea-readonly" id="textarea-readonly" aria-label="Readonly textarea example"'}}
 Readonly
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsPlain='true' form-control--IsReadonly="true" form-control--attribute='name="textarea-readonly-plain" id="textarea-readonly-plain" aria-label="Readonly plain textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--IsPlain='true' form-control--IsReadonly="true" form-control--attribute='name="textarea-readonly-plain" id="textarea-readonly-plain" aria-label="Readonly plain textarea example"'}}
 Readonly plain
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsDisabled="true" form-control--attribute='name="textarea-disabled" id="textarea-disabled" aria-label="Disabled textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--IsDisabled="true" form-control--attribute='name="textarea-disabled" id="textarea-disabled" aria-label="Disabled textarea example"'}}
 Disabled
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsSuccess="true" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--IsSuccess="true" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}
 Success
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsWarning="true" form-control--attribute='name="textarea-warning" id="textarea-warning" aria-label="Warning state textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--IsWarning="true" form-control--attribute='name="textarea-warning" id="textarea-warning" aria-label="Warning state textarea example"'}}
 Warning
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsError="true" form-control--attribute='required name="textarea-error" id="textarea-error" aria-label="Error state textarea example" aria-invalid="true"'}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--IsError="true" form-control--attribute='required name="textarea-error" id="textarea-error" aria-label="Error state textarea example" aria-invalid="true"'}}
 Error
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea-resize-vertical" id="textarea-resize-vertical" aria-label="Resize vertical textarea example"' form-control--modifier="pf-m-resize-vertical"}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--attribute='name="textarea-resize-vertical" id="textarea-resize-vertical" aria-label="Resize vertical textarea example"' form-control--modifier="pf-m-resize-vertical"}}
 Resizes vertically
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea-resize-horizontal" id="textarea-resize-horizontal" aria-label="Resize horizontal textarea example"' form-control--modifier="pf-m-resize-horizontal"}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--attribute='name="textarea-resize-horizontal" id="textarea-resize-horizontal" aria-label="Resize horizontal textarea example"' form-control--modifier="pf-m-resize-horizontal"}}
 Resizes horizontally
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--attribute='name="textarea-resize-both" id="textarea-resize-both" aria-label="Resize both textarea example"' form-control--modifier="pf-m-resize-both"}}
+{{#> form-control controlType="textarea" form-control--IsTextarea="true" form-control--attribute='name="textarea-resize-both" id="textarea-resize-both" aria-label="Resize both textarea example"' form-control--modifier="pf-m-resize-both"}}
 Resizes in both directions
 {{/form-control}}
 ```
