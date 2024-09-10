@@ -8,7 +8,6 @@
 $pf-v6-global--enable-reset: true !default;
 $pf-v6-global--enable-normalize: true !default;
 $pf-v6-global--enable-fontawesome-cdn: false !default;
-$pf-v6-global--disable-fontawesome: false !default;
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
