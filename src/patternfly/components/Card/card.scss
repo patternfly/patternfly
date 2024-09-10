@@ -22,7 +22,7 @@
   --#{$card}__footer--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$card}__footer--Color: var(--pf-t--global--text--color--subtle);
   --#{$card}__actions--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$card}__actions--Gap: var(--pf-t--global--spacer--sm);
+  --#{$card}__actions--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);
   --#{$card}__actions--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__actions--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
 

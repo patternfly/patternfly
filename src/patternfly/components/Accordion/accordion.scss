@@ -3,14 +3,14 @@
 @include pf-root($accordion) {
   // accordion
   --#{$accordion}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$accordion}--RowGap: var(--pf-t--global--spacer--xs);
+  --#{$accordion}--RowGap: var(--pf-t--global--spacer--xs); // No applicable spacer
 
   // accordion item
   --#{$accordion}__item--BorderRadius: var(--pf-t--global--border--radius--200);
   --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
 
   // accordion toggle
-  --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$accordion}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$accordion}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -21,7 +21,8 @@
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Accordion toggle toggle-start modifier
-  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--pf-t--global--spacer--md);
+  // This decreases the gap between icon and text, alternative is calc it to * 2 the token or create a new token
+  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
 
   // accordion toggle text
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);

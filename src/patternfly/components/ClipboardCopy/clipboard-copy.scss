@@ -21,14 +21,14 @@
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
 
   // Group
-  --#{$clipboard-copy}__group--Gap: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__group--Gap: var(--pf-t--global--spacer--gap--control-to-control--default);
 
   // Inline
   --#{$clipboard-copy}--m-inline--PaddingInlineStart: var(--pf-t--global--spacer--xs);
   --#{$clipboard-copy}--m-inline--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
   --#{$clipboard-copy}--m-inline--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$clipboard-copy}__actions--Gap: var(--pf-t--global--spacer--sm);
-  --#{$clipboard-copy}__actions--MarginInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$clipboard-copy}__actions--Gap: var(--pf-t--global--spacer--gap--action-to-action--plain);
+  --#{$clipboard-copy}__actions--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--compact);
   --#{$clipboard-copy}__actions-item--button--Color: var(--pf-t--global--icon--color--subtle);
   --#{$clipboard-copy}__actions-item--button--hover--Color: var(--pf-t--global--icon--color--regular);
 
