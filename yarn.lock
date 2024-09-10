@@ -2953,32 +2953,59 @@
     react-dropzone "^14.2.3"
     tslib "^2.6.2"
 
+"@patternfly/react-core@^6.0.0-prerelease.4":
+  version "6.0.0-prerelease.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.4.tgz#92fb6a12008c51992403bdb83ebf2497899b0485"
+  integrity sha512-QBCNND6YuN66s0uehdOgGF6FCkAzCDrarO9KvuCy+AXz/upUvEJP4RDflwtyrJOnB5BatkEwKfQCkwN+Te6OMQ==
+  dependencies:
+    "@patternfly/react-icons" "^6.0.0-prerelease.3"
+    "@patternfly/react-styles" "^6.0.0-prerelease.2"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.2"
+    focus-trap "7.5.4"
+    react-dropzone "^14.2.3"
+    tslib "^2.7.0"
+
 "@patternfly/react-icons@^6.0.0-alpha.37":
   version "6.0.0-alpha.37"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-alpha.37.tgz#13365f41c2c0f4d6d20582fa70f0e1d6b5252c86"
   integrity sha512-6KGvc4OJlePGh09vwHnTqaQLTpUOCsAh4tidCm4raB8tWk+kSwr4g8enflN0Kauc/AJ/GLq+U6olWRzk9RUnJA==
+
+"@patternfly/react-icons@^6.0.0-prerelease.3":
+  version "6.0.0-prerelease.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-prerelease.3.tgz#6761009b5e8fb6592426deff7f6b34bdc703533c"
+  integrity sha512-By2WJZX3X3oDezZ7qkRWcGVm5VFnFLbO8MQwwEfhOX9H/+JigNr1szm/Vb6MSsmbGiL42uvKIrvFFOmWQJep2w==
 
 "@patternfly/react-styles@^6.0.0-alpha.35":
   version "6.0.0-alpha.35"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.0.0-alpha.35.tgz#0f86572d555a022b2a3c0c3957fd467a19991678"
   integrity sha512-9ddQpDJ1CXDbsuV5lYmynw8hqGncKXxnhNwvUKc+s/i50pNBAMmNO9CP5dkKhnZPcjHQj0A35aleQ7xdRgNWQw==
 
-"@patternfly/react-table@6.0.0-alpha.107":
-  version "6.0.0-alpha.107"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-alpha.107.tgz#9bd5da9cc524db136385ecd93bc02c5d9815b31b"
-  integrity sha512-Pr8SgWPPQ1NkUiyrYqFQkk+ShHdW64T+Y9nKQKI6Y33ksr9S0FzOugGW6iqVOP0Js6nw7iGgB1Yj/tDdCXKBCg==
+"@patternfly/react-styles@^6.0.0-prerelease.2":
+  version "6.0.0-prerelease.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.0.0-prerelease.2.tgz#4812d57887792a1e2dea6ca4cc77bc126c42a05b"
+  integrity sha512-ISxLyY00iW5a1XRcw+f6f9AQWY2zqO4rgWRo0FODqsLc2ffcuBLnPCtdwziy45OrTmlpRB8oUjuJXKePt9Emsw==
+
+"@patternfly/react-table@6.0.0-prerelease.4":
+  version "6.0.0-prerelease.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.4.tgz#a535e898b21e5f6e81cd2bb12e0dc02dfe2fc11f"
+  integrity sha512-xij4vc7pZwwclq9g+OwpeiF+ZN34/xr6/vqDiHf+Q/meNd061HWzuEj4H7z/s0M5GeIyoZVCkJGiZ3mrSP+vBQ==
   dependencies:
-    "@patternfly/react-core" "^6.0.0-alpha.106"
-    "@patternfly/react-icons" "^6.0.0-alpha.37"
-    "@patternfly/react-styles" "^6.0.0-alpha.35"
-    "@patternfly/react-tokens" "^6.0.0-alpha.36"
+    "@patternfly/react-core" "^6.0.0-prerelease.4"
+    "@patternfly/react-icons" "^6.0.0-prerelease.3"
+    "@patternfly/react-styles" "^6.0.0-prerelease.2"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.2"
     lodash "^4.17.21"
-    tslib "^2.6.3"
+    tslib "^2.7.0"
 
 "@patternfly/react-tokens@^6.0.0-alpha.36":
   version "6.0.0-alpha.36"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-alpha.36.tgz#903ba943cfdc9b574c6f16e5bcec7dcfffc44dcb"
   integrity sha512-Lh2owTbx9tQj1W5zfnVKJKPsrOWlo3xPkCuTRPvyvzAtRwDEP/xvZVJhhls/tgyCcSEn2sOGgbfoAZVk7dzS0w==
+
+"@patternfly/react-tokens@^6.0.0-prerelease.2":
+  version "6.0.0-prerelease.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-prerelease.2.tgz#d0eae4a46f169033a9027101839c800fc9f88989"
+  integrity sha512-P1zJZEwP+L/DNahXKfroN4Y8YFLpzKKY1b8qVRgecJ3Zyds/93EytJ8j2sDCCQl7s3/JwMlaoV8BELNTnoPSaA==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -16692,10 +16719,15 @@ tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0:
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.1.tgz"
   integrity sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==
 
-tslib@^2.6.2, tslib@^2.6.3:
+tslib@^2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.3.tgz#0438f810ad7a9edcde7a241c3d80db693c8cbfe0"
   integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
+
+tslib@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.7.0.tgz#d9b40c5c40ab59e8738f297df3087bf1a2690c01"
+  integrity sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==
 
 ttf2eot@^2.0.0:
   version "2.0.0"
