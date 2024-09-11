@@ -13,7 +13,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 @include pf-root($toolbar) {
   --#{$toolbar}--RowGap: var(--pf-t--global--spacer--md);
   --#{$toolbar}--PaddingBlockStart: 0;
-  --#{$toolbar}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--PaddingBlockEnd: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$toolbar}--PaddingInlineStart: 0;
   --#{$toolbar}--PaddingInlineEnd: 0;
   --#{$toolbar}--LineHeight: var(--pf-t--global--font--line-height--body);

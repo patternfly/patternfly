@@ -6,6 +6,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 @include pf-root($pagination) {
   --#{$pagination}--inset: 0;
   --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--PaddingBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
 
   // Page insets
   --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--lg);
