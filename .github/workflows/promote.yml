@@ -3,7 +3,7 @@ on:
   push:
     # Sequence of patterns matched against refs/tags
     tags:        
-      - v5.*
+      - v6.*
 jobs:
   build-and-promote:
     runs-on: ubuntu-latest

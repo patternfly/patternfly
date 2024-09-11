@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$menu}) {
+@include pf-root($menu) {
   // * Menu
   --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$menu}--Width: auto;
@@ -127,17 +127,18 @@
   --#{$menu}--m-flyout__menu--m-left--InsetInlineEnd: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
 
   // * Menu drilldown content
-  --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--pf-t--global--transition--duration);
-  --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--pf-t--global--transition--duration);
+  // TODO Reduced motion default needed for drilldown
+  --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
   --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
 
   // * Menu drilldown menu
   --#{$menu}--m-drilldown--c-menu--InsetBlockStart: 0;
-  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--transition--duration);
+  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
   --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
 
   // * Menu drilldown list
-  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--pf-t--global--transition--duration);
+  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
   --#{$menu}--m-drilldown__list--Transition: transform var(--#{$menu}--m-drilldown__list--TransitionDuration--transform);
 
   // * Menu drilled in

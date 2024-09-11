@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$popover}) {
+@include pf-root($popover) {
   // Component
   --#{$popover}--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});

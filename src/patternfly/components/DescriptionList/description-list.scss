@@ -2,23 +2,23 @@
 
 $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root, .#{$description-list}) {
-  --#{$description-list}--RowGap: var(--pf-t--global--spacer--lg);
-  --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--lg);
+@include pf-root($description-list) {
+  --#{$description-list}--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
+  --#{$description-list}--ColumnGap: var(--pf-t--global--spacer--gap--group-to-group--horizontal);
   --#{$description-list}--GridTemplateColumns--count: 1;
   --#{$description-list}--GridTemplateColumns--width: 1fr;
   --#{$description-list}--GridTemplateColumns--min: 0;
 
   // group
-  --#{$description-list}__group--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$description-list}__group--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$description-list}__group--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$description-list}__group--ColumnGap: var(--pf-t--global--spacer--gap--group--horizontal); // Increases current Gap
   --#{$description-list}__group--GridTemplateColumns: auto;
   --#{$description-list}__group--GridTemplateRows: auto 1fr;
   --#{$description-list}__group--GridColumn: auto;
 
   // compact
-  --#{$description-list}--m-compact--RowGap: var(--pf-t--global--spacer--md);
-  --#{$description-list}--m-compact--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$description-list}--m-compact--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--compact);
+  --#{$description-list}--m-compact--ColumnGap: var(--pf-t--global--spacer--gap--group-to-group--horizontal--compact);
 
   // term
   --#{$description-list}__term--Display: inline;

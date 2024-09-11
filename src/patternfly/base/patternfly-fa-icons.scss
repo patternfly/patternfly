@@ -1,9 +1,8 @@
 // Font Awesome 5 icons https://fontawesome.com
 @use '../sass-utilities' as *;
-
-%pf-fa-local {
-  @import "../assets/fontawesome/fontawesome";
-}
+@use '../assets/fontawesome/variables' as *;
+@use '../assets/fontawesome/icons' as icons;
+@use '../assets/fontawesome' as *;
 
 @if not($pf-v6-global--disable-fontawesome) {
   @if $pf-v6-global--enable-fontawesome-cdn {
@@ -28,8 +27,27 @@
     }
     // stylelint-enable
 
-    * {
-      @extend %pf-fa-local;
-    }
+    @include icons.pf-fa-icon-vars;
+  }
+}
+
+@mixin pf-fa-icon-base {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+@if not($pf-v6-global--disable-fontawesome) {
+  .#{$fa-css-prefix},
+  .fa,
+  .fas,
+  .far,
+  .fal,
+  .fab {
+    @include pf-fa-icon-base;
   }
 }

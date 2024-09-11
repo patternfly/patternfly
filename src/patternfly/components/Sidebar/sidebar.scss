@@ -4,7 +4,7 @@
 $pf-v6-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
-:where(:root, .#{$sidebar}) {
+@include pf-root($sidebar) {
   --#{$sidebar}--inset: var(--pf-t--global--spacer--md);
   --#{$sidebar}--xl--inset: var(--pf-t--global--spacer--lg);
   --#{$sidebar}--BorderWidth--base: var(--pf-t--global--border--width--regular);
@@ -252,9 +252,9 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     @each $width-value in $pf-v6-c-sidebar__panel--list--width {
       .pf-v6-c-sidebar__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
         @if $width-value == "default" {
-          --pf-v6-c-sidebar__panel--FlexBasis: var(--pf-v6-c-sidebar__panel--FlexBasis--base);
+          --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--FlexBasis--base);
         } @else {
-          --pf-v6-c-sidebar__panel--FlexBasis: #{percentage(math.div($width-value, 100))};
+          --#{$sidebar}__panel--FlexBasis: #{percentage(math.div($width-value, 100))};
         }
       }
     }

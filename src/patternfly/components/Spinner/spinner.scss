@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$spinner}) {
+@include pf-root($spinner) {
   --#{$spinner}--diameter: var(--pf-t--global--icon--size--2xl);
   --#{$spinner}--Width: var(--#{$spinner}--diameter);
   --#{$spinner}--Height: var(--#{$spinner}--diameter);

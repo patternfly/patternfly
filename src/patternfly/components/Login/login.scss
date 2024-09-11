@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$login}) {
+@include pf-root($login) {
   --#{$login}--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$login}--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
 

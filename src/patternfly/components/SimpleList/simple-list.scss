@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$simple-list}) {
+@include pf-root($simple-list) {
   // Simple list item link
   --#{$simple-list}__item-link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$simple-list}__item-link--PaddingInlineEnd: var(--pf-t--global--spacer--md);

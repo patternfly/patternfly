@@ -5,7 +5,7 @@ $pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl")
 $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
-:where(:root, .#{$drawer}) {
+@include pf-root($drawer) {
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -45,7 +45,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
 
   // Drawer panel head
-  --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$drawer}__head--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$drawer}__head--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$drawer}__head--PaddingInlineStart: var(--pf-t--global--spacer--md);

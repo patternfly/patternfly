@@ -1,4 +1,5 @@
 @use '../sass-utilities' as *;
+@use '../assets/fontawesome/variables' as *;
 
 .#{$pf-prefix}screen-reader {
   @include pf-v6-u-screen-reader; // for use with assistive technologies
@@ -63,6 +64,6 @@
   --pf-t--global--duration--200: 0ms !important;
   --pf-t--global--duration--100: 0ms !important;
   --pf-t--global--duration--50: 0ms !important;
-  
+
   // stylelink-enable declaration-no-important
 }

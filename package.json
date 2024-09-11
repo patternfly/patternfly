@@ -47,11 +47,11 @@
     "@commitlint/config-conventional": "^19.1.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^20.1.0",
-    "@patternfly/documentation-framework": "6.0.0-alpha.81",
+    "@patternfly/documentation-framework": "6.0.0-alpha.92",
     "@patternfly/patternfly-a11y": "4.3.1",
-    "@patternfly/react-code-editor": "6.0.0-alpha.101",
-    "@patternfly/react-core": "6.0.0-alpha.101",
-    "@patternfly/react-table": "6.0.0-alpha.102",
+    "@patternfly/react-code-editor": "6.0.0-prerelease.4",
+    "@patternfly/react-core": "6.0.0-prerelease.4",
+    "@patternfly/react-table": "6.0.0-prerelease.4",
     "@starptech/prettyhtml": "^0.10.0",
     "backstopjs": "^6.3.23",
     "cheerio": "^1.0.0-rc.12",
@@ -107,8 +107,7 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public",
-    "tag": "alpha"
+    "access": "public"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

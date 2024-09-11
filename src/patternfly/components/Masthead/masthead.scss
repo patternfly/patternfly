@@ -3,7 +3,7 @@
 $pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-:where(:root, .#{$masthead}) {
+@include pf-root($masthead) {
   // * Masthead
   --#{$masthead}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--gutter--default);

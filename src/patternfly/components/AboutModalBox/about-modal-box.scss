@@ -1,10 +1,9 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$about-modal-box}) {
+@include pf-root($about-modal-box) {
     // Component variables
   --#{$about-modal-box}--BackgroundImage: none;
   --#{$about-modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-  --#{$about-modal-box}--BackgroundPosition: bottom right;
   --#{$about-modal-box}--BackgroundSize--min-width: 200px;
   --#{$about-modal-box}--BackgroundSize--width: 60%;
   --#{$about-modal-box}--BackgroundSize--max-width: 600px;
@@ -14,12 +13,6 @@
   --#{$about-modal-box}--Width: 100%;
   --#{$about-modal-box}--sm--GridTemplateColumns: 5fr 1fr;
   --#{$about-modal-box}--lg--GridTemplateColumns: 1fr .6fr;
-
-  @include pf-v6-bidirectional-style(
-    $prop: --#{$about-modal-box}--BackgroundPosition,
-    $ltr-val: bottom right,
-    $rtl-val: bottom left
-  );
 
   // Brand
   --#{$about-modal-box}__brand--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
@@ -131,6 +124,12 @@
     grid-template-rows: max-content max-content auto;
     grid-template-columns: var(--#{$about-modal-box}--lg--GridTemplateColumns);
   }
+
+  @include pf-v6-bidirectional-style (
+    $prop: --#{$about-modal-box}--BackgroundPosition,
+    $ltr-val: bottom right,
+    $rtl-val: bottom left
+  );
 }
 
 // Brand

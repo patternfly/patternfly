@@ -1,6 +1,6 @@
 // Animated icons
 // --------------------------
-@use './variables.scss' as *;
+@use './variables' as *;
 
 .#{$fa-css-prefix}-spin {
   animation: fa-spin 2s infinite linear;

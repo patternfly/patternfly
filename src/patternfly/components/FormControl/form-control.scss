@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$form-control}) {
-  --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--sm);
+@include pf-root($form-control) {
+  --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$form-control}--Color: var(--pf-t--global--text--color--regular);
   --#{$form-control}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$form-control}--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -100,7 +100,7 @@
   --#{$form-control}--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
 
   // Form control utilities
-  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--sm);
+  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$form-control}__utilities--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}--inset--base);
 

@@ -3,7 +3,7 @@
 $pf-v6-c-tree-view--MaxDepth: 10;
 
 // * Table tree view
-:where(:root, .#{$table}) {
+@include pf-root($table) {
   --#{$table}__tree-view-main--indent--base: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$table}__tree-view-icon--MinWidth)); // based off of the expected width of the toggle button
   --#{$table}__tree-view-main--nested-indent--base: calc(var(--#{$table}__tree-view-main--indent--base) - var(--pf-t--global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 

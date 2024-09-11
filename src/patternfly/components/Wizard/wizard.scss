@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$wizard}) {
+@include pf-root($wizard) {
   --#{$wizard}--Height: initial;
   --#{$wizard}--Height--base: 100%;
   --#{$modal-box}--c-wizard--Height--base: #{pf-size-prem(762px)}; // this is a specific height from design for the wizard in a modal
@@ -63,7 +63,8 @@
   --#{$wizard}__nav-link-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-toggle--Color: var(--pf-t--global--icon--color--regular);
-  --#{$wizard}__nav-link-toggle-icon--Transition: var(--pf-t--global--transition);
+  --#{$wizard}__nav-link-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$wizard}__nav-link-toggle-icon--Rotate: 0;
   --#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate: 90deg;
 
@@ -546,7 +547,7 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: var(--#{$wizard}__nav-link-toggle-icon--Transition);
+  transition: transform var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration) var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
 }
 

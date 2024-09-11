@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$nav}) {
+@include pf-root($nav) {
   // * Nav shared values
   --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -144,7 +144,7 @@
       --#{$menu}--PaddingBlockEnd: 0;
       --#{$menu}--BackgroundColor: var(--#{$nav}--BackgroundColor);
       --#{$menu}--BoxShadow: none;
-      --#{$menu}__list-item--hover--BackgroundColor: var(--pf-v6-c-nav__link--hover--BackgroundColor);
+      --#{$menu}__list-item--hover--BackgroundColor: var(--#{$nav}__link--hover--BackgroundColor);
 
       .#{$menu}__list {
         row-gap: var(--#{$nav}__subnav--RowGap);

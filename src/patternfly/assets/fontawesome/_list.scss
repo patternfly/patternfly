@@ -1,6 +1,6 @@
 // List icons
 // -------------------------
-@use './variables.scss' as *;
+@use './variables' as *;
 @use 'sass:math';
 
 .#{$fa-css-prefix}-ul {

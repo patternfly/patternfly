@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$tab-content}) {
+@include pf-root($tab-content) {
   --#{$tab-content}__body--PaddingBlockStart: 0;
   --#{$tab-content}__body--PaddingInlineEnd: 0;
   --#{$tab-content}__body--PaddingBlockEnd: 0;

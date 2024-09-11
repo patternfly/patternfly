@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-:where(:root, .#{$skip-to-content}) {
+@include pf-root($skip-to-content) {
   --#{$skip-to-content}--InsetBlockStart: var(--pf-t--global--spacer--md);
   --#{$skip-to-content}--ZIndex: var(--pf-t--global--z-index--2xl);
   --#{$skip-to-content}--focus--InsetInlineStart: var(--pf-t--global--spacer--md);

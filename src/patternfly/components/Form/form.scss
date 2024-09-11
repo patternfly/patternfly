@@ -25,14 +25,14 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 }
 
-:where(:root, .#{$form}) {
-  --#{$form}--GridGap: var(--pf-t--global--spacer--lg);
+@include pf-root($form) {
+  --#{$form}--GridGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
 
   // Group
-  --#{$form}__group--Gap: var(--pf-t--global--spacer--sm);
+  --#{$form}__group--Gap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$form}__group--m-action--MarginBlockStart: var(--pf-t--global--spacer--xl);
   --#{$form}--m-horizontal__group-label--md--GridColumnWidth: #{pf-size-prem(150px)};
-  --#{$form}--m-horizontal__group-label--md--GridColumnGap: var(--pf-t--global--spacer--md);
+  --#{$form}--m-horizontal__group-label--md--GridColumnGap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$form}--m-horizontal__group-control--md--GridColumnWidth: 1fr;
 
   // limit width
@@ -85,15 +85,14 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Form group label info
-  --#{$form}__group-label--m-info--Gap: var(--pf-t--global--spacer--sm);
+  --#{$form}__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--horizontal);
   --#{$form}__group-label-info--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$form}--m-horizontal__group-label--m-info--Gap: var(--pf-t--global--spacer--sm);
+  --#{$form}--m-horizontal__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--group--vertical);
 
   // Group control
-  --#{$form}__group-control--m-inline--child--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$form}__group-control--m-inline--Gap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$form}__group-control__helper-text--MarginBlockEnd: var(--pf-t--global--spacer--xs);
-  --#{$form}__group-control--Gap: var(--pf-t--global--spacer--sm);
-  --#{$form}__group-control--m-stack--Gap: var(--pf-t--global--spacer--sm);
+  --#{$form}__group-control--m-stack--Gap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$form}__group-control--m-stack__helper-text--MarginBlockStart: calc(var(--#{$form}__group-control--m-stack--Gap) * -1 + var(--#{$form}__helper-text--MarginBlockStart--base));
 
   // Actions
@@ -112,7 +111,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   // Section
   --#{$form}__section--MarginBlockStart: var(--pf-t--global--spacer--xl);
-  --#{$form}__section--Gap: var(--pf-t--global--spacer--md);
+  --#{$form}__section--Gap: var(--#{$form}--GridGap);
 
   // Section title
   --#{$form}__section-title--FontSize: var(--pf-t--global--font--size--heading--xs);
@@ -134,7 +133,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderBlockStartWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
   --#{$form}__field-group-toggle-button--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$form}__field-group-toggle-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
-  --#{$form}__field-group-toggle-icon--Transition: var(--pf-t--global--transition);
+  --#{$form}__field-group-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$form}__field-group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
   --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;
@@ -300,14 +300,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   &.pf-m-inline {
     display: flex;
     flex-flow: row wrap;
-
-    > * {
-      margin-inline-end: var(--#{$form}__group-control--m-inline--child--MarginInlineEnd);
-    }
-
-    > :last-child {
-      --#{$form}__group-control--m-inline--child--MarginInlineEnd: 0;
-    }
+    gap: var(--#{$form}__group-control--m-inline--Gap);
   }
 
   &.pf-m-stack {
@@ -419,7 +412,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   display: inline-block;
   min-width: var(--#{$form}__field-group-toggle-icon--MinWidth);
   text-align: center;
-  transition: var(--#{$form}__field-group-toggle-icon--Transition);
+  transition: transform var(--#{$form}__field-group-toggle-icon--TransitionDuration) var(--#{$form}__field-group-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$form}__field-group-toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;

@@ -47,44 +47,44 @@ $pf-v6-u-height-options: (
 @include pf-v6-utility-builder($pf-v6-u-height-options, $pf-v6-global--breakpoint-list);
 
 .#{$pf-prefix}u-min-width {
-  --pf-v6-u-min-width--MinWidth: 0;
+  --#{$pf-prefix}u-min-width--MinWidth: 0;
 
   @include pf-v6-build-css-variable-stack(
     "min-width",
-    "--pf-v6-u-min-width--MinWidth",
+    "--#{$pf-prefix}u-min-width--MinWidth",
     $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }
 
 .#{$pf-prefix}u-max-width {
-  --pf-v6-u-max-width--MaxWidth: auto;
+  --#{$pf-prefix}u-max-width--MaxWidth: auto;
 
   @include pf-v6-build-css-variable-stack(
     "max-width",
-    "--pf-v6-u-max-width--MaxWidth",
+    "--#{$pf-prefix}u-max-width--MaxWidth",
     $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }
 
 .#{$pf-prefix}u-min-height {
-  --pf-v6-u-min-height--MinHeight: 0;
+  --#{$pf-prefix}u-min-height--MinHeight: 0;
 
   @include pf-v6-build-css-variable-stack(
     "min-height",
-    "--pf-v6-u-min-height--MinHeight",
+    "--#{$pf-prefix}u-min-height--MinHeight",
     $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );
 }
 
 .#{$pf-prefix}u-max-height {
-  --pf-v6-u-max-height--MaxHeight: auto;
+  --#{$pf-prefix}u-max-height--MaxHeight: auto;
 
   @include pf-v6-build-css-variable-stack(
     "max-height",
-    "--pf-v6-u-max-height--MaxHeight",
+    "--#{$pf-prefix}u-max-height--MaxHeight",
     $pf-v6-u-sizing--min-max--breakpoint-map,
     $important: true
   );

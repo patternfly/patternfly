@@ -3,7 +3,7 @@
 // TODO: clean up unused variables
 // TODO: update grouping comments to // * Table {element}
 
-:where(:root, .#{$table}) {
+@include pf-root($table) {
   --#{$table}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$table}--border-width--base: var(--pf-t--global--border--width--divider--default);
@@ -81,7 +81,8 @@
   --#{$table}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 270deg;
-  --#{$table}__toggle--c-button__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$table}__toggle--c-button__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // * Table button
@@ -114,9 +115,6 @@
   --#{$table}__action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-
-  // * Table expandable row
-  --#{$table}__expandable-row--Transition: var(--pf-t--global--transition);
 
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -556,7 +554,7 @@
   }
 
   .#{$button} .#{$table}__sort-indicator {
-    --pf-v6-c-table__sort-indicator--MarginInlineStart: 0;
+    --#{$table}__sort-indicator--MarginInlineStart: 0;
   }
 }
 
@@ -741,7 +739,7 @@
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
 
-    transition: var(--#{$table}__toggle--c-button__toggle-icon--Transition);
+    transition: transform var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration) var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
     transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
 
@@ -943,11 +941,6 @@
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
-
-  &,
-  td:where(.#{$table}__td):first-child::after {
-    transition: var(--#{$table}__expandable-row--Transition);
-  }
 
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
     > .#{$table}__th,

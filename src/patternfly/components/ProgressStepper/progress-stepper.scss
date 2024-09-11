@@ -58,7 +58,7 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 }
 
 // Progress stepper is vertically oriented by default
-:where(:root, .#{$progress-stepper}) {
+@include pf-root($progress-stepper) {
   // Vertical - these are the default settings
   --#{$progress-stepper}--m-vertical--GridAutoFlow: row;
   --#{$progress-stepper}--m-vertical--GridTemplateColumns: auto 1fr;
