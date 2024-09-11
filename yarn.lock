@@ -2929,19 +2929,19 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@6.0.0-alpha.106":
-  version "6.0.0-alpha.106"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-6.0.0-alpha.106.tgz#cf8dc61e356ed5e507762b22035dea17444ae1e2"
-  integrity sha512-16lWBU+LU2ohrAXTH7Tk1riK2KktWrJyaz/xCAzKzejIxP3npGJAinROwubxRF1n5Ik3VVxuMtYPhdGb1mxjvw==
+"@patternfly/react-code-editor@6.0.0-prerelease.4":
+  version "6.0.0-prerelease.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-6.0.0-prerelease.4.tgz#d67c70682b76c16fc7bf29a8219964b3cbbeb523"
+  integrity sha512-etoNqLPKNHrlf5od68NmrLue05PqGxwDWXgRUCK4WJ9v+OwYv6Ts0rPQJHqNTKlpHROu8+Nlwl1Ub0fbHHtElA==
   dependencies:
     "@monaco-editor/react" "^4.6.0"
-    "@patternfly/react-core" "^6.0.0-alpha.106"
-    "@patternfly/react-icons" "^6.0.0-alpha.37"
-    "@patternfly/react-styles" "^6.0.0-alpha.35"
+    "@patternfly/react-core" "^6.0.0-prerelease.4"
+    "@patternfly/react-icons" "^6.0.0-prerelease.3"
+    "@patternfly/react-styles" "^6.0.0-prerelease.2"
     react-dropzone "14.2.3"
-    tslib "^2.6.2"
+    tslib "^2.7.0"
 
-"@patternfly/react-core@6.0.0-alpha.106", "@patternfly/react-core@^6.0.0-alpha.106":
+"@patternfly/react-core@6.0.0-alpha.106":
   version "6.0.0-alpha.106"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-alpha.106.tgz#a1aa6427b7208f8daf1573822f940d3fc0300437"
   integrity sha512-KbBiXo55zgCIIPvD0GNEzzaMUemh89OkE0ZDZ4AsyRZg+5nyc4OuUZnqx2hK89MYETy66HEiCJPvcBfMVlbFfQ==
