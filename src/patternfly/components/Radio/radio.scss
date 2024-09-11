@@ -34,7 +34,7 @@
   &.pf-m-standalone {
     display: inline-grid;
     grid-template-columns: auto;
-    height: var(--#{$check}--Height);
+    height: var(--#{$radio}--Height);
 
     .#{$radio}__input {
       align-self: center;

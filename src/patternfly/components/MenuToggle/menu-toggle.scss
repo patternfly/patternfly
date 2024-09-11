@@ -49,11 +49,11 @@
   --#{$menu-toggle}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // * Menu toggle icon
-  --#{$menu-toggle}__icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__icon--MinHeight: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight));
   --#{$menu-toggle}__icon--Color: var(--pf-t--global--icon--color--regular);
 
   // * Menu toggle toggle icon
-  --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu}__item--FontSize) * var(--#{$menu}__item--LineHeight));
+  --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight));
   --#{$menu-toggle}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // * Menu toggle primary
