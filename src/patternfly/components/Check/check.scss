@@ -3,7 +3,7 @@
 @include pf-root($check) {
   --#{$check}--GridGap: var(--pf-t--global--spacer--gap--group--vertical) var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
-  --#{$check}--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
+  --#{$check}--m-standalone--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
 
   // TODO: update to `--#{$check}--FontSize` `--#{$check}--LineHeight`
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -33,7 +33,7 @@
   &.pf-m-standalone {
     display: inline-grid;
     grid-template-columns: auto;
-    min-height: var(--#{$check}--MinHeight);
+    min-height: var(--#{$check}--m-standalone--MinHeight);
 
     .#{$check}__input {
       align-self: center;

@@ -3,7 +3,7 @@
 @include pf-root($radio) {
   --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
-  --#{$radio}--Height: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));
+  --#{$radio}--m-standalone--MinHeight: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));
 
   // TODO: update to `--#{$radio}--FontSize` `--#{$radio}--LineHeight`
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -34,7 +34,7 @@
   &.pf-m-standalone {
     display: inline-grid;
     grid-template-columns: auto;
-    height: var(--#{$radio}--Height);
+    min-height: var(--#{$radio}--m-standalone--MinHeight);
 
     .#{$radio}__input {
       align-self: center;
