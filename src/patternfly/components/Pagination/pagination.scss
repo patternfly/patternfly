@@ -6,7 +6,6 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 @include pf-root($pagination) {
   --#{$pagination}--inset: 0;
   --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
-  --#{$pagination}--PaddingBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
 
   // Page insets
   --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--lg);
@@ -46,6 +45,10 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
+  --#{$pagination}--m-bottom--PaddingBlockStart: 0;
+  --#{$pagination}--m-bottom--m-sticky--PaddingBlockStart: 0;
+  --#{$pagination}--m-bottom--md--PaddingBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$pagination}--m-bottom--m-static--PaddingBlockStart: var(--pf-t--global--spacer--gap--group--vertical);
 
   // options menu
   --#{$pagination}__page-menu--Display--base: block;
@@ -87,6 +90,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     position: sticky;
     inset-block-end: var(--#{$pagination}--m-bottom--InsetBlockEnd);
     justify-content: center;
+    padding-block-start: var(--#{$pagination}--m-bottom--PaddingBlockStart);
     padding-inline-start: var(--#{$pagination}--m-bottom--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--PaddingInlineEnd);
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
@@ -95,6 +99,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     &.pf-m-static {
       --#{$pagination}--m-bottom--MarginBlockStart: 0;
       --#{$pagination}--m-bottom--BorderBlockStartWidth: 0;
+      --#{$pagination}--m-bottom--PaddingBlockStart: var(--#{$pagination}--m-bottom--m-static--PaddingBlockStart);
 
       position: relative;
       box-shadow: none;
@@ -121,6 +126,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       --#{$pagination}--m-bottom--BorderBlockStartWidth: 0;
       --#{$pagination}--m-bottom--MarginBlockStart: 0;
       --#{$pagination}--m-bottom--InsetBlockEnd: auto;
+      --#{$pagination}--m-bottom--PaddingBlockStart: var(--#{$pagination}--m-bottom--md--PaddingBlockStart);
 
       position: relative;
       justify-content: flex-end;
@@ -148,6 +154,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
   &.pf-m-sticky {
     --#{$pagination}--m-bottom--InsetBlockEnd: 0;
+    --#{$pagination}--m-bottom--PaddingBlockStart: var(--#{$pagination}--m-bottom--m-sticky--PaddingBlockStart);
 
     position: sticky;
     inset-block-start: var(--#{$pagination}--m-sticky--InsetBlockStart);
