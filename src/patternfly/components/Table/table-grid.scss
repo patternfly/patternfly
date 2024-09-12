@@ -94,8 +94,8 @@
   // * Table td responsive
   --#{$table}-td--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
   --#{$table}--cell--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  // --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--cell--responsive--PaddingInlineEnd: 0;
   --#{$table}--cell--responsive--PaddingInlineStart: 0;
 
@@ -110,16 +110,16 @@
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
 
   // * Table grid expandable row content
-  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
-  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: 0;
+  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: 0;
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table check
   --#{$table}__check--responsive--MarginInlineStart: var(--#{$table}__tbody--responsive--border-width--base);
-  --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(14px)};
+  --#{$table}__check--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  // --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(14px)};
 
   // * Table grid favorite
-  --#{$table}--m-grid__favorite--MarginBlockStart: #{pf-size-prem(8px)};
   --#{$table}--m-grid__check--favorite--MarginInlineStart: var(--pf-t--global--spacer--xl);
 
   // * Table grid action
@@ -156,7 +156,13 @@
     overflow: visible;
     text-overflow: clip;
     white-space: normal;
+
+    &.#{$table}__check {
+      margin-inline-start: var(--#{$table}__check--responsive--MarginInlineStart);
+      padding-block-start: var(--#{$table}__check--responsive--PaddingBlockStart);
+    }
   }
+
 
   // - Table caption
   .#{$table}__caption {
@@ -229,11 +235,6 @@
       padding-inline-end: var(--#{$table}--cell--responsive--PaddingInlineEnd);
       padding-block-end: var(--#{$table}--cell--responsive--PaddingBlockEnd);
       padding-inline-start: var(--#{$table}--cell--responsive--PaddingInlineStart);
-
-      // remove padding from first child to align with kebab
-      &:first-child {
-        --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
-      }
     }
   }
 
@@ -243,8 +244,6 @@
     --#{$table}__tr--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr--responsive--PaddingBlockEnd);
     --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockStart);
     --#{$table}--cell--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockEnd);
-    --#{$table}__check--responsive--MarginBlockStart: var(--#{$table}--m-compact__check--responsive--MarginBlockStart);
-    --#{$table}__check--input--MarginBlockStart: 0;
 
     .#{$table}__action {
       margin-block-start: var(--#{$table}--m-compact__action--responsive--MarginBlockStart);
@@ -447,7 +446,7 @@
     .#{$table}__favorite,
     .#{$table}__action {
       width: auto;
-      padding: 0;
+      padding-block-end: 0;
     }
   }
 
@@ -479,10 +478,13 @@
     grid-column-start: 2;
   }
 
+  .#{$table}__action,
+  .#{$table}__favorite {
+    margin-block-start: calc(var(--#{$table}--cell--action--PaddingBlockStart) * -1);
+  }
+
   // - Table grid check
   .#{$table}__check {
-    margin-block-start: var(--#{$table}__check--responsive--MarginBlockStart);
-    margin-inline-start: var(--#{$table}__check--responsive--MarginInlineStart);
     line-height: 1;
 
     ~ .#{$table}__favorite {
@@ -496,16 +498,11 @@
     ~ .#{$table}__action {
       margin-inline-start: var(--#{$table}__action--responsive--MarginInlineStart);
     }
-
-    label {
-      display: inline-block;
-      margin: 0;
-    }
   }
 
   // - Table grid favorite
   .#{$table}__favorite {
-    margin-block-start: var(--#{$table}--m-grid__favorite--MarginBlockStart);
+    // margin-block-start: var(--#{$table}--m-grid__favorite--MarginBlockStart);
 
     ~ .#{$table}__action {
       margin-inline-start: var(--#{$table}--m-grid__favorite--action--MarginInlineStart);

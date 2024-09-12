@@ -5,11 +5,11 @@
   --#{$button}--AlignItems: baseline;
   --#{$button}--JustifyContent: center;
   --#{$button}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$button}--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--PaddingBlockStart) + var(--#{$button}--PaddingBlockEnd));
   --#{$button}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$button}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$button}--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$button}--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--PaddingBlockStart) + var(--#{$button}--PaddingBlockEnd));
   --#{$button}--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body--default);

@@ -1,5 +1,7 @@
 @use '../../sass-utilities' as *;
 
+$pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+
 // TODO: clean up unused variables
 // TODO: update grouping comments to // * Table {element}
 
@@ -13,20 +15,14 @@
   --#{$table}__caption--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__caption--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$table}__caption--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__caption--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--md);
 
   // * Table thead cell
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
-
-  // * Table thead toggle
-  --#{$table}__thead__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
-
-  // * Table body cell
-  --#{$table}__tbody--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
-  --#{$table}__tbody--cell--PaddingBlockEnd: var(--#{$table}--cell--Padding--base);
-  --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
+  --#{$table}__thead--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm); // use spacer-sm to align with --pf-t--global--spacer--control--vertical--default
+  --#{$table}__thead--cell--PaddingBlockEnd: var(--pf-t--global--spacer--sm); // use spacer-sm to align with --pf-t--global--spacer--control--vertical--default
 
   // * Table tr
   --#{$table}__tr--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -35,20 +31,24 @@
   // TODO: update these in order of appearance in scss declarations
 
   // * Table cell
-  --#{$table}--cell--Padding--base: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
-  --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--cell--Padding--base);
-  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--cell--Padding--base);
-  --#{$table}--cell--PaddingInlineStart: var(--#{$table}--cell--Padding--base);
+  --#{$table}--cell--PaddingBlock--base: calc(var(--pf-t--global--spacer--sm) * 2); // use spacer-sm * 2 to align with --pf-t--global--spacer--control--vertical--default
+  --#{$table}--cell--PaddingInline--base: var(--pf-t--global--spacer--md);
+  --#{$table}--cell--PaddingBlockStart: var(--#{$table}--cell--PaddingBlock--base);
+  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--cell--PaddingBlock--base);
+  --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--cell--PaddingInline--base);
+  --#{$table}--cell--PaddingInlineStart: var(--#{$table}--cell--PaddingInline--base);
   --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$table}--cell--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}--cell--first-last-child--PaddingInline--sm: var(--pf-t--global--spacer--sm);
-  --#{$table}--cell--first-last-child--PaddingInline--md: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--first-last-child--PaddingInline--lg: var(--pf-t--global--spacer--lg);
-  --#{$table}--cell--first-last-child--PaddingInline--xl: var(--pf-t--global--spacer--xl);
-  --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart: var(--#{$table}--cell--Padding--base);
+  --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart: var(--#{$table}--cell--PaddingInline--base);
+
+  // * Table cell action
+  --#{$table}--cell--action--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$table}--cell--action--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$table}--cell--action--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$table}--cell--action--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
 
   // * Table cell - default variables
   --#{$table}--cell--MinWidth: 0;
@@ -79,30 +79,22 @@
   --#{$table}--cell--hidden-visible--Display: table-cell;
 
   // * Table toggle
-  --#{$table}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$table}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 270deg;
   --#{$table}__toggle--c-button__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
   --#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // * Table button
-  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-
-  // * Table check
-  --#{$table}__check--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__check--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // * Table favorite
   --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body--default);
@@ -112,10 +104,6 @@
   // * Table ghost row
   --#{$table}__tr--m-ghost-row--Opacity: .4;
   --#{$table}__tr--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-
-  // * Table action
-  --#{$table}__action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -171,16 +159,16 @@
   --#{$table}--compound-expansion--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // * Table compact th
-  --#{$table}--m-compact__th--PaddingBlockStart: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
+  --#{$table}--m-compact__th--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact__th--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Table compact cell
   --#{$table}--m-compact--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
-  // * Table compact action
-  --#{$table}--m-compact__action--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$table}--m-compact__action--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  // * Table compact cell action
+  --#{$table}--m-compact--cell--action--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact--cell--action--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
 
   // * Table expandable row expanded
   --#{$table}__expandable-row--m-expanded--BorderBlockEndColor: var(--pf-t--global--border--color--default);
@@ -223,6 +211,9 @@
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
   --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
+
+  // * Table line height
+  --#{$table}--LineHeight: calc(var(--#{$table}--cell--FontSize) * var(--#{$table}--cell--LineHeight)); // retain consistent line-height for all table cells / supports vertical alignment
 }
 
 // TODO: update grouping comments to // Table {element}
@@ -330,7 +321,7 @@
     overflow: var(--#{$table}--cell--Overflow);
     font-size: var(--#{$table}--cell--FontSize);
     font-weight: var(--#{$table}--cell--FontWeight);
-    line-height: var(--#{$table}--cell--LineHeight);
+    line-height: var(--#{$table}--LineHeight); // use consistent line height
     color: var(--#{$table}--cell--Color);
     text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
@@ -422,14 +413,8 @@
 
   // - Table tbody
   // stylelint-disable
-  tbody:where(.#{$table}__tbody) {
-    --#{$table}--cell--PaddingBlockStart: var(--#{$table}__tbody--cell--PaddingBlockStart);
-    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}__tbody--cell--PaddingBlockEnd);
-    --#{$table}--cell--FontSize: var(--#{$table}__tbody--cell--FontSize);
-
-    > tr:where(.#{$table}__tr) > :where(th, td) {
-      overflow-wrap: break-word;
-    }
+  tbody:where(.#{$table}__tbody) > tr:where(.#{$table}__tr) > :where(th, td) {
+    overflow-wrap: break-word;
   }
   // stylelint-enable
 
@@ -497,9 +482,9 @@
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
     }
 
-    // &.pf-m-first-cell-offset-reset > :first-child {
-    //   padding-inline-start: var(--#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart);
-    // }
+    &.pf-m-first-cell-offset-reset > :first-child {
+      padding-inline-start: var(--#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart);
+    }
   }
 
   // - Table tbody clickable
@@ -601,7 +586,7 @@
   min-width: var(--#{$table}--text--MinWidth);
   max-width: var(--#{$table}--cell--MaxWidth);
   overflow: var(--#{$table}--cell--Overflow);
-  line-height: var(--#{$table}--cell--LineHeight);
+  line-height: var(--#{$table}--LineHeight);
   text-overflow: var(--#{$table}--cell--TextOverflow);
   word-break: var(--#{$table}--cell--WordBreak);
   white-space: var(--#{$table}--cell--WhiteSpace);
@@ -626,8 +611,9 @@
   padding-block-end: var(--#{$table}__button--PaddingBlockEnd);
   padding-inline-start: var(--#{$table}__button--PaddingInlineStart);
   padding-inline-end: var(--#{$table}__button--PaddingInlineEnd);
-  margin-block-end: calc(var(--#{$table}__button--PaddingBlockEnd) * -1);
-  margin-inline-start: calc(var(--#{$table}__button--PaddingInlineStart) * -1);
+  margin-inline-start: calc(var(--#{$table}__button--PaddingInlineStart) * -1); // button needs to retain negative margin-inline-start
+
+  // margin-inline-end: omit as adjacent buttons could collide
   font-size: inherit;
   font-weight: inherit;
   color: var(--#{$table}__button--Color);
@@ -668,8 +654,9 @@
 .#{$table}__column-help {
   display: inline-grid;
   grid-template-columns: auto max-content;
-  align-items: baseline;
+  align-items: last baseline;
   justify-content: start;
+  line-height: inherit;
 
   .#{$table}__text {
     min-width: auto;
@@ -706,6 +693,9 @@
 .#{$table} .#{$table}__draggable {
   --#{$table}--cell--MinWidth: 0;
   --#{$table}--cell--Width: 1%;
+
+  padding-inline-start: var(--#{$table}--cell--action--PaddingInlineStart);
+  padding-inline-end: var(--#{$table}--cell--action--PaddingInlineEnd);
 }
 // stylelint-enable
 
@@ -735,30 +725,9 @@
 
 // - Table check
 .#{$table}__check {
-  vertical-align: top;
-
-  .#{$check} {
-    --#{$check}__label--FontSize: var(--#{$table}--cell--FontSize);
-    --#{$check}__label--LineHeight: var(--#{$table}--cell--LineHeight);
-  }
-
+  .#{$check},
   .#{$radio} {
-    --#{$radio}__label--FontSize: var(--#{$table}--cell--FontSize);
-    --#{$radio}__label--LineHeight: var(--#{$table}--cell--LineHeight);
-  }
-
-  thead & {
-    vertical-align: bottom;
-  }
-
-  .#{$check}.pf-m-standalone,
-  .#{$radio}.pf-m-standalone {
-    thead & {
-      display: table-cell;
-      height: auto;
-      line-height: 1;
-      vertical-align: baseline;
-    }
+    display: flex;
   }
 }
 
@@ -769,10 +738,10 @@
   }
 
   &.pf-m-favorited .#{$button} {
-    --#{$button}--m-plain__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+  --#{$button}--m-plain__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
 
-    &:is(:hover, :focus) {
-      --#{$button}--hover__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+  &:is(:hover, :focus) {
+    --#{$button}--hover__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
     }
   }
 }
@@ -788,13 +757,26 @@
   }
 }
 
-// - Table action - Table favorite - Table inline edit action - Table draggable
+// - Table action - Table favorite - Table inline edit action - Table draggable - Table sort - Table toggle
 .#{$table}__action,
 .#{$table}__favorite,
 .#{$table}__inline-edit-action,
+.#{$table}__sort,
+.#{$table}__toggle,
 .#{$table}__draggable {
-  --#{$table}--cell--PaddingBlockStart: var(--#{$table}__action--PaddingBlockStart);
-  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}__action--PaddingBlockEnd);
+  .#{$table}__thead & {
+    padding-block-start: 0;
+    padding-block-end: var(--#{$table}--cell--action--PaddingBlockEnd);
+  }
+
+  .#{$table}__tbody & {
+    padding-block-start: var(--#{$table}--cell--action--PaddingBlockStart);
+    padding-block-end: 0;
+  }
+}
+
+.#{$table}__compound-expansion-toggle .#{$table}__button {
+  --pf-v6-c-table--cell--action--PaddingBlockEnd: 0;
 }
 
 // - Table action - Table inline edit action
@@ -867,6 +849,10 @@
 // - Table column help action
 .#{$table}__column-help-action {
   margin-inline-start: var(--#{$table}__column-help--MarginInlineStart);
+
+  .#{$button}__icon {
+    display: flex;
+  }
 }
 
 // - Table sort
@@ -911,7 +897,6 @@
 // - Table sort indicator
 .#{$table}__sort-indicator {
   grid-column: 2;
-  align-self: end;
   margin-inline-start: var(--#{$table}__sort-indicator--MarginInlineStart); // TODO: update this to gap
   color: var(--#{$table}__sort-indicator--Color);
   pointer-events: none;
@@ -995,8 +980,8 @@
   .#{$table}__favorite,
   .#{$table}__toggle,
   .#{$table}__draggable {
-    --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__action--PaddingBlockStart);
-    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__action--PaddingBlockEnd);
+    --#{$table}--cell--action--PaddingBlockStart: var(--#{$table}--m-compact--cell--action--PaddingBlockStart);
+    --#{$table}--cell--action--PaddingBlockEnd: var(--#{$table}--m-compact--cell--action--PaddingBlockEnd);
   }
 
   .#{$table}__icon {
@@ -1011,7 +996,13 @@
   --#{$table}__tr--BorderBlockEndWidth: 0;
   --#{$table}__toggle--PaddingBlockEnd: var(--#{$table}__thead__toggle--PaddingBlockEnd);
 
+  font-size: var(--#{$table}__thead--cell--FontSize);
   vertical-align: bottom;
+
+  // - Table button
+  .#{$table}__button {
+    margin-block-start: var(--#{$table}--cell--action--PaddingBlockStart); // this has no effect unless standard table are not present in the tr
+  }
 
   // - Table nested column header button
   &.pf-m-nested-column-header {
@@ -1029,9 +1020,30 @@
 .#{$table}__tbody {
   vertical-align: top;
 
+  // - Table button
+  .#{$table}__button {
+    margin-block-end: var(--#{$table}--cell--action--PaddingBlockEnd); // this has no effect unless standard table are not present in the tr
+  }
+
   // TODO: make this a class `compound expansion content`
   .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
     background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
+  }
+}
+
+// - Table thead - Table tbody
+.#{$table} {
+  .#{$table}__thead,
+  .#{$table}__tbody {
+    line-height: var(--pf-v6-c-table--LineHeight);
+  }
+}
+
+.#{$table}__column-help-action {
+  .#{$button},
+  .#{$menu-toggle},
+  .#{$table}__button {
+    line-height: var(--pf-v6-c-table--LineHeight);
   }
 }
 
@@ -1081,54 +1093,41 @@
   }
 }
 
+// - Table th - Table td
 .#{$table}__th,
 .#{$table}__td {
-  &.pf-m-inset-sm {
-    // First child padding left
-    &:first-child {
-      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--sm);
-    }
-
-    // Last child padding right
-    &:last-child {
-      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--sm);
-    }
+  // First child padding left
+  &:first-child {
+    padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
   }
 
-  &.pf-m-inset-md {
-    // First child padding left
-    &:first-child {
-      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--md);
-    }
-
-    // Last child padding right
-    &:last-child {
-      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--md);
-    }
+  // First child padding right
+  &:last-child {
+    padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
   }
 
-  &.pf-m-inset-lg {
-    // First child padding left
-    &:first-child {
-      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--lg);
-    }
+  // - Table th inset - Table td inset
+  @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
+    &.pf-m-inset-#{$inset} {
+      &:first-child {
+        padding-inline-start: #{$inset-value};
+      }
 
-    // Last child padding right
-    &:last-child {
-      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--lg);
+      &:last-child {
+        padding-inline-end: #{$inset-value};
+      }
     }
   }
+}
 
-  &.pf-m-inset-xl {
-    // First child padding left
-    &:first-child {
-      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline--xl);
-    }
+// - Table icon inline
+.#{$table}__icon-inline {
+  display: flex;
+  align-items: center;
+  margin-inline-end: var(--#{$table}__icon-inline--MarginInlineEnd);
 
-    // Last child padding right
-    &:last-child {
-      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline--xl);
-    }
+  &:last-child {
+    margin-inline-end: 0;
   }
 }
 
