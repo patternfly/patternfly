@@ -19,7 +19,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   // nav page select
   --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$pagination}__nav-page-select--c-form-control--width-base: calc((var(--#{$form-control}--PaddingInlineEnd) + var(--#{$form-control}--PaddingInlineStart)) + (var(--#{$form-control}--before--BorderWidth) * 2));
+  --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--border--width--control--default) * 2);
   --#{$pagination}__nav-page-select--c-form-control--width-chars: 2;
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
 
