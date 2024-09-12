@@ -2953,25 +2953,47 @@
     react-dropzone "^14.2.3"
     tslib "^2.7.0"
 
+"@patternfly/react-core@^6.0.0-prerelease.6":
+  version "6.0.0-prerelease.6"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.6.tgz#e553e404c4a632c28a365ed9176310dad952ba57"
+  integrity sha512-oYMZY1bKsQFe5HV7shJoxcQK8D1BLUtbekLplfXLaWIC9HqW0IL3VvtSdEf3ZR6IXbvFAslzuhp7KoFmiXEjXQ==
+  dependencies:
+    "@patternfly/react-icons" "^6.0.0-prerelease.4"
+    "@patternfly/react-styles" "^6.0.0-prerelease.3"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.3"
+    focus-trap "7.6.0"
+    react-dropzone "^14.2.3"
+    tslib "^2.7.0"
+
 "@patternfly/react-icons@^6.0.0-prerelease.3":
   version "6.0.0-prerelease.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-prerelease.3.tgz#6761009b5e8fb6592426deff7f6b34bdc703533c"
   integrity sha512-By2WJZX3X3oDezZ7qkRWcGVm5VFnFLbO8MQwwEfhOX9H/+JigNr1szm/Vb6MSsmbGiL42uvKIrvFFOmWQJep2w==
+
+"@patternfly/react-icons@^6.0.0-prerelease.4":
+  version "6.0.0-prerelease.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-prerelease.4.tgz#21ddc2a6c66adb6d4160e043a167d750841a8af0"
+  integrity sha512-KHo0v4XG4vS5wSZ76EUOrXDM636/ikXe6lNYqbAL/KRfqhfvXHEESZnK+0p1tpoBwwEUivAmJNSdIjppBPhACg==
 
 "@patternfly/react-styles@^6.0.0-prerelease.2":
   version "6.0.0-prerelease.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.0.0-prerelease.2.tgz#4812d57887792a1e2dea6ca4cc77bc126c42a05b"
   integrity sha512-ISxLyY00iW5a1XRcw+f6f9AQWY2zqO4rgWRo0FODqsLc2ffcuBLnPCtdwziy45OrTmlpRB8oUjuJXKePt9Emsw==
 
-"@patternfly/react-table@6.0.0-prerelease.4":
-  version "6.0.0-prerelease.4"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.4.tgz#a535e898b21e5f6e81cd2bb12e0dc02dfe2fc11f"
-  integrity sha512-xij4vc7pZwwclq9g+OwpeiF+ZN34/xr6/vqDiHf+Q/meNd061HWzuEj4H7z/s0M5GeIyoZVCkJGiZ3mrSP+vBQ==
+"@patternfly/react-styles@^6.0.0-prerelease.3":
+  version "6.0.0-prerelease.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.0.0-prerelease.3.tgz#16142ad8f3dbec9cc69c2b54690dba02f86e67fa"
+  integrity sha512-VyAODCKA/PkyGMVT0A2G2TVVx1H1QKBrmXBwY11Ba3ggvuLZ2zWu+vU9LyM/HhmefOwy+5/P8bmRtLM+37D/CA==
+
+"@patternfly/react-table@6.0.0-prerelease.6":
+  version "6.0.0-prerelease.6"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.6.tgz#d650c5cd8aa350f189071e46811be6023dd3ef5f"
+  integrity sha512-31buTz3S6n0haZm7dl0d27YayZ5BOLUT1rTnXiNk/yMZoC5piyEcJMtftjzEcJ6CoEJxF4fhOeaGyK88KJ6xcg==
   dependencies:
-    "@patternfly/react-core" "^6.0.0-prerelease.4"
-    "@patternfly/react-icons" "^6.0.0-prerelease.3"
-    "@patternfly/react-styles" "^6.0.0-prerelease.2"
-    "@patternfly/react-tokens" "^6.0.0-prerelease.2"
+    "@patternfly/react-core" "^6.0.0-prerelease.6"
+    "@patternfly/react-icons" "^6.0.0-prerelease.4"
+    "@patternfly/react-styles" "^6.0.0-prerelease.3"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.3"
     lodash "^4.17.21"
     tslib "^2.7.0"
 
@@ -2979,6 +3001,11 @@
   version "6.0.0-prerelease.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-prerelease.2.tgz#d0eae4a46f169033a9027101839c800fc9f88989"
   integrity sha512-P1zJZEwP+L/DNahXKfroN4Y8YFLpzKKY1b8qVRgecJ3Zyds/93EytJ8j2sDCCQl7s3/JwMlaoV8BELNTnoPSaA==
+
+"@patternfly/react-tokens@^6.0.0-prerelease.3":
+  version "6.0.0-prerelease.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-prerelease.3.tgz#a7ea927327d3e1db6c27951e4a6f80df653d2c0f"
+  integrity sha512-PViDVUIODaS/JNiF8zFo0f/uXvZn4Ch6atMKDdgtUGMqIWX0jPYwwwNeDbzyfBkQNxQt21KSgsnY4d3w+/Yasw==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -7971,6 +7998,13 @@ focus-trap@7.5.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.5.4.tgz#6c4e342fe1dae6add9c2aa332a6e7a0bbd495ba2"
   integrity sha512-N7kHdlgsO/v+iD/dMoJKtsSqs5Dz/dXZVebRgJw23LDk+jMi/974zyiOYDziY2JPp8xivq9BmUGwIJMiuSBi7w==
+  dependencies:
+    tabbable "^6.2.0"
+
+focus-trap@7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.6.0.tgz#7f3edab8135eaca92ab59b6e963eb5cc42ded715"
+  integrity sha512-1td0l3pMkWJLFipobUcGaf+5DTY4PLDDrcqoSaKP8ediO/CoWCCYk/fT/Y2A4e6TNB+Sh6clRJCjOPPnKoNHnQ==
   dependencies:
     tabbable "^6.2.0"
 
