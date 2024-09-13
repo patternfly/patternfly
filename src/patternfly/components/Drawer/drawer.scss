@@ -173,9 +173,9 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-inline,
   &.pf-m-static {
-    > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
-      --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-inline--BackgroundColor);
+    --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-inline--BackgroundColor);
 
+    > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
       padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingInlineStart);
     }
   }
