@@ -89,7 +89,7 @@
   --#{$content}--dl--GridTemplateColumns--dt: 12ch;
   --#{$content}--dl--GridTemplateColumns--dd: 1fr;
   --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--gap--group--horizontal);
-  --#{$content}--dl--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
+  --#{$content}--dl--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--default);
   --#{$content}--dt--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$content}--dt--MarginBlockStart: var(--pf-t--global--spacer--md);
   --#{$content}--dt--sm--MarginBlockStart: 0;

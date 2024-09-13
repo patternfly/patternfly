@@ -2,7 +2,7 @@
 
 @include pf-root($action-list) {
   --#{$action-list}--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
-  --#{$action-list}--ColumnGap: var(--pf-t--global--spacer--gap--group-to-group--horizontal);
+  --#{$action-list}--ColumnGap: var(--pf-t--global--spacer--gap--group-to-group--horizontal--default);
 
   // * Action list group
   --#{$action-list}__group--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
