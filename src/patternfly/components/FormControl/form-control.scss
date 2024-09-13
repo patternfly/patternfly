@@ -9,9 +9,11 @@
   --#{$form-control}--OutlineOffset: -6px;
   --#{$form-control}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$form-control}--before--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--before--BorderStyle: solid;
   --#{$form-control}--before--BorderColor: var(--pf-t--global--border--color--default);
   --#{$form-control}--before--BorderRadius: var(--#{$form-control}--BorderRadius);
   --#{$form-control}--after--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--after--BorderStyle: solid;
   --#{$form-control}--after--BorderColor: transparent;
   --#{$form-control}--after--BorderRadius: var(--#{$form-control}--BorderRadius);
   --#{$form-control}--BackgroundColor: var(--pf-t--global--background--color--control--default);
@@ -45,12 +47,13 @@
   --#{$form-control}--m-disabled--after--BorderColor: transparent;
 
   // readonly
-  --#{$form-control}--m-readonly--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$form-control}--m-readonly--BorderColor: transparent;
+  --#{$form-control}--m-readonly--BackgroundColor: var(--pf-t--global--background--color--control--read-only);
+  --#{$form-control}--m-readonly--BorderColor: var(--pf-t--global--border--color--control--read-only);
   --#{$form-control}--m-readonly--hover--after--BorderColor: revert;
 
   // readonly plain
   --#{$form-control}--m-readonly--m-plain--BackgroundColor: transparent;
+  --#{$form-control}--m-readonly--m-plain--BorderColor: transparent;
   --#{$form-control}--m-readonly--m-plain--inset--base: 0;
   --#{$form-control}--m-readonly--m-plain--OutlineOffset: 0;
 
@@ -134,13 +137,13 @@
 
   &::before {
     border-color: var(--#{$form-control}--before--BorderColor);
-    border-style: var(--#{$form-control}--before--BorderStyle, solid);
+    border-style: var(--#{$form-control}--before--BorderStyle);
     border-width: var(--#{$form-control}--before--BorderWidth);
     border-radius: var(--#{$form-control}--before--BorderRadius);
   }
 
   &::after {
-    border: var(--#{$form-control}--after--BorderWidth) var(--#{$form-control}--after--BorderStyle, solid) var(--#{$form-control}--after--BorderColor);
+    border: var(--#{$form-control}--after--BorderWidth) var(--#{$form-control}--after--BorderStyle) var(--#{$form-control}--after--BorderColor);
     border-radius: var(--#{$form-control}--before--BorderRadius);
   }
 
@@ -176,7 +179,7 @@
 
   &.pf-m-readonly {
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-readonly--BackgroundColor);
-    --#{$form-control}--BorderColor: var(--#{$form-control}--m-readonly--BorderColor);
+    --#{$form-control}--before--BorderColor: var(--#{$form-control}--m-readonly--BorderColor);
 
     &:hover {
       --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-readonly--hover--after--BorderColor);
@@ -189,6 +192,7 @@
 
     &.pf-m-plain {
       --#{$form-control}--m-readonly--BackgroundColor: var(--#{$form-control}--m-readonly--m-plain--BackgroundColor);
+      --#{$form-control}--m-readonly--BorderColor: var(--#{$form-control}--m-readonly--m-plain--BorderColor);
       --#{$form-control}--inset--base: var(--#{$form-control}--m-readonly--m-plain--inset--base);
       --#{$form-control}--before--BorderStyle: none;
       --#{$form-control}--after--BorderStyle: none;
