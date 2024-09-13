@@ -50,7 +50,7 @@
     "@patternfly/documentation-framework": "6.0.0-alpha.93",
     "@patternfly/patternfly-a11y": "4.3.1",
     "@patternfly/react-code-editor": "6.0.0-prerelease.4",
-    "@patternfly/react-core": "6.0.0-prerelease.4",
+    "@patternfly/react-core": "6.0.0-prerelease.9",
     "@patternfly/react-table": "6.0.0-prerelease.6",
     "@starptech/prettyhtml": "^0.10.0",
     "backstopjs": "^6.3.23",
