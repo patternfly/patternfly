@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Thu, 15 Aug 2024 00:08:40 GMT
+// Generated on Fri, 13 Sep 2024 01:51:18 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
@@ -65,17 +65,17 @@
   --pf-t--global--font--size--300: 1rem;
   --pf-t--global--font--size--400: 1.125rem;
   --pf-t--global--font--size--500: 1.25rem;
-  --pf-t--global--font--size--600: 1.375rem;
+  --pf-t--global--font--size--600: 1.5rem;
   --pf-t--global--font--size--700: 1.75rem;
   --pf-t--global--font--size--800: 2.25rem;
   --pf-t--global--font--weight--100: 400;
   --pf-t--global--font--weight--200: 500;
-  --pf-t--global--font--weight--300: 700;
+  --pf-t--global--font--weight--300: 500;
   --pf-t--global--font--weight--400: 700;
   --pf-t--global--icon--size--100: 0.75rem;
   --pf-t--global--icon--size--200: 0.875rem;
   --pf-t--global--icon--size--250: 1rem;
-  --pf-t--global--icon--size--300: 1.375rem;
+  --pf-t--global--icon--size--300: 1.5rem;
   --pf-t--global--icon--size--400: 3.5rem;
   --pf-t--global--icon--size--500: 6rem;
   --pf-t--global--spacer--100: 0.25rem;
@@ -111,6 +111,7 @@
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
   --pf-t--global--border--color--200: var(--pf-t--color--gray--40);
   --pf-t--global--border--color--300: var(--pf-t--color--gray--50);
+  --pf-t--global--border--color--50: var(--pf-t--color--gray--20);
   --pf-t--global--border--radius--large: var(--pf-t--global--border--radius--400);
   --pf-t--global--border--radius--medium: var(--pf-t--global--border--radius--300);
   --pf-t--global--border--radius--pill: var(--pf-t--global--border--radius--500);
@@ -312,6 +313,7 @@
   --pf-t--global--z-index--xs: var(--pf-t--global--z-index--100);
   --pf-t--global--background--color--action--plain--alt--clicked: var(--pf-t--global--background--color--100);
   --pf-t--global--background--color--action--plain--alt--hover: var(--pf-t--global--background--color--100);
+  --pf-t--global--background--color--control--read-only: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--disabled--default: var(--pf-t--global--color--disabled--100);
   --pf-t--global--background--color--floating--clicked: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--floating--default: var(--pf-t--global--background--color--100);
@@ -326,6 +328,7 @@
   --pf-t--global--background--color--secondary--default: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--secondary--hover: var(--pf-t--global--background--color--300);
   --pf-t--global--border--color--clicked: var(--pf-t--global--color--brand--200);
+  --pf-t--global--border--color--control--read-only: var(--pf-t--global--border--color--50);
   --pf-t--global--border--color--default: var(--pf-t--global--border--color--100);
   --pf-t--global--border--color--disabled: var(--pf-t--global--color--disabled--200);
   --pf-t--global--border--color--hover: var(--pf-t--global--color--brand--100);
@@ -469,8 +472,11 @@
   --pf-t--global--spacer--gap--control-to-control--default: var(--pf-t--global--spacer--xs);
   --pf-t--global--spacer--gap--group--horizontal: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--gap--group--vertical: var(--pf-t--global--spacer--sm);
-  --pf-t--global--spacer--gap--group-to-group--horizontal: var(--pf-t--global--spacer--2xl);
-  --pf-t--global--spacer--gap--group-to-group--vertical: var(--pf-t--global--spacer--lg);
+  --pf-t--global--spacer--gap--group-to-group--horizontal--compact: var(--pf-t--global--spacer--sm);
+  --pf-t--global--spacer--gap--group-to-group--horizontal--default: var(--pf-t--global--spacer--2xl);
+  --pf-t--global--spacer--gap--group-to-group--vertical--compact: var(--pf-t--global--spacer--md);
+  --pf-t--global--spacer--gap--group-to-group--vertical--default: var(--pf-t--global--spacer--lg);
+  --pf-t--global--spacer--gap--text-to-element--compact: var(--pf-t--global--spacer--xs);
   --pf-t--global--spacer--gap--text-to-element--default: var(--pf-t--global--spacer--sm);
   --pf-t--global--spacer--gutter--default: var(--pf-t--global--spacer--md);
   --pf-t--global--spacer--inset--page-chrome: var(--pf-t--global--spacer--lg);
