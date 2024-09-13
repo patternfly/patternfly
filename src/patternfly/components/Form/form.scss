@@ -26,7 +26,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 @include pf-root($form) {
-  --#{$form}--GridGap: var(--pf-t--global--spacer--gap--group-to-group--vertical);
+  --#{$form}--GridGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--default);
 
   // Group
   --#{$form}__group--Gap: var(--pf-t--global--spacer--gap--group--vertical);

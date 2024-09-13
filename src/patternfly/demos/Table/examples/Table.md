@@ -308,7 +308,7 @@ import './Table.css'
 
 ### Sticky header and last column
 ```hbs isFullscreen
-{{> page-template page-template--id="sticky-header-and-multiple columns-demo"}}
+{{> page-template page-template--id="sticky-header-and-multiple-columns-demo"}}
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-overflow-scroll" page-main-section--IsLimitWidths=true}}
