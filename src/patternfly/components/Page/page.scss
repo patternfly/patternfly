@@ -327,15 +327,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-container,
-.#{$page}__sidebar {
-  scrollbar-color: var(--pf-t--global--border--color--default) transparent;
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-}
-
-.#{$page}__main-container,
 .#{$page}__drawer {
   z-index: var(--#{$page}__main-container--ZIndex);
   grid-area: var(--#{$page}__main-container--GridArea);
