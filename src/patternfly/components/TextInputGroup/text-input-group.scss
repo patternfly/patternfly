@@ -54,9 +54,9 @@
   --#{$text-input-group}__icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$text-input-group}--utilities--icon--m-status--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$text-input-group}__icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$text-input-group}--m-disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$text-input-group}--m-disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
   --#{$text-input-group}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
-  --#{$text-input-group}--m-disabled__icon--m-status--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$text-input-group}--m-disabled__icon--m-status--Color: var(--pf-t--global--icon--color--on-disabled);
   --#{$text-input-group}__main--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$text-input-group}__main--m-warning__icon--m-status--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$text-input-group}__main--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
