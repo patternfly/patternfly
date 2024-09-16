@@ -47,7 +47,7 @@
 {{#> content--element content--element--type="p"}}Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.{{/content--element}}
 {{> content--element content--element--type="hr"}}
 {{#> content--element content--element--type="h3"}}Plain list example{{/content--element}}
-{{#> content--element content--element--type="ol" content--element--modifier="pf-m-plain"}}
+{{#> content--element content--element--type="ol" content--element--IsPlain=true}}
   {{#> content--element content--element--type="li"}}Donec blandit a lorem id convallis.{{/content--element}}
   {{#> content--element content--element--type="li"}}Cras gravida arcu at diam gravida gravida.{{/content--element}}
   {{#> content--element content--element--type="li"}}Integer in volutpat libero.{{/content--element}}
@@ -58,7 +58,7 @@
       {{#> content--element content--element--type="li"}}Donec blandit a lorem id convallis.{{/content--element}}
       {{#> content--element content--element--type="li"}}Cras gravida arcu at diam gravida gravida.{{/content--element}}
       {{#> content--element content--element--type="li"}}Integer in volutpat libero.
-        {{#> content--element content--element--type="ol" content--element--modifier="pf-m-plain"}}
+        {{#> content--element content--element--type="ol" content--element--IsPlain=true}}
           {{#> content--element content--element--type="li"}}Nested plain list{{/content--element}}
           {{#> content--element content--element--type="li"}}Donec blandit a lorem id convallis.{{/content--element}}
           {{#> content--element content--element--type="li"}}Cras gravida arcu at diam gravida gravida.{{/content--element}}
@@ -73,7 +73,7 @@
 {{> content--element content--element--type="hr"}}
 {{#> content--element content--element--type="h3"}}Visited link example{{/content--element}}
 {{#> content--element content--element--type="p"}}
-  {{#> content--element content--element--type="a" content--element--attribute='href' content--element--modifier="pf-m-plain"}}Visited link{{/content--element}}
+  {{#> content--element content--element--type="a" content--element--attribute='href' content--element--IsPlain=true}}Visited link{{/content--element}}
 {{/content--element}}
 {{> content--element content--element--type="hr"}}
 {{#> content--element content--element--type="p"}}Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum

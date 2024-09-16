@@ -417,9 +417,9 @@
   --#{$pf-global}--inverse--multiplier: #{if($val, -1, 1)};
 }
 
-@mixin pf-root($selector, $mods: null) {
-  :root,
-  .#{$selector} {
+@mixin pf-root($selector, $isClass: true) {
+  $selector: if($isClass, "." + $selector, $selector);
+  #{$selector} {
     @content
   }
 }

@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-@include pf-root($content) {
+@include pf-root(':root', false) {
   // Body
   --#{$content}--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$content}--LineHeight: var(--pf-t--global--font--line-height--body);
