@@ -15,6 +15,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
+  --#{$page}__sidebar--xl--Width: auto;
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
 
@@ -25,7 +26,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--TranslateZ: 0;
   --#{$page}__sidebar--m-expanded--TranslateX: 0;
   --#{$page}__sidebar--xl--TranslateX: 0;
-  --#{$page}__sidebar--MarginInlineEnd: 0;
+  --#{$page}__sidebar--MarginInlineEnd: calc(var(--pf-t--global--spacer--inset--page-chrome) / 2);
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar--PaddingInlineStart: 0;
   --#{$page}__sidebar--PaddingInlineEnd: 0;
@@ -43,7 +44,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // Sidebar body
-  --#{$page}__sidebar-body--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__sidebar-body--PaddingInlineEnd: calc(var(--pf-t--global--spacer--inset--page-chrome) / 2);
   --#{$page}__sidebar-body--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineEnd: var(--#{$page}--inset);
   --#{$page}__sidebar-body--m-page-insets--PaddingInlineStart: var(--#{$page}--inset);
@@ -62,8 +63,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset); 
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
-  --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--large);
-  --#{$page}__main-container--BorderWidth: var(--pf-t--global--spacer--sm); // TODO Change to be a page outline token
+  --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$page}__main-container--BorderWidth: #{pf-size-prem(4px)}; // TODO Change to be a page outline token
   --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
 
   // Main section
@@ -133,6 +134,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}--BackgroundColor);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width);
+
     grid-template-areas:
       "header header"
       "sidebar main";
