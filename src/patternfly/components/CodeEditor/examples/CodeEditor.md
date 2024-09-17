@@ -113,6 +113,41 @@ cssPrefix: pf-v6-c-code-editor
 {{/code-editor}}
 ```
 
+### With full height modifiers
+
+```hbs
+{{#> code-editor code-editor--modifier="pf-m-full-height"}}
+  {{#> code-editor-header}}
+    {{#> code-editor-header-content}}
+      {{#> code-editor-controls}}
+        {{> code-editor-controls--buttons}}
+      {{/code-editor-controls}}
+      {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
+      {{#> code-editor-keyboard-shortcuts}}
+        {{#> button button--IsLink=true button--icon="question-circle"}}
+          View shortcuts
+        {{/button}}
+      {{/code-editor-keyboard-shortcuts}}
+    {{/code-editor-header-content}}
+    {{#> code-editor-tab}}
+      {{#> code-editor-tab-icon}}
+        <i class="fas fa-code"></i>
+      {{/code-editor-tab-icon}}
+      {{#> code-editor-tab-text}}
+        HTML
+      {{/code-editor-tab-text}}
+    {{/code-editor-tab}}
+  {{/code-editor-header}}
+  {{#> code-editor-main}}
+    {{#> code-editor-code}}
+      {{#> code-editor-code-pre}}
+        code goes here
+      {{/code-editor-code-pre}}
+    {{/code-editor-code}}
+  {{/code-editor-main}}
+{{/code-editor}}
+```
+
 ## Documentation
 
 ### Usage
