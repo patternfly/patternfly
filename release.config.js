@@ -15,5 +15,5 @@ module.exports = {
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
   tagFormat: 'v${version}',
-  dryRun: true
+  dryRun: false
 };
