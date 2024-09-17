@@ -2953,6 +2953,18 @@
     react-dropzone "^14.2.3"
     tslib "^2.7.0"
 
+"@patternfly/react-core@^6.0.0-prerelease.11":
+  version "6.0.0-prerelease.11"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.11.tgz#012401b50e7e135602fa85452f5df824ab179e3e"
+  integrity sha512-aJqHif6IVbzqIDBeH5mo+3YTlvaXZLiXtVcmrHAV1pEVYLsAOMSrYZNJy2hD2rNj+u/wv5WDa3YGq/wDr+2zTA==
+  dependencies:
+    "@patternfly/react-icons" "^6.0.0-prerelease.4"
+    "@patternfly/react-styles" "^6.0.0-prerelease.3"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.3"
+    focus-trap "7.6.0"
+    react-dropzone "^14.2.3"
+    tslib "^2.7.0"
+
 "@patternfly/react-icons@^6.0.0-prerelease.4":
   version "6.0.0-prerelease.4"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-prerelease.4.tgz#21ddc2a6c66adb6d4160e043a167d750841a8af0"
@@ -2963,12 +2975,12 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.0.0-prerelease.3.tgz#16142ad8f3dbec9cc69c2b54690dba02f86e67fa"
   integrity sha512-VyAODCKA/PkyGMVT0A2G2TVVx1H1QKBrmXBwY11Ba3ggvuLZ2zWu+vU9LyM/HhmefOwy+5/P8bmRtLM+37D/CA==
 
-"@patternfly/react-table@6.0.0-prerelease.9":
-  version "6.0.0-prerelease.9"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.9.tgz#181f2e3aa1d0ee1149a054a53ded834d1efc39e3"
-  integrity sha512-ID1Fy/RuNhUnlewYqUV2QM3293+8kP/nNDaWTUW72J3qdFojUJHGI3bBJLdmfVQM4M+THuDNFyojzbvd3Vx3Vg==
+"@patternfly/react-table@6.0.0-prerelease.11":
+  version "6.0.0-prerelease.11"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.11.tgz#38ef0b6798eaac76949f778902cf0eb98bd33060"
+  integrity sha512-2WsWxZIBxEbkM1Wo+GgKcF+gKwlirTRL1A4aBokDAt+3e18R27ZTQAJZu8fMbCvfy93zSd27jrl2p84SBdogzg==
   dependencies:
-    "@patternfly/react-core" "^6.0.0-prerelease.9"
+    "@patternfly/react-core" "^6.0.0-prerelease.11"
     "@patternfly/react-icons" "^6.0.0-prerelease.4"
     "@patternfly/react-styles" "^6.0.0-prerelease.3"
     "@patternfly/react-tokens" "^6.0.0-prerelease.3"
