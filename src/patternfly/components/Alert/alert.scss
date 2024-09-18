@@ -193,9 +193,7 @@
 }
 
 .#{$alert}__icon {
-  display: flex;
   grid-area: icon;
-  margin-block-start: var(--#{$alert}__icon--MarginBlockStart);
   margin-inline-end: var(--#{$alert}__icon--MarginInlineEnd);
   font-size: var(--#{$alert}__icon--FontSize);
   color: var(--#{$alert}__icon--Color);
