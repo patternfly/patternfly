@@ -2929,13 +2929,13 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@6.0.0-prerelease.9":
-  version "6.0.0-prerelease.9"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-6.0.0-prerelease.9.tgz#1aa71875092bc386b871e376d393cafc1ced0ef7"
-  integrity sha512-75JKW0sAlx7TxSLlbY4+IKXTZhpqOVS1PmHVAcfhv0Z0yEQei6LRtkS4Kx/kEg5ivSX97GJfl32ezxmHzuLiug==
+"@patternfly/react-code-editor@6.0.0-prerelease.11":
+  version "6.0.0-prerelease.11"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-6.0.0-prerelease.11.tgz#2a19074adcb52931d01f5497fa410a576ea6c8da"
+  integrity sha512-OOakibSPBcq7XtkoILt6sIKgzfOAZJUqkWRU+tdYQ+attmI+kBoZOLQIPe59D9vPAOo5fwkdo4xbEkcv26CXVQ==
   dependencies:
     "@monaco-editor/react" "^4.6.0"
-    "@patternfly/react-core" "^6.0.0-prerelease.9"
+    "@patternfly/react-core" "^6.0.0-prerelease.11"
     "@patternfly/react-icons" "^6.0.0-prerelease.4"
     "@patternfly/react-styles" "^6.0.0-prerelease.3"
     react-dropzone "14.2.3"
@@ -2945,18 +2945,6 @@
   version "6.0.0-prerelease.11"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.11.tgz#012401b50e7e135602fa85452f5df824ab179e3e"
   integrity sha512-aJqHif6IVbzqIDBeH5mo+3YTlvaXZLiXtVcmrHAV1pEVYLsAOMSrYZNJy2hD2rNj+u/wv5WDa3YGq/wDr+2zTA==
-  dependencies:
-    "@patternfly/react-icons" "^6.0.0-prerelease.4"
-    "@patternfly/react-styles" "^6.0.0-prerelease.3"
-    "@patternfly/react-tokens" "^6.0.0-prerelease.3"
-    focus-trap "7.6.0"
-    react-dropzone "^14.2.3"
-    tslib "^2.7.0"
-
-"@patternfly/react-core@^6.0.0-prerelease.9":
-  version "6.0.0-prerelease.9"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.9.tgz#980cb537975033de2f1b33d01641a4494385299a"
-  integrity sha512-/eKLWJmHW93BmvVL5vJ50kGhlLgWULY3V1xE31w0ylFuxNac29nBo6uMGqDpEDaEiQdJ0JzM0W8IjUltsDc0zA==
   dependencies:
     "@patternfly/react-icons" "^6.0.0-prerelease.4"
     "@patternfly/react-styles" "^6.0.0-prerelease.3"
