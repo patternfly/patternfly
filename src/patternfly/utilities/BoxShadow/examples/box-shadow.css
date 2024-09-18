@@ -1,20 +1,9 @@
+.ws-core-u-box-shadow .ws-preview-html {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pf-t--global--spacer--xl);
+}
+
 .ws-core-u-box-shadow [class*="pf-v6-u-box-shadow"] {
-  padding: var(--pf-v6-global--spacer--lg);
-  margin-block-end: var(--pf-v6-global--spacer--md);
-}
-
-#ws-core-u-box-shadow-small [class*="pf-v6-u-box-shadow"]:not(:last-child) {
-  margin-block-end: var(--pf-v6-global--spacer--lg);
-}
-
-#ws-core-u-box-shadow-medium [class*="pf-v6-u-box-shadow"]:not(:last-child) {
-  margin-block-end: var(--pf-v6-global--spacer--xl);
-}
-
-#ws-core-u-box-shadow-large [class*="pf-v6-u-box-shadow"]:not(:last-child) {
-  margin-block-end: var(--pf-v6-global--spacer--2xl);
-}
-
-#ws-core-u-box-shadow-extra-large [class*="pf-v6-u-box-shadow"]:not(:last-child) {
-  margin-block-end: var(--pf-v6-global--spacer--3xl);
+  padding: var(--pf-t--global--spacer--md);
 }
