@@ -2941,10 +2941,10 @@
     react-dropzone "14.2.3"
     tslib "^2.7.0"
 
-"@patternfly/react-core@6.0.0-prerelease.9", "@patternfly/react-core@^6.0.0-prerelease.9":
-  version "6.0.0-prerelease.9"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.9.tgz#980cb537975033de2f1b33d01641a4494385299a"
-  integrity sha512-/eKLWJmHW93BmvVL5vJ50kGhlLgWULY3V1xE31w0ylFuxNac29nBo6uMGqDpEDaEiQdJ0JzM0W8IjUltsDc0zA==
+"@patternfly/react-core@6.0.0-prerelease.11", "@patternfly/react-core@^6.0.0-prerelease.11":
+  version "6.0.0-prerelease.11"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.11.tgz#012401b50e7e135602fa85452f5df824ab179e3e"
+  integrity sha512-aJqHif6IVbzqIDBeH5mo+3YTlvaXZLiXtVcmrHAV1pEVYLsAOMSrYZNJy2hD2rNj+u/wv5WDa3YGq/wDr+2zTA==
   dependencies:
     "@patternfly/react-icons" "^6.0.0-prerelease.4"
     "@patternfly/react-styles" "^6.0.0-prerelease.3"
@@ -2953,10 +2953,10 @@
     react-dropzone "^14.2.3"
     tslib "^2.7.0"
 
-"@patternfly/react-core@^6.0.0-prerelease.11":
-  version "6.0.0-prerelease.11"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.11.tgz#012401b50e7e135602fa85452f5df824ab179e3e"
-  integrity sha512-aJqHif6IVbzqIDBeH5mo+3YTlvaXZLiXtVcmrHAV1pEVYLsAOMSrYZNJy2hD2rNj+u/wv5WDa3YGq/wDr+2zTA==
+"@patternfly/react-core@^6.0.0-prerelease.9":
+  version "6.0.0-prerelease.9"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.9.tgz#980cb537975033de2f1b33d01641a4494385299a"
+  integrity sha512-/eKLWJmHW93BmvVL5vJ50kGhlLgWULY3V1xE31w0ylFuxNac29nBo6uMGqDpEDaEiQdJ0JzM0W8IjUltsDc0zA==
   dependencies:
     "@patternfly/react-icons" "^6.0.0-prerelease.4"
     "@patternfly/react-styles" "^6.0.0-prerelease.3"
