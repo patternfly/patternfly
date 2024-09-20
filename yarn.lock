@@ -2941,7 +2941,19 @@
     react-dropzone "14.2.3"
     tslib "^2.7.0"
 
-"@patternfly/react-core@6.0.0-prerelease.11", "@patternfly/react-core@^6.0.0-prerelease.11":
+"@patternfly/react-core@6.0.0-prerelease.14":
+  version "6.0.0-prerelease.14"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.14.tgz#e53677e217279ff749fe8b5bfe49337d97c7882f"
+  integrity sha512-FkKx9p76tLXc8kVOeYs16hNOjuwn7AxCI6OPB9lEEZOcIGTPixmvNLLy/AKeCyi1rQeZvh74XZJZTIDJLhVB1w==
+  dependencies:
+    "@patternfly/react-icons" "^6.0.0-prerelease.4"
+    "@patternfly/react-styles" "^6.0.0-prerelease.3"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.4"
+    focus-trap "7.6.0"
+    react-dropzone "^14.2.3"
+    tslib "^2.7.0"
+
+"@patternfly/react-core@^6.0.0-prerelease.11":
   version "6.0.0-prerelease.11"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.11.tgz#012401b50e7e135602fa85452f5df824ab179e3e"
   integrity sha512-aJqHif6IVbzqIDBeH5mo+3YTlvaXZLiXtVcmrHAV1pEVYLsAOMSrYZNJy2hD2rNj+u/wv5WDa3YGq/wDr+2zTA==
@@ -2979,6 +2991,11 @@
   version "6.0.0-prerelease.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-prerelease.3.tgz#a7ea927327d3e1db6c27951e4a6f80df653d2c0f"
   integrity sha512-PViDVUIODaS/JNiF8zFo0f/uXvZn4Ch6atMKDdgtUGMqIWX0jPYwwwNeDbzyfBkQNxQt21KSgsnY4d3w+/Yasw==
+
+"@patternfly/react-tokens@^6.0.0-prerelease.4":
+  version "6.0.0-prerelease.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-prerelease.4.tgz#0b0e0eaa271847cf71f6828b0ad048b5efa783d9"
+  integrity sha512-T1/C6nj78zvk4zLUp3VvNI3hChPR2vEy0BasIG3AYakWoLJsdOY6qS3PlLulawNZvlK7KH0X7VRfT1Zk073R6A==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
