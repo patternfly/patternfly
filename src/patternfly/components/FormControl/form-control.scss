@@ -7,7 +7,6 @@
   --#{$form-control}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$form-control}--Resize: none;
   --#{$form-control}--OutlineOffset: -6px;
-  --#{$form-control}--OutlinePadding: calc(-1 * var(--#{$form-control}--OutlineOffset));
   --#{$form-control}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$form-control}--before--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--before--BorderColor: var(--pf-t--global--border--color--default);
@@ -24,10 +23,6 @@
   --#{$form-control}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
   --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}--inset--base);
   --#{$form-control}--PaddingInlineStart: var(--#{$form-control}--inset--base);
-  --#{$form-control}--TextArea--PaddingBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) - var(--#{$form-control}--OutlinePadding));
-  --#{$form-control}--TextArea--PaddingBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) - var(--#{$form-control}--OutlinePadding));
-  --#{$form-control}--TextArea--PaddingInlineEnd: calc(var(--#{$form-control}--inset--base) - var(--#{$form-control}--OutlinePadding));
-  --#{$form-control}--TextArea--PaddingInlineStart: calc(var(--#{$form-control}--inset--base) - var(--#{$form-control}--OutlinePadding));
 
   // hover
   --#{$form-control}--hover--after--BorderWidth: var(--pf-t--global--border--width--control--hover);
@@ -95,6 +90,11 @@
   // Textarea
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
   --#{$form-control}--textarea--Height: auto;
+  --#{$form-control}--textarea--Padding: calc(-1 * var(--#{$form-control}--OutlineOffset));
+  --#{$form-control}--textarea--PaddingBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) - var(--#{$form-control}--textarea--Padding));
+  --#{$form-control}--textarea--PaddingBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) - var(--#{$form-control}--textarea--Padding));
+  --#{$form-control}--textarea--PaddingInlineEnd: calc(var(--#{$form-control}--inset--base) - var(--#{$form-control}--textarea--Padding));
+  --#{$form-control}--textarea--PaddingInlineStart: calc(var(--#{$form-control}--inset--base) - var(--#{$form-control}--textarea--Padding));
 
   // Form control icon
   --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -177,13 +177,13 @@
   }
 
   &.pf-m-textarea {
-    padding: var(--#{$form-control}--OutlinePadding);
+    padding: var(--#{$form-control}--textarea--Padding);
 
     > :is(textarea) {
-      padding-block-start: var(--#{$form-control}--TextArea--PaddingBlockStart);
-      padding-block-end: var(--#{$form-control}--TextArea--PaddingBlockEnd);
-      padding-inline-start: var(--#{$form-control}--TextArea--PaddingInlineStart);
-      padding-inline-end: var(--#{$form-control}--TextArea--PaddingInlineEnd);
+      padding-block-start: var(--#{$form-control}--textarea--PaddingBlockStart);
+      padding-block-end: var(--#{$form-control}--textarea--PaddingBlockEnd);
+      padding-inline-start: var(--#{$form-control}--textarea--PaddingInlineStart);
+      padding-inline-end: var(--#{$form-control}--textarea--PaddingInlineEnd);
       outline-offset: 0;
     }
   }
