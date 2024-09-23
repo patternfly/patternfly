@@ -71,6 +71,7 @@
   // Tertiary
   --#{$button}--m-tertiary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$button}--m-tertiary--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-tertiary--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
   --#{$button}--m-tertiary__icon--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$button}--m-tertiary--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$button}--m-tertiary--hover--BorderColor: var(--pf-t--global--border--color--hover);
@@ -375,6 +376,7 @@
   &.pf-m-tertiary {
     --#{$button}--Color: var(--#{$button}--m-tertiary--Color);
     --#{$button}--BorderColor: var(--#{$button}--m-tertiary--BorderColor);
+    --#{$button}--TransitionDuration: var(--#{$button}--m-tertiary--TransitionDuration);
     --#{$button}__icon--Color: var(--#{$button}--m-tertiary__icon--Color);
     --#{$button}--hover--Color: var(--#{$button}--m-tertiary--hover--Color);
     --#{$button}--hover--BorderColor: var(--#{$button}--m-tertiary--hover--BorderColor);
