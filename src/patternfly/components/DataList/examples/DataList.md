@@ -251,9 +251,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable secondary content details"')}}
       {{#> data-list-expandable-content-body}}
@@ -281,9 +279,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
@@ -317,9 +313,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Expandable compact primary content details"')}}
       {{#> data-list-expandable-content-body}}
@@ -488,9 +482,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable nested secondary content details"')}}
       {{#> data-list-expandable-content-body}}
@@ -518,9 +510,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable nested tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
