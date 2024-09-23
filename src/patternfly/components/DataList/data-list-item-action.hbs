@@ -5,6 +5,10 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{> data-list-action}}
+    {{> menu-toggle
+      menu-toggle--IsPlain=true
+      menu-toggle--HasKebab=true
+      menu-toggle--id=(dasherize data-list--id data-list-item--id 'menu-toggle')
+      menu-toggle--aria-label='Data list item menu toggle'}}
   {{/if}}
 </div>
