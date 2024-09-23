@@ -14,10 +14,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--before--BorderInlineStartWidth: 0;
   --#{$tabs}--m-vertical--inset: var(--pf-t--global--spacer--sm);
 
-  // Tabs, Page insets modifier
+  // * Tabs page insets
   --#{$tabs}--m-page-insets--inset: var(--pf-t--global--spacer--md);
 
-  // Tabs, Vertical modifier
+  // * Tabs vertical
   --#{$tabs}--m-vertical--Width: 100%;
   --#{$tabs}--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --#{$tabs}--m-vertical--m-box--inset: var(--pf-t--global--spacer--md);
@@ -27,10 +27,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical__list--before--BorderBlockEndWidth: 0;
   --#{$tabs}--m-vertical__list--before--BorderInlineStartWidth: var(--#{$tabs}--before--border-width--base);
 
-  // Tabs List
-  --#{$tabs}__list--Display: flex;
-
-  // Tabs Item
+  // * Tabs item
   --#{$tabs}__item--BackgroundColor: transparent;
   --#{$tabs}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -46,7 +43,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-box--m-secondary__item--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$tabs}__item--m-action--before--ZIndex: var(--pf-t--global--z-index--sm);
 
-  // Tabs link
+  // * Tabs link
   --#{$tabs}__link--Color: var(--pf-t--global--text--color--subtle);
   --#{$tabs}__link--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
@@ -75,7 +72,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-box--m-secondary__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
 
-  // Link before
+  // * Tabs link before
   --#{$tabs}__link--before--border-color--base: var(--pf-t--global--border--color--default);
   --#{$tabs}__link--before--border-width--base: var(--pf-t--global--border--width--regular);
   --#{$tabs}__link--before--BorderBlockStartColor: var(--#{$tabs}__link--before--border-color--base);
@@ -91,7 +88,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--disabled--before--BorderBlockEndWidth: var(--#{$tabs}--before--border-width--base);
   --#{$tabs}__link--disabled--before--BorderInlineStartWidth: 0;
 
-  // Link after
+  // * Tabs link after
   --#{$tabs}__link--after--InsetBlockStart: auto;
   --#{$tabs}__link--after--InsetInlineEnd: 0;
   --#{$tabs}__link--after--InsetBlockEnd: 0;
@@ -103,7 +100,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
-  // Scroll buttons
+  // * Tabs scroll buttons
   --#{$tabs}__scroll-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__scroll-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$tabs}__scroll-button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
@@ -113,22 +110,21 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__scroll-button--TransitionDuration--transform: .125s;
   --#{$tabs}__scroll-button--TransitionDuration--opacity: .125s;
 
-  // Scroll buttons before
+  // * Tabs scroll buttons before
   --#{$tabs}__scroll-button--before--BorderColor: var(--#{$tabs}--before--BorderColor);
   --#{$tabs}__scroll-button--before--border-width--base: var(--pf-t--global--border--width--regular);
   --#{$tabs}__scroll-button--before--BorderInlineEndWidth: 0;
   --#{$tabs}__scroll-button--before--BorderBlockEndWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
   --#{$tabs}__scroll-button--before--BorderInlineStartWidth: 0;
 
-  // Scroll snap
+  // * Tabs scroll snap
   --#{$tabs}__list--ScrollSnapTypeAxis: x;
   --#{$tabs}__list--ScrollSnapTypeStrictness: proximity;
   --#{$tabs}__list--ScrollSnapType: var(--#{$tabs}__list--ScrollSnapTypeAxis) var(--#{$tabs}__list--ScrollSnapTypeStrictness);
   --#{$tabs}__item--ScrollSnapAlign: end;
   --#{$tabs}--m-vertical__list--ScrollSnapTypeAxis: y;
 
-  // Expandable
-  --#{$tabs}__toggle--Display: flex;
+  // * Tabs expandable
   --#{$tabs}__toggle-icon--Transition: all 250ms cubic-bezier(.42, 0, .58, 1);
   --#{$tabs}__toggle-icon--Rotate: 0;
   --#{$tabs}--m-expanded__toggle-icon--Rotate: 90deg;
@@ -138,12 +134,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-expandable--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$tabs}--m-expandable--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
-  // Item action
+  // * Tabs item action
   --#{$tabs}__item-action--c-button--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}--m-subtab__item-action--c-button--FontSize: var(--pf-t--global--font--size--xs);
   --#{$tabs}__item-action-icon--MarginBlockStart: #{pf-size-prem(2px)};
 
-  // Add button
+  // * Tabs add button
   --#{$tabs}__add--before--BorderColor: var(--#{$tabs}__link--before--border-color--base);
   --#{$tabs}__add--before--BorderInlineStartWidth: var(--#{$tabs}__link--before--border-width--base);
   --#{$tabs}__add--c-button--FontSize: var(--pf-t--global--font--size--sm);
@@ -153,7 +149,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__add--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__add--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
-  // Overflow menu toggle icon
+  // * Tabs overflow menu toggle icon
   --#{$tabs}__link-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$tabs}__link-toggle-icon--Transition: .2s ease-in 0s;
   --#{$tabs}__link-toggle-icon--Rotate: 0;
@@ -161,6 +157,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--m-expanded__toggle-icon--Rotate: 90deg;
 }
 
+// - Tabs
 .#{$tabs} {
   position: relative;
   display: flex;
@@ -205,7 +202,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
   }
 
-  // Scroll buttons enabled
+  // - Tabs scrollable
   &.pf-m-scrollable {
     .#{$tabs}__scroll-button {
       opacity: 1;
@@ -236,7 +233,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
   }
 
-  // Box
+  // - Tabs box
   &.pf-m-box {
     --#{$tabs}__item--BackgroundColor: var(--#{$tabs}--m-box__item--BackgroundColor);
     --#{$tabs}__item--m-current--BackgroundColor: var(--#{$tabs}--m-box__item--m-current--BackgroundColor);
@@ -294,7 +291,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
   }
 
-  // Vertical
+  // - Tabs vertical
   &.pf-m-vertical {
     --#{$tabs}--Width: var(--#{$tabs}--m-vertical--Width);
     --#{$tabs}--inset: var(--#{$tabs}--m-vertical--inset);
@@ -359,22 +356,40 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     @each $breakpoint, $breakpoint-value in $pf-v6-c-tabs--breakpoint-map {
       $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
+      // stylelint-disable
       @include pf-v6-apply-breakpoint($breakpoint) {
-        // stylelint-disable max-nesting-depth
         &.pf-m-expandable#{$breakpoint-name} {
-          --#{$tabs}__list--Display: none;
-          --#{$tabs}__toggle--Display: flex;
+          .#{$tabs}__list {
+            display: none;
+          }
+
+          .#{$tabs}__toggle {
+            display: flex;
+          }
         }
 
         &.pf-m-non-expandable#{$breakpoint-name} {
-          --#{$tabs}__list--Display: flex;
-          --#{$tabs}__toggle--Display: none;
+          .#{$tabs}__list {
+            display: flex;
+          }
+
+          .#{$tabs}__toggle {
+            display: none;
+          }
         }
-        // stylelint-enable
       }
+      // stylelint-enable
     }
 
     &.pf-m-expandable {
+      .#{$tabs}__list {
+        display: none;
+      }
+
+      .#{$tabs}__toggle {
+        display: flex;
+      }
+
       row-gap: var(--#{$tabs}--m-expandable--RowGap);
       padding-block-start: var(--#{$tabs}--m-expandable--PaddingBlockStart);
       padding-block-end: var(--#{$tabs}--m-expandable--PaddingBlockEnd);
@@ -383,12 +398,15 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
 
     &.pf-m-expanded {
-      --#{$tabs}__list--Display: flex;
       --#{$tabs}__toggle-icon--Rotate: var(--#{$tabs}--m-expanded__toggle-icon--Rotate);
+
+      .#{$tabs}__list {
+        display: flex;
+      }
     }
   }
 
-  // Box, vertical
+  // - Tabs box vertical
   &.pf-m-box.pf-m-vertical {
     --#{$tabs}--inset: var(--#{$tabs}--m-vertical--m-box--inset);
     --#{$tabs}--m-vertical__list--before--BorderInlineStartWidth: 0;
@@ -453,12 +471,13 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 
-// Expandable toggle
+// - Tabs toggle
 .#{$tabs}__toggle {
-  display: var(--#{$tabs}__toggle--Display);
+  display: flex;
   align-items: center;
 }
 
+// - Tabs toggle button
 .#{$tabs}__toggle-button {
   .#{$button} {
     justify-content: start;
@@ -466,6 +485,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 
+// - Tabs toggle icon
 .#{$tabs}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
@@ -474,12 +494,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   transform: rotate(var(--#{$tabs}__toggle-icon--Rotate));
 }
 
-// Tab list
+// - Tabs list
 .#{$tabs}__list {
   @include pf-v6-overflow-hide-scroll;
 
   position: relative;
-  display: var(--#{$tabs}__list--Display);
+  display: flex;
   max-width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -487,7 +507,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   -webkit-overflow-scrolling: touch;
 }
 
-// Tabs item
+// - Tabs item
 .#{$tabs}__item {
   position: relative;
   display: flex;
@@ -609,7 +629,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   &:where(:hover, :focus) {
     --#{$tabs}__link--BackgroundColor: var(--#{$tabs}__link--hover--BackgroundColor);
-      }
+  }
 
   &:disabled,
   &.pf-m-disabled {
@@ -644,6 +664,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 
+// - Tabs link toggle icon
 .#{$tabs}__link-toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
@@ -654,6 +675,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   transform: rotate(var(--#{$tabs}__link-toggle-icon--Rotate));
 }
 
+// - Tabs item action
 .#{$tabs}__item-action {
   display: flex;
 
@@ -662,12 +684,13 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 
+// - Tabs item action icon
 .#{$tabs}__item-action-icon {
   display: inline-block;
   margin-block-start: var(--#{$tabs}__item-action-icon--MarginBlockStart);
 }
 
-// Scroll buttons
+// - Tabs scroll button
 .#{$tabs}__scroll-button {
   padding-block-start: var(--#{$tabs}__scroll-button--PaddingBlockStart);
   padding-block-end: var(--#{$tabs}__scroll-button--PaddingBlockEnd);
@@ -699,6 +722,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 
+// - Tabs add
 .#{$tabs}__add {
   position: relative;
   display: flex;
@@ -716,6 +740,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 
+// - Tabs
 // stylelint-disable no-duplicate-selectors, max-nesting-depth
 .#{$tabs} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-tabs--breakpoint-map {

@@ -194,39 +194,24 @@
 }
 
 @mixin pf-v6-hidden-visible($val: "block") {
-  // stylelint-disable-next-line
-  --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
-
-  // base value for visible display property is set to 'block' by default and passed in to
-  // placeholder via `pf-v6-hidden-visible` mixin
-
-  // set hidden var values
-  // stylelint-disable custom-property-pattern
-  --#{$pf-prefix}hidden-visible--hidden--Display: none;
-
-  // set visibile var values
-  --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
-
-  // set default state to visible
-  display: var(--#{$pf-prefix}hidden-visible--Display);
+  display: #{$val};
 
   // toggle values based on state
   &.pf-m-hidden {
-    --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+    display: none;
   }
 
   @each $size, $bp in $pf-v6-global--breakpoint-name-map {
     @media screen and (min-width: $bp) {
       &.pf-m-hidden-on-#{$size} {
-        --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        display: none;
       }
 
       &.pf-m-visible-on-#{$size} {
-        --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        display: #{$val}
       }
     }
   }
-  // stylelint-enable
 }
 
 // Apply media query if value is passed

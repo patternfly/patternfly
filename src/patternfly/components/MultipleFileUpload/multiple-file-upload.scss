@@ -22,7 +22,6 @@
   --#{$multiple-file-upload}__main--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // title
-  --#{$multiple-file-upload}__title--Display: grid;
   --#{$multiple-file-upload}__title--GridTemplateColumns: auto;
   --#{$multiple-file-upload}__title--Gap: var(--pf-t--global--spacer--lg);
 
@@ -37,7 +36,6 @@
   --#{$multiple-file-upload}__title-icon--FontSize: var(--pf-t--global--icon--size--xl);
 
   // title text separator
-  --#{$multiple-file-upload}__title-text-separator--Display: block;
   --#{$multiple-file-upload}__title-text-separator--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$multiple-file-upload}__title-text-separator--MarginBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$multiple-file-upload}__title-text-separator--Color: var(--pf-t--global--text--color--regular);
@@ -69,7 +67,6 @@
   // TODO replace with icon size token when available
   --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display: inline;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginBlockStart: 0;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--heading--xs);
@@ -128,11 +125,14 @@
     --#{$multiple-file-upload}__title-icon--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-icon--FontSize);
     --#{$multiple-file-upload}__title-text--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-text--FontSize);
     --#{$multiple-file-upload}__title-text-separator--FontFamily: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily);
-    --#{$multiple-file-upload}__title-text-separator--Display: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--Display);
     --#{$multiple-file-upload}__title-text-separator--MarginBlockStart: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginBlockStart);
     --#{$multiple-file-upload}__title-text-separator--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize);
     --#{$multiple-file-upload}__title-text-separator--FontWeight: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight);
     --#{$multiple-file-upload}__info--MarginBlockStart: var(--#{$multiple-file-upload}--m-horizontal__info--MarginBlockStart);
+
+    .#{$multiple-file-upload}__title-text-separator {
+      display: inline;
+    }
   }
 
   &.pf-m-drag-over {
@@ -158,7 +158,7 @@
 }
 
 .#{$multiple-file-upload}__title {
-  display: var(--#{$multiple-file-upload}__title--Display);
+  display: grid;
   grid-area: title;
   grid-template-columns: var(--#{$multiple-file-upload}__title--GridTemplateColumns);
   gap: var(--#{$multiple-file-upload}__title--Gap);
@@ -177,7 +177,7 @@
 }
 
 .#{$multiple-file-upload}__title-text-separator {
-  display: var(--#{$multiple-file-upload}__title-text-separator--Display);
+  display: block;
   margin-block-start: var(--#{$multiple-file-upload}__title-text-separator--MarginBlockStart);
   margin-block-end: var(--#{$multiple-file-upload}__title-text-separator--MarginBlockEnd);
   font-family: var(--#{$multiple-file-upload}__title-text-separator--FontFamily);

@@ -21,9 +21,6 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$tree-view}__node--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
 
-  // Container
-  --#{$tree-view}__node-container--Display: contents;
-
   // Node content
   --#{$tree-view}__node-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$tree-view}__node-content--Overflow: visible;
@@ -139,8 +136,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd: calc(var(--#{$tree-view}__node-toggle--PaddingInlineStart) * -.5);
   --#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart: calc(var(--#{$tree-view}__node-toggle--PaddingInlineStart) * -1.5);
 
-  // Node container
-  --#{$tree-view}--m-compact__node-container--Display: flex;
+  // * Node container
   --#{$tree-view}--m-compact__node-container--PaddingBlockEnd--base: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -168,6 +164,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact--m-no-background__node--before--InsetBlockStart: calc(var(--#{$tree-view}--m-compact__node-container--nested--PaddingBlockStart) + var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) + #{pf-size-prem(4px)});
 }
 
+// - Tree view
 .#{$tree-view} {
   &.pf-m-compact,
   &.pf-m-guides {
@@ -220,9 +217,16 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node--Color: var(--#{$tree-view}--m-compact__node--Color);
     --#{$tree-view}__node--PaddingBlockStart: var(--#{$tree-view}--m-compact__node--PaddingBlockStart);
     --#{$tree-view}__node--PaddingBlockEnd: var(--#{$tree-view}--m-compact__node--PaddingBlockEnd);
-    --#{$tree-view}__node-container--Display: var(--#{$tree-view}--m-compact__node-container--Display);
     --#{$tree-view}__node--hover--BackgroundColor: transparent;
     --#{$tree-view}__list-item__list-item__node-toggle--InsetBlockStart: var(--#{$tree-view}--m-compact__list-item__list-item__node-toggle--InsetBlockStart);
+
+    .#{$tree-view}__node-container {
+      display: flex;
+      padding-block-start: var(--#{$tree-view}--m-compact__node-container--PaddingBlockStart);
+      padding-block-end: var(--#{$tree-view}--m-compact__node-container--PaddingBlockEnd);
+      padding-inline-start: var(--#{$tree-view}--m-compact__node-container--PaddingInlineStart);
+      padding-inline-end: var(--#{$tree-view}--m-compact__node-container--PaddingInlineEnd);
+    }
 
     // Level 1
     .#{$tree-view}__list-item {
@@ -283,13 +287,6 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         }
         // stylelint-enable
       }
-    }
-
-    .#{$tree-view}__node-container {
-      padding-block-start: var(--#{$tree-view}--m-compact__node-container--PaddingBlockStart);
-      padding-block-end: var(--#{$tree-view}--m-compact__node-container--PaddingBlockEnd);
-      padding-inline-start: var(--#{$tree-view}--m-compact__node-container--PaddingInlineStart);
-      padding-inline-end: var(--#{$tree-view}--m-compact__node-container--PaddingInlineEnd);
     }
 
     // stylelint-disable selector-max-class, selector-max-compound-selectors
@@ -377,7 +374,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 }
 
 .#{$tree-view}__node-container {
-  display: var(--#{$tree-view}__node-container--Display);
+  display: contents;
   flex-grow: 1;
   border-radius: var(--#{$tree-view}--m-compact__node-container--BorderRadius);
 }
