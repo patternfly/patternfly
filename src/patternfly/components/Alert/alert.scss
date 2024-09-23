@@ -22,7 +22,7 @@
   --#{$alert}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--control--vertical--default));
   --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--control--vertical--default));
   --#{$alert}__toggle--MarginInlineStart: calc(-1 * var(--pf-t--global--spacer--action--horizontal--plain--default));
-  --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
   --#{$alert}__toggle-icon--Rotate: 0;
