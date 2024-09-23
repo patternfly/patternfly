@@ -2836,10 +2836,10 @@
   dependencies:
     "@octokit/openapi-types" "^20.0.0"
 
-"@patternfly/ast-helpers@^1.4.0-alpha.89":
-  version "1.4.0-alpha.89"
-  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.4.0-alpha.89.tgz#6cadd7a9327c2bbd38b78ae932195ee4df6a7177"
-  integrity sha512-nHDy9NmFwEFA9GsZxE91WQXFkWRahlAxQGb6aA/OtjSz/1wuUm1AGKKjMsI92mRKftrj4ogfMRXq/KvIzTmbtQ==
+"@patternfly/ast-helpers@^1.4.0-alpha.91":
+  version "1.4.0-alpha.91"
+  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.4.0-alpha.91.tgz#eafd39ae122fa24112562816bc9f7189019bbddc"
+  integrity sha512-r8h/sr/oSmf4ODNtUzuA9d/9m539rqXpbUzcyQJYOv2LFujJnLDmvY4RcVmImshgvpLPrJBSi0/8TVjFpDkidg==
   dependencies:
     acorn "^8.4.1"
     acorn-class-fields "^1.0.0"
@@ -2847,16 +2847,16 @@
     acorn-static-class-features "^1.0.0"
     astring "^1.7.5"
 
-"@patternfly/documentation-framework@6.0.0-alpha.100":
-  version "6.0.0-alpha.100"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.100.tgz#7fabacf077e270c135ddfccefefb7c2284e7bf16"
-  integrity sha512-5AQw2prM2Jo3M+CzOAgQHCHZ9C3/aonTxCWd7hM5DqqaKuoNyFe8LcDA4PF9EfYhwKnPCM6qbdc07jYelM2Awg==
+"@patternfly/documentation-framework@6.0.0-alpha.102":
+  version "6.0.0-alpha.102"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.102.tgz#29e67ee46a99cf7576009dc0436932e3266ad87a"
+  integrity sha512-VJ5JRk16X0NyktRDy5fWmgv6aLMUcuhzMtV+WmXv/N1Ms/71hogpSuVv2vfCD8fmfIBK42S9Ywht01VTbAFo7A==
   dependencies:
     "@babel/core" "^7.24.3"
     "@babel/preset-env" "^7.24.3"
     "@babel/preset-react" "^7.24.1"
     "@mdx-js/util" "1.6.16"
-    "@patternfly/ast-helpers" "^1.4.0-alpha.89"
+    "@patternfly/ast-helpers" "^1.4.0-alpha.91"
     "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer "9.8.6"
     babel-loader "^9.1.3"
@@ -2868,7 +2868,7 @@
     copy-webpack-plugin "11.0.0"
     css-loader "6.7.3"
     detab "2.0.3"
-    express "4.20.0"
+    express "4.21.0"
     file-loader "6.2.0"
     file-saver "1.3.8"
     fs-extra "9.0.1"
@@ -2953,18 +2953,6 @@
     react-dropzone "^14.2.3"
     tslib "^2.7.0"
 
-"@patternfly/react-core@^6.0.0-prerelease.11":
-  version "6.0.0-prerelease.11"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.11.tgz#012401b50e7e135602fa85452f5df824ab179e3e"
-  integrity sha512-aJqHif6IVbzqIDBeH5mo+3YTlvaXZLiXtVcmrHAV1pEVYLsAOMSrYZNJy2hD2rNj+u/wv5WDa3YGq/wDr+2zTA==
-  dependencies:
-    "@patternfly/react-icons" "^6.0.0-prerelease.4"
-    "@patternfly/react-styles" "^6.0.0-prerelease.3"
-    "@patternfly/react-tokens" "^6.0.0-prerelease.3"
-    focus-trap "7.6.0"
-    react-dropzone "^14.2.3"
-    tslib "^2.7.0"
-
 "@patternfly/react-icons@^6.0.0-prerelease.4":
   version "6.0.0-prerelease.4"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-prerelease.4.tgz#21ddc2a6c66adb6d4160e043a167d750841a8af0"
@@ -2986,11 +2974,6 @@
     "@patternfly/react-tokens" "^6.0.0-prerelease.4"
     lodash "^4.17.21"
     tslib "^2.7.0"
-
-"@patternfly/react-tokens@^6.0.0-prerelease.3":
-  version "6.0.0-prerelease.3"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.0.0-prerelease.3.tgz#a7ea927327d3e1db6c27951e4a6f80df653d2c0f"
-  integrity sha512-PViDVUIODaS/JNiF8zFo0f/uXvZn4Ch6atMKDdgtUGMqIWX0jPYwwwNeDbzyfBkQNxQt21KSgsnY4d3w+/Yasw==
 
 "@patternfly/react-tokens@^6.0.0-prerelease.4":
   version "6.0.0-prerelease.4"
@@ -7575,10 +7558,10 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
-express@4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.20.0.tgz#f1d08e591fcec770c07be4767af8eb9bcfd67c48"
-  integrity sha512-pLdae7I6QqShF5PnNTCVn4hI91Dx0Grkn2+IAsMTgMIKuQVte2dN9PeGSSAME2FR8anOhVA62QDIUaWVfEXVLw==
+express@4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/express/-/express-4.21.0.tgz#d57cb706d49623d4ac27833f1cbc466b668eb915"
+  integrity sha512-VqcNGcj/Id5ZT1LZ/cfihi3ttTn+NJmkli2eZADigjq29qTlWi/hAQ43t/VLPq8+UX06FCEx3ByOYet6ZFblng==
   dependencies:
     accepts "~1.3.8"
     array-flatten "1.1.1"
@@ -7592,7 +7575,7 @@ express@4.20.0:
     encodeurl "~2.0.0"
     escape-html "~1.0.3"
     etag "~1.8.1"
-    finalhandler "1.2.0"
+    finalhandler "1.3.1"
     fresh "0.5.2"
     http-errors "2.0.0"
     merge-descriptors "1.0.3"
@@ -7601,11 +7584,11 @@ express@4.20.0:
     parseurl "~1.3.3"
     path-to-regexp "0.1.10"
     proxy-addr "~2.0.7"
-    qs "6.11.0"
+    qs "6.13.0"
     range-parser "~1.2.1"
     safe-buffer "5.2.1"
     send "0.19.0"
-    serve-static "1.16.0"
+    serve-static "1.16.2"
     setprototypeof "1.2.0"
     statuses "2.0.1"
     type-is "~1.6.18"
@@ -7900,6 +7883,19 @@ finalhandler@1.2.0:
   dependencies:
     debug "2.6.9"
     encodeurl "~1.0.2"
+    escape-html "~1.0.3"
+    on-finished "2.4.1"
+    parseurl "~1.3.3"
+    statuses "2.0.1"
+    unpipe "~1.0.0"
+
+finalhandler@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.3.1.tgz#0c575f1d1d324ddd1da35ad7ece3df7d19088019"
+  integrity sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==
+  dependencies:
+    debug "2.6.9"
+    encodeurl "~2.0.0"
     escape-html "~1.0.3"
     on-finished "2.4.1"
     parseurl "~1.3.3"
@@ -14110,13 +14106,6 @@ qs@6.10.3:
   dependencies:
     side-channel "^1.0.4"
 
-qs@6.11.0:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.0.tgz#fd0d963446f7a65e1367e01abd85429453f0c37a"
-  integrity sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==
-  dependencies:
-    side-channel "^1.0.4"
-
 qs@6.13.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.13.0.tgz#6ca3bd58439f7e245655798997787b0d88a51906"
@@ -15203,15 +15192,15 @@ serve-static@1.15.0:
     parseurl "~1.3.3"
     send "0.18.0"
 
-serve-static@1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.16.0.tgz#2bf4ed49f8af311b519c46f272bf6ac3baf38a92"
-  integrity sha512-pDLK8zwl2eKaYrs8mrPZBJua4hMplRWJ1tIFksVC3FtBEBnl8dxgeHtsaMS8DhS9i4fLObaon6ABoc4/hQGdPA==
+serve-static@1.16.2:
+  version "1.16.2"
+  resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.16.2.tgz#b6a5343da47f6bdd2673848bf45754941e803296"
+  integrity sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==
   dependencies:
-    encodeurl "~1.0.2"
+    encodeurl "~2.0.0"
     escape-html "~1.0.3"
     parseurl "~1.3.3"
-    send "0.18.0"
+    send "0.19.0"
 
 set-blocking@^2.0.0:
   version "2.0.0"
