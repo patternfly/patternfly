@@ -506,9 +506,13 @@
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
 
-  .#{$avatar} {
-    margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
-    margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) * -1);
+  &.pf-m-avatar {
+    .#{$avatar},
+    img,
+    svg {
+      margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
+      margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) * -1);
+    }
   }
 }
 
