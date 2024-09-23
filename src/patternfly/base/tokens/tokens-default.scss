@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Wed, 18 Sep 2024 19:59:37 GMT
+// Generated on Mon, 23 Sep 2024 22:48:17 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
@@ -15,33 +15,33 @@
   --pf-t--global--border--width--100: 1px;
   --pf-t--global--border--width--200: 2px;
   --pf-t--global--border--width--300: 3px;
-  --pf-t--global--box-shadow--X--100: -8px;
+  --pf-t--global--box-shadow--X--100: -10px;
   --pf-t--global--box-shadow--X--200: -4px;
   --pf-t--global--box-shadow--X--300: -1px;
   --pf-t--global--box-shadow--X--400: 0px;
-  --pf-t--global--box-shadow--X--50: -24px;
+  --pf-t--global--box-shadow--X--50: -20px;
   --pf-t--global--box-shadow--X--500: 1px;
   --pf-t--global--box-shadow--X--600: 4px;
-  --pf-t--global--box-shadow--X--700: 8px;
-  --pf-t--global--box-shadow--X--800: 24px;
-  --pf-t--global--box-shadow--Y--100: -8px;
+  --pf-t--global--box-shadow--X--700: 10px;
+  --pf-t--global--box-shadow--X--800: 20px;
+  --pf-t--global--box-shadow--Y--100: -10px;
   --pf-t--global--box-shadow--Y--200: -4px;
   --pf-t--global--box-shadow--Y--300: -1px;
   --pf-t--global--box-shadow--Y--400: 0px;
-  --pf-t--global--box-shadow--Y--50: -24px;
+  --pf-t--global--box-shadow--Y--50: -20px;
   --pf-t--global--box-shadow--Y--500: 1px;
   --pf-t--global--box-shadow--Y--600: 4px;
-  --pf-t--global--box-shadow--Y--700: 8px;
-  --pf-t--global--box-shadow--Y--800: 24px;
-  --pf-t--global--box-shadow--blur--100: 6px;
-  --pf-t--global--box-shadow--blur--200: 8px;
-  --pf-t--global--box-shadow--blur--300: 24px;
-  --pf-t--global--box-shadow--color--100: rgba(0, 0, 0, 0.1600);
-  --pf-t--global--box-shadow--color--200: rgba(0, 0, 0, 0.1200);
+  --pf-t--global--box-shadow--Y--700: 10px;
+  --pf-t--global--box-shadow--Y--800: 20px;
+  --pf-t--global--box-shadow--blur--100: 4px;
+  --pf-t--global--box-shadow--blur--200: 9px;
+  --pf-t--global--box-shadow--blur--300: 20px;
+  --pf-t--global--box-shadow--color--100: rgba(41, 41, 41, 0.1500);
+  --pf-t--global--box-shadow--color--200: rgba(41, 41, 41, 0.2000);
   --pf-t--global--box-shadow--spread--100: 0px;
   --pf-t--global--box-shadow--spread--200: -4px;
-  --pf-t--global--box-shadow--spread--300: -6px;
-  --pf-t--global--box-shadow--spread--400: -16px;
+  --pf-t--global--box-shadow--spread--300: -8px;
+  --pf-t--global--box-shadow--spread--400: -20px;
   --pf-t--global--breakpoint--100: 0rem;
   --pf-t--global--breakpoint--200: 36rem;
   --pf-t--global--breakpoint--250: 40rem;
@@ -110,11 +110,13 @@
   --pf-t--global--background--color--200: var(--pf-t--color--gray--10);
   --pf-t--global--background--color--300: var(--pf-t--color--gray--20);
   --pf-t--global--background--color--400: var(--pf-t--color--gray--80);
+  --pf-t--global--background--color--450: var(--pf-t--color--gray--70);
   --pf-t--global--background--color--action--plain--clicked: var(--pf-t--global--background--color--600);
   --pf-t--global--background--color--action--plain--hover: var(--pf-t--global--background--color--600);
   --pf-t--global--background--color--backdrop--default: var(--pf-t--global--background--color--500);
   --pf-t--global--background--color--highlight--100: var(--pf-t--color--yellow--30);
   --pf-t--global--background--color--highlight--200: var(--pf-t--color--yellow--40);
+  --pf-t--global--background--color--tertiary--default: var(--pf-t--global--background--color--600);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
   --pf-t--global--border--color--200: var(--pf-t--color--gray--40);
   --pf-t--global--border--color--300: var(--pf-t--color--gray--50);
@@ -175,24 +177,18 @@
   --pf-t--global--box-shadow--blur--lg: var(--pf-t--global--box-shadow--blur--300);
   --pf-t--global--box-shadow--blur--md: var(--pf-t--global--box-shadow--blur--200);
   --pf-t--global--box-shadow--blur--sm: var(--pf-t--global--box-shadow--blur--100);
-  --pf-t--global--box-shadow--color--lg: var(--pf-t--global--box-shadow--color--200);
-  --pf-t--global--box-shadow--color--md: var(--pf-t--global--box-shadow--color--200);
-  --pf-t--global--box-shadow--color--sm: var(--pf-t--global--box-shadow--color--100);
-  --pf-t--global--box-shadow--spread--lg--bottom: var(--pf-t--global--box-shadow--spread--400);
+  --pf-t--global--box-shadow--color--lg--default: var(--pf-t--global--box-shadow--color--100);
+  --pf-t--global--box-shadow--color--lg--directional: var(--pf-t--global--box-shadow--color--200);
+  --pf-t--global--box-shadow--color--md--default: var(--pf-t--global--box-shadow--color--100);
+  --pf-t--global--box-shadow--color--md--directional: var(--pf-t--global--box-shadow--color--100);
+  --pf-t--global--box-shadow--color--sm--default: var(--pf-t--global--box-shadow--color--100);
+  --pf-t--global--box-shadow--color--sm--directional: var(--pf-t--global--box-shadow--color--200);
   --pf-t--global--box-shadow--spread--lg--default: var(--pf-t--global--box-shadow--spread--100);
-  --pf-t--global--box-shadow--spread--lg--left: var(--pf-t--global--box-shadow--spread--400);
-  --pf-t--global--box-shadow--spread--lg--right: var(--pf-t--global--box-shadow--spread--400);
-  --pf-t--global--box-shadow--spread--lg--top: var(--pf-t--global--box-shadow--spread--400);
-  --pf-t--global--box-shadow--spread--md--bottom: var(--pf-t--global--box-shadow--spread--300);
+  --pf-t--global--box-shadow--spread--lg--directional: var(--pf-t--global--box-shadow--spread--400);
   --pf-t--global--box-shadow--spread--md--default: var(--pf-t--global--box-shadow--spread--100);
-  --pf-t--global--box-shadow--spread--md--left: var(--pf-t--global--box-shadow--spread--300);
-  --pf-t--global--box-shadow--spread--md--right: var(--pf-t--global--box-shadow--spread--300);
-  --pf-t--global--box-shadow--spread--md--top: var(--pf-t--global--box-shadow--spread--300);
-  --pf-t--global--box-shadow--spread--sm--bottom: var(--pf-t--global--box-shadow--spread--200);
+  --pf-t--global--box-shadow--spread--md--directional: var(--pf-t--global--box-shadow--spread--300);
   --pf-t--global--box-shadow--spread--sm--default: var(--pf-t--global--box-shadow--spread--100);
-  --pf-t--global--box-shadow--spread--sm--left: var(--pf-t--global--box-shadow--spread--200);
-  --pf-t--global--box-shadow--spread--sm--right: var(--pf-t--global--box-shadow--spread--200);
-  --pf-t--global--box-shadow--spread--sm--top: var(--pf-t--global--box-shadow--spread--200);
+  --pf-t--global--box-shadow--spread--sm--directional: var(--pf-t--global--box-shadow--spread--200);
   --pf-t--global--breakpoint--2xl: var(--pf-t--global--breakpoint--600);
   --pf-t--global--breakpoint--height--2xl: var(--pf-t--global--breakpoint--550);
   --pf-t--global--breakpoint--height--lg: var(--pf-t--global--breakpoint--300);
@@ -339,7 +335,9 @@
   --pf-t--global--background--color--floating--hover: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--highlight--clicked: var(--pf-t--global--background--color--highlight--200);
   --pf-t--global--background--color--highlight--default: var(--pf-t--global--background--color--highlight--100);
+  --pf-t--global--background--color--inverse--clicked: var(--pf-t--global--background--color--450);
   --pf-t--global--background--color--inverse--default: var(--pf-t--global--background--color--400);
+  --pf-t--global--background--color--inverse--hover: var(--pf-t--global--background--color--450);
   --pf-t--global--background--color--primary--clicked: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--primary--default: var(--pf-t--global--background--color--100);
   --pf-t--global--background--color--primary--hover: var(--pf-t--global--background--color--200);
