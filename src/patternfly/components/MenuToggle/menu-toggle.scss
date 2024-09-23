@@ -496,7 +496,6 @@
 }
 
 // - Menu toggle controls - Menu toggle icon
-.#{$menu-toggle}__icon,
 .#{$menu-toggle}__controls,
 .#{$menu-toggle}__toggle-icon {
   display: flex;
@@ -507,10 +506,9 @@
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
 
-  &.pf-m-avatar {
-    align-items: center;
-    margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) / 2 * -1);
-    margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) / 2 * -1);
+  .#{$avatar} {
+    margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
+    margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) * -1);
   }
 }
 
