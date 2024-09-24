@@ -21,6 +21,7 @@
   // Toggle
   --#{$alert}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--control--vertical--default));
   --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--control--vertical--default));
+  --#{$alert}__toggle--MarginInlineStart: calc(-1 * var(--pf-t--global--spacer--action--horizontal--plain--default));
   --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
@@ -179,6 +180,7 @@
 .#{$alert}__toggle {
   margin-block-start: var(--#{$alert}__toggle--MarginBlockStart);
   margin-block-end: var(--#{$alert}__toggle--MarginBlockEnd);
+  margin-inline-start: var(--#{$alert}__toggle--MarginInlineStart);
   margin-inline-end: var(--#{$alert}__toggle--MarginInlineEnd);
 }
 
@@ -191,9 +193,7 @@
 }
 
 .#{$alert}__icon {
-  display: flex;
   grid-area: icon;
-  margin-block-start: var(--#{$alert}__icon--MarginBlockStart);
   margin-inline-end: var(--#{$alert}__icon--MarginInlineEnd);
   font-size: var(--#{$alert}__icon--FontSize);
   color: var(--#{$alert}__icon--Color);
@@ -225,11 +225,6 @@
   margin-block-start: var(--#{$alert}__action--MarginBlockStart);
   margin-block-end: var(--#{$alert}__action--MarginBlockEnd);
   margin-inline-end: var(--#{$alert}__action--MarginInlineEnd);
-  transform: translateY(var(--#{$alert}__action--TranslateY));
-
-  > .#{$button} {
-    --#{$button}--LineHeight: 1;
-  }
 }
 
 .#{$alert}__action-group {
