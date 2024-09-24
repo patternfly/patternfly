@@ -109,8 +109,8 @@
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
 
   // * Table grid expandable row content
-  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: 0;
-  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: 0;
+  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table check

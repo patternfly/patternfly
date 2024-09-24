@@ -23,8 +23,8 @@
       {{ternary table-tr--IsHidden 'hidden' null}}
     {{/unless}}
   {{/if}}
-  {{ternary table--IsGrid 'role="row"' null}}
-  {{ternary table-tr--IsClickable 'tabindex="0"' null}}
+  {{{ternary table--IsGrid 'role="row"'}}}
+  {{{ternary table-tr--IsClickable 'tabindex="0"'}}}
   {{#if table-tr--attribute}}
     {{{table-tr--attribute}}}
   {{/if}}>

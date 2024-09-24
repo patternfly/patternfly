@@ -34,8 +34,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$table}--cell--PaddingBlock--base: calc(var(--pf-t--global--spacer--sm) * 2); // use spacer-sm * 2 to align with --pf-t--global--spacer--control--vertical--default
   --#{$table}--cell--PaddingInline--base: var(--pf-t--global--spacer--md);
   --#{$table}--cell--PaddingBlockStart: var(--#{$table}--cell--PaddingBlock--base);
-  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--cell--PaddingBlock--base);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--cell--PaddingInline--base);
+  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--cell--PaddingBlock--base);
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}--cell--PaddingInline--base);
   --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body--default);
@@ -43,12 +43,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
   --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart: var(--#{$table}--cell--PaddingInline--base);
-
-  // * Table cell action
-  --#{$table}--cell--action--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
-  --#{$table}--cell--action--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
-  --#{$table}--cell--action--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
-  --#{$table}--cell--action--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
 
   // * Table cell - default variables
   --#{$table}--cell--MinWidth: 0;
@@ -104,6 +98,12 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // * Table ghost row
   --#{$table}__tr--m-ghost-row--Opacity: .4;
   --#{$table}__tr--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+
+  // * Table cell action
+  --#{$table}--cell--action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--action--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -419,6 +419,17 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
       color: var(--#{$table}__subhead--Color);
     }
+
+    // Table action - Table favorite - Table inline edit action - Table sort - Table toggle - Table draggable
+    .#{$table}__action,
+    .#{$table}__favorite,
+    .#{$table}__inline-edit-action,
+    .#{$table}__sort,
+    .#{$table}__toggle,
+    .#{$table}__draggable {
+      padding-block-start: 0;
+      padding-block-end: var(--#{$table}--cell--action--PaddingBlockEnd);
+    }
   }
 
   // - Table tbody
@@ -426,6 +437,17 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   tbody:where(.#{$table}__tbody) {
     > tr:where(.#{$table}__tr) > :where(th, td) {
       overflow-wrap: break-word;
+    }
+
+    // Table action - Table favorite - Table inline edit action - Table sort - Table toggle - Table draggable
+    .#{$table}__action,
+    .#{$table}__favorite,
+    .#{$table}__inline-edit-action,
+    .#{$table}__sort,
+    .#{$table}__toggle,
+    .#{$table}__draggable {
+      padding-block-start: var(--#{$table}--cell--action--PaddingBlockStart);
+      padding-block-end: 0;
     }
   }
   // stylelint-enable
@@ -696,7 +718,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 }
 
-// stylelint-disable
 // - Table check - Table toggle - Table action - Table favorite - Table inline-edit-action - Table draggable
 .#{$table} .#{$table}__check,
 .#{$table} .#{$table}__toggle,
@@ -709,8 +730,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-inline-start: var(--#{$table}--cell--action--PaddingInlineStart);
   padding-inline-end: var(--#{$table}--cell--action--PaddingInlineEnd);
 }
-// stylelint-enable
 
+// - Table favorite
 .#{$table} .#{$table}__favorite {
   --#{$table}--cell--MaxWidth: auto;
 }
@@ -774,14 +795,16 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$table}__action,
 .#{$table}__favorite,
 .#{$table}__inline-edit-action,
+.#{$table}__draggable,
 .#{$table}__sort,
-.#{$table}__toggle,
-.#{$table}__draggable {
+.#{$table}__toggle {
+  // set tbody actionable cells padding-block-start to zero, as negative margins impact row height
   .#{$table}__thead & {
     padding-block-start: 0;
     padding-block-end: var(--#{$table}--cell--action--PaddingBlockEnd);
   }
 
+  // set tbody actionable cells padding-block-start to zero, as negative margins impact row height
   .#{$table}__tbody & {
     padding-block-start: var(--#{$table}--cell--action--PaddingBlockStart);
     padding-block-end: 0;
@@ -967,6 +990,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$table}.pf-m-compact {
   --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact--cell--PaddingBlockStart);
   --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact--cell--PaddingBlockEnd);
+  --#{$table}--cell--action--PaddingBlockStart: var(--#{$table}--m-compact--cell--action--PaddingBlockStart);
+  --#{$table}--cell--action--PaddingBlockEnd: var(--#{$table}--m-compact--cell--action--PaddingBlockEnd);
 
   // - Table compact table tr
   tr:where(.#{$table}__tr) {
@@ -983,14 +1008,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__th--PaddingBlockStart);
       --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__th--PaddingBlockEnd);
     }
-  }
-
-  .#{$table}__action,
-  .#{$table}__favorite,
-  .#{$table}__toggle,
-  .#{$table}__draggable {
-    --#{$table}--cell--action--PaddingBlockStart: var(--#{$table}--m-compact--cell--action--PaddingBlockStart);
-    --#{$table}--cell--action--PaddingBlockEnd: var(--#{$table}--m-compact--cell--action--PaddingBlockEnd);
   }
 
   .#{$table}__icon {
@@ -1010,7 +1027,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // - Table button
   .#{$table}__button {
-    margin-block-start: var(--#{$table}--cell--action--PaddingBlockStart); // this has no effect unless standard table are not present in the tr
+    margin-block-start: var(--#{$table}--cell--action--PaddingBlockStart); // this has no effect unless standard table cells are not present in the tr
   }
 
   // - Table nested column header button
@@ -1031,7 +1048,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // - Table button
   .#{$table}__button {
-    margin-block-end: var(--#{$table}--cell--action--PaddingBlockEnd); // this has no effect unless standard table are not present in the tr
+    margin-block-end: var(--#{$table}--cell--action--PaddingBlockEnd); // this has no effect unless standard table cells are not present in the tr
   }
 
   // TODO: make this a class `compound expansion content`
@@ -1040,20 +1057,14 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 }
 
-// - Table thead - Table tbody
-.#{$table} {
-  .#{$table}__thead,
-  .#{$table}__tbody {
-    line-height: var(--pf-v6-c-table--LineHeight);
-  }
-}
-
-.#{$table}__column-help-action {
-  .#{$button},
-  .#{$menu-toggle},
-  .#{$table}__button {
-    line-height: var(--pf-v6-c-table--LineHeight);
-  }
+// - Table - Table thead - Table tbody - Table column help action button - Table column help action menu-toggle - Table column help action table button
+.#{$table},
+.#{$table} .#{$table}__thead,
+.#{$table} .#{$table}__tbody,
+.#{$table}__column-help-action .#{$button},
+.#{$table}__column-help-action .#{$menu-toggle},
+.#{$table}__column-help-action .#{$table}__button {
+  line-height: var(--pf-v6-c-table--LineHeight);
 }
 
 // Table table tbody expandable
