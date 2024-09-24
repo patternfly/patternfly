@@ -94,9 +94,12 @@
   // * Table td responsive
   --#{$table}-td--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
   --#{$table}--cell--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$table}--cell--responsive--PaddingInlineEnd: 0;
-  --#{$table}--cell--responsive--PaddingInlineStart: 0;
+  --#{$table}--cell--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$table}--cell--responsive--PaddingInlineStart: var(--pf-t--global--spacer--md);
+
+  --#{$table}--cell--action--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--action--responsive--PaddingBlockEnd: 0;
 
   // * Table grid compact table
   --#{$table}--m-compact__tr--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -154,11 +157,6 @@
     overflow: visible;
     text-overflow: clip;
     white-space: normal;
-
-    &.#{$table}__check {
-      margin-inline-start: var(--#{$table}__check--responsive--MarginInlineStart);
-      padding-block-start: var(--#{$table}__check--responsive--PaddingBlockStart);
-    }
   }
 
 
@@ -233,6 +231,15 @@
       padding-inline-end: var(--#{$table}--cell--responsive--PaddingInlineEnd);
       padding-block-end: var(--#{$table}--cell--responsive--PaddingBlockEnd);
       padding-inline-start: var(--#{$table}--cell--responsive--PaddingInlineStart);
+    }
+
+    .#{$table}__action,
+    .#{$table}__favorite,
+    .#{$table}__inline-edit-action,
+    .#{$table}__draggable,
+    .#{$table}__sort,
+    .#{$table}__toggle {
+      padding-block-start: var(--#{$table}--cell--action--responsive--PaddingBlockStart);
     }
   }
 
@@ -476,13 +483,10 @@
     grid-column-start: 2;
   }
 
-  .#{$table}__action,
-  .#{$table}__favorite {
-    margin-block-start: calc(var(--#{$table}--cell--action--PaddingBlockStart) * -1);
-  }
-
   // - Table grid check
   .#{$table}__check {
+    margin-inline-start: var(--#{$table}__check--responsive--MarginInlineStart);
+    padding-block-start: var(--#{$table}__check--responsive--PaddingBlockStart);
     line-height: 1;
 
     ~ .#{$table}__favorite {

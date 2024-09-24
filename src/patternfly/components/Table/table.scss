@@ -21,8 +21,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // * Table thead cell
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$table}__thead--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm); // use spacer-sm to align with --pf-t--global--spacer--control--vertical--default
-  --#{$table}__thead--cell--PaddingBlockEnd: var(--pf-t--global--spacer--sm); // use spacer-sm to align with --pf-t--global--spacer--control--vertical--default
 
   // * Table tr
   --#{$table}__tr--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -169,6 +167,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // * Table compact cell action
   --#{$table}--m-compact--cell--action--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact--cell--action--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--control--horizontal--spacious);
 
   // * Table expandable row expanded
   --#{$table}__expandable-row--m-expanded--BorderBlockEndColor: var(--pf-t--global--border--color--default);
@@ -304,6 +303,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     }
   }
 
+  // TODO: remove :where, target .#{$table}__th and .#{$table}__td
   // - Table th - Table td
   tr:where(.#{$table}__tr) > :where(th, td) {
     @include pf-v6-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
@@ -326,16 +326,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
-
-    // First child padding left
-    &:first-child {
-      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
-    }
-
-    // First child padding right
-    &:last-child {
-      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
-    }
 
     &.pf-m-center {
       text-align: center;
@@ -563,9 +553,16 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     }
   }
 
-  .#{$button} .#{$table}__sort-indicator {
-    --#{$table}__sort-indicator--MarginInlineStart: 0;
+  .#{$button} {
+    .#{$button}__icon {
+      line-height: inherit;
+    }
+
+    .#{$table}__sort-indicator {
+      --#{$table}__sort-indicator--MarginInlineStart: 0;
+    }
   }
+
 }
 
 // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
@@ -950,9 +947,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   th:where(.#{$table}__th) {
     &.pf-m-no-padding {
       padding-block-start: 0;
-      padding-block-end: 0;
       padding-inline-start: 0;
       padding-inline-end: 0;
+      // padding-block-end: 0; // retain bottom padding
 
       .#{$table}__expandable-row-content {
         padding: 0;
@@ -992,6 +989,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact--cell--PaddingBlockEnd);
   --#{$table}--cell--action--PaddingBlockStart: var(--#{$table}--m-compact--cell--action--PaddingBlockStart);
   --#{$table}--cell--action--PaddingBlockEnd: var(--#{$table}--m-compact--cell--action--PaddingBlockEnd);
+  --#{$table}--cell--first-last-child--PaddingInline: var(--#{$table}--m-compact--cell--first-last-child--PaddingInline);
 
   // - Table compact table tr
   tr:where(.#{$table}__tr) {
@@ -1116,6 +1114,16 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // - Table th - Table td
 .#{$table}__th,
 .#{$table}__td {
+  // first last child padding inline
+  &:first-child {
+    padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
+  }
+
+  // first last child padding inline
+  &:last-child {
+    padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
+  }
+
   // - Table th inset - Table td inset
   @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
     &.pf-m-inset-#{$inset} {
