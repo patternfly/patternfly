@@ -6,6 +6,22 @@
   *::before,
   *::after {
     box-sizing: border-box;
+    scrollbar-color: var(--pf-t--global--border--color--default) transparent;
+  }
+    
+  // styling scrollbar color in Safari requires setting max-width and max-height
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--pf-t--global--border--color--default);
+    border-radius: var(--pf-t--global--spacer--xs);
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar {
+    max-width: var(--pf-t--global--spacer--sm);
+    max-height: var(--pf-t--global--spacer--sm);
   }
 
   :where(
