@@ -14,8 +14,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$table}__caption--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__caption--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__caption--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$table}__caption--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$table}__caption--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--md);
 
   // * Table thead cell
@@ -85,10 +85,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // * Table button
-  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
-  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
@@ -327,6 +327,16 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
 
+    // First child padding left
+    &:first-child {
+      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
+    }
+
+    // First child padding right
+    &:last-child {
+      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
+    }
+
     &.pf-m-center {
       text-align: center;
     }
@@ -413,8 +423,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // - Table tbody
   // stylelint-disable
-  tbody:where(.#{$table}__tbody) > tr:where(.#{$table}__tr) > :where(th, td) {
-    overflow-wrap: break-word;
+  tbody:where(.#{$table}__tbody) {
+    > tr:where(.#{$table}__tr) > :where(th, td) {
+      overflow-wrap: break-word;
+    }
   }
   // stylelint-enable
 
@@ -711,6 +723,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     }
   }
 
+
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
 
@@ -738,10 +751,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   &.pf-m-favorited .#{$button} {
-  --#{$button}--m-plain__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+    --#{$button}--m-plain__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
 
-  &:is(:hover, :focus) {
-    --#{$button}--hover__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
+    &:is(:hover, :focus) {
+      --#{$button}--hover__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
     }
   }
 }
@@ -849,10 +862,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // - Table column help action
 .#{$table}__column-help-action {
   margin-inline-start: var(--#{$table}__column-help--MarginInlineStart);
-
-  .#{$button}__icon {
-    display: flex;
-  }
 }
 
 // - Table sort
@@ -1096,16 +1105,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // - Table th - Table td
 .#{$table}__th,
 .#{$table}__td {
-  // First child padding left
-  &:first-child {
-    padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
-  }
-
-  // First child padding right
-  &:last-child {
-    padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
-  }
-
   // - Table th inset - Table td inset
   @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
     &.pf-m-inset-#{$inset} {
@@ -1117,17 +1116,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
         padding-inline-end: #{$inset-value};
       }
     }
-  }
-}
-
-// - Table icon inline
-.#{$table}__icon-inline {
-  display: flex;
-  align-items: center;
-  margin-inline-end: var(--#{$table}__icon-inline--MarginInlineEnd);
-
-  &:last-child {
-    margin-inline-end: 0;
   }
 }
 

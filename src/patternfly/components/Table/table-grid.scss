@@ -95,7 +95,6 @@
   --#{$table}-td--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
   --#{$table}--cell--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$table}--cell--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  // --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--cell--responsive--PaddingInlineEnd: 0;
   --#{$table}--cell--responsive--PaddingInlineStart: 0;
 
@@ -117,7 +116,6 @@
   // * Table check
   --#{$table}__check--responsive--MarginInlineStart: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__check--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  // --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(14px)};
 
   // * Table grid favorite
   --#{$table}--m-grid__check--favorite--MarginInlineStart: var(--pf-t--global--spacer--xl);
@@ -502,8 +500,6 @@
 
   // - Table grid favorite
   .#{$table}__favorite {
-    // margin-block-start: var(--#{$table}--m-grid__favorite--MarginBlockStart);
-
     ~ .#{$table}__action {
       margin-inline-start: var(--#{$table}--m-grid__favorite--action--MarginInlineStart);
     }
