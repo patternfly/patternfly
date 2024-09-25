@@ -215,6 +215,24 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Small
+```hbs
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+```
+
+### Small with text
+```hbs
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Collapsed'}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Expanded' menu-toggle--IsExpanded=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true  menu-toggle--text='Disabled' menu-toggle--IsDisabled=true}}
+```
+
 ### Split toggle with checkbox
 ```hbs
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-example" menu-toggle--IsSplitButton="true"}}
@@ -326,24 +344,6 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
     {{/menu-toggle-controls}}
   {{/menu-toggle-button}}
 {{/menu-toggle}}
-```
-
-### Small
-```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
-&nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
-&nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
-```
-
-### Small with text
-```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Collapsed'}}
-&nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Expanded' menu-toggle--IsExpanded=true}}
-&nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true  menu-toggle--text='Disabled' menu-toggle--IsDisabled=true}}
 ```
 
 ### Split button, primary
