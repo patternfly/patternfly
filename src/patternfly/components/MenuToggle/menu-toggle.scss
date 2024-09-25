@@ -184,7 +184,7 @@
   transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
   transition-duration: var(--#{$menu-toggle}--TransitionDuration);
   transition-property: var(--#{$menu-toggle}--TransitionProperty);
-  
+
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);
@@ -385,12 +385,14 @@
 .#{$menu-toggle}.pf-m-split-button.pf-m-action {
   --#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor: var(--#{$menu-toggle}--BorderColor);
 
+  background-color: transparent;
+
   // all subsequent buttons
   > :not(:first-child) {
     border-inline-start: var(--#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartWidth) solid var(--#{$menu-toggle}--m-split-button--m-action--child--BorderInlineStartColor);
   }
 
-  > :has(.#{$menu-toggle}__controls) {
+  .#{$menu-toggle}__button:has(.#{$menu-toggle}__controls) {
     padding-inline-end: 0;
   }
 
@@ -449,13 +451,13 @@
     --#{$menu-toggle}__button--PaddingInlineEnd: 0;
   }
 
+
   .#{$menu-toggle}__controls {
     --#{$menu-toggle}__button--PaddingInlineEnd: 0;
 
     display: flex;
     align-items: stretch;
   }
-
   .#{$text-input-group} {
     --#{$text-input-group}__utilities--MarginInlineEnd: 0;
 
