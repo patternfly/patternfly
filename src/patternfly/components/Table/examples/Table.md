@@ -826,7 +826,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
   {{/table-tbody}}
 
-  {{#> table-tbody table-tr--index="2" table-tr--IsExpanded=true}}
+  {{#> table-tbody table-tr--index="2" table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsExpanded=true}}
       {{> table-cell-toggle}}
       {{> table-cell-check}}

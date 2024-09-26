@@ -8,6 +8,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 @include pf-root($table) {
   --#{$table}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$table}--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$table}--border-width--base: var(--pf-t--global--border--width--divider--default);
 
   // * Table caption
@@ -949,6 +950,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       padding-block-start: 0;
       padding-inline-start: 0;
       padding-inline-end: 0;
+
       // padding-block-end: 0; // retain bottom padding
 
       .#{$table}__expandable-row-content {
@@ -1059,9 +1061,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$table},
 .#{$table} .#{$table}__thead,
 .#{$table} .#{$table}__tbody,
-.#{$table}__column-help-action .#{$button},
-.#{$table}__column-help-action .#{$menu-toggle},
-.#{$table}__column-help-action .#{$table}__button {
+.#{$table} .#{$button},
+.#{$table} .#{$menu-toggle},
+.#{$table} .#{$table}__button {
   line-height: var(--pf-v6-c-table--LineHeight);
 }
 

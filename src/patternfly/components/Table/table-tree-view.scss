@@ -93,6 +93,7 @@ $pf-v6-c-tree-view--MaxDepth: 10;
   }
 
   > .#{$table}__check {
+    padding-inline-start: 0;
     margin-inline-end: var(--#{$table}__tree-view-main--c-table__check--MarginInlineEnd);
   }
 
@@ -216,12 +217,12 @@ $pf-v6-c-tree-view--MaxDepth: 10;
       --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingBlockStart);
     }
 
-    .#{$table}__action {
-      padding-block-start: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingBlockStart);
-    }
-
-    .#{$table}__tree-view-title-cell ~ .#{$table}__action {
-      --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingBlockStart);
+    .#{$table}__tree-view-title-cell ~ {
+      .#{$table}__th, .#{$table}__td {
+        &:is(&.#{$table}__action, .#{$table}__favorite, .#{$table}__inline-edit-action, .#{$table}__sort, .#{$table}__toggle, .#{$table}__draggable) {
+          padding-block-start: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingBlockStart);
+        }
+      }
     }
   }
 
