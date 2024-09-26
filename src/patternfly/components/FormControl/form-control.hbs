@@ -9,6 +9,7 @@
   {{#if form-control--IsWarning}} pf-m-warning{{/if}}
   {{#if form-control--IsError}} pf-m-error{{/if}}
   {{#if form-control--HasIcon}} pf-m-icon{{/if}}
+  {{#ifEquals controlType "textarea"}} pf-m-textarea{{/ifEquals}}
   {{#if form-control--modifier}} {{form-control--modifier}}{{/if}}
 ">
   {{#ifEquals controlType "select"}}
