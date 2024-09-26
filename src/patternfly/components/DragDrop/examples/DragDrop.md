@@ -1,6 +1,5 @@
 ---
 id: 'Drag and drop'
-beta: true
 section: components
 cssPrefix: pf-v6-c-drag-drop
 ---
