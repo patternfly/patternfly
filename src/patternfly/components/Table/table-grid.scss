@@ -42,7 +42,7 @@
 
   // * Table responsive
   --#{$table}--responsive--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$table}--data-label--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$table}--data-label--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // * Table body
   --#{$table}__tbody--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
