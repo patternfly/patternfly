@@ -2941,7 +2941,7 @@
     react-dropzone "14.2.3"
     tslib "^2.7.0"
 
-"@patternfly/react-core@6.0.0-prerelease.18":
+"@patternfly/react-core@6.0.0-prerelease.18", "@patternfly/react-core@^6.0.0-prerelease.18":
   version "6.0.0-prerelease.18"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.0.0-prerelease.18.tgz#5f78f74e1d2396fc8f15323e0f98ef285ed2a5f9"
   integrity sha512-M5e/6QIUUqFkNtjjdpMxzeZDFj10yfdQjsGWZkH8FURs8BcETuYP+b7UJkG9TGOxeOChGLa3H2XsqPvoSLXmNg==
@@ -2985,15 +2985,15 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.0.0-prerelease.5.tgz#ce5b5a1cfffd095e7580d79f78a4fb2db14e8187"
   integrity sha512-+W00HRje6z32hRSezULSaCgQ9Y+btu37PgUPNJIonMD6haLnLjxiJTE1BlK0Cdt8phD8I564hFhJWIbVgtubzw==
 
-"@patternfly/react-table@6.0.0-prerelease.18":
-  version "6.0.0-prerelease.18"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.18.tgz#927434cd8c922335d1a481be9384d43ef0160f90"
-  integrity sha512-1svgp7l8B9xeyMpbR29BS1I6MVNCa97X7fhVxe9P99ViCL7X+y2m9jz1sUeMmb0v+q8mQ7/uvGda5yIJEQS4yw==
+"@patternfly/react-table@6.0.0-prerelease.19":
+  version "6.0.0-prerelease.19"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-6.0.0-prerelease.19.tgz#da4ab768cc85b1722152e71f39a4dda0b12cfbaa"
+  integrity sha512-4YZrpULbz6b3mXrFlhIi2iI48u62fjbsDf/5mxH9v7o4tCL3Mu445CXoi/ALJizvIKq7Dm2OMnSQID+XopmhMg==
   dependencies:
-    "@patternfly/react-core" "^6.0.0-prerelease.17"
-    "@patternfly/react-icons" "^6.0.0-prerelease.5"
-    "@patternfly/react-styles" "^6.0.0-prerelease.4"
-    "@patternfly/react-tokens" "^6.0.0-prerelease.5"
+    "@patternfly/react-core" "^6.0.0-prerelease.18"
+    "@patternfly/react-icons" "^6.0.0-prerelease.6"
+    "@patternfly/react-styles" "^6.0.0-prerelease.5"
+    "@patternfly/react-tokens" "^6.0.0-prerelease.6"
     lodash "^4.17.21"
     tslib "^2.7.0"
 
