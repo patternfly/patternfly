@@ -3768,7 +3768,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 
 ## Draggable rows
 
-### Draggable rows example
+### Draggable rows example isBeta
 ```hbs
 {{#> wrapper table--id="table-draggable-rows"}}
   <div id="{{table--id}}-help">
