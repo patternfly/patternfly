@@ -188,7 +188,7 @@
   transition-timing-function: var(--#{$menu-toggle}--TransitionTimingFunction);
   transition-duration: var(--#{$menu-toggle}--TransitionDuration);
   transition-property: var(--#{$menu-toggle}--TransitionProperty);
-  
+
   &,
   &::before {
     border-radius: var(--#{$menu-toggle}--BorderRadius);
@@ -501,7 +501,6 @@
 }
 
 // - Menu toggle controls - Menu toggle icon
-.#{$menu-toggle}__icon,
 .#{$menu-toggle}__controls,
 .#{$menu-toggle}__toggle-icon {
   display: flex;
@@ -511,7 +510,15 @@
 
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
-  min-height: var(--#{$menu-toggle}__icon--MinHeight);
+
+  &.pf-m-avatar {
+    .#{$avatar},
+    img,
+    svg {
+      margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
+      margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) * -1);
+    }
+  }
 }
 
 // - Menu toggle controls

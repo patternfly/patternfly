@@ -566,7 +566,7 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 ### With avatar and text
 ```hbs
 {{#> menu-toggle}}
-  {{#> menu-toggle-icon}}
+  {{#> menu-toggle-icon menu-toggle-icon--HasAvatar=true}}
     {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
@@ -580,7 +580,7 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsExpanded="true"}}
-  {{#> menu-toggle-icon}}
+  {{#> menu-toggle-icon menu-toggle-icon--HasAvatar=true}}
     {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
@@ -594,7 +594,7 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsDisabled="true"}}
-  {{#> menu-toggle-icon}}
+  {{#> menu-toggle-icon menu-toggle-icon--HasAvatar=true}}
     {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
@@ -713,3 +713,4 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
 | `.pf-m-placeholder` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle text for placeholder styles. |
+| `.pf-m-avatar` | `.pf-v6-c-menu-toggle__icon` | Modifies the menu toggle icon for avatar styles. |
