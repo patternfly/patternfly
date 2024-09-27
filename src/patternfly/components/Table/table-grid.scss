@@ -106,8 +106,8 @@
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
 
   // * Table grid expandable row content
-  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
-  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$table}__expandable-row-content--responsive--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table check
@@ -134,6 +134,7 @@
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--m-grid--cell--PaddingInlineEnd);
   --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-grid--cell--PaddingBlockEnd);
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}--m-grid--cell--PaddingInlineStart);
+  --#{$table}--cell--first-last-child--PaddingInline: 0;
 
   // - Table favorite
   --#{$table}__favorite--c-button--MarginBlockStart: auto;
