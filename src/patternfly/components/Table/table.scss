@@ -14,7 +14,7 @@
   --#{$table}__caption--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$table}__caption--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
 
   // * Table thead cell
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -44,7 +44,7 @@
   --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$table}--cell--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
-  --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--sm);
+  --#{$table}--cell--first-last-child--PaddingInline: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart: var(--#{$table}--cell--Padding--base);
 
   // * Table cell - default variables
@@ -337,12 +337,12 @@
 
     // First child padding left
     &:first-child {
-      padding-inline-start: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingInlineStart));
+      padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
     }
 
     // Last child padding right
     &:last-child {
-      padding-inline-end: calc(var(--#{$table}--cell--first-last-child--PaddingInline) + var(--#{$table}--cell--PaddingInlineEnd));
+      padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
     }
 
     &.pf-m-center {
@@ -677,7 +677,7 @@
 .#{$table}__column-help {
   display: inline-grid;
   grid-template-columns: auto max-content;
-  align-items: baseline;
+  align-items: last baseline;
   justify-content: start;
 
   .#{$table}__text {
@@ -886,6 +886,7 @@
 
 // - Table column help action
 .#{$table}__column-help-action {
+  align-self: last baseline;
   margin-inline-start: var(--#{$table}__column-help--MarginInlineStart);
 }
 
