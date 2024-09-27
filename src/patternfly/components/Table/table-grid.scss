@@ -58,9 +58,9 @@
   --#{$table}__tr--responsive--GridColumnGap: var(--pf-t--global--spacer--md);
   --#{$table}__tr--responsive--MarginBlockStart: var(--#{$table}__tbody--responsive--border-width--base);
   --#{$table}__tr--responsive--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$table}__tr--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$table}__tr--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$table}__tr--responsive--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$table}__tr--responsive--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
 
   // * Table tr responsive nested table
   --#{$table}__tr--responsive--nested-table--PaddingBlockStart: var(--pf-t--global--spacer--xl);
