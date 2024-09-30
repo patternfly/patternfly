@@ -475,6 +475,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-shrink: 0;
 }
 
-.#{$page}__drawer > .#{$drawer} {
-    flex: 1 0 auto;
+.#{$page}__drawer .#{$page}__main-container {
+  align-self: revert;
+
+  &.pf-m-fill {
+    flex-grow: 1;
+  }
 }

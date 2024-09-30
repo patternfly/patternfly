@@ -417,11 +417,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 }
 
-// Page level drawer - move to page component in breaking change
-.#{$drawer}__body > .#{$page}__main {
-  height: 100%;
-}
-
 .#{$drawer}__splitter {
   position: relative;
   display: none;
