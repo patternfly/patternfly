@@ -16,7 +16,7 @@ Any of the files above are meant for use in consuming the library. The recommend
 
 ## Development
 
-**PatternFly 5 Development requires Node v16.0.0 or greater**
+**PatternFly 5 Development requires Node v18.0.0 or greater**
 
 To setup the PatternFly 5 development environment:
 
