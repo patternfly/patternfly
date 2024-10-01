@@ -699,7 +699,6 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 | `.pf-v6-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
 | `.pf-v6-c-menu-toggle__button` | `<button>` | Initiates the menu toggle button. |
 | `.pf-m-split-button` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the split button variation. |
-| `.pf-m-action` | `.pf-v6-c-menu-toggle.pf-m-split-button` | Modifies the menu toggle component for the action, split button variation. |
 | `.pf-m-text` | `.pf-v6-c-menu-toggle__button` | Modifies the menu toggle component split button variation with text. |
 | `.pf-m-disabled` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the disabled variation. |
 | `.pf-m-primary` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
