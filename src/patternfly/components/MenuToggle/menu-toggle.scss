@@ -64,6 +64,9 @@
   --#{$menu-toggle}--m-secondary--Color: var(--#{$pf-global}--primary-color--100);
   --#{$menu-toggle}--m-secondary--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
   --#{$menu-toggle}--m-secondary--BackgroundColor: transparent;
+  --#{$menu-toggle}--m-secondary--hover--BackgroundColor: transparent;
+  --#{$menu-toggle}--m-secondary--focus--BackgroundColor: transparent;
+  --#{$menu-toggle}--m-secondary--active--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$menu-toggle}--m-secondary--hover--before--BorderWidth: var(--#{$pf-global}--BorderWidth--md);
   --#{$menu-toggle}--m-secondary--focus--before--BorderWidth: var(--#{$pf-global}--BorderWidth--md);
@@ -72,6 +75,7 @@
   --#{$menu-toggle}--m-secondary--hover--before--BorderColor: var(--#{$pf-global}--primary-color--100);
   --#{$menu-toggle}--m-secondary--focus--before--BorderColor: var(--#{$pf-global}--primary-color--100);
   --#{$menu-toggle}--m-secondary--active--before--BorderColor: var(--#{$pf-global}--primary-color--100);
+  --#{$menu-toggle}--m-secondary--m-expanded--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--m-expanded--Color: var(--#{$pf-global}--primary-color--100);
   --#{$menu-toggle}--m-expanded__toggle--m-secondary--before--BorderColor: var(--#{$pf-global}--primary-color--100);
   --#{$menu-toggle}--m-expanded__toggle--m-secondary--before--BorderWidth: var(--#{$pf-global}--BorderWidth--md);
@@ -245,6 +249,11 @@
 
   &.pf-m-secondary {
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-secondary--Color);
+    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-secondary--BackgroundColor);
+    --#{$menu-toggle}--hover--BackgroundColor: var(--#{$menu-toggle}--m-secondary--hover--BackgroundColor);
+    --#{$menu-toggle}--focus--BackgroundColor: var(--#{$menu-toggle}--m-secondary--focus--BackgroundColor);
+    --#{$menu-toggle}--active--BackgroundColor: var(--#{$menu-toggle}--m-secondary--active--BackgroundColor);
+    --#{$menu-toggle}--m-expanded--BackgroundColor: var(--#{$menu-toggle}--m-secondary--m-expanded--BackgroundColor);
     --#{$menu-toggle}--m-expanded--Color: var(--#{$menu-toggle}--m-secondary--m-expanded--Color);
 
     &,
