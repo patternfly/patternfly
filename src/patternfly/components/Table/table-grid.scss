@@ -7,25 +7,25 @@
   }
 
   .pf-m-grid-md.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--md) {
+    @media screen and (max-width: calc(#{$pf-v6-global--breakpoint--md} - 1)) {
       @content;
     }
   }
 
   .pf-m-grid-lg.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--lg) {
+    @media screen and (max-width: calc(#{$pf-v6-global--breakpoint--lg} - 1)) {
       @content;
     }
   }
 
   .pf-m-grid-xl.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--xl) {
+    @media screen and (max-width: calc(#{$pf-v6-global--breakpoint--xl} - 1)) {
       @content;
     }
   }
 
   .pf-m-grid-2xl.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--2xl) {
+    @media screen and (max-width: calc(#{$pf-v6-global--breakpoint--2xl} - 1)) {
       @content;
     }
   }
