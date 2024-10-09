@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-v6-c-code-editor
 ---
 
+import './CodeEditor.css';
+
 ## Examples
 
 ### Default

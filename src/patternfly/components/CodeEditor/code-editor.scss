@@ -83,6 +83,12 @@
   }
 }
 
+.#{$code-editor}__container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .#{$code-editor}__header {
   position: relative;
   display: flex;
