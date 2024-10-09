@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-v6-c-code-editor
 ---
 
+import './CodeEditor.css';
+
 ## Examples
 
 ### Default
@@ -171,7 +173,7 @@ This is an extra container used in React to prevent event propagation if upload 
 ```
 
 
-### With full height modifiers
+### With full height modifier
 
 ```hbs
 {{#> code-editor code-editor--modifier="pf-m-full-height"}}
