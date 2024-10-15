@@ -76,8 +76,10 @@ $pf-v6-c-tree-view--MaxDepth: 10;
       $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$table}--m-tree-view__toggle--TranslateX))})
     );
 
-    position: var(--#{$table}--m-tree-view__toggle--Position);
+    position: absolute;
     inset-inline-start: var(--#{$table}--m-tree-view__toggle--InsetInlineStart);
+    width: auto;
+    padding: 0;
 
     .#{$table}__toggle-icon {
       min-width: var(--#{$table}--m-tree-view__toggle__toggle-icon--MinWidth);
@@ -91,6 +93,10 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
 
   > .#{$table}__check {
+    width: auto;
+    min-width: auto;
+    padding-block: 0;
+    padding-inline: 0;
     margin-inline-end: var(--#{$table}__tree-view-main--c-table__check--MarginInlineEnd);
   }
 
@@ -236,11 +242,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     padding-inline-end: var(--#{$table}__tree-view-text--PaddingInlineEnd);
   }
 
-  thead:where(.#{$table}__thead) th:where(.#{$table}__th) {
-    display: none;
-  }
-
-  td:where(.#{$table}__td) {
+  .#{$table}__thead .#{$table}__th,
+  .#{$table}__thead .#{$table}__td {
     display: none;
   }
 
@@ -252,7 +255,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     align-items: start;
 
     // set contents of td to start at column two of td grid
-    > :where(th, td) {
+    > .#{$table}__th,
+    > .#{$table}__td {
       grid-column: 2;
     }
 
@@ -264,7 +268,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
     }
   }
 
-  .#{$table}__tr > :where(th, td).pf-m-border-right::before {
+  .#{$table}__tr > .#{$table}__th.pf-m-border-right::before,
+  .#{$table}__tr > .#{$table}__td.pf-m-border-right::before {
     border-inline-end: 0;
   }
 
