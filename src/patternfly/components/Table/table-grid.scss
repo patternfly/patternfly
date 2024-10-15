@@ -146,13 +146,16 @@
   border: none;
 
   // reset cell modifications
-  tr:where(.#{$table}__tr) > :where(th, td) {
-    width: auto;
-    min-width: 0;
-    max-width: none;
-    overflow: visible;
-    text-overflow: clip;
-    white-space: normal;
+  .#{$table}__tr {
+    > .#{$table}__th,
+    > .#{$table}__td {
+      width: auto;
+      min-width: 0;
+      max-width: none;
+      overflow: visible;
+      text-overflow: clip;
+      white-space: normal;
+    }
   }
 
   // apply modifications to text
@@ -215,7 +218,8 @@
     padding-inline-start: var(--#{$table}__tr--responsive--PaddingInlineStart);
 
     // Reset td padding
-    & > :where(th, td) {
+    > .#{$table}__th,
+    > .#{$table}__td {
       padding-block-start: var(--#{$table}--cell--responsive--PaddingBlockStart);
       padding-inline-end: var(--#{$table}--cell--responsive--PaddingInlineEnd);
       padding-block-end: var(--#{$table}--cell--responsive--PaddingBlockEnd);
@@ -252,7 +256,8 @@
   }
 
   // - Table grid th td data label
-  :where(.#{$table}__th, .#{$table}__td)[data-label] {
+  .#{$table}__th[data-label],
+  .#{$table}__td[data-label] {
     // default pf-v6-hidden-visible() mixin is called in table.scss. redefining variable here
     --#{$table}--cell--hidden-visible--Display: var(--#{$table}--m-grid--cell--hidden-visible--Display);
 
@@ -276,15 +281,18 @@
     }
   }
 
-  tr:where(.#{$table}__tr) > :where(th, td) {
-    // Remove first child padding left
-    &:first-child {
-      --#{$table}--cell--PaddingInlineStart: 0;
-    }
+  .#{$table}__tr {
+    > .#{$table}__th,
+    > .#{$table}__td {
+      // Remove first child padding left
+      &:first-child {
+        --#{$table}--cell--PaddingInlineStart: 0;
+      }
 
-    // Remove last child padding right
-    &:last-child {
-      --#{$table}--cell--PaddingInlineEnd: 0;
+      // Remove last child padding right
+      &:last-child {
+        --#{$table}--cell--PaddingInlineEnd: 0;
+      }
     }
   }
 
@@ -352,7 +360,8 @@
     border-block-end: none;
 
     // cells
-    > :where(th, td) {
+    > .#{$table}__th,
+    > .#{$table}__td {
       position: static;
       display: block;
     }
@@ -367,8 +376,8 @@
       content: none;
     }
 
-    th:where(.#{$table}__th),
-    td:where(.#{$table}__td) {
+    .#{$table}__th,
+    .#{$table}__td {
       &.pf-m-no-padding {
         .#{$table}__expandable-row-content {
           padding: 0;
