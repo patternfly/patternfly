@@ -293,10 +293,10 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-threshold--stroke--Width: 1.5;
 
   // Tooltip
-  --#{$chart}-tooltip--corner-radius: 0;
+  --#{$chart}-tooltip--corner-radius: 6;
   --#{$chart}-tooltip--pointer-length: 10;
   --#{$chart}-tooltip--Fill: var(--#{$chart}-global--Fill--Color--200);
-  --#{$chart}-tooltip--flyoutStyle--corner-radius: 0;
+  --#{$chart}-tooltip--flyoutStyle--corner-radius: 6;
   --#{$chart}-tooltip--flyoutStyle--stroke--Width: 0;
   --#{$chart}-tooltip--flyoutStyle--PointerEvents: none;
   --#{$chart}-tooltip--flyoutStyle--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
