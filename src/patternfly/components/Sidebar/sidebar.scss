@@ -171,8 +171,8 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   position: var(--#{$sidebar}__panel--Position);
   inset-block-start: var(--#{$sidebar}__panel--InsetBlockStart);
   z-index: var(--#{$sidebar}__panel--ZIndex);
-  flex-basis: var(--#{$sidebar}__panel--FlexBasis);
   flex-shrink: 0;
+  flex-basis: var(--#{$sidebar}__panel--FlexBasis);
   order: var(--#{$sidebar}__panel--Order);
   padding-block-start: var(--#{$sidebar}__panel--PaddingBlockStart);
   padding-block-end: var(--#{$sidebar}__panel--PaddingBlockEnd);
@@ -254,7 +254,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
         @if $width-value == "default" {
           --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--FlexBasis--base);
         } @else {
-          --#{$sidebar}__panel--FlexBasis: #{percentage(math.div($width-value, 100))};
+          --#{$sidebar}__panel--FlexBasis: #{math.percentage(math.div($width-value, 100))};
         }
       }
     }

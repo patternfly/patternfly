@@ -429,8 +429,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
 .#{$form}__field-group-header-main {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 .#{$form}__field-group-header-title {

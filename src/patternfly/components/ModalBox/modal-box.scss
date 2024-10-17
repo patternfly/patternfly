@@ -24,10 +24,6 @@
   --#{$modal-box}--m-info__title-icon--Color: var(--pf-t--global--icon--color--status--info--default);
   --#{$modal-box}--m-custom__title-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
 
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$modal-box}--m-align-top--spacer: var(--#{$modal-box}--m-align-top--xl--spacer);
-  }
-
   // Header
   --#{$modal-box}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
@@ -75,6 +71,10 @@
   // Footer buttons
   --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
   --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2);
+
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$modal-box}--m-align-top--spacer: var(--#{$modal-box}--m-align-top--xl--spacer);
+  }
 }
 
 .#{$modal-box} {
@@ -158,8 +158,8 @@
 
 .#{$modal-box}__header {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
   gap: var(--#{$modal-box}__header--Gap);
   padding-block-start: var(--#{$modal-box}__header--PaddingBlockStart);
   padding-block-end: var(--#{$modal-box}__header--PaddingBlockEnd);
@@ -178,8 +178,8 @@
 
 .#{$modal-box}__header-main {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   gap: var(--#{$modal-box}__header-main--Gap);
   min-width: 0;
   padding-block-start: var(--#{$modal-box}__header-main--PaddingBlockStart);

@@ -78,13 +78,13 @@
 }
 
 .#{$slider} {
+  display: flex;
+
   @include pf-v6-bidirectional-style(
     $prop: --#{$slider}__rail-track--before--fill--direction,
     $ltr-val: right,
     $rtl-val: left
   );
-
-  display: flex;
 
   &.pf-m-disabled {
     --#{$slider}__rail-track--before--fill--BackgroundColor: var(--#{$slider}--m-disabled__rail-track--before--fill--BackgroundColor);
@@ -159,12 +159,6 @@
 }
 
 .#{$slider}__step-tick {
-  @include pf-v6-bidirectional-style(
-    $prop: transform,
-    $ltr-val: translateX(var(--#{$slider}__step-tick--TranslateX)),
-    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
-  );
-
   position: absolute;
   inset-block-start: var(--#{$slider}__step-tick--InsetBlockStart);
   inset-inline-start: 0;
@@ -172,27 +166,27 @@
   height: var(--#{$slider}__step-tick--Height);
   background-color: var(--#{$slider}__step-tick--BackgroundColor);
   border-radius: var(--#{$slider}__step-tick--BorderRadius);
+
+  @include pf-v6-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$slider}__step-tick--TranslateX)),
+    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
+  );
 }
 
 .#{$slider}__step-label {
+  position: absolute;
+  inset-block-start: var(--#{$slider}__step-label--InsetBlockStart);
+  word-break: normal;
+
   @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translateX(var(--#{$slider}__step-label--TranslateX)),
     $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
   );
-
-  position: absolute;
-  inset-block-start: var(--#{$slider}__step-label--InsetBlockStart);
-  word-break: normal;
 }
 
 .#{$slider}__thumb {
-  @include pf-v6-bidirectional-style(
-    $prop: transform,
-    $ltr-val: translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
-    $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
-  );
-
   position: absolute;
   inset-block-start: var(--#{$slider}__thumb--InsetBlockStart);
   inset-inline-start: var(--#{$slider}__thumb--InsetInlineStart);
@@ -203,13 +197,13 @@
   border-radius: var(--#{$slider}__thumb--BorderRadius);
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
 
-  &::before {
-    @include pf-v6-bidirectional-style(
-      $prop: transform,
-      $ltr-val: translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
-      $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
-    );
+  @include pf-v6-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
+    $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
+  );
 
+  &::before {
     position: absolute;
     inset-block-start: 50%;
     inset-inline-start: 50%;
@@ -217,6 +211,12 @@
     height: var(--#{$slider}__thumb--before--Height);
     content: "";
     border-radius: var(--#{$slider}__thumb--before--BorderRadius);
+
+    @include pf-v6-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
+      $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
+    );
   }
 
   &:hover {
@@ -238,18 +238,18 @@
   margin-inline-start: var(--#{$slider}__value--MarginInlineStart);
 
   &.pf-m-floating {
-    @include pf-v6-bidirectional-style(
-      $prop: transform,
-      $ltr-val: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
-      $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
-    );
-
     --#{$slider}__value--MarginInlineStart: 0;
 
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: var(--#{$slider}__value--m-floating--InsetInlineStart);
     z-index: var(--#{$slider}__value--m-floating--ZIndex);
+
+    @include pf-v6-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
+      $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
+    );
   }
 
   .#{$form-control} {

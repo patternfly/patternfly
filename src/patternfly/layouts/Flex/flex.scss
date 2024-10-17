@@ -1,4 +1,6 @@
 @use '../../sass-utilities' as *;
+@use 'sass:list';
+@use 'sass:map';
 
 // Always keep list of spacers and breakpoints up-to-date
 $pf-v6-l-flex--breakpoint-map: build-breakpoint-map();
@@ -307,7 +309,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
         &.pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
-            --#{$flex}--spacer: var(#{map-get($pf-v6-l-flex--variable-map, $spacer-value)});
+            --#{$flex}--spacer: var(#{map.get($pf-v6-l-flex--variable-map, $spacer-value)});
           }
 
           > :last-child {
@@ -325,10 +327,10 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
     @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
         .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
-          --#{$flex}--spacer: var(#{map-get($pf-v6-l-flex--variable-map, $spacer-value)});
+          --#{$flex}--spacer: var(#{map.get($pf-v6-l-flex--variable-map, $spacer-value)});
 
           &:last-child {
-            --#{$flex}--spacer: var(#{map-get($pf-v6-l-flex--variable-map, $spacer-value)});
+            --#{$flex}--spacer: var(#{map.get($pf-v6-l-flex--variable-map, $spacer-value)});
           }
         }
       }
@@ -346,7 +348,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
           $spacer-row: if($spacer == "base", var(--#{$flex}--m-gap--RowGap), $value);
           $spacer-column: if($spacer == "base", var(--#{$flex}--m-gap--ColumnGap), $value);
           $selector: ".pf-m-gap#{$spacer-name}#{$breakpoint-name}";
-          $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
+          $pf-v6-l-flex--gap--selectors: list.append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
 
           &#{$selector} {
             --#{$flex}--RowGap: #{$spacer-row};
@@ -373,7 +375,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         $spacer-name: if($spacer == "base", "", -#{$spacer});
         $spacer-value: if($spacer == "base", var(--#{$flex}--m-row-gap--RowGap), $value);
         $selector: ".pf-m-row-gap#{$spacer-name}#{$breakpoint-name}";
-        $pf-v6-l-flex--row-gap--selectors: append($pf-v6-l-flex--row-gap--selectors, $selector, $separator: comma);
+        $pf-v6-l-flex--row-gap--selectors: list.append($pf-v6-l-flex--row-gap--selectors, $selector, $separator: comma);
 
        &#{$selector} {
           --#{$flex}--RowGap: #{$spacer-value};
@@ -398,7 +400,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         $spacer-name: if($spacer == "base", "", -#{$spacer});
         $spacer-value: if($spacer == "base", var(--#{$flex}--m-column-gap--ColumnGap), $value);
         $selector: ".pf-m-column-gap#{$spacer-name}#{$breakpoint-name}";
-        $pf-v6-l-flex--column-gap--selectors: append($pf-v6-l-flex--column-gap--selectors, $selector, $separator: comma);
+        $pf-v6-l-flex--column-gap--selectors: list.append($pf-v6-l-flex--column-gap--selectors, $selector, $separator: comma);
 
         &#{$selector} {
           --#{$flex}--ColumnGap: #{$spacer-value};

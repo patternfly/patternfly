@@ -90,13 +90,13 @@
       background-color: var(--#{$switch}__input--checked__toggle--BackgroundColor);
 
       &::before {
+        background-color: var(--#{$switch}__input--checked__toggle--before--BackgroundColor);
+
         @include pf-v6-bidirectional-style(
           $prop: transform,
           $ltr-val: translate(var(--#{$switch}__input--checked__toggle--before--TranslateX), -50%),
           $rtl-val: translate(#{pf-v6-calc-inverse(var(--#{$switch}__input--checked__toggle--before--TranslateX))}, -50%)
         );
-
-        background-color: var(--#{$switch}__input--checked__toggle--before--BackgroundColor);
       }
     }
   }

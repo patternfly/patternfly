@@ -44,11 +44,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline--ColumnGap: 0;
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
-  --#{$masthead}--m-display-inline__brand--GridColumn: initial; 
+  --#{$masthead}--m-display-inline__brand--GridColumn: initial;
   --#{$masthead}--m-display-inline__brand--Order: initial;
   --#{$masthead}--m-display-inline__brand--PaddingBlockEnd: 0;
   --#{$masthead}--m-display-inline__brand--BorderBlockEnd: 0;
-  --#{$masthead}--m-display-inline__main--GridColumn: 1; 
+  --#{$masthead}--m-display-inline__main--GridColumn: 1;
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
   --#{$masthead}--m-display-inline__main--toggle--content--GridColumn: 2;
@@ -66,54 +66,42 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // * Masthead display stack
 @mixin pf-v6-c-masthead--m-display-stack {
-  --#{$masthead}--ColumnGap: var(--#{$masthead}--m-display-stack--ColumnGap);
-  --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-stack--GridTemplateColumns);
-  --#{$masthead}__brand--GridColumn: var(--#{$masthead}--m-display-stack__brand--GridColumn);
-  --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-stack__brand--Order);
-  --#{$masthead}__brand--PaddingBlockEnd: var(--#{$masthead}--m-display-stack__brand--PaddingBlockEnd);
-  --#{$masthead}__brand--BorderBlockEnd: var(--#{$masthead}--m-display-stack__brand--BorderBlockEnd);
-  --#{$masthead}__main--GridColumn: unset;
-  --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-stack__content--GridColumn);
-  --#{$masthead}__content--Order: var(--#{$masthead}--m-display-stack__content--Order);
-  --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-stack__main--toggle--content--GridColumn);
-  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-stack__main--Display);
-  --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-stack__main--ColumnGap);
+  & {
+    --#{$masthead}--ColumnGap: var(--#{$masthead}--m-display-stack--ColumnGap);
+    --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-stack--GridTemplateColumns);
+    --#{$masthead}__brand--GridColumn: var(--#{$masthead}--m-display-stack__brand--GridColumn);
+    --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-stack__brand--Order);
+    --#{$masthead}__brand--PaddingBlockEnd: var(--#{$masthead}--m-display-stack__brand--PaddingBlockEnd);
+    --#{$masthead}__brand--BorderBlockEnd: var(--#{$masthead}--m-display-stack__brand--BorderBlockEnd);
+    --#{$masthead}__main--GridColumn: unset;
+    --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-stack__content--GridColumn);
+    --#{$masthead}__content--Order: var(--#{$masthead}--m-display-stack__content--Order);
+    --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-stack__main--toggle--content--GridColumn);
+    --#{$masthead}__main--Display: var(--#{$masthead}--m-display-stack__main--Display);
+    --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-stack__main--ColumnGap);
+  }
 }
 
 // * Masthead display inline
 @mixin pf-v6-c-masthead--m-display-inline {
-  --#{$masthead}--ColumnGap: var(--#{$masthead}--m-display-inline--ColumnGap);
-  --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-inline--GridTemplateColumns);
-  --#{$masthead}__brand--GridColumn: var(--#{$masthead}--m-display-inline__brand--GridColumn);
-  --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-inline__brand--Order);
-  --#{$masthead}__brand--PaddingBlockEnd: var(--#{$masthead}--m-display-inline__brand--PaddingBlockEnd);
-  --#{$masthead}__brand--BorderBlockEnd: var(--#{$masthead}--m-display-inline__brand--BorderBlockEnd);
-  --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
-  --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
-  --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
-  --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-inline__main--toggle--content--GridColumn);
-  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display); 
-  --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-inline__main--ColumnGap);
-}
+  & {
+    --#{$masthead}--ColumnGap: var(--#{$masthead}--m-display-inline--ColumnGap);
+    --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-inline--GridTemplateColumns);
+    --#{$masthead}__brand--GridColumn: var(--#{$masthead}--m-display-inline__brand--GridColumn);
+    --#{$masthead}__brand--Order: var(--#{$masthead}--m-display-inline__brand--Order);
+    --#{$masthead}__brand--PaddingBlockEnd: var(--#{$masthead}--m-display-inline__brand--PaddingBlockEnd);
+    --#{$masthead}__brand--BorderBlockEnd: var(--#{$masthead}--m-display-inline__brand--BorderBlockEnd);
+    --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
+    --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
+    --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
+    --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-inline__main--toggle--content--GridColumn);
+    --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display);
+    --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-inline__main--ColumnGap);
+  }
+  }
 
 // - Masthead
 .#{$masthead} {
-  .#{$toolbar} {
-    --#{$toolbar}--Width: var(--#{$masthead}--c-toolbar--Width);
-    --#{$toolbar}--PaddingBlockEnd: 0;
-    --#{$toolbar}__content--MinWidth: 0;
-  }
-
-  // Set layout to stack by default
-  @include pf-v6-c-masthead--m-display-stack;
-
-  // Set layout to inline at medium breakpoint
-  :where(:not(.pf-m-resize-observer)) & {
-    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
-      @include pf-v6-c-masthead--m-display-inline;
-    }
-  }
-
   // - Masthead
   display: grid;
   grid-template-columns: var(--#{$masthead}--GridTemplateColumns);
@@ -128,6 +116,22 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
   background-color: var(--#{$masthead}--BackgroundColor);
+
+  // Set layout to stack by default
+  @include pf-v6-c-masthead--m-display-stack;
+
+  // Set layout to inline at medium breakpoint
+  :where(:not(.pf-m-resize-observer)) & {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
+      @include pf-v6-c-masthead--m-display-inline;
+    }
+  }
+
+  .#{$toolbar} {
+    --#{$toolbar}--Width: var(--#{$masthead}--c-toolbar--Width);
+    --#{$toolbar}--PaddingBlockEnd: 0;
+    --#{$toolbar}__content--MinWidth: 0;
+  }
 
   .#{$toolbar}__content-section {
     flex-wrap: nowrap;

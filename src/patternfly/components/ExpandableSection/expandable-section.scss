@@ -71,22 +71,22 @@
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
       display: -webkit-box;
+      overflow: hidden;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: var(--#{$expandable-section}--m-truncate__content--LineClamp);
       // stylelint-enable
-      overflow: hidden;
     }
   }
 }
 
 .#{$expandable-section}__toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
   color: var(--#{$expandable-section}__toggle-icon--Color);
   transition: var(--#{$expandable-section}__toggle-icon--Transition);
   transform: rotate(var(--#{$expandable-section}__toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 
   &.pf-m-expand-top {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);

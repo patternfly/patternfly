@@ -319,8 +319,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     .#{$tabs}__list {
       position: relative;
-      flex-direction: column;
       flex-grow: 1;
+      flex-direction: column;
       max-width: var(--#{$tabs}--m-vertical--MaxWidth);
 
       &::before {
@@ -467,17 +467,15 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   transition: var(--#{$tabs}__toggle-icon--Transition);
   transform: rotate(var(--#{$tabs}__toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 // Tab list
 .#{$tabs}__list {
-  @include pf-v6-overflow-hide-scroll;
-
   position: relative;
   display: var(--#{$tabs}__list--Display);
   max-width: 100%;
@@ -485,6 +483,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   scroll-behavior: smooth;
   scroll-snap-type: var(--#{$tabs}__list--ScrollSnapType);
   -webkit-overflow-scrolling: touch;
+
+  @include pf-v6-overflow-hide-scroll;
 }
 
 // Tabs item
@@ -493,11 +493,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   display: flex;
   flex: none;
   column-gap: var(--#{$tabs}__item--ColumnGap);
-  scroll-snap-align: var(--#{$tabs}__item--ScrollSnapAlign);
   padding-block-start: var(--#{$tabs}__item--PaddingBlockStart);
   padding-block-end: var(--#{$tabs}__item--PaddingBlockEnd);
   padding-inline-start: var(--#{$tabs}__item--PaddingInlineStart);
   padding-inline-end: var(--#{$tabs}__item--PaddingInlineEnd);
+  scroll-snap-align: var(--#{$tabs}__item--ScrollSnapAlign);
   background-color: var(--#{$tabs}__item--BackgroundColor);
 
   // Current
@@ -558,11 +558,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 // Tab link
 .#{$tabs}__link {
-  @at-root .#{$tabs}__item.pf-m-action,
-  & {
-    --#{$tabs}__link--after--BorderBlockEndWidth: var(--#{$tabs}__link--after--BorderWidth); // Set default border target
-  }
-
   display: flex;
   flex: 1;
   column-gap: var(--#{$tabs}__link--ColumnGap);
@@ -576,6 +571,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   text-decoration: none;
   background-color: var(--#{$tabs}__link--BackgroundColor);
   border-radius: var(--#{$tabs}__link--BorderRadius);
+
+  @at-root .#{$tabs}__item.pf-m-action,
+  & {
+    --#{$tabs}__link--after--BorderBlockEndWidth: var(--#{$tabs}__link--after--BorderWidth); // Set default border target
+  }
 
   @at-root .#{$tabs}__item.pf-m-action,
   & {
@@ -645,13 +645,13 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__link-toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   align-self: end;
   font-size: var(--#{$tabs}__link-toggle-icon--FontSize);
   color: var(--#{$tabs}__link-toggle-icon--Color);
   transition: var(--#{$tabs}__link-toggle-icon--Transition);
   transform: rotate(var(--#{$tabs}__link-toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$tabs}__item-action {

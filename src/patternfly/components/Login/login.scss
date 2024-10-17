@@ -12,38 +12,19 @@
   --#{$login}__container--PaddingInlineEnd: #{pf-size-prem(98px)};
   --#{$login}__container--xl--GridTemplateColumns: #{pf-size-prem(544px)} minmax(auto, #{pf-size-prem(544px)}); // unique to the login layout
 
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$login}__container--MaxWidth: var(--#{$login}__container--xl--MaxWidth);
-  }
-
   // header
   --#{$login}__header--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$login}__header--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$login}__header--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-
-  @media (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$login}__header--PaddingInlineEnd: 0;
-    --#{$login}__header--PaddingInlineStart: 0;
-  }
-
   --#{$login}__header--xl--MarginBlockEnd: var(--pf-t--global--spacer--2xl);
   --#{$login}__header--xl--MarginBlockStart: var(--pf-t--global--spacer--3xl);
   --#{$login}__header--c-brand--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__header--c-brand--xl--MarginBlockEnd: var(--pf-t--global--spacer--2xl);
 
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$login}__header--MarginBlockEnd: var(--#{$login}__header--xl--MarginBlockEnd);
-    --#{$login}__header--c-brand--MarginBlockEnd: var(--#{$login}__header--c-brand--xl--MarginBlockEnd);
-  }
-
   // main
   --#{$login}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$login}__main--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__main--BorderRadius: var(--pf-t--global--border--radius--large);
-
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$login}__main--MarginBlockEnd: 0;
-  }
 
   // main header
   --#{$login}__main-header--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
@@ -60,24 +41,12 @@
   --#{$login}__main-header-desc--md--MarginBlockEnd: 0;
   --#{$login}__main-header-desc--FontSize: var(--pf-t--global--font--size--body--default);
 
-
-  @media (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$login}__main-header--PaddingInlineEnd: var(--#{$login}__main-header--md--PaddingInlineEnd);
-    --#{$login}__main-header--PaddingInlineStart: var(--#{$login}__main-header--md--PaddingInlineStart);
-    --#{$login}__main-header-desc--MarginBlockEnd: var(--#{$login}__main-header-desc--md--MarginBlockEnd);
-  }
-
   // main body
   --#{$login}__main-body--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$login}__main-body--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
   --#{$login}__main-body--PaddingInlineStart: var(--pf-t--global--spacer--xl);
   --#{$login}__main-body--md--PaddingInlineEnd: var(--pf-t--global--spacer--2xl);
   --#{$login}__main-body--md--PaddingInlineStart: var(--pf-t--global--spacer--2xl);
-
-  @media (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$login}__main-body--PaddingInlineEnd: var(--#{$login}__main-body--md--PaddingInlineEnd);
-    --#{$login}__main-body--PaddingInlineStart: var(--#{$login}__main-body--md--PaddingInlineStart);
-  }
 
   // main footer
   --#{$login}__main-footer--PaddingBlockEnd: var(--pf-t--global--spacer--3xl);
@@ -99,16 +68,29 @@
   // footer
   --#{$login}__footer--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$login}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--c-list--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--c-list--xl--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v6-global--breakpoint--sm) {
+    --#{$login}__header--PaddingInlineEnd: 0;
+    --#{$login}__header--PaddingInlineStart: 0;
     --#{$login}__footer--PaddingInlineEnd: 0;
     --#{$login}__footer--PaddingInlineStart: 0;
   }
 
-  --#{$login}__footer--c-list--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$login}__footer--c-list--xl--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
+  @media (min-width: $pf-v6-global--breakpoint--md) {
+    --#{$login}__main-header--PaddingInlineEnd: var(--#{$login}__main-header--md--PaddingInlineEnd);
+    --#{$login}__main-header--PaddingInlineStart: var(--#{$login}__main-header--md--PaddingInlineStart);
+    --#{$login}__main-header-desc--MarginBlockEnd: var(--#{$login}__main-header-desc--md--MarginBlockEnd);
+    --#{$login}__main-body--PaddingInlineEnd: var(--#{$login}__main-body--md--PaddingInlineEnd);
+    --#{$login}__main-body--PaddingInlineStart: var(--#{$login}__main-body--md--PaddingInlineStart);
+  }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$login}__header--MarginBlockEnd: var(--#{$login}__header--xl--MarginBlockEnd);
+    --#{$login}__header--c-brand--MarginBlockEnd: var(--#{$login}__header--c-brand--xl--MarginBlockEnd);
+    --#{$login}__main--MarginBlockEnd: 0;
+    --#{$login}__container--MaxWidth: var(--#{$login}__container--xl--MaxWidth);
     --#{$login}__footer--c-list--PaddingBlockStart: var(--#{$login}__footer--c-list--xl--PaddingBlockStart);
   }
 }

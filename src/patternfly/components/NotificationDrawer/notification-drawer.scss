@@ -289,13 +289,13 @@
 }
 
 .#{$notification-drawer}__group-toggle-title {
-  @include pf-v6-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
-
   flex: 1;
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginInlineEnd);
   font-size: var(--#{$notification-drawer}__group-toggle-title--FontSize);
   text-align: start;
   word-break: break-word;
+
+  @include pf-v6-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
 }
 
 .#{$notification-drawer}__group-toggle-count {
@@ -304,11 +304,11 @@
 }
 
 .#{$notification-drawer}__group-toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginInlineEnd);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
   transition: var(--#{$notification-drawer}__group-toggle-icon--Transition);
+
+  @include pf-v6-mirror-inline-on-rtl;
 
   .#{$notification-drawer}__group.pf-m-expanded & {
     transform: rotate(var(--#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate));

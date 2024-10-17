@@ -280,10 +280,10 @@
 }
 
 .#{$card}__header-toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   transition: transform var(--#{$card}__header-toggle-icon--TransitionDuration) var(--#{$card}__header-toggle-icon--TransitionTimingFunction);
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$card}__title-text {
