@@ -1,6 +1,8 @@
 @use '../sass-utilities/functions' as *;
 @use '../sass-utilities/init' as *;
 @use '../sass-utilities/scss-variables' as *;
+@use 'sass:list';
+@use 'sass:meta';
 
 // Media query used to create responsive classes
 @mixin pf-v6-media-query($point) {
@@ -84,10 +86,10 @@
   // if $class-name is a map
 
   // stylelint-disable
-  @if type-of($props) == map {
+  @if meta.type-of($props) == map {
     @each $class, $val in $props {
-      $property: nth($val, 1);
-      $value: #{nth($val, 2)} !important;
+      $property: list.nth($val, 1);
+      $value: #{list.nth($val, 2)} !important;
 
       .#{$pf-prefix}u-#{$class} {
         #{$property}: #{$value};
@@ -102,8 +104,8 @@
         @if $direction == 'height' {
           @include pf-v6-height-media-query($breakpoint) {
             @each $class, $val in $props {
-              $property: nth($val, 1);
-              $value: #{nth($val, 2)} !important;
+              $property: list.nth($val, 1);
+              $value: #{list.nth($val, 2)} !important;
 
               .#{$pf-prefix}u-#{$class}#{$suffix}-height {
                 #{$property}: #{$value};
@@ -114,8 +116,8 @@
         @else if ($direction == 'width') {
           @include pf-v6-media-query($breakpoint) {
             @each $class, $val in $props {
-              $property: nth($val, 1);
-              $value: #{nth($val, 2)} !important;
+              $property: list.nth($val, 1);
+              $value: #{list.nth($val, 2)} !important;
 
               .#{$pf-prefix}u-#{$class}#{$suffix} {
                 #{$property}: #{$value};
@@ -126,10 +128,10 @@
       }
     }
   }
-  @else if type-of($props) == list {
-    $class: nth($props, 1);
-    $property: nth($props, 2);
-    $value: nth($props, 3) !important;
+  @else if meta.type-of($props) == list {
+    $class: list.nth($props, 1);
+    $property: list.nth($props, 2);
+    $value: list.nth($props, 3) !important;
 
     .#{$pf-prefix}u-#{$class} {
       #{$property}: #{$value};
@@ -176,12 +178,12 @@
 }
 
 @mixin pf-v6-line-clamp($line-clamp-val: 1) {
+  overflow: hidden;
   // stylelint-disable
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: #{$line-clamp-val};
   // stylelint-enable
-  overflow: hidden;
 }
 
 @mixin pf-v6-overflow-hide-scroll {
@@ -278,35 +280,37 @@
 
 // Build variable stack
 @mixin pf-v6-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
-  $list: ();
+  & { // new css syntax requires this to be wrapped in & {} to compile in the correct order
+    $list: ();
 
-  @each $breakpoint, $breakpoint-value in $breakpoint-map {
-    $variable-list: ();
+    @each $breakpoint, $breakpoint-value in $breakpoint-map {
+      $variable-list: ();
 
-    // Build variable list
-    @if $breakpoint != "base" {
-      $list: append($list, $css-var + "-on-" + $breakpoint);
-    } @else {
-      $list: append($list, $css-var);
-    }
-
-    // Construct variable stack
-    @each $list-item in $list {
-      @if length($variable-list) == 0 {
-        $variable-list: var(#{$list-item});
+      // Build variable list
+      @if $breakpoint != "base" {
+        $list: list.append($list, $css-var + "-on-" + $breakpoint);
       } @else {
-        $variable-list: var(#{$list-item}, $variable-list);
+        $list: list.append($list, $css-var);
       }
-    }
 
-    // Assign variable stack to $prop
-    @include pf-v6-apply-breakpoint($breakpoint) {
-      @if $important == true {
-        // stylelint-disable declaration-no-important
-        #{$prop}: #{$variable-list} !important;
-        // stylelint-enable
-      } @else {
-        #{$prop}: #{$variable-list};
+      // Construct variable stack
+      @each $list-item in $list {
+        @if list.length($variable-list) == 0 {
+          $variable-list: var(#{$list-item});
+        } @else {
+          $variable-list: var(#{$list-item}, $variable-list);
+        }
+      }
+
+      // Assign variable stack to $prop
+      @include pf-v6-apply-breakpoint($breakpoint) {
+        @if $important == true {
+          // stylelint-disable declaration-no-important
+          #{$prop}: #{$variable-list} !important;
+          // stylelint-enable
+        } @else {
+          #{$prop}: #{$variable-list};
+        }
       }
     }
   }
@@ -320,7 +324,7 @@
     // Build variable list
     // stylelint-disable scss/at-if-no-null
     @if $breakpoint-value {
-      $list: append($list, $css-var + "-on-" + $breakpoint);
+      $list: list.append($list, $css-var + "-on-" + $breakpoint);
     }
     // stylelint-enable
   }

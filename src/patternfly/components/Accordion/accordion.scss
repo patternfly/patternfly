@@ -141,17 +141,17 @@
 }
 
 .#{$accordion}__toggle-text {
-  @include pf-v6-text-overflow;
-
   flex-grow: 1;
   font-weight: var(--#{$accordion}__toggle-text--FontWeight);
   color: var(--#{$accordion}__toggle-text--Color);
+
+  @include pf-v6-text-overflow;
 }
 
 .#{$accordion}__toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   transition: var(--#{$accordion}__toggle-icon--Transition);
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$accordion}__expandable-content {

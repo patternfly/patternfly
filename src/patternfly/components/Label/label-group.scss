@@ -149,11 +149,11 @@
   padding-inline-end: var(--#{$label-group}__textarea--PaddingInlineEnd);
   white-space: nowrap;
   resize: none;
+  scrollbar-width: none;  // Firefox
   border: 0;
 
   // Hide scrollbar for IE, Edge and Firefox
   -ms-overflow-style: none;  // IE and Edge
-  scrollbar-width: none;  // Firefox
 
   // Hide scrollbar for Chrome, Safari and Opera
   &::-webkit-scrollbar {

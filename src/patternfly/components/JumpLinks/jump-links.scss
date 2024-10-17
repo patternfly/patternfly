@@ -214,10 +214,10 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 }
 
 .#{$jump-links}__toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
   transition: transform var(--#{$jump-links}__toggle-icon--TransitionDuration) var(--#{$jump-links}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$jump-links}__toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }

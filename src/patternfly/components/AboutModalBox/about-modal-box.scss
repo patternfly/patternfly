@@ -23,12 +23,6 @@
   --#{$about-modal-box}__brand--sm--PaddingInlineStart: var(--pf-t--global--spacer--3xl);
   --#{$about-modal-box}__brand--sm--PaddingBlockEnd: var(--pf-t--global--spacer--3xl);
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$about-modal-box}__brand--PaddingInlineEnd: var(--#{$about-modal-box}__brand--sm--PaddingInlineEnd);
-    --#{$about-modal-box}__brand--PaddingInlineStart: var(--#{$about-modal-box}__brand--sm--PaddingInlineStart);
-    --#{$about-modal-box}__brand--PaddingBlockEnd: var(--#{$about-modal-box}__brand--sm--PaddingBlockEnd);
-  }
-
   // Close
   --#{$about-modal-box}__close--ZIndex: var(--pf-t--global--z-index--2xl);
   --#{$about-modal-box}__close--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
@@ -36,14 +30,6 @@
   --#{$about-modal-box}__close--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
   --#{$about-modal-box}__close--sm--PaddingBlockEnd: var(--pf-t--global--spacer--3xl);
   --#{$about-modal-box}__close--lg--PaddingInlineEnd: var(--pf-t--global--spacer--3xl);
-
-  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$about-modal-box}__close--PaddingBlockEnd: var(--#{$about-modal-box}__close--sm--PaddingBlockEnd);
-  }
-
-  @media only screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    --#{$about-modal-box}__close--PaddingInlineEnd: var(--#{$about-modal-box}__close--lg--PaddingInlineEnd);
-  }
 
   // Close Button
   --#{$about-modal-box}__close--c-button--FontSize: var(--pf-t--global--icon--size--lg);
@@ -58,20 +44,11 @@
   --#{$about-modal-box}__header--sm--PaddingInlineEnd: var(--pf-t--global--spacer--3xl);
   --#{$about-modal-box}__header--sm--PaddingInlineStart: var(--pf-t--global--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$about-modal-box}__header--PaddingInlineEnd: var(--#{$about-modal-box}__header--sm--PaddingInlineEnd);
-    --#{$about-modal-box}__header--PaddingInlineStart: var(--#{$about-modal-box}__header--sm--PaddingInlineStart);
-  }
-
   // Strapline
   --#{$about-modal-box}__strapline--PaddingBlockStart: var(--pf-t--global--spacer--xl);
   --#{$about-modal-box}__strapline--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$about-modal-box}__strapline--Color: var(--pf-t--global--text--color--subtle);
   --#{$about-modal-box}__strapline--sm--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
-
-  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$about-modal-box}__strapline--PaddingBlockStart: var(--#{$about-modal-box}__strapline--sm--PaddingBlockStart);
-  }
 
   // Content
   --#{$about-modal-box}__content--MarginBlockStart: var(--pf-t--global--spacer--xl);
@@ -83,11 +60,23 @@
   --#{$about-modal-box}__content--sm--MarginBlockEnd: var(--pf-t--global--spacer--2xl);
   --#{$about-modal-box}__content--sm--MarginInlineStart: var(--pf-t--global--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    --#{$about-modal-box}__brand--PaddingInlineEnd: var(--#{$about-modal-box}__brand--sm--PaddingInlineEnd);
+    --#{$about-modal-box}__brand--PaddingInlineStart: var(--#{$about-modal-box}__brand--sm--PaddingInlineStart);
+    --#{$about-modal-box}__brand--PaddingBlockEnd: var(--#{$about-modal-box}__brand--sm--PaddingBlockEnd);
+    --#{$about-modal-box}__header--PaddingInlineEnd: var(--#{$about-modal-box}__header--sm--PaddingInlineEnd);
+    --#{$about-modal-box}__header--PaddingInlineStart: var(--#{$about-modal-box}__header--sm--PaddingInlineStart);
+    --#{$about-modal-box}__close--PaddingBlockEnd: var(--#{$about-modal-box}__close--sm--PaddingBlockEnd);
+    --#{$about-modal-box}__strapline--PaddingBlockStart: var(--#{$about-modal-box}__strapline--sm--PaddingBlockStart);
     --#{$about-modal-box}__content--MarginBlockStart: var(--#{$about-modal-box}__content--sm--MarginBlockStart);
     --#{$about-modal-box}__content--MarginInlineEnd: var(--#{$about-modal-box}__content--sm--MarginInlineEnd);
     --#{$about-modal-box}__content--MarginBlockEnd: var(--#{$about-modal-box}__content--sm--MarginBlockEnd);
     --#{$about-modal-box}__content--MarginInlineStart: var(--#{$about-modal-box}__content--sm--MarginInlineStart);
+  }
+
+  @media only screen and (min-width: $pf-v6-global--breakpoint--lg) {
+    --#{$about-modal-box}__close--PaddingInlineEnd: var(--#{$about-modal-box}__close--lg--PaddingInlineEnd);
   }
 }
 
@@ -109,6 +98,12 @@
   background-position: var(--#{$about-modal-box}--BackgroundPosition);
   background-size: var(--#{$about-modal-box}--BackgroundSize);
 
+  @include pf-v6-bidirectional-style (
+    $prop: --#{$about-modal-box}--BackgroundPosition,
+    $ltr-val: bottom right,
+    $rtl-val: bottom left
+  );
+
   @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     grid-template-areas:
     "brand          close"
@@ -124,12 +119,6 @@
     grid-template-rows: max-content max-content auto;
     grid-template-columns: var(--#{$about-modal-box}--lg--GridTemplateColumns);
   }
-
-  @include pf-v6-bidirectional-style (
-    $prop: --#{$about-modal-box}--BackgroundPosition,
-    $ltr-val: bottom right,
-    $rtl-val: bottom left
-  );
 }
 
 // Brand

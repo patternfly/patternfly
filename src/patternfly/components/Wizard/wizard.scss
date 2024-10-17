@@ -134,10 +134,6 @@
   --#{$wizard}__nav--lg--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__nav--lg--BorderInlineEndColor: var(--pf-t--global--border--color--default);
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
-    --#{$wizard}__nav--BoxShadow: none;
-  }
 
   // Nav list (nested)
   --#{$wizard}__nav-list--PaddingBlockStart: var(--pf-t--global--spacer--lg);
@@ -173,6 +169,11 @@
   --#{$wizard}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__footer--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
+    --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
+    --#{$wizard}__nav--BoxShadow: none;
+  }
 }
 
 .#{$wizard} {
@@ -321,9 +322,9 @@
 }
 
 .#{$wizard}__toggle-separator {
-  @include pf-v6-mirror-inline-on-rtl;
-
   color: var(--#{$wizard}__toggle-separator--Color);
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$wizard}__toggle-icon {
@@ -333,8 +334,8 @@
 .#{$wizard}__outer-wrap {
   position: relative;
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   min-height: var(--#{$wizard}__outer-wrap--MinHeight);
   background-color: var(--#{$wizard}__outer-wrap--BackgroundColor);
 
@@ -346,8 +347,8 @@
 .#{$wizard}__inner-wrap {
   position: relative;
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   min-height: 0;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
@@ -544,18 +545,18 @@
 }
 
 .#{$wizard}__nav-link-toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   transition: transform var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration) var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$wizard}__main {
   z-index: var(--#{$wizard}__main--ZIndex);
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
   word-break: break-word;
@@ -571,8 +572,8 @@
     padding: 0;
   }
 
-  &:last-child { 
-    flex-grow: 1; 
+  &:last-child {
+    flex-grow: 1;
   }
 }
 

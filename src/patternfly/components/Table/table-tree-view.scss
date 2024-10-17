@@ -70,14 +70,14 @@ $pf-v6-c-tree-view--MaxDepth: 10;
   cursor: pointer;
 
   > .#{$table}__toggle {
+    position: var(--#{$table}--m-tree-view__toggle--Position);
+    inset-inline-start: var(--#{$table}--m-tree-view__toggle--InsetInlineStart);
+
     @include pf-v6-bidirectional-style (
       $prop: 'transform',
       $ltr-val: translateX(var(--#{$table}--m-tree-view__toggle--TranslateX)),
       $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$table}--m-tree-view__toggle--TranslateX))})
     );
-
-    position: var(--#{$table}--m-tree-view__toggle--Position);
-    inset-inline-start: var(--#{$table}--m-tree-view__toggle--InsetInlineStart);
 
     .#{$table}__toggle-icon {
       min-width: var(--#{$table}--m-tree-view__toggle__toggle-icon--MinWidth);

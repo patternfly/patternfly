@@ -127,15 +127,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
-
-    &.pf-m-panel-bottom {
-      --#{$drawer}__panel--MinWidth: auto;
-      --#{$drawer}__panel--MinHeight: var(--#{$drawer}--m-panel-bottom__panel--xl--MinHeight);
-    }
-  }
-
   // Actions
   --#{$drawer}__actions--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--compact) * -1.5);
   --#{$drawer}__actions--MarginInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--compact) * -1.5);
@@ -152,20 +143,19 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-inline__panel--PaddingInlineStart: var(--#{$drawer}__panel--after--Width);
   --#{$drawer}--m-panel-left--m-inline__panel--PaddingInlineEnd: var(--#{$drawer}__panel--after--Width);
   --#{$drawer}--m-panel-bottom--m-inline__panel--PaddingBlockStart: var(--#{$drawer}__panel--after--Width);
+
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
+
+    &.pf-m-panel-bottom {
+      --#{$drawer}__panel--MinWidth: auto;
+      --#{$drawer}__panel--MinHeight: var(--#{$drawer}--m-panel-bottom__panel--xl--MinHeight);
+    }
+  }
 }
 
 .#{$drawer} {
-  @include pf-v6-bidirectional-style(
-    $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
-    $ltr-val: var(--pf-t--global--box-shadow--md--left),
-    $rtl-val: var(--pf-t--global--box-shadow--md--right)
-  );
-  @include pf-v6-bidirectional-style(
-    $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
-    $ltr-val: var(--pf-t--global--box-shadow--md--right),
-    $rtl-val: var(--pf-t--global--box-shadow--md--left)
-  );
-
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -259,8 +249,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .#{$drawer}__panel,
 .#{$drawer}__panel-main {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
   overflow: auto;
 }
 
@@ -634,7 +624,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v6-c-drawer__panel--list--width {
       .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --#{$drawer}__panel--md--FlexBasis: #{percentage(math.div($width-value, 100))};
+        --#{$drawer}__panel--md--FlexBasis: #{math.percentage(math.div($width-value, 100))};
       }
     }
   }
@@ -758,4 +748,20 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       // stylelint-enable
     }
   }
+}
+
+.#{$drawer} {
+  @include pf-v6-bidirectional-style(
+    $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
+    $ltr-val: var(--pf-t--global--box-shadow--md--left),
+    $rtl-val: var(--pf-t--global--box-shadow--md--right)
+    );
+}
+
+.#{$drawer} {
+  @include pf-v6-bidirectional-style(
+    $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
+    $ltr-val: var(--pf-t--global--box-shadow--md--right),
+    $rtl-val: var(--pf-t--global--box-shadow--md--left)
+  );
 }

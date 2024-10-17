@@ -560,9 +560,9 @@
 
 // - Menu item text
 .#{$menu}__item-text {
-  @include pf-v6-text-overflow;
-
   flex-grow: 1;
+
+  @include pf-v6-text-overflow;
 }
 
 // - Menu group title
@@ -590,9 +590,9 @@
 
 // - Menu toggle icon
 .#{$menu}__item-toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   color: var(--#{$menu}__item-toggle-icon--Color, inherit);
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 // - Menu item icon

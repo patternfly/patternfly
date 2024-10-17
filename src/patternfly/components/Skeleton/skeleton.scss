@@ -75,8 +75,6 @@
   }
 
   &::after {
-    @include pf-v6-mirror-inline-on-rtl;
-
     position: absolute;
     inset: 0;
     display: block;
@@ -84,6 +82,8 @@
     background: linear-gradient(var(--#{$skeleton}--after--LinearGradientAngle), var(--#{$skeleton}--after--LinearGradientColorStop1), var(--#{$skeleton}--after--LinearGradientColorStop2), var(--#{$skeleton}--after--LinearGradientColorStop3));
     transform: translate3d(var(--#{$skeleton}--after--TranslateX), 0, 0); // translateZ() to force GPU acceleration
     animation: var(--#{$skeleton}--after--AnimationName) var(--#{$skeleton}--after--AnimationDuration) var(--#{$skeleton}--after--AnimationTimingFunction) var(--#{$skeleton}--after--AnimationDelay) var(--#{$skeleton}--after--AnimationIterationCount);
+
+    @include pf-v6-mirror-inline-on-rtl;
   }
 
   // Circle

@@ -183,20 +183,20 @@
     padding-block-end: var(--#{$form-control}--textarea--PaddingBlockEnd--offset);
     padding-inline-start: var(--#{$form-control}--textarea--PaddingInlineStart--offset);
     padding-inline-end: var(--#{$form-control}--textarea--PaddingInlineEnd--offset);
-   
+
     &.pf-m-success,
     &.pf-m-warning,
     &.pf-m-error {
-      --#{$form-control}--m-status--PaddingInlineEnd--offset: calc(var(--#{$form-control}__icon--FontSize) + var(--#{$form-control}--ColumnGap)); 
+      --#{$form-control}--m-status--PaddingInlineEnd--offset: calc(var(--#{$form-control}__icon--FontSize) + var(--#{$form-control}--ColumnGap));
     }
 
     > textarea {
       padding-block-start: calc(var(--#{$form-control}--PaddingBlockStart) - var(--#{$form-control}--textarea--PaddingBlockStart--offset));
       padding-block-end: calc(var(--#{$form-control}--PaddingBlockEnd) - var(--#{$form-control}--textarea--PaddingBlockEnd--offset));
       padding-inline-start: calc(var(--#{$form-control}--PaddingInlineStart) - var(--#{$form-control}--textarea--PaddingInlineStart--offset));
-      padding-inline-end: calc(var(--#{$form-control}--PaddingInlineEnd) - var(--#{$form-control}--textarea--PaddingInlineEnd--offset) + var(--#{$form-control}--m-status--PaddingInlineEnd--offset, 0));  
-      outline-offset: 0;
+      padding-inline-end: calc(var(--#{$form-control}--PaddingInlineEnd) - var(--#{$form-control}--textarea--PaddingInlineEnd--offset) + var(--#{$form-control}--m-status--PaddingInlineEnd--offset, 0));
       scrollbar-gutter: stable;
+      outline-offset: 0;
     }
   }
 
@@ -291,15 +291,15 @@
     --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}__select--PaddingInlineEnd);
     --#{$form-control}--PaddingInlineStart: var(--#{$form-control}__select--PaddingInlineStart);
 
+    // We need this property for certain Linux distros/non-Mac OS where dark theme styles aren't applied properly.
+    background-color: var(--#{$form-control}--BackgroundColor);
+
     // Firefox's select text has additional padding
     // stylelint-disable-next-line
     @-moz-document url-prefix() {
       --#{$form-control}--PaddingInlineEnd: calc(var(--#{$form-control}__select--PaddingInlineEnd) - 1px);
       --#{$form-control}--PaddingInlineStart: calc(var(--#{$form-control}__select--PaddingInlineStart) - 4px);
     }
-
-    // We need this property for certain Linux distros/non-Mac OS where dark theme styles aren't applied properly.
-    background-color: var(--#{$form-control}--BackgroundColor);
   }
 
   &.pf-m-placeholder > select {
