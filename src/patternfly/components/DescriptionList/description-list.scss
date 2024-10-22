@@ -27,10 +27,6 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}__term--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$description-list}__term--LineHeight: var(--pf-t--global--font--line-height--body);
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$description-list}__term--Display: var(--#{$description-list}__term--sm--Display);
-  }
-
   // icon
   --#{$description-list}__term-icon--MinWidth: var(--pf-t--global--font--size--body--sm);
   --#{$description-list}__term-icon--MarginInlineEnd: var(--pf-t--global--spacer--sm);
@@ -66,6 +62,11 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 
   @include pf-v6-output-root-variables("--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
   @include pf-v6-build-css-variable-stack("--#{$description-list}__term--width", "--#{$description-list}--m-horizontal__term--width", $pf-v6-c-description-list--breakpoint-map);
+
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    --#{$description-list}__term--Display: var(--#{$description-list}__term--sm--Display);
+  }
 }
 
 .#{$description-list} {

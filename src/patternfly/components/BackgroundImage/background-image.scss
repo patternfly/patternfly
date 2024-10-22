@@ -11,12 +11,6 @@
 }
 
 .#{$background-image} {
-  @include pf-v6-bidirectional-style(
-    $prop: --#{$background-image}--BackgroundPosition,
-    $ltr-val: bottom right,
-    $rtl-val: bottom left
-  );
-
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -28,4 +22,10 @@
   background-repeat: no-repeat;
   background-position: var(--#{$background-image}--BackgroundPosition);
   background-size: var(--#{$background-image}--BackgroundSize);
+
+  @include pf-v6-bidirectional-style(
+    $prop: --#{$background-image}--BackgroundPosition,
+    $ltr-val: bottom right,
+    $rtl-val: bottom left
+  );
 }

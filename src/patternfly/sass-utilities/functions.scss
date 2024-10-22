@@ -3,10 +3,13 @@
 @use '../sass-utilities/scss-variables' as *;
 @use '../sass-utilities/init' as *;
 @use 'sass:math';
+@use 'sass:meta';
+@use 'sass:list';
+@use 'sass:map';
 
 // Transform px to rems
 @function pf-strip-unit($num) {
-  @if type-of($num) == 'number' and not unitless($num) {
+  @if meta.type-of($num) == 'number' and not math.is-unitless($num) {
     @return math.div($num, ($num * 0 + 1));
   }
 
@@ -23,14 +26,14 @@
 
 // Return (width) breakpoint value if it exists
 @function pf-breakpoint-value($breakpoint, $breakpoint-map: $pf-v6-global--breakpoint-name-map) {
-  $breakpoint-value: if(map-has-key($breakpoint-map, #{$breakpoint}), map-get($breakpoint-map, #{$breakpoint}), false);
+  $breakpoint-value: if(map.has-key($breakpoint-map, #{$breakpoint}), map.get($breakpoint-map, #{$breakpoint}), false);
 
   @return #{$breakpoint-value};
 }
 
 // Return height breakpoint value if it exists
 @function pf-height-breakpoint-value($height-breakpoint, $height-breakpoint-map: $pf-v6-global--height-breakpoint-name-map) {
-  $height-breakpoint-value: if(map-has-key($height-breakpoint-map, #{$height-breakpoint}), map-get($height-breakpoint-map, #{$height-breakpoint}), false);
+  $height-breakpoint-value: if(map.has-key($height-breakpoint-map, #{$height-breakpoint}), map.get($height-breakpoint-map, #{$height-breakpoint}), false);
 
   @return #{$height-breakpoint-value};
 }
@@ -40,17 +43,17 @@
 @function build-breakpoint-map($map-items...) {
   $map: ();
 
-  @if length($map-items) == 0 {
+  @if list.length($map-items) == 0 {
     $map: ("base": null);
-    $map: map-merge($map, $pf-v6-global--breakpoint-name-map);
+    $map: map.merge($map, $pf-v6-global--breakpoint-name-map);
   } @else {
     @each $breakpoint in $map-items {
-      @if not map-has-key($pf-v6-global--breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
-        $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
+      @if not map.has-key($pf-v6-global--breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
+        $map: map.merge($map, ("invalid breakpoint #{$breakpoint}": null));
       } @else if $breakpoint == "base" {
-        $map: map-merge($map, ($breakpoint: null));
+        $map: map.merge($map, ($breakpoint: null));
       } @else {
-        $map: map-merge($map, ($breakpoint: map-get($pf-v6-global--breakpoint-name-map, #{$breakpoint})));
+        $map: map.merge($map, ($breakpoint: map.get($pf-v6-global--breakpoint-name-map, #{$breakpoint})));
       }
     }
   }
@@ -63,17 +66,17 @@
 @function build-height-breakpoint-map($map-items...) {
   $map: ();
 
-  @if length($map-items) == 0 {
+  @if list.length($map-items) == 0 {
     $map: ("base": null);
-    $map: map-merge($map, $pf-v6-global--height-breakpoint-name-map);
+    $map: map.merge($map, $pf-v6-global--height-breakpoint-name-map);
   } @else {
     @each $breakpoint in $map-items {
-      @if not map-has-key($pf-v6-global--height-breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
-        $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
+      @if not map.has-key($pf-v6-global--height-breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
+        $map: map.merge($map, ("invalid breakpoint #{$breakpoint}": null));
       } @else if $breakpoint == "base" {
-        $map: map-merge($map, ($breakpoint: null));
+        $map: map.merge($map, ($breakpoint: null));
       } @else {
-        $map: map-merge($map, ($breakpoint: map-get($pf-v6-global--height-breakpoint-name-map, #{$breakpoint})));
+        $map: map.merge($map, ($breakpoint: map.get($pf-v6-global--height-breakpoint-name-map, #{$breakpoint})));
       }
     }
   }
@@ -87,17 +90,17 @@
 @function build-spacer-map($map-items...) {
   $map: ();
 
-  @if length($map-items) == 0 {
+  @if list.length($map-items) == 0 {
     $map: ("none": 0);
-    $map: map-merge($map, $pf-v6-global--spacer-map);
-    $map: map-remove($map, "auto", "0");
+    $map: map.merge($map, $pf-v6-global--spacer-map);
+    $map: map.remove($map, "auto", "0");
   }
 
   @each $spacer in $map-items {
     @if $spacer == "none" {
-      $map: map-merge($map, ($spacer: 0));
+      $map: map.merge($map, ($spacer: 0));
     } @else {
-      $map: map-merge($map, ($spacer: map-get($pf-v6-global--spacer-map, #{$spacer})));
+      $map: map.merge($map, ($spacer: map.get($pf-v6-global--spacer-map, #{$spacer})));
     }
   }
 
@@ -110,7 +113,7 @@
   $new-map: ();
 
   @each $size, $value in $map {
-    $new-map: map-merge($new-map, (map-get($map, $size): --#{$namespace}--#{$size}));
+    $new-map: map.merge($new-map, (map.get($map, $size): --#{$namespace}--#{$size}));
   }
 
   @return $new-map;

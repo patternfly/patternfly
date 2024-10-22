@@ -65,12 +65,12 @@
 
 // Breadcrumb divider
 .#{$breadcrumb}__item-divider {
-  @include pf-v6-mirror-inline-on-rtl;
-
   margin-inline-end: var(--#{$breadcrumb}__item-divider--MarginInlineEnd);
   font-size: var(--#{$breadcrumb}__item-divider--FontSize);
   line-height: 1;
   color: var(--#{$breadcrumb}__item-divider--Color);
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 // Breadcrumb link

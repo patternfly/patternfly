@@ -11,11 +11,6 @@
   --#{$banner}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
   --#{$banner}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
 
-  @media (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$banner}--PaddingInlineEnd: var(--#{$banner}--md--PaddingInlineEnd);
-    --#{$banner}--PaddingInlineStart: var(--#{$banner}--md--PaddingInlineStart);
-  }
-
   // banner link variables
   --#{$banner}--link--Color: var(--#{$banner}--Color);
   --#{$banner}--link--TextDecoration: underline;
@@ -55,6 +50,12 @@
   --#{$banner}--m-blue--Color: var(--pf-t--global--text--color--nonstatus--on-blue--default);
   --#{$banner}--m-purple--BackgroundColor: var(--pf-t--global--color--nonstatus--purple--default);
   --#{$banner}--m-purple--Color: var(--pf-t--global--text--color--nonstatus--on-purple--default);
+
+
+  @media (min-width: $pf-v6-global--breakpoint--md) {
+    --#{$banner}--PaddingInlineEnd: var(--#{$banner}--md--PaddingInlineEnd);
+    --#{$banner}--PaddingInlineStart: var(--#{$banner}--md--PaddingInlineStart);
+  }
 }
 
 .#{$banner} {

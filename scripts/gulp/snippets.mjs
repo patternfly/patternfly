@@ -3,8 +3,8 @@ import fs from 'fs';
 import gulp from 'gulp';
 import through2 from 'through2';
 import prettyhtml from '@starptech/prettyhtml';
-import cheerio from 'cheerio';
 import { hbsInstance, hbsFileMap } from './html.mjs';
+import * as cheerio from 'cheerio';
 
 const { src } = gulp;
 

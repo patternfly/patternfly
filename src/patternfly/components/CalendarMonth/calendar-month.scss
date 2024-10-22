@@ -88,11 +88,10 @@
 }
 
 .#{$calendar-month}__header-nav-control {
-  @include pf-v6-mirror-inline-on-rtl;
-
   margin-inline-start: var(--#{$calendar-month}__header-nav-control--MarginInlineStart);
   margin-inline-end: var(--#{$calendar-month}__header-nav-control--MarginInlineEnd);
 
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$calendar-month}__header-month {
