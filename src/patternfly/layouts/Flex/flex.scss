@@ -335,33 +335,35 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
     }
   }
 
-    // .pf-m-gap{-[size]}{-on-[breakpoint]}
-    @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
-      $pf-v6-l-flex--gap--selectors: ();
+  // .pf-m-gap{-[size]}{-on-[breakpoint]}
+  @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
+    $pf-v6-l-flex--gap--selectors: ();
 
-      @include pf-v6-apply-breakpoint($breakpoint) {
-        @each $spacer, $value in $pf-v6-l-flex--gap-map {
-          $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
-          $spacer-name: if($spacer == "base", "", -#{$spacer});
-          $spacer-row: if($spacer == "base", var(--#{$flex}--m-gap--RowGap), $value);
-          $spacer-column: if($spacer == "base", var(--#{$flex}--m-gap--ColumnGap), $value);
-          $selector: ".pf-m-gap#{$spacer-name}#{$breakpoint-name}";
-          $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
+    @include pf-v6-apply-breakpoint($breakpoint) {
+      @each $spacer, $value in $pf-v6-l-flex--gap-map {
+        $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
+        $spacer-name: if($spacer == "base", "", -#{$spacer});
+        $spacer-row: if($spacer == "base", var(--#{$flex}--m-gap--RowGap), $value);
+        $spacer-column: if($spacer == "base", var(--#{$flex}--m-gap--ColumnGap), $value);
+        $selector: ".pf-m-gap#{$spacer-name}#{$breakpoint-name}";
+        $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
 
-          &#{$selector} {
-            --#{$flex}--RowGap: #{$spacer-row};
-            --#{$flex}--ColumnGap: #{$spacer-column};
-          }
+        &#{$selector} {
+          --#{$flex}--RowGap: #{$spacer-row};
+          --#{$flex}--ColumnGap: #{$spacer-column};
         }
+      }
 
-        &:is(#{$pf-v6-l-flex--gap--selectors}) {
-          > * {
-            --#{$flex}--spacer--row: 0;
-            --#{$flex}--spacer--column: 0;
-          }
+      &#{$pf-v6-l-flex--gap--selectors} {
+        > .#{$flex} > .#{$flex},
+        > .#{$flex}__group,
+        > .#{$flex}__item {
+          margin-block: 0;
+          margin-inline: 0;
         }
       }
     }
+  }
 
   // .pf-m-row-gap{-[size]}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
@@ -380,9 +382,11 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         }
       }
 
-      &:is(#{$pf-v6-l-flex--row-gap--selectors}) {
-        > * {
-          --#{$flex}--spacer--row: 0;
+      &#{$pf-v6-l-flex--row-gap--selectors} {
+        > .#{$flex} > .#{$flex},
+        > .#{$flex}__group,
+        > .#{$flex}__item {
+          margin-block: 0;
         }
       }
     }
@@ -405,9 +409,11 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         }
       }
 
-      &:is(#{$pf-v6-l-flex--column-gap--selectors}) {
-        > * {
-          --#{$flex}--spacer--column: 0;
+      &#{$pf-v6-l-flex--column-gap--selectors} {
+        > .#{$flex} > .#{$flex},
+        > .#{$flex}__group,
+        > .#{$flex}__item {
+          margin: 0;
         }
       }
     }
