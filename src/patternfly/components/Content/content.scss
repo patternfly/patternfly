@@ -99,7 +99,7 @@
   --#{$content}--hr--BackgroundColor: var(--pf-t--global--border--color--default);
 }
 
-[class*="#{$content}"] {
+.#{$content} {
   font-size: var(--#{$content}--FontSize);
   line-height: var(--#{$content}--LineHeight);
   color: var(--#{$content}--Color);
@@ -110,265 +110,224 @@
   }
 }
 
-.#{$content} {
-  @at-root :is(
-    .#{$content}--a,
-    & a
-  ) {
-    color: var(--#{$content}--a--Color);
-    text-decoration: var(--#{$content}--a--TextDecorationLine) var(--#{$content}--a--TextDecorationStyle);
+.#{$content}--a,
+.#{$content} a {
+  color: var(--#{$content}--a--Color);
+  text-decoration: var(--#{$content}--a--TextDecorationLine) var(--#{$content}--a--TextDecorationStyle);
 
-    &:is(:hover, :focus) {
-      --#{$content}--a--Color: var(--#{$content}--a--hover--Color);
-      --#{$content}--a--TextDecorationLine: var(--#{$content}--a--hover--TextDecorationLine);
-      --#{$content}--a--TextDecorationStyle: var(--#{$content}--a--hover--TextDecorationStyle);
-    }
+  &:is(:hover, :focus) {
+    color: var(--#{$content}--a--hover--Color);
+    text-decoration-line: var(--#{$content}--a--hover--TextDecorationLine);
+    text-decoration-style: var(--#{$content}--a--hover--TextDecorationStyle);
+  }
+}
+
+// stylelint-disable selector-no-qualifying-type
+.#{$content}--a.pf-m-visited,
+.#{$content}.pf-m-visited a,
+.#{$content} a.pf-m-visited {
+  &:visited {
+    color: var(--#{$content}--a--visited--Color);
+  }
+}
+// stylelint-enable
+
+.#{$content}--li + .#{$content}--li,
+.#{$content} li + li {
+  margin-block-start: var(--#{$content}--li--MarginBlockStart);
+}
+
+.#{$content}--p,
+.#{$content}--dl,
+.#{$content}--ol,
+.#{$content}--ul,
+.#{$content}--blockquote,
+.#{$content}--small,
+.#{$content}--pre,
+.#{$content}--table,
+.#{$content}--hr,
+.#{$content} p,
+.#{$content} dl,
+.#{$content} ol,
+.#{$content} ul,
+.#{$content} blockquote,
+.#{$content} small,
+.#{$content} pre,
+.#{$content} table,
+.#{$content} hr {
+  margin-block-end: var(--#{$content}--MarginBlockEnd);
+
+  &:last-child {
+    margin-block-end:0;
+  }
+}
+
+.#{$content}--h1,
+.#{$content}--h2,
+.#{$content}--h3,
+.#{$content}--h4,
+.#{$content}--h5,
+.#{$content}--h6,
+.#{$content} h1,
+.#{$content} h2,
+.#{$content} h3,
+.#{$content} h4,
+.#{$content} h5,
+.#{$content} h6 {
+  margin: 0;
+  font-family: var(--#{$content}--heading--FontFamily);
+
+  &:first-child {
+    margin-block-start: 0;
   }
 
-  // stylelint-disable selector-no-qualifying-type
-  @at-root :is(
-    .#{$content}--a.pf-m-visited,
-    &.pf-m-visited a,
-    & a.pf-m-visited
-  ) {
-    &:visited {
-      color: var(--#{$content}--a--visited--Color);
-    }
+  &:last-child {
+    margin-block-end: 0;
   }
-  // stylelint-enable
+}
 
-  @at-root :is(
-    .#{$content}--li + .#{$content}--li,
-    & li + li
-  ) {
-    margin-block-start: var(--#{$content}--li--MarginBlockStart);
+.#{$content}--h1,
+.#{$content} h1 {
+  margin-block-start: var(--#{$content}--h1--MarginBlockStart);
+  margin-block-end: var(--#{$content}--h1--MarginBlockEnd);
+  font-size: var(--#{$content}--h1--FontSize);
+  font-weight: var(--#{$content}--h1--FontWeight);
+  line-height: var(--#{$content}--h1--LineHeight);
+}
+
+.#{$content}--h2,
+.#{$content} h2 {
+  margin-block-start: var(--#{$content}--h2--MarginBlockStart);
+  margin-block-end: var(--#{$content}--h2--MarginBlockEnd);
+  font-size: var(--#{$content}--h2--FontSize);
+  font-weight: var(--#{$content}--h2--FontWeight);
+  line-height: var(--#{$content}--h2--LineHeight);
+}
+
+.#{$content}--h3,
+.#{$content} h3 {
+  margin-block-start: var(--#{$content}--h3--MarginBlockStart);
+  margin-block-end: var(--#{$content}--h3--MarginBlockEnd);
+  font-size: var(--#{$content}--h3--FontSize);
+  font-weight: var(--#{$content}--h3--FontWeight);
+  line-height: var(--#{$content}--h3--LineHeight);
+}
+
+.#{$content}--h4,
+.#{$content} h4 {
+  margin-block-start: var(--#{$content}--h4--MarginBlockStart);
+  margin-block-end: var(--#{$content}--h4--MarginBlockEnd);
+  font-size: var(--#{$content}--h4--FontSize);
+  font-weight: var(--#{$content}--h4--FontWeight);
+  line-height: var(--#{$content}--h4--LineHeight);
+}
+
+.#{$content}--h5,
+.#{$content} h5 {
+  margin-block-start: var(--#{$content}--h5--MarginBlockStart);
+  margin-block-end: var(--#{$content}--h5--MarginBlockEnd);
+  font-size: var(--#{$content}--h5--FontSize);
+  font-weight: var(--#{$content}--h5--FontWeight);
+  line-height: var(--#{$content}--h5--LineHeight);
+}
+
+.#{$content}--h6,
+.#{$content} h6 {
+  margin-block-start: var(--#{$content}--h6--MarginBlockStart);
+  margin-block-end: var(--#{$content}--h6--MarginBlockEnd);
+  font-size: var(--#{$content}--h6--FontSize);
+  font-weight: var(--#{$content}--h6--FontWeight);
+  line-height: var(--#{$content}--h6--LineHeight);
+}
+
+.#{$content}--small,
+.#{$content} small {
+  display: block;
+  margin-block-end: var(--#{$content}--small--MarginBlockEnd);
+  font-size: var(--#{$content}--small--FontSize);
+  line-height: var(--#{$content}--small--LineHeight);
+  color: var(--#{$content}--small--Color);
+
+  &:last-child {
+    margin-block-end: 0;
   }
+}
 
-  @at-root :is(
-    .#{$content}--p,
-    .#{$content}--dl,
-    .#{$content}--ol,
-    .#{$content}--ul,
-    .#{$content}--blockquote,
-    .#{$content}--small,
-    .#{$content}--pre,
-    .#{$content}--table,
-    .#{$content}--hr,
-    & p,
-    & dl,
-    & ol,
-    & ul,
-    & blockquote,
-    & small,
-    & pre,
-    & table,
-    & hr
-  ) {
-    &:not(:last-child) {
-      // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-      margin-block-end: var(--#{$content}--MarginBlockEnd);
-    }
-  }
+.#{$content}--blockquote,
+.#{$content} blockquote {
+  padding-block-start: var(--#{$content}--blockquote--PaddingBlockStart);
+  padding-block-end: var(--#{$content}--blockquote--PaddingBlockEnd);
+  padding-inline-start: var(--#{$content}--blockquote--PaddingInlineStart);
+  padding-inline-end: var(--#{$content}--blockquote--PaddingInlineEnd);
+  color: var(--#{$content}--blockquote--Color);
+  border-inline-start: var(--#{$content}--blockquote--BorderInlineStartWidth) solid var(--#{$content}--blockquote--BorderInlineStartColor);
+}
 
-  @at-root :is(
-    .#{$content}--h1,
-    .#{$content}--h2,
-    .#{$content}--h3,
-    .#{$content}--h4,
-    .#{$content}--h5,
-    .#{$content}--h6,
-    & h1,
-    & h2,
-    & h3,
-    & h4,
-    & h5,
-    & h6
-  ) {
-    margin: 0;
-    font-family: var(--#{$content}--heading--FontFamily);
+.#{$content}--hr,
+.#{$content} hr {
+  height: var(--#{$content}--hr--Height);
+  background-color: var(--#{$content}--hr--BackgroundColor);
+  border: none;
+}
 
-    &:first-child {
-      margin-block-start: 0;
-    }
+.#{$content}--ol,
+.#{$content}--ul,
+.#{$content} ol,
+.#{$content} ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$content}--list--Gap);
+  padding-inline-start: var(--#{$content}--list--PaddingInlineStart);
 
-    &:last-child {
-      margin-block-end: 0;
-    }
-  }
-
-  @at-root :is(
-    .#{$content}--h1,
-    & h1
-  ) {
-    margin-block-start: var(--#{$content}--h1--MarginBlockStart);
-    margin-block-end: var(--#{$content}--h1--MarginBlockEnd);
-    font-size: var(--#{$content}--h1--FontSize);
-    font-weight: var(--#{$content}--h1--FontWeight);
-    line-height: var(--#{$content}--h1--LineHeight);
-  }
-
-  @at-root :is(
-    .#{$content}--h2,
-    & h2
-  ) {
-    margin-block-start: var(--#{$content}--h2--MarginBlockStart);
-    margin-block-end: var(--#{$content}--h2--MarginBlockEnd);
-    font-size: var(--#{$content}--h2--FontSize);
-    font-weight: var(--#{$content}--h2--FontWeight);
-    line-height: var(--#{$content}--h2--LineHeight);
-  }
-
-  @at-root :is(
-    .#{$content}--h3,
-    & h3
-  ) {
-    margin-block-start: var(--#{$content}--h3--MarginBlockStart);
-    margin-block-end: var(--#{$content}--h3--MarginBlockEnd);
-    font-size: var(--#{$content}--h3--FontSize);
-    font-weight: var(--#{$content}--h3--FontWeight);
-    line-height: var(--#{$content}--h3--LineHeight);
-  }
-
-  @at-root :is(
-    .#{$content}--h4,
-    & h4
-  ) {
-    margin-block-start: var(--#{$content}--h4--MarginBlockStart);
-    margin-block-end: var(--#{$content}--h4--MarginBlockEnd);
-    font-size: var(--#{$content}--h4--FontSize);
-    font-weight: var(--#{$content}--h4--FontWeight);
-    line-height: var(--#{$content}--h4--LineHeight);
+  &.pf-m-plain {
+    padding-inline-start: 0;
+    list-style: none;
   }
 
-  @at-root :is(
-    .#{$content}--h5,
-    & h5
-  ) {
-    margin-block-start: var(--#{$content}--h5--MarginBlockStart);
-    margin-block-end: var(--#{$content}--h5--MarginBlockEnd);
-    font-size: var(--#{$content}--h5--FontSize);
-    font-weight: var(--#{$content}--h5--FontWeight);
-    line-height: var(--#{$content}--h5--LineHeight);
+  .#{$content}--ol,
+  .#{$content}--ul,
+  ol,
+  ul {
+    margin-block-start: var(--#{$content}--list--nested--MarginBlockStart);
+  }
+}
+
+.#{$content}--ul,
+.#{$content} ul {
+  list-style: var(--#{$content}--ul--ListStyle);
+}
+
+.#{$content}--dl,
+.#{$content} dl {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    grid-template: auto / var(--#{$content}--dl--GridTemplateColumns--dt) var(--#{$content}--dl--GridTemplateColumns--dd);
+    grid-row-gap: var(--#{$content}--dl--RowGap);
+    grid-column-gap: var(--#{$content}--dl--ColumnGap);
+  }
+}
+
+.#{$content}--dt,
+.#{$content} dt {
+  margin-block-start: var(--#{$content}--dt--MarginBlockStart);
+  font-weight: var(--#{$content}--dt--FontWeight);
+
+  &:first-child {
+    margin-block-start: 0;
+
   }
 
-  @at-root :is(
-    .#{$content}--h6,
-    & h6
-  ) {
-    margin-block-start: var(--#{$content}--h6--MarginBlockStart);
-    margin-block-end: var(--#{$content}--h6--MarginBlockEnd);
-    font-size: var(--#{$content}--h6--FontSize);
-    font-weight: var(--#{$content}--h6--FontWeight);
-    line-height: var(--#{$content}--h6--LineHeight);
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    grid-column: 1;
+    margin-block-start: var(--#{$content}--dt--sm--MarginBlockStart);
   }
+}
 
-  @at-root :is(
-    .#{$content}--small,
-    & small
-  ) {
-    display: block;
-    font-size: var(--#{$content}--small--FontSize);
-    line-height: var(--#{$content}--small--LineHeight);
-    color: var(--#{$content}--small--Color);
-
-    &:not(:last-child) {
-      margin-block-end: var(--#{$content}--small--MarginBlockEnd);
-    }
-  }
-
-  @at-root :is(
-    .#{$content}--blockquote,
-    & blockquote
-  ) {
-    padding-block-start: var(--#{$content}--blockquote--PaddingBlockStart);
-    padding-block-end: var(--#{$content}--blockquote--PaddingBlockEnd);
-    padding-inline-start: var(--#{$content}--blockquote--PaddingInlineStart);
-    padding-inline-end: var(--#{$content}--blockquote--PaddingInlineEnd);
-    color: var(--#{$content}--blockquote--Color);
-    border-inline-start: var(--#{$content}--blockquote--BorderInlineStartWidth) solid var(--#{$content}--blockquote--BorderInlineStartColor);
-  }
-
-  @at-root :is(
-    .#{$content}--hr,
-    & hr
-  ) {
-    height: var(--#{$content}--hr--Height);
-    background-color: var(--#{$content}--hr--BackgroundColor);
-    border: none;
-  }
-
-  @at-root :is(
-    .#{$content}--ol,
-    .#{$content}--ul,
-    & ol,
-    & ul
-  ) {
-    display: flex;
-    flex-direction: column;
-    gap: var(--#{$content}--list--Gap);
-    padding-inline-start: var(--#{$content}--list--PaddingInlineStart);
-
-    &.pf-m-plain {
-      padding-inline-start: 0;
-      list-style: none;
-    }
-
-    :is(
-      .#{$content}--ol,
-      .#{$content}--ul,
-      ol,
-      ul
-    ) {
-      margin-block-start: var(--#{$content}--list--nested--MarginBlockStart);
-    }
-  }
-
-  @at-root :is(
-    .#{$content}--ul,
-    & ul
-  ) {
-    list-style: var(--#{$content}--ul--ListStyle);
-  }
-
-  @at-root :is(
-    .#{$content}--dl,
-    & dl
-  ) {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      grid-template: auto / var(--#{$content}--dl--GridTemplateColumns--dt) var(--#{$content}--dl--GridTemplateColumns--dd);
-      grid-row-gap: var(--#{$content}--dl--RowGap);
-      grid-column-gap: var(--#{$content}--dl--ColumnGap);
-    }
-  }
-
-  @at-root :is(
-    .#{$content}--dt,
-    & dt
-  ) {
-    font-weight: var(--#{$content}--dt--FontWeight);
-
-    &:not(:first-child) {
-      margin-block-start: var(--#{$content}--dt--MarginBlockStart);
-
-      @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-        --#{$content}--dt--MarginBlockStart: var(--#{$content}--dt--sm--MarginBlockStart);
-      }
-    }
-
-    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      grid-column: 1;
-    }
-  }
-
-  @at-root :is(
-    .#{$content}--dd,
-    & dd
-  ) {
-    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      grid-column: 2;
-    }
+.#{$content}--dd,
+.#{$content} dd {
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    grid-column: 2;
   }
 }
