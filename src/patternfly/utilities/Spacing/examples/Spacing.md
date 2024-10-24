@@ -3,11 +3,15 @@ id: Spacing
 section: utility-classes
 pf: 'test'
 ---
+
 import './Spacing.css'
 
 ## Examples
+
 <!-- {$pf} -->
+
 ### Margin
+
 ```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Margin, marginX, marginY
@@ -65,6 +69,7 @@ import './Spacing.css'
 ```
 
 ### Padding
+
 ```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Padding, paddingX, paddingY
@@ -122,6 +127,7 @@ import './Spacing.css'
 ```
 
 ### Combined
+
 ```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Combined spacers
@@ -152,47 +158,53 @@ import './Spacing.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-m-sm-on-lg**
 
 ### Margin properties
-| Abbreviation | Property |
-| -- | -- |
-| `m` |  margin |
-| `mt` | margin-top |
-| `mr` | margin-right |
-| `mb` | margin-bottom |
-| `ml` | margin-left |
-| `mx` | margin-left & margin-right |
-| `my` | margin-top & margin-bottom |
+
+| Abbreviation | Property                   |
+| ------------ | -------------------------- |
+| `m`          | margin                     |
+| `mt`         | margin-top                 |
+| `mr`         | margin-right               |
+| `mb`         | margin-bottom              |
+| `ml`         | margin-left                |
+| `mx`         | margin-left & margin-right |
+| `my`         | margin-top & margin-bottom |
 
 ### Padding properties
-| Abbreviation | Property |
-| -- | -- |
-| `p` |  padding |
-| `pt` | padding-top |
-| `pr` | padding-right |
-| `pb` | padding-bottom |
-| `pl` | padding-left |
-| `px` | padding-left & padding-right |
-| `py` | padding-top & padding-bottom |
+
+| Abbreviation | Property                     |
+| ------------ | ---------------------------- |
+| `p`          | padding                      |
+| `pt`         | padding-top                  |
+| `pr`         | padding-right                |
+| `pb`         | padding-bottom               |
+| `pl`         | padding-left                 |
+| `px`         | padding-left & padding-right |
+| `py`         | padding-top & padding-bottom |
 
 ### Size values
-| Abbreviation | Property |
-| -- | -- |
-| `auto` |  auto |
-| `0` | 0 |
-| `xs` | var(--pf-v6-global--spacer--xs) |
-| `sm` | var(--pf-v6-global--spacer--sm) |
-| `md` | var(--pf-v6-global--spacer--md) |
-| `lg` | var(--pf-v6-global--spacer--lg) |
-| `xl` | var(--pf-v6-global--spacer--xl) |
-| `2xl` | var(--pf-v6-global--spacer--2xl) |
-| `3xl` | var(--pf-v6-global--spacer--3xl) |
-| `4xl` | var(--pf-v6-global--spacer--4xl) |
+
+| Abbreviation | Property                         |
+| ------------ | -------------------------------- |
+| `auto`       | auto                             |
+| `0`          | 0                                |
+| `xs`         | var(--pf-v6-global--spacer--xs)  |
+| `sm`         | var(--pf-v6-global--spacer--sm)  |
+| `md`         | var(--pf-v6-global--spacer--md)  |
+| `lg`         | var(--pf-v6-global--spacer--lg)  |
+| `xl`         | var(--pf-v6-global--spacer--xl)  |
+| `2xl`        | var(--pf-v6-global--spacer--2xl) |
+| `3xl`        | var(--pf-v6-global--spacer--3xl) |
+| `4xl`        | var(--pf-v6-global--spacer--4xl) |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-u-{m, mt, mr, mb, ml, mx, my}-{size}{-on-[breakpoint]}`  | `*` |  Sets margin top, right, bottom, left, margin-left & right, margin-top & bottom to spacer value |
-| `.pf-v6-u-{p, pt, pr, pb, pl, px, py}-{size}{-on-[breakpoint]}`  | `*` |  Sets padding top, right, bottom, left, padding-left & right, padding-top & bottom to spacer value |
+
+| Class                                                           | Applied to | Outcome                                                                                           |
+| --------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| `.pf-v6-u-{m, mt, mr, mb, ml, mx, my}-{size}{-on-[breakpoint]}` | `*`        | Sets margin top, right, bottom, left, margin-left & right, margin-top & bottom to spacer value    |
+| `.pf-v6-u-{p, pt, pr, pb, pl, px, py}-{size}{-on-[breakpoint]}` | `*`        | Sets padding top, right, bottom, left, padding-left & right, padding-top & bottom to spacer value |

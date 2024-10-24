@@ -30,7 +30,9 @@
   --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
+  --#{$card}__header-toggle--MarginInlineStart: calc(
+    var(--pf-t--global--spacer--action--horizontal--plain--default) * -1
+  );
   --#{$card}__header-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$card}__header-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
@@ -103,8 +105,12 @@
   --#{$card}--m-plain--BackgroundColor: transparent;
 
   // Toggle right
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
-  --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(
+    var(--pf-t--global--spacer--action--horizontal--plain--default) * -1
+  );
+  --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(
+    --pf-t--global--spacer--gap--text-to-element--default
+  );
 }
 
 .#{$card} {
@@ -120,7 +126,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    content: "";
+    content: '';
     border: var(--#{$card}--BorderColor) var(--#{$card}--BorderStyle) var(--#{$card}--BorderWidth);
     border-radius: inherit;
   }
@@ -165,13 +171,17 @@
     }
 
     // When SELECTABLE and CLICKABLE card is focused, don't show change of background or border on the card
-    .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:focus-visible) ~ :is(.#{$check}__label, .#{$radio}__label) {
+    .#{$card}__selectable-actions
+      :is(.#{$check}__input, .#{$radio}__input):where(:focus-visible)
+      ~ :is(.#{$check}__label, .#{$radio}__label) {
       --#{$card}--BackgroundColor: revert;
       --#{$card}--BorderColor: revert;
     }
 
     // SELECTABLE and CLICKABLE card is selected (Check box checked or marked .pf-m-selected)
-    .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:checked) ~ :is(.#{$check}__label, .#{$radio}__label),
+    .#{$card}__selectable-actions
+      :is(.#{$check}__input, .#{$radio}__input):where(:checked)
+      ~ :is(.#{$check}__label, .#{$radio}__label),
     &.pf-m-selected {
       --#{$card}--BorderColor: revert;
       --#{$card}--m-selectable--BorderWidth: revert;
@@ -184,7 +194,9 @@
     }
 
     // SELECTABLE and CLICKABLE but DISABLED card
-    .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:disabled) ~ :is(.#{$check}__label, .#{$radio}__label),
+    .#{$card}__selectable-actions
+      :is(.#{$check}__input, .#{$radio}__input):where(:disabled)
+      ~ :is(.#{$check}__label, .#{$radio}__label),
     &.pf-m-disabled {
       --#{$card}--BackgroundColor: var(--#{$card}--m-selectable--m-disabled--BackgroundColor);
     }
@@ -200,7 +212,9 @@
     --#{$card}--child--PaddingBlockEnd: var(--#{$card}--m-compact--child--PaddingBlockEnd);
     --#{$card}--child--PaddingInlineStart: var(--#{$card}--m-compact--child--PaddingInlineStart);
     --#{$card}--c-divider--child--PaddingBlockStart: var(--#{$card}--m-compact--c-divider--child--PaddingBlockStart);
-    --#{$card}__title--not--last-child--PaddingBlockEnd: var(--#{$card}--m-compact__title--not--last-child--PaddingBlockEnd);
+    --#{$card}__title--not--last-child--PaddingBlockEnd: var(
+      --#{$card}--m-compact__title--not--last-child--PaddingBlockEnd
+    );
   }
 
   &.pf-m-display-lg {
@@ -212,7 +226,9 @@
     --#{$card}--child--PaddingBlockEnd: var(--#{$card}--m-display-lg--child--PaddingBlockEnd);
     --#{$card}--child--PaddingInlineStart: var(--#{$card}--m-display-lg--child--PaddingInlineStart);
     --#{$card}--c-divider--child--PaddingBlockStart: var(--#{$card}--m-display-lg--c-divider--child--PaddingBlockStart);
-    --#{$card}__title--not--last-child--PaddingBlockEnd: var(--#{$card}--m-display-lg__title--not--last-child--PaddingBlockEnd);
+    --#{$card}__title--not--last-child--PaddingBlockEnd: var(
+      --#{$card}--m-display-lg__title--not--last-child--PaddingBlockEnd
+    );
   }
 
   &.pf-m-secondary {
@@ -283,7 +299,8 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: transform var(--#{$card}__header-toggle-icon--TransitionDuration) var(--#{$card}__header-toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$card}__header-toggle-icon--TransitionDuration)
+    var(--#{$card}__header-toggle-icon--TransitionTimingFunction);
 }
 
 .#{$card}__title-text {
@@ -340,27 +357,37 @@
 }
 
 // Selected card (checked)
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:checked) ~ :is(.#{$radio}__label, .#{$check}__label),
+.#{$card}__selectable-actions
+  :is(.#{$check}__input, .#{$radio}__input):where(:checked)
+  ~ :is(.#{$radio}__label, .#{$check}__label),
 .#{$card}.pf-m-selected {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-selected--BorderColor);
-  --#{$card}--m-selectable--BorderWidth: var(--#{$card}--m-selectable--m-selected--BorderWidth); // this line used to be just BorderWidth, not m-selectable
+  --#{$card}--m-selectable--BorderWidth: var(
+    --#{$card}--m-selectable--m-selected--BorderWidth
+  ); // this line used to be just BorderWidth, not m-selectable
 }
 
 // Focus on the card (focus on label but not checked)
 .#{$card}__selectable-actions .#{$card}__clickable-action:where(:focus-visible),
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input, .#{$card}__clickable-action):where(:focus-visible) ~ :is(.#{$check}__label, .#{$radio}__label) {
+.#{$card}__selectable-actions
+  :is(.#{$check}__input, .#{$radio}__input, .#{$card}__clickable-action):where(:focus-visible)
+  ~ :is(.#{$check}__label, .#{$radio}__label) {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--focus--BorderColor);
   --#{$card}--BorderWidth: var(--#{$card}--m-selectable--focus--BorderWidth);
 }
 
 // Focus on a selected card (focus + checked)
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:focus-visible):where(:checked) ~ :is(.#{$check}__label, .#{$radio}__label) {
+.#{$card}__selectable-actions
+  :is(.#{$check}__input, .#{$radio}__input):where(:focus-visible):where(:checked)
+  ~ :is(.#{$check}__label, .#{$radio}__label) {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-selected--focus--BorderColor);
   --#{$card}--BorderWidth: var(--#{$card}--m-selectable--m-selected--focus--BorderWidth);
 }
 
 // Disabled card
-.#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:disabled) ~ :is(.#{$check}__label, .#{$radio}__label),
+.#{$card}__selectable-actions
+  :is(.#{$check}__input, .#{$radio}__input):where(:disabled)
+  ~ :is(.#{$check}__label, .#{$radio}__label),
 .#{$card}.pf-m-disabled {
   --#{$card}__title-text--Color: var(--#{$card}--m-selectable--m-disabled__title-text--Color);
   --#{$card}__body--Color: var(--#{$card}--m-selectable--m-disabled__body--Color);

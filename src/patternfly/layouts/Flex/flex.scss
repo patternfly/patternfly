@@ -3,8 +3,8 @@
 // Always keep list of spacers and breakpoints up-to-date
 $pf-v6-l-flex--breakpoint-map: build-breakpoint-map();
 $pf-v6-l-flex--spacer-map: build-spacer-map();
-$pf-v6-l-flex--gap-map: build-spacer-map("base", "none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl");
-$pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $pf-v6-l-flex--spacer-map);
+$pf-v6-l-flex--gap-map: build-spacer-map('base', 'none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl');
+$pf-v6-l-flex--variable-map: build-variable-map('#{$pf-prefix}l-flex--spacer', $pf-v6-l-flex--spacer-map);
 
 @include pf-root($flex) {
   --#{$flex}--Display: flex;
@@ -56,15 +56,33 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   }
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    order: var(--#{$flex}--item--Order-on-lg, var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order))));
+    order: var(
+      --#{$flex}--item--Order-on-lg,
+      var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order)))
+    );
   }
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    order: var(--#{$flex}--item--Order-on-xl, var(--#{$flex}--item--Order-on-lg, var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order)))));
+    order: var(
+      --#{$flex}--item--Order-on-xl,
+      var(
+        --#{$flex}--item--Order-on-lg,
+        var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order)))
+      )
+    );
   }
 
   @media screen and (min-width: $pf-v6-global--breakpoint--2xl) {
-    order: var(--#{$flex}--item--Order-on-2xl, var(--#{$flex}--item--Order-on-xl, var(--#{$flex}--item--Order-on-lg, var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order))))));
+    order: var(
+      --#{$flex}--item--Order-on-2xl,
+      var(
+        --#{$flex}--item--Order-on-xl,
+        var(
+          --#{$flex}--item--Order-on-lg,
+          var(--#{$flex}--item--Order-on-md, var(--#{$flex}--item--Order-on-sm, var(--#{$flex}--item--Order)))
+        )
+      )
+    );
   }
 
   &:last-child {
@@ -74,7 +92,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
 .#{$flex} {
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       // display
@@ -301,7 +319,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
   // .pf-m-space-items-{size}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
@@ -320,7 +338,7 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
   // .pf-m-spacer-{size}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-l-flex--spacer-map {
@@ -335,33 +353,33 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
     }
   }
 
-    // .pf-m-gap{-[size]}{-on-[breakpoint]}
-    @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
-      $pf-v6-l-flex--gap--selectors: ();
+  // .pf-m-gap{-[size]}{-on-[breakpoint]}
+  @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
+    $pf-v6-l-flex--gap--selectors: ();
 
-      @include pf-v6-apply-breakpoint($breakpoint) {
-        @each $spacer, $value in $pf-v6-l-flex--gap-map {
-          $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
-          $spacer-name: if($spacer == "base", "", -#{$spacer});
-          $spacer-row: if($spacer == "base", var(--#{$flex}--m-gap--RowGap), $value);
-          $spacer-column: if($spacer == "base", var(--#{$flex}--m-gap--ColumnGap), $value);
-          $selector: ".pf-m-gap#{$spacer-name}#{$breakpoint-name}";
-          $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
+    @include pf-v6-apply-breakpoint($breakpoint) {
+      @each $spacer, $value in $pf-v6-l-flex--gap-map {
+        $breakpoint-name: if($breakpoint == 'base', '', -on-#{$breakpoint});
+        $spacer-name: if($spacer == 'base', '', -#{$spacer});
+        $spacer-row: if($spacer == 'base', var(--#{$flex}--m-gap--RowGap), $value);
+        $spacer-column: if($spacer == 'base', var(--#{$flex}--m-gap--ColumnGap), $value);
+        $selector: '.pf-m-gap#{$spacer-name}#{$breakpoint-name}';
+        $pf-v6-l-flex--gap--selectors: append($pf-v6-l-flex--gap--selectors, $selector, $separator: comma);
 
-          &#{$selector} {
-            --#{$flex}--RowGap: #{$spacer-row};
-            --#{$flex}--ColumnGap: #{$spacer-column};
-          }
+        &#{$selector} {
+          --#{$flex}--RowGap: #{$spacer-row};
+          --#{$flex}--ColumnGap: #{$spacer-column};
         }
+      }
 
-        &:is(#{$pf-v6-l-flex--gap--selectors}) {
-          > * {
-            --#{$flex}--spacer--row: 0;
-            --#{$flex}--spacer--column: 0;
-          }
+      &:is(#{$pf-v6-l-flex--gap--selectors}) {
+        > * {
+          --#{$flex}--spacer--row: 0;
+          --#{$flex}--spacer--column: 0;
         }
       }
     }
+  }
 
   // .pf-m-row-gap{-[size]}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-v6-l-flex--breakpoint-map {
@@ -369,13 +387,13 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
       $pf-v6-l-flex--row-gap--selectors: ();
 
       @each $spacer, $value in $pf-v6-l-flex--gap-map {
-        $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
-        $spacer-name: if($spacer == "base", "", -#{$spacer});
-        $spacer-value: if($spacer == "base", var(--#{$flex}--m-row-gap--RowGap), $value);
-        $selector: ".pf-m-row-gap#{$spacer-name}#{$breakpoint-name}";
+        $breakpoint-name: if($breakpoint == 'base', '', -on-#{$breakpoint});
+        $spacer-name: if($spacer == 'base', '', -#{$spacer});
+        $spacer-value: if($spacer == 'base', var(--#{$flex}--m-row-gap--RowGap), $value);
+        $selector: '.pf-m-row-gap#{$spacer-name}#{$breakpoint-name}';
         $pf-v6-l-flex--row-gap--selectors: append($pf-v6-l-flex--row-gap--selectors, $selector, $separator: comma);
 
-       &#{$selector} {
+        &#{$selector} {
           --#{$flex}--RowGap: #{$spacer-value};
         }
       }
@@ -394,11 +412,15 @@ $pf-v6-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $value in $pf-v6-l-flex--gap-map {
-        $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
-        $spacer-name: if($spacer == "base", "", -#{$spacer});
-        $spacer-value: if($spacer == "base", var(--#{$flex}--m-column-gap--ColumnGap), $value);
-        $selector: ".pf-m-column-gap#{$spacer-name}#{$breakpoint-name}";
-        $pf-v6-l-flex--column-gap--selectors: append($pf-v6-l-flex--column-gap--selectors, $selector, $separator: comma);
+        $breakpoint-name: if($breakpoint == 'base', '', -on-#{$breakpoint});
+        $spacer-name: if($spacer == 'base', '', -#{$spacer});
+        $spacer-value: if($spacer == 'base', var(--#{$flex}--m-column-gap--ColumnGap), $value);
+        $selector: '.pf-m-column-gap#{$spacer-name}#{$breakpoint-name}';
+        $pf-v6-l-flex--column-gap--selectors: append(
+          $pf-v6-l-flex--column-gap--selectors,
+          $selector,
+          $separator: comma
+        );
 
         &#{$selector} {
           --#{$flex}--ColumnGap: #{$spacer-value};

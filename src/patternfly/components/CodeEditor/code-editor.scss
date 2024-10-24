@@ -36,9 +36,11 @@
   --#{$code-editor}__upload--before--BorderWidth: 0;
   --#{$code-editor}__upload--before--BorderColor: transparent;
   --#{$code-editor}__main--m-drag-hover--before--BorderWidth: var(--pf-t--global--border--width--divider--hover);
-  --#{$code-editor}__main--m-drag-hover--before--BorderColor: var( --pf-t--global--border--color--clicked);
-  --#{$code-editor}__main--m-drag-hover--after--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$code-editor}__main--m-drag-hover--after--Opacity: .1;
+  --#{$code-editor}__main--m-drag-hover--before--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$code-editor}__main--m-drag-hover--after--BackgroundColor: var(
+    --pf-t--global--background--color--primary--default
+  );
+  --#{$code-editor}__main--m-drag-hover--after--Opacity: 0.1;
 
   // code
   --#{$code-editor}__code--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -56,9 +58,9 @@
   --#{$code-editor}__tab--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$code-editor}__tab--Color: var(--pf-t--global--text--color--subtle);
   --#{$code-editor}__tab--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$code-editor}__tab--PaddingInlineEnd: var( --pf-t--global--spacer--sm);
+  --#{$code-editor}__tab--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__tab--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$code-editor}__tab--PaddingInlineStart: var( --pf-t--global--spacer--sm);
+  --#{$code-editor}__tab--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__tab--BorderBlockStartWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__tab--BorderInlineEndWidth: var(--pf-t--global--border--width--box--default);
   --#{$code-editor}__tab--BorderBlockEndWidth: 0;
@@ -86,12 +88,15 @@
     inset-inline-start: 0;
     inset-inline-end: 0;
     pointer-events: none;
-    content: "";
-    border-block-end: var(--#{$code-editor}__header--before--BorderBlockEndWidth) solid var(--#{$code-editor}__header--before--BorderBlockEndColor);
+    content: '';
+    border-block-end: var(--#{$code-editor}__header--before--BorderBlockEndWidth) solid
+      var(--#{$code-editor}__header--before--BorderBlockEndColor);
   }
 
   &.pf-m-plain {
-    --#{$code-editor}__header-content--BackgroundColor: var(--#{$code-editor}__header-content--m-plain--BackgroundColor);
+    --#{$code-editor}__header-content--BackgroundColor: var(
+      --#{$code-editor}__header-content--m-plain--BackgroundColor
+    );
   }
 }
 
@@ -137,8 +142,9 @@
     inset-block-end: var(--#{$code-editor}__upload--PaddingBlockEnd);
     inset-inline-start: var(--#{$code-editor}__upload--PaddingInlineStart);
     inset-inline-end: var(--#{$code-editor}__upload--PaddingInlineEnd);
-    content: "";
-    border: var(--#{$code-editor}__upload--before--BorderWidth) dashed var(--#{$code-editor}__upload--before--BorderColor);
+    content: '';
+    border: var(--#{$code-editor}__upload--before--BorderWidth) dashed
+      var(--#{$code-editor}__upload--before--BorderColor);
     border-radius: var(--#{$code-editor}__upload--BorderRadius);
   }
 }

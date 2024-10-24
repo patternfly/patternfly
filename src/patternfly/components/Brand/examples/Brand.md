@@ -6,7 +6,9 @@ section: components
 import './Brand.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 <div class="show-light">
 {{> brand
@@ -22,6 +24,7 @@ import './Brand.css'
 ```
 
 ### Responsive
+
 ```hbs
 <div class="show-light">
 {{> brand
@@ -44,18 +47,22 @@ import './Brand.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 Simple brand component.
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `alt` | `.pf-v6-c-brand` | The alt attribute specifies an alternate text for an image, if the image cannot be displayed. **Required** |
+
+| Attribute | Applied to       | Outcome                                                                                                    |
+| --------- | ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| `alt`     | `.pf-v6-c-brand` | The alt attribute specifies an alternate text for an image, if the image cannot be displayed. **Required** |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-brand` | `<img>, <picture>` |  Initiates a brand image. **Required** |
-| `.pf-m-picture` | `.pf-v6-c-brand` |  Modifies a brand image to a picture. |
-| `--pf-v6-c-brand--Width{-on-[breakpoint]}: {width}` | `.pf-v6-c-brand` |  Modifies the width value of a picture on optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `--pf-v6-c-brand--Height{-on-[breakpoint]}: {height}` | `.pf-v6-c-brand` |  Modifies the height value of a picture on optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+
+| Class                                                 | Applied to         | Outcome                                                                                                                                             |
+| ----------------------------------------------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-brand`                                      | `<img>, <picture>` | Initiates a brand image. **Required**                                                                                                               |
+| `.pf-m-picture`                                       | `.pf-v6-c-brand`   | Modifies a brand image to a picture.                                                                                                                |
+| `--pf-v6-c-brand--Width{-on-[breakpoint]}: {width}`   | `.pf-v6-c-brand`   | Modifies the width value of a picture on optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  |
+| `--pf-v6-c-brand--Height{-on-[breakpoint]}: {height}` | `.pf-v6-c-brand`   | Modifies the height value of a picture on optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

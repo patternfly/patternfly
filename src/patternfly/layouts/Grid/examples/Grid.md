@@ -7,7 +7,9 @@ cssPrefix: pf-v6-l-grid
 import './Grid.css'
 
 ## Examples
+
 ### Smart (responsive)
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item}}
@@ -50,6 +52,7 @@ import './Grid.css'
 ```
 
 ### Smart with overrides (responsive)
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item grid-item--modifier="pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl"}}
@@ -98,6 +101,7 @@ import './Grid.css'
 ```
 
 ### Base
+
 ```hbs
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
@@ -137,6 +141,7 @@ import './Grid.css'
 ```
 
 ### Gutter
+
 ```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
@@ -164,6 +169,7 @@ import './Grid.css'
 ```
 
 ### Responsive
+
 ```hbs
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-1-col pf-m-6-col-on-md pf-m-11-col-on-xl"}}
@@ -200,6 +206,7 @@ import './Grid.css'
 ```
 
 ### Nested
+
 ```hbs
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
@@ -229,6 +236,7 @@ import './Grid.css'
 ```
 
 ### Offsets
+
 ```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-11-col pf-m-offset-1-col"}}
@@ -247,6 +255,7 @@ import './Grid.css'
 ```
 
 ### Row spans
+
 ```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-8-col"}}
@@ -289,6 +298,7 @@ import './Grid.css'
 ```
 
 ### As a list
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm" grid--type="ul" grid-item--type="li"}}
   {{#> grid-item}}
@@ -308,9 +318,10 @@ import './Grid.css'
 
 ## Ordering
 
-Ordering - Ordering can be applied to nested <code>.pf-v6-l-grid</code> and <code>.pf-v6-l-grid__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-v6-l-grid--item--Order{-on-[breakpoint]}: {order}`.
+Ordering - Ordering can be applied to nested <code>.pf-v6-l-grid</code> and <code>.pf-v6-l-grid\_\_item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-v6-l-grid--item--Order{-on-[breakpoint]}: {order}`.
 
 ### Ordering example
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-4-col pf-m-gutter"}}
   {{#> grid-item grid-item--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-grid--item--Order: 2;"')}}
@@ -326,6 +337,7 @@ Ordering - Ordering can be applied to nested <code>.pf-v6-l-grid</code> and <cod
 ```
 
 ### Responsive ordering
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-4-col pf-m-gutter"}}
   {{#> grid-item grid-item--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-grid--item--Order-on-lg: 2;"')}}
@@ -341,6 +353,7 @@ Ordering - Ordering can be applied to nested <code>.pf-v6-l-grid</code> and <cod
 ```
 
 ### Grouped ordering
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
   {{#> grid grid--modifier="pf-m-gutter" grid--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-grid--item--Order: 2;"')}}
@@ -375,6 +388,7 @@ Ordering - Ordering can be applied to nested <code>.pf-v6-l-grid</code> and <cod
 ```
 
 ### Grouped, responsive ordering
+
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
   {{#> grid grid--modifier="pf-m-gutter" grid--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-grid--item--Order-on-lg: 2;"')}}
@@ -416,12 +430,12 @@ The grid layout is based on CSS Grid’s two-dimensional system of columns and r
 
 ### Usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-l-grid` | `<div>` | Initializes the grid layout. |
-| `.pf-v6-l-grid__item` | `<div>` | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
-| `.pf-m-gutter` | `.pf-v6-l-grid` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-all-{1-12}-col{-on-[breakpoint]}` | `.pf-v6-l-grid` | Defines grid item size on grid container at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-{1-12}-col{-on-[breakpoint]}` | `.pf-v6-l-grid__item` | Defines grid item size at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  Although not required, they are strongly suggested. If not used, grid item will default to 12 col. |
-| `.pf-m-{2-x}-row{-on-[breakpoint]}` | `.pf-v6-l-grid__item` | Defines grid item row span at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).  For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
-| `--pf-v6-l-grid--item--Order{-on-[breakpoint]}: {order}` | `.pf-v6-l-grid > .pf-v6-l-grid`, `.pf-v6-l-grid__item` | Modifies the order of the grid layout element at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| Class                                                    | Applied to                                             | Outcome                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.pf-v6-l-grid`                                          | `<div>`                                                | Initializes the grid layout.                                                                                                                                                                                                                                                                                                                                                         |
+| `.pf-v6-l-grid__item`                                    | `<div>`                                                | Explicitly sets a child of the grid. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers.                                                                                                                                                                                     |
+| `.pf-m-gutter`                                           | `.pf-v6-l-grid`                                        | Adds space between children by using the globally defined gutter value.                                                                                                                                                                                                                                                                                                              |
+| `.pf-m-all-{1-12}-col{-on-[breakpoint]}`                 | `.pf-v6-l-grid`                                        | Defines grid item size on grid container at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).                                                                                                                                                                                                                                |
+| `.pf-m-{1-12}-col{-on-[breakpoint]}`                     | `.pf-v6-l-grid__item`                                  | Defines grid item size at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Although not required, they are strongly suggested. If not used, grid item will default to 12 col.                                                                                                                                               |
+| `.pf-m-{2-x}-row{-on-[breakpoint]}`                      | `.pf-v6-l-grid__item`                                  | Defines grid item row span at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). For row spans to function correctly, the value of of the current row plus the grid items to span must be equal to or less than 12. Example: .pf-m-8-col.pf-m-2-row + .pf-m-4-col + .pf-m-4-col. There is no limit to number of spanned rows. |
+| `--pf-v6-l-grid--item--Order{-on-[breakpoint]}: {order}` | `.pf-v6-l-grid > .pf-v6-l-grid`, `.pf-v6-l-grid__item` | Modifies the order of the grid layout element at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).                                                                                                                                                                                                                           |

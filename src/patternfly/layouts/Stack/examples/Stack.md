@@ -7,7 +7,9 @@ cssPrefix: pf-v6-l-stack
 import './Stack.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> stack}}
   {{#> stack-item}}
@@ -23,6 +25,7 @@ import './Stack.css'
 ```
 
 ### With gutter
+
 ```hbs
 {{#> stack stack--modifier="pf-m-gutter"}}
   {{#> stack-item}}
@@ -38,13 +41,16 @@ import './Stack.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 The stack layout is designed to position items vertically, with one item filling the available vertical space.
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-l-stack` | `<div>`, `<section>`, or `<article>` | Initiates the stack layout. |
-| `.pf-v6-l-stack__item` | `<div>` | Initiates a stack item. **Required**  |
-| `.pf-m-gutter` | `.pf-v6-l-stack` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-fill` | `.pf-v6-l-stack__item` | Specifies which item(s) should fill the avaiable vertical space. |
+
+| Class                  | Applied to                           | Outcome                                                                 |
+| ---------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
+| `.pf-v6-l-stack`       | `<div>`, `<section>`, or `<article>` | Initiates the stack layout.                                             |
+| `.pf-v6-l-stack__item` | `<div>`                              | Initiates a stack item. **Required**                                    |
+| `.pf-m-gutter`         | `.pf-v6-l-stack`                     | Adds space between children by using the globally defined gutter value. |
+| `.pf-m-fill`           | `.pf-v6-l-stack__item`               | Specifies which item(s) should fill the avaiable vertical space.        |

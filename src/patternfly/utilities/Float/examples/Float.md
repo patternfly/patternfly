@@ -6,7 +6,9 @@ section: utility-classes
 import './Float.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> float float--type="inline-start"}}
   Float inline-start
@@ -19,11 +21,14 @@ import './Float.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-float-inline-start-on-lg**
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-u-float-inline-start{-on-[breakpoint]}` | `*` |  Float element inline-start |
-| `.pf-v6-u-float-inline-end{-on-[breakpoint]}` | `*` |  Float element inline-end |
+
+| Class                                           | Applied to | Outcome                    |
+| ----------------------------------------------- | ---------- | -------------------------- |
+| `.pf-v6-u-float-inline-start{-on-[breakpoint]}` | `*`        | Float element inline-start |
+| `.pf-v6-u-float-inline-end{-on-[breakpoint]}`   | `*`        | Float element inline-end   |

@@ -72,7 +72,8 @@
   &.pf-m-bordered {
     > * + * {
       padding-block-start: var(--#{$list}--m-bordered--li--PaddingBlockStart);
-      border-block-start: var(--#{$list}--m-bordered--li--BorderBlockStartWidth) solid var(--#{$list}--m-bordered--li--BorderBlockStartColor);
+      border-block-start: var(--#{$list}--m-bordered--li--BorderBlockStartWidth) solid
+        var(--#{$list}--m-bordered--li--BorderBlockStartColor);
     }
   }
 }

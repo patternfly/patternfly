@@ -1,6 +1,11 @@
-{{#if modal-box--IsDangerAlert}} pf-m-danger
-  {{else if modal-box--IsWarningAlert}} pf-m-warning
-  {{else if modal-box--IsSuccessAlert}} pf-m-success
-  {{else if modal-box--IsInfoAlert}} pf-m-info
-  {{else if modal-box--IsCustomAlert}} pf-m-custom
+{{#if modal-box--IsDangerAlert}}
+  pf-m-danger
+{{else if modal-box--IsWarningAlert}}
+  pf-m-warning
+{{else if modal-box--IsSuccessAlert}}
+  pf-m-success
+{{else if modal-box--IsInfoAlert}}
+  pf-m-info
+{{else if modal-box--IsCustomAlert}}
+  pf-m-custom
 {{/if}}

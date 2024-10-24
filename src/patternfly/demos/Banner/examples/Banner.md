@@ -6,7 +6,9 @@ wrapperTag: div
 ---
 
 ## Examples
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="banner-basic-example" page-template-gallery--IsLongGallery="true"}}
 
@@ -15,7 +17,9 @@ wrapperTag: div
   {{> demos/Page/page-template-main-content}}
 {{/inline}}
 ```
+
 ### Top/bottom
+
 ```hbs isFullscreen
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-nowrap pf-m-space-items-none" l-flex--attribute='style="height: 100%;"'}}
   {{> banner-template banner-template--modifier="pf-m-sticky"}}

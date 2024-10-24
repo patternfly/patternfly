@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-icon
 ---
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> icon}}
   {{#> icon-content}}
@@ -33,6 +35,7 @@ cssPrefix: pf-v6-c-icon
 ```
 
 ### Standalone icon sizes
+
 ```hbs
 {{#> icon icon--modifier="pf-m-sm"}}
   {{#> icon-content}}
@@ -67,6 +70,7 @@ cssPrefix: pf-v6-c-icon
 ```
 
 ### Body sizes
+
 ```hbs
 {{#> icon icon--modifier="pf-m-body-sm"}}
   {{#> icon-content}}
@@ -86,6 +90,7 @@ cssPrefix: pf-v6-c-icon
 ```
 
 ### Heading sizes
+
 ```hbs
 {{#> icon icon--modifier="pf-m-heading-sm"}}
   {{#> icon-content}}
@@ -120,6 +125,7 @@ cssPrefix: pf-v6-c-icon
 ```
 
 ### Status colors
+
 ```hbs
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-danger"}}
@@ -149,7 +155,9 @@ cssPrefix: pf-v6-c-icon
 ```
 
 ### Sizing content within the icon container
+
 Use a size modifier on the icon container to maintain a consistent size, even if the contents change in size.
+
 ```hbs
 {{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-lg"}}
@@ -174,6 +182,7 @@ Use a size modifier on the icon container to maintain a consistent size, even if
 ```
 
 ### Inline
+
 ```hbs
 {{#> content}}
   <h1>Heading
@@ -239,6 +248,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
 ```
 
 ### In progress
+
 ```hbs
 {{#> icon icon--modifier="pf-m-md pf-m-in-progress"}}
   {{#> icon-content}}
@@ -260,23 +270,26 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
 ```
 
 ## Documentation
+
 ### Overview
+
 The icon element is a container used to maintain a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
 
 Refer to the [icons](/design-foundations/icons) page for information about the PatternFly icon set and guidelines for use.
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-icon` | `<span>`, `<div>` | Initiates an icon component. **Required**  |
-| `.pf-v6-c-icon__content` | `<span>`, `<div>` | Initiates the icon content. **Required**  |
-| `.pf-v6-c-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
-| `.pf-m-inline` | `.pf-v6-c-icon` | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent. |
-| `.pf-m-[sm,md,lg,xl,2xl,3xl]` | `.pf-v6-c-icon` | Modifies the icon container to be small, medium, large, extra large, double extra large, or triple extra large. |
-| `.pf-m-body-[sm,default,lg]` | `.pf-v6-c-icon` | Modifies the icon container to be a size matching small, default, or large body text. |
-| `.pf-m-heading-[sm,md,lg,xl,2xl,3xl]` | `.pf-v6-c-icon` | Modifies the icon container to be a size matching small, medium, large, extra large, double extra large, or triple extra large (h6-h1) heading text. |
-| `.pf-m-[sm,md,lg,xl,2xl,3xl]` | `.pf-v6-c-icon__content`, `pf-v6-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
-| `.pf-m-body-[sm,default,lg]` | `.pf-v6-c-icon__content` | Modifies the icon content or progress element to be a size matching small, default, or large body text. |
-| `.pf-m-heading-[sm,md,lg,xl,2xl,3xl]` | `.pf-v6-c-icon__content` | Modifies the icon content or progress element to be a size matching small, medium, large, extra large, double extra large, or triple extra large (h6-h1) heading text. |
-| `.pf-m-in-progress` | `.pf-v6-c-icon` | Shows the progress element in place of the icon content.  |
-| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-custom`  | `.pf-v6-c-icon__content` | Modifies the icon content to use a status color.  |
+
+| Class                                                                          | Applied to                                         | Outcome                                                                                                                                                                |
+| ------------------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-icon`                                                                | `<span>`, `<div>`                                  | Initiates an icon component. **Required**                                                                                                                              |
+| `.pf-v6-c-icon__content`                                                       | `<span>`, `<div>`                                  | Initiates the icon content. **Required**                                                                                                                               |
+| `.pf-v6-c-icon__progress`                                                      | `<span>`, `<div>`                                  | Initiates a container for a progress spinner.                                                                                                                          |
+| `.pf-m-inline`                                                                 | `.pf-v6-c-icon`                                    | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent.                                                                   |
+| `.pf-m-[sm,md,lg,xl,2xl,3xl]`                                                  | `.pf-v6-c-icon`                                    | Modifies the icon container to be small, medium, large, extra large, double extra large, or triple extra large.                                                        |
+| `.pf-m-body-[sm,default,lg]`                                                   | `.pf-v6-c-icon`                                    | Modifies the icon container to be a size matching small, default, or large body text.                                                                                  |
+| `.pf-m-heading-[sm,md,lg,xl,2xl,3xl]`                                          | `.pf-v6-c-icon`                                    | Modifies the icon container to be a size matching small, medium, large, extra large, double extra large, or triple extra large (h6-h1) heading text.                   |
+| `.pf-m-[sm,md,lg,xl,2xl,3xl]`                                                  | `.pf-v6-c-icon__content`, `pf-v6-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large.                                                                              |
+| `.pf-m-body-[sm,default,lg]`                                                   | `.pf-v6-c-icon__content`                           | Modifies the icon content or progress element to be a size matching small, default, or large body text.                                                                |
+| `.pf-m-heading-[sm,md,lg,xl,2xl,3xl]`                                          | `.pf-v6-c-icon__content`                           | Modifies the icon content or progress element to be a size matching small, medium, large, extra large, double extra large, or triple extra large (h6-h1) heading text. |
+| `.pf-m-in-progress`                                                            | `.pf-v6-c-icon`                                    | Shows the progress element in place of the icon content.                                                                                                               |
+| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-custom` | `.pf-v6-c-icon__content`                           | Modifies the icon content to use a status color.                                                                                                                       |

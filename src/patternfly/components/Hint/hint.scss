@@ -24,8 +24,12 @@
 
   // Hint Actions
   --#{$hint}__actions--MarginInlineStart: var(--pf-t--global--spacer--2xl);
-  --#{$hint}__actions--c-menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$hint}__actions--c-menu-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$hint}__actions--c-menu-toggle--MarginBlockStart: calc(
+    var(--pf-t--global--spacer--control--vertical--default) * -1
+  );
+  --#{$hint}__actions--c-menu-toggle--MarginBlockEnd: calc(
+    var(--pf-t--global--spacer--control--vertical--default) * -1
+  );
 }
 
 .#{$hint} {

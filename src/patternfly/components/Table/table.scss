@@ -26,7 +26,9 @@
   // * Table body cell
   --#{$table}__tbody--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--PaddingBlockEnd: var(--#{$table}--cell--Padding--base);
-  --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
+  --#{$table}__tbody--cell--FontSize: var(
+    --pf-t--global--font--size--body--default
+  ); // set this explicitly for input heights to calc properly
 
   // * Table tr
   --#{$table}__tr--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -59,7 +61,9 @@
   // * Table cell border right
   --#{$table}--cell--m-border-right--before--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$table}--cell--m-border-right--before--BorderInlineEndColor: var(--pf-t--global--border--color--default);
-  --#{$table}--cell--m-border-left--before--BorderInlineStartWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}--cell--m-border-left--before--BorderInlineStartWidth: var(
+    --pf-t--global--border--width--divider--default
+  );
   --#{$table}--cell--m-border-left--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
 
   // * Table help
@@ -67,7 +71,9 @@
 
   // * Table truncate
   --#{$table}--m-truncate--cell--MaxWidth: 1px;
-  --#{$table}--m-truncate--cell--MinWidth: calc(5ch + var(--#{$table}--cell--PaddingInlineEnd) + var(--#{$table}--cell--PaddingInlineStart));
+  --#{$table}--m-truncate--cell--MinWidth: calc(
+    5ch + var(--#{$table}--cell--PaddingInlineEnd) + var(--#{$table}--cell--PaddingInlineStart)
+  );
 
   // * Table truncate
   --#{$table}--m-truncate__text--MinWidth: 5ch;
@@ -82,7 +88,9 @@
   --#{$table}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 270deg;
   --#{$table}__toggle--c-button__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
-  --#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction: var(
+    --pf-t--global--motion--timing-function--default
+  );
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
   // * Table button
@@ -107,7 +115,7 @@
   --#{$table}__favorite--m-favorited--c-button--Color: var(--pf-t--global--color--favorite--clicked);
 
   // * Table ghost row
-  --#{$table}__tr--m-ghost-row--Opacity: .4;
+  --#{$table}__tr--m-ghost-row--Opacity: 0.4;
   --#{$table}__tr--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table action
@@ -133,7 +141,10 @@
   --#{$table}__icon-inline--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // * Table sort cell
-  --#{$table}__sort--MinWidth: calc(6ch + var(--#{$table}--cell--PaddingInlineEnd) + var(--#{$table}--cell--PaddingInlineStart) + var(--#{$table}__sort-indicator--MarginInlineStart));
+  --#{$table}__sort--MinWidth: calc(
+    6ch + var(--#{$table}--cell--PaddingInlineEnd) + var(--#{$table}--cell--PaddingInlineStart) +
+      var(--#{$table}__sort-indicator--MarginInlineStart)
+  );
   --#{$table}__sort--m-selected__button--Color: var(--pf-t--global--color--brand--clicked);
   --#{$table}__sort--m-help--MinWidth: 15ch;
 
@@ -155,22 +166,36 @@
 
   // * Table compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
-  --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(
+    --pf-t--global--background--color--action--plain--default
+  );
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor: var(
+    --pf-t--global--background--color--action--plain--hover
+  );
+  --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor: var(
+    --pf-t--global--background--color--action--plain--clicked
+  );
 
   // * Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
-  --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
+  --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: var(
+    --pf-t--global--border--width--strong
+  );
+  --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth: var(
+    --pf-t--global--border--width--strong
+  );
 
   // * Compound expandable
-  --#{$table}--compound-expansion--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$table}--compound-expansion--m-expanded--BackgroundColor: var(
+    --pf-t--global--background--color--primary--clicked
+  );
 
   // * Table compact th
-  --#{$table}--m-compact__th--PaddingBlockStart: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
+  --#{$table}--m-compact__th--PaddingBlockStart: calc(
+    var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs)
+  );
   --#{$table}--m-compact__th--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Table compact cell
@@ -197,7 +222,9 @@
   --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
   --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(
+    --pf-t--global--background--color--primary--clicked
+  );
 
   // * Table tbody selected
   --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
@@ -212,8 +239,12 @@
   --#{$table}__subhead--Color: var(--pf-t--global--text--color--subtle);
 
   // * Table subhead button
-  --#{$table}__nested-column-header__button--PaddingInlineStart: calc(var(--#{$table}__button--PaddingInlineStart) - var(--pf-t--global--spacer--control--horizontal--plain));
-  --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(var(--#{$table}__button--PaddingInlineEnd) - (var(--pf-t--global--spacer--control--horizontal--plain) / 2));
+  --#{$table}__nested-column-header__button--PaddingInlineStart: calc(
+    var(--#{$table}__button--PaddingInlineStart) - var(--pf-t--global--spacer--control--horizontal--plain)
+  );
+  --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(
+    var(--#{$table}__button--PaddingInlineEnd) - (var(--pf-t--global--spacer--control--horizontal--plain) / 2)
+  );
 
   // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -295,7 +326,8 @@
   &.pf-m-striped.pf-m-expandable > tbody:where(.#{$table}__tbody):nth-of-type(odd) > tr:where(.#{$table}__tr), // expandable table
   > .pf-m-striped > tr:nth-child(odd), // tbody odd
   > .pf-m-striped-even > tr:nth-child(even), // tbody even
-  tr:where(.#{$table}__tr).pf-m-striped { // tr
+  tr:where(.#{$table}__tr).pf-m-striped {
+    // tr
     --#{$table}__sticky-column--BackgroundColor: var(--#{$table}--m-striped__tr--BackgroundColor);
 
     background: var(--#{$table}--m-striped__tr--BackgroundColor);
@@ -371,15 +403,17 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      content: "";
+      content: '';
     }
 
     &.pf-m-border-right::before {
-      border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderInlineEndWidth) solid var(--#{$table}--cell--m-border-right--before--BorderInlineEndColor);
+      border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderInlineEndWidth) solid
+        var(--#{$table}--cell--m-border-right--before--BorderInlineEndColor);
     }
 
     &.pf-m-border-left::before {
-      border-inline-start: var(--#{$table}--cell--m-border-left--before--BorderInlineStartWidth) solid var(--#{$table}--cell--m-border-left--before--BorderInlineStartColor);
+      border-inline-start: var(--#{$table}--cell--m-border-left--before--BorderInlineStartWidth) solid
+        var(--#{$table}--cell--m-border-left--before--BorderInlineStartColor);
     }
   }
 
@@ -414,7 +448,9 @@
         th:where(.#{$table}__th),
         td:where(.#{$table}__td) {
           &:not([rowspan]) {
-            --#{$table}--cell--PaddingBlockStart: var(--#{$table}__thead--m-nested-column-header__tr--PaddingBlockStart);
+            --#{$table}--cell--PaddingBlockStart: var(
+              --#{$table}__thead--m-nested-column-header__tr--PaddingBlockStart
+            );
           }
         }
       }
@@ -524,7 +560,9 @@
       }
 
       &.pf-m-expanded {
-        --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--m-expanded--BackgroundColor);
+        --#{$table}__tbody--m-clickable--BackgroundColor: var(
+          --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor
+        );
       }
     }
 
@@ -544,7 +582,7 @@
   }
 
   // - Table table
-  .#{$table}{
+  .#{$table} {
     background-color: transparent;
 
     &,
@@ -735,11 +773,11 @@
     }
   }
 
-
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
 
-    transition: transform var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration) var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
+    transition: transform var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration)
+      var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
     transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
 
@@ -858,18 +896,27 @@
     inset: 0;
     content: '';
     border: 0;
-    border-block-start: var(--#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth) solid var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
+    border-block-start: var(--#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth) solid
+      var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
   }
 
   &:hover,
   &:focus-within {
-    --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(--#{$table}__compound-expansion-toggle__button--hover--BackgroundColor);
-    --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: var(--#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth);
+    --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(
+      --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor
+    );
+    --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: var(
+      --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth
+    );
   }
 
   &.pf-m-expanded {
-    --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(--#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor);
-    --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: var(--#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth);
+    --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(
+      --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor
+    );
+    --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: var(
+      --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth
+    );
   }
 
   &:focus-within {
@@ -1074,7 +1121,8 @@
     // - Table tbody table control row
     .#{$table}__control-row {
       background-color: var(--#{$table}__control-row--BackgroundColor);
-      border-block-end: var(--#{$table}__control-row--BorderBlockEndWidth) solid var(--#{$table}__control-row__tbody--BorderBlockEndColor);
+      border-block-end: var(--#{$table}__control-row--BorderBlockEndWidth) solid
+        var(--#{$table}__control-row__tbody--BorderBlockEndColor);
     }
   }
 }

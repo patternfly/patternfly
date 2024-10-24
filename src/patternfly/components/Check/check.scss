@@ -1,7 +1,8 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($check) {
-  --#{$check}--GridGap: var(--pf-t--global--spacer--gap--group--vertical) var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$check}--GridGap: var(--pf-t--global--spacer--gap--group--vertical)
+    var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
   --#{$check}--m-standalone--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
 
@@ -20,7 +21,9 @@
   --#{$check}__label-required--Color: var(--pf-t--global--color--status--danger--default);
 
   // TODO: due to subpixel rendering and this value resolving to 21px, the checkbox vertical centering is off by 1px. Mozilla rounds subpixels up while chrome rounds down. This is a temporary fix until we can find a better solution.
-  --#{$check}__input--TranslateY: calc((var(--#{$check}__label--LineHeight) * var(--#{$check}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
+  --#{$check}__input--TranslateY: calc(
+    (var(--#{$check}__label--LineHeight) * var(--#{$check}__label--FontSize) / 2) - 50%
+  ); // find height of single label, divide by two, offset by 50% of own height
 }
 
 // - Check
@@ -74,7 +77,7 @@
   justify-self: start;
 
   @at-root label.#{$check},
-  & {
+    & {
     cursor: pointer;
   }
 

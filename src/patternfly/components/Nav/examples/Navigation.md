@@ -9,6 +9,7 @@ import './Navigation.css'
 ## Examples
 
 ### Default
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -37,6 +38,7 @@ import './Navigation.css'
 ```
 
 ### Grouped nav
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
@@ -87,6 +89,7 @@ import './Navigation.css'
 ```
 
 ### Grouped nav, no titles
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-label="Section one"'}}
@@ -132,6 +135,7 @@ import './Navigation.css'
 ```
 
 ### Expanded
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -196,6 +200,7 @@ import './Navigation.css'
 ```
 
 ### Expanded with subnav titles
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -243,6 +248,7 @@ import './Navigation.css'
 ```
 
 ### Mixed
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -295,6 +301,7 @@ import './Navigation.css'
 ```
 
 ### Expandable, third level
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"' nav--id="expandable-third-level-example"}}
   {{#> nav-list}}
@@ -389,6 +396,7 @@ import './Navigation.css'
 ```
 
 ### Horizontal
+
 ```hbs
 {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -412,6 +420,7 @@ import './Navigation.css'
 ```
 
 ### Horizontal overflow
+
 ```hbs
 {{#> nav nav--HasScroll=true
     nav--IsHorizontal=true
@@ -450,6 +459,7 @@ import './Navigation.css'
 ```
 
 ### Horizontal subnav
+
 ```hbs
 {{#> nav nav--IsHorizontalSubnav="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
@@ -473,6 +483,7 @@ import './Navigation.css'
 ```
 
 ### Horizontal subnav overflow
+
 ```hbs
 {{#> nav nav--HasScroll="true"
     nav--IsHorizontalSubnav="true"
@@ -510,6 +521,7 @@ import './Navigation.css'
 ```
 
 ### Nav with flyout
+
 ```hbs
 {{#> nav--flyout nav--flyout--id="nav-flyout-example" nav--flyout--submenu--IsExpanded="true"}}
   {{> nav--menu--submenu}}
@@ -517,21 +529,25 @@ import './Navigation.css'
 ```
 
 ### Nav with drilldown menu
+
 ```hbs
 {{> nav--drilldown nav--drilldown--id="basic-drilldown-example" menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
 ### Nav with drilldown menu level two
+
 ```hbs
 {{> nav--drilldown nav--drilldown--id="level-two-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 228px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
 ### Nav with drilldown menu level three
+
 ```hbs
 {{> nav--drilldown nav--drilldown--id="level-three-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true"  menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-v6-c-menu__content--Height: 284px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
 ### Nav item icons
+
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -565,43 +581,42 @@ import './Navigation.css'
 
 The navigation system relies on several different sub-components:
 
-* `.pf-v6-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
+- `.pf-v6-c-nav__list` - default navigation list. It is the basis for both default and expandable, vertical navigation.
 
 ### Accessibility
 
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="[landmark description]"` | `.pf-v6-c-nav` |  Describes `<nav>` landmark. |
-| `aria-label="[section title]"` | `.pf-v6-c-nav__section` |  Describes a nav `<section>`, where a `.pf-v6-c-nav__section-title` is not present. |
-| `aria-labelledby="[id value of link describing subnav]"` | `.pf-v6-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. |
-| `aria-expanded="false"` | `.pf-v6-c-nav__link` |  Indicates that subnav section is hidden. |
-| `aria-expanded="true"` | `.pf-v6-c-nav__link` |  Indicates that subnav section is visible. |
-| `hidden` | `.pf-v6-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
-| `disabled` | `.pf-v6-c-nav__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
-| `aria-current="page"` | `.pf-v6-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
-| `aria-haspopup="true"` | `.pf-v6-c-nav__link` | Declares that a nav item has a submenu. |
-
+| Attribute                                                | Applied to                    | Outcome                                                                                                                                   |
+| -------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `aria-label="[landmark description]"`                    | `.pf-v6-c-nav`                | Describes `<nav>` landmark.                                                                                                               |
+| `aria-label="[section title]"`                           | `.pf-v6-c-nav__section`       | Describes a nav `<section>`, where a `.pf-v6-c-nav__section-title` is not present.                                                        |
+| `aria-labelledby="[id value of link describing subnav]"` | `.pf-v6-c-nav__subnav`        | Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. |
+| `aria-expanded="false"`                                  | `.pf-v6-c-nav__link`          | Indicates that subnav section is hidden.                                                                                                  |
+| `aria-expanded="true"`                                   | `.pf-v6-c-nav__link`          | Indicates that subnav section is visible.                                                                                                 |
+| `hidden`                                                 | `.pf-v6-c-nav__subnav`        | Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies.              |
+| `disabled`                                               | `.pf-v6-c-nav__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled**                          |
+| `aria-current="page"`                                    | `.pf-v6-c-nav__link`          | Indicates the current page link. Can only occur once on page.                                                                             |
+| `aria-haspopup="true"`                                   | `.pf-v6-c-nav__link`          | Declares that a nav item has a submenu.                                                                                                   |
 
 ### Usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-nav` | `<nav>` | Initiates a primary nav element. |
-| `.pf-v6-c-nav__subnav` | `<section>` | Initiates a subnav section. |
-| `.pf-v6-c-nav__list` | `<ul>` | Initiates nav list. |
-| `.pf-v6-c-nav__item` | `<li>` | Initiates nav list item. |
-| `.pf-v6-c-nav__link` | `<a>` | Initiates nav list link. |
-| `.pf-v6-c-nav__link-icon` | `<span>` | Initiates nav list link icon. |
-| `.pf-v6-c-nav__link-text` | `<span>` | Initiates nav list link text. |
-| `.pf-v6-c-nav__section` | `<section>` | Initiates a nav section element. |
-| `.pf-v6-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title. |
-| `.pf-v6-c-nav__toggle` | `<span>` | Initiates the nav toggle wrapper. |
-| `.pf-v6-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
-| `.pf-v6-c-nav__scroll-button` | `<button>` | Initiates a nav scroll button. **Required for horizontal navs** |
-| `.pf-m-horizontal` | `.pf-v6-c-nav` | Modifies nav for the horizontal variation. |
-| `.pf-m-horizontal-subnav` | `.pf-v6-c-nav` | Modifies nav for the horizontal subnav variation. |
-| `.pf-m-flyout` | `.pf-v6-c-nav__item` | Modifies nav item for the flyout variation. |
-| `.pf-m-scrollable` | `.pf-v6-c-nav` | Modifies nav for the scrollable state. |
-| `.pf-m-expanded` | `.pf-v6-c-nav__item` | Modifies for the expanded state. |
-| `.pf-m-current` | `.pf-v6-c-nav__link` | Modifies for the current state. |
-| `.pf-m-hover` | `.pf-v6-c-nav__link` | Modifies for the hover state. |
+| Class                         | Applied to                                     | Outcome                                                         |
+| ----------------------------- | ---------------------------------------------- | --------------------------------------------------------------- |
+| `.pf-v6-c-nav`                | `<nav>`                                        | Initiates a primary nav element.                                |
+| `.pf-v6-c-nav__subnav`        | `<section>`                                    | Initiates a subnav section.                                     |
+| `.pf-v6-c-nav__list`          | `<ul>`                                         | Initiates nav list.                                             |
+| `.pf-v6-c-nav__item`          | `<li>`                                         | Initiates nav list item.                                        |
+| `.pf-v6-c-nav__link`          | `<a>`                                          | Initiates nav list link.                                        |
+| `.pf-v6-c-nav__link-icon`     | `<span>`                                       | Initiates nav list link icon.                                   |
+| `.pf-v6-c-nav__link-text`     | `<span>`                                       | Initiates nav list link text.                                   |
+| `.pf-v6-c-nav__section`       | `<section>`                                    | Initiates a nav section element.                                |
+| `.pf-v6-c-nav__section-title` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Initiates a nav section title.                                  |
+| `.pf-v6-c-nav__toggle`        | `<span>`                                       | Initiates the nav toggle wrapper.                               |
+| `.pf-v6-c-nav__toggle-icon`   | `<span>`                                       | Initiates a nav toggle icon wrapper.                            |
+| `.pf-v6-c-nav__scroll-button` | `<button>`                                     | Initiates a nav scroll button. **Required for horizontal navs** |
+| `.pf-m-horizontal`            | `.pf-v6-c-nav`                                 | Modifies nav for the horizontal variation.                      |
+| `.pf-m-horizontal-subnav`     | `.pf-v6-c-nav`                                 | Modifies nav for the horizontal subnav variation.               |
+| `.pf-m-flyout`                | `.pf-v6-c-nav__item`                           | Modifies nav item for the flyout variation.                     |
+| `.pf-m-scrollable`            | `.pf-v6-c-nav`                                 | Modifies nav for the scrollable state.                          |
+| `.pf-m-expanded`              | `.pf-v6-c-nav__item`                           | Modifies for the expanded state.                                |
+| `.pf-m-current`               | `.pf-v6-c-nav__link`                           | Modifies for the current state.                                 |
+| `.pf-m-hover`                 | `.pf-v6-c-nav__link`                           | Modifies for the hover state.                                   |

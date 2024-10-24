@@ -5,7 +5,9 @@ subsection: forms
 ---
 
 ## Demos
+
 ### Basic
+
 ```hbs
 {{#> form form--id="form-demo-basic"}}
   {{#> form-group form-group--id="-name"}}
@@ -88,6 +90,7 @@ subsection: forms
 ```
 
 ### Horizontal
+
 ```hbs
 {{#> form form--modifier="pf-m-horizontal" form--id="form-demo-horizontal"}}
   {{#> form-group form-group--id=(concat form--id '-name') form-group--modifier="-name"}}
@@ -154,6 +157,7 @@ subsection: forms
 ```
 
 ### Grid
+
 ```hbs
 {{#> form form--id="form-demo-grid"}}
   {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
@@ -285,6 +289,7 @@ subsection: forms
 ```
 
 ### Sections with repeatable fields
+
 ```hbs
 {{#> form form--id="form-demo-sections-repeatable-fields"}}
   {{#> form-section form-section--id=(concat form--id '-section1')}}
@@ -381,6 +386,7 @@ subsection: forms
 ```
 
 ### Complex form
+
 ```hbs
 {{#> form form--id="form-demo-sections-complex-form"}}
   {{!-- Name field --}}

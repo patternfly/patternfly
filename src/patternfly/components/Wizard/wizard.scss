@@ -16,7 +16,9 @@
   --#{$wizard}__header--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   // Close
-  --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--spacer--control--vertical--plain));
+  --#{$wizard}__close--InsetBlockStart: calc(
+    var(--pf-t--global--spacer--lg) - var(--pf-t--global--spacer--control--vertical--plain)
+  );
   --#{$wizard}__close--InsetInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__close--FontSize: var(--pf-t--global--font--size--xl);
 
@@ -83,8 +85,12 @@
 
   // Nav link status icon
   --#{$wizard}__nav-link-status-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
-  --#{$wizard}__nav-link--m-success__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color: var(
+    --pf-t--global--icon--color--status--danger--default
+  );
+  --#{$wizard}__nav-link--m-success__nav-link-status-icon--Color: var(
+    --pf-t--global--icon--color--status--success--default
+  );
   --#{$wizard}__nav-link-status-icon--InsetBlockStart: 4px; // not spacer-based but needed to align
   --#{$wizard}__nav-link-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
 
@@ -109,8 +115,12 @@
   // Toggle status icon
   --#{$wizard}__nav-link-status-icon--LineHeight: 1;
   --#{$wizard}__toggle-status-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$wizard}__toggle-list-item--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
-  --#{$wizard}__toggle-list-item--m-success__status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$wizard}__toggle-list-item--m-danger__status-icon--Color: var(
+    --pf-t--global--icon--color--status--danger--default
+  );
+  --#{$wizard}__toggle-list-item--m-success__status-icon--Color: var(
+    --pf-t--global--icon--color--status--success--default
+  );
   --#{$wizard}__toggle-status-icon--InsetBlockStart: 2px; // not spacer-based but needed to align
   --#{$wizard}__toggle-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
 
@@ -217,8 +227,8 @@
   // Nested selector to match button component color specificity
   .#{$wizard}__close {
     position: absolute;
-   inset-block-start: var(--#{$wizard}__close--InsetBlockStart);
-   inset-inline-end: var(--#{$wizard}__close--InsetInlineEnd);
+    inset-block-start: var(--#{$wizard}__close--InsetBlockStart);
+    inset-inline-end: var(--#{$wizard}__close--InsetInlineEnd);
 
     button {
       font-size: var(--#{$wizard}__close--FontSize);
@@ -357,8 +367,8 @@
 
 .#{$wizard}__nav {
   position: absolute;
- inset-block-start: 0;
- inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   z-index: var(--#{$wizard}__nav--ZIndex);
   display: none;
   width: var(--#{$wizard}__nav--Width);
@@ -375,7 +385,8 @@
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     display: block;
     height: 100%;
-    border-inline-end: var(--#{$wizard}__nav--lg--BorderInlineEndWidth) solid var(--#{$wizard}__nav--lg--BorderInlineEndColor);
+    border-inline-end: var(--#{$wizard}__nav--lg--BorderInlineEndWidth) solid
+      var(--#{$wizard}__nav--lg--BorderInlineEndColor);
   }
 }
 
@@ -449,7 +460,7 @@
 
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
-  &::before {
+    &::before {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -465,16 +476,16 @@
 
   // Nav step number
   &::before {
-    inset-block-start:  var(--#{$wizard}__nav-link--before--InsetBlockStart); // 8px; // TODO variable
+    inset-block-start: var(--#{$wizard}__nav-link--before--InsetBlockStart); // 8px; // TODO variable
     content: counter(wizard-nav-count);
-}
+  }
 
   &.pf-m-current {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
     --#{$wizard}__nav-link-main--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
 
     @at-root .#{$wizard}__toggle-num,
-    &::before {
+      &::before {
       --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$wizard}__nav-link--m-current--before--BackgroundColor);
       --#{$wizard}__nav-link--before--Color: var(--#{$wizard}__nav-link--m-current--before--Color);
     }
@@ -547,7 +558,8 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: transform var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration) var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration)
+    var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
 }
 
@@ -571,8 +583,8 @@
     padding: 0;
   }
 
-  &:last-child { 
-    flex-grow: 1; 
+  &:last-child {
+    flex-grow: 1;
   }
 }
 
@@ -584,5 +596,6 @@
   padding-inline-start: var(--#{$wizard}__footer--PaddingInlineStart);
   padding-inline-end: var(--#{$wizard}__footer--PaddingInlineEnd);
   background-color: var(--#{$wizard}__footer--BackgroundColor);
-  border-block-start: var(--#{$wizard}__footer--BorderBlockStartWidth) solid var(--#{$wizard}__footer--BorderBlockStartColor);
+  border-block-start: var(--#{$wizard}__footer--BorderBlockStartWidth) solid
+    var(--#{$wizard}__footer--BorderBlockStartColor);
 }

@@ -55,8 +55,8 @@
 #ws-core-c-toolbar-insets .pf-v6-c-toolbar__item,
 #ws-core-c-toolbar-page-insets .pf-v6-c-toolbar__item,
 #ws-core-c-toolbar-width-control .pf-v6-c-toolbar__item {
-  padding-block: .25rem;
-  padding-inline: .5rem;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
 }
 
 #ws-core-c-toolbar-adjusted-group-column-gap .pf-v6-c-toolbar__item,

@@ -6,6 +6,7 @@ section: components
 ## Demos
 
 ### Collapsed
+
 ```hbs isFullscreen
 {{> notification-drawer-template
     notification-drawer--id="drawer-collapsed-example"
@@ -15,6 +16,7 @@ section: components
 ```
 
 ### Expanded read
+
 ```hbs isFullscreen
 {{> notification-drawer-template
     notification-drawer--id="drawer-expanded-read-example"
@@ -25,6 +27,7 @@ section: components
 ```
 
 ### Expanded unread
+
 ```hbs isFullscreen
 {{> notification-drawer-template
     notification-drawer--id="drawer-expanded-unread-example"
@@ -35,6 +38,7 @@ section: components
 ```
 
 ### Expanded attention
+
 ```hbs isFullscreen
 {{> notification-drawer-template
     notification-drawer--id="drawer-expanded-attention-example"
@@ -45,6 +49,7 @@ section: components
 ```
 
 ### Expanded with groups
+
 ```hbs isFullscreen
 {{> notification-drawer-template
     notification-drawer--id="drawer-expanded-with-groups-example"

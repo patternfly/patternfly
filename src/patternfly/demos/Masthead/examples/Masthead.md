@@ -5,22 +5,25 @@ wrapperTag: div
 ---
 
 ## Examples
+
 ### Basic
- ```hbs isFullscreen
+
+```hbs isFullscreen
 {{> page-template page-template--id="masthead-basic-example"}}
 
 {{#*inline "masthead-template-content-toolbar-content"}}
-  {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
-      {{#> toolbar-item}}
-        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
-      {{/toolbar-item}}
-    {{/toolbar-group}}
-  {{/toolbar-content-section}}
+ {{#> toolbar-content-section}}
+   {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
+     {{#> toolbar-item}}
+       {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
+     {{/toolbar-item}}
+   {{/toolbar-group}}
+ {{/toolbar-content-section}}
 {{/inline}}
 ```
 
 ### With context selector and dropdown
+
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-context-selecton-drilldown-example"}}
 
@@ -49,6 +52,7 @@ wrapperTag: div
 ```
 
 ### With toolbar, filters
+
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-toolbar-filters-example"}}
 
@@ -67,6 +71,7 @@ wrapperTag: div
 ```
 
 ### With toggle group and filters
+
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-toggle-group-filters-example"}}
 
@@ -85,58 +90,63 @@ wrapperTag: div
 ```
 
 ### With expandable search, collapsed
- ```hbs isFullscreen
+
+```hbs isFullscreen
 {{> page-template page-template--id="masthead-expandable-search-example"}}
 
 {{#*inline "masthead-template-content-toolbar-content"}}
-  {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
-      {{#> toolbar-item}}
-        {{#> input-group input-group--IsPlain=true}}
-          {{#> input-group-item input-group-item--IsPlain=true}}
-            {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--aria-label="Open search"}}
-          {{/input-group-item}}
-        {{/input-group}}
-      {{/toolbar-item}}
-    {{/toolbar-group}}
-  {{/toolbar-content-section}}
+ {{#> toolbar-content-section}}
+   {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
+     {{#> toolbar-item}}
+       {{#> input-group input-group--IsPlain=true}}
+         {{#> input-group-item input-group-item--IsPlain=true}}
+           {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--aria-label="Open search"}}
+         {{/input-group-item}}
+       {{/input-group}}
+     {{/toolbar-item}}
+   {{/toolbar-group}}
+ {{/toolbar-content-section}}
 {{/inline}}
 ```
+
 ### With expandable search, expanded
- ```hbs isFullscreen
+
+```hbs isFullscreen
 {{> page-template page-template--id="masthead-expandable-search-expanded-example"}}
 
 {{#*inline "masthead-template-content-toolbar-content"}}
-  {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
-      {{#> toolbar-item}}
-        {{#> input-group input-group--IsPlain=true}}
-          {{#> input-group-item input-group-item--IsFill=true}}
-            {{#> text-input-group}}
-              {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-                {{#> text-input-group-text}}
-                  {{> text-input-group-icon}}
-                  {{> text-input-group-text-input text-input-group-text-input--placeholder='Search'}}
-                {{/text-input-group-text}}
-              {{/text-input-group-main}}
-            {{/text-input-group}}
-          {{/input-group-item}}
-          {{#> input-group-item input-group-item--IsPlain=true}}
-            {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close"}}
-          {{/input-group-item}}
-        {{/input-group}}
-      {{/toolbar-item}}
-    {{/toolbar-group}}
-  {{/toolbar-content-section}}
+ {{#> toolbar-content-section}}
+   {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
+     {{#> toolbar-item}}
+       {{#> input-group input-group--IsPlain=true}}
+         {{#> input-group-item input-group-item--IsFill=true}}
+           {{#> text-input-group}}
+             {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+               {{#> text-input-group-text}}
+                 {{> text-input-group-icon}}
+                 {{> text-input-group-text-input text-input-group-text-input--placeholder='Search'}}
+               {{/text-input-group-text}}
+             {{/text-input-group-main}}
+           {{/text-input-group}}
+         {{/input-group-item}}
+         {{#> input-group-item input-group-item--IsPlain=true}}
+           {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close"}}
+         {{/input-group-item}}
+       {{/input-group}}
+     {{/toolbar-item}}
+   {{/toolbar-group}}
+ {{/toolbar-content-section}}
 {{/inline}}
 ```
 
 ### Advanced integration with menu options
+
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-advanced-with-menu-example"}}
 ```
 
 ### Horizontal nav
+
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-horizontal-nav"
       page-template--HasNoSidebar="true"
@@ -148,6 +158,7 @@ wrapperTag: div
 ## Mobile examples
 
 ### With toggle group, filters, expandable content expanded (mobile)
+
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-toggle-group-filters-expanded-mobile-example"}}
 

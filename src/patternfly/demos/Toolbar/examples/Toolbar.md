@@ -8,6 +8,7 @@ import './Toolbar.css'
 ## Demos
 
 ### Toolbar attribute value search filter on desktop
+
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-desktop-example"}}
   {{#> toolbar-content}}
@@ -22,6 +23,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar with validation on desktop
+
 ```hbs isFullscreen
 {{> page-template page-template--id="toolbar-pagination-management-example"}}
 
@@ -91,6 +93,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar attribute value search filter on mobile
+
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-mobile-example"  toolbar-expandable-content--IsExpanded=true}}
   {{#> toolbar-content}}
@@ -107,6 +110,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar attribute value single select filter on desktop
+
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-single-menu-toggle-filter-desktop-example"}}
   {{#> toolbar-content}}
@@ -121,6 +125,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar attribute value single select filter on mobile
+
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-single-menu-toggle-filter-mobile-example" toolbar-expandable-content--IsExpanded=true}}
   {{#> toolbar-content}}
@@ -137,6 +142,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar attribute value checkbox menu toggle filter on desktop
+
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-checkbox-menu-toggle-filter-desktop-example"}}
   {{#> toolbar-content}}
@@ -155,6 +161,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar attribute value checkbox menu toggle filter on mobile
+
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-checkbox-menu-toggle-filter-mobile-example" toolbar-expandable-content--IsExpanded=true}}
   {{#> toolbar-content}}
@@ -173,6 +180,7 @@ import './Toolbar.css'
 ```
 
 ### Toolbar pagination management on mobile
+
 ```hbs isFullscreen
 {{> page-template page-template--id="toolbar-pagination-management-example"}}
 

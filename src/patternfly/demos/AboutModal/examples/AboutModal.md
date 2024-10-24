@@ -4,6 +4,7 @@ section: components
 ---
 
 ## Demos
+
 ### Basic
 
 This demo implements the about modal, including the backdrop.

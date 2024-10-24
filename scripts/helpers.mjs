@@ -59,7 +59,7 @@ export const unlessIfEquals = function () {
 export const ifAny = function () {
   const args = Array.prototype.slice.call(arguments, 0, -1);
   const options = arguments[arguments.length - 1];
-  const anyTruthy = args.some(arg => arg);
+  const anyTruthy = args.some((arg) => arg);
 
   return anyTruthy ? options.fn(this) : options.inverse(this);
 };
@@ -95,7 +95,7 @@ export const debug = function (optionalValue) {
     console.log('====================');
     console.log(optionalValue);
   }
-}
+};
 
 // ======================================================================================
 // stringToLower: is a helper function that transforms a string to lowercase
@@ -103,7 +103,7 @@ export const debug = function (optionalValue) {
 export const stringToLower = function (string) {
   const newString = string.toLowerCase();
   return newString;
-}
+};
 
 // ======================================================================================
 // dasherize: is a helper function that removes punctuaation and spaces from a string and replaces them with dashes
@@ -111,7 +111,7 @@ export const stringToLower = function (string) {
 export const dasherize = (...params) => {
   let newString = '';
 
-  params.forEach(function(element) {
+  params.forEach(function (element) {
     if (typeof element === 'string') {
       newString += element.toLowerCase() + '-';
     }
@@ -153,8 +153,8 @@ export const has = function (value) {
 
   if (Array.isArray(value)) {
     result.any = value.includes(true);
-    result.all = value.every(element => element === true);
-    result.none = value.every(value => !value);
+    result.all = value.every((element) => element === true);
+    result.none = value.every((value) => !value);
   } else if (value !== undefined && value === true) {
     result.any = true;
     result.all = true;
@@ -166,7 +166,7 @@ export const has = function (value) {
   }
 
   return result;
-}
+};
 
 export const returnHas = function (value, keyword, fallback) {
   const compValue = has(value);
@@ -177,7 +177,7 @@ export const returnHas = function (value, keyword, fallback) {
   } else {
     return boolResult;
   }
-}
+};
 
 // ======================================================================================
 // hasAny/All/None: is a helper function that returns the value of a propterty or array
@@ -195,15 +195,15 @@ export const returnHas = function (value, keyword, fallback) {
 // ======================================================================================
 export const hasAny = function (value, fallback = '') {
   return returnHas(value, 'any', fallback);
-}
+};
 
 export const hasAll = function (value, fallback = '') {
   return returnHas(value, 'all', fallback);
-}
+};
 
 export const hasNone = function (value, fallback = '') {
   return returnHas(value, 'none', fallback);
-}
+};
 
 // ======================================================================================
 // tag: is a helper function that returns the tag of a component
@@ -252,9 +252,9 @@ export const setProp = function (context, el) {
 //
 // ======================================================================================
 export const reset = function (...params) {
-  params.forEach(element => {
+  params.forEach((element) => {
     element = undefined;
-  })
+  });
 };
 
 // ======================================================================================
@@ -280,7 +280,7 @@ export const setModifiers = function (...mods) {
         modSet += ` ${value}`;
       }
     }
-  };
+  }
 
   return modSet;
 };
@@ -298,7 +298,7 @@ export const setAttributes = function (...mods) {
         modSet += ` ${value}`;
       }
     }
-  };
+  }
 
   return modSet;
 };
@@ -358,4 +358,4 @@ export const pfv = (type) => {
 
 export const prefix = function (term) {
   return pfv('c') + term;
-}
+};

@@ -25,30 +25,18 @@
 
 // End
 .#{$truncate}__end {
-  @include pf-v6-bidirectional-style (
-    $prop: direction,
-    $ltr-val: rtl,
-    $rtl-val: ltr
-  )
+  @include pf-v6-bidirectional-style($prop: direction, $ltr-val: rtl, $rtl-val: ltr);
 }
 
 .#{$truncate}__start + .#{$truncate}__end {
   overflow: visible;
 
-  @include pf-v6-bidirectional-style (
-    $prop: direction,
-    $ltr-val: ltr,
-    $rtl-val: rtl
-  )
+  @include pf-v6-bidirectional-style($prop: direction, $ltr-val: ltr, $rtl-val: rtl);
 }
 
 // safari not supported
 @supports (-webkit-hyphens: none) {
   .#{$truncate}__end {
-    @include pf-v6-bidirectional-style (
-      $prop: direction,
-      $ltr-val: ltr,
-      $rtl-val: rtl
-    )
+    @include pf-v6-bidirectional-style($prop: direction, $ltr-val: ltr, $rtl-val: rtl);
   }
 }

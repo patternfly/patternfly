@@ -5,7 +5,9 @@ wrapperTag: div
 ---
 
 ## Demos
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id='data-list-basic-example'}}
 
@@ -18,12 +20,13 @@ wrapperTag: div
       }}
   {{> data-list-simple-data-list}}
 {{> data-list-pagination-footer}}
-    
+
   {{/page-main-section}}
 {{/inline}}
 ```
 
 ### Actionable
+
 ```hbs isFullscreen
 {{> page-template page-template--id='data-list-actionable-example'}}
 
@@ -43,6 +46,7 @@ wrapperTag: div
 ```
 
 ### Expandable demo
+
 ```hbs isFullscreen
 {{> page-template page-template--id='data-list-expandable-example'}}
 
@@ -63,6 +67,7 @@ wrapperTag: div
 ```
 
 ### Static bottom pagination
+
 ```hbs isFullscreen
 {{> page-template page-template--id='data-list-static-bottom-example'}}
 

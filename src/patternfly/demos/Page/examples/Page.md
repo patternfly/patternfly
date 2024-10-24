@@ -9,11 +9,13 @@ import './Page.css'
 ## Demos
 
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-basic"}}
 ```
 
 ### Multiple sidebar body elements
+
 ```hbs isFullscreen
 {{> page-template page-template--id="multiple-sidebar-body-elements-demo"}}
 
@@ -42,6 +44,7 @@ import './Page.css'
 ```
 
 ### Sticky horizontal subnav
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-top-horizontal-subnav"
@@ -52,6 +55,7 @@ import './Page.css'
 ```
 
 ### Sticky breadcrumb
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-top-breadcrumb"
@@ -61,6 +65,7 @@ import './Page.css'
 ```
 
 ### Sticky breadcrumb on medium
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-top-breadcrumb"
@@ -70,6 +75,7 @@ import './Page.css'
 ```
 
 ### Sticky section group
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-top-section-group"
@@ -88,6 +94,7 @@ import './Page.css'
 ```
 
 ### Sticky section bottom
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-section-bottom"
@@ -98,6 +105,7 @@ import './Page.css'
 ```
 
 ### Overflow scroll
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-overflow-scroll"
@@ -111,6 +119,7 @@ import './Page.css'
 ```
 
 ### Centered section
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-centered-section"
@@ -140,21 +149,25 @@ import './Page.css'
 ```
 
 ### Context selector in sidebar
+
 ```hbs isFullscreen
 {{> page-template page-template--id="page-context-selector" page-template-sidebar--HasContextSelector=true}}
 ```
 
 ### Context selector expanded in sidebar
+
 ```hbs isFullscreen
 {{> page-template page-template--id="page-context-selector-expanded" page-template-sidebar--HasContextSelector=true page-template-context-selector--IsExpanded=true}}
 ```
 
 ### Sidebar collapsed
+
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-sidebar-collapsed" page-sidebar--modifier="pf-m-collapsed"}}
 ```
 
 ### Sidebar expanded
+
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-sidebar-expanded" page-sidebar--modifier="pf-m-expanded"}}
 ```

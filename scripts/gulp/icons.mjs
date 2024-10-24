@@ -20,27 +20,26 @@ const getIconNamesUnicodes = (filePath, reg) => {
   const scssText = scssData.toString();
   const unicodesArr = scssText.matchAll(reg);
   return unicodesArr;
-}
-const buildUnicodesMap = (regexMatchesArr, isPfIcons) => [...regexMatchesArr].reduce((obj, regMatch) => {
-  // Remove -var from FA icon names (fa-var-ad => fa-ad)
-  const iconName = isPfIcons
-    ? regMatch[1]
-    : regMatch[1].replace('-var-', '-');
-  const iconUnicode = regMatch[2];
-  obj[iconName] = iconUnicode;
-  if (isPfIcons) {
-    const iconCodepoint = parseInt(iconUnicode, 16);
-    if (iconCodepoint > maxCodepoint) {
-      maxCodepoint = iconCodepoint;
+};
+const buildUnicodesMap = (regexMatchesArr, isPfIcons) =>
+  [...regexMatchesArr].reduce((obj, regMatch) => {
+    // Remove -var from FA icon names (fa-var-ad => fa-ad)
+    const iconName = isPfIcons ? regMatch[1] : regMatch[1].replace('-var-', '-');
+    const iconUnicode = regMatch[2];
+    obj[iconName] = iconUnicode;
+    if (isPfIcons) {
+      const iconCodepoint = parseInt(iconUnicode, 16);
+      if (iconCodepoint > maxCodepoint) {
+        maxCodepoint = iconCodepoint;
+      }
     }
-  }
-  return obj;
-}, {});
+    return obj;
+  }, {});
 const writeUnicodesToJson = (path, fileName, obj) => {
   const data = JSON.stringify(obj, null, 2);
   mkdirSync(path, { recursive: true });
   writeFileSync(`${path}/${fileName}`, data);
-}
+};
 
 export function pfIcons() {
   return generateIcons();
@@ -99,5 +98,5 @@ export function pfIconFont() {
           writeUnicodesToJson('src/patternfly/assets/icons', 'iconUnicodes.json', iconUnicodes);
         })
     )
-    .pipe(dest('./src/patternfly/assets/pficon/'))
+    .pipe(dest('./src/patternfly/assets/pficon/'));
 }

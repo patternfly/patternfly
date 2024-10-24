@@ -2,10 +2,18 @@
 
 // stylelint-disable
 $pf-v6-u-alignment-options: (
-  text-align-start:    (text-align start),
-  text-align-center:  (text-align center),
-  text-align-end:   (text-align end),
-  text-align-justify: (text-align justify)
+  text-align-start: (
+    text-align start
+  ),
+  text-align-center: (
+    text-align center
+  ),
+  text-align-end: (
+    text-align end
+  ),
+  text-align-justify: (
+    text-align justify
+  )
 );
 
 // Text utilities

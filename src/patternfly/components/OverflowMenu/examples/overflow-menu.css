@@ -1,7 +1,7 @@
 #ws-core-c-overflow-menu-simple .pf-v6-c-overflow-menu__item,
 #ws-core-c-overflow-menu-simple .pf-v6-c-overflow-menu__group,
-#ws-core-c-overflow-menu-group-types .pf-v6-c-overflow-menu__group:not([class*="pf-m-"]) {
-  padding: .5rem;
+#ws-core-c-overflow-menu-group-types .pf-v6-c-overflow-menu__group:not([class*='pf-m-']) {
+  padding: 0.5rem;
   border: 2px dashed #393f44;
 }
 

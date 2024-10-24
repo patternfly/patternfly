@@ -21,6 +21,7 @@ cssPrefix: pf-v6-c-inline-edit
 Inline edit **toggle** can be placed anywhere within `.pf-v6-c-inline-edit`. It initiates the editability of elements. When an element becomes editable, **toggle** is hidden.
 
 ### Inline edit toggle
+
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-toggle-example"}}
   {{#> inline-edit-toggle}}
@@ -32,6 +33,7 @@ Inline edit **toggle** can be placed anywhere within `.pf-v6-c-inline-edit`. It 
 Inline edit **value** can be placed anywhere within `.pf-v6-c-inline-edit`. It is visible by default and hidden when inline edit becomes **editable**.
 
 ### Inline edit value
+
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-value-example"}}
   {{#> inline-edit-value}}
@@ -43,6 +45,7 @@ Inline edit **value** can be placed anywhere within `.pf-v6-c-inline-edit`. It i
 Inline edit **action-group** contains save and cancel actions and is only visible when inline edit is **editable**.
 
 ### Inline edit action group
+
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-action-group-example" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
@@ -53,6 +56,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### Inline edit action group icon buttons
+
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-action-group-icon-buttons-example" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
@@ -63,6 +67,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### Single inline edit (default)
+
 ```hbs
 {{#> inline-edit inline-edit--id="single-inline-edit-example" inline-edit--type="form"}}
   {{#> inline-edit-group}}
@@ -86,6 +91,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### Single inline edit (active)
+
 ```hbs
 {{#> inline-edit inline-edit--id="single-editable-example" inline-edit--type="form" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
@@ -109,6 +115,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### Free form edit
+
 ```hbs
 {{#> inline-edit inline-edit--id="free-form-edit-example"}}
   {{#> inline-edit-editable-text}}
@@ -118,6 +125,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### Single inline edit with label (default)
+
 ```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="single-inline-edit-with-label-example"}}
   {{#> inline-edit-group}}
@@ -144,6 +152,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### State valid
+
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-state-valid" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
@@ -170,6 +179,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### State invalid
+
 ```hbs
 {{#> inline-edit inline-edit--id="inline-edit-state-invalid" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
@@ -197,6 +207,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ```
 
 ### Inline edit table row
+
 ```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
   {{#> table table--id="inline-edit-table-row-example" table--IsGrid=true table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
@@ -383,35 +394,38 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 ## Documentation
 
 ### Accessibility
+
 All accessibility requirements for inputs apply to elements within inline edit.
 
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `id` | `[labelling element]` | Provides a reference for toggle button and/or editable content. |
-| `aria-label="descriptive text"` | `.pf-v6-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required** |
+| Attribute                                                  | Applied to                              | Outcome                                                            |
+| ---------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------ |
+| `id`                                                       | `[labelling element]`                   | Provides a reference for toggle button and/or editable content.    |
+| `aria-label="descriptive text"`                            | `.pf-v6-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required** |
 | `aria-labelledby="[labelling element] [toggle button id]"` | `.pf-v6-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required** |
-| `aria-label="descriptive text"` | `[radio button group]` | Provides an accessible description for radio groups. **Required** |
-| `contenteditable="true"` | `.pf-v6-c-inline-edit__editable-text` | Ensures the text node is editable. |
-| `role="textbox"` | `.pf-v6-c-inline-edit__editable-text` | Identifies an element that allows the input of free-form text. |
-| `role="radiogroup"` | `[radio button group]` | Provides an accessible role for radio buttons groups. **Required** |
+| `aria-label="descriptive text"`                            | `[radio button group]`                  | Provides an accessible description for radio groups. **Required**  |
+| `contenteditable="true"`                                   | `.pf-v6-c-inline-edit__editable-text`   | Ensures the text node is editable.                                 |
+| `role="textbox"`                                           | `.pf-v6-c-inline-edit__editable-text`   | Identifies an element that allows the input of free-form text.     |
+| `role="radiogroup"`                                        | `[radio button group]`                  | Provides an accessible role for radio buttons groups. **Required** |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-inline-edit` | `<form>`, `<div>` | Initiates the inline edit component. **Required** |
-| `.pf-v6-c-inline-edit__value` | `*` | Initiates an inline edit value. **Required** |
-| `.pf-v6-c-inline-edit__input` | `*` | Initiates an inline edit input. **Required** |
-| `.pf-v6-c-inline-edit__editable-text` | `*` | Initiates an inline editable text element. |
-| `.pf-v6-c-inline-edit__label` | `*` | Initiates an inline edit label. |
-| `.pf-v6-c-inline-edit__action` | `*` | Initiates an inline edit action (visible when inline edit region is active). **Required** |
-| `.pf-m-inline-editable` | `.pf-v6-c-inline-edit`, `.pf-v6-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |
-| `.pf-m-action-group` | `.pf-v6-c-inline-edit__group` | Modifies group for action group. |
-| `.pf-m-icon-group` | `.pf-v6-c-inline-edit__group` | Modifies an action group item spacing. |
-| `.pf-m-column` | `.pf-v6-c-inline-edit__group` | Modifies an action group flex direction. |
-| `.pf-m-footer` | `.pf-v6-c-inline-edit__group` | Modifies an inline edit group margin-top. |
-| `.pf-m-bold` | `.pf-v6-c-inline-edit__label` | Modifies an inline edit label's `font-weight`. |
-| `.pf-m-valid` | `.pf-v6-c-inline-edit__action` | Modifies the action button state. |
-| `.pf-m-enable-editable` | `.pf-v6-c-inline-edit__action` | Exposes an inline edit action by default. |
+
+| Class                                 | Applied to                                                           | Outcome                                                                                   |
+| ------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `.pf-v6-c-inline-edit`                | `<form>`, `<div>`                                                    | Initiates the inline edit component. **Required**                                         |
+| `.pf-v6-c-inline-edit__value`         | `*`                                                                  | Initiates an inline edit value. **Required**                                              |
+| `.pf-v6-c-inline-edit__input`         | `*`                                                                  | Initiates an inline edit input. **Required**                                              |
+| `.pf-v6-c-inline-edit__editable-text` | `*`                                                                  | Initiates an inline editable text element.                                                |
+| `.pf-v6-c-inline-edit__label`         | `*`                                                                  | Initiates an inline edit label.                                                           |
+| `.pf-v6-c-inline-edit__action`        | `*`                                                                  | Initiates an inline edit action (visible when inline edit region is active). **Required** |
+| `.pf-m-inline-editable`               | `.pf-v6-c-inline-edit`, `.pf-v6-c-inline-edit [block level element]` | Modifies an inline edit region for editable state.                                        |
+| `.pf-m-action-group`                  | `.pf-v6-c-inline-edit__group`                                        | Modifies group for action group.                                                          |
+| `.pf-m-icon-group`                    | `.pf-v6-c-inline-edit__group`                                        | Modifies an action group item spacing.                                                    |
+| `.pf-m-column`                        | `.pf-v6-c-inline-edit__group`                                        | Modifies an action group flex direction.                                                  |
+| `.pf-m-footer`                        | `.pf-v6-c-inline-edit__group`                                        | Modifies an inline edit group margin-top.                                                 |
+| `.pf-m-bold`                          | `.pf-v6-c-inline-edit__label`                                        | Modifies an inline edit label's `font-weight`.                                            |
+| `.pf-m-valid`                         | `.pf-v6-c-inline-edit__action`                                       | Modifies the action button state.                                                         |
+| `.pf-m-enable-editable`               | `.pf-v6-c-inline-edit__action`                                       | Exposes an inline edit action by default.                                                 |
 
 ```
 -->
+```

@@ -2,17 +2,17 @@
 // --------------------------
 @use 'sass:math';
 
-$fa-font-size-base:           16px !default;
-$fa-css-prefix:               'fa' !default;
-$fa-version:                  "5.6.3" !default;
-$fa-border-color:             #eee !default;
-$fa-inverse:                  #fff !default;
-$fa-li-width:                 2em !default;
-$fa-fw-width:                 math.div(20em, 16);
+$fa-font-size-base: 16px !default;
+$fa-css-prefix: 'fa' !default;
+$fa-version: '5.6.3' !default;
+$fa-border-color: #eee !default;
+$fa-inverse: #fff !default;
+$fa-li-width: 2em !default;
+$fa-fw-width: math.div(20em, 16);
 $pf-v6-global--disable-fontawesome: false !default;
 // Convenience function used to set content property
 @function fa-content($fa-var) {
-  @return unquote("\"#{ $fa-var }\"");
+  @return unquote('"#{ $fa-var }"');
 }
 
 $fa-var-500px: \f26e;

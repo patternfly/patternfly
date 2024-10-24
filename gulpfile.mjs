@@ -1,14 +1,14 @@
-import fs from'fs';
+import fs from 'fs';
 import path from 'path';
-import gulp from'gulp';
-import rimraf from'rimraf';
-import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
-import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
-import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
-import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
-import { generateSnippets } from'./scripts/gulp/snippets.mjs';
+import gulp from 'gulp';
+import rimraf from 'rimraf';
+import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from './scripts/gulp/copy.mjs';
+import { compileSASS, minifyCSS, watchSASS } from './scripts/gulp/sass.mjs';
+import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from './scripts/gulp/icons.mjs';
+import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from './scripts/gulp/html.mjs';
+import { generateSnippets } from './scripts/gulp/snippets.mjs';
 import { start } from '@patternfly/documentation-framework/scripts/cli/start.js';
-import { build as docsFrameworkBuild} from '@patternfly/documentation-framework/scripts/cli/build.js';
+import { build as docsFrameworkBuild } from '@patternfly/documentation-framework/scripts/cli/build.js';
 
 const { series, parallel } = gulp;
 
@@ -41,7 +41,7 @@ export function clean(cb) {
     'public',
     'patternfly-docs/generated/**/*.js'
   ];
-  cleanGlobs.forEach(glob => rimraf.sync(glob));
+  cleanGlobs.forEach((glob) => rimraf.sync(glob));
   cb();
 }
 
@@ -99,7 +99,7 @@ async function startWebpackDevServer() {
   await start(themeCLIOptions);
 
   // temporary auto deletion of public dir due to docs-framework bug
-  rimraf(path.join(process.cwd(), 'public'), {}, () => {})
+  rimraf(path.join(process.cwd(), 'public'), {}, () => {});
 }
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));

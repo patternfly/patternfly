@@ -55,22 +55,23 @@ function compileMD0(srcFiles) {
       const { frontmatter, contents } = separateFrontmatter(chunk.contents.toString());
       const htmlMD = unified()
         .use(toMDAST)
-        .use(() => ast =>
-          visit(ast, 'code', node => {
-            if (node.lang === 'hbs') {
-              try {
-                let html = hbsInstance.compile(node.value)({});
-                html = prettyhtml(html)
-                  .contents.replace(/class /g, '')
-                  .replace(/ class>/g, '>')
-                  .replace(/[\n\t\s\r]+removeWhiteSpaceForPrettier[\n\t\s\r]+/g, '');
-                node.lang = 'html';
-                node.value = html;
-              } catch (error) {
-                console.error(`\x1b[31m${chunk.history[0]}: ${error} for PatternFly example ${node.value}\x1b[0m`);
+        .use(
+          () => (ast) =>
+            visit(ast, 'code', (node) => {
+              if (node.lang === 'hbs') {
+                try {
+                  let html = hbsInstance.compile(node.value)({});
+                  html = prettyhtml(html)
+                    .contents.replace(/class /g, '')
+                    .replace(/ class>/g, '>')
+                    .replace(/[\n\t\s\r]+removeWhiteSpaceForPrettier[\n\t\s\r]+/g, '');
+                  node.lang = 'html';
+                  node.value = html;
+                } catch (error) {
+                  console.error(`\x1b[31m${chunk.history[0]}: ${error} for PatternFly example ${node.value}\x1b[0m`);
+                }
               }
-            }
-          })
+            })
         )
         .use(stringifyMDAST)
         .processSync(contents);
@@ -98,21 +99,15 @@ function registerHBSPartial(file) {
   const partialNameFull = path.dirname(file.replace(/^.*src\/patternfly\//g, '')) + '/' + partialName; // partial name with path
   const partialContents = fs.readFileSync(file, 'utf8'); // partial contents
 
-  hbsInstance.registerPartial(
-    partialName,
-    partialContents
-  );
-  hbsInstance.registerPartial(
-    partialNameFull,
-    partialContents
-  );
+  hbsInstance.registerPartial(partialName, partialContents);
+  hbsInstance.registerPartial(partialNameFull, partialContents);
 }
 
 // Helper
 function onHBSChange(file) {
-  registerHBSPartial(file)
+  registerHBSPartial(file);
   const mdGlob = path.join(path.dirname(file), '/**/*.md');
-  glob.sync(mdGlob).forEach(mdFile => onMDChange(mdFile));
+  glob.sync(mdGlob).forEach((mdFile) => onMDChange(mdFile));
 }
 
 export function watchHBS(hbsFiles, cb) {
@@ -133,7 +128,7 @@ export function watchMD(mdFiles, cb) {
 
 /** synchronizes the registeredHelpers object and hbsInstance in sync with the helper file(s).
  * Returns the names of the helpers it has changed.
-*/
+ */
 async function registerHelpers(file) {
   const relativeFilePath = path.relative(path.join(process.cwd(), 'scripts/gulp'), file);
 
@@ -185,10 +180,10 @@ async function refreshHelperImpactedHbsFiles(hbsFiles, changedHelperNames) {
 async function onHelperChange(file, hbsGlobPaths) {
   const changedHelpers = await registerHelpers(file);
 
-  const hbsFiles = []
+  const hbsFiles = [];
   hbsGlobPaths.forEach((hbsPath) => {
-    hbsFiles.push(...glob.sync(path.join(process.cwd(), hbsPath)))
-  })
+    hbsFiles.push(...glob.sync(path.join(process.cwd(), hbsPath)));
+  });
 
   await refreshHelperImpactedHbsFiles(hbsFiles, changedHelpers);
 }

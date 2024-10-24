@@ -50,7 +50,9 @@
   --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--clicked);
 
   // * Table body responsive
-  --#{$table}__tbody--responsive--m-expandable--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__tbody--responsive--m-expandable--BorderBlockEndWidth: var(
+    --pf-t--global--border--width--divider--default
+  );
 
   // * Table tr responsive
   --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
@@ -71,11 +73,15 @@
   // * Table tbody
   --#{$table}__tbody--after__tr--BorderInlineStartWidth: 0;
   --#{$table}__tbody--after__tr--BorderInlineStartColor: transparent;
-  --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartWidth: var(
+    --#{$table}__expandable-row--after--border-width--base
+  );
   --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartColor: var(--pf-t--global--border--color--clicked);
 
   // * Table tbody selected
-  --#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth: var(
+    --#{$table}__expandable-row--after--border-width--base
+  );
   --#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor: var(--pf-t--global--border--color--clicked);
 
   // * Table grid cell
@@ -121,10 +127,13 @@
   // * Table grid action
   --#{$table}__action--responsive--MarginInlineStart: var(--pf-t--global--spacer--xl);
   --#{$table}--m-grid__favorite--action--MarginInlineStart: var(--pf-t--global--spacer--2xl);
-  --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
+  --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(
+    var(--#{$table}--m-grid__check--favorite--MarginInlineStart) +
+      var(--#{$table}--m-grid__favorite--action--MarginInlineStart)
+  );
 
   // * Table grid toggle icon
-  --#{$table}__toggle__icon--Transition: .2s ease-in 0s;
+  --#{$table}__toggle__icon--Transition: 0.2s ease-in 0s;
   --#{$table}__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
@@ -176,7 +185,8 @@
     display: block;
 
     &:first-of-type {
-      border-block-start: var(--#{$table}__tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+      border-block-start: var(--#{$table}__tbody--responsive--border-width--base) solid
+        var(--#{$table}--responsive--BorderColor);
     }
   }
 
@@ -186,7 +196,8 @@
 
     .#{$table}__tbody,
     .#{$table}__tbody.pf-m-expanded {
-      border-block-end: var(--#{$table}__tbody--responsive--m-expandable--BorderBlockEndWidth) solid var(--#{$table}--responsive--BorderColor);
+      border-block-end: var(--#{$table}__tbody--responsive--m-expandable--BorderBlockEndWidth) solid
+        var(--#{$table}--responsive--BorderColor);
     }
   }
 
@@ -223,7 +234,9 @@
 
       // remove padding from first child to align with kebab
       &:first-child {
-        --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
+        --#{$table}--cell--responsive--PaddingBlockStart: var(
+          --#{$table}--cell--first-child--responsive--PaddingBlockStart
+        );
       }
     }
   }
@@ -232,7 +245,9 @@
   &.pf-m-compact {
     --#{$table}__tr--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr--responsive--PaddingBlockStart);
     --#{$table}__tr--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr--responsive--PaddingBlockEnd);
-    --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockStart);
+    --#{$table}--cell--responsive--PaddingBlockStart: var(
+      --#{$table}--m-compact__tr__td--responsive--PaddingBlockStart
+    );
     --#{$table}--cell--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockEnd);
     --#{$table}__check--responsive--MarginBlockStart: var(--#{$table}--m-compact__check--responsive--MarginBlockStart);
     --#{$table}__check--input--MarginBlockStart: 0;
@@ -315,9 +330,10 @@
       inset-block-start: 0;
       inset-block-end: 0;
       inset-inline-start: 0;
-      content: "";
+      content: '';
       border: 0;
-      border-inline-start: var(--#{$table}__tbody--after--BorderInlineStartWidth) solid var(--#{$table}__tbody--after--BorderColor);
+      border-inline-start: var(--#{$table}__tbody--after--BorderInlineStartWidth) solid
+        var(--#{$table}__tbody--after--BorderColor);
     }
 
     &.pf-m-expanded {
@@ -347,7 +363,7 @@
     --#{$table}--cell--PaddingInlineStart: 0;
 
     display: block;
-    max-height: var(--#{$table}__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
+    max-height: var(--#{$table}__expandable-row--MaxHeight); // Overflow scroll should only happen on responsive
     overflow-y: auto;
     border-block-end: none;
 
@@ -407,16 +423,23 @@
     }
 
     &.pf-m-expanded {
-      --#{$table}__tbody--after__tr--BorderInlineStartWidth: var(--#{$table}__tbody--m-expanded--after__tr--BorderInlineStartWidth);
-      --#{$table}__tbody--after__tr--BorderInlineStartColor: var(--#{$table}__tbody--m-expanded--after__tr--BorderInlineStartColor);
+      --#{$table}__tbody--after__tr--BorderInlineStartWidth: var(
+        --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartWidth
+      );
+      --#{$table}__tbody--after__tr--BorderInlineStartColor: var(
+        --#{$table}__tbody--m-expanded--after__tr--BorderInlineStartColor
+      );
     }
 
     &.pf-m-selected {
-      --#{$table}__tbody--after__tr--BorderInlineStartWidth: var(--#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth);
-      --#{$table}__tbody--after__tr--BorderInlineStartColor: var(--#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor);
+      --#{$table}__tbody--after__tr--BorderInlineStartWidth: var(
+        --#{$table}__tbody--m-selected--after__tr--BorderInlineStartWidth
+      );
+      --#{$table}__tbody--after__tr--BorderInlineStartColor: var(
+        --#{$table}__tbody--m-selected--after__tr--BorderInlineStartColor
+      );
     }
   }
-
 
   // - Table grid tr selected
   tr:where(.#{$table}__tr).pf-m-selected {
@@ -531,8 +554,15 @@
   }
 
   // - Table grid nowrap - Table grid fit content - Table grid truncate - Table grid width
-  :where(.#{$table}, .#{$table}__thead, .#{$table}__tbody, .#{$table}__tr, .#{$table}__th, .#{$table}__td, .#{$table}__text) {
-
+  :where(
+      .#{$table},
+      .#{$table}__thead,
+      .#{$table}__tbody,
+      .#{$table}__tr,
+      .#{$table}__th,
+      .#{$table}__td,
+      .#{$table}__text
+    ) {
     // No wrap
     &.pf-m-nowrap {
       --#{$table}--cell--Overflow: auto;
@@ -550,7 +580,7 @@
     }
   }
 
-  [class*="pf-m-width"] {
+  [class*='pf-m-width'] {
     --#{$table}--cell--Width: auto;
   }
 }

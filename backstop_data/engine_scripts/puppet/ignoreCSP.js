@@ -33,7 +33,7 @@ module.exports = async function (page, scenario) {
     // FIND TARGET URL REQUEST
     if (requestUrl === targetUrl) {
       const cookiesList = await page.cookies(requestUrl);
-      const cookies = cookiesList.map(cookie => `${cookie.name}=${cookie.value}`).join('; ');
+      const cookies = cookiesList.map((cookie) => `${cookie.name}=${cookie.value}`).join('; ');
       const headers = Object.assign(request.headers(), { cookie: cookies });
       const options = {
         headers,
@@ -59,7 +59,7 @@ module.exports = async function (page, scenario) {
   };
 
   await page.setRequestInterception(true);
-  page.on('request', req => {
+  page.on('request', (req) => {
     intercept(req, scenario.url);
   });
 };

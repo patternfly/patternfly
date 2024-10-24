@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-simple-list
 ---
 
 ## Examples
+
 ### Simple list
+
 ```hbs
 {{#> simple-list}}
   {{#> simple-list-list}}
@@ -29,6 +31,7 @@ cssPrefix: pf-v6-c-simple-list
 ```
 
 ### Simple list with links
+
 ```hbs
 {{#> simple-list simple-list-item-link--IsLink="true"}}
   {{#> simple-list-list}}
@@ -52,6 +55,7 @@ cssPrefix: pf-v6-c-simple-list
 ```
 
 ### Grouped list
+
 ```hbs
 {{#> simple-list}}
   {{#> simple-list-section}}
@@ -114,17 +118,19 @@ cssPrefix: pf-v6-c-simple-list
 ## Documentation
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
+
+| Attribute      | Applied to                         | Outcome                                                                               |
+| -------------- | ---------------------------------- | ------------------------------------------------------------------------------------- |
 | `tabindex="0"` | `a.pf-v6-c-simple-list__item-link` | Inserts the link into the tab order of the page so that it is focusable. **Required** |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-simple-list` | `<div>` | Initiates a simple list. |
-| `.pf-v6-c-simple-list__section` | `<section>` | Initiates a simple list section. |
-| `.pf-v6-c-simple-list__title` | `<h2>` | Initiates a simple list title. |
-| `.pf-v6-c-simple-list__list` | `<ul>` | Initiates a simple list unordered list. |
-| `.pf-v6-c-simple-list__item` | `<li>` | Initiates a simple list item. |
-| `.pf-v6-c-simple-list__item-link` | `<button>`, `<a>` | Initiates a simple list item link. It can be a button or a link depending on the context. |
-| `.pf-m-current` | `.pf-v6-c-simple-list__item-link` | Modifies the simple list item link for the current state. |
+
+| Class                             | Applied to                        | Outcome                                                                                   |
+| --------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------- |
+| `.pf-v6-c-simple-list`            | `<div>`                           | Initiates a simple list.                                                                  |
+| `.pf-v6-c-simple-list__section`   | `<section>`                       | Initiates a simple list section.                                                          |
+| `.pf-v6-c-simple-list__title`     | `<h2>`                            | Initiates a simple list title.                                                            |
+| `.pf-v6-c-simple-list__list`      | `<ul>`                            | Initiates a simple list unordered list.                                                   |
+| `.pf-v6-c-simple-list__item`      | `<li>`                            | Initiates a simple list item.                                                             |
+| `.pf-v6-c-simple-list__item-link` | `<button>`, `<a>`                 | Initiates a simple list item link. It can be a button or a link depending on the context. |
+| `.pf-m-current`                   | `.pf-v6-c-simple-list__item-link` | Modifies the simple list item link for the current state.                                 |

@@ -27,7 +27,9 @@
   &.pf-m-icons {
     --#{$action-list}__group--ColumnGap: var(--#{$action-list}--m-icons--ColumnGap);
 
-    column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
+    column-gap: var(
+      --#{$action-list}--m-icons--ColumnGap
+    ); // update prop: val to prevent potential inheritance conflicts
   }
 }
 
@@ -38,6 +40,8 @@
 
   // - Action list group icons
   &.pf-m-icons {
-    column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
+    column-gap: var(
+      --#{$action-list}--m-icons--ColumnGap
+    ); // update prop: val to prevent potential inheritance conflicts
   }
 }

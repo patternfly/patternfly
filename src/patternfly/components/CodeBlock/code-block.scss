@@ -28,7 +28,8 @@
   padding-block-end: var(--#{$code-block}__header--PaddingBlockEnd);
   padding-inline-start: var(--#{$code-block}__header--PaddingInlineStart);
   padding-inline-end: var(--#{$code-block}__header--PaddingInlineEnd);
-  border-block-end: var(--#{$code-block}__header--BorderBlockEndWidth) solid var(--#{$code-block}__header--BorderBlockEndColor);
+  border-block-end: var(--#{$code-block}__header--BorderBlockEndWidth) solid
+    var(--#{$code-block}__header--BorderBlockEndColor);
 }
 
 .#{$code-block}__actions {
