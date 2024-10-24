@@ -715,6 +715,8 @@
 .#{$table} .#{$table}__draggable {
   --#{$table}--cell--MinWidth: 0;
   --#{$table}--cell--Width: 1%;
+
+  max-width: none;
 }
 // stylelint-enable
 
