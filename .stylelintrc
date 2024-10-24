@@ -1,13 +1,6 @@
 {
-  "extends": [
-    "stylelint-config-recess-order",
-    "stylelint-config-standard-scss"
-  ],
-  "plugins": [
-    "stylelint-order",
-    "stylelint-scss",
-    "stylelint-use-logical-spec"
-  ],
+  "extends": ["stylelint-config-recess-order", "stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order", "stylelint-scss", "stylelint-use-logical-spec"],
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
     "./src/patternfly/assets/pficon/*.scss",
@@ -15,31 +8,31 @@
     "./scripts/gulp/*.scss"
   ],
   "rules": {
-    "at-rule-empty-line-before": [ "always", {
-      "except": [
-        "blockless-after-same-name-blockless",
-        "first-nested"
-      ],
-      "ignore": ["after-comment"],
-      "ignoreAtRules": "else"
-    }],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-same-name-blockless", "first-nested"],
+        "ignore": ["after-comment"],
+        "ignoreAtRules": "else"
+      }
+    ],
     "alpha-value-notation": null,
-    "annotation-no-unknown": [ true, {
-      "ignoreAnnotations": [
-        "=",
-        "default"
-      ]
-    }],
+    "annotation-no-unknown": [
+      true,
+      {
+        "ignoreAnnotations": ["=", "default"]
+      }
+    ],
     "color-function-notation": null,
     "color-named": "never",
     "color-hex-length": null,
-    "comment-empty-line-before": ["always", {
-      "except": ["first-nested"],
-      "ignore": [
-        "after-comment",
-        "stylelint-commands"
-      ]
-    }],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment", "stylelint-commands"]
+      }
+    ],
     "custom-property-pattern": "^pf-(v[56]|t-)-(color|global|chart|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-no-important": true,
@@ -49,33 +42,32 @@
     "font-weight-notation": "numeric",
     "import-notation": "string",
     "keyframes-name-pattern": null,
-    "liberty/use-logical-spec": ["always", { "except": ["width", "max-width", "min-width", "height", "max-height", "min-height"] }],
+    "liberty/use-logical-spec": [
+      "always",
+      { "except": ["width", "max-width", "min-width", "height", "max-height", "min-height"] }
+    ],
     "max-nesting-depth": 3,
     "media-query-no-invalid": null,
     "no-descending-specificity": null,
     "no-unknown-animations": true,
-    "order/order": [
-      "custom-properties",
-      "declarations"
-    ],
+    "order/order": ["custom-properties", "declarations"],
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-colon-space-after": "at-least-one-space",
     "scss/dollar-variable-colon-space-before": "never",
-    "scss/dollar-variable-empty-line-before": ["always", {
-      "except": [
-        "first-nested",
-        "after-comment",
-        "after-dollar-variable"
-      ]
-    }],
-    "scss/dollar-variable-pattern": ["^pf-v[56]-", {"ignore": "local"}],
-    "scss/double-slash-comment-empty-line-before": ["always", {
-      "except": ["first-nested"],
-      "ignore": [
-        "between-comments",
-        "stylelint-commands"
-      ]
-    }],
+    "scss/dollar-variable-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested", "after-comment", "after-dollar-variable"]
+      }
+    ],
+    "scss/dollar-variable-pattern": ["^pf-v[56]-", { "ignore": "local" }],
+    "scss/double-slash-comment-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["between-comments", "stylelint-commands"]
+      }
+    ],
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/at-mixin-pattern": "^pf-",
     "scss/no-global-function-names": null,

@@ -7,7 +7,9 @@ cssPrefix: pf-v6-c-tile
 import './Tile.css'
 
 ## Examples
+
 ### Basic tiles
+
 ```hbs
 {{#> tile}}
   {{#> tile-header}}
@@ -116,6 +118,7 @@ import './Tile.css'
 ```
 
 ### Stacked tiles
+
 ```hbs
 {{#> tile}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
@@ -238,6 +241,7 @@ import './Tile.css'
 ```
 
 ### Stacked tiles large
+
 ```hbs
 {{#> tile tile--modifier="pf-m-display-lg"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
@@ -360,6 +364,7 @@ import './Tile.css'
 ```
 
 ### Extra content
+
 ```hbs
 {{#> tile}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
@@ -405,23 +410,26 @@ import './Tile.css'
 ```
 
 ## Documentation
+
 ### Overview
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `tabindex="0"` | `.pf-v6-c-tile` | Inserts the tile into the tab order of the page so that it is focusable. **Required** |
-| `tabindex="-1"` | `.pf-v6-c-tile` | Removes the tile from keyboard focus when it is disabled. |
+
+| Attribute       | Applied to      | Outcome                                                                               |
+| --------------- | --------------- | ------------------------------------------------------------------------------------- |
+| `tabindex="0"`  | `.pf-v6-c-tile` | Inserts the tile into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="-1"` | `.pf-v6-c-tile` | Removes the tile from keyboard focus when it is disabled.                             |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-tile` | `<div>` | Initiates a tile. **Required**  |
-| `.pf-v6-c-tile__header` | `<div>` | Initiates the tile header. |
-| `.pf-v6-c-tile__title` | `<div>` | Initiates the tile title. |
-| `.pf-v6-c-tile__icon` | `<div>` | Initiates the tile icon or image. |
-| `.pf-v6-c-tile__body` | `<div>` | Initiates the tile body. |
-| `.pf-m-selected` | `.pf-v6-c-tile` | Modifies the tile for the selected state. |
-| `.pf-m-disabled` | `.pf-v6-c-tile` | Modifies the tile for the disabled state. |
-| `.pf-m-stacked` | `.pf-v6-c-tile__header` | Modifies the tile header to be stacked vertically. |
-| `.pf-m-display-lg` | `.pf-v6-c-tile` | Modifies the tile to have large display styling. |
+
+| Class                   | Applied to              | Outcome                                            |
+| ----------------------- | ----------------------- | -------------------------------------------------- |
+| `.pf-v6-c-tile`         | `<div>`                 | Initiates a tile. **Required**                     |
+| `.pf-v6-c-tile__header` | `<div>`                 | Initiates the tile header.                         |
+| `.pf-v6-c-tile__title`  | `<div>`                 | Initiates the tile title.                          |
+| `.pf-v6-c-tile__icon`   | `<div>`                 | Initiates the tile icon or image.                  |
+| `.pf-v6-c-tile__body`   | `<div>`                 | Initiates the tile body.                           |
+| `.pf-m-selected`        | `.pf-v6-c-tile`         | Modifies the tile for the selected state.          |
+| `.pf-m-disabled`        | `.pf-v6-c-tile`         | Modifies the tile for the disabled state.          |
+| `.pf-m-stacked`         | `.pf-v6-c-tile__header` | Modifies the tile header to be stacked vertically. |
+| `.pf-m-display-lg`      | `.pf-v6-c-tile`         | Modifies the tile to have large display styling.   |

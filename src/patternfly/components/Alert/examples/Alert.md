@@ -1,11 +1,13 @@
 ---
 id: Alert
 section: components
-cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
+cssPrefix: ['pf-v6-c-alert', 'pf-v6-c-alert-group']
 ---
 
 ## Alert examples
+
 ### Types
+
 ```hbs
 {{#> alert alert--modifier="pf-m-custom" alert--attribute='aria-label="Custom alert"'}}
   {{> alert-icon alert-icon--type="bell"}}
@@ -49,6 +51,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```
 
 ### Variations
+
 ```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-icon alert-icon--type="check-circle"}}
@@ -148,6 +151,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```
 
 ### Inline types
+
 ```hbs
 {{#> alert alert--modifier="pf-m-custom pf-m-inline" alert--attribute='aria-label="Inline custom alert"'}}
   {{> alert-icon alert-icon--type="bell"}}
@@ -191,6 +195,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```
 
 ### Inline variations
+
 ```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{> alert-icon alert-icon--type="check-circle"}}
@@ -257,6 +262,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```
 
 ### Custom icon
+
 ```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-icon alert-icon--type="cog"}}
@@ -276,6 +282,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```
 
 ### Inline plain
+
 ```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-plain pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{> alert-icon alert-icon--type="check-circle"}}
@@ -287,6 +294,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```
 
 ### Expandable
+
 ```hbs
 {{#> alert alert--id="alert-expandable-example-1" alert--IsExpandable="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
@@ -384,6 +392,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ## Alert group examples
 
 ### Static alert group
+
 An alert group is optional when only one static alert is needed. It becomes required when more than one alert is used in a list.
 
 ```hbs
@@ -427,6 +436,7 @@ An alert group is optional when only one static alert is needed. It becomes requ
 ```
 
 ### Toast alert group
+
 An alert group is required to display toast alerts. An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window.
 
 Every toast alert must include a close button to dismiss the alert.
@@ -494,37 +504,41 @@ For sighted users, interactive elements can be included in this message in one o
 ## Documentation
 
 ### Alert overview
+
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
 
 ### Alert usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-alert` | `<div>` | Initiates the alert component. Always use with a status modifier class. **Required** |
-| `.pf-v6-c-alert__toggle` | `<div>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
-| `.pf-v6-c-alert__toggle-icon` | `<span>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
-| `.pf-v6-c-alert__icon` | `<div>` | Defines the alert icon. **Required** |
-| `.pf-v6-c-alert__title` | `<p>, <h1-h6>` | Defines the alert title. **Required** |
-| `.pf-v6-c-alert__description` | `<div>` | Defines the alert description area. |
-| `.pf-v6-c-alert__action` | `<div>` | Defines the action button wrapper. Should contain `.pf-v6-c-button.pf-m-plain` for close action or `.pf-v6-c-button.pf-m-link` for link text. It should only include one action. |
-| `.pf-v6-c-alert__action-group` | `<div>` | Defines the action button group. Should contain `.pf-v6-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group. |
-| `.pf-m-custom` | `.pf-v6-c-alert` | Applies custom status styling. |
-| `.pf-m-success` | `.pf-v6-c-alert` | Applies success status styling. |
-| `.pf-m-danger` | `.pf-v6-c-alert` | Applies danger status styling. |
-| `.pf-m-warning` | `.pf-v6-c-alert` | Applies warning status styling. |
-| `.pf-m-info` | `.pf-v6-c-alert` | Applies info status styling. |
-| `.pf-m-inline` | `.pf-v6-c-alert` | Applies inline styling. |
-| `.pf-m-plain` | `.pf-v6-c-alert.pf-m-inline` | Applies plain styling to an inline alert. |
-| `.pf-m-expandable` | `.pf-v6-c-alert` | Applies expandable styles to the alert. |
-| `.pf-m-expanded` | `.pf-v6-c-alert.pf-m-expandable` | Applies expanded styles to an expandable alert. |
-| `.pf-m-truncate` | `.pf-v6-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-v6-c-alert__title--max-lines` (the default value is `1`). |
+
+| Class                          | Applied to                       | Outcome                                                                                                                                                                                                                            |
+| ------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-alert`               | `<div>`                          | Initiates the alert component. Always use with a status modifier class. **Required**                                                                                                                                               |
+| `.pf-v6-c-alert__toggle`       | `<div>`                          | Defines the expandable alert toggle icon. **Required for expandable alerts**                                                                                                                                                       |
+| `.pf-v6-c-alert__toggle-icon`  | `<span>`                         | Defines the expandable alert toggle icon. **Required for expandable alerts**                                                                                                                                                       |
+| `.pf-v6-c-alert__icon`         | `<div>`                          | Defines the alert icon. **Required**                                                                                                                                                                                               |
+| `.pf-v6-c-alert__title`        | `<p>, <h1-h6>`                   | Defines the alert title. **Required**                                                                                                                                                                                              |
+| `.pf-v6-c-alert__description`  | `<div>`                          | Defines the alert description area.                                                                                                                                                                                                |
+| `.pf-v6-c-alert__action`       | `<div>`                          | Defines the action button wrapper. Should contain `.pf-v6-c-button.pf-m-plain` for close action or `.pf-v6-c-button.pf-m-link` for link text. It should only include one action.                                                   |
+| `.pf-v6-c-alert__action-group` | `<div>`                          | Defines the action button group. Should contain `.pf-v6-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group.                                          |
+| `.pf-m-custom`                 | `.pf-v6-c-alert`                 | Applies custom status styling.                                                                                                                                                                                                     |
+| `.pf-m-success`                | `.pf-v6-c-alert`                 | Applies success status styling.                                                                                                                                                                                                    |
+| `.pf-m-danger`                 | `.pf-v6-c-alert`                 | Applies danger status styling.                                                                                                                                                                                                     |
+| `.pf-m-warning`                | `.pf-v6-c-alert`                 | Applies warning status styling.                                                                                                                                                                                                    |
+| `.pf-m-info`                   | `.pf-v6-c-alert`                 | Applies info status styling.                                                                                                                                                                                                       |
+| `.pf-m-inline`                 | `.pf-v6-c-alert`                 | Applies inline styling.                                                                                                                                                                                                            |
+| `.pf-m-plain`                  | `.pf-v6-c-alert.pf-m-inline`     | Applies plain styling to an inline alert.                                                                                                                                                                                          |
+| `.pf-m-expandable`             | `.pf-v6-c-alert`                 | Applies expandable styles to the alert.                                                                                                                                                                                            |
+| `.pf-m-expanded`               | `.pf-v6-c-alert.pf-m-expandable` | Applies expanded styles to an expandable alert.                                                                                                                                                                                    |
+| `.pf-m-truncate`               | `.pf-v6-c-alert__title`          | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-v6-c-alert__title--max-lines` (the default value is `1`). |
 
 ### Alert group overview
-The alert component is used to contain and align consecutive alerts.  Alert groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
+
+The alert component is used to contain and align consecutive alerts. Alert groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
 
 ### Alert group usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-alert-group` | `<ul>` | Creates an alert group component. **Required** |
-| `.pf-v6-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
-| `.pf-v6-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
-| `.pf-m-toast`| `.pf-v6-c-alert-group` | Applies toast alert styling to an alert group. |
+
+| Class                                   | Applied to             | Outcome                                                            |
+| --------------------------------------- | ---------------------- | ------------------------------------------------------------------ |
+| `.pf-v6-c-alert-group`                  | `<ul>`                 | Creates an alert group component. **Required**                     |
+| `.pf-v6-c-alert-group__item`            | `<li>`                 | Creates an alert group item. **Required**                          |
+| `.pf-v6-c-alert-group__overflow-button` | `<button>`             | Applies overflow button styling to an alert group overflow button. |
+| `.pf-m-toast`                           | `.pf-v6-c-alert-group` | Applies toast alert styling to an alert group.                     |

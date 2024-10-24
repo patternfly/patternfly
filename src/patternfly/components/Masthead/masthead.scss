@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 $pf-v6-c-masthead--breakpoint-map: build-breakpoint-map();
-$pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-masthead--inset-map: build-spacer-map('none', 'sm', 'md', 'lg', 'xl', '2xl');
 
 @include pf-root($masthead) {
   // * Masthead
@@ -33,7 +33,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-stack__brand--GridColumn: -1 / 1;
   --#{$masthead}--m-display-stack__brand--Order: -1;
   --#{$masthead}--m-display-stack__brand--PaddingBlockEnd: var(--#{$masthead}--RowGap);
-  --#{$masthead}--m-display-stack__brand--BorderBlockEnd: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
+  --#{$masthead}--m-display-stack__brand--BorderBlockEnd: var(--#{$masthead}--BorderWidth) solid
+    var(--#{$masthead}--BorderColor);
   --#{$masthead}--m-display-stack__content--GridColumn: 1;
   --#{$masthead}--m-display-stack__content--Order: 1;
   --#{$masthead}--m-display-stack__main--toggle--content--GridColumn: 2;
@@ -44,11 +45,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline--ColumnGap: 0;
   --#{$masthead}--m-display-inline--GridTemplateColumns: min-content 1fr;
   --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: subgrid;
-  --#{$masthead}--m-display-inline__brand--GridColumn: initial; 
+  --#{$masthead}--m-display-inline__brand--GridColumn: initial;
   --#{$masthead}--m-display-inline__brand--Order: initial;
   --#{$masthead}--m-display-inline__brand--PaddingBlockEnd: 0;
   --#{$masthead}--m-display-inline__brand--BorderBlockEnd: 0;
-  --#{$masthead}--m-display-inline__main--GridColumn: 1; 
+  --#{$masthead}--m-display-inline__main--GridColumn: 1;
   --#{$masthead}--m-display-inline__content--GridColumn: 2;
   --#{$masthead}--m-display-inline__content--Order: 0;
   --#{$masthead}--m-display-inline__main--toggle--content--GridColumn: 2;
@@ -57,7 +58,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // * Masthead toolbar
   --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
-  --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
+  --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid
+    var(--#{$masthead}--BorderColor);
 
   // * Masthead toolbar
   --#{$masthead}--c-toolbar--Width: 100%;
@@ -75,7 +77,9 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__main--GridColumn: unset;
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-stack__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-stack__content--Order);
-  --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-stack__main--toggle--content--GridColumn);
+  --#{$masthead}__main--toggle--content--GridColumn: var(
+    --#{$masthead}--m-display-stack__main--toggle--content--GridColumn
+  );
   --#{$masthead}__main--Display: var(--#{$masthead}--m-display-stack__main--Display);
   --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-stack__main--ColumnGap);
 }
@@ -91,8 +95,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-inline__main--GridColumn);
   --#{$masthead}__content--GridColumn: var(--#{$masthead}--m-display-inline__content--GridColumn);
   --#{$masthead}__content--Order: var(--#{$masthead}--m-display-inline__content--Order);
-  --#{$masthead}__main--toggle--content--GridColumn: var(--#{$masthead}--m-display-inline__main--toggle--content--GridColumn);
-  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display); 
+  --#{$masthead}__main--toggle--content--GridColumn: var(
+    --#{$masthead}--m-display-inline__main--toggle--content--GridColumn
+  );
+  --#{$masthead}__main--Display: var(--#{$masthead}--m-display-inline__main--Display);
   --#{$masthead}__main--ColumnGap: var(--#{$masthead}--m-display-inline__main--ColumnGap);
 }
 
@@ -214,7 +220,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     max-width: 100%;
     max-height: 100%;
     vertical-align: middle;
- }
+  }
 }
 
 // - Masthead toggle
@@ -233,7 +239,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // stylelint-disable no-duplicate-selectors
 .#{$masthead} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-masthead--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-display-stack#{$breakpoint-name} {

@@ -38,7 +38,7 @@ function compileSASS0(srcFiles) {
             files: chunk.history[0],
             formatter: 'string'
           })
-          .then(data => {
+          .then((data) => {
             if (data.errored) {
               console.error(data.output);
             }
@@ -86,7 +86,7 @@ export function watchSASS(sassFiles, cb) {
   function compileDocSASS(sassFile) {
     const toCompile = docCSSFiles;
     compileSASS0(src(toCompile));
-    console.log('Compiled', toCompile.map(file => path.relative(process.cwd(), file)).join(' '));
+    console.log('Compiled', toCompile.map((file) => path.relative(process.cwd(), file)).join(' '));
   }
 
   watcher.on('change', compileDocSASS);

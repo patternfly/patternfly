@@ -8,7 +8,7 @@
     box-sizing: border-box;
     scrollbar-color: var(--pf-t--global--border--color--default) transparent;
   }
-    
+
   // styling scrollbar color in Safari requires setting max-width and max-height
   *::-webkit-scrollbar-thumb {
     background-color: var(--pf-t--global--border--color--default);
@@ -24,10 +24,7 @@
     max-height: var(--pf-t--global--spacer--sm);
   }
 
-  :where(
-    html,
-    body
-  ) {
+  :where(html, body) {
     height: 100%;
   }
 
@@ -39,14 +36,7 @@
     color: var(--pf-t--global--text--color--regular);
   }
 
-  :where(
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6
-  ) {
+  :where(h1, h2, h3, h4, h5, h6) {
     font-size: 100%;
     font-weight: var(--pf-t--global--font--weight--body--default);
   }
@@ -55,13 +45,7 @@
     list-style: none;
   }
 
-  :where(
-    button,
-    input,
-    optgroup,
-    select,
-    textarea
-  ) {
+  :where(button, input, optgroup, select, textarea) {
     margin: 0;
     font-family: inherit;
     font-size: 100%;
@@ -69,14 +53,7 @@
     color: var(--pf-t--global--text--color--regular);
   }
 
-  :where(
-    img,
-    embed,
-    iframe,
-    object,
-    audio,
-    video
-  ) {
+  :where(img, embed, iframe, object, audio, video) {
     max-width: 100%;
     height: auto;
   }
@@ -90,18 +67,12 @@
     border-collapse: collapse;
   }
 
-  :where(
-    td,
-    th
-  ) {
+  :where(td, th) {
     padding: 0;
     text-align: start;
   }
 
-  :where(
-    code,
-    pre
-  ) {
+  :where(code, pre) {
     font-family: var(--pf-t--global--font--family--mono);
   }
 
@@ -115,10 +86,7 @@
     text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
   }
 
-  :where(
-    a,
-    button
-  ) {
+  :where(a, button) {
     cursor: pointer;
   }
 

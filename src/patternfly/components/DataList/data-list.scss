@@ -2,7 +2,7 @@
 @use './data-list-grid' as *;
 
 @include pf-root($data-list) {
-  --#{$data-list}--FontSize: var( --pf-t--global--font--size--body);
+  --#{$data-list}--FontSize: var(--pf-t--global--font--size--body);
   --#{$data-list}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$data-list}--BorderBlockStartColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
@@ -16,7 +16,7 @@
   }
 
   // item
-  --#{$data-list}__item--BackgroundColor: var( --pf-t--global--background--color--primary--default);
+  --#{$data-list}__item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$data-list}__item--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$data-list}__item--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
@@ -56,11 +56,13 @@
   --#{$data-list}--cell--m-truncate--MinWidth: 5ch;
 
   // toggle
-  --#{$data-list}__toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1); // offset toggle to align left
+  --#{$data-list}__toggle--MarginInlineStart: calc(
+    var(--pf-t--global--spacer--action--horizontal--plain--default) * -1
+  ); // offset toggle to align left
   --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
-  --#{$data-list}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$data-list}__toggle-icon--Transition: 0.2s ease-in 0s;
   --#{$data-list}__toggle-icon--Rotate: 0;
   --#{$data-list}__item--m-expanded__toggle-icon--Rotate: 90deg;
 
@@ -78,7 +80,7 @@
   --#{$data-list}__item-draggable-button--hover__draggable-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$data-list}__item-draggable-button--focus__draggable-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$data-list}__item--m-ghost-row--after--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$data-list}__item--m-ghost-row--after--Opacity: .6;
+  --#{$data-list}__item--m-ghost-row--after--Opacity: 0.6;
 
   // controls
   --#{$data-list}__item-control--PaddingBlockStart: var(--pf-t--global--spacer--lg);
@@ -102,7 +104,7 @@
   --#{$data-list}__item-action--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);
 
   // expandable content
-  --#{$data-list}__expandable-content--BackgroundColor: var( --pf-t--global--background--color--primary--default);
+  --#{$data-list}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$data-list}__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$data-list}__expandable-content--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$data-list}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);
@@ -157,11 +159,21 @@
     --#{$data-list}__item-control--PaddingBlockStart: var(--#{$data-list}--m-compact__item-control--PaddingBlockStart);
     --#{$data-list}__item-control--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-control--PaddingBlockEnd);
     --#{$data-list}__item-content--md--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-content--PaddingBlockEnd);
-    --#{$data-list}__item-draggable-button--MarginBlockStart: var(--#{$data-list}--m-compact__item-draggable-button--MarginBlockStart);
-    --#{$data-list}__item-draggable-button--MarginBlockEnd: var(--#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd);
-    --#{$data-list}__item-draggable-button--PaddingBlockStart: var(--#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart);
-    --#{$data-list}__item-draggable-button--PaddingBlockEnd: var(--#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd);
-    --#{$data-list}__cell--m-icon--cell--PaddingBlockStart: var(--#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart);
+    --#{$data-list}__item-draggable-button--MarginBlockStart: var(
+      --#{$data-list}--m-compact__item-draggable-button--MarginBlockStart
+    );
+    --#{$data-list}__item-draggable-button--MarginBlockEnd: var(
+      --#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd
+    );
+    --#{$data-list}__item-draggable-button--PaddingBlockStart: var(
+      --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart
+    );
+    --#{$data-list}__item-draggable-button--PaddingBlockEnd: var(
+      --#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd
+    );
+    --#{$data-list}__cell--m-icon--cell--PaddingBlockStart: var(
+      --#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart
+    );
 
     font-size: var(--#{$data-list}--m-compact--FontSize);
 
@@ -208,7 +220,8 @@
   display: flex;
   flex-direction: column;
   background-color: var(--#{$data-list}__item--BackgroundColor);
-  border-block-end: var(--#{$data-list}__item--BorderBlockEndWidth) solid var(--#{$data-list}__item--BorderBlockEndColor);
+  border-block-end: var(--#{$data-list}__item--BorderBlockEndWidth) solid
+    var(--#{$data-list}__item--BorderBlockEndColor);
 
   &.pf-m-clickable {
     cursor: pointer;
@@ -231,7 +244,7 @@
       inset-block-end: 0;
       inset-inline-start: 0;
       inset-inline-end: 0;
-      content: "";
+      content: '';
       background-color: var(--#{$data-list}__item--m-ghost-row--after--BackgroundColor);
       opacity: var(--#{$data-list}__item--m-ghost-row--after--Opacity);
     }
@@ -287,13 +300,17 @@
   border: 0;
 
   &:hover {
-    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--hover__draggable-icon--Color);
+    --#{$data-list}__item-draggable-button-icon--Color: var(
+      --#{$data-list}__item-draggable-button--hover__draggable-icon--Color
+    );
 
     cursor: grab;
   }
 
   &:focus {
-    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--focus__draggable-icon--Color);
+    --#{$data-list}__item-draggable-button-icon--Color: var(
+      --#{$data-list}__item-draggable-button--focus__draggable-icon--Color
+    );
   }
 
   &:active {
@@ -301,7 +318,9 @@
   }
 
   &.pf-m-disabled {
-    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color);
+    --#{$data-list}__item-draggable-button-icon--Color: var(
+      --#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color
+    );
 
     pointer-events: none;
   }
@@ -317,8 +336,12 @@
   gap: var(--#{$data-list}__item-action--Gap);
   align-content: flex-start;
   align-items: flex-start;
-  padding-block-start: calc(var(--#{$data-list}__item-action--PaddingBlockStart) - var(--#{$data-list}__item-action--PaddingBlockStart--offset));
-  padding-block-end: calc(var(--#{$data-list}__item-action--PaddingBlockEnd) - var(--#{$data-list}__item-action--PaddingBlockEnd--offset));
+  padding-block-start: calc(
+    var(--#{$data-list}__item-action--PaddingBlockStart) - var(--#{$data-list}__item-action--PaddingBlockStart--offset)
+  );
+  padding-block-end: calc(
+    var(--#{$data-list}__item-action--PaddingBlockEnd) - var(--#{$data-list}__item-action--PaddingBlockEnd--offset)
+  );
   margin-inline-start: var(--#{$data-list}__item-action--MarginInlineStart);
 }
 

@@ -8,15 +8,18 @@
   --#{$number-input}__icon--FontSize: var(--pf-t--global--font--size--xs);
 
   // form control
-  --#{$number-input}--c-form-control--width-base: calc(var(--pf-t--global--spacer--md) * 2 + var(--pf-t--global--border--width--box--default) * 2); // form controls's padding
-  --#{$number-input}--c-form-control--width-icon: var(--pf-t--global--spacer--xl); // extra width to accommodate a status icon
+  --#{$number-input}--c-form-control--width-base: calc(
+    var(--pf-t--global--spacer--md) * 2 + var(--pf-t--global--border--width--box--default) * 2
+  ); // form controls's padding
+  --#{$number-input}--c-form-control--width-icon: var(
+    --pf-t--global--spacer--xl
+  ); // extra width to accommodate a status icon
   --#{$number-input}--c-form-control--width-chars: 4;
-  --#{$number-input}--c-form-control--Width:
+  --#{$number-input}--c-form-control--Width: calc(
     calc(
-      calc(
         var(--#{$number-input}--c-form-control--width-base) + var(--#{$number-input}--c-form-control--width-chars) * 1ch
       ) + var(--#{$number-input}--c-form-control--width-icon)
-    );
+  );
 }
 
 .#{$number-input} {

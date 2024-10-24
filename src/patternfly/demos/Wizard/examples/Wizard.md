@@ -5,7 +5,9 @@ wrapperTag: div
 ---
 
 ## Demos
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-basic-example"}}
 
@@ -87,6 +89,7 @@ wrapperTag: div
 ```
 
 ### Nav expanded (mobile)
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-nav-expanded-example"}}
 
@@ -168,6 +171,7 @@ wrapperTag: div
 ```
 
 ### With drawer, closed
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-closed-example"}}
 
@@ -249,6 +253,7 @@ wrapperTag: div
 ```
 
 ### With drawer, expanded
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-expanded-example"}}
 
@@ -330,6 +335,7 @@ wrapperTag: div
 ```
 
 ### With drawer and informational step
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-info-example"}}
 
@@ -411,6 +417,7 @@ wrapperTag: div
 ```
 
 ### In page
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-in-page-example"}}
 
@@ -485,6 +492,7 @@ wrapperTag: div
 ```
 
 ### In page nav expanded (mobile)
+
 ```hbs isFullscreen
 {{> page-template page-template--id="in-page-nav-expanded-example"}}
 
@@ -559,6 +567,7 @@ wrapperTag: div
 ```
 
 ### With drawer, in page
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-in-page-example"}}
 
@@ -630,6 +639,7 @@ wrapperTag: div
 ```
 
 ### With drawer, in page, expanded
+
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-in-page-expanded-example"}}
 

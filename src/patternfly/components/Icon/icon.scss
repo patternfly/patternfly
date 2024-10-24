@@ -46,7 +46,7 @@
   --#{$icon}--m-inline--Height: 1em;
 
   // Content
-  --#{$icon}__content--svg--VerticalAlign: -.125em;
+  --#{$icon}__content--svg--VerticalAlign: -0.125em;
 
   // Content color
   --#{$icon}__content--Color: var(--pf-t--global--icon--color--regular);
@@ -58,7 +58,7 @@
   --#{$icon}--m-inline__content--Color: initial;
 
   // Content sizes
-  --#{$icon}__content--FontSize: var(--pf-t--global--icon--size--font--body--default);;
+  --#{$icon}__content--FontSize: var(--pf-t--global--icon--size--font--body--default);
 
   // Standalone content sizes
   --#{$icon}--m-sm__content--FontSize: var(--pf-t--global--icon--size--sm);
@@ -310,7 +310,7 @@
 // Progress element
 .#{$icon}__progress {
   position: absolute;
-  inset-block-start: calc(50% + calc(.5 * var(--#{$icon}__content--svg--VerticalAlign)));
+  inset-block-start: calc(50% + calc(0.5 * var(--#{$icon}__content--svg--VerticalAlign)));
   opacity: var(--#{$icon}__progress--Opacity, 0);
-  transform: translateY(calc(-50% - calc(.5 * var(--#{$icon}__content--svg--VerticalAlign))));
+  transform: translateY(calc(-50% - calc(0.5 * var(--#{$icon}__content--svg--VerticalAlign))));
 }

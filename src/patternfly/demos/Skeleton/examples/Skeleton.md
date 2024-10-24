@@ -6,6 +6,7 @@ section: components
 ## Demos
 
 ### Skeleton card
+
 ```hbs isFullscreen
 {{> page-template page-template--id="skeleton-basic-example"}}
 

@@ -39,20 +39,44 @@
   --#{$notification-drawer}__list-item--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // List item modifiers
-  --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--info--default);
-  --#{$notification-drawer}__list-item--m-info__list-item--BorderColor: var(--pf-t--global--border--color--status--info--default);
-  --#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
-  --#{$notification-drawer}__list-item--m-warning__list-item--BorderColor: var(--pf-t--global--border--color--status--warning--default);
-  --#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
-  --#{$notification-drawer}__list-item--m-danger__list-item--BorderColor: var(--pf-t--global--border--color--status--danger--default);
-  --#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--success--default);
-  --#{$notification-drawer}__list-item--m-success__list-item--BorderColor: var(--pf-t--global--border--color--status--success--default);
-  --#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
-  --#{$notification-drawer}__list-item--m-custom__list-item--BorderColor: var(--pf-t--global--border--color--status--custom--default);
-  --#{$notification-drawer}__list-item--m-read--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color: var(
+    --pf-t--global--icon--color--status--info--default
+  );
+  --#{$notification-drawer}__list-item--m-info__list-item--BorderColor: var(
+    --pf-t--global--border--color--status--info--default
+  );
+  --#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color: var(
+    --pf-t--global--icon--color--status--warning--default
+  );
+  --#{$notification-drawer}__list-item--m-warning__list-item--BorderColor: var(
+    --pf-t--global--border--color--status--warning--default
+  );
+  --#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color: var(
+    --pf-t--global--icon--color--status--danger--default
+  );
+  --#{$notification-drawer}__list-item--m-danger__list-item--BorderColor: var(
+    --pf-t--global--border--color--status--danger--default
+  );
+  --#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color: var(
+    --pf-t--global--icon--color--status--success--default
+  );
+  --#{$notification-drawer}__list-item--m-success__list-item--BorderColor: var(
+    --pf-t--global--border--color--status--success--default
+  );
+  --#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color: var(
+    --pf-t--global--icon--color--status--custom--default
+  );
+  --#{$notification-drawer}__list-item--m-custom__list-item--BorderColor: var(
+    --pf-t--global--border--color--status--custom--default
+  );
+  --#{$notification-drawer}__list-item--m-read--BackgroundColor: var(
+    --pf-t--global--background--color--primary--default
+  );
   --#{$notification-drawer}__list-item--m-read--BorderWidth: var(--pf-t--global--border--width--box--status--read);
   --#{$notification-drawer}__list-item--m-read--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor: var(
+    --pf-t--global--background--color--primary--hover
+  );
 
   // List item header
   --#{$notification-drawer}__list-item-header--MarginBlockEnd: var(--pf-t--global--spacer--xs);
@@ -66,7 +90,9 @@
   --#{$notification-drawer}__list-item-header-title--max-lines: 1;
 
   // List item action
-  --#{$notification-drawer}__list-item-action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$notification-drawer}__list-item-action--MarginBlockStart: calc(
+    var(--pf-t--global--spacer--control--vertical--plain) * -1
+  );
 
   // List item description
   --#{$notification-drawer}__list-item-description--MarginBlockEnd: var(--pf-t--global--spacer--sm);
@@ -80,7 +106,6 @@
   --#{$notification-drawer}__group--m-expanded--group--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$notification-drawer}__group--m-expanded--MinHeight: 0; // remove at breaking change
   --#{$notification-drawer}__group--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-
 
   // Group toggle
   --#{$notification-drawer}__group-toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -101,7 +126,7 @@
   // Group toggle icon
   --#{$notification-drawer}__group-toggle-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__group-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$notification-drawer}__group-toggle-icon--Transition: .2s ease-in 0s;
+  --#{$notification-drawer}__group-toggle-icon--Transition: 0.2s ease-in 0s;
   --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: 90deg;
 }
 
@@ -169,37 +194,60 @@
   padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingInlineStart);
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
-  border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
+  border: var(--#{$notification-drawer}__list-item--BorderWidth) solid
+    var(--#{$notification-drawer}__list-item--BorderColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
 
   &.pf-m-info {
-    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-info__list-item--BorderColor);
-    --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color);
+    --#{$notification-drawer}__list-item--BorderColor: var(
+      --#{$notification-drawer}__list-item--m-info__list-item--BorderColor
+    );
+    --#{$notification-drawer}__list-item-header-icon--Color: var(
+      --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color
+    );
   }
 
   &.pf-m-warning {
-    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-warning__list-item--BorderColor);
-    --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color);
+    --#{$notification-drawer}__list-item--BorderColor: var(
+      --#{$notification-drawer}__list-item--m-warning__list-item--BorderColor
+    );
+    --#{$notification-drawer}__list-item-header-icon--Color: var(
+      --#{$notification-drawer}__list-item--m-warning__list-item-header-icon--Color
+    );
   }
 
   &.pf-m-danger {
-    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-danger__list-item--BorderColor);
-    --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color);
+    --#{$notification-drawer}__list-item--BorderColor: var(
+      --#{$notification-drawer}__list-item--m-danger__list-item--BorderColor
+    );
+    --#{$notification-drawer}__list-item-header-icon--Color: var(
+      --#{$notification-drawer}__list-item--m-danger__list-item-header-icon--Color
+    );
   }
 
   &.pf-m-success {
-    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-success__list-item--BorderColor);
-    --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color);
+    --#{$notification-drawer}__list-item--BorderColor: var(
+      --#{$notification-drawer}__list-item--m-success__list-item--BorderColor
+    );
+    --#{$notification-drawer}__list-item-header-icon--Color: var(
+      --#{$notification-drawer}__list-item--m-success__list-item-header-icon--Color
+    );
   }
 
   &.pf-m-custom {
-    --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-custom__list-item--BorderColor);
-    --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color);
+    --#{$notification-drawer}__list-item--BorderColor: var(
+      --#{$notification-drawer}__list-item--m-custom__list-item--BorderColor
+    );
+    --#{$notification-drawer}__list-item-header-icon--Color: var(
+      --#{$notification-drawer}__list-item--m-custom__list-item-header-icon--Color
+    );
   }
 
   &.pf-m-read {
     --#{$notification-drawer}__list-item--BorderWidth: var(--#{$notification-drawer}__list-item--m-read--BorderWidth);
-    --#{$notification-drawer}__list-item--BackgroundColor: var(--#{$notification-drawer}__list-item--m-read--BackgroundColor);
+    --#{$notification-drawer}__list-item--BackgroundColor: var(
+      --#{$notification-drawer}__list-item--m-read--BackgroundColor
+    );
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-read--BorderColor);
 
     position: relative;
@@ -233,7 +281,7 @@
   word-break: break-word;
 
   &.pf-m-truncate {
-    @include pf-v6-line-clamp("var(--#{$notification-drawer}__list-item-header-title--max-lines)");
+    @include pf-v6-line-clamp('var(--#{$notification-drawer}__list-item-header-title--max-lines)');
   }
 }
 
@@ -267,7 +315,8 @@
 }
 
 .#{$notification-drawer}__group {
-  border-block-end: var(--#{$notification-drawer}__group--BorderBlockEndWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderBlockEndColor);
+  border-block-end: var(--#{$notification-drawer}__group--BorderBlockEndWidth) solid
+    var(--#{$notification-drawer}__group--m-expanded--group--BorderBlockEndColor);
 
   &.pf-m-expanded {
     min-height: var(--#{$notification-drawer}__group--m-expanded--MinHeight);
@@ -289,7 +338,7 @@
 }
 
 .#{$notification-drawer}__group-toggle-title {
-  @include pf-v6-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
+  @include pf-v6-line-clamp('var(--#{$notification-drawer}__group-toggle-title--max-lines)');
 
   flex: 1;
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginInlineEnd);
@@ -314,4 +363,3 @@
     transform: rotate(var(--#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate));
   }
 }
-

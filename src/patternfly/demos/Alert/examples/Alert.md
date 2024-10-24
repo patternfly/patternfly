@@ -6,6 +6,7 @@ section: components
 ## Demos
 
 ### Toast
+
 ```hbs isFullscreen
 {{> page-template page-template--id="alert-basic-example"}}
 
@@ -62,6 +63,7 @@ section: components
 ```
 
 ### Inline Alert in Horizontal Form
+
 ```hbs isFullscreen
 {{> page-template page-template--id="alert-horizontal-example"}}
 
@@ -73,6 +75,7 @@ section: components
 ```
 
 ### Inline Alert in Stacked Form
+
 ```hbs isFullscreen
 {{> page-template page-template--id="alert-stacked-example"}}
 

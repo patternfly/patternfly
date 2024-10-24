@@ -9,32 +9,48 @@
   // Before
   --#{$skeleton}--before--PaddingBlockEnd: 0;
   --#{$skeleton}--before--Height: auto;
-  --#{$skeleton}--before--Content: "\00a0";
+  --#{$skeleton}--before--Content: '\00a0';
 
   // After
   --#{$skeleton}--after--LinearGradientAngle: 90deg;
   --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default);
-  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover); // TODO: replace with new token
+  --#{$skeleton}--after--LinearGradientColorStop2: var(
+    --pf-t--global--background--color--secondary--hover
+  ); // TODO: replace with new token
   --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--after--TranslateX: -100%;
   --#{$skeleton}--after--AnimationName: #{$skeleton}-loading;
   --#{$skeleton}--after--AnimationDuration: 3s;
   --#{$skeleton}--after--AnimationIterationCount: infinite;
   --#{$skeleton}--after--AnimationTimingFunction: linear;
-  --#{$skeleton}--after--AnimationDelay: .5s;
+  --#{$skeleton}--after--AnimationDelay: 0.5s;
 
   // Circle
   --#{$skeleton}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$skeleton}--m-circle--before--PaddingBlockEnd: 100%;
 
   // Text modifiers
-  --#{$skeleton}--m-text-4xl--Height: calc(var(--pf-t--global--font--size--4xl) * var(--pf-t--global--font--line-height--heading));
-  --#{$skeleton}--m-text-3xl--Height: calc(var(--pf-t--global--font--size--3xl) * var(--pf-t--global--font--line-height--heading));
-  --#{$skeleton}--m-text-2xl--Height: calc(var(--pf-t--global--font--size--2xl) * var(--pf-t--global--font--line-height--heading));
-  --#{$skeleton}--m-text-xl--Height: calc(var(--pf-t--global--font--size--xl) * var(--pf-t--global--font--line-height--heading));
-  --#{$skeleton}--m-text-lg--Height: calc(var(--pf-t--global--font--size--lg) * var(--pf-t--global--font--line-height--body));
-  --#{$skeleton}--m-text-md--Height: calc(var(--pf-t--global--font--size--md) * var(--pf-t--global--font--line-height--body));
-  --#{$skeleton}--m-text-sm--Height: calc(var(--pf-t--global--font--size--sm) * var(--pf-t--global--font--line-height--body));
+  --#{$skeleton}--m-text-4xl--Height: calc(
+    var(--pf-t--global--font--size--4xl) * var(--pf-t--global--font--line-height--heading)
+  );
+  --#{$skeleton}--m-text-3xl--Height: calc(
+    var(--pf-t--global--font--size--3xl) * var(--pf-t--global--font--line-height--heading)
+  );
+  --#{$skeleton}--m-text-2xl--Height: calc(
+    var(--pf-t--global--font--size--2xl) * var(--pf-t--global--font--line-height--heading)
+  );
+  --#{$skeleton}--m-text-xl--Height: calc(
+    var(--pf-t--global--font--size--xl) * var(--pf-t--global--font--line-height--heading)
+  );
+  --#{$skeleton}--m-text-lg--Height: calc(
+    var(--pf-t--global--font--size--lg) * var(--pf-t--global--font--line-height--body)
+  );
+  --#{$skeleton}--m-text-md--Height: calc(
+    var(--pf-t--global--font--size--md) * var(--pf-t--global--font--line-height--body)
+  );
+  --#{$skeleton}--m-text-sm--Height: calc(
+    var(--pf-t--global--font--size--sm) * var(--pf-t--global--font--line-height--body)
+  );
 
   // Width
   --#{$skeleton}--m-width-sm--Width: #{pf-size-prem(100px)};
@@ -80,10 +96,17 @@
     position: absolute;
     inset: 0;
     display: block;
-    content: "";
-    background: linear-gradient(var(--#{$skeleton}--after--LinearGradientAngle), var(--#{$skeleton}--after--LinearGradientColorStop1), var(--#{$skeleton}--after--LinearGradientColorStop2), var(--#{$skeleton}--after--LinearGradientColorStop3));
+    content: '';
+    background: linear-gradient(
+      var(--#{$skeleton}--after--LinearGradientAngle),
+      var(--#{$skeleton}--after--LinearGradientColorStop1),
+      var(--#{$skeleton}--after--LinearGradientColorStop2),
+      var(--#{$skeleton}--after--LinearGradientColorStop3)
+    );
     transform: translate3d(var(--#{$skeleton}--after--TranslateX), 0, 0); // translateZ() to force GPU acceleration
-    animation: var(--#{$skeleton}--after--AnimationName) var(--#{$skeleton}--after--AnimationDuration) var(--#{$skeleton}--after--AnimationTimingFunction) var(--#{$skeleton}--after--AnimationDelay) var(--#{$skeleton}--after--AnimationIterationCount);
+    animation: var(--#{$skeleton}--after--AnimationName) var(--#{$skeleton}--after--AnimationDuration)
+      var(--#{$skeleton}--after--AnimationTimingFunction) var(--#{$skeleton}--after--AnimationDelay)
+      var(--#{$skeleton}--after--AnimationIterationCount);
   }
 
   // Circle

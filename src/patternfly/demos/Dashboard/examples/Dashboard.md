@@ -5,7 +5,9 @@ cssPrefix: pf-d-dashboard
 ---
 
 ## Examples
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="dashboard-demo"}}
 

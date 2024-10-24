@@ -59,4 +59,3 @@ jobs:
         env:
           HUSKY: 0
         name: Release to NPM
-

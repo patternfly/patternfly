@@ -10,7 +10,9 @@
   --#{$simple-list}__item-link--Color: var(--pf-t--global--text--color--subtle);
   --#{$simple-list}__item-link--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$simple-list}__item-link--m-current--Color: var(--pf-t--global--text--color--regular);
-  --#{$simple-list}__item-link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$simple-list}__item-link--m-current--BackgroundColor: var(
+    --pf-t--global--background--color--action--plain--clicked
+  );
   --#{$simple-list}__item-link--hover--Color: var(--pf-t--global--text--color--subtle);
   --#{$simple-list}__item-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$simple-list}__item-link--BorderRadius: var(--pf-t--global--border--radius--tiny);
@@ -51,7 +53,7 @@
   &.pf-m-link {
     --#{$simple-list}__item-link--Color: var(--#{$simple-list}__item-link--m-link--Color);
     --#{$simple-list}__item-link--hover--Color: var(--#{$simple-list}__item-link--m-link--m-current--Color);
-    --#{$simple-list}__item-link--m-current--Color:  var(--#{$simple-list}__item-link--m-link--hover--Color);
+    --#{$simple-list}__item-link--m-current--Color: var(--#{$simple-list}__item-link--m-link--hover--Color);
   }
 
   &:is(:hover, :focus) {

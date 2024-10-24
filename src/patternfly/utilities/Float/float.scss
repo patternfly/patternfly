@@ -2,8 +2,12 @@
 
 // stylelint-disable
 $pf-v6-u-float-options: (
-  float-inline-start: (float inline-start),
-  float-inline-end: (float inline-end)
+  float-inline-start: (
+    float inline-start
+  ),
+  float-inline-end: (
+    float inline-end
+  )
 );
 
 // Text utilities

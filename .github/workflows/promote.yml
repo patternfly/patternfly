@@ -2,7 +2,7 @@ name: promote
 on:
   push:
     # Sequence of patterns matched against refs/tags
-    tags:        
+    tags:
       - v6.*
 jobs:
   build-and-promote:

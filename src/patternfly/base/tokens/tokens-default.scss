@@ -1,11 +1,10 @@
-
 // Do not edit directly
 // Generated on Mon, 23 Sep 2024 22:48:17 GMT
 
 @mixin pf-v6-tokens {
-  --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
-  --pf-t--global--background--color--600: rgba(199, 199, 199, 0.2500);
-  --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0.0000);
+  --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2);
+  --pf-t--global--background--color--600: rgba(199, 199, 199, 0.25);
+  --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0);
   --pf-t--global--border--radius--0: 0px;
   --pf-t--global--border--radius--100: 4px;
   --pf-t--global--border--radius--200: 6px;
@@ -36,8 +35,8 @@
   --pf-t--global--box-shadow--blur--100: 4px;
   --pf-t--global--box-shadow--blur--200: 9px;
   --pf-t--global--box-shadow--blur--300: 20px;
-  --pf-t--global--box-shadow--color--100: rgba(41, 41, 41, 0.1500);
-  --pf-t--global--box-shadow--color--200: rgba(41, 41, 41, 0.2000);
+  --pf-t--global--box-shadow--color--100: rgba(41, 41, 41, 0.15);
+  --pf-t--global--box-shadow--color--200: rgba(41, 41, 41, 0.2);
   --pf-t--global--box-shadow--spread--100: 0px;
   --pf-t--global--box-shadow--spread--200: -4px;
   --pf-t--global--box-shadow--spread--300: -8px;
@@ -62,9 +61,13 @@
   --pf-t--global--duration--50: 50ms;
   --pf-t--global--duration--500: 500ms;
   --pf-t--global--duration--600: 600ms;
-  --pf-t--global--font--family--100: "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
-  --pf-t--global--font--family--200: "Red Hat Display", "RedHatDisplay", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
-  --pf-t--global--font--family--300: "Red Hat Mono", "RedHatMono", "Courier New", Courier, monospace;
+  --pf-t--global--font--family--100: 'Red Hat Text', 'RedHatText', 'Noto Sans Arabic', 'Noto Sans Hebrew',
+    'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Malayalam', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Thai', Helvetica,
+    Arial, sans-serif;
+  --pf-t--global--font--family--200: 'Red Hat Display', 'RedHatDisplay', 'Noto Sans Arabic', 'Noto Sans Hebrew',
+    'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Malayalam', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Thai', Helvetica,
+    Arial, sans-serif;
+  --pf-t--global--font--family--300: 'Red Hat Mono', 'RedHatMono', 'Courier New', Courier, monospace;
   --pf-t--global--font--line-height--100: 1.3;
   --pf-t--global--font--line-height--200: 1.5;
   --pf-t--global--font--size--100: 0.75rem;
@@ -97,9 +100,9 @@
   --pf-t--global--text-decoration--line--200: underline;
   --pf-t--global--text-decoration--style--100: solid;
   --pf-t--global--text-decoration--style--200: dashed;
-  --pf-t--global--timing-function--100: cubic-bezier(.4, 0, .7, .2);
-  --pf-t--global--timing-function--200: cubic-bezier(.4, 0, .2, 1);
-  --pf-t--global--timing-function--300: cubic-bezier(0, 0, .2, 1);
+  --pf-t--global--timing-function--100: cubic-bezier(0.4, 0, 0.7, 0.2);
+  --pf-t--global--timing-function--200: cubic-bezier(0.4, 0, 0.2, 1);
+  --pf-t--global--timing-function--300: cubic-bezier(0, 0, 0.2, 1);
   --pf-t--global--z-index--100: 100;
   --pf-t--global--z-index--200: 200;
   --pf-t--global--z-index--300: 300;

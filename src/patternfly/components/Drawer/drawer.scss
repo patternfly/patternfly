@@ -1,8 +1,8 @@
 @use 'sass:math';
 @use '../../sass-utilities' as *;
 
-$pf-v6-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
-$pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
+$pf-v6-c-drawer--breakpoint-map: build-breakpoint-map('base', 'lg', 'xl', '2xl');
+$pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map('base', 'lg', 'xl', '2xl');
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 @include pf-root($drawer) {
@@ -97,19 +97,27 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter--after--BorderInlineEndWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}__splitter--after--BorderBlockEndWidth: 0;
   --#{$drawer}__splitter--after--BorderInlineStartWidth: var(--#{$drawer}__splitter--after--border-width--base);
-  --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(--#{$drawer}__splitter--after--border-width--base);
-  --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(
+    --#{$drawer}__splitter--after--border-width--base
+  );
+  --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth: var(
+    --#{$drawer}__splitter--after--border-width--base
+  );
   --#{$drawer}--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline__splitter-handle--InsetInlineStart: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
   --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--InsetBlockStart: 50%;
-  --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(
+    --#{$drawer}__splitter--after--border-width--base
+  );
 
   // Splitter handle
   --#{$drawer}__splitter-handle--InsetBlockStart: 50%;
   --#{$drawer}__splitter-handle--InsetInlineStart: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
   --#{$drawer}--m-panel-left__splitter-handle--InsetInlineStart: 50%;
-  --#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
+  --#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart: calc(
+    50% - var(--#{$drawer}__splitter--after--border-width--base)
+  );
 
   // Splitter handle line
   --#{$drawer}__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--default);
@@ -119,9 +127,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter-handle--after--BorderInlineStartWidth: 0;
   --#{$drawer}__splitter--hover__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBlockStartWidth: 0;
-  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineEndWidth: var(
+    --pf-t--global--border--width--divider--default
+  );
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBlockEndWidth: 0;
-  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineStartWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineStartWidth: var(
+    --pf-t--global--border--width--divider--default
+  );
   --#{$drawer}__splitter-handle--after--Width: #{pf-size-prem(12px)};
   --#{$drawer}__splitter-handle--after--Height: #{pf-size-prem(4px)};
   --#{$drawer}__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
@@ -188,7 +200,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(-100%),
-        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)})
       );
     }
 
@@ -208,7 +220,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(-100%),
-        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)})
       );
     }
 
@@ -308,7 +320,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     inset-inline-start: 0;
     width: var(--#{$drawer}__panel--after--Width);
     height: 100%;
-    content: "";
+    content: '';
     background-color: var(--#{$drawer}__panel--after--BackgroundColor);
   }
 
@@ -326,11 +338,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   @media screen and (min-width: $pf-v6-global--breakpoint--md) {
-    --#{$drawer}__panel--FlexBasis:
-      max(
-        var(--#{$drawer}__panel--md--FlexBasis--min),
-        min(var(--#{$drawer}__panel--md--FlexBasis), var(--#{$drawer}__panel--md--FlexBasis--max))
-      );
+    --#{$drawer}__panel--FlexBasis: max(
+      var(--#{$drawer}__panel--md--FlexBasis--min),
+      min(var(--#{$drawer}__panel--md--FlexBasis), var(--#{$drawer}__panel--md--FlexBasis--max))
+    );
   }
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
@@ -359,7 +370,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Remove tab focus
-@include pf-v6-animate-remove-tab-focus(".#{$drawer}__panel", var(--#{$drawer}__panel--TransitionDuration));
+@include pf-v6-animate-remove-tab-focus('.#{$drawer}__panel', var(--#{$drawer}__panel--TransitionDuration));
 
 // Panel head
 .#{$drawer}__head {
@@ -430,16 +441,28 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__splitter--Width: var(--#{$drawer}__splitter--m-vertical--Width);
     --#{$drawer}__splitter--Cursor: var(--#{$drawer}__splitter--m-vertical--Cursor);
     --#{$drawer}__splitter-handle--after--Width: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--Width);
-    --#{$drawer}__splitter-handle--after--Height: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--Height);
-    --#{$drawer}__splitter-handle--after--BorderBlockStartWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBlockStartWidth);
-    --#{$drawer}__splitter-handle--after--BorderInlineEndWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineEndWidth);
-    --#{$drawer}__splitter-handle--after--BorderBlockEndWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBlockEndWidth);
-    --#{$drawer}__splitter-handle--after--BorderInlineStartWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineStartWidth);
+    --#{$drawer}__splitter-handle--after--Height: var(
+      --#{$drawer}__splitter--m-vertical__splitter-handle--after--Height
+    );
+    --#{$drawer}__splitter-handle--after--BorderBlockStartWidth: var(
+      --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBlockStartWidth
+    );
+    --#{$drawer}__splitter-handle--after--BorderInlineEndWidth: var(
+      --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineEndWidth
+    );
+    --#{$drawer}__splitter-handle--after--BorderBlockEndWidth: var(
+      --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBlockEndWidth
+    );
+    --#{$drawer}__splitter-handle--after--BorderInlineStartWidth: var(
+      --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderInlineStartWidth
+    );
   }
 
   &:hover,
   &:focus {
-    --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$drawer}__splitter--hover__splitter-handle--after--BorderColor);
+    --#{$drawer}__splitter-handle--after--BorderColor: var(
+      --#{$drawer}__splitter--hover__splitter-handle--after--BorderColor
+    );
   }
 
   &::after {
@@ -448,7 +471,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     inset-block-end: 0;
     inset-inline-start: 0;
     inset-inline-end: 0;
-    content: "";
+    content: '';
     border: solid var(--#{$drawer}__splitter--after--BorderColor);
     border-block-start-width: var(--#{$drawer}__splitter--after--BorderBlockStartWidth);
     border-block-end-width: var(--#{$drawer}__splitter--after--BorderBlockEndWidth);
@@ -465,15 +488,14 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translate(-50%, -50%),
-    $rtl-val: translate(#{pf-v6-calc-inverse(-50%)}, -50%),
+    $rtl-val: translate(#{pf-v6-calc-inverse(-50%)}, -50%)
   );
-
 
   &::after {
     display: block;
     width: var(--#{$drawer}__splitter-handle--after--Width);
     height: var(--#{$drawer}__splitter-handle--after--Height);
-    content: "";
+    content: '';
     border-color: var(--#{$drawer}__splitter-handle--after--BorderColor);
     border-style: solid;
     border-block-start-width: var(--#{$drawer}__splitter-handle--after--BorderBlockStartWidth);
@@ -541,7 +563,9 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
       > .#{$drawer}__splitter {
-        --#{$drawer}__splitter-handle--InsetInlineStart: var(--#{$drawer}--m-panel-left__splitter-handle--InsetInlineStart);
+        --#{$drawer}__splitter-handle--InsetInlineStart: var(
+          --#{$drawer}--m-panel-left__splitter-handle--InsetInlineStart
+        );
 
         order: 1;
       }
@@ -572,17 +596,27 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
-      --#{$drawer}__panel--md--FlexBasis--min: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min);
-      --#{$drawer}__panel--m-resizable--FlexDirection: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection);
+      --#{$drawer}__panel--md--FlexBasis--min: var(
+        --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min
+      );
+      --#{$drawer}__panel--m-resizable--FlexDirection: var(
+        --#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection
+      );
       --#{$drawer}__panel--m-resizable--MinWidth: 0;
 
       min-height: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight);
 
       > .#{$drawer}__splitter {
-        --#{$drawer}__splitter-handle--InsetBlockStart: var(--#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart);
-        --#{$drawer}__splitter--after--BorderBlockStartWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth);
+        --#{$drawer}__splitter-handle--InsetBlockStart: var(
+          --#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart
+        );
+        --#{$drawer}__splitter--after--BorderBlockStartWidth: var(
+          --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth
+        );
         --#{$drawer}__splitter--after--BorderInlineEndWidth: 0;
-        --#{$drawer}__splitter--after--BorderBlockEndWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth);
+        --#{$drawer}__splitter--after--BorderBlockEndWidth: var(
+          --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth
+        );
         --#{$drawer}__splitter--after--BorderInlineStartWidth: 0;
       }
     }
@@ -602,8 +636,12 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
         > .#{$drawer}__splitter {
           --#{$drawer}__splitter--Height: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--Height);
-          --#{$drawer}__splitter-handle--InsetBlockStart: var(--#{$drawer}--m-inline--m-panel-bottom__splitter-handle--InsetBlockStart);
-          --#{$drawer}__splitter--after--BorderBlockStartWidth: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth);
+          --#{$drawer}__splitter-handle--InsetBlockStart: var(
+            --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--InsetBlockStart
+          );
+          --#{$drawer}__splitter--after--BorderBlockStartWidth: var(
+            --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth
+          );
           --#{$drawer}__splitter--after--BorderInlineEndWidth: 0;
           --#{$drawer}__splitter--after--BorderInlineStartWidth: 0;
         }
@@ -625,10 +663,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Responsive width modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-drawer--breakpoint-map--width {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
-  @if $breakpoint == "base" {
-    $breakpoint: "md";
+  @if $breakpoint == 'base' {
+    $breakpoint: 'md';
   }
 
   @include pf-v6-apply-breakpoint($breakpoint) {
@@ -642,10 +680,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Responsive modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-drawer--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
-  @if $breakpoint == "base" {
-    $breakpoint: "md";
+  @if $breakpoint == 'base' {
+    $breakpoint: 'md';
   }
 
   @include pf-v6-apply-breakpoint($breakpoint) {
@@ -677,7 +715,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         @include pf-v6-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(100%),
-          $rtl-val: translateX(#{pf-v6-calc-inverse(100%)}),
+          $rtl-val: translateX(#{pf-v6-calc-inverse(100%)})
         );
       }
 
@@ -701,7 +739,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
           @include pf-v6-bidirectional-style(
             $prop: transform,
             $ltr-val: translateX(-100%),
-            $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
+            $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)})
           );
         }
 

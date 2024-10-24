@@ -6,6 +6,7 @@ section: components
 ## Examples
 
 ### Initial state
+
 ```hbs
 {{#> form form--id="password-strength-demo--initial"}}
   {{#> form-group form-group--id="-password"}}
@@ -38,6 +39,7 @@ section: components
 ```
 
 ### Invalid password
+
 ```hbs
 {{#> form  form--id="password-strength-demo--invalid"}}
   {{#> form-group form-group--id="-password"}}
@@ -70,6 +72,7 @@ section: components
 ```
 
 ### Valid, weak password
+
 ```hbs
 {{#> form  form--id="password-strength-demo--weak"}}
   {{#> form-group form-group--id="-password"}}
@@ -103,6 +106,7 @@ section: components
 ```
 
 ### Valid, strong password
+
 ```hbs
 {{#> form  form--id="password-strength-demo--strong"}}
   {{#> form-group form-group--id="-password"}}

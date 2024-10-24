@@ -64,7 +64,7 @@
   &::after {
     position: absolute;
     pointer-events: none;
-    content: "";
+    content: '';
   }
 
   &::before {
@@ -133,4 +133,3 @@
   font-size: var(--#{$tile}__icon--FontSize);
   color: var(--#{$tile}__icon--Color);
 }
-

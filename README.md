@@ -54,8 +54,8 @@ To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
 
 `node generate TestDemo TestDemo2 TestDemo3 -f demos`
 
-
 #### Update screenshots
+
 When making visual changes to a full page example, new example preview screenshots must be generated. To update the screenshots:
 
 - open a terminal and run `yarn build && yarn serve`
@@ -68,13 +68,16 @@ When making visual changes to a full page example, new example preview screensho
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
-### Handlebars guidelines 
+### Handlebars guidelines
+
 [For information on how to contribute, refer to our guidelines.](https://core-staging.patternfly.org/contribution)
 
 ### CSS/Sass guidelines
+
 [For more information on using CSS and Sass, refer to our guidelines.](https://core-staging.patternfly.org/guidelines)
 
 ### Custom icon guidelines
+
 [For more information on custom icons, refer to our guidelines.](https://core-staging.patternfly.org/adding-custom-icons)
 
 ## Beta components
@@ -86,6 +89,7 @@ When creating a brand new component, it should be released as beta in order to g
 PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility guide](https://www.patternfly.org/accessibility/patternflys-accessibility).
 
 ### How to perform an accessibility audit with aXe
+
 aXe is available as either a browser extension or npm script.
 
 To run the a11y audit locally:
@@ -112,9 +116,11 @@ If you have any suggestions about ways that we can improve how we use this tool,
 ## FAQ
 
 #### CSS Variables
+
 [How do I use CSS variables to customize the library?](https://core-staging.patternfly.org/guidelines#variables)
 
 #### Browser support
+
 PatternFly 5 is supported on the latest two major versions of the following browsers:
 
 - Chrome

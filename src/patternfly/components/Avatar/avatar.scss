@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
-$pf-v6-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
+$pf-v6-c-avatar--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
+$pf-v6-c-avatar--sizes: 'sm', 'md', 'lg', 'xl';
 
 @include pf-root($avatar) {
   --#{$avatar}--BorderColor: transparent;
@@ -36,8 +36,16 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
 
   @each $size in $pf-v6-c-avatar--sizes {
     &.pf-m-#{$size} {
-      @include pf-v6-build-css-variable-stack("--#{$avatar}--Width", "--#{$avatar}--m-#{$size}--Width", $pf-v6-c-avatar--breakpoint-map);
-      @include pf-v6-build-css-variable-stack("--#{$avatar}--Height", "--#{$avatar}--m-#{$size}--Height", $pf-v6-c-avatar--breakpoint-map);
+      @include pf-v6-build-css-variable-stack(
+        '--#{$avatar}--Width',
+        '--#{$avatar}--m-#{$size}--Width',
+        $pf-v6-c-avatar--breakpoint-map
+      );
+      @include pf-v6-build-css-variable-stack(
+        '--#{$avatar}--Height',
+        '--#{$avatar}--m-#{$size}--Height',
+        $pf-v6-c-avatar--breakpoint-map
+      );
     }
   }
 }

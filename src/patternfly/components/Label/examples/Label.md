@@ -1,7 +1,7 @@
 ---
 id: Label
 section: components
-cssPrefix: ['pf-v6-c-label','pf-v6-c-label-group']
+cssPrefix: ['pf-v6-c-label', 'pf-v6-c-label-group']
 ---
 
 import './Label.css'
@@ -9,6 +9,7 @@ import './Label.css'
 ## Examples
 
 ### Filled
+
 ```hbs
 {{> label--colors label--IsFilled=true label--colors--id="filled"}}
 ```
@@ -102,6 +103,7 @@ This style of label is used to add new labels to a label group.
 ```
 
 ### Basic label group
+
 Use a label group to display multiple labels at once.
 
 ```hbs
@@ -123,6 +125,7 @@ Use a label group to display multiple labels at once.
 ```
 
 ### Label group with overflow
+
 ```hbs
 {{#> label-group label-group--id="label-group-overflow"}}
   {{#> label-group-main}}
@@ -145,6 +148,7 @@ Use a label group to display multiple labels at once.
 ```
 
 ### Label group with overflow expanded
+
 ```hbs
 {{#> label-group label-group--id="label-group-overflow-expanded"}}
   {{#> label-group-main}}
@@ -173,6 +177,7 @@ Use a label group to display multiple labels at once.
 ```
 
 ### Editable label group with add button
+
 The contents of a label group can be modified by removing labels or adding new ones using the Add button.
 
 ```hbs
@@ -197,6 +202,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Label group with category label
+
 ```hbs
 {{#> label-group label-group--id="label-group-category" label-group--modifier="pf-m-category"}}
   {{#> label-group-main}}
@@ -219,6 +225,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Label group with removable categories
+
 ```hbs
 {{#> label-group label-group--id="label-group-category-removable" label-group--modifier="pf-m-category"}}
   {{#> label-group-main}}
@@ -251,6 +258,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Vertical label group
+
 ```hbs
 {{#> label-group label-group--id="label-group-vertical" label-group--modifier="pf-m-vertical"}}
   {{#> label-group-main}}
@@ -270,6 +278,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Vertical label group with overflow
+
 ```hbs
 {{#> label-group label-group--id="label-group-vertical-overflow" label-group--modifier="pf-m-vertical"}}
   {{#> label-group-main}}
@@ -292,6 +301,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Vertical label group with overflow expanded
+
 ```hbs
 {{#> label-group label-group--id="label-group-vertical-overflow-expanded" label-group--modifier="pf-m-vertical"}}
   {{#> label-group-main}}
@@ -320,6 +330,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Vertical label group with category
+
 ```hbs
 {{#> label-group label-group--id="label-group-vertical-category" label-group--modifier="pf-m-vertical pf-m-category"}}
   {{#> label-group-main}}
@@ -342,6 +353,7 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 ### Vertical label group with removable category
+
 ```hbs
 {{#> label-group label-group--id="label-group-vertical-category-removable" label-group--modifier="pf-m-vertical pf-m-category"}}
   {{#> label-group-main}}
@@ -365,10 +377,12 @@ The contents of a label group can be modified by removing labels or adding new o
 ```
 
 In addition to the JavaScript management of [editable labels](/components/label#editable), dynamic label groups also need:
-* `.pf-v6-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-v6-c-label-group__textarea`
+
+- `.pf-v6-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-v6-c-label-group__textarea`
 
 ### Editable labels, dynamic label group
-``` hbs
+
+```hbs
 {{#> label-group label-group--id="editable-labels-editable-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -405,7 +419,8 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Editable labels, label active, dynamic label group
-``` hbs
+
+```hbs
 {{#> label-group label-group--id="editable-labels-label-active-editable-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -427,7 +442,8 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Static labels, dynamic label group
-``` hbs
+
+```hbs
 {{#> label-group label-group--id="static-labels-dynamic-label-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -449,7 +465,8 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Mixed labels (static / editable), dynamic label group
-``` hbs
+
+```hbs
 {{#> label-group label-group--id="mixed-labels-dynamic-label-group-example" label-group--IsEditable=true}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -477,6 +494,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Label group with compact labels
+
 ```hbs
 {{#> label-group label-group--id="label-group-compact"}}
   {{#> label-group-main}}
@@ -507,6 +525,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Label group with compact labels and overflow
+
 ```hbs
 {{#> label-group label-group--id="label-group-compact-overflow"}}
   {{#> label-group-main}}
@@ -537,6 +556,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Vertical label group with compact labels
+
 ```hbs
 {{#> label-group label-group--id="label-group-compact-vertical" label-group--modifier="pf-m-vertical"}}
   {{#> label-group-main}}
@@ -567,57 +587,59 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 ### Label usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required. Note: always use with either `.pf-m-filled` or `.pf-m-outline`.** |
-| `.pf-v6-c-label__content` | `<span>`, `<a>`, `<button>` | Creates a content wrapper. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
-| `.pf-v6-c-label__icon` | `<span>` | Initiates a label icon. |
-| `.pf-v6-c-label__text` | `<span>` | Initiates label text. **Required** |
-| `.pf-v6-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
-| `.pf-v6-c-label__actions` | `<span>` | Creates a wrapper for label actions. **Required for removable labels** |
-| `.pf-m-filled` | `.pf-v6-c-label` | Modifies label for filled styles. |
-| `.pf-m-outline` | `.pf-v6-c-label` | Modifies label for outline styles. |
-| `.pf-m-compact` | `.pf-v6-c-label` | Modifies label for compact styles. |
-| `.pf-m-overflow` | `.pf-v6-c-label` | Modifies label for overflow styles for use in a label group. |
-| `.pf-m-add` | `.pf-v6-c-label` | Modifies label for add styles for use in a label group. |
-| `.pf-m-blue` | `.pf-v6-c-label` | Modifies the label to have blue colored styling. |
-| `.pf-m-green` | `.pf-v6-c-label` | Modifies the label to have green colored styling. |
-| `.pf-m-orange` | `.pf-v6-c-label` | Modifies the label to have orange colored styling. |
-| `.pf-m-red` | `.pf-v6-c-label` | Modifies the label to have red colored styling. |
-| `.pf-m-purple` | `.pf-v6-c-label` | Modifies the label to have purple colored styling. |
-| `.pf-m-teal` | `.pf-v6-c-label` | Modifies the label to have teal colored styling. |
-| `.pf-m-yellow` | `.pf-v6-c-label` | Modifies the label to have yellow colored styling. |
-| `.pf-m-success` | `.pf-v6-c-label` | Modifies the label to have success colored styling. |
-| `.pf-m-warning` | `.pf-v6-c-label` | Modifies the label to have warning colored styling. |
-| `.pf-m-danger` | `.pf-v6-c-label` | Modifies the label to have danger colored styling. |
-| `.pf-m-info` | `.pf-v6-c-label` | Modifies the label to have info colored styling. |
-| `.pf-m-custom` | `.pf-v6-c-label` | Modifies the label to have custom colored styling. |
-| `.pf-m-disabled` | `.pf-v6-c-label` | Modifies label for disabled styles. |
-| `.pf-m-editable` | `.pf-v6-c-label` | Modifies label for editable styles. |
-| `.pf-m-editable-active` | `.pf-v6-c-label.pf-m-editable` | Modifies editable label for active styles. |
-| `--pf-v6-c-label__text--MaxWidth` | `.pf-v6-c-label` | Modifiex the max width of the text before text will truncate. |
+| Class                             | Applied to                     | Outcome                                                                                                                                                                                                                                                                                   |
+| --------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-label`                  | `<span>`, `<button>`           | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required. Note: always use with either `.pf-m-filled` or `.pf-m-outline`.** |
+| `.pf-v6-c-label__content`         | `<span>`, `<a>`, `<button>`    | Creates a content wrapper. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required**                                                                                                                                         |
+| `.pf-v6-c-label__icon`            | `<span>`                       | Initiates a label icon.                                                                                                                                                                                                                                                                   |
+| `.pf-v6-c-label__text`            | `<span>`                       | Initiates label text. **Required**                                                                                                                                                                                                                                                        |
+| `.pf-v6-c-label__editable-text`   | `<button>`, `<input>`          | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.                                                                                                                                                                   |
+| `.pf-v6-c-label__actions`         | `<span>`                       | Creates a wrapper for label actions. **Required for removable labels**                                                                                                                                                                                                                    |
+| `.pf-m-filled`                    | `.pf-v6-c-label`               | Modifies label for filled styles.                                                                                                                                                                                                                                                         |
+| `.pf-m-outline`                   | `.pf-v6-c-label`               | Modifies label for outline styles.                                                                                                                                                                                                                                                        |
+| `.pf-m-compact`                   | `.pf-v6-c-label`               | Modifies label for compact styles.                                                                                                                                                                                                                                                        |
+| `.pf-m-overflow`                  | `.pf-v6-c-label`               | Modifies label for overflow styles for use in a label group.                                                                                                                                                                                                                              |
+| `.pf-m-add`                       | `.pf-v6-c-label`               | Modifies label for add styles for use in a label group.                                                                                                                                                                                                                                   |
+| `.pf-m-blue`                      | `.pf-v6-c-label`               | Modifies the label to have blue colored styling.                                                                                                                                                                                                                                          |
+| `.pf-m-green`                     | `.pf-v6-c-label`               | Modifies the label to have green colored styling.                                                                                                                                                                                                                                         |
+| `.pf-m-orange`                    | `.pf-v6-c-label`               | Modifies the label to have orange colored styling.                                                                                                                                                                                                                                        |
+| `.pf-m-red`                       | `.pf-v6-c-label`               | Modifies the label to have red colored styling.                                                                                                                                                                                                                                           |
+| `.pf-m-purple`                    | `.pf-v6-c-label`               | Modifies the label to have purple colored styling.                                                                                                                                                                                                                                        |
+| `.pf-m-teal`                      | `.pf-v6-c-label`               | Modifies the label to have teal colored styling.                                                                                                                                                                                                                                          |
+| `.pf-m-yellow`                    | `.pf-v6-c-label`               | Modifies the label to have yellow colored styling.                                                                                                                                                                                                                                        |
+| `.pf-m-success`                   | `.pf-v6-c-label`               | Modifies the label to have success colored styling.                                                                                                                                                                                                                                       |
+| `.pf-m-warning`                   | `.pf-v6-c-label`               | Modifies the label to have warning colored styling.                                                                                                                                                                                                                                       |
+| `.pf-m-danger`                    | `.pf-v6-c-label`               | Modifies the label to have danger colored styling.                                                                                                                                                                                                                                        |
+| `.pf-m-info`                      | `.pf-v6-c-label`               | Modifies the label to have info colored styling.                                                                                                                                                                                                                                          |
+| `.pf-m-custom`                    | `.pf-v6-c-label`               | Modifies the label to have custom colored styling.                                                                                                                                                                                                                                        |
+| `.pf-m-disabled`                  | `.pf-v6-c-label`               | Modifies label for disabled styles.                                                                                                                                                                                                                                                       |
+| `.pf-m-editable`                  | `.pf-v6-c-label`               | Modifies label for editable styles.                                                                                                                                                                                                                                                       |
+| `.pf-m-editable-active`           | `.pf-v6-c-label.pf-m-editable` | Modifies editable label for active styles.                                                                                                                                                                                                                                                |
+| `--pf-v6-c-label__text--MaxWidth` | `.pf-v6-c-label`               | Modifiex the max width of the text before text will truncate.                                                                                                                                                                                                                             |
 
 ### Label group accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role="list"` | `.pf-v6-c-label-group__list` | Indicates that the label group list is a list element. This role is redundant since `.pf-v6-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list properly. **Required** |
-| `aria-label="[button label text]"` | `.pf-v6-c-label-group__close > button` |  Provides an accessible name for a label group close button when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
-| `aria-labelledby="[id value of .pf-v6-c-label-group__close > button] [id value of .pf-v6-c-label-group__label]"` | `.pf-v6-c-label-group__close > button` | Provides an accessible name for the button. **Required** |
-| `aria-label="[label text]"` | `.pf-v6-c-label-group__textarea` | Provides an accessible name for the textarea. **Required** |
-| `row="1"` | `.pf-v6-c-label-group__textarea` | Indicates that the label group textarea is one row. **Required** |
-| `tabindex="0"` | `.pf-v6-c-label-group__textarea` | Inserts the label group textarea into the tab order of the page so that it is focusable. **Required** |
+
+| Attribute                                                                                                        | Applied to                             | Outcome                                                                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `role="list"`                                                                                                    | `.pf-v6-c-label-group__list`           | Indicates that the label group list is a list element. This role is redundant since `.pf-v6-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list properly. **Required** |
+| `aria-label="[button label text]"`                                                                               | `.pf-v6-c-label-group__close > button` | Provides an accessible name for a label group close button when an icon is used instead of text. Required when an icon is used with no supporting text. **Required**                                        |
+| `aria-labelledby="[id value of .pf-v6-c-label-group__close > button] [id value of .pf-v6-c-label-group__label]"` | `.pf-v6-c-label-group__close > button` | Provides an accessible name for the button. **Required**                                                                                                                                                    |
+| `aria-label="[label text]"`                                                                                      | `.pf-v6-c-label-group__textarea`       | Provides an accessible name for the textarea. **Required**                                                                                                                                                  |
+| `row="1"`                                                                                                        | `.pf-v6-c-label-group__textarea`       | Indicates that the label group textarea is one row. **Required**                                                                                                                                            |
+| `tabindex="0"`                                                                                                   | `.pf-v6-c-label-group__textarea`       | Inserts the label group textarea into the tab order of the page so that it is focusable. **Required**                                                                                                       |
 
 ### Label group usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-label-group` | `<div>` | Initiates the label group component. **Required.** |
-| `.pf-v6-c-label-group__list` | `<ul>` | Initiates the container for a list of labels. **Required.** |
-| `.pf-v6-c-label-group__list-item` | `<li>` | Initiates the list item inside of the label group. **Required.** |
-| `.pf-v6-c-label-group__main` | `<div>` | Initiates the main element in the label group. **Required when label and list are present** |
-| `.pf-v6-c-label-group__textarea` | `<textarea>` | Initiates the textarea element in the label group. **Required when label group is editable** |
-| `.pf-v6-c-label-group__label` | `<span>` | Initiates the label to be used in the label group. |
-| `.pf-v6-c-label-group__close` | `<div>` | Initiates the container used for the button to remove the label group. |
-| `.pf-v6-c-button` | `.pf-v6-c-label-group__close <button>` | Initiates the button used to remove the label group. |
-| `.pf-m-editable` | `.pf-v6-c-label-group` | Modifies the label group to support editable styling. |
-| `.pf-m-category` | `.pf-v6-c-label-group` | Modifies the label group to support category styling. |
-| `.pf-m-textarea` | `.pf-v6-c-label-group__list-item` | Modifies the label group list item to support textarea. |
+
+| Class                             | Applied to                             | Outcome                                                                                      |
+| --------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-label-group`            | `<div>`                                | Initiates the label group component. **Required.**                                           |
+| `.pf-v6-c-label-group__list`      | `<ul>`                                 | Initiates the container for a list of labels. **Required.**                                  |
+| `.pf-v6-c-label-group__list-item` | `<li>`                                 | Initiates the list item inside of the label group. **Required.**                             |
+| `.pf-v6-c-label-group__main`      | `<div>`                                | Initiates the main element in the label group. **Required when label and list are present**  |
+| `.pf-v6-c-label-group__textarea`  | `<textarea>`                           | Initiates the textarea element in the label group. **Required when label group is editable** |
+| `.pf-v6-c-label-group__label`     | `<span>`                               | Initiates the label to be used in the label group.                                           |
+| `.pf-v6-c-label-group__close`     | `<div>`                                | Initiates the container used for the button to remove the label group.                       |
+| `.pf-v6-c-button`                 | `.pf-v6-c-label-group__close <button>` | Initiates the button used to remove the label group.                                         |
+| `.pf-m-editable`                  | `.pf-v6-c-label-group`                 | Modifies the label group to support editable styling.                                        |
+| `.pf-m-category`                  | `.pf-v6-c-label-group`                 | Modifies the label group to support category styling.                                        |
+| `.pf-m-textarea`                  | `.pf-v6-c-label-group__list-item`      | Modifies the label group list item to support textarea.                                      |

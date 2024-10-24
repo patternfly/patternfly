@@ -8,6 +8,7 @@ cssPrefix: pf-v6-c-file-upload
 ## Examples
 
 ### Basic file upload
+
 ```hbs
 {{#> file-upload file-upload--id="basic-file-upload"}}
   {{#> file-upload-file-select}}
@@ -70,6 +71,7 @@ cssPrefix: pf-v6-c-file-upload
 ```
 
 ### Upload complete non editable
+
 ```hbs
 {{#> file-upload file-upload--id="browsed-file-upload-complete"}}
   {{#> file-upload-file-select}}
@@ -99,6 +101,7 @@ cssPrefix: pf-v6-c-file-upload
 ```
 
 ### Upload complete editable
+
 ```hbs
 {{#> file-upload file-upload--id="drop-file"}}
   {{#> file-upload-file-select}}
@@ -128,6 +131,7 @@ cssPrefix: pf-v6-c-file-upload
 ```
 
 ### Drag file hover component
+
 ```hbs
 {{#> file-upload file-upload--id="drag-file-hover-component" file-upload--modifier="pf-m-drag-hover"}}
   {{#> file-upload-file-select}}
@@ -156,6 +160,7 @@ cssPrefix: pf-v6-c-file-upload
 ```
 
 ### File upload in form with error
+
 ```hbs
 {{#> form}}
   {{#> form-group}}
@@ -196,6 +201,7 @@ cssPrefix: pf-v6-c-file-upload
 ```
 
 ### File upload loading
+
 ```hbs
 {{#> file-upload file-upload--id="file-upload-loading" file-upload--modifier="pf-m-loading"}}
   {{#> file-upload-file-select}}
@@ -230,12 +236,12 @@ cssPrefix: pf-v6-c-file-upload
 
 ### Usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-file-upload` | `<div>`, `<form>` | Initiates the file upload component. **Required**. |
-| `.pf-v6-c-file-upload__file-select` | `<div>` | Initiates the file select element. **Required** |
-| `.pf-v6-c-file-upload__file-details` | `<div>` | Initiates the file details element. **Required** |
-| `.pf-v6-c-file-upload__file-details-spinner` | `<div>` | Initiates the file details element. **Required** |
-| `.pf-v6-c-file-upload__helper-text` | `<div>` | Initiates a container for [helper text](/components/helper-text) |
-| `.pf-m-drag-hover` | `.pf-v6-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
-| `.pf-m-loading` | `.pf-v6-c-file-upload` | Modifies file upload for the loading state. |
+| Class                                        | Applied to             | Outcome                                                                                 |
+| -------------------------------------------- | ---------------------- | --------------------------------------------------------------------------------------- |
+| `.pf-v6-c-file-upload`                       | `<div>`, `<form>`      | Initiates the file upload component. **Required**.                                      |
+| `.pf-v6-c-file-upload__file-select`          | `<div>`                | Initiates the file select element. **Required**                                         |
+| `.pf-v6-c-file-upload__file-details`         | `<div>`                | Initiates the file details element. **Required**                                        |
+| `.pf-v6-c-file-upload__file-details-spinner` | `<div>`                | Initiates the file details element. **Required**                                        |
+| `.pf-v6-c-file-upload__helper-text`          | `<div>`                | Initiates a container for [helper text](/components/helper-text)                        |
+| `.pf-m-drag-hover`                           | `.pf-v6-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
+| `.pf-m-loading`                              | `.pf-v6-c-file-upload` | Modifies file upload for the loading state.                                             |

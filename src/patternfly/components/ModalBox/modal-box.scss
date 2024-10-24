@@ -10,12 +10,20 @@
   --#{$modal-box}--m-sm--sm--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
   --#{$modal-box}--m-md--Width: #{pf-size-prem(840px)};
   --#{$modal-box}--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
-  --#{$modal-box}--MaxHeight: calc(100% - var(--pf-t--global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
+  --#{$modal-box}--MaxHeight: calc(
+    100% - var(--pf-t--global--spacer--2xl)
+  ); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
   --#{$modal-box}--m-align-top--spacer: var(--pf-t--global--spacer--sm);
   --#{$modal-box}--m-align-top--xl--spacer: var(--pf-t--global--spacer--xl);
   --#{$modal-box}--m-align-top--InsetBlockStart: var(--#{$modal-box}--m-align-top--spacer);
-  --#{$modal-box}--m-align-top--MaxHeight: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer), var(--pf-t--global--spacer--2xl)) - var(--#{$modal-box}--m-align-top--spacer));
-  --#{$modal-box}--m-align-top--MaxWidth: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer) * 2, var(--pf-t--global--spacer--xl)));
+  --#{$modal-box}--m-align-top--MaxHeight: calc(
+    100% - min(var(--#{$modal-box}--m-align-top--spacer), var(--pf-t--global--spacer--2xl)) - var(
+        --#{$modal-box}--m-align-top--spacer
+      )
+  );
+  --#{$modal-box}--m-align-top--MaxWidth: calc(
+    100% - min(var(--#{$modal-box}--m-align-top--spacer) * 2, var(--pf-t--global--spacer--xl))
+  );
 
   // States
   --#{$modal-box}--m-danger__title-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
@@ -54,7 +62,9 @@
   --#{$modal-box}__description--Color: var(--pf-t--global--text--color--subtle);
 
   // Body
-  --#{$modal-box}__body--MinHeight: calc(var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)); // Allow for at least 1 line of content in the body
+  --#{$modal-box}__body--MinHeight: calc(
+    var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)
+  ); // Allow for at least 1 line of content in the body
   --#{$modal-box}__body--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__body--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__body--PaddingInlineStart: var(--pf-t--global--spacer--lg);
@@ -64,7 +74,9 @@
   // Close
   --#{$modal-box}__close--InsetBlockStart: var(--#{$modal-box}__header--PaddingBlockStart);
   --#{$modal-box}__close--InsetInlineEnd: var(--#{$modal-box}__header--PaddingInlineEnd);
-  --#{$modal-box}__close--sibling--MarginInlineEnd: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
+  --#{$modal-box}__close--sibling--MarginInlineEnd: calc(
+    var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm)
+  );
 
   // Footer
   --#{$modal-box}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
@@ -73,8 +85,12 @@
   --#{$modal-box}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
-  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2);
+  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(
+    --pf-t--global--spacer--md
+  ); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
+  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(
+    var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2
+  );
 }
 
 .#{$modal-box} {
@@ -110,35 +126,35 @@
   }
 
   @at-root .#{$modal-box}__title,
-  & {
+    & {
     &.pf-m-danger {
       --#{$modal-box}__title-icon--Color: var(--#{$modal-box}--m-danger__title-icon--Color);
     }
   }
 
   @at-root .#{$modal-box}__title,
-  & {
+    & {
     &.pf-m-warning {
       --#{$modal-box}__title-icon--Color: var(--#{$modal-box}--m-warning__title-icon--Color);
     }
   }
 
   @at-root .#{$modal-box}__title,
-  & {
+    & {
     &.pf-m-success {
       --#{$modal-box}__title-icon--Color: var(--#{$modal-box}--m-success__title-icon--Color);
     }
   }
 
   @at-root .#{$modal-box}__title,
-  & {
+    & {
     &.pf-m-custom {
       --#{$modal-box}__title-icon--Color: var(--#{$modal-box}--m-custom__title-icon--Color);
     }
   }
 
   @at-root .#{$modal-box}__title,
-  & {
+    & {
     &.pf-m-info {
       --#{$modal-box}__title-icon--Color: var(--#{$modal-box}--m-info__title-icon--Color);
     }
@@ -148,8 +164,8 @@
 // Close button
 .#{$modal-box}__close {
   position: absolute;
- inset-block-start: var(--#{$modal-box}__close--InsetBlockStart);
- inset-inline-end: var(--#{$modal-box}__close--InsetInlineEnd);
+  inset-block-start: var(--#{$modal-box}__close--InsetBlockStart);
+  inset-inline-end: var(--#{$modal-box}__close--InsetInlineEnd);
 
   + * {
     margin-inline-end: var(--#{$modal-box}__close--sibling--MarginInlineEnd); // Create room for the close button

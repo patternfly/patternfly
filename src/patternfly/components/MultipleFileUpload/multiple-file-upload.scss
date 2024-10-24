@@ -8,10 +8,7 @@
   --#{$multiple-file-upload}__main--TextAlign: center;
   --#{$multiple-file-upload}__main--GridTemplateColumns: auto;
   --#{$multiple-file-upload}__main--GridTemplateRows: auto;
-  --#{$multiple-file-upload}__main--GridTemplateAreas:
-    "title"
-    "upload"
-    "info";
+  --#{$multiple-file-upload}__main--GridTemplateAreas: 'title' 'upload' 'info';
   --#{$multiple-file-upload}__main--PaddingBlockStart: var(--pf-t--global--spacer--xl);
   --#{$multiple-file-upload}__main--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
   --#{$multiple-file-upload}__main--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
@@ -58,9 +55,7 @@
   --#{$multiple-file-upload}--m-horizontal--GridTemplateColumns: fit-content(100%);
   --#{$multiple-file-upload}--m-horizontal__main--TextAlign: start;
   --#{$multiple-file-upload}--m-horizontal__main--GridTemplateColumns: 1fr auto;
-  --#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas:
-    "title upload"
-    "info upload";
+  --#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas: 'title upload' 'info upload';
   --#{$multiple-file-upload}--m-horizontal__main--Gap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--lg);
   --#{$multiple-file-upload}--m-horizontal__main--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns: auto 1fr;
@@ -71,9 +66,15 @@
   --#{$multiple-file-upload}--m-horizontal__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display: inline;
   --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginBlockStart: 0;
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(--pf-t--global--font--weight--heading--default);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily: var(
+    --pf-t--global--font--family--heading
+  );
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize: var(
+    --pf-t--global--font--size--heading--xs
+  );
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight: var(
+    --pf-t--global--font--weight--heading--default
+  );
   --#{$multiple-file-upload}--m-horizontal__info--MarginBlockStart: 0;
 
   // status container
@@ -119,20 +120,44 @@
   &.pf-m-horizontal {
     --#{$multiple-file-upload}--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal--GridTemplateColumns);
     --#{$multiple-file-upload}__main--TextAlign: var(--#{$multiple-file-upload}--m-horizontal__main--TextAlign);
-    --#{$multiple-file-upload}__main--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal__main--GridTemplateColumns);
-    --#{$multiple-file-upload}__main--GridTemplateAreas: var(--#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas);
+    --#{$multiple-file-upload}__main--GridTemplateColumns: var(
+      --#{$multiple-file-upload}--m-horizontal__main--GridTemplateColumns
+    );
+    --#{$multiple-file-upload}__main--GridTemplateAreas: var(
+      --#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas
+    );
     --#{$multiple-file-upload}__main--Gap: var(--#{$multiple-file-upload}--m-horizontal__main--Gap);
-    --#{$multiple-file-upload}__main--PaddingBlockEnd: var(--#{$multiple-file-upload}--m-horizontal__main--PaddingBlockEnd);
-    --#{$multiple-file-upload}__title--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns);
+    --#{$multiple-file-upload}__main--PaddingBlockEnd: var(
+      --#{$multiple-file-upload}--m-horizontal__main--PaddingBlockEnd
+    );
+    --#{$multiple-file-upload}__title--GridTemplateColumns: var(
+      --#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns
+    );
     --#{$multiple-file-upload}__title--Gap: var(--#{$multiple-file-upload}--m-horizontal__title--Gap);
-    --#{$multiple-file-upload}__title-icon--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-icon--FontSize);
-    --#{$multiple-file-upload}__title-text--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-text--FontSize);
-    --#{$multiple-file-upload}__title-text-separator--FontFamily: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily);
-    --#{$multiple-file-upload}__title-text-separator--Display: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--Display);
-    --#{$multiple-file-upload}__title-text-separator--MarginBlockStart: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginBlockStart);
-    --#{$multiple-file-upload}__title-text-separator--FontSize: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize);
-    --#{$multiple-file-upload}__title-text-separator--FontWeight: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight);
-    --#{$multiple-file-upload}__info--MarginBlockStart: var(--#{$multiple-file-upload}--m-horizontal__info--MarginBlockStart);
+    --#{$multiple-file-upload}__title-icon--FontSize: var(
+      --#{$multiple-file-upload}--m-horizontal__title-icon--FontSize
+    );
+    --#{$multiple-file-upload}__title-text--FontSize: var(
+      --#{$multiple-file-upload}--m-horizontal__title-text--FontSize
+    );
+    --#{$multiple-file-upload}__title-text-separator--FontFamily: var(
+      --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontFamily
+    );
+    --#{$multiple-file-upload}__title-text-separator--Display: var(
+      --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display
+    );
+    --#{$multiple-file-upload}__title-text-separator--MarginBlockStart: var(
+      --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginBlockStart
+    );
+    --#{$multiple-file-upload}__title-text-separator--FontSize: var(
+      --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontSize
+    );
+    --#{$multiple-file-upload}__title-text-separator--FontWeight: var(
+      --#{$multiple-file-upload}--m-horizontal__title-text-separator--FontWeight
+    );
+    --#{$multiple-file-upload}__info--MarginBlockStart: var(
+      --#{$multiple-file-upload}--m-horizontal__info--MarginBlockStart
+    );
   }
 
   &.pf-m-drag-over {
@@ -153,7 +178,8 @@
   padding-inline-start: var(--#{$multiple-file-upload}__main--PaddingInlineStart);
   padding-inline-end: var(--#{$multiple-file-upload}__main--PaddingInlineEnd);
   text-align: var(--#{$multiple-file-upload}__main--TextAlign);
-  border: var(--#{$multiple-file-upload}__main--BorderWidth) var(--#{$multiple-file-upload}__main--BorderStyle) var(--#{$multiple-file-upload}__main--BorderColor);
+  border: var(--#{$multiple-file-upload}__main--BorderWidth) var(--#{$multiple-file-upload}__main--BorderStyle)
+    var(--#{$multiple-file-upload}__main--BorderColor);
   border-radius: var(--#{$multiple-file-upload}__main--BorderRadius);
 }
 
@@ -225,7 +251,8 @@
   gap: var(--#{$multiple-file-upload}__status-item--Gap);
   padding-block-start: var(--#{$multiple-file-upload}__status-item--PaddingBlockStart);
   padding-block-end: var(--#{$multiple-file-upload}__status-item--PaddingBlockEnd);
-  border-block-end: var(--#{$multiple-file-upload}__status-item--BorderWidth) solid var(--#{$multiple-file-upload}__status-item--BorderColor);
+  border-block-end: var(--#{$multiple-file-upload}__status-item--BorderWidth) solid
+    var(--#{$multiple-file-upload}__status-item--BorderColor);
 }
 
 .#{$multiple-file-upload}__status-item-icon {

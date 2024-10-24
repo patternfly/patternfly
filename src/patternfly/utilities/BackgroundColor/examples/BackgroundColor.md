@@ -42,8 +42,9 @@ Care should be taken especially when applying background colors, as this can hav
 Note that "inverse" background colors are labeled as such to indicate that they are best used with the ["inverse" text colors](/utility-classes/text#inverse-colors).
 
 [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-background-color-disabled-on-lg**
+
 ### Usage
 
-| Class                             | Applied to | Outcome                            |
-| --------------------------------- | ---------- | ---------------------------------- |
-| `.pf-v6-u-background-color-{disabled, inverse, highlight}{-on-[breakpoint]}`                | `*`        | Applies background color |
+| Class                                                                        | Applied to | Outcome                  |
+| ---------------------------------------------------------------------------- | ---------- | ------------------------ |
+| `.pf-v6-u-background-color-{disabled, inverse, highlight}{-on-[breakpoint]}` | `*`        | Applies background color |

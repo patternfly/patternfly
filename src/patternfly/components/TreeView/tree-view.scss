@@ -4,8 +4,12 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
 @include pf-root($tree-view) {
   // Node base
-  --#{$tree-view}__node--indent--base: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$tree-view}__node-toggle-icon--MinWidth)); // based off of the expected width of the toggle button
-  --#{$tree-view}__node--nested-indent--base: calc(var(--#{$tree-view}__node--indent--base) - var(--pf-t--global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
+  --#{$tree-view}__node--indent--base: calc(
+    var(--pf-t--global--spacer--md) * 2 + var(--#{$tree-view}__node-toggle-icon--MinWidth)
+  ); // based off of the expected width of the toggle button
+  --#{$tree-view}__node--nested-indent--base: calc(
+    var(--#{$tree-view}__node--indent--base) - var(--pf-t--global--spacer--md)
+  ); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // Content
   --#{$tree-view}__content--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -79,13 +83,20 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   // Guides
   // ================================================================== //
-  --#{$tree-view}--m-guides--guide--InsetInlineStart: var(--#{$tree-view}--m-guides--guide-left--base); // starting value, this gets updated for each nesting level
+  --#{$tree-view}--m-guides--guide--InsetInlineStart: var(
+    --#{$tree-view}--m-guides--guide-left--base
+  ); // starting value, this gets updated for each nesting level
 
   // Base
   --#{$tree-view}--m-guides--guide-color--base: var(--pf-t--global--border--color--default);
   --#{$tree-view}--m-guides--guide-width--base: var(--pf-t--global--border--width--divider--default);
-  --#{$tree-view}--m-guides--guide-left--base: calc(var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-guides__list-node--guide-width--base));
-  --#{$tree-view}--m-guides--guide-left--base--offset: calc(var(--#{$tree-view}__list-item__list-item__node-toggle--InsetInlineStart) + var(--#{$tree-view}__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
+  --#{$tree-view}--m-guides--guide-left--base: calc(
+    var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-guides__list-node--guide-width--base)
+  );
+  --#{$tree-view}--m-guides--guide-left--base--offset: calc(
+    var(--#{$tree-view}__list-item__list-item__node-toggle--InsetInlineStart) +
+      var(--#{$tree-view}__node-toggle-icon--MinWidth) / 2
+  ); // based on toggle positioning
   --#{$tree-view}--m-guides__list-node--guide-width--base: var(--pf-t--global--spacer--lg);
 
   // List item
@@ -93,8 +104,12 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-guides__list-item--before--Width: var(--#{$tree-view}--m-guides--guide-width--base);
   --#{$tree-view}--m-guides__list-item--before--Height: 100%;
   --#{$tree-view}--m-guides__list-item--before--BackgroundColor: var(--#{$tree-view}--m-guides--guide-color--base);
-  --#{$tree-view}--m-guides__list-item--last-child--before--InsetBlockStart: var(--#{$tree-view}--m-guides__node--before--InsetBlockStart);
-  --#{$tree-view}--m-guides__list-item--last-child--before--Height: var(--#{$tree-view}--m-guides__list-item--last-child--before--InsetBlockStart);
+  --#{$tree-view}--m-guides__list-item--last-child--before--InsetBlockStart: var(
+    --#{$tree-view}--m-guides__node--before--InsetBlockStart
+  );
+  --#{$tree-view}--m-guides__list-item--last-child--before--Height: var(
+    --#{$tree-view}--m-guides__list-item--last-child--before--InsetBlockStart
+  );
   --#{$tree-view}--m-guides__list-item--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Node
@@ -107,8 +122,14 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   // ================================================================== //
   // Base
   --#{$tree-view}--m-compact--base-border--InsetInlineStart--offset: var(--pf-t--global--spacer--md);
-  --#{$tree-view}--m-compact--base-border--InsetInlineStart: calc(var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-compact--base-border--InsetInlineStart--offset));
-  --#{$tree-view}--m-compact__node--indent--base: var(--#{$tree-view}__node--indent--base); // based off of the expected width of the toggle button
+  --#{$tree-view}--m-compact--base-border--InsetInlineStart: calc(
+    var(--#{$tree-view}__node--PaddingInlineStart) - var(
+        --#{$tree-view}--m-compact--base-border--InsetInlineStart--offset
+      )
+  );
+  --#{$tree-view}--m-compact__node--indent--base: var(
+    --#{$tree-view}__node--indent--base
+  ); // based off of the expected width of the toggle button
   --#{$tree-view}--m-compact__node--nested-indent--base: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact--border--InsetInlineStart: var(--#{$tree-view}--m-compact--base-border--InsetInlineStart);
 
@@ -120,38 +141,58 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact__node--nested--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // Node toggle
-  --#{$tree-view}--m-compact__list-item__list-item__node-toggle--InsetBlockStart: calc(var(--#{$tree-view}--m-compact__node-container--PaddingBlockStart));
+  --#{$tree-view}--m-compact__list-item__list-item__node-toggle--InsetBlockStart: calc(
+    var(--#{$tree-view}--m-compact__node-container--PaddingBlockStart)
+  );
 
   // List item
   --#{$tree-view}--m-compact__list-item--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$tree-view}--m-compact__list-item--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$tree-view}--m-compact__list-item--before--InsetBlockStart: 0;
-  --#{$tree-view}--m-compact__list-item--last-child--before--Height: var(--#{$tree-view}--m-compact__node--before--InsetBlockStart);
-  --#{$tree-view}--m-compact__list-item--nested--before--InsetBlockStart: calc(var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) * -1);
-  --#{$tree-view}--m-compact__list-item--nested--last-child--before--Height: calc(var(--#{$tree-view}--m-compact__node--before--InsetBlockStart) + var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart));
+  --#{$tree-view}--m-compact__list-item--last-child--before--Height: var(
+    --#{$tree-view}--m-compact__node--before--InsetBlockStart
+  );
+  --#{$tree-view}--m-compact__list-item--nested--before--InsetBlockStart: calc(
+    var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) * -1
+  );
+  --#{$tree-view}--m-compact__list-item--nested--last-child--before--Height: calc(
+    var(--#{$tree-view}--m-compact__node--before--InsetBlockStart) +
+      var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart)
+  );
 
   // Node
   --#{$tree-view}--m-compact__node--PaddingInlineStart: var(--#{$tree-view}--m-compact__node--indent--base);
-  --#{$tree-view}--m-compact__node--before--InsetBlockStart: calc(var(--#{$tree-view}--m-compact__node-container--PaddingBlockStart) + var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) + #{pf-size-prem(4px)});
+  --#{$tree-view}--m-compact__node--before--InsetBlockStart: calc(
+    var(--#{$tree-view}--m-compact__node-container--PaddingBlockStart) +
+      var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) + #{pf-size-prem(4px)}
+  );
   --#{$tree-view}--m-compact__node--level-2--PaddingInlineStart: var(--#{$tree-view}--m-compact__node--indent--base);
 
   // Node toggle
-  --#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd: calc(var(--#{$tree-view}__node-toggle--PaddingInlineStart) * -.5);
-  --#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart: calc(var(--#{$tree-view}__node-toggle--PaddingInlineStart) * -1.5);
+  --#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd: calc(
+    var(--#{$tree-view}__node-toggle--PaddingInlineStart) * -0.5
+  );
+  --#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart: calc(
+    var(--#{$tree-view}__node-toggle--PaddingInlineStart) * -1.5
+  );
 
   // Node container
   --#{$tree-view}--m-compact__node-container--Display: flex;
   --#{$tree-view}--m-compact__node-container--PaddingBlockEnd--base: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
-  --#{$tree-view}--m-compact__node-container--PaddingBlockEnd: var(--#{$tree-view}--m-compact__node-container--PaddingBlockEnd--base);
+  --#{$tree-view}--m-compact__node-container--PaddingBlockEnd: var(
+    --#{$tree-view}--m-compact__node-container--PaddingBlockEnd--base
+  );
   --#{$tree-view}--m-compact__node-container--PaddingInlineStart: var(--pf-t--global--spacer--xs);
   --#{$tree-view}--m-compact__node-container--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$tree-view}--m-compact__node-container--nested--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$tree-view}--m-compact__node-container--nested--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--nested--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$tree-view}--m-compact__node-container--nested--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(
+    --pf-t--global--background--color--secondary--default
+  );
   --#{$tree-view}--m-compact__list-item--m-expanded__node-container--PaddingBlockEnd: 0;
 
   // Background transparent
@@ -160,12 +201,21 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   // Compact, no background
   // ================================================================== //
   --#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart--offset: var(--pf-t--global--spacer--sm);
-  --#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart: calc(var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart--offset));
-  --#{$tree-view}--m-compact--m-no-background__node--indent--base: var(--#{$tree-view}__node--indent--base); // based off of the expected width of the toggle button
+  --#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart: calc(
+    var(--#{$tree-view}__node--PaddingInlineStart) - var(
+        --#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart--offset
+      )
+  );
+  --#{$tree-view}--m-compact--m-no-background__node--indent--base: var(
+    --#{$tree-view}__node--indent--base
+  ); // based off of the expected width of the toggle button
   --#{$tree-view}--m-compact--m-no-background__node--nested-indent--base: var(--pf-t--global--spacer--2xl);
   --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBlockStart: 0;
   --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBlockEnd: 0;
-  --#{$tree-view}--m-compact--m-no-background__node--before--InsetBlockStart: calc(var(--#{$tree-view}--m-compact__node-container--nested--PaddingBlockStart) + var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) + #{pf-size-prem(4px)});
+  --#{$tree-view}--m-compact--m-no-background__node--before--InsetBlockStart: calc(
+    var(--#{$tree-view}--m-compact__node-container--nested--PaddingBlockStart) +
+      var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart) + #{pf-size-prem(4px)}
+  );
 }
 
 .#{$tree-view} {
@@ -179,13 +229,13 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         &::before,
         .#{$tree-view}__node::before {
           position: absolute;
-         inset-inline-start: var(--#{$tree-view}--m-guides--guide--InsetInlineStart);
-          content: "";
+          inset-inline-start: var(--#{$tree-view}--m-guides--guide--InsetInlineStart);
+          content: '';
         }
 
         // vertical border
         &::before {
-         inset-block-start: var(--#{$tree-view}--m-guides__list-item--before--InsetBlockStart);
+          inset-block-start: var(--#{$tree-view}--m-guides__list-item--before--InsetBlockStart);
           z-index: var(--#{$tree-view}--m-guides__list-item--ZIndex);
           width: var(--#{$tree-view}--m-guides__list-item--before--Width);
           height: var(--#{$tree-view}--m-guides__list-item--before--Height);
@@ -194,7 +244,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
         // horizontal border
         .#{$tree-view}__node::before {
-         inset-block-start: var(--#{$tree-view}--m-guides__node--before--InsetBlockStart);
+          inset-block-start: var(--#{$tree-view}--m-guides__node--before--InsetBlockStart);
           width: var(--#{$tree-view}--m-guides__node--before--Width);
           height: var(--#{$tree-view}--m-guides__node--before--Height);
           background-color: var(--#{$tree-view}--m-guides__node--before--BackgroundColor);
@@ -205,7 +255,9 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         }
 
         .#{$tree-view}__list-item {
-          --#{$tree-view}--m-guides--guide--InsetInlineStart: var(--#{$tree-view}--m-guides--border--nested--InsetInlineStart); // swap with nested value
+          --#{$tree-view}--m-guides--guide--InsetInlineStart: var(
+            --#{$tree-view}--m-guides--border--nested--InsetInlineStart
+          ); // swap with nested value
         }
         // stylelint-enable
       }
@@ -222,14 +274,19 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node--PaddingBlockEnd: var(--#{$tree-view}--m-compact__node--PaddingBlockEnd);
     --#{$tree-view}__node-container--Display: var(--#{$tree-view}--m-compact__node-container--Display);
     --#{$tree-view}__node--hover--BackgroundColor: transparent;
-    --#{$tree-view}__list-item__list-item__node-toggle--InsetBlockStart: var(--#{$tree-view}--m-compact__list-item__list-item__node-toggle--InsetBlockStart);
+    --#{$tree-view}__list-item__list-item__node-toggle--InsetBlockStart: var(
+      --#{$tree-view}--m-compact__list-item__list-item__node-toggle--InsetBlockStart
+    );
 
     // Level 1
     .#{$tree-view}__list-item {
-      border-block-end: var(--#{$tree-view}--m-compact__list-item--BorderBlockEndWidth) solid var(--#{$tree-view}--m-compact__list-item--BorderBlockEndColor);
+      border-block-end: var(--#{$tree-view}--m-compact__list-item--BorderBlockEndWidth) solid
+        var(--#{$tree-view}--m-compact__list-item--BorderBlockEndColor);
 
       &.pf-m-expanded {
-        --#{$tree-view}--m-compact__node-container--PaddingBlockEnd: var(--#{$tree-view}--m-compact__list-item--m-expanded__node-container--PaddingBlockEnd);
+        --#{$tree-view}--m-compact__node-container--PaddingBlockEnd: var(
+          --#{$tree-view}--m-compact__list-item--m-expanded__node-container--PaddingBlockEnd
+        );
       }
 
       // Level 2
@@ -237,23 +294,27 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         --#{$tree-view}__node--PaddingBlockStart: var(--#{$tree-view}--m-compact__node--nested--PaddingBlockStart);
         --#{$tree-view}__node--PaddingBlockEnd: var(--#{$tree-view}--m-compact__node--nested--PaddingBlockEnd);
         --#{$tree-view}__node-toggle--Position: static;
-        --#{$tree-view}__node--PaddingInlineStart: var(--#{$tree-view}--m-compact__node--level-2--PaddingInlineStart); // second+ nested child padding left
+        --#{$tree-view}__node--PaddingInlineStart: var(
+          --#{$tree-view}--m-compact__node--level-2--PaddingInlineStart
+        ); // second+ nested child padding left
         --#{$tree-view}__list-item__list-item__node-toggle--TranslateX: 0;
         --#{$tree-view}--m-compact__list-item--BorderBlockEndWidth: 0; // hide nested list item bottom borders
-        --#{$tree-view}--m-compact__node-container--PaddingBlockEnd: var(--#{$tree-view}--m-compact__node-container--PaddingBlockEnd--base); // reset expanded node container padding
+        --#{$tree-view}--m-compact__node-container--PaddingBlockEnd: var(
+          --#{$tree-view}--m-compact__node-container--PaddingBlockEnd--base
+        ); // reset expanded node container padding
 
         // stylelint-disable max-nesting-depth, selector-max-class
         &::before,
         .#{$tree-view}__node::before {
-         inset-inline-start: var(--#{$tree-view}--m-compact--border--InsetInlineStart);
+          inset-inline-start: var(--#{$tree-view}--m-compact--border--InsetInlineStart);
         }
 
         &::before {
-         inset-block-start: var(--#{$tree-view}--m-compact__list-item--before--InsetBlockStart);
+          inset-block-start: var(--#{$tree-view}--m-compact__list-item--before--InsetBlockStart);
         }
 
         .#{$tree-view}__node::before {
-         inset-block-start: var(--#{$tree-view}--m-compact__node--before--InsetBlockStart);
+          inset-block-start: var(--#{$tree-view}--m-compact__node--before--InsetBlockStart);
         }
 
         &:last-child::before {
@@ -262,10 +323,18 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
         // Level 3
         .#{$tree-view}__list-item {
-          --#{$tree-view}__node--PaddingInlineStart: var(--#{$tree-view}--m-compact__node--PaddingInlineStart); // second+ nested child padding left
-          --#{$tree-view}--m-compact--border--InsetInlineStart: var(--#{$tree-view}--m-compact--border--nested--InsetInlineStart);
-          --#{$tree-view}--m-compact__list-item--before--InsetBlockStart: var(--#{$tree-view}--m-compact__list-item--nested--before--InsetBlockStart);
-          --#{$tree-view}--m-compact__list-item--last-child--before--Height: var(--#{$tree-view}--m-compact__list-item--nested--last-child--before--Height);
+          --#{$tree-view}__node--PaddingInlineStart: var(
+            --#{$tree-view}--m-compact__node--PaddingInlineStart
+          ); // second+ nested child padding left
+          --#{$tree-view}--m-compact--border--InsetInlineStart: var(
+            --#{$tree-view}--m-compact--border--nested--InsetInlineStart
+          );
+          --#{$tree-view}--m-compact__list-item--before--InsetBlockStart: var(
+            --#{$tree-view}--m-compact__list-item--nested--before--InsetBlockStart
+          );
+          --#{$tree-view}--m-compact__list-item--last-child--before--Height: var(
+            --#{$tree-view}--m-compact__list-item--nested--last-child--before--Height
+          );
         }
 
         .#{$tree-view}__node-container {
@@ -302,25 +371,37 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     // stylelint-enable
 
     &.pf-m-no-background {
-      --#{$tree-view}--m-compact__node--before--InsetBlockStart: var(--#{$tree-view}--m-compact--m-no-background__node--before--InsetBlockStart);
+      --#{$tree-view}--m-compact__node--before--InsetBlockStart: var(
+        --#{$tree-view}--m-compact--m-no-background__node--before--InsetBlockStart
+      );
 
       // stylelint-disable max-nesting-depth, selector-max-class
       .#{$tree-view}__list-item .#{$tree-view}__list-item {
-        --#{$tree-view}__node--PaddingBlockStart: var(--#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBlockStart);
-        --#{$tree-view}__node--PaddingBlockEnd: var(--#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBlockEnd);
+        --#{$tree-view}__node--PaddingBlockStart: var(
+          --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBlockStart
+        );
+        --#{$tree-view}__node--PaddingBlockEnd: var(
+          --#{$tree-view}--m-compact--m-no-background__node--nested--PaddingBlockEnd
+        );
       }
 
       // level 3
       .#{$tree-view}__list-item .#{$tree-view}__list-item .#{$tree-view}__list-item {
-        --#{$tree-view}--m-compact--border--InsetInlineStart: var(--#{$tree-view}--m-compact--m-no-background--border--nested--InsetInlineStart);
-        --#{$tree-view}__node--PaddingInlineStart: var(--#{$tree-view}--m-compact--m-no-background__node--PaddingInlineStart); // third+ nested child padding left
+        --#{$tree-view}--m-compact--border--InsetInlineStart: var(
+          --#{$tree-view}--m-compact--m-no-background--border--nested--InsetInlineStart
+        );
+        --#{$tree-view}__node--PaddingInlineStart: var(
+          --#{$tree-view}--m-compact--m-no-background__node--PaddingInlineStart
+        ); // third+ nested child padding left
       }
       // stylelint-enable
     }
   }
 
   &.pf-m-no-background {
-    --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$tree-view}--m-no-background__node-container--BackgroundColor);
+    --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(
+      --#{$tree-view}--m-no-background__node-container--BackgroundColor
+    );
   }
 }
 
@@ -336,7 +417,9 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 // stylelint-disable
 .#{$tree-view}__list-item {
   .#{$tree-view}__list-item {
-    --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__node-toggle-icon--base--Rotate); // reset nested toggle icon rotate
+    --#{$tree-view}__node-toggle-icon--Rotate: var(
+      --#{$tree-view}__node-toggle-icon--base--Rotate
+    ); // reset nested toggle icon rotate
     --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--Color--base); // reset nested toggle color
   }
 
@@ -493,19 +576,43 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   @for $i from 1 through $pf-v6-c-tree-view--MaxNesting {
     #{$nested-item} {
-      --#{$tree-view}__list-item__list-item__node-toggle--InsetInlineStart: var(--#{$tree-view}__node--PaddingInlineStart);
-      --#{$tree-view}__node--PaddingInlineStart: calc(var(--#{$tree-view}__node--nested-indent--base) * #{$i} + var(--#{$tree-view}__node--indent--base));
-      --#{$tree-view}--m-guides--border--nested--InsetInlineStart: calc(var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-guides--guide-left--base--offset));
+      --#{$tree-view}__list-item__list-item__node-toggle--InsetInlineStart: var(
+        --#{$tree-view}__node--PaddingInlineStart
+      );
+      --#{$tree-view}__node--PaddingInlineStart: calc(
+        var(--#{$tree-view}__node--nested-indent--base) * #{$i} + var(--#{$tree-view}__node--indent--base)
+      );
+      --#{$tree-view}--m-guides--border--nested--InsetInlineStart: calc(
+        var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-guides--guide-left--base--offset)
+      );
 
       @if $i > 1 {
-        --#{$tree-view}--m-compact__node--PaddingInlineStart: calc(var(--#{$tree-view}--m-compact__node--nested-indent--base) * #{$i - 1} + var(--#{$tree-view}--m-compact__node--indent--base));
-        --#{$tree-view}--m-compact--border--nested--InsetInlineStart: calc(var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-compact--base-border--InsetInlineStart--offset));
-        --#{$tree-view}--m-compact--m-no-background__node--PaddingInlineStart: calc(var(--#{$tree-view}--m-compact--m-no-background__node--nested-indent--base) * #{$i - 1} + var(--#{$tree-view}--m-compact--m-no-background__node--indent--base));
-        --#{$tree-view}--m-compact--m-no-background--border--nested--InsetInlineStart: calc(var(--#{$tree-view}__node--PaddingInlineStart) - var(--#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart--offset));
+        --#{$tree-view}--m-compact__node--PaddingInlineStart: calc(
+          var(--#{$tree-view}--m-compact__node--nested-indent--base) *
+            #{$i -
+            1} +
+            var(--#{$tree-view}--m-compact__node--indent--base)
+        );
+        --#{$tree-view}--m-compact--border--nested--InsetInlineStart: calc(
+          var(--#{$tree-view}__node--PaddingInlineStart) - var(
+              --#{$tree-view}--m-compact--base-border--InsetInlineStart--offset
+            )
+        );
+        --#{$tree-view}--m-compact--m-no-background__node--PaddingInlineStart: calc(
+          var(--#{$tree-view}--m-compact--m-no-background__node--nested-indent--base) *
+            #{$i -
+            1} +
+            var(--#{$tree-view}--m-compact--m-no-background__node--indent--base)
+        );
+        --#{$tree-view}--m-compact--m-no-background--border--nested--InsetInlineStart: calc(
+          var(--#{$tree-view}__node--PaddingInlineStart) - var(
+              --#{$tree-view}--m-compact--m-no-background--base-border--InsetInlineStart--offset
+            )
+        );
       }
     }
 
-    $nested-item: $nested-item + " " + $root;
+    $nested-item: $nested-item + ' ' + $root;
   }
 }
 // stylelint-enable

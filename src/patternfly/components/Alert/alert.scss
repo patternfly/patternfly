@@ -5,10 +5,7 @@
   --#{$alert}--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$alert}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$alert}--GridTemplateColumns: max-content 1fr max-content;
-  --#{$alert}--GridTemplateAreas:
-    "icon title action"
-    ". description description"
-    ". actiongroup actiongroup";
+  --#{$alert}--GridTemplateAreas: 'icon title action' '. description description' '. actiongroup actiongroup';
   --#{$alert}--BorderWidth: var(--pf-t--global--border--width--box--status--default);
   --#{$alert}--BorderColor: transparent;
   --#{$alert}--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -53,8 +50,12 @@
   --#{$alert}__action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--sm);
   --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__action-group--PaddingBlockStart-base);
   --#{$alert}__description--action-group--PaddingBlockStart-base: var(--pf-t--global--spacer--sm);
-  --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart-base);
-  --#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
+  --#{$alert}__description--action-group--PaddingBlockStart: var(
+    --#{$alert}__description--action-group--PaddingBlockStart-base
+  );
+  --#{$alert}__action-group__c-button--not-last-child--MarginInlineEnd: var(
+    --pf-t--global--spacer--gap--action-to-action--default
+  );
 
   // Custom
   --#{$alert}--m-custom--BorderColor: var(--pf-t--global--border--color--status--custom--default);
@@ -82,8 +83,8 @@
   --#{$alert}--m-info__title--Color: var(--pf-t--global--text--color--regular);
 
   // Inline
-    --#{$alert}--m-inline--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-    --#{$alert}--m-inline--BoxShadow: none;
+  --#{$alert}--m-inline--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$alert}--m-inline--BoxShadow: none;
 
   // Inline plain
   --#{$alert}--m-inline--m-plain--BorderWidth: 0;
@@ -95,15 +96,17 @@
 
   // Expandable
   --#{$alert}--m-expandable--GridTemplateColumns: auto max-content 1fr max-content;
-  --#{$alert}--m-expandable--GridTemplateAreas:
-    "toggle icon title action"
-    ". . description description"
-    ". . actiongroup actiongroup";
-  --#{$alert}--m-expandable__description--action-group--PaddingBlockStart: var(--#{$alert}__action-group--PaddingBlockStart-base);
+  --#{$alert}--m-expandable--GridTemplateAreas: 'toggle icon title action' '. . description description'
+    '. . actiongroup actiongroup';
+  --#{$alert}--m-expandable__description--action-group--PaddingBlockStart: var(
+    --#{$alert}__action-group--PaddingBlockStart-base
+  );
 
   // Expanded
   --#{$alert}--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$alert}--m-expanded__description--action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart-base);
+  --#{$alert}--m-expanded__description--action-group--PaddingBlockStart: var(
+    --#{$alert}__description--action-group--PaddingBlockStart-base
+  );
 }
 
 .#{$alert} {
@@ -120,7 +123,7 @@
   border: var(--#{$alert}--BorderWidth) solid var(--#{$alert}--BorderColor);
   border-radius: var(--#{$alert}--BorderRadius);
   box-shadow: var(--#{$alert}--BoxShadow);
-  
+
   &.pf-m-custom {
     --#{$alert}--BorderColor: var(--#{$alert}--m-custom--BorderColor);
     --#{$alert}__icon--Color: var(--#{$alert}--m-custom__icon--Color);
@@ -131,7 +134,7 @@
     --#{$alert}--BorderColor: var(--#{$alert}--m-success--BorderColor);
     --#{$alert}__icon--Color: var(--#{$alert}--m-success__icon--Color);
     --#{$alert}__title--Color: var(--#{$alert}--m-success__title--Color);
- }
+  }
 
   &.pf-m-danger {
     --#{$alert}--BorderColor: var(--#{$alert}--m-danger--BorderColor);
@@ -168,12 +171,16 @@
   &.pf-m-expandable {
     --#{$alert}--GridTemplateColumns: var(--#{$alert}--m-expandable--GridTemplateColumns);
     --#{$alert}--GridTemplateAreas: var(--#{$alert}--m-expandable--GridTemplateAreas);
-    --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}--m-expandable__description--action-group--PaddingBlockStart);
+    --#{$alert}__description--action-group--PaddingBlockStart: var(
+      --#{$alert}--m-expandable__description--action-group--PaddingBlockStart
+    );
   }
 
   &.pf-m-expanded {
     --#{$alert}__toggle-icon--Rotate: var(--#{$alert}--m-expanded__toggle-icon--Rotate);
-    --#{$alert}__description--action-group--PaddingBlockStart: var(--#{$alert}--m-expanded__description--action-group--PaddingBlockStart);
+    --#{$alert}__description--action-group--PaddingBlockStart: var(
+      --#{$alert}--m-expanded__description--action-group--PaddingBlockStart
+    );
   }
 }
 
@@ -188,7 +195,8 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration)
+    var(--#{$alert}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$alert}__toggle-icon--Rotate));
 }
 
@@ -206,7 +214,7 @@
   word-break: break-word;
 
   &.pf-m-truncate {
-    @include pf-v6-line-clamp("var(--#{$alert}__title--max-lines)");
+    @include pf-v6-line-clamp('var(--#{$alert}__title--max-lines)');
   }
 }
 

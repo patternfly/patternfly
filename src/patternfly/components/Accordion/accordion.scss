@@ -28,10 +28,12 @@
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
+  --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(
+    --pf-t--global--font--weight--heading--default
+  );
 
   // accordion toggle icon
-  --#{$accordion}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$accordion}__toggle-icon--Transition: 0.2s ease-in 0s;
   --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expandable content
@@ -83,12 +85,16 @@
     --#{$accordion}__toggle--PaddingBlockStart: var(--#{$accordion}--m-display-lg__toggle--PaddingBlockStart);
     --#{$accordion}__toggle--PaddingInlineEnd: var(--#{$accordion}--m-display-lg__toggle--PaddingInlineEnd);
     --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}--m-display-lg__toggle--PaddingBlockEnd);
-    --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBlockEnd);
+    --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(
+      --#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBlockEnd
+    );
     --#{$accordion}__toggle--PaddingInlineStart: var(--#{$accordion}--m-display-lg__toggle--PaddingInlineStart);
     --#{$accordion}__toggle--FontFamily: var(--#{$accordion}--m-display-lg__toggle--FontFamily);
     --#{$accordion}__toggle--FontSize: var(--#{$accordion}--m-display-lg__toggle--FontSize);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle-text--FontWeight);
-    --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(--#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight);
+    --#{$accordion}__toggle--m-expanded__toggle-text--FontWeight: var(
+      --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight
+    );
     --#{$accordion}__expandable-content--FontSize: var(--#{$accordion}--m-display-lg__expandable-content--FontSize);
     --#{$accordion}__expandable-content--Color: var(--#{$accordion}--m-display-lg__expandable-content--Color);
   }
@@ -99,7 +105,8 @@
     --#{$accordion}__toggle--BorderRadius: 0;
 
     .#{$accordion}__item {
-      border-block-end: var(--#{$accordion}__item--m-bordered--BorderBlockEndWidth) solid var(--#{$accordion}__item--m-bordered--BorderBlockEndColor);
+      border-block-end: var(--#{$accordion}__item--m-bordered--BorderBlockEndWidth) solid
+        var(--#{$accordion}__item--m-bordered--BorderBlockEndColor);
     }
   }
 }
@@ -176,6 +183,8 @@
   padding-inline-end: var(--#{$accordion}__expandable-content-body--PaddingInlineEnd);
 
   & + & {
-    --#{$accordion}__expandable-content-body--PaddingBlockStart: var(--#{$accordion}__expandable-content-body--expandable-content-body--PaddingBlockStart);
+    --#{$accordion}__expandable-content-body--PaddingBlockStart: var(
+      --#{$accordion}__expandable-content-body--expandable-content-body--PaddingBlockStart
+    );
   }
 }

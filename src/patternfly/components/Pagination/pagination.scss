@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 $pf-v6-c-pagination--breakpoint-map: build-breakpoint-map();
-$pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-pagination--variable-map: build-spacer-map('none', 'sm', 'md', 'lg', 'xl', '2xl');
 
 @include pf-root($pagination) {
   --#{$pagination}--inset: 0;
@@ -19,9 +19,16 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   // nav page select
   --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--border--width--control--default) * 2);
+  --#{$pagination}__nav-page-select--c-form-control--width-base: calc(
+    var(--pf-t--global--spacer--control--horizontal--default) +
+      var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--border--width--control--default) *
+      2
+  );
   --#{$pagination}__nav-page-select--c-form-control--width-chars: 2;
-  --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
+  --#{$pagination}__nav-page-select--c-form-control--Width: calc(
+    var(--#{$pagination}__nav-page-select--c-form-control--width-base) +
+      (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch)
+  );
 
   // total items
   --#{$pagination}__total-items--Display: block;
@@ -127,7 +134,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       padding-block-end: var(--#{$pagination}--m-bottom--m-static--PaddingBlockEnd);
       padding-inline-start: var(--#{$pagination}--m-bottom--m-static--PaddingInlineStart);
       padding-inline-end: var(--#{$pagination}--m-bottom--m-static--PaddingInlineEnd);
-  
+
       .#{$pagination}__nav-control.pf-m-first,
       .#{$pagination}__nav-control.pf-m-last,
       .#{$pagination}__nav-page-select {
@@ -217,7 +224,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 // stylelint-disable no-duplicate-selectors
 .#{$pagination} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-pagination--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-display-summary#{$breakpoint-name} {

@@ -155,6 +155,7 @@ section: components
 ```
 
 ### Open tabs with secondary tabs
+
 ```hbs isFullscreen
 {{> page-template page-template--id="tabs-tables-and-tabs-example"}}
 
@@ -266,6 +267,7 @@ section: components
 ```
 
 ### Nested tabs
+
 ```hbs isFullscreen
 {{> page-template page-template--id="nested-tabs-example"}}
 
@@ -303,6 +305,7 @@ section: components
 ```
 
 ### Tables and tabs
+
 ```hbs isFullscreen
 {{> page-template page-template--id='table-tabs-example'}}
 
@@ -347,6 +350,7 @@ section: components
 ```
 
 ### Modal tabs
+
 ```hbs isFullscreen
 {{#> modal-template modal-template--id="modal-tabs-example"}}
   {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="' modal-template--id '-modal-title" aria-describedby="' modal-template--id '-modal-description"')}}
@@ -423,6 +427,7 @@ section: components
 ```
 
 ### Nested, unindented tabs
+
 ```hbs isFullscreen
 {{> page-template page-template--id="gray-tabs-example"}}
 

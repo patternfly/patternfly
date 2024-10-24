@@ -1,8 +1,4 @@
 {
-  "*.js": [
-    "eslint --fix"
-  ],
-  "*.scss": [
-    "stylelint --fix"
-  ]
+  "*.js": ["eslint --fix"],
+  "*.scss": ["stylelint --fix"]
 }

@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-list
 ---
 
 ## Examples
+
 ### Unordered
+
 ```hbs
 {{#> list}}
   <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
@@ -28,6 +30,7 @@ cssPrefix: pf-v6-c-list
 ```
 
 ### Ordered
+
 ```hbs
 {{#> list list--type="ol"}}
   <li>Donec blandit a lorem id convallis.</li>
@@ -52,6 +55,7 @@ cssPrefix: pf-v6-c-list
 ```
 
 ### Inline
+
 ```hbs
 {{#> list list--modifier="pf-m-inline"}}
   <li>Inline list item 1</li>
@@ -61,6 +65,7 @@ cssPrefix: pf-v6-c-list
 ```
 
 ### Plain
+
 ```hbs
 {{#> list list--modifier="pf-m-plain"}}
   <li>Donec blandit a lorem id convallis.</li>
@@ -78,6 +83,7 @@ cssPrefix: pf-v6-c-list
 ```
 
 ### With horizontal rules
+
 ```hbs
 {{#> list list--modifier="pf-m-plain pf-m-bordered"}}
   <li>Donec blandit a lorem id convallis.</li>
@@ -89,6 +95,7 @@ cssPrefix: pf-v6-c-list
 ```
 
 ### With small icons
+
 ```hbs
 {{#> list list--modifier="pf-m-plain"}}
   {{#> list-item}}
@@ -119,6 +126,7 @@ cssPrefix: pf-v6-c-list
 ```
 
 ### With large icons
+
 ```hbs
 {{#> list list--modifier="pf-m-plain pf-m-icon-lg"}}
   {{#> list-item}}
@@ -149,14 +157,17 @@ cssPrefix: pf-v6-c-list
 ```
 
 ## Documentation
+
 ### Overview
+
 Non-inline lists can be nested up to any level.
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
-| `.pf-m-inline` | `.pf-v6-c-list` | Displays list items inline. |
-| `.pf-m-plain` | `.pf-v6-c-list` |  Removes the list marker and base indentation. |
+
+| Class            | Applied to      | Outcome                                         |
+| ---------------- | --------------- | ----------------------------------------------- |
+| `.pf-v6-c-list`  | `<ul>, <ol>`    | Initiates a list. **Required**                  |
+| `.pf-m-inline`   | `.pf-v6-c-list` | Displays list items inline.                     |
+| `.pf-m-plain`    | `.pf-v6-c-list` | Removes the list marker and base indentation.   |
 | `.pf-m-bordered` | `.pf-v6-c-list` | Add horizontal divider between items in a list. |
-| `.pf-m-icon-lg` | `.pf-v6-c-list` | Show all the icons or logos in the list large. |
+| `.pf-m-icon-lg`  | `.pf-v6-c-list` | Show all the icons or logos in the list large.  |

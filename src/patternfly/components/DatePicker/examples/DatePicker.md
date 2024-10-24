@@ -10,6 +10,7 @@ import './DatePicker.css'
 ## Examples
 
 ### Basic
+
 ```hbs
 {{#> date-picker date-picker--id="basic"}}
   {{#> input-group}}
@@ -24,6 +25,7 @@ import './DatePicker.css'
 ```
 
 ### Helper text
+
 ```hbs
 {{#> date-picker date-picker--id="helper-text" helper-text--value="Select a date"}}
   {{#> input-group}}
@@ -38,6 +40,7 @@ import './DatePicker.css'
 ```
 
 ### Invalid
+
 ```hbs
 {{#> date-picker date-picker--id="invalid" helper-text--value="Invalid date" helper-text-item--IsError="true" helper-text-item--HasIcon=true}}
   {{#> input-group}}
@@ -52,6 +55,7 @@ import './DatePicker.css'
 ```
 
 ### Expanded
+
 ```hbs
 {{#> date-picker date-picker--id="expanded" date-picker--IsExpanded="true"}}
   {{#> input-group}}
@@ -66,6 +70,7 @@ import './DatePicker.css'
 ```
 
 ### Custom width input
+
 ```hbs
 {{#> date-picker date-picker--id="custom-width-input" date-picker--attribute='style="--pf-v6-c-date-picker__input--c-form-control--Width: 220px;"'}}
   {{#> input-group}}
@@ -80,6 +85,7 @@ import './DatePicker.css'
 ```
 
 ### Custom width input based on number of characters
+
 ```hbs
 {{#> date-picker date-picker--id="custom-width-input-based-on-number-of-characters" date-picker--attribute='style="--pf-v6-c-date-picker__input--c-form-control--width-chars: 18;"'}}
   {{#> input-group}}
@@ -94,14 +100,15 @@ import './DatePicker.css'
 ```
 
 ## Documentation
+
 ### Usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-date-picker` | `<div>` | Initiates the date picker component. **Required** |
-| `.pf-v6-c-date-picker__input` | `<div>` | Initiates the date picker input container. **Required** |
-| `.pf-v6-c-date-picker__helper-text` | `<div>` | Initiates the date picker helper text. |
-| `.pf-v6-c-date-picker__calendar` | `<div>` | Initiates an optional date picker calendar container. **Note:** Required in the react date picker component. |
-| `.pf-m-top` | `.pf-v6-c-date-picker` | Modifies to display the calendar above the date picker. |
-| `.pf-m-align-right` | `.pf-v6-c-date-picker__calendar` | Modifies the calendar to align the calendar to the right edge of the date picker. |
-| `.pf-m-static` | `.pf-v6-c-date-picker__calendar` | Modifies the calendar to be statically positioned to support custom positioning. |
+| Class                               | Applied to                       | Outcome                                                                                                      |
+| ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `.pf-v6-c-date-picker`              | `<div>`                          | Initiates the date picker component. **Required**                                                            |
+| `.pf-v6-c-date-picker__input`       | `<div>`                          | Initiates the date picker input container. **Required**                                                      |
+| `.pf-v6-c-date-picker__helper-text` | `<div>`                          | Initiates the date picker helper text.                                                                       |
+| `.pf-v6-c-date-picker__calendar`    | `<div>`                          | Initiates an optional date picker calendar container. **Note:** Required in the react date picker component. |
+| `.pf-m-top`                         | `.pf-v6-c-date-picker`           | Modifies to display the calendar above the date picker.                                                      |
+| `.pf-m-align-right`                 | `.pf-v6-c-date-picker__calendar` | Modifies the calendar to align the calendar to the right edge of the date picker.                            |
+| `.pf-m-static`                      | `.pf-v6-c-date-picker__calendar` | Modifies the calendar to be statically positioned to support custom positioning.                             |

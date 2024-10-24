@@ -4,7 +4,9 @@ section: components
 ---
 
 ## Examples
+
 ### Helper text on a form
+
 ```hbs
 {{#> form form--id="helper-text-form"}}
   {{#> form-group form-group--id=(concat form--id '-name')}}
@@ -65,5 +67,7 @@ section: components
   {{/form-group}}
 {{/form}}
 ```
+
 ## Documentation
+
 When adding helper text to a form field, place it within the form helper text element.

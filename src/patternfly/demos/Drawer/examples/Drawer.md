@@ -7,11 +7,13 @@ wrapperTag: div
 ## Demos
 
 ### Collapsed
+
 ```hbs isFullscreen
 {{> page-template page-template--id="drawer-collapsed-example" page-template--IsDrawer="true"}}
 ```
 
 ### Expanded
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="drawer-expanded-example"
@@ -29,6 +31,7 @@ wrapperTag: div
 ```
 
 ### Expanded bottom
+
 ```hbs isFullscreen
 {{> page-template
       page-template--id="drawer-expanded-bottom-example"
@@ -47,14 +50,17 @@ wrapperTag: div
 ```
 
 ### Collapsed drawer with jump links
+
 ```hbs isFullscreen
 {{> drawer-jump-links drawer-jump-links--id="drawer-jump-links"}}
 ```
 
 ### Expanded drawer with jump links
+
 ```hbs isFullscreen
 {{> drawer-jump-links drawer-jump-links--id="drawer-expanded-jump-links" drawer-panel--IsOpen="true"}}
 ```
 
 ## Documentation
+
 This demo implements the drawer in context of the page component.

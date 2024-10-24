@@ -6,7 +6,7 @@
   // Toggle icon
   --#{$expandable-section}__toggle-icon--MinWidth: 1em;
   --#{$expandable-section}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$expandable-section}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$expandable-section}__toggle-icon--Transition: 0.2s ease-in 0s;
   --#{$expandable-section}__toggle-icon--Rotate: 0;
   --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: 0;
   --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
@@ -30,7 +30,10 @@
   --#{$expandable-section}--m-display-lg--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // Indented
-  --#{$expandable-section}--m-indented__content--PaddingInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) + var(--pf-t--global--spacer--gap--text-to-element--default) + var(--#{$expandable-section}__toggle-icon--MinWidth));
+  --#{$expandable-section}--m-indented__content--PaddingInlineStart: calc(
+    var(--pf-t--global--spacer--action--horizontal--plain--default) +
+      var(--pf-t--global--spacer--gap--text-to-element--default) + var(--#{$expandable-section}__toggle-icon--MinWidth)
+  );
 
   // Truncate
   --#{$expandable-section}--m-truncate__content--LineClamp: 3;
@@ -44,8 +47,12 @@
 
   &.pf-m-expanded {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
-    --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate);
-    --#{$expandable-section}--m-display-lg--PaddingBlockEnd: var(--#{$expandable-section}--m-display-lg--m-expanded--PaddingBlockEnd);
+    --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: var(
+      --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate
+    );
+    --#{$expandable-section}--m-display-lg--PaddingBlockEnd: var(
+      --#{$expandable-section}--m-display-lg--m-expanded--PaddingBlockEnd
+    );
   }
 
   &.pf-m-limit-width {
@@ -58,12 +65,15 @@
     padding-inline-start: var(--#{$expandable-section}--m-display-lg--PaddingInlineStart);
     padding-inline-end: var(--#{$expandable-section}--m-display-lg--PaddingInlineEnd);
     background-color: var(--#{$expandable-section}--m-display-lg--BackgroundColor);
-    border: var(--#{$expandable-section}--m-display-lg--BorderWidth) solid var(--#{$expandable-section}--m-display-lg--BorderColor);
+    border: var(--#{$expandable-section}--m-display-lg--BorderWidth) solid
+      var(--#{$expandable-section}--m-display-lg--BorderColor);
     border-radius: var(--#{$expandable-section}--m-display-lg--BorderRadius);
   }
 
   &.pf-m-indented {
-    --#{$expandable-section}__content--PaddingInlineStart: var(--#{$expandable-section}--m-indented__content--PaddingInlineStart);
+    --#{$expandable-section}__content--PaddingInlineStart: var(
+      --#{$expandable-section}--m-indented__content--PaddingInlineStart
+    );
   }
 
   &.pf-m-truncate {

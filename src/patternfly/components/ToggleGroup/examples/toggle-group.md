@@ -7,6 +7,7 @@ cssPrefix: pf-v6-c-toggle-group
 ## Examples
 
 ### Default
+
 ```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
@@ -86,6 +87,7 @@ cssPrefix: pf-v6-c-toggle-group
 ```
 
 ### With icon
+
 ```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
@@ -165,6 +167,7 @@ cssPrefix: pf-v6-c-toggle-group
 ```
 
 ### Icon-and-text
+
 ```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
@@ -236,6 +239,7 @@ cssPrefix: pf-v6-c-toggle-group
 ```
 
 ### Compact
+
 ```hbs
 {{#> toggle-group toggle-group--modifier="pf-m-compact"}}
   {{#> toggle-group-item}}
@@ -317,18 +321,20 @@ cssPrefix: pf-v6-c-toggle-group
 ## Documentation
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-v6-c-toggle-group__button` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
-| `disabled` | `.pf-v6-c-toggle-group__button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
+
+| Attribute                          | Applied to                      | Outcome                                                                                                                                  |
+| ---------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `aria-label="[button label text]"` | `.pf-v6-c-toggle-group__button` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text**  |
+| `disabled`                         | `.pf-v6-c-toggle-group__button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-toggle-group` | `<div>` | Initiates the toggle group. **Required** |
-| `.pf-v6-c-toggle-group__button` | `<button>` | Initiates the toggle group button. **Required** |
-| `.pf-v6-c-toggle-group__item` | `<div>` | Initiates the toggle group item wrapper. **Required** |
-| `.pf-v6-c-toggle-group__text` | `<span>` | Initiates the toggle button text element. |
-| `.pf-v6-c-toggle-group__icon` | `<span>` | Initiates the toggle button icon element. |
-| `.pf-m-compact` | `.pf-v6-c-toggle-group` | Modifies the toggle group for compact styles. |
-| `.pf-m-selected` | `.pf-v6-c-toggle-group__button` | Modifies the toggle button group button for the selected state. |
+
+| Class                           | Applied to                      | Outcome                                                         |
+| ------------------------------- | ------------------------------- | --------------------------------------------------------------- |
+| `.pf-v6-c-toggle-group`         | `<div>`                         | Initiates the toggle group. **Required**                        |
+| `.pf-v6-c-toggle-group__button` | `<button>`                      | Initiates the toggle group button. **Required**                 |
+| `.pf-v6-c-toggle-group__item`   | `<div>`                         | Initiates the toggle group item wrapper. **Required**           |
+| `.pf-v6-c-toggle-group__text`   | `<span>`                        | Initiates the toggle button text element.                       |
+| `.pf-v6-c-toggle-group__icon`   | `<span>`                        | Initiates the toggle button icon element.                       |
+| `.pf-m-compact`                 | `.pf-v6-c-toggle-group`         | Modifies the toggle group for compact styles.                   |
+| `.pf-m-selected`                | `.pf-v6-c-toggle-group__button` | Modifies the toggle button group button for the selected state. |

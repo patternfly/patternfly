@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-action-list
 ---
 
 ## Examples
+
 ### Action list single group
+
 ```hbs
 {{#> action-list}}
   {{#> action-list-group}}
@@ -43,6 +45,7 @@ With kebab
 ```
 
 ### Action list with icons
+
 ```hbs
 {{#> action-list action-list--modifier="pf-m-icons"}}
   {{#> action-list-item}}
@@ -75,6 +78,7 @@ With group icons wrapper
 ```
 
 ### Action list multiple groups
+
 ```hbs
 {{#> action-list}}
   {{#> action-list-group}}
@@ -105,6 +109,7 @@ With group icons wrapper
 ```
 
 ### Action list with cancel button
+
 ```hbs
 In modals, forms, data lists
 {{#> action-list}}
@@ -147,9 +152,10 @@ In wizards
 ### Overview
 
 ### Usage
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-action-list` | `<div>` | Initiates the action list container. |
-| `.pf-v6-c-action-list__item` | `<div>` | Initiates the action list item container. |
-| `.pf-v6-c-action-list__group` | `<div>` | Initiates the action list group container. |
-| `.pf-m-icons` | `.pf-v6-c-action-list`, `.pf-v6-c-action-list__group` | Modifies the action list and/or group to support icon buttons. If applied to `.pf-v6-c-action-list`, all nested groups will inherit this modification. |
+
+| Attribute                     | Applied to                                            | Outcome                                                                                                                                                |
+| ----------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.pf-v6-c-action-list`        | `<div>`                                               | Initiates the action list container.                                                                                                                   |
+| `.pf-v6-c-action-list__item`  | `<div>`                                               | Initiates the action list item container.                                                                                                              |
+| `.pf-v6-c-action-list__group` | `<div>`                                               | Initiates the action list group container.                                                                                                             |
+| `.pf-m-icons`                 | `.pf-v6-c-action-list`, `.pf-v6-c-action-list__group` | Modifies the action list and/or group to support icon buttons. If applied to `.pf-v6-c-action-list`, all nested groups will inherit this modification. |

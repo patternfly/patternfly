@@ -27,7 +27,9 @@
   width: var(--#{$spinner}--Width);
   height: var(--#{$spinner}--Height);
   overflow: hidden;
-  animation: #{$spinner}-animation-rotate calc(var(--#{$spinner}--AnimationDuration) * 2) var(--#{$spinner}--AnimationTimingFunction) infinite;
+  animation: #{$spinner}-animation-rotate calc(var(--#{$spinner}--AnimationDuration) * 2) var(
+      --#{$spinner}--AnimationTimingFunction
+    ) infinite;
 
   // Modifiers change the variables for size variations
   &.pf-m-inline {
@@ -60,7 +62,9 @@
   stroke-linecap: round;
   stroke-width: var(--#{$spinner}--StrokeWidth);
   transform-origin: 50% 50%;
-  animation: #{$spinner}-animation-dash var(--#{$spinner}--AnimationDuration) var(--#{$spinner}__path--AnimationTimingFunction) infinite;
+  animation: #{$spinner}-animation-dash var(--#{$spinner}--AnimationDuration) var(
+      --#{$spinner}__path--AnimationTimingFunction
+    ) infinite;
 }
 
 @keyframes #{$spinner}-animation-rotate {

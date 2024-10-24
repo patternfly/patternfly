@@ -16,9 +16,11 @@ export function copyAssets() {
 export function copySource() {
   return Promise.all([
     // Copy excluded source files
-    src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss', './src/patternfly/components/**/themes/**/*.scss']).pipe(
-      dest('dist')
-    ),
+    src([
+      'src/patternfly/**/_all.scss',
+      'src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss',
+      './src/patternfly/components/**/themes/**/*.scss'
+    ]).pipe(dest('dist')),
     // Copy source files
     src('src/patternfly/*.scss').pipe(dest('dist')),
     src('src/patternfly/sass-utilities/**').pipe(dest('dist/sass-utilities')),

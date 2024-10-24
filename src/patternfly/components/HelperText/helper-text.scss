@@ -47,12 +47,15 @@
   display: flex;
   font-weight: var(--#{$helper-text}__item-text--FontWeight);
 
-
   &.pf-m-indeterminate {
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-indeterminate--Color);
     --#{$helper-text}__item-text--Color: var(--#{$helper-text}__item-text--m-indeterminate--Color);
-    --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-indeterminate__item-icon--Color);
-    --#{$helper-text}--m-dynamic__item-text--Color: var(--#{$helper-text}--m-dynamic--m-indeterminate__item-text--Color);
+    --#{$helper-text}--m-dynamic__item-icon--Color: var(
+      --#{$helper-text}--m-dynamic--m-indeterminate__item-icon--Color
+    );
+    --#{$helper-text}--m-dynamic__item-text--Color: var(
+      --#{$helper-text}--m-dynamic--m-indeterminate__item-text--Color
+    );
   }
 
   &.pf-m-warning {
@@ -86,4 +89,3 @@
 .#{$helper-text}__item-text {
   color: var(--#{$helper-text}__item-text--Color);
 }
-

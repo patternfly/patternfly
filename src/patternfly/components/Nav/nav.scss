@@ -26,7 +26,8 @@
   // * Nav list
   --#{$nav}__list--ScrollSnapTypeAxis: x;
   --#{$nav}__list--ScrollSnapTypeStrictness: proximity;
-  --#{$nav}__list--ScrollSnapType: var(--#{$nav}__list--ScrollSnapTypeAxis) var(--#{$nav}__list--ScrollSnapTypeStrictness);
+  --#{$nav}__list--ScrollSnapType: var(--#{$nav}__list--ScrollSnapTypeAxis)
+    var(--#{$nav}__list--ScrollSnapTypeStrictness);
   --#{$nav}__item--ScrollSnapAlign: end;
 
   // * Nav section title
@@ -73,7 +74,9 @@
   // * Nav toggle
   --#{$nav}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2) - 50%); // find height of single label, divide by two, offset by 50% of own height
+  --#{$nav}__toggle--TranslateY: calc(
+    (var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2) - 50%
+  ); // find height of single label, divide by two, offset by 50% of own height
 
   // * Nav horizontal list
   --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
@@ -128,7 +131,7 @@
 
   &.pf-m-inset {
     --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
-    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);  
+    --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   }
 
   &.pf-m-fill {
@@ -149,7 +152,7 @@
       .#{$menu}__list {
         row-gap: var(--#{$nav}__subnav--RowGap);
       }
-    
+
       .#{$menu}__list-item::before {
         border-radius: var(--#{$nav}__link--BorderRadius);
       }
@@ -157,7 +160,7 @@
   }
 }
 
-[class^="#{$nav}"][hidden] {
+[class^='#{$nav}'][hidden] {
   display: none;
 }
 
@@ -166,9 +169,15 @@
 .#{$nav}__list,
 .#{$nav}__subnav {
   // These variables need to remove local to list and subnav to be recalculated upon row gap setting updates
-  --#{$nav}__item--RowGap--row-offset: calc(var(--#{$nav}__list--RowGap) / 2 * -1); // row gap offset calcs 1/2 height of row gap
-  --#{$nav}__link--clickable-inset--Block: var(--#{$nav}__item--RowGap--row-offset); // set link's clickable area offset based on 1/2 row gap
-  --#{$nav}__button--RowGap--row-offset: calc(var(--#{$nav}__item--RowGap) * -1); // match extra bottom paddings applied to expanded nav_links
+  --#{$nav}__item--RowGap--row-offset: calc(
+    var(--#{$nav}__list--RowGap) / 2 * -1
+  ); // row gap offset calcs 1/2 height of row gap
+  --#{$nav}__link--clickable-inset--Block: var(
+    --#{$nav}__item--RowGap--row-offset
+  ); // set link's clickable area offset based on 1/2 row gap
+  --#{$nav}__button--RowGap--row-offset: calc(
+    var(--#{$nav}__item--RowGap) * -1
+  ); // match extra bottom paddings applied to expanded nav_links
 }
 
 // - Nav list
@@ -179,7 +188,9 @@
 
 // - Nav subnav
 .#{$nav}__subnav {
-  --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
+  --#{$nav}__list--RowGap: var(
+    --#{$nav}__subnav--RowGap
+  ); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
 }
@@ -194,7 +205,10 @@
   }
 
   &.pf-m-expanded:is(:not(:only-child, :last-child)) {
-    margin-block-end: var(--#{$nav}__item--m-expanded--MarginBlockEnd, var(--#{$nav}__item--RowGap)); // default to row gap if no custom value is set
+    margin-block-end: var(
+      --#{$nav}__item--m-expanded--MarginBlockEnd,
+      var(--#{$nav}__item--RowGap)
+    ); // default to row gap if no custom value is set
 
     + .#{$nav}__item > .#{$nav}__link::before {
       inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
@@ -239,7 +253,7 @@
   border-radius: var(--#{$nav}__link--BorderRadius);
 
   // increase height clickable area of expanded nav_links to account for
-  &[aria-expanded="true"]::before {
+  &[aria-expanded='true']::before {
     inset-block-end: calc(var(--#{$nav}__item--RowGap) * -1);
   }
 
@@ -286,7 +300,7 @@
     --#{$nav}__item--m-expanded__toggle-icon--Rotate: 0;
   }
 
-  .#{$nav}__link:where([aria-expanded="true"]) & {
+  .#{$nav}__link:where([aria-expanded='true']) & {
     transform: rotate(var(--#{$nav}__item--m-expanded__toggle-icon--Rotate));
   }
 }
@@ -298,12 +312,14 @@
   &::before {
     position: absolute;
     inset: 0;
-    content: "";
+    content: '';
   }
 
   &:first-of-type {
     .#{$button} {
-      --#{$button}--BorderStartStartRadius: var(--#{$nav}__scroll-button--first-of-type--c-button--BorderStartStartRadius);
+      --#{$button}--BorderStartStartRadius: var(
+        --#{$nav}__scroll-button--first-of-type--c-button--BorderStartStartRadius
+      );
       --#{$button}--BorderEndStartRadius: var(--#{$nav}__scroll-button--first-of-type--c-button--BorderEndStartRadius);
     }
 
@@ -373,8 +389,12 @@
     --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
     --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineEnd);
-    --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineStart);
-    --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineEnd);
+    --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart: var(
+      --#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineStart
+    );
+    --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(
+      --#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineEnd
+    );
     --#{$nav}__link--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart);
     --#{$nav}__link--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd);
 
@@ -382,7 +402,9 @@
   }
 
   &.pf-m-scrollable {
-    --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart);
+    --#{$nav}--m-horizontal__list--PaddingInlineStart: var(
+      --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart
+    );
     --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd);
   }
 }

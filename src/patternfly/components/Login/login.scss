@@ -60,7 +60,6 @@
   --#{$login}__main-header-desc--md--MarginBlockEnd: 0;
   --#{$login}__main-header-desc--FontSize: var(--pf-t--global--font--size--body--default);
 
-
   @media (min-width: $pf-v6-global--breakpoint--md) {
     --#{$login}__main-header--PaddingInlineEnd: var(--#{$login}__main-header--md--PaddingInlineEnd);
     --#{$login}__main-header--PaddingInlineStart: var(--#{$login}__main-header--md--PaddingInlineStart);
@@ -133,9 +132,9 @@
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     display: grid;
     grid-template-areas:
-      "main header"
-      "main footer"
-      "main .";
+      'main header'
+      'main footer'
+      'main .';
     grid-template-columns: var(--#{$login}__container--xl--GridTemplateColumns);
     grid-column-gap: var(--#{$login}__container--xl--GridColumnGap);
     justify-content: center;
@@ -241,7 +240,7 @@
 }
 
 .#{$login}__main-footer-links-item {
-  .#{$button}{
+  .#{$button} {
     --#{$button}--FontSize: var(--#{$login}__main-footer-links-item--c-button--FontSize);
   }
 }
@@ -252,7 +251,8 @@
   padding-inline-start: var(--#{$login}__main-footer-band--PaddingInlineStart);
   padding-inline-end: var(--#{$login}__main-footer-band--PaddingInlineEnd);
   text-align: center;
-  border-block-start: var(--#{$login}__main-footer-band--BorderBlockStartWidth) solid var(--#{$login}__main-footer-band--BorderBlockStartColor);
+  border-block-start: var(--#{$login}__main-footer-band--BorderBlockStartWidth) solid
+    var(--#{$login}__main-footer-band--BorderBlockStartColor);
 
   > * + * {
     padding-block-start: var(--#{$login}__main-footer-band-item--PaddingBlockStart);
@@ -269,9 +269,9 @@
       color: unset; // fixes a11y issue
     }
 
-    &:not(:only-child) { // paragraph text might not always be included.
+    &:not(:only-child) {
+      // paragraph text might not always be included.
       padding-block-start: var(--#{$login}__footer--c-list--PaddingBlockStart);
     }
   }
 }
-

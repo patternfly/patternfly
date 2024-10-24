@@ -6,9 +6,10 @@ cssPrefix: pf-v6-c-form-control
 ---
 
 ## Examples
+
 ### Input
 
-**Note:** In webkit browsers, inputs with status icons that are autocompleted will have their icons removed by the user agent stylesheet. If the field does not need to use autocomplete, turn it off with `autocomplete="off"` to avoid the problem. Otherwise, use [helper text](/components/helper-text/html-demos)  instead to ensure that the status will remain visible if the field is autocompleted.
+**Note:** In webkit browsers, inputs with status icons that are autocompleted will have their icons removed by the user agent stylesheet. If the field does not need to use autocomplete, turn it off with `autocomplete="off"` to avoid the problem. Otherwise, use [helper text](/components/helper-text/html-demos) instead to ensure that the status will remain visible if the field is autocompleted.
 
 ```hbs
 {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
@@ -37,6 +38,7 @@ cssPrefix: pf-v6-c-form-control
 ```
 
 ### Select
+
 ```hbs
 {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
   <option value="" selected>Selectable placeholder</option>
@@ -118,6 +120,7 @@ cssPrefix: pf-v6-c-form-control
 ```
 
 ### Textarea
+
 ```hbs
 {{#> form-control controlType="textarea" form-control--attribute='name="textarea-standard" id="textarea-standard" aria-label="Standard textarea example"'}}
 Standard
@@ -163,30 +166,32 @@ Resizes in both directions
 ## Documentation
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `id` | `.pf-v6-c-form-control > input`,`.pf-v6-c-form-control > select`, or `.pf-v6-c-form-control > textarea` | Provides an `id` value that can be used with the `for` attribute on an associated `<label>` element to provide an accessible label for the form control element.
-| `aria-invalid="true"` | `.pf-v6-c-form-control > input`,`.pf-v6-c-form-control > select`, or `.pf-v6-c-form-control > textarea` | Indicates that the form control is in the error state and applies error state styling. Use with `.pf-m-error` on the `.pf-v6-c-form-control` to ensure correct styling. |
-| `aria-label="descriptive text"` | `.pf-v6-c-form-control > input`,`.pf-v6-c-form-control > select`, or `.pf-v6-c-form-control > textarea` | Provides an accessible label for assistive technology. |
-| `aria-expanded="true"` | `.pf-v6-c-form-control > input` | Indicates that clicking in the form control has toggled something else to be expanded. Use with `.pf-m-expanded` on the `.pf-v6-c-form-control` to ensure correct styling. |
+
+| Attribute                       | Applied to                                                                                              | Outcome                                                                                                                                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                            | `.pf-v6-c-form-control > input`,`.pf-v6-c-form-control > select`, or `.pf-v6-c-form-control > textarea` | Provides an `id` value that can be used with the `for` attribute on an associated `<label>` element to provide an accessible label for the form control element.           |
+| `aria-invalid="true"`           | `.pf-v6-c-form-control > input`,`.pf-v6-c-form-control > select`, or `.pf-v6-c-form-control > textarea` | Indicates that the form control is in the error state and applies error state styling. Use with `.pf-m-error` on the `.pf-v6-c-form-control` to ensure correct styling.    |
+| `aria-label="descriptive text"` | `.pf-v6-c-form-control > input`,`.pf-v6-c-form-control > select`, or `.pf-v6-c-form-control > textarea` | Provides an accessible label for assistive technology.                                                                                                                     |
+| `aria-expanded="true"`          | `.pf-v6-c-form-control > input`                                                                         | Indicates that clicking in the form control has toggled something else to be expanded. Use with `.pf-m-expanded` on the `.pf-v6-c-form-control` to ensure correct styling. |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-form-control` | `<span>` |  Initiates a container for an input, text area or select. For styling of checkboxes or radios see the [checkbox component](/components/forms/checkbox) or [radio component](/components/forms/radio). **Required**  |
-| `.pf-v6-c-form-control__utilities` | `<span>` |  Initiates a container for elements like icons to be associated with the form control.  |
-| `.pf-v6-c-form-control__icon` | `<span>` |  Creates a container for an icon associated with a form control.  |
-| `.pf-v6-c-form-control__toggle-icon` | `<span>` |  Initiates a toggle icon for a form select.  |
-| `.pf-m-resize-vertical` | `.pf-v6-c-form-control` | Modifies a form control element containing a text area so it can only be resized vertically. |
-| `.pf-m-resize-horizontal` | `.pf-v6-c-form-control` | Modifies a form control element containing a text area so it can only be resized horizontally. |
-| `.pf-m-resize-both` | `.pf-v6-c-form-control` | Modifies a `.pf-v6-c-form-control` element containing a text area so it resizes in both directions. |
-| `.pf-m-icon` | `.pf-v6-c-form-control` | Modifies a form control to allow for an icon. |
-| `.pf-m-readonly` | `.pf-v6-c-form-control` | Modifies a form control for a readonly input, text area, or select.|
-| `.pf-m-disabled` | `.pf-v6-c-form-control` | Modifies a form control for a disabled input, text area, or select.|
-| `.pf-m-success` | `.pf-v6-c-form-control` | Modifies a form control for the success state. |
-| `.pf-m-warning` | `.pf-v6-c-form-control` | Modifies a form control for the warning state. |
-| `.pf-m-error` | `.pf-v6-c-form-control` | Modifies a form control for the error (invalid) state. |
-| `.pf-m-expanded` | `.pf-v6-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
-| `.pf-m-placeholder` | `.pf-v6-c-form-control` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
-| `.pf-m-plain` | `.pf-v6-c-form-control` | Modifies a form control containing an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text. |
-| `.pf-m-status`| `.pf-v6-c-form-control__icon` | Modifies a form control icon to show status. |
+
+| Class                                | Applied to                    | Outcome                                                                                                                                                                                                           |
+| ------------------------------------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-form-control`              | `<span>`                      | Initiates a container for an input, text area or select. For styling of checkboxes or radios see the [checkbox component](/components/forms/checkbox) or [radio component](/components/forms/radio). **Required** |
+| `.pf-v6-c-form-control__utilities`   | `<span>`                      | Initiates a container for elements like icons to be associated with the form control.                                                                                                                             |
+| `.pf-v6-c-form-control__icon`        | `<span>`                      | Creates a container for an icon associated with a form control.                                                                                                                                                   |
+| `.pf-v6-c-form-control__toggle-icon` | `<span>`                      | Initiates a toggle icon for a form select.                                                                                                                                                                        |
+| `.pf-m-resize-vertical`              | `.pf-v6-c-form-control`       | Modifies a form control element containing a text area so it can only be resized vertically.                                                                                                                      |
+| `.pf-m-resize-horizontal`            | `.pf-v6-c-form-control`       | Modifies a form control element containing a text area so it can only be resized horizontally.                                                                                                                    |
+| `.pf-m-resize-both`                  | `.pf-v6-c-form-control`       | Modifies a `.pf-v6-c-form-control` element containing a text area so it resizes in both directions.                                                                                                               |
+| `.pf-m-icon`                         | `.pf-v6-c-form-control`       | Modifies a form control to allow for an icon.                                                                                                                                                                     |
+| `.pf-m-readonly`                     | `.pf-v6-c-form-control`       | Modifies a form control for a readonly input, text area, or select.                                                                                                                                               |
+| `.pf-m-disabled`                     | `.pf-v6-c-form-control`       | Modifies a form control for a disabled input, text area, or select.                                                                                                                                               |
+| `.pf-m-success`                      | `.pf-v6-c-form-control`       | Modifies a form control for the success state.                                                                                                                                                                    |
+| `.pf-m-warning`                      | `.pf-v6-c-form-control`       | Modifies a form control for the warning state.                                                                                                                                                                    |
+| `.pf-m-error`                        | `.pf-v6-c-form-control`       | Modifies a form control for the error (invalid) state.                                                                                                                                                            |
+| `.pf-m-expanded`                     | `.pf-v6-c-form-control`       | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed.                                                                                       |
+| `.pf-m-placeholder`                  | `.pf-v6-c-form-control`       | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option.                                                                                                   |
+| `.pf-m-plain`                        | `.pf-v6-c-form-control`       | Modifies a form control containing an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text.                                                                                       |
+| `.pf-m-status`                       | `.pf-v6-c-form-control__icon` | Modifies a form control icon to show status.                                                                                                                                                                      |

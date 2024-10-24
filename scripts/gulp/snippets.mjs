@@ -43,7 +43,7 @@ export function generateSnippets(htmlIndexFiles) {
       const compiledPartial = template(templateContext, {
         partials: { '@partial-block': '{{PLACEHOLDER}}' }
       })
-        .replace(/"-[a-zA-Z]/g, match => `"\${${++placeholderNum}}${match.slice(1)}`)
+        .replace(/"-[a-zA-Z]/g, (match) => `"\${${++placeholderNum}}${match.slice(1)}`)
         .replace(/\$PLACEHOLDER/g, () => `\${${++placeholderNum}}`);
       // partialName is always prefixed with component name
       const snippetKey = `${section[0]}-${partialName}`;
@@ -75,7 +75,7 @@ export function generateSnippets(htmlIndexFiles) {
 
         queryableHTML('div[id*="ws-core"]').map((i, elm) => {
           const exampleDiv = queryableHTML(`#${elm.attribs.id} .ws-preview-html`);
-          const baseId = elm.attribs.class.split(/\s+/).find(className => className.startsWith('ws-core-'));
+          const baseId = elm.attribs.class.split(/\s+/).find((className) => className.startsWith('ws-core-'));
           const snippetKey = elm.attribs.id.replace('ws-core', 'ex').replace(baseId, `${baseId}-`);
           const snippetValue = prettyHTML(exampleDiv.html());
 
@@ -115,5 +115,3 @@ export function generateSnippets(htmlIndexFiles) {
       fs.writeFileSync('workspace/coreSnippets.json', JSON.stringify(snippets, null, 2));
     });
 }
-
-

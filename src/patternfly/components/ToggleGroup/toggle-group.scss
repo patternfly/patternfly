@@ -31,14 +31,18 @@
   --#{$toggle-group}__button--m-selected--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$toggle-group}__button--m-selected--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$toggle-group}__button--m-selected--before--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor: var(
+    --pf-t--global--border--color--default
+  );
   --#{$toggle-group}__button--m-selected--ZIndex: var(--pf-t--global--z-index--xs);
 
   // disabled
   --#{$toggle-group}__button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$toggle-group}__button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$toggle-group}__button--disabled--before--BorderColor: var(--pf-t--global--border--color--disabled);
-  --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor: var(
+    --pf-t--global--border--color--default
+  );
   --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Compact
@@ -108,13 +112,25 @@
     inset-inline-start: 0;
     inset-inline-end: 0;
     pointer-events: none;
-    content: "";
+    content: '';
     border-style: solid;
     border-width: var(--#{$toggle-group}__button--before--BorderWidth);
-    border-block-start-color: var(--#{$toggle-group}__button--before--BorderBlockStartColor, var(--#{$toggle-group}__button--before--BorderColor));
-    border-block-end-color: var(--#{$toggle-group}__button--before--BorderBlockEndColor, var(--#{$toggle-group}__button--before--BorderColor));
-    border-inline-start-color: var(--#{$toggle-group}__button--before--BorderInlineStartColor, var(--#{$toggle-group}__button--before--BorderColor));
-    border-inline-end-color: var(--#{$toggle-group}__button--before--BorderInlineEndColor, var(--#{$toggle-group}__button--before--BorderColor));
+    border-block-start-color: var(
+      --#{$toggle-group}__button--before--BorderBlockStartColor,
+      var(--#{$toggle-group}__button--before--BorderColor)
+    );
+    border-block-end-color: var(
+      --#{$toggle-group}__button--before--BorderBlockEndColor,
+      var(--#{$toggle-group}__button--before--BorderColor)
+    );
+    border-inline-start-color: var(
+      --#{$toggle-group}__button--before--BorderInlineStartColor,
+      var(--#{$toggle-group}__button--before--BorderColor)
+    );
+    border-inline-end-color: var(
+      --#{$toggle-group}__button--before--BorderInlineEndColor,
+      var(--#{$toggle-group}__button--before--BorderColor)
+    );
   }
 
   &:is(:hover, :focus) {
@@ -144,16 +160,19 @@
 
 // For consecutive selected items, turn the left border back to what it was
 .#{$toggle-group}__item:has(.pf-m-selected) + .#{$toggle-group}__item:has(.pf-m-selected) {
-  --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor);
+  --#{$toggle-group}__button--before--BorderInlineStartColor: var(
+    --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor
+  );
 }
 
 // For consecutive disabled items, turn the left border back to what it was
 .#{$toggle-group}__item:has(:disabled, .pf-m-disabled) + .#{$toggle-group}__item:has(:disabled, .pf-m-disabled) {
-  --#{$toggle-group}__button--before--BorderInlineStartColor: var(--#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor);
+  --#{$toggle-group}__button--before--BorderInlineStartColor: var(
+    --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor
+  );
 }
 
 .#{$toggle-group}__icon + .#{$toggle-group}__text,
 .#{$toggle-group}__text + .#{$toggle-group}__icon {
   margin-inline-start: var(--#{$toggle-group}__icon--text--MarginInlineStart);
 }
-

@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: Suggest a new feature for PatternFly. Features augment or impact end user experience and requires design input.
-title: "[Component] - [short description]"
+title: '[Component] - [short description]'
 labels: Feature
 assignees: ''
-
 ---
 
 **Is this a new component or an extension of an existing one?**

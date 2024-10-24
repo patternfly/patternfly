@@ -68,31 +68,31 @@ The main reason to have global variables is to maintain consistency. They adhere
 - They are prefixed with the word `global` and follow the formula `--pf-global--concept--PropertyCamelCase--modifier--state`.
   - a `concept` is something like a `spacer` or `main-title`.
   - a `PropertyCamelCase` is something like `BackgroundColor` or `FontSize`.
-  - a `modifier` is something like  `sm`, or `lg`.
-  - and a `state` is something like  `hover`, or `expanded`.
+  - a `modifier` is something like `sm`, or `lg`.
+  - and a `state` is something like `hover`, or `expanded`.
 - They are concepts, never tied to an element or component. This is incorrect: `--pf-global--h1--FontSize`, this is correct: `--pf-global--FontSize--3xl`.
 
 For example a global variable setup would look like:
 
 ```scss
-  // --pf-global--concept--size
-  --pf-global--spacer--lg: .5rem;
-  --pf-global--spacer--xl: 1rem;
-  --pf-global--spacer--2xl: 2rem;
+// --pf-global--concept--size
+--pf-global--spacer--lg: 0.5rem;
+--pf-global--spacer--xl: 1rem;
+--pf-global--spacer--2xl: 2rem;
 
-  // --pf-global--PropertyCamelCase--modifier
-  --pf-global--FontSize--3xl: 2rem;
-  --pf-global--FontSize--2xl: 1.8rem;
-  --pf-global--FontSize--lg: 1rem;
+// --pf-global--PropertyCamelCase--modifier
+--pf-global--FontSize--3xl: 2rem;
+--pf-global--FontSize--2xl: 1.8rem;
+--pf-global--FontSize--lg: 1rem;
 
-  // --pf-global--PropertyCamelCase--state
-  --pf-global--link--TextDecoration--hover: #ccc;
+// --pf-global--PropertyCamelCase--state
+--pf-global--link--TextDecoration--hover: #ccc;
 
-  // --pf-global--PropertyCamelCase--modifier
-  --pf-global--Color--100: #000;
+// --pf-global--PropertyCamelCase--modifier
+--pf-global--Color--100: #000;
 
-  // --pf-global--concept--modifier
-  --pf-global--primary-color--100: #00f;
+// --pf-global--concept--modifier
+--pf-global--primary-color--100: #00f;
 ```
 
 ### Component variables
@@ -232,7 +232,7 @@ Limit the use of shorthand declarations to instances where you must explicitly s
 .element {
   margin: 0 0 10px;
   background: #f00;
-  background: url("image.jpg");
+  background: url('image.jpg');
   border-radius: 3px 3px 0 0;
 }
 
@@ -240,7 +240,7 @@ Limit the use of shorthand declarations to instances where you must explicitly s
 .element {
   margin-bottom: 10px;
   background-color: #f00;
-  background-image: url("image.jpg");
+  background-image: url('image.jpg');
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -267,8 +267,8 @@ Limit nesting to the following use cases:
 
 ##### 1. Modifiers and elements of a block
 
-* Do not use [Sass's parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
-* Do use that method to create compound selectors with modifier classes.
+- Do not use [Sass's parent selector](https://css-tricks.com/the-sass-ampersand/) mechanism to construct BEM elements.
+- Do use that method to create compound selectors with modifier classes.
 
 ```scss
 // Good
@@ -305,11 +305,11 @@ Component-specific media queries should be nested inside the component block. Re
 PatternFly has 5 breakpoints:
 
 ```scss
-  $pf-global-breakpoint--xs: 0;
-  $pf-global-breakpoint--sm: 576px;
-  $pf-global-breakpoint--md: 768px;
-  $pf-global-breakpoint--lg: 992px;
-  $pf-global-breakpoint--xl: 1200px;
+$pf-global-breakpoint--xs: 0;
+$pf-global-breakpoint--sm: 576px;
+$pf-global-breakpoint--md: 768px;
+$pf-global-breakpoint--lg: 992px;
+$pf-global-breakpoint--xl: 1200px;
 ```
 
 To make sure you are writing mobile first, always do `min-width`:
@@ -338,7 +338,6 @@ States of a component should be included as a nested element. This includes hove
   }
 }
 ```
-
 
 #### Sass variables
 

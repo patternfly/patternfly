@@ -39,11 +39,7 @@
   max-width: var(--#{$tooltip}--MaxWidth);
   box-shadow: var(--#{$tooltip}--BoxShadow);
 
-  &:is(
-    .pf-m-top,
-    .pf-m-top-left,
-    .pf-m-top-right
-  ) {
+  &:is(.pf-m-top, .pf-m-top-left, .pf-m-top-right) {
     --#{$tooltip}__arrow--InsetBlockEnd: var(--#{$tooltip}--m-top--InsetBlockEnd, 0);
     --#{$tooltip}__arrow--InsetInlineStart: var(--#{$tooltip}--m-top--InsetInlineStart, 50%);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-top--TranslateX);
@@ -51,11 +47,7 @@
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-top--Rotate);
   }
 
-  &:is(
-    .pf-m-bottom,
-    .pf-m-bottom-left,
-    .pf-m-bottom-right
-    ) {
+  &:is(.pf-m-bottom, .pf-m-bottom-left, .pf-m-bottom-right) {
     --#{$tooltip}__arrow--InsetBlockStart: var(--#{$tooltip}--m-bottom--InsetBlockStart, 0);
     --#{$tooltip}__arrow--InsetInlineStart: var(--#{$tooltip}--m-bottom--InsetInlineStart, 50%);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-bottom--TranslateX);
@@ -63,11 +55,7 @@
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-bottom--Rotate);
   }
 
-  &:is(
-    .pf-m-left,
-    .pf-m-left-top,
-    .pf-m-left-bottom
-  ) {
+  &:is(.pf-m-left, .pf-m-left-top, .pf-m-left-bottom) {
     --#{$tooltip}__arrow--InsetBlockStart: var(--#{$tooltip}--m-left--InsetBlockStart, 50%);
     --#{$tooltip}__arrow--InsetInlineEnd: var(--#{$tooltip}--m-left--InsetInlineEnd, 0);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-left--TranslateX);
@@ -75,11 +63,7 @@
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-left--Rotate);
   }
 
-  &:is(
-    .pf-m-right,
-    .pf-m-right-top,
-    .pf-m-right-bottom
-  ) {
+  &:is(.pf-m-right, .pf-m-right-top, .pf-m-right-bottom) {
     --#{$tooltip}__arrow--InsetBlockStart: var(--#{$tooltip}--m-right--InsetBlockStart, 50%);
     --#{$tooltip}__arrow--InsetInlineStart: var(--#{$tooltip}--m-right--InsetInlineStart, 0);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-right--TranslateX);
@@ -87,34 +71,22 @@
     --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-right--Rotate);
   }
 
-  &:is(
-    .pf-m-left-top,
-    .pf-m-right-top
-  ) {
+  &:is(.pf-m-left-top, .pf-m-right-top) {
     --#{$tooltip}__arrow--InsetBlockStart: 0;
     --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-top--TranslateY);
   }
 
-  &:is(
-    .pf-m-left-bottom,
-    .pf-m-right-bottom
-  ) {
+  &:is(.pf-m-left-bottom, .pf-m-right-bottom) {
     --#{$tooltip}__arrow--InsetBlockStart: auto;
     --#{$tooltip}__arrow--InsetBlockEnd: 0;
   }
 
-  &:is(
-    .pf-m-top-left,
-    .pf-m-bottom-left
-  ) {
+  &:is(.pf-m-top-left, .pf-m-bottom-left) {
     --#{$tooltip}__arrow--InsetInlineStart: 0;
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-left--TranslateX);
   }
 
-  &:is(
-    .pf-m-top-right,
-    .pf-m-bottom-right
-  ) {
+  &:is(.pf-m-top-right, .pf-m-bottom-right) {
     --#{$tooltip}__arrow--InsetInlineEnd: 0;
     --#{$tooltip}__arrow--InsetInlineStart: auto;
   }
@@ -151,5 +123,6 @@
   pointer-events: none;
   background-color: var(--#{$tooltip}__arrow--BackgroundColor);
   box-shadow: var(--#{$tooltip}__arrow--BoxShadow);
-  transform: translateX(var(--#{$tooltip}__arrow--TranslateX, 0)) translateY(var(--#{$tooltip}__arrow--TranslateY, 0)) rotate(var(--#{$tooltip}__arrow--Rotate, 0));
+  transform: translateX(var(--#{$tooltip}__arrow--TranslateX, 0)) translateY(var(--#{$tooltip}__arrow--TranslateY, 0))
+    rotate(var(--#{$tooltip}__arrow--Rotate, 0));
 }

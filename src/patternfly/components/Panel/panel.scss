@@ -66,7 +66,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    content: "";
+    content: '';
     border: var(--#{$panel}--before--BorderWidth) solid var(--#{$panel}--before--BorderColor);
     border-radius: var(--#{$panel}--BorderRadius);
   }

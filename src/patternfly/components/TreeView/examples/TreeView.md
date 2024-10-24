@@ -7,6 +7,7 @@ cssPrefix: pf-v6-c-tree-view
 ## Examples
 
 ### Single selectable
+
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View single selectable example"}}
@@ -280,6 +281,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### With checkboxes
+
 ```hbs
 {{#> tree-view tree-view--id="tree-view-checkboxes"}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with checkboxes example"}}
@@ -371,6 +373,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### With icons
+
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with icons example"}}
@@ -452,6 +455,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### With badges
+
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with badges example"}}
@@ -587,6 +591,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### With action item
+
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with action item example"}}
@@ -680,6 +685,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### With non-expandable top level nodes
+
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with non-expandable top level nodes example"}}
@@ -771,6 +777,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### With selectable, expandable nodes
+
 ```hbs
 {{#> tree-view tree-view--id="tree-view-selectable-expandable"}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View with selectable, expandable nodes example"}}
@@ -862,6 +869,7 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### Guides
+
 ```hbs
 {{#> tree-view tree-view--modifier="pf-m-guides"}}
   {{#> tree-view-list tree-view-list--IsRoot="true" tree-view-list--AriaLabel="Tree View guides example"}}
@@ -953,39 +961,42 @@ A search input can be used to filter tree view items. It is recommended that a t
 ```
 
 ### Compact
+
 ```hbs
 {{> tree-view--base tree-view-list--AriaLabel="Tree View compact example" tree-view--base--modifier="pf-m-compact"}}
 ```
 
 ### Compact, no background
+
 ```hbs
 {{> tree-view--base tree-view-list--AriaLabel="Tree View compact no background example" tree-view--base--modifier="pf-m-compact pf-m-no-background"}}
 ```
 
 ## Documentation
+
 ### Usage
 
-| Class | Applied | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-tree-view` | `<div>` | Initiates the tree view container. **Required** |
-| `.pf-v6-c-tree-view__list` | `<ul>` | Initiates a tree view list. **Required** |
-| `.pf-v6-c-tree-view__list-item` | `<li>` | Initiates a tree view list item. **Required** |
-| `.pf-v6-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
-| `.pf-v6-c-tree-view__node` | `<button>`, `<label>` | Initiates a tree view node. **Required** |
-| `.pf-v6-c-tree-view__node-container` | `<span>` | Initiates a tree view node container. **Required for compact variant** |
-| `.pf-v6-c-tree-view__node-content` | `<span>` | Initiates a tree view node content container used to stack elements. |
-| `.pf-v6-c-tree-view__node-count` | `<span>` | Initiates a tree view node count. |
-| `.pf-v6-c-tree-view__node-toggle` | `<span>`, `<button>` | Initiates a tree view toggle. |
-| `.pf-v6-c-tree-view__node-toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
-| `.pf-v6-c-tree-view__node-title` | `<span>` | Initiates a tree view node title. |
-| `.pf-v6-c-tree-view__node-text` | `<span>`, `<button>` | Initiates tree view text. **Note:** Use a `<button>` when the node is expandable and selectable. |
-| `.pf-v6-c-tree-view__node-icon` | `<span>` | Initiates a tree view icon. |
-| `.pf-v6-c-tree-view__node-check` | `<span>` | Initiates a tree view check. |
-| `.pf-v6-c-tree-view__action` | `<div>` | Initiates a tree view action wrapper. |
-| `.pf-v6-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
-| `.pf-m-guides` | `.pf-v6-c-tree-view` | Modifies the tree view to the guides presentation. |
-| `.pf-m-compact` | `.pf-v6-c-tree-view` | Modifies the tree view to the compact presentation. |
-| `.pf-m-no-background` | `.pf-v6-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
-| `.pf-m-current` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to be current. |
-| `.pf-m-selectable` | `.pf-v6-c-tree-view__node` | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
-| `.pf-m-truncate` | `.pf-v6-c-tree-view`, `.pf-v6-c-tree-view__node-title`, `.pf-v6-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |
+| Class                                  | Applied                                                                                 | Outcome                                                                                                                            |
+| -------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-tree-view`                   | `<div>`                                                                                 | Initiates the tree view container. **Required**                                                                                    |
+| `.pf-v6-c-tree-view__list`             | `<ul>`                                                                                  | Initiates a tree view list. **Required**                                                                                           |
+| `.pf-v6-c-tree-view__list-item`        | `<li>`                                                                                  | Initiates a tree view list item. **Required**                                                                                      |
+| `.pf-v6-c-tree-view__content`          | `<div>`                                                                                 | Initiates a tree view node. **Required**                                                                                           |
+| `.pf-v6-c-tree-view__node`             | `<button>`, `<label>`                                                                   | Initiates a tree view node. **Required**                                                                                           |
+| `.pf-v6-c-tree-view__node-container`   | `<span>`                                                                                | Initiates a tree view node container. **Required for compact variant**                                                             |
+| `.pf-v6-c-tree-view__node-content`     | `<span>`                                                                                | Initiates a tree view node content container used to stack elements.                                                               |
+| `.pf-v6-c-tree-view__node-count`       | `<span>`                                                                                | Initiates a tree view node count.                                                                                                  |
+| `.pf-v6-c-tree-view__node-toggle`      | `<span>`, `<button>`                                                                    | Initiates a tree view toggle.                                                                                                      |
+| `.pf-v6-c-tree-view__node-toggle-icon` | `<span>`                                                                                | Initiates a tree view toggle icon.                                                                                                 |
+| `.pf-v6-c-tree-view__node-title`       | `<span>`                                                                                | Initiates a tree view node title.                                                                                                  |
+| `.pf-v6-c-tree-view__node-text`        | `<span>`, `<button>`                                                                    | Initiates tree view text. **Note:** Use a `<button>` when the node is expandable and selectable.                                   |
+| `.pf-v6-c-tree-view__node-icon`        | `<span>`                                                                                | Initiates a tree view icon.                                                                                                        |
+| `.pf-v6-c-tree-view__node-check`       | `<span>`                                                                                | Initiates a tree view check.                                                                                                       |
+| `.pf-v6-c-tree-view__action`           | `<div>`                                                                                 | Initiates a tree view action wrapper.                                                                                              |
+| `.pf-v6-c-tree-view__search`           | `<div>`                                                                                 | Initiates a tree view search wrapper.                                                                                              |
+| `.pf-m-guides`                         | `.pf-v6-c-tree-view`                                                                    | Modifies the tree view to the guides presentation.                                                                                 |
+| `.pf-m-compact`                        | `.pf-v6-c-tree-view`                                                                    | Modifies the tree view to the compact presentation.                                                                                |
+| `.pf-m-no-background`                  | `.pf-v6-c-tree-view.pf-m-compact`                                                       | Modifies the tree view compact variant node containers to have a transparent background.                                           |
+| `.pf-m-current`                        | `.pf-v6-c-tree-view__node`                                                              | Modifies the tree view node to be current.                                                                                         |
+| `.pf-m-selectable`                     | `.pf-v6-c-tree-view__node`                                                              | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
+| `.pf-m-truncate`                       | `.pf-v6-c-tree-view`, `.pf-v6-c-tree-view__node-title`, `.pf-v6-c-tree-view__node-text` | Modifies the tree view title or text to truncate.                                                                                  |

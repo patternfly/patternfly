@@ -1,13 +1,13 @@
 @use '../../sass-utilities' as *;
 
-$pf-v6-c-divider--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
-$pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl");
+$pf-v6-c-divider--breakpoint-map: build-breakpoint-map('sm', 'md', 'lg', 'xl', '2xl');
+$pf-v6-c-divider--spacer-map: build-spacer-map('none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl');
 
 // * Divider horizontal
 @mixin pf-v6-c-divider--m-horizontal {
   flex-direction: row;
   width: 100%;
-  height: var(--#{$divider}--Size);  // apply size to height in horizontal orientation
+  height: var(--#{$divider}--Size); // apply size to height in horizontal orientation
 }
 
 // * Divider vertical
@@ -41,7 +41,7 @@ $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
   // - Divider before
   &::before {
     flex-basis: var(--#{$divider}--before--FlexBasis);
-    content: "";
+    content: '';
     background-color: var(--#{$divider}--Color);
   }
 

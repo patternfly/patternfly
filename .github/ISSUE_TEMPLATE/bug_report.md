@@ -4,13 +4,13 @@ about: Help us to improve PatternFly
 title: Bug - [Component] - [short description]
 labels: bug
 assignees: ''
-
 ---
 
 **Describe the problem**
-This is an issue with 
-- [ ] Patternfly 5  
-- [ ] Patternfly 6  
+This is an issue with
+
+- [ ] Patternfly 5
+- [ ] Patternfly 6
 - [ ] other
 
 Please give a clear and concise description of the problem. Which components are affected?
@@ -28,9 +28,10 @@ List the workaround if there is one.
 If applicable, add screenshots to help explain the issue.
 
 **What is your environment?**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+
+- OS: [e.g. iOS]
+- Browser [e.g. chrome, safari]
+- Version [e.g. 22]
 
 **What is your product and what release date are you targeting?**
 

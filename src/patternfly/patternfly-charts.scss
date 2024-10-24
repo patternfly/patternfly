@@ -1,6 +1,6 @@
 @use './sass-utilities' as *;
-@use "./base/tokens/tokens-charts" as charts;
-@use "./base/tokens/tokens-charts-dark" as charts-dark;
+@use './base/tokens/tokens-charts' as charts;
+@use './base/tokens/tokens-charts-dark' as charts-dark;
 
 // stylelint-disable-next-line scss/dollar-variable-pattern
 $chart: #{$pf-prefix} + 'chart';
@@ -130,7 +130,7 @@ $chart: #{$pf-prefix} + 'chart';
   // Individual Charts
 
   // Area Chart
-  --#{$chart}-area--Opacity: .3;
+  --#{$chart}-area--Opacity: 0.3;
   --#{$chart}-area--stroke--Width: var(--#{$chart}-global--stroke--Width--sm);
   --#{$chart}-area--data--Fill: var(--#{$chart}-global--Fill--Color--900);
 
@@ -289,7 +289,7 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-stack--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
 
   // Threshold
-  --#{$chart}-threshold--stroke-dash-array: 4,2;
+  --#{$chart}-threshold--stroke-dash-array: 4, 2;
   --#{$chart}-threshold--stroke--Width: 1.5;
 
   // Tooltip
@@ -369,66 +369,186 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-theme--purple--ColorScale--500: var(--pf-t--chart--theme--colorscales--purple--colorscale--500);
 
   // multi ordered
-  --#{$chart}-theme--multi-color-ordered--ColorScale--100: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--100);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--200: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--200);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--300: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--300);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--400: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--400);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--500: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--500);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--600: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--600);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--700: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--700);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--800: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--800);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--900: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--900);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1000: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1000);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1100: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1100);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1200: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1200);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1300: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1300);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1400: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1400);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1500: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1500);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1600: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1600);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1700: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1700);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1800: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1800);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--1900: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1900);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--2000: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2000);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--2100: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2100);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--2200: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2200);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--2300: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2300);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--2400: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2400);
-  --#{$chart}-theme--multi-color-ordered--ColorScale--2500: var(--pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2500);
+  --#{$chart}-theme--multi-color-ordered--ColorScale--100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--100
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--200
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--300
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--400
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--500
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--600: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--600
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--700: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--700
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--800: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--800
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--900: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--900
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1000: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1000
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1100
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1200
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1300
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1400
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1500
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1600: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1600
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1700: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1700
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1800: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1800
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1900: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--1900
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2000: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2000
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2100
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2200
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2300
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2400
+  );
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-ordered--colorscale--2500
+  );
 
   // multi unordered
-  --#{$chart}-theme--multi-color-unordered--ColorScale--100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--100);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--200);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--300);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--400);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--500);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--600: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--600);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--700: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--700);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--800: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--800);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--900: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--900);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1000: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1000);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1100);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1200);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1300);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1400);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1500);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1600: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1600);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1700: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1700);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1800: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1800);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--1900: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1900);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2000: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2000);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2100);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2200);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2300);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2400);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2500);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2600: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2600);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2700: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2700);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2800: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2800);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--2900: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2900);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--3000: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3000);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--3100: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3100);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--3200: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3200);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--3300: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3300);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--3400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3400);
-  --#{$chart}-theme--multi-color-unordered--ColorScale--3500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3500);
+  --#{$chart}-theme--multi-color-unordered--ColorScale--100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--100
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--200
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--300
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--400
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--500
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--600: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--600
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--700: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--700
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--800: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--800
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--900: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--900
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1000: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1000
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1100
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1200
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1300
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1400
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1500
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1600: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1600
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1700: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1700
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1800: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1800
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1900: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--1900
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2000: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2000
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2100
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2200
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2300
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2400
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2500
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2600: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2600
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2700: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2700
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2800: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2800
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2900: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--2900
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3000: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3000
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3100: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3100
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3200: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3200
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3300: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3300
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3400: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3400
+  );
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3500: var(
+    --pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3500
+  );
 }

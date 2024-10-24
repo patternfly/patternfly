@@ -6,8 +6,11 @@
   --#{$background-image}--BackgroundSize--min-width: 200px;
   --#{$background-image}--BackgroundSize--width: 60%;
   --#{$background-image}--BackgroundSize--max-width: 600px;
-  --#{$background-image}--BackgroundSize: clamp(var(--#{$background-image}--BackgroundSize--min-width), var(--#{$background-image}--BackgroundSize--width), var(--#{$background-image}--BackgroundSize--max-width));
-
+  --#{$background-image}--BackgroundSize: clamp(
+    var(--#{$background-image}--BackgroundSize--min-width),
+    var(--#{$background-image}--BackgroundSize--width),
+    var(--#{$background-image}--BackgroundSize--max-width)
+  );
 }
 
 .#{$background-image} {

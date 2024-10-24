@@ -6,7 +6,7 @@ $pf-v6-c-description-list-order--limit: 12;
 // stylelint-disable max-nesting-depth
 .#{$description-list}__group {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-description-list-order--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       @for $i from 0 through $pf-v6-c-description-list-order--limit {

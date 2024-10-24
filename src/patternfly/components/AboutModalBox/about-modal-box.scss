@@ -1,18 +1,22 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($about-modal-box) {
-    // Component variables
+  // Component variables
   --#{$about-modal-box}--BackgroundImage: none;
   --#{$about-modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$about-modal-box}--BackgroundSize--min-width: 200px;
   --#{$about-modal-box}--BackgroundSize--width: 60%;
   --#{$about-modal-box}--BackgroundSize--max-width: 600px;
-  --#{$about-modal-box}--BackgroundSize: clamp(var(--#{$about-modal-box}--BackgroundSize--min-width), var(--#{$about-modal-box}--BackgroundSize--width), var(--#{$about-modal-box}--BackgroundSize--max-width));
+  --#{$about-modal-box}--BackgroundSize: clamp(
+    var(--#{$about-modal-box}--BackgroundSize--min-width),
+    var(--#{$about-modal-box}--BackgroundSize--width),
+    var(--#{$about-modal-box}--BackgroundSize--max-width)
+  );
   --#{$about-modal-box}--Height: 100%;
   --#{$about-modal-box}--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
   --#{$about-modal-box}--Width: 100%;
   --#{$about-modal-box}--sm--GridTemplateColumns: 5fr 1fr;
-  --#{$about-modal-box}--lg--GridTemplateColumns: 1fr .6fr;
+  --#{$about-modal-box}--lg--GridTemplateColumns: 1fr 0.6fr;
 
   // Brand
   --#{$about-modal-box}__brand--PaddingBlockStart: var(--pf-t--global--spacer--2xl);
@@ -95,9 +99,9 @@
   position: relative;
   display: grid;
   grid-template-areas:
-    "brand close"
-    "header header"
-    "content content";
+    'brand close'
+    'header header'
+    'content content';
   grid-template-rows: max-content max-content auto;
   width: var(--#{$about-modal-box}--Width);
   height: var(--#{$about-modal-box}--Height);
@@ -111,9 +115,9 @@
 
   @media only screen and (min-width: $pf-v6-global--breakpoint--sm) {
     grid-template-areas:
-    "brand          close"
-    "header         close"
-    "content        close";
+      'brand          close'
+      'header         close'
+      'content        close';
     grid-template-columns: var(--#{$about-modal-box}--sm--GridTemplateColumns);
   }
 
@@ -125,7 +129,7 @@
     grid-template-columns: var(--#{$about-modal-box}--lg--GridTemplateColumns);
   }
 
-  @include pf-v6-bidirectional-style (
+  @include pf-v6-bidirectional-style(
     $prop: --#{$about-modal-box}--BackgroundPosition,
     $ltr-val: bottom right,
     $rtl-val: bottom left
@@ -171,7 +175,9 @@
   grid-area: content;
   margin-block-start: var(--#{$about-modal-box}__content--MarginBlockStart);
   margin-block-end: var(--#{$about-modal-box}__content--MarginBlockEnd);
-  margin-inline-start: var(--#{$about-modal-box}__content--MarginInlineStart); // Using margin instead of padding to prevent scrollbar extending to top of content block
+  margin-inline-start: var(
+    --#{$about-modal-box}__content--MarginInlineStart
+  ); // Using margin instead of padding to prevent scrollbar extending to top of content block
   margin-inline-end: var(--#{$about-modal-box}__content--MarginInlineEnd);
   overflow-x: hidden;
   overflow-y: auto;

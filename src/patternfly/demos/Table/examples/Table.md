@@ -7,7 +7,9 @@ wrapperTag: div
 import './Table.css'
 
 ## Demos
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="basic-demo"}}
 
@@ -28,6 +30,7 @@ import './Table.css'
 ```
 
 ### Sortable
+
 ```hbs isFullscreen
 {{> page-template page-template--id="sortable-demo"}}
 
@@ -50,6 +53,7 @@ import './Table.css'
 ```
 
 ### Expandable
+
 ```hbs isFullscreen
 {{> page-template page-template--id="expandable-demo"}}
 
@@ -70,6 +74,7 @@ import './Table.css'
 ```
 
 ### Compact
+
 ```hbs isFullscreen
 {{> page-template page-template--id="compact-demo"}}
 
@@ -90,6 +95,7 @@ import './Table.css'
 ```
 
 ### Compound expansion
+
 ```hbs isFullscreen
 {{> page-template page-template--id="compound-expansion-demo"}}
 
@@ -110,6 +116,7 @@ import './Table.css'
 ```
 
 ### Loading state demo
+
 ```hbs isFullscreen
 {{> page-template page-template--id="loading-state-demo"}}
 
@@ -121,6 +128,7 @@ import './Table.css'
 ```
 
 ### Empty state
+
 ```hbs isFullscreen
 
 {{> page-template page-template--id="empty-state-demo"}}
@@ -133,6 +141,7 @@ import './Table.css'
 ```
 
 ### Static bottom pagination
+
 ```hbs isFullscreen
 {{> page-template page-template--id="static-bottom-pagination-demo"}}
 
@@ -153,6 +162,7 @@ import './Table.css'
 ```
 
 ### Column management modal
+
 ```hbs isFullscreen
 {{> page-template page-template--id="column-management-demo"}}
 
@@ -202,6 +212,7 @@ import './Table.css'
 ```
 
 ### Sticky header
+
 ```hbs isFullscreen
 {{> page-template page-template--id="sticky-header-demo"}}
 
@@ -222,6 +233,7 @@ import './Table.css'
 ```
 
 ### Sticky first column
+
 ```hbs isFullscreen
 {{> page-template page-template--id="sticky-first-column-demo"}}
 
@@ -249,6 +261,7 @@ import './Table.css'
 ```
 
 ### Sticky multiple columns
+
 ```hbs isFullscreen
 {{> page-template page-template--id="sticky-multiple-columns-demo"}}
 
@@ -278,6 +291,7 @@ import './Table.css'
 ```
 
 ### Sticky header and multiple columns
+
 ```hbs isFullscreen
 {{> page-template page-template--id="sticky-header-and-multiple-columns-demo"}}
 
@@ -307,6 +321,7 @@ import './Table.css'
 ```
 
 ### Sticky header and last column
+
 ```hbs isFullscreen
 {{> page-template page-template--id="sticky-header-and-multiple-columns-demo"}}
 

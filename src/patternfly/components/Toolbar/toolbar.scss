@@ -189,8 +189,16 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar item
 .#{$toolbar}__item {
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map);
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack(
+    '--#{$toolbar}__item--Width--base',
+    '--#{$toolbar}__item--Width',
+    $pf-v6-c-toolbar--breakpoint-map
+  );
+  @include pf-v6-build-css-variable-stack(
+    '--#{$toolbar}__item--MinWidth--base',
+    '--#{$toolbar}__item--MinWidth',
+    $pf-v6-c-toolbar--breakpoint-map
+  );
 
   row-gap: var(--#{$toolbar}__item--RowGap);
   column-gap: var(--#{$toolbar}__item--ColumnGap);
@@ -300,7 +308,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar expand all
 .#{$toolbar}__expand-all-icon {
   display: inline-flex;
-  transition: transform var(--#{$toolbar}__expand-all-icon--TransitionDuration) var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
+  transition: transform var(--#{$toolbar}__expand-all-icon--TransitionDuration)
+    var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change
@@ -318,7 +327,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 }
 
 @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
   @include pf-v6-apply-breakpoint($breakpoint) {
     .#{$toolbar}__group,

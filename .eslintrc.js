@@ -11,11 +11,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'no-template-curly-in-string': 'off'
   },
-  extends: [
-    'standard',
-    'standard-react',
-    'standard-jsx'
-  ],
+  extends: ['standard', 'standard-react', 'standard-jsx'],
   env: {
     es6: true,
     browser: true,

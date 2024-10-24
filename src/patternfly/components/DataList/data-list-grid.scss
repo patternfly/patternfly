@@ -2,7 +2,7 @@
 
 @mixin pf-v6-c-data-list-responsive-block() {
   // base responsive styles
-  @at-root .#{$data-list}:not([class*="pf-m-grid"]) {
+  @at-root .#{$data-list}:not([class*='pf-m-grid']) {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @content;
     }
@@ -29,16 +29,26 @@
   --#{$data-list}__cell--PaddingBlockEnd: var(--#{$data-list}__cell--md--PaddingBlockEnd);
   --#{$data-list}__item-control--MarginInlineEnd: var(--#{$data-list}__item-control--md--MarginInlineEnd);
   --#{$data-list}__item-action--MarginInlineStart: var(--#{$data-list}__item-action--md--MarginInlineStart);
-  --#{$data-list}__expandable-content-body--PaddingBlockStart: var(--#{$data-list}__expandable-content-body--md--PaddingBlockStart);
-  --#{$data-list}__expandable-content-body--PaddingBlockEnd: var(--#{$data-list}__expandable-content-body--md--PaddingBlockEnd);
+  --#{$data-list}__expandable-content-body--PaddingBlockStart: var(
+    --#{$data-list}__expandable-content-body--md--PaddingBlockStart
+  );
+  --#{$data-list}__expandable-content-body--PaddingBlockEnd: var(
+    --#{$data-list}__expandable-content-body--md--PaddingBlockEnd
+  );
   --#{$data-list}--m-compact__cell--PaddingBlockEnd: var(--#{$data-list}--m-compact__cell--md--PaddingBlockEnd);
-  --#{$data-list}--m-compact__cell-cell--PaddingBlockStart: var(--#{$data-list}--m-compact__cell-cell--md--PaddingBlockStart);
+  --#{$data-list}--m-compact__cell-cell--PaddingBlockStart: var(
+    --#{$data-list}--m-compact__cell-cell--md--PaddingBlockStart
+  );
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$data-list}__item-row--PaddingInlineEnd: var(--#{$data-list}__item-row--xl--PaddingInlineEnd);
     --#{$data-list}__item-row--PaddingInlineStart: var(--#{$data-list}__item-row--xl--PaddingInlineStart);
-    --#{$data-list}__expandable-content-body--PaddingInlineEnd: var(--#{$data-list}__expandable-content-body--xl--PaddingInlineEnd);
-    --#{$data-list}__expandable-content-body--PaddingInlineStart: var(--#{$data-list}__expandable-content-body--xl--PaddingInlineStart);
+    --#{$data-list}__expandable-content-body--PaddingInlineEnd: var(
+      --#{$data-list}__expandable-content-body--xl--PaddingInlineEnd
+    );
+    --#{$data-list}__expandable-content-body--PaddingInlineStart: var(
+      --#{$data-list}__expandable-content-body--xl--PaddingInlineStart
+    );
   }
 
   .#{$data-list}__item-content {
@@ -69,10 +79,18 @@
       flex: none;
     }
 
-    &.pf-m-flex-2 { flex-grow: 2; }
-    &.pf-m-flex-3 { flex-grow: 3; }
-    &.pf-m-flex-4 { flex-grow: 4; }
-    &.pf-m-flex-5 { flex-grow: 5; }
+    &.pf-m-flex-2 {
+      flex-grow: 2;
+    }
+    &.pf-m-flex-3 {
+      flex-grow: 3;
+    }
+    &.pf-m-flex-4 {
+      flex-grow: 4;
+    }
+    &.pf-m-flex-5 {
+      flex-grow: 5;
+    }
   }
 
   .#{$data-list}__expandable-content {

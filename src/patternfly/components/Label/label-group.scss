@@ -137,7 +137,9 @@
     --#{$button}--m-plain--m-no-padding--PaddingBlockStart: var(--#{$label-group}__close--c-button--PaddingBlockStart);
     --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: var(--#{$label-group}__close--c-button--PaddingInlineEnd);
     --#{$button}--m-plain--m-no-padding--PaddingBlockEnd: var(--#{$label-group}__close--c-button--PaddingBlockEnd);
-    --#{$button}--m-plain--m-no-padding--PaddingInlineStart: var(--#{$label-group}__close--c-button--PaddingInlineStart);
+    --#{$button}--m-plain--m-no-padding--PaddingInlineStart: var(
+      --#{$label-group}__close--c-button--PaddingInlineStart
+    );
   }
 }
 
@@ -152,8 +154,8 @@
   border: 0;
 
   // Hide scrollbar for IE, Edge and Firefox
-  -ms-overflow-style: none;  // IE and Edge
-  scrollbar-width: none;  // Firefox
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
 
   // Hide scrollbar for Chrome, Safari and Opera
   &::-webkit-scrollbar {

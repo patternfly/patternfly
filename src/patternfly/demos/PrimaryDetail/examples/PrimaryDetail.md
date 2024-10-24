@@ -7,6 +7,7 @@ wrapperTag: div
 ## Demos
 
 ### Primary-detail expanded
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-expanded-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
@@ -54,6 +55,7 @@ wrapperTag: div
 ```
 
 ### Primary-detail collapsed
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-collapsed-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
@@ -98,6 +100,7 @@ wrapperTag: div
 ```
 
 ### Primary-detail content body padding
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-content-body-padding-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
@@ -141,6 +144,7 @@ wrapperTag: div
 ```
 
 ### Primary-detail card view expanded
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-view-expanded-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
@@ -191,6 +195,7 @@ wrapperTag: div
 ```
 
 ### Primary-detail card simple list expanded on mobile
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-simple-list-on-mobile-example"}}
 
@@ -228,6 +233,7 @@ wrapperTag: div
 ```
 
 ### Primary-detail card data list expanded on mobile
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-data-list-example"}}
 
@@ -265,6 +271,7 @@ wrapperTag: div
 ```
 
 ### Inline modifier
+
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-inline-modifier-example"}}
 

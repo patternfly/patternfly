@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-skip-to-content
 ---
 
 ## Examples
+
 ### Basic
+
 ```hbs isFullscreen
 {{#> skip-to-content skip-to-content--href="#main-content"}}
   Skip to content
@@ -105,17 +107,21 @@ Press tab to skip to content at the bottom of the page.
 ```
 
 ## Documentation
+
 ### Overview
+
 Skip to content allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
 
 When using `.pf-v6-c-skip-to-content` you must provide an `href` attribute whose value corresponds to the `id` attribute of the primary content container for your application. In most cases this is the `<main>` element. For a demo of this, navigate to a [page demo](/components/page/html-demos) and note the use of `tabindex="-1"`, which allows the element to receive focus programmatically.
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
+
+| Attribute                       | Applied to                 | Outcome                                                    |
+| ------------------------------- | -------------------------- | ---------------------------------------------------------- |
 | `href="[id of main container]"` | `.pf-v6-c-skip-to-content` | Sends focus to the primary content container. **Required** |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-skip-to-content` | `<a>` |  initiates the skip to content link. |
+
+| Class                      | Applied to | Outcome                             |
+| -------------------------- | ---------- | ----------------------------------- |
+| `.pf-v6-c-skip-to-content` | `<a>`      | initiates the skip to content link. |
