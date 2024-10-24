@@ -563,6 +563,55 @@ In addition to the JavaScript management of [editable labels](/components/label#
 {{/label-group}}
 ```
 
+### Labels with truncation
+```hbs
+<div class="pf-v6-c-label-truncate--example">
+<strong>Label</strong>
+<br/><br/>
+{{> label
+    label--IsRemovable=true
+    label--id=(concat label--variants--id '-truncated-with-icon')
+    label-text--value=(concat label--variants--title ' Label with set max-width truncation')
+    label-text--attribute='style="--pf-v6-c-label__text--MaxWidth: 38ch"'}}
+<br/><br/>
+<strong>Label group</strong>
+<br/><br/>
+{{#> label-group label-group--id="label-group-basic"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{> label label-text--value="Label 1" label--color="blue" label-icon--value="info-circle"}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{> label label-text--value="Label 2" label--color="green" label-icon--value="info-circle"}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{> label label-text--value="Label 3 has a lot of text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula" label-icon--value="info-circle"}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+<br/><br/>
+<strong>Label group vertical</strong>
+<br/><br/>
+{{#> label-group label-group--id="label-group-vertical" label-group--modifier="pf-m-vertical"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{> label label--color="green" label-text--value="Label 3 has a lot of text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula" label-icon--value="info-circle"}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+</div>
+```
+
 ## Documentation
 
 ### Label usage
