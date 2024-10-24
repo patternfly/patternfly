@@ -618,7 +618,8 @@
   // Only apply these settings if specifically modified
   &.pf-m-truncate {
     --#{$table}--cell--MinWidth: 100%;
-    --#{$table}--text--MinWidth: var(--#{$table}--m-truncate__text--MinWidth);
+
+    min-width: max(var(--#{$table}--m-truncate__text--MinWidth), var(--#{$table}--m-truncate--cell--MaxWidth));
 
     > :where(th, td) {
       overflow: var(--#{$table}--cell--Overflow);
