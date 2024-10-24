@@ -2,6 +2,7 @@
 id: Tile
 section: components
 cssPrefix: pf-v6-c-tile
+deprecated: true
 ---
 
 import './Tile.css'
