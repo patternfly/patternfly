@@ -99,6 +99,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-subnav--PaddingBlockEnd: 0;
   --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
   --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
+  --#{$page}__main-subnav--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -106,6 +107,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-breadcrumb--PaddingBlockEnd: 0;
   --#{$page}__main-breadcrumb--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$page}__main-breadcrumb--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
   // Main section tabs
   --#{$page}__main-tabs--PaddingBlockStart: 0;
@@ -374,6 +376,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-inline-start: var(--#{$page}__main-subnav--PaddingInlineStart);
   padding-inline-end: var(--#{$page}__main-subnav--PaddingInlineEnd);
   background-color: var(--#{$page}__main-subnav--BackgroundColor);
+
+  &.pf-m-sticky-top {
+    padding-block-end: var(--#{$page}__main-subnav--m-sticky-top--PaddingBlockEnd);
+  }
 }
 
 .#{$page}__main-breadcrumb {
