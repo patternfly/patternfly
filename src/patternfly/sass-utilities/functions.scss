@@ -21,6 +21,12 @@
   @return math.div(pf-strip-unit($pxval), $base) * 1rem;
 }
 
+// Return breakpoint for max-width
+// Used in combination with min-width avoids 1px overlap
+@function pf-v6-max-width-bp($breakpoint) {
+  @return calc($breakpoint - 1px);
+}
+
 // Return (width) breakpoint value if it exists
 @function pf-breakpoint-value($breakpoint, $breakpoint-map: $pf-v6-global--breakpoint-name-map) {
   $breakpoint-value: if(map-has-key($breakpoint-map, #{$breakpoint}), map-get($breakpoint-map, #{$breakpoint}), false);
