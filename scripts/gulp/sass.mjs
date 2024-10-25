@@ -15,18 +15,12 @@ function compileSASS0(srcFiles) {
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
       let cssString;
-      let scss = chunk.contents.toString();
       const relativePath = path.relative(path.join(chunk._cwd, '/src/patternfly'), chunk.history[0]);
       const loggedPath = path.relative(process.cwd(), chunk.history[0]);
       const numDirectories = relativePath.split(path.sep).length - 1;
 
       try {
-        const css = sass.renderSync({
-          // Pass filename for import resolution. Contents are not compiled.
-          file: chunk.history[0],
-          // Contents to compile
-          data: scss
-        });
+        const css = sass.compile(chunk.history[0]);
         cssString = css.css.toString();
         // TODO: Cleaner way to to do relative image assets in component CSS
         if (numDirectories > 0) {

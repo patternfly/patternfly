@@ -29,14 +29,14 @@ $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
 
 // - Divider
 .#{$divider} {
-  @include pf-v6-c-divider--m-horizontal; // default, set to orientation to horizontal
-  @include pf-v6-hidden-visible(var(--#{$divider}--Display));
-
   flex-shrink: 0;
   align-items: stretch;
   align-self: stretch;
   justify-content: center;
   border: 0; // removes the default border styling on an hr
+
+  @include pf-v6-c-divider--m-horizontal; // default, set to orientation to horizontal
+  @include pf-v6-hidden-visible(var(--#{$divider}--Display));
 
   // - Divider before
   &::before {

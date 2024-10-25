@@ -120,7 +120,7 @@
   border: var(--#{$alert}--BorderWidth) solid var(--#{$alert}--BorderColor);
   border-radius: var(--#{$alert}--BorderRadius);
   box-shadow: var(--#{$alert}--BoxShadow);
-  
+
   &.pf-m-custom {
     --#{$alert}--BorderColor: var(--#{$alert}--m-custom--BorderColor);
     --#{$alert}__icon--Color: var(--#{$alert}--m-custom__icon--Color);
@@ -185,11 +185,11 @@
 }
 
 .#{$alert}__toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$alert}__toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$alert}__icon {

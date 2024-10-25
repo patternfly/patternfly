@@ -325,12 +325,12 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 }
 
 .#{$tree-view}__node-toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   display: inline-block;
   min-width: var(--#{$tree-view}__node-toggle-icon--MinWidth);
   text-align: center;
   transform: rotate(var(--#{$tree-view}__node-toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 // stylelint-disable

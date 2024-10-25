@@ -10,11 +10,6 @@
   --#{$data-list}--sm--BorderBlockStartColor: var(--pf-t--global--border--color--default);
   --#{$data-list}--MarginInlineStart: var(--pf-t--global--spacer--md);
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$data-list}--BorderBlockStartColor: var(--#{$data-list}--sm--BorderBlockStartColor);
-    --#{$data-list}--BorderBlockStartWidth: var(--#{$data-list}--sm--BorderBlockStartWidth);
-  }
-
   // item
   --#{$data-list}__item--BackgroundColor: var( --pf-t--global--background--color--primary--default);
   --#{$data-list}__item--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
@@ -24,11 +19,6 @@
   --#{$data-list}__item--BorderBlockEndWidth: var(--pf-t--global--border--width--strong);
   --#{$data-list}__item--sm--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$data-list}__item--sm--BorderBlockEndColor: var(--pf-t--global--border--color--default);
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-    --#{$data-list}__item--BorderBlockEndWidth: var(--#{$data-list}__item--sm--BorderBlockEndWidth);
-    --#{$data-list}__item--BorderBlockEndColor: var(--#{$data-list}__item--sm--BorderBlockEndColor);
-  }
 
   // data list item row
   --#{$data-list}__item-row--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -139,6 +129,13 @@
   --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    --#{$data-list}--BorderBlockStartColor: var(--#{$data-list}--sm--BorderBlockStartColor);
+    --#{$data-list}--BorderBlockStartWidth: var(--#{$data-list}--sm--BorderBlockStartWidth);
+    --#{$data-list}__item--BorderBlockEndWidth: var(--#{$data-list}__item--sm--BorderBlockEndWidth);
+    --#{$data-list}__item--BorderBlockEndColor: var(--#{$data-list}__item--sm--BorderBlockEndColor);
+  }
 }
 
 .#{$data-list} {
@@ -312,14 +309,14 @@
 }
 
 .#{$data-list}__item-action {
-  @include pf-v6-hidden-visible(var(--#{$data-list}__item-action--Display));
-
   gap: var(--#{$data-list}__item-action--Gap);
   align-content: flex-start;
   align-items: flex-start;
   padding-block-start: calc(var(--#{$data-list}__item-action--PaddingBlockStart) - var(--#{$data-list}__item-action--PaddingBlockStart--offset));
   padding-block-end: calc(var(--#{$data-list}__item-action--PaddingBlockEnd) - var(--#{$data-list}__item-action--PaddingBlockEnd--offset));
   margin-inline-start: var(--#{$data-list}__item-action--MarginInlineStart);
+
+  @include pf-v6-hidden-visible(var(--#{$data-list}__item-action--Display));
 }
 
 // toggle
@@ -331,12 +328,12 @@
 
 // toggle icon rotate
 .#{$data-list}__toggle-icon {
-  @include pf-v6-mirror-inline-on-rtl;
-
   height: var(--#{$data-list}__toggle-icon--Height);
   pointer-events: none;
   transition: var(--#{$data-list}__toggle-icon--Transition);
   transform: rotate(var(--#{$data-list}__toggle-icon--Rotate));
+
+  @include pf-v6-mirror-inline-on-rtl;
 }
 
 .#{$data-list}__item-content {

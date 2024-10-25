@@ -1,4 +1,5 @@
 @use '../../sass-utilities' as *;
+@use 'sass:math';
 
 $pf-v6-c-toolbar--spacer-map: build-spacer-map();
 $pf-v6-c-toolbar--inset-map: build-spacer-map();
@@ -105,11 +106,11 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar content - Toolbar content section - Toolbar expandable content
 .#{$toolbar}__content {
-  @include pf-v6-hidden-visible(grid);
-
   row-gap: var(--#{$toolbar}__content--RowGap);
   padding-inline-start: var(--#{$toolbar}__content--PaddingInlineStart);
   padding-inline-end: var(--#{$toolbar}__content--PaddingInlineEnd);
+
+  @include pf-v6-hidden-visible(grid);
 }
 
 // Toolbar content section
@@ -189,13 +190,13 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar item
 .#{$toolbar}__item {
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map);
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map);
-
   row-gap: var(--#{$toolbar}__item--RowGap);
   column-gap: var(--#{$toolbar}__item--ColumnGap);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
+
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map);
 
   // - Toolbar expand
   &.pf-m-expand-all.pf-m-expanded {

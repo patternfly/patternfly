@@ -314,8 +314,6 @@
 
   // - Table th - Table td
   tr:where(.#{$table}__tr) > :where(th, td) {
-    @include pf-v6-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
-
     position: relative;
     width: var(--#{$table}--cell--Width);
     min-width: var(--#{$table}--cell--MinWidth);
@@ -334,6 +332,8 @@
     text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
+
+    @include pf-v6-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
     // First child padding left
     &:first-child {
@@ -737,10 +737,10 @@
 
 
   .#{$table}__toggle-icon {
-    @include pf-v6-mirror-inline-on-rtl;
-
     transition: transform var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration) var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
     transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
+
+    @include pf-v6-mirror-inline-on-rtl;
   }
 
   svg {
