@@ -4,7 +4,9 @@ section: patterns
 ---
 
 ## Examples
+
 ### Card view
+
 ```hbs isFullscreen
 {{> page-template page-template--id="card-view-basic-example" page-template-sidebar--nav--IsExpandable="true"}}
 

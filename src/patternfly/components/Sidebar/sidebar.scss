@@ -1,8 +1,8 @@
 @use 'sass:math';
 @use '../../sass-utilities' as *;
 
-$pf-v6-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
+$pf-v6-c-sidebar--breakpoint-map--width: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
+$pf-v6-c-sidebar__panel--list--width: ('default', 25, 33, 50, 66, 75, 100);
 
 @include pf-root($sidebar) {
   --#{$sidebar}--inset: var(--pf-t--global--spacer--md);
@@ -105,7 +105,9 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   @media (min-width: $pf-v6-global--breakpoint--md) {
     --#{$sidebar}__main--FlexDirection: var(--#{$sidebar}__main--md--FlexDirection);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}__main--md--AlignItems);
-    --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}__main--m-border--before--md--Display); // show border starting at md breakpoint
+    --#{$sidebar}__main--m-border--before--Display: var(
+      --#{$sidebar}__main--m-border--before--md--Display
+    ); // show border starting at md breakpoint
     --#{$sidebar}__panel--BoxShadow: none;
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--md--FlexBasis);
     --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}__panel--md--InsetBlockStart);
@@ -162,7 +164,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     display: var(--#{$sidebar}__main--m-border--before--Display);
     flex: 0 0 var(--#{$sidebar}__main--m-border--before--BorderWidth);
     align-self: stretch;
-    content: "";
+    content: '';
     background-color: var(--#{$sidebar}__main--m-border--before--BorderColor);
   }
 }
@@ -246,12 +248,12 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 // Responsive width modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-sidebar--breakpoint-map--width {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
   @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v6-c-sidebar__panel--list--width {
       .pf-v6-c-sidebar__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        @if $width-value == "default" {
+        @if $width-value == 'default' {
           --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--FlexBasis--base);
         } @else {
           --#{$sidebar}__panel--FlexBasis: #{percentage(math.div($width-value, 100))};

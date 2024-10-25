@@ -1,8 +1,8 @@
 @use '../../sass-utilities' as *;
 
 // stylelint-disable
-$pf-page-v6--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-page-v6--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
+$pf-page-v6--height-breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
 // stylelint-enable
 
 @include pf-root($page) {
@@ -30,7 +30,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar--PaddingInlineStart: 0;
   --#{$page}__sidebar--PaddingInlineEnd: 0;
-
 
   // Sidebar header
   --#{$page}__sidebar-header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -61,17 +60,23 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--masthead--main-container--GridArea: sidebar / sidebar / main / main; // no sidebar
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset); 
+  --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$page}__main-container--BorderWidth: #{pf-size-prem(4px)}; // TODO Change to be a page outline token
-  --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
+  --#{$page}__main-container--BorderColor: var(
+    --#{$page}__main-container--BackgroundColor
+  ); // TODO Border should match the background to blend in - change to be a page outline token
 
   // Main section
   --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-section--PaddingInlineEnd: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
+  --#{$page}__main-section--PaddingInlineEnd: var(
+    --pf-t--global--spacer--lg
+  ); // This is the intended spacing - the border of the main section will be subtracted
   --#{$page}__main-section--PaddingBlockEnd: var(--pf-t--global--spacer--md);
-  --#{$page}__main-section--PaddingInlineStart: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
+  --#{$page}__main-section--PaddingInlineStart: var(
+    --pf-t--global--spacer--lg
+  ); // This is the intended spacing - the border of the main section will be subtracted
   --#{$page}__main-section--RowGap: var(--pf-t--global--spacer--lg);
   --#{$page}__main-breadcrumb--main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -80,7 +85,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
-  
+
   // Sticky
   --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
@@ -97,14 +102,22 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-subnav--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-subnav--PaddingBlockEnd: 0;
-  --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
-  --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
+  --#{$page}__main-subnav--PaddingInlineStart: calc(
+    var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)
+  );
+  --#{$page}__main-subnav--PaddingInlineEnd: calc(
+    var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)
+  );
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-breadcrumb--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingInlineEnd: calc(
+    var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)
+  ); // subtract the border of the main section
   --#{$page}__main-breadcrumb--PaddingBlockEnd: 0;
-  --#{$page}__main-breadcrumb--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingInlineStart: calc(
+    var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)
+  ); // subtract the border of the main section
   --#{$page}__main-breadcrumb--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // Main section tabs
@@ -124,8 +137,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Base
   display: grid;
   grid-template-areas:
-    "header"
-    "main";
+    'header'
+    'main';
   grid-template-rows: max-content 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
@@ -137,16 +150,18 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width);
 
     grid-template-areas:
-      "header header"
-      "sidebar main";
+      'header header'
+      'sidebar main';
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
-    }
   }
+}
 
 // Header
 .#{$page} > .#{$masthead} {
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
+    --#{$masthead}--m-display-inline--GridTemplateColumns: var(
+      --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns
+    );
   }
 
   z-index: var(--#{$page}--c-masthead--ZIndex);
@@ -176,7 +191,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @include pf-v6-bidirectional-style(
     $prop: transform,
     $ltr-val: translateX(var(--#{$page}__sidebar--TranslateX)) translateZ(var(--#{$page}__sidebar--TranslateZ)),
-    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$page}__sidebar--TranslateX))}) translateZ(var(--#{$page}__sidebar--TranslateZ))
+    $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$page}__sidebar--TranslateX))})
+      translateZ(var(--#{$page}__sidebar--TranslateZ))
   );
 
   // Mobile
@@ -202,7 +218,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__sidebar-header {
   padding-block-start: var(--#{$page}__sidebar-header--PaddingBlockStart);
   padding-block-end: var(--#{$page}__sidebar-header--PaddingBlockEnd);
-  border-block-end: var(--#{$page}__sidebar-header--BorderBlockEndWidth) solid var(--#{$page}__sidebar-header--BorderBlockEndColor);
+  border-block-end: var(--#{$page}__sidebar-header--BorderBlockEndWidth) solid
+    var(--#{$page}__sidebar-header--BorderBlockEndColor);
 }
 
 .#{$page}__sidebar-title {
@@ -292,10 +309,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Responsive height modifiers for sticky top/bottom
   @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}-height, '');
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
-
       &.pf-m-sticky-top#{$breakpoint-name} {
         position: sticky;
         inset-block-start: 0;
@@ -350,7 +366,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     align-self: stretch;
   }
 
-
   &:focus {
     outline: 0;
   }
@@ -389,7 +404,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Responsive height modifiers for sticky top/bottom
   @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}-height, '');
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
       &.pf-m-sticky-top#{$breakpoint-name},
@@ -428,8 +443,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   gap: var(--#{$page}__main-section--RowGap);
   padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
   padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-  padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
-  padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
+  padding-inline-start: calc(
+    var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth)
+  );
+  padding-inline-end: calc(
+    var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth)
+  );
   background-color: var(--#{$page}__main-section--BackgroundColor);
 
   &.pf-m-secondary {
@@ -437,15 +456,19 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @each $breakpoint, $breakpoint-value in $pf-page-v6--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       // stylelint-disable max-nesting-depth
       &.pf-m-padding#{$breakpoint-name} {
         padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
         padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-        padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
-        padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
+        padding-inline-start: calc(
+          var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth)
+        );
+        padding-inline-end: calc(
+          var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth)
+        );
       }
 
       &.pf-m-no-padding#{$breakpoint-name} {
@@ -460,7 +483,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex: 1 1;
   min-height: 0;
   background-color: var(--#{$page}__main-wizard--BackgroundColor);
-  border-block-start: var(--#{$page}__main-wizard--BorderBlockStartWidth) solid var(--#{$page}__main-wizard--BorderBlockStartColor);
+  border-block-start: var(--#{$page}__main-wizard--BorderBlockStartWidth) solid
+    var(--#{$page}__main-wizard--BorderBlockStartColor);
 
   &:first-child {
     --#{$page}__main-wizard--BorderBlockStartWidth: 0;

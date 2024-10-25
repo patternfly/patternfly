@@ -4,25 +4,25 @@
 
 // Media query used to create responsive classes
 @mixin pf-v6-media-query($point) {
-  @if $point == "" or not $point or $point == "base" {
+  @if $point == '' or not $point or $point == 'base' {
     @content;
-  } @else if $point == "sm" {
+  } @else if $point == 'sm' {
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       @content;
     }
-  } @else if $point == "md" {
+  } @else if $point == 'md' {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       @content;
     }
-  } @else if $point == "lg" {
+  } @else if $point == 'lg' {
     @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
       @content;
     }
-  } @else if $point == "xl" {
+  } @else if $point == 'xl' {
     @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
       @content;
     }
-  } @else if $point == "2xl" {
+  } @else if $point == '2xl' {
     @media screen and (min-width: $pf-v6-global--breakpoint--2xl) {
       @content;
     }
@@ -31,25 +31,25 @@
 
 // Media query used to create responsive classes
 @mixin pf-v6-height-media-query($point) {
-  @if $point == "" or not $point or $point == "base" {
+  @if $point == '' or not $point or $point == 'base' {
     @content;
-  } @else if $point == "sm" {
+  } @else if $point == 'sm' {
     @media screen and (min-height: $pf-v6-global--height-breakpoint--sm) {
       @content;
     }
-  } @else if $point == "md" {
+  } @else if $point == 'md' {
     @media screen and (min-height: $pf-v6-global--height-breakpoint--md) {
       @content;
     }
-  } @else if $point == "lg" {
+  } @else if $point == 'lg' {
     @media screen and (min-height: $pf-v6-global--height-breakpoint--lg) {
       @content;
     }
-  } @else if $point == "xl" {
+  } @else if $point == 'xl' {
     @media screen and (min-height: $pf-v6-global--height-breakpoint--xl) {
       @content;
     }
-  } @else if $point == "2xl" {
+  } @else if $point == '2xl' {
     @media screen and (min-height: $pf-v6-global--height-breakpoint--2xl) {
       @content;
     }
@@ -110,8 +110,7 @@
               }
             }
           }
-        }
-        @else if ($direction == 'width') {
+        } @else if ($direction == 'width') {
           @include pf-v6-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
@@ -125,8 +124,7 @@
         }
       }
     }
-  }
-  @else if type-of($props) == list {
+  } @else if type-of($props) == list {
     $class: nth($props, 1);
     $property: nth($props, 2);
     $value: nth($props, 3) !important;
@@ -193,7 +191,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v6-hidden-visible($val: "block") {
+@mixin pf-v6-hidden-visible($val: 'block') {
   // stylelint-disable-next-line
   --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
 
@@ -231,7 +229,7 @@
 
 // Apply media query if value is passed
 @mixin pf-v6-apply-breakpoint($breakpoint) {
-  @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
+  @if $breakpoint == 'null' or $breakpoint == 'base' or $breakpoint == '' {
     @content;
   } @else {
     $breakpoint: pf-breakpoint-value($breakpoint);
@@ -244,7 +242,7 @@
 
 // Apply height media query if value is passed
 @mixin pf-v6-apply-height-breakpoint($breakpoint) {
-  @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
+  @if $breakpoint == 'null' or $breakpoint == 'base' or $breakpoint == '' {
     @content;
   } @else {
     $breakpoint: pf-height-breakpoint-value($breakpoint);
@@ -277,15 +275,20 @@
 }
 
 // Build variable stack
-@mixin pf-v6-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
+@mixin pf-v6-build-css-variable-stack(
+  $prop,
+  $css-var,
+  $breakpoint-map: $pf-v6-global--breakpoint-map,
+  $important: false
+) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
     $variable-list: ();
 
     // Build variable list
-    @if $breakpoint != "base" {
-      $list: append($list, $css-var + "-on-" + $breakpoint);
+    @if $breakpoint != 'base' {
+      $list: append($list, $css-var + '-on-' + $breakpoint);
     } @else {
       $list: append($list, $css-var);
     }
@@ -320,7 +323,7 @@
     // Build variable list
     // stylelint-disable scss/at-if-no-null
     @if $breakpoint-value {
-      $list: append($list, $css-var + "-on-" + $breakpoint);
+      $list: append($list, $css-var + '-on-' + $breakpoint);
     }
     // stylelint-enable
   }
@@ -351,7 +354,7 @@
   // stylelint-disable
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
-  // stylelint-enable
+    // stylelint-enable
     margin: 0;
     appearance: none;
   }
@@ -371,14 +374,14 @@
 //   background: red;
 // }
 @mixin pf-v6-rtl {
-  @at-root :where(.#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+  @at-root :where(.#{$pf-prefix}m-dir-rtl, [dir='rtl']) #{&} {
     @content;
   }
 }
 
 // Used to create the LTR selector for LTR specific styles
 @mixin pf-v6-ltr {
-  @at-root :where(.#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
+  @at-root :where(.#{$pf-prefix}m-dir-ltr, [dir='ltr']) #{&} {
     @content;
   }
 }
@@ -418,8 +421,8 @@
 }
 
 @mixin pf-root($selector, $isClass: true) {
-  $selector: if($isClass, "." + $selector, $selector);
+  $selector: if($isClass, '.' + $selector, $selector);
   #{$selector} {
-    @content
+    @content;
   }
 }

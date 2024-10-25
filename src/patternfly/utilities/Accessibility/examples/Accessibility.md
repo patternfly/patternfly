@@ -4,7 +4,9 @@ section: utility-classes
 ---
 
 ## Examples
+
 ### Screen reader only
+
 ```hbs
 Content available only to screen reader, open inspector to investigate
 {{#> accessibility accessibility--type="screen-reader"}}
@@ -13,6 +15,7 @@ Content available only to screen reader, open inspector to investigate
 ```
 
 ### Visible
+
 ```hbs
 {{#> accessibility accessibility--type="visible"}}
     This class unsets .pf-v6-u-screen-reader and .pf-v6-screen-reader. It will be visible.
@@ -20,6 +23,7 @@ Content available only to screen reader, open inspector to investigate
 ```
 
 ### Hidden
+
 ```hbs
 The text underneath is hidden.
 {{#> accessibility accessibility--type="hidden"}}
@@ -28,11 +32,14 @@ The text underneath is hidden.
 ```
 
 ## Documentation
+
 ### Overview
+
 [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-screen-reader-on-lg**
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
-| `.pf-v6-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-v6-u-screen-reader` and `.pf-v6-screen-reader` |
+
+| Class                                      | Applied to | Outcome                                                                 |
+| ------------------------------------------ | ---------- | ----------------------------------------------------------------------- |
+| `.pf-v6-u-screen-reader{-on-[breakpoint]}` | `*`        | Visually hides element, but leaves accessible to assistive technologies |
+| `.pf-v6-u-visible{-on-[breakpoint]}`       | `*`        | Unsets `.pf-v6-u-screen-reader` and `.pf-v6-screen-reader`              |

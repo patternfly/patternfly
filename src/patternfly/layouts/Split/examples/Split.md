@@ -7,7 +7,9 @@ cssPrefix: pf-v6-l-split
 import './Split.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> split}}
   {{#> split-item}}
@@ -23,6 +25,7 @@ import './Split.css'
 ```
 
 ### With gutter
+
 ```hbs
 {{#> split split--modifier="pf-m-gutter"}}
   {{#> split-item}}
@@ -38,6 +41,7 @@ import './Split.css'
 ```
 
 ### Wrappable
+
 ```hbs
 {{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
   {{#> split-item}}
@@ -86,14 +90,17 @@ import './Split.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 The split layout is designed to position items horizontally, with one item filling the available horizontal space.
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-l-split` | `<div>`, `<section>`, or `<article>` | Initiates the split layout. |
-| `.pf-v6-l-split__item` | `<div>` | Initiates a split item. **Required** |
-| `.pf-m-gutter` | `.pf-v6-l-split` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-wrap` | `.pf-v6-l-split` | Sets the split layout to wrap. |
-| `.pf-m-fill` | `.pf-v6-l-split__item` | Specifies which item(s) should fill the avaiable horizontal space. |
+
+| Class                  | Applied to                           | Outcome                                                                 |
+| ---------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
+| `.pf-v6-l-split`       | `<div>`, `<section>`, or `<article>` | Initiates the split layout.                                             |
+| `.pf-v6-l-split__item` | `<div>`                              | Initiates a split item. **Required**                                    |
+| `.pf-m-gutter`         | `.pf-v6-l-split`                     | Adds space between children by using the globally defined gutter value. |
+| `.pf-m-wrap`           | `.pf-v6-l-split`                     | Sets the split layout to wrap.                                          |
+| `.pf-m-fill`           | `.pf-v6-l-split__item`               | Specifies which item(s) should fill the avaiable horizontal space.      |

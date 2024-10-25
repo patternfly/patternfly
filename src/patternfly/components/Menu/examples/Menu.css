@@ -1,5 +1,5 @@
-[id^="ws-core-c-menu-with-flyout"],
-[id^="ws-core-c-menu-standard-menu-flyout-child"] {
+[id^='ws-core-c-menu-with-flyout'],
+[id^='ws-core-c-menu-standard-menu-flyout-child'] {
   display: flex;
   height: 360px;
 }
@@ -9,11 +9,19 @@
   justify-content: flex-end;
 }
 
-:is([id="ws-core-c-menu-drilldown-with-breadcrumbs---level-3"], [id="ws-core-c-menu-drilldown-with-breadcrumbs---level-4"]) {
+:is(
+    [id='ws-core-c-menu-drilldown-with-breadcrumbs---level-3'],
+    [id='ws-core-c-menu-drilldown-with-breadcrumbs---level-4']
+  ) {
   position: relative;
 }
 
-:is([id="ws-core-c-menu-drilldown-with-breadcrumbs---level-3"], [id="ws-core-c-menu-drilldown-with-breadcrumbs---level-4"]) .pf-v6-c-breadcrumb__dropdown .pf-v6-c-menu {
+:is(
+    [id='ws-core-c-menu-drilldown-with-breadcrumbs---level-3'],
+    [id='ws-core-c-menu-drilldown-with-breadcrumbs---level-4']
+  )
+  .pf-v6-c-breadcrumb__dropdown
+  .pf-v6-c-menu {
   position: absolute;
 }
 

@@ -2,7 +2,7 @@
 
 @include pf-root($clipboard-copy) {
   // Toggle icon
-  --#{$clipboard-copy}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$clipboard-copy}__toggle-icon--Transition: 0.2s ease-in 0s;
   --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Clipboard copy expanded content
@@ -15,7 +15,9 @@
   --#{$clipboard-copy}__expandable-content--BorderBlockStartWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderInlineEndWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderBlockEndWidth: var(--pf-t--global--border--width--control--default);
-  --#{$clipboard-copy}__expandable-content--BorderInlineStartWidth: var(--pf-t--global--border--width--control--default);
+  --#{$clipboard-copy}__expandable-content--BorderInlineStartWidth: var(
+    --pf-t--global--border--width--control--default
+  );
   --#{$clipboard-copy}__expandable-content--BorderColor: var(--pf-t--global--border--color--default);
   --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
@@ -57,7 +59,6 @@
     }
   }
 }
-
 
 .#{$clipboard-copy}__group {
   display: flex;
@@ -109,7 +110,6 @@
 }
 
 .#{$clipboard-copy}__actions-item {
-
   .#{$button}.pf-m-plain {
     --#{$button}--m-plain__icon--Color: var(--#{$clipboard-copy}__actions-item--button--Color);
     --#{$button}--m-plain--hover__icon--Color: var(--#{$clipboard-copy}__actions-item--button--hover--Color);
@@ -117,4 +117,3 @@
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
-

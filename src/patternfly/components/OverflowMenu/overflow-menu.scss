@@ -48,6 +48,6 @@
 
 // - Overflow menu content - Overflow menu control
 .#{$overflow-menu}__content,
-.#{$overflow-menu}__control  {
+.#{$overflow-menu}__control {
   column-gap: var(--#{$overflow-menu}--ColumnGap);
 }

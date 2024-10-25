@@ -7,7 +7,9 @@ wrapperTag: div
 import './Card.css'
 
 ## Demos
+
 ### Horizontal grid collapsed
+
 ```hbs
 {{#> card card--id="card-demo-horizontal-grid-collapsed-example"}}
   {{#> card-header}}
@@ -51,6 +53,7 @@ import './Card.css'
 ```
 
 ### Horizontal grid expanded
+
 ```hbs
 {{#> card card--id="card-demo-horizontal-grid-expanded-example" card--modifier="pf-m-expanded"}}
   {{#> card-header}}
@@ -149,6 +152,7 @@ import './Card.css'
 ```
 
 ### Horizontal split
+
 ```hbs
 {{#> card card--id="card-demo-horizontal-split-example"}}
   {{#> grid grid--modifier="pf-m-all-6-col-on-md"}}
@@ -168,6 +172,7 @@ import './Card.css'
 ```
 
 ### Details card
+
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v6-l-gallery--GridTemplateColumns--min: 260px;"'}}
   {{#> card}}
@@ -284,6 +289,7 @@ import './Card.css'
 ```
 
 ### Aggregate status card
+
 ```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item}}
@@ -527,6 +533,7 @@ import './Card.css'
 ```
 
 ### Status, tabbed card
+
 ```hbs
 {{#> card}}
   {{#> card-header}}
@@ -657,21 +664,25 @@ import './Card.css'
 ```
 
 ### Status card
+
 ```hbs
 {{> card-demo--status-card card--id="status-card-default-example"}}
 ```
 
 ### Status card expanded notifications
+
 ```hbs
 {{> card-demo--status-card card--id="status-card-expanded-example" card-demo--notication-drawer--IsOpen="true"}}
 ```
 
 ### Status card expanded with popover
+
 ```hbs
 {{> card-demo--status-card card--id="status-card-expanded-with-popover-example" card-demo--popover--IsOpen="true" card-demo--notication-drawer--IsOpen="true"}}
 ```
 
 ### Utilization card 1
+
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v6-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-1-example"}}
@@ -709,6 +720,7 @@ import './Card.css'
 ```
 
 ### Utilization card 2
+
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v6-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-2-example"}}
@@ -744,6 +756,7 @@ import './Card.css'
 ```
 
 ### Utilization card 3
+
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
@@ -783,6 +796,7 @@ import './Card.css'
 ```
 
 ### Utilization card 4
+
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v6-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-4-example"}}
@@ -802,6 +816,7 @@ import './Card.css'
 ```
 
 ### Nested cards with expand toggle on the right
+
 ```hbs
 {{#> card card--id="nested-cards-toggle-right-example"}}
   {{#> card-header}}
@@ -846,6 +861,7 @@ import './Card.css'
 ```
 
 ### Nested cards with expand toggle
+
 ```hbs
 {{#> card card--id="nested-cards-example"}}
   {{#> card-header}}
@@ -890,6 +906,7 @@ import './Card.css'
 ```
 
 ### With accordion
+
 ```hbs
 {{#> card card--id="with-accordion-example"}}
   {{#> card-header}}
@@ -940,6 +957,7 @@ import './Card.css'
 ```
 
 ### Trend card 1
+
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
@@ -968,6 +986,7 @@ import './Card.css'
 ```
 
 ### Trend card 2
+
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v6-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="trend-card-2-example"}}
@@ -1003,6 +1022,7 @@ import './Card.css'
 ```
 
 ### Log view
+
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
@@ -1093,6 +1113,7 @@ import './Card.css'
 ```
 
 ### Events view
+
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>

@@ -9,7 +9,9 @@
   --#{$inline-edit}__action--c-button--m-valid--m-plain--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Icon button
-  --#{$inline-edit}__action--m-icon-group--item--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--plain);
+  --#{$inline-edit}__action--m-icon-group--item--MarginInlineEnd: var(
+    --pf-t--global--spacer--gap--action-to-action--plain
+  );
 
   // Footer group
   --#{$inline-edit}__group--m-footer--MarginBlockStart: var(--pf-t--global--spacer--xl);
@@ -28,7 +30,9 @@
   }
 
   &.pf-m-icon-group {
-    --#{$inline-edit}__group--item--MarginInlineEnd: var(--#{$inline-edit}__action--m-icon-group--item--MarginInlineEnd);
+    --#{$inline-edit}__group--item--MarginInlineEnd: var(
+      --#{$inline-edit}__action--m-icon-group--item--MarginInlineEnd
+    );
   }
 
   // Footer

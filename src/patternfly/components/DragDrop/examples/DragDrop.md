@@ -7,7 +7,9 @@ cssPrefix: pf-v6-c-drag-drop
 import './DragDrop.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> droppable}}
   {{> draggable}}
@@ -22,6 +24,7 @@ import './DragDrop.css'
 ```
 
 ### Dragging
+
 ```hbs
 {{#> droppable droppable--modifier="pf-m-dragging"}}
   {{> draggable}}
@@ -36,6 +39,7 @@ import './DragDrop.css'
 ```
 
 ### Drag outside
+
 ```hbs
 {{#> droppable droppable--modifier="pf-m-dragging pf-m-drag-outside"}}
   {{> draggable}}
@@ -50,10 +54,12 @@ import './DragDrop.css'
 ```
 
 ## Documentation
+
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-draggable` | `*` | Initiates a draggable element. |
-| `.pf-v6-c-droppable` | `*` | Initiates a droppable element. |
-| `.pf-m-dragging` | `.pf-v6-c-draggable`, `.pf-v6-c-droppable` | Indicates a draggable and droppable element are in the dragging state. |
+
+| Class                | Applied to                                 | Outcome                                                                  |
+| -------------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| `.pf-v6-c-draggable` | `*`                                        | Initiates a draggable element.                                           |
+| `.pf-v6-c-droppable` | `*`                                        | Initiates a droppable element.                                           |
+| `.pf-m-dragging`     | `.pf-v6-c-draggable`, `.pf-v6-c-droppable` | Indicates a draggable and droppable element are in the dragging state.   |
 | `.pf-m-drag-outside` | `.pf-v6-c-draggable`, `.pf-v6-c-droppable` | Indicates a draggable element is dragged outside of a droppable element. |

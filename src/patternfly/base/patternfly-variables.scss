@@ -1,8 +1,8 @@
 @use '../sass-utilities' as *;
-@use "./tokens/tokens-palette" as palette;
-@use "./tokens/tokens-default" as default;
-@use "./tokens/tokens-dark" as dark;
-@use "./tokens/tokens-local" as local;
+@use './tokens/tokens-palette' as palette;
+@use './tokens/tokens-default' as default;
+@use './tokens/tokens-dark' as dark;
+@use './tokens/tokens-local' as local;
 
 :root {
   @include pf-v6-set-inverse(false);

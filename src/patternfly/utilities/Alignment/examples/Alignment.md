@@ -6,7 +6,9 @@ section: utility-classes
 import './Alignment.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> alignment alignment--type="start"}}
   Text start
@@ -25,13 +27,16 @@ import './Alignment.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 [Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-text-align-start-on-lg**
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-u-text-align-start{-on-[breakpoint]}` | `*` |  Aligns text start |
-| `.pf-v6-u-text-align-center{-on-[breakpoint]}` | `*` |  Aligns text center |
-| `.pf-v6-u-text-align-end{-on-[breakpoint]}` | `*` |  Aligns text end |
-| `.pf-v6-u-text-align-justify{-on-[breakpoint]}` | `*` |  Aligns text justify |
+
+| Class                                           | Applied to | Outcome             |
+| ----------------------------------------------- | ---------- | ------------------- |
+| `.pf-v6-u-text-align-start{-on-[breakpoint]}`   | `*`        | Aligns text start   |
+| `.pf-v6-u-text-align-center{-on-[breakpoint]}`  | `*`        | Aligns text center  |
+| `.pf-v6-u-text-align-end{-on-[breakpoint]}`     | `*`        | Aligns text end     |
+| `.pf-v6-u-text-align-justify{-on-[breakpoint]}` | `*`        | Aligns text justify |

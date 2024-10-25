@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-$pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map('sm', 'md', 'lg', 'xl', '2xl');
 
 @mixin pf-v6-c-form--m-horizontal {
   // default horizontal styles applied at medium breakpoint
@@ -54,7 +54,27 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // plus the border width used by the text inputs is 1px
   // So we need to adjust by 21 - 16.1 + 1 = 5.9px
 
-  --#{$form}--m-horizontal__group-label--md--PaddingBlockStart: calc((((((var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) + (2 * var(--pf-t--global--border--width--control--default))) - var(--pf-t--global--font--size--body--default)) / 2) + var(--pf-t--global--font--size--body--default)) - ((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) + var(--pf-t--global--border--width--control--default));
+  --#{$form}--m-horizontal__group-label--md--PaddingBlockStart: calc(
+    (
+        (
+            (
+                (
+                    (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) +
+                      (2 * var(--pf-t--global--border--width--control--default))
+                  ) - var(--pf-t--global--font--size--body--default)
+              ) / 2
+          ) + var(--pf-t--global--font--size--body--default)
+      ) -
+      (
+        (
+            (
+                (var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(
+                    --pf-t--global--font--size--body--sm
+                  )
+              ) / 2
+          ) + var(--pf-t--global--font--size--body--sm)
+      ) + var(--pf-t--global--border--width--control--default)
+  );
   --#{$form}__group-label--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // Use the no-padding modifier to align form groups that aren't text inputs
@@ -64,7 +84,26 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // - controls like checkboxes use the medium font and small line height
   // - This comes out to a difference of 2.3px.
   --#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingBlockStart: 0;
-  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--default)) / 2) + var(--pf-t--global--font--size--body--default)));
+  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(
+    (
+        (
+            (
+                (var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(
+                    --pf-t--global--font--size--body--sm
+                  )
+              ) / 2
+          ) + var(--pf-t--global--font--size--body--sm)
+      ) -
+      (
+        (
+            (
+                (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) - var(
+                    --pf-t--global--font--size--body--default
+                  )
+              ) / 2
+          ) + var(--pf-t--global--font--size--body--default)
+      )
+  );
 
   // Label
   --#{$form}__label--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -93,7 +132,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__group-control--m-inline--Gap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$form}__group-control__helper-text--MarginBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$form}__group-control--m-stack--Gap: var(--pf-t--global--spacer--gap--group--vertical);
-  --#{$form}__group-control--m-stack__helper-text--MarginBlockStart: calc(var(--#{$form}__group-control--m-stack--Gap) * -1 + var(--#{$form}__helper-text--MarginBlockStart--base));
+  --#{$form}__group-control--m-stack__helper-text--MarginBlockStart: calc(
+    var(--#{$form}__group-control--m-stack--Gap) * -1 + var(--#{$form}__helper-text--MarginBlockStart--base)
+  );
 
   // Actions
   --#{$form}__actions--child--MarginBlockStart: var(--pf-t--global--spacer--sm);
@@ -125,14 +166,23 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group--BorderBlockEndWidth: var(--#{$form}__field-group--border-width-base);
   --#{$form}__field-group--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$form}__field-group--field-group--MarginBlockStart: calc(var(--#{$form}--GridGap) * -1);
-  --#{$form}__field-group--GridTemplateColumns--toggle: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) + var(--pf-t--global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
+  --#{$form}__field-group--GridTemplateColumns--toggle: calc(
+    var(--pf-t--global--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) +
+      var(--pf-t--global--spacer--xs)
+  ); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
   --#{$form}__field-group-toggle--PaddingBlockStart: var(--#{$form}__field-group-header--PaddingBlockStart);
   --#{$form}__field-group-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
   --#{$form}__field-group__field-group__field-group-toggle--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$form}__field-group-header-toggle--BorderWidth--base: var(--pf-t--global--border--width--divider--default);
-  --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderBlockStartWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
-  --#{$form}__field-group-toggle-button--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
-  --#{$form}__field-group-toggle-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderBlockStartWidth: var(
+    --#{$form}__field-group-header-toggle--BorderWidth--base
+  );
+  --#{$form}__field-group-toggle-button--MarginBlockStart: calc(
+    var(--pf-t--global--spacer--control--vertical--plain) * -1
+  );
+  --#{$form}__field-group-toggle-button--MarginBlockEnd: calc(
+    var(--pf-t--global--spacer--control--vertical--plain) * -1
+  );
   --#{$form}__field-group-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
   --#{$form}__field-group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
@@ -144,7 +194,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group__field-group__field-group-header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group__field-group__field-group-header--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group-toggle--field-group-header--GridColumn: 2 / 3;
-  --#{$form}__field-group__field-group--field-group__field-group-header--after--BorderBlockStartWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
+  --#{$form}__field-group__field-group--field-group__field-group-header--after--BorderBlockStartWidth: var(
+    --#{$form}__field-group-header-toggle--BorderWidth--base
+  );
   --#{$form}__field-group-header-description--MarginBlockStart: var(--pf-t--global--spacer--xs);
   --#{$form}__field-group-header-description--Color: var(--pf-t--global--text--color--subtle);
   --#{$form}__field-group-header-actions--MarginInlineStart: var(--pf-t--global--spacer--sm);
@@ -154,7 +206,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-body--GridColumn: 2 / 3;
   --#{$form}__field-group__field-group__field-group-body--GridColumn: 1 / 3;
   --#{$form}__field-group__field-group__field-group-toggle--field-group-body--GridColumn: 2 / 3;
-  --#{$form}__field-group-body__field-group--last-child--MarginBlockEnd: calc(var(--#{$form}__field-group-body--PaddingBlockEnd) * -1);
+  --#{$form}__field-group-body__field-group--last-child--MarginBlockEnd: calc(
+    var(--#{$form}__field-group-body--PaddingBlockEnd) * -1
+  );
 }
 
 .#{$form} {
@@ -173,7 +227,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
       .#{$form}__group {
         display: grid;
-        grid-template-columns: var(--#{$form}--m-horizontal__group-label--md--GridColumnWidth) var(--#{$form}--m-horizontal__group-control--md--GridColumnWidth);
+        grid-template-columns: var(--#{$form}--m-horizontal__group-label--md--GridColumnWidth) var(
+            --#{$form}--m-horizontal__group-control--md--GridColumnWidth
+          );
         grid-column-gap: var(--#{$form}--m-horizontal__group-label--md--GridColumnGap);
       }
 
@@ -182,7 +238,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
         // stylelint-disable max-nesting-depth
         &.pf-m-no-padding-top {
-          --#{$form}--m-horizontal__group-label--md--PaddingBlockStart: var(--#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingBlockStart);
+          --#{$form}--m-horizontal__group-label--md--PaddingBlockStart: var(
+            --#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingBlockStart
+          );
 
           transform: translateY(var(--#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY));
         }
@@ -356,8 +414,10 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   display: grid;
   grid-template-columns: minmax(var(--#{$form}__field-group--GridTemplateColumns--toggle), max-content) 1fr;
-  border-block-start: var(--#{$form}__field-group--BorderBlockStartWidth) solid var(--#{$form}__field-group--BorderBlockStartColor);
-  border-block-end: var(--#{$form}__field-group--BorderBlockEndWidth) solid var(--#{$form}__field-group--BorderBlockEndColor);
+  border-block-start: var(--#{$form}__field-group--BorderBlockStartWidth) solid
+    var(--#{$form}__field-group--BorderBlockStartColor);
+  border-block-end: var(--#{$form}__field-group--BorderBlockEndWidth) solid
+    var(--#{$form}__field-group--BorderBlockEndColor);
 
   &:last-child {
     --#{$form}__field-group--BorderBlockEndWidth: 0;
@@ -375,13 +435,21 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // nested
   & & {
     --#{$form}__field-group-body--GridColumn: var(--#{$form}__field-group__field-group__field-group-body--GridColumn);
-    --#{$form}__field-group-toggle--PaddingBlockStart: var(--#{$form}__field-group__field-group__field-group-toggle--PaddingBlockStart);
-    --#{$form}__field-group-header--PaddingBlockStart: var(--#{$form}__field-group__field-group__field-group-header--PaddingBlockStart);
-    --#{$form}__field-group-header--PaddingBlockEnd: var(--#{$form}__field-group__field-group__field-group-header--PaddingBlockEnd);
+    --#{$form}__field-group-toggle--PaddingBlockStart: var(
+      --#{$form}__field-group__field-group__field-group-toggle--PaddingBlockStart
+    );
+    --#{$form}__field-group-header--PaddingBlockStart: var(
+      --#{$form}__field-group__field-group__field-group-header--PaddingBlockStart
+    );
+    --#{$form}__field-group-header--PaddingBlockEnd: var(
+      --#{$form}__field-group__field-group__field-group-header--PaddingBlockEnd
+    );
     --#{$form}__field-group-body--PaddingBlockStart: 0;
 
     .#{$form}__field-group-toggle ~ .#{$form}__field-group-body {
-      --#{$form}__field-group-body--GridColumn: var(--#{$form}__field-group__field-group__field-group-toggle--field-group-body--GridColumn);
+      --#{$form}__field-group-body--GridColumn: var(
+        --#{$form}__field-group__field-group__field-group-toggle--field-group-body--GridColumn
+      );
     }
   }
 
@@ -412,7 +480,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   display: inline-block;
   min-width: var(--#{$form}__field-group-toggle-icon--MinWidth);
   text-align: center;
-  transition: transform var(--#{$form}__field-group-toggle-icon--TransitionDuration) var(--#{$form}__field-group-toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$form}__field-group-toggle-icon--TransitionDuration)
+    var(--#{$form}__field-group-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$form}__field-group-toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
@@ -469,4 +538,3 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     }
   }
 }
-

@@ -37,11 +37,19 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   // List item
   --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
-  --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
-  --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
-  --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
+  --#{$dual-list-selector}__list-item-row--BackgroundColor: var(
+    --pf-t--global--background--color--action--plain--default
+  );
+  --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(
+    --pf-t--global--background--color--primary--hover
+  );
+  --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(
+    --pf-t--global--background--color--primary--clicked
+  );
+  --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(
+    --pf-t--global--background--color--action--plain--clicked
+  );
+  --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: 0.4;
 
   // Item
   --#{$dual-list-selector}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -49,8 +57,13 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$dual-list-selector}__item--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$dual-list-selector}__item--m-expandable--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$dual-list-selector}__item--indent--base: calc(var(--pf-t--global--spacer--md) + var(--pf-t--global--spacer--sm) + var(--#{$dual-list-selector}__list-item-row--FontSize));
-  --#{$dual-list-selector}__item--nested-indent--base: calc(var(--#{$dual-list-selector}__item--indent--base) - var(--pf-t--global--spacer--md));
+  --#{$dual-list-selector}__item--indent--base: calc(
+    var(--pf-t--global--spacer--md) + var(--pf-t--global--spacer--sm) +
+      var(--#{$dual-list-selector}__list-item-row--FontSize)
+  );
+  --#{$dual-list-selector}__item--nested-indent--base: calc(
+    var(--#{$dual-list-selector}__item--indent--base) - var(--pf-t--global--spacer--md)
+  );
   --#{$dual-list-selector}__draggable--item--PaddingInlineStart: var(--pf-t--global--spacer--xs);
 
   // Item text
@@ -79,13 +92,17 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   // Badge
   --#{$dual-list-selector}__item-count--MarginInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
+  --#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor: var(
+    --pf-t--global--color--nonstatus--gray--default
+  );
 
   // Icon
   --#{$dual-list-selector}__item-toggle-icon--Rotate: 0;
   --#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
   --#{$dual-list-selector}__item-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
-  --#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction: var(
+    --pf-t--global--motion--timing-function--default
+  );
   --#{$dual-list-selector}__item-toggle-icon--MinWidth: var(--#{$dual-list-selector}__list-item-row--FontSize);
   --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
 }
@@ -93,15 +110,21 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 .#{$dual-list-selector} {
   display: grid;
   grid-template-areas:
-    "pane-header . pane-header-c"
-    "pane-tools . pane-tools-c"
-    "pane-status . pane-status-c"
-    "pane-menu controls pane-menu-c";
+    'pane-header . pane-header-c'
+    'pane-tools . pane-tools-c'
+    'pane-status . pane-status-c'
+    'pane-menu controls pane-menu-c';
   grid-template-rows: repeat(3, auto) auto;
   grid-template-columns:
-    minmax(var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--min), var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--max))
+    minmax(
+      var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--min),
+      var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--max)
+    )
     min-content
-    minmax(var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--min), var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--max));
+    minmax(
+      var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--min),
+      var(--#{$dual-list-selector}--GridTemplateColumns--pane--MinMax--max)
+    );
 }
 
 .#{$dual-list-selector}__pane {
@@ -176,7 +199,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
       @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX)),
-        $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))})
       );
 
       position: absolute;
@@ -194,20 +217,28 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
 .#{$dual-list-selector}__list-item {
   &:focus {
-    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(
+      --#{$dual-list-selector}__list-item-row--hover--BackgroundColor
+    );
   }
 
   &.pf-m-expandable {
-    --#{$dual-list-selector}__item--PaddingInlineStart: var(--#{$dual-list-selector}__item--m-expandable--PaddingInlineStart);
+    --#{$dual-list-selector}__item--PaddingInlineStart: var(
+      --#{$dual-list-selector}__item--m-expandable--PaddingInlineStart
+    );
   }
 
   &.pf-m-expanded {
-    --#{$dual-list-selector}__item-toggle-icon--Rotate: var(--#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate);
+    --#{$dual-list-selector}__item-toggle-icon--Rotate: var(
+      --#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate
+    );
   }
 
   &.pf-m-disabled {
     --#{$dual-list-selector}__item-text--Color: var(--#{$dual-list-selector}__list-item--m-disabled__item-text--Color);
-    --#{$dual-list-selector}__item-toggle-icon--Color: var(--#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color);
+    --#{$dual-list-selector}__item-toggle-icon--Color: var(
+      --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color
+    );
 
     pointer-events: none;
   }
@@ -219,7 +250,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   background-color: var(--#{$dual-list-selector}__list-item-row--BackgroundColor);
 
   &.pf-m-selected {
-    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(
+      --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor
+    );
 
     .#{$dual-list-selector}__item-text {
       --#{$dual-list-selector}__item-text--Color: var(--#{$dual-list-selector}__list-item-row--m-selected__text--Color);
@@ -229,7 +262,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   }
 
   &:hover {
-    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(
+      --#{$dual-list-selector}__list-item-row--hover--BackgroundColor
+    );
   }
 
   &.pf-m-check {
@@ -237,7 +272,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   }
 
   &.pf-m-ghost-row {
-    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BackgroundColor: var(
+      --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor
+    );
 
     opacity: var(--#{$dual-list-selector}__list-item--m-ghost-row--Opacity);
   }
@@ -257,7 +294,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   display: flex;
 
   + .#{$dual-list-selector}__item {
-    --#{$dual-list-selector}__item--PaddingInlineStart: var(--#{$dual-list-selector}__draggable--item--PaddingInlineStart);
+    --#{$dual-list-selector}__item--PaddingInlineStart: var(
+      --#{$dual-list-selector}__draggable--item--PaddingInlineStart
+    );
   }
 
   .#{$button} {
@@ -339,7 +378,8 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   min-width: var(--#{$dual-list-selector}__item-toggle-icon--MinWidth);
   color: var(--#{$dual-list-selector}__item-toggle-icon--Color, inherit);
   text-align: center;
-  transition: transform var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration) var(--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration)
+    var(--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$dual-list-selector}__item-toggle-icon--Rotate));
 }
 
@@ -350,11 +390,17 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   @for $i from 1 through $pf-v6-c-dual-list-selector__item--MaxNesting {
     #{$nested-item} {
-      --#{$dual-list-selector}__item--PaddingInlineStart: calc(var(--#{$dual-list-selector}__item--nested-indent--base) * #{$i} + var(--#{$dual-list-selector}__item--indent--base));
-      --#{$dual-list-selector}__list__list__item-toggle--InsetInlineStart: var(--#{$dual-list-selector}__item--PaddingInlineStart);
+      --#{$dual-list-selector}__item--PaddingInlineStart: calc(
+        var(--#{$dual-list-selector}__item--nested-indent--base) *
+          #{$i} +
+          var(--#{$dual-list-selector}__item--indent--base)
+      );
+      --#{$dual-list-selector}__list__list__item-toggle--InsetInlineStart: var(
+        --#{$dual-list-selector}__item--PaddingInlineStart
+      );
     }
 
-    $nested-item: $nested-item + " " + $root;
+    $nested-item: $nested-item + ' ' + $root;
   }
 }
 // stylelint-enable

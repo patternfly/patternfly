@@ -4,7 +4,9 @@ section: components
 ---
 
 ## Demos
+
 ### Basic
+
 ```hbs isFullscreen
 {{> page-template page-template--id="modal-basic-example"}}
 
@@ -33,6 +35,7 @@ section: components
 ```
 
 ### Scrollable content
+
 ```hbs isFullscreen
 {{> page-template page-template--id="modal-scrollable-content-example"}}
 
@@ -71,6 +74,7 @@ section: components
 ```
 
 ### Medium
+
 ```hbs isFullscreen
 {{> page-template page-template--id="modal-medium-example"}}
 
@@ -99,6 +103,7 @@ section: components
 ```
 
 ### Large
+
 ```hbs isFullscreen
 {{> page-template page-template--id="modal-large-example"}}
 
@@ -127,6 +132,7 @@ section: components
 ```
 
 ### Top aligned
+
 ```hbs isFullscreen
 {{> page-template page-template--id="modal-large-example"}}
 
@@ -155,6 +161,7 @@ section: components
 ```
 
 ### Modal with form
+
 ```hbs isFullscreen
 {{> page-template page-template--id="modal-with-form-example"}}
 

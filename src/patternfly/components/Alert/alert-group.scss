@@ -23,11 +23,14 @@
   --#{$alert-group}__overflow-button--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$alert-group}__overflow-button--hover--Color: var(--pf-t--global--text--color--link--hover);
   --#{$alert-group}__overflow-button--hover--BackgroundColor: var(--pf-t--global--background--color--floating--hover);
-  --#{$alert-group}__overflow-button--hover--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
+  --#{$alert-group}__overflow-button--hover--BoxShadow: var(--pf-t--global--box-shadow--lg),
+    var(--pf-t--global--box-shadow--lg--bottom);
   --#{$alert-group}__overflow-button--focus--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$alert-group}__overflow-button--focus--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
+  --#{$alert-group}__overflow-button--focus--BoxShadow: var(--pf-t--global--box-shadow--lg),
+    var(--pf-t--global--box-shadow--lg--bottom);
   --#{$alert-group}__overflow-button--active--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$alert-group}__overflow-button--active--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
+  --#{$alert-group}__overflow-button--active--BoxShadow: var(--pf-t--global--box-shadow--lg),
+    var(--pf-t--global--box-shadow--lg--bottom);
 }
 
 .#{$alert-group} {
@@ -70,23 +73,30 @@
   // This transition will happen when the item is added (.pf-m-offstage-top is removed)
   // Reduced motion by default
   // transparency change only
-  transition: 
-  opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
+  transition: opacity var(--pf-t--global--motion--duration--fade--default)
+    var(--pf-t--global--motion--timing-function--decelerate) 0s;
   transform: translateX(0) translateY(0);
 
   // This transition will happen when the item is added (.pf-m-offstage-top is removed)
   // give it height, then slide it down into place
   // These values are for regular motion
   @media screen and (prefers-reduced-motion: no-preference) {
-    transition: 
-      opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
-      transform var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
-      grid-template-rows var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s, 
-      margin-block var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
+    transition:
+      opacity var(--pf-t--global--motion--duration--fade--default)
+        var(--pf-t--global--motion--timing-function--decelerate)
+        var(--pf-t--global--motion--duration--slide-in--default),
+      transform var(--pf-t--global--motion--duration--slide-in--default)
+        var(--pf-t--global--motion--timing-function--decelerate)
+        var(--pf-t--global--motion--duration--slide-in--default),
+      grid-template-rows var(--pf-t--global--motion--duration--slide-in--default)
+        var(--pf-t--global--motion--timing-function--decelerate) 0s,
+      margin-block var(--pf-t--global--motion--duration--slide-in--default)
+        var(--pf-t--global--motion--timing-function--decelerate) 0s;
 
-      & .pf-v6-c-alert {
-        transition: all var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate);
-      }
+    & .pf-v6-c-alert {
+      transition: all var(--pf-t--global--motion--duration--slide-in--default)
+        var(--pf-t--global--motion--timing-function--decelerate);
+    }
   }
 
   // This class is used BEFORE the alert item comes into the list
@@ -118,8 +128,8 @@
     // This transition will happen when the item is removed
     // Reduced motion by default
     // transparency change only
-    transition: 
-      opacity var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) 0s;
+    transition: opacity var(--pf-t--global--motion--duration--fade--short)
+      var(--pf-t--global--motion--timing-function--accelerate) 0s;
     transform: translateX(100%);
 
     & .pf-v6-c-alert {
@@ -133,21 +143,31 @@
     // give it height, then slide it down into place
     // These values are for regular motion
     @media screen and (prefers-reduced-motion: no-preference) {
-      transition: 
-        transform var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s, 
-        opacity var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s,
-        margin-block var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short), 
-        grid-template-rows var(--pf-t--global--motion--duration--slide-in--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
+      transition:
+        transform var(--pf-t--global--motion--duration--slide-out--short)
+          var(--pf-t--global--motion--timing-function--accelerate) 0s,
+        opacity var(--pf-t--global--motion--duration--slide-out--short)
+          var(--pf-t--global--motion--timing-function--accelerate) 0s,
+        margin-block var(--pf-t--global--motion--duration--fade--short)
+          var(--pf-t--global--motion--timing-function--accelerate)
+          var(--pf-t--global--motion--duration--slide-out--short),
+        grid-template-rows var(--pf-t--global--motion--duration--slide-in--short)
+          var(--pf-t--global--motion--timing-function--accelerate)
+          var(--pf-t--global--motion--duration--slide-out--short);
 
-        & .pf-v6-c-alert {
-          transition: all var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
-        }
+      & .pf-v6-c-alert {
+        transition: all var(--pf-t--global--motion--duration--slide-out--short)
+          var(--pf-t--global--motion--timing-function--accelerate)
+          var(--pf-t--global--motion--duration--slide-out--short);
+      }
     }
   }
 
   &:hover {
     --#{$alert-group}__overflow-button--Color: var(--#{$alert-group}__overflow-button--hover--Color);
-    --#{$alert-group}__overflow-button--BackgroundColor: var(--#{$alert-group}__overflow-button--hover--BackgroundColor);
+    --#{$alert-group}__overflow-button--BackgroundColor: var(
+      --#{$alert-group}__overflow-button--hover--BackgroundColor
+    );
     --#{$alert-group}__overflow-button--BoxShadow: var(--#{$alert-group}__overflow-button--hover--BoxShadow);
   }
 

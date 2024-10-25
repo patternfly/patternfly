@@ -27,10 +27,14 @@
   background-color: var(--#{$tab-content}--BackgroundColor);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$tab-content}__body--m-padding--PaddingBlockStart: var(--#{$tab-content}__body--m-padding--xl--PaddingBlockStart);
+    --#{$tab-content}__body--m-padding--PaddingBlockStart: var(
+      --#{$tab-content}__body--m-padding--xl--PaddingBlockStart
+    );
     --#{$tab-content}__body--m-padding--PaddingInlineEnd: var(--#{$tab-content}__body--m-padding--xl--PaddingInlineEnd);
     --#{$tab-content}__body--m-padding--PaddingBlockEnd: var(--#{$tab-content}__body--m-padding--xl--PaddingBlockEnd);
-    --#{$tab-content}__body--m-padding--PaddingInlineStart: var(--#{$tab-content}__body--m-padding--xl--PaddingInlineStart);
+    --#{$tab-content}__body--m-padding--PaddingInlineStart: var(
+      --#{$tab-content}__body--m-padding--xl--PaddingInlineStart
+    );
   }
 
   &.pf-m-secondary {

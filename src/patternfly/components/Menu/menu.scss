@@ -103,7 +103,9 @@
   --#{$menu}__item-action--icon--size: var(--#{$menu}__item-action--FontSize, var(--pf-t--global--icon--size--md));
   --#{$menu}__item-action--Color: var(--pf-t--global--icon--color--subtle);
   --#{$menu}__item-action--m-favorited--Color: var(--pf-t--global--icon--color--favorite--clicked);
-  --#{$menu}__item-action--button--MinWidth: calc(var(--#{$menu}__item-action--icon--size) + var(--pf-t--global--spacer--sm) * 2);
+  --#{$menu}__item-action--button--MinWidth: calc(
+    var(--#{$menu}__item-action--icon--size) + var(--pf-t--global--spacer--sm) * 2
+  );
 
   // * Menu select icon
   --#{$menu}__item-select-icon--Color: var(--pf-t--global--icon--color--subtle);
@@ -119,26 +121,41 @@
 
   // * Menu flyout
   --#{$menu}--m-flyout__Zindex: var(--pf-t--global--z-index--sm);
-  --#{$menu}--m-flyout__menu--InsetBlockStart: calc(var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset));
+  --#{$menu}--m-flyout__menu--InsetBlockStart: calc(
+    var(--#{$menu}__list--PaddingBlockStart) * -1 + var(--#{$menu}--m-flyout__menu--top-offset)
+  );
   --#{$menu}--m-flyout__menu--InsetInlineEnd: auto;
   --#{$menu}--m-flyout__menu--InsetBlockEnd: auto;
   --#{$menu}--m-flyout__menu--InsetInlineStart: calc(100% + var(--#{$menu}--m-flyout__menu--left-offset));
   --#{$menu}--m-flyout__menu--m-top--InsetBlockEnd: calc(var(--#{$menu}__list--PaddingBlockStart) * -1);
-  --#{$menu}--m-flyout__menu--m-left--InsetInlineEnd: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
+  --#{$menu}--m-flyout__menu--m-left--InsetInlineEnd: calc(
+    100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset)
+  );
 
   // * Menu drilldown content
   // TODO Reduced motion default needed for drilldown
-  --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
+  --#{$menu}--m-drilldown__content--TransitionDuration--height: var(
+    --pf-t--global--motion--duration--slide-in--default
+  );
+  --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(
+    --pf-t--global--motion--duration--slide-in--default
+  );
+  --#{$menu}--m-drilldown__content--Transition: transform
+      var(--#{$menu}--m-drilldown__content--TransitionDuration--transform),
+    height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
 
   // * Menu drilldown menu
   --#{$menu}--m-drilldown--c-menu--InsetBlockStart: 0;
-  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
+  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(
+    --pf-t--global--motion--duration--slide-in--default
+  );
+  --#{$menu}--m-drilldown--c-menu--Transition: transform
+    var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
 
   // * Menu drilldown list
-  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(
+    --pf-t--global--motion--duration--slide-in--default
+  );
   --#{$menu}--m-drilldown__list--Transition: transform var(--#{$menu}--m-drilldown__list--TransitionDuration--transform);
 
   // * Menu drilled in
@@ -173,7 +190,7 @@
 // - Menu item disabled - Menu action disabled
 .#{$menu}__list-item,
 .#{$menu}__item-action {
-  &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled, [aria-disabled="true"]) {
+  &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled, [aria-disabled='true']) {
     --#{$menu}__item--Color: var(--#{$menu}__item--m-disabled--Color);
     --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
     --#{$menu}__item-external-icon--Color: var(--#{$menu}--icon--disabled--Color);
@@ -185,7 +202,7 @@
 }
 
 // - Menu hidden
-[class*="#{$menu}"]:is([hidden]) {
+[class*='#{$menu}']:is([hidden]) {
   display: none;
 }
 
@@ -207,8 +224,12 @@
   border-radius: var(--#{$menu}--BorderRadius);
   box-shadow: var(--#{$menu}--BoxShadow);
   // stylelint-disable declaration-no-important
-  transition-timing-function: var(--#{$menu}--TransitionTimingFunction) !important; // Note that this timing function is overriding the default that Popper is using
-  transition-duration: var(--#{$menu}--TransitionDuration) !important; // Note that this duration is overriding whatever value is supplied as a prop to Popper
+  transition-timing-function: var(
+    --#{$menu}--TransitionTimingFunction
+  ) !important; // Note that this timing function is overriding the default that Popper is using
+  transition-duration: var(
+    --#{$menu}--TransitionDuration
+  ) !important; // Note that this duration is overriding whatever value is supplied as a prop to Popper
   // stylelint-enable declaration-no-important
 
   .#{$menu} {
@@ -458,7 +479,7 @@
   &::before {
     position: absolute;
     inset: 0;
-    content: "";
+    content: '';
     background-color: var(--#{$menu}__list-item--BackgroundColor);
     transition: inherit;
   }
@@ -484,7 +505,10 @@
     --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--Color);
 
     &:is(:hover, :focus) {
-      --#{$menu}__item--Color: var(--#{$menu}__list-item--m-danger--hover--Color, var(--#{$menu}__list-item--m-danger--Color));
+      --#{$menu}__item--Color: var(
+        --#{$menu}__list-item--m-danger--hover--Color,
+        var(--#{$menu}__list-item--m-danger--Color)
+      );
     }
   }
 

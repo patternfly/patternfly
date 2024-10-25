@@ -2,5 +2,9 @@
 // -------------------------
 @use './mixins' as *;
 
-.sr-only { @include sr-only; }
-.sr-only-focusable { @include sr-only-focusable; }
+.sr-only {
+  @include sr-only;
+}
+.sr-only-focusable {
+  @include sr-only-focusable;
+}

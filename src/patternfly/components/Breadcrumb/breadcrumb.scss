@@ -9,11 +9,15 @@
   // Breadcrumb divider
   --#{$breadcrumb}__item-divider--Color: var(--pf-t--global--icon--color--regular);
   --#{$breadcrumb}__item-divider--MarginInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$breadcrumb}__item-divider--FontSize: var( --pf-t--global--font--size--body--sm);
+  --#{$breadcrumb}__item-divider--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Breadcrumb link
-  --#{$breadcrumb}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
-  --#{$breadcrumb}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
+  --#{$breadcrumb}__link--PaddingInlineStart: var(
+    --pf-t--global--spacer--sm
+  ); // use a mutable value for alignment control
+  --#{$breadcrumb}__link--PaddingInlineEnd: var(
+    --pf-t--global--spacer--sm
+  ); // use a mutable value for alignment control
   --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
   --#{$breadcrumb}__link--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--default);
   --#{$breadcrumb}__link--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--default);
@@ -24,7 +28,7 @@
   --#{$breadcrumb}__link--BackgroundColor: transparent;
 
   // Heading
-  --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
+  --#{$breadcrumb}__heading--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // breadcrumb dropdown
   --#{$breadcrumb}__menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
@@ -90,7 +94,6 @@
     --#{$breadcrumb}__link--TextDecorationLine: var(--#{$breadcrumb}__link--hover--TextDecorationLine);
     --#{$breadcrumb}__link--TextDecorationStyle: var(--#{$breadcrumb}__link--hover--TextDecorationStyle);
   }
-
 
   // current item
   &.pf-m-current {

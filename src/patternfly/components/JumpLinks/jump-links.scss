@@ -1,6 +1,6 @@
 @use '../../sass-utilities' as *;
 
-$pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map('base', 'sm', 'md', 'lg', 'xl', '2xl');
 
 @include pf-root($jump-links) {
   // list
@@ -40,11 +40,15 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__link--before--BorderBlockEndWidth: 0;
   --#{$jump-links}__link--before--BorderInlineStartWidth: 0;
   --#{$jump-links}__link--before--BorderColor: transparent;
-  --#{$jump-links}__item--m-current__link--before--BorderBlockStartWidth: var(--pf-t--global--border--width--extra-strong);
+  --#{$jump-links}__item--m-current__link--before--BorderBlockStartWidth: var(
+    --pf-t--global--border--width--extra-strong
+  );
   --#{$jump-links}__item--m-current__link--before--BorderInlineStartWidth: 0;
   --#{$jump-links}__item--m-current__link--before--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$jump-links}--m-vertical__item--m-current__link--before--BorderBlockStartWidth: 0;
-  --#{$jump-links}--m-vertical__item--m-current__link--before--BorderInlineStartWidth: var(--pf-t--global--border--width--extra-strong);
+  --#{$jump-links}--m-vertical__item--m-current__link--before--BorderInlineStartWidth: var(
+    --pf-t--global--border--width--extra-strong
+  );
 
   // text
   --#{$jump-links}__link-text--Color: var(--pf-t--global--text--color--subtle);
@@ -85,17 +89,25 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
     --#{$jump-links}__list--PaddingInlineEnd: var(--#{$jump-links}--m-vertical__list--PaddingInlineEnd);
     --#{$jump-links}__list--PaddingBlockEnd: var(--#{$jump-links}--m-vertical__list--PaddingBlockEnd);
     --#{$jump-links}__list--PaddingInlineStart: var(--#{$jump-links}--m-vertical__list--PaddingInlineStart);
-    --#{$jump-links}__list--before--BorderBlockStartWidth: var(--#{$jump-links}--m-vertical__list--before--BorderBlockStartWidth);
-    --#{$jump-links}__list--before--BorderInlineStartWidth: var(--#{$jump-links}--m-vertical__list--before--BorderInlineStartWidth);
-    --#{$jump-links}__item--m-current__link--before--BorderBlockStartWidth: var(--#{$jump-links}--m-vertical__item--m-current__link--before--BorderBlockStartWidth);
-    --#{$jump-links}__item--m-current__link--before--BorderInlineStartWidth: var(--#{$jump-links}--m-vertical__item--m-current__link--before--BorderInlineStartWidth);
+    --#{$jump-links}__list--before--BorderBlockStartWidth: var(
+      --#{$jump-links}--m-vertical__list--before--BorderBlockStartWidth
+    );
+    --#{$jump-links}__list--before--BorderInlineStartWidth: var(
+      --#{$jump-links}--m-vertical__list--before--BorderInlineStartWidth
+    );
+    --#{$jump-links}__item--m-current__link--before--BorderBlockStartWidth: var(
+      --#{$jump-links}--m-vertical__item--m-current__link--before--BorderBlockStartWidth
+    );
+    --#{$jump-links}__item--m-current__link--before--BorderInlineStartWidth: var(
+      --#{$jump-links}--m-vertical__item--m-current__link--before--BorderInlineStartWidth
+    );
     --#{$jump-links}__list--FlexDirection: var(--#{$jump-links}--m-vertical__list--FlexDirection);
 
     flex-direction: column;
   }
 
   @each $breakpoint, $breakpoint-value in $pf-v6-c-jump-links--m-expandable--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: if($breakpoint != 'base', -on-#{$breakpoint}, '');
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-expandable#{$breakpoint-name} {
@@ -133,7 +145,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
     position: absolute;
     inset: 0;
     pointer-events: none;
-    content: "";
+    content: '';
     border: solid var(--#{$jump-links}__list--before--BorderColor);
     border-block-start-width: var(--#{$jump-links}__list--before--BorderBlockStartWidth);
     border-block-end-width: var(--#{$jump-links}__list--before--BorderBlockEndWidth);
@@ -171,7 +183,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
     position: absolute;
     inset: 0;
     pointer-events: none;
-    content: "";
+    content: '';
     border-color: var(--#{$jump-links}__link--before--BorderColor);
     border-style: solid;
     border-block-start-width: var(--#{$jump-links}__link--before--BorderBlockStartWidth);
@@ -186,8 +198,12 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__list--before--BorderColor: transparent;
 
   &.pf-m-current > .#{$jump-links}__link {
-    --#{$jump-links}__link--before--BorderBlockStartWidth: var(--#{$jump-links}__item--m-current__link--before--BorderBlockStartWidth);
-    --#{$jump-links}__link--before--BorderInlineStartWidth: var(--#{$jump-links}__item--m-current__link--before--BorderInlineStartWidth);
+    --#{$jump-links}__link--before--BorderBlockStartWidth: var(
+      --#{$jump-links}__item--m-current__link--before--BorderBlockStartWidth
+    );
+    --#{$jump-links}__link--before--BorderInlineStartWidth: var(
+      --#{$jump-links}__item--m-current__link--before--BorderInlineStartWidth
+    );
     --#{$jump-links}__link--before--BorderColor: var(--#{$jump-links}__item--m-current__link--before--BorderColor);
     --#{$jump-links}__link-text--Color: var(--#{$jump-links}__item--m-current__link-text--Color);
   }
@@ -218,6 +234,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
-  transition: transform var(--#{$jump-links}__toggle-icon--TransitionDuration) var(--#{$jump-links}__toggle-icon--TransitionTimingFunction);
+  transition: transform var(--#{$jump-links}__toggle-icon--TransitionDuration)
+    var(--#{$jump-links}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$jump-links}__toggle-icon--Rotate));
 }

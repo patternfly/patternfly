@@ -7,7 +7,9 @@ cssPrefix: pf-v6-c-text-input-group
 import './TextInputGroup.css'
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-basic"}}
   {{#> text-input-group-main}}
@@ -19,6 +21,7 @@ import './TextInputGroup.css'
 ```
 
 ### Disabled
+
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-disabled" text-input-group--IsDisabled="true"}}
   {{#> text-input-group-main}}
@@ -47,6 +50,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Utilities and icon with placeholder text
+
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-utilities-and-icon-with-placeholder-text"}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
@@ -100,6 +104,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Filters
+
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters"}}
   {{#> text-input-group-main}}
@@ -115,6 +120,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Filters expanded
+
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters-expanded" text-input-group--label-group--IsLong="true"}}
   {{#> text-input-group-main}}
@@ -130,6 +136,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Autocomplete last option hint
+
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-autocomplete-last-option-hint" text-input-group--value="apples"}}
   {{#> text-input-group-main}}
@@ -142,26 +149,31 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Find by name"}}
 ```
 
 ### Search input group, no match
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-no-match" text-input-group-text-input--placeholder="Find by name" text-input-group--value="Joh"}}
 ```
 
-###  Search input group, match with result count
+### Search input group, match with result count
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-result-count" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="3"}}
 ```
 
 ### Search input group, match with navigable options
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch="true"}}
 ```
 
 ### Search input group, expandable
+
 ```hbs
 <h3>Collapsed</h3>
 <br>
@@ -186,6 +198,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group, with submit button
+
 ```hbs
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
@@ -198,6 +211,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group, advanced search
+
 ```hbs
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
@@ -214,6 +228,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group, advanced search expanded
+
 ```hbs
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
@@ -298,6 +313,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group, autocomplete
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete" text-input-group--value="app"}}
 
@@ -346,6 +362,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group, autocomplete last option hint
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete-last-option-hint" text-input-group--value="app" text-input-group-text-input--hint-text="appleseed"}}
 
@@ -367,6 +384,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group, advanced search expanded with autocomplete
+
 ```hbs
 <div class="ws-example-wrapper">
 {{#> input-group}}
@@ -496,10 +514,11 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-success` | `.pf-v6-c-text-input-group` | Applies success validation styling. |
-| `.pf-m-warning` | `.pf-v6-c-text-input-group` | Applies warning validation styling. |
-| `.pf-m-error` | `.pf-v6-c-text-input-group` | Applies error validation styling. |
-| `.pf-m-icon` | `.pf-v6-c-text-input-group__main` | Applies styling when icons are included in the container. |
-| `.pf-m-status` | `.pf-v6-c-text-input-group__icon` | Applies status styling to the icon, matching the status modifier applied to `.pf-v6-c-text-input-group`. |
+
+| Class           | Applied to                        | Outcome                                                                                                  |
+| --------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `.pf-m-success` | `.pf-v6-c-text-input-group`       | Applies success validation styling.                                                                      |
+| `.pf-m-warning` | `.pf-v6-c-text-input-group`       | Applies warning validation styling.                                                                      |
+| `.pf-m-error`   | `.pf-v6-c-text-input-group`       | Applies error validation styling.                                                                        |
+| `.pf-m-icon`    | `.pf-v6-c-text-input-group__main` | Applies styling when icons are included in the container.                                                |
+| `.pf-m-status`  | `.pf-v6-c-text-input-group__icon` | Applies status styling to the icon, matching the status modifier applied to `.pf-v6-c-text-input-group`. |

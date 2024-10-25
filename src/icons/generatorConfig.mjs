@@ -6,8 +6,8 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 export default (plop) => {
   plop.setGenerator('svgs', {
     prompts: [],
-    actions: data => [
-      ...data.icons.map(icon => ({
+    actions: (data) => [
+      ...data.icons.map((icon) => ({
         type: 'add',
         force: true,
         data: { ...icon },

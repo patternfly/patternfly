@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-hint
 ---
 
 ## Examples
+
 ### Hint with title
+
 ```hbs
 {{#> hint hint--id='hint-with-title-example'}}
   {{#> hint-actions}}
@@ -50,6 +52,7 @@ cssPrefix: pf-v6-c-hint
 ```
 
 ### Default with no title
+
 ```hbs
 {{#> hint}}
   {{#> hint-body}}
@@ -80,6 +83,7 @@ cssPrefix: pf-v6-c-hint
 ```
 
 ### Actions with no offset
+
 ```hbs
 {{#> hint hint--id='hint-actions-with-no-offset'}}
   {{#> hint-actions hint-actions--modifier='pf-m-no-offset'}}
@@ -96,13 +100,13 @@ cssPrefix: pf-v6-c-hint
 
 ## Documentation
 
-
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-hint` | `<div>` | Initiates the hint component. **Required** |
-| `.pf-v6-c-hint__title` | `<div>` | Initiates the hint title element. |
-| `.pf-v6-c-hint__body` | `<div>` | Initiates the hint body element. |
-| `.pf-v6-c-hint__footer` | `<div>` | Initiates the hint footer element. |
-| `.pf-v6-c-hint__actions` | `<div>` | Initiates the hint actions element. |
-| `.pf-m-no-offset` | `.pf-v6-c-hint__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the hint title. |
+
+| Class                    | Applied to               | Outcome                                                                                                                |
+| ------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-hint`          | `<div>`                  | Initiates the hint component. **Required**                                                                             |
+| `.pf-v6-c-hint__title`   | `<div>`                  | Initiates the hint title element.                                                                                      |
+| `.pf-v6-c-hint__body`    | `<div>`                  | Initiates the hint body element.                                                                                       |
+| `.pf-v6-c-hint__footer`  | `<div>`                  | Initiates the hint footer element.                                                                                     |
+| `.pf-v6-c-hint__actions` | `<div>`                  | Initiates the hint actions element.                                                                                    |
+| `.pf-m-no-offset`        | `.pf-v6-c-hint__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the hint title. |

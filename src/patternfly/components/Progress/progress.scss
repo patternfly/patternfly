@@ -6,7 +6,9 @@
 
   // Element variables
   --#{$progress}__bar--Height: var(--pf-t--global--spacer--md);
-  --#{$progress}__bar--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default); // the bar always needs white under it so that the semi-transparent color shows correctly
+  --#{$progress}__bar--BackgroundColor: var(
+    --pf-t--global--color--nonstatus--gray--default
+  ); // the bar always needs white under it so that the semi-transparent color shows correctly
   --#{$progress}__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
   --#{$progress}__status--Gap: var(--pf-t--global--spacer--sm);
   --#{$progress}__status-icon--Color: var(--pf-t--global--icon--color--regular);

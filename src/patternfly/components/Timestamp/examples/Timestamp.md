@@ -65,8 +65,8 @@ cssPrefix: pf-v6-c-timestamp
 
 ### Usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
-| `.pf-v6-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
-| `.pf-m-help-text`| `.pf-v6-c-timestamp` | Modifies styling for a timestamp that has help text. |
+| Class                      | Applied to           | Outcome                                                |
+| -------------------------- | -------------------- | ------------------------------------------------------ |
+| `.pf-v6-c-timestamp`       | `<span>`             | Creates a timestamp. **Required**                      |
+| `.pf-v6-c-timestamp__text` | `<time>`             | Creates the visual text of the timestamp. **Required** |
+| `.pf-m-help-text`          | `.pf-v6-c-timestamp` | Modifies styling for a timestamp that has help text.   |

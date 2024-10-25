@@ -1,5 +1,5 @@
 #ws-core-c-navigation-nav-with-flyout .ws-preview-html,
-[id^="ws-core-c-navigation-nav-with-drilldown-menu"] .ws-preview-html {
+[id^='ws-core-c-navigation-nav-with-drilldown-menu'] .ws-preview-html {
   width: 280px;
 }
 
@@ -22,10 +22,10 @@
   background: var(--pf-v6-c-page__sidebar--BackgroundColor); /* use sidebar background for vertical nav examples */
 }
 
-[id^="ws-core-c-navigation-horizontal"] .ws-preview-html {
+[id^='ws-core-c-navigation-horizontal'] .ws-preview-html {
   background: var(--pf-v6-c-masthead--BackgroundColor); /* use masthead background for horizontal nav examples */
 }
 
-[id^="ws-core-c-navigation-horizontal-subnav"] .ws-preview-html {
+[id^='ws-core-c-navigation-horizontal-subnav'] .ws-preview-html {
   background: transparent; /* reset background for horizontal subnav examples */
 }

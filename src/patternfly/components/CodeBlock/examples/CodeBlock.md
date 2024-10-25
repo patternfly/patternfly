@@ -5,7 +5,9 @@ cssPrefix: pf-v6-c-code-block
 ---
 
 ## Examples
+
 ### Basic
+
 ```hbs
 {{#> code-block}}
   {{#> code-block-header}}
@@ -31,6 +33,7 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs{{~/
 ```
 
 ### Expandable
+
 ```hbs
 {{#> code-block expandable-section--id="code-block-expandable" expandable-section--IsDetached="true"}}
   {{#> code-block-header}}
@@ -72,6 +75,7 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
 ```
 
 ### Expandable expanded
+
 ```hbs
 {{#> code-block expandable-section--id="code-block-expandable-expanded" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
   {{#> code-block-header}}
@@ -113,13 +117,15 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
 ```
 
 ## Documentation
+
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-code-block` | `<div>` | Initiates the code block component. **Required** |
-| `.pf-v6-c-code-block__header` | `<div>` | Initiates the code block header. |
-| `.pf-v6-c-code-block__actions` | `<div>` | Initiates the code block actions. |
-| `.pf-v6-c-code-block__actions-item` | `<div>` | Initiates a code block action item. |
-| `.pf-v6-c-code-block__content` | `<div>` | Initiates the code block content. **Required** |
-| `.pf-v6-c-code-block__pre` | `<pre>` | Initiates the code block `<pre>` element. **Required** |
-| `.pf-v6-c-code-block__code` | `<code>` | Initiates the code block `<code>` element. **Required** |
+
+| Class                               | Applied to | Outcome                                                 |
+| ----------------------------------- | ---------- | ------------------------------------------------------- |
+| `.pf-v6-c-code-block`               | `<div>`    | Initiates the code block component. **Required**        |
+| `.pf-v6-c-code-block__header`       | `<div>`    | Initiates the code block header.                        |
+| `.pf-v6-c-code-block__actions`      | `<div>`    | Initiates the code block actions.                       |
+| `.pf-v6-c-code-block__actions-item` | `<div>`    | Initiates a code block action item.                     |
+| `.pf-v6-c-code-block__content`      | `<div>`    | Initiates the code block content. **Required**          |
+| `.pf-v6-c-code-block__pre`          | `<pre>`    | Initiates the code block `<pre>` element. **Required**  |
+| `.pf-v6-c-code-block__code`         | `<code>`   | Initiates the code block `<code>` element. **Required** |

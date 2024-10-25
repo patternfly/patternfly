@@ -5,11 +5,11 @@ async function waitFor(page) {
 }
 
 const urls = Object.keys(fullscreenRoutes)
-  .map(key => {
+  .map((key) => {
     if (fullscreenRoutes[key].isFullscreenOnly) {
       return key;
     } else {
-      const path = fullscreenRoutes[key].path
+      const path = fullscreenRoutes[key].path;
       if (path.match(/\/patterns\/.*\/html-demos$/g)) {
         return path.replace(/\/html-demos$/, '');
       } else {
@@ -19,14 +19,11 @@ const urls = Object.keys(fullscreenRoutes)
           path.includes('/dropdown/') |
           path.includes('/select/')
         ) {
-          return path.replace(/\/html-deprecated$/, '')
-        } else if (
-          path.includes('/password-generator/') |
-          path.includes('/password-strength/')
-        ) {
+          return path.replace(/\/html-deprecated$/, '');
+        } else if (path.includes('/password-generator/') | path.includes('/password-strength/')) {
           return path.replace(/\/html-demos$/, '');
         }
-        return path.replace(/\/html$/, '')
+        return path.replace(/\/html$/, '');
       }
     }
   })
@@ -41,7 +38,7 @@ module.exports = {
       url: '/',
       label: 'home fullscreen nav expanded',
       viewportDimensions: { width: 1920, height: 1080 },
-      afterNav: async page => {
+      afterNav: async (page) => {
         await page.click('button#nav-toggle');
       }
     },
@@ -59,7 +56,7 @@ module.exports = {
       url: '/',
       label: 'home mobile nav expanded',
       viewportDimensions: { width: 400, height: 900 },
-      afterNav: async page => {
+      afterNav: async (page) => {
         await page.click('button#nav-toggle');
       }
     },

@@ -10,6 +10,7 @@ import './Page.css'
 ## Examples
 
 ### Vertical nav
+
 ```hbs
 {{#> page}}
   {{#> masthead}}
@@ -52,6 +53,7 @@ import './Page.css'
 ```
 
 ### Horizontal nav
+
 ```hbs
 {{#> page page--nav-direction="vertical"}}
   {{#> masthead}}
@@ -80,6 +82,7 @@ import './Page.css'
 ```
 
 ### Multiple sidebar body elements, padding, and fill
+
 ```hbs
 {{#> page}}
   {{#> masthead}}
@@ -112,6 +115,7 @@ import './Page.css'
 ```
 
 ### With or without fill
+
 ```hbs
 {{#> page page--nav-direction="vertical"}}
   {{#> masthead}}
@@ -140,6 +144,7 @@ import './Page.css'
 ```
 
 ### Main section padding
+
 ```hbs
 {{#> page}}
   {{#> masthead}}
@@ -171,6 +176,7 @@ import './Page.css'
 ```
 
 ### Main section variations
+
 ```hbs
 {{#> page}}
   {{#> masthead}}
@@ -211,6 +217,7 @@ import './Page.css'
 ```
 
 ### Centered section
+
 ```hbs
 {{#> page}}
   {{#> masthead}}
@@ -239,45 +246,49 @@ import './Page.css'
 ```
 
 ## Documentation
+
 ### Overview
+
 This component provides the basic chrome for a page, including sidebar and main areas.
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `role="main"` | `.pf-v6-c-page__main` | Identifies the element that serves as the main region. |
-| `tabindex="-1"` | `.pf-v6-c-page__main` | Allows the main region to receive programmatic focus. **Required** |
-| `id="[id]"` | `.pf-v6-c-page__main` | Provides a hook for sending focus to new content. **Required** |
-| `tabindex="0"` | `.pf-v6-c-page__main-section.pf-m-overflow-scroll` | If a page section has overflow content that triggers a scrollbar, to ensure that the content is keyboard accessible, the page section must include either a focusable element within the scrollable region or the page section itself must be focusable by adding `tabindex="0"`. |
+
+| Attribute       | Applied to                                         | Outcome                                                                                                                                                                                                                                                                           |
+| --------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `role="main"`   | `.pf-v6-c-page__main`                              | Identifies the element that serves as the main region.                                                                                                                                                                                                                            |
+| `tabindex="-1"` | `.pf-v6-c-page__main`                              | Allows the main region to receive programmatic focus. **Required**                                                                                                                                                                                                                |
+| `id="[id]"`     | `.pf-v6-c-page__main`                              | Provides a hook for sending focus to new content. **Required**                                                                                                                                                                                                                    |
+| `tabindex="0"`  | `.pf-v6-c-page__main-section.pf-m-overflow-scroll` | If a page section has overflow content that triggers a scrollbar, to ensure that the content is keyboard accessible, the page section must include either a focusable element within the scrollable region or the page section itself must be focusable by adding `tabindex="0"`. |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-page` | `<div>` | Declares the page component. |
-| `.pf-v6-c-page__sidebar` | `<aside>` | Declares the page sidebar. |
-| `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
-| `.pf-v6-c-page__main` | `<main>` | Declares the main page area. |
-| `.pf-v6-c-page__main-subnav` | `<section>` | Creates a container to nest the horizontal subnav navigation component in the main page area. |
-| `.pf-v6-c-page__main-breadcrumb` | `<section>` | Creates a container to nest the breadcrumb component in the main page area. |
-| `.pf-v6-c-page__main-section` | `<section>` | Creates a section container in the main page area. **Note: This section will not fill the vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
-| `.pf-v6-c-page__main-tabs` | `<section>` | Creates a container to nest the tabs component in the main page area. |
-| `.pf-v6-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the main page area. |
-| `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required** |
-| `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
-| `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
-| `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |
-| `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the collapsed state. |
-| `.pf-m-page-insets` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body padding/inset to visually match padding of page elements. |
-| `.pf-m-context-selector` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body to contain a context selector. |
-| `.pf-m-inset-none` | `.pf-v6-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
-| `.pf-m-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
-| `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |
-| `.pf-m-no-fill` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element not to grow to fill the available vertical space. |
-| `.pf-m-limit-width` | `.pf-v6-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
-| `.pf-m-align-center` | `.pf-v6-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |
-| `.pf-m-sticky-top{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the top of its container at an optional height breakpoint. |
-| `.pf-m-sticky-bottom{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the bottom of its container at an optional height breakpoint. |
-| `.pf-m-shadow-bottom` | `.pf-v6-c-page__main-*` | Modifies a section/group to have a bottom shadow. |
-| `.pf-m-shadow-top` | `.pf-v6-c-page__main-*` | Modifies a section/group to have a top shadow. |
-| `.pf-m-overflow-scroll` | `.pf-v6-c-page__main-*` | Modifies a section/group to show a scrollbar if it has overflow content. |
+
+| Class                                          | Applied to                                                                                                                                               | Outcome                                                                                                                                                                                                                                                              |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-v6-c-page`                                | `<div>`                                                                                                                                                  | Declares the page component.                                                                                                                                                                                                                                         |
+| `.pf-v6-c-page__sidebar`                       | `<aside>`                                                                                                                                                | Declares the page sidebar.                                                                                                                                                                                                                                           |
+| `.pf-v6-c-page__sidebar-body`                  | `<div>`                                                                                                                                                  | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
+| `.pf-v6-c-page__main`                          | `<main>`                                                                                                                                                 | Declares the main page area.                                                                                                                                                                                                                                         |
+| `.pf-v6-c-page__main-subnav`                   | `<section>`                                                                                                                                              | Creates a container to nest the horizontal subnav navigation component in the main page area.                                                                                                                                                                        |
+| `.pf-v6-c-page__main-breadcrumb`               | `<section>`                                                                                                                                              | Creates a container to nest the breadcrumb component in the main page area.                                                                                                                                                                                          |
+| `.pf-v6-c-page__main-section`                  | `<section>`                                                                                                                                              | Creates a section container in the main page area. **Note: This section will not fill the vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**                                                         |
+| `.pf-v6-c-page__main-tabs`                     | `<section>`                                                                                                                                              | Creates a container to nest the tabs component in the main page area.                                                                                                                                                                                                |
+| `.pf-v6-c-page__main-wizard`                   | `<section>`                                                                                                                                              | Creates a container to nest the wizard component in the main page area.                                                                                                                                                                                              |
+| `.pf-v6-c-page__main-body`                     | `<div>`                                                                                                                                                  | Creates the body section for a page section. **Required**                                                                                                                                                                                                            |
+| `.pf-v6-c-page__main-group`                    | `<div>`                                                                                                                                                  | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky.                                                                                                                 |
+| `.pf-v6-c-page__drawer`                        | `<div>`                                                                                                                                                  | Creates a container for the drawer component when placing the main page element in the drawer body.                                                                                                                                                                  |
+| `.pf-m-expanded`                               | `.pf-v6-c-page__sidebar`                                                                                                                                 | Modifies the sidebar for the expanded state.                                                                                                                                                                                                                         |
+| `.pf-m-collapsed`                              | `.pf-v6-c-page__sidebar`                                                                                                                                 | Modifies the sidebar for the collapsed state.                                                                                                                                                                                                                        |
+| `.pf-m-page-insets`                            | `.pf-v6-c-page__sidebar-body`                                                                                                                            | Modifies a sidebar body padding/inset to visually match padding of page elements.                                                                                                                                                                                    |
+| `.pf-m-context-selector`                       | `.pf-v6-c-page__sidebar-body`                                                                                                                            | Modifies a sidebar body to contain a context selector.                                                                                                                                                                                                               |
+| `.pf-m-inset-none`                             | `.pf-v6-c-page__sidebar-body`                                                                                                                            | Removes a sidebar body left/right inset.                                                                                                                                                                                                                             |
+| `.pf-m-padding{-on-[breakpoint]}`              | `.pf-v6-c-page__main-section`                                                                                                                            | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding.                                                           |
+| `.pf-m-no-padding{-on-[breakpoint]}`           | `.pf-v6-c-page__main-section`                                                                                                                            | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).                                                                                                           |
+| `.pf-m-fill`                                   | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space.                                                                                                                                                                                                            |
+| `.pf-m-no-fill`                                | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body`                                  | Modifies the element not to grow to fill the available vertical space.                                                                                                                                                                                               |
+| `.pf-m-limit-width`                            | `.pf-v6-c-page__main-section`                                                                                                                            | Modifies a page section to limit the `max-width` of the content inside.                                                                                                                                                                                              |
+| `.pf-m-align-center`                           | `.pf-v6-c-page__main-section.pf-m-limit-width`                                                                                                           | Modifies a page section body to align center.                                                                                                                                                                                                                        |
+| `.pf-m-sticky-top{-on-[breakpoint]-height}`    | `.pf-v6-c-page__main-*`                                                                                                                                  | Modifies a section/group to be sticky to the top of its container at an optional height breakpoint.                                                                                                                                                                  |
+| `.pf-m-sticky-bottom{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*`                                                                                                                                  | Modifies a section/group to be sticky to the bottom of its container at an optional height breakpoint.                                                                                                                                                               |
+| `.pf-m-shadow-bottom`                          | `.pf-v6-c-page__main-*`                                                                                                                                  | Modifies a section/group to have a bottom shadow.                                                                                                                                                                                                                    |
+| `.pf-m-shadow-top`                             | `.pf-v6-c-page__main-*`                                                                                                                                  | Modifies a section/group to have a top shadow.                                                                                                                                                                                                                       |
+| `.pf-m-overflow-scroll`                        | `.pf-v6-c-page__main-*`                                                                                                                                  | Modifies a section/group to show a scrollbar if it has overflow content.                                                                                                                                                                                             |

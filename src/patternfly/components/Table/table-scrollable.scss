@@ -8,9 +8,13 @@
   --#{$table}__sticky-cell--InsetInlineEnd: auto;
   --#{$table}__sticky-cell--InsetInlineStart: auto;
   --#{$table}__sticky-cell--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth: var(
+    --pf-t--global--border--width--divider--default
+  );
   --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndColor: var(--pf-t--global--border--color--default);
-  --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth: var(
+    --pf-t--global--border--width--divider--default
+  );
   --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
   --#{$table}__sticky-cell--m-right--InsetInlineEnd: 0;
   --#{$table}__sticky-cell--m-left--InsetInlineStart: 0;
@@ -34,13 +38,21 @@
   background-clip: padding-box;
 
   &.pf-m-border-right::before {
-    --#{$table}--cell--m-border-right--before--BorderInlineEndWidth: var(--#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth);
-    --#{$table}--cell--m-border-right--before--BorderInlineEndColor: var(--#{$table}__sticky-cell--m-border-right--before--BorderInlineEndColor);
+    --#{$table}--cell--m-border-right--before--BorderInlineEndWidth: var(
+      --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndWidth
+    );
+    --#{$table}--cell--m-border-right--before--BorderInlineEndColor: var(
+      --#{$table}__sticky-cell--m-border-right--before--BorderInlineEndColor
+    );
   }
 
   &.pf-m-border-left::before {
-    --#{$table}--cell--m-border-left--before--BorderInlineStartWidth: var(--#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth);
-    --#{$table}--cell--m-border-left--before--BorderInlineStartColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderInlineStartColor);
+    --#{$table}--cell--m-border-left--before--BorderInlineStartWidth: var(
+      --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartWidth
+    );
+    --#{$table}--cell--m-border-left--before--BorderInlineStartColor: var(
+      --#{$table}__sticky-cell--m-border-left--before--BorderInlineStartColor
+    );
   }
 
   &.pf-m-right,

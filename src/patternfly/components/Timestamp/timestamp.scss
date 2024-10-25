@@ -12,7 +12,9 @@
   --#{$timestamp}--m-help-text--Color: var(--pf-t--global--text--color--subtle);
   --#{$timestamp}--m-help-text--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$timestamp}--m-help-text--hover--TextDecorationLine: var(--pf-t--global--text-decoration--help-text--line--hover);
-  --#{$timestamp}--m-help-text--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--help-text--style--hover);
+  --#{$timestamp}--m-help-text--hover--TextDecorationStyle: var(
+    --pf-t--global--text-decoration--help-text--style--hover
+  );
 }
 
 .#{$timestamp} {
@@ -23,8 +25,9 @@
 
   &.pf-m-help-text {
     --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--Color);
-    
-    text-decoration: var(--#{$timestamp}--m-help-text--TextDecorationLine) var(--#{$timestamp}--m-help-text--TextDecorationStyle);
+
+    text-decoration: var(--#{$timestamp}--m-help-text--TextDecorationLine)
+      var(--#{$timestamp}--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$timestamp}--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 

@@ -7,10 +7,13 @@ cssPrefix: pf-v6-l-flex
 import './Flex.css'
 
 ## Introduction
+
 The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. By default, a flex layout uses the [spacing system](#spacing-system) to space children along the main axis and [gap spacing](#gap-spacing) to space any wrapping children along the cross axis, `flex-wrap` is set to `wrap`, and `align-items` is set to `baseline`. The flex layout is infinitely nestable and can be nested to group items within.
 
 ### Spacing
+
 The flex layout provides two ways of spacing its direct children.
+
 - [Spacing system](#spacing-system)
   - The spacing system applies a margin between the flex layout's direct children to create space between items along the main axis only. The benefit of the spacing system is that it allows for variable spacing between direct children. Use the spacing system when individual flex items along the main axis require a different spacer than sibling items.
 - [Gap spacing](#gap-spacing)
@@ -18,13 +21,16 @@ The flex layout provides two ways of spacing its direct children.
   - **Note** using `gap` along the main axis will override any other spacing applied using the spacing system.
 
 ### Breakpoints
+
 [Breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl` are provided.
 
 ### Usefulness
+
 - Use when content dictates layout and elements wrap when necessary.
 - Use when a rigid grid is not necessary/wanted.
 
 ### Differences from utility class
+
 - It contains multiple css declarations and does not use the `!important` tag.
 - It does not require wrapping elements in columns or rows.
 - It breaks the dependency upon adding utility classes to each child.
@@ -35,6 +41,7 @@ The flex layout provides two ways of spacing its direct children.
 ## Basic flex layout
 
 ### Basic flex example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex-item}}
@@ -53,6 +60,7 @@ The flex layout provides two ways of spacing its direct children.
 ```
 
 ### Nested flex example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex}}
@@ -78,6 +86,7 @@ The flex layout provides two ways of spacing its direct children.
 ```
 
 ### Nested flex and items example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex}}
@@ -105,17 +114,20 @@ The flex layout provides two ways of spacing its direct children.
 ```
 
 ### Basic flex layout overview
+
 The CSS approach, by keeping specificity low on base class properties and resetting css variable values at higher specificities, allows any spacer property to be overwritten with a single selector (specificity of 10 or greater).
 
 ### Basic flex layout usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-l-flex` | `*` | Initiates the flex layout. **Required** |
-| `.pf-v6-l-flex__item` | `.pf-v6-l-flex > *` | Initiates a flex item. **Required** |
+
+| Class                 | Applied to          | Outcome                                 |
+| --------------------- | ------------------- | --------------------------------------- |
+| `.pf-v6-l-flex`       | `*`                 | Initiates the flex layout. **Required** |
+| `.pf-v6-l-flex__item` | `.pf-v6-l-flex > *` | Initiates a flex item. **Required**     |
 
 ## Spacing system
 
 ### Spacing system on parent example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-space-items-2xl"}}
   {{#> l-flex-item}}
@@ -137,6 +149,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Spacing system on children example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
@@ -170,6 +183,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Spacing system on parent and children example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-space-items-2xl"}}
   {{#> l-flex-item}}
@@ -191,14 +205,16 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Spacing system usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}` | `.pf-v6-l-flex` |  Modifies the spacer between direct children along the main axis of a flex layout. |
-| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}` | `.pf-v6-l-flex > *` |  Modifies the spacer for any individual direct child along the main axis of a flex layout. |
+
+| Class                                                                           | Applied to          | Outcome                                                                                   |
+| ------------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
+| `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}` | `.pf-v6-l-flex`     | Modifies the spacer between direct children along the main axis of a flex layout.         |
+| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`      | `.pf-v6-l-flex > *` | Modifies the spacer for any individual direct child along the main axis of a flex layout. |
 
 ## Gap spacing
 
 ### Row gap example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-row-gap-2xl"}}
   {{#> l-flex-item}}
@@ -253,6 +269,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Column gap example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-column-gap-2xl"}}
   {{#> l-flex-item}}
@@ -307,6 +324,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Gap example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-gap-2xl"}}
   {{#> l-flex-item}}
@@ -362,15 +380,16 @@ The CSS approach, by keeping specificity low on base class properties and resett
 
 ### Gap spacing usage
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between columns and rows. |
-| `.pf-m-row-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between rows. |
-| `.pf-m-column-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between columns. |
+| Class                                                                            | Applied to      | Outcome                                      |
+| -------------------------------------------------------------------------------- | --------------- | -------------------------------------------- |
+| `.pf-m-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}`        | `.pf-v6-l-flex` | Modifies the space between columns and rows. |
+| `.pf-m-row-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}`    | `.pf-v6-l-flex` | Modifies the space between rows.             |
+| `.pf-m-column-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between columns.          |
 
 ## Layout modifiers
 
 ### Default layout example
+
 ```hbs
 {{#> l-flex l-flex--modifier="ws-example-flex-border"}}
   {{#> l-flex-item}}Flex item{{/l-flex-item}}
@@ -380,6 +399,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Inline flex layout example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-inline-flex ws-example-flex-border"}}
   {{#> l-flex-item}}Flex item{{/l-flex-item}}
@@ -389,6 +409,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ```
 
 ### Basic flex grow example
+
 Adjusting width with `.pf-m-grow`, which sets `flex-grow: 1`. In this example, the first group is set to `.pf-m-grow`, will occupy the remaining available space.
 
 ```hbs
@@ -409,6 +430,7 @@ Adjusting width with `.pf-m-grow`, which sets `flex-grow: 1`. In this example, t
 ```
 
 ### Flex grow 1 example
+
 Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf-m-flex-1`. They will share available space equally.
 
 ```hbs
@@ -429,6 +451,7 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
 ```
 
 ### Flex grow 1-4 example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex l-flex--modifier="pf-m-flex-1 ws-example-flex-border" l-flex--attribute='data-label=".pf-m-flex-1"'}}
@@ -450,21 +473,24 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
 ```
 
 ### Layout modifiers usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-inline-flex{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout display property to inline-flex. |
-| `.pf-m-grow{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-grow property to 1. |
-| `.pf-m-shrink{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-shrink property to 1. |
-| `.pf-m-full-width{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex item to full width of parent. |
-| `.pf-m-flex-1{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 1 0 0. |
-| `.pf-m-flex-2{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 2 0 0. |
-| `.pf-m-flex-3{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 3 0 0. |
-| `.pf-m-flex-4{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 4 0 0. |
+
+| Class                                  | Applied to                                             | Outcome                                                                       |
+| -------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| `.pf-m-inline-flex{-on-[breakpoint]}`  | `.pf-v6-l-flex`                                        | Modifies the flex layout display property to inline-flex.                     |
+| `.pf-m-grow{-on-[breakpoint]}`         | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-grow property to 1.           |
+| `.pf-m-shrink{-on-[breakpoint]}`       | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-shrink property to 1.         |
+| `.pf-m-full-width{-on-[breakpoint]}`   | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex item to full width of parent. |
+| `.pf-m-flex-1{-on-[breakpoint]}`       | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 1 0 0.  |
+| `.pf-m-flex-2{-on-[breakpoint]}`       | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 2 0 0.  |
+| `.pf-m-flex-3{-on-[breakpoint]}`       | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 3 0 0.  |
+| `.pf-m-flex-4{-on-[breakpoint]}`       | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 4 0 0.  |
 | `.pf-m-flex-default{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets a nested flex layout or flex item flex shorthand property to 0 1 auto. |
-| `.pf-m-flex-none{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to none. |
+| `.pf-m-flex-none{-on-[breakpoint]}`    | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to none.   |
 
 ## Column layout modifiers
+
 ### Basic column example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-column"}}
   {{#> l-flex-item}}
@@ -480,6 +506,7 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
 ```
 
 ### Nested column example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-column"}}
   {{#> l-flex newcontext}}
@@ -542,12 +569,15 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
 ```
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-column{-on-[breakpoint]}` | `.pf-v6-l-flex` |  Modifies flex-direction property to column. |
+
+| Class                            | Applied to      | Outcome                                     |
+| -------------------------------- | --------------- | ------------------------------------------- |
+| `.pf-m-column{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies flex-direction property to column. |
 
 ## Responsive layouts
+
 ### Flex direction responsive example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-lg"}}
   {{#> l-flex newcontext}}
@@ -619,14 +649,16 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
 ```
 
 ### Responsive layouts usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-column{-on-[breakpoint]}` | `.pf-v6-l-flex`  |  Modifies flex-direction property to column. |
-| `.pf-m-row{-on-[breakpoint]}` | `.pf-v6-l-flex`  |  Modifies flex-direction property to row. |
+
+| Class                            | Applied to      | Outcome                                     |
+| -------------------------------- | --------------- | ------------------------------------------- |
+| `.pf-m-column{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies flex-direction property to column. |
+| `.pf-m-row{-on-[breakpoint]}`    | `.pf-v6-l-flex` | Modifies flex-direction property to row.    |
 
 ## Alignment
 
 ### Basic align right example
+
 Aligning right with `.pf-m-align-right`. This solution will always align element right by setting margin-inline-start: auto, including when wrapped.
 
 ```hbs
@@ -650,6 +682,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Align right on single item example
+
 ```hbs
 {{#> l-flex l-flex--modifier="ws-example-flex-border"}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-align-right"}}
@@ -662,6 +695,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Align right on multiple groups example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex newcontext}}
@@ -692,6 +726,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 #### Alignment using .pf-m-flex-1 example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex newcontext l-flex--modifier="pf-m-flex-1"}}
@@ -720,6 +755,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Alignment using .pf-m-align-self-flex-end example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex newcontext l-flex--modifier="pf-m-column"}}
@@ -745,6 +781,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Aligning nested columns with .pf-m-align-self-center example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex newcontext l-flex--modifier="pf-m-column"}}
@@ -770,6 +807,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Aligning nested columns with .pf-m-align-self-baseline example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex newcontext l-flex--modifier="pf-m-column"}}
@@ -795,6 +833,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Aligning nested columns with .pf-m-align-self-stretch example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex newcontext l-flex--modifier="pf-m-column"}}
@@ -820,19 +859,21 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Alignment usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies margin-inline-start property to auto. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets margin-inline-start property 0. |
-| `.pf-m-align-self-flex-start{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to flex-start. |
-| `.pf-m-align-self-flex-end{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to flex-end. |
-| `.pf-m-align-self-flex-center{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to center. |
-| `.pf-m-align-self-flex-baseline{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to baseline. |
-| `.pf-m-align-self-flex-stretch{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to stretch. |
+
+| Class                                              | Applied to                                             | Outcome                                        |
+| -------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |
+| `.pf-m-align-right{-on-[breakpoint]}`              | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies margin-inline-start property to auto. |
+| `.pf-m-align-left{-on-[breakpoint]}`               | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets margin-inline-start property 0.         |
+| `.pf-m-align-self-flex-start{-on-[breakpoint]}`    | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to flex-start.    |
+| `.pf-m-align-self-flex-end{-on-[breakpoint]}`      | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to flex-end.      |
+| `.pf-m-align-self-flex-center{-on-[breakpoint]}`   | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to center.        |
+| `.pf-m-align-self-flex-baseline{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to baseline.      |
+| `.pf-m-align-self-flex-stretch{-on-[breakpoint]}`  | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies align-self property to stretch.       |
 
 ## Justification
 
 ### Justify content flex end example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-justify-content-flex-end ws-example-flex-border"}}
   {{#> l-flex-item}}
@@ -851,6 +892,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Justify content space between example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-justify-content-space-between ws-example-flex-border"}}
   {{#> l-flex-item}}
@@ -866,6 +908,7 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ```
 
 ### Justify content flex start example
+
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-justify-content-flex-start ws-example-flex-border"}}
   {{#> l-flex-item}}
@@ -880,16 +923,18 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 {{/l-flex}}
 ```
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-justify-content-flex-end{-on-[breakpoint]}` | `.pf-v6-l-flex` |  Modifies justification property and descendant spacing. |
-| `.pf-m-justify-content-flex-space-between{-on-[breakpoint]}` | `.pf-v6-l-flex` |  Modifies justification property and descendant spacing. |
-| `.pf-m-justify-content-flex-start{-on-[breakpoint]}` | `.pf-v6-l-flex` |  Modifies justification property and descendant spacing, used primarily to reset spacing to default. |
+| Class                                                        | Applied to      | Outcome                                                                                             |
+| ------------------------------------------------------------ | --------------- | --------------------------------------------------------------------------------------------------- |
+| `.pf-m-justify-content-flex-end{-on-[breakpoint]}`           | `.pf-v6-l-flex` | Modifies justification property and descendant spacing.                                             |
+| `.pf-m-justify-content-flex-space-between{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies justification property and descendant spacing.                                             |
+| `.pf-m-justify-content-flex-start{-on-[breakpoint]}`         | `.pf-v6-l-flex` | Modifies justification property and descendant spacing, used primarily to reset spacing to default. |
 
 ## Ordering
+
 Ordering - Ordering can be applied to nested `.pf-v6-l-flex` and `.pf-v6-l-flex__item`s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-v6-l-flex--item--Order{-on-[breakpoint]}: {order}`.
 
 ### Basic ordering example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex l-flex--modifier="pf-m-spacer-none" l-flex--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-flex--item--Order: 1;"')}}
@@ -924,6 +969,7 @@ Ordering - Ordering can be applied to nested `.pf-v6-l-flex` and `.pf-v6-l-flex_
 ```
 
 ### First and last ordering example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none" l-flex-item--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-flex--item--Order: 2;"')}}
@@ -939,6 +985,7 @@ Ordering - Ordering can be applied to nested `.pf-v6-l-flex` and `.pf-v6-l-flex_
 ```
 
 ### Responsive first last ordering example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none-on-lg" l-flex-item--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-flex--item--Order-on-lg: 2;"')}}
@@ -954,6 +1001,7 @@ Ordering - Ordering can be applied to nested `.pf-v6-l-flex` and `.pf-v6-l-flex_
 ```
 
 ### Responsive ordering example
+
 ```hbs
 {{#> l-flex}}
   {{#> l-flex l-flex--modifier="pf-m-spacer-none" l-flex--attribute=(concat 'style="--' (pfv "unset-prefix") 'l-flex--item--Order-on-lg: 1;"')}}
@@ -988,12 +1036,13 @@ Ordering - Ordering can be applied to nested `.pf-v6-l-flex` and `.pf-v6-l-flex_
 ```
 
 ### Ordering usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
+
+| Class                                                    | Applied to                                             | Outcome                                          |
+| -------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------ |
 | `--pf-v6-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies the flex layout element order property. |
 
-
 ## Flex layout as list
+
 ```hbs
 {{#> l-flex l-flex--type="ul" l-flex-item--type="li"}}
   {{#> l-flex-item}}
@@ -1014,56 +1063,59 @@ Ordering - Ordering can be applied to nested `.pf-v6-l-flex` and `.pf-v6-l-flex_
 ## Documentation
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-l-flex` | `*` | Initiates the flex layout. **Required** |
-| `.pf-v6-l-flex__item` | `.pf-v6-l-flex > *` | Initiates a flex item. **Required** |
-| `.pf-m-flex{-on-[breakpoint]}` | `.pf-v6-l-flex` | Initializes or resets the flex layout display property to flex. |
-| `.pf-m-inline-flex{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout display property to inline-flex. |
-| `.pf-m-grow{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-grow property to 1. |
-| `.pf-m-shrink{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-shrink property to 1. |
-| `.pf-m-full-width{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex item to full width of parent. |
-| `.pf-m-flex-1{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 1 0 0. |
-| `.pf-m-flex-2{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 2 0 0. |
-| `.pf-m-flex-3{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 3 0 0. |
-| `.pf-m-flex-4{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 4 0 0. |
-| `.pf-m-flex-default{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets a nested flex layout or flex item flex shorthand property to 0 1 auto. |
-| `.pf-m-flex-none{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to none. |
-| `.pf-m-column-reverse{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout flex-direction property to column-reverse. |
-| `.pf-m-row-reverse{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout flex-direction property to row-reverse. |
-| `.pf-m-wrap{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout flex-wrap property to wrap. |
-| `.pf-m-wrap-reverse{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout flex-wrap property to wrap-reverse. |
-| `.pf-m-nowrap{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout flex-wrap property to nowrap. |
-| `.pf-m-justify-content-flex-start{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout justify-content property to flex-start. |
-| `.pf-m-justify-content-flex-end{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout justify-content property to flex-end. |
-| `.pf-m-justify-content-center{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout justify-content property to center. |
-| `.pf-m-justify-content-space-between{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout justify-content property to space-between. |
-| `.pf-m-justify-content-space-around{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout justify-content property to space-around. |
-| `.pf-m-justify-content-space-evenly{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout justify-content property to space-evenly. |
-| `.pf-m-align-items-flex-start{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-items property to flex-start. |
-| `.pf-m-align-items-flex-end{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-items property to flex-end. |
-| `.pf-m-align-items-center{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-items property to center. |
-| `.pf-m-align-items-stretch{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-items property to stretch. |
-| `.pf-m-align-items-baseline{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-items property to baseline. |
-| `.pf-m-align-content-flex-start{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-content property to flex-start. |
-| `.pf-m-align-content-flex-end{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-content property to flex-end. |
-| `.pf-m-align-content-center{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-content property to center. |
-| `.pf-m-align-content-stretch{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-content property to stretch. |
-| `.pf-m-align-content-space-between{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-content property to space-between. |
-| `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the flex layout align-content property to space-around. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets the flex layout element margin-inline-start property to 0. |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies the flex layout element margin-inline-start property to auto. |
-| `--pf-v6-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies the flex layout element order property. |
+
+| Class                                                    | Applied to                                             | Outcome                                                                       |
+| -------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| `.pf-v6-l-flex`                                          | `*`                                                    | Initiates the flex layout. **Required**                                       |
+| `.pf-v6-l-flex__item`                                    | `.pf-v6-l-flex > *`                                    | Initiates a flex item. **Required**                                           |
+| `.pf-m-flex{-on-[breakpoint]}`                           | `.pf-v6-l-flex`                                        | Initializes or resets the flex layout display property to flex.               |
+| `.pf-m-inline-flex{-on-[breakpoint]}`                    | `.pf-v6-l-flex`                                        | Modifies the flex layout display property to inline-flex.                     |
+| `.pf-m-grow{-on-[breakpoint]}`                           | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-grow property to 1.           |
+| `.pf-m-shrink{-on-[breakpoint]}`                         | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex-shrink property to 1.         |
+| `.pf-m-full-width{-on-[breakpoint]}`                     | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex item to full width of parent. |
+| `.pf-m-flex-1{-on-[breakpoint]}`                         | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 1 0 0.  |
+| `.pf-m-flex-2{-on-[breakpoint]}`                         | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 2 0 0.  |
+| `.pf-m-flex-3{-on-[breakpoint]}`                         | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 3 0 0.  |
+| `.pf-m-flex-4{-on-[breakpoint]}`                         | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to 4 0 0.  |
+| `.pf-m-flex-default{-on-[breakpoint]}`                   | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets a nested flex layout or flex item flex shorthand property to 0 1 auto. |
+| `.pf-m-flex-none{-on-[breakpoint]}`                      | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to none.   |
+| `.pf-m-column-reverse{-on-[breakpoint]}`                 | `.pf-v6-l-flex`                                        | Modifies the flex layout flex-direction property to column-reverse.           |
+| `.pf-m-row-reverse{-on-[breakpoint]}`                    | `.pf-v6-l-flex`                                        | Modifies the flex layout flex-direction property to row-reverse.              |
+| `.pf-m-wrap{-on-[breakpoint]}`                           | `.pf-v6-l-flex`                                        | Modifies the flex layout flex-wrap property to wrap.                          |
+| `.pf-m-wrap-reverse{-on-[breakpoint]}`                   | `.pf-v6-l-flex`                                        | Modifies the flex layout flex-wrap property to wrap-reverse.                  |
+| `.pf-m-nowrap{-on-[breakpoint]}`                         | `.pf-v6-l-flex`                                        | Modifies the flex layout flex-wrap property to nowrap.                        |
+| `.pf-m-justify-content-flex-start{-on-[breakpoint]}`     | `.pf-v6-l-flex`                                        | Modifies the flex layout justify-content property to flex-start.              |
+| `.pf-m-justify-content-flex-end{-on-[breakpoint]}`       | `.pf-v6-l-flex`                                        | Modifies the flex layout justify-content property to flex-end.                |
+| `.pf-m-justify-content-center{-on-[breakpoint]}`         | `.pf-v6-l-flex`                                        | Modifies the flex layout justify-content property to center.                  |
+| `.pf-m-justify-content-space-between{-on-[breakpoint]}`  | `.pf-v6-l-flex`                                        | Modifies the flex layout justify-content property to space-between.           |
+| `.pf-m-justify-content-space-around{-on-[breakpoint]}`   | `.pf-v6-l-flex`                                        | Modifies the flex layout justify-content property to space-around.            |
+| `.pf-m-justify-content-space-evenly{-on-[breakpoint]}`   | `.pf-v6-l-flex`                                        | Modifies the flex layout justify-content property to space-evenly.            |
+| `.pf-m-align-items-flex-start{-on-[breakpoint]}`         | `.pf-v6-l-flex`                                        | Modifies the flex layout align-items property to flex-start.                  |
+| `.pf-m-align-items-flex-end{-on-[breakpoint]}`           | `.pf-v6-l-flex`                                        | Modifies the flex layout align-items property to flex-end.                    |
+| `.pf-m-align-items-center{-on-[breakpoint]}`             | `.pf-v6-l-flex`                                        | Modifies the flex layout align-items property to center.                      |
+| `.pf-m-align-items-stretch{-on-[breakpoint]}`            | `.pf-v6-l-flex`                                        | Modifies the flex layout align-items property to stretch.                     |
+| `.pf-m-align-items-baseline{-on-[breakpoint]}`           | `.pf-v6-l-flex`                                        | Modifies the flex layout align-items property to baseline.                    |
+| `.pf-m-align-content-flex-start{-on-[breakpoint]}`       | `.pf-v6-l-flex`                                        | Modifies the flex layout align-content property to flex-start.                |
+| `.pf-m-align-content-flex-end{-on-[breakpoint]}`         | `.pf-v6-l-flex`                                        | Modifies the flex layout align-content property to flex-end.                  |
+| `.pf-m-align-content-center{-on-[breakpoint]}`           | `.pf-v6-l-flex`                                        | Modifies the flex layout align-content property to center.                    |
+| `.pf-m-align-content-stretch{-on-[breakpoint]}`          | `.pf-v6-l-flex`                                        | Modifies the flex layout align-content property to stretch.                   |
+| `.pf-m-align-content-space-between{-on-[breakpoint]}`    | `.pf-v6-l-flex`                                        | Modifies the flex layout align-content property to space-between.             |
+| `.pf-m-align-content-space-around{-on-[breakpoint]}`     | `.pf-v6-l-flex`                                        | Modifies the flex layout align-content property to space-around.              |
+| `.pf-m-align-left{-on-[breakpoint]}`                     | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Resets the flex layout element margin-inline-start property to 0.             |
+| `.pf-m-align-right{-on-[breakpoint]}`                    | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies the flex layout element margin-inline-start property to auto.        |
+| `--pf-v6-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-v6-l-flex > .pf-v6-l-flex`, `.pf-v6-l-flex__item` | Modifies the flex layout element order property.                              |
 
 ### Spacer system usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}` | `.pf-v6-l-flex` |  Modifies the flex layout to add space between items on the main axis. |
-| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}` | `.pf-v6-l-flex`, `.pf-v6-l-flex > .pf-v6-l-flex__item` |  Modifies the spacer for any direct child along the main axis of a flex layout. |
+
+| Class                                                                           | Applied to                                             | Outcome                                                                        |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}` | `.pf-v6-l-flex`                                        | Modifies the flex layout to add space between items on the main axis.          |
+| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`      | `.pf-v6-l-flex`, `.pf-v6-l-flex > .pf-v6-l-flex__item` | Modifies the spacer for any direct child along the main axis of a flex layout. |
 
 ### Gap spacing usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between columns and rows. |
-| `.pf-m-row-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between rows. |
-| `.pf-m-column-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between columns. |
+
+| Class                                                                            | Applied to      | Outcome                                      |
+| -------------------------------------------------------------------------------- | --------------- | -------------------------------------------- |
+| `.pf-m-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}`        | `.pf-v6-l-flex` | Modifies the space between columns and rows. |
+| `.pf-m-row-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}`    | `.pf-v6-l-flex` | Modifies the space between rows.             |
+| `.pf-m-column-gap{-[none, xs, sm, md, lg, xl, 2xl, 3xl, 4xl]}{-on-[breakpoint]}` | `.pf-v6-l-flex` | Modifies the space between columns.          |

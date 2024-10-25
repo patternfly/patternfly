@@ -16,14 +16,14 @@ $pf-v6-global--font-size-root: 16 !default; // for fonts
 $pf-v6-global--space-size-root: 16 !default; // for spaces
 
 // Fontpath
-$pf-v6-global--font-path: "./assets/fonts" !default;
+$pf-v6-global--font-path: './assets/fonts' !default;
 
 // Iconpath
 // stylelint-disable-next-line scss/dollar-variable-pattern
-$fa-font-path: "./assets/fonts/webfonts" !default;
+$fa-font-path: './assets/fonts/webfonts' !default;
 
 // FontIcon path
-$pf-v6-global--fonticon-path: "./assets/pficon" !default;
+$pf-v6-global--fonticon-path: './assets/pficon' !default;
 
 // Grid breakpoints
 // Note that these duplicate and should match breakpoint tokens
@@ -43,69 +43,63 @@ $pf-v6-global--height-breakpoint--2xl: 80rem !default; // 1280px
 
 // Global breakpoint map - used for @pf-grid-item-modifiers
 $pf-v6-global--breakpoint-map: (
-  "": null,
-  "sm": "-on-sm",
-  "md": "-on-md",
-  "lg": "-on-lg",
-  "xl": "-on-xl",
-  "2xl": "-on-2xl"
+  '': null,
+  'sm': '-on-sm',
+  'md': '-on-md',
+  'lg': '-on-lg',
+  'xl': '-on-xl',
+  '2xl': '-on-2xl'
 );
 
 // Global breakpoint list - used for @pf-v6-utility-builder
-$pf-v6-global--breakpoint-list: (
-  "sm",
-  "md",
-  "lg",
-  "xl",
-  "2xl"
-);
+$pf-v6-global--breakpoint-list: ('sm', 'md', 'lg', 'xl', '2xl');
 
 // Global breakpoint name map - used for %pf-v6-hidden-visible
 $pf-v6-global--breakpoint-name-map: (
-  "sm": $pf-v6-global--breakpoint--sm,
-  "md": $pf-v6-global--breakpoint--md,
-  "lg": $pf-v6-global--breakpoint--lg,
-  "xl": $pf-v6-global--breakpoint--xl,
-  "2xl": $pf-v6-global--breakpoint--2xl
+  'sm': $pf-v6-global--breakpoint--sm,
+  'md': $pf-v6-global--breakpoint--md,
+  'lg': $pf-v6-global--breakpoint--lg,
+  'xl': $pf-v6-global--breakpoint--xl,
+  '2xl': $pf-v6-global--breakpoint--2xl
 );
 
 // Global breakpoint name map - used for %pf-v6-hidden-visible
 $pf-v6-global--height-breakpoint-name-map: (
-  "sm": $pf-v6-global--height-breakpoint--sm,
-  "md": $pf-v6-global--height-breakpoint--md,
-  "lg": $pf-v6-global--height-breakpoint--lg,
-  "xl": $pf-v6-global--height-breakpoint--xl,
-  "2xl": $pf-v6-global--height-breakpoint--2xl
+  'sm': $pf-v6-global--height-breakpoint--sm,
+  'md': $pf-v6-global--height-breakpoint--md,
+  'lg': $pf-v6-global--height-breakpoint--lg,
+  'xl': $pf-v6-global--height-breakpoint--xl,
+  '2xl': $pf-v6-global--height-breakpoint--2xl
 );
 
 // Spacer properties
 $pf-v6-global--spacer-properties-map: (
-  "m":  "margin",
-  "mt": "margin-block-start",
-  "mr": "margin-inline-end",
-  "mb": "margin-block-end",
-  "ml": "margin-inline-start",
-  "mx": null,
-  "my": null,
-  "p":  "padding",
-  "pt": "padding-block-start",
-  "pr": "padding-inline-end",
-  "pb": "padding-block-end",
-  "pl": "padding-inline-start",
-  "px": null,
-  "py": null
+  'm': 'margin',
+  'mt': 'margin-block-start',
+  'mr': 'margin-inline-end',
+  'mb': 'margin-block-end',
+  'ml': 'margin-inline-start',
+  'mx': null,
+  'my': null,
+  'p': 'padding',
+  'pt': 'padding-block-start',
+  'pr': 'padding-inline-end',
+  'pb': 'padding-block-end',
+  'pl': 'padding-inline-start',
+  'px': null,
+  'py': null
 );
 
 // Spacer values
 $pf-v6-global--spacer-map: (
-  "auto": "auto",
-  "0": 0,
-  "xs": "var(--pf-t--global--spacer--xs)",
-  "sm": "var(--pf-t--global--spacer--sm)",
-  "md": "var(--pf-t--global--spacer--md)",
-  "lg": "var(--pf-t--global--spacer--lg)",
-  "xl": "var(--pf-t--global--spacer--xl)",
-  "2xl": "var(--pf-t--global--spacer--2xl)",
-  "3xl": "var(--pf-t--global--spacer--3xl)",
-  "4xl": "var(--pf-t--global--spacer--4xl)"
+  'auto': 'auto',
+  '0': 0,
+  'xs': 'var(--pf-t--global--spacer--xs)',
+  'sm': 'var(--pf-t--global--spacer--sm)',
+  'md': 'var(--pf-t--global--spacer--md)',
+  'lg': 'var(--pf-t--global--spacer--lg)',
+  'xl': 'var(--pf-t--global--spacer--xl)',
+  '2xl': 'var(--pf-t--global--spacer--2xl)',
+  '3xl': 'var(--pf-t--global--spacer--3xl)',
+  '4xl': 'var(--pf-t--global--spacer--4xl)'
 );

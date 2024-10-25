@@ -1,5 +1,5 @@
 .pf-v6-c-draggable {
-  padding: .25em;
+  padding: 0.25em;
 }
 
 .pf-v6-c-draggable.pf-m-dragging {
@@ -7,7 +7,7 @@
 
   position: absolute;
   inset-block-start: 23%;
-  inset-inline-start: .5em;
+  inset-inline-start: 0.5em;
   z-index: 9999;
   width: 100%;
 }
