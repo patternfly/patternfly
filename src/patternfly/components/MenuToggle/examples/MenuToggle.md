@@ -536,7 +536,7 @@ Shown with default, primary, and secondary styling
 <br/>
 <br/>
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -547,7 +547,7 @@ Shown with default, primary, and secondary styling
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button--primary-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -558,7 +558,7 @@ Shown with default, primary, and secondary styling
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true" check--standalone--label="Select all items"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button--primary-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true" check--standalone--label="Select all items"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone=true check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -570,7 +570,7 @@ Shown with default, primary, and secondary styling
 <br/>
 <br/>
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -581,7 +581,7 @@ Shown with default, primary, and secondary styling
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -592,7 +592,7 @@ Shown with default, primary, and secondary styling
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true" check--standalone--label="Select all items"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true" check--standalone--label="Select all items"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone=true check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -759,7 +759,7 @@ Shown with default, primary, and secondary styling
 <br/>
 <br/>
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -771,7 +771,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -783,7 +783,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -798,7 +798,7 @@ Shown with default, primary, and secondary styling
 <br/>
 <br/>
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -810,7 +810,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -822,7 +822,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-text}}
@@ -842,7 +842,7 @@ To add a label to a split toggle that will be linked to the toggle button, pass 
 Shown with default, primary, and secondary styling
 
 ```hbs
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-icon-text-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -857,7 +857,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-icon-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -872,7 +872,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-button-icon-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -890,7 +890,7 @@ Shown with default, primary, and secondary styling
 <br/>
 <br/>
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-with-toggle-button-icon-text-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -905,7 +905,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-with-toggle-button-icon-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -920,7 +920,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-primary-checkbox-with-toggle-button-icon-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -938,7 +938,7 @@ Shown with default, primary, and secondary styling
 <br/>
 <br/>
 
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-example" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-with-toggle-button-icon-text-example" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -953,7 +953,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-with-toggle-button-icon-text-expanded-example"  menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
@@ -968,7 +968,7 @@ Shown with default, primary, and secondary styling
   {{/menu-toggle-button}}
 {{/menu-toggle}}
 &nbsp;
-{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-button-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-secondary-checkbox-with-toggle-button-icon-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
