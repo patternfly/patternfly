@@ -1259,18 +1259,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action button--aria-label='Starred' menu-item-action--IsFavorit=true menu-item-action--IsFavorited=true}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Item 3
-              {{/menu-item-text}}
-              {{> menu-item-external-icon}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
+          {{> menu-item-action button--aria-label='Starred' button--icon="star" menu-item-action--IsFavorite=true menu-item-action--IsFavorited=true}}
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
@@ -1291,7 +1280,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
+          {{> menu-item-action button--aria-label='Starred' button--icon="star" menu-item-action--IsFavorite=true menu-item-action--IsFavorited=true}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1305,7 +1294,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
+          {{> menu-item-action button--aria-label='Not starred' button--icon="star" menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -1316,7 +1305,7 @@ import './Menu.css'
               {{> menu-item-external-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{> menu-item-action button--aria-label='Not starred' menu-item-action--IsFavorite=true}}
+          {{> menu-item-action button--aria-label='Not starred' button--icon="star" menu-item-action--IsFavorite=true}}
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}

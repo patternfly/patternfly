@@ -101,7 +101,6 @@
   // * Menu action
   --#{$menu}__item-action--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu}__item-action--icon--size: var(--#{$menu}__item-action--FontSize, var(--pf-t--global--icon--size--md));
-  --#{$menu}__item-action--Color: var(--pf-t--global--icon--color--subtle);
   --#{$menu}__item-action--m-favorited--Color: var(--pf-t--global--icon--color--favorite--clicked);
   --#{$menu}__item-action--button--MinWidth: calc(var(--#{$menu}__item-action--icon--size) + var(--pf-t--global--spacer--sm) * 2);
 
@@ -613,8 +612,11 @@
   &.pf-m-favorited,
   &.pf-m-favorited:hover,
   &.pf-m-favorited .#{$button} {
-    --#{$button}--Color: var(--#{$menu}__item-action--m-favorited--Color);
-    --#{$menu}__item-action--Color: var(--#{$menu}__item-action--m-favorited--Color);
+    --#{$button}--m-plain__icon--Color: var(--#{$menu}__item-action--m-favorited--Color);
+    
+    &:is(:hover, :focus) {
+      --#{$button}--hover__icon--Color: var(--#{$menu}__item-action--m-favorited--Color);
+    }
   }
 }
 
