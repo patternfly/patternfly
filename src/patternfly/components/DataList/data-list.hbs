@@ -1,4 +1,6 @@
-<ul class="{{pfv}}data-list{{#if data-list--modifier}} {{data-list--modifier}}{{/if}}"
+<ul class="{{pfv}}data-list
+  {{#if data-list--IsCompact}} pf-m-compact{{/if}}
+  {{#if data-list--modifier}} {{data-list--modifier}}{{/if}}"
   role="list"
   {{#if data-list--attribute}}
     {{{data-list--attribute}}}

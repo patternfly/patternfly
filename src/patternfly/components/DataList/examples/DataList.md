@@ -292,7 +292,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Expandable compact
 ```hbs
-{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable-compact" data-list--attribute='aria-label="Expandable data list example"'}}
+{{#> data-list data-list--IsCompact=true data-list--id="data-list-expandable-compact" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -523,7 +523,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Compact
 ```hbs
-{{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier="pf-m-compact pf-m-grid-sm"}}
+{{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier=" pf-m-grid-sm" data-list--IsCompact=true}}
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -565,10 +565,10 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        {{#> button button--IsPrimary=true}}
+        {{#> button button--IsPrimary=true button--IsSmall=true}}
             Primary
         {{/button}}
-        {{#> button button--IsSecondary=true}}
+        {{#> button button--IsSecondary=true button--IsSmall=true}}
             Secondary
         {{/button}}
       {{/data-list-item-action}}
@@ -590,16 +590,16 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
-        {{#> button button--IsPrimary=true}}
+        {{#> button button--IsPrimary=true button--IsSmall=true}}
             Primary
         {{/button}}
-        {{#> button button--IsSecondary=true}}
+        {{#> button button--IsSecondary=true button--IsSmall=true}}
             Secondary
         {{/button}}
-        {{#> button button--IsSecondary=true}}
+        {{#> button button--IsSecondary=true button--IsSmall=true}}
             Secondary
         {{/button}}
-        {{#> button button--IsSecondary=true}}
+        {{#> button button--IsSecondary=true button--IsSmall=true}}
             Secondary
         {{/button}}
       {{/data-list-item-action}}
@@ -871,7 +871,7 @@ When a list item includes more than one block of content, it can be difficult fo
 <div id="draggable-help">
   Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
 </div>
-{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
+{{#> data-list data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}

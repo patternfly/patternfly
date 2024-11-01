@@ -6,6 +6,7 @@
     {{> @partial-block}}
   {{else}}
     {{> menu-toggle
+      menu-toggle--IsSmall=data-list--IsCompact
       menu-toggle--IsPlain=true
       menu-toggle--HasKebab=true
       menu-toggle--id=(dasherize data-list--id data-list-item--id 'menu-toggle')
