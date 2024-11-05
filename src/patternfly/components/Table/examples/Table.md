@@ -685,7 +685,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -712,7 +712,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -738,7 +738,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -764,7 +764,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
         {{/table-expandable-row-content}}
@@ -814,7 +814,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content-' table-tr--index '"')}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
       {{#> table-td table-td--attribute='colspan="4"'}}
@@ -843,7 +843,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content-' table-tr--index '"')}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
       {{#> table-td table-td--attribute='colspan="2"'}}
@@ -877,7 +877,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content-' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="7"'}}
         {{#> table-expandable-row-content}}
           <b>Span all</b>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -903,7 +903,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content-' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="3"'}}
         {{#> table-expandable-row-content}}
           Span one, two, and three
@@ -963,7 +963,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           {{#> table newcontext table--id=(concat table--id "-table-basic") table--IsGrid=true table--IsCompact=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table"'}}
             {{#> table-thead}}
@@ -1083,7 +1083,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1109,7 +1109,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1135,7 +1135,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
         {{/table-expandable-row-content}}
@@ -1519,7 +1519,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tr--index '"')}}
         <div class="pf-v6-c-table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
@@ -1546,7 +1546,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1572,7 +1572,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1598,7 +1598,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           This content has no padding.
         {{/table-expandable-row-content}}
@@ -1624,7 +1624,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1649,7 +1649,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content-' table-tr--index '"')}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
       {{#> table-td table-td--attribute='colspan="2"'}}
@@ -1685,7 +1685,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -1710,7 +1710,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true table-tr--attribute=(concat 'id="' table--id '-content-' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="4"'}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -1743,7 +1743,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -2187,7 +2187,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -2214,7 +2214,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -2241,7 +2241,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -2267,7 +2267,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
         {{/table-expandable-row-content}}
@@ -3299,7 +3299,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
         {{> table-cell-empty}}
         {{> table-cell-empty}}
-        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content1"'}}
+        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content-1"'}}
           {{#> table-expandable-row-content}}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           {{/table-expandable-row-content}}
@@ -3333,7 +3333,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-tr table-tr--IsExpandable=true}}
         {{> table-cell-empty}}
         {{> table-cell-empty}}
-        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content2"'}}
+        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content-2"'}}
           {{#> table-expandable-row-content}}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           {{/table-expandable-row-content}}
@@ -3367,7 +3367,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{#> table-tr table-tr--IsExpandable=true}}
         {{> table-cell-empty}}
         {{> table-cell-empty}}
-        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content3"'}}
+        {{#> table-td table-td--attribute='colspan="5" id="nested-columns-expandable-example-content-3"'}}
           {{#> table-expandable-row-content}}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           {{/table-expandable-row-content}}
@@ -4045,7 +4045,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -4072,7 +4072,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -4098,7 +4098,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
@@ -4124,7 +4124,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
         {{/table-expandable-row-content}}

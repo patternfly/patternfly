@@ -21,6 +21,10 @@
   --pf-v6-c-table--m-compact--cell--first-last-child--PaddingInlineStart: var(--pf-v6-global--spacer--sm);
 }
 
+#ws-html-demos-c-card-status-card-expanded-with-popover .pf-v6-c-card {
+  overflow: initial;
+}
+
 .ws-chart {
   display: flex;
   max-width: 100%;
