@@ -76,6 +76,11 @@
       // stylelint-enable
       overflow: hidden;
     }
+
+    .#{$truncate}__start,
+    .#{$truncate}__end {
+      white-space: nowrap;
+    }
   }
 }
 
