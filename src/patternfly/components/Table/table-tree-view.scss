@@ -126,25 +126,25 @@ $pf-v6-c-tree-view--MaxDepth: 10;
   }
 
   .pf-m-tree-view-grid-md.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--md) {
+    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
       @content;
     }
   }
 
   .pf-m-tree-view-grid-lg.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--lg) {
+    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--lg)) {
       @content;
     }
   }
 
   .pf-m-tree-view-grid-xl.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--xl) {
+    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
       @content;
     }
   }
 
   .pf-m-tree-view-grid-2xl.#{$table} {
-    @media screen and (max-width: $pf-v6-global--breakpoint--2xl) {
+    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--2xl)) {
       @content;
     }
   }
