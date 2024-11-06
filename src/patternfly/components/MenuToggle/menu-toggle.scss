@@ -411,7 +411,7 @@
   &.pf-m-primary,
   &.pf-m-secondary {
     // Reduce the padding before/after the border unless it's an icon/check-only element
-    .#{$menu-toggle}__button:not(:has(.#{$menu-toggle}__toggle-icon:only-child)),
+    .#{$menu-toggle}__button:not(:has(.#{$menu-toggle}__controls:only-child)),
     .#{$check}:not(.pf-m-standalone) {
       &:first-child {
         padding-inline-end: var(--#{$menu-toggle}--m-split-button--pill--child--PaddingInlineEnd--offset);
