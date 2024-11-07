@@ -8,10 +8,11 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-}
 
-.#{$stack}__item.pf-m-fill {
-  flex-grow: 1;
+  @at-root .#{$stack}__item.pf-m-fill,
+  & > .pf-m-fill {
+    flex-grow: 1;
+  }
 }
 
 .#{$stack}.pf-m-gutter {
