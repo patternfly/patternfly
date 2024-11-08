@@ -10,7 +10,7 @@ jobs:
       GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
       GH_PR_NUM:   ${{ github.event.number }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       # Yes, we really want to checkout the PR
       - run: |
           git fetch origin pull/$GH_PR_NUM/head:tmp
@@ -24,10 +24,10 @@ jobs:
 
       # Yes, we really want to checkout the PR
       # Injected by generate-workflows.js
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
-      - uses: actions/cache@v2
+          node-version: '20'
+      - uses: actions/cache@v4
         id: yarn-cache
         name: Load npm deps from cache
         with:
@@ -43,7 +43,7 @@ jobs:
         if: always()
       - run: yarn build-patternfly
         name: Build patternfly
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache
         with:
@@ -54,6 +54,8 @@ jobs:
       - run: node .github/upload-preview.js public
         name: Upload docs
         if: always()
+      - name: Install Chrome for Puppeteer
+        run: npx puppeteer browsers install chrome
       - run: yarn serve & yarn test
         name: a11y tests
       - run: node .github/upload-preview.js coverage
