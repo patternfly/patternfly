@@ -14,14 +14,14 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       # Injected by generate-workflows.js
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
-      - uses: actions/cache@v2
+          node-version: '20'
+      - uses: actions/cache@v4
         id: yarn-cache
         name: Load npm deps from cache
         with:
@@ -37,7 +37,7 @@ jobs:
         if: always()
       - run: yarn build-patternfly
         name: Build patternfly
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache
         with:
