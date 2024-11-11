@@ -1,18 +1,16 @@
 {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=page-template-title--modifier}}
-  {{#> content}}
-    <h1>
-      {{~#if page-template-title--title}}
-        {{page-template-title--title}}
-      {{else}}
-        Main title
-      {{/if}}
-    </h1>
-    <p>
-      {{~#if page-template-title--description}}
-        {{page-template-title--description}}
-      {{else}}
-        This is a full page demo.
-      {{/if}}
-    </p>
-  {{/content}}
+  {{#> content--element content--element--type="h1" content--element--IsPageTitle=true}}
+    {{~#if page-template-title--title}}
+      {{page-template-title--title}}
+    {{else}}
+      Main title
+    {{/if}}
+  {{/content--element}}
+  {{#> content--element content--element--type="p"}}
+    {{~#if page-template-title--description}}
+      {{page-template-title--description}}
+    {{else}}
+      This is a full page demo.
+    {{/if}}
+  {{/content--element}}
 {{/page-main-section}}
