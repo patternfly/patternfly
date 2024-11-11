@@ -29,6 +29,15 @@ cssPrefix: pf-v6-c-content
 {{/content}}
 ```
 
+### Page title
+```hbs
+{{#> content}}
+  {{#> content--element content--element--type="h1" content--element--IsPageTitle=true content--element--ExcludeClass=true}}H1 page title in content wrapper{{/content--element}}
+{{/content}}
+
+{{#> content--element content--element--type="h1" content--element--IsPageTitle=true}}H1 page title{{/content--element}}
+```
+
 ## Documentation
 ### Overview
 When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-v6-c-content` as container. It can handle almost any HTML tag:
@@ -50,3 +59,4 @@ This component is an exception to the variable system since we style type select
 | `.pf-m-visited` | `.pf-v6-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
 | `.pf-m-plain` | `<ul>`, `<ol>` | Removes the list marker and indentation. |
 | `.pf-m-editorial` | `.pf-v6-c-content*` | Applies long-form, editorial content styles to a block of content or individual content elements. |
+| `.pf-m-page-title` | `.pf-v6-c-content--[h1, h2, h3, h4, h5, h6]`, `.pf-v6-c-content [h1, h2, h3, h4, h5, h6]` | Applies page title styles. **Note:** `.pf-m-page-title` should only apply to the heading that serves as the title for the current page. |
