@@ -3768,8 +3768,8 @@ For sticky columns to function correctly, the parent table's width must be contr
 
 ## Draggable rows
 
-### Draggable rows example isBeta
-```hbs
+### Draggable rows example
+```hbs isBeta
 {{#> wrapper table--id="table-draggable-rows"}}
   <div id="{{table--id}}-help">
     Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
