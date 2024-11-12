@@ -500,14 +500,6 @@
   flex-wrap: nowrap;
 }
 
-// - Menu toggle controls - Menu toggle icon
-.#{$menu-toggle}__controls,
-.#{$menu-toggle}__toggle-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
 
@@ -523,7 +515,10 @@
 
 // - Menu toggle controls
 .#{$menu-toggle}__controls {
+  display: flex;
   gap: var(--#{$menu-toggle}__controls--Gap);
+  align-items: center;
+  justify-content: center;
   margin-inline-start: auto; // TODO: possibly replace as part of one of the other TODOs at top of file
 }
 
