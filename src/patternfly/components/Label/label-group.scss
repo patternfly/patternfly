@@ -4,20 +4,28 @@
   // Label group - spaces main with the close button
   --#{$label-group}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$label-group}--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}--MaxWidth: 100%;
   --#{$label-group}--m-vertical--RowGap: var(--pf-t--global--spacer--sm);
   --#{$label-group}--m-vertical--ColumnGap: var(--pf-t--global--spacer--sm);
 
   // Main - spaces the category label with the list
   --#{$label-group}__main--RowGap: var(--pf-t--global--spacer--xs);
   --#{$label-group}__main--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$label-group}__main--MaxWidth: 100%;
+  --#{$label-group}__main--MinWidth: 0;
   --#{$label-group}--m-vertical__main--RowGap: var(--pf-t--global--spacer--sm);
   --#{$label-group}--m-vertical__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // List - spaces the items
   --#{$label-group}__list--RowGap: var(--pf-t--global--spacer--xs);
   --#{$label-group}__list--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$label-group}__list--MaxWidth: 100%;
+  --#{$label-group}__list--MinWidth: 0;
   --#{$label-group}--m-vertical__list--RowGap: var(--pf-t--global--spacer--xs);
   --#{$label-group}--m-vertical__list--ColumnGap: var(--pf-t--global--spacer--xs);
+
+  // List item
+  --#{$label-group}__list-item--MaxWidth: 100%;
 
   // Category
   --#{$label-group}--m-category--PaddingBlockStart: var(--pf-t--global--spacer--xs);
@@ -52,6 +60,7 @@
   row-gap: var(--#{$label-group}--RowGap);
   column-gap: var(--#{$label-group}--ColumnGap);
   align-items: center;
+  max-width: var(--#{$label-group}--MaxWidth);
 
   &.pf-m-category {
     padding-block-start: var(--#{$label-group}--m-category--PaddingBlockStart);
@@ -79,10 +88,12 @@
     .#{$label-group}__list {
       flex-direction: column;
       align-items: flex-start;
+      max-width: var(--#{$label-group}__list--MaxWidth);
     }
 
     .#{$label-group}__main {
       flex-direction: column;
+      min-width: var(--#{$label-group}__main--MinWidth);
     }
   }
 
@@ -109,6 +120,7 @@
   row-gap: var(--#{$label-group}__main--RowGap);
   column-gap: var(--#{$label-group}__main--ColumnGap);
   align-items: baseline;
+  min-width: var(--#{$label-group}__main--MinWidth);
 }
 
 .#{$label-group}__list {
@@ -116,10 +128,12 @@
   flex-wrap: wrap;
   row-gap: var(--#{$label-group}__list--RowGap);
   column-gap: var(--#{$label-group}__list--ColumnGap);
+  min-width: var(--#{$label-group}__list--MinWidth);
 }
 
 .#{$label-group}__list-item {
   display: inline-flex;
+  max-width: var(--#{$label-group}__list-item--MaxWidth);
 }
 
 .#{$label-group}__label {
