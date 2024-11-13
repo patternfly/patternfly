@@ -10,6 +10,11 @@
   align-items: center;
   justify-content: space-between;
 
+  @at-root .#{$level}__item.pf-m-fill,
+  & > .pf-m-fill {
+    flex-grow: 1;
+  }
+
   &.pf-m-gutter {
     gap: var(--#{$level}--m-gutter--Gap);
   }
