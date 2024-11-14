@@ -29,15 +29,6 @@ cssPrefix: pf-v6-c-content
 {{/content}}
 ```
 
-### Page title
-```hbs
-{{#> content}}
-  {{#> content--element content--element--type="h1" content--element--IsPageTitle=true content--element--ExcludeClass=true}}H1 page title in content wrapper{{/content--element}}
-{{/content}}
-
-{{#> content--element content--element--type="h1" content--element--IsPageTitle=true}}H1 page title{{/content--element}}
-```
-
 ## Documentation
 ### Overview
 When you can't use the CSS classes you want, or when you just want to directly use HTML tags, use `pf-v6-c-content` as container. It can handle almost any HTML tag:
