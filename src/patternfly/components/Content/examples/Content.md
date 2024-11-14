@@ -50,3 +50,4 @@ This component is an exception to the variable system since we style type select
 | `.pf-m-visited` | `.pf-v6-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
 | `.pf-m-plain` | `<ul>`, `<ol>` | Removes the list marker and indentation. |
 | `.pf-m-editorial` | `.pf-v6-c-content*` | Applies long-form, editorial content styles to a block of content or individual content elements. |
+| `.pf-m-page-title` | `.pf-v6-c-content--[h1, h2, h3, h4, h5, h6]`, `.pf-v6-c-content [h1, h2, h3, h4, h5, h6]` | Applies page title styles. **Note:** `.pf-m-page-title` should only apply to the heading that serves as the title for the current page. |

@@ -8,44 +8,55 @@ cssPrefix: pf-v6-c-title
 ### Size modifiers
 ```hbs
 {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
-    4xl title
+  4xl title
 {{/title}}
 {{#> title titleType="h1" title--modifier="pf-m-3xl"}}
-    3xl title
+  3xl title
 {{/title}}
 {{#> title titleType="h1" title--modifier="pf-m-2xl"}}
-    2xl title
+  2xl title
 {{/title}}
 {{#> title titleType="h1" title--modifier="pf-m-xl"}}
-    xl title
+  xl title
 {{/title}}
 {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-    lg title
+  lg title
 {{/title}}
 {{#> title titleType="h1" title--modifier="pf-m-md"}}
-    md title
+  md title
 {{/title}}
 ```
 
 ### Heading level modifiers
 ```hbs
 {{#> title titleType="div" title--modifier="pf-m-h1"}}
-    H1-styled title
+  H1-styled title
 {{/title}}
 {{#> title titleType="div" title--modifier="pf-m-h2"}}
-    H2-styled title
+  H2-styled title
 {{/title}}
 {{#> title titleType="div" title--modifier="pf-m-h3"}}
-    H3-styled title
+  H3-styled title
 {{/title}}
 {{#> title titleType="div" title--modifier="pf-m-h4"}}
-    H4-styled title
+  H4-styled title
 {{/title}}
 {{#> title titleType="div" title--modifier="pf-m-h5"}}
-    H5-styled title
+  H5-styled title
 {{/title}}
 {{#> title titleType="div" title--modifier="pf-m-h6"}}
-    H6-styled title
+  H6-styled title
+{{/title}}
+```
+
+### Page title
+```hbs
+{{#> title titleType="h1" title--modifier="pf-m-2xl" title--IsPageTitle=true}}
+  2xl page title
+{{/title}}
+
+{{#> title titleType="div" title--modifier="pf-m-h1" title--IsPageTitle=true}}
+  H1 page title
 {{/title}}
 ```
 
@@ -80,3 +91,4 @@ The content component defines margin on headers. To regain the same spacing use,
 | `.pf-m-h4` | `.pf-v6-c-title` | Modifies for default h4 size |
 | `.pf-m-h5` | `.pf-v6-c-title` | Modifies for default h5 size |
 | `.pf-m-h6` | `.pf-v6-c-title` | Modifies for default h6 size |
+| `.pf-m-page-title` | `.pf-v6-c-title` | Applies page title styles. **Note:** `.pf-m-page-title` should only apply to the heading that serves as the title for the current page. |

@@ -64,6 +64,9 @@
   --#{$title}--m-h6--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$title}--m-h6--FontSize: var(--pf-t--global--font--size--heading--h6);
   --#{$title}--m-h6--FontWeight: var(--pf-t--global--font--weight--heading--default);
+
+  // Page title
+  --#{$title}--m-page-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
 }
 
 .#{$title} {
@@ -140,5 +143,9 @@
     font-size: var(--#{$title}--m-h6--FontSize);
     font-weight: var(--#{$title}--m-h6--FontWeight);
     line-height: var(--#{$title}--m-h6--LineHeight);
+  }
+
+  &.pf-m-page-title {
+    font-weight: var(--#{$title}--m-page-title--FontWeight);
   }
 }

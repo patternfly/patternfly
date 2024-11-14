@@ -1,4 +1,8 @@
-<{{#if titleType}}{{titleType}}{{else}}h1{{/if}} class="{{pfv}}title{{#if title--modifier}} {{title--modifier}}{{/if}}"
+<{{#if titleType}}{{titleType}}{{else}}h1{{/if}} class="{{pfv}}title
+  {{setModifiers
+    title--IsPageTitle='pf-m-page-title'
+    title--modifier=title--modifier
+  }}"
 	{{#if title--attribute}}
     {{{title--attribute}}}
   {{/if}}>
