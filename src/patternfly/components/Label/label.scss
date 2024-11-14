@@ -6,7 +6,7 @@
   --#{$label}--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$label}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--MaxWidth: 100%;
-  --#{$label}--MinWidth: 3em;
+  --#{$label}--MinWidth: calc((var(--#{$label}--FontSize) * var(--pf-t--global--font--line-height--body) + var(--#{$label}--PaddingBlockStart) + var(--#{$label}--PaddingBlockEnd)));
   --#{$label}--BorderWidth: 0;
   --#{$label}--BorderColor: transparent;
   --#{$label}--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -203,6 +203,7 @@
   --#{$label}--m-compact--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$label}--m-compact--m-editable--TextUnderlineOffset: #{pf-size-prem(1px)};
+  --#{$label}--m-compact--MinWidth: calc((var(--#{$label}--m-compact--FontSize) * var(--pf-t--global--font--line-height--body)) + (var(--#{$label}--m-compact--PaddingBlockStart) + var(--#{$label}--m-compact--PaddingBlockEnd)));
 
   // Content
   --#{$label}__content--MaxWidth: 100%;
@@ -424,6 +425,7 @@
     --#{$label}--PaddingBlockEnd: var(--#{$label}--m-compact--PaddingBlockEnd);
     --#{$label}--PaddingInlineStart: var(--#{$label}--m-compact--PaddingInlineStart);
     --#{$label}--FontSize: var(--#{$label}--m-compact--FontSize);
+    --#{$label}--MinWidth: var(--#{$label}--m-compact--MinWidth);
     --#{$label}--m-editable--TextUnderlineOffset: var(--#{$label}--m-compact--m-editable--TextUnderlineOffset);
   }
 
@@ -535,6 +537,7 @@
 .#{$label}__content {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .#{$label}__text {

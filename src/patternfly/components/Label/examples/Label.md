@@ -120,6 +120,25 @@ Use a label group to display multiple labels at once.
     {{/label-group-list}}
   {{/label-group-main}}
 {{/label-group}}
+
+<br/><br/>
+
+{{#> label-group label-group--id="label-group-basic"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{> label label-text--value="A"}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{> label label--color="blue" label-text--value="T"}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{> label label--color="green" label-text--value="I"}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+
 ```
 
 ### Label group with overflow
