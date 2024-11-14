@@ -54,6 +54,11 @@ jobs:
       - run: node .github/upload-preview.js public
         name: Upload docs
         if: always()
+      - name: Install specific Chrome version
+        run: npx puppeteer install
+        env:
+          PUPPETEER_BROWSER: chrome
+          PUPPETEER_CHROMIUM_REVISION: 130.0.6723.116
       - name: Install Chrome for Puppeteer
         run: npx puppeteer browsers install chrome
       - run: yarn serve & yarn test
