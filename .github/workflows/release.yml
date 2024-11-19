@@ -48,6 +48,8 @@ jobs:
       - run: node .github/upload-preview.js public
         name: Upload docs
         if: always()
+      - name: Install Chrome for Puppeteer
+        run: npx puppeteer browsers install chrome
       - run: yarn serve & yarn test
         name: a11y tests
       - run: node .github/upload-preview.js coverage
