@@ -12,6 +12,10 @@ import './Level.css'
 {{#> level}}
   {{#> level-item}}
     content
+    <br>
+    content
+    <br>
+    content
   {{/level-item}}
   {{#> level-item}}
     content
@@ -26,6 +30,10 @@ import './Level.css'
     content
   {{/level-item}}
   {{#> level-item}}
+    content
+    <br>
+    content
+    <br>
     content
   {{/level-item}}
   {{#> level-item}}
@@ -44,7 +52,11 @@ import './Level.css'
     content with gutter
   {{/level-item}}
   {{#> level-item}}
-    content with gutter
+    content
+    <br>
+    content
+    <br>
+    content
   {{/level-item}}
 {{/level}}
 ```

@@ -12,10 +12,11 @@
   &.pf-m-wrap {
     flex-wrap: wrap; // make default in a breaking change release
   }
-}
 
-.#{$split}__item.pf-m-fill {
-  flex-grow: 1;
+  @at-root .#{$split}__item.pf-m-fill,
+  & > .pf-m-fill {
+    flex-grow: 1;
+  }
 }
 
 .#{$split}.pf-m-gutter {

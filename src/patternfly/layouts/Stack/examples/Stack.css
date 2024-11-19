@@ -1,5 +1,4 @@
-.ws-core-l-stack .pf-v6-l-stack,
-.ws-core-l-stack .pf-v6-l-stack__item {
+.ws-core-l-stack :is(.pf-v6-l-stack, .pf-v6-l-stack__item, .pf-v6-l-stack > *) {
   padding: var(--pf-t--global--spacer--sm);
   border: var(--pf-t--global--border--width--box--default) dashed var(--pf-t--global--border--color--default);
 }
