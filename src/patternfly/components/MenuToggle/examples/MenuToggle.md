@@ -217,20 +217,35 @@ import './MenuToggle.css'
 
 ### Small
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--text="Collapsed"}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsExpanded=true menu-toggle--text="Expanded"}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
-```
-
-### Small with text
-```hbs
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsDisabled=true menu-toggle--text="Disabled"}}
+<br><br>
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsPrimary=true menu-toggle--text="Collapsed"}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsPrimary=true menu-toggle--IsExpanded=true menu-toggle--text="Expanded"}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsPrimary=true menu-toggle--IsDisabled=true menu-toggle--text="Disabled"}}
+<br><br>
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsSecondary=true menu-toggle--text="Collapsed"}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsSecondary=true menu-toggle--IsExpanded=true menu-toggle--text="Expanded"}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsSmall=true menu-toggle--IsSecondary=true menu-toggle--IsDisabled=true menu-toggle--text="Disabled"}}
+<br><br>
 {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Collapsed'}}
 &nbsp;
 {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true menu-toggle--text='Expanded' menu-toggle--IsExpanded=true}}
 &nbsp;
 {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsText=true  menu-toggle--text='Disabled' menu-toggle--IsDisabled=true}}
+<br><br>
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSmall=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
 ```
 
 ### With icon/image and text
