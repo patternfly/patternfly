@@ -269,7 +269,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-start` | `.pf-v6-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
 | `.pf-m-end` | `.pf-v6-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-active` | `.pf-v6-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
-| `.pf-m-small` | `.pf-v6-c-button` | Modifies the button so that it has small font size. |
+| `.pf-m-small` | `.pf-v6-c-button` | Modifies the button for small/compact styles. |
 | `.pf-m-aria-disabled` | `.pf-v6-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
 | `.pf-m-display-lg` | `.pf-v6-c-button`, `pf-v6-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
 | `.pf-m-progress` | `.pf-v6-c-button` | Indicates that the button supports the progress state. **Note:** Not used with the plain variation. |

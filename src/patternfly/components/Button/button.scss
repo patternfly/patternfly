@@ -93,6 +93,8 @@
   --#{$button}--m-link--m-clicked--Color: var(--pf-t--global--text--color--brand--clicked);
   --#{$button}--m-link--m-clicked--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$button}--m-link--m-clicked__icon--Color: var(--pf-t--global--text--color--brand--clicked);
+  --#{$button}--m-link--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--compact);
+  --#{$button}--m-link--m-small--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--compact);
 
   // Link danger
   --#{$button}--m-link--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
@@ -150,6 +152,8 @@
   --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: 0;
   --#{$button}--m-plain--m-no-padding--PaddingBlockEnd: 0;
   --#{$button}--m-plain--m-no-padding--PaddingInlineStart: 0;
+  --#{$button}--m-plain--m-no-padding--m-small--PaddingInlineStart: 0;
+  --#{$button}--m-plain--m-no-padding--m-small--PaddingInlineEnd: 0;
   --#{$button}--m-plain--m-no-padding__icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$button}--m-plain--m-no-padding--BackgroundColor: transparent;
   --#{$button}--m-plain--m-no-padding--hover__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -176,11 +180,15 @@
   --#{$button}--m-control--m-clicked--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$button}--m-control--m-clicked--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$button}--m-control--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$button}--m-control--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$button}--m-control--m-small--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
 
   // Stateful
   --#{$button}--m-stateful--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$button}--m-stateful--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}--m-stateful--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$button}--m-stateful--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$button}--m-stateful--m-small--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
 
   // Read
   --#{$button}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
@@ -402,6 +410,8 @@
     --#{$button}--m-clicked--Color: var(--#{$button}--m-link--m-clicked--Color);
     --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-link--m-clicked--BackgroundColor);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-link--m-clicked__icon--Color);
+    --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-link--m-small--PaddingInlineEnd);
+    --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-link--m-small--PaddingInlineStart);
 
     &.pf-m-inline {
       @at-root span#{&} {
@@ -499,6 +509,8 @@
     --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-control--m-clicked--BorderColor);
     --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-control--m-clicked--BorderWidth);
     --#{$button}--m-clicked__icon--Color: var(--#{$button}--m-control--m-clicked__icon--Color);
+    --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-control--m-small--PaddingInlineEnd);
+    --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-control--m-small--PaddingInlineStart);
   }
 
   // Stateful
@@ -506,6 +518,8 @@
     --#{$button}--BorderRadius: var(--#{$button}--m-stateful--BorderRadius);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-stateful--PaddingInlineStart);
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-stateful--PaddingInlineEnd);
+    --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-stateful--m-small--PaddingInlineEnd);
+    --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-stateful--m-small--PaddingInlineStart);
   }
 
   // Read
@@ -570,9 +584,11 @@
       --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-plain--m-no-padding--m-clicked--BackgroundColor);
       --#{$button}--PaddingBlockStart: var(--#{$button}--m-plain--m-no-padding--PaddingBlockStart);
       --#{$button}--PaddingBlockEnd: var(--#{$button}--m-plain--m-no-padding--PaddingBlockEnd);
-      --#{$button}--m-plain--PaddingInlineEnd: var(--#{$button}--m-plain--m-no-padding--PaddingInlineEnd);
-      --#{$button}--m-plain--PaddingInlineStart: var(--#{$button}--m-plain--m-no-padding--PaddingInlineStart);
-
+      --#{$button}--PaddingInlineEnd: var(--#{$button}--m-plain--m-no-padding--PaddingInlineEnd);
+      --#{$button}--PaddingInlineStart: var(--#{$button}--m-plain--m-no-padding--PaddingInlineStart);
+      --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-plain--m-no-padding--m-small--PaddingInlineEnd);
+      --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-plain--m-no-padding--m-small--PaddingInlineStart);
+  
       min-width: var(--#{$button}--m-plain--m-no-padding--MinWidth);
     }
   }
