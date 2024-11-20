@@ -15,7 +15,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
-  --#{$page}__sidebar--xl--Width: auto;
+  --#{$page}__sidebar--xl--Width: #{pf-size-prem(290px)}; // TODO Can remove at breaking change
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
 
@@ -80,7 +80,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
-  --#{$page}--section--m-limit-width--xl--MaxWidth: #{pf-size-prem(1710px)}; // 2000px - 290px because at xl breakpoint, the sidebar width goes to auto and can't be used in a calc
   
   // Sticky
   --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
@@ -137,8 +136,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}--BackgroundColor);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width);
-    --#{$page}--section--m-limit-width--MaxWidth: var(--#{$page}--section--m-limit-width--xl--MaxWidth);
+    --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width); // TODO can remove at breaking change
 
     grid-template-areas:
       "header header"
