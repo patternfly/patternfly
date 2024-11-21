@@ -48,7 +48,7 @@
   --#{$table}__tr--m-first-cell-offset-reset--cell--PaddingInlineStart: var(--#{$table}--cell--Padding--base);
 
   // * Table cell - default variables
-  --#{$table}--cell--MinWidth: 0;
+  --#{$table}--cell--MinWidth: calc(var(--#{$table}--cell--PaddingInlineEnd) + var(--#{$table}--cell--PaddingInlineEnd));
   --#{$table}--cell--MaxWidth: none;
   --#{$table}--cell--Width: auto;
   --#{$table}--cell--Overflow: visible;
@@ -70,6 +70,8 @@
   --#{$table}--m-truncate--cell--MinWidth: calc(5ch + var(--#{$table}--cell--PaddingInlineEnd) + var(--#{$table}--cell--PaddingInlineStart));
 
   // * Table truncate
+  --#{$table}__text--MinWidth: 100%;
+  --#{$table}__text--m-truncate--MinWidth: 5ch;
   --#{$table}--m-truncate__text--MinWidth: 5ch;
 
   // * Table cell hidden visible
@@ -602,12 +604,10 @@
 
 // - Table text
 .#{$table}__text {
-  --#{$table}--cell--MaxWidth: 100%;
-
   position: relative;
   display: block;
   width: var(--#{$table}--cell--Width);
-  min-width: var(--#{$table}--text--MinWidth);
+  min-width: var(--#{$table}__text--MinWidth);
   max-width: var(--#{$table}--cell--MaxWidth);
   overflow: var(--#{$table}--cell--Overflow);
   line-height: var(--#{$table}--cell--LineHeight);
@@ -619,7 +619,7 @@
   &.pf-m-truncate {
     --#{$table}--cell--MinWidth: 100%;
 
-    min-width: max(var(--#{$table}--m-truncate__text--MinWidth), var(--#{$table}--m-truncate--cell--MaxWidth));
+    min-width: max(var(--#{$table}__text--m-truncate--MinWidth), var(--#{$table}__text--MinWidth));
 
     > :where(th, td) {
       overflow: var(--#{$table}--cell--Overflow);
@@ -683,6 +683,7 @@
 
   .#{$table}__text {
     min-width: auto;
+    max-width: 100%;
   }
 
   .#{$table} thead:where(.#{$table}__thead).pf-m-nowrap &,
