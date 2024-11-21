@@ -3391,25 +3391,16 @@ For sticky columns to function correctly, the parent table's width must be contr
         {{#> table-th table-th--attribute='scope="col" colspan="2"' table-th--modifier="pf-m-border-right"}}
           Ports
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
-          Protocol
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
-          Flow rate
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
-          Traffic
-        {{/table-th}}
         {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-fit-content"}}
           Packets
         {{/table-th}}
       {{/table-tr}}
 
       {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-wrap"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-wrap"}}
           Destination
         {{/table-th}}
         {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
@@ -3452,25 +3443,16 @@ For sticky columns to function correctly, the parent table's width must be contr
         {{#> table-th table-th--attribute='scope="col" colspan="2"' table-th--modifier="pf-m-border-right"}}
           Ports
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
-          Protocol
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
-          Flow rate
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-border-right pf-m-fit-content"}}
-          Traffic
-        {{/table-th}}
         {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--IsSortable=true table-th--modifier="pf-m-fit-content"}}
           Packets
         {{/table-th}}
       {{/table-tr}}
 
       {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-wrap"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-wrap"}}
           Destination
         {{/table-th}}
         {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
