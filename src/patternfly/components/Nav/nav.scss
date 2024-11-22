@@ -30,13 +30,13 @@
   --#{$nav}__item--ScrollSnapAlign: end;
 
   // Nav list animation variables
-  --#{$nav}__list--opacity--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$nav}__list--opacity--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$nav}__list--transform--TransitionDuration: 0s; // no slide by default
-  --#{$nav}__list--transform--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__list--TransitionDuration--opacity: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__list--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__list--TransitionDuration--transform: 0s; // no slide by default
+  --#{$nav}__list--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--default);
 
   @media ( prefers-reduced-motion: no-preference ) {
-    --#{$nav}__list--transform--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__list--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // * Nav section title
@@ -80,11 +80,11 @@
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__subnav--max-height--TransitionDuration: 0s; // no slide by default
-  --#{$nav}__subnav--max-height--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__subnav--TransitionDuration--max-height: 0s; // no slide by default
+  --#{$nav}__subnav--TransitionTimingFunction--max-height: var(--pf-t--global--motion--timing-function--default);
 
   @media ( prefers-reduced-motion: no-preference ) {
-    --#{$nav}__subnav--max-height--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--short); // TODO I think short might be better that having it the same as the list's slide var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__subnav--TransitionDuration--max-height: var(--pf-t--global--motion--duration--slide-in--short); // TODO I think short might be better that having it the same as the list's slide var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // * Nav scroll button
@@ -212,7 +212,7 @@
   row-gap: var(--#{$nav}__list--RowGap);
   column-gap: var(--#{$nav}__list--ColumnGap);
   opacity: 1;
-  transition: opacity var(--#{$nav}__list--opacity--TransitionDuration) var(--#{$nav}__list--opacity--TransitionTimingFunction), transform var(--#{$nav}__list--transform--TransitionDuration) var(--#{$nav}__list--transform--TransitionTimingFunction);
+  transition: opacity var(--#{$nav}__list--TransitionDuration--opacity) var(--#{$nav}__list--TransitionTimingFunction--opacity), transform var(--#{$nav}__list--TransitionDuration--transform) var(--#{$nav}__list--TransitionTimingFunction--transform);
   transform: translateY(0); 
 
 }
@@ -225,7 +225,7 @@
   max-height: 100dvh;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
-  transition: max-height var(--#{$nav}__subnav--max-height--TransitionDuration) var(--#{$nav}__subnav--max-height--TransitionTimingFunction);
+  transition: max-height var(--#{$nav}__subnav--TransitionDuration--max-height) var(--#{$nav}__subnav--TransitionTimingFunction--max-height);
 
   // transition-behavior: allow-discrete;
   // border: 1px solid blue;
