@@ -30,13 +30,13 @@
   --#{$nav}__item--ScrollSnapAlign: end;
 
   // Nav list animation variables
-  --#{$nav}__list--opacity--Duration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$nav}__list--opacity--TimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$nav}__list--transform--Duration: 0s; // no slide by default
-  --#{$nav}__list--transform--TimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__list--opacity--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__list--opacity--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__list--transform--TransitionDuration: 0s; // no slide by default
+  --#{$nav}__list--transform--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   @media ( prefers-reduced-motion: no-preference ) {
-    --#{$nav}__list--transform--Duration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__list--transform--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // * Nav section title
@@ -51,7 +51,7 @@
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$nav}__item__toggle-icon--Duration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$nav}__item__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
 
   // * Nav link
   --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
@@ -80,11 +80,11 @@
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__subnav--max-height--Duration: 0s; // no slide by default
-  --#{$nav}__subnav--max-height--TimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__subnav--max-height--TransitionDuration: 0s; // no slide by default
+  --#{$nav}__subnav--max-height--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   @media ( prefers-reduced-motion: no-preference ) {
-    --#{$nav}__subnav--max-height--Duration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__subnav--max-height--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--short); // TODO I think short might be better that having it the same as the list's slide var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // * Nav scroll button
@@ -212,7 +212,7 @@
   row-gap: var(--#{$nav}__list--RowGap);
   column-gap: var(--#{$nav}__list--ColumnGap);
   opacity: 1;
-  transition: opacity var(--#{$nav}__list--opacity--Duration) var(--#{$nav}__list--opacity--TimingFunction), transform var(--#{$nav}__list--transform--Duration) var(--#{$nav}__list--transform--TimingFunction);
+  transition: opacity var(--#{$nav}__list--opacity--TransitionDuration) var(--#{$nav}__list--opacity--TransitionTimingFunction), transform var(--#{$nav}__list--transform--TransitionDuration) var(--#{$nav}__list--transform--TransitionTimingFunction);
   transform: translateY(0); 
 
 }
@@ -225,7 +225,7 @@
   max-height: 100dvh;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
-  transition: max-height var(--#{$nav}__subnav--max-height--Duration) var(--#{$nav}__subnav--max-height--TimingFunction);
+  transition: max-height var(--#{$nav}__subnav--max-height--TransitionDuration) var(--#{$nav}__subnav--max-height--TransitionTimingFunction);
 
   // transition-behavior: allow-discrete;
   // border: 1px solid blue;
@@ -328,7 +328,7 @@
 // - Nav toggle icon
 .#{$nav}__toggle-icon {
   display: inline-block;
-  transition: transform var(--#{$nav}__item__toggle-icon--Duration);
+  transition: transform var(--#{$nav}__item__toggle-icon--TransitionDuration);
   transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
