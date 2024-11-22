@@ -29,6 +29,16 @@
   --#{$nav}__list--ScrollSnapType: var(--#{$nav}__list--ScrollSnapTypeAxis) var(--#{$nav}__list--ScrollSnapTypeStrictness);
   --#{$nav}__item--ScrollSnapAlign: end;
 
+  // Nav list animation variables
+  --#{$nav}__list--opacity--Duration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__list--opacity--TimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__list--transform--Duration: 0s; // no slide by default
+  --#{$nav}__list--transform--TimingFunction: var(--pf-t--global--motion--timing-function--default);
+
+  @media ( prefers-reduced-motion: no-preference ) {
+    --#{$nav}__list--transform--Duration: var(--pf-t--global--motion--duration--slide-in--default);
+  }
+
   // * Nav section title
   --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
@@ -41,6 +51,7 @@
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$nav}__item__toggle-icon--Duration: var(--pf-t--global--motion--duration--icon--default);
 
   // * Nav link
   --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
@@ -54,6 +65,14 @@
   --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
 
+  // background color transition on hover
+  --#{$nav}__link--background-color--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__link--background-color--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+
+  // text color transition for current
+  --#{$nav}__link--m-current--color--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$nav}__link--m-current--color--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  
   // * Nav link icon
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -61,6 +80,12 @@
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$nav}__subnav--max-height--Duration: 0s; // no slide by default
+  --#{$nav}__subnav--max-height--TimingFunction: var(--pf-t--global--motion--timing-function--default);
+
+  @media ( prefers-reduced-motion: no-preference ) {
+    --#{$nav}__subnav--max-height--Duration: var(--pf-t--global--motion--duration--slide-in--default);
+  }
 
   // * Nav scroll button
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
@@ -96,6 +121,10 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // horizontal - background color transition on hover
+  --#{$nav}__link--m-horizontal--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$nav}__link--m-horizontal--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 }
 
 // - Nav display - default to grid
@@ -158,7 +187,14 @@
 }
 
 [class^="#{$nav}"][hidden] {
-  display: none;
+  // display: none;
+  // border: 1px solid red;
+  max-height: 0;
+
+  & .#{$nav}__list {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 // Magic value calcs
@@ -175,13 +211,24 @@
 .#{$nav}__list {
   row-gap: var(--#{$nav}__list--RowGap);
   column-gap: var(--#{$nav}__list--ColumnGap);
+  opacity: 1;
+  transition: opacity var(--#{$nav}__list--opacity--Duration) var(--#{$nav}__list--opacity--TimingFunction), transform var(--#{$nav}__list--transform--Duration) var(--#{$nav}__list--transform--TimingFunction);
+  transform: translateY(0); 
+
 }
 
 // - Nav subnav
 .#{$nav}__subnav {
   --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
+  height: auto;
+  max-height: 100dvh;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
+  overflow-y: clip;
+  transition: max-height var(--#{$nav}__subnav--max-height--Duration) var(--#{$nav}__subnav--max-height--TimingFunction);
+
+  // transition-behavior: allow-discrete;
+  // border: 1px solid blue;
 }
 
 // - Nav item
@@ -237,6 +284,9 @@
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
+  transition: 
+    background-color var(--#{$nav}__link--background-color--TransitionDuration) var(--#{$nav}__link--background-color--TransitionTimingFunction),
+    color var(--#{$nav}__link--m-current--color--TransitionDuration) var(--#{$nav}__link--m-current--color--TransitionTimingFunction);
 
   // increase height clickable area of expanded nav_links to account for
   &[aria-expanded="true"]::before {
@@ -278,6 +328,7 @@
 // - Nav toggle icon
 .#{$nav}__toggle-icon {
   display: inline-block;
+  transition: transform var(--#{$nav}__item__toggle-icon--Duration);
   transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
