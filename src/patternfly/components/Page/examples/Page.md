@@ -97,10 +97,13 @@ import './Page.css'
     {{#> page-sidebar-body}}
       Navigation
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-page-insets"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill"}}
       inset content
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-inset-none"}}
+      content that is not inset
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-no-fill"}}
       footer content
     {{/page-sidebar-body}}
   {{/page-sidebar}}
@@ -125,15 +128,15 @@ import './Page.css'
     {{/masthead-main}}
     {{> masthead-content}}
   {{/masthead}}
-  {{#> page-main}}
+  {{#> page-main page-main-container--IsFilled="true"}}
     {{#> page-main-section}}
       A regular page section.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-      This section uses <code>.pf-m-fill</code> to fill the available space.
+      This section uses <code>.pf-m-fill</code> to fill the available space. The <code>.pf-v6-c-page__main-container</code> must also have <code>.pf-m-fill</code> in order for the section to have space to stretch to full height.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
-      This section uses <code>.pf-m-no-fill</code> not to fill the available space.
+      This section uses <code>.pf-m-no-fill</code> and will not fill the available space.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -272,7 +275,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-inset-none` | `.pf-v6-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
 | `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |
+| `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. Note that `.pf-v6-c-page__main-container` must also have `.pf-m-fill` applied in order for the section to have space to stretch to full height.|
 | `.pf-m-no-fill` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element not to grow to fill the available vertical space. |
 | `.pf-m-limit-width` | `.pf-v6-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
 | `.pf-m-align-center` | `.pf-v6-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |

@@ -15,7 +15,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
-  --#{$page}__sidebar--xl--Width: auto;
+  --#{$page}__sidebar--xl--Width: #{pf-size-prem(290px)}; // TODO Can remove at breaking change
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
 
@@ -136,7 +136,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}--BackgroundColor);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width);
+    --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width); // TODO can remove at breaking change
 
     grid-template-areas:
       "header header"
@@ -247,6 +247,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 }
 
+.#{$page}__main-subnav,
 .#{$page}__main-breadcrumb,
 .#{$page}__main-tabs,
 .#{$page}__main-section,
