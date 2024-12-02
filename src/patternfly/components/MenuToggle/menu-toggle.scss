@@ -70,6 +70,7 @@
   // * Menu toggle secondary
   --#{$menu-toggle}--m-secondary--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-secondary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$menu-toggle}--m-secondary--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -235,6 +236,7 @@
     --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-secondary--PaddingInlineStart);
     --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-secondary--PaddingInlineEnd);
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-secondary--Color);
+    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-secondary--BackgroundColor);
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-secondary--BorderColor);
     --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-secondary--BorderRadius);
     --#{$menu-toggle}--hover--Color: var(--#{$menu-toggle}--m-secondary--hover--Color);
