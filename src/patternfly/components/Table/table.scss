@@ -649,11 +649,6 @@
   border-radius: var(--#{$table}__button--BorderRadius);
   outline-offset: var(--#{$table}__button--OutlineOffset);
 
-  // Table table table button
-  .#{$table} .#{$table} & {
-    margin-block-end: 0; // remove offset in nested tables
-  }
-
   &:is(:hover, :focus) {
     color: var(--#{$table}__button--hover--Color);
   }
@@ -1054,6 +1049,14 @@
 .#{$table}__tbody {
   vertical-align: top;
 
+  .#{$table}__sort {
+    vertical-align: top;
+  }
+
+  .#{$table}__control-row .#{$table}__sort .#{$table}__button {
+    margin-block-start: calc(var(--#{$table}__button--PaddingBlockStart) * -1);
+    margin-block-end: 0;
+  }
   // TODO: make this a class `compound expansion content`
   .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
     background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
