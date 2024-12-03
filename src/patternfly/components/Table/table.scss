@@ -4,6 +4,7 @@
 // TODO: update grouping comments to // * Table {element}
 
 @include pf-root($table) {
+  --#{$table}--LineHeight: calc(var(--pf-t--global--font--line-height--body) * var(--pf-t--global--font--size--body--default));
   --#{$table}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$table}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$table}--border-width--base: var(--pf-t--global--border--width--divider--default);
@@ -331,7 +332,7 @@
     overflow: var(--#{$table}--cell--Overflow);
     font-size: var(--#{$table}--cell--FontSize);
     font-weight: var(--#{$table}--cell--FontWeight);
-    line-height: var(--#{$table}--cell--LineHeight);
+    line-height: var(--#{$table}--LineHeight); // because standard buttons are allowed in table th/td cells, line-height must remain consistent with default values to ensure proper vertical alignment
     color: var(--#{$table}--cell--Color);
     text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
@@ -636,7 +637,6 @@
   padding-block-end: var(--#{$table}__button--PaddingBlockEnd);
   padding-inline-start: var(--#{$table}__button--PaddingInlineStart);
   padding-inline-end: var(--#{$table}__button--PaddingInlineEnd);
-  margin-block-end: calc(var(--#{$table}__button--PaddingBlockEnd) * -1);
   margin-inline-start: calc(var(--#{$table}__button--PaddingInlineStart) * -1);
   font-size: inherit;
   font-weight: inherit;
@@ -649,9 +649,20 @@
   border-radius: var(--#{$table}__button--BorderRadius);
   outline-offset: var(--#{$table}__button--OutlineOffset);
 
+  // Table table table button
+  .#{$table} .#{$table} & {
+    margin-block-end: 0; // remove offset in nested tables
+  }
+
   &:is(:hover, :focus) {
     color: var(--#{$table}__button--hover--Color);
   }
+}
+
+// - Table sort - Table compound expansion toggle
+.#{$table} .#{$table}__sort {
+  padding-block-start: calc(var(--#{$table}--cell--PaddingBlockStart) / 2);
+  padding-block-end: calc(var(--#{$table}--cell--PaddingBlockEnd) / 2);
 }
 
 // - Table sort - Table compound expansion toggle
@@ -891,8 +902,6 @@
 
 // - Table sort
 .#{$table}__sort {
-  vertical-align: bottom;
-
   // - Table button
   .#{$table}__button {
     &:is(:hover, :focus) {
@@ -1014,7 +1023,8 @@
   .#{$table}__action,
   .#{$table}__favorite,
   .#{$table}__toggle,
-  .#{$table}__draggable {
+  .#{$table}__draggable,
+  .#{$table}__sort {
     --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__action--PaddingBlockStart);
     --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__action--PaddingBlockEnd);
   }
@@ -1048,15 +1058,6 @@
 // - Table tbody
 .#{$table}__tbody {
   vertical-align: top;
-
-  .#{$table}__sort {
-    vertical-align: top;
-  }
-
-  .#{$table}__control-row .#{$table}__sort .#{$table}__button {
-    margin-block-start: calc(var(--#{$table}__button--PaddingBlockStart) * -1);
-    margin-block-end: 0;
-  }
 
   // TODO: make this a class `compound expansion content`
   .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
