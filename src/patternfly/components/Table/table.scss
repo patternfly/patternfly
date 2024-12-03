@@ -1057,6 +1057,7 @@
     margin-block-start: calc(var(--#{$table}__button--PaddingBlockStart) * -1);
     margin-block-end: 0;
   }
+
   // TODO: make this a class `compound expansion content`
   .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
     background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
