@@ -79,8 +79,6 @@
   --#{$table}--cell--hidden-visible--Display: table-cell;
 
   // * Table toggle
-  --#{$table}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 270deg;
@@ -114,8 +112,12 @@
   --#{$table}__tr--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table action
-  --#{$table}__action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}--action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+
+  // * Table action
+  --#{$table}__action--PaddingBlockStart: var(--#{$table}--action--PaddingBlockStart);
+  --#{$table}__action--PaddingBlockEnd: var(--#{$table}--action--PaddingBlockEnd);
   --#{$table}__action--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
@@ -341,11 +343,19 @@
     // First child padding left
     &:first-child {
       padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
+
+      .#{$table}__button {
+        margin-inline-start: calc((var(--#{$table}--cell--first-last-child--PaddingInline) - var(--#{$table}--cell--PaddingInlineStart)) * -1);
+      }
     }
 
     // Last child padding right
     &:last-child {
       padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
+
+      .#{$table}__button {
+        margin-inline-end: calc((var(--#{$table}--cell--first-last-child--PaddingInline) - var(--#{$table}--cell--PaddingInlineend)) * -1);
+      }
     }
 
     &.pf-m-center {
@@ -637,7 +647,7 @@
   padding-block-end: var(--#{$table}__button--PaddingBlockEnd);
   padding-inline-start: var(--#{$table}__button--PaddingInlineStart);
   padding-inline-end: var(--#{$table}__button--PaddingInlineEnd);
-  margin-inline-start: calc(var(--#{$table}__button--PaddingInlineStart) * -1);
+  margin-inline-start: calc((var(--#{$table}__button--PaddingInlineStart) - var(--#{$table}--cell--PaddingInlineStart)) * -1);
   font-size: inherit;
   font-weight: inherit;
   color: var(--#{$table}__button--Color);
@@ -657,12 +667,6 @@
   &:is(:hover, :focus) {
     color: var(--#{$table}__button--hover--Color);
   }
-}
-
-// - Table sort - Table compound expansion toggle
-.#{$table} .#{$table}__sort {
-  padding-block-start: calc(var(--#{$table}--cell--PaddingBlockStart) / 2);
-  padding-block-end: calc(var(--#{$table}--cell--PaddingBlockEnd) / 2);
 }
 
 // - Table sort - Table compound expansion toggle
@@ -763,8 +767,6 @@
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}__check--PaddingInlineStart);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}__check--PaddingInlineEnd);
 
-  vertical-align: top;
-
   .#{$check} {
     --#{$check}__label--FontSize: var(--#{$table}--cell--FontSize);
     --#{$check}__label--LineHeight: var(--#{$table}--cell--LineHeight);
@@ -781,11 +783,12 @@
 
   .#{$check}.pf-m-standalone,
   .#{$radio}.pf-m-standalone {
-    thead & {
-      display: table-cell;
-      height: auto;
-      line-height: 1;
-      vertical-align: baseline;
+    --#{$check}--m-standalone--MinHeight: var(--#{$table}--LineHeight);
+
+    vertical-align: top;
+
+    .#{$check}__input {
+      align-self: normal;
     }
   }
 }
@@ -820,11 +823,20 @@
 .#{$table}__action,
 .#{$table}__favorite,
 .#{$table}__inline-edit-action,
-.#{$table}__draggable {
-  --#{$table}--cell--PaddingBlockStart: var(--#{$table}__action--PaddingBlockStart);
-  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}__action--PaddingBlockEnd);
+.#{$table}__draggable,
+.#{$table}__sort {
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}__action--PaddingInlineStart);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}__action--PaddingInlineEnd);
+}
+
+.#{$table}__action,
+.#{$table}__favorite,
+.#{$table}__inline-edit-action,
+.#{$table}__draggable,
+.#{$table}__toggle,
+.#{$table}__sort {
+  --#{$table}--cell--PaddingBlockStart: var(--#{$table}--action--PaddingBlockStart);
+  --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--action--PaddingBlockEnd);
 }
 
 // - Table action - Table inline edit action
