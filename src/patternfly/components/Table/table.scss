@@ -406,6 +406,10 @@
     --#{$table}--cell--TextOverflow: ellipsis;
     --#{$table}--cell--WhiteSpace: nowrap;
 
+    .#{$table}__sort .#{$table}__button {
+      margin-block-end: calc(var(--#{$table}__button--PaddingBlockEnd) * -1);
+    }
+
     // stylelint-disable
     &.pf-m-nested-column-header {
       button:where(.#{$button}) {
