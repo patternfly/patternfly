@@ -343,18 +343,20 @@
     // First child padding left
     &:first-child {
       padding-inline-start: var(--#{$table}--cell--first-last-child--PaddingInline);
-
-      .#{$table}__button {
-        margin-inline-start: calc((var(--#{$table}--cell--first-last-child--PaddingInline) - var(--#{$table}--cell--PaddingInlineStart)) * -1);
-      }
     }
 
     // Last child padding right
     &:last-child {
       padding-inline-end: var(--#{$table}--cell--first-last-child--PaddingInline);
+    }
 
-      .#{$table}__button {
-        margin-inline-end: calc((var(--#{$table}--cell--first-last-child--PaddingInline) - var(--#{$table}--cell--PaddingInlineend)) * -1);
+    &.#{$table}__sort {
+      &:first-child .#{$table}__button {
+        margin-inline-start: calc((var(--#{$table}--cell--first-last-child--PaddingInline) - var(--#{$table}--cell--PaddingInlineStart)) * -1);
+      }
+
+      &:last-child .#{$table}__button {
+        margin-inline-end: calc((var(--#{$table}--cell--first-last-child--PaddingInline) - var(--#{$table}--cell--PaddingInlineEnd)) * -1);
       }
     }
 
