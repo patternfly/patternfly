@@ -767,28 +767,22 @@
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}__check--PaddingInlineStart);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}__check--PaddingInlineEnd);
 
-  .#{$check} {
-    --#{$check}__label--FontSize: var(--#{$table}--cell--FontSize);
-    --#{$check}__label--LineHeight: var(--#{$table}--cell--LineHeight);
-  }
-
-  .#{$radio} {
-    --#{$radio}__label--FontSize: var(--#{$table}--cell--FontSize);
-    --#{$radio}__label--LineHeight: var(--#{$table}--cell--LineHeight);
-  }
-
-  thead & {
-    vertical-align: bottom;
-  }
-
   .#{$check}.pf-m-standalone,
   .#{$radio}.pf-m-standalone {
-    --#{$check}--m-standalone--MinHeight: var(--#{$table}--LineHeight);
+    min-height: var(--#{$table}--LineHeight);
+    line-height: 1;
 
-    vertical-align: top;
-
-    .#{$check}__input {
+    .#{$check}__input,
+    .#{$radio}__input {
       align-self: normal;
+    }
+
+    .#{$table}__thead & {
+      vertical-align: bottom;
+    }
+
+    .#{$table}__tbody & {
+      vertical-align: top;
     }
   }
 }
