@@ -20,6 +20,7 @@
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecorationLine: none;
   --#{$button}--TextDecorationStyle: none;
+  --#{$button}--TextDecorationColor: currentcolor;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
@@ -30,6 +31,7 @@
   --#{$button}--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$button}--hover--TextDecorationLine: none;
   --#{$button}--hover--TextDecorationStyle: none;
+  --#{$button}--hover--TextDecorationColor: currentcolor;
 
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
@@ -128,6 +130,12 @@
   --#{$button}--span--m-link--m-inline--Display: inline;
   --#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$button}--m-link--m-inline--Color: var(--pf-t--global--text--color--brand--default);
+  --#{$button}--m-link--m-inline__icon--Color: var(--pf-t--global--icon--color--brand--default);
+  --#{$button}--m-link--m-inline--TextDecorationColor: currentcolor;
+  --#{$button}--m-link--m-inline--hover--Color: var(--pf-t--global--text--color--brand--hover);
+  --#{$button}--m-link--m-inline--hover__icon--Color: var(--pf-t--global--icon--color--brand--hover);
+  --#{$button}--m-link--m-inline--hover--TextDecorationColor: currentcolor;
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -259,6 +267,7 @@
   // Disabled
   --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$button}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$button}--disabled--TextDecorationColor: currentcolor;
   --#{$button}--disabled--BorderColor: transparent;
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
 
@@ -311,7 +320,7 @@
   line-height: var(--#{$button}--LineHeight, inherit);
   color: var(--#{$button}--Color);
   text-align: center;
-  text-decoration: var(--#{$button}--TextDecorationLine) var(--#{$button}--TextDecorationStyle);
+  text-decoration: var(--#{$button}--TextDecorationLine) var(--#{$button}--TextDecorationColor) var(--#{$button}--TextDecorationStyle);
   white-space: nowrap;
   cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   user-select: none;
@@ -440,6 +449,12 @@
       --#{$button}--disabled--BackgroundColor: transparent;
       --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
       --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
+      --#{$button}--m-link--Color: var(--#{$button}--m-link--m-inline--Color);
+      --#{$button}--m-link__icon--Color: var(--#{$button}--m-link--m-inline__icon--Color);
+      --#{$button}--TextDecorationColor: var(--#{$button}--m-link--m-inline--TextDecorationColor);
+      --#{$button}--hover--TextDecorationColor: var(--#{$button}--m-link--m-inline--hover--TextDecorationColor);
+      --#{$button}--m-link--hover--Color: var(--#{$button}--m-link--m-inline--hover--Color);
+      --#{$button}--m-link--hover__icon--Color: var(--#{$button}--m-link--m-inline--hover__icon--Color);
 
       text-align: start;
       white-space: normal;
@@ -623,7 +638,7 @@
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
 
-    text-decoration: var(--#{$button}--hover--TextDecorationLine) var(--#{$button}--hover--TextDecorationStyle);
+    text-decoration: var(--#{$button}--hover--TextDecorationLine) var(--#{$button}--hover--TextDecorationColor) var(--#{$button}--hover--TextDecorationStyle);
   }
 
   &.pf-m-clicked {
@@ -645,6 +660,7 @@
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
     color: var(--#{$button}--disabled--Color);
+    text-decoration-color: var(--#{$button}--disabled--TextDecorationColor);
     background-color: var(--#{$button}--disabled--BackgroundColor);
 
     &::after {
