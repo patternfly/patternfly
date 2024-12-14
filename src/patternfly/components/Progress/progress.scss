@@ -188,8 +188,8 @@
   grid-column: 1 / 3;
   align-self: center;
   height: var(--#{$progress}__bar--Height);
-  background-color: var(--#{$progress}__bar--BackgroundColor);
   overflow: hidden;
+  background-color: var(--#{$progress}__bar--BackgroundColor);
   border-radius: var(--#{$progress}__bar--BorderRadius);
 }
 
