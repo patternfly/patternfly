@@ -189,8 +189,8 @@
   align-self: center;
   height: var(--#{$progress}__bar--Height);
   background-color: var(--#{$progress}__bar--BackgroundColor);
-  border-radius: var(--#{$progress}__bar--BorderRadius);
   overflow: hidden;
+  border-radius: var(--#{$progress}__bar--BorderRadius);
 }
 
 // the progress__indicator is the part that advances (widens) as progress is made
