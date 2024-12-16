@@ -233,8 +233,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // Masthead toggle
 .#{$masthead}__toggle-button {
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
-    &.pf-m-expanded,
-    &[aria-expanded="true"] {
+    &.pf-m-expanded {
       .#{$masthead}__toggle-icon-arrow {
         d: var(--#{$masthead}__toggle-icon-arrow--collapse--path);
       }
