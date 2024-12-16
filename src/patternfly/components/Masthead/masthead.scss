@@ -248,7 +248,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
       .#{$masthead}__toggle-icon-arrow {
         d: var(--#{$masthead}__toggle-icon-arrow--collapse--path);
