@@ -3,6 +3,7 @@
 @use "./tokens/tokens-default" as default;
 @use "./tokens/tokens-dark" as dark;
 @use "./tokens/tokens-local" as local;
+@use "./tokens/holiday-theme" as holiday;
 
 :root {
   @include pf-v6-set-inverse(false);
@@ -11,8 +12,20 @@
   @include local.pf-v6-tokens;
 }
 
+:root:where(.pf-theme-holiday) {
+  @include holiday.palette;
+  @include holiday.default;
+  @include holiday.charts;
+  @include holiday.local;
+}
+
 :root:where(.pf-v6-theme-dark) {
   @include dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-dark.pf-theme-holiday) {
+  @include holiday.dark;
+  @include holiday.charts-dark;
 }
 
 @include pf-v6-rtl {
