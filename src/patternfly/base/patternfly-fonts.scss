@@ -47,3 +47,10 @@
   src: url("#{$pf-v6-global--font-path}/RedHatMono/RedHatMonoVF-Italic.woff2") format("woff2-variations");
   font-display: fallback;
 }
+
+@font-face {
+  font-family: "Ice & snow";
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$pf-v6-global--font-path}/snowtt.ttf");
+}

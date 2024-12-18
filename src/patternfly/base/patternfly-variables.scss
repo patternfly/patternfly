@@ -3,6 +3,7 @@
 @use "./tokens/tokens-default" as default;
 @use "./tokens/tokens-dark" as dark;
 @use "./tokens/tokens-local" as local;
+@use "./tokens/holiday-theme" as holiday;
 
 :root {
   @include pf-v6-set-inverse(false);
@@ -11,9 +12,31 @@
   @include local.pf-v6-tokens;
 }
 
+// stylelint-disable
+
+:root {
+  &:where(.pf-theme-holiday),
+  &:where(:has(#holiday-switch:checked)) {
+    @include holiday.palette;
+    @include holiday.default;
+    @include holiday.charts;
+    @include holiday.local;
+  }
+}
+
 :root:where(.pf-v6-theme-dark) {
   @include dark.pf-v6-tokens;
 }
+
+:root:where(.pf-v6-theme-dark) {
+  &:where(.pf-theme-holiday),
+  &:where(:has(#holiday-switch:checked)) {
+    @include holiday.dark;
+    @include holiday.charts-dark;
+  }
+}
+
+// stylelint-enable
 
 @include pf-v6-rtl {
   @include pf-v6-set-inverse;
