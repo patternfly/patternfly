@@ -7,7 +7,7 @@ cssPrefix: pf-d-holiday-theme
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{> page-template page-template--id="holiday-theme-demo" page-sidebar-body--modifier="pf-m-no-fill"}}
+{{> page-template page-template--id="holiday-theme-demo" page-sidebar-body--modifier="pf-m-no-fill" menu-template--HasContextSelector=true}}
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--IsLimitWidth=true}}
@@ -52,6 +52,14 @@ cssPrefix: pf-d-holiday-theme
       {{/title}}
     {{/l-flex}}
   {{/page-main-section}}
+{{/inline}}
+
+{{#*inline "masthead-template-context-selector"}}
+{{#> switch switch--attribute='for="holiday-switch"'}}
+  {{#> switch-input switch-input--id="holiday-switch" aria-labelledby="holiday-switch-label"}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label switch-label--id="holiday-switch-label" switch-label--attribute='aria-hidden="true"'}}Holiday theme{{/switch-label}}
+{{/switch}}
 {{/inline}}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
