@@ -1,3 +1,4 @@
+// stylelint-disable
 @mixin palette {
   --pf-t--color--black: #000000;
   --pf-t--color--blue--10: #e0f0ff;
@@ -141,7 +142,7 @@
   --pf-t--global--font--family--100: "Work sans", "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
   --pf-t--global--font--family--200: "Ice & snow", "Red Hat Display", "RedHatDisplay", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
   --pf-t--global--font--family--300: "Red Hat Mono", "RedHatMono", "Courier New", Courier, monospace;
-  --pf-t--global--font--line-height--100: 1.2999999523162842;
+  --pf-t--global--font--line-height--100: 1.3;
   --pf-t--global--font--line-height--200: 1.5;
   --pf-t--global--font--size--100: 0.75rem;
   --pf-t--global--font--size--200: 0.875rem;
@@ -1491,3 +1492,4 @@
     }
   }
 }
+// stylelint-enable
