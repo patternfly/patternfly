@@ -1491,5 +1491,15 @@
       }
     }
   }
+  .pf-v6-c-data-list {
+    --pf-v6-c-data-list__item--BackgroundColor: transparent;
+  }
+  .pf-v6-c-card {
+    --pf-v6-c-card--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  }
+  .pf-v6-c-notification-drawer {
+    --pf-v6-c-notification-drawer__group-toggle--BackgroundColor: transparent;
+    --pf-v6-c-notification-drawer--BackgroundColor: transparent;
+  }
 }
 // stylelint-enable
