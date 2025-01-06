@@ -78,9 +78,9 @@
 }
 
 .#{$modal-box} {
-  position: relative;
-  z-index: var(--#{$modal-box}--ZIndex);
-  display: flex;
+  // position: relative;
+  // z-index: var(--#{$modal-box}--ZIndex);
+  // display: flex;
   flex-direction: column;
   width: var(--#{$modal-box}--Width);
   max-width: var(--#{$modal-box}--MaxWidth);
@@ -89,6 +89,34 @@
   background-color: var(--#{$modal-box}--BackgroundColor);
   border-radius: var(--#{$modal-box}--BorderRadius);
   box-shadow: var(--#{$modal-box}--BoxShadow);
+
+  &, 
+  &::backdrop {
+    transition: 
+      display 1s allow-discrete,
+      overlay 1s allow-discrete,
+      opacity 1s;
+    opacity: 0;
+  }
+
+  &::backdrop {
+    background-color: rebeccapurple;
+  }
+
+  &[open] {
+    opacity: 1;
+
+    &::backdrop {
+      opacity: .5;
+    }
+  }
+
+  @starting-style {
+    &[open],
+    &[open]::backdrop {
+      opacity: 0;
+    }
+  }
 
   &.pf-m-sm {
     --#{$modal-box}--Width: var(--#{$modal-box}--m-sm--sm--MaxWidth);

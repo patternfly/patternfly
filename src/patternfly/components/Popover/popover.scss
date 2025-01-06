@@ -17,9 +17,9 @@
   --#{$popover}--m-custom__title-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
 
   // Content
-  --#{$popover}__content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$popover}__content--BackgroundColor: lightblue; // var(--pf-t--global--background--color--floating--default);
   --#{$popover}__content--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$popover}__content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$popover}__content--PaddingInlineEnd: 3px; // var(--pf-t--global--spacer--md);
   --#{$popover}__content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$popover}__content--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$popover}__content--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -73,8 +73,100 @@
   min-width: var(--#{$popover}--MinWidth);
   max-width: var(--#{$popover}--MaxWidth);
   font-size: var(--#{$popover}--FontSize);
+  border: none; // var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--default);
   border-radius: var(--#{$popover}--BorderRadius);
   box-shadow: var(--#{$popover}--BoxShadow);
+  inset: auto;
+  margin: 0;
+
+  overflow: visible;
+  clip-path: inset(var(--tether-offset)) margin-box;
+  margin: 0.5rem 0 0 0;
+
+  // position-anchor: --my-anchor; // set this inline
+  position: absolute;
+  position-area: bottom span-right;
+  position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+  position-visibility: anchors-visible;
+
+  --tether-offset: 0px;
+  --tether-size: 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: calc(-1 * var(--tether-size)) calc(80% - var(--tether-size)) calc(-1 * var(--tether-size)) calc(20% - var(--tether-size));
+    background: inherit;
+    clip-path: polygon(
+      0 var(--tether-size),
+      50% 0,
+      100% var(--tether-size),
+      100% calc(100% - var(--tether-size)),
+      50% 100%,
+      0 calc(100% - var(--tether-size))
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: calc(50% - var(--tether-size)) calc(-1 * var(--tether-size));
+    background: inherit;
+    clip-path: polygon(
+      0 var(--tether-size),
+      var(--tether-size) 0,
+      calc(100% - var(--tether-size)) 0,
+      100% 50%,
+      calc(100% - var(--tether-size)) 100%,
+      var(--tether-size) 100%
+    );
+  }
+
+
+@position-try --bottom {
+  position-area: bottom;
+  margin: 0.5rem 0 0 0;
+  background-color: pink;
+  // --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-bottom--InsetBlockStart, 0);
+  // --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-bottom--InsetInlineStart, 50%);
+  // --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
+  // --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-bottom--TranslateY);
+  // --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-bottom--Rotate);
+}
+
+@position-try --top {
+  position-area: top;
+  margin: 0 0 0.5rem 0;
+  background-color: lightblue;
+  // --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-bottom--InsetBlockStart, 0);
+  // --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-bottom--InsetInlineStart, 50%);
+  // --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
+  // --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-bottom--TranslateY);
+  // --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-bottom--Rotate);
+}
+
+@position-try --left {
+  position-area: left;
+  margin: 0 0.5rem 0 0;
+  // --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-left--InsetBlockStart, 50%);
+  // --#{$popover}__arrow--InsetInlineEnd: var(--#{$popover}--m-left--InsetInlineEnd, 0);
+  // --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
+  // --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-left--TranslateY);
+  // --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-left--Rotate);
+}
+
+@position-try --right {
+  position-area: right;
+  margin: 0 0 0 0.5rem;
+
+  // --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-right--InsetBlockStart, 50%);
+  // --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-right--InsetInlineStart, 0);
+  // --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-right--TranslateX);
+  // --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-right--TranslateY);
+  // --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-right--Rotate);
+}
 
   &.pf-m-no-padding {
     // Use px values below so the min/max-width calc() doesn't break
@@ -91,53 +183,55 @@
     --#{$popover}--MaxWidth: none;
   }
 
-  &:is(
-    .pf-m-top,
-    .pf-m-top-left,
-    .pf-m-top-right
-  ) {
-    --#{$popover}__arrow--InsetBlockEnd: var(--#{$popover}--m-top--InsetBlockEnd, 0);
-    --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-top--InsetInlineStart, 50%);
-    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-top--TranslateX);
-    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
-    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-top--Rotate);
-  }
+  // &:is(
+  //   .pf-m-top,
+  //   .pf-m-top-left,
+  //   .pf-m-top-right
+  // ) {
+  //   --#{$popover}__arrow--InsetBlockEnd: var(--#{$popover}--m-top--InsetBlockEnd, 0);
+  //   --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-top--InsetInlineStart, 50%);
+  //   --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-top--TranslateX);
+  //   --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
+  //   --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-top--Rotate);
 
-  &:is(
-    .pf-m-bottom,
-    .pf-m-bottom-left,
-    .pf-m-bottom-right
-  ) {
-    --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-bottom--InsetBlockStart, 0);
-    --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-bottom--InsetInlineStart, 50%);
-    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
-    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-bottom--TranslateY);
-    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-bottom--Rotate);
-  }
+  //   margin-top: 1em;
+  // }
 
-  &:is(
-    .pf-m-left,
-    .pf-m-left-top,
-    .pf-m-left-bottom
-  ) {
-    --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-left--InsetBlockStart, 50%);
-    --#{$popover}__arrow--InsetInlineEnd: var(--#{$popover}--m-left--InsetInlineEnd, 0);
-    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
-    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-left--TranslateY);
-    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-left--Rotate);
-  }
+  // &:is(
+  //   .pf-m-bottom,
+  //   .pf-m-bottom-left,
+  //   .pf-m-bottom-right
+  // ) {
+  //   --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-bottom--InsetBlockStart, 0);
+  //   --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-bottom--InsetInlineStart, 50%);
+  //   --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
+  //   --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-bottom--TranslateY);
+  //   --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-bottom--Rotate);
+  // }
 
-  &:is(
-    .pf-m-right,
-    .pf-m-right-top,
-    .pf-m-right-bottom
-  ) {
-    --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-right--InsetBlockStart, 50%);
-    --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-right--InsetInlineStart, 0);
-    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-right--TranslateX);
-    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-right--TranslateY);
-    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-right--Rotate);
-  }
+  // &:is(
+  //   .pf-m-left,
+  //   .pf-m-left-top,
+  //   .pf-m-left-bottom
+  // ) {
+  //   --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-left--InsetBlockStart, 50%);
+  //   --#{$popover}__arrow--InsetInlineEnd: var(--#{$popover}--m-left--InsetInlineEnd, 0);
+  //   --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
+  //   --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-left--TranslateY);
+  //   --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-left--Rotate);
+  // }
+
+  // &:is(
+  //   .pf-m-right,
+  //   .pf-m-right-top,
+  //   .pf-m-right-bottom
+  // ) {
+  //   --#{$popover}__arrow--InsetBlockStart: var(--#{$popover}--m-right--InsetBlockStart, 50%);
+  //   --#{$popover}__arrow--InsetInlineStart: var(--#{$popover}--m-right--InsetInlineStart, 0);
+  //   --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-right--TranslateX);
+  //   --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-right--TranslateY);
+  //   --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-right--Rotate);
+  // }
 
   &:is(
     .pf-m-left-top,

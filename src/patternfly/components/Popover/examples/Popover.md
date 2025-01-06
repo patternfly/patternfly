@@ -7,11 +7,13 @@ cssPrefix: pf-v6-c-popover
 import './Popover.css'
 
 ## Examples
-    {{> popover-close}}
 ### Top
-```hbs isFullscreen
-{{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
-  {{#> popover-content}}
+```hbs
+<div style="height: 500px;">Scroll to see popover adjust</div>
+{{#> button button--IsPrimary=true button--attribute='style="anchor-name: --a1;" popovertarget=my-popover'}}Open popover{{/button}}
+<div style="height: 1500px;"></div>
+{{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body" style="position-anchor: --a1;" id=my-popover'}}
+  <!-- {{#> popover-content}} -->
     {{> popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--id="popover-top-header"}}
@@ -26,7 +28,7 @@ import './Popover.css'
     {{#> popover-footer}}
       Popover footer
     {{/popover-footer}}
-  {{/popover-content}}
+  <!-- {{/popover-content}} -->
 {{/popover}}
 ```
 

@@ -5,6 +5,8 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close"}}
+    <form method="dialog">
+      <button>OK</button>
+    </form>
   {{/if}}
 </div>
