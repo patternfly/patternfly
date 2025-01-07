@@ -129,6 +129,7 @@
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu-toggle}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu-toggle}--m-plain--BorderColor: transparent;
+  --#{$menu-toggle}--m-plain--BorderRadius: var(--#{$menu-toggle}--BorderRadius);
   --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$menu-toggle}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -268,6 +269,7 @@
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-plain--Color);
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-plain--BackgroundColor);
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-plain--BorderColor);
+    --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-plain--BorderRadius);
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-plain--BackgroundColor);
     --#{$menu-toggle}--hover--BackgroundColor: var(--#{$menu-toggle}--m-plain--hover--BackgroundColor);
     --#{$menu-toggle}--expanded--BackgroundColor: var(--#{$menu-toggle}--m-plain--expanded--BackgroundColor);
