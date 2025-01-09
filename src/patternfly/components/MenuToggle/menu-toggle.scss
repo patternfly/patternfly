@@ -70,6 +70,7 @@
   // * Menu toggle secondary
   --#{$menu-toggle}--m-secondary--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-secondary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$menu-toggle}--m-secondary--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -77,6 +78,7 @@
   --#{$menu-toggle}--m-secondary--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
   --#{$menu-toggle}--m-secondary--expanded--Color: var(--pf-t--global--text--color--brand--clicked);
+  --#{$menu-toggle}--m-secondary--expanded--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--expanded--BorderWidth: var(--pf-t--global--border--width--action--clicked);
   --#{$menu-toggle}--m-secondary--expanded--BorderColor: var(--pf-t--global--border--color--brand--clicked);
   --#{$menu-toggle}--m-secondary__toggle-icon--Color: var(--pf-t--global--icon--color--brand--default);
@@ -236,12 +238,14 @@
     --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-secondary--PaddingInlineStart);
     --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-secondary--PaddingInlineEnd);
     --#{$menu-toggle}--Color: var(--#{$menu-toggle}--m-secondary--Color);
+    --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-secondary--BackgroundColor);
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-secondary--BorderColor);
     --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-secondary--BorderRadius);
     --#{$menu-toggle}--hover--Color: var(--#{$menu-toggle}--m-secondary--hover--Color);
     --#{$menu-toggle}--hover--BorderWidth: var(--#{$menu-toggle}--m-secondary--hover--BorderWidth);
     --#{$menu-toggle}--hover--BorderColor: var(--#{$menu-toggle}--m-secondary--hover--BorderColor);
     --#{$menu-toggle}--expanded--Color: var(--#{$menu-toggle}--m-secondary--expanded--Color);
+    --#{$menu-toggle}--expanded--BackgroundColor: var(--#{$menu-toggle}--m-secondary--expanded--BackgroundColor);
     --#{$menu-toggle}--expanded--BorderWidth: var(--#{$menu-toggle}--m-secondary--expanded--BorderWidth);
     --#{$menu-toggle}--hover__toggle-icon--Color: var(--#{$menu-toggle}--m-secondary--hover__toggle-icon--Color);
     --#{$menu-toggle}--expanded__toggle-icon--Color: var(--#{$menu-toggle}--m-secondary--expanded__toggle-icon--Color);
