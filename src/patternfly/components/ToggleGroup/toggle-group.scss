@@ -122,7 +122,7 @@
     --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--hover--ZIndex);
     --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--hover--before--BorderColor);
 
-    text-decoration: none;
+    text-decoration-line: none;
   }
 
   &.pf-m-selected {

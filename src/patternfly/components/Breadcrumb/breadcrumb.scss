@@ -81,7 +81,8 @@
   font-weight: var(--#{$breadcrumb}__link--FontWeight);
   line-height: inherit;
   color: var(--#{$breadcrumb}__link--Color);
-  text-decoration: var(--#{$breadcrumb}__link--TextDecorationLine) var(--#{$breadcrumb}__link--TextDecorationStyle);
+  text-decoration-line: var(--#{$breadcrumb}__link--TextDecorationLine);
+  text-decoration-style: var(--#{$breadcrumb}__link--TextDecorationStyle);
   word-break: break-word;
   background-color: var(--#{$breadcrumb}__link--BackgroundColor);
 
@@ -99,7 +100,7 @@
     &,
     &:is(:hover, :focus) {
       color: var(--#{$breadcrumb}__link--m-current--Color);
-      text-decoration: none;
+      text-decoration-line: none;
     }
   }
 

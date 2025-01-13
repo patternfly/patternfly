@@ -573,7 +573,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-inline-end: var(--#{$tabs}__link--PaddingInlineEnd);
   font-size: var(--#{$tabs}__link--FontSize);
   color: var(--#{$tabs}__link--Color);
-  text-decoration: none;
+  text-decoration-line: none;
   background-color: var(--#{$tabs}__link--BackgroundColor);
   border-radius: var(--#{$tabs}__link--BorderRadius);
 

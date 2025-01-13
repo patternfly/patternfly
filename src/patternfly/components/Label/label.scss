@@ -458,7 +458,8 @@
     }
 
     .#{$label}__text {
-      text-decoration: var(--#{$label}--m-editable--TextDecorationLine) var(--#{$label}--m-editable--TextDecorationStyle);
+      text-decoration-line: var(--#{$label}--m-editable--TextDecorationLine);
+      text-decoration-style: var(--#{$label}--m-editable--TextDecorationStyle);
       text-underline-offset: var(--#{$label}--m-editable--TextUnderlineOffset);
     }
   }
@@ -500,7 +501,7 @@
     .#{$label}__content {
       &,
       &:is(:hover, :focus) {
-        text-decoration: none;
+        text-decoration-line: none;
       }
 
       &:is(:hover, :focus) {

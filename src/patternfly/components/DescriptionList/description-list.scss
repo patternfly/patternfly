@@ -179,7 +179,8 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   min-width: 0; // this allows overflow-wrap to work
 
   &.pf-m-help-text {
-    text-decoration: var(--#{$description-list}__text--m-help-text--TextDecorationLine) var(--#{$description-list}__text--m-help-text--TextDecorationStyle);
+    text-decoration-line: var(--#{$description-list}__text--m-help-text--TextDecorationLine);
+    text-decoration-style: var(--#{$description-list}__text--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$description-list}__text--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 

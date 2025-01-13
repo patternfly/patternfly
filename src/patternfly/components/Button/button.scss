@@ -320,7 +320,9 @@
   line-height: var(--#{$button}--LineHeight, inherit);
   color: var(--#{$button}--Color);
   text-align: center;
-  text-decoration: var(--#{$button}--TextDecorationLine) var(--#{$button}--TextDecorationColor) var(--#{$button}--TextDecorationStyle);
+  text-decoration-line: var(--#{$button}--TextDecorationLine);
+  text-decoration-style: var(--#{$button}--TextDecorationStyle);
+  text-decoration-color: var(--#{$button}--TextDecorationColor);
   white-space: nowrap;
   cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   user-select: none;
@@ -638,7 +640,9 @@
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
 
-    text-decoration: var(--#{$button}--hover--TextDecorationLine) var(--#{$button}--hover--TextDecorationColor) var(--#{$button}--hover--TextDecorationStyle);
+    text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
+    text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
+    text-decoration-color: var(--#{$button}--hover--TextDecorationColor);
   }
 
   &.pf-m-clicked {
