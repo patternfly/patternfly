@@ -200,8 +200,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-v6-c-data-list__item-action` | `<div>` | Initiates a container for the data list actions. For example, add `.pf-v6-c-data-list__action` here. **Required** |
 | `.pf-v6-c-data-list__check`  | `<div>` | Initiates a data list check cell. **Required** |
 | `.pf-v6-c-data-list__action` | `<div>` | Initiates a data list action button cell. **Required** |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-data-list__item-action` | Hides an actions container at optional [breakpoint](/tokens/all-tokens), or hides it at all breakpoints with `.pf-m-hidden`. |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-data-list__item-action` | Shows an actions container at optional [breakpoint](/tokens/all-tokens). |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-data-list__item-action` | Hides an actions container at optional [breakpoint](/tokens/all-patternfly-tokens), or hides it at all breakpoints with `.pf-m-hidden`. |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-data-list__item-action` | Shows an actions container at optional [breakpoint](/tokens/all-patternfly-tokens). |
 
 ### Expandable
 ```hbs
@@ -1258,4 +1258,4 @@ The DataList component provides a flexible alternative to the Table component, w
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-grid{-[none, sm, md, lg, xl, 2xl]}` | `.pf-v6-c-data-list` | Modifies the data list to switch to a grid layout at a specified [breakpoint](/tokens/all-tokens). `.pf-m-grid` will display the grid layout at all breakpoints. `.pf-m-grid-none` will display the desktop layout at all breakpoints. **Note:** Without a grid modifier, the data list will display the grid layout by default and switch to the desktop layout at a medium breakpoint. |
+| `.pf-m-grid{-[none, sm, md, lg, xl, 2xl]}` | `.pf-v6-c-data-list` | Modifies the data list to switch to a grid layout at a specified [breakpoint](/tokens/all-patternfly-tokens). `.pf-m-grid` will display the grid layout at all breakpoints. `.pf-m-grid-none` will display the desktop layout at all breakpoints. **Note:** Without a grid modifier, the data list will display the grid layout by default and switch to the desktop layout at a medium breakpoint. |

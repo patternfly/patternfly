@@ -109,5 +109,5 @@ The gallery layout is designed so that all of its children are of uniform size, 
 | `.pf-v6-l-gallery` |  `<div>` |  Initializes a Gallery layout |
 | `.pf-v6-l-gallery__item` | `<div>` |  Explicitly sets the child for the gallery. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
 | `.pf-m-gutter` | `.pf-v6-l-gallery` | Adds space between children by using the globally defined gutter value. |
-| `--pf-v6-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v6-l-gallery` | Modifies the min value of `grid-template-columns` declaration at the optional [breakpoint](/tokens/all-tokens). |
-| `--pf-v6-l-gallery--GridTemplateColumns--max{-on-[breakpoint]}: {width}` | `.pf-v6-l-gallery` | Modifies the max value of `grid-template-columns` declaration at the optional [breakpoint](/tokens/all-tokens). |
+| `--pf-v6-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v6-l-gallery` | Modifies the min value of `grid-template-columns` declaration at the optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `--pf-v6-l-gallery--GridTemplateColumns--max{-on-[breakpoint]}: {width}` | `.pf-v6-l-gallery` | Modifies the max value of `grid-template-columns` declaration at the optional [breakpoint](/tokens/all-patternfly-tokens). |

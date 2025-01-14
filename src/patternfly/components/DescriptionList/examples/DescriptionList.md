@@ -195,8 +195,8 @@ Cards can be used as description list group wrappers. Using cards in this way ap
 | `.pf-m-auto-column-widths` | `.pf-v6-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-v6-c-description-list` | Modifies the description list display to inline-grid. |
 | `.pf-m-{1,2,3}-col{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v6-c-description-list` | Modifies the description list number of columns. |
-| `--pf-v6-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v6-c-description-list` | Modifies the min value of the `grid-template-columns` declaration at optional [breakpoint](/tokens/all-tokens). |
-| `--pf-v6-c-description-list--m-horizontal__term--width{-on-[breakpoint]}: {width}` | `.pf-v6-c-description-list.pf-m-horizontal` | Modifies the description list term width at optional [breakpoint](/tokens/all-tokens). |
+| `--pf-v6-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-v6-c-description-list` | Modifies the min value of the `grid-template-columns` declaration at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `--pf-v6-c-description-list--m-horizontal__term--width{-on-[breakpoint]}: {width}` | `.pf-v6-c-description-list.pf-m-horizontal` | Modifies the description list term width at optional [breakpoint](/tokens/all-patternfly-tokens). |
 
 <!-- | `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-v6-c-description-list__group` | Modifies the order of the flex layout element. |
 | `.pf-m-order-first{-on-[breakpoint]}` | `.pf-v6-c-description-list__group` | Modifies the order of the flex layout element to -1. |
