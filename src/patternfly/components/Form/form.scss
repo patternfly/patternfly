@@ -261,10 +261,6 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   font-size: var(--#{$form}__label--FontSize);
   line-height: var(--#{$form}__label--LineHeight);
 
-  &::selection {
-    background-color: none;
-  }
-
   &:not(.pf-m-disabled):hover {
     cursor: var(--#{$form}__label--hover--Cursor);
   }
