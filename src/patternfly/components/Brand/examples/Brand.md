@@ -57,5 +57,5 @@ Simple brand component.
 | -- | -- | -- |
 | `.pf-v6-c-brand` | `<img>, <picture>` |  Initiates a brand image. **Required** |
 | `.pf-m-picture` | `.pf-v6-c-brand` |  Modifies a brand image to a picture. |
-| `--pf-v6-c-brand--Width{-on-[breakpoint]}: {width}` | `.pf-v6-c-brand` |  Modifies the width value of a picture on optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `--pf-v6-c-brand--Height{-on-[breakpoint]}: {height}` | `.pf-v6-c-brand` |  Modifies the height value of a picture on optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-v6-c-brand--Width{-on-[breakpoint]}: {width}` | `.pf-v6-c-brand` |  Modifies the width value of a picture on optional [breakpoint](/tokens/all-tokens). |
+| `--pf-v6-c-brand--Height{-on-[breakpoint]}: {height}` | `.pf-v6-c-brand` |  Modifies the height value of a picture on optional [breakpoint](/tokens/all-tokens). |

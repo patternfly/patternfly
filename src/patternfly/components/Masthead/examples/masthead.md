@@ -105,4 +105,4 @@ cssPrefix: pf-v6-c-masthead
 | `.pf-v6-c-masthead__brand` | `<div>` | Initiates the masthead content component. |
 | `.pf-v6-c-masthead__logo` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-v6-c-masthead__content` | `<div>` | Initiates the masthead content component. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/tokens/all-tokens). |

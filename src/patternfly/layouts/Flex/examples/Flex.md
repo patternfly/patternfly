@@ -18,7 +18,7 @@ The flex layout provides two ways of spacing its direct children.
   - **Note** using `gap` along the main axis will override any other spacing applied using the spacing system.
 
 ### Breakpoints
-[Breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl` are provided.
+[Breakpoints](/tokens/all-tokens) `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl` are provided.
 
 ### Usefulness
 - Use when content dictates layout and elements wrap when necessary.

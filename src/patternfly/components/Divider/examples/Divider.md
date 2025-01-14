@@ -111,5 +111,5 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 | `.pf-v6-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |
 | `.pf-m-vertical` | `.pf-v6-c-divider` | Modifies the divider component from horizontal to vertical. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-v6-c-divider` | Modifies divider padding/inset to visually match padding of other adjacent components. |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-divider` | Modifies a divider to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-divider` | Modifies a divider to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-divider` | Modifies a divider to be hidden, at optional [breakpoint](/tokens/all-tokens). |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-divider` | Modifies a divider to be shown, at optional [breakpoint](/tokens/all-tokens). |
