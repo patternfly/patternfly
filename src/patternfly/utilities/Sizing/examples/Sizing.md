@@ -32,7 +32,7 @@ import './Sizing.css'
 ```
 
 ### Usage
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-w-initial-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-w-initial-on-lg`
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -69,7 +69,7 @@ import './Sizing.css'
 ```
 
 ### Usage
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-v6-u-w-25vw-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-w-25vw-on-lg`
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -106,7 +106,7 @@ import './Sizing.css'
 ```
 
 ### Usage
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-v6-u-h-initial-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-h-initial-on-lg`
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -143,7 +143,7 @@ import './Sizing.css'
 ```
 
 ### Usage
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-v6-u-h-25vh-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-h-25vh-on-lg`
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -188,7 +188,7 @@ import './Sizing.css'
 | `.pf-v6-u-min-width` | `*` | Sets min-width: `var(--pf-v6-u-min-width--MinWidth{-on-[breakpoint]})`. |
 | `.pf-v6-u-max-width` | `*` | Sets min-width: `var(--pf-v6-u-max-width--MaxWidth{-on-[breakpoint]})`. |
 
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example --pf-v6-u-min-width--MinWidth-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.--pf-v6-u-min-width--MinWidth-on-lg`
 
 | Custom property | Applied to | Outcome |
 | -- | -- | -- |
@@ -229,7 +229,7 @@ import './Sizing.css'
 | `.pf-v6-u-min-height` | `*` | Sets min-height: `var(--pf-v6-u-min-height--MinHeight{-on-[breakpoint]})`. |
 | `.pf-v6-u-max-height` | `*` | Sets max-height: `var(--pf-v6-u-max-height--MaxHeight{-on-[breakpoint]})`. |
 
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example --pf-v6-u-min-height--MinHeight-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.--pf-v6-u-min-height--MinHeight-on-lg`
 
 | Custom property | Applied to | Outcome |
 | -- | -- | -- |

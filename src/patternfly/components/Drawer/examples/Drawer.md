@@ -324,15 +324,15 @@ import './Drawer.css'
 | `.pf-m-panel-left` | `.pf-v6-c-drawer` | Modifies the drawer panel to expand from the left. |
 | `.pf-m-panel-bottom` | `.pf-v6-c-drawer` | Modifies the drawer panel to expand from the bottom. **Note:** percentage based panel sizes require the drawer component's parent element have an implicit or explicit height. |
 | `.pf-m-expanded` | `.pf-v6-c-drawer` | Modifies the drawer panel for the expanded state. |
-| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) will default to the `md` breakpoint. |
+| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/tokens/all-patternfly-tokens) will default to the `md` breakpoint. |
 | `.pf-m-no-border` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-v6-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-v6-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__panel` | Modifies the drawer element background color to transparent. |
 | `.pf-m-primary` | `.pf-v6-c-drawer__content` | Modifies the drawer content to use the primary background color. |
 | `.pf-m-secondary` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` | Modifies the drawer element to use the secondary background color. |
-| `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-resizable` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-v6-c-drawer__splitter` element. |
 | `--pf-v6-c-drawer__panel--md--FlexBasis--min` | `.pf-v6-c-drawer__panel` | Defines the drawer panel minimum size. |
 | `--pf-v6-c-drawer__panel--md--FlexBasis` | `.pf-v6-c-drawer__panel` | Defines the drawer panel size. |

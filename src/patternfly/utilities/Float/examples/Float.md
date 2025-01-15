@@ -20,7 +20,7 @@ import './Float.css'
 
 ## Documentation
 ### Overview
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v6-u-float-inline-start-on-lg**
+[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-float-inline-start-on-lg`
 
 ### Usage
 | Class | Applied to | Outcome |
