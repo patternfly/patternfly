@@ -440,7 +440,7 @@
   padding-inline: 0;
   color: var(--#{$wizard}__nav-link--Color);
   text-align: start; // needed for when the item is a button
-  text-decoration: var(--#{$wizard}__nav-link--TextDecoration);
+  text-decoration-line: var(--#{$wizard}__nav-link--TextDecoration);
   word-break: break-word;
   counter-increment: wizard-nav-count;
   background-color: transparent;

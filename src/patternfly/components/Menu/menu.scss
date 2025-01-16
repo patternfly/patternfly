@@ -518,7 +518,7 @@
   line-height: var(--#{$menu}__item--LineHeight);
   color: var(--#{$menu}__item--Color);
   text-align: start;
-  text-decoration: none;
+  text-decoration-line: none;
   background-color: var(--#{$menu}__item--BackgroundColor);
   border: 0;
   outline-offset: var(--#{$menu}--OutlineOffset);

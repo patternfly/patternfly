@@ -107,12 +107,12 @@
 
   :where(a) {
     color: var(--pf-t--global--text--color--link--default);
-    text-decoration: var(--pf-t--global--text-decoration--link--line--default);
+    text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
   }
 
   :where(a:hover, a:focus) {
     color: var(--pf-t--global--text--color--link--hover);
-    text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
+    text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
   }
 
   :where(

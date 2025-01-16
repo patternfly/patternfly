@@ -160,7 +160,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   padding-block-end: var(--#{$jump-links}__link--PaddingBlockEnd);
   padding-inline-start: var(--#{$jump-links}__link--PaddingInlineStart);
   padding-inline-end: var(--#{$jump-links}__link--PaddingInlineEnd);
-  text-decoration: none;
+  text-decoration-line: none;
   outline-offset: var(--#{$jump-links}__link--OutlineOffset);
 
   &:is(:hover, :focus) {

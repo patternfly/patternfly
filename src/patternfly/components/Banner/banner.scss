@@ -142,7 +142,7 @@
 
   a {
     color: var(--#{$banner}--link--Color);
-    text-decoration: var(--#{$banner}--link--TextDecoration);
+    text-decoration-line: var(--#{$banner}--link--TextDecoration);
 
     &:hover:not(.pf-m-disabled) {
       --#{$banner}--link--Color: var(--#{$banner}--link--hover--Color);
@@ -162,7 +162,7 @@
     --#{$button}--m-link--hover--Color: var(--#{$banner}--link--hover--Color);
     --#{$button}--disabled--Color: var(--#{$banner}--link--disabled--Color);
 
-    text-decoration: var(--#{$banner}--link--TextDecoration);
+    text-decoration-line: var(--#{$banner}--link--TextDecoration);
 
     &:disabled,
     &.pf-m-disabled {

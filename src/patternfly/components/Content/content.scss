@@ -119,7 +119,8 @@
     & a
   ) {
     color: var(--#{$content}--a--Color);
-    text-decoration: var(--#{$content}--a--TextDecorationLine) var(--#{$content}--a--TextDecorationStyle);
+    text-decoration-line: var(--#{$content}--a--TextDecorationLine);
+    text-decoration-style: var(--#{$content}--a--TextDecorationStyle);
 
     &:is(:hover, :focus) {
       --#{$content}--a--Color: var(--#{$content}--a--hover--Color);

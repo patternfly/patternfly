@@ -406,7 +406,8 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   &.pf-m-help-text {
     padding-inline-start: var(--#{$progress-stepper}__step-title--m-help-text--PaddingInlineStart);
     padding-inline-end: var(--#{$progress-stepper}__step-title--m-help-text--PaddingInlineEnd);
-    text-decoration: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationLine) var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationStyle);
+    text-decoration-line: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationLine);
+    text-decoration-style: var(--#{$progress-stepper}__step-title--m-help-text--TextDecorationStyle);
     text-underline-offset: var(--#{$progress-stepper}__step-title--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 

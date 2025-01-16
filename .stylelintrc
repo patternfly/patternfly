@@ -58,6 +58,9 @@
       "custom-properties",
       "declarations"
     ],
+    "property-disallowed-list": [
+      "text-decoration"
+    ],
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-colon-space-after": "at-least-one-space",
     "scss/dollar-variable-colon-space-before": "never",
