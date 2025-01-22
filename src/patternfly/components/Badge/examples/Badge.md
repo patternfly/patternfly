@@ -6,39 +6,67 @@ cssPrefix: pf-v6-c-badge
 
 ## Examples
 ### Read
-```hbs
-{{#> badge badge--modifier="pf-m-read"}}
-  7
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read"}}
-  24
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read"}}
-  240
-{{/badge}}
-{{#> badge badge--modifier="pf-m-read"}}
-  999+
-{{/badge}}
+```ts
+interface CoreBadgeProps {
+  className: string;
+  children: React.ReactNode;
+  screenReaderText: string;
+}
+
+const CoreBadge: React.FunctionComponent<CoreBadgeProps> = ({
+  className,
+  children,
+  screenReaderText
+}: CoreBadgeProps) => (
+  <span className={`pf-v6-c-badge ${className}`}>
+    {children}
+    {screenReaderText && <span className="pf-v6-screen-reader">{screenReaderText}</span>}
+  </span>
+);
+
+const readExample = () => {
+  const readValues = ['7', '21', '245', '999+'];
+  return (
+    <>
+      {readValues.map((value, index) => (
+        <CoreBadge className="pf-m-read" key={index}>{value}</CoreBadge>
+      ))}
+    </>
+  )
+}
 ```
 
 ### Unread
-```hbs
-{{#> badge badge--modifier="pf-m-unread"}}
-  7
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread"}}
-  24
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread"}}
-  240
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
-{{#> badge badge--modifier="pf-m-unread"}}
-  999+
-  {{#> screen-reader}}unread messages{{/screen-reader}}
-{{/badge}}
+```ts
+interface CoreBadgeProps {
+  className: string;
+  children: React.ReactNode;
+  screenReaderText: string;
+}
+
+const CoreBadge: React.FunctionComponent<CoreBadgeProps> = ({
+  className,
+  children,
+  screenReaderText
+}: CoreBadgeProps) => (
+  <span className={`pf-v6-c-badge ${className}`}>
+    {children}
+    {screenReaderText && <span className="pf-v6-screen-reader">{screenReaderText}</span>}
+  </span>
+);
+
+const unreadExample = () => {
+  const unReadValues = ['7', '21', '245', '999+'];
+  return (
+    <>
+      {unReadValues.map((value, index) => (
+        <CoreBadge className="pf-m-unread" key={index} screenReaderText="unread messages">
+          {value}
+        </CoreBadge>
+      ))}
+    </>
+  )
+}
 ```
 
 ### Disabled
