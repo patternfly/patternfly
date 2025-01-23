@@ -1,10 +1,10 @@
-<div class="{{pfv}}popover{{#if popover--IsDangerAlert}} pf-m-danger{{else if popover--IsWarningAlert}} pf-m-warning{{else if popover--IsSuccessAlert}} pf-m-success{{else if popover--IsInfoAlert}} pf-m-info{{else if popover--IsCustomAlert}} pf-m-custom{{/if}}{{#if popover--modifier}} {{popover--modifier}}{{/if}}"
+<div class="{{pfv}}popover {{pfv}}popover__content{{#if popover--IsDangerAlert}} pf-m-danger{{else if popover--IsWarningAlert}} pf-m-warning{{else if popover--IsSuccessAlert}} pf-m-success{{else if popover--IsInfoAlert}} pf-m-info{{else if popover--IsCustomAlert}} pf-m-custom{{/if}}{{#if popover--modifier}} {{popover--modifier}}{{/if}}"
   role="dialog"
   aria-modal="true"
   {{#if popover--attribute}}
     {{{popover--attribute}}}
-  {{/if}}>
-  {{#> popover-arrow}}
-  {{/popover-arrow}}
+  {{/if}} popover>
+  {{!-- {{#> popover-arrow}} --}}
+  {{!-- {{/popover-arrow}} --}}
   {{> @partial-block}}
 </div>
