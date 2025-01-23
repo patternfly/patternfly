@@ -24,7 +24,7 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
   --#{$description-list}__term--Display: inline;
   --#{$description-list}__term--sm--Display: flex;
   --#{$description-list}__term--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$description-list}__term--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$description-list}__term--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$description-list}__term--LineHeight: var(--pf-t--global--font--line-height--body);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
