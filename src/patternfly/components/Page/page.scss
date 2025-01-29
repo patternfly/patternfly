@@ -443,6 +443,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-secondary--BackgroundColor);
   }
 
+  .#{$toolbar} { // remove padding as there is gap + padding already
+    --#{$toolbar}--PaddingBlockEnd: 0;
+  }
+
   @each $breakpoint, $breakpoint-value in $pf-page-v6--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
