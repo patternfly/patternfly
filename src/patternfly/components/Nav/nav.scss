@@ -32,12 +32,6 @@
   // Nav list animation variables
   --#{$nav}__list--TransitionDuration--opacity: var(--pf-t--global--motion--duration--fade--default);
   --#{$nav}__list--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
-  --#{$nav}__list--TransitionDuration--transform: 0s; // no slide by default
-  --#{$nav}__list--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--default);
-
-  @media ( prefers-reduced-motion: no-preference ) {
-    --#{$nav}__list--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
-  }
 
   // * Nav section title
   --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
@@ -47,11 +41,20 @@
   --#{$nav}__section-title--PaddingInlineStart: var(--#{$nav}__link--PaddingInlineStart);
   --#{$nav}__section-title--PaddingInlineEnd: var(--#{$nav}__link--PaddingInlineEnd);
 
-  // * Nav toggle icon
+  // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
+  --#{$nav}__item--TransitionDuration: 0; // var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$nav}__item--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+
+  @media ( prefers-reduced-motion: no-preference ) {
+    --#{$nav}__item--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+  }
+
+  // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$nav}__item__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+
 
   // * Nav link
   --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
@@ -122,10 +125,6 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-
-  // horizontal - background color transition on hover
-  --#{$nav}__link--m-horizontal--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
-  --#{$nav}__link--m-horizontal--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 }
 
 // - Nav display - default to grid
@@ -189,11 +188,9 @@
 
 [class^="#{$nav}"][hidden] {
   display: none;
-  max-height: 0;
 
   & .#{$nav}__list {
     opacity: 0;
-    transform: translateY(-100%);
   }
 }
 
@@ -211,17 +208,15 @@
 .#{$nav}__list {
   row-gap: var(--#{$nav}__list--RowGap);
   column-gap: var(--#{$nav}__list--ColumnGap);
+  min-height: 0;
   opacity: 1;
-
-  // transition: opacity var(--#{$nav}__list--TransitionDuration--opacity) var(--#{$nav}__list--TransitionTimingFunction--opacity), transform var(--#{$nav}__list--TransitionDuration--transform) var(--#{$nav}__list--TransitionTimingFunction--transform);
-
-  // add display for the __list
-  transition: opacity var(--#{$nav}__list--TransitionDuration--opacity) var(--#{$nav}__list--TransitionTimingFunction--opacity), transform var(--#{$nav}__list--TransitionDuration--transform) var(--#{$nav}__list--TransitionTimingFunction--transform), display var(--#{$nav}__list--TransitionDuration--opacity) allow-discrete;
-  transform: translateY(0);
+  transition-timing-function: var(--#{$nav}__list--TransitionTimingFunction--opacity);
+  transition-duration: var(--#{$nav}__list--TransitionDuration--opacity);
+  transition-property: opacity, display;
+  transition-behavior: allow-discrete;
 
   @starting-style {
     opacity: 0;
-    transform: translateY(-100%);
   }
 }
 
@@ -229,23 +224,33 @@
 .#{$nav}__subnav {
   --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
-  max-height: var(--#{$nav}__subnav--MaxHeight, fit-content); // This can be set in React to the proper height until allow-discrete, i.e. transition to auto, is fully supported
+  grid-template-rows: 1fr;
+  min-height: 0;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
   transition-timing-function: var(--#{$nav}__subnav--max-height--TransitionTimingFunction);
   transition-duration: var(--#{$nav}__subnav--max-height--TransitionDuration);
-  transition-property: max-height, display;
-  transition-behavior: allow-discrete; // should allow transitions during show/hide 
+  transition-property: grid-template-rows, display;
+  transition-behavior: allow-discrete; 
   
   @starting-style {
-    max-height: 0;
+    grid-template-rows: 0fr;
+  }
+
+  [hidden] {
+    --#{$nav}__list--RowGap: 0;
+
+    grid-template-rows: 0fr;
   }
 }
 
 // - Nav item
 .#{$nav}__item {
-  row-gap: var(--#{$nav}__item--RowGap); // no fallback here as this value is used to calc clickable offsets
+  row-gap: 0; // Only have row-gap when expanded and transition it
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
+  transition-timing-function: var(--#{$nav}__item--TransitionTimingFunction);
+  transition-duration: var(--#{$nav}__item--TransitionDuration);
+  transition-property: row-gap;
 
   > .#{$nav}__link[button] {
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
@@ -257,6 +262,10 @@
     + .#{$nav}__item > .#{$nav}__link::before {
       inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
     }
+  }
+
+  &.pf-m-expanded {
+    row-gap: var(--#{$nav}__item--RowGap); // no fallback here as this value is used to calc clickable offsets
   }
 }
 
@@ -295,9 +304,9 @@
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
-  transition: 
-    background-color var(--#{$nav}__link--background-color--TransitionDuration) var(--#{$nav}__link--background-color--TransitionTimingFunction),
-    color var(--#{$nav}__link--m-current--color--TransitionDuration) var(--#{$nav}__link--m-current--color--TransitionTimingFunction);
+  transition-timing-function: var(--#{$nav}__link--background-color--TransitionTimingFunction), var(--#{$nav}__link--m-current--color--TransitionTimingFunction);
+  transition-duration: var(--#{$nav}__link--background-color--TransitionDuration), var(--#{$nav}__link--m-current--color--TransitionDuration);
+  transition-property: background-color color;
 
   // increase height clickable area of expanded nav_links to account for
   &[aria-expanded="true"]::before {
@@ -339,7 +348,8 @@
 // - Nav toggle icon
 .#{$nav}__toggle-icon {
   display: inline-block;
-  transition: transform var(--#{$nav}__item__toggle-icon--TransitionDuration);
+  transition-duration: var(--#{$nav}__item__toggle-icon--TransitionDuration);
+  transition-property: transform;
   transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
