@@ -46,7 +46,7 @@
   --#{$nav}__item--TransitionDuration: 0;
   --#{$nav}__item--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
-  @media ( prefers-reduced-motion: no-preference ) {
+  @media (prefers-reduced-motion: no-preference) {
     --#{$nav}__item--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
@@ -69,12 +69,12 @@
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
 
   // background color transition on hover
-  --#{$nav}__link--background-color--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$nav}__link--background-color--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__link--TransitionDuration--background-color: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__link--TransitionTimingFunction--background-color: var(--pf-t--global--motion--timing-function--default);
 
   // text color transition for current
-  --#{$nav}__link--m-current--color--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
-  --#{$nav}__link--m-current--color--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__link--m-current--TransitionDuration--color: var(--pf-t--global--motion--duration--fade--short);
+  --#{$nav}__link--m-current--TransitionTimingFunction--color: var(--pf-t--global--motion--timing-function--default);
   
   // * Nav link icon
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
@@ -84,11 +84,11 @@
   --#{$nav}__subnav--MaxHeight: fit-content;  
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__subnav--max-height--TransitionDuration: 0s; // no slide by default
-  --#{$nav}__subnav--max-height--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__subnav--TransitionDuration--max-height: 0s; // no slide by default
+  --#{$nav}__subnav--TransitionTimingFunction--max-height: var(--pf-t--global--motion--timing-function--default);
 
   @media ( prefers-reduced-motion: no-preference ) {
-    --#{$nav}__subnav--max-height--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__subnav--TransitionDuration--max-height: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // * Nav scroll button
@@ -228,8 +228,8 @@
   min-height: 0;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
-  transition-timing-function: var(--#{$nav}__subnav--max-height--TransitionTimingFunction);
-  transition-duration: var(--#{$nav}__subnav--max-height--TransitionDuration);
+  transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--max-height);
+  transition-duration: var(--#{$nav}__subnav--TransitionDuration--max-height);
   transition-property: grid-template-rows, display;
   transition-behavior: allow-discrete; 
   
@@ -265,7 +265,7 @@
   }
 
   &.pf-m-expanded {
-    row-gap: var(--#{$nav}__item--RowGap); // no fallback here as this value is used to calc clickable offsets
+    row-gap: var(--#{$nav}__item--RowGap);
   }
 }
 
@@ -304,9 +304,9 @@
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
-  transition-timing-function: var(--#{$nav}__link--background-color--TransitionTimingFunction), var(--#{$nav}__link--m-current--color--TransitionTimingFunction);
-  transition-duration: var(--#{$nav}__link--background-color--TransitionDuration), var(--#{$nav}__link--m-current--color--TransitionDuration);
-  transition-property: background-color color;
+  transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
+  transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
+  transition-property: background-color, color;
 
   // increase height clickable area of expanded nav_links to account for
   &[aria-expanded="true"]::before {
