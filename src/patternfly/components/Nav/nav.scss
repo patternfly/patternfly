@@ -43,7 +43,7 @@
 
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
-  --#{$nav}__item--TransitionDuration: 0; // var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$nav}__item--TransitionDuration: 0;
   --#{$nav}__item--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   @media ( prefers-reduced-motion: no-preference ) {
