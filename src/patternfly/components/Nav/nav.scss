@@ -237,7 +237,7 @@
     grid-template-rows: 0fr;
   }
 
-  [hidden] {
+  &[hidden] {
     --#{$nav}__list--RowGap: 0;
     
     grid-template-rows: 0fr;
