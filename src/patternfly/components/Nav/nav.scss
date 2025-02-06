@@ -31,6 +31,7 @@
 
   // Nav list animation variables
   --#{$nav}__list--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--default); // match the duration of the slide open
+  --#{$nav}__list--hidden--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--short);
   --#{$nav}__list--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
 
   // * Nav section title
@@ -44,10 +45,12 @@
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
   --#{$nav}__item--TransitionDuration--row-gap: 0;
+  --#{$nav}__item--m-expanded--TransitionDuration--row-gap: 0;
   --#{$nav}__item--TransitionTimingFunction--row-gap: var(--pf-t--global--motion--timing-function--default);
 
   @media (prefers-reduced-motion: no-preference) {
-    --#{$nav}__item--TransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__item--TransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$nav}__item--m-expandedTransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // * Nav item toggle icon
@@ -87,8 +90,9 @@
   --#{$nav}__subnav--TransitionDuration--max-height: 0s; // no slide by default
   --#{$nav}__subnav--TransitionTimingFunction--max-height: var(--pf-t--global--motion--timing-function--default);
 
-  @media ( prefers-reduced-motion: no-preference ) {
+  @media (prefers-reduced-motion: no-preference) {
     --#{$nav}__subnav--TransitionDuration--max-height: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__subnav--hidden--TransitionDuration--max-height: var(--pf-t--global--motion--duration--slide-in--short);
   }
 
   // * Nav scroll button
@@ -190,6 +194,8 @@
   display: none;
 
   & .#{$nav}__list {
+    --#{$nav}__list--TransitionDuration--opacity: var(--#{$nav}__list--hidden--TransitionDuration--opacity);
+
     opacity: 0;
   }
 }
@@ -239,7 +245,8 @@
 
   &[hidden] {
     --#{$nav}__list--RowGap: 0;
-    
+    --#{$nav}__subnav--TransitionDuration--max-height: var(--#{$nav}__subnav--hidden--TransitionDuration--max-height);
+
     grid-template-rows: 0fr;
   }
 }
@@ -266,6 +273,9 @@
 
   &.pf-m-expanded {
     row-gap: var(--#{$nav}__item--RowGap);
+
+    // duration for collapsing needs to set the property rather than the variable because of nested items
+    transition-duration: var(--#{$nav}__item--m-expanded--TransitionDuration--row-gap); 
   }
 }
 
