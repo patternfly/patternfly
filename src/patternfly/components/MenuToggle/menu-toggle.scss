@@ -152,6 +152,8 @@
 
   // Status icon
   --#{$menu-toggle}__status-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$menu-toggle}__status-icon--m--danger--Opacity: var(--pf-t--global--motion--duration--icon--default);
+  --#{$menu-toggle}__status-icon--m--danger--TransitionTimingFunction: var(--pf-t--global--motion--duration--icon--default);
 
   // Success
   --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
@@ -164,6 +166,8 @@
   // Danger
   --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$menu-toggle}--m-danger--TransitionDuration--Transform: var(--pf-t--global--motion--duration--md);
+  --#{$menu-toggle}--m-danger--TransitionTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
 
   // Placeholder
   --#{$menu-toggle}--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
@@ -337,6 +341,24 @@
   &.pf-m-danger {
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
+    
+    transform: translate3d(0, 0, 0);
+    animation-name: menu-toggle-m-danger-motion;
+    animation-duration: var(--#{$menu-toggle}--m-danger--TransitionDuration--Transform);
+    animation-timing-function: var(--#{$menu-toggle}--m-danger--TransitionTimingFunction--Transform);
+    animation-fill-mode: both;
+
+    .#{$menu-toggle}__status-icon {
+      color: var(--#{$menu-toggle}__status-icon--Color, inherit);
+      transition: 
+        opacity
+          var(--#{$menu-toggle}__status-icon--m--danger--Opacity)
+          var(--#{$menu-toggle}--m-danger--TransitionTimingFunction--Transform);
+      
+      @starting-style  {
+        opacity: 0;
+      }
+    }
   }
 
   &.pf-m-placeholder {
@@ -353,6 +375,18 @@
     &,
     .#{$button} {
       pointer-events: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes menu-toggle-m-danger-motion {
+    33% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    66% {
+      transform: translate3d(3px, 0, 0);
     }
   }
 }
