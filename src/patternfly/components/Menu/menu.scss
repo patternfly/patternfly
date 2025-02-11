@@ -175,11 +175,21 @@
   &:is(.pf-m-disabled, :disabled, .pf-m-aria-disabled, [aria-disabled="true"]) {
     --#{$menu}__item--Color: var(--#{$menu}__item--m-disabled--Color);
     --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
-    --#{$menu}__item-external-icon--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__item-external--Color: transparent;
+    --#{$menu}__item-select-icon--Color: transparent;
     --#{$menu}__item-description--Color: var(--#{$menu}--icon--disabled--Color);
     --#{$menu}__list-item--BackgroundColor: transparent;
+    --#{$menu}__list-item--hover--BackgroundColor: transparent;
+  }
 
+  &:is(.pf-m-disabled, :disabled) {
     pointer-events: none;
+  }
+
+  &.pf-m-aria-disabled {
+    .#{$menu}__item {
+      cursor: default;
+    }
   }
 }
 
