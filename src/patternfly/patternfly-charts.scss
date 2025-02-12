@@ -432,3 +432,121 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-theme--multi-color-unordered--ColorScale--3400: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3400);
   --#{$chart}-theme--multi-color-unordered--ColorScale--3500: var(--pf-t--chart--theme--colorscales--multi-colored-unordered--colorscale--3500);
 }
+
+// ECharts styles
+// stylelint-disable-next-line no-duplicate-selectors
+:where(:root) {
+  // Global
+  --#{$chart}-echarts-global--axis-label--Color: transparent;
+  --#{$chart}-echarts-global--axis-line--item-style--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-global--axis-tick--item-style--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-global--label--Color: var(--#{$chart}-global--label--Fill);
+
+  // Basic config
+  --#{$chart}-echarts-BackgroundColor: transparent;
+
+  // Bar chart
+  --#{$chart}-echarts-bar--item-style--BarBorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-bar--item-style--BarBorderWidth: 0;
+
+  // Boxplot
+  --#{$chart}-echarts-boxplot--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-boxplot--item-style--BorderWidth: 0;
+
+  // Candlestick
+  --#{$chart}-echarts-candlestick--item-style--BorderWidth: 1;
+  --#{$chart}-echarts-candlestick--item-style--negative--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-candlestick--item-style--positive--Color: var(--#{$chart}-global--Fill--Color--white);
+  --#{$chart}-echarts-candlestick--item-style--negative--BorderColor: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-candlestick--item-style--positive--BorderColor: var(--#{$chart}-global--Fill--Color--white);
+
+  // DataZoom
+  --#{$chart}-echarts-datazoom--HandleSize: 100%;
+
+  // Funnel
+  --#{$chart}-echarts-funnel--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-funnel--item-style--BorderWidth: 0;
+
+  // Gauge
+  --#{$chart}-echarts-gauge--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-gauge--item-style--BorderWidth: 0;
+
+  // Geo
+  --#{$chart}-echarts-geo--emphasis--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-echarts-geo--emphasis--item-style--BorderWidth: 1;
+  --#{$chart}-echarts-geo--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-geo--item-style--BorderWidth: 0.5;
+
+  // Graph
+  --#{$chart}-echarts-graph--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-graph--item-style--BorderWidth: 0;
+  --#{$chart}-echarts-graph--line-style--Color:  var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-graph--line-style--BorderWidth: 1;
+  --#{$chart}-echarts-graph--Smooth: false;
+  --#{$chart}-echarts-graph--SymbolSize: 4;
+  --#{$chart}-echarts-graph--Symbol: 'emptyCircle';
+
+  // Line
+  --#{$chart}-echarts-line--item-style--BorderWidth: 1;
+  --#{$chart}-echarts-line--line-style--BorderWidth: 2;
+  --#{$chart}-echarts-line--Smooth: false;
+  --#{$chart}-echarts-line--SymbolSize: 4;
+  --#{$chart}-echarts-line--Symbol: 'emptyCircle';
+
+  // Map
+  --#{$chart}-echarts-map--emphasis--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-echarts-map--emphasis--item-style--BorderWidth: 1;
+  --#{$chart}-echarts-map--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-map--item-style--BorderWidth: 0.5;
+
+  // Parallel
+  --#{$chart}-echarts-parallel--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-parallel--item-style--BorderWidth: 0;
+
+  // Pie
+  --#{$chart}-echarts-pie--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-pie--item-style--BorderWidth: 0;
+
+  // Sankey
+  --#{$chart}-echarts-sankey--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-sankey--item-style--BorderWidth: 0;
+
+  // Scatter
+  --#{$chart}-echarts-scatter--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-scatter--item-style--BorderWidth: 0;
+
+  // Skeleton
+  --#{$chart}-echarts-skeleton--label--Color: transparent;
+
+  // Toolbox
+  --#{$chart}-echarts-toolbox--emphasis--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-echarts-toolbox--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--300);
+
+  // Tooltip
+  --#{$chart}-echarts-tooltip--axis--pointer--cross-style--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-tooltip--axis--pointer--cross-style--Width: 1;
+  --#{$chart}-echarts-tooltip--axis--pointer--line-style--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-tooltip--axis--pointer--line-style--Width: 1;
+
+  // Timeline
+  --#{$chart}-echarts-timeline--emphasis--control-style--Color: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-echarts-timeline--emphasis--control-style--BorderColor: var(--#{$chart}-global--Fill--Color--200);
+  --#{$chart}-echarts-timeline--emphasis--control-style--BorderWidth: 1;
+  --#{$chart}-echarts-timeline--emphasis--item-style--Color: var(--#{$chart}-global--Fill--Color--white);
+  --#{$chart}-echarts-timeline--checkpoint-style--Color: var(--pf-t--chart--theme--colorscales--blue--colorscale--400);
+  --#{$chart}-echarts-timeline--checkpoint-style--BorderColor: var(--#{$chart}-global--Fill--Color--white);
+  --#{$chart}-echarts-timeline--control-style--Color: var(--pf-t--chart--theme--colorscales--gray--colorscale--100);
+  --#{$chart}-echarts-timeline--control-style--BorderColor: var(--pf-t--chart--theme--colorscales--gray--colorscale--100);
+  --#{$chart}-echarts-timeline--control-style--BorderWidth: 1;
+  --#{$chart}-echarts-timeline--item-style--BorderWidth: 1;
+  --#{$chart}-echarts-timeline--item-style--Color: var(--pf-t--chart--theme--colorscales--gray--colorscale--100);
+  --#{$chart}-echarts-timeline--line-style--Color: var(--pf-t--chart--theme--colorscales--gray--colorscale--400);
+  --#{$chart}-echarts-timeline--line-style--Width: 2;
+
+  // Radar
+  --#{$chart}-echarts-radar--item-style--BorderWidth: 1;
+  --#{$chart}-echarts-radar--line-style--BorderWidth: 2;
+  --#{$chart}-echarts-radar--Smooth: false;
+  --#{$chart}-echarts-radar--SymbolSize: 4;
+  --#{$chart}-echarts-radar--Symbol: 'emptyCircle';
+}
