@@ -17,6 +17,22 @@
       disabled
     {{/if}}
   {{/if}}
+  onClick="
+    ((e) => {
+      const el = this,
+            li = this.closest('li'),
+            ul = this.closest('ul'),
+            tabs = this.closest('.pf-v6-c-tabs'),
+            left = Math.round(li.offsetLeft),
+            width = Math.round(li.offsetWidth);
+
+      ul.querySelectorAll('li').forEach(function(el) {
+        el.classList.remove('pf-m-current')});
+        li.classList.add('pf-m-current');
+        tabs.style.setProperty('--pf-v6-c-tabs--link-accent--start', left + 'px');
+        tabs.style.setProperty('--pf-v6-c-tabs--link-accent--width', width + 'px');
+      }
+    )()"
   {{~#if tabs-link--IsAriaDisabled}}
     aria-disabled="true"
   {{/if}}

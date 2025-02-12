@@ -74,6 +74,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-box--m-secondary__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}--m-box--m-secondary__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
+  --#{$tabs}__link--TransitionDuration--background-color: var(--pf-t--global--motion--duration--fade--short);
+  --#{$tabs}__link--TransitionTimingFunction--background-color: var(--pf-t--global--motion--timing-function--default);
 
   // Link before
   --#{$tabs}__link--before--border-color--base: var(--pf-t--global--border--color--default);
@@ -102,6 +104,16 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--after--BorderInlineStartWidth: 0;
   --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
+
+  // Link accent
+  --#{$tabs}--link-accent--start: 0;
+  --#{$tabs}--link-accent--width: auto;
+  --#{$tabs}--link-accent--color: var(--#{$tabs}__item--m-current__link--after--BorderColor);
+  --#{$tabs}--link-accent--size: var(--#{$tabs}__item--m-current__link--after--BorderWidth);
+  --#{$tabs}--link-accent--TransitionDuration--width: var(--pf-t--global--motion--duration--md);
+  --#{$tabs}--link-accent--TransitionTimingFunction--width: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$tabs}--link-accent--TransitionDuration--start: var(--pf-t--global--motion--duration--md);
+  --#{$tabs}--link-accent--TransitionTimingFunction--start: var(--pf-t--global--motion--timing-function--decelerate);
 
   // Scroll buttons
   --#{$tabs}__scroll-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -580,6 +592,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   text-decoration-line: none;
   background-color: var(--#{$tabs}__link--BackgroundColor);
   border-radius: var(--#{$tabs}__link--BorderRadius);
+  transition: background-color var(--#{$tabs}__link--TransitionDuration--background-color) var(--#{$tabs}__link--TransitionTimingFunction--background-color);
 
   @at-root .#{$tabs}__item.pf-m-action,
   & {
@@ -737,3 +750,23 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 // stylelint-enable
+
+@media (prefers-reduced-motion: no-preference) {
+  .#{$tabs}:not(.pf-m-box, .pf-m-vertical) {
+    .#{$tabs}__link::after {
+      content: revert;
+    }
+
+    .#{$tabs}__list::after {
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: var(--#{$tabs}--link-accent--start);
+      width: var(--#{$tabs}--link-accent--width);
+      content: "";
+      border-block-end: var(--#{$tabs}--link-accent--size) solid var(--#{$tabs}--link-accent--color);
+      transition:
+        width var(--#{$tabs}--link-accent--TransitionDuration--width) var(--#{$tabs}--link-accent--TransitionTimingFunction--width),
+        inset-inline-start var(--#{$tabs}--link-accent--TransitionDuration--start) var(--#{$tabs}--link-accent--TransitionTimingFunction--start),
+    }
+  }
+}
