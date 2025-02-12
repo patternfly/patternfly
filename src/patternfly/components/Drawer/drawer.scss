@@ -27,7 +27,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$drawer}__panel--TransitionDuration: 250ms;
+  --#{$drawer}__panel--TransitionDuration: var(--pf-t--global--motion--duration--md);
+  --#{$drawer}__panel--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
   --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
   --#{$drawer}__panel--FlexBasis: 100%;
   --#{$drawer}__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
@@ -299,6 +300,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   background-color: var(--#{$drawer}__panel--BackgroundColor);
   box-shadow: var(--#{$drawer}__panel--BoxShadow);
   transition-duration: var(--#{$drawer}__panel--TransitionDuration);
+  transition-timing-function: var(--#{$drawer}__panel--TransitionTimingFunction);
   transition-property: var(--#{$drawer}__panel--TransitionProperty);
   -webkit-overflow-scrolling: touch;
 
