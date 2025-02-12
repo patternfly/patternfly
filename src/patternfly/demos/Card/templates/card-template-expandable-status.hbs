@@ -12,25 +12,35 @@
       {{/card-title}}
     {{/card-header}}
     {{#> card-expandable-content}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md"}}
-        {{> card-template-expandable-status-card card-template-expandable-status-card--HasIncident=true}}
-        {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
-        {{> card-template-expandable-status-card
-            card-template-expandable-status-card--label-icon='<i class="fas fa-cube" aria-hidden="true"></i>'
-            card-template-expandable-status-card--label-text="Stablility"
-            card-template-expandable-status-card--label--HasOverflowLabel=true
-            card-template-expandable-status-card--header-link--text="211 systems"
-            card-template-expandable-status-card--body--text="Adjust your networking configuration to get ahead of network perfomance degradations and packet losses"
-            card-template-expandable-status-card--RequiresReboot=true
-          }}
-        {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
-        {{> card-template-expandable-status-card
-            card-template-expandable-status-card--label-icon='<i class="pf-v6-pficon pf-v6-pficon-automation" aria-hidden="true"></i>'
-            card-template-expandable-status-card--label-text="Availability"
-            card-template-expandable-status-card--header-link--text="166 systems"
-            card-template-expandable-status-card--body--text="Fine tune your Oracle DB configuration to improve database performance and avoid process failure"
-            card-template-expandable-status-card--HasIncident=true
-          }}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md pf-m-align-items-stretch"}}
+        {{#> l-flex-item}}
+          {{> card-template-expandable-status-card card-template-expandable-status-card--HasIncident=true}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> card-template-expandable-status-card
+              card-template-expandable-status-card--label-icon='<i class="fas fa-cube" aria-hidden="true"></i>'
+              card-template-expandable-status-card--label-text="Stablility"
+              card-template-expandable-status-card--label--HasOverflowLabel=true
+              card-template-expandable-status-card--header-link--text="211 systems"
+              card-template-expandable-status-card--body--text="Adjust your networking configuration to get ahead of network perfomance degradations and packet losses"
+              card-template-expandable-status-card--RequiresReboot=true
+            }}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{> card-template-expandable-status-card
+              card-template-expandable-status-card--label-icon='<i class="pf-v6-pficon pf-v6-pficon-automation" aria-hidden="true"></i>'
+              card-template-expandable-status-card--label-text="Availability"
+              card-template-expandable-status-card--header-link--text="166 systems"
+              card-template-expandable-status-card--body--text="Fine tune your Oracle DB configuration to improve database performance and avoid process failure"
+              card-template-expandable-status-card--HasIncident=true
+            }}
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/card-expandable-content}}
   {{/card}}
