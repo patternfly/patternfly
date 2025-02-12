@@ -23,6 +23,19 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // * Masthead toggle
   --#{$masthead}__toggle--Size: var(--pf-t--global--icon--size--xl);
+  --#{$masthead}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$masthead}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--md);
+  --#{$masthead}__toggle-icon-arrow--collapse--path: path("M3,7 L1,5 L3,3");
+  --#{$masthead}__toggle-icon-top--collapse--path: path("M5,1 L9,1");
+  --#{$masthead}__toggle-icon-bottom--collapse--path: path("M9,9 L5,9");
+
+
+  // Masthead settings
+  --#{$masthead}__settings-button-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$masthead}__settings-button-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$masthead}__settings-button-icon--hover--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$masthead}__settings-button-icon--hover--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$masthead}__settings-button-icon--hover__icon--Rotate: 60deg;
 
   // * Masthead content
   --#{$masthead}__content--ColumnGap: var(--pf-t--global--spacer--md);
@@ -217,9 +230,69 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
  }
 }
 
-// - Masthead toggle
-.#{$masthead}__toggle {
-  --#{$button}--FontSize: var(--#{$masthead}__toggle--Size);
+// Masthead toggle
+.#{$masthead}__toggle-button {
+  @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
+    &.pf-m-expanded {
+      .#{$masthead}__toggle-icon-arrow {
+        d: var(--#{$masthead}__toggle-icon-arrow--collapse--path);
+      }
+      .#{$masthead}__toggle-icon-top {
+        d: var(--#{$masthead}__toggle-icon-top--collapse--path);
+      }
+      .#{$masthead}__toggle-icon-bottom {
+        d: var(--#{$masthead}__toggle-icon-bottom--collapse--path);
+      }
+    }
+  }
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+    &:hover,
+    &:focus-visible {
+      .#{$masthead}__toggle-icon-arrow {
+        d: var(--#{$masthead}__toggle-icon-arrow--collapse--path);
+      }
+      .#{$masthead}__toggle-icon-top {
+        d: var(--#{$masthead}__toggle-icon-top--collapse--path);
+      }
+      .#{$masthead}__toggle-icon-bottom {
+        d: var(--#{$masthead}__toggle-icon-bottom--collapse--path);
+      }
+    }
+
+    &:not(.pf-m-expanded) {
+      .#{$masthead}__toggle-icon {
+        scale: -1;
+      }
+    }
+  }
+}
+
+.#{$masthead}__toggle-icon {
+  path {
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: d var(--#{$masthead}__toggle-icon--TransitionDuration) var(--#{$masthead}__toggle-icon--TransitionTimingFunction);
+  }
+}
+
+.#{$masthead}__settings-button {
+  &:hover,
+  &:focus {
+    .#{$masthead}__settings-button-icon {
+      --#{$masthead}__settings-button-icon--TransitionDuration: var(--#{$masthead}__settings-button-icon--hover--TransitionDuration);
+      --#{$masthead}__settings-button-icon--TransitionTimingFunction: var(--#{$masthead}__settings-button-icon--hover--TransitionTimingFunction);
+
+      rotate: var(--#{$masthead}__settings-button-icon--hover__icon--Rotate);
+    }
+  }
+}
+
+.#{$masthead}__settings-button-icon {
+  display: inline-block;
+  transition: rotate var(--#{$masthead}__settings-button-icon--TransitionDuration) var(--#{$masthead}__settings-button-icon--TransitionTimingFunction);
 }
 
 // - Masthead expandable content
