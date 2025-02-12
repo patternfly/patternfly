@@ -9,20 +9,55 @@ import './ModalBox.css'
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description" id="firstmodal"'}}
   {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
-      Modal title
+      First modal
     {{/modal-box-title}}
   {{/modal-box-header}}
   {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
-    To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+    We don't need no stinkin' javascript. 
   {{/modal-box-body}}
   {{#> modal-box-footer}}
     Modal footer
   {{/modal-box-footer}}
 {{/modal-box}}
+
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description" id="secondmodal"'}}
+  {{> modal-box-close}}
+  {{#> modal-box-header}}
+    {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
+      Second modal
+    {{/modal-box-title}}
+  {{/modal-box-header}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante purus, feugiat ut elit et, lacinia feugiat velit. Cras eget pharetra lorem, eget venenatis augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut eu consectetur orci. Vestibulum ac dui facilisis, dictum sem vel, porttitor magna. Donec auctor velit in nunc cursus, sit amet pellentesque dui elementum. Vestibulum a auctor felis. Nam malesuada sem et sapien pellentesque, et dictum elit elementum. Quisque ut massa consectetur ligula laoreet laoreet vel a justo. Praesent vel malesuada velit. Aenean quis leo in sapien sodales sagittis quis a turpis. Mauris vitae fermentum lorem. Fusce in felis in lectus ullamcorper rutrum. Maecenas quis libero consectetur, dictum neque at, tempor ante. Curabitur quis ante pulvinar velit consequat luctus ut faucibus enim.
+  {{/modal-box-body}}
+  {{#> modal-box-footer}}
+    So much text!
+  {{/modal-box-footer}}
+{{/modal-box}}<div>
+
+<button onclick="firstmodal.showModal()">Show the modal</button>
+
+<p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante purus, feugiat ut elit et, lacinia feugiat velit. Cras eget pharetra lorem, eget venenatis augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut eu consectetur orci. Vestibulum ac dui facilisis, dictum sem vel, porttitor magna. Donec auctor velit in nunc cursus, sit amet pellentesque dui elementum. Vestibulum a auctor felis. Nam malesuada sem et sapien pellentesque, et dictum elit elementum. Quisque ut massa consectetur ligula laoreet laoreet vel a justo. Praesent vel malesuada velit. Aenean quis leo in sapien sodales sagittis quis a turpis. Mauris vitae fermentum lorem. Fusce in felis in lectus ullamcorper rutrum. Maecenas quis libero consectetur, dictum neque at, tempor ante. Curabitur quis ante pulvinar velit consequat luctus ut faucibus enim.
+</p>
+<p>
+Ut diam felis, fermentum eu dignissim et, viverra sed turpis. Fusce vehicula elit et maximus placerat. Ut elementum at neque sit amet vehicula. Nulla at finibus felis. Sed tincidunt sapien fermentum mauris dignissim maximus. Proin laoreet enim at justo sollicitudin, sit amet scelerisque massa feugiat. Fusce quis cursus libero. In posuere nulla dui, quis viverra leo finibus in. Maecenas sem magna, ullamcorper quis tellus in, placerat ullamcorper diam. Aenean vitae ultricies libero.
+</p>
+<p>
+Mauris sodales viverra metus sed dignissim. Sed eleifend eleifend aliquam. Phasellus sit amet sagittis lacus, ut ullamcorper neque. Etiam volutpat, urna non aliquam pulvinar, sem urna congue dolor, eu ultrices sapien nisi eu nibh. Nulla nulla diam, suscipit nec nibh vitae, mollis faucibus risus. Curabitur ornare est nec nulla condimentum, et commodo diam bibendum. Sed hendrerit justo id lobortis dapibus. Phasellus venenatis fringilla rhoncus. Mauris suscipit et velit eget posuere. Sed volutpat magna faucibus urna sollicitudin, vitae porttitor velit finibus. Vestibulum sed metus porttitor sem pretium mollis. Donec quis posuere nunc. Nam lacus lacus, sagittis lobortis laoreet a, cursus ac leo. Donec sed enim a odio facilisis scelerisque. Suspendisse eros nisi, sagittis a dolor eget, laoreet ornare arcu. Aliquam molestie, enim et aliquet efficitur, ante arcu congue risus, id finibus nibh elit ac erat.
+</p>
+<p>
+Etiam quis maximus nulla. Nunc quis orci ante. Nulla porttitor scelerisque vestibulum. Cras ipsum dolor, maximus nec leo vel, dapibus egestas neque. Phasellus iaculis lobortis neque, et malesuada erat tristique nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque aliquet eget erat eu feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ultrices varius luctus. Aenean gravida nibh id porta efficitur.
+</p>
+<p>
+Curabitur condimentum vehicula diam eget pulvinar. Duis tincidunt finibus metus. Quisque consequat enim ut mauris consectetur aliquet. Quisque egestas urna in massa eleifend, sit amet imperdiet diam congue. Quisque enim nulla, iaculis sed justo in, facilisis tincidunt mauris. Integer sit amet luctus elit, vel semper dolor. Phasellus nec semper nibh, at fermentum odio. Nam mollis purus eu mi ultrices consequat. Ut ligula odio, malesuada vel viverra et, consequat ac purus. Curabitur sit amet felis erat. Quisque consequat, purus quis suscipit ultricies, est lorem commodo ante, in pharetra mi turpis nec diam.
+</p>
+<button onclick="secondmodal.showModal()">Show a different modal</button>
+
+</div>
 ```
 
 ### With help button
