@@ -152,8 +152,8 @@
 
   // Status icon
   --#{$menu-toggle}__status-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$menu-toggle}__status-icon--m--danger--Opacity: var(--pf-t--global--motion--duration--icon--default);
-  --#{$menu-toggle}__status-icon--m--danger--TransitionTimingFunction: var(--pf-t--global--motion--duration--icon--default);
+  --#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--icon--default);
+  --#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity: var(--pf-t--global--motion--timing-function--default);
 
   // Success
   --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
@@ -166,8 +166,8 @@
   // Danger
   --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
-  --#{$menu-toggle}--m-danger--TransitionDuration--Transform: var(--pf-t--global--motion--duration--md);
-  --#{$menu-toggle}--m-danger--TransitionTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
+  --#{$menu-toggle}--m-danger--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
+  --#{$menu-toggle}--m-danger--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
 
   // Placeholder
   --#{$menu-toggle}--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
@@ -341,22 +341,26 @@
   &.pf-m-danger {
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
-    
-    transform: translate3d(0, 0, 0);
-    animation-name: menu-toggle-m-danger-motion;
-    animation-duration: var(--#{$menu-toggle}--m-danger--TransitionDuration--Transform);
-    animation-timing-function: var(--#{$menu-toggle}--m-danger--TransitionTimingFunction--Transform);
-    animation-fill-mode: both;
 
-    .#{$menu-toggle}__status-icon {
-      color: var(--#{$menu-toggle}__status-icon--Color, inherit);
-      transition: 
-        opacity
-          var(--#{$menu-toggle}__status-icon--m--danger--Opacity)
-          var(--#{$menu-toggle}--m-danger--TransitionTimingFunction--Transform);
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transform: translate3d(0, 0, 0);
+      animation-name: menu-toggle-m-danger-motion;
+      animation-duration: var(--#{$menu-toggle}--m-danger--AnimationDuration--Transform);
+      animation-timing-function: var(--#{$menu-toggle}--m-danger--AnimationTimingFunction--Transform);
+      animation-fill-mode: both;
       
-      @starting-style  {
-        opacity: 0;
+      .#{$menu-toggle}__status-icon {
+        color: var(--#{$menu-toggle}__status-icon--Color, inherit);
+        opacity: 1;
+        transition: 
+          opacity 
+            var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity)
+            var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity);
+        // stylelint-disable max-nesting-depth
+        @starting-style {
+          opacity: 0;
+        }
+        // stylelint-enable
       }
     }
   }
