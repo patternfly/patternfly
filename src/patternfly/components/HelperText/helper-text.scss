@@ -16,6 +16,8 @@
   --#{$helper-text}__item-text--m-success--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$helper-text}__item-icon--m-error--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$helper-text}__item-text--m-error--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$helper-text}__item-icon--m-error--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
+  --#{$helper-text}__item-icon--m-error--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
 
   // dynamic
   --#{$helper-text}--m-dynamic__item-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -71,6 +73,15 @@
     --#{$helper-text}__item-text--FontWeight: var(--#{$helper-text}__item-text--m-error--FontWeight);
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-error--Color);
     --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-error__item-icon--Color);
+
+    transition:
+      opacity 
+        var(--#{$helper-text}__item-icon--m-error--TransitionDuration--Opacity)
+        var(--#{$helper-text}__item-icon--m-error--TransitionTimingFunction--Opacity);
+    
+    @starting-style {
+      opacity: 0;
+    }
   }
 
   &.pf-m-dynamic {
