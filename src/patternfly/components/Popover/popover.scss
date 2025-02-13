@@ -247,9 +247,11 @@
 }
 
 .#{$popover}__title-text {
+  min-width: 0;
   font-size: var(--#{$popover}__title-text--FontSize);
   font-weight: var(--#{$popover}__title-text--FontWeight);
   color: var(--#{$popover}__title-text--Color);
+  overflow-wrap: break-word;
 }
 
 // Body
