@@ -29,6 +29,11 @@
   --#{$nav}__list--ScrollSnapType: var(--#{$nav}__list--ScrollSnapTypeAxis) var(--#{$nav}__list--ScrollSnapTypeStrictness);
   --#{$nav}__item--ScrollSnapAlign: end;
 
+  // Nav list animation variables
+  --#{$nav}__list--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--default); // match the duration of the slide open
+  --#{$nav}__list--hidden--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--short);
+  --#{$nav}__list--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
+
   // * Nav section title
   --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
@@ -37,10 +42,22 @@
   --#{$nav}__section-title--PaddingInlineStart: var(--#{$nav}__link--PaddingInlineStart);
   --#{$nav}__section-title--PaddingInlineEnd: var(--#{$nav}__link--PaddingInlineEnd);
 
-  // * Nav toggle icon
+  // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
+  --#{$nav}__item--TransitionDuration--row-gap: 0;
+  --#{$nav}__item--m-expanded--TransitionDuration--row-gap: 0;
+  --#{$nav}__item--TransitionTimingFunction--row-gap: var(--pf-t--global--motion--timing-function--default);
+
+  @media (prefers-reduced-motion: no-preference) {
+    --#{$nav}__item--TransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$nav}__item--m-expandedTransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--default);
+  }
+
+  // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$nav}__item__toggle-icon--TransitionDuration--transform: var(--pf-t--global--motion--duration--icon--default);
+
 
   // * Nav link
   --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
@@ -54,13 +71,29 @@
   --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
 
+  // background color transition on hover
+  --#{$nav}__link--TransitionDuration--background-color: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__link--TransitionTimingFunction--background-color: var(--pf-t--global--motion--timing-function--default);
+
+  // text color transition for current
+  --#{$nav}__link--m-current--TransitionDuration--color: var(--pf-t--global--motion--duration--fade--short);
+  --#{$nav}__link--m-current--TransitionTimingFunction--color: var(--pf-t--global--motion--timing-function--default);
+  
   // * Nav link icon
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // * Nav subnav
+  --#{$nav}__subnav--MaxHeight: fit-content;  
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$nav}__subnav--TransitionDuration--max-height: 0s; // no slide by default
+  --#{$nav}__subnav--TransitionTimingFunction--max-height: var(--pf-t--global--motion--timing-function--default);
+
+  @media (prefers-reduced-motion: no-preference) {
+    --#{$nav}__subnav--TransitionDuration--max-height: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__subnav--hidden--TransitionDuration--max-height: var(--pf-t--global--motion--duration--slide-in--short);
+  }
 
   // * Nav scroll button
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
@@ -159,6 +192,12 @@
 
 [class^="#{$nav}"][hidden] {
   display: none;
+
+  & .#{$nav}__list {
+    --#{$nav}__list--TransitionDuration--opacity: var(--#{$nav}__list--hidden--TransitionDuration--opacity);
+
+    opacity: 0;
+  }
 }
 
 // Magic value calcs
@@ -175,19 +214,50 @@
 .#{$nav}__list {
   row-gap: var(--#{$nav}__list--RowGap);
   column-gap: var(--#{$nav}__list--ColumnGap);
+  min-height: 0;
+  opacity: 1;
+  transition-timing-function: var(--#{$nav}__list--TransitionTimingFunction--opacity);
+  transition-duration: var(--#{$nav}__list--TransitionDuration--opacity);
+  transition-property: opacity, display;
+  transition-behavior: allow-discrete;
+
+  @starting-style {
+    opacity: 0;
+  }
 }
 
 // - Nav subnav
 .#{$nav}__subnav {
   --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
+  grid-template-rows: 1fr;
+  min-height: 0;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
+  overflow-y: clip;
+  transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--max-height);
+  transition-duration: var(--#{$nav}__subnav--TransitionDuration--max-height);
+  transition-property: grid-template-rows, display;
+  transition-behavior: allow-discrete; 
+  
+  @starting-style {
+    grid-template-rows: 0fr;
+  }
+
+  &[hidden] {
+    --#{$nav}__list--RowGap: 0;
+    --#{$nav}__subnav--TransitionDuration--max-height: var(--#{$nav}__subnav--hidden--TransitionDuration--max-height);
+
+    grid-template-rows: 0fr;
+  }
 }
 
 // - Nav item
 .#{$nav}__item {
-  row-gap: var(--#{$nav}__item--RowGap); // no fallback here as this value is used to calc clickable offsets
+  row-gap: 0; // Only have row-gap when expanded and transition it
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
+  transition-timing-function: var(--#{$nav}__item--TransitionTimingFunction--row-gap);
+  transition-duration: var(--#{$nav}__item--TransitionDuration--row-gap);
+  transition-property: row-gap;
 
   > .#{$nav}__link[button] {
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
@@ -199,6 +269,13 @@
     + .#{$nav}__item > .#{$nav}__link::before {
       inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
     }
+  }
+
+  &.pf-m-expanded {
+    row-gap: var(--#{$nav}__item--RowGap);
+
+    // duration for collapsing needs to set the property rather than the variable because of nested items
+    transition-duration: var(--#{$nav}__item--m-expanded--TransitionDuration--row-gap); 
   }
 }
 
@@ -237,6 +314,9 @@
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
+  transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
+  transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
+  transition-property: background-color, color;
 
   // increase height clickable area of expanded nav_links to account for
   &[aria-expanded="true"]::before {
@@ -278,6 +358,8 @@
 // - Nav toggle icon
 .#{$nav}__toggle-icon {
   display: inline-block;
+  transition-duration: var(--#{$nav}__item__toggle-icon--TransitionDuration--transform);
+  transition-property: transform;
   transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
