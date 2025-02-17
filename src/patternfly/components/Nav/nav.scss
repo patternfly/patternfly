@@ -191,7 +191,7 @@
 }
 
 [class^="#{$nav}"][hidden] {
-  display: none;
+  visibility: hidden;
 
   & .#{$nav}__list {
     --#{$nav}__list--TransitionDuration--opacity: var(--#{$nav}__list--hidden--TransitionDuration--opacity);
@@ -208,6 +208,8 @@
   --#{$nav}__item--RowGap--row-offset: calc(var(--#{$nav}__list--RowGap) / 2 * -1); // row gap offset calcs 1/2 height of row gap
   --#{$nav}__link--clickable-inset--Block: var(--#{$nav}__item--RowGap--row-offset); // set link's clickable area offset based on 1/2 row gap
   --#{$nav}__button--RowGap--row-offset: calc(var(--#{$nav}__item--RowGap) * -1); // match extra bottom paddings applied to expanded nav_links
+
+  visibility: visible;
 }
 
 // - Nav list
@@ -218,7 +220,7 @@
   opacity: 1;
   transition-timing-function: var(--#{$nav}__list--TransitionTimingFunction--opacity);
   transition-duration: var(--#{$nav}__list--TransitionDuration--opacity);
-  transition-property: opacity, display;
+  transition-property: opacity;
   transition-behavior: allow-discrete;
 
   @starting-style {
@@ -236,7 +238,7 @@
   overflow-y: clip;
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--max-height);
   transition-duration: var(--#{$nav}__subnav--TransitionDuration--max-height);
-  transition-property: grid-template-rows, display;
+  transition-property: grid-template-rows;
   transition-behavior: allow-discrete; 
   
   @starting-style {
