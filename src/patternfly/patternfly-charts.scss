@@ -527,6 +527,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-echarts-tooltip--axis--pointer--cross-style--Width: 1;
   --#{$chart}-echarts-tooltip--axis--pointer--line-style--Color: var(--#{$chart}-global--Fill--Color--300);
   --#{$chart}-echarts-tooltip--axis--pointer--line-style--Width: 1;
+  --#{$chart}-echarts-tooltip--backgroundColor: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-tooltip--text-Style--Color: var(--#{$chart}-global--Fill--Color--200);
 
   // Timeline
   --#{$chart}-echarts-timeline--emphasis--control-style--Color: var(--#{$chart}-global--Fill--Color--400);
