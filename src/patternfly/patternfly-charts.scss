@@ -437,9 +437,15 @@ $chart: #{$pf-prefix} + 'chart';
 // stylelint-disable-next-line no-duplicate-selectors
 :where(:root) {
   // Global
-  --#{$chart}-echarts-global--axis-line--item-style--Color: var(--#{$chart}-global--Fill--Color--300);
-  --#{$chart}-echarts-global--axis-tick--item-style--Color: var(--#{$chart}-global--Fill--Color--300);
-  --#{$chart}-echarts-global--split-area--area-style--Color: var(--#{$chart}-global--Fill--Color--white);
+  --#{$chart}-echarts-global--axis--BoundaryGap: false;
+  --#{$chart}-echarts-global--axis--axis-label--Show: true;
+  --#{$chart}-echarts-global--axis--axis-line--Show: true;
+  --#{$chart}-echarts-global--axis--axis-line--item-style--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-global--axis--axis-tick--Show: true;
+  --#{$chart}-echarts-global--axis--axis-tick--item-style--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-echarts-global--axis--split-area--Show: false;
+  --#{$chart}-echarts-global--axis--split-area--area-style--Color: var(--#{$chart}-global--Fill--Color--white);
+  --#{$chart}-echarts-global--axis--split-line--Show: false;
   --#{$chart}-echarts-global--label--Color: var(--#{$chart}-global--label--Fill);
 
   // Basic config
@@ -537,12 +543,12 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-echarts-timeline--emphasis--item-style--Color: var(--#{$chart}-global--Fill--Color--white);
   --#{$chart}-echarts-timeline--checkpoint-style--Color: var(--#{$chart}-theme--blue--ColorScale--400);
   --#{$chart}-echarts-timeline--checkpoint-style--BorderColor: var(--#{$chart}-global--Fill--Color--white);
-  --#{$chart}-echarts-timeline--control-style--Color: var(--#{$chart}-theme--gray--ColorScale--900);
-  --#{$chart}-echarts-timeline--control-style--BorderColor: var(--#{$chart}-theme--gray--ColorScale--900);
+  --#{$chart}-echarts-timeline--control-style--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-timeline--control-style--BorderColor: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-echarts-timeline--control-style--BorderWidth: 1;
   --#{$chart}-echarts-timeline--item-style--BorderWidth: 1;
-  --#{$chart}-echarts-timeline--item-style--Color: var(--#{$chart}-theme--gray--ColorScale--900);
-  --#{$chart}-echarts-timeline--line-style--Color: var(--#{$chart}-theme--gray--ColorScale--900);
+  --#{$chart}-echarts-timeline--item-style--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-echarts-timeline--line-style--Color: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-echarts-timeline--line-style--Width: 2;
 
   // Radar
