@@ -7,6 +7,7 @@
   // Element variables
   --#{$progress}__bar--Height: var(--pf-t--global--spacer--md);
   --#{$progress}__bar--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default); // the bar always needs white under it so that the semi-transparent color shows correctly
+  --#{$progress}__bar--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$progress}__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
   --#{$progress}__status--Gap: var(--pf-t--global--spacer--sm);
   --#{$progress}__status-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -187,7 +188,9 @@
   grid-column: 1 / 3;
   align-self: center;
   height: var(--#{$progress}__bar--Height);
+  overflow: hidden;
   background-color: var(--#{$progress}__bar--BackgroundColor);
+  border-radius: var(--#{$progress}__bar--BorderRadius);
 }
 
 // the progress__indicator is the part that advances (widens) as progress is made
