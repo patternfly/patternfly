@@ -44,12 +44,9 @@
 
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
-  --#{$nav}__item--TransitionDuration--row-gap: 0;
   --#{$nav}__item--m-expanded--TransitionDuration--row-gap: 0;
-  --#{$nav}__item--TransitionTimingFunction--row-gap: var(--pf-t--global--motion--timing-function--default);
 
   @media (prefers-reduced-motion: no-preference) {
-    --#{$nav}__item--TransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--short);
     --#{$nav}__item--m-expandedTransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
@@ -233,11 +230,13 @@
 
   grid-template-rows: 1fr;
   min-height: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--grid-template-rows);
   transition-duration: var(--#{$nav}__subnav--TransitionDuration--grid-template-rows);
-  transition-property: grid-template-rows;
+  transition-property: grid-template-rows, padding-block-start;
   transition-behavior: allow-discrete; 
   
   @starting-style {
@@ -245,7 +244,6 @@
   }
 
   &[hidden] {
-    --#{$nav}__list--RowGap: 0;
     --#{$nav}__subnav--TransitionDuration--grid-template-rows: var(--#{$nav}__subnav--hidden--TransitionDuration--grid-template-rows);
 
     grid-template-rows: 0fr;
@@ -254,29 +252,26 @@
 
 // - Nav item
 .#{$nav}__item {
-  row-gap: 0; // Only have row-gap when expanded and transition it
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
-  transition-timing-function: var(--#{$nav}__item--TransitionTimingFunction--row-gap);
-  transition-duration: var(--#{$nav}__item--TransitionDuration--row-gap);
-  transition-property: row-gap;
 
   > .#{$nav}__link[button] {
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
   }
 
   &.pf-m-expanded:is(:not(:only-child, :last-child)) {
-    margin-block-end: var(--#{$nav}__item--m-expanded--MarginBlockEnd, var(--#{$nav}__item--RowGap)); // default to row gap if no custom value is set
-
     + .#{$nav}__item > .#{$nav}__link::before {
       inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
     }
   }
 
   &.pf-m-expanded {
-    row-gap: var(--#{$nav}__item--RowGap);
-
     // duration for collapsing needs to set the property rather than the variable because of nested items
     transition-duration: var(--#{$nav}__item--m-expanded--TransitionDuration--row-gap); 
+
+    & > .#{$nav}__subnav {
+      padding-block-start: var(--#{$nav}__item--RowGap);
+      padding-block-end: var(--#{$nav}__item--RowGap);
+    }
   }
 }
 
