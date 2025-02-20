@@ -67,7 +67,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--default)) / 2) + var(--pf-t--global--font--size--body--default)));
 
   // Label
-  --#{$form}__label--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}__label--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$form}__label--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$form}__label--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$form}__label--hover--Cursor: pointer;
@@ -78,11 +78,11 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   // Required labels
   --#{$form}__label-required--MarginInlineStart: var(--pf-t--global--spacer--xs);
-  --#{$form}__label-required--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}__label-required--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$form}__label-required--Color: var(--pf-t--global--color--status--danger--default);
 
   // Field level help
-  --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Form group label info
   --#{$form}__group-label--m-info--Gap: var(--pf-t--global--spacer--gap--horizontal);
