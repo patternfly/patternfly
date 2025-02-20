@@ -27,14 +27,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - uses: actions/cache@v4
-        id: yarn-cache
-        name: Load npm deps from cache
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
+      #- uses: actions/cache@v4
+      #  id: yarn-cache
+      #  name: Load npm deps from cache
+      #  with:
+      #    path: '**/node_modules'
+      #    key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
       - run: yarn install --frozen-lockfile
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        # if: steps.yarn-cache.outputs.cache-hit != 'true'
       - run: yarn lint:sass
         name: Lint SASS
         if: always()
