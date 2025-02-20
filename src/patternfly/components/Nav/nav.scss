@@ -219,10 +219,6 @@
   transition-timing-function: var(--#{$nav}__list--TransitionTimingFunction--opacity);
   transition-duration: var(--#{$nav}__list--TransitionDuration--opacity);
   transition-property: opacity;
-
-  @starting-style {
-    opacity: 0;
-  }
 }
 
 // - Nav subnav
@@ -239,10 +235,6 @@
   transition-duration: var(--#{$nav}__subnav--TransitionDuration--grid-template-rows);
   transition-property: grid-template-rows, padding-block-start;
   
-  @starting-style {
-    grid-template-rows: 0fr;
-  }
-
   &[hidden] {
     --#{$nav}__subnav--TransitionDuration--grid-template-rows: var(--#{$nav}__subnav--hidden--TransitionDuration--grid-template-rows);
     --#{$nav}__subnav--PaddingBlockStart: 0;
