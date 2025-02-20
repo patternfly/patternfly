@@ -448,6 +448,9 @@ For sighted users, interactive elements can be included in this message in one o
         {{#> screen-reader}}Success alert:{{/screen-reader}}
         Success toast alert title
       {{/alert-title}}
+      {{#> alert-description}}
+        Info toast alert description. From the settings tab, click <a href="#">View logs</a>&nbsp;to review the details.
+      {{/alert-description}}
       {{#> alert-action}}
         {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="times"}}
       {{/alert-action}}
