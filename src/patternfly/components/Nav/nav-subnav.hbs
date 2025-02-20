@@ -1,6 +1,6 @@
 <section class="{{pfv}}nav__subnav{{#if nav-subnav--modifier}} {{nav-subnav--modifier}}{{/if}}"
   aria-labelledby="{{ternary nav-subnav--aria-labelledby nav-subnav--aria-labelledby nav-item--id}}"
-  {{ternary nav-item--IsExpanded '' 'hidden'}}
+  {{ternary nav-item--IsExpanded '' 'hidden inert'}}
   {{#if nav-subnav--attribute}}
     {{{nav-subnav--attribute}}}
   {{/if}}>
