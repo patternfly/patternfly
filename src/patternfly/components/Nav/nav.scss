@@ -238,7 +238,7 @@
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
   }
 
-  &:is(:only-child, :last-child) {
+  &:last-child {
     --#{$nav}__subnav--PaddingBlockEnd: 0;
   }
 
