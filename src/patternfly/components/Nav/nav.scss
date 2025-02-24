@@ -32,8 +32,8 @@
   // * Nav section title
   --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}__section-title--PaddingBlockStart: var(--#{$nav}__link--PaddingBlockStart);
-  --#{$nav}__section-title--PaddingBlockEnd: var(--#{$nav}__link--PaddingBlockEnd);
+  --#{$nav}__section-title--PaddingBlockStart: 0;
+  --#{$nav}__section-title--PaddingBlockEnd: 0;
   --#{$nav}__section-title--PaddingInlineStart: var(--#{$nav}__link--PaddingInlineStart);
   --#{$nav}__section-title--PaddingInlineEnd: var(--#{$nav}__link--PaddingInlineEnd);
 
@@ -73,8 +73,8 @@
 
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
-  --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap);
-  --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap);
+  --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap); // needed to keep focus outline on first item from being cut off
+  --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap); // needed to keep focus outline on last item from being cut off
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}__subnav--TransitionDuration--grid-template-rows: 0s; // no slide by default
   --#{$nav}__subnav--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--default); // match the duration of the slide open
@@ -238,8 +238,10 @@
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
   }
 
-  &:last-child {
-    --#{$nav}__subnav--PaddingBlockEnd: 0;
+  &.pf-m-expanded:last-child {
+    > .#{$nav}__subnav {
+      margin-block-end: calc(var(--#{$nav}__subnav--PaddingBlockEnd) * -1); // offset bottom padding
+    }
   }
 
   &.pf-m-expanded { 
