@@ -153,7 +153,7 @@
   // Status icon
   --#{$menu-toggle}__status-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--icon--default);
-  --#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity: var(--pf-t--global--motion--timing-function--default);
+  --#{$menu-toggle}__status-icon--m-danger--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
 
   // Success
   --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
@@ -343,22 +343,27 @@
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
 
     @media screen and (prefers-reduced-motion: no-preference) {
-      transform: translate3d(0, 0, 0);
-      animation-name: menu-toggle-m-danger-motion;
+      transform: translateX(var(--#{$menu-toggle}--m-danger--TranslateX, 0));
+      animation-name: #{$menu-toggle}-m-danger-motion;
       animation-duration: var(--#{$menu-toggle}--m-danger--AnimationDuration--Transform);
       animation-timing-function: var(--#{$menu-toggle}--m-danger--AnimationTimingFunction--Transform);
       animation-fill-mode: both;
       
       .#{$menu-toggle}__status-icon {
         color: var(--#{$menu-toggle}__status-icon--Color, inherit);
-        opacity: 1;
-        transition: 
-          opacity 
-            var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity)
-            var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity);
+        animation-name: #{$menu-toggle}-status-icon-fade-in;
+        animation-duration: var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity);
+        animation-timing-function: var(--#{$menu-toggle}__status-icon--m-danger--TransitionTimingFunction--Opacity);
+        
         // stylelint-disable max-nesting-depth
-        @starting-style {
-          opacity: 0;
+        @keyframes #{$menu-toggle}-status-icon-fade-in {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
         }
         // stylelint-enable
       }
@@ -383,14 +388,21 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes menu-toggle-m-danger-motion {
-    33% {
-      transform: translate3d(-2px, 0, 0);
-    }
+// Register the property type for the custom property to be animatable
+@property --#{$menu-toggle}--m-danger--TranslateX {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes #{$menu-toggle}-m-danger-motion {
+    33% {
+      --#{$menu-toggle}--m-danger--TranslateX: -2px;
+    }
+    
     66% {
-      transform: translate3d(3px, 0, 0);
+      --#{$menu-toggle}--m-danger--TranslateX: 3px;
     }
   }
 }
