@@ -82,8 +82,8 @@
 
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
-  --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__subnav--RowGap);
-  --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__subnav--RowGap);
+  --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap);
+  --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}__subnav--TransitionDuration--grid-template-rows: 0s; // no slide by default
   --#{$nav}__subnav--TransitionTimingFunction--grid-template-rows: var(--pf-t--global--motion--timing-function--default);
@@ -180,7 +180,7 @@
       .#{$menu}__list {
         row-gap: var(--#{$nav}__subnav--RowGap);
       }
-    
+
       .#{$menu}__list-item::before {
         border-radius: var(--#{$nav}__link--BorderRadius);
       }
@@ -233,7 +233,7 @@
   overflow-y: clip;
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--grid-template-rows);
   transition-duration: var(--#{$nav}__subnav--TransitionDuration--grid-template-rows);
-  transition-property: grid-template-rows, padding-block-start;
+  transition-property: grid-template-rows, padding-block-start, padding-block-end;
   
   &[hidden] {
     --#{$nav}__subnav--TransitionDuration--grid-template-rows: var(--#{$nav}__subnav--hidden--TransitionDuration--grid-template-rows);
@@ -252,16 +252,11 @@
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
   }
 
-  &.pf-m-expanded:is(:not(:only-child, :last-child)) {
-    + .#{$nav}__item > .#{$nav}__link::before {
-      inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
-    }
+  &:is(:only-child, :last-child) {
+    --#{$nav}__subnav--PaddingBlockEnd: 0;
   }
 
   &.pf-m-expanded { 
-    --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap);
-    --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap);
-
     // duration for collapsing needs to set the property rather than the variable because of nested items
     transition-duration: var(--#{$nav}__item--m-expanded--TransitionDuration--row-gap);
   }
@@ -305,11 +300,6 @@
   transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
   transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
   transition-property: background-color, color;
-
-  // increase height clickable area of expanded nav_links to account for
-  &[aria-expanded="true"]::before {
-    inset-block-end: calc(var(--#{$nav}__item--RowGap) * -1);
-  }
 
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
