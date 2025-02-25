@@ -279,6 +279,8 @@
   --#{$button}__icon--MarginInlineEnd: 0;
   --#{$button}__icon--m-start--MarginInlineEnd: 0;
   --#{$button}__icon--m-end--MarginInlineStart: 0;
+  --#{$button}__icon--AnimationDuration--notify: var(--pf-t--global--duration--600);
+  --#{$button}__icon--AnimationTimingFunction--notify: var(--pf-t--global--motion--timing-function--default);
 
   // Progress
   --#{$button}__progress--width: calc(var(--pf-t--global--icon--size--lg) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
@@ -705,6 +707,12 @@
       }
     }
   }
+
+  &.pf-m-notify .#{$button}__icon {
+    animation-name: #{$button}-icon-notify;
+    animation-duration: var(--#{$button}__icon--AnimationDuration--notify);
+    animation-timing-function: var(--#{$button}__icon--AnimationTimingFunction--notify);
+  }
 }
 
 .#{$button}__icon {
@@ -737,4 +745,18 @@
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
+}
+
+@keyframes #{$button}-icon-notify {
+  33% {
+    transform: rotate(30deg);
+  }
+
+  66% {
+    transform: rotate(-60deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
