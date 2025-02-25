@@ -29,26 +29,16 @@
   --#{$nav}__list--ScrollSnapType: var(--#{$nav}__list--ScrollSnapTypeAxis) var(--#{$nav}__list--ScrollSnapTypeStrictness);
   --#{$nav}__item--ScrollSnapAlign: end;
 
-  // Nav list animation variables
-  --#{$nav}__list--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--default); // match the duration of the slide open
-  --#{$nav}__list--hidden--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-in--short);
-  --#{$nav}__list--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
-
   // * Nav section title
   --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}__section-title--PaddingBlockStart: var(--#{$nav}__link--PaddingBlockStart);
-  --#{$nav}__section-title--PaddingBlockEnd: var(--#{$nav}__link--PaddingBlockEnd);
+  --#{$nav}__section-title--PaddingBlockStart: 0;
+  --#{$nav}__section-title--PaddingBlockEnd: 0;
   --#{$nav}__section-title--PaddingInlineStart: var(--#{$nav}__link--PaddingInlineStart);
   --#{$nav}__section-title--PaddingInlineEnd: var(--#{$nav}__link--PaddingInlineEnd);
 
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
-  --#{$nav}__item--m-expanded--TransitionDuration--row-gap: 0;
-
-  @media (prefers-reduced-motion: no-preference) {
-    --#{$nav}__item--m-expandedTransitionDuration--row-gap: var(--pf-t--global--motion--duration--slide-in--default);
-  }
 
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
@@ -82,15 +72,16 @@
 
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
-  --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__subnav--RowGap);
-  --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__subnav--RowGap);
+  --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap); // needed to keep focus outline on first item from being cut off
+  --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap); // needed to keep focus outline on last item from being cut off
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__subnav--TransitionDuration--grid-template-rows: 0s; // no slide by default
-  --#{$nav}__subnav--TransitionTimingFunction--grid-template-rows: var(--pf-t--global--motion--timing-function--default);
-  
+  --#{$nav}__subnav--TransitionDuration--expansion: 0s; // no slide by default
+  --#{$nav}__subnav--hidden--TransitionDuration--expansion: 0;
+  --#{$nav}__subnav--TransitionTimingFunction--expansion: var(--pf-t--global--motion--timing-function--default);
+
   @media (prefers-reduced-motion: no-preference) {
-    --#{$nav}__subnav--TransitionDuration--grid-template-rows: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$nav}__subnav--hidden--TransitionDuration--grid-template-rows: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$nav}__subnav--TransitionDuration--expansion: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$nav}__subnav--hidden--TransitionDuration--expansion: var(--pf-t--global--motion--duration--slide-in--short);
   }
 
   // * Nav scroll button
@@ -180,7 +171,7 @@
       .#{$menu}__list {
         row-gap: var(--#{$nav}__subnav--RowGap);
       }
-    
+
       .#{$menu}__list-item::before {
         border-radius: var(--#{$nav}__link--BorderRadius);
       }
@@ -190,12 +181,6 @@
 
 [class^="#{$nav}"][hidden] {
   visibility: hidden;
-
-  .#{$nav}__list {
-    --#{$nav}__list--TransitionDuration--opacity: var(--#{$nav}__list--hidden--TransitionDuration--opacity);
-
-    opacity: 0;
-  }
 }
 
 // Magic value calcs
@@ -215,10 +200,6 @@
   row-gap: var(--#{$nav}__list--RowGap);
   column-gap: var(--#{$nav}__list--ColumnGap);
   min-height: 0;
-  opacity: 1;
-  transition-timing-function: var(--#{$nav}__list--TransitionTimingFunction--opacity);
-  transition-duration: var(--#{$nav}__list--TransitionDuration--opacity);
-  transition-property: opacity;
 }
 
 // - Nav subnav
@@ -231,16 +212,17 @@
   padding-block-end: var(--#{$nav}__subnav--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
-  transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--grid-template-rows);
-  transition-duration: var(--#{$nav}__subnav--TransitionDuration--grid-template-rows);
-  transition-property: grid-template-rows, padding-block-start;
+  transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--expansion);
+  transition-duration: var(--#{$nav}__subnav--TransitionDuration--expansion);
+  transition-property: grid-template-rows, padding-block-start, padding-block-end, opacity;
   
   &[hidden] {
-    --#{$nav}__subnav--TransitionDuration--grid-template-rows: var(--#{$nav}__subnav--hidden--TransitionDuration--grid-template-rows);
+    --#{$nav}__subnav--TransitionDuration--expansion: var(--#{$nav}__subnav--hidden--TransitionDuration--expansion);
     --#{$nav}__subnav--PaddingBlockStart: 0;
     --#{$nav}__subnav--PaddingBlockEnd: 0;
 
     grid-template-rows: 0fr;
+    opacity: 0;
   }
 }
 
@@ -252,18 +234,10 @@
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
   }
 
-  &.pf-m-expanded:is(:not(:only-child, :last-child)) {
-    + .#{$nav}__item > .#{$nav}__link::before {
-      inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
+  &.pf-m-expanded:last-child {
+    > .#{$nav}__subnav {
+      margin-block-end: calc(var(--#{$nav}__subnav--PaddingBlockEnd) * -1); // offset bottom padding
     }
-  }
-
-  &.pf-m-expanded { 
-    --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap);
-    --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap);
-
-    // duration for collapsing needs to set the property rather than the variable because of nested items
-    transition-duration: var(--#{$nav}__item--m-expanded--TransitionDuration--row-gap);
   }
 }
 
@@ -305,11 +279,6 @@
   transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
   transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
   transition-property: background-color, color;
-
-  // increase height clickable area of expanded nav_links to account for
-  &[aria-expanded="true"]::before {
-    inset-block-end: calc(var(--#{$nav}__item--RowGap) * -1);
-  }
 
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
