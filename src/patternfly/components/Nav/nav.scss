@@ -76,7 +76,7 @@
   --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap); // needed to keep focus outline on last item from being cut off
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}__subnav--TransitionDuration--expansion: 0s; // no slide by default
-  --#{$nav}__subnav--hidden--TransitionDuration--expansion: 0;
+  --#{$nav}__subnav--hidden--TransitionDuration--expansion: 0s;
   --#{$nav}__subnav--TransitionTimingFunction--expansion: var(--pf-t--global--motion--timing-function--default);
 
   @media (prefers-reduced-motion: no-preference) {
