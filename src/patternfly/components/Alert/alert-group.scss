@@ -11,6 +11,60 @@
   --#{$alert-group}--m-toast--MaxWidth: #{pf-size-prem(600px)};
   --#{$alert-group}--m-toast--ZIndex: var(--pf-t--global--z-index--2xl);
 
+  // Alert group item addition reduced motion
+  --#{$alert-group}--m-toast__item--TransitionDuration--opacity--default: var(--pf-t--global--motion--duration--fade--default);
+  --#{$alert-group}--m-toast__item--TransitionTimingFunction--opacity--default: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$alert-group}--m-toast__item--Transition--opacity--default: var(--#{$alert-group}--m-toast__item--TransitionDuration--opacity--default) 
+    var(--#{$alert-group}--m-toast__item--TransitionTimingFunction--opacity--default) 
+    0s;
+
+  // Alert group item addition
+  --#{$alert-group}--m-toast__item--TransitionDuration--opacity: var(--pf-t--global--motion--duration--fade--default);
+  --#{$alert-group}--m-toast__item--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$alert-group}--m-toast__item--TransitionDelay--opacity: var(--pf-t--global--motion--delay--none);
+  --#{$alert-group}--m-toast__item--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$alert-group}--m-toast__item--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$alert-group}--m-toast__item--TransitionDelay--transform: var(--pf-t--global--motion--delay--none);
+  --#{$alert-group}--m-toast__item--TransitionDuration--grid-template-rows: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$alert-group}--m-toast__item--TransitionTimingFunction--grid-template-rows: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$alert-group}--m-toast__item--TransitionDuration--margin-block: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$alert-group}--m-toast__item--TransitionTimingFunction--margin-block: var(--pf-t--global--motion--timing-function--decelerate);
+
+  // Alert addition
+  --#{$alert-group}--m-toast__item--c-alert--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$alert-group}--m-toast__item--c-alert--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$alert-group}--m-toast__item--c-alert--Transition: all 
+    var(--#{$alert-group}--m-toast__item--c-alert--TransitionDuration)
+    var(--#{$alert-group}--m-toast__item--c-alert--TransitionTimingFunction)
+    0s;
+
+  // Alert group item removal reduced motion
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--opacity--default: var(--pf-t--global--motion--duration--fade--default);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--opacity--default: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--grid-template-rows--default: var(--pf-t--global--motion--duration--fade--default);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--margin-block--default: var(--pf-t--global--motion--duration--fade--default);
+  --#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionDelay--default: var(--pf-t--global--motion--duration--fade--default);
+
+  // Alert group item removal
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-out--short);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--opacity: var(--pf-t--global--motion--duration--slide-out--short);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--margin-block: var(--pf-t--global--motion--duration--fade--short);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--margin-block: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--margin-block: var(--pf-t--global--motion--duration--slide-out--short);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--grid-template-rows: var(--pf-t--global--motion--duration--slide-in--short);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--grid-template-rows: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--grid-template-rows: var(--pf-t--global--motion--duration--slide-out--short);
+    
+    // Alert removal
+  --#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionDuration: var(--pf-t--global--motion--duration--slide-out--short);
+  --#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$alert-group}--m-toast__item--m-offstage-right--c-alert--Transition: all 
+    var(--#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionDuration) 
+    var(--#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionTimingFunction) 
+    var(--#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionDuration);
+  
   // Overflow button
   --#{$alert-group}__overflow-button--BorderWidth: 0;
   --#{$alert-group}__overflow-button--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -71,7 +125,7 @@
   // Reduced motion by default
   // transparency change only
   transition: 
-  opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
+    opacity var(--#{$alert-group}--m-toast__item--Transition--opacity--default);
   transform: translateX(0) translateY(0);
 
   // This transition will happen when the item is added (.pf-m-offstage-top is removed)
@@ -79,14 +133,24 @@
   // These values are for regular motion
   @media screen and (prefers-reduced-motion: no-preference) {
     transition: 
-      opacity var(--pf-t--global--motion--duration--fade--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
-      transform var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) var(--pf-t--global--motion--duration--slide-in--default), 
-      grid-template-rows var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s, 
-      margin-block var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate) 0s;
+      opacity 
+        var(--#{$alert-group}--m-toast__item--TransitionDuration--opacity) 
+        var(--#{$alert-group}--m-toast__item--TransitionTimingFunction--opacity) 
+        var(--#{$alert-group}--m-toast__item--TransitionDelay--opacity),
+      transform 
+        var(--#{$alert-group}--m-toast__item--TransitionDuration--transform) 
+        var(--#{$alert-group}--m-toast__item--TransitionTimingFunction--transform) 
+        var(--#{$alert-group}--m-toast__item--TransitionDelay--transform),
+      grid-template-rows 
+        var(--#{$alert-group}--m-toast__item--TransitionDuration--grid-template-rows) 
+        var(--#{$alert-group}--m-toast__item--TransitionTimingFunction--grid-template-rows),
+      margin-block 
+        var(--#{$alert-group}--m-toast__item--TransitionDuration--margin-block) 
+        var(--#{$alert-group}--m-toast__item--TransitionTimingFunction--margin-block);
 
-      & .pf-v6-c-alert {
-        transition: all var(--pf-t--global--motion--duration--slide-in--default) var(--pf-t--global--motion--timing-function--decelerate);
-      }
+    & .pf-v6-c-alert {
+      transition: var(--#{$alert-group}--m-toast__item--c-alert--Transition);
+    }
   }
 
   // This class is used BEFORE the alert item comes into the list
@@ -117,30 +181,52 @@
 
     // This transition will happen when the item is removed
     // Reduced motion by default
-    // transparency change only
+    // transparency change only, the other properties are delayed until opacity reaches 0 then collapse instantly
     transition: 
-      opacity var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) 0s;
-    transform: translateX(100%);
-
-    & .pf-v6-c-alert {
-      min-height: 0;
-      padding-block-start: 0;
-      padding-block-end: 0;
-      border-width: 0;
-    }
-
-    // This transition will happen when the item is added (.pf-m-offstage-top is removed)
-    // give it height, then slide it down into place
-    // These values are for regular motion
-    @media screen and (prefers-reduced-motion: no-preference) {
+      grid-template-rows 
+        0s
+        var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--grid-template-rows--default),
+      margin-block 
+        0s
+        var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--margin-block--default),
+      opacity
+        var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--opacity--default)
+        var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--opacity--default);
+      
+      & .pf-v6-c-alert {
+        min-height: 0;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        border-width: 0;
+        transition: 
+          all 
+            0s
+            var(--#{$alert-group}--m-toast__item--m-offstage-right--c-alert--TransitionDelay--default);
+      }
+      
+      // This transition will happen when the item is removed (.pf-m-offstage-right is added)
+      // Slide it down into place, then reduce height
+      // These values are for regular motion
+      @media screen and (prefers-reduced-motion: no-preference) {
       transition: 
-        transform var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s, 
-        opacity var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) 0s,
-        margin-block var(--pf-t--global--motion--duration--fade--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short), 
-        grid-template-rows var(--pf-t--global--motion--duration--slide-in--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
+        transform 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--transform) 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--transform), 
+        opacity 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--opacity) 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--opacity),
+        margin-block 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--margin-block) 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--margin-block) 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--margin-block), 
+        grid-template-rows 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDuration--grid-template-rows) 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionTimingFunction--grid-template-rows) 
+          var(--#{$alert-group}--m-toast__item--m-offstage-right--TransitionDelay--grid-template-rows);
+      transform: translateX(100%);
 
         & .pf-v6-c-alert {
-          transition: all var(--pf-t--global--motion--duration--slide-out--short) var(--pf-t--global--motion--timing-function--accelerate) var(--pf-t--global--motion--duration--slide-out--short);
+          transition: var(--#{$alert-group}--m-toast__item--m-offstage-right--c-alert--Transition);
         }
     }
   }
