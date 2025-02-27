@@ -2945,10 +2945,10 @@
     webpack-dev-server "5.2.0"
     webpack-merge "5.8.0"
 
-"@patternfly/patternfly-a11y@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly-a11y/-/patternfly-a11y-5.0.0.tgz#e8c5982eb99a12529a994e80d2c5591d8f198036"
-  integrity sha512-2GSzO6rSo/8Qg5IBvZeRtJp9tLj6XZGMD0HkENMBkHKDXBdUvCLftsu91E9408qAqgxDx1DrO3nhB3spo5LfiA==
+"@patternfly/patternfly-a11y@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly-a11y/-/patternfly-a11y-5.1.0.tgz#f76a9de0a48809df4e2efa5f38868a044caf1f48"
+  integrity sha512-QwWF3jm41hhwDkg/AAmpHAG//UspqTIdFTRljGiqg8w66jG+QKTaj+AQKLiiMZ1pTzf3TRaB3sN0hmI/cIJSfA==
   dependencies:
     axe-core "^4.10.2"
     chromedriver "^130.0.1"
