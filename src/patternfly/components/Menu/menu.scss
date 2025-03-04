@@ -399,7 +399,6 @@
       z-index: var(--#{$menu}--ZIndex);
       margin-block-start: calc(var(--#{$menu}--RowGap) * -1);
       margin-block-end: calc(var(--#{$menu}--RowGap) * -1);
-      overflow: hidden; // hide scrollbars
     }
 
     .#{$menu}__list {
