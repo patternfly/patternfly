@@ -199,7 +199,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   grid-column-end: -1; // force content to right edge or full available width
   row-gap: var(--#{$masthead}__content-RowGap, var(--#{$masthead}--RowGap));
   column-gap: var(--#{$masthead}__content--ColumnGap, var(--#{$masthead}--ColumnGap));
-  align-self: stretch;
+  align-self: center;
   order: var(--#{$masthead}__content--Order);
   min-width: #{pf-size-prem(4ch)}; // allow flex containers to shrink to fit possible overflow
 }
