@@ -18,6 +18,7 @@
     {{/if}}
   {{/if}}
   onClick="
+    event.preventDefault();
     ((e) => {
       const el = this,
             li = this.closest('li'),

@@ -769,4 +769,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
         inset-inline-start var(--#{$tabs}--link-accent--TransitionDuration--start) var(--#{$tabs}--link-accent--TransitionTimingFunction--start),
     }
   }
+
+  .#{$tabs}.pf-m-no-animate-current {
+    --#{$tabs}--link-accent--TransitionDuration--width: 0;
+    --#{$tabs}--link-accent--TransitionDuration--start: 0;
+  }
 }
