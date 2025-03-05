@@ -8,7 +8,7 @@
     {{{menu-item-action--attribute}}}
   {{/if}}>
   {{#> button button--role="menuitem" 
-  button--IsPlain=true button--IsIcon=true button--IsDisabled=menu-list-item--IsDisabled button--IsAriaDisabled=menu-list-item--IsAriaDisabled}}
+  button--IsPlain=true button--IsIcon=true button--IsDisabled=menu-list-item--IsDisabled button--IsAriaDisabled=menu-list-item--IsAriaDisabled button--IsFavorite=menu-item-action--IsFavorite button--IsFavorited=menu-item-action--IsFavorited}}
     {{#ifAny menu-item-action--IsFavorite menu-item-action--IsFavorited}}
       {{> button-icon button--icon="star"}}
     {{else if @partial-block}}
