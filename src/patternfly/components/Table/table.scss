@@ -789,12 +789,13 @@
 }
 
 // - Table favorite
+// TODO in breaking change - remove button styling here that is taken care of by favorite button now
 .#{$table}__favorite {
-  .#{$button} {
+  .#{$button}:not(.pf-m-favorite) {
     --#{$button}--FontSize: var(--#{$table}__favorite--c-button--FontSize);
   }
 
-  &.pf-m-favorited .#{$button} {
+  &.pf-m-favorited .#{$button}:not(.pf-m-favorited) {
     --#{$button}--m-plain__icon--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
 
     &:is(:hover, :focus) {

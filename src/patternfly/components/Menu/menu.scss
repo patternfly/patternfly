@@ -621,7 +621,7 @@
 .#{$menu}__item-action {
   &.pf-m-favorited,
   &.pf-m-favorited:hover,
-  &.pf-m-favorited .#{$button} {
+  &.pf-m-favorited .#{$button}:not(.pf-m-favorited) {
     --#{$button}--m-plain__icon--Color: var(--#{$menu}__item-action--m-favorited--Color);
     
     &:is(:hover, :focus) {
