@@ -617,6 +617,7 @@
 
 // TODO: standardize icon fitting
 // - Menu item action
+// TODO in breaking change - remove button styling here that is taken care of by favorite button no
 .#{$menu}__item-toggle-icon,
 .#{$menu}__item-action {
   &.pf-m-favorited,

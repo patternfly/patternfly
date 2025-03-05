@@ -646,13 +646,6 @@
     --#{$button}--FontSize: var(--#{$button}--m-display-lg--FontSize);
   }
 
-  // Register the property type for the custom property to be animatable
-// @property --#{$button}__icon--Color {
-//   syntax: "<color>";
-//   inherits: false;
-//   initial-value: "red";
-// }
-
   // Favorite button icon will transition color
   &.pf-m-favorite .#{$button}__icon {
     transition-timing-function: var(--#{$button}--m-favorite__icon--TransitionTimingFunction);
@@ -660,13 +653,13 @@
     transition-property: color;
   }
 
-  // Favorite button when clicked
+  // Favorite button when favorited
   &.pf-m-favorited {
     --#{$button}__icon--Color: var(--#{$button}--m-favorited__icon--Color);
     --#{$button}--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
   }
 
-  // Favorite button will run an animation when clicked
+  // Favorite button will run an animation when favorited
   &.pf-m-favorited .#{$button}__icon {
     animation-name: #{$button}-icon-favorited;
     animation-duration: var(--#{$button}--m-favorited__icon--AnimationDuration);
