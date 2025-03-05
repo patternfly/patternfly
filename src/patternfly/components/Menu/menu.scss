@@ -394,12 +394,10 @@
 
     // offset row-gap when scrollbar is present
     .#{$menu}__content {
-      // TODO: figure out why this fixes the scrollable
       position: relative;
       z-index: var(--#{$menu}--ZIndex);
       margin-block-start: calc(var(--#{$menu}--RowGap) * -1);
       margin-block-end: calc(var(--#{$menu}--RowGap) * -1);
-      overflow: hidden; // hide scrollbars
     }
 
     .#{$menu}__list {
