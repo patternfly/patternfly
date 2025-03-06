@@ -152,6 +152,8 @@
 
   // Status icon
   --#{$menu-toggle}__status-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--icon--default);
+  --#{$menu-toggle}__status-icon--m-danger--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
 
   // Success
   --#{$menu-toggle}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
@@ -164,6 +166,8 @@
   // Danger
   --#{$menu-toggle}--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
   --#{$menu-toggle}--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$menu-toggle}--m-danger--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
+  --#{$menu-toggle}--m-danger--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
 
   // Placeholder
   --#{$menu-toggle}--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
@@ -337,6 +341,32 @@
   &.pf-m-danger {
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--m-danger--BorderColor);
     --#{$menu-toggle}__status-icon--Color: var(--#{$menu-toggle}--m-danger__status-icon--Color);
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+      transform: translateX(var(--#{$menu-toggle}--m-danger--TranslateX, 0));
+      animation-name: #{$menu-toggle}-m-danger-motion;
+      animation-duration: var(--#{$menu-toggle}--m-danger--AnimationDuration--Transform);
+      animation-timing-function: var(--#{$menu-toggle}--m-danger--AnimationTimingFunction--Transform);
+      animation-fill-mode: both;
+    }
+
+    .#{$menu-toggle}__status-icon {
+      animation-name: #{$menu-toggle}-status-icon-fade-in;
+      animation-duration: var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity);
+      animation-timing-function: var(--#{$menu-toggle}__status-icon--m-danger--TransitionTimingFunction--Opacity);
+      
+      // stylelint-disable max-nesting-depth
+      @keyframes #{$menu-toggle}-status-icon-fade-in {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      // stylelint-enable
+    }
   }
 
   &.pf-m-placeholder {
@@ -353,6 +383,25 @@
     &,
     .#{$button} {
       pointer-events: none;
+    }
+  }
+}
+
+// Register the property type for the custom property to be animatable
+@property --#{$menu-toggle}--m-danger--TranslateX {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes #{$menu-toggle}-m-danger-motion {
+    33% {
+      --#{$menu-toggle}--m-danger--TranslateX: -2px;
+    }
+    
+    66% {
+      --#{$menu-toggle}--m-danger--TranslateX: 3px;
     }
   }
 }
