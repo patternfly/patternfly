@@ -348,25 +348,24 @@
       animation-duration: var(--#{$menu-toggle}--m-danger--AnimationDuration--Transform);
       animation-timing-function: var(--#{$menu-toggle}--m-danger--AnimationTimingFunction--Transform);
       animation-fill-mode: both;
-      
-      .#{$menu-toggle}__status-icon {
-        color: var(--#{$menu-toggle}__status-icon--Color, inherit);
-        animation-name: #{$menu-toggle}-status-icon-fade-in;
-        animation-duration: var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity);
-        animation-timing-function: var(--#{$menu-toggle}__status-icon--m-danger--TransitionTimingFunction--Opacity);
-        
-        // stylelint-disable max-nesting-depth
-        @keyframes #{$menu-toggle}-status-icon-fade-in {
-          from {
-            opacity: 0;
-          }
+    }
 
-          to {
-            opacity: 1;
-          }
+    .#{$menu-toggle}__status-icon {
+      animation-name: #{$menu-toggle}-status-icon-fade-in;
+      animation-duration: var(--#{$menu-toggle}__status-icon--m-danger--TransitionDuration--Opacity);
+      animation-timing-function: var(--#{$menu-toggle}__status-icon--m-danger--TransitionTimingFunction--Opacity);
+      
+      // stylelint-disable max-nesting-depth
+      @keyframes #{$menu-toggle}-status-icon-fade-in {
+        from {
+          opacity: 0;
         }
-        // stylelint-enable
+
+        to {
+          opacity: 1;
+        }
       }
+      // stylelint-enable
     }
   }
 
