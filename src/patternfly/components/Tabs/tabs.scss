@@ -797,12 +797,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       inset-block-start: var(--#{$tabs}--link-accent--InsetBlockStart, var(--#{$tabs}--link-accent--start));
       inset-block-end: var(--#{$tabs}--link-accent--InsetBlockEnd);
       inset-inline-start: var(--#{$tabs}--link-accent--InsetInlineStart, var(--#{$tabs}--link-accent--start));
-      width: var(--#{$tabs}--link-accent--Width, var(--#{$tabs}--link-accent--length)); // set by --#{$tabs}--link-accent--TransitionDuration--length in regular tabs
-      height: var(--#{$tabs}--link-accent--Height, var(--#{$tabs}--link-accent--length)); // set by --#{$tabs}--link-accent--TransitionDuration--length in vertical tabs
+      width: var(--#{$tabs}--link-accent--Width, var(--#{$tabs}--link-accent--length));
+      height: var(--#{$tabs}--link-accent--Height, var(--#{$tabs}--link-accent--length));
       content: "";
       border: solid var(--#{$tabs}--link-accent--color);
-      border-block-end-width: var(--#{$tabs}--link-accent--BorderBlockEndWidth); // set by --#{$tabs}--link-accent--border-size in regular tabs
-      border-inline-start-width: var(--#{$tabs}--link-accent--BorderInlineStartWidth); // set by --#{$tabs}--link-accent--border-size in vertical tabs
+      border-block-end-width: var(--#{$tabs}--link-accent--BorderBlockEndWidth);
+      border-inline-start-width: var(--#{$tabs}--link-accent--BorderInlineStartWidth);
       transition:
         --#{$tabs}--link-accent--length var(--#{$tabs}--link-accent--TransitionDuration--length) var(--#{$tabs}--link-accent--TransitionTimingFunction--length),
         --#{$tabs}--link-accent--start var(--#{$tabs}--link-accent--TransitionDuration--start) var(--#{$tabs}--link-accent--TransitionTimingFunction--start),
