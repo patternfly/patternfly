@@ -25,13 +25,20 @@
             ul = this.closest('ul'),
             tabs = this.closest('.pf-v6-c-tabs'),
             left = Math.round(li.offsetLeft),
-            width = Math.round(li.offsetWidth);
+            top = Math.round(li.offsetTop),
+            width = Math.round(li.offsetWidth),
+            height = Math.round(li.offsetHeight);
 
       ul.querySelectorAll('li').forEach(function(el) {
         el.classList.remove('pf-m-current')});
         li.classList.add('pf-m-current');
-        tabs.style.setProperty('--pf-v6-c-tabs--link-accent--start', left + 'px');
-        tabs.style.setProperty('--pf-v6-c-tabs--link-accent--width', width + 'px');
+        {{#if tabs--IsVertical}}
+          tabs.style.setProperty('--pf-v6-c-tabs--link-accent--start', top + 'px');
+          tabs.style.setProperty('--pf-v6-c-tabs--link-accent--length', height + 'px');
+        {{else}}
+          tabs.style.setProperty('--pf-v6-c-tabs--link-accent--start', left + 'px');
+          tabs.style.setProperty('--pf-v6-c-tabs--link-accent--length', width + 'px');
+        {{/if}}
       }
     )()"
   {{~#if tabs-link--IsAriaDisabled}}
