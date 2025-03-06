@@ -490,14 +490,14 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-echarts-graph--line-style--BorderWidth: 1;
   --#{$chart}-echarts-graph--Smooth: false;
   --#{$chart}-echarts-graph--SymbolSize: 4;
-  --#{$chart}-echarts-graph--Symbol: 'rect';
+  --#{$chart}-echarts-graph--Symbol: 'square';
 
   // Line
   --#{$chart}-echarts-line--item-style--BorderWidth: 1;
   --#{$chart}-echarts-line--line-style--BorderWidth: 2;
   --#{$chart}-echarts-line--Smooth: false;
   --#{$chart}-echarts-line--SymbolSize: 4;
-  --#{$chart}-echarts-line--Symbol: 'rect';
+  --#{$chart}-echarts-line--Symbol: 'square';
 
   // Map
   --#{$chart}-echarts-map--emphasis--item-style--BorderColor: var(--#{$chart}-global--Fill--Color--400);
@@ -556,5 +556,5 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-echarts-radar--line-style--BorderWidth: 2;
   --#{$chart}-echarts-radar--Smooth: false;
   --#{$chart}-echarts-radar--SymbolSize: 4;
-  --#{$chart}-echarts-radar--Symbol: 'rect';
+  --#{$chart}-echarts-radar--Symbol: 'square';
 }
