@@ -498,8 +498,18 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-v6-c-text-input-group` | `<div>` | Creates a text input group. *Required* |
+| `.pf-v6-c-text-input-group__main` | `<div>` | Creates a wrapper for the main content. *Required* |
+| `.pf-v6-c-text-input-group__text` | `<span>` | Creates the text container. *Required*|
+| `.pf-v6-c-text-input-group__icon` | `<span>` | Creates a container for an icon. |
+| `.pf-v6-c-text-input-group__text-input` | `<input>` | Creates a text input. *Required* |
+| `.pf-v6-c-text-input-group__utilities` | `<div>` | Creates text input utilities container. |
+| `.pf-v6-c-text-input-group__group` | `<div>` | Creates text input prev/next nav group. |
+| `.pf-m-plain` | `.pf-v6-c-text-input-group` | Applies plain styling. Only use this variant when the text input group is contained in an ancestor with its own border or background styling. |
+| `.pf-m-disabled` | `.pf-v6-c-text-input-group` | Applies disabled styling. The `<input>` should also be `disabled`. |
 | `.pf-m-success` | `.pf-v6-c-text-input-group` | Applies success validation styling. |
 | `.pf-m-warning` | `.pf-v6-c-text-input-group` | Applies warning validation styling. |
 | `.pf-m-error` | `.pf-v6-c-text-input-group` | Applies error validation styling. |
 | `.pf-m-icon` | `.pf-v6-c-text-input-group__main` | Applies styling when icons are included in the container. |
 | `.pf-m-status` | `.pf-v6-c-text-input-group__icon` | Applies status styling to the icon, matching the status modifier applied to `.pf-v6-c-text-input-group`. |
+| `.pf-m-hint` | `.pf-v6-c-text-input-group__text-input` | Applies styling when hints are included in the container. |
