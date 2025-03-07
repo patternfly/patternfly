@@ -800,7 +800,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       width: var(--#{$tabs}--link-accent--Width, var(--#{$tabs}--link-accent--length));
       height: var(--#{$tabs}--link-accent--Height, var(--#{$tabs}--link-accent--length));
       content: "";
-      border: solid var(--#{$tabs}--link-accent--color);
+      border: 0 solid var(--#{$tabs}--link-accent--color);
       border-block-end-width: var(--#{$tabs}--link-accent--BorderBlockEndWidth);
       border-inline-start-width: var(--#{$tabs}--link-accent--BorderInlineStartWidth);
       transition:
