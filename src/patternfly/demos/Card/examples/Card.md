@@ -291,7 +291,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="5 Clusters"}}
         {{#> card-body}}
-          {{#> icon}}
+          {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-success"}}
               <i class="fas fa-check-circle" aria-hidden="true"></i>
             {{/icon-content}}
@@ -301,7 +301,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="15 Clusters"}}
         {{#> card-body}}
-          {{#> icon}}
+          {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-warning"}}
               <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
             {{/icon-content}}
@@ -311,7 +311,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v6-u-text-align-center"}}
         {{> card-title card-title-text--value="3 Clusters"}}
         {{#> card-body}}
-          {{#> icon}}
+          {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-danger"}}
               <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
             {{/icon-content}}
@@ -328,7 +328,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -341,7 +341,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
                     <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -360,7 +360,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -373,7 +373,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
                     <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -392,7 +392,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
                     <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -405,7 +405,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
                     <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -428,7 +428,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
                     <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -441,7 +441,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
                     <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -461,7 +461,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -474,7 +474,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
                     <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -494,7 +494,7 @@ import './Card.css'
           {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
                     <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -507,7 +507,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
                     <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -553,7 +553,7 @@ import './Card.css'
             {{#> description-list-text}}
               {{#> grid}}
                 {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-                  {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
+                  {{#> spinner spinner--modifier="pf-m-inline" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
                 {{/grid-item}}
                 {{#> grid-item grid-item--modifier="pf-m-9-col"}}
                   {{#> title titleType="h3" title--modifier="pf-m-md"}}
@@ -577,7 +577,11 @@ import './Card.css'
             {{#> description-list-text}}
               {{#> l-flex}}
                 {{#> l-flex-item}}
-                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{#> icon icon--modifier="pf-m-inline"}}
+                    {{#> icon-content icon-content--modifier="pf-m-success"}}
+                      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{/icon-content}}
+                  {{/icon}}
                 {{/l-flex-item}}
                 {{#> l-flex-item}}
                   {{#> title titleType="h3" title--modifier="pf-m-md"}}
@@ -601,7 +605,7 @@ import './Card.css'
             {{#> description-list-text}}
               {{#> grid}}
                 {{#> grid-item grid-item--modifier="pf-m-3-col"}}
-                  {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
+                  {{#> spinner spinner--modifier="pf-m-inline" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
                 {{/grid-item}}
                 {{#> grid-item grid-item--modifier="pf-m-9-col"}}
                   {{#> title titleType="h3" title--modifier="pf-m-md"}}
@@ -625,7 +629,11 @@ import './Card.css'
             {{#> description-list-text}}
               {{#> l-flex}}
                 {{#> l-flex-item}}
-                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  {{#> icon icon--modifier="pf-m-inline"}}
+                    {{#> icon-content icon-content--modifier="pf-m-success"}}
+                      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{/icon-content}}
+                  {{/icon}}
                 {{/l-flex-item}}
                 {{#> l-flex-item}}
                   {{#> title titleType="h3" title--modifier="pf-m-md"}}
@@ -765,7 +773,7 @@ import './Card.css'
       {{#> l-flex l-flex--modifier="pf-m-column"}}
         <span>System</span>
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-          {{#> icon}}
+          {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-danger"}}
               <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
             {{/icon-content}}
@@ -1116,7 +1124,7 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
                     <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -1142,7 +1150,7 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
                   {{/icon-content}}
@@ -1168,7 +1176,7 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
+                {{#> spinner spinner--modifier="pf-m-inline" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Pulling image
@@ -1190,7 +1198,7 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                {{#> icon}}
+                {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
                   {{/icon-content}}
