@@ -101,7 +101,8 @@
   // Group toggle icon
   --#{$notification-drawer}__group-toggle-icon--MarginInlineEnd: var(--pf-t--global--spacer--md);
   --#{$notification-drawer}__group-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$notification-drawer}__group-toggle-icon--Transition: .2s ease-in 0s;
+  --#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$notification-drawer}__group-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: 90deg;
 }
 
@@ -308,7 +309,9 @@
 
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginInlineEnd);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
-  transition: var(--#{$notification-drawer}__group-toggle-icon--Transition);
+  transition-timing-function: var(--#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction);
+  transition-duration: var(--#{$notification-drawer}__group-toggle-icon--TransitionDuration);
+  transition-property: transform;
 
   .#{$notification-drawer}__group.pf-m-expanded & {
     transform: rotate(var(--#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate));

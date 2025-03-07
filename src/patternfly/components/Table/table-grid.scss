@@ -124,7 +124,8 @@
   --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
 
   // * Table grid toggle icon
-  --#{$table}__toggle__icon--Transition: .2s ease-in 0s;
+  --#{$table}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$table}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
@@ -523,7 +524,9 @@
 
   // - Table grid toggle icon
   .#{$table}__toggle-icon {
-    transition: var(--#{$table}__toggle__icon--Transition);
+    transition-timing-function: var(--#{$table}__toggle-icon--TransitionTimingFunction);
+    transition-duration: var(--#{$table}__toggle-icon--TransitionDuration);
+    transition-property: transform;
 
     .#{$button}.pf-m-expanded > & {
       transform: rotate(var(--#{$table}__toggle--m-expanded__icon--Rotate));
