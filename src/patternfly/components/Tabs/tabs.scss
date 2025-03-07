@@ -788,8 +788,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 @media (prefers-reduced-motion: no-preference) {
   .#{$tabs}:not(.pf-m-box) {
-    .#{$tabs}__link::after {
-      content: revert;
+    .#{$tabs}__link,
+    .#{$tabs}__item.pf-m-action {
+      &::after {
+        content: revert;
+      }
     }
 
     .#{$tabs}__list::after {
