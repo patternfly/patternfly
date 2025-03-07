@@ -6,7 +6,8 @@
   // Toggle icon
   --#{$expandable-section}__toggle-icon--MinWidth: 1em;
   --#{$expandable-section}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$expandable-section}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$expandable-section}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$expandable-section}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$expandable-section}__toggle-icon--Rotate: 0;
   --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: 0;
   --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
@@ -85,7 +86,8 @@
   display: inline-block;
   min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
   color: var(--#{$expandable-section}__toggle-icon--Color);
-  transition: var(--#{$expandable-section}__toggle-icon--Transition);
+  transition-timing-function: var(--#{$expandable-section}__toggle-icon--TransitionTimingFunction);
+  transition-duration: var(--#{$expandable-section}__toggle-icon--TransitionDuration);
   transform: rotate(var(--#{$expandable-section}__toggle-icon--Rotate));
 
   &.pf-m-expand-top {
