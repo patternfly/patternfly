@@ -61,14 +61,14 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical tabs example
 ```hbs
-{{#> tabs tabs--id="vertical-tabs" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-tabs" tabs--IsVertical=true}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expandable example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--IsVertical=true}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -76,7 +76,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expanded example
 ```hbs
-{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--IsVertical=true}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -84,7 +84,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expandable responsive example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -92,7 +92,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expandable example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -100,7 +100,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expanded example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--IsVertical=true}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -108,7 +108,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expandable responsive example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -132,7 +132,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Box vertical example
 ```hbs
-{{#> tabs tabs--id="box-vertical" tabs--modifier="pf-m-box pf-m-vertical"}}
+{{#> tabs tabs--id="box-vertical" tabs--IsVertical=true tabs--modifier="pf-m-box"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
