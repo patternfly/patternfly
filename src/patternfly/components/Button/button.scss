@@ -271,7 +271,7 @@
   --#{$button}--disabled--BorderColor: transparent;
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
 
-  // Icons
+  // Icon
   --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--hover__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -281,6 +281,14 @@
   --#{$button}__icon--m-end--MarginInlineStart: 0;
   --#{$button}--m-notify__icon--AnimationDuration--notify: var(--pf-t--global--motion--duration--3xl);
   --#{$button}--m-notify__icon--AnimationTimingFunction--notify: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}__icon--TransitionTimingFunction: auto;
+  --#{$button}__icon--TransitionDuration: 0s;
+  --#{$button}__icon--TransitionProperty: none;
+  --#{$button}__icon--Rotate: 0deg;
+  --#{$button}--hover__icon--TransitionTimingFunction: auto;
+  --#{$button}--hover__icon--TransitionDuration: 0s;
+  --#{$button}--hover__icon--TransitionProperty: none;
+  --#{$button}--hover__icon--Rotate: 0deg;
 
   // Favorite button
   --#{$button}--m-favorite__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
@@ -310,6 +318,13 @@
   --#{$button}--m-in-progress--m-plain--Color: var(--pf-t--global--icon--color--brand--default);
   --#{$button}--m-in-progress--m-plain__progress--InsetInlineStart: 50%;
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
+
+  // Settings
+  --#{$button}--m-settings__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$button}--m-settings__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$button}--m-settings--hover__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$button}--m-settings--hover__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$button}--m-settings--hover__icon--Rotate: 60deg;
 
   // Count
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
@@ -627,7 +642,7 @@
 
   &.pf-m-block {
     --#{$button}--Display: var(--#{$button}--m-block--Display);
-
+ 
     width: var(--#{$button}--m-block--Width);
   }
 
@@ -668,6 +683,16 @@
     animation-timing-function: var(--#{$button}--m-favorited__icon--AnimationTimingFunction);
   }
 
+  &.pf-m-settings {
+    --#{$button}__icon--TransitionProperty: rotate;
+    --#{$button}__icon--TransitionDuration: var(--#{$button}--m-settings__icon--TransitionDuration);
+    --#{$button}__icon--TransitionTimingFunction: var(--#{$button}--m-settings__icon--TransitionTimingFunction);
+    --#{$button}--hover__icon--TransitionProperty: rotate;
+    --#{$button}--hover__icon--TransitionDuration: var(--#{$button}--m-settings--hover__icon--TransitionDuration);
+    --#{$button}--hover__icon--TransitionTimingFunction: var(--#{$button}--m-settings--hover__icon--TransitionTimingFunction);
+    --#{$button}--hover__icon--Rotate: var(--#{$button}--m-settings--hover__icon--Rotate);
+  }
+
   &:hover,
   &:focus {
     --#{$button}--Color: var(--#{$button}--hover--Color);
@@ -676,6 +701,10 @@
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
+    --#{$button}__icon--TransitionTimingFunction: var(--#{$button}--hover__icon--TransitionTimingFunction);
+    --#{$button}__icon--TransitionDuration: var(--#{$button}--hover__icon--TransitionDuration);
+    --#{$button}__icon--TransitionProperty: var(--#{$button}--hover__icon--TransitionProperty);
+    --#{$button}__icon--Rotate: var(--#{$button}--hover__icon--Rotate);
 
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
@@ -754,6 +783,10 @@
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
+  transition-timing-function: var(--#{$button}__icon--TransitionTimingFunction);
+  transition-duration: var(--#{$button}__icon--TransitionDuration);
+  transition-property: var(--#{$button}__icon--TransitionProperty);
+  rotate: var(--#{$button}__icon--Rotate);
 
   &.pf-m-start {
     --#{$button}__icon--MarginInlineEnd: var(--#{$button}__icon--m-start--MarginInlineEnd);

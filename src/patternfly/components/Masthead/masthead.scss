@@ -29,14 +29,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__toggle-icon-top--collapse--path: path("M5,1 L9,1");
   --#{$masthead}__toggle-icon-bottom--collapse--path: path("M9,9 L5,9");
 
-
-  // Masthead settings
-  --#{$masthead}__settings-button-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
-  --#{$masthead}__settings-button-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
-  --#{$masthead}__settings-button-icon--hover--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
-  --#{$masthead}__settings-button-icon--hover--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
-  --#{$masthead}__settings-button-icon--hover__icon--Rotate: 60deg;
-
   // * Masthead content
   --#{$masthead}__content--ColumnGap: var(--pf-t--global--spacer--md);
 
@@ -276,23 +268,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     stroke-linejoin: round;
     transition: d var(--#{$masthead}__toggle-icon--TransitionDuration) var(--#{$masthead}__toggle-icon--TransitionTimingFunction);
   }
-}
-
-.#{$masthead}__settings-button {
-  &:hover,
-  &:focus {
-    .#{$masthead}__settings-button-icon {
-      --#{$masthead}__settings-button-icon--TransitionDuration: var(--#{$masthead}__settings-button-icon--hover--TransitionDuration);
-      --#{$masthead}__settings-button-icon--TransitionTimingFunction: var(--#{$masthead}__settings-button-icon--hover--TransitionTimingFunction);
-
-      rotate: var(--#{$masthead}__settings-button-icon--hover__icon--Rotate);
-    }
-  }
-}
-
-.#{$masthead}__settings-button-icon {
-  display: inline-block;
-  transition: rotate var(--#{$masthead}__settings-button-icon--TransitionDuration) var(--#{$masthead}__settings-button-icon--TransitionTimingFunction);
 }
 
 // - Masthead expandable content
