@@ -227,6 +227,11 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 {{/button}}
 ```
 
+### Settings
+```hbs
+{{> button button--IsSettings=true button--IsPlain=true button--aria-label="Settings" button--IsIcon=true button--icon="cog"}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class to add color to the button.
