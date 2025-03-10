@@ -812,7 +812,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
   }
 
-  .#{$tabs}.pf-m-no-animate-current {
+  .#{$tabs}.pf-m-initializing-accent {
     --#{$tabs}--link-accent--TransitionDuration--length: 0;
     --#{$tabs}--link-accent--TransitionDuration--start: 0;
   }
