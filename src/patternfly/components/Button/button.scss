@@ -332,6 +332,13 @@
   // Block
   --#{$button}--m-block--Display: flex;
   --#{$button}--m-block--Width: 100%;
+
+  // Big mac
+  --#{$button}--hamburger-icon---TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$button}--hamburger-icon---TransitionDuration: var(--pf-t--global--motion--duration--md);
+  --#{$button}--hamburger-icon--arrow--collapse--path: path("M3,7 L1,5 L3,3");
+  --#{$button}--hamburger-icon--top--collapse--path: path("M5,1 L9,1");
+  --#{$button}--hamburger-icon--bottom--collapse--path: path("M9,9 L5,9");
 }
 
 .#{$button} {
@@ -693,6 +700,24 @@
     --#{$button}--hover__icon--Rotate: var(--#{$button}--m-settings--hover__icon--Rotate);
   }
 
+  &.pf-m-hamburger {
+    &.pf-m-expanded {
+      .#{$button}--hamburger-icon--arrow {
+        d: var(--#{$button}--hamburger-icon--arrow--collapse--path);
+      }
+      .#{$button}--hamburger-icon--top {
+        d: var(--#{$button}--hamburger-icon--top--collapse--path);
+      }
+      .#{$button}--hamburger-icon--bottom {
+        d: var(--#{$button}--hamburger-icon--bottom--collapse--path);
+      }
+    }
+
+    &.pf-m-collapsed {
+      scale: -1;
+    }
+  }
+
   &:hover,
   &:focus {
     --#{$button}--Color: var(--#{$button}--hover--Color);
@@ -835,6 +860,16 @@
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
+}
+
+.#{$button}--hamburger-icon {
+  path {
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: d var(--#{$button}--hamburger-icon---TransitionDuration) var(--#{$button}--hamburger-icon---TransitionTimingFunction);
+  }
 }
 
 @keyframes #{$button}-icon-notify {

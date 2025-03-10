@@ -238,7 +238,7 @@ A favorite button should use a plain button with the star icon. Applying `.pf-m-
 
 ### Settings
 ```hbs
-{{> button button--IsSettings=true button--IsPlain=true button--aria-label="Settings" button--IsIcon=true button--icon="cog"}}
+{{> button button--IsSettings=true button--IsPlain=true button--IsIcon=true button--aria-label="Settings"}}
 ```
 
 ## Documentation

@@ -23,11 +23,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // * Masthead toggle
   --#{$masthead}__toggle--Size: var(--pf-t--global--icon--size--xl);
-  --#{$masthead}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
-  --#{$masthead}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--md);
-  --#{$masthead}__toggle-icon-arrow--collapse--path: path("M3,7 L1,5 L3,3");
-  --#{$masthead}__toggle-icon-top--collapse--path: path("M5,1 L9,1");
-  --#{$masthead}__toggle-icon-bottom--collapse--path: path("M9,9 L5,9");
 
   // * Masthead content
   --#{$masthead}__content--ColumnGap: var(--pf-t--global--spacer--md);
@@ -220,54 +215,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     max-height: 100%;
     vertical-align: middle;
  }
-}
-
-// Masthead toggle
-.#{$masthead}__toggle-button {
-  @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
-    &.pf-m-expanded {
-      .#{$masthead}__toggle-icon-arrow {
-        d: var(--#{$masthead}__toggle-icon-arrow--collapse--path);
-      }
-      .#{$masthead}__toggle-icon-top {
-        d: var(--#{$masthead}__toggle-icon-top--collapse--path);
-      }
-      .#{$masthead}__toggle-icon-bottom {
-        d: var(--#{$masthead}__toggle-icon-bottom--collapse--path);
-      }
-    }
-  }
-
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-    &:hover,
-    &:focus-visible {
-      .#{$masthead}__toggle-icon-arrow {
-        d: var(--#{$masthead}__toggle-icon-arrow--collapse--path);
-      }
-      .#{$masthead}__toggle-icon-top {
-        d: var(--#{$masthead}__toggle-icon-top--collapse--path);
-      }
-      .#{$masthead}__toggle-icon-bottom {
-        d: var(--#{$masthead}__toggle-icon-bottom--collapse--path);
-      }
-    }
-
-    &:not(.pf-m-expanded) {
-      .#{$masthead}__toggle-icon {
-        scale: -1;
-      }
-    }
-  }
-}
-
-.#{$masthead}__toggle-icon {
-  path {
-    fill: none;
-    stroke: currentcolor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: d var(--#{$masthead}__toggle-icon--TransitionDuration) var(--#{$masthead}__toggle-icon--TransitionTimingFunction);
-  }
 }
 
 // - Masthead expandable content
