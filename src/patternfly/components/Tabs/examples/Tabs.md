@@ -399,21 +399,24 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-v6-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
 | `.pf-v6-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
 | `.pf-v6-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
-| `.pf-m-tubtab` | `.pf-v6-c-tabs` | Applies subtab styling to the tab component. |
+| `.pf-m-subtab` | `.pf-v6-c-tabs` | Applies subtab styling to the tab component. |
 | `.pf-m-no-border-bottom` | `.pf-v6-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-v6-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-v6-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-v6-c-tabs` | Modifies the tabs to fill the available space. |
-| `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
-| `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
-| `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
-| `.pf-m-expanded` | `.pf-v6-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v6-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-page-insets` | `.pf-v6-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 | `.pf-m-secondary` | `.pf-v6-c-tabs.pf-m-box` | Modifies the tabs component tab background colors for the box variant. |
 | `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/tokens/all-patternfly-tokens). **Note:** works with vertical tabs only. |
 | `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-expanded` | `.pf-v6-c-tabs` | Modifies the expandable tabs component for the expanded state. |
+| `.pf-m-initializing-accent` | `.pf-v6-c-tabs` | Modifies tabs styles while initializing the "current" tab's accent styles. |
+| `--pf-v6-c-tabs--link-accent--start` | `.pf-v6-c-tabs` | Sets the value for the "start" inset of the current tab's accent. |
+| `--pf-v6-c-tabs--link-accent--length` | `.pf-v6-c-tabs` | Sets the value for the length of the current tab's accent. |
+| `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
+| `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
+| `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
+| `.pf-m-expanded` | `.pf-v6-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
 | `.pf-m-disabled` | `a.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles. |
 | `.pf-m-aria-disabled` | `.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
 
