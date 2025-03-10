@@ -91,6 +91,47 @@ Several components in the following examples do not include functional and/or ac
 | `.pf-v6-c-toolbar__item` | `<div>` | Initiates the toolbar component item. **Required** |
 | `.pf-v6-c-toolbar__group` | `<div>` | Initiates the toolbar component group. |
 
+### No padding
+```hbs
+{{#> toolbar toolbar--id="toolbar-simple-example" toolbar--modifier="pf-m-no-padding"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
 ### Adjusted group column gap
 ```hbs
 {{#> toolbar toolbar--id="toolbar-group-spacer-example"}}
@@ -597,6 +638,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-static` | `.pf-v6-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
 | `.pf-m-primary` | `.pf-v6-c-toolbar` | Modifies toolbar to have primary background color. |
 | `.pf-m-secondary` | `.pf-v6-c-toolbar` | Modifies toolbar to have secondary background color. |
+| `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |

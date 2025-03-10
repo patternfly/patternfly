@@ -160,13 +160,17 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // - Toolbar full height
   &.pf-m-full-height {
     --#{$toolbar}--PaddingBlockStart: 0;
-    --#{$toolbar}--PaddinkBlockEnd: 0;
+    --#{$toolbar}--PaddingBlockEnd: 0;
 
     .#{$toolbar}__group,
     .#{$toolbar}__item {
       align-items: stretch;
       align-self: stretch;
     }
+  }
+
+  &.pf-m-no-padding {
+    --#{$toolbar}--PaddingBlockEnd: 0;
   }
 
   // - Toolbar background modifiers
