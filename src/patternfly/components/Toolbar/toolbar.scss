@@ -171,6 +171,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   &.pf-m-no-padding {
     --#{$toolbar}--PaddingBlockEnd: 0;
+    --#{$toolbar}--m-sticky--PaddingBlockStart: 0;
+    --#{$toolbar}--m-sticky--PaddingBlockEnd: 0;
   }
 
   // - Toolbar background modifiers
