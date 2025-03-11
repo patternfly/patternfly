@@ -284,6 +284,6 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-progress` | `.pf-v6-c-button` | Indicates that the button supports the progress state. **Note:** Not used with the plain variation. |
 | `.pf-m-in-progress` | `.pf-v6-c-button` | Indicates that the button is in the in progress state. |
 | `.pf-m-stateful` | `.pf-v6-c-button` | Indicates that the button is used for one of read, unread, and attention states. **Note:** Always use with a modifier of `.pf-m-read`, `.pf-m-unread`, or `.pf-m-attention`. |
-| `.pf-m-notify` | `.pf-v6-c-button` | Indicates that the button should show the user notification of an event. **Note:** This is intended for use with a bell icon in the Notification Badge. |
+| `.pf-m-notify` | `.pf-v6-c-button` | Indicates that the button should show the user notification of an event. **Note:** This is intended for use with a bell icon in the notification badge. |
 | `.pf-m-favorite` | `.pf-v6-c-button .pf-m-plain` | Modifies a plain button to be a favorite button. **Note:** This is intended for use with a star icon. |
 | `.pf-m-favorited` | `.pf-v6-c-button .pf-m-plain .pf-m-favorite` | Modifies a favorite button to indicate that item is favorited.  |

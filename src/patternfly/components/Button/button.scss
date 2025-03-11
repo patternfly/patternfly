@@ -315,11 +315,6 @@
 }
 
 .#{$button} {
-  --#{$button}--m-favorite__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
-  --#{$button}--m-favorite__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$button}--m-favorited__icon--AnimationDuration: var(--pf-t--global--motion--duration--icon--long);
-  --#{$button}--m-favorited__icon--AnimationTimingFunction: var(--pf-t--global--motion--timing-function--default);
-
   position: relative;
   display: var(--#{$button}--Display);
   gap: var(--#{$button}--Gap);
@@ -792,6 +787,6 @@
 
 @keyframes #{$button}-icon-favorited {
   50% {
-    transform: scale(1.5); // make a variable
+    transform: scale(1.5);
   }
 }
