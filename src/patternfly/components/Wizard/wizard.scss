@@ -65,6 +65,7 @@
   --#{$wizard}__nav-link-toggle--Color: var(--pf-t--global--icon--color--regular);
   --#{$wizard}__nav-link-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$wizard}__nav-link-toggle-icon--Transition: transform var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration) var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$wizard}__nav-link-toggle-icon--Rotate: 0;
   --#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate: 90deg;
 
@@ -547,9 +548,7 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition-timing-function:  var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$wizard}__nav-link-toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
 }
 

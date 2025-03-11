@@ -86,6 +86,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
   --#{$dual-list-selector}__item-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$dual-list-selector}__item-toggle-icon--Transition: transform var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration) var(--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$dual-list-selector}__item-toggle-icon--MinWidth: var(--#{$dual-list-selector}__list-item-row--FontSize);
   --#{$dual-list-selector}__list-item--m-disabled__item-toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
 }
@@ -339,9 +340,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   min-width: var(--#{$dual-list-selector}__item-toggle-icon--MinWidth);
   color: var(--#{$dual-list-selector}__item-toggle-icon--Color, inherit);
   text-align: center;
-  transition-timing-function: var(--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$dual-list-selector}__item-toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$dual-list-selector}__item-toggle-icon--Rotate));
 }
 

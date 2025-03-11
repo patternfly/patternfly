@@ -69,6 +69,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__expand-all-icon--Rotate: 0;
   --#{$toolbar}__expand-all-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$toolbar}__expand-all-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$toolbar}__expand-all-icon--Transition:  transform var(--#{$toolbar}__expand-all-icon--TransitionDuration) var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$toolbar}__item--m-expand-all--m-expanded__expand-all-icon--Rotate: 90deg;
 
   // * Toolbar filter group
@@ -300,9 +301,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar expand all
 .#{$toolbar}__expand-all-icon {
   display: inline-flex;
-  transition-timing-function: var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$toolbar}__expand-all-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$toolbar}__expand-all-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change

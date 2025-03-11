@@ -33,6 +33,7 @@
   // accordion toggle icon
   --#{$accordion}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$accordion}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$accordion}__toggle-icon--Transition: transform var(--#{$accordion}__toggle-icon--TransitionDuration) var(--#{$accordion}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expandable content
@@ -152,9 +153,7 @@
 .#{$accordion}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  transition-timing-function: var(--#{$accordion}__toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$accordion}__toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
 }
 
 .#{$accordion}__expandable-content {

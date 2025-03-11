@@ -131,6 +131,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__toggle--Display: flex;
   --#{$tabs}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$tabs}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$tabs}__toggle-icon--Transition: transform var(--#{$tabs}__toggle-icon--TransitionDuration) var(--#{$tabs}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$tabs}__toggle-icon--Rotate: 0;
   --#{$tabs}--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$tabs}--m-expandable--RowGap: var(--pf-t--global--spacer--sm);
@@ -472,9 +473,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition-timing-function: var(--#{$tabs}__toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$tabs}__toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$tabs}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$tabs}__toggle-icon--Rotate));
 }
 

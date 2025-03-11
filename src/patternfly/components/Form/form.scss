@@ -135,6 +135,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-toggle-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$form}__field-group-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$form}__field-group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$form}__field-group-toggle-icon--Transition: transform var(---#{$form}__field-group-toggle-icon--TransitionDuration) var(--#{$form}__field-group-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
   --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;
@@ -408,9 +409,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   display: inline-block;
   min-width: var(--#{$form}__field-group-toggle-icon--MinWidth);
   text-align: center;
-  transition-timing-function: var(--#{$form}__field-group-toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$form}__field-group-toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$form}__field-group-toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$form}__field-group-toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;

@@ -126,6 +126,7 @@
   // * Table grid toggle icon
   --#{$table}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$table}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}__toggle-icon--Transition: transform var(--#{$table}__toggle-icon--TransitionDuration) var(--#{$table}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$table}__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
@@ -524,9 +525,7 @@
 
   // - Table grid toggle icon
   .#{$table}__toggle-icon {
-    transition-timing-function: var(--#{$table}__toggle-icon--TransitionTimingFunction);
-    transition-duration: var(--#{$table}__toggle-icon--TransitionDuration);
-    transition-property: transform;
+    transition: var(--#{$table}__toggle-icon--Transition); // TODO remove shorthand in breaking change
 
     .#{$button}.pf-m-expanded > & {
       transform: rotate(var(--#{$table}__toggle--m-expanded__icon--Rotate));

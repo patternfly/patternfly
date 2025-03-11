@@ -103,6 +103,7 @@
   --#{$notification-drawer}__group-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$notification-drawer}__group-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$notification-drawer}__group-toggle-icon--Transition: transform var(--#{$notification-drawer}__group-toggle-icon--TransitionDuration) var(--#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: 90deg;
 }
 
@@ -309,9 +310,7 @@
 
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginInlineEnd);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
-  transition-timing-function: var(--#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$notification-drawer}__group-toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$notification-drawer}__group-toggle-icon--Transition); // TODO remove shorthand in breaking change
 
   .#{$notification-drawer}__group.pf-m-expanded & {
     transform: rotate(var(--#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate));

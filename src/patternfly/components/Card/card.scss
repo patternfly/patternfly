@@ -33,6 +33,7 @@
   --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$card}__header-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$card}__header-toggle-icon--Transition: transform var(--#{$card}__header-toggle-icon--TransitionDuration) var(--#{$card}__header-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
 
   // Selectable/Clickable
@@ -283,9 +284,7 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition-timing-function: var(--#{$card}__header-toggle-icon--TransitionTimingFunction);
-  transition-duration: var(--#{$card}__header-toggle-icon--TransitionDuration);
-  transition-property: transform;
+  transition: var(--#{$card}__header-toggle-icon--Transition); // TODO remove shorthand in breaking change
 }
 
 .#{$card}__title-text {
