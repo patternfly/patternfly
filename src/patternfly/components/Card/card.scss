@@ -25,6 +25,8 @@
   --#{$card}__actions--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);
   --#{$card}__actions--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__actions--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__header--m-wrap--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$card}__header--m-wrap--ColumnGap: var(--pf-t--global--spacer--md);
 
   // Expandable
   --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
@@ -263,6 +265,26 @@
 
     .#{$card}__header-toggle {
       order: 2;
+    }
+  }
+
+  &.pf-m-wrap {
+    --pf-v6-c-card__actions--PaddingInlineStart: 0;
+
+    gap: var(--#{$card}__header--m-wrap--RowGap) var(--#{$card}__header--m-wrap--ColumnGap);
+
+    &,
+    .#{$card}__actions {
+      flex-wrap: wrap;
+      row-gap: var(--#{$card}__header--m-wrap--RowGap);
+    }
+
+    .#{$card}__actions {
+      + * {
+        margin-inline-end: auto;
+      }
+
+      margin-inline-start: 0
     }
   }
 }
