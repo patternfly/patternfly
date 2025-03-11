@@ -749,7 +749,6 @@
     @include pf-v6-mirror-inline-on-rtl;
 
     transition: var(--#{$table}__toggle--c-button__toggle-icon--Transition); // TODO remove in breaking change
-    transition-property: transform;
   }
 
   svg {
