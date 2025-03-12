@@ -227,6 +227,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
 &nbsp;Mauris luctus, libero nec dapibus ultricies, urna purus pretium mauris, ullamcorper pharetra lacus nibh vitae enim.
 ```
 
+### Inline compact with truncation
+```hbs
+{{#> clipboard-copy clipboard-copy--IsInline=true clipboard-copy--IsTruncate=true clipboard-copy--id="inline-truncation"}}
+  {{#> clipboard-copy-text}}
+    {{#> truncate}}
+      {{> truncate-start truncate-start--text='This lengthy, copyable content will be truncated with default settings when the truncation prop is simply set to true. This is useful for quickly applying truncation without needing to worry about any other properties to set.'}}
+    {{/truncate}}
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{> button button--IsPlain=true button--HasNoPadding=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -250,6 +266,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
 | `.pf-v6-c-clipboard-copy__actions-item` | `<span>` | Initiates the inline copy clipboard actions item element. **Required** |
 | `.pf-m-inline` | `.pf-v6-c-clipboard-copy` | Modifies the clipboard copy component for inline styles. |
 | `.pf-m-block` | `.pf-v6-c-clipboard-copy.pf-m-inline` | Modifies the inline copy clipboard component to have block formatting. |
+| `.pf-m-truncate` | `.pf-v6-c-clipboard-copy.pf-m-truncate` | Modifies the inline copy clipboard component for use with text used in trucate component. |
 | `.pf-m-expanded` | `.pf-v6-c-clipboard-copy` | Modifies the clipboard copy component for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-button.pf-m-control` | Modifies the control toggle button for the expanded state. |
 | `.pf-m-code` | `code.pf-v6-c-clipboard-copy__text` | Modifies the inline copy clipboard text styles for use with the `<code>` element. |

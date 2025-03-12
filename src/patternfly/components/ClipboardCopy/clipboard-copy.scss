@@ -55,6 +55,10 @@
     &.pf-m-block {
       display: block;
     }
+
+    &.pf-m-truncate {
+      display: inline-flex;
+    }
   }
 }
 
