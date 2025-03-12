@@ -615,11 +615,12 @@
 
 // TODO: standardize icon fitting
 // - Menu item action
+// TODO in breaking change - remove button styling here that is taken care of by favorite button now
 .#{$menu}__item-toggle-icon,
 .#{$menu}__item-action {
   &.pf-m-favorited,
   &.pf-m-favorited:hover,
-  &.pf-m-favorited .#{$button} {
+  &.pf-m-favorited .#{$button}:not(.pf-m-favorited) {
     --#{$button}--m-plain__icon--Color: var(--#{$menu}__item-action--m-favorited--Color);
     
     &:is(:hover, :focus) {

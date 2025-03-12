@@ -282,6 +282,14 @@
   --#{$button}--m-notify__icon--AnimationDuration--notify: var(--pf-t--global--motion--duration--3xl);
   --#{$button}--m-notify__icon--AnimationTimingFunction--notify: var(--pf-t--global--motion--timing-function--default);
 
+  // Favorite button
+  --#{$button}--m-favorite__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$button}--m-favorite__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--m-favorited__icon--Color: var(--pf-t--global--color--favorite--default);
+  --#{$button}--m-favorited--hover__icon--Color: var(--pf-t--global--color--favorite--hover);
+  --#{$button}--m-favorited__icon--AnimationDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$button}--m-favorited__icon--AnimationTimingFunction: var(--pf-t--global--motion--timing-function--default);
+
   // Progress
   --#{$button}__progress--width: calc(var(--pf-t--global--icon--size--lg) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
   --#{$button}__progress--Opacity: 0;
@@ -633,6 +641,26 @@
     --#{$button}--FontSize: var(--#{$button}--m-display-lg--FontSize);
   }
 
+  // Favorite button icon will transition color
+  &.pf-m-favorite .#{$button}__icon {
+    transition-timing-function: var(--#{$button}--m-favorite__icon--TransitionTimingFunction);
+    transition-duration: var(--#{$button}--m-favorite__icon--TransitionDuration);
+    transition-property: color;
+  }
+
+  // Favorite button when favorited
+  &.pf-m-favorited {
+    --#{$button}__icon--Color: var(--#{$button}--m-favorited__icon--Color);
+    --#{$button}--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
+  }
+
+  // Favorite button will run an animation when favorited
+  &.pf-m-favorited .#{$button}__icon {
+    animation-name: #{$button}-icon-favorited;
+    animation-duration: var(--#{$button}--m-favorited__icon--AnimationDuration);
+    animation-timing-function: var(--#{$button}--m-favorited__icon--AnimationTimingFunction);
+  }
+
   &:hover,
   &:focus {
     --#{$button}--Color: var(--#{$button}--hover--Color);
@@ -754,5 +782,11 @@
 
   66% {
     transform: rotate(-60deg);
+  }
+}
+
+@keyframes #{$button}-icon-favorited {
+  50% {
+    transform: scale(1.5);
   }
 }
