@@ -120,8 +120,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
   // Link accent
-  // --#{$tabs}--link-accent--start: 0; // needed to create react-token
-  // --#{$tabs}--link-accent--length: auto; // needed to create react-token
+  --#{$tabs}--link-accent--start: 0; // needed to create react-token
+  --#{$tabs}--link-accent--length: auto; // needed to create react-token
   --#{$tabs}--link-accent--color: var(--#{$tabs}__item--m-current__link--after--BorderColor);
   --#{$tabs}--link-accent--border-size: var(--#{$tabs}__item--m-current__link--after--BorderWidth);
   --#{$tabs}--link-accent--InsetBlockStart: auto;
@@ -138,10 +138,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical--link-accent--Height: initial;
   --#{$tabs}--m-vertical--link-accent--BorderBlockEndWidth: 0;
   --#{$tabs}--m-vertical--link-accent--BorderInlineStartWidth: var(--#{$tabs}--link-accent--border-size);
-  --#{$tabs}--link-accent--TransitionDuration--length: var(--pf-t--global--motion--duration--md);
-  --#{$tabs}--link-accent--TransitionTimingFunction--length: var(--pf-t--global--motion--timing-function--decelerate);
-  --#{$tabs}--link-accent--TransitionDuration--start: var(--pf-t--global--motion--duration--md);
-  --#{$tabs}--link-accent--TransitionTimingFunction--start: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$tabs}--link-accent--TransitionDuration: var(--pf-t--global--motion--duration--md);
+  --#{$tabs}--link-accent--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
 
   // Scroll buttons
   --#{$tabs}__scroll-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -806,9 +804,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       border: 0 solid var(--#{$tabs}--link-accent--color);
       border-block-end-width: var(--#{$tabs}--link-accent--BorderBlockEndWidth);
       border-inline-start-width: var(--#{$tabs}--link-accent--BorderInlineStartWidth);
-      transition:
-        --#{$tabs}--link-accent--length var(--#{$tabs}--link-accent--TransitionDuration--length) var(--#{$tabs}--link-accent--TransitionTimingFunction--length),
-        --#{$tabs}--link-accent--start var(--#{$tabs}--link-accent--TransitionDuration--start) var(--#{$tabs}--link-accent--TransitionTimingFunction--start),
+      transition-timing-function: var(--#{$tabs}--link-accent--TransitionTimingFunction);
+      transition-duration: var(--#{$tabs}--link-accent--TransitionDuration);
+      transition-property: --#{$tabs}--link-accent--length, --#{$tabs}--link-accent--start, width;
     }
   }
 
