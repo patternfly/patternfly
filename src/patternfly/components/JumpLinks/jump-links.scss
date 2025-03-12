@@ -64,7 +64,6 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$jump-links}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$jump-links}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$jump-links}__toggle-icon--Transition: tranform var(--#{$jump-links}__toggle-icon--TransitionDuration) var(--#{$jump-links}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$jump-links}__toggle-icon--Rotate: 0;
   --#{$jump-links}--m-expanded__toggle-icon--Rotate: 90deg;
 }
@@ -219,6 +218,8 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
-  transition: var(--#{$jump-links}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
+  transition-timing-function: var(--#{$jump-links}__toggle-icon--TransitionTimingFunction);
+  transition-duration: var(--#{$jump-links}__toggle-icon--TransitionDuration);
+  transition-property: transform;
   transform: rotate(var(--#{$jump-links}__toggle-icon--Rotate));
 }
