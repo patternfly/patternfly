@@ -871,7 +871,7 @@ When a list item includes more than one block of content, it can be difficult fo
 <div id="draggable-help">
   Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
 </div>
-{{#> data-list data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
+{{#> data-list data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"' data-list--IsCompact=true}}
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}

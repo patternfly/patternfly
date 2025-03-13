@@ -158,8 +158,8 @@
   }
 
   .#{$button}.pf-m-inline {
-    --#{$button}--m-link--Color: var(--#{$banner}--link--Color);
-    --#{$button}--m-link--hover--Color: var(--#{$banner}--link--hover--Color);
+    --#{$button}--m-link--m-inline--Color: var(--#{$banner}--link--Color);
+    --#{$button}--m-link--m-inline--hover--Color: var(--#{$banner}--link--hover--Color);
     --#{$button}--disabled--Color: var(--#{$banner}--link--disabled--Color);
 
     text-decoration-line: var(--#{$banner}--link--TextDecoration);
