@@ -60,7 +60,9 @@
   --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
-  --#{$data-list}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$data-list}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$data-list}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$data-list}__toggle-icon--Transition: transform var(--#{$data-list}__toggle-icon--TransitionDuration) var(--#{$data-list}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$data-list}__toggle-icon--Rotate: 0;
   --#{$data-list}__item--m-expanded__toggle-icon--Rotate: 90deg;
 
@@ -342,7 +344,7 @@
 
   height: var(--#{$data-list}__toggle-icon--Height);
   pointer-events: none;
-  transition: var(--#{$data-list}__toggle-icon--Transition);
+  transition: var(--#{$data-list}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$data-list}__toggle-icon--Rotate));
 }
 

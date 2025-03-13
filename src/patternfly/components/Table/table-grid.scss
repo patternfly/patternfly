@@ -124,7 +124,9 @@
   --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
 
   // * Table grid toggle icon
-  --#{$table}__toggle__icon--Transition: .2s ease-in 0s;
+  --#{$table}__toggle__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$table}__toggle__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}__toggle__icon--Transition: transform var(--#{$table}__toggle__icon--TransitionDuration) var(--#{$table}__toggle__icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$table}__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
@@ -523,7 +525,7 @@
 
   // - Table grid toggle icon
   .#{$table}__toggle-icon {
-    transition: var(--#{$table}__toggle__icon--Transition);
+    transition: var(--#{$table}__toggle__icon--Transition); // TODO remove shorthand in breaking change
 
     .#{$button}.pf-m-expanded > & {
       transform: rotate(var(--#{$table}__toggle--m-expanded__icon--Rotate));

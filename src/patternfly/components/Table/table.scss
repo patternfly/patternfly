@@ -83,7 +83,7 @@
   --#{$table}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 270deg;
-  --#{$table}__toggle--c-button__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$table}__toggle--c-button__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 360deg;
 
@@ -747,7 +747,9 @@
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
 
-    transition: transform var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration) var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
+    transition-timing-function: var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
+    transition-duration: var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration);
+    transition-property: transform;
     transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
 

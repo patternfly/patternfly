@@ -2,7 +2,9 @@
 
 @include pf-root($clipboard-copy) {
   // Toggle icon
-  --#{$clipboard-copy}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$clipboard-copy}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$clipboard-copy}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$clipboard-copy}__toggle-icon--Transition: transform var(--#{$clipboard-copy}__toggle-icon--TransitionDuration) var(--#{$clipboard-copy}__toggle-icon--TransitionTimingFunction); // TODO Remove in breaking change along with shorthand property
   --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Clipboard copy expanded content
@@ -71,7 +73,7 @@
 .#{$clipboard-copy}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  transition: var(--#{$clipboard-copy}__toggle-icon--Transition);
+  transition: var(--#{$clipboard-copy}__toggle-icon--Transition); // TODO remove shorthand in breaking change
 }
 
 .#{$clipboard-copy}__expandable-content {

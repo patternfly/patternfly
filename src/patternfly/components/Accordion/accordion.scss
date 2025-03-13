@@ -31,7 +31,9 @@
   --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
 
   // accordion toggle icon
-  --#{$accordion}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$accordion}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$accordion}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$accordion}__toggle-icon--Transition: transform var(--#{$accordion}__toggle-icon--TransitionDuration) var(--#{$accordion}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expandable content
@@ -151,7 +153,7 @@
 .#{$accordion}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  transition: var(--#{$accordion}__toggle-icon--Transition);
+  transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
 }
 
 .#{$accordion}__expandable-content {

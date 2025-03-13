@@ -129,7 +129,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   // Expandable
   --#{$tabs}__toggle--Display: flex;
-  --#{$tabs}__toggle-icon--Transition: all 250ms cubic-bezier(.42, 0, .58, 1);
+  --#{$tabs}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$tabs}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$tabs}__toggle-icon--Transition: transform var(--#{$tabs}__toggle-icon--TransitionDuration) var(--#{$tabs}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$tabs}__toggle-icon--Rotate: 0;
   --#{$tabs}--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$tabs}--m-expandable--RowGap: var(--pf-t--global--spacer--sm);
@@ -155,7 +157,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   // Overflow menu toggle icon
   --#{$tabs}__link-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$tabs}__link-toggle-icon--Transition: .2s ease-in 0s;
+  --#{$tabs}__link-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$tabs}__link-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$tabs}__link-toggle-icon--Transition: transform var(--#{$tabs}__link-toggle-icon--TransitionDuration) var(--#{$tabs}__link-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$tabs}__link-toggle-icon--Rotate: 0;
   --#{$tabs}__link-toggle-icon--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}__link--m-expanded__toggle-icon--Rotate: 90deg;
@@ -470,7 +474,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: var(--#{$tabs}__toggle-icon--Transition);
+  transition: var(--#{$tabs}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$tabs}__toggle-icon--Rotate));
 }
 
@@ -650,7 +654,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   align-self: end;
   font-size: var(--#{$tabs}__link-toggle-icon--FontSize);
   color: var(--#{$tabs}__link-toggle-icon--Color);
-  transition: var(--#{$tabs}__link-toggle-icon--Transition);
+  transition: var(--#{$tabs}__link-toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$tabs}__link-toggle-icon--Rotate));
 }
 
