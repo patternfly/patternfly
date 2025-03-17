@@ -154,7 +154,8 @@
   }
 
   // This class is used BEFORE the alert item comes into the list
-  &.pf-m-offstage-top {
+  // Only apply if the item is the first alert in the list (all new alerts should appear at the top)
+  &.pf-m-offstage-top:first-child {
     // make the item have no height and position it up above
     grid-template-rows: 0fr;
     margin-block: 0;
