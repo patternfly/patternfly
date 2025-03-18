@@ -346,7 +346,7 @@
     }
     
     > select {
-      padding-inline-end: var--#{$form-control}__select--m-success--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-success--PaddingInlineEnd));
+      padding-inline-end: var(--#{$form-control}__select--m-success--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-success--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
