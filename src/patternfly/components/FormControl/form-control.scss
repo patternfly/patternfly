@@ -215,6 +215,7 @@
       --#{$form-control}--PaddingBlockEnd: var(--#{$form-control}__input--PaddingBlockEnd);
       --#{$form-control}--PaddingInlineStart: var(--#{$form-control}__input--PaddingInlineStart);
       --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}__input--PaddingInlineEnd);
+      --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
     }
   }
   
@@ -235,6 +236,7 @@
       --#{$form-control}--PaddingBlockEnd: calc(var(--#{$form-control}__textarea--PaddingBlockEnd) - var(--#{$form-control}--textarea--PaddingBlockEnd--offset));
       --#{$form-control}--PaddingInlineStart: calc(var(--#{$form-control}__textarea--PaddingInlineStart) - var(--#{$form-control}--textarea--PaddingInlineStart--offset));
       --#{$form-control}--PaddingInlineEnd: calc(var(--#{$form-control}__textarea--PaddingInlineEnd) - var(--#{$form-control}--textarea--PaddingInlineEnd--offset) + var(--#{$form-control}--m-status--PaddingInlineEnd--offset, 0px));
+      --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
     }
 
     > textarea {
@@ -294,26 +296,14 @@
 
     > textarea {
       padding-inline-end: var(--#{$form-control}--m-error--PaddingInlineEnd, var(--#{$form-control}__textarea--m-error--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
-      }
     }
     
     > input {
       padding-inline-end: var(--#{$form-control}--m-error--PaddingInlineEnd, var(--#{$form-control}__input--m-error--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
-      }
     }
     
     > select {
       padding-inline-end: var(--#{$form-control}__select--m-error--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-error--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
-      }
     }
 
     &.pf-m-icon {
@@ -331,26 +321,14 @@
 
     > textarea {
       padding-inline-end: var(--#{$form-control}--m-success--PaddingInlineEnd, var(--#{$form-control}__textarea--m-success--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
-      }
     }
     
     > input {
       padding-inline-end: var(--#{$form-control}--m-success--PaddingInlineEnd, var(--#{$form-control}__input--m-success--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
-      }
     }
     
     > select {
       padding-inline-end: var(--#{$form-control}__select--m-success--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-success--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
-      }
     }
 
     &.pf-m-icon {
@@ -368,26 +346,14 @@
     
     > textarea {
       padding-inline-end: var(--#{$form-control}--m-warning--PaddingInlineEnd, var(--#{$form-control}__textarea--m-warning--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
-      }
     }
     
     > input {
       padding-inline-end: var(--#{$form-control}--m-warning--PaddingInlineEnd, var(--#{$form-control}__input--m-warning--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
-      }
     }
     
     > select {
       padding-inline-end: var(--#{$form-control}__select--m-warning--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-warning--PaddingInlineEnd));
-
-      & + .#{$form-control}__utilities {
-        padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
-      }
     }
     
     &.pf-m-icon {
@@ -411,6 +377,7 @@
     --#{$form-control}--PaddingBlockEnd: var(--#{$form-control}__select--PaddingBlockEnd);
     --#{$form-control}--PaddingInlineStart: var(--#{$form-control}__select--PaddingInlineStart);
     --#{$form-control}--PaddingInlineEnd: calc(var(--#{$form-control}__select--PaddingInlineEnd) + var(--#{$form-control}__icon--FontSize));
+    --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
 
     & .#{$form-control}__utilities {
       padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
