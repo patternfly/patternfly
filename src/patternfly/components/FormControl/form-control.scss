@@ -88,13 +88,17 @@
   // success
   --#{$form-control}--m-success--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-success--after--BorderColor: var(--pf-t--global--border--color--status--success--default);
+  --#{$form-control}--m-success--PaddingInlineEnd: initial; // remove in breaking change
+  --#{$form-control}__select--m-success--m-status--PaddingInlineEnd: initial; // remove in breaking change
   --#{$form-control}__input--m-success--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--input--PaddingInlineEnd));
   --#{$form-control}__select--m-success--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--select--PaddingInlineEnd));
   --#{$form-control}__textarea--m-success--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--textarea--PaddingInlineEnd));
-  
+
   // warning
   --#{$form-control}--m-warning--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-warning--after--BorderColor: var(--pf-t--global--border--color--status--warning--default);
+  --#{$form-control}--m-warning--PaddingInlineEnd: initial; // remove in breaking change
+  --#{$form-control}__select--m-warning--m-status--PaddingInlineEnd: initial; // remove in breaking change
   --#{$form-control}__input--m-warning--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--input--PaddingInlineEnd));
   --#{$form-control}__select--m-warning--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--select--PaddingInlineEnd));
   --#{$form-control}__textarea--m-warning--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--textarea--PaddingInlineEnd));
@@ -102,6 +106,9 @@
   // error
   --#{$form-control}--m-error--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--m-error--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+  --#{$form-control}--m-error--PaddingInlineEnd: initial; // remove in breaking change
+  --#{$form-control}__select--m-error--m-status--PaddingInlineEnd: initial; // remove in breaking change
+  --#{$form-control}--m-error--icon--width: var(--#{$form-control}--FontSize); // remove in breaking change
   --#{$form-control}__input--m-error--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--input--PaddingInlineEnd));
   --#{$form-control}__select--m-error--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}__utilities--Gap) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--select--PaddingInlineEnd));
   --#{$form-control}__textarea--m-error--PaddingInlineEnd: calc(var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--ColumnGap) + var(--#{$form-control}__utilities--textarea--PaddingInlineEnd));
@@ -131,10 +138,12 @@
   // Form control utilities
   --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--gap--group--horizontal);
   --#{$form-control}__utilities--PaddingBlockStart: var(--#{$form-control}--PaddingBlockStart);
+  --#{$form-control}__utilities--PaddingInlineEnd: var(--#{$form-control}--PaddingInlineEnd--base);
   --#{$form-control}__utilities--textarea--PaddingBlockStart: calc(var(--#{$form-control}__textarea--PaddingBlockStart) - var(--pf-v6-c-form-control--textarea--PaddingBlockStart--offset));
 
   // Form control select toggle icon
-  --#{$form-control}__toggle-icon--PaddingInlineStart: var(--#{$form-control}--inset--base);
+  --#{$form-control}__toggle-icon--PaddingInlineStart: 0; // remove in breaking change
+  --#{$form-control}__toggle-icon--PaddingInlineEnd: 0; // remove in breaking change
   --#{$form-control}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}__toggle-icon--FontSize: var(--pf-t--global--icon--size--font--body--default); 
   --#{$form-control}--m-disabled__toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
@@ -284,7 +293,7 @@
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-error--after--BorderWidth);
 
     > textarea {
-      padding-inline-end: var(--#{$form-control}__textarea--m-error--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}--m-error--PaddingInlineEnd, var(--#{$form-control}__textarea--m-error--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
@@ -292,7 +301,7 @@
     }
     
     > input {
-      padding-inline-end: var(--#{$form-control}__input--m-error--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}--m-error--PaddingInlineEnd, var(--#{$form-control}__input--m-error--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
@@ -300,7 +309,7 @@
     }
     
     > select {
-      padding-inline-end: var(--#{$form-control}__select--m-error--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}__select--m-error--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-error--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
@@ -321,7 +330,7 @@
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-success--after--BorderWidth);
 
     > textarea {
-      padding-inline-end: var(--#{$form-control}__textarea--m-success--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}--m-success--PaddingInlineEnd, var(--#{$form-control}__textarea--m-success--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
@@ -329,7 +338,7 @@
     }
     
     > input {
-      padding-inline-end: var(--#{$form-control}__input--m-success--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}--m-success--PaddingInlineEnd, var(--#{$form-control}__input--m-success--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
@@ -337,7 +346,7 @@
     }
     
     > select {
-      padding-inline-end: var(--#{$form-control}__select--m-success--PaddingInlineEnd);
+      padding-inline-end: var--#{$form-control}__select--m-success--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-success--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
@@ -358,7 +367,7 @@
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-warning--after--BorderWidth);
     
     > textarea {
-      padding-inline-end: var(--#{$form-control}__textarea--m-warning--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}--m-warning--PaddingInlineEnd, var(--#{$form-control}__textarea--m-warning--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--textarea--PaddingInlineEnd);
@@ -366,7 +375,7 @@
     }
     
     > input {
-      padding-inline-end: var(--#{$form-control}__input--m-warning--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}--m-warning--PaddingInlineEnd, var(--#{$form-control}__input--m-warning--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
@@ -374,7 +383,7 @@
     }
     
     > select {
-      padding-inline-end: var(--#{$form-control}__select--m-warning--PaddingInlineEnd);
+      padding-inline-end: var(--#{$form-control}__select--m-warning--m-status--PaddingInlineEnd, var(--#{$form-control}__select--m-warning--PaddingInlineEnd));
 
       & + .#{$form-control}__utilities {
         padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
@@ -395,10 +404,6 @@
   
   &.pf-m-icon {
     --#{$form-control}--PaddingInlineEnd: var(--#{$form-control}--m-icon--PaddingInlineEnd);
-
-    .#{$form-control}__utilities {
-      padding-inline-end: var(--#{$form-control}__utilities--input--PaddingInlineEnd);
-    }
   }
 
   &:has(select) {
@@ -476,6 +481,8 @@
 .#{$form-control}__toggle-icon {
   grid-row: 1 / 2;
   grid-column: 3;
+  padding-inline-start: var(--#{$form-control}__toggle-icon--PaddingInlineStart);
+  padding-inline-end: var(--#{$form-control}__toggle-icon--PaddingInlineEnd);
   font-size: var(--#{$form-control}__toggle-icon--FontSize);
   color: var(--#{$form-control}__toggle-icon--Color);
   pointer-events: none;
@@ -488,5 +495,6 @@
   grid-column: 2;
   gap: var(--#{$form-control}__utilities--Gap);
   padding-block-start: var(--#{$form-control}__utilities--PaddingBlockStart);
+  padding-inline-end: var(--#{$form-control}__utilities--PaddingInlineEnd);
   pointer-events: none;
 }
