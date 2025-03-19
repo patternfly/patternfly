@@ -20,7 +20,7 @@ jobs:
       # Injected by generate-workflows.js
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
       # - uses: actions/cache@v4
       #   id: yarn-cache
       #   name: Load npm deps from cache
