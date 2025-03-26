@@ -4599,10 +4599,10 @@ bach@^1.0.0:
     async-settle "^1.0.0"
     now-and-later "^2.0.0"
 
-backstopjs@^6.3.23:
-  version "6.3.23"
-  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-6.3.23.tgz#33e7ad7d9739ea60bd5c2ff783eee5a13cb669ab"
-  integrity sha512-GRSth3jEWI0goJ5ETA+D6QsK7ZZi0+qvZ0AAroGoLODCb20Y7NG3gc0Egnf4Qdrqg4D+seJHVjfZwqm3nuYqZg==
+backstopjs@^6.3.25:
+  version "6.3.25"
+  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-6.3.25.tgz#751533f03eb8a6a62de06991cbb9ed51bcd367cd"
+  integrity sha512-jy0dxlk45tItXLcj9zjRTCyCa6D27M9OMK5kM8To0ELLclKhI/dWn/igUTMBBMJXe4Kql+CGyDRErMtTv2+40Q==
   dependencies:
     "@mirzazeyrek/node-resemble-js" "^1.2.1"
     chalk "^4.1.2"
