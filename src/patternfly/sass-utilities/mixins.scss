@@ -370,15 +370,19 @@
 // [dir="rtl"] {
 //   background: red;
 // }
-@mixin pf-v6-rtl {
-  @at-root :where(.#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+@mixin pf-v6-rtl($hasWhere: true) {
+  $sel: if($hasWhere,':where',':is');
+
+  @at-root #{$sel}(.#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
     @content;
   }
 }
 
 // Used to create the LTR selector for LTR specific styles
-@mixin pf-v6-ltr {
-  @at-root :where(.#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
+@mixin pf-v6-ltr($hasWhere: true) {
+  $sel: if($hasWhere,':where',':is');
+
+  @at-root #{$sel}(.#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
     @content;
   }
 }

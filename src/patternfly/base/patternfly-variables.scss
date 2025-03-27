@@ -15,6 +15,6 @@
   @include dark.pf-v6-tokens;
 }
 
-@include pf-v6-rtl {
+@include pf-v6-rtl(false) {
   @include pf-v6-set-inverse;
 }
