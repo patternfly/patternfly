@@ -74,11 +74,11 @@
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-error--Color);
     --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-error__item-icon--Color);
 
-    animation-name: --#{$helper-text}-item-fade-in;
+    animation-name: #{$helper-text}-item-fade-in;
     animation-duration: var(--#{$helper-text}__item--m-error--TransitionDuration--Opacity);
-    animation-timing-function: var(--#{$helper-text}__item--m-error--TransitionTimingFunction--Opacity); 
-    
-    @keyframes --#{$helper-text}-item-fade-in {
+    animation-timing-function: var(--#{$helper-text}__item--m-error--TransitionTimingFunction--Opacity);
+
+    @keyframes #{$helper-text}-item-fade-in {
       from {
         opacity: 0;
       }
@@ -102,4 +102,3 @@
 .#{$helper-text}__item-text {
   color: var(--#{$helper-text}__item-text--Color);
 }
-
