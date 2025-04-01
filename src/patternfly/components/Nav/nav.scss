@@ -75,14 +75,10 @@
   --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap); // needed to keep focus outline on first item from being cut off
   --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap); // needed to keep focus outline on last item from being cut off
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__subnav--TransitionDuration--expansion: 0s; // no slide by default
-  --#{$nav}__subnav--hidden--TransitionDuration--expansion: 0s;
+  --#{$nav}__subnav--TransitionProperty: opacity;
+  --#{$nav}__subnav--TransitionDuration--expansion: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$nav}__subnav--hidden--TransitionDuration--expansion: var(--pf-t--global--motion--duration--slide-in--short);
   --#{$nav}__subnav--TransitionTimingFunction--expansion: var(--pf-t--global--motion--timing-function--default);
-
-  @media (prefers-reduced-motion: no-preference) {
-    --#{$nav}__subnav--TransitionDuration--expansion: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$nav}__subnav--hidden--TransitionDuration--expansion: var(--pf-t--global--motion--duration--slide-in--short);
-  }
 
   // * Nav scroll button
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
@@ -180,7 +176,7 @@
 }
 
 [class^="#{$nav}"][hidden] {
-  visibility: hidden;
+  display: none;
 }
 
 // Magic value calcs
@@ -191,8 +187,6 @@
   --#{$nav}__item--RowGap--row-offset: calc(var(--#{$nav}__list--RowGap) / 2 * -1); // row gap offset calcs 1/2 height of row gap
   --#{$nav}__link--clickable-inset--Block: var(--#{$nav}__item--RowGap--row-offset); // set link's clickable area offset based on 1/2 row gap
   --#{$nav}__button--RowGap--row-offset: calc(var(--#{$nav}__item--RowGap) * -1); // match extra bottom paddings applied to expanded nav_links
-
-  visibility: visible;
 }
 
 // - Nav list
@@ -214,15 +208,25 @@
   overflow-y: clip;
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--expansion);
   transition-duration: var(--#{$nav}__subnav--TransitionDuration--expansion);
-  transition-property: grid-template-rows, padding-block-start, padding-block-end, opacity;
+  transition-property: var(--#{$nav}__subnav--TransitionProperty);
   
   &[hidden] {
     --#{$nav}__subnav--TransitionDuration--expansion: var(--#{$nav}__subnav--hidden--TransitionDuration--expansion);
     --#{$nav}__subnav--PaddingBlockStart: 0;
     --#{$nav}__subnav--PaddingBlockEnd: 0;
 
+    display: grid; // overrides `display: none` - element is hidden via `visibility: hidden`
     grid-template-rows: 0fr;
     opacity: 0;
+    animation-name: pf-remove-tab-focus;
+    animation-delay: var(--#{$nav}__subnav--TransitionDuration--expansion);
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes pf-remove-tab-focus {
+  to {
+    visibility: hidden;
   }
 }
 
