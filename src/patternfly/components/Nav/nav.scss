@@ -205,13 +205,13 @@
   padding-block-end: var(--#{$nav}__subnav--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
-  transition-delay: 0s, var(--#{$nav}__subnav--TransitionDelay--expand--visibility, 0s);
+  transition-delay: 0s, var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s);
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--expand);
-  transition-duration: var(--#{$nav}__subnav--TransitionDuration--expand), 0s;
-  transition-property: opacity, visibility;
+  transition-duration: var(--#{$nav}__subnav--TransitionDuration--expand), 0s, 0s, 0s, 0s;
+  transition-property: opacity, visibility, grid-template-rows, padding-block-start, padding-block-end;
   
   &[hidden] {
-    --#{$nav}__subnav--TransitionDelay--expand--visibility: var(--#{$nav}__subnav--TransitionDuration--expand);
+    --#{$nav}__subnav--TransitionDelay--expand--focus: var(--#{$nav}__subnav--TransitionDuration--expand);
     --#{$nav}__subnav--TransitionDuration--expand: var(--#{$nav}__subnav--TransitionDuration--collapse);
     --#{$nav}__subnav--PaddingBlockStart: 0;
     --#{$nav}__subnav--PaddingBlockEnd: 0;
