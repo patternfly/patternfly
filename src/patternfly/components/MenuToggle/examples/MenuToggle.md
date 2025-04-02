@@ -1034,4 +1034,3 @@ Shown with default, primary, and secondary styling
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
 | `.pf-m-placeholder` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle text for placeholder styles. |
-| `.pf-m-avatar` | `.pf-v6-c-menu-toggle__icon` | Modifies the menu toggle icon for avatar styles. |
