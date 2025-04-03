@@ -190,15 +190,11 @@
     padding-inline-start: var(--#{$form-control}--PaddingInlineStart);
     padding-inline-end: var(--#{$form-control}--PaddingInlineEnd);
     color: var(--#{$form-control}--Color);
+    appearance: none;
     background-color: transparent;
     border: none;
     border-radius: var(--#{$form-control}--BorderRadius);
     outline-offset: var(--#{$form-control}--OutlineOffset);
-
-    // stylelint-disable
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    // stylelint-enable
   }
 
   > ::placeholder {
