@@ -53,27 +53,27 @@ Apply the `pf-m-ignore-resizing` class to the `pf-v6-c-truncate` element to impl
 
 ```hbs
 <div>Truncated at end position:</div>
-{{#> truncate truncate--id='max-chars-truncation-example'}}
-  redhat_logo_black_and_white_reversed_simple_with_
+{{#> truncate truncate--ShouldIgnoreResize=true}}
+  <span>redhat_logo_black_and_white_reversed_simple_with_</span>
   <span aria-hidden="true">…</span>
   {{#> screen-reader}}fedora_container.zip{{/screen-reader}}
 {{/truncate}}
 <br />
 <br />
 <div>Truncated at middle position:</div>
-{{#> truncate truncate--id='max-chars-truncation-example'}}
-  redhat_logo_black_and_
+{{#> truncate truncate--ShouldIgnoreResize=true}}
+  <span>redhat_logo_black_and_</span>
   {{#> screen-reader}}white_reversed_simple_with_{{/screen-reader}}
   <span aria-hidden="true">…</span>
-  fedora_container.zip
+  <span>fedora_container.zip</span>
 {{/truncate}}
 <br />
 <br />
 <div>Truncated at start position:</div>
-{{#> truncate truncate--id='max-chars-truncation-example'}}
+{{#> truncate truncate--ShouldIgnoreResize=true}}
   {{#> screen-reader}}redhat_logo_black_{{/screen-reader}}
   <span aria-hidden="true">…</span>
-  and_white_reversed_simple_with_fedora_container.zip
+  <span>and_white_reversed_simple_with_fedora_container.zip</span>
 {{/truncate}}
 ```
 
