@@ -17,6 +17,7 @@
   --#{$card}__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$card}__title-text--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$card}__title-text--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --#{$card}__title-text--OverflowWrap: break-word;
   --#{$card}--c-button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$card}__body--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$card}__footer--FontSize: var(--pf-t--global--font--size--body--default);
@@ -311,11 +312,13 @@
 }
 
 .#{$card}__title-text {
+  overflow: auto;
   font-family: var(--#{$card}__title-text--FontFamily);
   font-size: var(--#{$card}__title-text--FontSize);
   font-weight: var(--#{$card}__title-text--FontWeight);
   line-height: var(--#{$card}__title-text--LineHeight);
   color: var(--#{$card}__title-text--Color);
+  overflow-wrap: var(--#{$card}__title-text--OverflowWrap);
 }
 
 .#{$card}__actions {
