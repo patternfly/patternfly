@@ -11,7 +11,7 @@
   align-items: baseline;
   min-width: var(--#{$truncate}--MinWidth);
 
-  &.pf-m-ignore-resizing {
+  &.pf-m-fixed {
     display: inline;
     min-width: 0;
   }

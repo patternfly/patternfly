@@ -8,7 +8,7 @@ import './Truncate.css'
 
 ## Examples
 
-The default behavior of the `Truncate` component is to truncate based on whether the content can fit within the width of its parent container, and to prevent text from wrapping. The following examples that use this default behavior render the `Truncate` component inside a resizable container, allowing you to see how the parent container width affects the truncation.
+The default behavior of the truncate component is to truncate based on whether the content can fit within the width of its parent container, and to prevent text from wrapping. The following examples that use this default behavior render the truncate component inside a resizable container, allowing you to see how the parent container width affects the truncation.
 
 ### Default
 
@@ -49,31 +49,39 @@ When only the `.pf-v6-c-truncate__end` element is used, truncation will occur at
 
 ### Based on max characters
 
-Apply the `pf-m-ignore-resizing` class to the `pf-v6-c-truncate` element to implement truncation based on an amount of characters rather than a parent container width. You must ensure that the omission designator (typically an ellipsis) is removed from the accessibility tree by wrapping it in a `<span>` with the `aria-hidden="true"` attribute.
+Apply the `.pf-m-fixed` class to the `.pf-v6-c-truncate` element to implement truncation based on a fixed amount of characters rather than a parent container width. You must ensure that the omission designator (typically an ellipsis) is removed from the accessibility tree by wrapping it in a `<span>` with the `aria-hidden="true"` attribute.
 
 ```hbs
 <div>Truncated at end position:</div>
-{{#> truncate truncate--ShouldIgnoreResize=true}}
-  <span>redhat_logo_black_and_white_reversed_simple_with_</span>
-  <span aria-hidden="true">…</span>
+{{#> truncate truncate--IsFixed=true}}
+  {{#> truncate-text}}
+    redhat_logo_black_and_white_reversed_simple_with_
+  {{/truncate-text}}
+  {{> truncate-omission}}
   {{#> screen-reader}}fedora_container.zip{{/screen-reader}}
 {{/truncate}}
 <br />
 <br />
 <div>Truncated at middle position:</div>
-{{#> truncate truncate--ShouldIgnoreResize=true}}
-  <span>redhat_logo_black_and_</span>
+{{#> truncate truncate--IsFixed=true}}
+  {{#> truncate-text}}
+    redhat_logo_black_and_
+  {{/truncate-text}}
   {{#> screen-reader}}white_reversed_simple_with_{{/screen-reader}}
-  <span aria-hidden="true">…</span>
-  <span>fedora_container.zip</span>
+  {{> truncate-omission}}
+  {{#> truncate-text}}
+    fedora_container.zip
+  {{/truncate-text}}
 {{/truncate}}
 <br />
 <br />
 <div>Truncated at start position:</div>
-{{#> truncate truncate--ShouldIgnoreResize=true}}
+{{#> truncate truncate--IsFixed=true}}
   {{#> screen-reader}}redhat_logo_black_{{/screen-reader}}
-  <span aria-hidden="true">…</span>
-  <span>and_white_reversed_simple_with_fedora_container.zip</span>
+  {{> truncate-omission}}
+  {{#> truncate-text}}
+    and_white_reversed_simple_with_fedora_container.zip
+  {{/truncate-text}}
 {{/truncate}}
 ```
 
@@ -84,7 +92,7 @@ Apply the `pf-m-ignore-resizing` class to the `pf-v6-c-truncate` element to impl
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-truncate` | `<span>` | Initiates the truncate component. **Required** |
-| `.pf-v6-c-truncate__start` | `<span>` | Defines the truncate component starting text. |
-| `.pf-v6-c-truncate__end` | `<span>` | Defines the truncate component ending text. |
-| `.pf-m-ignore-resizing` | `span.pf-v6-c-truncate` | Modifies the truncate component to ignore resizing and container widths for truncation. |
-| `.pf-v6-screen-reader` | `.pf-v6-c-truncate span` | Visually hides text when truncation is meant to occur based on a maximum amount of characters rather than resizing/container width. | 
+| `.pf-v6-c-truncate__start` | `.pf-v6-c-truncate span` | Defines the truncate component starting text. Only to be used when the `.pf-m-fixed` class is **not** applied to the `.pf-v6-c-truncate` element. |
+| `.pf-v6-c-truncate__end` | `.pf-v6-c-truncate span` | Defines the truncate component ending text. Only to be used when the `.pf-m-fixed` class is **not** applied to the `.pf-v6-c-truncate` element. |
+| `.pf-v6-c-truncate__text` | `.pf-v6-c-truncate.pf-m-fixed span` | Defines the visible truncate component text when the `pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
+| `.pf-m-fixed` | `.pf-v6-c-truncate` | Modifies the truncate component to base truncation on a fixed amount of characters rather than container width. |
