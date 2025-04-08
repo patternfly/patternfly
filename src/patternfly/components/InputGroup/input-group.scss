@@ -31,6 +31,12 @@
   // Input group text, disabled variant
   --#{$input-group}__item--m-disabled__text--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$input-group}__item--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+
+    // Input group search expanded
+  --#{$input-group}__text-input--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
+  --#{$input-group}__text-input--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
+  --#{$input-group}__text-input--TransitionTimingFunction--Width: var(--pf-t--global--motion--timing-function--default);
+  --#{$input-group}__text-input--TransitionDuration--Width: var(--pf-t--global--motion--duration--slide-in--short);
 }
 
 .#{$input-group} {
@@ -38,6 +44,46 @@
   gap: var(--#{$input-group}--Gap);
   width: 100%;
 }
+
+@mixin pf-v6-c-input-group-fade-in {
+    animation-name: #{$input-group}-fade-in;
+    animation-duration: var(
+      --#{$input-group}__text-input--TransitionDuration--Opacity
+    );
+    animation-timing-function: var(
+      --#{$input-group}__text-input--TransitionTimingFunction--Opacity
+    );
+
+    @keyframes #{$input-group}-fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .#{$input-group}__search-expandable.pf-m-expanded { 
+    .#{$text-input-group},
+    .#{$button}__icon {
+      @include pf-v6-c-input-group-fade-in;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .#{$input-group}__item {
+        flex-grow: 0;
+        transition-timing-function: var(--#{$input-group}__text-input--TransitionTimingFunction--Width);
+        transition-duration: var(--#{$input-group}__text-input--TransitionDuration--Width);
+        transition-property: flex-grow;
+        
+        &.pf-m-fill {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
 
 .#{$input-group}__item {
   position: relative; // stack items without explicit z-index
