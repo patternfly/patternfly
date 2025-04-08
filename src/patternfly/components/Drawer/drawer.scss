@@ -27,15 +27,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$drawer}__panel--TransitionDelay--expand--visibility: 0s; // on expand, transition visible immediately
-  --#{$drawer}__panel--TransitionDelay--collapse--visibility: var(--#{$drawer}__panel--TransitionDuration--opacity); // on collapse, delay until opacity transitions
-  --#{$drawer}__panel--TransitionDelay--visibility: var(--#{$drawer}__panel--TransitionDelay--collapse--visibility); // TODO should be collapse but this BREAKS first time for normal and all the time for reduced motion
-  --#{$drawer}__panel--TransitionDelay: 0s, var(--#{$drawer}__panel--TransitionDelay--visibility);
+  --#{$drawer}__panel--TransitionDelay: 0s, var(--#{$drawer}__panel--TransitionDelay--focus), var(--#{$drawer}__panel--TransitionDelay--focus);
+  --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDuration--fade);
+  --#{$drawer}__panel--TransitionDelay--expand--focus: 0s; // on expand, transition visible immediately
   --#{$drawer}__panel--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
-  --#{$drawer}__panel--TransitionDuration--visibility: var(--pf-t--global--motion--duration--fade--default);
-  --#{$drawer}__panel--TransitionDuration--opacity: var(--pf-t--global--motion--duration--fade--default);
-  --#{$drawer}__panel--TransitionDuration: var(--#{$drawer}__panel--TransitionDuration--opacity), 0s;
-  --#{$drawer}__panel--TransitionProperty: opacity, visibility; // by default, fade the drawer
+  --#{$drawer}__panel--TransitionDuration--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$drawer}__panel--TransitionDuration: var(--#{$drawer}__panel--TransitionDuration--fade), 0s, 0s;
+  --#{$drawer}__panel--TransitionProperty: opacity, visibility, transform; // by default, fade the drawer
   --#{$drawer}__panel--Opacity: 0;
   --#{$drawer}--m-expanded__panel--Opacity: 1;
   --#{$drawer}__panel--FlexBasis: 100%;
@@ -55,10 +53,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$drawer}__panel--TransitionDelay--collapse--visibility: var(--#{$drawer}__panel--TransitionDuration); // on collapse, delay until everything transitions
-    --#{$drawer}__panel--TransitionDelay: 0s, 0s, 0s, 0s, var(--#{$drawer}__panel--TransitionDelay--visibility);
+    --#{$drawer}__panel--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDuration--slide);
+    --#{$drawer}__panel--TransitionDelay: 0s, 0s, 0s, 0s, var(--#{$drawer}__panel--TransitionDelay--focus);
     --#{$drawer}__panel--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
-    --#{$drawer}__panel--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$drawer}__panel--TransitionDuration: 0s, var(--#{$drawer}__panel--TransitionDuration--slide), 0s, 0s, 0s;
     --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis, visibility; // with no preference, slide the panel
     --#{$drawer}__panel--Opacity: 1;
   }
@@ -222,6 +221,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
+    --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDelay--expand--focus);
+
     > .#{$drawer}__main > .#{$drawer}__panel {
       @include pf-v6-bidirectional-style(
         $prop: transform,
@@ -230,8 +231,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       );
 
       --#{$drawer}__panel--Opacity: var(--#{$drawer}--m-expanded__panel--Opacity);
-      --#{$drawer}__panel--TransitionDelay--visibility: var(--#{$drawer}__panel--TransitionDelay--expand--visibility);
-      
+
       visibility: visible;
     }
 
@@ -513,9 +513,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   .#{$drawer} {
     min-width: var(--#{$drawer}__panel--MinWidth);
 
-    // stylelint-disable selector-max-class
-    // Expanded
-    &.pf-m-expanded > .#{$drawer}__main {
+    > .#{$drawer}__main {
       > .#{$drawer}__panel {
         box-shadow: var(--#{$drawer}--m-expanded__panel--BoxShadow);
       }
@@ -640,7 +638,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   .#{$drawer}.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel.pf-m-no-border {
     --#{$drawer}--m-expanded__panel--BoxShadow: none;
   }
-  // stylelint-enable
 
   .#{$drawer}__splitter {
     display: block;
