@@ -13,7 +13,8 @@
 
   &.pf-m-fixed {
     display: inline;
-    min-width: 0;
+    align-items: revert;
+    min-width: revert;
   }
 }
 

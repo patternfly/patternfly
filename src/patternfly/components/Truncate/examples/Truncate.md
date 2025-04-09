@@ -49,7 +49,7 @@ When only the `.pf-v6-c-truncate__end` element is used, truncation will occur at
 
 ### Based on max characters
 
-Apply the `.pf-m-fixed` class to the `.pf-v6-c-truncate` element to implement truncation based on a fixed amount of characters rather than a parent container width. You must ensure that the omission designator (typically an ellipsis) is removed from the accessibility tree by wrapping it in a `<span>` with the `aria-hidden="true"` attribute.
+Apply the `.pf-m-fixed` class to the `.pf-v6-c-truncate` element to implement truncation based on a fixed amount of characters rather than a parent container width.
 
 ```hbs
 <div>Truncated at end position:</div>
@@ -92,7 +92,7 @@ Apply the `.pf-m-fixed` class to the `.pf-v6-c-truncate` element to implement tr
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-truncate` | `<span>` | Initiates the truncate component. **Required** |
-| `.pf-v6-c-truncate__start` | `.pf-v6-c-truncate span` | Defines the truncate component starting text. Only to be used when the `.pf-m-fixed` class is **not** applied to the `.pf-v6-c-truncate` element. |
-| `.pf-v6-c-truncate__end` | `.pf-v6-c-truncate span` | Defines the truncate component ending text. Only to be used when the `.pf-m-fixed` class is **not** applied to the `.pf-v6-c-truncate` element. |
-| `.pf-v6-c-truncate__text` | `.pf-v6-c-truncate.pf-m-fixed span` | Defines the visible truncate component text when the `pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
+| `.pf-v6-c-truncate__start` | `<span>` | Defines the truncate component starting text. **Required** when using default/end or middle truncation, **except** for when the `.pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
+| `.pf-v6-c-truncate__end` | `<span>` | Defines the truncate component ending text. **Required** when using start or middle truncation, **except** for when the `.pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element.  |
+| `.pf-v6-c-truncate__text` | `<span>` | Defines the visible truncate component text. **Required** and should only be used when the `pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
 | `.pf-m-fixed` | `.pf-v6-c-truncate` | Modifies the truncate component to base truncation on a fixed amount of characters rather than container width. |
