@@ -280,7 +280,7 @@ import './MenuToggle.css'
 ### With avatar and text
 ```hbs
 {{#> menu-toggle}}
-  {{#> menu-toggle-icon menu-toggle-icon--HasAvatar=true}}
+  {{#> menu-toggle-icon}}
     {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
@@ -294,7 +294,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsExpanded="true"}}
-  {{#> menu-toggle-icon menu-toggle-icon--HasAvatar=true}}
+  {{#> menu-toggle-icon}}
     {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
@@ -308,7 +308,7 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsDisabled="true"}}
-  {{#> menu-toggle-icon menu-toggle-icon--HasAvatar=true}}
+  {{#> menu-toggle-icon}}
     {{> avatar avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
@@ -1034,4 +1034,3 @@ Shown with default, primary, and secondary styling
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
 | `.pf-m-placeholder` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle text for placeholder styles. |
-| `.pf-m-avatar` | `.pf-v6-c-menu-toggle__icon` | Modifies the menu toggle icon for avatar styles. |

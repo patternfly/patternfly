@@ -567,16 +567,28 @@
   flex-wrap: nowrap;
 }
 
+%pf-v6-menu-toggle__icon--MarginBlock {
+  margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
+  margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) * -1);
+}
+
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
-
+  
+  @at-root .#{$menu-toggle}:not(.pf-m-plain) & {
+    @extend %pf-v6-menu-toggle__icon--MarginBlock;
+  }
+  
   &.pf-m-avatar {
     .#{$avatar},
     img,
     svg {
-      margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
-      margin-block-end: calc(var(--#{$menu-toggle}--PaddingBlockEnd) * -1);
+      @extend %pf-v6-menu-toggle__icon--MarginBlock;
     }
+  }
+
+  :where(picture, img) {
+    vertical-align: middle;
   }
 }
 
