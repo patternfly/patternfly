@@ -27,9 +27,15 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$drawer}__panel--TransitionDelay: 0s, var(--#{$drawer}__panel--TransitionDelay--focus), var(--#{$drawer}__panel--TransitionDelay--focus);
+  --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDuration--fade);
+  --#{$drawer}__panel--TransitionDelay--expand--focus: 0s; // on expand, transition visible immediately
   --#{$drawer}__panel--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
-  --#{$drawer}__panel--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--short);
-  --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
+  --#{$drawer}__panel--TransitionDuration--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$drawer}__panel--TransitionDuration: var(--#{$drawer}__panel--TransitionDuration--fade), 0s, 0s;
+  --#{$drawer}__panel--TransitionProperty: opacity, visibility, transform; // by default, fade the drawer
+  --#{$drawer}__panel--Opacity: 0;
+  --#{$drawer}--m-expanded__panel--Opacity: 1;
   --#{$drawer}__panel--FlexBasis: 100%;
   --#{$drawer}__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}__panel--md--FlexBasis: 50%;
@@ -45,6 +51,16 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection: column;
   --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$drawer}__panel--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDuration--slide);
+    --#{$drawer}__panel--TransitionDelay: 0s, 0s, 0s, 0s, var(--#{$drawer}__panel--TransitionDelay--focus);
+    --#{$drawer}__panel--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+    --#{$drawer}__panel--TransitionDuration: 0s, var(--#{$drawer}__panel--TransitionDuration--slide), 0s, 0s, 0s;
+    --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis, visibility; // with no preference, slide the panel
+    --#{$drawer}__panel--Opacity: 1;
+  }
 
   // Drawer panel head
   --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -205,12 +221,18 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
+    --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDelay--expand--focus);
+
     > .#{$drawer}__main > .#{$drawer}__panel {
       @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(-100%),
         $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
       );
+
+      --#{$drawer}__panel--Opacity: var(--#{$drawer}--m-expanded__panel--Opacity);
+
+      visibility: visible;
     }
 
     &.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel {
@@ -297,8 +319,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   order: 1;
   max-height: var(--#{$drawer}__panel--MaxHeight);
   overflow: auto;
+  visibility: hidden; // hidden by default
   background-color: var(--#{$drawer}__panel--BackgroundColor);
   box-shadow: var(--#{$drawer}__panel--BoxShadow);
+  opacity: var(--#{$drawer}__panel--Opacity);
+  transition-delay: var(--#{$drawer}__panel--TransitionDelay);
   transition-timing-function: var(--#{$drawer}__panel--TransitionTimingFunction);
   transition-duration: var(--#{$drawer}__panel--TransitionDuration);
   transition-property: var(--#{$drawer}__panel--TransitionProperty);
@@ -359,9 +384,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   padding-block-start: var(--#{$drawer}__panel--PaddingBlockStart);
   padding-block-end: var(--#{$drawer}__panel--PaddingBlockEnd);
 }
-
-// Remove tab focus
-@include pf-v6-animate-remove-tab-focus(".#{$drawer}__panel", var(--#{$drawer}__panel--TransitionDuration));
 
 // Panel head
 .#{$drawer}__head {
@@ -491,9 +513,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   .#{$drawer} {
     min-width: var(--#{$drawer}__panel--MinWidth);
 
-    // stylelint-disable selector-max-class
-    // Expanded
-    &.pf-m-expanded > .#{$drawer}__main {
+    > .#{$drawer}__main {
       > .#{$drawer}__panel {
         box-shadow: var(--#{$drawer}--m-expanded__panel--BoxShadow);
       }
@@ -618,7 +638,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   .#{$drawer}.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel.pf-m-no-border {
     --#{$drawer}--m-expanded__panel--BoxShadow: none;
   }
-  // stylelint-enable
 
   .#{$drawer}__splitter {
     display: block;
