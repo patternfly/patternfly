@@ -48,7 +48,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^20.1.0",
     "@patternfly/documentation-framework": "6.9.1",
-    "@patternfly/patternfly-a11y": "5.0.0",
+    "@patternfly/patternfly-a11y": "5.1.0",
     "@patternfly/react-code-editor": "6.2.0",
     "@patternfly/react-core": "6.2.0",
     "@patternfly/react-table": "6.2.0",
