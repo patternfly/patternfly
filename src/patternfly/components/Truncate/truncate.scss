@@ -10,6 +10,12 @@
   grid-auto-flow: column;
   align-items: baseline;
   min-width: var(--#{$truncate}--MinWidth);
+
+  &.pf-m-fixed {
+    display: inline;
+    align-items: revert;
+    min-width: revert;
+  }
 }
 
 .#{$truncate}__start,
