@@ -94,5 +94,5 @@ Apply the `.pf-m-fixed` class to the `.pf-v6-c-truncate` element to implement tr
 | `.pf-v6-c-truncate` | `<span>` | Initiates the truncate component. **Required** |
 | `.pf-v6-c-truncate__start` | `<span>` | Defines the truncate component starting text. **Required** when using default/end or middle truncation, **except** for when the `.pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
 | `.pf-v6-c-truncate__end` | `<span>` | Defines the truncate component ending text. **Required** when using start or middle truncation, **except** for when the `.pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element.  |
-| `.pf-v6-c-truncate__text` | `<span>` | Defines the visible truncate component text. **Required** and should only be used when the `pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
+| `.pf-v6-c-truncate__text` | `<span>` | Defines the visible truncate component text. **Required** and should only be used when the `.pf-m-fixed` class is applied to the `.pf-v6-c-truncate` element. |
 | `.pf-m-fixed` | `.pf-v6-c-truncate` | Modifies the truncate component to base truncation on a fixed amount of characters rather than container width. |
