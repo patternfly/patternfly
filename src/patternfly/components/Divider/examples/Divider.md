@@ -19,7 +19,7 @@ import './Divider.css'
 ```hbs
 <ul role="list">
   <li>List item one</li>
-  {{> divider divider--type="li"}}
+  {{> divider divider--type="li" divider--role="presentation"}}
   <li>List item two</li>
 </ul>
 ```

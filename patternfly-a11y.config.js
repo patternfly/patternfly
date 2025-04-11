@@ -74,7 +74,8 @@ module.exports = {
     'color-contrast',
     'landmark-no-duplicate-main',
     'landmark-main-is-top-level',
-    'scrollable-region-focusable'
+    'scrollable-region-focusable',
+    'aria-required-children' // Remove once https://github.com/patternfly/patternfly-react/issues/9968 is resolved
   ].join(','),
   ignoreIncomplete: true,
   skip: '(mailto)|(/(developer-resources)/.+)'

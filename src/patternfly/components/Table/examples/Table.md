@@ -649,7 +649,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 {{#> table table--id="table-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead" table-tr--index="thead"}}
-      {{> table-cell-toggle}}
+      {{> table-cell-toggle table-tr--aria-controls="table-expandable-content-1 table-expandable-content-2 table-expandable-content-3 table-expandable-content-4"}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
@@ -779,7 +779,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 {{#> table table--id="expandable-set-width-columns-example" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table, set column widths example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-toggle table-tr--IsExpanded=true}}
+      {{> table-cell-toggle table-tr--IsExpanded=true table-tr--aria-controls="expandable-set-width-columns-example-content-1 expandable-set-width-columns-example-content-2 expandable-set-width-columns-example-content-3 expandable-set-width-columns-example-content-4"}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30" table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
@@ -929,7 +929,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 {{#> table table--id="table-expandable-nested-table" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable with nested table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-toggle}}
+      {{> table-cell-toggle table-tr--aria-controls="table-expandable-nested-table-content-1 table-expandable-nested-table-content-2 table-expandable-nested-table-content-3 table-expandable-nested-table-content-4"}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
         Repositories
@@ -1483,7 +1483,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 {{#> table table--id="table-compact-expandable" table--IsGrid=true table--IsCompact=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-toggle}}
+      {{> table-cell-toggle table-tr--aria-controls="table-compact-expandable-content-1 table-compact-expandable-content-2 table-compact-expandable-content-3 table-compact-expandable-content-4"}}
       {{> table-cell-check}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories

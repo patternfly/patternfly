@@ -7,7 +7,11 @@
   {{divider--attribute}}
 {{/if}}
 {{#if divider--type}}
-  role="separator"
+  {{#if divider--role}}
+    role={{divider--role}}
+  {{else}}
+    role="separator"
+  {{/if}}
 {{/if}}>
 {{#if divider--type}}
   </{{divider--type}}>
