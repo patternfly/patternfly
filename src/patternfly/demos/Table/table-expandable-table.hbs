@@ -1,7 +1,11 @@
 {{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-cell-toggle}}
+      {{> table-cell-toggle table-tr--aria-controls="expandable-demo-table-content-1 
+      expandable-demo-table-content-2 
+      expandable-demo-table-content-3 
+      expandable-demo-table-content-4 
+      expandable-demo-table-content-5"}}
       {{> table-cell-empty table-cell--text='Row select'}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
@@ -23,8 +27,8 @@
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody}}
-    {{#> table-tr table-tr--index='1'}}
+  {{#> table-tbody table-tr--index="1"}}
+    {{#> table-tr}}
       {{> table-cell-toggle}}
       {{> table-cell-check}}
       {{#> table-th table-th--data-label="Repository name"}}
@@ -51,10 +55,10 @@
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--index='2' table-tr--IsExpandable=true}}
+    {{#> table-tr table-tr--IsExpandable=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
-      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-1"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -68,9 +72,9 @@
     {{/table-tr}}
   {{/table-tbody}}
 
-  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--index='3' table-tr--IsExpanded=true}}
-      {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}
+  {{#> table-tbody table-tr--index='2' table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
       {{#> table-td table-td--IsCheckbox=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-node2"')}}{{/check-input}}
@@ -100,10 +104,10 @@
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--index='4' table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
-      {{#> table-td table-td--attribute=(concat 'colspan="5" id="' table--id '-content2"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="5" id="' table--id '-content-2"')}}
         <div class="{{pfv}}table__expandable-row-content">
           {{#> content}}
             <p>Git URL: <small>http://github.com/mindreeper2420/rhuxd.git</small></p>
@@ -118,9 +122,9 @@
     {{/table-tr}}
   {{/table-tbody}}
 
-  {{#> table-tbody}}
-    {{#> table-tr table-tr--index='5'}}
-      {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}
+  {{#> table-tbody table-tr--index='3'}}
+    {{#> table-tr}}
+      {{> table-cell-toggle}}
       {{#> table-td table-td--IsCheckbox=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-node3"')}}{{/check-input}}
@@ -150,8 +154,8 @@
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--index='6' table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content3"')}}
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content-3"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -164,9 +168,9 @@
     {{/table-tr}}
   {{/table-tbody}}
 
-  {{#> table-tbody}}
-    {{#> table-tr table-tr--index='7'}}
-      {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}
+  {{#> table-tbody table-tr--index='4'}}
+    {{#> table-tr}}
+      {{> table-cell-toggle}}
       {{#> table-td table-td--IsCheckbox=true}}
         {{#> check check--modifier="pf-m-standalone"}}
           {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-node4"')}}{{/check-input}}
@@ -196,8 +200,8 @@
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--index='8' table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content4"')}}
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content-4"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -210,9 +214,9 @@
     {{/table-tr}}
   {{/table-tbody}}
 
-  {{#> table-tbody}}
-    {{#> table-tr table-tr--index='9'}}
-      {{> table-td table-td--IsToggle=true table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 expandable-toggle5" id="expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}
+  {{#> table-tbody table-tr--index='5'}}
+    {{#> table-tr}}
+      {{> table-cell-toggle}}
       {{> table-cell-check}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
@@ -238,8 +242,8 @@
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--index='10' table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content5"')}}
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute=(concat 'colspan="9" id="' table--id '-content-5"')}}
         <div class="{{pfv}}table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
