@@ -353,7 +353,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     .#{$masthead} + &,
-    .#{$page}__sidebar.pf-m-collapsed + & {
+    .#{$page}__sidebar.pf-m-collapsed + &,
+    .#{$page}:not(:has(.#{$page}__sidebar)) & {
       --#{$page}__main-container--GridArea: var(--#{$page}--masthead--main-container--GridArea);
     }
 
