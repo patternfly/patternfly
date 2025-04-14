@@ -1,5 +1,7 @@
-{{#> page page--id=page-template--id page--modifier=page-template--modifier page-template-masthead-drilldown--IsHidden="true"}}
-  {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
+{{#> page page--id=page-template--id page--modifier=page-template--modifier page-template-masthead-drilldown--IsHidden="true" page--HasNoSidebar=page-template--HasNoSidebar}}
+  {{#unless page-template--HasNoMasthead}}
+    {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
+  {{/unless}}
   {{#unless page-template--HasNoSidebar}}
     {{> page-template-sidebar}}
   {{/unless}}

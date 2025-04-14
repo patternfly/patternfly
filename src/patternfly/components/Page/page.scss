@@ -14,8 +14,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
-  --#{$page}__sidebar--xl--Width: #{pf-size-prem(290px)}; // TODO Can remove at breaking change
+  --#{$page}__sidebar--Width--base: #{pf-size-prem(290px)};
+  --#{$page}__sidebar--Width: var(--#{$page}__sidebar--Width--base);
+  --#{$page}__sidebar--xl--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__sidebar--BoxShadow: none;
 
@@ -352,6 +353,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   -webkit-overflow-scrolling: touch;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+    @at-root .#{$page}.pf-m-no-sidebar,
     .#{$masthead} + &,
     .#{$page}__sidebar.pf-m-collapsed + & {
       --#{$page}__main-container--GridArea: var(--#{$page}--masthead--main-container--GridArea);
