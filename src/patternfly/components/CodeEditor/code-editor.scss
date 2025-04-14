@@ -157,7 +157,7 @@
 }
 
 .#{$code-editor}__main {
-  position: relative; 
+  position: relative;
   flex-grow: 1;
   color: var(--#{$code-editor}__main--Color, inherit);
   background-color: var(--#{$code-editor}__main--BackgroundColor);
@@ -175,6 +175,8 @@
   .monaco-editor {
     background-color: var(--#{$code-editor}__main--BackgroundColor);
   }
+
+  a.label-name { text-decoration-line: none; } // revert normalize.scss
   // stylelint-enable selector-class-pattern
 }
 
