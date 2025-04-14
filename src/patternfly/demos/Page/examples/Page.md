@@ -158,3 +158,13 @@ import './Page.css'
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-sidebar-expanded" page-sidebar--modifier="pf-m-expanded"}}
 ```
+
+### No sidebar
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-no-sidebar" page-template--HasNoSidebar=true}}
+```
+
+### No sidebar or masthead
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-no-sidebar-masthead" page-template--HasNoSidebar=true page-template--HasNoMasthead=true}}
+```
