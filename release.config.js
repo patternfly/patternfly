@@ -4,7 +4,6 @@ module.exports = {
     { name: 'v5', channel: 'prerelease-v5', range: '5.x' },
     { name: 'main', channel: 'prerelease', prerelease: 'prerelease' },
     { name: '6.2.x', channel: 'prerelease-bugfix', range: '6.2.x' }
-
   ],
   analyzeCommits: {
     preset: 'angular'
@@ -24,6 +23,6 @@ module.exports = {
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'v${version}',
+  tagFormat: 'patch-v${version}',
   dryRun: true
 };
