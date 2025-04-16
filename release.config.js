@@ -24,6 +24,6 @@ module.exports = {
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'patch-v${version}',
+  tagFormat: 'v${version}',
   dryRun: true
 };
