@@ -187,7 +187,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 ### Plain with no padding
 ```hbs
-For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--IsIcon=true button--icon="question-circle"}}.
+For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--IsIcon=true button--icon-template='assets/images/icon-help'}}.
 ```
 
 ### Stateful
