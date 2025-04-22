@@ -91,7 +91,7 @@ import './CodeEditor.css';
       {{/code-editor-controls}}
       {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
       {{#> code-editor-keyboard-shortcuts}}
-        {{#> button button--IsLink=true button--icon-template='assets/images/icon-help'}}
+        {{#> button button--IsLink=true button--icon-template="icon-help"}}
           View shortcuts
         {{/button}}
       {{/code-editor-keyboard-shortcuts}}
