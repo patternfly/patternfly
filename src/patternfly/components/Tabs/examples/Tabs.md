@@ -61,14 +61,14 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical tabs example
 ```hbs
-{{#> tabs tabs--id="vertical-tabs" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-tabs" tabs--modifier="pf-m-vertical"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expandable example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -76,7 +76,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expanded example
 ```hbs
-{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -84,7 +84,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expandable responsive example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -92,7 +92,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expandable example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -100,7 +100,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expanded example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -108,7 +108,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical expandable responsive example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -132,7 +132,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Box vertical example
 ```hbs
-{{#> tabs tabs--id="box-vertical" tabs--IsVertical=true tabs--modifier="pf-m-box"}}
+{{#> tabs tabs--id="box-vertical" tabs--modifier="pf-m-box pf-m-vertical"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
@@ -399,24 +399,21 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-v6-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
 | `.pf-v6-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
 | `.pf-v6-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
-| `.pf-m-subtab` | `.pf-v6-c-tabs` | Applies subtab styling to the tab component. |
+| `.pf-m-tubtab` | `.pf-v6-c-tabs` | Applies subtab styling to the tab component. |
 | `.pf-m-no-border-bottom` | `.pf-v6-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-v6-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-v6-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-v6-c-tabs` | Modifies the tabs to fill the available space. |
+| `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
+| `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
+| `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
+| `.pf-m-expanded` | `.pf-v6-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v6-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-page-insets` | `.pf-v6-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 | `.pf-m-secondary` | `.pf-v6-c-tabs.pf-m-box` | Modifies the tabs component tab background colors for the box variant. |
 | `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/tokens/all-patternfly-tokens). **Note:** works with vertical tabs only. |
 | `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-expanded` | `.pf-v6-c-tabs` | Modifies the expandable tabs component for the expanded state. |
-| `.pf-m-initializing-accent` | `.pf-v6-c-tabs` | Modifies tabs styles while initializing the "current" tab's accent styles. |
-| `--pf-v6-c-tabs--link-accent--start` | `.pf-v6-c-tabs` | Sets the value for the "start" inset of the current tab's accent. |
-| `--pf-v6-c-tabs--link-accent--length` | `.pf-v6-c-tabs` | Sets the value for the length of the current tab's accent. |
-| `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
-| `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
-| `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
-| `.pf-m-expanded` | `.pf-v6-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
 | `.pf-m-disabled` | `a.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles. |
 | `.pf-m-aria-disabled` | `.pf-v6-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
 
