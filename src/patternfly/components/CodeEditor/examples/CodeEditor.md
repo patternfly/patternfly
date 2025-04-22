@@ -91,7 +91,7 @@ import './CodeEditor.css';
       {{/code-editor-controls}}
       {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
       {{#> code-editor-keyboard-shortcuts}}
-        {{#> button button--IsLink=true button--icon="question-circle"}}
+        {{#> button button--IsLink=true button--icon-template="icon-help"}}
           View shortcuts
         {{/button}}
       {{/code-editor-keyboard-shortcuts}}
@@ -184,7 +184,7 @@ This is an extra container used in React to prevent event propagation if upload 
       {{/code-editor-controls}}
       {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
       {{#> code-editor-keyboard-shortcuts}}
-        {{#> button button--IsLink=true button--icon="question-circle"}}
+        {{#> button button--IsLink=true button--icon-template="icon-help"}}
           View shortcuts
         {{/button}}
       {{/code-editor-keyboard-shortcuts}}
