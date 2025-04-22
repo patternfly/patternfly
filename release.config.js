@@ -2,6 +2,7 @@ module.exports = {
   branches: [
     'do-not-delete-v6',
     { name: 'v5', channel: 'prerelease-v5', range: '5.x' },
+    { name: 'main', channel: 'prerelease', prerelease: 'prerelease' },
     'archieved-6.2.x',
     { name: '6.2.x', channel: 'prerelease-bugfix', range: '6.2.x' }
   ],
