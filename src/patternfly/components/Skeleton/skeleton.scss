@@ -13,8 +13,8 @@
 
   // After
   --#{$skeleton}--after--LinearGradientAngle: 90deg;
-  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--hover); // TODO: replace with new token
-  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover); 
+  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--hover);
+  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--default); 
   --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--hover);
   --#{$skeleton}--after--TranslateX: 0;
   --#{$skeleton}--after--AnimationName: #{$skeleton}-loading-reduced-motion;
@@ -24,7 +24,7 @@
   --#{$skeleton}--after--AnimationDelay: .5s;
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default); // TODO: replace with new token
+    --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default);
     --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover);
     --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--default);
     --#{$skeleton}--after--TranslateX: -100%;
@@ -220,7 +220,7 @@
 
 @keyframes #{$skeleton}-loading-reduced-motion {
   0% {
-    opacity: 0;
+    opacity: 0.25;
   }
 
   60% {
@@ -228,6 +228,6 @@
   }
 
   100% {
-    opacity: 0;
+    opacity: 0.25;
   }
 }
