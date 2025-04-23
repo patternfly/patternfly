@@ -14,14 +14,22 @@
   // After
   --#{$skeleton}--after--LinearGradientAngle: 90deg;
   --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default);
-  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover); // TODO: replace with new token
+  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover); 
   --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--default);
-  --#{$skeleton}--after--TranslateX: -100%;
-  --#{$skeleton}--after--AnimationName: #{$skeleton}-loading;
+  --#{$skeleton}--after--TranslateX: 0;
+  --#{$skeleton}--after--AnimationName: #{$skeleton}-loading-reduced-motion;
   --#{$skeleton}--after--AnimationDuration: 3s;
   --#{$skeleton}--after--AnimationIterationCount: infinite;
   --#{$skeleton}--after--AnimationTimingFunction: linear;
   --#{$skeleton}--after--AnimationDelay: .5s;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default);
+    --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover);
+    --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--default);
+    --#{$skeleton}--after--TranslateX: -100%;
+    --#{$skeleton}--after--AnimationName: #{$skeleton}-loading;
+  }
 
   // Circle
   --#{$skeleton}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -207,5 +215,19 @@
 
   100% {
     transform: translateX(100%);
+  }
+}
+
+@keyframes #{$skeleton}-loading-reduced-motion {
+  0% {
+    opacity: 0.25;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.25;
   }
 }
