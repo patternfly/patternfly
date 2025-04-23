@@ -13,9 +13,9 @@
 
   // After
   --#{$skeleton}--after--LinearGradientAngle: 90deg;
-  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--hover);
-  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--default); 
-  --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--hover);
+  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--secondary--default);
+  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--secondary--hover); 
+  --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--secondary--default);
   --#{$skeleton}--after--TranslateX: 0;
   --#{$skeleton}--after--AnimationName: #{$skeleton}-loading-reduced-motion;
   --#{$skeleton}--after--AnimationDuration: 3s;
