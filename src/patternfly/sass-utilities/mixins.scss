@@ -289,8 +289,6 @@
 @mixin pf-v6-animate-danger-jiggle($element) {
   --#{$element}--m-danger--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
   --#{$element}--m-danger--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
-  --#{$element}__status-icon--m-danger--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--icon--default);
-  --#{$element}__status-icon--m-danger--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
 
   translate: var(--#{$element}--m-danger--TranslateX, 0);
   animation-name: #{$element}-m-danger-motion;
@@ -311,19 +309,32 @@
   }
 }
 
-// Animate icon fade in
-@mixin pf-v6-animate-icon-fade-in($element) {
-  animation-name: #{$element}-status-icon-fade-in;
-  animation-duration: var(--#{$element}__status-icon--m-danger--TransitionDuration--Opacity);
-  animation-timing-function: var(--#{$element}__status-icon--m-danger--TransitionTimingFunction--Opacity);
+// Animate default fade in/out
+@mixin pf-v6-fade-default($element, $fade) {
+  --#{$element}--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
+  --#{$element}--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
+
+  animation-name: $fade;
+  animation-duration: var(--#{$element}--TransitionDuration--Opacity);
+  animation-timing-function: var(--#{$element}--TransitionTimingFunction--Opacity);
   
-  @keyframes #{$element}-status-icon-fade-in {
+  @keyframes fade-in {
     from {
       opacity: 0;
     }
 
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
     }
   }
 }

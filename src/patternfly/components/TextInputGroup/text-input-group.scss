@@ -198,7 +198,7 @@
     inset-inline-end: var(--#{$text-input-group}__icon--m-status--InsetInlineEnd);
     color: var(--#{$text-input-group}__icon--m-status--Color);
 
-    @include pf-v6-animate-icon-fade-in(#{$text-input-group});
+    @include pf-v6-fade-default(#{$text-input-group}, fade-in);
   }
 }
 
