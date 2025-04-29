@@ -289,6 +289,11 @@
   --#{$button}--m-favorited--hover__icon--Color: var(--pf-t--global--color--favorite--hover);
   --#{$button}--m-favorited__icon--AnimationDuration: var(--pf-t--global--motion--duration--icon--long);
   --#{$button}--m-favorited__icon--AnimationTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}__icon--favorite--Opacity: 1;
+  --#{$button}__icon--favorited--Opacity: 0;
+  --#{$button}--m-favorited__icon--favorite--Opacity: 0;
+  --#{$button}--m-favorited__icon--favorited--Opacity: 1;
+  --#{$button}__icon--favorite--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
 
   // Progress
   --#{$button}__progress--width: calc(var(--pf-t--global--icon--size--lg) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
@@ -641,8 +646,8 @@
     --#{$button}--FontSize: var(--#{$button}--m-display-lg--FontSize);
   }
 
-  // Favorite button icon will transition color
   &.pf-m-favorite .#{$button}__icon {
+    display: grid;
     transition-timing-function: var(--#{$button}--m-favorite__icon--TransitionTimingFunction);
     transition-duration: var(--#{$button}--m-favorite__icon--TransitionDuration);
     transition-property: color;
@@ -652,6 +657,8 @@
   &.pf-m-favorited {
     --#{$button}__icon--Color: var(--#{$button}--m-favorited__icon--Color);
     --#{$button}--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
+    --#{$button}__icon--favorite--Opacity: var(--#{$button}--m-favorited__icon--favorite--Opacity);
+    --#{$button}__icon--favorited--Opacity: var(--#{$button}--m-favorited__icon--favorited--Opacity);
   }
 
   // Favorite button will run an animation when favorited
@@ -755,6 +762,21 @@
   &.pf-m-end {
     --#{$button}__icon--MarginInlineStart: var(--#{$button}__icon--m-end--MarginInlineStart);
   }
+}
+
+.#{$button}__icon-favorite,
+.#{$button}__icon-favorited {
+  grid-area: 1 / 1 / 1 / 1;
+  transition-duration: var(--#{$button}__icon--favorite--TransitionDuration);
+  transition-property: opacity;
+}
+
+.#{$button}__icon-favorite {
+  opacity: var(--#{$button}__icon--favorite--Opacity);
+}
+
+.#{$button}__icon-favorited {
+  opacity: var(--#{$button}__icon--favorited--Opacity);
 }
 
 .#{$button}__progress {

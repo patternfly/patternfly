@@ -230,9 +230,9 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 ### Favorite
 A favorite button should use a plain button with the star icon. Applying `.pf-m-favorited` to the button initiates a microanimation and indicates that the item is favorited.
 ```hbs
-{{#> button button--icon="star" button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--aria-label="not starred"}}
+{{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--aria-label="not starred"}}
 {{/button}}
-{{#> button button--icon="star" button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--IsFavorited=true button--aria-label="starred"}}
+{{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--IsFavorited=true button--aria-label="starred"}}
 {{/button}}
 ```
 

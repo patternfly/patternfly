@@ -6,7 +6,10 @@
   {{#if button-icon--attribute}}
     {{{button-icon--attribute}}}
   {{/if}}>
-  {{#if button--icon}}
+  {{#if button--IsFavorite}}
+    <span class="{{pfv}}button__icon-favorite">{{> icon-outlined-star}}</span>
+    <span class="{{pfv}}button__icon-favorited">{{> icon-star}}</span>
+  {{else if button--icon}}
     <i class="fas fa-{{button--icon}}" aria-hidden="true"></i>
   {{else if button--icon-template}}
     {{! renders a hbs partial if passed as the value for button--icon-template}}
