@@ -14,9 +14,9 @@
   --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
   --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
   --#{$expandable-section}__content--TransitionDuration--expand--slide: 0s;
-  --#{$expandable-section}__content--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$expandable-section}__content--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$expandable-section}__content--TransitionDuration--collapse--slide: 0s;
-  --#{$expandable-section}__content--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--slide-in--short);
+  --#{$expandable-section}__content--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$expandable-section}__content--TransitionDuration--slide: var(--#{$expandable-section}__content--TransitionDuration--expand--slide);
   --#{$expandable-section}__content--TransitionDuration--fade: var(--#{$expandable-section}__content--TransitionDuration--expand--fade);
   --#{$expandable-section}__content--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
@@ -27,8 +27,8 @@
   --#{$expandable-section}--m-expanded__content--TranslateY: 0;
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$expandable-section}__content--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$expandable-section}__content--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$expandable-section}__content--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$expandable-section}__content--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--default);
     --#{$expandable-section}__content--TranslateY: -1rem;
   }
 
