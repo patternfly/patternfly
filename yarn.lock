@@ -2971,19 +2971,7 @@
     react-dropzone "14.3.5"
     tslib "^2.8.1"
 
-"@patternfly/react-core@6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.2.1.tgz#f3070f7dcb4a7127e9cab0e0d50dcfe8020a41f2"
-  integrity sha512-Yyw2WmM48bmKU7/AKPokUUmdbgUtNDndZbpTDvjJvhvQMiX1qbcXNFm8Y6y1F4+ZACP+FK9+b3PWykV/rWXHLQ==
-  dependencies:
-    "@patternfly/react-icons" "^6.2.1"
-    "@patternfly/react-styles" "^6.2.1"
-    "@patternfly/react-tokens" "^6.2.1"
-    focus-trap "7.6.4"
-    react-dropzone "^14.3.5"
-    tslib "^2.8.1"
-
-"@patternfly/react-core@^6.2.2":
+"@patternfly/react-core@6.2.2", "@patternfly/react-core@^6.2.2":
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-6.2.2.tgz#8965a727b64506366bdf4682bf86b9c2c7fc0fb3"
   integrity sha512-JUrZ57JQ4bkmed1kxaciXb0ZpIVYyCHc2HjtzoKQ5UNRlx204zR2isATSHjdw2GFcWvwpkC5/fU2BR+oT3opbg==
@@ -2995,20 +2983,10 @@
     react-dropzone "^14.3.5"
     tslib "^2.8.1"
 
-"@patternfly/react-icons@^6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.2.1.tgz#e3c68a54e5ccec1f8ca3c7c7f9bd8cb3a2834d90"
-  integrity sha512-0JcaSjRXZat2rPmXtGq6xHjTRRXZWTZTfmy6oPbXZjHNbW8L+qsRICA3VXxP3lWszMR6koV+rySUVt7tHXUUNw==
-
 "@patternfly/react-icons@^6.2.2":
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.2.2.tgz#6b19359df7618ea4ec6aa6da3af2a9a287666f23"
   integrity sha512-XkBwzuV/uiolX+T6QgB3RIqphM1m+vAZjAe3McYtyY22j1rsOdlWDE4RtRrJ1q7EoIZwyZHj0h8T9vMfUsLn4Q==
-
-"@patternfly/react-styles@^6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-6.2.1.tgz#02cb3a8e6ea512556cd957d5e782b8ef1c39fc48"
-  integrity sha512-3pM7dTak1tsbM9GhSMVywZUYaEr4vpowSGvCJoIUIqfUvDI5ab1pWWFlxIPfB60Q8Hym86xdy56gGe+d3SGBUQ==
 
 "@patternfly/react-styles@^6.2.2":
   version "6.2.2"
@@ -3026,11 +3004,6 @@
     "@patternfly/react-tokens" "^6.2.2"
     lodash "^4.17.21"
     tslib "^2.8.1"
-
-"@patternfly/react-tokens@^6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-6.2.1.tgz#4d35bccc4ce0dfd5e86eb7ab8800a661c4e9f6b1"
-  integrity sha512-5u36MIyPulsOK858pwa/WD2RpTwpbHTdmsF75ozljrfpKi5TLfknZXYb3tDpdzujTDX79bcw8WriqrNV8U6ykw==
 
 "@patternfly/react-tokens@^6.2.2":
   version "6.2.2"
