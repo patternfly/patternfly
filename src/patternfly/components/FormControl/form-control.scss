@@ -444,7 +444,7 @@
   &.pf-m-status {
     --#{$form-control}__icon--Color: var(--#{$form-control}__icon--m-status--Color);
     
-    @include pf-v6-fade-default(#{$form-control}, fade-in);
+    @include pf-v6-fade-default(#{$form-control}, pf-v6-global-fade-in);
   }
 }
 

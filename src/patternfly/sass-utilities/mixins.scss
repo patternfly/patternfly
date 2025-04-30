@@ -318,7 +318,7 @@
   animation-duration: var(--#{$element}--TransitionDuration--Opacity);
   animation-timing-function: var(--#{$element}--TransitionTimingFunction--Opacity);
   
-  @keyframes fade-in {
+  @keyframes #{$pf-global}-fade-in {
     from {
       opacity: 0;
     }
@@ -328,7 +328,7 @@
     }
   }
 
-  @keyframes fade-out {
+  @keyframes #{$pf-global}-fade-out {
     from {
       opacity: 1;
     }
