@@ -785,7 +785,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 // stylelint-enable
 
 @media (prefers-reduced-motion: no-preference) {
-  .#{$tabs}:not(.pf-m-box) {
+  .#{$tabs}.pf-m-animate-current:not(.pf-m-box) {
     .#{$tabs}__link,
     .#{$tabs}__item.pf-m-action {
       &::after {
