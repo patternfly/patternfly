@@ -17,7 +17,8 @@
       disabled
     {{/if}}
   {{/if}}
-  
+
+  {{#if tabs--IsAnimateCurrent}}
   onClick="
     event.preventDefault();
     ((e) => {
@@ -42,6 +43,7 @@
         {{/if}}
       }
     )()"
+  {{/if}}
  
   {{~#if tabs-link--IsAriaDisabled}}
     aria-disabled="true"
