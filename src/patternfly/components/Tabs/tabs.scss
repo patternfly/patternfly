@@ -3,20 +3,6 @@
 $pf-v6-c-tabs--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-// @property --#{$tabs}--link-accent--length {
-//   syntax: "<length>";
-//   inherits: true;
-//   // stylelint-disable-next-line length-zero-no-unit
-//   initial-value: 0px;
-// }
-
-// @property --#{$tabs}--link-accent--start {
-//   syntax: "<length>";
-//   inherits: true;
-//   // stylelint-disable-next-line length-zero-no-unit
-//   initial-value: 0px;
-// }
-
 @include pf-root($tabs) {
   --#{$tabs}--inset: 0;
   --#{$tabs}--Width: auto;
