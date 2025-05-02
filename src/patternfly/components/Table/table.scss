@@ -119,7 +119,6 @@
   --#{$table}__action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // * Table expandable row
-  --#{$table}__expandable-row--TransitionDuration--display: var(--#{$table}__expandable-row--TransitionDuration--fade);
   --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
   --#{$table}__expandable-row--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
@@ -127,7 +126,6 @@
   --#{$table}__expandable-row--TransitionDuration--slide: var(--#{$table}__expandable-row--TransitionDuration--expand--slide);
   --#{$table}__expandable-row--TransitionDuration--fade: var(--#{$table}__expandable-row--TransitionDuration--expand--fade);
   --#{$table}__expandable-row--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$table}__expandable-row--TransitionDelay: 0;
   --#{$table}__expandable-row--Opacity: 0;
   --#{$table}__tbody--m-expanded__expandable-row--Opacity: 1;
   --#{$table}__expandable-row--TranslateY: 0;
