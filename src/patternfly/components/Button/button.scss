@@ -25,6 +25,14 @@
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
 
+  // Button click (ripple) effect
+  --#{$button}--after--MaskPosition: center;
+  --#{$button}--after--MaskSize: 15000%;
+  --#{$button}--after--TransitionDuration: var(--pf-t--global--motion--duration--3xl);
+  --#{$button}--after--active--TransitionDuration: 0s;
+  --#{$button}--after--Opacity: 0;
+  --#{$button}--after--hover--Opacity: 0.12;
+
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
   --#{$button}--hover--BorderColor: transparent;
@@ -334,9 +342,13 @@
   text-decoration-style: var(--#{$button}--TextDecorationStyle);
   text-decoration-color: var(--#{$button}--TextDecorationColor);
   white-space: nowrap;
-  cursor: pointer; // needed for when a button does not use <button> - eg, <span>
+  cursor: pointer;
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
+  background-image: var(--#{$button}--BackgroundImage);
+  background-repeat: no-repeat;
+  background-position: var(--#{$button}--BackgroundPosition);
+  background-size: var(--#{$button}--BackgroundSize);
   border: 0;
   border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
@@ -346,7 +358,8 @@
   transition-duration: var(--#{$button}--TransitionDuration);
   transition-property: var(--#{$button}--TransitionProperty);
 
-  &::after {
+  // Border pseudo-element
+  &::before {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -355,6 +368,35 @@
     border-color: var(--#{$button}--BorderColor);
     border-radius: inherit;
     transition: inherit;
+  }
+
+  // Click effect (ripple) pseudo-element
+  // The radial gradient mask expands from 0 to very large when moving from active state to default/hover
+  // currentcolor is used for the background so that it will show up on any color
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background-color: currentcolor;
+    border-radius: inherit;
+    opacity: var(--#{$button}--after--Opacity);
+    // stylelint-disable property-no-vendor-prefix
+    // stylelint-disable color-named
+    -webkit-mask-image: radial-gradient(circle, transparent 1%, black 1%);
+            mask-image: radial-gradient(circle, transparent 1%, black 1%);
+    // stylelint-enable color-named 
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: var(--#{$button}--after--MaskPosition);
+            mask-position: var(--#{$button}--after--MaskPosition);
+    -webkit-mask-size: var(--#{$button}--after--MaskSize);
+            mask-size: var(--#{$button}--after--MaskSize);
+    transition: opacity var(--#{$button}--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
+                -webkit-mask-size var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
+                mask-size var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction);
+
+    // styleline-enable property-no-vendor-prefix
   }
 
   // Primary
@@ -669,18 +711,27 @@
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
+    --#{$button}--after--Opacity: var(--#{$button}--after--hover--Opacity);
+    --#{$button}--after--MaskSize: 15000%;
 
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
     text-decoration-color: var(--#{$button}--hover--TextDecorationColor);
   }
 
+  &:active,
   &.pf-m-clicked {
     --#{$button}--Color: var(--#{$button}--m-clicked--Color);
     --#{$button}--BackgroundColor: var(--#{$button}--m-clicked--BackgroundColor);
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
+    --#{$button}--after--MaskSize: 0;
+
+    &::after {
+      transition: opacity var(--#{$button}--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
+                  -webkit-mask-size var(--#{$button}--#{$button}--after--active--TransitionDurationTransitionDurationActive) var(--#{$button}--TransitionTimingFunction);
+    }
   }
 
   // Disabled buttons
@@ -697,7 +748,7 @@
     text-decoration-color: var(--#{$button}--disabled--TextDecorationColor);
     background-color: var(--#{$button}--disabled--BackgroundColor);
 
-    &::after {
+    &::before {
       border-color: transparent;
     }
 
