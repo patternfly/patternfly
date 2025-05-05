@@ -244,7 +244,7 @@ cssPrefix: pf-v6-c-progress-stepper
       {{/progress-stepper-step-description}}
     {{/progress-stepper-step-main}}
   {{/progress-stepper-step}}
-  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgressAlt="true" progress-stepper-step--IsCurrent="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
       {{#> progress-stepper-step-title}}
