@@ -48,20 +48,20 @@
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   // expand animation
-  --#{$accordion}__item--before--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$accordion}__item--before--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--slide-in--short);
-  --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--expand--fade);
+  --#{$accordion}__item--before--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$accordion}__item--before--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--collapse--fade);
   --#{$accordion}__item--before--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$accordion}__item--before--TransitionDelay: 0;
   --#{$accordion}__item--before--Opacity: 0;
   --#{$accordion}__item--m-expanded--before--Opacity: 1;
   --#{$accordion}__item--m-expanded--before--TranslateY: 0;
-  --#{$accordion}__expandable-content--TransitionDuration--expand--slide: 0s;
-  --#{$accordion}__expandable-content--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--slide-in--default);
   --#{$accordion}__expandable-content--TransitionDuration--collapse--slide: 0s;
-  --#{$accordion}__expandable-content--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--slide-in--short);
-  --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
-  --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
+  --#{$accordion}__expandable-content--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$accordion}__expandable-content--TransitionDuration--expand--slide: 0s;
+  --#{$accordion}__expandable-content--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--collapse--slide);
+  --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--collapse--fade);
   --#{$accordion}__expandable-content--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$accordion}__expandable-content--Opacity: 0;
   --#{$accordion}__item--m-expanded__expandable-content--Opacity: 1;
@@ -69,11 +69,11 @@
   --#{$accordion}__item--m-expanded__expandable-content--TranslateY: 0;
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$accordion}__item--before--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$accordion}__item--before--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$accordion}__item--before--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$accordion}__item--before--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
     --#{$accordion}__item--before--TranslateY: -.5rem; // TODO - replace with token
-    --#{$accordion}__expandable-content--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$accordion}__expandable-content--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--slide-in--short);
+    --#{$accordion}__expandable-content--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$accordion}__expandable-content--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
     --#{$accordion}__expandable-content--TranslateY: -.5rem; // TODO - replace with token
   }
 
@@ -156,12 +156,12 @@
   &.pf-m-expanded {
     --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}__toggle--m-expanded--PaddingBlockEnd);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
-    --#{$accordion}__item--before--TransitionDuration--slide: var(--#{$accordion}__item--before--TransitionDuration--collapse--slide);
-    --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--collapse--fade);
+    --#{$accordion}__item--before--TransitionDuration--slide: var(--#{$accordion}__item--before--TransitionDuration--expand--slide);
+    --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--expand--fade);
     --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
     --#{$accordion}__item--before--TranslateY: var(--#{$accordion}__item--m-expanded--before--TranslateY);
-    --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--collapse--slide);
-    --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--collapse--fade);
+    --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
+    --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
     --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
     --#{$accordion}__expandable-content--TranslateY: var(--#{$accordion}__item--m-expanded__expandable-content--TranslateY);
 
