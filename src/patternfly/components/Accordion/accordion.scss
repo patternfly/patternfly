@@ -7,7 +7,7 @@
 
   // accordion item
   --#{$accordion}__item--BorderRadius: var(--pf-t--global--border--radius--200);
-  --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked); // TODO - remove "m-expanded" in breaking change
 
   // accordion toggle
   --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -19,6 +19,7 @@
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$accordion}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Accordion toggle toggle-start modifier
   // This decreases the gap between icon and text, alternative is calc it to * 2 the token or create a new token
@@ -45,6 +46,35 @@
   --#{$accordion}__expandable-content--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__expandable-content--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
+
+  // expand animation
+  --#{$accordion}__item--before--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$accordion}__item--before--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--collapse--fade);
+  --#{$accordion}__item--before--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$accordion}__item--before--Opacity: 0;
+  --#{$accordion}__item--m-expanded--before--Opacity: 1;
+  --#{$accordion}__item--m-expanded--before--TranslateY: 0;
+  --#{$accordion}__expandable-content--TransitionDuration--collapse--slide: 0s;
+  --#{$accordion}__expandable-content--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$accordion}__expandable-content--TransitionDuration--expand--slide: 0s;
+  --#{$accordion}__expandable-content--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--collapse--slide);
+  --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--collapse--fade);
+  --#{$accordion}__expandable-content--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$accordion}__expandable-content--Opacity: 0;
+  --#{$accordion}__item--m-expanded__expandable-content--Opacity: 1;
+  --#{$accordion}__expandable-content--TranslateY: 0;
+  --#{$accordion}__item--m-expanded__expandable-content--TranslateY: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$accordion}__item--before--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$accordion}__item--before--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$accordion}__item--before--TranslateY: -.5rem; // TODO - replace with token
+    --#{$accordion}__expandable-content--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$accordion}__expandable-content--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$accordion}__expandable-content--TranslateY: -.5rem; // TODO - replace with token
+  }
 
   // accordion expandable content body
   --#{$accordion}__expandable-content-body--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -107,13 +137,32 @@
 }
 
 .#{$accordion}__item {
-  border-radius: var(--#{$accordion}__item--BorderRadius);
+  position: relative;
+
+  &::before { 
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
+    border-radius: var(--#{$accordion}__item--BorderRadius);
+    opacity: var(--#{$accordion}__item--before--Opacity);
+    transition-timing-function: var(--#{$accordion}__item--before--TransitionTimingFunction);
+    transition-duration: var(--#{$accordion}__item--before--TransitionDuration--fade);
+    transition-property: opacity;
+  }
 
   &.pf-m-expanded {
     --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}__toggle--m-expanded--PaddingBlockEnd);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
-
-    background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
+    --#{$accordion}__item--before--TransitionDuration--slide: var(--#{$accordion}__item--before--TransitionDuration--expand--slide);
+    --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--expand--fade);
+    --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
+    --#{$accordion}__item--before--TranslateY: var(--#{$accordion}__item--m-expanded--before--TranslateY);
+    --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
+    --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
+    --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
+    --#{$accordion}__expandable-content--TranslateY: var(--#{$accordion}__item--m-expanded__expandable-content--TranslateY);
 
     .#{$accordion}__toggle-icon {
       transform: rotate(var(--#{$accordion}__toggle--m-expanded__toggle-icon--Rotate));
@@ -122,6 +171,8 @@
 }
 
 .#{$accordion}__toggle {
+  position: relative;
+  z-index: var(--#{$accordion}__toggle--ZIndex);
   display: flex;
   column-gap: var(--#{$accordion}__toggle--ColumnGap);
   align-items: center;
@@ -164,6 +215,11 @@
   color: var(--#{$accordion}__expandable-content--Color);
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
+  opacity: var(--#{$accordion}__expandable-content--Opacity);
+  transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
+  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide);
+  transition-property: opacity, translate;
+  translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
     max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
