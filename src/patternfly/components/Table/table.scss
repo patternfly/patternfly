@@ -122,9 +122,9 @@
   --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
   --#{$table}__expandable-row--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
-  --#{$table}__expandable-row--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--default);
-  --#{$table}__expandable-row--TransitionDuration--slide: var(--#{$table}__expandable-row--TransitionDuration--expand--slide);
-  --#{$table}__expandable-row--TransitionDuration--fade: var(--#{$table}__expandable-row--TransitionDuration--expand--fade);
+  --#{$table}__expandable-row--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$table}__expandable-row--TransitionDuration--slide: var(--#{$table}__expandable-row--TransitionDuration--collapse--slide);
+  --#{$table}__expandable-row--TransitionDuration--fade: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
   --#{$table}__expandable-row--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__expandable-row--Opacity: 0;
   --#{$table}__tbody--m-expanded__expandable-row--Opacity: 1;
@@ -133,8 +133,8 @@
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$table}__expandable-row--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
-    --#{$table}__expandable-row--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--default);
-    --#{$table}__expandable-row--TranslateY: -1rem;
+    --#{$table}__expandable-row--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$table}__expandable-row--TranslateY: -.5rem;
   }
 
   // * Table expandable row content
@@ -1015,7 +1015,7 @@
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
     border-block-end-width: var(--#{$table}--border-width--base);
     opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
-    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), var(--#{$table}__expandable-row--TransitionDuration--expand--fade);
     translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
 
     @starting-style {
