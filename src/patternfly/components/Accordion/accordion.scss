@@ -52,7 +52,6 @@
   --#{$accordion}__item--before--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
   --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--collapse--fade);
   --#{$accordion}__item--before--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$accordion}__item--before--TransitionDelay: 0;
   --#{$accordion}__item--before--Opacity: 0;
   --#{$accordion}__item--m-expanded--before--Opacity: 1;
   --#{$accordion}__item--m-expanded--before--TranslateY: 0;
