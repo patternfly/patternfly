@@ -32,11 +32,10 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__list--TransitionDuration--expand--slide: 0s;
   --#{$tree-view}__list--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$tree-view}__list--TransitionDuration--collapse--slide: 0s;
-  --#{$tree-view}__list--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--default);
-  --#{$tree-view}__list--TransitionDuration--slide: var(--#{$tree-view}__list--TransitionDuration--expand--slide);
-  --#{$tree-view}__list--TransitionDuration--fade: var(--#{$tree-view}__list--TransitionDuration--expand--fade);
+  --#{$tree-view}__list--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$tree-view}__list--TransitionDuration--slide: var(--#{$tree-view}__list--TransitionDuration--collapse--slide);
+  --#{$tree-view}__list--TransitionDuration--fade: var(--#{$tree-view}__list--TransitionDuration--collapse--fade);
   --#{$tree-view}__list--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$tree-view}__list--TransitionDelay: 0;
   --#{$tree-view}__list--Opacity: 0;
   --#{$tree-view}--m-expanded__list--Opacity: 1;
   --#{$tree-view}__list--TranslateY: 0;
@@ -44,8 +43,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$tree-view}__list--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
-    --#{$tree-view}__list--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--default);
-    --#{$tree-view}__list--TranslateY: -1rem;
+    --#{$tree-view}__list--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$tree-view}__list--TranslateY: -.5rem;
   }
 
   // Nested toggle
@@ -68,6 +67,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node-toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$tree-view}__node-toggle--MarginBlockStart: calc(var(--#{$tree-view}__node-toggle--PaddingBlockStart) * -1);
   --#{$tree-view}__node-toggle--MarginBlockEnd: calc(var(--#{$tree-view}__node-toggle--PaddingBlockStart) * -1);
+  --#{$tree-view}__node-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
+  --#{$tree-view}__node-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
 
   // Check
   --#{$tree-view}__node-check--MarginInlineEnd: var(--pf-t--global--spacer--sm);
@@ -350,6 +351,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   display: inline-block;
   min-width: var(--#{$tree-view}__node-toggle-icon--MinWidth);
   text-align: center;
+  transition: transform var(--#{$tree-view}__node-toggle-icon--TransitionDuration) var(--#{$tree-view}__node-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$tree-view}__node-toggle-icon--Rotate));
 }
 
@@ -373,7 +375,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
     > .#{$tree-view}__list {
       opacity: var(--#{$tree-view}--m-expanded__list--Opacity);
-      transition-duration: var(--#{$tree-view}__list--TransitionDuration--collapse--fade), var(--#{$tree-view}__list--TransitionDuration--collapse--slide);
+      transition-duration: var(--#{$tree-view}__list--TransitionDuration--expand--fade), var(--#{$tree-view}__list--TransitionDuration--expand--slide);
       translate: 0 var(--#{$tree-view}--m-expanded__list--TranslateY);
     }
   }
