@@ -26,12 +26,11 @@
   --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
 
   // Button click (ripple) effect
-  --#{$button}--after--MaskPosition: center;
-  --#{$button}--after--MaskSize: 15000%;
   --#{$button}--after--TransitionDuration: var(--pf-t--global--motion--duration--3xl);
   --#{$button}--after--active--TransitionDuration: 0s;
   --#{$button}--after--Opacity: 0;
   --#{$button}--after--hover--Opacity: 0.12;
+  --#{$button}--after--Scale: 15000%;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -333,6 +332,7 @@
   padding-block-end: var(--#{$button}--PaddingBlockEnd);
   padding-inline-start: var(--#{$button}--PaddingInlineStart);
   padding-inline-end: var(--#{$button}--PaddingInlineEnd);
+  overflow: hidden;
   font-size: var(--#{$button}--FontSize, inherit);
   font-weight: var(--#{$button}--FontWeight, inherit);
   line-height: var(--#{$button}--LineHeight, inherit);
@@ -371,32 +371,19 @@
   }
 
   // Click effect (ripple) pseudo-element
-  // The radial gradient mask expands from 0 to very large when moving from active state to default/hover
-  // currentcolor is used for the background so that it will show up on any color
+  // The pseudoelement expands from 0 (active state) to very large (default and hover state) so that the semi-transparent background gradient creates the ripple.
   &::after {
     position: absolute;
     inset: 0;
     pointer-events: none;
     content: "";
-    background-color: currentcolor;
+    background: radial-gradient(circle, transparent 1%, currentcolor 1%);
+    background-position: center;
     border-radius: inherit;
     opacity: var(--#{$button}--after--Opacity);
-    // stylelint-disable property-no-vendor-prefix
-    // stylelint-disable color-named
-    -webkit-mask-image: radial-gradient(circle, transparent 1%, black 1%);
-            mask-image: radial-gradient(circle, transparent 1%, black 1%);
-    // stylelint-enable color-named 
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-position: var(--#{$button}--after--MaskPosition);
-            mask-position: var(--#{$button}--after--MaskPosition);
-    -webkit-mask-size: var(--#{$button}--after--MaskSize);
-            mask-size: var(--#{$button}--after--MaskSize);
-    transition: opacity var(--#{$button}--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
-                -webkit-mask-size var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
-                mask-size var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction);
-
-    // styleline-enable property-no-vendor-prefix
+    transition: scale var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
+                opacity var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction);
+    scale: var(--#{$button}--after--Scale);
   }
 
   // Primary
@@ -712,7 +699,7 @@
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
     --#{$button}--after--Opacity: var(--#{$button}--after--hover--Opacity);
-    --#{$button}--after--MaskSize: 15000%;
+    --#{$button}--after--Scale: 15000%;
 
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
@@ -726,11 +713,11 @@
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
-    --#{$button}--after--MaskSize: 0;
+    --#{$button}--after--Scale: 0;
 
     &::after {
-      transition: opacity var(--#{$button}--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
-                  -webkit-mask-size var(--#{$button}--#{$button}--after--active--TransitionDurationTransitionDurationActive) var(--#{$button}--TransitionTimingFunction);
+      transition: scale var(--#{$button}--after--active--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
+                  opacity var(--#{$button}--after--active--TransitionDuration) var(--#{$button}--TransitionTimingFunction);
     }
   }
 
