@@ -26,11 +26,15 @@
   --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
 
   // Button click (ripple) effect
-  --#{$button}--after--TransitionDuration: var(--pf-t--global--motion--duration--3xl);
-  --#{$button}--after--active--TransitionDuration: 0s;
+  --#{$button}--after--Scale: 15000%;
   --#{$button}--after--Opacity: 0;
   --#{$button}--after--hover--Opacity: 0.12;
-  --#{$button}--after--Scale: 15000%;
+  --#{$button}--after--TransitionDuration--scale: var(--pf-t--global--motion--duration--3xl);
+  --#{$button}--after--TransitionTimingFunction--scale: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--after--TransitionDuration--opacity: var(--pf-t--global--motion--duration--3xl);
+  --#{$button}--after--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--after--active--TransitionDuration--scale: 0s;
+  --#{$button}--after--active--TransitionDuration--opacity: 0s;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -381,8 +385,7 @@
     background-position: center;
     border-radius: inherit;
     opacity: var(--#{$button}--after--Opacity);
-    transition: scale var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
-                opacity var(--#{$button}--after--TransitionDuration) var(--#{$button}--TransitionTimingFunction);
+    transition: scale var(--#{$button}--after--TransitionDuration--scale) var(--#{$button}--after--TransitionTimingFunction--scale), opacity var(--#{$button}--after--TransitionDuration--opacity) var(--#{$button}--after--TransitionTimingFunction--opacity);
     scale: var(--#{$button}--after--Scale);
   }
 
@@ -716,8 +719,7 @@
     --#{$button}--after--Scale: 0;
 
     &::after {
-      transition: scale var(--#{$button}--after--active--TransitionDuration) var(--#{$button}--TransitionTimingFunction),
-                  opacity var(--#{$button}--after--active--TransitionDuration) var(--#{$button}--TransitionTimingFunction);
+      transition: scale var(--#{$button}--after--active--TransitionDuration--scale) var(--#{$button}--after--TransitionTimingFunction--scale), opacity var(--#{$button}--after--active--TransitionDuration--opacity) var(--#{$button}--after--TransitionTimingFunction--opacity);
     }
   }
 
