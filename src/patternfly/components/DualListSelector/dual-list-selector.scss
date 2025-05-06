@@ -39,9 +39,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__list--TransitionDuration--expand--slide: 0s;
   --#{$dual-list-selector}__list--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$dual-list-selector}__list--TransitionDuration--collapse--slide: 0s;
-  --#{$dual-list-selector}__list--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--default);
-  --#{$dual-list-selector}__list--TransitionDuration--slide: var(--#{$dual-list-selector}__list--TransitionDuration--expand--slide);
-  --#{$dual-list-selector}__list--TransitionDuration--fade: var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade);
+  --#{$dual-list-selector}__list--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$dual-list-selector}__list--TransitionDuration--slide: var(--#{$dual-list-selector}__list--TransitionDuration--collapse--slide);
+  --#{$dual-list-selector}__list--TransitionDuration--fade: var(--#{$dual-list-selector}__list--TransitionDuration--collapse--fade);
   --#{$dual-list-selector}__list--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$dual-list-selector}__list--TransitionDelay: 0;
   --#{$dual-list-selector}__list--Opacity: 0;
@@ -51,8 +51,8 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$dual-list-selector}__list--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
-    --#{$dual-list-selector}__list--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--default);
-    --#{$dual-list-selector}__list--TranslateY: -1rem;
+    --#{$dual-list-selector}__list--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$dual-list-selector}__list--TranslateY: -.5rem;
   }
 
   // List item
@@ -231,8 +231,8 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   &.pf-m-expanded {
     --#{$dual-list-selector}__item-toggle-icon--Rotate: var(--#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate);
-    --#{$dual-list-selector}__list--TransitionDuration--slide: var(--#{$dual-list-selector}__list--TransitionDuration--collapse--slide);
-    --#{$dual-list-selector}__list--TransitionDuration--fade: var(--#{$dual-list-selector}__list--TransitionDuration--collapse--fade);
+    --#{$dual-list-selector}__list--TransitionDuration--slide: var(--#{$dual-list-selector}__list--TransitionDuration--expand--slide);
+    --#{$dual-list-selector}__list--TransitionDuration--fade: var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade);
     --#{$dual-list-selector}__list--Opacity: var(--#{$dual-list-selector}--m-expanded__list--Opacity);
     --#{$dual-list-selector}__list--TranslateY: var(--#{$dual-list-selector}--m-expanded__list--TranslateY);
   }
