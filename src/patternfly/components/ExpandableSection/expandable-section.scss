@@ -21,8 +21,8 @@
   --#{$expandable-section}__content--TransitionDuration--fade: var(--#{$expandable-section}__content--TransitionDuration--collapse--fade);
   --#{$expandable-section}__content--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$expandable-section}__content--Opacity: 0;
-  --#{$expandable-section}--m-expanded__content--Opacity: 1;
   --#{$expandable-section}__content--TranslateY: 0;
+  --#{$expandable-section}--m-expanded__content--Opacity: 1;
   --#{$expandable-section}--m-expanded__content--TranslateY: 0;
 
   @media screen and (prefers-reduced-motion: no-preference) {
@@ -48,7 +48,6 @@
   --#{$expandable-section}--m-display-lg--BorderColor: var(--pf-t--global--border--color--default);
   --#{$expandable-section}--m-display-lg--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$expandable-section}--m-display-lg--TransitionDelay: var(--#{$expandable-section}__content--TransitionDuration--fade);
-
 
   // Indented
   --#{$expandable-section}--m-indented__content--PaddingInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) + var(--pf-t--global--spacer--gap--text-to-element--default) + var(--#{$expandable-section}__toggle-icon--MinWidth));
@@ -95,6 +94,7 @@
 
   &.pf-m-truncate {
     --#{$expandable-section}--Gap: var(--#{$expandable-section}--m-truncate--Gap);
+
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
       display: -webkit-box;
@@ -124,9 +124,27 @@
   max-width: var(--#{$expandable-section}__content--MaxWidth);
   padding-block-end: var(--#{$expandable-section}__content--PaddingBlockEnd, 0);
   padding-inline-start: var(--#{$expandable-section}__content--PaddingInlineStart, 0);
-  opacity: var(--#{$expandable-section}__content--Opacity);
-  transition-timing-function: var(--#{$expandable-section}__content--TransitionTimingFunction);
-  transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide);
-  transition-property: opacity, translate;
-  translate: 0 var(--#{$expandable-section}__content--TranslateY);
+
+  &:where([hidden]) {
+    display: revert;
+  }
+
+  .#{$expandable-section}:where(:not(.pf-m-truncate)) & {
+    display: none;
+    opacity: var(--#{$expandable-section}__content--Opacity);
+    transition-timing-function: var(--#{$expandable-section}__content--TransitionTimingFunction);
+    transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), var(--#{$expandable-section}__content--TransitionDuration--fade);
+    transition-property: opacity, translate, display;
+    transition-behavior: allow-discrete;
+    translate: 0 var(--#{$expandable-section}__content--TranslateY);
+  }
+
+  .#{$expandable-section}.pf-m-expanded & {
+    display: revert;
+
+    @starting-style {
+      --#{$expandable-section}__content--Opacity: 0;
+      --#{$expandable-section}__content--TranslateY: -.5rem;
+    }
+  }
 }
