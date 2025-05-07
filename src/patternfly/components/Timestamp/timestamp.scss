@@ -36,3 +36,10 @@
     }
   }
 }
+
+// enable timestamp with tooltip to have dashed underline when used with truncate
+.#{$timestamp}__text {
+  // stylelint-disable property-disallowed-list
+  text-decoration: inherit;
+  // stylelint-enable property-disallowed-list
+} 

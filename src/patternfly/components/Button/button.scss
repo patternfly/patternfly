@@ -770,6 +770,13 @@
   }
 }
 
+// enable inline link to have underline when used with truncate
+.#{$button}__text {
+  // stylelint-disable property-disallowed-list
+  text-decoration: inherit;
+  // stylelint-enable property-disallowed-list
+}
+
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
