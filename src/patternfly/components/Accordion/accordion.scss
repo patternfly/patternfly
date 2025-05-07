@@ -207,7 +207,12 @@
   transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
 }
 
+.#{$accordion}__expandable-content:where([hidden]) {
+  display: revert;
+}
+
 .#{$accordion}__expandable-content {
+  display: none;
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
@@ -217,13 +222,23 @@
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
   opacity: var(--#{$accordion}__expandable-content--Opacity);
   transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
-  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide);
-  transition-property: opacity, translate;
+  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
+  transition-property: opacity, translate, display;
+  transition-behavior: allow-discrete;
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
     max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
     overflow-y: auto;
+  }
+
+  .#{$accordion}__item.pf-m-expanded & {
+    display: revert;
+
+    @starting-style {
+      --#{$accordion}__expandable-content--Opacity: 0;
+      --#{$accordion}__expandable-content--TranslateY: -.5rem;
+    }
   }
 }
 
