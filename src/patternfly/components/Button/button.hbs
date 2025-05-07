@@ -81,8 +81,8 @@
   {{#if button--IsInProgress}}
     {{> button-progress}}
   {{/if}}
-  {{#if button--IsIcon}} {{! button only has an icon - eg, no text}}
-    {{#ifAny button--icon button--icon-template}}
+  {{#ifAny button--IsIcon button--IsFavorite}} {{! button only has an icon - eg, no text}}
+    {{#ifAny button--icon button--icon-template button--IsFavorite}}
       {{> button-icon}}
     {{else if @partial-block}}
       {{#> button-icon}}
@@ -90,7 +90,7 @@
       {{/button-icon}}
     {{/ifAny}}
   {{else}}
-    {{#ifAny button--icon button--icon-template}}
+    {{#ifAny button--icon button--icon-template button--IsFavorite}}
       {{#unless button-icon--IsEnd}}
         {{> button-icon}}
       {{/unless}}
@@ -104,12 +104,12 @@
         {{/button-text}}
       {{/if}}
     {{/if}}
-    {{#ifAny button--icon button--icon-template}}
+    {{#ifAny button--icon button--icon-template button--IsFavorite}}
       {{#if button-icon--IsEnd}}
         {{> button-icon}}
       {{/if}}
     {{/ifAny}}
-  {{/if}}
+  {{/ifAny}}
   {{#if button--count}}
     {{> button-count}}
   {{/if}}
