@@ -118,6 +118,25 @@
   --#{$table}__action--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
+  // * Table expandable row
+  --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
+  --#{$table}__expandable-row--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
+  --#{$table}__expandable-row--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$table}__expandable-row--TransitionDuration--slide: var(--#{$table}__expandable-row--TransitionDuration--collapse--slide);
+  --#{$table}__expandable-row--TransitionDuration--fade: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+  --#{$table}__expandable-row--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}__expandable-row--Opacity: 0;
+  --#{$table}__tbody--m-expanded__expandable-row--Opacity: 1;
+  --#{$table}__expandable-row--TranslateY: 0;
+  --#{$table}__tbody--m-expanded__expandable-row--TranslateY: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$table}__expandable-row--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$table}__expandable-row--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$table}__expandable-row--TranslateY: -.5rem;
+  }
+
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
@@ -953,6 +972,12 @@
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
+  opacity: var(--#{$table}__expandable-row--Opacity);
+  transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
+  transition-duration: var(--#{$table}__expandable-row--TransitionDuration--fade), var(--#{$table}__expandable-row--TransitionDuration--slide), var(--#{$table}__expandable-row--TransitionDuration--fade);
+  transition-property: opacity, translate, display;
+  transition-behavior: allow-discrete;
+  translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
     > .#{$table}__th,
@@ -989,6 +1014,14 @@
   &.pf-m-expanded {
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
     border-block-end-width: var(--#{$table}--border-width--base);
+    opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), var(--#{$table}__expandable-row--TransitionDuration--expand--fade);
+    translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
+
+    @starting-style {
+      opacity: var(--#{$table}__expandable-row--Opacity);
+      translate: 0 var(--#{$table}__expandable-row--TranslateY);
+    }
   }
 
   &:not(.pf-m-expanded) {
