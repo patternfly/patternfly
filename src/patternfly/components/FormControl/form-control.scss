@@ -290,7 +290,13 @@
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--m-status--Color);
     --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-error--after--BorderWidth);
 
-    @include pf-v6-animate-danger-jiggle("#{$form-control}");
+    @media (prefers-reduced-motion: no-preference) {
+      @include pf-v6-animate-danger-jiggle;
+    }
+
+    .pf-m-status {
+      @include pf-v6-fade-default(#{$form-control}, pf-v6-global-fade-in);
+    }
 
     > textarea {
       padding-inline-end: var(--#{$form-control}--m-error--PaddingInlineEnd, var(--#{$form-control}__textarea--m-error--PaddingInlineEnd));
@@ -434,9 +440,6 @@
   }
 }
 
-// Register the property type (unnested) for the custom property to be animatable
-@include pf-v6-animate-danger-translateX("#{$form-control}");
-
 .#{$form-control}__icon {
   font-size: var(--#{$form-control}__icon--FontSize);
   color: var(--#{$form-control}__icon--Color);
@@ -444,7 +447,6 @@
   &.pf-m-status {
     --#{$form-control}__icon--Color: var(--#{$form-control}__icon--m-status--Color);
     
-    @include pf-v6-fade-default(#{$form-control}, pf-v6-global-fade-in);
   }
 }
 

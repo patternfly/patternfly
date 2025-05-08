@@ -128,8 +128,14 @@
     --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-error--BorderColor);
     --#{$text-input-group}--m-hover--BorderColor: var(--#{$text-input-group}--m-hover--m-error--BorderColor);
     --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-error__icon--m-status--Color);  
-
-    @include pf-v6-animate-danger-jiggle("#{$text-input-group}");
+    
+    @media (prefers-reduced-motion: no-preference) {
+      @include pf-v6-animate-danger-jiggle;
+    }
+    
+    .pf-m-status {
+      @include pf-v6-fade-default(#{$text-input-group}, pf-v6-global-fade-in);
+    }
   }
   
   &:hover {
@@ -145,9 +151,6 @@
     --#{$text-input-group}--status__text-input--PaddingInlineEnd: var(--#{$text-input-group}--utilities--status__text-input--PaddingInlineEnd);
   }
 }
-
-// Register the property type (unnested) for the custom property to be animatable
-@include pf-v6-animate-danger-translateX("#{$text-input-group}");
 
 .#{$text-input-group}__main {
   display: flex;
@@ -197,8 +200,6 @@
     inset-inline-start: auto;
     inset-inline-end: var(--#{$text-input-group}__icon--m-status--InsetInlineEnd);
     color: var(--#{$text-input-group}__icon--m-status--Color);
-
-    @include pf-v6-fade-default(#{$text-input-group}, pf-v6-global-fade-in);
   }
 }
 
