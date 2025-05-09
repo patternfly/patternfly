@@ -3,6 +3,21 @@
 $pf-v6-c-tabs--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
+
+@property --#{$tabs}--link-accent--length {
+  syntax: "<length>";
+  inherits: true;
+  // stylelint-disable-next-line length-zero-no-unit
+  initial-value: 0px;
+}
+
+@property --#{$tabs}--link-accent--start {
+  syntax: "<length>";
+  inherits: true;
+  // stylelint-disable-next-line length-zero-no-unit
+  initial-value: 0px;
+}
+
 @include pf-root($tabs) {
   --#{$tabs}--inset: 0;
   --#{$tabs}--Width: auto;
@@ -115,10 +130,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--link-accent--InsetBlockStart: auto;
   --#{$tabs}--link-accent--InsetBlockEnd: 0;
   --#{$tabs}--link-accent--InsetInlineStart: 0;
+  --#{$tabs}--link-accent--Width: initial;
+  --#{$tabs}--link-accent--Height: 0;
   --#{$tabs}--link-accent--BorderBlockEndWidth: var(--#{$tabs}--link-accent--border-size);
   --#{$tabs}--link-accent--BorderInlineStartWidth: 0;
-  --#{$tabs}--link-accent--ScaleX: var(--#{$tabs}--link-accent--length);
-  --#{$tabs}--link-accent--ScaleY: 1;
   --#{$tabs}--link-accent--TranslateX: var(--#{$tabs}--link-accent--start);
   --#{$tabs}--link-accent--TranslateY: 0;
   --#{$tabs}--link-accent--TransformOrigin: 0 center;
@@ -126,8 +141,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical--link-accent--InsetBlockEnd: auto;
   --#{$tabs}--m-vertical--link-accent--BorderBlockEndWidth: 0;
   --#{$tabs}--m-vertical--link-accent--BorderInlineStartWidth: var(--#{$tabs}--link-accent--border-size);
-  --#{$tabs}--m-vertical--link-accent--ScaleX: 1;
-  --#{$tabs}--m-vertical--link-accent--ScaleY: var(--#{$tabs}--link-accent--length);
   --#{$tabs}--m-vertical--link-accent--TranslateX: 0;
   --#{$tabs}--m-vertical--link-accent--TranslateY: var(--#{$tabs}--link-accent--start);
   --#{$tabs}--m-vertical--link-accent--TransformOrigin: center 0;
@@ -345,10 +358,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__list--ScrollSnapTypeAxis: var(--#{$tabs}--m-vertical__list--ScrollSnapTypeAxis);
     --#{$tabs}--link-accent--InsetBlockStart: var(--#{$tabs}--m-vertical--link-accent--InsetBlockStart);
     --#{$tabs}--link-accent--InsetBlockEnd: var(--#{$tabs}--m-vertical--link-accent--InsetBlockEnd);
+    --#{$tabs}--link-accent--Width: var(--#{$tabs}--m-vertical--link-accent--Width);
+    --#{$tabs}--link-accent--Height: var(--#{$tabs}--m-vertical--link-accent--Height);
     --#{$tabs}--link-accent--BorderBlockEndWidth: var(--#{$tabs}--m-vertical--link-accent--BorderBlockEndWidth);
     --#{$tabs}--link-accent--BorderInlineStartWidth: var(--#{$tabs}--m-vertical--link-accent--BorderInlineStartWidth);
-    --#{$tabs}--link-accent--ScaleX: var(--#{$tabs}--m-vertical--link-accent--ScaleX);
-    --#{$tabs}--link-accent--ScaleY: var(--#{$tabs}--m-vertical--link-accent--ScaleY);
     --#{$tabs}--link-accent--TranslateX: var(--#{$tabs}--m-vertical--link-accent--TranslateX);
     --#{$tabs}--link-accent--TranslateY: var(--#{$tabs}--m-vertical--link-accent--TranslateY);
     --#{$tabs}--link-accent--TransformOrigin: var(--#{$tabs}--m-vertical--link-accent--TransformOrigin);
@@ -791,17 +804,16 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       inset-block-start: var(--#{$tabs}--link-accent--InsetBlockStart);
       inset-block-end: var(--#{$tabs}--link-accent--InsetBlockEnd);
       inset-inline-start: var(--#{$tabs}--link-accent--InsetInlineStart);
-      width: 1px;
-      height: 1px;
+      width: var(--#{$tabs}--link-accent--Width, var(--#{$tabs}--link-accent--length));
+      height: var(--#{$tabs}--link-accent--Height, var(--#{$tabs}--link-accent--length));
       content: "";
       border: 0 solid var(--#{$tabs}--link-accent--color);
       border-block-end-width: var(--#{$tabs}--link-accent--BorderBlockEndWidth);
       border-inline-start-width: var(--#{$tabs}--link-accent--BorderInlineStartWidth);
       transition-timing-function: var(--#{$tabs}--link-accent--TransitionTimingFunction);
       transition-duration: var(--#{$tabs}--link-accent--TransitionDuration);
-      transition-property: scale, translate;
+      transition-property: width, height, translate;
       transform-origin: var(--#{$tabs}--link-accent--TransformOrigin);
-      scale: var(--#{$tabs}--link-accent--ScaleX) var(--#{$tabs}--link-accent--ScaleY);
       translate: var(--#{$tabs}--link-accent--TranslateX) var(--#{$tabs}--link-accent--TranslateY);
     }
   }

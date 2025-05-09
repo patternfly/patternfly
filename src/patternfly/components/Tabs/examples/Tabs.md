@@ -355,7 +355,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Animate vertical tabs accent
 ```hbs
-{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-vertical" tabs--IsVertical=true}}
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-vertical" tabs--IsVertical=true __tabs-list--HasMultiLine=true}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
