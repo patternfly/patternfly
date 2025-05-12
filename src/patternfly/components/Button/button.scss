@@ -26,15 +26,15 @@
   --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
 
   // Button click (ripple) effect
-  --#{$button}--after--Scale: 15000%;
-  --#{$button}--after--Opacity: 0;
-  --#{$button}--after--hover--Opacity: 0.12;
-  --#{$button}--after--TransitionDuration--scale: var(--pf-t--global--motion--duration--3xl);
-  --#{$button}--after--TransitionTimingFunction--scale: var(--pf-t--global--motion--timing-function--default);
-  --#{$button}--after--TransitionDuration--opacity: var(--pf-t--global--motion--duration--3xl);
-  --#{$button}--after--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
-  --#{$button}--after--active--TransitionDuration--scale: 0s;
-  --#{$button}--after--active--TransitionDuration--opacity: 0s;
+  --#{$button}--before--Scale: 15000%;
+  --#{$button}--before--Opacity: 0;
+  --#{$button}--before--hover--Opacity: 0.12;
+  --#{$button}--before--TransitionDuration--scale: var(--pf-t--global--motion--duration--3xl);
+  --#{$button}--before--TransitionTimingFunction--scale: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--before--TransitionDuration--opacity: var(--pf-t--global--motion--duration--3xl);
+  --#{$button}--before--TransitionTimingFunction--opacity: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--before--active--TransitionDuration--scale: 0s;
+  --#{$button}--before--active--TransitionDuration--opacity: 0s;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -362,8 +362,8 @@
   transition-duration: var(--#{$button}--TransitionDuration);
   transition-property: var(--#{$button}--TransitionProperty);
 
-  // Border pseudo-element
-  &::before {
+  // Border pseudo-element (now ::after)
+  &::after {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -374,9 +374,9 @@
     transition: inherit;
   }
 
-  // Click effect (ripple) pseudo-element
+  // Click effect (ripple) pseudo-element (now ::before)
   // The pseudoelement expands from 0 (active state) to very large (default and hover state) so that the semi-transparent background gradient creates the ripple.
-  &::after {
+  &::before {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -384,9 +384,9 @@
     background: radial-gradient(circle, transparent 1%, currentcolor 1%);
     background-position: center;
     border-radius: inherit;
-    opacity: var(--#{$button}--after--Opacity);
-    transition: scale var(--#{$button}--after--TransitionDuration--scale) var(--#{$button}--after--TransitionTimingFunction--scale), opacity var(--#{$button}--after--TransitionDuration--opacity) var(--#{$button}--after--TransitionTimingFunction--opacity);
-    scale: var(--#{$button}--after--Scale);
+    opacity: var(--#{$button}--before--Opacity);
+    transition: scale var(--#{$button}--before--TransitionDuration--scale) var(--#{$button}--before--TransitionTimingFunction--scale), opacity var(--#{$button}--before--TransitionDuration--opacity) var(--#{$button}--before--TransitionTimingFunction--opacity);
+    scale: var(--#{$button}--before--Scale);
   }
 
   // Primary
@@ -467,7 +467,7 @@
     --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-link--m-small--PaddingInlineStart);
 
     &.pf-m-inline {
-      --#{$button}--after--TransitionDuration--scale: 0; // don't show the ripple effect for inline links
+      --#{$button}--before--TransitionDuration--scale: 0; // don't show the ripple effect for inline links
 
       @at-root span#{&} {
         --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
@@ -703,8 +703,8 @@
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
-    --#{$button}--after--Opacity: var(--#{$button}--after--hover--Opacity);
-    --#{$button}--after--Scale: 15000%;
+    --#{$button}--before--Opacity: var(--#{$button}--before--hover--Opacity);
+    --#{$button}--before--Scale: 15000%;
 
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
@@ -718,10 +718,10 @@
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
-    --#{$button}--after--Scale: 0;
+    --#{$button}--before--Scale: 0;
 
-    &::after {
-      transition: scale var(--#{$button}--after--active--TransitionDuration--scale) var(--#{$button}--after--TransitionTimingFunction--scale), opacity var(--#{$button}--after--active--TransitionDuration--opacity) var(--#{$button}--after--TransitionTimingFunction--opacity);
+    &::before {
+      transition: scale var(--#{$button}--before--active--TransitionDuration--scale) var(--#{$button}--before--TransitionTimingFunction--scale), opacity var(--#{$button}--before--active--TransitionDuration--opacity) var(--#{$button}--before--TransitionTimingFunction--opacity);
     }
   }
 
