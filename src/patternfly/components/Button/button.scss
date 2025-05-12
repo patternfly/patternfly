@@ -467,6 +467,8 @@
     --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-link--m-small--PaddingInlineStart);
 
     &.pf-m-inline {
+      --#{$button}--after--TransitionDuration--scale: 0; // don't show the ripple effect for inline links
+
       @at-root span#{&} {
         --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
         --#{$button}__icon--m-start--MarginInlineEnd: var(--#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd);
