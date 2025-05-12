@@ -47,6 +47,16 @@ export const unlessIfEquals = function () {
   return allEqual ? options.inverse(this) : options.fn(this);
 };
 
+/** ifEquals but returns bool */
+export const ifEqualsBool = (arg1, arg2) => {
+  return arg1 === arg2;
+};
+
+/** unlessIfEquals but returns bool */
+export const unlessIfEqualsBool = (arg1, arg2) => {
+  return arg1 != arg2;
+};
+
 // Using ifAny else if with helpers
 // {{#ifAny A B C}}
 //   this if A or B or C
@@ -62,6 +72,28 @@ export const ifAny = function () {
   const anyTruthy = args.some(arg => arg);
 
   return anyTruthy ? options.fn(this) : options.inverse(this);
+};
+
+export const unlessIfAny = function () {
+  const args = Array.prototype.slice.call(arguments, 0, -1);
+  const options = arguments[arguments.length - 1];
+  const anyTruthy = args.some(arg => arg);
+
+  return !anyTruthy ? options.fn(this) : options.inverse(this);
+};
+
+export const ifAnyBool = function () {
+  const args = Array.prototype.slice.call(arguments, 0, -1);
+  const anyTruthy = args.some(arg => arg);
+
+  return anyTruthy;
+};
+
+export const unlessIfAnyBool = function () {
+  const args = Array.prototype.slice.call(arguments, 0, -1);
+  const anyTruthy = args.some(arg => arg);
+
+  return !anyTruthy;
 };
 
 /** Using ternary
