@@ -336,7 +336,7 @@
   padding-block-end: var(--#{$button}--PaddingBlockEnd);
   padding-inline-start: var(--#{$button}--PaddingInlineStart);
   padding-inline-end: var(--#{$button}--PaddingInlineEnd);
-  overflow: hidden;
+  overflow: hidden; // needed for ripple effect
   font-size: var(--#{$button}--FontSize, inherit);
   font-weight: var(--#{$button}--FontWeight, inherit);
   line-height: var(--#{$button}--LineHeight, inherit);
@@ -346,13 +346,9 @@
   text-decoration-style: var(--#{$button}--TextDecorationStyle);
   text-decoration-color: var(--#{$button}--TextDecorationColor);
   white-space: nowrap;
-  cursor: pointer;
+  cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
-  background-image: var(--#{$button}--BackgroundImage);
-  background-repeat: no-repeat;
-  background-position: var(--#{$button}--BackgroundPosition);
-  background-size: var(--#{$button}--BackgroundSize);
   border: 0;
   border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
@@ -362,7 +358,6 @@
   transition-duration: var(--#{$button}--TransitionDuration);
   transition-property: var(--#{$button}--TransitionProperty);
 
-  // Border pseudo-element (now ::after)
   &::after {
     position: absolute;
     inset: 0;
@@ -374,7 +369,7 @@
     transition: inherit;
   }
 
-  // Click effect (ripple) pseudo-element (now ::before)
+  // Click effect (ripple) pseudo-element
   // The pseudoelement expands from 0 (active state) to very large (default and hover state) so that the semi-transparent background gradient creates the ripple.
   &::before {
     position: absolute;
@@ -739,7 +734,7 @@
     text-decoration-color: var(--#{$button}--disabled--TextDecorationColor);
     background-color: var(--#{$button}--disabled--BackgroundColor);
 
-    &::before {
+    &::after {
       border-color: transparent;
     }
 
