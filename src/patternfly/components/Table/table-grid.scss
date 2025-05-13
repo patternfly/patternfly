@@ -94,6 +94,7 @@
   --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--cell--responsive--PaddingInlineEnd: 0;
   --#{$table}--cell--responsive--PaddingInlineStart: 0;
+  --#{$table}--cell--responsive--th--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // * Table grid compact table
   --#{$table}--m-compact__tr--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -272,7 +273,7 @@
 
     &::before {
       position: revert;
-      font-weight: bold;
+      font-weight: var(--#{$table}--cell--responsive--th--FontWeight);
       text-align: start;
       content: attr(data-label);
     }
