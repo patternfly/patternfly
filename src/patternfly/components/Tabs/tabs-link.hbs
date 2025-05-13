@@ -20,16 +20,25 @@
 
   {{#if tabs--IsAnimateCurrent}}
   onClick="
+    const doc = document.querySelector('html');
+    let isRTL = doc.dir === 'rtl' ? true : false;
     event.preventDefault();
     ((e) => {
       const el = this,
             li = this.closest('li'),
             ul = this.closest('ul'),
             tabs = this.closest('.pf-v6-c-tabs'),
-            left = Math.round(li.offsetLeft),
             top = Math.round(li.offsetTop),
             width = Math.round(li.offsetWidth),
             height = Math.round(li.offsetHeight);
+      
+      let left = Math.round(li.offsetLeft);
+
+      const getRight = () => {
+        return ul.offsetWidth - left - width;
+      }
+      
+      left = isRTL ? getRight(left) : Math.round(li.offsetLeft);
 
       ul.querySelectorAll('li').forEach(function(el) {
         el.classList.remove('pf-m-current')});
