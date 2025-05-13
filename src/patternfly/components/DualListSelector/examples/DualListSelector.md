@@ -386,106 +386,9 @@ cssPrefix: pf-v6-c-dual-list-selector
 {{/dual-list-selector}}
 ```
 
-
 ### Tree view
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="tree"}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
-    {{#> dual-list-selector-header}}
-      {{#> dual-list-selector-title}}
-        {{#> dual-list-selector-title-text}}
-          Available options
-        {{/dual-list-selector-title-text}}
-      {{/dual-list-selector-title}}
-    {{/dual-list-selector-header}}
-    {{#> dual-list-selector-tools}}
-      {{#> dual-list-selector-tools-filter}}
-        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
-      {{/dual-list-selector-tools-filter}}
-      {{> dual-list-selector--actions}}
-    {{/dual-list-selector-tools}}
-    {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
-        1 of 11 items selected
-      {{/dual-list-selector-status-text}}
-    {{/dual-list-selector-status}}
-    {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list dual-list-selector-list--IsTree="true"}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="0" dual-list-selector-item--count="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-            {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true" dual-list-selector-list--IsSublist="true"}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Red" dual-list-selector-item--id="1" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-              {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="2" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-              {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--id="3" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-              {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--id="4" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true"}}
-                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="5" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                  {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--id="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                  {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--id="7" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                  {{/dual-list-selector-list-item}}
-                  {{/dual-list-selector-list}}
-              {{/dual-list-selector-list-item}}
-            {{/dual-list-selector-list}}
-        {{/dual-list-selector-list-item}}
-
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item-row--HasCheck="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="8" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-        {{/dual-list-selector-list-item}}
-
-        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="9" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-        {{/dual-list-selector-list-item}}
-
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item-row--HasCheck="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="10" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-        {{/dual-list-selector-list-item}}
-
-      {{/dual-list-selector-list}}
-    {{/dual-list-selector-menu}}
-  {{/dual-list-selector-pane}}
-  {{#> dual-list-selector-controls}}
-    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAdd=true dual-list-selector-controls-item--IsDisabled=true}}
-    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsAddAll=true}}
-    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemoveAll=true dual-list-selector-controls-item--IsDisabled=true}}
-    {{> dual-list-selector-controls-item dual-list-selector-controls-item--IsRemove=true dual-list-selector-controls-item--IsDisabled=true}}
-  {{/dual-list-selector-controls}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
-    {{#> dual-list-selector-header}}
-      {{#> dual-list-selector-title}}
-        {{#> dual-list-selector-title-text}}
-          Chosen options
-        {{/dual-list-selector-title-text}}
-      {{/dual-list-selector-title}}
-    {{/dual-list-selector-header}}
-    {{#> dual-list-selector-tools}}
-      {{#> dual-list-selector-tools-filter}}
-        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
-      {{/dual-list-selector-tools-filter}}
-      {{> dual-list-selector--actions}}
-    {{/dual-list-selector-tools}}
-    {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
-        0 of 0 items selected
-      {{/dual-list-selector-status-text}}
-    {{/dual-list-selector-status}}
-    {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
-      {{/dual-list-selector-list}}
-    {{/dual-list-selector-menu}}
-  {{/dual-list-selector-pane}}
-{{/dual-list-selector}}
+{{> dual-list-selector--tree}}
 ```
 
 ### Tree view with chosen and disabled options
@@ -589,6 +492,11 @@ cssPrefix: pf-v6-c-dual-list-selector
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
 {{/dual-list-selector}}
+```
+
+### Tree view animated
+```hbs
+{{> dual-list-selector--tree dual-list-selector--tree--modifier="pf-m-animate-expand"}}
 ```
 
 ### Draggable
