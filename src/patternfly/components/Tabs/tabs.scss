@@ -814,7 +814,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       transition-duration: var(--#{$tabs}--link-accent--TransitionDuration);
       transition-property: width, height, translate;
       transform-origin: var(--#{$tabs}--link-accent--TransformOrigin);
-      translate: var(--#{$tabs}--link-accent--TranslateX) var(--#{$tabs}--link-accent--TranslateY);
+
+      @include pf-v6-bidirectional-style(
+        $prop: translate,
+        $ltr-val: var(--#{$tabs}--link-accent--TranslateX) var(--#{$tabs}--link-accent--TranslateY),
+        $rtl-val: #{pf-v6-calc-inverse(var(--#{$tabs}--link-accent--TranslateX))} var(--#{$tabs}--link-accent--TranslateY)
+      );
     }
   }
 
