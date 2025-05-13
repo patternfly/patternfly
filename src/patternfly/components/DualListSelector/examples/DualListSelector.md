@@ -722,6 +722,7 @@ cssPrefix: pf-v6-c-dual-list-selector
 | `.pf-v6-c-dual-list-selector__item-text` | `<span>` | Initiates a dual list selector pane menu item text. **Required** |
 | `.pf-v6-c-dual-list-selector__controls` | `<div>` | Initiates the dual list selector controls. **Required** |
 | `.pf-v6-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
+| `.pf-m-animate-expand` | `.pf-v6-c-dual-list-selector` | Animates the expansion of dual list selector tree view. |
 | `.pf-m-available` | `.pf-v6-c-dual-list-selector__pane` | Defines a pane as the available list. |
 | `.pf-m-chosen` | `.pf-v6-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
 | `.pf-m-drag-over` | `.pf-v6-c-dual-list-selector__list` | Modifies the dual list selector list to indicate that a draggable item is being dragged over the list. |
