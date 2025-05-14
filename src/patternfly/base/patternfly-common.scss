@@ -50,20 +50,20 @@
   @include pf-v6-mirror-inline-on-rtl;
 }
 
-// Turn off all motion (for testing purposes) by setting all motion tokens to 0
+// Turn off perceptible motion (for testing purposes) by setting all motion tokens to 1ms
 .#{$pf-prefix}m-no-motion {
   // stylelint-disable declaration-no-important
-  --pf-t--global--delay--400: 0ms !important;
-  --pf-t--global--delay--300: 0ms !important;
-  --pf-t--global--delay--200: 0ms !important;
-  --pf-t--global--delay--100: 0ms !important;
-  --pf-t--global--duration--600: 0ms !important;
-  --pf-t--global--duration--500: 0ms !important;
-  --pf-t--global--duration--400: 0ms !important;
-  --pf-t--global--duration--300: 0ms !important;
-  --pf-t--global--duration--200: 0ms !important;
-  --pf-t--global--duration--100: 0ms !important;
-  --pf-t--global--duration--50: 0ms !important;
+  --pf-t--global--delay--400: 1ms !important;
+  --pf-t--global--delay--300: 1ms !important;
+  --pf-t--global--delay--200: 1ms !important;
+  --pf-t--global--delay--100: 1ms !important;
+  --pf-t--global--duration--600: 1ms !important;
+  --pf-t--global--duration--500: 1ms !important;
+  --pf-t--global--duration--400: 1ms !important;
+  --pf-t--global--duration--300: 1ms !important;
+  --pf-t--global--duration--200: 1ms !important;
+  --pf-t--global--duration--100: 1ms !important;
+  --pf-t--global--duration--50: 1ms !important;
 
   // stylelink-enable declaration-no-important
 }
