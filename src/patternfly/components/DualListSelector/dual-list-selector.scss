@@ -221,18 +221,13 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
     > .#{$dual-list-selector}__list {
       .#{$dual-list-selector}.pf-m-animate-expand & {
-        // stylelint-disable max-nesting-depth, selector-max-class
-        &:where([hidden]) {
-          display: flex;
-        }
-        // stylelint-enable
-
-        display: none;
+        max-height: 0;
+        visibility: hidden;
         opacity: var(--#{$dual-list-selector}__list--Opacity);
+        transition-delay: 0s, 0s, var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--fade);
         transition-timing-function: var(--#{$dual-list-selector}__list--TransitionTimingFunction);
-        transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--slide), var(--#{$dual-list-selector}__list--TransitionDuration--fade);
-        transition-property: opacity, translate, display;
-        transition-behavior: allow-discrete;
+        transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--slide), 0s, 0s;
+        transition-property: opacity, translate, visibility, max-height;
         translate: 0 var(--#{$dual-list-selector}__list--TranslateY);
       }
     }
@@ -243,17 +238,12 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
     > .#{$dual-list-selector}__list {
       .#{$dual-list-selector}.pf-m-animate-expand & {
-        display: revert;
+        max-height: 9999px;
+        visibility: revert;
         opacity: var(--#{$dual-list-selector}--m-expanded__list--Opacity);
-        transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade), var(--#{$dual-list-selector}__list--TransitionDuration--expand--slide), var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade);
+        transition-delay: 0s;
+        transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade), var(--#{$dual-list-selector}__list--TransitionDuration--expand--slide), 0s, 0s;
         translate: 0 var(--#{$dual-list-selector}--m-expanded__list--TranslateY);
-
-        // stylelint-disable max-nesting-depth
-        @starting-style {
-          --#{$dual-list-selector}--m-expanded__list--Opacity: 0;
-          --#{$dual-list-selector}--m-expanded__list--TranslateY: -.5rem;
-        }
-        // stylelint-enable
       }
     }
   }
