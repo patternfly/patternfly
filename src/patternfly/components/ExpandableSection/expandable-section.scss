@@ -64,7 +64,7 @@
   gap: 0;
   transition-delay: var(--#{$expandable-section}__content--TransitionDelay--hide);
   transition-duration: 0s;
-  transition-property: gap;
+  transition-property: none;
 
   &.pf-m-expanded {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
@@ -80,6 +80,11 @@
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
     gap: var(--pf-v6-c-expandable-section--Gap);
+    transition-property: gap;
+
+    .#{$expandable-section}__content {
+      transition-property: opacity, translate, visibility, max-height;
+    }
   }
 
   &.pf-m-limit-width {
@@ -145,7 +150,7 @@
     transition-delay: 0s, 0s, var(--#{$expandable-section}__content--TransitionDelay--hide, 0s), var(--#{$expandable-section}__content--TransitionDelay--hide, 0s);
     transition-timing-function: var(--#{$expandable-section}__content--TransitionTimingFunction);
     transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), 0s, 0s;
-    transition-property: opacity, translate, visibility, max-height;
+    transition-property: none;
     translate: 0 var(--#{$expandable-section}__content--TranslateY);
   }
 }
