@@ -76,7 +76,7 @@
     --#{$expandable-section}__content--TranslateY: var(--#{$expandable-section}--m-expanded__content--TranslateY);
     --#{$expandable-section}--m-display-lg--TransitionDelay: 0s;
     --#{$expandable-section}__content--Visibility: auto;
-    --#{$expandable-section}__content--Height: auto;
+    --#{$expandable-section}__content--MaxHeight: 9999px;
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
     gap: var(--pf-v6-c-expandable-section--Gap);
@@ -139,14 +139,13 @@
   }
 
   .#{$expandable-section}:where(:not(.pf-m-truncate)) & {
-    height: var(--#{$expandable-section}__content--Height, 0);
+    max-height: var(--#{$expandable-section}__content--MaxHeight, 0);
     visibility: var(--#{$expandable-section}__content--Visibility, hidden);
     opacity: var(--#{$expandable-section}__content--Opacity);
     transition-delay: 0s, 0s, var(--#{$expandable-section}__content--TransitionDelay--hide, 0s), var(--#{$expandable-section}__content--TransitionDelay--hide, 0s);
     transition-timing-function: var(--#{$expandable-section}__content--TransitionTimingFunction);
     transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), 0s, 0s;
-    transition-property: opacity, translate, visibility, height;
-    transition-behavior: allow-discrete;
+    transition-property: opacity, translate, visibility, max-height;
     translate: 0 var(--#{$expandable-section}__content--TranslateY);
   }
 }
