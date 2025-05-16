@@ -13,6 +13,8 @@ cssPrefix: pf-v6-c-spinner
 
 ### Sizes
 ```hbs
+{{#> spinner spinner--modifier="pf-m-xs"}}Loading...{{/spinner}}
+
 {{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
 
 {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
