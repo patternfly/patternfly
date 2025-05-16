@@ -20,6 +20,7 @@
   --#{$expandable-section}__content--TransitionDuration--slide: var(--#{$expandable-section}__content--TransitionDuration--collapse--slide);
   --#{$expandable-section}__content--TransitionDuration--fade: var(--#{$expandable-section}__content--TransitionDuration--collapse--fade);
   --#{$expandable-section}__content--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$expandable-section}__content--TransitionDelay--hide: var(--#{$expandable-section}__content--TransitionDuration--fade);
   --#{$expandable-section}__content--Opacity: 0;
   --#{$expandable-section}__content--TranslateY: 0;
   --#{$expandable-section}--m-expanded__content--Opacity: 1;
@@ -60,7 +61,10 @@
 .#{$expandable-section} {
   display: flex;
   flex-direction: column;
-  gap: var(--#{$expandable-section}--Gap);
+  gap: 0;
+  transition-delay: var(--#{$expandable-section}__content--TransitionDelay--hide);
+  transition-duration: 0s;
+  transition-property: gap;
 
   &.pf-m-expanded {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
@@ -71,6 +75,11 @@
     --#{$expandable-section}__content--Opacity: var(--#{$expandable-section}--m-expanded__content--Opacity);
     --#{$expandable-section}__content--TranslateY: var(--#{$expandable-section}--m-expanded__content--TranslateY);
     --#{$expandable-section}--m-display-lg--TransitionDelay: 0s;
+    --#{$expandable-section}__content--Visibility: auto;
+    --#{$expandable-section}__content--MaxHeight: 9999px;
+    --#{$expandable-section}__content--TransitionDelay--hide: 0s;
+
+    gap: var(--pf-v6-c-expandable-section--Gap);
   }
 
   &.pf-m-limit-width {
@@ -130,21 +139,13 @@
   }
 
   .#{$expandable-section}:where(:not(.pf-m-truncate)) & {
-    display: none;
+    max-height: var(--#{$expandable-section}__content--MaxHeight, 0);
+    visibility: var(--#{$expandable-section}__content--Visibility, hidden);
     opacity: var(--#{$expandable-section}__content--Opacity);
+    transition-delay: 0s, 0s, var(--#{$expandable-section}__content--TransitionDelay--hide, 0s), var(--#{$expandable-section}__content--TransitionDelay--hide, 0s);
     transition-timing-function: var(--#{$expandable-section}__content--TransitionTimingFunction);
-    transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), var(--#{$expandable-section}__content--TransitionDuration--fade);
-    transition-property: opacity, translate, display;
-    transition-behavior: allow-discrete;
+    transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), 0s, 0s;
+    transition-property: opacity, translate, visibility, max-height;
     translate: 0 var(--#{$expandable-section}__content--TranslateY);
-  }
-
-  .#{$expandable-section}.pf-m-expanded & {
-    display: revert;
-
-    @starting-style {
-      --#{$expandable-section}__content--Opacity: 0;
-      --#{$expandable-section}__content--TranslateY: -.5rem;
-    }
   }
 }
