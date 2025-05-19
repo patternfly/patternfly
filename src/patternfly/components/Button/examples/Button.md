@@ -241,6 +241,13 @@ A favorite button should use a plain button with the star icon. Applying `.pf-m-
 {{> button button--IsSettings=true button--IsPlain=true button--IsIcon=true button--aria-label="Settings"}}
 ```
 
+### Hamburger
+```hbs
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger"}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-expanded"}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-collapsed"}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class to add color to the button.
@@ -293,3 +300,6 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-favorite` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a favorite button. **Note:** This is intended for use with a star icon. |
 | `.pf-m-favorited` | `.pf-v6-c-button.pf-m-plain.pf-m-favorite` | Modifies a favorite button to indicate that item is favorited. |
 | `.pf-m-settings` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a settings button. |
+| `.pf-m-hamburger` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a hamburger button. |
+| `.pf-m-expanded` | `.pf-v6-c-button.pf-m-plain.pf-m-expanded` | Modifies a hamburger button to indicate that it will expand a menu. |
+| `.pf-m-collapsed` | `.pf-v6-c-button.pf-m-plain.pf-m-collapsed` | Modifies a hamburger button to indicate that it will collapse a menu. |
