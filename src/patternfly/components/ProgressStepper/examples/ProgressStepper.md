@@ -244,11 +244,11 @@ cssPrefix: pf-v6-c-progress-stepper
       {{/progress-stepper-step-description}}
     {{/progress-stepper-step-main}}
   {{/progress-stepper-step}}
-  {{#> progress-stepper-step progress-stepper-step--IsInProgressAlt="true" progress-stepper-step--IsCurrent="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgressAnimate="true" progress-stepper-step--IsCurrent="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
       {{#> progress-stepper-step-title}}
-        Second step
+        In process
       {{/progress-stepper-step-title}}
       {{#> progress-stepper-step-description}}
         This is the second thing to happen
@@ -530,7 +530,7 @@ cssPrefix: pf-v6-c-progress-stepper
       {{/progress-stepper-step-title}}
     {{/progress-stepper-step-main}}
   {{/progress-stepper-step}}
-  {{#> progress-stepper-step progress-stepper-step--IsInProgressAlt="true" progress-stepper-step--IsCurrent="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgressAnimate="true" progress-stepper-step--IsCurrent="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
       {{#> progress-stepper-step-title}}

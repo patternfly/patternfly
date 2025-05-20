@@ -9,8 +9,9 @@
     {{else if progress-stepper-step--IsInProgress}}
       <i class="pf-v6-pficon pf-v6-pficon-resources-full" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsInProgressAlt}}
-      {{!-- <i class="pf-v6-pficon pf-v6-pficon-in-progress" aria-hidden="true"></i> --}}
-      {{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
+      <i class="pf-v6-pficon pf-v6-pficon-in-progress" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsInProgressAnimate}}
+      {{#> spinner spinner--modifier="pf-m-xs"}}Loading...{{/spinner}}
     {{else if progress-stepper-step--IsComplete}}
       <i class="fas fa-check-circle" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsFailure}}

@@ -42,7 +42,8 @@
 
   &.pf-m-sm {
     --#{$spinner}--diameter: var(--#{$spinner}--m-sm--diameter);
-    --#{$spinner}--StrokeWidth: 15;
+
+    // --#{$spinner}--StrokeWidth: 15;
   }
 
   &.pf-m-md {
