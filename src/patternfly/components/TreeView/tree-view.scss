@@ -357,12 +357,13 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
 .#{$tree-view}__list-item {
   .#{$tree-view}__list {
-    display: none;
+    max-height: 0;
+    visibility: hidden;
     opacity: var(--#{$tree-view}__list--Opacity);
+    transition-delay: 0s, 0s, var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--fade);
     transition-timing-function: var(--#{$tree-view}__list--TransitionTimingFunction);
     transition-duration: var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--slide);
-    transition-property: opacity, translate, display;
-    transition-behavior: allow-discrete;
+    transition-property: opacity, translate, visibility, max-height;
     translate: 0 var(--#{$tree-view}__list--TranslateY);
 
     &:where([hidden]) {
@@ -380,15 +381,12 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate);
 
     > .#{$tree-view}__list {
-      display: revert;
+      max-height: 9999px;
+      visibility: revert;
       opacity: var(--#{$tree-view}--m-expanded__list--Opacity);
+      transition-delay: 0s;
       transition-duration: var(--#{$tree-view}__list--TransitionDuration--expand--fade), var(--#{$tree-view}__list--TransitionDuration--expand--slide), var(--#{$tree-view}__list--TransitionDuration--expand--fade);
       translate: 0 var(--#{$tree-view}--m-expanded__list--TranslateY);
-
-      @starting-style {
-        --#{$tree-view}--m-expanded__list--Opacity: 0;
-        --#{$tree-view}--m-expanded__list--TranslateY: -.5rem;
-      }
     }
   }
 }
