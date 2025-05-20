@@ -13,6 +13,8 @@ cssPrefix: pf-v6-c-spinner
 
 ### Sizes
 ```hbs
+{{#> spinner spinner--modifier="pf-m-xs"}}Loading...{{/spinner}}
+
 {{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
 
 {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
@@ -57,6 +59,7 @@ Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 ### Modifiers
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-m-xs` | `.pf-v6-c-spinner` |  Creates a extra-small spinner. |
 | `.pf-m-sm` | `.pf-v6-c-spinner` |  Creates a small spinner. |
 | `.pf-m-md` | `.pf-v6-c-spinner` |  Creates a medium spinner. |
 | `.pf-m-lg` | `.pf-v6-c-spinner` |  Creates a large spinner. |

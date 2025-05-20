@@ -14,6 +14,7 @@
   --#{$spinner}__path--AnimationTimingFunction: ease-in-out;
 
   // sizes
+  --#{$spinner}--m-xs--diameter: var(--pf-t--global--icon--size--sm);
   --#{$spinner}--m-sm--diameter: var(--pf-t--global--icon--size--md);
   --#{$spinner}--m-md--diameter: var(--pf-t--global--icon--size--lg);
   --#{$spinner}--m-lg--diameter: var(--pf-t--global--icon--size--xl);
@@ -32,6 +33,11 @@
   // Modifiers change the variables for size variations
   &.pf-m-inline {
     --#{$spinner}--diameter: var(--#{$spinner}--m-inline--diameter);
+  }
+
+  &.pf-m-xs {
+    --#{$spinner}--diameter: var(--#{$spinner}--m-xs--diameter);
+    --#{$spinner}--StrokeWidth: 15;
   }
 
   &.pf-m-sm {
