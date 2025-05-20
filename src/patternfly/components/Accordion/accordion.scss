@@ -212,32 +212,30 @@
 }
 
 .#{$accordion}__expandable-content {
-  display: none;
+  max-height: 0;
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
+  visibility: hidden;
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
   opacity: var(--#{$accordion}__expandable-content--Opacity);
+  transition-delay: 0s, 0s, var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
   transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
-  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
-  transition-property: opacity, translate, display;
-  transition-behavior: allow-discrete;
+  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), 0s, 0s;
+  transition-property: opacity, translate, visibility, max-height;
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
-  &.pf-m-fixed {
-    max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
-    overflow-y: auto;
-  }
-
   .#{$accordion}__item.pf-m-expanded & {
-    display: revert;
+    max-height: 9999px;
+    visibility: revert;
+    transition-delay: 0s;
 
-    @starting-style {
-      --#{$accordion}__expandable-content--Opacity: 0;
-      --#{$accordion}__expandable-content--TranslateY: -.5rem;
+    &.pf-m-fixed {
+      max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
+      overflow-y: auto;
     }
   }
 }
