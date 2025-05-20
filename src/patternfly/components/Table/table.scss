@@ -978,6 +978,10 @@
   transition-property: opacity, translate, visibility;
   translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
+  &[hidden] {
+    display: revert;
+  }
+
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
     > .#{$table}__th,
     > .#{$table}__td {
