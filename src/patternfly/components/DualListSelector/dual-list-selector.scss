@@ -35,6 +35,25 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__menu--MaxHeight: #{pf-size-prem(320px)};
   --#{$dual-list-selector}__menu--MarginBlockStart: var(--pf-t--global--spacer--md);
 
+  // List
+  --#{$dual-list-selector}__list--TransitionDuration--expand--slide: 0s;
+  --#{$dual-list-selector}__list--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$dual-list-selector}__list--TransitionDuration--collapse--slide: 0s;
+  --#{$dual-list-selector}__list--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$dual-list-selector}__list--TransitionDuration--slide: var(--#{$dual-list-selector}__list--TransitionDuration--collapse--slide);
+  --#{$dual-list-selector}__list--TransitionDuration--fade: var(--#{$dual-list-selector}__list--TransitionDuration--collapse--fade);
+  --#{$dual-list-selector}__list--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$dual-list-selector}__list--Opacity: 0;
+  --#{$dual-list-selector}--m-expanded__list--Opacity: 1;
+  --#{$dual-list-selector}__list--TranslateY: 0;
+  --#{$dual-list-selector}--m-expanded__list--TranslateY: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$dual-list-selector}__list--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$dual-list-selector}__list--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$dual-list-selector}__list--TranslateY: -.5rem;
+  }
+
   // List item
   --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
   --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
@@ -199,10 +218,34 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   &.pf-m-expandable {
     --#{$dual-list-selector}__item--PaddingInlineStart: var(--#{$dual-list-selector}__item--m-expandable--PaddingInlineStart);
+
+    > .#{$dual-list-selector}__list {
+      .#{$dual-list-selector}.pf-m-animate-expand & { // TODO - remove opt-in class in a breaking change
+        max-height: 0;
+        visibility: hidden;
+        opacity: var(--#{$dual-list-selector}__list--Opacity);
+        transition-delay: 0s, 0s, var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--fade);
+        transition-timing-function: var(--#{$dual-list-selector}__list--TransitionTimingFunction);
+        transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--slide), 0s, 0s;
+        transition-property: opacity, translate, visibility, max-height;
+        translate: 0 var(--#{$dual-list-selector}__list--TranslateY);
+      }
+    }
   }
 
   &.pf-m-expanded {
     --#{$dual-list-selector}__item-toggle-icon--Rotate: var(--#{$dual-list-selector}__list-item--m-expanded__item-toggle-icon--Rotate);
+
+    > .#{$dual-list-selector}__list {
+      .#{$dual-list-selector}.pf-m-animate-expand & {
+        max-height: 9999px;
+        visibility: revert;
+        opacity: var(--#{$dual-list-selector}--m-expanded__list--Opacity);
+        transition-delay: 0s;
+        transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade), var(--#{$dual-list-selector}__list--TransitionDuration--expand--slide), 0s, 0s;
+        translate: 0 var(--#{$dual-list-selector}--m-expanded__list--TranslateY);
+      }
+    }
   }
 
   &.pf-m-disabled {
