@@ -123,8 +123,6 @@
   --#{$table}__expandable-row--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
   --#{$table}__expandable-row--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
-  --#{$table}__expandable-row--TransitionDuration--slide: var(--#{$table}__expandable-row--TransitionDuration--collapse--slide);
-  --#{$table}__expandable-row--TransitionDuration--fade: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
   --#{$table}__expandable-row--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__expandable-row--Opacity: 0;
   --#{$table}__tbody--m-expanded__expandable-row--Opacity: 1;
@@ -971,12 +969,13 @@
 // - Table expandable row
 .#{$table}__expandable-row {
   position: relative;
+  visibility: hidden;
   border-block-end: 0 solid transparent;
   opacity: var(--#{$table}__expandable-row--Opacity);
+  transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
   transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
-  transition-duration: var(--#{$table}__expandable-row--TransitionDuration--fade), var(--#{$table}__expandable-row--TransitionDuration--slide), var(--#{$table}__expandable-row--TransitionDuration--fade);
-  transition-property: opacity, translate, display;
-  transition-behavior: allow-discrete;
+  transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
+  transition-property: opacity, translate, visibility;
   translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
@@ -1012,26 +1011,44 @@
 
   // - Table expandable row content expanded
   &.pf-m-expanded {
+    visibility: visible;
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
     border-block-end-width: var(--#{$table}--border-width--base);
     opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
-    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), var(--#{$table}__expandable-row--TransitionDuration--expand--fade);
+    transition-delay: 0s;
+    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
     translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
 
-    @starting-style {
-      opacity: var(--#{$table}__expandable-row--Opacity);
-      translate: 0 var(--#{$table}__expandable-row--TranslateY);
+    > :is(.#{$table}__td, .#{$table}__th) {
+      > .#{$table}__expandable-row-content {
+        max-height: 9999px;
+      }
     }
   }
 
   &:not(.pf-m-expanded) {
-    display: none;
+    > :is(.#{$table}__td, .#{$table}__th) {
+      &,
+      > .#{$table}__expandable-row-content {
+        padding: 0;
+        transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+        transition-property: padding, max-height;
+      }
+
+      > .#{$table}__expandable-row-content {
+        max-height: 0;
+      }
+    }
   }
 
   // - Table expandable row tr last-child
   tr:last-child {
     border-block-end: 0;
   }
+}
+
+.#{$table}__tr:has(+ .#{$table}__expandable-row:not(.pf-m-expanded)) {
+  border-block-end: revert;
 }
 
 // - Table compact
