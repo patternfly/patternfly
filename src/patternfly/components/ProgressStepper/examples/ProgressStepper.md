@@ -519,7 +519,7 @@ cssPrefix: pf-v6-c-progress-stepper
 {{/progress-stepper}}
 ```
 
-### Basic with Patternfly icons
+### Basic in process
 ```hbs
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
