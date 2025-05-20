@@ -327,7 +327,7 @@ cssPrefix: pf-v6-c-tabs
 ```
 
 ## Animate current tab accent
-To animate the current tab accent, you must set the following variables on the `.pf-v6-c-tabs` wrapper. As tabs are added, removed, and resized, these values may need to be updated dynamically. The following examples use static values for these values and are not updated dynamically, so there may be styling issues. For more functional examples, see the [react tabs component examples](/components/tabs).
+To animate the current tab accent, you must set the following variables on the `.pf-v6-c-tabs` wrapper. As tabs are added, removed, and resized, these values may need to be updated dynamically. The following examples use static values for these variables and are not updated dynamically, so there may be styling issues. For more functional examples, see the [react tabs component examples](/components/tabs).
 
 * `--pf-v6-c-tabs--link-accent--start` - the left offset of the current tab
 * `--pf-v6-c-tabs--link-accent--length` - the width of the current tab
