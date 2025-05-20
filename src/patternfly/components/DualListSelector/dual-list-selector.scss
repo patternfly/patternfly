@@ -220,7 +220,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
     --#{$dual-list-selector}__item--PaddingInlineStart: var(--#{$dual-list-selector}__item--m-expandable--PaddingInlineStart);
 
     > .#{$dual-list-selector}__list {
-      .#{$dual-list-selector}.pf-m-animate-expand & {
+      .#{$dual-list-selector}.pf-m-animate-expand & { // TODO - remove opt-in class in a breaking change
         max-height: 0;
         visibility: hidden;
         opacity: var(--#{$dual-list-selector}__list--Opacity);
