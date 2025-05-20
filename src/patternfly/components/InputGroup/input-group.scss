@@ -36,7 +36,7 @@
   --#{$input-group}-expandable__search-input--TransitionTimingFunction--expand: var(--pf-t--global--motion--timing-function--decelerate);
   --#{$input-group}-expandable__search-input--TransitionTimingFunction--collapse: var(--pf-t--global--motion--timing-function--accelerate);
   --#{$input-group}-expandable__search-input--TransitionDuration--expand: var(--pf-t--global--motion--duration--fade--default);
-  --#{$input-group}-expandable__search-input--TransitionDuration--collapse: var(--pf-t--global--motion--duration--fade--default);
+  --#{$input-group}-expandable__search-input--TransitionDuration--collapse: var(--pf-t--global--motion--duration--fade--short);
   --#{$input-group}-expandable__search-input--ScaleX: 1;
   --#{$input-group}-expandable__search-input--TransformOriginX--expand-left: 100%;
   --#{$input-group}-expandable__search-input--TransformOriginX--expand-right: 0;
@@ -57,12 +57,12 @@
   
 .#{$input-group}-expandable {
   &:not(.pf-m-expanded) {
-    .pf-v6-c-search-input {
+    .#{$pf-prefix}c-search-input {
       display: none;
     }
   }
 
-  .pf-v6-c-search-input {
+  .#{$pf-prefix}c-search-input {
     width: 100%;
     opacity: 0;
     transition-timing-function: var(--#{$input-group}-expandable__search-input--TransitionTimingFunction--collapse);
@@ -72,13 +72,13 @@
     transform-origin: var(--#{$input-group}-expandable__search-input--TransformOriginX) center;
     scale: var(--#{$input-group}-expandable__search-input--ScaleX) 1;
   }
-  
+
   &.pf-m-expand-left {
     --#{$input-group}-expandable__search-input--TransformOriginX: var(--#{$input-group}-expandable__search-input--TransformOriginX--expand-left);
   }
   
   &.pf-m-expanded {
-    .pf-v6-c-search-input {
+    .#{$pf-prefix}c-search-input {
       opacity: 1;
       transition-timing-function: var(--#{$input-group}-expandable__search-input--TransitionTimingFunction--expand);
       transition-duration: var(--#{$input-group}-expandable__search-input--TransitionDuration--expand);
