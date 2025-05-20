@@ -38,7 +38,7 @@ __tabs-list--IsCloseDisabled: bool
     __tabs-item--id="containers"
     __tabs-item--icon-name="fas fa-box"
     __tabs-item--aria-label="Containers"
-    __tabs-item--text="Containers"
+    __tabs-item--text=(ternary __tabs-list--HasMultiLine "Containers <br> and more" "Containers")
     }}
   {{> __tabs-item
     __tabs-item--id="database"

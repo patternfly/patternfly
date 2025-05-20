@@ -325,6 +325,45 @@ cssPrefix: pf-v6-c-tabs
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 ```
+
+## Animate current tab accent
+To animate the current tab accent, you must set the following variables on the `.pf-v6-c-tabs` wrapper. As tabs are added, removed, and resized, these values may need to be updated dynamically. The following examples use static values for these variables and are not updated dynamically, so there may be styling issues. For more functional examples, see the [react tabs component examples](/components/tabs).
+
+* `--pf-v6-c-tabs--link-accent--start` - the left offset of the current tab
+* `--pf-v6-c-tabs--link-accent--length` - the width of the current tab
+
+### Animate default tabs accent
+```hbs
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-default" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 67px;"'}}
+  {{> __tabs-list __tabs-list--IsDisabled="true"}}
+{{/tabs}}
+```
+
+### Animate sub tabs accent
+```hbs
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-subtabs" tabs--modifier="pf-m-scrollable" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 67px;"'}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
+{{/tabs}}
+
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-subtabs-sub" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 63px;"'}}
+  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
+{{/tabs}}
+```
+
+### Animate filled tabs accent
+```hbs
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-filled" tabs--modifier="pf-m-fill" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 253px;"'}}
+  {{> __tabs-list __tabs-list--IsShort="true"}}
+{{/tabs}}
+```
+
+### Animate vertical tabs accent
+```hbs
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-vertical" tabs--IsVertical=true __tabs-list--HasMultiLine=true tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 8px; --pf-v6-c-tabs--link-accent--length: 45px;"'}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
+{{/tabs}}
+```
+
 ## Tab content
 
 ### Default tab content example
@@ -410,9 +449,10 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/tokens/all-patternfly-tokens). **Note:** works with vertical tabs only. |
 | `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-expanded` | `.pf-v6-c-tabs` | Modifies the expandable tabs component for the expanded state. |
-| `.pf-m-initializing-accent` | `.pf-v6-c-tabs` | Modifies tabs styles while initializing the "current" tab's accent styles. |
-| `--pf-v6-c-tabs--link-accent--start` | `.pf-v6-c-tabs` | Sets the value for the "start" inset of the current tab's accent. |
-| `--pf-v6-c-tabs--link-accent--length` | `.pf-v6-c-tabs` | Sets the value for the length of the current tab's accent. |
+| `.pf-m-animate-current` | `.pf-v6-c-tabs` | Modifies tabs to animate movement of the current tab accent line. |
+| `.pf-m-initializing-accent` | `.pf-v6-c-tabs.pf-m-animate-current` | Modifies tabs styles while initializing the "current" tab's accent styles. |
+| `--pf-v6-c-tabs--link-accent--start` | `.pf-v6-c-tabs.pf-m-animate-current` | Sets the value for the "start" inset of the current tab's accent. |
+| `--pf-v6-c-tabs--link-accent--length` | `.pf-v6-c-tabs.pf-m-animate-current` | Sets the value for the length of the current tab's accent. |
 | `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
 | `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
