@@ -163,9 +163,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-body__field-group--last-child--MarginBlockEnd: calc(var(--#{$form}__field-group-body--PaddingBlockEnd) * -1);
   --#{$form}__field-group-body--TranslateY: 0;
   --#{$form}__field-group--m-expanded__field-group-body--TranslateY: 0;
-  --#{$form}__field-group-body--TransitionDuration--expand--slide: 0;
+  --#{$form}__field-group-body--TransitionDuration--expand--slide: 0s;
   --#{$form}__field-group-body--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
-  --#{$form}__field-group-body--TransitionDuration--collapse--slide: 0;
+  --#{$form}__field-group-body--TransitionDuration--collapse--slide: 0s;
   --#{$form}__field-group-body--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
 
   @media screen and (prefers-reduced-motion: no-preference) {
