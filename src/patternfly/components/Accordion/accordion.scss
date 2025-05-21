@@ -227,6 +227,10 @@
   transition-property: opacity, translate, visibility, max-height, margin-block-end;
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
+  &.pf-m-fixed {
+    overflow-y: auto;
+  }
+
   .#{$accordion}__item.pf-m-expanded & {
     max-height: 9999px;
     margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
@@ -235,7 +239,6 @@
 
     &.pf-m-fixed {
       max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
-      overflow-y: auto;
     }
   }
 }
