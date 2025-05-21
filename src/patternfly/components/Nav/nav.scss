@@ -75,9 +75,19 @@
   --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap); // needed to keep focus outline on first item from being cut off
   --#{$nav}__subnav--PaddingBlockEnd: var(--#{$nav}__item--RowGap); // needed to keep focus outline on last item from being cut off
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__subnav--TransitionDuration--expand: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$nav}__subnav--TransitionDuration--collapse: var(--pf-t--global--motion--duration--slide-in--short);
+  --#{$nav}__subnav--TransitionDuration--expand: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__subnav--TransitionDuration--expand--slide: 0s;
+  --#{$nav}__subnav--TransitionDuration--collapse: var(--pf-t--global--motion--duration--fade--short);
+  --#{$nav}__subnav--TransitionDuration--collapse--slide: 0s;
   --#{$nav}__subnav--TransitionTimingFunction--expand: var(--pf-t--global--motion--timing-function--default);
+  --#{$nav}__subnav--TranslateY: 0;
+  --#{$nav}__subnav--hidden--TranslateY: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$nav}__subnav--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$nav}__subnav--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$nav}__subnav--hidden--TranslateY: -.5rem;
+  }
 
   // * Nav scroll button
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
@@ -199,25 +209,28 @@
 .#{$nav}__subnav {
   --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
-  grid-template-rows: 1fr;
-  min-height: 0;
+  max-height: 9999px;
   padding-block-start: var(--#{$nav}__subnav--PaddingBlockStart);
   padding-block-end: var(--#{$nav}__subnav--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
   overflow-y: clip;
-  transition-delay: 0s, var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s);
+  visibility: visible;
+  transition-delay: 0s, 0s, var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s);
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--expand);
-  transition-duration: var(--#{$nav}__subnav--TransitionDuration--expand), 0s, 0s, 0s, 0s;
-  transition-property: opacity, visibility, grid-template-rows, padding-block-start, padding-block-end;
-  
+  transition-duration: var(--#{$nav}__subnav--TransitionDuration--expand), var(--#{$nav}__subnav--TransitionDuration--expand--slide), 0s, 0s, 0s, 0s;
+  transition-property: opacity, translate, visibility, max-height, padding-block-start, padding-block-end;
+  translate: 0 var(--#{$nav}__subnav--TranslateY);
+
   &[hidden] {
     --#{$nav}__subnav--TransitionDelay--expand--focus: var(--#{$nav}__subnav--TransitionDuration--expand);
     --#{$nav}__subnav--TransitionDuration--expand: var(--#{$nav}__subnav--TransitionDuration--collapse);
+    --#{$nav}__subnav--TransitionDuration--expand--slide: var(--#{$nav}__subnav--TransitionDuration--collapse--slide);
     --#{$nav}__subnav--PaddingBlockStart: 0;
     --#{$nav}__subnav--PaddingBlockEnd: 0;
+    --#{$nav}__subnav--TranslateY: var(--#{$nav}__subnav--hidden--TranslateY);
 
     display: grid; // overrides `display: none` - element is hidden via `visibility: hidden`
-    grid-template-rows: 0fr;
+    max-height: 0;
     visibility: hidden;
     opacity: 0;
   }
