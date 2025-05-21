@@ -213,7 +213,6 @@
 
 .#{$accordion}__expandable-content {
   max-height: 0;
-  margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
@@ -222,14 +221,15 @@
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
   opacity: var(--#{$accordion}__expandable-content--Opacity);
-  transition-delay: 0s, 0s, var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
+  transition-delay: 0s, 0s, var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
   transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
-  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), 0s, 0s;
-  transition-property: opacity, translate, visibility, max-height;
+  transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), 0s, 0s, 0s;
+  transition-property: opacity, translate, visibility, max-height, margin-block-end;
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   .#{$accordion}__item.pf-m-expanded & {
     max-height: 9999px;
+    margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
     visibility: revert;
     transition-delay: 0s;
 
