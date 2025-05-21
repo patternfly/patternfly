@@ -125,6 +125,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group--BorderBlockEndWidth: var(--#{$form}__field-group--border-width-base);
   --#{$form}__field-group--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$form}__field-group--field-group--MarginBlockStart: calc(var(--#{$form}--GridGap) * -1);
+
+  // Field group toggle
   --#{$form}__field-group--GridTemplateColumns--toggle: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) + var(--pf-t--global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
   --#{$form}__field-group-toggle--PaddingBlockStart: var(--#{$form}__field-group-header--PaddingBlockStart);
   --#{$form}__field-group-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
@@ -138,6 +140,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
   --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;
+
+  // Field group header
   --#{$form}__field-group-header--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$form}__field-group-header--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$form}__field-group-header--GridColumn: 1 / 3;
@@ -148,6 +152,8 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-header-description--MarginBlockStart: var(--pf-t--global--spacer--xs);
   --#{$form}__field-group-header-description--Color: var(--pf-t--global--text--color--subtle);
   --#{$form}__field-group-header-actions--MarginInlineStart: var(--pf-t--global--spacer--sm);
+
+  // Field group body
   --#{$form}__field-group-body--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group-body--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group-body--Gap: var(--#{$form}--GridGap);
@@ -155,6 +161,18 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group__field-group__field-group-body--GridColumn: 1 / 3;
   --#{$form}__field-group__field-group__field-group-toggle--field-group-body--GridColumn: 2 / 3;
   --#{$form}__field-group-body__field-group--last-child--MarginBlockEnd: calc(var(--#{$form}__field-group-body--PaddingBlockEnd) * -1);
+  --#{$form}__field-group-body--TranslateY: 0;
+  --#{$form}__field-group--m-expanded__field-group-body--TranslateY: 0;
+  --#{$form}__field-group-body--TransitionDuration--expand--slide: 0;
+  --#{$form}__field-group-body--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$form}__field-group-body--TransitionDuration--collapse--slide: 0;
+  --#{$form}__field-group-body--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$form}__field-group-body--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$form}__field-group-body--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$form}__field-group-body--TranslateY: -.5rem;
+  }
 }
 
 .#{$form} {
@@ -385,6 +403,17 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     > .#{$form}__field-group-toggle {
       --#{$form}__field-group-toggle-icon--Rotate: var(--#{$form}__field-group--m-expanded__toggle-icon--Rotate);
     }
+
+    &.pf-m-expandable > .#{$form}__field-group-body { // TODO - remove .pf-m-expandable in a breaking change, it shouldn't be needed. Only needed now so that these styles are an opt-in behind .pf-m-expandable
+      max-height: 9999px;
+      padding-block-start: var(--#{$form}__field-group-body--PaddingBlockStart);
+      padding-block-end: var(--#{$form}__field-group-body--PaddingBlockEnd);
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+      transition-duration: var(--#{$form}__field-group-body--TransitionDuration--expand--fade), var(--#{$form}__field-group-body--TransitionDuration--expand--slide), 0s, 0s, 0s, 0s;
+      translate: 0 var(--#{$form}__field-group--m-expanded__field-group-body--TranslateY);
+    }
   }
 }
 
@@ -453,8 +482,16 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   display: grid;
   grid-column: var(--#{$form}__field-group-body--GridColumn);
   gap: var(--#{$form}__field-group-body--Gap);
-  padding-block-start: var(--#{$form}__field-group-body--PaddingBlockStart);
-  padding-block-end: var(--#{$form}__field-group-body--PaddingBlockEnd);
+
+  @at-root .#{$form}__field-group.pf-m-expandable > & {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0s, 0s, var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--fade);
+    transition-duration: var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--slide), 0s, 0s, 0s, 0s;
+    transition-property: opacity, translate, visibility, max-height, padding-block-start, padding-block-end;
+    translate: 0 var(--#{$form}__field-group-body--TranslateY);
+  }
 
   > .#{$form}__field-group {
     &:first-child {
