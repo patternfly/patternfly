@@ -465,19 +465,6 @@
   }
   // stylelint-enable
 
-  // REMOVE PADDING FOR SPECIAL CELLS THAT CONTAIN BUTTONS
-  // ==================================================================
-  // unset padding, button adds appropriate padding
-  // unset padding for these cells as the button within provides padding
-  // .#{$table}__compound-expansion-toggle {
-  //   &,
-  //   &:first-child,
-  //   &:last-child {
-  //     // explicitly reset padding rather than css variable, as the button within uses the variable
-  //     padding: 0;
-  //   }
-  // }
-
   // - Table sort
   // set property here to increase specificity
   .#{$table}__sort {
@@ -969,23 +956,27 @@
 // - Table expandable row
 .#{$table}__expandable-row {
   position: relative;
-  visibility: hidden;
   border-block-end: 0 solid transparent;
-  opacity: var(--#{$table}__expandable-row--Opacity);
-  transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
-  transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
-  transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
-  transition-property: opacity, translate, visibility;
-  translate: 0 var(--#{$table}__expandable-row--TranslateY);
-
-  &[hidden] {
-    display: revert;
-  }
 
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
     > .#{$table}__th,
     > .#{$table}__td {
       padding-block-start: 0;
+    }
+  }
+
+  // Regular expandable - excludes compound expansion - TODO update in breaking change to use a class on regular and/or compound expandable to better target one or the other
+  @at-root .#{$table}__tr:not(.#{$table}__control-row, .#{$table}__expandable-row) + & {
+    visibility: hidden;
+    opacity: var(--#{$table}__expandable-row--Opacity);
+    transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+    transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
+    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
+    transition-property: opacity, translate, visibility;
+    translate: 0 var(--#{$table}__expandable-row--TranslateY);
+
+    &[hidden] {
+      display: revert;
     }
   }
 
@@ -1015,32 +1006,43 @@
 
   // - Table expandable row content expanded
   &.pf-m-expanded {
-    visibility: visible;
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
     border-block-end-width: var(--#{$table}--border-width--base);
-    opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
-    transition-delay: 0s;
-    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
-    translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
 
-    > :is(.#{$table}__td, .#{$table}__th) {
-      > .#{$table}__expandable-row-content {
-        max-height: 9999px;
+    // TODO update in breaking change to use a class on regular and/or compound expandable to better target one or the other
+    @at-root .#{$table}__tr:not(.#{$table}__control-row, .#{$table}__expandable-row) + & {
+      visibility: visible;
+      opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+      transition-delay: 0s;
+      transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
+      translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
+
+      > :is(.#{$table}__td, .#{$table}__th) {
+        > .#{$table}__expandable-row-content {
+          max-height: 9999px;
+        }
       }
     }
   }
 
   &:not(.pf-m-expanded) {
-    > :is(.#{$table}__td, .#{$table}__th) {
-      &,
-      > .#{$table}__expandable-row-content {
-        padding: 0;
-        transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
-        transition-property: padding, max-height;
-      }
+    @at-root .#{$table}__control-row ~ & {
+      display: none;
+    }
 
-      > .#{$table}__expandable-row-content {
-        max-height: 0;
+    // TODO update in breaking change to use a class on regular and/or compound expandable to better target one or the other
+    @at-root .#{$table}__tr:not(.#{$table}__control-row, .#{$table}__expandable-row) + & {
+      > :is(.#{$table}__td, .#{$table}__th) {
+        &,
+        > .#{$table}__expandable-row-content {
+          padding: 0;
+          transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+          transition-property: padding, max-height;
+        }
+
+        > .#{$table}__expandable-row-content {
+          max-height: 0;
+        }
       }
     }
   }
@@ -1051,7 +1053,8 @@
   }
 }
 
-.#{$table}__tr:has(+ .#{$table}__expandable-row:not(.pf-m-expanded)) {
+// TODO update in breaking change to use a class on regular and/or compound expandable to better target one or the other
+.#{$table}__tr:not(.#{$table}__control-row, .#{$table}__expandable-row):has(+ .#{$table}__expandable-row:not(.pf-m-expanded)) {
   border-block-end: revert;
 }
 
