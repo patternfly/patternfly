@@ -362,7 +362,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     opacity: var(--#{$tree-view}__list--Opacity);
     transition-delay: 0s, 0s, var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--fade);
     transition-timing-function: var(--#{$tree-view}__list--TransitionTimingFunction);
-    transition-duration: var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--slide);
+    transition-duration: var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--slide), 0s, 0s;
     transition-property: opacity, translate, visibility, max-height;
     translate: 0 var(--#{$tree-view}__list--TranslateY);
 
@@ -385,7 +385,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
       visibility: revert;
       opacity: var(--#{$tree-view}--m-expanded__list--Opacity);
       transition-delay: 0s;
-      transition-duration: var(--#{$tree-view}__list--TransitionDuration--expand--fade), var(--#{$tree-view}__list--TransitionDuration--expand--slide), var(--#{$tree-view}__list--TransitionDuration--expand--fade);
+      transition-duration: var(--#{$tree-view}__list--TransitionDuration--expand--fade), var(--#{$tree-view}__list--TransitionDuration--expand--slide), 0s, 0s;
       translate: 0 var(--#{$tree-view}--m-expanded__list--TranslateY);
     }
   }
