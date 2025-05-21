@@ -48,7 +48,7 @@
   --#{$expandable-section}--m-display-lg--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$expandable-section}--m-display-lg--BorderColor: var(--pf-t--global--border--color--default);
   --#{$expandable-section}--m-display-lg--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$expandable-section}--m-display-lg--TransitionDelay: var(--#{$expandable-section}__content--TransitionDuration--fade);
+  --#{$expandable-section}--m-display-lg--TransitionDelay: var(--#{$expandable-section}__content--TransitionDuration--collapse--fade);
 
   // Indented
   --#{$expandable-section}--m-indented__content--PaddingInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) + var(--pf-t--global--spacer--gap--text-to-element--default) + var(--#{$expandable-section}__toggle-icon--MinWidth));
@@ -64,7 +64,7 @@
   gap: 0;
   transition-delay: var(--#{$expandable-section}__content--TransitionDelay--hide);
   transition-duration: 0s;
-  transition-property: gap;
+  transition-property: gap, padding-block-end;
 
   &.pf-m-expanded {
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
@@ -74,7 +74,6 @@
     --#{$expandable-section}__content--TransitionDuration--fade: var(--#{$expandable-section}__content--TransitionDuration--expand--fade);
     --#{$expandable-section}__content--Opacity: var(--#{$expandable-section}--m-expanded__content--Opacity);
     --#{$expandable-section}__content--TranslateY: var(--#{$expandable-section}--m-expanded__content--TranslateY);
-    --#{$expandable-section}--m-display-lg--TransitionDelay: 0s;
     --#{$expandable-section}__content--Visibility: auto;
     --#{$expandable-section}__content--MaxHeight: 9999px;
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
@@ -94,7 +93,6 @@
     background-color: var(--#{$expandable-section}--m-display-lg--BackgroundColor);
     border: var(--#{$expandable-section}--m-display-lg--BorderWidth) solid var(--#{$expandable-section}--m-display-lg--BorderColor);
     border-radius: var(--#{$expandable-section}--m-display-lg--BorderRadius);
-    transition: padding-block-end 0s var(--#{$expandable-section}--m-display-lg--TransitionDelay, 0s);
   }
 
   &.pf-m-indented {
