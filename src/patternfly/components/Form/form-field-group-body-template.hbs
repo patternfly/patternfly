@@ -1,0 +1,18 @@
+{{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
+  {{#> form-group-label}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
+    {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+  {{/form-group-label}}
+  {{#> form-group-control}}
+    {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+  {{/form-group-control}}
+{{/form-group}}
+{{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
+  {{#> form-group-label}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
+    {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+  {{/form-group-label}}
+  {{#> form-group-control}}
+    {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+  {{/form-group-control}}
+{{/form-group}}
