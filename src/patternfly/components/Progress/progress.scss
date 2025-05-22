@@ -140,6 +140,16 @@
     --#{$progress}__indicator--BackgroundColor: var(--#{$progress}--m-danger__indicator--BackgroundColor);
     --#{$progress}__status-icon--Color: var(--#{$progress}--m-danger__status-icon--Color);
     --#{$progress}--m-inside__measure--Color: var(--#{$progress}--m-danger--m-inside__measure--Color);
+
+    .#{$progress}__bar {
+      @media (prefers-reduced-motion: no-preference) {
+        @include pf-v6-animate-danger-jiggle;
+      }
+
+      .pf-m-status {
+        @include pf-v6-fade-default(#{$progress}, pf-v6-global-fade-in);
+      }
+    } 
   }
 }
 
