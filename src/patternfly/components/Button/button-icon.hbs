@@ -9,6 +9,10 @@
   {{#if button--IsFavorite}}
     <span class="{{pfv}}button__icon-favorite">{{> icon-outlined-star}}</span>
     <span class="{{pfv}}button__icon-favorited">{{> icon-star}}</span>
+  {{else if button--IsSettings}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{else if button--IsHamburger}}
+    {{> hamburger-icon}}
   {{else if button--icon}}
     <i class="fas fa-{{button--icon}}" aria-hidden="true"></i>
   {{else if button--icon-template}}

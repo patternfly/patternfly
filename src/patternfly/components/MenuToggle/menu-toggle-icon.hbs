@@ -5,7 +5,10 @@
   {{#if menu-toggle-icon--attribute}}
     {{{menu-toggle-icon--attribute}}}
   {{/if}}>
-  {{#if menu-toggle--icon}}
+  {{#if menu-toggle--icon-template}}
+    {{! renders a hbs partial if passed as the value for menu-toggle--icon-template}}
+    {{> (lookup . "menu-toggle--icon-template")}}
+  {{else if menu-toggle--icon}}
     <i class="fas fa-{{menu-toggle--icon}}" aria-hidden="true"></i>
   {{else if @partial-block}}
     {{> @partial-block}}

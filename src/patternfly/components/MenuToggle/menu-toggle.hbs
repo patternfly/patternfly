@@ -75,9 +75,9 @@
         check--IsStandalone=true
       }}
   {{/if}}
-  {{#if menu-toggle--icon}}
+  {{#ifAny menu-toggle--icon menu-toggle--icon-template}}
     {{> menu-toggle-icon}}
-  {{/if}}
+  {{/ifAny}}
   {{#if menu-toggle--text}}
     {{> menu-toggle-text}}
   {{/if}}

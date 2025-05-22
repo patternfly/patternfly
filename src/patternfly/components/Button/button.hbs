@@ -25,6 +25,8 @@
     button--IsFavorited='pf-m-favorited'
     button--IsDisplayLg='pf-m-display-lg'
     button--IsBlock='pf-m-block'
+    button--IsSettings='pf-m-settings'
+    button--IsHamburger='pf-m-hamburger'
     button--modifier=button--modifier
   }}
   {{#if button--IsDisabled}}
@@ -81,16 +83,16 @@
   {{#if button--IsInProgress}}
     {{> button-progress}}
   {{/if}}
-  {{#ifAny button--IsIcon button--IsFavorite}} {{! button only has an icon - eg, no text}}
-    {{#ifAny button--icon button--icon-template button--IsFavorite}}
-      {{> button-icon}}
-    {{else if @partial-block}}
+  {{#if button--IsIcon}} {{! button only has an icon - eg, no text}}
+    {{#if @partial-block}}
       {{#> button-icon}}
         {{> @partial-block}}
       {{/button-icon}}
-    {{/ifAny}}
+    {{else}}
+      {{> button-icon}}
+    {{/if}}
   {{else}}
-    {{#ifAny button--icon button--icon-template button--IsFavorite}}
+    {{#ifAny button--icon button--icon-template}}
       {{#unless button-icon--IsEnd}}
         {{> button-icon}}
       {{/unless}}
@@ -104,12 +106,12 @@
         {{/button-text}}
       {{/if}}
     {{/if}}
-    {{#ifAny button--icon button--icon-template button--IsFavorite}}
+    {{#ifAny button--icon button--icon-template}}
       {{#if button-icon--IsEnd}}
         {{> button-icon}}
       {{/if}}
     {{/ifAny}}
-  {{/ifAny}}
+  {{/if}}
   {{#if button--count}}
     {{> button-count}}
   {{/if}}
