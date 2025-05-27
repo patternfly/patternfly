@@ -84,6 +84,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__content__body--PaddingInlineEnd: 0;
   --#{$drawer}__content__body--PaddingBlockEnd: 0;
   --#{$drawer}__content__body--PaddingInlineStart: 0;
+  --#{$drawer}__content__body--Position: relative;
 
   // Drawer panel body
   --#{$drawer}__panel__body--PaddingBlockStart: var(--#{$drawer}__body--PaddingBlockStart--base);
@@ -303,6 +304,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   > .#{$drawer}__body {
+    position: var(--#{$drawer}__content__body--Position);
     padding-block-start: var(--#{$drawer}__content__body--PaddingBlockStart);
     padding-block-end: var(--#{$drawer}__content__body--PaddingBlockEnd);
     padding-inline-start: var(--#{$drawer}__content__body--PaddingInlineStart);
