@@ -198,6 +198,14 @@
   --#{$table}--m-compact--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact--cell--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
+  // * Table cell with button
+  --#{$table}__td-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}__td-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+
+  // * Table compact cell with button
+  --#{$table}--m-compact__td-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact__td-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+
   // * Table compact action
   --#{$table}--m-compact__action--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__action--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
@@ -479,6 +487,11 @@
   //     padding: 0;
   //   }
   // }
+
+  .#{$table}__td.#{$table}__td-button {
+    --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}__td-button--PaddingBlockStart);
+    --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}__td-button--PaddingBlockEnd);
+  }
 
   // - Table sort
   // set property here to increase specificity
@@ -1062,6 +1075,11 @@
   .#{$table}__draggable {
     --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__action--PaddingBlockStart);
     --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__action--PaddingBlockEnd);
+  }
+
+  .#{$table}__td-button {
+    --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}--m-compact__td-button--PaddingBlockStart);
+    --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td-button--PaddingBlockEnd);
   }
 
   .#{$table}__icon {
