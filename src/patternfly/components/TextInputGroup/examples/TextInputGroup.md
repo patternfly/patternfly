@@ -165,9 +165,9 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```hbs
 <h3>Collapsed</h3>
 <br>
-{{#> input-group input-group--IsPlain=true input-group--modifier="pf-v6-c-input-group-expandable"}}
-  {{#> input-group-item input-group-item--modifier="pf-v6-c-search-input"}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
+{{#> input-group input-group--IsPlain=true input-group--modifier="pf-m-search-input"}}
+  {{#> input-group-item input-group-item--modifier="pf-m-search-text-input"}}
+    {{> text-input-group--search-input text-input-group--id="pf-m-search-input-expandable" text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
@@ -177,9 +177,9 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 <br>
 <h3>Expanded</h3>
 <br>
-{{#> input-group input-group--IsPlain=true input-group--modifier="pf-v6-c-input-group-expandable pf-m-expanded"}}
-  {{#> input-group-item input-group-item--IsFill=true input-group-item--modifier="pf-v6-c-search-input"}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
+{{#> input-group input-group--IsPlain=true input-group--modifier="pf-m-search-input pf-m-expanded"}}
+  {{#> input-group-item input-group-item--IsFill=true input-group-item--modifier="pf-m-search-text-input"}}
+    {{> text-input-group--search-input text-input-group--id="pf-m-search-input-expandable" text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
