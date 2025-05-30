@@ -338,7 +338,7 @@
   // stylelint-disable property-no-vendor-prefix
   -webkit-user-select: none;
   user-select: none;
-  // stylelint-ensable property-no-vendor-prefix
+  // stylelint-enable property-no-vendor-prefix
   background: var(--#{$button}--BackgroundColor) radial-gradient(circle, transparent 1%, color-mix(in srgb, currentcolor 15%, transparent) 1%) center/15000%;
   border: 0;
   border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
