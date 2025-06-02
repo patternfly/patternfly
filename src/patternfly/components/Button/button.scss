@@ -22,7 +22,7 @@
   --#{$button}--TextDecorationStyle: none;
   --#{$button}--TextDecorationColor: currentcolor;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
   --#{$button}--TransitionProperty: color, background, border-width, border-color;
 
   // Hover
