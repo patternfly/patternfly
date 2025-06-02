@@ -687,7 +687,9 @@
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
+  }
 
+  &:active {
     background-size: 100%; // apply the background surface for ripple
     transition-duration: 0s; // transition immediately
   }
