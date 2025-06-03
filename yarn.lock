@@ -2866,10 +2866,10 @@
   dependencies:
     "@octokit/openapi-types" "^23.0.1"
 
-"@patternfly/ast-helpers@^1.4.0-alpha.207":
-  version "1.4.0-alpha.207"
-  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.4.0-alpha.207.tgz#fe3a1ab9cbd4c9464ababfb617d74c16ac1fcec3"
-  integrity sha512-jZ4WVxhceebVN7GLbyhasmHAiyQYBEB1zPE+jBwg9SLjHByQTI+3lnI3EfQcxojng8eUDgv+sNT8nwBQNUGBiw==
+"@patternfly/ast-helpers@^1.4.0-alpha.208":
+  version "1.4.0-alpha.208"
+  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-1.4.0-alpha.208.tgz#7603925b70524b476c814e9c3912a8aef90d99b3"
+  integrity sha512-HTJbnOIdJfNKyOTJBGQhWzysBhVsakrzvQ1nPFv0cg0IZmFFbJxppBAJwVUKf2DobT4FqfmGfOssKyGauSUCCA==
   dependencies:
     acorn "^8.4.1"
     acorn-class-fields "^1.0.0"
@@ -2877,16 +2877,16 @@
     acorn-static-class-features "^1.0.0"
     astring "^1.7.5"
 
-"@patternfly/documentation-framework@6.10.21":
-  version "6.10.21"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.10.21.tgz#9b2ddf12362ea7c84b34f451ac206b94f383a640"
-  integrity sha512-Ys9nifB30YnrRyqIEWBfMndS3Z6G/ZSTQ44d9VSnj2cCVea5UxyoesvrpF86bfd1prE7RXg+ETlkNyvXdWSG7w==
+"@patternfly/documentation-framework@6.10.22":
+  version "6.10.22"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.10.22.tgz#6946cd8635fa81d6af64a3cd4f935a7c2136530c"
+  integrity sha512-Q6D5EwZZtA8oUe7gwSZUgpjrTGOSY+v4TERRGNQdP551fIE7B2w2y735xvil/brrNUmpC+wutFdKEtKZyEH1ow==
   dependencies:
     "@babel/core" "^7.24.3"
     "@babel/preset-env" "^7.24.3"
     "@babel/preset-react" "^7.24.1"
     "@mdx-js/util" "1.6.16"
-    "@patternfly/ast-helpers" "^1.4.0-alpha.207"
+    "@patternfly/ast-helpers" "^1.4.0-alpha.208"
     "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer "9.8.6"
     babel-loader "^9.1.3"
