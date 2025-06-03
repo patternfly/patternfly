@@ -149,8 +149,37 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       "header header"
       "sidebar main";
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
+  }
+
+  // Hamburger menu animation
+  // mobile - show expand on hover
+  > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    @include pf-v6-hamburger;
+  }
+
+  // mobile - show collapse when sidebar expanded
+  &:where(:has(> .#{$page}__sidebar.pf-m-expanded)) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
+    // desktop - disable default arrow
+    > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    &:where(:has(> .#{$page}__sidebar.pf-m-expanded)) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+      @include pf-v6-hamburger($reset: true);
+    }
+
+    // desktop - show collapse on hover
+    > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
+    }
+
+    // desktop - show expand on hover when sidebar collapsed
+    &:where(:has(> .#{$page}__sidebar.pf-m-collapsed)) > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger;
     }
   }
+}
 
 // Header
 .#{$page} > .#{$masthead} {

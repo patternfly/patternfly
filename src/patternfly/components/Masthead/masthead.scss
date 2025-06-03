@@ -217,11 +217,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
  }
 }
 
-// - Masthead toggle
-.#{$masthead}__toggle {
-  --#{$button}--FontSize: var(--#{$masthead}__toggle--Size);
-}
-
 // - Masthead expandable content
 .#{$masthead}__expandable-content {
   row-gap: var(--#{$masthead}__expandable-content-RowGap, var(--#{$masthead}--RowGap));

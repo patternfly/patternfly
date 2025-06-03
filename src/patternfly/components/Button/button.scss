@@ -21,6 +21,7 @@
   --#{$button}--TextDecorationLine: none;
   --#{$button}--TextDecorationStyle: none;
   --#{$button}--TextDecorationColor: currentcolor;
+  --#{$button}--TransitionDelay: 0s;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
   --#{$button}--TransitionProperty: color, background, border-width, border-color;
@@ -271,7 +272,7 @@
   --#{$button}--disabled--BorderColor: transparent;
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
 
-  // Icons
+  // Icon
   --#{$button}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--hover__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-clicked__icon--Color: var(--pf-t--global--icon--color--regular);
@@ -281,6 +282,16 @@
   --#{$button}__icon--m-end--MarginInlineStart: 0;
   --#{$button}--m-notify__icon--AnimationDuration--notify: var(--pf-t--global--motion--duration--3xl);
   --#{$button}--m-notify__icon--AnimationTimingFunction--notify: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}__icon--TransitionDelay: 0s;
+  --#{$button}__icon--TransitionTimingFunction: auto;
+  --#{$button}__icon--TransitionDuration: 0s;
+  --#{$button}__icon--TransitionProperty: none;
+  --#{$button}__icon--Rotate: 0deg;
+  --#{$button}__icon--Scale: 1;
+  --#{$button}--hover__icon--TransitionTimingFunction: auto;
+  --#{$button}--hover__icon--TransitionDuration: 0s;
+  --#{$button}--hover__icon--TransitionProperty: none;
+  --#{$button}--hover__icon--Rotate: 0deg;
 
   // Favorite button
   --#{$button}--m-favorite__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
@@ -311,12 +322,35 @@
   --#{$button}--m-in-progress--m-plain__progress--InsetInlineStart: 50%;
   --#{$button}--m-in-progress--m-plain__progress--TranslateX: -50%;
 
+  // Settings
+  --#{$button}--m-settings__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$button}--m-settings__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$button}--m-settings--hover__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$button}--m-settings--hover__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$button}--m-settings--hover__icon--Rotate: 60deg;
+
   // Count
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
 
   // Block
   --#{$button}--m-block--Display: flex;
   --#{$button}--m-block--Width: 100%;
+
+  // Hamburger
+  --#{$button}--hamburger-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$button}--hamburger-icon--TransitionDuration: var(--pf-t--global--motion--duration--md);
+  --#{$button}--hamburger-icon--top--path--base: path("M1,1 L9,1");
+  --#{$button}--hamburger-icon--middle--path--base: path("M1,5 L9,5");
+  --#{$button}--hamburger-icon--arrow--path--base: path("M1,5 L1,5 L1,5");
+  --#{$button}--hamburger-icon--bottom--path--base: path("M9,9 L1,9");
+  --#{$button}--hamburger-icon--top--path: var(--#{$button}--hamburger-icon--top--path--base);
+  --#{$button}--hamburger-icon--middle--path: var(--#{$button}--hamburger-icon--middle--path--base);
+  --#{$button}--hamburger-icon--arrow--path: var(--#{$button}--hamburger-icon--arrow--path--base);
+  --#{$button}--hamburger-icon--bottom--path: var(--#{$button}--hamburger-icon--bottom--path--base);
+  --#{$button}--hamburger-icon--top--collapse--path: path("M5,1 L9,1");
+  --#{$button}--hamburger-icon--arrow--collapse--path: path("M3,7 L1,5 L3,3");
+  --#{$button}--hamburger-icon--bottom--collapse--path: path("M9,9 L5,9");
+  --#{$button}--m-hamburger__icon--m-expand--Scale: -1;
 }
 
 .#{$button} {
@@ -350,9 +384,11 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
+  transition-delay: var(--#{$button}--TransitionDelay);
   transition-timing-function: var(--#{$button}--TransitionTimingFunction);
   transition-duration: var(--#{$button}--TransitionDuration);
   transition-property: var(--#{$button}--TransitionProperty);
+  scale: var(--#{$button}--Scale, revert);
 
   &::after {
     position: absolute;
@@ -632,7 +668,7 @@
 
   &.pf-m-block {
     --#{$button}--Display: var(--#{$button}--m-block--Display);
-
+ 
     width: var(--#{$button}--m-block--Width);
   }
 
@@ -661,7 +697,9 @@
   // Favorite button when favorited
   &.pf-m-favorited {
     --#{$button}__icon--Color: var(--#{$button}--m-favorited__icon--Color);
+    --pf-v6-c-button--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-favorited__icon--Color);
     --#{$button}--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
+    --pf-v6-c-button--m-plain--m-no-padding--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
     --#{$button}__icon--favorite--Opacity: var(--#{$button}--m-favorited__icon--favorite--Opacity);
     --#{$button}__icon--favorited--Opacity: var(--#{$button}--m-favorited__icon--favorited--Opacity);
   }
@@ -673,6 +711,33 @@
     animation-timing-function: var(--#{$button}--m-favorited__icon--AnimationTimingFunction);
   }
 
+  &.pf-m-settings {
+    --#{$button}__icon--TransitionProperty: rotate;
+    --#{$button}__icon--TransitionDuration: var(--#{$button}--m-settings__icon--TransitionDuration);
+    --#{$button}__icon--TransitionTimingFunction: var(--#{$button}--m-settings__icon--TransitionTimingFunction);
+    --#{$button}--hover__icon--TransitionProperty: rotate;
+    --#{$button}--hover__icon--TransitionDuration: var(--#{$button}--m-settings--hover__icon--TransitionDuration);
+    --#{$button}--hover__icon--TransitionTimingFunction: var(--#{$button}--m-settings--hover__icon--TransitionTimingFunction);
+    --#{$button}--hover__icon--Rotate: var(--#{$button}--m-settings--hover__icon--Rotate);
+  }
+
+  &.pf-m-hamburger {
+    --#{$button}__icon--TransitionDelay: var(--#{$button}--hamburger-icon--TransitionDuration);
+    --#{$button}__icon--TransitionDuration: 0s;
+    --#{$button}__icon--TransitionProperty: scale;
+    --#{$button}--hover__icon--TransitionDelay: var(--#{$button}--hamburger-icon--TransitionDuration);
+    --#{$button}--hover__icon--TransitionDuration: 0s;
+    --#{$button}--hover__icon--TransitionProperty: scale;
+
+    &.pf-m-expand {
+      @include pf-v6-hamburger;
+    }
+
+    &.pf-m-collapse {
+      @include pf-v6-hamburger($collapse: true);
+    }
+  }
+
   &:hover,
   &:focus {
     --#{$button}--Color: var(--#{$button}--hover--Color);
@@ -681,6 +746,10 @@
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
+    --#{$button}__icon--TransitionTimingFunction: var(--#{$button}--hover__icon--TransitionTimingFunction);
+    --#{$button}__icon--TransitionDuration: var(--#{$button}--hover__icon--TransitionDuration);
+    --#{$button}__icon--TransitionProperty: var(--#{$button}--hover__icon--TransitionProperty);
+    --#{$button}__icon--Rotate: var(--#{$button}--hover__icon--Rotate);
 
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
@@ -765,6 +834,12 @@
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
+  transition-delay: var(--#{$button}__icon--TransitionDelay);
+  transition-timing-function: var(--#{$button}__icon--TransitionTimingFunction);
+  transition-duration: var(--#{$button}__icon--TransitionDuration);
+  transition-property: var(--#{$button}__icon--TransitionProperty);
+  rotate: var(--#{$button}__icon--Rotate);
+  scale: var(--#{$button}__icon--Scale);
 
   &.pf-m-start {
     --#{$button}__icon--MarginInlineEnd: var(--#{$button}__icon--m-start--MarginInlineEnd);
@@ -813,6 +888,32 @@
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
+}
+
+.#{$button}--hamburger-icon {
+  path {
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: d var(--#{$button}--hamburger-icon--TransitionDuration) var(--#{$button}--hamburger-icon--TransitionTimingFunction);
+  }
+}
+
+.#{$button}--hamburger-icon--top {
+  d: var(--#{$button}--hamburger-icon--top--path, var(--#{$button}--hamburger-icon--top--direction--path));
+}
+
+.#{$button}--hamburger-icon--middle {
+  d: var(--#{$button}--hamburger-icon--middle--path, var(--#{$button}--hamburger-icon--middle--direction--path));
+}
+
+.#{$button}--hamburger-icon--arrow {
+  d: var(--#{$button}--hamburger-icon--arrow--path, var(--#{$button}--hamburger-icon--arrow--direction--path));
+}
+
+.#{$button}--hamburger-icon--bottom {
+  d: var(--#{$button}--hamburger-icon--bottom--path, var(--#{$button}--hamburger-icon--bottom--direction--path));
 }
 
 @keyframes #{$button}-icon-notify {
