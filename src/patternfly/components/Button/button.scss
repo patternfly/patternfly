@@ -22,8 +22,8 @@
   --#{$button}--TextDecorationStyle: none;
   --#{$button}--TextDecorationColor: currentcolor;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$button}--TransitionProperty: color, background-color, border-width, border-color, padding;
+  --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$button}--TransitionProperty: color, background, border-width, border-color;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -340,8 +340,11 @@
   text-decoration-color: var(--#{$button}--TextDecorationColor);
   white-space: nowrap;
   cursor: pointer; // needed for when a button does not use <button> - eg, <span>
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-user-select: none;
   user-select: none;
-  background-color: var(--#{$button}--BackgroundColor);
+  // stylelint-enable property-no-vendor-prefix
+  background: var(--#{$button}--BackgroundColor) radial-gradient(circle, transparent 1%, color-mix(in srgb, currentcolor 15%, transparent) 1%) center/15000%;
   border: 0;
   border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
@@ -475,6 +478,7 @@
 
       text-align: start;
       white-space: normal;
+      background: transparent; // don't show the ripple effect for inline links
       outline-offset: #{pf-size-prem(2px)};
     }
 
@@ -622,6 +626,7 @@
       --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-plain--m-no-padding--m-small--PaddingInlineStart);
   
       min-width: var(--#{$button}--m-plain--m-no-padding--MinWidth);
+      background: var(--#{$button}--BackgroundColor); // override the ripple background
     }
   }
 
@@ -682,12 +687,18 @@
     text-decoration-color: var(--#{$button}--hover--TextDecorationColor);
   }
 
+  &:active,
   &.pf-m-clicked {
     --#{$button}--Color: var(--#{$button}--m-clicked--Color);
     --#{$button}--BackgroundColor: var(--#{$button}--m-clicked--BackgroundColor);
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
+  }
+
+  &:active {
+    background-size: 100%; // apply the background surface for ripple
+    transition-duration: 0s; // transition immediately
   }
 
   // Disabled buttons
@@ -702,7 +713,7 @@
   &.pf-m-aria-disabled {
     color: var(--#{$button}--disabled--Color);
     text-decoration-color: var(--#{$button}--disabled--TextDecorationColor);
-    background-color: var(--#{$button}--disabled--BackgroundColor);
+    background: var(--#{$button}--disabled--BackgroundColor);
 
     &::after {
       border-color: transparent;
