@@ -15,8 +15,12 @@
   --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$menu}--icon--disabled--Color: var(--pf-t--global--icon--color--disabled);
-  --#{$menu}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$menu}--TransitionDuration: 0s;
   --#{$menu}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  
+  @media (prefers-reduced-motion: no-preference) {
+    --#{$menu}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  }
 
   // * Menu plain
   --#{$menu}--m-plain--BoxShadow: none;
@@ -126,19 +130,30 @@
   --#{$menu}--m-flyout__menu--m-left--InsetInlineEnd: calc(100% + var(--#{$menu}--m-flyout__menu--m-left--right-offset));
 
   // * Menu drilldown content
-  // TODO Reduced motion default needed for drilldown
   --#{$menu}--m-drilldown__content--TransitionDuration--height: var(--pf-t--global--motion--duration--slide-in--default);
   --#{$menu}--m-drilldown__content--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
+  --#{$menu}--m-drilldown__content--Transition: height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
+  
+  @media (prefers-reduced-motion: no-preference) {
+    --#{$menu}--m-drilldown__content--Transition: transform var(--#{$menu}--m-drilldown__content--TransitionDuration--transform), height var(--#{$menu}--m-drilldown__content--TransitionDuration--height);
+  }
 
   // * Menu drilldown menu
   --#{$menu}--m-drilldown--c-menu--InsetBlockStart: 0;
-  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: 0s;
   --#{$menu}--m-drilldown--c-menu--Transition: transform var(--#{$menu}--m-drilldown--c-menu--TransitionDuration--transform);
 
+  @media (prefers-reduced-motion: no-preference) {
+    --#{$menu}--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
+  }
+
   // * Menu drilldown list
-  --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
+  --#{$menu}--m-drilldown__list--TransitionDuration--transform: 0s;
   --#{$menu}--m-drilldown__list--Transition: transform var(--#{$menu}--m-drilldown__list--TransitionDuration--transform);
+  
+  @media (prefers-reduced-motion: no-preference) {
+    --#{$menu}--m-drilldown__list--TransitionDuration--transform: var(--pf-t--global--motion--duration--slide-in--default);
+  }
 
   // * Menu drilled in
   --#{$menu}--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-t--global--z-index--xs);
