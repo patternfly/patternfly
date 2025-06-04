@@ -1,6 +1,7 @@
 @use '../sass-utilities/functions' as *;
 @use '../sass-utilities/init' as *;
 @use '../sass-utilities/scss-variables' as *;
+@use '../sass-utilities/namespaces-components' as *;
 
 // Media query used to create responsive classes
 @mixin pf-v6-media-query($point) {
@@ -410,6 +411,7 @@
   scale: -1 1;
 }
 
+
 @mixin pf-v6-mirror-inline-on-rtl {
   @include pf-v6-rtl {
     @include pf-v6-mirror-inline;
@@ -425,5 +427,38 @@
   $selector: if($isClass, "." + $selector, $selector);
   #{$selector} {
     @content
+  }
+}
+
+// Sets hamburger styles. Defaults to expand styles (right arrow)
+// $collapse - if true, changes to left arrow
+// $reset - will reset the bars to the default (no arrow)
+@mixin pf-v6-hamburger($collapse: false, $reset: false) {
+  @if $reset {
+    --#{$button}--hamburger-icon--top--path: var(--#{$button}--hamburger-icon--top--path--base);
+    --#{$button}--hamburger-icon--arrow--path: var(--#{$button}--hamburger-icon--arrow--path--base);
+    --#{$button}--hamburger-icon--bottom--path: var(--#{$button}--hamburger-icon--bottom--path--base);
+    --#{$button}__icon--TransitionDelay: var(--#{$button}--hamburger-icon--TransitionDuration);
+    --#{$button}--hover__icon--TransitionDelay: var(--#{$button}--hamburger-icon--TransitionDuration);
+  } @else {
+    // set direction vars
+    --#{$button}--hamburger-icon--top--path: var(--#{$button}--hamburger-icon--top--collapse--path);
+    --#{$button}--hamburger-icon--arrow--path: var(--#{$button}--hamburger-icon--arrow--collapse--path);
+    --#{$button}--hamburger-icon--bottom--path: var(--#{$button}--hamburger-icon--bottom--collapse--path);
+
+    // collapse
+    @if $collapse {
+      --#{$button}__icon--TransitionDelay: 0s;
+      --#{$button}__icon--Scale: 1;
+      --#{$button}--hover__icon--TransitionDelay: 0s;
+      --#{$button}--hover__icon--Scale: 1;
+
+    // expand
+    } @else {
+      --#{$button}__icon--TransitionDelay: 0s;
+      --#{$button}__icon--Scale: var(--#{$button}--m-hamburger__icon--m-expand--Scale);
+      --#{$button}--hover__icon--TransitionDelay: 0s;
+      --#{$button}--hover__icon--Scale: var(--#{$button}--m-hamburger__icon--m-expand--Scale);
+    }
   }
 }

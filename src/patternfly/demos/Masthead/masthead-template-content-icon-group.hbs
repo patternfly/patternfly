@@ -9,7 +9,7 @@
       {{> masthead-template-application-launcher app-launcher--id=(concat toolbar-group--id '-app-launcher')}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Settings"' menu-toggle--icon="cog"}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
       {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Help"' menu-toggle--icon="question-circle"}}

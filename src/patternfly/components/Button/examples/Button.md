@@ -236,6 +236,18 @@ A favorite button should use a plain button with the star icon. Applying `.pf-m-
 {{/button}}
 ```
 
+### Settings
+```hbs
+{{> button button--IsSettings=true button--IsPlain=true button--IsIcon=true button--aria-label="Settings"}}
+```
+
+### Hamburger
+```hbs
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger"}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-expand"}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-collapse"}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class to add color to the button.
@@ -262,7 +274,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-v6-c-button` | `<button>, <span>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-v6-c-button__icon` | `<span>` | Initiates a button icon. |
 | `.pf-v6-c-button__progress` | `<span>` | Initiates a button progress container. |
-| `.pf-v6-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
+| `.pf-v6-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons. |
 | `.pf-m-primary` | `.pf-v6-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-v6-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-v6-c-button` | Modifies for tertiary styles. |
@@ -285,5 +297,9 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-in-progress` | `.pf-v6-c-button` | Indicates that the button is in the in progress state. |
 | `.pf-m-stateful` | `.pf-v6-c-button` | Indicates that the button is used for one of read, unread, and attention states. **Note:** Always use with a modifier of `.pf-m-read`, `.pf-m-unread`, or `.pf-m-attention`. |
 | `.pf-m-notify` | `.pf-v6-c-button` | Indicates that the button should show the user notification of an event. **Note:** This is intended for use with a bell icon in the notification badge. |
-| `.pf-m-favorite` | `.pf-v6-c-button .pf-m-plain` | Modifies a plain button to be a favorite button. **Note:** This is intended for use with a star icon. |
-| `.pf-m-favorited` | `.pf-v6-c-button .pf-m-plain .pf-m-favorite` | Modifies a favorite button to indicate that item is favorited.  |
+| `.pf-m-favorite` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a favorite button. **Note:** This is intended for use with a star icon. |
+| `.pf-m-favorited` | `.pf-v6-c-button.pf-m-plain.pf-m-favorite` | Modifies a favorite button to indicate that item is favorited. |
+| `.pf-m-settings` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a settings button. |
+| `.pf-m-hamburger` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a hamburger button. |
+| `.pf-m-expand` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will expand a menu. |
+| `.pf-m-collapse` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will collapse a menu. |

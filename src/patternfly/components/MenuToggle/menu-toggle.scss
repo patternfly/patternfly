@@ -43,6 +43,14 @@
   // * Menu toggle icon
   --#{$menu-toggle}__icon--MinHeight: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight));
   --#{$menu-toggle}__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$menu-toggle}__icon--TransitionDelay: 0s;
+  --#{$menu-toggle}__icon--TransitionDuration: 0s;
+  --#{$menu-toggle}__icon--TransitionProperty: none;
+  --#{$menu-toggle}--hover__icon--TransitionDelay: 0s;
+  --#{$menu-toggle}--hover__icon--TransitionDuration: 0s;
+  --#{$menu-toggle}--hover__icon--TransitionProperty: none;
+  --#{$menu-toggle}__icon--Rotate: 0deg;
+  --#{$menu-toggle}--hover__icon--Rotate: 0deg;
 
   // * Menu toggle toggle icon
   --#{$menu-toggle}__toggle-icon--MinHeight: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight));
@@ -174,6 +182,13 @@
 
   // Controls
   --#{$menu-toggle}__controls--Gap: var(--pf-t--global--spacer--sm);
+
+  // Settings
+  --#{$menu-toggle}--m-settings__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$menu-toggle}--m-settings__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$menu-toggle}--m-settings--hover__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--long);
+  --#{$menu-toggle}--m-settings--hover__icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$menu-toggle}--m-settings--hover__icon--Rotate: 60deg;
 }
 
 .#{$menu-toggle} {
@@ -299,6 +314,10 @@
     --#{$menu-toggle}--BorderWidth: var(--#{$menu-toggle}--hover--BorderWidth);
     --#{$menu-toggle}--BorderColor: var(--#{$menu-toggle}--hover--BorderColor);
     --#{$menu-toggle}__toggle-icon--Color: var(--#{$menu-toggle}--hover__toggle-icon--Color);
+    --#{$menu-toggle}__icon--TransitionDelay: var(--#{$menu-toggle}--hover__icon--TransitionDelay);
+    --#{$menu-toggle}__icon--TransitionDuration: var(--#{$menu-toggle}--hover__icon--TransitionDuration);
+    --#{$menu-toggle}__icon--TransitionProperty: var(--#{$menu-toggle}--hover__icon--TransitionProperty);
+    --#{$menu-toggle}__icon--Rotate: var(--#{$menu-toggle}--hover__icon--Rotate);
   }
 
   &:is(.pf-m-expanded, [aria-expanded="true"]) {
@@ -367,6 +386,16 @@
       }
       // stylelint-enable
     }
+  }
+
+  &.pf-m-settings {
+    --#{$menu-toggle}__icon--TransitionProperty: rotate;
+    --#{$menu-toggle}__icon--TransitionDuration: var(--#{$menu-toggle}--m-settings__icon--TransitionDuration);
+    --#{$menu-toggle}__icon--TransitionTimingFunction: var(--#{$menu-toggle}--m-settings__icon--TransitionTimingFunction);
+    --#{$menu-toggle}--hover__icon--TransitionProperty: rotate;
+    --#{$menu-toggle}--hover__icon--TransitionDuration: var(--#{$menu-toggle}--m-settings--hover__icon--TransitionDuration);
+    --#{$menu-toggle}--hover__icon--TransitionTimingFunction: var(--#{$menu-toggle}--m-settings--hover__icon--TransitionTimingFunction);
+    --#{$menu-toggle}--hover__icon--Rotate: var(--#{$menu-toggle}--m-settings--hover__icon--Rotate);
   }
 
   &.pf-m-placeholder {
@@ -574,6 +603,10 @@
 
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
+  transition-delay: var(--#{$menu-toggle}__icon--TransitionDelay);
+  transition-duration: var(--#{$menu-toggle}__icon--TransitionDuration);
+  transition-property: var(--#{$menu-toggle}__icon--TransitionProperty);
+  rotate: var(--#{$menu-toggle}__icon--Rotate);
   
   @at-root .#{$menu-toggle}:not(.pf-m-plain) & {
     @extend %pf-v6-menu-toggle__icon--MarginBlock;
