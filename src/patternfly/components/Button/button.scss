@@ -697,9 +697,9 @@
   // Favorite button when favorited
   &.pf-m-favorited {
     --#{$button}__icon--Color: var(--#{$button}--m-favorited__icon--Color);
-    --pf-v6-c-button--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-favorited__icon--Color);
+    --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-favorited__icon--Color);
     --#{$button}--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
-    --pf-v6-c-button--m-plain--m-no-padding--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
+    --#{$button}--m-plain--m-no-padding--hover__icon--Color: var(--#{$button}--m-favorited--hover__icon--Color);
     --#{$button}__icon--favorite--Opacity: var(--#{$button}--m-favorited__icon--favorite--Opacity);
     --#{$button}__icon--favorited--Opacity: var(--#{$button}--m-favorited__icon--favorited--Opacity);
   }
