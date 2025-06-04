@@ -301,5 +301,5 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-favorited` | `.pf-v6-c-button.pf-m-plain.pf-m-favorite` | Modifies a favorite button to indicate that item is favorited. |
 | `.pf-m-settings` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a settings button. |
 | `.pf-m-hamburger` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a hamburger button. |
-| `.pf-m-expanded` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will expand a menu. |
-| `.pf-m-collapsed` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will collapse a menu. |
+| `.pf-m-expand` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will expand a menu. |
+| `.pf-m-collapse` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will collapse a menu. |

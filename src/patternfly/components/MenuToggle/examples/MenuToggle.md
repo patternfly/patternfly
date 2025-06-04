@@ -1001,11 +1001,11 @@ Shown with default, primary, and secondary styling
 
 ### Settings
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog"}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
 
-{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog"}}
+{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
 
-{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog"}}
+{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
 ```
 
 ## Documentation

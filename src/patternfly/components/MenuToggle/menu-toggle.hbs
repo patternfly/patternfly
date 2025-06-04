@@ -39,7 +39,7 @@
 
   {{#if menu-toggle--IsPlain}}
     {{#unless menu-toggle--text}}
-      aria-label='Menu toggle'
+      aria-label="{{ternary menu-toggle--aria-label menu-toggle--aria-label "Menu toggle"}}"
     {{/unless}}
   {{/if}}
 
