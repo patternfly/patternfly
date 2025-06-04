@@ -274,7 +274,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-v6-c-button` | `<button>, <span>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-v6-c-button__icon` | `<span>` | Initiates a button icon. |
 | `.pf-v6-c-button__progress` | `<span>` | Initiates a button progress container. |
-| `.pf-v6-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
+| `.pf-v6-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons. |
 | `.pf-m-primary` | `.pf-v6-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-v6-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-v6-c-button` | Modifies for tertiary styles. |
@@ -301,5 +301,5 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-favorited` | `.pf-v6-c-button.pf-m-plain.pf-m-favorite` | Modifies a favorite button to indicate that item is favorited. |
 | `.pf-m-settings` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a settings button. |
 | `.pf-m-hamburger` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a hamburger button. |
-| `.pf-m-expanded` | `.pf-v6-c-button.pf-m-plain.pf-m-expanded` | Modifies a hamburger button to indicate that it will expand a menu. |
-| `.pf-m-collapsed` | `.pf-v6-c-button.pf-m-plain.pf-m-collapsed` | Modifies a hamburger button to indicate that it will collapse a menu. |
+| `.pf-m-expanded` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will expand a menu. |
+| `.pf-m-collapsed` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will collapse a menu. |

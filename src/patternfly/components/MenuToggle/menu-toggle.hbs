@@ -1,25 +1,19 @@
 <{{#ifAny menu-toggle--IsDiv menu-toggle--IsSplitButton}}div{{else}}button{{/ifAny}} class="{{pfv}}menu-toggle
-  {{#if menu-toggle--IsPrimary}}
-    pf-m-primary
-  {{/if}}
-  {{#if menu-toggle--IsSecondary}}
-    pf-m-secondary
-  {{/if}}
-  {{#if menu-toggle--IsPlain}}
-    pf-m-plain
-  {{/if}}
-  {{#if menu-toggle--IsSmall}}
-    pf-m-small
-  {{/if}}
-  {{#if menu-toggle--IsText}}
-    pf-m-text
-  {{/if}}
-  {{#if menu-toggle--IsExpanded}}
-    pf-m-expanded
-  {{/if}}
-  {{#if menu-toggle--IsTypeahead}}
-    pf-m-typeahead
-  {{/if}}
+  {{setModifiers
+    menu-toggle--IsPrimary='pf-m-primary'
+    menu-toggle--IsSecondary='pf-m-secondary'
+    menu-toggle--IsPlain='pf-m-plain'
+    menu-toggle--IsSmall='pf-m-small'
+    menu-toggle--IsText='pf-m-text'
+    menu-toggle--IsExpanded='pf-m-expanded'
+    menu-toggle--IsTypeahead='pf-m-typeahead'
+    menu-toggle--IsSuccess='pf-m-success'
+    menu-toggle--IsWarning='pf-m-warning'
+    menu-toggle--IsDanger='pf-m-danger'
+    menu-toggle--IsPlaceholder='pf-m-placeholder'
+    menu-toggle--IsSettings='pf-m-settings'
+    menu-toggle--modifier=menu-toggle--modifier
+  }}
   {{#unless menu-toggle--IsSplitButton}}
     {{#if menu-toggle--IsDisabled}}
       pf-m-disabled
@@ -30,20 +24,7 @@
     {{#if menu-toggle--IsDisabled}}
       pf-m-disabled
     {{/if}}
-  {{/if}}
-  {{#if menu-toggle--IsSuccess}}
-    pf-m-success
-  {{/if}}
-  {{#if menu-toggle--IsWarning}}
-    pf-m-warning
-  {{/if}}
-  {{#if menu-toggle--IsDanger}}
-    pf-m-danger
-  {{/if}}
-  {{#if menu-toggle--IsPlaceholder}}
-    pf-m-placeholder
-  {{/if}}
-  {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
+  {{/if}}"
   {{#unless (concat menu-toggle--IsDiv menu-toggle--IsSplitButton)}}
     type="button"
     {{#if menu-toggle--IsExpanded}}

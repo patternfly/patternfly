@@ -901,19 +901,19 @@
 }
 
 .#{$button}--hamburger-icon--top {
-  d: var(--#{$button}--hamburger-icon--top--path, var(--#{$button}--hamburger-icon--top--direction--path));
+  d: var(--#{$button}--hamburger-icon--top--path);
 }
 
 .#{$button}--hamburger-icon--middle {
-  d: var(--#{$button}--hamburger-icon--middle--path, var(--#{$button}--hamburger-icon--middle--direction--path));
+  d: var(--#{$button}--hamburger-icon--middle--path);
 }
 
 .#{$button}--hamburger-icon--arrow {
-  d: var(--#{$button}--hamburger-icon--arrow--path, var(--#{$button}--hamburger-icon--arrow--direction--path));
+  d: var(--#{$button}--hamburger-icon--arrow--path);
 }
 
 .#{$button}--hamburger-icon--bottom {
-  d: var(--#{$button}--hamburger-icon--bottom--path, var(--#{$button}--hamburger-icon--bottom--direction--path));
+  d: var(--#{$button}--hamburger-icon--bottom--path);
 }
 
 @keyframes #{$button}-icon-notify {

@@ -999,6 +999,15 @@ Shown with default, primary, and secondary styling
 {{/menu-toggle}}
 ```
 
+### Settings
+```hbs
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog"}}
+
+{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog"}}
+
+{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog"}}
+```
+
 ## Documentation
 
 ### Accessibility
