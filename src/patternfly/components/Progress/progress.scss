@@ -145,11 +145,11 @@
       @media (prefers-reduced-motion: no-preference) {
         @include pf-v6-animate-danger-jiggle;
       }
+    }
 
-      .pf-m-status {
-        @include pf-v6-fade-default(#{$progress}, pf-v6-global-fade-in);
-      }
-    } 
+    .#{$progress}__status-icon {
+      @include pf-v6-fade-default(#{$progress}, pf-v6-global-fade-in);
+    }
   }
 }
 

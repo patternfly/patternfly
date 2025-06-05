@@ -294,7 +294,7 @@
       @include pf-v6-animate-danger-jiggle;
     }
 
-    .pf-m-status {
+    .#{$form-control}__icon.pf-m-status {
       @include pf-v6-fade-default(#{$form-control}, pf-v6-global-fade-in);
     }
 
