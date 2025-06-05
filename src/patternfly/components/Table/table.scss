@@ -999,6 +999,7 @@
 
       .#{$table}__expandable-row-content {
         padding: 0;
+        border-radius: 0;
       }
     }
   }
@@ -1011,6 +1012,10 @@
     padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
     background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
     border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
+
+    &.pf-m-no-background {
+      background-color: transparent;
+    }
   }
 
   // - Table expandable row content expanded
