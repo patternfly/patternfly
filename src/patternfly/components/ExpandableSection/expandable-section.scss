@@ -89,7 +89,7 @@
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);
   }
 
-  &.pf-m-detached {
+  &:has(.#{$expandable-section}__content:only-child) {
     &:not(.pf-m-expand-top, .pf-m-expand-bottom) {
       --#{$expandable-section}__content--TranslateY: 0;
       --#{$expandable-section}__content--TransitionDuration--expand--fade: 0s;
