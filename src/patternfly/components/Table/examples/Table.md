@@ -1222,19 +1222,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-1'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-1')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-2'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-2')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-3'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-3')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1267,19 +1273,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-4'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-4')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-5'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-5')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-6'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-6')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1312,19 +1324,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-7'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-7')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-8'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-8')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{> table-nested table-nested--id='nested-table-9'}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-9')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1344,8 +1362,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-table__control-row` | `.pf-v6-c-table__expandable > <tr>` | Modifies a compound expandable table control row. |
-| `.pf-m-expanded` | `<tbody>`, `.pf-v6-c-table__compound-expansion-toggle` > `.pf-v6-c-button` | Modifies a tbody with a row and an expandable row. |
 | `.pf-v6-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
+| `.pf-m-expanded` | `<tbody>`, `.pf-v6-c-table__compound-expansion-toggle` > `.pf-v6-c-button` | Modifies a tbody with a row and an expandable row. |
+| `.pf-m-no-background` | `.pf-v6-c-table__expandable-row-content` | Modifies the expandable row content to have a transparent background. For in compound expandable when the parent expandable row has no padding with `.pf-m-no-padding`. |
+
 
 ## Compact variant
 
@@ -1520,9 +1540,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{> table-cell-empty}}
       {{> table-cell-empty}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tr--index '"')}}
-        <div class="pf-v6-c-table__expandable-row-content">
+        {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        {{/table-expandable-row-content}}
       {{/table-td}}
       {{> table-cell-empty}}
     {{/table-tr}}
@@ -2329,22 +2349,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-1')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-1')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-2')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-2')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-3')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-3')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2374,22 +2397,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-4')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-4')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-5')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-5')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-6')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-6')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -2422,22 +2448,25 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-7')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-7')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-8')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-8')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-9')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-9')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -2470,22 +2499,24 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-10')}}
-        {{/table-nested}}
-      {{/table-td}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-10')}}
+        {{/table-expandable-row-content}}
+        {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-11')}}
-        {{/table-nested}}
-      {{/table-td}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-11')}}
+        {{/table-expandable-row-content}}      {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-12')}}
-        {{/table-nested}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-12')}}
+        {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
