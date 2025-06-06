@@ -1,11 +1,9 @@
-{{#> table-tr table-tr--attribute='role="row"'}}
+{{#> table-tr table-tr--attribute='role="row"' table-tr--IsNested=(unlessIfEqualsBool table--IsTree-view--level "1") table-tr--IsTreeExpandable=(unlessIfAnyBool table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
   {{#> table-th table-th--modifier="pf-v6-c-table__tree-view-title-cell"}}
     {{#> table-tree-view-main}}
-      {{!-- TODO: fix this after merge --}}
-      {{#unless (concat table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
+      {{#unlessIfAny table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset}}
         {{> table-td table-td--IsToggle=true table-td--type='span'}}
-      {{/unless}}
-      {{!-- TODO: fix this after merge --}}
+      {{/unlessIfAny}}
       {{#unless table-tr--tree--HasNoCheckbox}}
         {{#if table-tree-view--HasCheckboxes}}
           {{#> table-td table-td--type='span' table-td--IsCheckbox=true}}
