@@ -579,6 +579,55 @@
   .#{$button} .#{$table}__sort-indicator {
     --#{$table}__sort-indicator--MarginInlineStart: 0;
   }
+
+  // stylelint-disable max-nesting-depth, selector-max-class
+  &.pf-m-animate-expand {
+    > .#{$table}__tbody {
+      > .#{$table}__expandable-row {
+        visibility: hidden;
+        opacity: var(--#{$table}__expandable-row--Opacity);
+        transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+        transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
+        transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
+        transition-property: opacity, translate, visibility;
+        translate: 0 var(--#{$table}__expandable-row--TranslateY);
+
+        &[hidden] {
+          display: revert;
+        }
+
+        &.pf-m-expanded {
+          visibility: visible;
+          opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+          transition-delay: 0s;
+          transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
+          translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
+
+          > :is(.#{$table}__td, .#{$table}__th) {
+            > .#{$table}__expandable-row-content {
+              max-height: 9999px;
+            }
+          }
+        }
+
+        &:not(.pf-m-expanded) {
+          > :is(.#{$table}__td, .#{$table}__th) {
+            &,
+            > .#{$table}__expandable-row-content {
+              padding: 0;
+              transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+              transition-property: padding, max-height;
+            }
+
+            > .#{$table}__expandable-row-content {
+              max-height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  // stylelint-enable max-nesting-depth, selector-max-class
 }
 
 // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
@@ -969,18 +1018,7 @@
 // - Table expandable row
 .#{$table}__expandable-row {
   position: relative;
-  visibility: hidden;
   border-block-end: 0 solid transparent;
-  opacity: var(--#{$table}__expandable-row--Opacity);
-  transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
-  transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
-  transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
-  transition-property: opacity, translate, visibility;
-  translate: 0 var(--#{$table}__expandable-row--TranslateY);
-
-  &[hidden] {
-    display: revert;
-  }
 
   @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
     > .#{$table}__th,
@@ -1020,34 +1058,8 @@
 
   // - Table expandable row content expanded
   &.pf-m-expanded {
-    visibility: visible;
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
     border-block-end-width: var(--#{$table}--border-width--base);
-    opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
-    transition-delay: 0s;
-    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
-    translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
-
-    > :is(.#{$table}__td, .#{$table}__th) {
-      > .#{$table}__expandable-row-content {
-        max-height: 9999px;
-      }
-    }
-  }
-
-  &:not(.pf-m-expanded) {
-    > :is(.#{$table}__td, .#{$table}__th) {
-      &,
-      > .#{$table}__expandable-row-content {
-        padding: 0;
-        transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
-        transition-property: padding, max-height;
-      }
-
-      > .#{$table}__expandable-row-content {
-        max-height: 0;
-      }
-    }
   }
 
   // - Table expandable row tr last-child
@@ -1057,7 +1069,7 @@
 }
 
 .#{$table}__tr:has(+ .#{$table}__expandable-row:not(.pf-m-expanded)) {
-  border-block-end: revert;
+  border-block-end: 0;
 }
 
 // - Table compact
