@@ -277,6 +277,25 @@
   }
 }
 
+// Animate error state on form elements
+@mixin pf-v6-animate-danger-jiggle {
+  translate: var(--#{$pf-global}--danger-jiggle--TranslateX, 0);
+  animation-name: #{$pf-global}-danger-jiggle-motion;
+  animation-duration: var(--#{$pf-global}--danger-jiggle--AnimationDuration--Transform);
+  animation-timing-function: var(--#{$pf-global}--danger-jiggle--AnimationTimingFunction--Transform);
+  animation-fill-mode: both;
+}
+
+// Animate default fade in/out
+@mixin pf-v6-fade-default($element) {
+  --#{$element}--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
+  --#{$element}--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
+
+  animation-name: #{$pf-global}-fade-in;
+  animation-duration: var(--#{$element}--TransitionDuration--Opacity);
+  animation-timing-function: var(--#{$element}--TransitionTimingFunction--Opacity);
+}
+
 // Build variable stack
 @mixin pf-v6-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
   $list: ();

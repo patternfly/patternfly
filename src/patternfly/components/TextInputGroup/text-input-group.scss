@@ -128,6 +128,14 @@
     --#{$text-input-group}--BorderColor: var(--#{$text-input-group}--m-error--BorderColor);
     --#{$text-input-group}--m-hover--BorderColor: var(--#{$text-input-group}--m-hover--m-error--BorderColor);
     --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}__main--m-error__icon--m-status--Color);  
+    
+    @media (prefers-reduced-motion: no-preference) {
+      @include pf-v6-animate-danger-jiggle;
+    }
+    
+    .#{$text-input-group}__icon.pf-m-status {
+      @include pf-v6-fade-default(#{$text-input-group});
+    }
   }
   
   &:hover {

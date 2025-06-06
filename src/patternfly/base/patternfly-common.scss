@@ -67,3 +67,48 @@
 
   // stylelink-enable declaration-no-important
 }
+
+:root {
+  --#{$pf-global}--danger-jiggle--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
+  --#{$pf-global}--danger-jiggle--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
+}
+
+// Register the property type for the custom property to be animatable
+@property  --#{$pf-global}--danger-jiggle--TranslateX {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+// Animate danger jiggle
+@keyframes #{$pf-global}-danger-jiggle-motion {
+  33% {
+    --#{$pf-global}--danger-jiggle--TranslateX: -2px;
+  }
+  
+  66% {
+    --#{$pf-global}--danger-jiggle--TranslateX: 3px;
+  }
+}
+
+// Animate fade-in
+@keyframes #{$pf-global}-fade-in {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+// Animate fade-out
+@keyframes #{$pf-global}-fade-out {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
