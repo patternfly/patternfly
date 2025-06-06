@@ -1144,7 +1144,7 @@
     // - Table tbody table control row
     .#{$table}__control-row {
       background-color: var(--#{$table}__control-row--BackgroundColor);
-      border-block-end: var(--#{$table}__control-row--BorderBlockEndWidth) solid var(--#{$table}__control-row__tbody--BorderBlockEndColor);
+      border-block-end: 0;
     }
   }
 }
