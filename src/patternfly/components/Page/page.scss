@@ -21,9 +21,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--BoxShadow: none;
 
   // TODO Reduced Motion default needed
-  --#{$page}__sidebar--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
-  --#{$page}__sidebar--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$page}__sidebar--TransitionProperty: opacity;
+  --#{$page}__sidebar--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$page}__sidebar--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
   --#{$page}__sidebar--TranslateX: -100%;
+  --#{$page}__sidebar--Opacity: 0;
+  --#{$page}__sidebar--m-expanded--Opacity: 1;
+  --#{$page}__sidebar--xl--Opacity: 1;
   --#{$page}__sidebar--TranslateZ: 0;
   --#{$page}__sidebar--m-expanded--TranslateX: 0;
   --#{$page}__sidebar--xl--TranslateX: 0;
@@ -32,6 +36,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--PaddingInlineStart: 0;
   --#{$page}__sidebar--PaddingInlineEnd: 0;
 
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$page}__sidebar--TransitionProperty: transform;
+    --#{$page}__sidebar--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+  }
 
   // Sidebar header
   --#{$page}__sidebar-header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -54,6 +62,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
+    --#{$page}__sidebar--Opacity: var(--#{$page}__sidebar--xl--Opacity);
   }
 
   // Container for the main content area (grid area)
@@ -209,7 +218,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
-  transition: transform var(--#{$page}__sidebar--TransitionDuration) var(--#{$page}__sidebar--TransitionTimingFunction);
+  opacity: var(--#{$page}__sidebar--Opacity);
+  transition: var(--#{$page}__sidebar--TransitionProperty) var(--#{$page}__sidebar--TransitionDuration) var(--#{$page}__sidebar--TransitionTimingFunction);
 
   @include pf-v6-bidirectional-style(
     $prop: transform,
@@ -221,6 +231,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Expanded nav
   &.pf-m-expanded {
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--m-expanded--TranslateX);
+    --#{$page}__sidebar--Opacity: var(--#{$page}__sidebar--m-expanded--Opacity);
 
     box-shadow: var(--#{$page}__sidebar--BoxShadow);
 
