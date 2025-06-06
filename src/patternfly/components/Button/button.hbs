@@ -45,7 +45,7 @@
     {{/unless}}
   {{/if}}
   {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
-    aria-expanded="true"
+    aria-expanded="{{button--IsExpanded}}"
   {{/if}}
   {{#if button--role}}
     role="{{button--role}}"

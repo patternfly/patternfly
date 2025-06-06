@@ -243,9 +243,9 @@ A favorite button should use a plain button with the star icon. Applying `.pf-m-
 
 ### Hamburger
 ```hbs
-{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger"}}
-{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-expand"}}
-{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-collapse"}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--IsExpanded=false}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-expand" button--IsExpanded=false}}
+{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-collapse" button--IsExpanded=true}}
 ```
 
 ## Documentation
