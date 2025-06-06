@@ -286,11 +286,11 @@
 }
 
 // Animate default fade in/out
-@mixin pf-v6-fade-default($element, $fade) {
+@mixin pf-v6-fade-default($element) {
   --#{$element}--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
   --#{$element}--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
 
-  animation-name: $fade;
+  animation-name: #{$pf-global}-fade-in;
   animation-duration: var(--#{$element}--TransitionDuration--Opacity);
   animation-timing-function: var(--#{$element}--TransitionTimingFunction--Opacity);
 }

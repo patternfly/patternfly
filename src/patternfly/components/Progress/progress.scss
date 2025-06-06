@@ -148,7 +148,7 @@
     }
 
     .#{$progress}__status-icon {
-      @include pf-v6-fade-default(#{$progress}, pf-v6-global-fade-in);
+      @include pf-v6-fade-default(#{$progress});
     }
   }
 }
