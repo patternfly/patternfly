@@ -25,6 +25,8 @@
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
   --#{$button}--TransitionProperty: color, background, border-width, border-color;
+  --#{$button}--ScaleX: 1;
+  --#{$button}--ScaleY: 1;
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -33,6 +35,8 @@
   --#{$button}--hover--TextDecorationLine: none;
   --#{$button}--hover--TextDecorationStyle: none;
   --#{$button}--hover--TextDecorationColor: currentcolor;
+  --#{$button}--hover--ScaleX: 1;
+  --#{$button}--hover--ScaleY: 1;
 
   // Clicked
   --#{$button}--m-clicked--BackgroundColor: transparent;
@@ -287,11 +291,14 @@
   --#{$button}__icon--TransitionDuration: 0s;
   --#{$button}__icon--TransitionProperty: none;
   --#{$button}__icon--Rotate: 0deg;
-  --#{$button}__icon--Scale: 1;
   --#{$button}--hover__icon--TransitionTimingFunction: auto;
   --#{$button}--hover__icon--TransitionDuration: 0s;
   --#{$button}--hover__icon--TransitionProperty: none;
   --#{$button}--hover__icon--Rotate: 0deg;
+  --#{$button}__icon--ScaleX: 1;
+  --#{$button}__icon--ScaleY: 1;
+  --#{$button}--hover__icon--ScaleX: 1;
+  --#{$button}--hover__icon--ScaleY: 1;
 
   // Favorite button
   --#{$button}--m-favorite__icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
@@ -350,7 +357,7 @@
   --#{$button}--hamburger-icon--top--collapse--path: path("M5,1 L9,1");
   --#{$button}--hamburger-icon--arrow--collapse--path: path("M3,7 L1,5 L3,3");
   --#{$button}--hamburger-icon--bottom--collapse--path: path("M9,9 L5,9");
-  --#{$button}--m-hamburger__icon--m-expand--Scale: -1;
+  --#{$button}--m-hamburger__icon--m-expand--ScaleX: -1;
 }
 
 .#{$button} {
@@ -388,7 +395,7 @@
   transition-timing-function: var(--#{$button}--TransitionTimingFunction);
   transition-duration: var(--#{$button}--TransitionDuration);
   transition-property: var(--#{$button}--TransitionProperty);
-  scale: var(--#{$button}--Scale, revert);
+  scale: var(--#{$button}--ScaleX) var(--#{$button}--ScaleY);
 
   &::after {
     position: absolute;
@@ -744,12 +751,16 @@
     --#{$button}--BackgroundColor: var(--#{$button}--hover--BackgroundColor);
     --#{$button}--BorderColor: var(--#{$button}--hover--BorderColor);
     --#{$button}--BorderWidth: var(--#{$button}--hover--BorderWidth);
+    --#{$button}--ScaleX: var(--#{$button}--hover--ScaleX);
+    --#{$button}--ScaleY: var(--#{$button}--hover--ScaleY);
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
     --#{$button}__icon--TransitionTimingFunction: var(--#{$button}--hover__icon--TransitionTimingFunction);
     --#{$button}__icon--TransitionDuration: var(--#{$button}--hover__icon--TransitionDuration);
     --#{$button}__icon--TransitionProperty: var(--#{$button}--hover__icon--TransitionProperty);
     --#{$button}__icon--Rotate: var(--#{$button}--hover__icon--Rotate);
+    --#{$button}__icon--ScaleX: var(--#{$button}--hover__icon--ScaleX);
+    --#{$button}__icon--ScaleY: var(--#{$button}--hover__icon--ScaleY);
 
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
@@ -839,7 +850,7 @@
   transition-duration: var(--#{$button}__icon--TransitionDuration);
   transition-property: var(--#{$button}__icon--TransitionProperty);
   rotate: var(--#{$button}__icon--Rotate);
-  scale: var(--#{$button}__icon--Scale);
+  scale: var(--#{$button}__icon--ScaleX) var(--#{$button}__icon--ScaleY);
 
   &.pf-m-start {
     --#{$button}__icon--MarginInlineEnd: var(--#{$button}__icon--m-start--MarginInlineEnd);
@@ -928,6 +939,6 @@
 
 @keyframes #{$button}-icon-favorited {
   50% {
-    transform: scale(1.5);
+    scale: 1.5;
   }
 }
