@@ -238,7 +238,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
     > .#{$dual-list-selector}__list {
       .#{$dual-list-selector}.pf-m-animate-expand & {
-        max-height: 9999px;
+        max-height: 99999px;
         visibility: revert;
         opacity: var(--#{$dual-list-selector}--m-expanded__list--Opacity);
         transition-delay: 0s;

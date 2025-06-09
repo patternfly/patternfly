@@ -209,7 +209,7 @@
 .#{$nav}__subnav {
   --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
-  max-height: 9999px;
+  max-height: 99999px;
   padding-block-start: var(--#{$nav}__subnav--PaddingBlockStart);
   padding-block-end: var(--#{$nav}__subnav--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists

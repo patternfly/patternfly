@@ -605,7 +605,7 @@
 
           > :is(.#{$table}__td, .#{$table}__th) {
             > .#{$table}__expandable-row-content {
-              max-height: 9999px;
+              max-height: 99999px;
             }
           }
         }
