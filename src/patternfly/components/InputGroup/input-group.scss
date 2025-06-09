@@ -33,19 +33,28 @@
   --#{$input-group}__item--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
 
   // Input group search expanded
-  --#{$input-group}-expandable__search-input--TransitionTimingFunction--expand: var(--pf-t--global--motion--timing-function--decelerate);
-  --#{$input-group}-expandable__search-input--TransitionTimingFunction--collapse: var(--pf-t--global--motion--timing-function--accelerate);
-  --#{$input-group}-expandable__search-input--TransitionDuration--expand: var(--pf-t--global--motion--duration--fade--default);
-  --#{$input-group}-expandable__search-input--TransitionDuration--collapse: var(--pf-t--global--motion--duration--fade--short);
-  --#{$input-group}-expandable__search-input--ScaleX: 1;
-  --#{$input-group}-expandable__search-input--TransformOriginX--expand-left: 100%;
-  --#{$input-group}-expandable__search-input--TransformOriginX--expand-right: 0;
-  --#{$input-group}-expandable__search-input--TransformOriginX: var(--#{$input-group}-expandable__search-input--TransformOriginX--expand-right);
-  --#{$input-group}-expandable__button-icon--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
-  --#{$input-group}-expandable__button-icon--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
+  --#{$input-group}__item--m-search-input--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$input-group}__item--m-search-input--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$input-group}__item--m-search-input--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$input-group}__item--m-search-input--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+  --#{$input-group}__item--m-search-input--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+  --#{$input-group}__item--m-search-input--TransitionDuration--fade: var(--#{$input-group}__item--m-search-input--TransitionDuration--collapse--fade);
+  --#{$input-group}__item--m-search-input--TransitionDuration--slide: var(-#{$input-group}__item--m-search-input--TransitionDuration--collapse--slide);
+  --#{$input-group}__item--m-search-input--ScaleX: 1;
+  --#{$input-group}__item--m-search-input--TransformOriginX--expand-start: 100%;
+  --#{$input-group}__item--m-search-input--TransformOriginX--expand-end: 0;
+  --#{$input-group}__item--m-search-input--TransformOriginX: var(--#{$input-group}__item--m-search-input--TransformOriginX--expand-end);
+  --#{$input-group}__item--m-search-close--Opacity: 0;
+  --#{$input-group}__item--m-search-close--TransitionTimingFunction: 0;
+  --#{$input-group}__item--m-search-close--TransitionDuration: 0;
+  --#{$input-group}__item--m-search-expand--Opacity: 0;
+  --#{$input-group}__item--m-search-expand--TransitionTimingFunction: 0;
+  --#{$input-group}__item--m-search-expand--TransitionDuration: 0;
+  --#{$input-group}__item--m-search-close--TransitionDuration--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$input-group}__item--m-search-close--TransitionTimingFunction--fade: var(--pf-t--global--motion--timing-function--default);
   
   @media (prefers-reduced-motion: no-preference) {
-    --#{$input-group}-expandable__search-input--ScaleX: .7;
+    --#{$input-group}__item--m-search-input--ScaleX: .7;
   }
 }
 
@@ -54,53 +63,60 @@
   gap: var(--#{$input-group}--Gap);
   width: 100%;
 
-  &.pf-m-search-input {
+  &.pf-m-search-input-expandable {
     &:not(.pf-m-expanded) {
-      .pf-m-search-text-input {
+      // stylelint-disable max-nesting-depth
+      &.pf-m-search-input {
         width: 0;
         visibility: hidden;
       }
+      // stylelint-enable max-nesting-depth
     }
   
-    .pf-m-search-text-input {
-      width: 100%;
-      visibility: visible;
-      opacity: 0;
-      transition-timing-function: var(--#{$input-group}-expandable__search-input--TransitionTimingFunction--collapse);
-      transition-duration: var(--#{$input-group}-expandable__search-input--TransitionDuration--collapse);
-      transition-property: opacity, scale;
-      transform-origin: var(--#{$input-group}-expandable__search-input--TransformOriginX) center;
-      scale: var(--#{$input-group}-expandable__search-input--ScaleX) 1;
+    .#{$input-group}__item {
+      &.pf-m-search-input {
+        width: 100%;
+        visibility: visible;
+        opacity: var(--#{$input-group}__item--m-search-input--Opacity);
+        transition-timing-function: var(--#{$input-group}__item--m-search-input--TransitionTimingFunction);
+        transition-duration: var(--#{$input-group}__item--m-search-input--TransitionDuration--fade), var(--#{$input-group}__item--m-search-input--TransitionDuration--slide), var(--#{$input-group}__item--m-search-input--TransitionTimingFunction--fade);
+        transition-property: opacity, scale, visibility;
+        transform-origin: var(--#{$input-group}__item--m-search-input--TransformOriginX) center;
+        scale: var(--#{$input-group}__item--m-search-input--ScaleX) 1;
+      }
+
+      &.pf-m-search-close {
+        opacity: var(--#{$input-group}__item--m-search-close--Opacity);
+        transition-timing-function: var(--#{$input-group}__item--m-search-close--TransitionTimingFunction);
+        transition-duration: var(--#{$input-group}__item--m-search-close--TransitionDuration);
+        transition-property: opacity, visibility;
+      }
+
+      &.pf-m-search-expand {
+        opacity: var(--#{$input-group}__item--m-search-expand--Opacity);
+        transition-timing-function: var(--#{$input-group}__item--m-search-expand--TransitionTimingFunction);
+        transition-duration: var(--#{$input-group}__item--m-search-expand--TransitionDuration);
+        transition-property: opacity, visibility;
+      }
     }
   
-    &.pf-m-expand-left {
-      --#{$input-group}-expandable__search-input--TransformOriginX: var(--#{$input-group}-expandable__search-input--TransformOriginX--expand-left);
+    &.pf-m-expand-start {
+      --#{$input-group}__item--m-search-input--TransformOriginX: var(--#{$input-group}__item--m-search-input--TransformOriginX--expand-start);
     }
     
     &.pf-m-expanded {
-      .pf-m-search-text-input {
+      --#{$input-group}__item--m-search-input--TransitionDuration--fade: var(--#{$input-group}__item--m-search-input--TransitionDuration--expand--fade);
+      --#{$input-group}__item--m-search-input--TransitionDuration--slide: var(--#{$input-group}__item--m-search-input--TransitionDuration--expand--slide);
+      --#{$input-group}__item--m-search-input--ScaleX: 1;
+      --#{$input-group}__item--m-search-input--Opacity: 1;
+
+      .#{$input-group}__item.pf-m-search-close {
         opacity: 1;
-        transition-timing-function: var(--#{$input-group}-expandable__search-input--TransitionTimingFunction--expand);
-        transition-duration: var(--#{$input-group}-expandable__search-input--TransitionDuration--expand);
-        scale: 1 1; 
-      }
-            
-      .#{$input-group}__item {
-        animation-name: #{$input-group}-expandable-fade;
-        animation-duration: var(--#{$input-group}-expandable__button-icon--TransitionDuration--Opacity);
-        animation-timing-function: var(--#{$input-group}-expandable__button-icon--TransitionTimingFunction--Opacity);
+        transition-timing-function: var(--#{$input-group}__item--m-search-close--TransitionTimingFunction--fade);
+        transition-duration: var(--#{$input-group}__item--m-search-close--TransitionDuration--fade);
+        transition-property: opacity;
       }
     }
-  }
-}
-
-@keyframes #{$input-group}-expandable-fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 

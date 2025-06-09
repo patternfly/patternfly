@@ -166,7 +166,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 <h3>Collapsed</h3>
 <br>
 {{#> input-group input-group--IsPlain=true input-group--modifier="pf-m-search-input"}}
-  {{#> input-group-item input-group-item--modifier="pf-m-search-text-input"}}
+  {{#> input-group-item input-group-item--modifier="pf-m-search-input"}}
     {{> text-input-group--search-input text-input-group--id="pf-m-search-input-expandable" text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true}}
@@ -178,13 +178,15 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 <h3>Expanded</h3>
 <br>
 {{#> input-group input-group--IsPlain=true input-group--modifier="pf-m-search-input pf-m-expanded"}}
-  {{#> input-group-item input-group-item--IsFill=true input-group-item--modifier="pf-m-search-text-input"}}
+  {{#> input-group-item input-group-item--IsFill=true input-group-item--modifier="pf-m-search-input"}}
     {{> text-input-group--search-input text-input-group--id="pf-m-search-input-expandable" text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--modifier="pf-m-search-expand"}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
+  {{/input-group-item}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--modifier="pf-m-search-close"}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
-
 {{/input-group}}
 ```
 
