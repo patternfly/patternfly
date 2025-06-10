@@ -616,8 +616,9 @@
             &,
             > .#{$table}__expandable-row-content {
               padding: 0;
+              overflow: hidden;
               transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
-              transition-property: padding, max-height;
+              transition-property: padding, max-height, overflow;
             }
 
             > .#{$table}__expandable-row-content {
