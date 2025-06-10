@@ -1062,6 +1062,10 @@
     border-block-end-width: var(--#{$table}--border-width--base);
   }
 
+  &:not(.pf-m-expanded) {
+    display: none;
+  }
+
   // - Table expandable row tr last-child
   tr:last-child {
     border-block-end: 0;

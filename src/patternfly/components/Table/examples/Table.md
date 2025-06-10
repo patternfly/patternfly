@@ -2509,7 +2509,8 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
           {{> table-nested table--id=(concat table--id '-nested-table-11')}}
-        {{/table-expandable-row-content}}      {{/table-td}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
