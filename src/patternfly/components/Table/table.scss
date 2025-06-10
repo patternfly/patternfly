@@ -584,6 +584,7 @@
   &.pf-m-animate-expand {
     > .#{$table}__tbody {
       > .#{$table}__expandable-row {
+        display: revert;
         visibility: hidden;
         opacity: var(--#{$table}__expandable-row--Opacity);
         transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);

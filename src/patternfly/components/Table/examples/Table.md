@@ -774,6 +774,136 @@ Note: Table column widths will respond automatically when toggling expanded rows
 {{/table}}
 ```
 
+### Animated expandable
+```hbs
+{{#> table table--IsAnimateExpand=true table--id="table-animated-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Animated expandable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr table-tr--index="thead" table-tr--index="thead"}}
+      {{> table-cell-toggle table-tr--aria-controls="table-animated-expandable-content-1 table-animated-expandable-content-2 table-animated-expandable-content-3 table-animated-expandable-content-4"}}
+      {{> table-cell-check}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-m-width-30" table-th--IsSelected="true" table-th--IsAsc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
+        Pull requests
+      {{/table-th}}
+      {{> table-cell-empty table-cell--text='Links'}}
+      {{> table-cell-empty}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 1</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{> table-cell-empty}}
+      {{> table-cell-empty}}
+      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tr--index '"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{> table-cell-empty}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tr--index="2"}}
+    {{#> table-tr}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 2</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 3</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--IsExpanded=true}}
+      {{> table-cell-toggle}}
+      {{> table-cell-check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 4</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
+        {{#> table-expandable-row-content}}
+          Expandable row content has no padding.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 ### Expandable with set width columns example
 ```hbs
 {{#> table table--id="expandable-set-width-columns-example" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Expandable table, set column widths example"'}}
@@ -1165,6 +1295,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | `.pf-v6-c-table__toggle-icon` | `<span>` | Initiates the table toggle icon wrapper. |
 | `.pf-v6-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
 | `.pf-v6-c-table__expandable-row-content` | `.pf-v6-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
+| `.pf-m-animate-expand` | `.pf-v6-c-table` | Modifies the table to animate expansion. |
 | `.pf-m-expanded` | `.pf-v6-c-table__toggle` > `.pf-v6-c-button`, `.pf-v6-c-table__expandable-row` | Modifies for expanded state. |
 | `.pf-m-no-padding` | `.pf-v6-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
 
@@ -1173,6 +1304,185 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 ### Compound expansion example
 ```hbs
 {{#> table table--id="table-compound-expansion" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Compound expandable table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Last commit
+      {{/table-th}}
+      {{> table-cell-empty table-cell--text='Links'}}
+      {{> table-cell-empty}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        234
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        4
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Workspaces"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>20 minutes</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-1')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-2')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-3')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--IsControlRow="true"}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        2
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        82
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        1
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Workspaces"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>1 day ago</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-4')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-5')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-6')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--IsControlRow="true"}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        4
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        4
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        1
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Workspaces"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>2 days ago</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-7')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-8')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-9')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Animated compound expansion example
+```hbs
+{{#> table table--IsAnimateExpand=true table--id="table-animate-compound-expansion" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Animated compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
@@ -1363,7 +1673,8 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | -- | -- | -- |
 | `.pf-v6-c-table__control-row` | `.pf-v6-c-table__expandable > <tr>` | Modifies a compound expandable table control row. |
 | `.pf-v6-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
-| `.pf-m-expanded` | `<tbody>`, `.pf-v6-c-table__compound-expansion-toggle` > `.pf-v6-c-button` | Modifies a tbody with a row and an expandable row. |
+| `.pf-m-animate-expand` | `.pf-v6-c-table` | Modifies the table to animate expansion. |
+| `.pf-m-expanded` | `.pf-v6-c-table__tbody`, `.pf-v6-c-table__control-row`, `.pf-v6-c-table__compound-expansion-toggle` | Modifies a `<tbody>`, control row, and item in a control row for the expanded state. |
 | `.pf-m-no-background` | `.pf-v6-c-table__expandable-row-content` | Modifies the expandable row content to have a transparent background. For in compound expandable when the parent expandable row has no padding with `.pf-m-no-padding`. |
 
 
