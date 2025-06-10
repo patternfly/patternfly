@@ -1074,7 +1074,7 @@
   }
 }
 
-.#{$table}__tr:has(~ .#{$table}__expandable-row:not(.pf-m-expanded)) {
+.#{$table}__tr:has(~ .#{$table}__expandable-row) {
   border-block-end: 0;
 }
 
