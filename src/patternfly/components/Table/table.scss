@@ -123,8 +123,6 @@
   --#{$table}__expandable-row--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
   --#{$table}__expandable-row--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
-  --#{$table}__expandable-row--TransitionDuration--slide: var(--#{$table}__expandable-row--TransitionDuration--collapse--slide);
-  --#{$table}__expandable-row--TransitionDuration--fade: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
   --#{$table}__expandable-row--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$table}__expandable-row--Opacity: 0;
   --#{$table}__tbody--m-expanded__expandable-row--Opacity: 1;
@@ -581,6 +579,57 @@
   .#{$button} .#{$table}__sort-indicator {
     --#{$table}__sort-indicator--MarginInlineStart: 0;
   }
+
+  // stylelint-disable max-nesting-depth, selector-max-class
+  &.pf-m-animate-expand {
+    > .#{$table}__tbody {
+      > .#{$table}__expandable-row {
+        display: revert;
+        visibility: hidden;
+        opacity: var(--#{$table}__expandable-row--Opacity);
+        transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+        transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
+        transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
+        transition-property: opacity, translate, visibility;
+        translate: 0 var(--#{$table}__expandable-row--TranslateY);
+
+        &[hidden] {
+          display: revert;
+        }
+
+        &.pf-m-expanded {
+          visibility: visible;
+          opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+          transition-delay: 0s;
+          transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
+          translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
+
+          > :is(.#{$table}__td, .#{$table}__th) {
+            > .#{$table}__expandable-row-content {
+              max-height: 99999px;
+            }
+          }
+        }
+
+        &:not(.pf-m-expanded) {
+          > :is(.#{$table}__td, .#{$table}__th) {
+            &,
+            > .#{$table}__expandable-row-content {
+              padding: 0;
+              overflow: hidden;
+              transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+              transition-property: padding, max-height, overflow;
+            }
+
+            > .#{$table}__expandable-row-content {
+              max-height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  // stylelint-enable max-nesting-depth, selector-max-class
 }
 
 // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
@@ -972,22 +1021,23 @@
 .#{$table}__expandable-row {
   position: relative;
   border-block-end: 0 solid transparent;
-  opacity: var(--#{$table}__expandable-row--Opacity);
-  transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
-  transition-duration: var(--#{$table}__expandable-row--TransitionDuration--fade), var(--#{$table}__expandable-row--TransitionDuration--slide), var(--#{$table}__expandable-row--TransitionDuration--fade);
-  transition-property: opacity, translate, display;
-  transition-behavior: allow-discrete;
-  translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
-  @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
+  // Remove top padding from regular expandable
+  > .#{$table}__th,
+  > .#{$table}__td {
+    padding-block-start: 0;
+  }
+
+  // Add padding back to compound expandable
+  .#{$table}__control-row ~ & {
     > .#{$table}__th,
     > .#{$table}__td {
-      padding-block-start: 0;
+      padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
     }
   }
 
-  td:where(.#{$table}__td),
-  th:where(.#{$table}__th) {
+  .#{$table}__td,
+  .#{$table}__th {
     &.pf-m-no-padding {
       padding-block-start: 0;
       padding-block-end: 0;
@@ -996,6 +1046,7 @@
 
       .#{$table}__expandable-row-content {
         padding: 0;
+        border-radius: 0;
       }
     }
   }
@@ -1008,20 +1059,16 @@
     padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
     background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
     border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
+
+    &.pf-m-no-background {
+      background-color: transparent;
+    }
   }
 
   // - Table expandable row content expanded
   &.pf-m-expanded {
     border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
     border-block-end-width: var(--#{$table}--border-width--base);
-    opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
-    transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), var(--#{$table}__expandable-row--TransitionDuration--expand--fade);
-    translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
-
-    @starting-style {
-      opacity: var(--#{$table}__expandable-row--Opacity);
-      translate: 0 var(--#{$table}__expandable-row--TranslateY);
-    }
   }
 
   &:not(.pf-m-expanded) {
@@ -1032,6 +1079,10 @@
   tr:last-child {
     border-block-end: 0;
   }
+}
+
+.#{$table}__tr:has(~ .#{$table}__expandable-row) {
+  border-block-end: 0;
 }
 
 // - Table compact
@@ -1118,7 +1169,7 @@
     // - Table tbody table control row
     .#{$table}__control-row {
       background-color: var(--#{$table}__control-row--BackgroundColor);
-      border-block-end: var(--#{$table}__control-row--BorderBlockEndWidth) solid var(--#{$table}__control-row__tbody--BorderBlockEndColor);
+      border-block-end: 0;
     }
   }
 }

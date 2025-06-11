@@ -1,10 +1,13 @@
 <table class="{{pfv}}table
-  {{#if table--IsExpandable}} pf-m-expandable{{/if}}
-  {{#if table--IsTree-view}} pf-m-tree-view{{/if}}
-  {{#if tree-view--HasCheckboxes}} pf-m-tree-view-checkboxes{{/if}}
-  {{#if table--HasNoPosinset}} pf-m-no-inset{{/if}}
-  {{#if table--IsCompact}} pf-m-compact{{/if}}
-  {{#if table--modifier}} {{table--modifier}}{{/if}}"
+  {{setModifiers
+    table--IsExpandable='pf-m-expandable'
+    table--IsTree-view='pf-m-tree-view'
+    tree-view--HasCheckboxes='pf-m-tree-view-checkboxes'
+    table--HasNoPosinset='pf-m-no-inset'
+    table--IsCompact='pf-m-compact'
+    table--IsAnimateExpand='pf-m-animate-expand'
+    table--modifier=table--modifier
+  }}"
   {{#if table--IsGrid}}
     role="grid"
   {{/if}}

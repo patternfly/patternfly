@@ -232,7 +232,7 @@
   }
 
   .#{$accordion}__item.pf-m-expanded & {
-    max-height: 9999px;
+    max-height: 99999px;
     margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
     visibility: revert;
     transition-delay: 0s;
