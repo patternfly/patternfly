@@ -468,16 +468,16 @@
     // collapse
     @if $collapse {
       --#{$button}__icon--TransitionDelay: 0s;
-      --#{$button}__icon--Scale: 1;
+      --#{$button}__icon--ScaleX: 1;
       --#{$button}--hover__icon--TransitionDelay: 0s;
-      --#{$button}--hover__icon--Scale: 1;
+      --#{$button}--hover__icon--ScaleX: 1;
 
     // expand
     } @else {
       --#{$button}__icon--TransitionDelay: 0s;
-      --#{$button}__icon--Scale: var(--#{$button}--m-hamburger__icon--m-expand--Scale);
+      --#{$button}__icon--ScaleX: var(--#{$button}--m-hamburger__icon--m-expand--ScaleX);
       --#{$button}--hover__icon--TransitionDelay: 0s;
-      --#{$button}--hover__icon--Scale: var(--#{$button}--m-hamburger__icon--m-expand--Scale);
+      --#{$button}--hover__icon--ScaleX: var(--#{$button}--m-hamburger__icon--m-expand--ScaleX);
     }
   }
 }
