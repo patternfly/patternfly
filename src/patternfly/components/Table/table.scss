@@ -1022,15 +1022,22 @@
   position: relative;
   border-block-end: 0 solid transparent;
 
-  @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
+  // Remove top padding from regular expandable
+  > .#{$table}__th,
+  > .#{$table}__td {
+    padding-block-start: 0;
+  }
+
+  // Add padding back to compound expandable
+  .#{$table}__control-row ~ & {
     > .#{$table}__th,
     > .#{$table}__td {
-      padding-block-start: 0;
+      padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
     }
   }
 
-  td:where(.#{$table}__td),
-  th:where(.#{$table}__th) {
+  .#{$table}__td,
+  .#{$table}__th {
     &.pf-m-no-padding {
       padding-block-start: 0;
       padding-block-end: 0;
