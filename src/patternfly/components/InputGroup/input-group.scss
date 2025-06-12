@@ -90,7 +90,7 @@
         opacity: var(--#{$input-group}__item--m-search-expand--Opacity, 1);
         transition-delay: var(--#{$input-group}__item--m-search-close--TransitionDuration--fade);
         transition-timing-function: var(--#{$input-group}__item--m-search-expand--TransitionTimingFunction);
-        transition-duration: var(--#{$input-group}__item--m-search-expand--TransitionDuration--fade);
+        transition-duration: var(--#{$input-group}__item--m-search-expand--TransitionDuration--fade), 0s, 0s;
         transition-property: opacity, visibility, max-width;
       }
 
@@ -98,8 +98,9 @@
         max-width: var(--#{$input-group}__item--m-search-close--MaxWidth, 0);
         visibility: var(--#{$input-group}__item--m-search-close--Visibility, hidden);
         opacity: var(--#{$input-group}__item--m-search-close--Opacity, 0);
+        transition-delay: 0s, var(--#{$input-group}__item--m-search-close--TransitionDuration--fade), var(--#{$input-group}__item--m-search-close--TransitionDuration--fade);
         transition-timing-function: var(--#{$input-group}__item--m-search-close--TransitionTimingFunction);
-        transition-duration: var(--#{$input-group}__item--m-search-close--TransitionDuration--fade);
+        transition-duration: var(--#{$input-group}__item--m-search-close--TransitionDuration--fade), 0s, 0s;
         transition-property: opacity, visibility, max-width;
       }
     }
@@ -124,9 +125,9 @@
       --#{$input-group}__item--m-search-expand--Opacity: 0;
       --#{$input-group}__item--m-search-expand--TransitionDuration--fade: var(--#{$input-group}__item--m-search-expand--TransitionDuration--collapse--fade);
 
-      .#{$input-group}__item:is(.pf-m-search-text-input, .pf-m-search-expand) {
-          transition-delay: 0s;
-        }
+      .#{$input-group}__item:is(.pf-m-search-text-input, .pf-m-search-expand, .pf-m-search-close) {
+        transition-delay: 0s;
+      }
     }
   }
 }
