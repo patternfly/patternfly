@@ -45,9 +45,9 @@
   --#{$input-group}__item--m-search-text-input--TransformOriginX--expand-end: 0;
   --#{$input-group}__item--m-search-text-input--TransformOriginX: var(--#{$input-group}__item--m-search-text-input--TransformOriginX--expand-end);
   --#{$input-group}__item--m-search-expand--TransitionTimingFunction:var(--pf-t--global--motion--timing-function--default);
-  --#{$input-group}__item--m-search-expand--TransitionDuration--expand--fade: 0s;
-  --#{$input-group}__item--m-search-expand--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
-  --#{$input-group}__item--m-search-expand--TransitionDuration--fade: var(--#{$input-group}__item--m-search-expand--TransitionDuration--collapse--fade);
+  --#{$input-group}__item--m-search-expand--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$input-group}__item--m-search-expand--TransitionDuration--collapse--fade: 0s;
+  --#{$input-group}__item--m-search-expand--TransitionDuration--fade: var(--#{$input-group}__item--m-search-expand--TransitionDuration--expand--fade);
   --#{$input-group}__item--m-search-close--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$input-group}__item--m-search-close--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
   --#{$input-group}__item--m-search-close--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
@@ -66,6 +66,8 @@
   &.pf-m-search-input {
     &:not(.pf-m-expanded) {
       --#{$input-group}--Gap: 0;
+
+      transition: gap 0s var(--#{$input-group}__item--m-search-text-input--TransitionDuration--fade);
     }
 
     .#{$input-group}__item {
@@ -120,7 +122,7 @@
       --#{$input-group}__item--m-search-expand--MaxWidth: 0;
       --#{$input-group}__item--m-search-expand--Visibility: hidden;
       --#{$input-group}__item--m-search-expand--Opacity: 0;
-      --#{$input-group}__item--m-search-expand--TransitionDuration--fade: var(--#{$input-group}__item--m-search-expand--TransitionDuration--expand--fade);
+      --#{$input-group}__item--m-search-expand--TransitionDuration--fade: var(--#{$input-group}__item--m-search-expand--TransitionDuration--collapse--fade);
 
       .#{$input-group}__item:is(.pf-m-search-text-input, .pf-m-search-expand) {
           transition-delay: 0s;
