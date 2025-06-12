@@ -165,26 +165,29 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```hbs
 <h3>Collapsed</h3>
 <br>
-{{#> input-group input-group--IsPlain=true input-group--modifier="pf-m-search-input"}}
-  {{#> input-group-item input-group-item--modifier="pf-m-search-input"}}
-    {{> text-input-group--search-input text-input-group--id="pf-m-search-input-expandable" text-input-group-text-input--placeholder="Search"}}
+{{#> input-group input-group--IsPlain=true input-group--IsSearchInput=true}}
+  {{#> input-group-item input-group-item--IsSearchTextInput=true}}
+    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
+  {{/input-group-item}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchClose=true}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
 <br>
 <h3>Expanded</h3>
 <br>
-{{#> input-group input-group--IsPlain=true input-group--modifier="pf-m-search-input pf-m-expanded"}}
-  {{#> input-group-item input-group-item--IsFill=true input-group-item--modifier="pf-m-search-input"}}
-    {{> text-input-group--search-input text-input-group--id="pf-m-search-input-expandable" text-input-group-text-input--placeholder="Search"}}
+{{#> input-group input-group--IsPlain=true input-group--IsSearchInput=true input-group--IsExpanded=true}}
+  {{#> input-group-item input-group-item--IsSearchTextInput=true}}
+    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true input-group-item--modifier="pf-m-search-expand"}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true input-group-item--modifier="pf-m-search-close"}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchClose=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
