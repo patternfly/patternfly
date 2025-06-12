@@ -140,8 +140,8 @@
   --#{$data-list}--m-compact__item-content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1);
-  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 }
 
