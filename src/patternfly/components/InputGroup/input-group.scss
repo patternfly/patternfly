@@ -65,14 +65,9 @@
 
   &.pf-m-search-input {
     &:not(.pf-m-expanded) {
-      // stylelint-disable max-nesting-depth
-      &.pf-m-search-text-input {
-        width: 0;
-        visibility: hidden;
-      }
-      // stylelint-enable max-nesting-depth
+      --#{$input-group}--Gap: 0;
     }
-  
+
     .#{$input-group}__item {
       &.pf-m-search-text-input {
         flex-grow: 1;
