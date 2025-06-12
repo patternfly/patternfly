@@ -6,6 +6,8 @@
   {{#if table-tr--IsClickable}} pf-m-clickable{{/if}}
   {{#if table-tr--IsSelected}} pf-m-selected{{/if}}
   {{#if table-tr--HasNoInset}} pf-m-no-inset{{/if}}
+  {{#if table-tr--IsNested}} pf-m-nested{{/if}}
+  {{#if table-tr--IsTreeExpandable}} pf-m-tree-expandable{{/if}}
   {{#if table-tr--modifier}} {{table-tr--modifier}}{{/if}}"
   {{#if table--IsTree-view}}
     {{#unless (concat table-tr--HasNoPosinset table--HasNoPosinset)}}
