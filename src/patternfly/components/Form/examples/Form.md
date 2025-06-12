@@ -311,7 +311,29 @@ cssPrefix: pf-v6-c-form
 ```hbs
 {{#> form form--id="form-expandable-field-groups"}}
 
-  {{#> form-field-group form-field-group--id=(concat form--id '-field-group-1') form-field-group--IsExpandable="true"}}
+  {{#> form-group form-group--id=(concat form--id '-field1')}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+        Label 1
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+
+  {{#> form-group form-group--id=(concat form--id '-field2')}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+        Label 2
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+
+  {{#> form-field-group form-field-group--id=(concat form--id '-field-group-1') form-field-group--IsExpandable="true" form-field-group--IsExpanded=true}}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -328,10 +350,92 @@ cssPrefix: pf-v6-c-form
       {{/form-field-group-header-actions}}
     {{/form-field-group-header}}
     {{#> form-field-group-body}}
-      {{> form-field-group-body-template}}
+
+      {{#> form-field-group form-field-group--id=(concat form--id '-nested-field-group-1') form-field-group--IsExpandable="true"}}
+        {{#> form-field-group-header}}
+          {{#> form-field-group-header-main}}
+            {{#> form-field-group-title}}
+              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 1{{/form-field-group-title-text}}
+            {{/form-field-group-title}}
+            {{#> form-field-group-header-description}}
+              Nested field group 1 description text
+            {{/form-field-group-header-description}}
+          {{/form-field-group-header-main}}
+          {{#> form-field-group-header-actions}}
+            {{#> button button--IsSecondary=true}}
+              Action
+            {{/button}}
+          {{/form-field-group-header-actions}}
+        {{/form-field-group-header}}
+        {{#> form-field-group-body}}
+          {{> form-field-group-body-template}}
+        {{/form-field-group-body}}
+      {{/form-field-group}}
+
+      {{#> form-field-group form-field-group--id=(concat form--id '-nested-field-group-2') form-field-group--IsExpandable="true" form-field-group--IsExpanded=reset}}
+        {{#> form-field-group-header}}
+          {{#> form-field-group-header-main}}
+            {{#> form-field-group-title}}
+              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 2{{/form-field-group-title-text}}
+            {{/form-field-group-title}}
+          {{/form-field-group-header-main}}
+          {{#> form-field-group-header-actions}}
+            {{#> button button--IsSecondary=true}}
+              Action
+            {{/button}}
+          {{/form-field-group-header-actions}}
+        {{/form-field-group-header}}
+        {{#> form-field-group-body}}
+          {{> form-field-group-body-template}}
+        {{/form-field-group-body}}
+      {{/form-field-group}}
+
+      {{#> form-field-group form-field-group--id=(concat form--id '-nested-field-group-3') form-field-group--IsExpandable="true" form-field-group--IsExpanded=reset}}
+        {{#> form-field-group-header}}
+          {{#> form-field-group-header-main}}
+            {{#> form-field-group-title}}
+              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 3{{/form-field-group-title-text}}
+            {{/form-field-group-title}}
+            {{#> form-field-group-header-description}}
+              Nested field group 3 description text
+            {{/form-field-group-header-description}}
+          {{/form-field-group-header-main}}
+          {{#> form-field-group-header-actions}}
+            {{#> button button--IsSecondary=true}}
+              Action
+            {{/button}}
+          {{/form-field-group-header-actions}}
+        {{/form-field-group-header}}
+        {{#> form-field-group-body}}
+          {{> form-field-group-body-template}}
+        {{/form-field-group-body}}
+      {{/form-field-group}}
+
+      {{#> form-group form-group--id=(concat form--id '-nested-field1')}}
+        {{#> form-group-label}}
+          {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+            Label 1
+          {{/form-label}}
+        {{/form-group-label}}
+        {{#> form-group-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+        {{/form-group-control}}
+      {{/form-group}}
+
+      {{#> form-group form-group--id=(concat form--id '-nested-field2')}}
+        {{#> form-group-label}}
+          {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+            Label 2
+          {{/form-label}}
+        {{/form-group-label}}
+        {{#> form-group-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+        {{/form-group-control}}
+      {{/form-group}}
     {{/form-field-group-body}}
   {{/form-field-group}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-field-group-2') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
+
+  {{#> form-field-group form-field-group--id=(concat form--id '-field-group-2') form-field-group--IsExpandable="true"}}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -358,6 +462,112 @@ cssPrefix: pf-v6-c-form
       {{/form-field-group}}
     {{/form-field-group-body}}
   {{/form-field-group}}
+
+  {{#> form-field-group form-field-group--id=(concat form--id '-field-group-4') form-field-group--IsExpandable="true" form-field-group--IsExpanded=true}}
+    {{#> form-field-group-header}}
+      {{#> form-field-group-header-main}}
+        {{#> form-field-group-title}}
+          {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Field group 3{{/form-field-group-title-text}}
+        {{/form-field-group-title}}
+        {{#> form-field-group-header-description}}
+          Field group 3 description text
+        {{/form-field-group-header-description}}
+      {{/form-field-group-header-main}}
+    {{/form-field-group-header}}
+    {{#> form-field-group-body}}
+
+      {{#> form-group form-group--id=(concat form--id '-' form-field-group--id '-field1')}}
+        {{#> form-group-label}}
+          {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+            Label 1
+          {{/form-label}}
+        {{/form-group-label}}
+        {{#> form-group-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+        {{/form-group-control}}
+      {{/form-group}}
+
+      {{#> form-group form-group--id=(concat form--id '-' form-field-group--id '-field2')}}
+        {{#> form-group-label}}
+          {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+            Label 2
+          {{/form-label}}
+        {{/form-group-label}}
+        {{#> form-group-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+        {{/form-group-control}}
+      {{/form-group}}
+
+      {{#> form-field-group form-field-group--id=(concat form--id '-nested-field-group-4') form-field-group--IsExpandable=reset form-field-group--IsExpanded=reset}}
+        {{#> form-field-group-header}}
+          {{#> form-field-group-header-main}}
+            {{#> form-field-group-title}}
+              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 1 (non-expandable){{/form-field-group-title-text}}
+            {{/form-field-group-title}}
+          {{/form-field-group-header-main}}
+        {{/form-field-group-header}}
+        {{#> form-field-group-body}}
+          {{> form-field-group-body-template}}
+        {{/form-field-group-body}}
+      {{/form-field-group}}
+
+      {{#> form-field-group form-field-group--id=(concat form--id '-nested-field-group-5') form-field-group--IsExpandable=reset form-field-group--IsExpanded=reset}}
+        {{#> form-field-group-header}}
+          {{#> form-field-group-header-main}}
+            {{#> form-field-group-title}}
+              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 2 (non-expandable){{/form-field-group-title-text}}
+            {{/form-field-group-title}}
+            {{#> form-field-group-header-description}}
+              Field group 2 description text
+            {{/form-field-group-header-description}}
+          {{/form-field-group-header-main}}
+        {{/form-field-group-header}}
+        {{#> form-field-group-body}}
+          {{> form-field-group-body-template}}
+        {{/form-field-group-body}}
+      {{/form-field-group}}
+
+    {{/form-field-group-body}}
+  {{/form-field-group}}
+
+  {{#> form-field-group form-field-group--id=(concat form--id '-nested-field-group-5') form-field-group--IsExpandable=reset form-field-group--IsExpanded=reset}}
+    {{#> form-field-group-header}}
+      {{#> form-field-group-header-main}}
+        {{#> form-field-group-title}}
+          {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Field group 4 (non-expandable){{/form-field-group-title-text}}
+        {{/form-field-group-title}}
+        {{#> form-field-group-header-description}}
+          Field group 4 description text
+        {{/form-field-group-header-description}}
+      {{/form-field-group-header-main}}
+    {{/form-field-group-header}}
+    {{#> form-field-group-body}}
+      {{> form-field-group-body-template}}
+    {{/form-field-group-body}}
+  {{/form-field-group}}
+
+  {{#> form-group form-group--id=(concat form--id '-field3')}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+        Label 3
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+
+  {{#> form-group form-group--id=(concat form--id '-field4')}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
+        Label 4
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+
 {{/form}}
 ```
 
