@@ -165,14 +165,14 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```hbs
 <h3>Collapsed</h3>
 <br>
-{{#> input-group input-group--IsPlain=true input-group--IsSearchInput=true}}
-  {{#> input-group-item input-group-item--IsSearchTextInput=true}}
+{{#> input-group input-group--IsPlain=true input-group--IsSearchExpandable=true}}
+  {{#> input-group-item input-group-item--IsSearchInput=true}}
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchClose=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchActions=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
@@ -180,14 +180,14 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 <br>
 <h3>Expanded</h3>
 <br>
-{{#> input-group input-group--IsPlain=true input-group--IsSearchInput=true input-group--IsExpanded=true}}
-  {{#> input-group-item input-group-item--IsSearchTextInput=true}}
+{{#> input-group input-group--IsPlain=true input-group--IsSearchExpandable=true input-group--IsExpanded=true}}
+  {{#> input-group-item input-group-item--IsSearchInput=true}}
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchClose=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchActions=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
