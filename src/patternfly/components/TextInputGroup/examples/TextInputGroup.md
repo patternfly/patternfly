@@ -218,7 +218,6 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
-
 ```
 
 ### Search input group, advanced search expanded

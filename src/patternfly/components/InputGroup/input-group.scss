@@ -63,7 +63,7 @@
   gap: var(--#{$input-group}--Gap);
   width: 100%;
 
-  &.pf-m-search-input {
+  &.pf-m-search-expandable {
     &:not(.pf-m-expanded) {
       --#{$input-group}--Gap: 0;
 
@@ -71,7 +71,7 @@
     }
 
     .#{$input-group}__item {
-      &.pf-m-search-text-input {
+      &.pf-m-search-input {
         flex-grow: 1;
         max-width: var(--#{$input-group}__item--m-search-text-input--MaxWidth, 0);
         visibility: var(--#{$input-group}__item--m-search-text-input--Visibility, hidden);
@@ -125,7 +125,7 @@
       --#{$input-group}__item--m-search-expand--Opacity: 0;
       --#{$input-group}__item--m-search-expand--TransitionDuration--fade: var(--#{$input-group}__item--m-search-expand--TransitionDuration--collapse--fade);
 
-      .#{$input-group}__item:is(.pf-m-search-text-input, .pf-m-search-expand, .pf-m-search-close) {
+      .#{$input-group}__item:is(.pf-m-search-input, .pf-m-search-expand, .pf-m-search-close) {
         transition-delay: 0s;
       }
     }
