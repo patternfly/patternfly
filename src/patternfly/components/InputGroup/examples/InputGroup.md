@@ -150,4 +150,4 @@ When using the `.pf-v6-c-input-group` always ensure labels are used outside the 
 | `.pf-m-search-expandable` | `.pf-v6-c-input-group` | Modifies an input group to be an expandable search input. **Note:** The expandable search input can be found in the [search input](/components/search-input/) component docs for react and [text input group](/components/text-input-group/html#search-input-group-expandable) component docs for core. |
 | `.pf-m-search-input` | `.pf-v6-c-input-group__item` | Identifies the text input an expandable search input. |
 | `.pf-m-search-expand` | `.pf-v6-c-input-group__item` | Identifies the expand button in an expandable search input. |
-| `.pf-m-search-action` | `.pf-v6-c-input-group__item` | Identifies additional items adjacent to the search input when expanded in an expandable search input. |
+| `.pf-m-search-action` | `.pf-v6-c-input-group__item` | Identifies actions adjacent to the search input when an expandable search input is expanded. |
