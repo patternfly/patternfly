@@ -142,6 +142,9 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group
+
+The react implementation can be found in the [search input](/components/search-input) component docs.
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Find by name"}}
 ```
