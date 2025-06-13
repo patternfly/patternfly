@@ -175,7 +175,7 @@ The React implementation can be found in the [search input](/components/search-i
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchActions=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
@@ -190,7 +190,7 @@ The React implementation can be found in the [search input](/components/search-i
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchActions=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
