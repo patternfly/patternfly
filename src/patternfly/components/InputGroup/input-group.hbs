@@ -1,6 +1,10 @@
 <div class="{{pfv}}input-group
-  {{#if input-group--IsPlain}} pf-m-plain{{/if}}
-  {{#if input-group--modifier}} {{input-group--modifier}}{{/if}}"
+  {{setModifiers
+    input-group--IsPlain='pf-m-plain'
+    input-group--IsSearchExpandable='pf-m-search-expandable'
+    input-group--IsExpanded='pf-m-expanded'
+    input-group--modifier=input-group--modifier
+  }}"
   {{#if input-group--attribute}}
     {{{input-group--attribute}}}
   {{/if}}
