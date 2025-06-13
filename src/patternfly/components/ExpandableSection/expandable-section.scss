@@ -89,6 +89,9 @@
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);
   }
 
+  // The following selector is for ensuring we target only detached expandable section contents without introducing a breaking change
+  // (since typically both toggle and content would both be in the expandable section wrapper)
+  // In a breaking change we could update this to utilize the pf-m-detached class
   &:has(.#{$expandable-section}__content:only-child) {
     &:not(.pf-m-expand-top, .pf-m-expand-bottom) {
       --#{$expandable-section}__content--TranslateY: 0;
@@ -146,7 +149,7 @@
   transition: var(--#{$expandable-section}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$expandable-section}__toggle-icon--Rotate));
 
-  &.pf-m-expand-top { // TODO: Remove this block in breaking change in favor of using modifier on outter expandable section wrapper
+  &.pf-m-expand-top { // TODO: Remove this block in breaking change in favor of using modifier on outer expandable section wrapper
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);
   }
 }
