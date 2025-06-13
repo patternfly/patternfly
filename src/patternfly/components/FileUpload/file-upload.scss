@@ -8,11 +8,11 @@
   --#{$file-upload}--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$file-upload}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$file-upload}--BorderWidth: var(--pf-t--global--border--width--regular);
-  --#{$file-upload}--BorderColor: transparent;
-  --#{$file-upload}--BorderStyle: solid;
+  --#{$file-upload}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$file-upload}--BorderStyle: dashed;
 
   // pf-m-drag-hover
-  --#{$file-upload}--m-drag-hover--BorderColor: var(--pf-t--global--icon--color--brand--default);
+  --#{$file-upload}--m-drag-hover--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$file-upload}--m-drag-hover--BorderStyle: dashed;
 
   // File select > Button
