@@ -488,7 +488,7 @@
   //   }
   // }
 
-  .#{$table}__td.#{$table}__td-button {
+  .#{$table}__td.pf-m-action {
     --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}__td-button--PaddingBlockStart);
     --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}__td-button--PaddingBlockEnd);
   }
@@ -1077,7 +1077,7 @@
     --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__action--PaddingBlockEnd);
   }
 
-  .#{$table}__td-button {
+  .pf-m-action {
     --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}--m-compact__td-button--PaddingBlockStart);
     --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td-button--PaddingBlockEnd);
   }

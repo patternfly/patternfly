@@ -653,7 +653,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Builds"}}
         6
       {{/table-td}}
-      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-v6-c-table__td-button"}}
+      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
         <span class="pf-v6-c-table__text">
           {{#> button button--IsTertiary=true}}
             Start
@@ -673,7 +673,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Builds"}}
         2
       {{/table-td}}
-      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-v6-c-table__td-button"}}
+      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
         <span class="pf-v6-c-table__text">
           {{#> button button--IsTertiary=true}}
             Start
@@ -693,7 +693,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-td table-td--data-label="Builds"}}
         7
       {{/table-td}}
-      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-v6-c-table__td-button"}}
+      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
         <span class="pf-v6-c-table__text">
           {{#> button button--IsTertiary=true}}
             Start
@@ -725,7 +725,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 | `.pf-v6-c-table__check` | `<th>`, `<td>` | Initiates a checkbox or radio input table cell. |
 | `.pf-v6-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 | `.pf-v6-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
-| `.pf-v6-c-table__td-button` | `<td>` | Initiates an table cell with button. |
+| `.pf-m-action` | `<td>` | Initiates an table cell with button. |
 
 ## Expandable
 

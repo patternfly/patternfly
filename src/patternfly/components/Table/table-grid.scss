@@ -266,7 +266,7 @@
     grid-template-columns: 1fr minmax(0, 1.5fr);
     align-items: start;
 
-    &.#{$table}__td-button {
+    &.pf-m-action {
       align-items: center;
     }
 
