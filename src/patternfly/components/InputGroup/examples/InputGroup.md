@@ -137,7 +137,6 @@ When using the `.pf-v6-c-input-group` always ensure labels are used outside the 
 | -- | -- | -- |
 | `aria-describedby` | `.pf-v6-c-form-control` |  When using `.pf-v6-c-input-group__text` or `.pf-v6-c-input-group__action` make use of this on the input field. |
 
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -148,4 +147,7 @@ When using the `.pf-v6-c-input-group` always ensure labels are used outside the 
 | `.pf-m-box` | `.pf-v6-c-input-group__item` | Adds appropriate styling for items that are not form controls. |
 | `.pf-m-fill` | `.pf-v6-c-input-group__item` | Allows the input group element to stretch to fill available space. |
 | `.pf-m-disabled` | `.pf-v6-c-input-group__item` | Adds disabled styling to match a disabled input within the input group. |
-
+| `.pf-m-search-expandable` | `.pf-v6-c-input-group` | Modifies an input group to be an expandable search input. **Note:** The expandable search input can be found in the [search input](/components/search-input/) component docs for react and [text input group](/components/text-input-group/html#search-input-group-expandable) component docs for core. |
+| `.pf-m-search-input` | `.pf-v6-c-input-group__item` | Identifies the text input an expandable search input. |
+| `.pf-m-search-expand` | `.pf-v6-c-input-group__item` | Identifies the expand button in an expandable search input. |
+| `.pf-m-search-action` | `.pf-v6-c-input-group__item` | Identifies actions adjacent to the search input when an expandable search input is expanded. |

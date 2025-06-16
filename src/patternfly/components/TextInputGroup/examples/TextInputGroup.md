@@ -142,6 +142,9 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```
 
 ### Search input group
+
+The React implementation can be found in the [search input](/components/search-input) component.
+
 ```hbs
 {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Find by name"}}
 ```
@@ -165,23 +168,31 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ```hbs
 <h3>Collapsed</h3>
 <br>
-{{#> input-group input-group--IsPlain=true}}
-  {{#> input-group-item input-group-item--IsPlain=true}}
+{{#> input-group input-group--IsPlain=true input-group--IsSearchExpandable=true}}
+  {{#> input-group-item input-group-item--IsSearchInput=true}}
+    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
+  {{/input-group-item}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
+  {{/input-group-item}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
 <br>
 <h3>Expanded</h3>
 <br>
-{{#> input-group input-group--IsPlain=true}}
-  {{#> input-group-item input-group-item--IsFill=true}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
+{{#> input-group input-group--IsPlain=true input-group--IsSearchExpandable=true input-group--IsExpanded=true}}
+  {{#> input-group-item input-group-item--IsSearchInput=true}}
+    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
+  {{/input-group-item}}
+  {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
   {{/input-group-item}}
-
 {{/input-group}}
 ```
 
@@ -210,7 +221,6 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
-
 ```
 
 ### Search input group, advanced search expanded
