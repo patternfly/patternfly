@@ -266,6 +266,10 @@
     grid-template-columns: 1fr minmax(0, 1.5fr);
     align-items: start;
 
+    &.pf-m-action {
+      align-items: center;
+    }
+
     // set contents of td to start at column two of td grid
     > * {
       grid-column: 2;

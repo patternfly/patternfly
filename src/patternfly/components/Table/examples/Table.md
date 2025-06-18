@@ -621,6 +621,92 @@ These classes can be used to ensure that the table changes between the tabular a
 {{/table}}
 ```
 
+### Table with buttons and actions
+```hbs
+{{#> table table--id="table-buttons-and-actions" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with buttons and actions"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Deployment
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Status
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Builds
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Start New Build
+      {{/table-th}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Deployment"}}
+        Deployment 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Status"}}
+        Success
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Builds"}}
+        6
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
+        <span>
+          {{#> button button--IsTertiary=true}}
+            Start
+          {{/button}}
+        </span>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+    
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Deployment"}}
+        Deployment 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Status"}}
+        Failed
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Builds"}}
+        2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
+        <span>
+          {{#> button button--IsTertiary=true}}
+            Start
+          {{/button}}
+        </span>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+    
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Deployment"}}
+        Deployment 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Status"}}
+        Success
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Builds"}}
+        7
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
+        <span>
+          {{#> button button--IsTertiary=true}}
+            Start
+          {{/button}}
+        </span>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+  {{/table-tbody}}
+{{/table}}
+```
+
 When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
 
 When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
@@ -639,6 +725,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 | `.pf-v6-c-table__check` | `<th>`, `<td>` | Initiates a checkbox or radio input table cell. |
 | `.pf-v6-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 | `.pf-v6-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
+| `.pf-m-action` | `<td>` | Initiates an table cell with button. |
 
 ## Expandable
 
