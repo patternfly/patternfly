@@ -654,7 +654,7 @@ These classes can be used to ensure that the table changes between the tabular a
         6
       {{/table-td}}
       {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
-        <span class="pf-v6-c-table__text">
+        <span>
           {{#> button button--IsTertiary=true}}
             Start
           {{/button}}
@@ -674,7 +674,7 @@ These classes can be used to ensure that the table changes between the tabular a
         2
       {{/table-td}}
       {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
-        <span class="pf-v6-c-table__text">
+        <span>
           {{#> button button--IsTertiary=true}}
             Start
           {{/button}}
@@ -694,7 +694,7 @@ These classes can be used to ensure that the table changes between the tabular a
         7
       {{/table-td}}
       {{#> table-td table-td--data-label="Start Build" table-td--modifier="pf-m-action"}}
-        <span class="pf-v6-c-table__text">
+        <span>
           {{#> button button--IsTertiary=true}}
             Start
           {{/button}}

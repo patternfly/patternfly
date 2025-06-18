@@ -1077,7 +1077,7 @@
     --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__action--PaddingBlockEnd);
   }
 
-  .pf-m-action {
+  .#{$table}__td.pf-m-action {
     --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}--m-compact__td--m-action--PaddingBlockStart);
     --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td--m-action--PaddingBlockEnd);
   }
