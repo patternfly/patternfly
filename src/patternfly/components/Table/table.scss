@@ -627,6 +627,13 @@
           }
         }
       }
+
+      > .#{$table}__control-row.pf-m-no-animate-expand ~ .#{$table}__expandable-row {
+        --#{$table}__expandable-row--TransitionDuration--collapse--fade: 0s;
+        --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
+        --#{$table}__expandable-row--TransitionDuration--expand--fade: 0s;
+        --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
+      }
     }
   }
   // stylelint-enable max-nesting-depth, selector-max-class

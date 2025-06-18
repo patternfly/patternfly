@@ -1676,6 +1676,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | `.pf-m-animate-expand` | `.pf-v6-c-table` | Modifies the table to animate expansion. |
 | `.pf-m-expanded` | `.pf-v6-c-table__tbody`, `.pf-v6-c-table__control-row`, `.pf-v6-c-table__compound-expansion-toggle` | Modifies a `<tbody>`, control row, and item in a control row for the expanded state. |
 | `.pf-m-no-background` | `.pf-v6-c-table__expandable-row-content` | Modifies the expandable row content to have a transparent background. For in compound expandable when the parent expandable row has no padding with `.pf-m-no-padding`. |
+| `.pf-m-no-animate-expand` | `.pf-v6-c-table__control-row` | Disables animation on a compound expandable row. |
 
 
 ## Compact variant
