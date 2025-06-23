@@ -285,6 +285,7 @@
 .#{$data-list}__item-draggable-button {
   display: flex;
   flex-direction: column; // fixes safari alignment
+  justify-content: center;
   padding-block-start: var(--#{$data-list}__item-draggable-button--PaddingBlockStart);
   padding-block-end: var(--#{$data-list}__item-draggable-button--PaddingBlockEnd);
   padding-inline-start: var(--#{$data-list}__item-draggable-button--PaddingInlineStart);
