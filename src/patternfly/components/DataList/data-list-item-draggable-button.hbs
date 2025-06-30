@@ -1,10 +1,12 @@
-{{> button 
+{{#> button 
   button--IsPlain=true 
   button--IsIcon=true 
-  button--icon='grip-vertical' 
   button--aria-label='Reorder'
   button--IsSmall='pf-m-small'
   button--IsDraggable=true
   button--attribute=data-list-item-draggable-button--attribute
   button--IsDisabled=data-list-item-draggable-button--IsDisabled
+  button--modifier=(concat (pfv) 'data-list__item-draggable-button')
 }}
+  {{> data-list-item-draggable-icon}}
+{{/button}}

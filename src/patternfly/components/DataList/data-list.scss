@@ -75,10 +75,10 @@
   --#{$data-list}__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$data-list}__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$data-list}__item-draggable-button--MarginInlineStart: calc(var(--pf-t--global--spacer--md) * -1);
-  --#{$data-list}__item-draggable-button-icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color: var(--pf-t--global--icon--color--disabled);
-  --#{$data-list}__item-draggable-button--hover__draggable-icon--Color: var(--pf-t--global--icon--color--regular);
-  --#{$data-list}__item-draggable-button--focus__draggable-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$data-list}__item-draggable-button-icon--Color: initial;
+  --#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color: initial;
+  --#{$data-list}__item-draggable-button--hover__draggable-icon--Color: initial;
+  --#{$data-list}__item-draggable-button--focus__draggable-icon--Color: initial;
   --#{$data-list}__item--m-ghost-row--after--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$data-list}__item--m-ghost-row--after--Opacity: .6;
 
@@ -296,13 +296,13 @@
   border: 0;
 
   &:hover {
-    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--hover__draggable-icon--Color);
+    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--hover__draggable-icon--Color, inherit);
 
     cursor: grab;
   }
 
   &:focus {
-    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--focus__draggable-icon--Color);
+    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--focus__draggable-icon--Color, inherit);
   }
 
   &:active {
@@ -310,13 +310,13 @@
   }
 
   &.pf-m-disabled {
-    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color);
+    --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color, inherit);
 
     pointer-events: none;
   }
 
   .#{$data-list}__item-draggable-icon {
-    color: var(--#{$data-list}__item-draggable-button-icon--Color);
+    color: var(--#{$data-list}__item-draggable-button-icon--Color, inherit);
   }
 }
 
