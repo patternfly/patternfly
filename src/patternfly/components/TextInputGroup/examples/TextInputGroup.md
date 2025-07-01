@@ -97,6 +97,21 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/button}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
+
+<br/>
+{{#> text-input-group text-input-group--IsError=true text-input-group--id="text-input-group-validation-error"}}
+  {{#> text-input-group-main }}
+    {{#> text-input-group-text}}
+      {{> text-input-group-text-input text-input-group--value="Error validation with no icon but with utilities"}}
+      {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+  {{#> text-input-group-utilities}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+    {{/button}}
+  {{/text-input-group-utilities}}
+{{/text-input-group}}
 ```
 
 ### Filters
