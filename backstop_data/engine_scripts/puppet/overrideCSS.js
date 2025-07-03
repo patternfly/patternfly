@@ -1,6 +1,6 @@
 module.exports = async (page, scenario) => {
+  // disable animations/transitions
   await page.evaluate(() => {
-    // disable animations/transitions
-    document.querySelector('html').classList.add('pf-m-no-motion');
+    document.documentElement.classList.add('pf-v6-m-no-motion');
   });
 };
