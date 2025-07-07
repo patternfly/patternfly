@@ -1,81 +1,46 @@
 ---
 id: contribution
-title: Contribution guidelines
+title: Contribution guide
 ---
 
-## Component, layout, demo creation
-### Naming blocks
+## Quick Start for New Contributors
 
-Components, layouts, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
-Example: `Button`, `SecondaryNav`
+New to contributing to PatternFly? Here's how to get started quickly:
 
-### Handlebars names
+**1. Set up your development environment:**
+```bash
+# Clone the repository
+git clone https://github.com/patternfly/patternfly.git
+cd patternfly
 
-The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
+# Install dependencies (requires Node.js v18.0.0+)
+yarn install
 
-### Handlebars utilities
-| Property | Usage                                                          | Example
-| ------------ | --------------------------------------------------- | -------------
-| `uniqueId`   | Creates a unique id | badge-&lbrace;&lbrace;uniqueId&rbrace;&rbrace;
-| `concat`   | Join multiple strings or variables together |  &lbrace;&lbrace;concat 'Hello' ' world' '!!!'&rbrace;&rbrace; results in Hello world!!!
-| `contains` | Tests to see if a string contains another string | &lbrace;&lbrace;#contains alert--modifier 'pf-m-amazingmodifier'&rbrace;&rbrace;<br />&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br />&lbrace;&lbrace;else&rbrace;&rbrace;<br />&nbsp;&nbsp;&lt;span&gt;Alternate text&lt;/span&gt;<br />&lbrace;&lbrace;/contains&rbrace;&rbrace;
+# Start the development server
+yarn start
 
-## Documentation
-For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
-
-A good example of this approach is the [table component](/components/table).
-
-## Modifiers
-### Modifier parameter
-
-Every block and element should have a parameter allowing for modifier classes and attributes to be passed in. These should be named in kebab case with the block/element name plus `--modifier` and `--attribute` respectively.
-For example:
-
-```html noLive
-<!-- Component definition -->
-<div class="pf-v6-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
-  {{#if grid--attribute}}
-    {{{grid--attribute}}}
-  {{/if}}>
-  {{> @partial-block}}
-</div>
----
-<!-- Using the component in handlebars -->
-{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="grid-id" aria-label="Grid usage example"'}}
-  [content]
-{{/grid}}
+# Open your browser to http://localhost:8001
 ```
 
-When including a partial within a partial, by default, handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
+**2. Find your first contribution:**
+- Browse [good first issues](https://github.com/patternfly/patternfly/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- Look for [help wanted](https://github.com/patternfly/patternfly/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) issues
+- Check the [project board](https://github.com/orgs/patternfly/projects) for approved work
 
-If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
+**3. Get help:**
+- Join our [Slack community](https://patternfly.slack.com/) - `#patternfly-core` channel
+- Read our [development guidelines](https://core-staging.patternfly.org/guidelines)
+- Check existing [GitHub issues](https://github.com/patternfly/patternfly/issues)
 
-```html noLive
-{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="base-grid" aria-label="Base grid"'}}
-  {{#> grid-item grid-item--modifier="pf-m-6-col" grid-item--attribute='id="base-grid-item" aria-label="Base grid item"'}}
-    {{#> grid newcontext}}
-      {{#> grid-item}}
-        (nested grid and grid-item will not inherit --modifier or --attribute values)
-      {{/grid-item}}
-    {{/grid}}
-  {{/grid-item}}
-{{/grid}}
-```
+## Code of Conduct
 
-### Common modifier class names
-
-Modifier classes help us to create variations of blocks. Reuse names as much as possible to avoid confusion.
-
-| Modifier class name | Outcome                                                             |
-| ------------------- | ------------------------------------------------------------------- |
-| `pf-m-gutter`   | Adds vertical (if applicable) and horizontal gutters to the element |
-
+All contributors and participants agree to abide by the [PatternFly Code of Conduct](../../../CODE_OF_CONDUCT.md). Please read it before contributing.
 
 ## Pull request guidelines
 
 In order to streamline reviews and set expectations, the following should be expected when submitting a pull request:
 
- - All pull requests should have an issue that the work relates to.
+ - All pull requests should link to an issue that the work relates to.
 
  - A single reviewer should follow the PR through from start to finish after it has been submitted - if somebody else needs to follow it through to completion, please make that transition clear in the PR comments.
 
@@ -92,3 +57,72 @@ In order to streamline reviews and set expectations, the following should be exp
     6) Have the accessibility standards been followed?
     7) Is the example resilient - if you put more content in it, do things start to break?
 
+### Submitting Pull Requests
+
+1. **Create a descriptive title** following conventional commits
+2. **Fill out the PR template** completely
+3. **Include screenshots** for visual changes
+4. **Link related issues** using GitHub keywords
+5. **Ensure all checks pass** before requesting review
+
+### Testing Your Changes
+
+```bash
+# Run the development server
+yarn start
+
+# Run accessibility tests
+yarn a11y
+
+# Run linting
+yarn lint
+
+# Run Prettier
+yarn prettier
+
+# Build the project
+yarn build
+```
+
+## AI-Assisted Development Guidelines
+
+AI-generated code can be accepted as a contribution to this project as long as the contributor follows the following guidance.
+
+When using AI coding assistants (such as GitHub Copilot, ChatGPT, Claude, or other similar tools) to help with development work on PatternFly, please follow these guidelines to ensure code quality, security, and transparency:
+
+### Human in the loop: Verify and validate AI-generated code
+
+- **Treat AI-generated code as suggestions, not final code.** Review all generated code and modify as appropriate. Thoroughly review and test all code that you intend to integrate into your work.
+
+- **Do not blindly trust the code assistant output.** Always apply your own judgment and expertise. AI coding assistants can introduce security vulnerabilities if not used carefully, and AI models can sometimes hallucinate and provide incorrect or non-functional code.
+
+- **Make sure you thoroughly understand any AI-generated code.** If the generated code you intend to incorporate in your work is outside your expertise, consult with someone knowledgeable in the area prior to making it available to others within Red Hat or externally.
+
+### Mark code with substantial AI-generated portions
+
+Nontrivial and substantial AI-generated or AI-assisted content should be "marked" in appropriate cases. In deciding how to approach this, consider adopting one or more of the following recommendations:
+
+- **In a commit message, or in a pull request/merge request description field,** identify the code assistant that you used, perhaps elaborating on how it was used. You may wish to use a trailer like "Assisted-by:" or "Generated-by:". For example:
+
+  ```
+  Assisted-by: GitHub Copilot
+  Generated-by: ChatGPT for initial component structure
+  ```
+
+- **In a source file comment,** indicate the use of the code assistant. For example:
+
+  ```scss
+  // Generated by GitHub Copilot
+  // AI-assisted implementation with human review and modifications
+  .pf-v6-c-component-name {
+    // Optimized CSS properties based on AI suggestions
+    --pf-v6-c-component-name--FontSize: var(--pf-v6-global--FontSize--md);
+  }
+  ```
+
+### Additional considerations
+
+- **Security review:** Pay special attention to security implications of AI-generated code, especially when dealing with user input, authentication, or data handling.
+- **Testing:** Ensure that AI-generated code is thoroughly tested and meets all existing project standards for testing coverage.
+- **Code style:** Verify that AI-generated code follows PatternFly's coding standards and style guidelines as outlined in this document.
+- **Documentation:** If AI assists in generating documentation or comments, review them for accuracy and completeness.
