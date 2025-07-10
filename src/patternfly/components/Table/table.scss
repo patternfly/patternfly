@@ -596,7 +596,7 @@
   // stylelint-disable max-nesting-depth, selector-max-class
   &.pf-m-animate-expand {
     > .#{$table}__tbody {
-      > .#{$table}__expandable-row {
+      > .#{$table}__expandable-row:nth-child(n+2) {
         display: revert;
         visibility: hidden;
         opacity: var(--#{$table}__expandable-row--Opacity);
@@ -1038,7 +1038,7 @@
 }
 
 // - Table expandable row
-.#{$table}__expandable-row {
+.#{$table}__expandable-row:nth-child(n+2) {
   position: relative;
   border-block-end: 0 solid transparent;
 
@@ -1188,6 +1188,7 @@
   }
 
   // - Table tbody - Table tr
+  @at-root .#{$table}__tbody:has(> .#{$table}__expandable-row:not(.pf-m-expanded)),
   .#{$table}__tbody.pf-m-expanded {
     border-block-end: var(--#{$table}__tr--BorderBlockEndWidth) solid var(--#{$table}__tr--BorderBlockEndColor);
 
