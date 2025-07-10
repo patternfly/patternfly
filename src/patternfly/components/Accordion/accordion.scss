@@ -99,6 +99,14 @@
   --#{$accordion}--m-bordered--RowGap: 0;
   --#{$accordion}__item--m-bordered--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$accordion}__item--m-bordered--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  
+  // accordion item border for high contrast
+  --#{$accordion}__item--after--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$accordion}__item--after--BorderColor: var(--pf-t--global--border--color--high-contrast);
+
+  // expandable content border for high contrast
+  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$accordion}__expandable-content--BorderColor: var(--pf-t--global--border--color--high-contrast);
 }
 
 .#{$accordion} {
@@ -129,7 +137,8 @@
     --#{$accordion}--RowGap: var(--#{$accordion}--m-bordered--RowGap);
     --#{$accordion}__item--BorderRadius: 0;
     --#{$accordion}__toggle--BorderRadius: 0;
-
+    --#{$accordion}__item--after--BorderWidth: 0;
+  
     .#{$accordion}__item {
       border-block-end: var(--#{$accordion}__item--m-bordered--BorderBlockEndWidth) solid var(--#{$accordion}__item--m-bordered--BorderBlockEndColor);
     }
@@ -150,6 +159,18 @@
     transition-timing-function: var(--#{$accordion}__item--before--TransitionTimingFunction);
     transition-duration: var(--#{$accordion}__item--before--TransitionDuration--fade);
     transition-property: opacity;
+  }
+
+  &:is(:hover, :active),
+  &.pf-m-expanded {
+    &::after {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+      border: var(--#{$accordion}__item--after--BorderWidth) solid var(--#{$accordion}__item--after--BorderColor);
+      border-radius: var(--#{$accordion}__item--BorderRadius);
+    }
   }
 
   &.pf-m-expanded {
@@ -235,6 +256,7 @@
     max-height: 99999px;
     margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
     visibility: revert;
+    border: var(--#{$accordion}__expandable-content--BorderWidth) solid var(--#{$accordion}__expandable-content--BorderColor);
     transition-delay: 0s;
 
     &.pf-m-fixed {
