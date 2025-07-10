@@ -1181,22 +1181,17 @@
   }
 }
 
-// Table table tbody expandable
-.#{$table}.pf-m-expandable {
-  .#{$table}__tr.pf-m-expanded {
-    border-block-end: 0;
+.#{$table}__tr.pf-m-expanded {
+  border-block-end: 0;
+}
+
+.#{$table}__tbody {
+  &.pf-m-expanded,
+  &:has(> .#{$table}__expandable-row:where(:nth-child(n+2)):not(.pf-m-expanded)) {
+    border-block-end: var(--#{$table}__tbody--BorderBlockEndWidth) solid var(--#{$table}__tbody--BorderBlockEndColor);
   }
 
-  // - Table tbody
-  .#{$table}__tbody {
-    &,
-    &.pf-m-expanded,
-    &:has(> .#{$table}__expandable-row:where(:nth-child(n+2)):not(.pf-m-expanded)) {
-      border-block-end: var(--#{$table}__tbody--BorderBlockEndWidth) solid var(--#{$table}__tbody--BorderBlockEndColor);
-    }
-  }
-
-  .#{$table}__tbody.pf-m-expanded {
+  &.pf-m-expanded {
     // - Table tbody table control row
     .#{$table}__control-row {
       background-color: var(--#{$table}__control-row--BackgroundColor);
