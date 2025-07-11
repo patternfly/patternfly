@@ -144,6 +144,10 @@
 
   &:where(.pf-m-success, .pf-m-warning, .pf-m-error) {
     --#{$text-input-group}__text-input--PaddingInlineEnd: var(--#{$text-input-group}--status__text-input--PaddingInlineEnd);
+
+    & .pf-v6-c-text-input-group__text {
+      --#{$text-input-group}__text--Position: relative;
+    }
   }
 
   &:has(> .#{$text-input-group}__utilities) {
@@ -246,4 +250,3 @@
 .#{$text-input-group}__group {
   display: flex;
 }
-
