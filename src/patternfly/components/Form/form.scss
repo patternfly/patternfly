@@ -408,7 +408,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     }
 
     &.pf-m-expandable > .#{$form}__field-group-body { // TODO - remove .pf-m-expandable in a breaking change, it shouldn't be needed. Only needed now so that these styles are an opt-in behind .pf-m-expandable
-      max-height: 99999px;
+      max-height: 9999px;
       padding-block-start: var(--#{$form}__field-group-body--PaddingBlockStart);
       padding-block-end: var(--#{$form}__field-group-body--PaddingBlockEnd);
       visibility: visible;

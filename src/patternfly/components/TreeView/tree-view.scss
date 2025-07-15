@@ -377,7 +377,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate);
 
     > .#{$tree-view}__list {
-      max-height: 99999px;
+      max-height: 9999px;
       visibility: revert;
       opacity: var(--#{$tree-view}--m-expanded__list--Opacity);
       transition-delay: 0s;
