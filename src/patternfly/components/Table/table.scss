@@ -600,10 +600,10 @@
         display: revert;
         visibility: hidden;
         opacity: var(--#{$table}__expandable-row--Opacity);
-        transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+        transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
         transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
-        transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s, 0s;
-        transition-property: opacity, translate, visibility, background-color;
+        transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s;
+        transition-property: opacity, translate, visibility;
         translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
         &[hidden] {
@@ -639,13 +639,6 @@
             }
           }
         }
-      }
-
-      > .#{$table}__control-row.pf-m-no-animate-expand ~ .#{$table}__expandable-row {
-        --#{$table}__expandable-row--TransitionDuration--collapse--fade: 0s;
-        --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
-        --#{$table}__expandable-row--TransitionDuration--expand--fade: 0s;
-        --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
       }
     }
   }
