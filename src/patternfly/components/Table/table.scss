@@ -27,8 +27,6 @@
   --#{$table}__tbody--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--PaddingBlockEnd: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--FontSize: var(--pf-t--global--font--size--body--default); // set this explicitly for input heights to calc properly
-  --#{$table}__tbody--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$table}__tbody--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
   // * Table tr
   --#{$table}__tr--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -333,7 +331,7 @@
 
   // Standard table row (non-expandable)
   // exclude expandable rows
-  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row:where(:nth-child(n+2))) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     // stylelint-disable-next-line
     &.pf-m-ghost-row {
       background-color: var(--#{$table}__tr--m-ghost-row--BackgroundColor);
@@ -571,7 +569,7 @@
       background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
 
-      .#{$table}__tr.pf-m-expanded:not(.#{$table}__expandable-row:where(:nth-child(n+2))) {
+      .#{$table}__tr.pf-m-expanded:not(.#{$table}__expandable-row) {
         border: none;
       }
     }
@@ -598,8 +596,8 @@
   // stylelint-disable max-nesting-depth, selector-max-class
   &.pf-m-animate-expand {
     > .#{$table}__tbody {
-      > .#{$table}__expandable-row:where(:nth-child(n+2)) {
-        display: var(--#{$table}__expandable-row--Display, revert);
+      > .#{$table}__expandable-row {
+        display: revert;
         visibility: hidden;
         opacity: var(--#{$table}__expandable-row--Opacity);
         transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
@@ -609,7 +607,7 @@
         translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
         &[hidden] {
-          display: var(--#{$table}__expandable-row--Display, revert);
+          display: revert;
         }
 
         &.pf-m-expanded {
@@ -628,8 +626,6 @@
 
         &:not(.pf-m-expanded) {
           > :is(.#{$table}__td, .#{$table}__th) {
-            --#{$table}--cell--responsive--label: none;
-
             &,
             > .#{$table}__expandable-row-content {
               padding: 0;
@@ -645,7 +641,7 @@
         }
       }
 
-      > .#{$table}__control-row.pf-m-no-animate-expand ~ .#{$table}__expandable-row:where(:nth-child(n+2)) {
+      > .#{$table}__control-row.pf-m-no-animate-expand ~ .#{$table}__expandable-row {
         --#{$table}__expandable-row--TransitionDuration--collapse--fade: 0s;
         --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
         --#{$table}__expandable-row--TransitionDuration--expand--fade: 0s;
@@ -1041,7 +1037,71 @@
   pointer-events: none;
 }
 
-.#{$table}__tr:has(~ .#{$table}__expandable-row.pf-m-expanded) {
+// - Table expandable row
+.#{$table}__expandable-row {
+  position: relative;
+  border-block-end: 0 solid transparent;
+
+  // Remove top padding from regular expandable
+  > .#{$table}__th,
+  > .#{$table}__td {
+    padding-block-start: 0;
+  }
+
+  // Add padding back to compound expandable
+  .#{$table}__control-row ~ & {
+    > .#{$table}__th,
+    > .#{$table}__td {
+      padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
+    }
+  }
+
+  .#{$table}__td,
+  .#{$table}__th {
+    &.pf-m-no-padding {
+      padding-block-start: 0;
+      padding-block-end: 0;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+
+      .#{$table}__expandable-row-content {
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+  }
+
+  // - Table expandable row content
+  .#{$table}__expandable-row-content {
+    padding-block-start: var(--#{$table}__expandable-row-content--PaddingBlockStart);
+    padding-block-end: var(--#{$table}__expandable-row-content--PaddingBlockEnd);
+    padding-inline-start: var(--#{$table}__expandable-row-content--PaddingInlineStart);
+    padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
+    background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
+    border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
+
+    &.pf-m-no-background {
+      background-color: transparent;
+    }
+  }
+
+  // - Table expandable row content expanded
+  &.pf-m-expanded {
+    border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
+    border-block-end-width: var(--#{$table}--border-width--base);
+  }
+
+  &:not(.pf-m-expanded) {
+    display: none;
+  }
+
+  // - Table expandable row tr last-child
+  tr:last-child {
+    border-block-end: 0;
+  }
+}
+
+.#{$table}__tr:has(~ .#{$table}__expandable-row) {
   border-block-end: 0;
 }
 
@@ -1052,7 +1112,7 @@
 
   // - Table compact table tr
   tr:where(.#{$table}__tr) {
-    &:not(.#{$table}__expandable-row:where(:nth-child(n+2))) {
+    &:not(.#{$table}__expandable-row) {
       --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact--cell--PaddingBlockStart);
       --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact--cell--PaddingBlockEnd);
     }
@@ -1116,17 +1176,21 @@
   }
 }
 
-.#{$table}__tr.pf-m-expanded:has(~ .#{$table}__expandable-row) {
-  border-block-end: 0;
-}
-
-.#{$table}__tbody {
-  &.pf-m-expanded,
-  &:has(> .#{$table}__expandable-row.pf-m-expanded) {
-    border-block-end: var(--#{$table}__tbody--BorderBlockEndWidth) solid var(--#{$table}__tbody--BorderBlockEndColor);
+// Table table tbody expandable
+.#{$table}.pf-m-expandable {
+  .#{$table}__tr.pf-m-expanded {
+    border-block-end: 0;
   }
 
-  &.pf-m-expanded {
+  // - Table tbody
+  .#{$table}__tbody {
+    border-block-end: var(--#{$table}__tr--BorderBlockEndWidth) solid var(--#{$table}__tr--BorderBlockEndColor);
+  }
+
+  // - Table tbody - Table tr
+  .#{$table}__tbody.pf-m-expanded {
+    border-block-end: var(--#{$table}__tr--BorderBlockEndWidth) solid var(--#{$table}__tr--BorderBlockEndColor);
+
     // - Table tbody table control row
     .#{$table}__control-row {
       background-color: var(--#{$table}__control-row--BackgroundColor);
@@ -1145,71 +1209,6 @@
 
   &.pf-m-border-row {
     border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
-  }
-}
-
-// - Table expandable row
-// n+2 selects all children except the first because __expandable-row can go on the first row in an expandable tbody when it shouldn't. TODO - remove __expandable-body from first/control tr in breaking change.
-.#{$table}__expandable-row:where(:nth-child(n+2)) {
-  position: relative;
-  border-block-end: 0 solid transparent;
-
-  // Remove top padding from regular expandable
-  > .#{$table}__th,
-  > .#{$table}__td {
-    padding-block-start: 0;
-  }
-
-  // Add padding back to compound expandable
-  .#{$table}__control-row ~ & {
-    > .#{$table}__th,
-    > .#{$table}__td {
-      padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
-    }
-  }
-
-  .#{$table}__td,
-  .#{$table}__th {
-    &.pf-m-no-padding {
-      padding-block-start: 0;
-      padding-block-end: 0;
-      padding-inline-start: 0;
-      padding-inline-end: 0;
-
-      .#{$table}__expandable-row-content {
-        padding: 0;
-        border-radius: 0;
-      }
-    }
-  }
-
-  // - Table expandable row content
-  .#{$table}__expandable-row-content {
-    padding-block-start: var(--#{$table}__expandable-row-content--PaddingBlockStart);
-    padding-block-end: var(--#{$table}__expandable-row-content--PaddingBlockEnd);
-    padding-inline-start: var(--#{$table}__expandable-row-content--PaddingInlineStart);
-    padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
-    background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
-    border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
-
-    &.pf-m-no-background {
-      background-color: transparent;
-    }
-  }
-
-  // - Table expandable row content expanded
-  &.pf-m-expanded {
-    border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBlockEndColor);
-    border-block-end-width: var(--#{$table}--border-width--base);
-  }
-
-  &:not(.pf-m-expanded) {
-    display: none;
-  }
-
-  // - Table expandable row tr last-child
-  tr:last-child {
-    border-block-end: 0;
   }
 }
 
