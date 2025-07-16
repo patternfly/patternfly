@@ -22,7 +22,7 @@
   {{/table-thead}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--IsControlRow=true table-tr--IsExpanded=true}}
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -76,7 +76,7 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--IsControlRow=true}}
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -130,7 +130,7 @@
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--IsControlRow=true}}
       {{#> table-th table-th--data-label="Repository name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}

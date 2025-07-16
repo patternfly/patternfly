@@ -118,6 +118,23 @@
   --#{$table}__action--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
+  // * Table expandable row
+  --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
+  --#{$table}__expandable-row--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
+  --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
+  --#{$table}__expandable-row--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
+  --#{$table}__expandable-row--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}__expandable-row--Opacity: 0;
+  --#{$table}__tbody--m-expanded__expandable-row--Opacity: 1;
+  --#{$table}__expandable-row--TranslateY: 0;
+  --#{$table}__tbody--m-expanded__expandable-row--TranslateY: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$table}__expandable-row--TransitionDuration--expand--slide: var(--pf-t--global--motion--duration--fade--default);
+    --#{$table}__expandable-row--TransitionDuration--collapse--slide: var(--pf-t--global--motion--duration--fade--short);
+    --#{$table}__expandable-row--TranslateY: -.5rem;
+  }
+
   // * Table expandable row content
   --#{$table}__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
@@ -575,6 +592,89 @@
   .#{$button} .#{$table}__sort-indicator {
     --#{$table}__sort-indicator--MarginInlineStart: 0;
   }
+
+  // stylelint-disable max-nesting-depth, selector-max-class
+  &.pf-m-animate-expand {
+    > .#{$table}__tbody {
+      &.pf-m-expanded {
+        > .#{$table}__control-row {
+          border-block-end: 0;
+        }
+      }
+
+      > .#{$table}__expandable-row {
+        display: var(--#{$table}__expandable-row--Display, revert);
+
+        &:where(:nth-child(n+2)) {
+          visibility: hidden;
+          opacity: var(--#{$table}__expandable-row--Opacity);
+          transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+          transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
+          transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s, 0s;
+          transition-property: opacity, translate, visibility, background-color;
+          translate: 0 var(--#{$table}__expandable-row--TranslateY);
+
+          &[hidden] {
+            display: var(--#{$table}__expandable-row--Display, revert);
+          }
+
+          &.pf-m-expanded {
+            visibility: visible;
+            opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+            transition-delay: 0s;
+            transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
+            translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
+
+            > :is(.#{$table}__td, .#{$table}__th) {
+              > .#{$table}__expandable-row-content {
+                max-height: 99999px;
+              }
+            }
+          }
+
+          &:not(.pf-m-expanded) {
+            > :is(.#{$table}__td, .#{$table}__th) {
+              &,
+              > .#{$table}__expandable-row-content {
+                padding: 0;
+                overflow: hidden;
+                transition-delay: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
+                transition-property: padding, max-height, overflow;
+              }
+
+              > .#{$table}__expandable-row-content {
+                max-height: 0;
+              }
+            }
+          }
+
+          // Remove top padding from regular expandable
+          // > :is(.#{$table}__th, .#{$table}__td) {
+          //   padding-block-start: 0;
+          // }
+        }
+      }
+
+      // Add padding back to compound expandable
+      > .#{$table}__control-row ~ .#{$table}__expandable-row:where(:nth-child(n+2)).pf-m-expanded {
+        > :is(.#{$table}__th, .#{$table}__td):not(.pf-m-no-padding) {
+          padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
+        }
+      }
+
+      > .#{$table}__tr:has(~ .#{$table}__expandable-row) {
+        border-block-end: 0;
+      }
+
+      > .#{$table}__control-row.pf-m-no-animate-expand ~ .#{$table}__expandable-row {
+        --#{$table}__expandable-row--TransitionDuration--collapse--fade: 0s;
+        --#{$table}__expandable-row--TransitionDuration--collapse--slide: 0s;
+        --#{$table}__expandable-row--TransitionDuration--expand--fade: 0s;
+        --#{$table}__expandable-row--TransitionDuration--expand--slide: 0s;
+      }
+    }
+  }
+  // stylelint-enable
 }
 
 // - Table truncate - Table wrap - Table nowrap - Table fit content - Table wrap - Table break word
@@ -984,6 +1084,7 @@
 
       .#{$table}__expandable-row-content {
         padding: 0;
+        border-radius: 0;
       }
     }
   }
@@ -996,6 +1097,10 @@
     padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
     background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
     border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
+
+    &.pf-m-no-background {
+      background-color: transparent;
+    }
   }
 
   // - Table expandable row content expanded
@@ -1021,6 +1126,7 @@
 
   // - Table compact table tr
   tr:where(.#{$table}__tr) {
+    @at-root .#{$table}.pf-m-animate-expand.pf-m-compact > .#{$table}__tbody > .#{$table}__tr:not(.#{$table}__expandable-row:where(:nth-child(n+2))),
     &:not(.#{$table}__expandable-row) {
       --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact--cell--PaddingBlockStart);
       --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact--cell--PaddingBlockEnd);
@@ -1104,6 +1210,12 @@
     .#{$table}__control-row {
       background-color: var(--#{$table}__control-row--BackgroundColor);
       border-block-end: var(--#{$table}__control-row--BorderBlockEndWidth) solid var(--#{$table}__control-row__tbody--BorderBlockEndColor);
+
+      // stylelint-disable max-nesting-depth, selector-max-class
+      &.pf-m-expanded {
+        border-block-end: 0; // TODO this is a dupe of the block above, consolidate in a breaking change
+      }
+      // stylelint-enable
     }
   }
 }

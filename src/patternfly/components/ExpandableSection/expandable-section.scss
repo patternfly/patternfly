@@ -79,7 +79,7 @@
     --#{$expandable-section}__content--Opacity: var(--#{$expandable-section}--m-expanded__content--Opacity);
     --#{$expandable-section}__content--TranslateY: var(--#{$expandable-section}--m-expanded__content--TranslateY);
     --#{$expandable-section}__content--Visibility: auto;
-    --#{$expandable-section}__content--MaxHeight: 9999px;
+    --#{$expandable-section}__content--MaxHeight: 99999px;
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
     gap: var(--pf-v6-c-expandable-section--Gap);
