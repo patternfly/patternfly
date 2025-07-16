@@ -862,7 +862,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 ```
 
 ### Animated expandable
-```hbs
+```hbs isBeta
 {{#> table table--IsAnimateExpand=true table--id="table-animated-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Animated expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead" table-tr--index="thead"}}
@@ -1560,7 +1560,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 ```
 
 ### Animated compound expansion example
-```hbs
+```hbs isBeta
 {{#> table table--IsAnimateExpand=true table--id="table-animate-compound-expansion" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Animated compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
