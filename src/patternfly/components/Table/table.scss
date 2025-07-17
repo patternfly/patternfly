@@ -647,13 +647,6 @@
         }
       }
 
-      // Add padding back to compound expandable
-      > .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
-        > :is(.#{$table}__th, .#{$table}__td):not(.pf-m-no-padding) {
-          padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
-        }
-      }
-
       > .#{$table}__tr:has(~ .#{$table}__expandable-row) {
         border-block-end: 0;
       }
@@ -1059,12 +1052,20 @@
   position: relative;
   border-block-end: 0 solid transparent;
 
-  @at-root :not(.#{$table}__control-row) ~ .#{$table}__expandable-row {
+  // remove top padding from expandable row cells by default
+  :not(.#{$table}__control-row) ~ & {
     > .#{$table}__th,
     > .#{$table}__td {
       padding-block-start: 0;
     }
   }
+
+  // add back padding for compound expandable
+  .#{$table}__control-row ~ &.pf-m-expanded {
+  > :is(.#{$table}__th, .#{$table}__td):not(.pf-m-no-padding) {
+    padding-block-start: var(--#{$table}--cell--PaddingBlockStart);
+  }
+}
 
   td:where(.#{$table}__td),
   th:where(.#{$table}__th) {
