@@ -455,8 +455,7 @@
   }
 
   // Set defaults
-  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row),
-  &.pf-m-animate-expand > .#{$table}__tbody > tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     .#{$table}__toggle,
     .#{$table}__check,
     .#{$table}__favorite,

@@ -1123,7 +1123,6 @@
 
   // - Table compact table tr
   tr:where(.#{$table}__tr) {
-    @at-root .#{$table}.pf-m-animate-expand.pf-m-compact > .#{$table}__tbody > .#{$table}__tr:not(.#{$table}__expandable-row),
     &:not(.#{$table}__expandable-row) {
       --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact--cell--PaddingBlockStart);
       --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact--cell--PaddingBlockEnd);
