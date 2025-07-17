@@ -133,6 +133,8 @@
 
 // - Table mobile layout
 @include pf-mobile-layout {
+  $pf-mobile-parent: &;
+
   --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-grid--cell--PaddingBlockStart);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}--m-grid--cell--PaddingInlineEnd);
   --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-grid--cell--PaddingBlockEnd);
@@ -185,6 +187,16 @@
 
   &.pf-m-animate-expand {
     --#{$table}__expandable-row--Display: block;
+
+    > .#{$table}__tbody > .#{$table}__expandable-row {
+      &:not(.pf-m-expanded) {
+        > :is(.#{$table}__td, .#{$table}__th) {
+          &[data-label]::before {
+            content: none; // hides column header for non-expanded rows
+          }
+        }
+      }
+    }
   }
 
   // Remove border on tr inside non-expanded tbody in of expandable tables
@@ -206,7 +218,7 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   // - Table grid tr not expandable row
-  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row:where(:nth-child(n+2))) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     display: grid;
     grid-template-columns: 1fr;
     height: auto;
@@ -283,7 +295,7 @@
       position: revert;
       font-weight: var(--#{$table}--cell--responsive--th--FontWeight);
       text-align: start;
-      content: var(--#{$table}--cell--responsive--label, attr(data-label));
+      content: attr(data-label);
     }
   }
 
@@ -349,7 +361,7 @@
   }
 
   // - Table grid expandable row
-  .#{$table}__expandable-row:where(:nth-child(n+2)) {
+  .#{$table}__expandable-row {
     --#{$table}--cell--responsive--PaddingBlockStart: 0;
     --#{$table}--cell--responsive--PaddingInlineEnd: 0;
     --#{$table}--cell--responsive--PaddingBlockEnd: 0;
@@ -443,7 +455,7 @@
   }
 
   // Set defaults
-  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row:where(:nth-child(n+2))) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     .#{$table}__toggle,
     .#{$table}__check,
     .#{$table}__favorite,

@@ -862,7 +862,7 @@ Note: Table column widths will respond automatically when toggling expanded rows
 ```
 
 ### Animated expandable
-```hbs
+```hbs isBeta
 {{#> table table--IsAnimateExpand=true table--id="table-animated-expandable" table--IsGrid=true table--modifier="pf-m-grid-lg" table--IsExpandable=true table--attribute='aria-label="Animated expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead" table-tr--index="thead"}}
@@ -881,7 +881,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
-
   {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsExpanded=true}}
       {{> table-cell-toggle}}
@@ -898,7 +897,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{> table-cell-empty}}
       {{> table-cell-empty}}
@@ -910,7 +908,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-tbody}}
-
   {{#> table-tbody table-tr--index="2"}}
     {{#> table-tr}}
       {{> table-cell-toggle}}
@@ -927,7 +924,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
@@ -936,7 +932,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
-
   {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsExpanded=true}}
       {{> table-cell-toggle}}
@@ -953,7 +948,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
@@ -962,7 +956,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
-
   {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsExpanded=true}}
       {{> table-cell-toggle}}
@@ -979,7 +972,6 @@ Note: Table column widths will respond automatically when toggling expanded rows
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content-' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
@@ -1568,7 +1560,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 ```
 
 ### Animated compound expansion example
-```hbs
+```hbs isBeta
 {{#> table table--IsAnimateExpand=true table--id="table-animate-compound-expansion" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Animated compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1591,7 +1583,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{> table-cell-empty}}
     {{/table-tr}}
   {{/table-thead}}
-
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
@@ -1616,7 +1607,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1624,7 +1614,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1632,7 +1621,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1641,7 +1629,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
-
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
@@ -1667,7 +1654,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1675,7 +1661,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1683,7 +1668,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1692,7 +1676,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
-
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
@@ -1718,7 +1701,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1726,7 +1708,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1734,7 +1715,6 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
@@ -1759,12 +1739,12 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-table__control-row` | `.pf-v6-c-table__expandable > <tr>` | Modifies a compound expandable table control row. |
+| `.pf-m-expanded` | `<tbody>`, `.pf-v6-c-table__compound-expansion-toggle` > `.pf-v6-c-button` | Modifies a tbody with a row and an expandable row. |
 | `.pf-v6-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 | `.pf-m-animate-expand` | `.pf-v6-c-table` | Modifies the table to animate expansion. |
 | `.pf-m-expanded` | `.pf-v6-c-table__tbody`, `.pf-v6-c-table__control-row`, `.pf-v6-c-table__compound-expansion-toggle` | Modifies a `<tbody>`, control row, and item in a control row for the expanded state. |
 | `.pf-m-no-background` | `.pf-v6-c-table__expandable-row-content` | Modifies the expandable row content to have a transparent background. For in compound expandable when the parent expandable row has no padding with `.pf-m-no-padding`. |
 | `.pf-m-no-animate-expand` | `.pf-v6-c-table__control-row.pf-m-expanded` | Disables animation on a compound expandable row. **Note:** Used to disable the animation when clicking between compound expandable items. |
-
 
 ## Compact variant
 
@@ -2901,7 +2881,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
           {{> table-nested table--id=(concat table--id '-nested-table-10')}}
         {{/table-expandable-row-content}}
-        {{/table-td}}
+      {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
