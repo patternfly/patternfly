@@ -97,6 +97,7 @@
 
   &.pf-m-disabled {
     --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
+    --#{$text-input-group}__text-input--placeholder--Color: var(--#{$text-input-group}--m-disabled--Color);
     --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled__icon--Color);
     --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}--m-disabled__icon--m-status--Color);
     --#{$text-input-group}--BackgroundColor: var(--#{$text-input-group}--m-disabled--BackgroundColor);
