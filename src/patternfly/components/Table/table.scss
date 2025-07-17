@@ -645,11 +645,6 @@
             }
           }
         }
-
-        // Remove top padding from regular expandable
-        // > :is(.#{$table}__th, .#{$table}__td) {
-        //   padding-block-start: 0;
-        // }
       }
 
       // Add padding back to compound expandable
