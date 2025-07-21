@@ -412,4 +412,3 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-m-bold` | `.pf-v6-c-inline-edit__label` | Modifies an inline edit label's `font-weight`. |
 | `.pf-m-valid` | `.pf-v6-c-inline-edit__action` | Modifies the action button state. |
 | `.pf-m-enable-editable` | `.pf-v6-c-inline-edit__action` | Exposes an inline edit action by default. |
-```
