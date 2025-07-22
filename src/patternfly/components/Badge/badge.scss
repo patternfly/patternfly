@@ -19,6 +19,7 @@
   // Modifiers
   --#{$badge}--m-read--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
   --#{$badge}--m-read--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
+  --#{$badge}--m-read--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$badge}--m-read__toggle-icon--Color: var(--pf-t--global--icon--color--nonstatus--on-gray--default);
   --#{$badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$badge}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -52,6 +53,7 @@
   }
 
   &.pf-m-read {
+    --#{$badge}--BorderColor: var(--#{$badge}--m-read--BorderColor);
     --#{$badge}--Color: var(--#{$badge}--m-read--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-read--BackgroundColor);
     --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-read__toggle-icon--Color);
