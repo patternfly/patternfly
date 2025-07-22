@@ -99,6 +99,9 @@
   --#{$alert-group}__overflow-button--Color: var(--pf-t--global--text--color--link--default);
   --#{$alert-group}__overflow-button--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$alert-group}__overflow-button--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$alert-group}__overflow-button--after--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$alert-group}__overflow-button--after--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$alert-group}__overflow-button--hover--after--BorderWidth: var(--pf-t--global--border--width--strong);
   --#{$alert-group}__overflow-button--hover--Color: var(--pf-t--global--text--color--link--hover);
   --#{$alert-group}__overflow-button--hover--BackgroundColor: var(--pf-t--global--background--color--floating--hover);
   --#{$alert-group}__overflow-button--hover--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
@@ -137,6 +140,20 @@
   border-width: var(--#{$alert-group}__overflow-button--BorderWidth);
   border-radius: var(--#{$alert-group}__overflow-button--BorderRadius);
   box-shadow: var(--#{$alert-group}__overflow-button--BoxShadow);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$alert-group}__overflow-button--after--BorderWidth) solid var(--#{$alert-group}__overflow-button--after--BorderColor);
+    border-radius: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    --#{$alert-group}__overflow-button--after--BorderWidth: var(--#{$alert-group}__overflow-button--hover--after--BorderWidth);
+  }
 }
 
 .#{$alert-group}__item {
