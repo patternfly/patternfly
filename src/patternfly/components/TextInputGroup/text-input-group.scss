@@ -44,6 +44,7 @@
   --#{$text-input-group}__text-input--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$text-input-group}__text-input--MinWidth: 12ch;
   --#{$text-input-group}__text-input--m-hint--Color: var(--pf-t--global--text--color--placeholder);
+  --#{$text-input-group}__text-input--Color: var(--pf-t--global--text--color--regular);
   --#{$text-input-group}__text-input--placeholder--Color: var(--pf-t--global--text--color--placeholder);
   --#{$text-input-group}__text-input--BackgroundColor: transparent;
   --#{$text-input-group}__text-input--OutlineOffset: -6px;
@@ -97,6 +98,8 @@
 
   &.pf-m-disabled {
     --#{$text-input-group}--Color: var(--#{$text-input-group}--m-disabled--Color);
+    --#{$text-input-group}__text-input--Color: var(--#{$text-input-group}--m-disabled--Color);
+    --#{$text-input-group}__text-input--placeholder--Color: var(--#{$text-input-group}--m-disabled--Color);
     --#{$text-input-group}__icon--Color: var(--#{$text-input-group}--m-disabled__icon--Color);
     --#{$text-input-group}__icon--m-status--Color: var(--#{$text-input-group}--m-disabled__icon--m-status--Color);
     --#{$text-input-group}--BackgroundColor: var(--#{$text-input-group}--m-disabled--BackgroundColor);
@@ -213,6 +216,7 @@
   padding-block-end: var(--#{$text-input-group}__text-input--PaddingBlockEnd);
   padding-inline-start: var(--#{$text-input-group}__text-input--PaddingInlineStart);
   padding-inline-end: var(--#{$text-input-group}__text-input--PaddingInlineEnd);
+  color: var(--#{$text-input-group}__text-input--Color);
   background-color: var(--#{$text-input-group}__text-input--BackgroundColor);
   border: 0;
   outline-offset: var(--#{$text-input-group}__text-input--OutlineOffset);
