@@ -161,7 +161,7 @@
     transition-property: opacity;
   }
 
-  &:is(:hover, :active),
+  &:is(:hover, :focus-within),
   &.pf-m-expanded {
     &::after {
       position: absolute;
