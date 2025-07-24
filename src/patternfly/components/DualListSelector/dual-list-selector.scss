@@ -218,8 +218,10 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__list-item {
-  &:focus {
+  &:focus-visible {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--BorderColor);
+
   }
 
   &.pf-m-expandable {
@@ -292,12 +294,12 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   &:hover {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
     --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--hover--BorderColor);
-    --#{$dual-list-selector}__list-item-row--BorderWidth: revert;
   }
 
   &.pf-m-check {
     --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: transparent;
     --#{$dual-list-selector}__list-item-row--m-selected--BorderColor: transparent;
+    --#{$dual-list-selector}__list-item-row--BorderWidth: revert;
   }
 
   &.pf-m-ghost-row {
