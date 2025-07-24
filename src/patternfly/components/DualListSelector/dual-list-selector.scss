@@ -57,8 +57,13 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   // List item
   --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
   --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
+  --#{$dual-list-selector}__list-item-row--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$dual-list-selector}__list-item-row--BorderColor: transparent;
   --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$dual-list-selector}__list-item-row--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$dual-list-selector}__list-item-row--m-selected--BorderWidth: var(--pf-t--global--border--width--strong);
+  --#{$dual-list-selector}__list-item-row--m-selected--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
 
@@ -182,6 +187,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   overflow: auto;
   border: var(--#{$dual-list-selector}__menu--BorderWidth) solid var(--#{$dual-list-selector}__menu--BorderColor);
   border-radius: var(--#{$dual-list-selector}__menu--BorderRadius);
+  outline-offset: 2px; // push the focus outline out so that it is not broken by the list item row background
 }
 
 .#{$dual-list-selector}__list {
@@ -257,12 +263,24 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__list-item-row {
+  position: relative;
   display: flex;
   font-size: var(--#{$dual-list-selector}__list-item-row--FontSize);
   background-color: var(--#{$dual-list-selector}__list-item-row--BackgroundColor);
 
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border-block-start: var(--#{$dual-list-selector}__list-item-row--BorderWidth) solid var(--#{$dual-list-selector}__list-item-row--BorderColor);
+    border-block-end: var(--#{$dual-list-selector}__list-item-row--BorderWidth) solid var(--#{$dual-list-selector}__list-item-row--BorderColor);
+  }
+
   &.pf-m-selected {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BorderWidth: var(--#{$dual-list-selector}__list-item-row--m-selected--BorderWidth);
+    --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BorderColor);
 
     .#{$dual-list-selector}__item-text {
       --#{$dual-list-selector}__item-text--Color: var(--#{$dual-list-selector}__list-item-row--m-selected__text--Color);
@@ -273,10 +291,13 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   &:hover {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
+    --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--hover--BorderColor);
+    --#{$dual-list-selector}__list-item-row--BorderWidth: revert;
   }
 
   &.pf-m-check {
     --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: transparent;
+    --#{$dual-list-selector}__list-item-row--m-selected--BorderColor: transparent;
   }
 
   &.pf-m-ghost-row {
