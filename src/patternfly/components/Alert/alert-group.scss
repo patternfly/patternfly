@@ -90,7 +90,8 @@
   --#{$alert-group}--m-toast__item--m-offstage-right--c-alert--Transition: initial;
 
     // Overflow button
-  --#{$alert-group}__overflow-button--BorderWidth: 0;
+  --#{$alert-group}__overflow-button--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$alert-group}__overflow-button--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$alert-group}__overflow-button--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$alert-group}__overflow-button--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$alert-group}__overflow-button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -99,6 +100,7 @@
   --#{$alert-group}__overflow-button--Color: var(--pf-t--global--text--color--link--default);
   --#{$alert-group}__overflow-button--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$alert-group}__overflow-button--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$alert-group}__overflow-button--hover--BorderWidth: var(--pf-t--global--border--width--strong);
   --#{$alert-group}__overflow-button--hover--Color: var(--pf-t--global--text--color--link--hover);
   --#{$alert-group}__overflow-button--hover--BackgroundColor: var(--pf-t--global--background--color--floating--hover);
   --#{$alert-group}__overflow-button--hover--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);
@@ -134,9 +136,23 @@
   padding-inline-end: var(--#{$alert-group}__overflow-button--PaddingInlineEnd);
   color: var(--#{$alert-group}__overflow-button--Color);
   background-color: var(--#{$alert-group}__overflow-button--BackgroundColor);
-  border-width: var(--#{$alert-group}__overflow-button--BorderWidth);
+  border: 0;
   border-radius: var(--#{$alert-group}__overflow-button--BorderRadius);
   box-shadow: var(--#{$alert-group}__overflow-button--BoxShadow);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$alert-group}__overflow-button--BorderWidth) solid var(--#{$alert-group}__overflow-button--BorderColor);
+    border-radius: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    --#{$alert-group}__overflow-button--BorderWidth: var(--#{$alert-group}__overflow-button--hover--BorderWidth);
+  }
 }
 
 .#{$alert-group}__item {
