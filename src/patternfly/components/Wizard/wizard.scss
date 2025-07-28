@@ -452,6 +452,7 @@
   &::before {
     position: relative;
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     width: var(--#{$wizard}__nav-link--before--Width);
@@ -514,12 +515,9 @@
   }
 }
 
-.#{$wizard}__nav-link-text {
-  flex-grow: 1;
-}
-
 .#{$wizard}__nav-link-main {
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
   padding-block-start: var(--#{$wizard}__nav-link-main--PaddingBlockStart);
   padding-block-end: var(--#{$wizard}__nav-link-main--PaddingBlockEnd);
