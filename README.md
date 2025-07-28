@@ -63,19 +63,19 @@ When making visual changes to a full page example, new example preview screensho
 
 ## Guidelines for CSS development
 
-- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://core-staging.patternfly.org, and information detailing the change.
+- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://pf-core-staging.patternfly.org, and information detailing the change.
 - If global variables are modified in Core, a React issue should be opened to address this.
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
 ### Handlebars guidelines 
-[For information on how to contribute, refer to our guidelines.](https://core-staging.patternfly.org/contribution)
+[For information on how to contribute, refer to our guidelines.](https://pf-core-staging.patternfly.org/contribution)
 
 ### CSS/Sass guidelines
-[For more information on using CSS and Sass, refer to our guidelines.](https://core-staging.patternfly.org/guidelines)
+[For more information on using CSS and Sass, refer to our guidelines.](https://pf-core-staging.patternfly.org/guidelines)
 
 ### Custom icon guidelines
-[For more information on custom icons, refer to our guidelines.](https://core-staging.patternfly.org/adding-custom-icons)
+[For more information on custom icons, refer to our guidelines.](https://pf-core-staging.patternfly.org/adding-custom-icons)
 
 ## Beta components
 
@@ -112,7 +112,7 @@ If you have any suggestions about ways that we can improve how we use this tool,
 ## FAQ
 
 #### CSS Variables
-[How do I use CSS variables to customize the library?](https://core-staging.patternfly.org/guidelines#variables)
+[How do I use CSS variables to customize the library?](https://pf-core-staging.patternfly.org/guidelines#variables)
 
 #### Browser support
 PatternFly is supported on the latest two major versions of the following browsers:
