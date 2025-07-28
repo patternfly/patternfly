@@ -41,6 +41,7 @@
   --#{$label-group}__label--MaxWidth: 18ch;
 
   // Close
+  --#{$label-group}__close--c-button--Color: var(--pf-t--global--icon--color--regular);
   --#{$label-group}__close--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label-group}__close--c-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$label-group}__close--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
@@ -146,8 +147,9 @@
   display: flex;
   align-self: flex-start;
 
-  .#{$button} {
+  .#{$button}.pf-m-plain.pf-m-no-padding {
     --#{$button}--FontSize: var(--#{$label-group}__close--c-button--FontSize);
+    --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$label-group}__close--c-button--Color);
     --#{$button}--m-plain--m-no-padding--PaddingBlockStart: var(--#{$label-group}__close--c-button--PaddingBlockStart);
     --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: var(--#{$label-group}__close--c-button--PaddingInlineEnd);
     --#{$button}--m-plain--m-no-padding--PaddingBlockEnd: var(--#{$label-group}__close--c-button--PaddingBlockEnd);
