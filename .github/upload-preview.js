@@ -20,7 +20,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `pf-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
   case 'coverage':
