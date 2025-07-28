@@ -84,6 +84,7 @@
   // Nav link status icon
   --#{$wizard}__nav-link-status-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$wizard}__nav-link--m-danger__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__nav-link--m-warning__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$wizard}__nav-link--m-success__nav-link-status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$wizard}__nav-link-status-icon--InsetBlockStart: 4px; // not spacer-based but needed to align
   --#{$wizard}__nav-link-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
@@ -110,6 +111,7 @@
   --#{$wizard}__nav-link-status-icon--LineHeight: 1;
   --#{$wizard}__toggle-status-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$wizard}__toggle-list-item--m-danger__status-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$wizard}__toggle-list-item--m-warning__status-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$wizard}__toggle-list-item--m-success__status-icon--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$wizard}__toggle-status-icon--InsetBlockStart: 2px; // not spacer-based but needed to align
   --#{$wizard}__toggle-status-icon--FontSize: var(--pf-t--global--icon--size--font--xl);
@@ -302,6 +304,10 @@
     --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-danger__status-icon--Color);
   }
 
+  &.pf-m-warning {
+    --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-warning__status-icon--Color);
+  }
+
   &.pf-m-success {
     --#{$wizard}__toggle-status-icon--Color: var(--#{$wizard}__toggle-list-item--m-success__status-icon--Color);
   }
@@ -480,7 +486,7 @@
     }
   }
 
-  &:is(.pf-m-success, .pf-m-danger) {
+  &:is(.pf-m-success, .pf-m-warning, .pf-m-danger) {
     &::before {
       display: none;
     }
@@ -488,6 +494,10 @@
 
   &.pf-m-success {
     --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-success__nav-link-status-icon--Color);
+  }
+
+  &.pf-m-warning {
+    --#{$wizard}__nav-link-status-icon--Color: var(--#{$wizard}__nav-link--m-warning__nav-link-status-icon--Color);
   }
 
   &.pf-m-danger {
