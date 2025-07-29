@@ -7,8 +7,8 @@
   --#{$label}--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--MaxWidth: 100%;
   --#{$label}--MinWidth: calc((var(--#{$label}--FontSize) * var(--pf-t--global--font--line-height--body) + var(--#{$label}--PaddingBlockStart) + var(--#{$label}--PaddingBlockEnd)));
-  --#{$label}--BorderWidth: 0;
-  --#{$label}--BorderColor: transparent;
+  --#{$label}--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$label}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$label}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$label}--FontSize: var(--pf-t--global--font--size--body--sm);
 
@@ -163,8 +163,8 @@
   --#{$label}--m-custom--m-outline--m-clickable--hover__icon--Color: var(--pf-t--global--icon--color--status--custom--hover);
 
   // Clickable
-  --#{$label}--m-clickable--hover--BorderWidth: 0;
-  --#{$label}--m-clickable--hover--BorderColor: transparent;
+  --#{$label}--m-clickable--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
+  --#{$label}--m-clickable--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$label}--m-clickable__content--Cursor: pointer;
 
   // Filled
@@ -183,8 +183,10 @@
   // Overflow
   --#{$label}--m-overflow--Color: var(--pf-t--global--text--color--brand--default);
   --#{$label}--m-overflow--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$label}--m-overflow--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$label}--m-overflow--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$label}--m-overflow--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$label}--m-overflow--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
 
   // Add
   --#{$label}--m-add--Color: var(--pf-t--global--text--color--brand--default);
@@ -474,10 +476,12 @@
   &.pf-m-overflow {
     --#{$label}--Color: var(--#{$label}--m-overflow--Color);
     --#{$label}--BackgroundColor: var(--#{$label}--m-overflow--BackgroundColor);
+    --#{$label}--BorderWidth: var(--#{$label}--m-overflow--BorderWidth);
 
     &:is(:hover, :focus) {
       --#{$label}--m-overflow--Color: var(--#{$label}--m-overflow--hover--Color);
       --#{$label}--m-overflow--BackgroundColor: var(--#{$label}--m-overflow--hover--BackgroundColor);
+      --#{$label}--m-overflow--BorderWidth: var(--#{$label}--m-overflow--hover--BorderWidth);
     }
   }
 
