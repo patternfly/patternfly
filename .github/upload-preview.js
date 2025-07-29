@@ -20,7 +20,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `pf-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
   case 'coverage':
@@ -28,7 +28,7 @@ switch(uploadFolderName) {
     break;
   case 'public':
     if (!prnum && prbranch === 'main') {
-      uploadURL = 'core-staging.patternfly.org';
+      uploadURL = 'pf-core-staging.patternfly.org';
       fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
     }
     else {
