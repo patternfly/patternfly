@@ -8,6 +8,8 @@
   --#{$progress}__bar--Height: var(--pf-t--global--spacer--md);
   --#{$progress}__bar--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default); // the bar always needs white under it so that the semi-transparent color shows correctly
   --#{$progress}__bar--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$progress}__bar--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$progress}__bar--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$progress}__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
   --#{$progress}__status--Gap: var(--pf-t--global--spacer--sm);
   --#{$progress}__status-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -201,6 +203,15 @@
   overflow: hidden;
   background-color: var(--#{$progress}__bar--BackgroundColor);
   border-radius: var(--#{$progress}__bar--BorderRadius);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    border: var(--#{$progress}__bar--BorderWidth) solid var(--#{$progress}__bar--BorderColor);
+    border-radius: var(--#{$progress}__bar--BorderRadius);
+  }
 }
 
 // the progress__indicator is the part that advances (widens) as progress is made
