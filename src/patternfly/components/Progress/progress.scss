@@ -210,7 +210,7 @@
     pointer-events: none;
     content: '';
     border: var(--#{$progress}__bar--BorderWidth) solid var(--#{$progress}__bar--BorderColor);
-    border-radius: var(--#{$progress}__bar--BorderRadius);
+    border-radius: inherit;
   }
 }
 
