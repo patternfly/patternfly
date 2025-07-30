@@ -22,6 +22,7 @@
 
   // * Table thead toggle
   --#{$table}__thead__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$table}__thead__toggle--VerticalAlign: middle;
 
   // * Table body cell
   --#{$table}__tbody--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
@@ -191,6 +192,10 @@
   // * Table compact th
   --#{$table}--m-compact__th--PaddingBlockStart: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
   --#{$table}--m-compact__th--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+
+  // * Table compact thead toggle
+  --#{$table}--m-compact__thead__tr--VerticalAlign: middle;
+  --#{$table}--m-compact__thead__check--VerticalAlign: middle;
 
   // * Table compact cell
   --#{$table}--m-compact--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -835,6 +840,11 @@
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}__toggle--PaddingInlineStart);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}__toggle--PaddingInlineEnd);
 
+  // Apply vertical alignment for thead toggle in non-compact tables
+  thead:where(.#{$table}__thead) & {
+    vertical-align: var(--#{$table}__thead__toggle--VerticalAlign);
+  }
+
   .#{$button} {
     &.pf-m-expanded .#{$table}__toggle-icon {
       transform: rotate(var(--#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate));
@@ -1131,6 +1141,14 @@
     .#{$table}__toggle {
       --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__th--PaddingBlockStart);
       --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__th--PaddingBlockEnd);
+    }
+
+    tr:where(.#{$table}__tr) {
+      vertical-align: var(--#{$table}--m-compact__thead__tr--VerticalAlign);
+    }
+
+    .#{$table}__check {
+      vertical-align: var(--#{$table}--m-compact__thead__check--VerticalAlign);
     }
   }
 
