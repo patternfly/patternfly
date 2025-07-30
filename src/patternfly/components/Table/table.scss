@@ -16,6 +16,9 @@
   --#{$table}__caption--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$table}__caption--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
 
+  // * Table thead
+  --#{$table}__thead--VerticalAlign: bottom;
+
   // * Table thead cell
   --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
@@ -877,6 +880,11 @@
     vertical-align: bottom;
   }
 
+  // Override for compact expandable tables
+  .#{$table}.pf-m-compact.pf-m-expandable thead & {
+    vertical-align: middle;
+  }
+
   .#{$check}.pf-m-standalone,
   .#{$radio}.pf-m-standalone {
     thead & {
@@ -1159,7 +1167,7 @@
   --#{$table}__tr--BorderBlockEndWidth: 0;
   --#{$table}__toggle--PaddingBlockEnd: var(--#{$table}__thead__toggle--PaddingBlockEnd);
 
-  vertical-align: bottom;
+  vertical-align: var(--#{$table}__thead--VerticalAlign);
 
   // - Table nested column header button
   &.pf-m-nested-column-header {
@@ -1185,6 +1193,8 @@
 
 // Table table tbody expandable
 .#{$table}.pf-m-expandable {
+  --#{$table}__thead--VerticalAlign: middle;
+  
   .#{$table}__tr.pf-m-expanded {
     border-block-end: 0;
   }
