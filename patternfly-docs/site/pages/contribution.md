@@ -1,81 +1,45 @@
 ---
 id: contribution
-title: Contribution guidelines
+title: Contribution guide
 ---
 
-## Component, layout, demo creation
-### Naming blocks
+## Quick Start for New Contributors
 
-Components, layouts, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
-Example: `Button`, `SecondaryNav`
+New to contributing to PatternFly? Here's how to get started quickly:
 
-### Handlebars names
+**1. Set up your development environment:**
+```bash
+# Clone the repository
+git clone https://github.com/patternfly/patternfly.git
+cd patternfly
 
-The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
+# Install dependencies (requires Node.js v18.0.0+)
+yarn install
 
-### Handlebars utilities
-| Property | Usage                                                          | Example
-| ------------ | --------------------------------------------------- | -------------
-| `uniqueId`   | Creates a unique id | badge-&lbrace;&lbrace;uniqueId&rbrace;&rbrace;
-| `concat`   | Join multiple strings or variables together |  &lbrace;&lbrace;concat 'Hello' ' world' '!!!'&rbrace;&rbrace; results in Hello world!!!
-| `contains` | Tests to see if a string contains another string | &lbrace;&lbrace;#contains alert--modifier 'pf-m-amazingmodifier'&rbrace;&rbrace;<br />&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br />&lbrace;&lbrace;else&rbrace;&rbrace;<br />&nbsp;&nbsp;&lt;span&gt;Alternate text&lt;/span&gt;<br />&lbrace;&lbrace;/contains&rbrace;&rbrace;
+# Start the development server
+yarn start
 
-## Documentation
-For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
-
-A good example of this approach is the [table component](/components/table).
-
-## Modifiers
-### Modifier parameter
-
-Every block and element should have a parameter allowing for modifier classes and attributes to be passed in. These should be named in kebab case with the block/element name plus `--modifier` and `--attribute` respectively.
-For example:
-
-```html noLive
-<!-- Component definition -->
-<div class="pf-v6-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
-  {{#if grid--attribute}}
-    {{{grid--attribute}}}
-  {{/if}}>
-  {{> @partial-block}}
-</div>
----
-<!-- Using the component in handlebars -->
-{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="grid-id" aria-label="Grid usage example"'}}
-  [content]
-{{/grid}}
+# Open your browser to http://localhost:8001
 ```
 
-When including a partial within a partial, by default, handlebars will pass along the parent context to it's children. This would mean the value of any property specified by the parent is also used by the children.
+**2. Find your first contribution:**
+- Browse [good first issues](https://github.com/patternfly/patternfly/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- Check the [project board](https://github.com/orgs/patternfly/projects/7/views/27) for our currently planned work.
 
-If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
+**3. Get help:**
+- Join our [Slack community](https://patternfly.slack.com/) - `#patternfly-core` channel
+- Read our [development guidelines](https://pf-core-staging.patternfly.org/guidelines)
+- Check existing [GitHub issues](https://github.com/patternfly/patternfly/issues)
 
-```html noLive
-{{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="base-grid" aria-label="Base grid"'}}
-  {{#> grid-item grid-item--modifier="pf-m-6-col" grid-item--attribute='id="base-grid-item" aria-label="Base grid item"'}}
-    {{#> grid newcontext}}
-      {{#> grid-item}}
-        (nested grid and grid-item will not inherit --modifier or --attribute values)
-      {{/grid-item}}
-    {{/grid}}
-  {{/grid-item}}
-{{/grid}}
-```
+## Code of Conduct
 
-### Common modifier class names
-
-Modifier classes help us to create variations of blocks. Reuse names as much as possible to avoid confusion.
-
-| Modifier class name | Outcome                                                             |
-| ------------------- | ------------------------------------------------------------------- |
-| `pf-m-gutter`   | Adds vertical (if applicable) and horizontal gutters to the element |
-
+All contributors and participants agree to abide by the [PatternFly Code of Conduct](https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md). Please read it before contributing.
 
 ## Pull request guidelines
 
 In order to streamline reviews and set expectations, the following should be expected when submitting a pull request:
 
- - All pull requests should have an issue that the work relates to.
+ - All pull requests should link to an issue that the work relates to.
 
  - A single reviewer should follow the PR through from start to finish after it has been submitted - if somebody else needs to follow it through to completion, please make that transition clear in the PR comments.
 
@@ -91,4 +55,28 @@ In order to streamline reviews and set expectations, the following should be exp
     5) Does the responsive behavior work correctly?
     6) Have the accessibility standards been followed?
     7) Is the example resilient - if you put more content in it, do things start to break?
+
+### Submitting Pull Requests
+
+1. **Create a descriptive title** following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+2. **Fill out the PR template** completely
+3. **Include screenshots** for visual changes
+4. **Link related issues** using GitHub keywords
+5. **Ensure all checks pass** before requesting review
+
+### Testing Your Changes
+
+```bash
+# Build the project
+yarn build
+
+# Run the development server
+yarn start
+
+# Run accessibility tests
+yarn a11y
+
+# Run linting
+yarn lint
+```
 
