@@ -479,6 +479,15 @@ import './Wizard.css'
 {{> wizard--status wizard--status--IsExpanded=true  wizard--status--id="success-on-step-nav-expanded" wizard--status--IsSuccess=true}}
 ```
 
+### Warning on step
+```hbs isFullscreen
+{{> wizard--status wizard--status--id="warning-on-step" wizard--status--IsWarning=true}}
+```
+
+### Nav expanded with warning (mobile)
+```hbs isFullscreen
+{{> wizard--status wizard--status--IsExpanded=true  wizard--status--id="warning-on-step-nav-expanded" wizard--status--IsWarning=true}}
+```
 
 ## Documentation
 ### Accessibility
@@ -534,5 +543,6 @@ import './Wizard.css'
 | `.pf-m-current` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
 | `.pf-m-disabled` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the disabled state. |
 | `.pf-m-success` | `.pf-v6-c-wizard__nav-link`, `.pf-v6-c-wizard__toggle-list-item` | Modifies a step link to indicate success status. |
+| `.pf-m-warning` | `.pf-v6-c-wizard__nav-link`, `.pf-v6-c-wizard__toggle-list-item` | Modifies a step link to indicate warning status. |
 | `.pf-m-danger` | `.pf-v6-c-wizard__nav-link`, `.pf-v6-c-wizard__toggle-list-item` | Modifies a step link to indicate danger status. |
 | `.pf-m-no-padding` | `.pf-v6-c-wizard__main-body` | Modifies the main container body to remove the padding. |
