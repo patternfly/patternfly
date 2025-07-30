@@ -26,6 +26,9 @@
   // * Table thead toggle
   --#{$table}__thead__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
 
+  // * Table thead check
+  --#{$table}__thead__check--VerticalAlign: bottom;
+
   // * Table body cell
   --#{$table}__tbody--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
   --#{$table}__tbody--cell--PaddingBlockEnd: var(--#{$table}--cell--Padding--base);
@@ -877,12 +880,12 @@
   }
 
   thead & {
-    vertical-align: bottom;
+    vertical-align: var(--#{$table}__thead__check--VerticalAlign);
   }
 
   // Override for compact expandable tables
   .#{$table}.pf-m-compact.pf-m-expandable thead & {
-    vertical-align: middle;
+    --#{$table}__thead__check--VerticalAlign: middle;
   }
 
   .#{$check}.pf-m-standalone,
