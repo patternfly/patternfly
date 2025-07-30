@@ -123,4 +123,43 @@
 
   // stylelint-disable custom-property-pattern
   --pf-t--temp--dev--tbd: #BC11E0;
+
+  // High contrast custom tokens - placeholders until they're in figma
+  --pf-t--global--high-contrast--border--width--action--clicked: 0;
+  --pf-t--global--high-contrast--border--width--action--default: 0;
+  --pf-t--global--high-contrast--border--width--action--hover: 0;
+  --pf-t--global--high-contrast--border--width--box--clicked: 0;
+  --pf-t--global--high-contrast--border--width--box--default: 0;
+  --pf-t--global--high-contrast--border--width--box--hover: 0;
+  --pf-t--global--high-contrast--border--width--box--status--default: 0;
+  --pf-t--global--high-contrast--border--width--box--status--read: 0;
+  --pf-t--global--high-contrast--border--width--control--clicked: 0;
+  --pf-t--global--high-contrast--border--width--control--default: 0;
+  --pf-t--global--high-contrast--border--width--control--hover: 0;
+  --pf-t--global--high-contrast--border--width--divider--clicked: 0;
+  --pf-t--global--high-contrast--border--width--divider--default: 0;
+  --pf-t--global--high-contrast--border--width--divider--hover: 0;
+  --pf-t--global--high-contrast--border--width--extra-strong: 0;
+  --pf-t--global--high-contrast--border--width--regular: 0;
+  --pf-t--global--high-contrast--border--width--strong: 0;
+
+  @media (prefers-contrast: more) {
+    --pf-t--global--high-contrast--border--width--action--clicked: var(--pf-t--global--border--width--action--clicked);
+    --pf-t--global--high-contrast--border--width--action--default: var(--pf-t--global--border--width--action--default);
+    --pf-t--global--high-contrast--border--width--action--hover: var(--pf-t--global--border--width--action--hover);
+    --pf-t--global--high-contrast--border--width--box--clicked: var(--pf-t--global--border--width--box--clicked);
+    --pf-t--global--high-contrast--border--width--box--default: var(--pf-t--global--border--width--box--default);
+    --pf-t--global--high-contrast--border--width--box--hover: var(--pf-t--global--border--width--box--hover);
+    --pf-t--global--high-contrast--border--width--box--status--default: var(--pf-t--global--border--width--box--status--default);
+    --pf-t--global--high-contrast--border--width--box--status--read: var(--pf-t--global--border--width--box--status--read);
+    --pf-t--global--high-contrast--border--width--control--clicked: var(--pf-t--global--border--width--control--clicked);
+    --pf-t--global--high-contrast--border--width--control--default: var(--pf-t--global--border--width--control--default);
+    --pf-t--global--high-contrast--border--width--control--hover: var(--pf-t--global--border--width--control--hover);
+    --pf-t--global--high-contrast--border--width--divider--clicked: var(--pf-t--global--border--width--divider--clicked);
+    --pf-t--global--high-contrast--border--width--divider--default: var(--pf-t--global--border--width--divider--default);
+    --pf-t--global--high-contrast--border--width--divider--hover: var(--pf-t--global--border--width--divider--hover);
+    --pf-t--global--high-contrast--border--width--extra-strong: var(--pf-t--global--border--width--extra-strong);
+    --pf-t--global--high-contrast--border--width--regular: var(--pf-t--global--border--width--regular);
+    --pf-t--global--high-contrast--border--width--strong: var(--pf-t--global--border--width--strong);
+  }
 }
