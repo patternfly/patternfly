@@ -8,52 +8,52 @@ cssPrefix: pf-v6-c-description-list
 
 ### Default
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Default example"' description-list--title="Default DL"}}
+{{> description-list__example description-list--aria-label="Default example"}}
 ```
 
 ### Term help text
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Term help text example"' description-list--title="Term help text" description-list-term--IsHelp="true"}}
+{{> description-list__example description-list--aria-label="Term help text example" description-list-term--IsHelp="true"}}
 ```
 
 ### Default, two column
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Default, two column example"' description-list--title="Default 2 column DL" description-list--modifier="pf-m-2-col" description-list--IsLongDescription="true"}}
+{{> description-list__example description-list--aria-label="Default, two column example" description-list--modifier="pf-m-2-col" description-list--IsLongDescription="true"}}
 ```
 
 ### Default, three column on lg breakpoint
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Default, three column on lg breakpoint example"' description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col-on-lg"}}
+{{> description-list__example description-list--aria-label="Default, three column on lg breakpoint example" description-list--modifier="pf-m-3-col-on-lg"}}
 ```
 
 ### Horizontal
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Horizontal example"' description-list--title="Horizontal DL" description-list--modifier="pf-m-horizontal"}}
+{{> description-list__example description-list--aria-label="Horizontal example" description-list--modifier="pf-m-horizontal"}}
 ```
 
 ### Horizontal, two column
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Horizontal, two column example"' description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-2-col"}}
+{{> description-list__example description-list--aria-label="Horizontal, two column example" description-list--modifier="pf-m-horizontal pf-m-2-col"}}
 ```
 
 ### Horizontal, three column on lg breakpoint
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Horizontal, three column on lg breakpoint example"' description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
+{{> description-list__example description-list--aria-label="Horizontal, three column on lg breakpoint example" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
 
 ### Compact
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Compact example"' description-list--title="Compact DL" description-list--modifier="pf-m-compact"}}
+{{> description-list__example description-list--aria-label="Compact example" description-list--modifier="pf-m-compact"}}
 ```
 
 ### Compact horizontal
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Compact horizontal example"' description-list--title="Compact DL" description-list--modifier="pf-m-compact pf-m-horizontal pf-m-2-col"}}
+{{> description-list__example description-list--aria-label="Compact horizontal example" description-list--modifier="pf-m-compact pf-m-horizontal pf-m-2-col"}}
 ```
 
 ### Fluid horizontal
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Fluid horizontal example"' description-list--title="Fluid DL" description-list--modifier="pf-m-horizontal pf-m-fluid pf-m-2-col"}}
+{{> description-list__example description-list--aria-label="Fluid horizontal example" description-list--modifier="pf-m-horizontal pf-m-fluid pf-m-2-col"}}
 ```
 
 ### Column fill
@@ -61,65 +61,65 @@ cssPrefix: pf-v6-c-description-list
 Column fill will modify the default placement of description list groups to fill from top to bottom using css column-count, instead of left to right. **Note:** using this modifier will change the layout so that horizontally adjacent groups are no longer aligned in the same row.
 
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Column fill example"' description-list--title="Column fill" description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-3-col-on-lg" description-list--IsLongDescription="true"}}
+{{> description-list__example description-list--aria-label="Column fill example" description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-3-col-on-lg" description-list--IsLongDescription="true"}}
 ```
 
 ## Auto fit
 
 ### Auto-fit basic
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Auto-fit basic example"' description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
+{{> description-list__example description-list--aria-label="Auto-fit basic example" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
 ```
 
 ### Auto-fit, min width modified, grid template columns
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Auto-fit, min width modified, grid template columns example" style="--pf-v6-c-description-list--GridTemplateColumns--min: 200px;"' description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
+{{> description-list__example description-list--aria-label="Auto-fit, min width modified, grid template columns example" description-list--attribute='style="--pf-v6-c-description-list--GridTemplateColumns--min: 200px;"' description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
 ```
 
 ### Auto-fit, min width modified, responsive grid template columns
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Auto-fit, min width modified, responsive grid template columns example" style="--pf-v6-c-description-list--GridTemplateColumns--min-on-md: 100px; --pf-v6-c-description-list--GridTemplateColumns--min-on-lg: 150px; --pf-v6-c-description-list--GridTemplateColumns--min-on-xl: 200px; --pf-v6-c-description-list--GridTemplateColumns--min-on-2xl: 300px;"' description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
+{{> description-list__example description-list--aria-label="Auto-fit, min width modified, responsive grid template columns example" description-list--attribute='style="--pf-v6-c-description-list--GridTemplateColumns--min-on-md: 100px; --pf-v6-c-description-list--GridTemplateColumns--min-on-lg: 150px; --pf-v6-c-description-list--GridTemplateColumns--min-on-xl: 200px; --pf-v6-c-description-list--GridTemplateColumns--min-on-2xl: 300px;"' description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
 ```
 
 ## Responsive column definitions
 
 ### Default, responsive columns
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Default, responsive columns example"' description-list--title="Default responsive DL" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
+{{> description-list__example description-list--aria-label="Default, responsive columns example" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
 ### Horizontal, responsive columns
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Horizontal, responsive columns example"' description-list--title="Horizontal responsive DL columns" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
+{{> description-list__example description-list--aria-label="Horizontal, responsive columns example" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
 ### Responsive, horizontal, vertical group layout
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Responsive, horizontal, vertical group layout example"' description-list--title="Horizontal responsive DL groups" description-list--modifier="pf-m-horizontal pf-m-vertical-on-md pf-m-horizontal-on-lg pf-m-vertical-on-xl pf-m-horizontal-on-2xl"}}
+{{> description-list__example description-list--aria-label="Responsive, horizontal, vertical group layout example" description-list--modifier="pf-m-horizontal pf-m-vertical-on-md pf-m-horizontal-on-lg pf-m-vertical-on-xl pf-m-horizontal-on-2xl"}}
 ```
 
 ## Auto-column-width
 
 ### Default, auto columns width
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Default, auto columns width example"' description-list--title="Auto column width DL" description-list--modifier="pf-m-auto-column-widths pf-m-3-col"}}
+{{> description-list__example description-list--aria-label="Default, auto columns width example" description-list--modifier="pf-m-auto-column-widths pf-m-3-col"}}
 ```
 
 ### Horizontal, auto column width
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Horizontal, auto column width example"' description-list--title="Horizontal auto-fit DL" description-list--modifier="pf-m-horizontal pf-m-auto-column-widths pf-m-2-col-on-lg"}}
+{{> description-list__example description-list--aria-label="Horizontal, auto column width example" description-list--modifier="pf-m-horizontal pf-m-auto-column-widths pf-m-2-col-on-lg"}}
 ```
 
 ## Inline grid
 
 ### Default, inline grid
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Default, inline grid example"' description-list--title="Default inline grid" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
+{{> description-list__example description-list--aria-label="Default, inline grid example" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
 ```
 
 ### Display variant
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Display variant example"' description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+{{> description-list__example description-list--aria-label="Display variant example" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg"}}
 ```
 
 ## Card variants
@@ -128,27 +128,27 @@ Cards can be used as description list group wrappers. Using cards in this way ap
 
 ### Description list group wrapper as card
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Description list group wrapper as card example"' description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}
+{{> description-list__example description-list--aria-label="Description list group wrapper as card example" description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true"}}
 ```
 
 ### Display lg and card variant
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Display lg and card variant example"' description-list-group--IsCard="true" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+{{> description-list__example description-list--aria-label="Display lg and card variant example" description-list-group--IsCard="true" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg"}}
 ```
 
 ### Display 2xl and card variant
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Display 2xl and card variant example"' description-list-group--IsCard="true" description-list--modifier="pf-m-display-2xl pf-m-2-col-on-lg" description-list--title="Card DL"}}
+{{> description-list__example description-list--aria-label="Display 2xl and card variant example" description-list-group--IsCard="true" description-list--modifier="pf-m-display-2xl pf-m-2-col-on-lg"}}
 ```
 
 ### Display and card variant, three column on lg breakpoint
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Display and card variant, three column on lg breakpoint example"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-3-col-on-lg pf-m-display-lg" description-list--title="Card DL"}}
+{{> description-list__example description-list--aria-label="Display and card variant, three column on lg breakpoint example" description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-3-col-on-lg pf-m-display-lg"}}
 ```
 
 ### Display and card variant, horizontal, modified term width
 ```hbs
-{{> description-list__example description-list--attribute='aria-label="Display and card variant, horizontal, modified term width example" style="--pf-v6-c-description-list__term--width: 10ch;"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-2-col-on-lg pf-m-display-lg pf-m-horizontal" description-list--title="Card DL"}}
+{{> description-list__example description-list--aria-label="Display and card variant, horizontal, modified term width example" description-list--attribute='style="--pf-v6-c-description-list__term--width: 10ch;"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-2-col-on-lg pf-m-display-lg pf-m-horizontal"}}
 ```
 
 <!-- ## Auto term with is only supported in FF currently
@@ -156,14 +156,14 @@ Cards can be used as description list group wrappers. Using cards in this way ap
 ### Horizontal 2 col auto term width
 ```hbs
 {{> description-list__example 
-description-list--attribute='aria-label="Horizontal 2 column auto term width example"'description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-auto-term-widths pf-m-2-col"}}
+description-list--aria-label="Horizontal 2 column auto term width example" description-list--modifier="pf-m-horizontal pf-m-auto-term-widths pf-m-2-col"}}
 ``` -->
 
 ## With icons
 
 ### Icons on terms
 ```hbs
-{{> description-list__example-with-icons description-list--attribute='aria-label="Icons on terms example"' description-list--title="With icon"}}
+{{> description-list__example-with-icons description-list--aria-label="Icons on terms example"}}
 ```
 
 ## Documentation
@@ -172,7 +172,7 @@ description-list--attribute='aria-label="Horizontal 2 column auto term width exa
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `title` | `.pf-v6-c-description-list` | Provides an accessible title for the description list. **Required** |
+| `aria-label` | `.pf-v6-c-description-list` | Provides an accessible title for the description list. **Required** |
 | `tabindex="0"` | `.pf-v6-c-description-list__text.pf-m-help-text` | Inserts the `.pf-v6-c-description-list__text` into the tab order of the page so that it is focusable. **Required when the element is clickable** |
 
 ### Usage
