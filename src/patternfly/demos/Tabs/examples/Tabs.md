@@ -171,7 +171,8 @@ section: components
           {{#> l-flex l-flex--modifier="pf-m-column"}}
             {{#> l-flex-item}}
               {{#> description-list 
-              description-list--aria-label="API 2" description-list--modifier="pf-m-2-col-on-lg" description-list--attribute='aria-label="Pod information list"'}}
+              description-list--aria-label="API 2" description-list--modifier="pf-m-2-col-on-lg" 
+              description-list--aria-label="Pod information list" }}
                 {{#> description-list-group}}
                   {{#> description-list-term}}
                     Name
