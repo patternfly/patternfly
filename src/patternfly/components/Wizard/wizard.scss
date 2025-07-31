@@ -58,6 +58,11 @@
   --#{$wizard}__nav-link-main--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-main--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$wizard}__nav-link-main--BorderColor: transparent;
+  --#{$wizard}__nav-link-main--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$wizard}__nav-link--hover--nav-link-main--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$wizard}__nav-link--m-current--nav-link-main--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$wizard}__nav-link--m-current--nav-link-main--BorderWidth: var(--pf-t--global--border--width--strong);
 
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
@@ -73,13 +78,17 @@
   --#{$wizard}__nav-link--before--Height: var(--pf-t--global--icon--size--font--xl);
   --#{$wizard}__nav-link--before--InsetBlockStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link--before--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$wizard}__nav-link--before--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$wizard}__nav-link--before--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$wizard}__nav-link--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$wizard}__nav-link--before--Color: var(--pf-t--global--text--color--regular);
   --#{$wizard}__nav-link--before--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$wizard}__nav-link--m-current--before--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$wizard}__nav-link--m-current--before--Color: var(--pf-t--global--text--color--on-brand--default);
+  --#{$wizard}__nav-link--m-current--before--BorderColor: transparent;
   --#{$wizard}__nav-link--m-disabled--before--BackgroundColor: transparent;
   --#{$wizard}__nav-link--m-disabled--before--Color: var(--pf-t--global--text--color--disabled);
+  --#{$wizard}__nav-link--m-disabled--before--BorderColor: transparent;
 
   // Nav link status icon
   --#{$wizard}__nav-link-status-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -466,18 +475,22 @@
 
   // Nav step number
   &::before {
-    inset-block-start:  var(--#{$wizard}__nav-link--before--InsetBlockStart); // 8px; // TODO variable
+    inset-block-start: var(--#{$wizard}__nav-link--before--InsetBlockStart); // 8px; // TODO variable
     content: counter(wizard-nav-count);
-}
+    border: var(--#{$wizard}__nav-link--before--BorderWidth) solid var(--#{$wizard}__nav-link--before--BorderColor);
+  }
 
   &.pf-m-current {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
     --#{$wizard}__nav-link-main--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
+    --#{$wizard}__nav-link-main--BorderColor: var(--#{$wizard}__nav-link--m-current--nav-link-main--BorderColor);
+    --#{$wizard}__nav-link-main--BorderWidth: var(--#{$wizard}__nav-link--m-current--nav-link-main--BorderWidth); 
 
     @at-root .#{$wizard}__toggle-num,
     &::before {
       --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$wizard}__nav-link--m-current--before--BackgroundColor);
       --#{$wizard}__nav-link--before--Color: var(--#{$wizard}__nav-link--m-current--before--Color);
+      --#{$wizard}__nav-link--before--BorderColor: var(--#{$wizard}__nav-link--m-current--before--BorderColor);
     }
   }
 
@@ -498,6 +511,7 @@
   &:where(:hover, :focus) {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--hover--Color);
     --#{$wizard}__nav-link-main--BackgroundColor: var(--#{$wizard}__nav-link--hover--BackgroundColor);
+    --#{$wizard}__nav-link-main--BorderColor: var(--#{$wizard}__nav-link--hover--nav-link-main--BorderColor);
   }
 
   // override the button background/color for disabled nav links
@@ -511,11 +525,13 @@
     &::before {
       --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$wizard}__nav-link--m-disabled--before--BackgroundColor);
       --#{$wizard}__nav-link--before--Color: var(--#{$wizard}__nav-link--m-disabled--before--Color);
+      --#{$wizard}__nav-link--before--BorderColor: var(--#{$wizard}__nav-link--m-disabled--before--BorderColor);
     }
   }
 }
 
 .#{$wizard}__nav-link-main {
+  position: relative;
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
@@ -524,8 +540,16 @@
   padding-inline-start: var(--#{$wizard}__nav-link-main--PaddingInlineStart);
   padding-inline-end: var(--#{$wizard}__nav-link-main--PaddingInlineEnd);
   background-color: var(--#{$wizard}__nav-link-main--BackgroundColor);
-  border: none;
   border-radius: var(--#{$wizard}__nav-link-main--BorderRadius);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$wizard}__nav-link-main--BorderWidth) solid var(--#{$wizard}__nav-link-main--BorderColor);
+    border-radius: inherit;
+  }
 }
 
 .#{$wizard}__nav-link-status-icon {
