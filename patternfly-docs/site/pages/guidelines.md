@@ -454,3 +454,6 @@ This guide is inspired by people we follow and respect:
 - **[Gravity Department](http://gravitydept.com/)**: [Style Guide Field Manual](http://manuals.gravitydept.com/code/css/style-guide)
 - **[Kitty Giraudel](http://kittygiraudel.com/):** [SASS Guidelines](https://sass-guidelin.es/)
 
+## AI-assisted development guidelines
+
+Please reference [PatternFly's AI-assisted development guidelines](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md) if you'd like to contribute code generated using AI.
