@@ -101,11 +101,11 @@
   --#{$accordion}__item--m-bordered--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   
   // accordion item border for high contrast
-  --#{$accordion}__item--after--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$accordion}__item--after--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
   --#{$accordion}__item--after--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // expandable content border for high contrast
-  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
   --#{$accordion}__expandable-content--BorderColor: var(--pf-t--global--border--color--high-contrast);
 }
 
@@ -154,23 +154,12 @@
     pointer-events: none;
     content: "";
     background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
+    border: var(--#{$accordion}__item--after--BorderWidth) solid var(--#{$accordion}__item--after--BorderColor);
     border-radius: var(--#{$accordion}__item--BorderRadius);
     opacity: var(--#{$accordion}__item--before--Opacity);
     transition-timing-function: var(--#{$accordion}__item--before--TransitionTimingFunction);
     transition-duration: var(--#{$accordion}__item--before--TransitionDuration--fade);
     transition-property: opacity;
-  }
-
-  &:is(:hover, :focus-within),
-  &.pf-m-expanded {
-    &::after {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      content: "";
-      border: var(--#{$accordion}__item--after--BorderWidth) solid var(--#{$accordion}__item--after--BorderColor);
-      border-radius: var(--#{$accordion}__item--BorderRadius);
-    }
   }
 
   &.pf-m-expanded {
