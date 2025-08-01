@@ -10,7 +10,7 @@ import './TextInputGroup.css'
 ### Basic
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-basic"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Basic"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
@@ -21,7 +21,7 @@ import './TextInputGroup.css'
 ### Disabled
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-disabled" text-input-group--IsDisabled="true"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Disabled"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
@@ -38,7 +38,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-plain" text-input-group--modifier="pf-m-plain" text-input-group--value="Text input group with plain styling"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Plain"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
@@ -49,7 +49,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ### Utilities and icon with placeholder text
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-utilities-and-icon-with-placeholder-text"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon" text-input-group-main--attribute = 'aria-label = "Utilities and icon with placeholder"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
       {{> text-input-group-text-input text-input-group-text-input--placeholder='placeholder'}}
@@ -65,7 +65,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 
 ```hbs
 {{#> text-input-group text-input-group--IsSuccess=true text-input-group--id="text-input-group-validation-success"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Success validation"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input text-input-group--value="Success validation"}}
       {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
@@ -74,7 +74,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{/text-input-group}}
 <br/>
 {{#> text-input-group text-input-group--IsWarning=true text-input-group--id="text-input-group-validation-warning"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon" text-input-group-main--attribute = 'aria-label = "Warning validation"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
       {{> text-input-group-text-input text-input-group--value="Warning validation with icon at start"}}
@@ -84,7 +84,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{/text-input-group}}
 <br/>
 {{#> text-input-group text-input-group--IsError=true text-input-group--id="text-input-group-validation-error"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon" text-input-group-main--attribute = 'aria-label = "Error validation"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
       {{> text-input-group-text-input text-input-group--value="Error validation with icon at start and utilities"}}
@@ -102,7 +102,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ### Filters
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Filters"'}}
     {{> text-input-group--label-group}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
@@ -117,7 +117,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ### Filters expanded
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-filters-expanded" text-input-group--label-group--IsLong="true"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Filters expanded"'}}
     {{> text-input-group--label-group}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input}}
@@ -132,7 +132,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 ### Autocomplete last option hint
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-autocomplete-last-option-hint" text-input-group--value="apples"}}
-  {{#> text-input-group-main}}
+  {{#> text-input-group-main text-input-group-main--attribute = 'aria-label = "Autocomplete with last option hint"'}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" }}
       {{> text-input-group-text-input}}
