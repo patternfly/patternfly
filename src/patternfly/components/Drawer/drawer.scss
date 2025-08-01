@@ -550,12 +550,12 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__panel--BorderInlineEndWidth: var(--#{$drawer}__panel--after--Width);
     --#{$drawer}__panel--BorderInlineStartWidth: 0; // turn off default left border
 
-    &.pf-m-inline, // TODO
+    &.pf-m-inline,
     &.pf-m-static {
       > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
         --#{$drawer}__panel--BorderInlineEndWidth: var(--#{$drawer}--m-inline__panel--after--Width);
 
-        // TODOremove in breaking change
+        // TODO remove in breaking change
         padding-inline-start: 0;
         padding-inline-end: var(--#{$drawer}--m-panel-left--m-inline__panel--PaddingInlineEnd);
 
