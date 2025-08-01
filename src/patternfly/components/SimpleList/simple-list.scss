@@ -18,11 +18,7 @@
   // Simple list item link
   --#{$simple-list}__item-link--m-link--Color: var(--pf-t--global--text--color--link--default);
   --#{$simple-list}__item-link--m-link--m-current--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$simple-list}__item-link--m-link--m-current--BorderWidth: var(--pf-t--global--border--width--strong);
-  --#{$simple-list}__item-link--m-link--m-current--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$simple-list}__item-link--m-link--hover--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$simple-list}__item-link--m-link--hover--BorderWidth: var(--pf-t--global--border--width--regular);
-  --#{$simple-list}__item-link--m-link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // Simple list title
   --#{$simple-list}__title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -38,6 +34,7 @@
 }
 
 .#{$simple-list}__item-link {
+  position:relative;
   display: block;
   width: 100%;
   padding-block-start: var(--#{$simple-list}__item-link--PaddingBlockStart);
@@ -52,6 +49,15 @@
   border: none;
   border-radius: var(--#{$simple-list}__item-link--BorderRadius);
 
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$simple-list}__item-link--BorderWidth) solid var(--#{$simple-list}__item-link--BorderColor);
+    border-radius: inherit;
+  }
+
   &.pf-m-link {
     --#{$simple-list}__item-link--Color: var(--#{$simple-list}__item-link--m-link--Color);
     --#{$simple-list}__item-link--hover--Color: var(--#{$simple-list}__item-link--m-link--m-current--Color);
@@ -61,36 +67,17 @@
   &:is(:hover, :focus) {
     --#{$simple-list}__item-link--BackgroundColor: var(--#{$simple-list}__item-link--hover--BackgroundColor);
     --#{$simple-list}__item-link--Color: var(--#{$simple-list}__item-link--hover--Color);
+    --#{$simple-list}__item-link--BorderWidth: var(--pf-t--global--border--width--regular);
+    --#{$simple-list}__item-link--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
-    position:relative;
     text-decoration-line: none;
-
-    &::after {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      content: "";
-      background-color: inherit;
-      border: var(--#{$simple-list}__item-link--m-link--hover--BorderWidth) solid var(--#{$simple-list}__item-link--m-link--hover--BorderColor);
-      border-radius: inherit;
-    }
   }
 
   &.pf-m-current {
     --#{$simple-list}__item-link--BackgroundColor: var(--#{$simple-list}__item-link--m-current--BackgroundColor);
     --#{$simple-list}__item-link--Color: var(--#{$simple-list}__item-link--m-current--Color);
-
-    position: relative;
-    
-    &::after {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      content: "";
-      background-color: inherit;
-      border: var(--#{$simple-list}__item-link--m-link--m-current--BorderWidth) solid var(--#{$simple-list}__item-link--m-link--m-current--BorderColor);
-      border-radius: inherit;
-    }
+    --#{$simple-list}__item-link--BorderWidth: var(--pf-t--global--border--width--strong);
+    --#{$simple-list}__item-link--BorderColor: var(--pf-t--global--border--color--high-contrast);
   }
 }
 
