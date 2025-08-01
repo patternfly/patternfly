@@ -2,7 +2,7 @@
 
 @include pf-root($code-block) {
   --#{$code-block}--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$code-block}--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$code-block}--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
   --#{$code-block}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-block}--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$code-block}__header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -20,18 +20,9 @@
 }
 
 .#{$code-block} {
-  position: relative;
   background-color: var(--#{$code-block}--BackgroundColor);
+  border: var(--#{$code-block}--BorderWidth) solid var(--#{$code-block}--BorderColor);
   border-radius: var(--#{$code-block}--BorderRadius);
-
-  &::after {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    content: "";
-    border: var(--#{$code-block}--BorderWidth) solid var(--#{$code-block}--BorderColor);
-    border-radius: inherit;
-  }
 }
 
 .#{$code-block}__header {
