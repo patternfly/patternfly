@@ -11,12 +11,14 @@ import './Skeleton.css'
 ### Default
 ```hbs
 {{#> skeleton}}
+    <span class="pf-v6-screen-reader">Loading default content</span>
 {{/skeleton}}
 ```
 
 ### Percentage width modifiers
 ```hbs
 {{#> skeleton skeleton--modifier="pf-m-width-25"}}
+    <span class="pf-v6-screen-reader">Loading percentage with modifiers content</span>
 {{/skeleton}}
 <br/>
 {{#> skeleton skeleton--modifier="pf-m-width-33"}}
@@ -38,6 +40,7 @@ import './Skeleton.css'
 ### Percentage height modifiers
 ```hbs
 {{#> skeleton skeleton--modifier="pf-m-height-25"}}
+    <span class="pf-v6-screen-reader">Loading percentage height modifiers content</span>
 {{/skeleton}}
 {{#> skeleton skeleton--modifier="pf-m-height-33"}}
 {{/skeleton}}
@@ -55,6 +58,7 @@ import './Skeleton.css'
 ```hbs
 --pf-v6-global--FontSize--4xl
 {{#> skeleton skeleton--modifier="pf-m-text-4xl"}}
+    <span class="pf-v6-screen-reader">Loading text modifiers content</span>
 {{/skeleton}}
 <br/>
 --pf-v6-global--FontSize--3xl
@@ -86,6 +90,7 @@ import './Skeleton.css'
 ```hbs
 Small circle
 {{#> skeleton skeleton--modifier="pf-m-circle pf-m-width-sm"}}
+    <span class="pf-v6-screen-reader">Loading circle content</span>
 {{/skeleton}}
 <br/>
 Medium circle
@@ -98,6 +103,7 @@ Large circle
 <br/>
 Small square
 {{#> skeleton skeleton--modifier="pf-m-square pf-m-width-sm"}}
+    <span class="pf-v6-screen-reader">Loading square content</span>
 {{/skeleton}}
 <br/>
 Medium square
@@ -110,6 +116,7 @@ Large square
 <br/>
 Small rectangle
 {{#> skeleton skeleton--modifier="pf-m-height-sm pf-m-width-md"}}
+    <span class="pf-v6-screen-reader">Loading rectangle content</span>
 {{/skeleton}}
 <br/>
 Medium rectangle
