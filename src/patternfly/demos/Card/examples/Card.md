@@ -177,7 +177,7 @@ import './Card.css'
       {{/title}}
     {{/card-title}}
     {{#> card-body}}
-      {{#> description-list}}
+      {{#> description-list description-list--aria-label="API 1"}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             Cluster API Address
@@ -232,7 +232,7 @@ import './Card.css'
       {{/title}}
     {{/card-title}}
     {{#> card-body}}
-      {{#> description-list}}
+      {{#> description-list description-list--aria-label="API 2" }}
         {{#> description-list-group}}
           {{#> description-list-term}}
             Cluster API Address
@@ -547,7 +547,8 @@ import './Card.css'
   {{/card-body}}
   {{#> card-body}}
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'id="' primary-detail-template--id '-tab1-panel"')}}
-      {{#> description-list description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg"}}
+      {{#> description-list 
+      description-list--aria-label="Status" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg"}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> description-list-text}}
@@ -1029,7 +1030,7 @@ import './Card.css'
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-body}}
-      {{#> description-list}}
+      {{#> description-list description-list--aria-label="Activity" }}
         {{#> description-list-group}}
           {{#> description-list-term}}
             Readiness probe failed
@@ -1119,7 +1120,7 @@ import './Card.css'
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-body}}
-      {{#> description-list}}
+      {{#> description-list description-list--aria-label="Events" }}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}

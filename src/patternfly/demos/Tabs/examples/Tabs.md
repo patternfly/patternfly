@@ -24,7 +24,8 @@ section: components
             {{> title titleType="h2" title--modifier="pf-m-lg pf-v6-u-mt-sm" title--text="Pod details" title--attribute=(concat 'id="' tabs-template-pod-tab-content--id '-details-title"')}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
-            {{#> description-list description-list--modifier="pf-m-2-col-on-lg" description-list--attribute=(concat 'aria-labelledby="' tabs-template-pod-tab-content--id '-details-title"')}}
+            {{#> description-list 
+            description-list--aria-label="API 1" description-list--modifier="pf-m-2-col-on-lg" description-list--attribute=(concat 'aria-labelledby="' tabs-template-pod-tab-content--id '-details-title"')}}
               {{#> description-list-group}}
                 {{#> description-list-term}}
                   Name
@@ -169,7 +170,9 @@ section: components
         {{#> tabs-template-pod-tab-content tab-content-body--modifier=reset tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
           {{#> l-flex l-flex--modifier="pf-m-column"}}
             {{#> l-flex-item}}
-              {{#> description-list description-list--modifier="pf-m-2-col-on-lg" description-list--attribute='aria-label="Pod information list"'}}
+              {{#> description-list 
+              description-list--aria-label="API 2" description-list--modifier="pf-m-2-col-on-lg" 
+              description-list--aria-label="Pod information list" }}
                 {{#> description-list-group}}
                   {{#> description-list-term}}
                     Name
