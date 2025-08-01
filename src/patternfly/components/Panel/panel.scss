@@ -10,17 +10,20 @@
 
   // border
   --#{$panel}--before--BorderWidth: 0;
-  --#{$panel}--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$panel}--before--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // secondary modifier
   --#{$panel}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$panel}--m-secondary--before--BorderWidth: var(--pf-t--global--border--width--box--default);
 
   // bordered
   --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$panel}--m-bordered--before--BorderColor: var(--pf-t--global--border--color--default);
 
   // raised
   --#{$panel}--m-raised--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$panel}--m-raised--before--BorderWidth: var(--pf-t--global--border--width--box--default);
 
   // header
   --#{$panel}__header--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -73,15 +76,18 @@
 
   &.pf-m-bordered {
     --#{$panel}--before--BorderWidth: var(--#{$panel}--m-bordered--before--BorderWidth);
+    --#{$panel}--before--BorderColor: var(--#{$panel}--m-bordered--before--BorderColor);
   }
 
   &.pf-m-secondary {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-secondary--BackgroundColor);
+    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-secondary--before--BorderWidth);
   }
 
   &.pf-m-raised {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-raised--BackgroundColor);
     --#{$panel}--BoxShadow: var(--#{$panel}--m-raised--BoxShadow);
+    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-raised--before--BorderWidth);
   }
 
   &.pf-m-scrollable {
