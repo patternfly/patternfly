@@ -11,14 +11,14 @@ import './Skeleton.css'
 ### Default
 ```hbs
 {{#> skeleton}}
-    <span class="pf-v6-screen-reader">Loading default content</span>
+    {{#> screen-reader}}Loading default content{{/screen-reader}}
 {{/skeleton}}
 ```
 
 ### Percentage width modifiers
 ```hbs
 {{#> skeleton skeleton--modifier="pf-m-width-25"}}
-    <span class="pf-v6-screen-reader">Loading percentage with modifiers content</span>
+    {{#> screen-reader}}Loading percentage with modifiers content{{/screen-reader}}
 {{/skeleton}}
 <br/>
 {{#> skeleton skeleton--modifier="pf-m-width-33"}}
@@ -40,7 +40,7 @@ import './Skeleton.css'
 ### Percentage height modifiers
 ```hbs
 {{#> skeleton skeleton--modifier="pf-m-height-25"}}
-    <span class="pf-v6-screen-reader">Loading percentage height modifiers content</span>
+    {{#> screen-reader}}Loading percentage height modifiers content{{/screen-reader}}
 {{/skeleton}}
 {{#> skeleton skeleton--modifier="pf-m-height-33"}}
 {{/skeleton}}
@@ -58,7 +58,7 @@ import './Skeleton.css'
 ```hbs
 --pf-v6-global--FontSize--4xl
 {{#> skeleton skeleton--modifier="pf-m-text-4xl"}}
-    <span class="pf-v6-screen-reader">Loading text modifiers content</span>
+    {{#> screen-reader}}Loading text modifiers content{{/screen-reader}}
 {{/skeleton}}
 <br/>
 --pf-v6-global--FontSize--3xl
@@ -90,7 +90,7 @@ import './Skeleton.css'
 ```hbs
 Small circle
 {{#> skeleton skeleton--modifier="pf-m-circle pf-m-width-sm"}}
-    <span class="pf-v6-screen-reader">Loading circle content</span>
+    {{#> screen-reader}}Loading circle content{{/screen-reader}}
 {{/skeleton}}
 <br/>
 Medium circle
@@ -103,7 +103,7 @@ Large circle
 <br/>
 Small square
 {{#> skeleton skeleton--modifier="pf-m-square pf-m-width-sm"}}
-    <span class="pf-v6-screen-reader">Loading square content</span>
+    {{#> screen-reader}}Loading square content{{/screen-reader}}
 {{/skeleton}}
 <br/>
 Medium square
@@ -116,7 +116,7 @@ Large square
 <br/>
 Small rectangle
 {{#> skeleton skeleton--modifier="pf-m-height-sm pf-m-width-md"}}
-    <span class="pf-v6-screen-reader">Loading rectangle content</span>
+    {{#> screen-reader}}Loading rectangle content{{/screen-reader}}
 {{/skeleton}}
 <br/>
 Medium rectangle
