@@ -383,6 +383,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--xs--MaxHeight);
     --#{$page}__main-container--BorderRadius: var(--#{$page}__main-container--xs--BorderRadius);
   }
+
+  @media (prefers-contrast: more) {
+    --#{$page}__main-container--BorderWidth: var(--pf-t--global--border--width--strong);
+    --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  }
 }
 
 .#{$page}__main-container,
