@@ -838,9 +838,10 @@
 
   @at-root .#{$table}__thead & {
     .#{$button} {
+      --#{$button}--LineHeight: 1lh;
+
       margin-block-start: calc(var(--#{$button}--PaddingBlockStart) * -1);
       margin-block-end: calc(var(--#{$button}--PaddingBlockEnd) * -1);
-      line-height: 1lh;
     }
   }
 
@@ -1005,6 +1006,10 @@
 .#{$table}__column-help-action {
   align-self: last baseline;
   margin-inline-start: var(--#{$table}__column-help--MarginInlineStart);
+
+  .#{$button} {
+    --#{$button}--LineHeight: 1lh;
+  }
 }
 
 // - Table sort
