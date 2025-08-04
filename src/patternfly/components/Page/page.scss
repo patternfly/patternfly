@@ -78,6 +78,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$page}__main-container--BorderWidth: #{pf-size-prem(4px)}; // TODO Change to be a page outline token
   --#{$page}__main-container--BorderColor: var(--#{$page}__main-container--BackgroundColor); // TODO Border should match the background to blend in - change to be a page outline token
+  --#{$page}__main-container--BorderOffset: var(--#{$page}__main-container--BorderWidth);
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
@@ -114,15 +115,15 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-subnav--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-subnav--PaddingBlockEnd: 0;
-  --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
-  --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
+  --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderOffset));
+  --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderOffset));
   --#{$page}__main-subnav--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-breadcrumb--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderOffset)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--PaddingBlockEnd: 0;
-  --#{$page}__main-breadcrumb--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderOffset)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-breadcrumb--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
@@ -387,6 +388,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @media (prefers-contrast: more) {
     --#{$page}__main-container--BorderWidth: var(--pf-t--global--border--width--strong);
     --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--high-contrast);
+    --#{$page}__main-container--BorderOffset: #{pf-size-prem(4px)};
+
+    padding: calc(var(--#{$page}__main-container--BorderOffset) - var(--#{$page}__main-container--BorderWidth));
   }
 }
 
@@ -497,8 +501,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   gap: var(--#{$page}__main-section--RowGap);
   padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
   padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-  padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
-  padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
+  padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderOffset));
+  padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderOffset));
   background-color: var(--#{$page}__main-section--BackgroundColor);
 
   &.pf-m-secondary {
