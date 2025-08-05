@@ -1,4 +1,7 @@
 <dl class="{{pfv}}description-list{{#if description-list--modifier}} {{description-list--modifier}}{{/if}}"
+  {{#if description-list--aria-label}}
+    aria-label="{{description-list--aria-label}}"
+  {{/if}}
   {{#if description-list--attribute}}
     {{{description-list--attribute}}}
   {{/if}}>
