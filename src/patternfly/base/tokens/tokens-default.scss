@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Thu, 29 May 2025 01:58:23 GMT
+// Generated on Tue, 05 Aug 2025 23:18:24 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
@@ -54,9 +54,7 @@
   --pf-t--global--breakpoint--550: 80rem;
   --pf-t--global--breakpoint--600: 90.625rem;
   --pf-t--global--color--nonstatus--green--400: #3d7019;
-  --pf-t--global--color--status--danger--300: #501600;
   --pf-t--global--color--status--success--150: #3d7019;
-  --pf-t--global--color--status--success--300: #153300;
   --pf-t--global--delay--100: 0ms;
   --pf-t--global--delay--200: 50ms;
   --pf-t--global--delay--300: 100ms;
@@ -68,6 +66,10 @@
   --pf-t--global--duration--50: 50ms;
   --pf-t--global--duration--500: 500ms;
   --pf-t--global--duration--600: 600ms;
+  --pf-t--global--focus-ring--position--inset: -4;
+  --pf-t--global--focus-ring--position--offset: 2;
+  --pf-t--global--focus-ring--width--inset: 3;
+  --pf-t--global--focus-ring--width--offset: 2;
   --pf-t--global--font--family--100: "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
   --pf-t--global--font--family--200: "Red Hat Display", "RedHatDisplay", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
   --pf-t--global--font--family--300: "Red Hat Mono", "RedHatMono", "Courier New", Courier, monospace;
@@ -280,17 +282,21 @@
   --pf-t--global--color--status--custom--300: var(--pf-t--color--teal--80);
   --pf-t--global--color--status--danger--100: var(--pf-t--color--red-orange--60);
   --pf-t--global--color--status--danger--200: var(--pf-t--color--red-orange--70);
+  --pf-t--global--color--status--danger--300: var(--pf-t--color--red-orange--80);
   --pf-t--global--color--status--info--100: var(--pf-t--color--purple--50);
   --pf-t--global--color--status--info--200: var(--pf-t--color--purple--60);
   --pf-t--global--color--status--info--300: var(--pf-t--color--purple--70);
   --pf-t--global--color--status--success--100: var(--pf-t--color--green--60);
   --pf-t--global--color--status--success--200: var(--pf-t--color--green--70);
+  --pf-t--global--color--status--success--300: var(--pf-t--color--green--80);
   --pf-t--global--color--status--warning--100: var(--pf-t--color--yellow--30);
   --pf-t--global--color--status--warning--200: var(--pf-t--color--yellow--40);
   --pf-t--global--color--status--warning--300: var(--pf-t--color--yellow--50);
   --pf-t--global--color--status--warning--400: var(--pf-t--color--yellow--60);
   --pf-t--global--color--status--warning--500: var(--pf-t--color--yellow--70);
   --pf-t--global--color--status--warning--600: var(--pf-t--color--yellow--80);
+  --pf-t--global--focus-ring--color--100: var(--pf-t--color--blue--50);
+  --pf-t--global--focus-ring--color--200: var(--pf-t--color--blue--60);
   --pf-t--global--font--family--body: var(--pf-t--global--font--family--100);
   --pf-t--global--font--family--heading: var(--pf-t--global--font--family--200);
   --pf-t--global--font--family--mono: var(--pf-t--global--font--family--300);
@@ -471,6 +477,7 @@
   --pf-t--global--color--status--warning--clicked: var(--pf-t--global--color--status--warning--200);
   --pf-t--global--color--status--warning--default: var(--pf-t--global--color--status--warning--100);
   --pf-t--global--color--status--warning--hover: var(--pf-t--global--color--status--warning--200);
+  --pf-t--global--focus-ring--color--default: var(--pf-t--global--focus-ring--color--100);
   --pf-t--global--font--size--body--default: var(--pf-t--global--font--size--sm);
   --pf-t--global--font--size--body--lg: var(--pf-t--global--font--size--md);
   --pf-t--global--font--size--body--sm: var(--pf-t--global--font--size--xs);
