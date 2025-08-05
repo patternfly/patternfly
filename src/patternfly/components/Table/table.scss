@@ -838,10 +838,9 @@
 
   @at-root .#{$table}__thead & {
     .#{$button} {
-      --#{$button}--LineHeight: 1lh;
-
       margin-block-start: calc(var(--#{$button}--PaddingBlockStart) * -1);
       margin-block-end: calc(var(--#{$button}--PaddingBlockEnd) * -1);
+      line-height: 1lh; // set line-height instead of --LineHeight to avoid breaking the min-width calc for plain buttons
     }
   }
 
@@ -1008,7 +1007,7 @@
   margin-inline-start: var(--#{$table}__column-help--MarginInlineStart);
 
   .#{$button} {
-    --#{$button}--LineHeight: 1lh;
+    line-height: 1lh; // set line-height instead of --LineHeight to avoid breaking the min-width calc for plain buttons
   }
 }
 
