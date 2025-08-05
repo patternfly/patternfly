@@ -10,6 +10,8 @@
   --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$menu}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$menu}--Color: var(--pf-t--global--text--color--regular);
+  --#{$menu}--BorderWidth: var(--pf-t--global--high-contrast--border--width--control--default);
+  --#{$menu}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
   --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
@@ -44,6 +46,9 @@
   // * Menu list item
   --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__list-item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$menu}__list-item--BorderWidth: var(--pf-t--global--high-contrast--border--width--control--default);
+  --#{$menu}__list-item--BorderColor: transparent;
+  --#{$menu}__list-item--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$menu}__list-item--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
   --#{$menu}__list-item--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$menu}__list-item--TransitionProperty: background-color;
@@ -195,6 +200,7 @@
     --#{$menu}__item-description--Color: var(--#{$menu}--icon--disabled--Color);
     --#{$menu}__list-item--BackgroundColor: transparent;
     --#{$menu}__list-item--hover--BackgroundColor: transparent;
+    --#{$menu}__list-item--hover--BorderColor: transparent;
   }
 
   &:is(.pf-m-disabled, :disabled) {
@@ -219,6 +225,7 @@
   // TODO: Explore this fallback method
   // padding-block-start: var(--#{$menu}--PaddingBlockStart, var(--#{$menu}--PaddingBlock));
   // padding-block-end: var(--#{$menu}--PaddingBlockEnd, var(--#{$menu}--PaddingBlock));
+  position: relative;
   display: grid;
   row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
@@ -235,6 +242,15 @@
   transition-duration: var(--#{$menu}--TransitionDuration) !important; // Note that this duration is overriding whatever value is supplied as a prop to Popper
   // stylelint-enable declaration-no-important
 
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$menu}--BorderWidth) solid var(--#{$menu}--BorderColor);
+    border-radius: inherit;
+  }
+    
   .#{$menu} {
     min-width: 100%;
   }
@@ -482,6 +498,8 @@
     inset: 0;
     content: "";
     background-color: var(--#{$menu}__list-item--BackgroundColor);
+    border-block-start: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
+    border-block-end: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
     transition: inherit;
   }
 
@@ -518,6 +536,7 @@
   &:focus-within,
   &:has(> :hover) {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
+    --#{$menu}__list-item--BorderColor: var(--#{$menu}__list-item--hover--BorderColor);
 
     .#{$menu}__item-select-icon,
     .#{$menu}__item-external-icon {
