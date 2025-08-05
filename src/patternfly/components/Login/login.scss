@@ -40,6 +40,8 @@
   --#{$login}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$login}__main--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__main--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$login}__main--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$login}__main--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$login}__main--MarginBlockEnd: 0;
@@ -159,11 +161,20 @@
 }
 
 .#{$login}__main {
+  position: relative;
   grid-area: main;
   align-self: start;
   margin-block-end: var(--#{$login}__main--MarginBlockEnd);
   background-color: var(--#{$login}__main--BackgroundColor);
   border-radius: var(--#{$login}__main--BorderRadius);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border: var(--#{$login}__main--BorderWidth) solid var(--#{$login}__main--BorderColor);
+    border-radius: inherit;
+  }
 
   // If the first child isn't a header, then we need to put the header's top padding there
   > :first-child:not(.#{$login}__main-header) {
