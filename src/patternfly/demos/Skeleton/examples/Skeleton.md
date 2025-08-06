@@ -12,6 +12,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> page-main-section}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
+      <span class="pf-v6-screen-reader">Loading content</span>
       {{> card-skeleton}}
       {{> card-skeleton}}
       {{> card-skeleton}}
