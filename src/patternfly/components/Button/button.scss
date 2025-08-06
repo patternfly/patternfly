@@ -27,6 +27,8 @@
   --#{$button}--TransitionProperty: color, background, border-width, border-color;
   --#{$button}--ScaleX: 1;
   --#{$button}--ScaleY: 1;
+  --#{$button}--BorderWidth--high-contrast: var(--pf-t--global--border--width--regular);
+  --#{$button}--BorderColor--high-contrast: var(--pf-t--global--border--color--high-contrast);
 
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
@@ -42,6 +44,8 @@
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
   --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--action--clicked);
+  --#{$button}--m-clicked--BorderWidth--high-contrast: var(--pf-t--global--border--width--strong);
+  --#{$button}--m-clicked--BorderColor--high-contrast: var(--pf-t--global--border--color--high-contrast);
 
   // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -485,6 +489,18 @@
     --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-link--m-small--PaddingInlineEnd);
     --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-link--m-small--PaddingInlineStart);
 
+    @media (prefers-contrast: more) {
+      &:hover:not(.pf-m-inline) {
+        --#{$button}--BorderWidth: var(--#{$button}--BorderWidth--high-contrast);
+        --#{$button}--BorderColor: var(--#{$button}--BorderColor--high-contrast);
+      }
+    
+      &.pf-m-clicked:not(.pf-m-inline) {
+        --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth--high-contrast);
+        --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor--high-contrast);
+      }
+    }
+  
     &.pf-m-inline {
       @at-root span#{&} {
         --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
@@ -670,6 +686,18 @@
   
       min-width: var(--#{$button}--m-plain--m-no-padding--MinWidth);
       background: var(--#{$button}--BackgroundColor); // override the ripple background
+    }
+
+    @media (prefers-contrast: more) {
+      &:hover {
+      --#{$button}--BorderWidth: var(--#{$button}--BorderWidth--high-contrast);
+      --#{$button}--BorderColor: var(--#{$button}--BorderColor--high-contrast);
+      }
+  
+      &.pf-m-clicked {
+        --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth--high-contrast);
+        --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor--high-contrast);
+      }
     }
   }
 
