@@ -21,7 +21,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --#{$drawer}__panel--MaxHeight: auto;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$drawer}__panel--BorderWidth: 0; 
   --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--after--BackgroundColor); // TODO use token directly in breaking change
   --#{$drawer}__panel--BorderBlockStartWidth: 0;
   --#{$drawer}__panel--BorderBlockEndWidth: 0;
@@ -331,7 +330,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   overflow: auto;
   visibility: hidden; // hidden by default
   background-color: var(--#{$drawer}__panel--BackgroundColor);
-  border: var(--#{$drawer}__panel--BorderWidth) solid var(--#{$drawer}__panel--BorderColor);
+  border: solid var(--#{$drawer}__panel--BorderColor);
   border-block-start-width: var(--#{$drawer}__panel--BorderBlockStartWidth);
   border-block-end-width: var(--#{$drawer}__panel--BorderBlockEndWidth);
   border-inline-start-width: var(--#{$drawer}__panel--BorderInlineStartWidth);
@@ -700,12 +699,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       > .#{$drawer}__main > .#{$drawer}__panel {
-        --#{$drawer}--m-expanded__panel--BoxShadow: none;
-
-        &:not(.pf-m-no-border) {
-          --#{$drawer}__panel--BorderColor: var(--#{$drawer}--m-inline--m-expanded__panel--after--BackgroundColor);
-        }
-
         margin-inline-start: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
 
         @include pf-v6-bidirectional-style(
