@@ -96,7 +96,7 @@
 
   // Secondary
   --#{$card}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$card}--m-secondary--BorderColor: transparent;
+  --#{$card}--m-secondary--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // Full height
   --#{$card}--m-full-height--Height: 100%;
