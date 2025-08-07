@@ -122,6 +122,10 @@
     cursor: pointer;
   }
 
+  :where(:root) {
+    color-scheme: light;
+  }
+
   :where(.pf-v6-theme-dark) {
     color-scheme: dark;
   }
