@@ -482,7 +482,7 @@
   &.pf-m-current {
     --#{$wizard}__nav-link--Color: var(--#{$wizard}__nav-link--m-current--Color);
     --#{$wizard}__nav-link-main--BackgroundColor: var(--#{$wizard}__nav-link--m-current--BackgroundColor);
-    --#{$wizard}__nav-link-main--BorderWidth: var(--#{$wizard}__nav-link--m-current--nav-link-main--BorderWidth); 
+    --#{$wizard}__nav-link-main--BorderWidth: var(--#{$wizard}__nav-link--m-current__nav-link-main--BorderWidth); 
 
     @at-root .#{$wizard}__toggle-num,
     &::before {
