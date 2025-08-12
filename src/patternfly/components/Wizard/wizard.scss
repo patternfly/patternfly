@@ -60,8 +60,8 @@
   --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$wizard}__nav-link-main--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav-link-main--BorderWidth: 0;
-  --#{$wizard}__nav-link--hover--nav-link-main--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
-  --#{$wizard}__nav-link--m-current--nav-link-main--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
+  --#{$wizard}__nav-link--hover__nav-link-main--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$wizard}__nav-link--m-current__nav-link-main--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
 
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
