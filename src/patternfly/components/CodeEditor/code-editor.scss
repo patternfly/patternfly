@@ -6,8 +6,12 @@
   --#{$code-editor}__controls--Gap: var(--pf-t--global--spacer--gap--action-to-action--plain);
 
   // header
-  --#{$code-editor}__header--before--BorderBlockEndWidth: var(--pf-t--global--border--width--box--default);
-  --#{$code-editor}__header--before--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  --#{$code-editor}__header--before--BorderBlockEndWidth: var(--pf-t--global--border--width--box--default); // TODO - remove in breaking change
+  --#{$code-editor}__header--before--BorderBlockEndColor: var(--pf-t--global--border--color--default); // TODO - remove in breaking change
+  --#{$code-editor}__header--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$code-editor}__header--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$code-editor}__header--BorderStartStartRadius: var(--pf-t--global--border--radius--medium);
+  --#{$code-editor}__header--BorderStartEndRadius: var(--pf-t--global--border--radius--medium);
 
   // header content
   --#{$code-editor}__header-content--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -95,12 +99,13 @@
 
   &::before {
     position: absolute;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
-    border-block-end: var(--#{$code-editor}__header--before--BorderBlockEndWidth) solid var(--#{$code-editor}__header--before--BorderBlockEndColor);
+    border: var(--#{$code-editor}__header--BorderWidth) solid var(--#{$code-editor}__header--BorderColor);
+    border-block-end: var(--#{$code-editor}__header--before--BorderBlockEndWidth) solid var(--#{$code-editor}__header--before--BorderBlockEndColor); // TODO - remove in breaking change
+    border-start-start-radius: var(--#{$code-editor}__header--BorderStartStartRadius);
+    border-start-end-radius: var(--#{$code-editor}__header--BorderStartEndRadius);
   }
 
   &.pf-m-plain {
