@@ -10,7 +10,7 @@
   --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$menu}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$menu}--Color: var(--pf-t--global--text--color--regular);
-  --#{$menu}--BorderWidth: var(--pf-t--global--high-contrast--border--width--control--default);
+  --#{$menu}--BorderWidth: var(--pf-t--global--high-contrast--border--width--box--default);
   --#{$menu}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
@@ -225,7 +225,6 @@
   // TODO: Explore this fallback method
   // padding-block-start: var(--#{$menu}--PaddingBlockStart, var(--#{$menu}--PaddingBlock));
   // padding-block-end: var(--#{$menu}--PaddingBlockEnd, var(--#{$menu}--PaddingBlock));
-  position: relative;
   display: grid;
   row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
@@ -235,21 +234,13 @@
   overflow: hidden;
   color: var(--#{$menu}--Color);
   background-color: var(--#{$menu}--BackgroundColor);
+  border: var(--#{$menu}--BorderWidth) solid var(--#{$menu}--BorderColor);
   border-radius: var(--#{$menu}--BorderRadius);
   box-shadow: var(--#{$menu}--BoxShadow);
   // stylelint-disable declaration-no-important
   transition-timing-function: var(--#{$menu}--TransitionTimingFunction) !important; // Note that this timing function is overriding the default that Popper is using
   transition-duration: var(--#{$menu}--TransitionDuration) !important; // Note that this duration is overriding whatever value is supplied as a prop to Popper
   // stylelint-enable declaration-no-important
-
-  &::after {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    content: "";
-    border: var(--#{$menu}--BorderWidth) solid var(--#{$menu}--BorderColor);
-    border-radius: inherit;
-  }
     
   .#{$menu} {
     min-width: 100%;
