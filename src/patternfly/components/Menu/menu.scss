@@ -225,6 +225,7 @@
   // TODO: Explore this fallback method
   // padding-block-start: var(--#{$menu}--PaddingBlockStart, var(--#{$menu}--PaddingBlock));
   // padding-block-end: var(--#{$menu}--PaddingBlockEnd, var(--#{$menu}--PaddingBlock));
+  box-sizing: content-box;
   display: grid;
   row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
