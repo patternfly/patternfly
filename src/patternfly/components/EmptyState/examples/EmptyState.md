@@ -12,7 +12,7 @@ cssPrefix: pf-v6-c-empty-state
   {{#> empty-state-header}}
     {{> empty-state-icon}}
     {{#> empty-state-title}}
-      {{#> empty-state-title-text}}
+      {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         Empty state
       {{/empty-state-title-text}}
     {{/empty-state-title}}
@@ -58,7 +58,7 @@ cssPrefix: pf-v6-c-empty-state
   {{#> empty-state-header}}
     {{> empty-state-icon}}
     {{#> empty-state-title}}
-      {{#> empty-state-title-text}}
+      {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         Empty state
       {{/empty-state-title-text}}
     {{/empty-state-title}}
@@ -99,7 +99,7 @@ cssPrefix: pf-v6-c-empty-state
   {{#> empty-state-header}}
     {{> empty-state-icon}}
     {{#> empty-state-title}}
-      {{#> empty-state-title-text}}
+      {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         Empty state
       {{/empty-state-title-text}}
     {{/empty-state-title}}
@@ -146,7 +146,7 @@ cssPrefix: pf-v6-c-empty-state
   {{#> empty-state-header}}
     {{> empty-state-icon}}
     {{#> empty-state-title}}
-      {{#> empty-state-title-text}}
+      {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         Empty state
       {{/empty-state-title-text}}
     {{/empty-state-title}}
@@ -192,7 +192,7 @@ cssPrefix: pf-v6-c-empty-state
   {{#> empty-state-header}}
     {{> empty-state-icon}}
     {{#> empty-state-title}}
-      {{#> empty-state-title-text}}
+      {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         Empty state
       {{/empty-state-title-text}}
     {{/empty-state-title}}
@@ -237,7 +237,7 @@ cssPrefix: pf-v6-c-empty-state
   {{#> empty-state-header}}
     {{> empty-state-icon empty-state-icon--type="check-circle"}}
     {{#> empty-state-title}}
-      {{#> empty-state-title-text}}
+      {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         You're all set
       {{/empty-state-title-text}}
     {{/empty-state-title}}
