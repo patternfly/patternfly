@@ -13,7 +13,7 @@ cssPrefix: pf-v6-c-hint
       menu-toggle--IsPlain=true
       menu-toggle--HasKebab=true
       menu-toggle--id=(dasherize hint--id 'hint')
-      menu-toggle--aria-label='Hint with title example kebab toggle'
+      menu-toggle--aria-label='Hint with title example actions'
     }}
   {{/hint-actions}}
   {{#> hint-title}}
@@ -32,7 +32,7 @@ cssPrefix: pf-v6-c-hint
       menu-toggle--IsPlain=true
       menu-toggle--HasKebab=true
       menu-toggle--id=(dasherize hint--id 'hint')
-      menu-toggle--aria-label='Hint with title example kebab toggle'
+      menu-toggle--aria-label='Hint with title and footer example actions'
     }}
  {{/hint-actions}}
   {{#> hint-title}}
@@ -65,7 +65,7 @@ cssPrefix: pf-v6-c-hint
       menu-toggle--IsPlain=true
       menu-toggle--HasKebab=true
       menu-toggle--id=(dasherize hint--id 'hint')
-      menu-toggle--aria-label='Hint without title example kebab toggle'
+      menu-toggle--aria-label='Hint without title example actions'
     }}
  {{/hint-actions}}
   {{#> hint-body}}
