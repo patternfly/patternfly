@@ -16,7 +16,6 @@
   --#{$button}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$button}--BackgroundColor: transparent;
   --#{$button}--BorderColor: transparent;
-  --#{$button}--BorderColor--high-contrast: var(--pf-t--global--border--color--high-contrast);
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecorationLine: none;
@@ -33,7 +32,6 @@
   // Hover
   --#{$button}--hover--BackgroundColor: transparent;
   --#{$button}--hover--BorderColor: transparent;
-  --#{$button}--hover--BorderColor--high-contrast: var(--pf-t--global--border--color--high-contrast);
   --#{$button}--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$button}--hover--TextDecorationLine: none;
   --#{$button}--hover--TextDecorationStyle: none;
@@ -45,7 +43,6 @@
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
   --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--action--clicked);
-  --#{$button}--m-clicked--BorderColor--high-contrast: var(--pf-t--global--border--color--high-contrast);
 
   // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -109,6 +106,9 @@
   --#{$button}--m-link--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$button}--m-link--m-clicked--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$button}--m-link--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$button}--m-link--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$button}--m-link--m-clicked--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$button}--m-link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // Link danger
   --#{$button}--m-link--m-danger--Color: var(--pf-t--global--text--color--status--danger--default);
@@ -169,6 +169,9 @@
   --#{$button}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$button}--m-plain--m-clicked--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$button}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$button}--m-plain--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$button}--m-plain--m-clicked--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$button}--m-plain--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // Plain no padding
   --#{$button}--m-plain--m-no-padding--MinWidth: auto;
@@ -485,9 +488,9 @@
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-link--PaddingInlineStart);
     --#{$button}--Color: var(--#{$button}--m-link--Color);
     --#{$button}--BorderWidth: var(--#{$button}--m-link--BorderWidth);
-    --#{$button}--hover--BorderColor: var(--#{$button}--hover--BorderColor--high-contrast);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-link--hover--BorderColor);
     --#{$button}--hover--BorderWidth: var(--#{$button}--m-link--hover--BorderWidth);
-    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-clicked--BorderColor--high-contrast);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-link--m-clicked--BorderColor);
     --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-link--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--BorderColor--high-contrast);
     --#{$button}--BorderRadius: var(--#{$button}--m-link--BorderRadius);
@@ -661,9 +664,9 @@
   // Icon buttons
   &.pf-m-plain {
     --#{$button}--BorderWidth: var(--#{$button}--m-plain--BorderWidth);
-    --#{$button}--hover--BorderColor: var(--#{$button}--hover--BorderColor--high-contrast);
+    --#{$button}--hover--BorderColor: var(--#{$button}--m-plain--hover--BorderColor);
     --#{$button}--hover--BorderWidth: var(--#{$button}--m-plain--hover--BorderWidth);
-    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-clicked--BorderColor--high-contrast);
+    --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-plain--m-clicked--BorderColor);
     --#{$button}--m-clicked--BorderWidth: var(--#{$button}--m-plain--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--BorderColor--high-contrast);
     --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
