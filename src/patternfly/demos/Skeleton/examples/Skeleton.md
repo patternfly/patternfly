@@ -12,7 +12,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> page-main-section}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
-      {{> card-skeleton isFirstCard=true}}
+      {{> card-skeleton card-skeleton--IsFirstCard=true}}
       {{> card-skeleton}}
       {{> card-skeleton}}
       {{> card-skeleton}}
