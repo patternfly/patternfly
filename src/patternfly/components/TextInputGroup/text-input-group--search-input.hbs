@@ -2,7 +2,11 @@
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--aria-label="Search input"}}
+        {{#if text-input-group--search-input--aria-label}}
+          {{> text-input-group-text-input text-input-group-text-input--aria-label=text-input-group--search-input--aria-label }}
+        {{else}}
+          {{> text-input-group-text-input text-input-group-text-input--aria-label="Search input" }}
+        {{/if}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#if text-input-group--value}}
