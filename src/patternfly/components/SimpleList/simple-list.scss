@@ -14,15 +14,15 @@
   --#{$simple-list}__item-link--hover--Color: var(--pf-t--global--text--color--subtle);
   --#{$simple-list}__item-link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$simple-list}__item-link--BorderRadius: var(--pf-t--global--border--radius--tiny);
-  --#{$simple-list}__item-link--BorderWidth: 0;
+  --#{$simple-list}__item-link--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$simple-list}__item-link--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$simple-list}__item-link--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$simple-list}__item-link--hover--BorderWidth:  var(--pf-t--global--border--width--action--plain--hover);
+  --#{$simple-list}__item-link--m-current--BorderWidth:  var(--pf-t--global--border--width--action--plain--clicked);
   
   // Simple list item link
   --#{$simple-list}__item-link--m-link--Color: var(--pf-t--global--text--color--link--default);
   --#{$simple-list}__item-link--m-link--m-current--Color: var(--pf-t--global--text--color--link--hover);
   --#{$simple-list}__item-link--m-link--hover--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$simple-list}__item-link--m-current--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
 
   // Simple list title
   --#{$simple-list}__title--PaddingBlockStart: var(--pf-t--global--spacer--sm);

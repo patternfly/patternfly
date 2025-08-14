@@ -90,7 +90,7 @@
   --#{$alert-group}--m-toast__item--m-offstage-right--c-alert--Transition: initial;
 
     // Overflow button
-  --#{$alert-group}__overflow-button--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$alert-group}__overflow-button--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$alert-group}__overflow-button--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$alert-group}__overflow-button--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$alert-group}__overflow-button--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -100,7 +100,7 @@
   --#{$alert-group}__overflow-button--Color: var(--pf-t--global--text--color--link--default);
   --#{$alert-group}__overflow-button--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$alert-group}__overflow-button--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-  --#{$alert-group}__overflow-button--hover--BorderWidth: var(--pf-t--global--border--width--strong);
+  --#{$alert-group}__overflow-button--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$alert-group}__overflow-button--hover--Color: var(--pf-t--global--text--color--link--hover);
   --#{$alert-group}__overflow-button--hover--BackgroundColor: var(--pf-t--global--background--color--floating--hover);
   --#{$alert-group}__overflow-button--hover--BoxShadow: var(--pf-t--global--box-shadow--lg), var(--pf-t--global--box-shadow--lg--bottom);

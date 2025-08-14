@@ -59,9 +59,9 @@
   --#{$wizard}__nav-link-main--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$wizard}__nav-link-main--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$wizard}__nav-link-main--BorderWidth: 0;
-  --#{$wizard}__nav-link--hover__nav-link-main--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
-  --#{$wizard}__nav-link--m-current__nav-link-main--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
+  --#{$wizard}__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$wizard}__nav-link--hover__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$wizard}__nav-link--m-current__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
 
   // Nav link toggle icon
   --#{$wizard}__nav-link-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
