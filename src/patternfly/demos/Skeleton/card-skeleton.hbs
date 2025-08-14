@@ -2,6 +2,9 @@
   {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column pf-m-spacer-md"}}
         {{#> skeleton}}
+          {{#if isFirstCard}}
+            <span class="pf-v6-screen-reader">Loading card content</span>
+          {{/if}}
         {{/skeleton}}
         {{#> skeleton skeleton--modifier="pf-m-width-66"}}
         {{/skeleton}}
