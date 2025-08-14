@@ -39,7 +39,21 @@
           {{/text-input-group-group}}
         {{/if}}
       {{/if}}
-      {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
+      {{#if text-input-group--search-input--clear-button-aria-label}}
+        {{> button
+          button--IsPlain=true
+          button--IsIcon=true
+          button--icon="times fa-fw"
+          button--aria-label=text-input-group--search-input--clear-button-aria-label
+        }}
+      {{else}}
+        {{> button
+          button--IsPlain=true
+          button--IsIcon=true
+          button--icon="times fa-fw"
+          button--aria-label="Clear input"
+        }}
+      {{/if}}
     {{/text-input-group-utilities}}
   {{/if}}
 {{/text-input-group}}
