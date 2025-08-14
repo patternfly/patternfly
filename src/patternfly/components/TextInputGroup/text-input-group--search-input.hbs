@@ -8,7 +8,16 @@
   {{#if text-input-group--value}}
     {{#> text-input-group-utilities}}
       {{#if text-input-group--search-input--count}}
-        {{> badge badge--modifier="pf-m-read" badge--text=text-input-group--search-input--count}}
+        {{#> badge badge--modifier="pf-m-read"}}
+          <span aria-hidden="true">{{text-input-group--search-input--count}}</span>
+          {{#> screen-reader}}
+            {{#if text-input-group--search-input--IsNavigable}}
+              Showing result {{text-input-group--search-input--count}}
+            {{else}}
+              {{text-input-group--search-input--count}} matching results
+            {{/if}}
+          {{/screen-reader}}
+        {{/badge}}
         {{#if text-input-group--search-input--IsNavigable}}
           {{#> text-input-group-group}}
             {{> button
