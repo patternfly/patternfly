@@ -58,9 +58,9 @@
   --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$nav}__link--after--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$nav}__link--after--BorderWidth: 0;
-  --#{$nav}__link--hover--after--BorderWidth: var(--pf-t--global--high-contrast--border--width--control--hover);
-  --#{$nav}__link--m-current--after--BorderWidth: var(--pf-t--global--high-contrast--border--width--control--clicked);
+  --#{$nav}__link--after--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$nav}__link--hover--after--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$nav}__link--m-current--after--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
 
   // background color transition on hover
   --#{$nav}__link--TransitionDuration--background-color: var(--pf-t--global--motion--duration--fade--default);
@@ -117,7 +117,7 @@
   // * Nav horizontal subnav
   --#{$nav}--m-horizontal--m-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$nav}--m-horizontal--m-subnav--BorderWidth: var(--pf-t--global--high-contrast--border--width--divider--default);
+  --#{$nav}--m-horizontal--m-subnav--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$nav}--m-horizontal--m-subnav--BorderColor: var(--pf-t--global--border--color--high-contrast--default);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
