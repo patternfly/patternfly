@@ -66,6 +66,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}__link--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$tabs}__link--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$tabs}__link--BorderColor: transparent;
+  --#{$tabs}__link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$tabs}__link--disabled--BorderColor: transparent;
   --#{$tabs}__link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$tabs}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$tabs}__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
@@ -630,6 +634,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   color: var(--#{$tabs}__link--Color);
   text-decoration-line: none;
   background-color: var(--#{$tabs}__link--BackgroundColor);
+  border: var(--#{$tabs}__link--BorderWidth) solid var(--#{$tabs}__link--BorderColor);
   border-radius: var(--#{$tabs}__link--BorderRadius);
   transition: background-color var(--#{$tabs}__link--TransitionDuration--background-color) var(--#{$tabs}__link--TransitionTimingFunction--background-color);
 
@@ -665,7 +670,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   &:where(:hover, :focus) {
     --#{$tabs}__link--BackgroundColor: var(--#{$tabs}__link--hover--BackgroundColor);
-      }
+    --#{$tabs}__link--BorderColor: var(--#{$tabs}__link--hover--BorderColor);
+  }
 
   &:disabled,
   &.pf-m-disabled {
@@ -685,6 +691,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   &:is(:disabled, .pf-m-disabled, .pf-m-aria-disabled) {
     --#{$tabs}__link--BackgroundColor: var(--#{$tabs}__link--disabled--BackgroundColor);
+    --#{$tabs}__link--BorderColor: var(--#{$tabs}__link--disabled--BorderColor);
   }
 
   @at-root .#{$tabs}__item.pf-m-action.pf-m-disabled {
