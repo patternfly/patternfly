@@ -8,7 +8,9 @@ import './Truncate.css'
 
 ## Examples
 
-The default behavior of the truncate component is to truncate based on whether the content can fit within the width of its parent container, and to prevent text from wrapping. The following examples that use this default behavior render the truncate component inside a resizable container, allowing you to see how the parent container width affects the truncation.
+The default behavior of the truncate component is to truncate based on whether the content can fit within the width of its parent container, and to prevent text from wrapping. The following examples that use this default behavior render the truncate component inside a resizable container, allowing you to see how the parent container width affects the truncation. 
+
+Note that when content is truncated, a tabindex of 0 should also be added to the element to ensure it remains accessible. The examples below however, add a tabindex in both cases as the content is static.
 
 ### Default
 
