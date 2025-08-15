@@ -219,7 +219,6 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 .#{$dual-list-selector}__list-item {
   &:focus-visible {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
-
   }
 
   &.pf-m-expandable {
