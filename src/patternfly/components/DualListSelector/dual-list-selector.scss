@@ -57,13 +57,12 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   // List item
   --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
   --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
-  --#{$dual-list-selector}__list-item-row--BorderWidth: var(--pf-t--global--border--width--regular);
-  --#{$dual-list-selector}__list-item-row--BorderColor: transparent;
+  --#{$dual-list-selector}__list-item-row--BorderWidth: 0;
+  --#{$dual-list-selector}__list-item-row--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$dual-list-selector}__list-item-row--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$dual-list-selector}__list-item-row--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
   --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$dual-list-selector}__list-item-row--m-selected--BorderWidth: var(--pf-t--global--border--width--strong);
-  --#{$dual-list-selector}__list-item-row--m-selected--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$dual-list-selector}__list-item-row--m-selected--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
   --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
 
@@ -220,7 +219,6 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 .#{$dual-list-selector}__list-item {
   &:focus-visible {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
-    --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--BorderColor);
 
   }
 
@@ -282,7 +280,6 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   &.pf-m-selected {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor);
     --#{$dual-list-selector}__list-item-row--BorderWidth: var(--#{$dual-list-selector}__list-item-row--m-selected--BorderWidth);
-    --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BorderColor);
 
     .#{$dual-list-selector}__item-text {
       --#{$dual-list-selector}__item-text--Color: var(--#{$dual-list-selector}__list-item-row--m-selected__text--Color);
@@ -293,7 +290,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
   &:hover {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
-    --#{$dual-list-selector}__list-item-row--BorderColor: var(--#{$dual-list-selector}__list-item-row--hover--BorderColor);
+    --#{$dual-list-selector}__list-item-row--BorderWidth: var(--#{$dual-list-selector}__list-item-row--hover--BorderWidth);
   }
 
   &.pf-m-check {
