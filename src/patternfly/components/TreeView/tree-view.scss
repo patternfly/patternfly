@@ -18,10 +18,10 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node--Color: var(--pf-t--global--text--color--subtle);
   --#{$tree-view}__node--BackgroundColor: transparent;
   --#{$tree-view}__node--BorderRadius: var(--#{$tree-view}__content--BorderRadius);
-  --#{$tree-view}__node--BorderWidth: 0;
   --#{$tree-view}__node--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$tree-view}__node--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
-  --#{$tree-view}__node--m-current--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
+  --#{$tree-view}__node--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$tree-view}__node--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$tree-view}__node--m-current--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$tree-view}__node--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$tree-view}__node--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$tree-view}__node--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
@@ -248,7 +248,6 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node--PaddingBlockEnd: var(--#{$tree-view}--m-compact__node--PaddingBlockEnd);
     --#{$tree-view}__node-container--Display: var(--#{$tree-view}--m-compact__node-container--Display);
     --#{$tree-view}__node--hover--BackgroundColor: transparent;
-    --#{$tree-view}__node--hover--BorderWidth: 0;
     --#{$tree-view}__list-item__list-item__node-toggle--InsetBlockStart: var(--#{$tree-view}--m-compact__list-item__list-item__node-toggle--InsetBlockStart);
 
     // Level 1
