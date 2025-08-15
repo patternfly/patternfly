@@ -510,9 +510,6 @@
         --#{$button}--m-link--m-inline--Display: var(--#{$button}--span--m-link--m-inline--Display);
         --#{$button}__icon--m-start--MarginInlineEnd: var(--#{$button}--span--m-link--m-inline__icon--m-start--MarginInlineEnd);
         --#{$button}__icon--m-end--MarginInlineStart: var(--#{$button}--span--m-link--m-inline__icon--m-end--MarginInlineStart);
-        --#{$button}--BorderWidth: 0;
-        --#{$button}--hover--BorderWidth: 0;
-        --#{$button}--m-clicked--BorderWidth: 0;
       }
 
       --#{$button}--Display: var(--#{$button}--m-link--m-inline--Display);
@@ -542,7 +539,10 @@
       --#{$button}--m-link--hover--Color: var(--#{$button}--m-link--m-inline--hover--Color);
       --#{$button}--m-link--hover__icon--Color: var(--#{$button}--m-link--m-inline--hover__icon--Color);
       --#{$button}--after--Inset: var(--#{$button}--m-link--m-inline--after--Inset);
-
+      --#{$button}--BorderWidth: 0;
+      --#{$button}--hover--BorderWidth: 0;
+      --#{$button}--m-clicked--BorderWidth: 0;
+      
       text-align: start;
       white-space: normal;
       background: transparent; // don't show the ripple effect for inline links
