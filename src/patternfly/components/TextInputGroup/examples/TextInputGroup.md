@@ -450,7 +450,7 @@ The React implementation can be found in the [search input](/components/search-i
             {{#> button button--id="submit-advanced-search-expanded-with-autocomplete" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
               Submit
             {{/button}}
-            {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
+            {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
               Reset
             {{/button}}
           {{/form-actions}}
