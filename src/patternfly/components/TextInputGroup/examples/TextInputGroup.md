@@ -293,10 +293,10 @@ The React implementation can be found in the [search input](/components/search-i
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--IsPrimary=true button--IsSubmit=true button--attribute='id="submit-advanced-search-expanded" aria-labelledby="submit-advanced-search-expanded search-input-group-advanced-search-expanded"'}}
+            {{#> button button--id="submit-advanced-search-expanded" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded search-input-group-advanced-search-expanded"}}
               Submit
             {{/button}}
-            {{#> button button--IsLink=true button--IsReset=true button--attribute='id="reset-advanced-search-expanded" aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"'}}
+            {{#> button button--id="reset-advanced-search-expanded" button--IsLink=true button--IsReset=true button--aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"}}
               Reset
             {{/button}}
           {{/form-actions}}
@@ -447,10 +447,10 @@ The React implementation can be found in the [search input](/components/search-i
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--IsPrimary=true button--IsSubmit=true button--attribute='id="submit-advanced-search-expanded-with-autocomplete" aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"'}}
+            {{#> button button--id="submit-advanced-search-expanded-with-autocomplete" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
               Submit
             {{/button}}
-            {{#> button button--IsLink=true button--IsReset=true button--attribute='id="reset-advanced-search-expanded-with-autocomplete" aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"'}}
+            {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
               Reset
             {{/button}}
           {{/form-actions}}
