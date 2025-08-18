@@ -588,6 +588,10 @@
   margin-inline-end: var(--#{$label}__actions--MarginInlineEnd);
 
   .#{$button} {
+    @at-root .#{$label}.pf-m-compact & {
+      --#{$button}--m-plain--m-no-padding--after--Inset: 0 calc(#{pf-size-prem(2px) * -1});
+    }
+
     --#{$button}--FontSize: var(--#{$label}__actions--c-button--FontSize);
     --#{$button}--m-plain--m-no-padding--PaddingBlockStart: var(--#{$label}__actions--c-button--PaddingBlockStart);
     --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: var(--#{$label}__actions--c-button--PaddingInlineEnd);

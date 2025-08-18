@@ -148,7 +148,6 @@
   --#{$button}--m-link--m-inline--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$button}--m-link--m-inline--hover__icon--Color: var(--pf-t--global--icon--color--brand--hover);
   --#{$button}--m-link--m-inline--hover--TextDecorationColor: currentcolor;
-  --#{$button}--m-link--m-inline--after--Inset: calc(#{pf-size-prem(2px)} * -1);
 
   // Plain
   --#{$button}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
@@ -538,11 +537,10 @@
       --#{$button}--hover--TextDecorationColor: var(--#{$button}--m-link--m-inline--hover--TextDecorationColor);
       --#{$button}--m-link--hover--Color: var(--#{$button}--m-link--m-inline--hover--Color);
       --#{$button}--m-link--hover__icon--Color: var(--#{$button}--m-link--m-inline--hover__icon--Color);
-      --#{$button}--after--Inset: var(--#{$button}--m-link--m-inline--after--Inset);
       --#{$button}--BorderWidth: 0;
       --#{$button}--hover--BorderWidth: 0;
       --#{$button}--m-clicked--BorderWidth: 0;
-      
+
       text-align: start;
       white-space: normal;
       background: transparent; // don't show the ripple effect for inline links
