@@ -765,7 +765,7 @@
     text-decoration-line: var(--#{$button}--hover--TextDecorationLine);
     text-decoration-style: var(--#{$button}--hover--TextDecorationStyle);
     text-decoration-color: var(--#{$button}--hover--TextDecorationColor);
-    outline-offset: #{pf-size-prem(2px)}; // TODO - update to --pf-t--global--focus-ring--position--offset when tokens are pulled in
+    outline-offset: var(--pf-t--global--focus-ring--position--offset);
   }
 
   &:active,
