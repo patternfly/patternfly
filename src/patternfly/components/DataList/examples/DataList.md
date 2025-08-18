@@ -971,7 +971,7 @@ When a list item includes more than one block of content, it can be difficult fo
             This text will wrap to the next line because it has the default behavior of the data list cell.
           </span>
         {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--IsTruncate}}
+        {{#> data-list-cell data-list-cell--IsTruncate=true}}
           This text will truncate because it is very very long.
         {{/data-list-cell}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-break-word"}}
@@ -982,7 +982,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-item-row data-list-item-row--isTruncate=true}}
+    {{#> data-list-item-row data-list-item-row--IsTruncate=true}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
            This text will truncate because it is very very long. This text will truncate because it is very very long.
@@ -1044,7 +1044,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span id="{{data-list--id}}-{{data-list-item--id}}">
             This text will wrap to the next line because it has the default behavior of the data list cell.
           </span>
-          {{#> data-list-text data-list-text--IsTruncate}}
+          {{#> data-list-text data-list-text--IsTruncate=true}}
             This is data list text, you can apply `pf-m-truncate` directly to the text. This is data list text, you can apply `pf-m-truncate` directly to the text.
           {{/data-list-text}}
         {{/data-list-cell}}

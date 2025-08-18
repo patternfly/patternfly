@@ -248,7 +248,7 @@ cssPrefix: pf-v6-c-progress
   progress__description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis ultricies lectus, eu lobortis mauris. Morbi pretium arcu id rhoncus mollis. Donec accumsan tincidunt enim nec varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti."
   progress__id="progress-truncate-description-example"
   progress-description--modifier="pf-m-truncate"
-  progress-description--attribute="tabindex=\"0\""
+  progress-description--attribute='tabindex="0"'
 }}
 {{/progress}}
 ```
