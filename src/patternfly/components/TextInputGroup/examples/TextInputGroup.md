@@ -161,7 +161,7 @@ The React implementation can be found in the [search input](/components/search-i
 
 ### Search input group, match with navigable options
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch="true" text-input-group--search-input--aria-label="Search input group match with navigable options" text-input-group--search-input--clear-button-aria-label="Clear search input group match with navigable options"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch="true" text-input-group--search-input--IsNavigable="true" text-input-group--search-input--aria-label="Search input group match with navigable options" text-input-group--search-input--clear-button-aria-label="Clear search input group match with navigable options"}}
 ```
 
 ### Search input group, expandable
@@ -293,10 +293,10 @@ The React implementation can be found in the [search input](/components/search-i
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true button--attribute='id="submit-advanced-search-expanded" aria-labelledby="submit-advanced-search-expanded search-input-group-advanced-search-expanded"'}}
               Submit
             {{/button}}
-            {{#> button button--IsLink=true button--IsReset=true}}
+            {{#> button button--IsLink=true button--IsReset=true button--attribute='id="reset-advanced-search-expanded" aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"'}}
               Reset
             {{/button}}
           {{/form-actions}}
@@ -447,10 +447,10 @@ The React implementation can be found in the [search input](/components/search-i
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true button--attribute='id="submit-advanced-search-expanded-with-autocomplete" aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"'}}
               Submit
             {{/button}}
-            {{#> button button--IsLink=true button--IsReset=true}}
+            {{#> button button--IsLink=true button--IsReset=true button--attribute='id="reset-advanced-search-expanded-with-autocomplete" aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"'}}
               Reset
             {{/button}}
           {{/form-actions}}
