@@ -95,6 +95,9 @@
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
+  --#{$table}__button--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$table}__button--BorderWidth: var(--pf-t--global--high-contrast--border--width--action--default);
+  --#{$table}__button--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--action--hover);
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
@@ -142,6 +145,8 @@
   --#{$table}__expandable-row-content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__expandable-row-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__expandable-row-content--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$table}__expandable-row-content--BorderWidth: 0;
 
   // * Table control row
   --#{$table}__control-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -181,12 +186,14 @@
 
   // * Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$table}__compound-expansion-toggle__button--after--BorderRadius: inherit;
   --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: 0;
   --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
   --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
 
   // * Compound expandable
   --#{$table}--compound-expansion--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$table}--compound-expansion--m-expanded--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
 
   // * Table compact th
   --#{$table}--m-compact__th--PaddingBlockStart: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
@@ -733,6 +740,7 @@
 
 // - Table button
 .#{$table}__button {
+  position: relative;
   width: auto;
   padding-block-start: var(--#{$table}__button--PaddingBlockStart);
   padding-block-end: var(--#{$table}__button--PaddingBlockEnd);
@@ -750,6 +758,15 @@
   border: 0;
   border-radius: var(--#{$table}__button--BorderRadius);
   outline-offset: var(--#{$table}__button--OutlineOffset);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    border: var(--#{$table}__button--BorderWidth) solid var(--#{$table}__button--BorderColor);
+    border-radius: inherit;
+  }
 
   // Table table table button
   .#{$table} .#{$table} & {
@@ -968,6 +985,7 @@
     content: '';
     border: 0;
     border-block-start: var(--#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth) solid var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
+    border-radius: var(--#{$table}__compound-expansion-toggle__button--after--BorderRadius);
   }
 
   &:hover,
@@ -1009,6 +1027,7 @@
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
       --#{$table}__sort__button__text--Color: var(--#{$table}__sort__button--hover__text--Color);
       --#{$table}__button--BackgroundColor: var(--#{$table}__button--hover--BackgroundColor);
+      --#{$table}__button--BorderWidth: var(--#{$table}__button--hover--BorderWidth);
     }
 
     // - Table text
@@ -1084,17 +1103,29 @@
 
   // - Table expandable row content
   .#{$table}__expandable-row-content {
+    position: relative;
     padding-block-start: var(--#{$table}__expandable-row-content--PaddingBlockStart);
     padding-block-end: var(--#{$table}__expandable-row-content--PaddingBlockEnd);
     padding-inline-start: var(--#{$table}__expandable-row-content--PaddingInlineStart);
     padding-inline-end: var(--#{$table}__expandable-row-content--PaddingInlineEnd);
     background-color: var(--#{$table}__expandable-row-content--BackgroundColor);
+    border: 0;
     border-radius: var(--#{$table}__expandable-row-content--BorderRadius);
 
     &.pf-m-no-background {
       background-color: transparent;
     }
   }
+
+  .#{$table}__td:not(.pf-m-no-padding) > .#{$table}__expandable-row-content::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$table}__expandable-row-content--BorderWidth) solid var(--#{$table}__expandable-row-content--BorderColor);
+    border-radius: inherit;
+  }
+
 
   // - Table expandable row content expanded
   &.pf-m-expanded {
@@ -1179,6 +1210,8 @@
 
   // TODO: make this a class `compound expansion content`
   .#{$table}__control-row ~ .#{$table}__expandable-row.pf-m-expanded {
+    --#{$table}__expandable-row-content--BorderWidth: var(--#{$table}--compound-expansion--m-expanded--BorderWidth);
+
     background-color: var(--#{$table}--compound-expansion--m-expanded--BackgroundColor);
   }
 }
