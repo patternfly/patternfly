@@ -20,9 +20,9 @@
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
-  --#{$accordion}__toggle--BorderWidth: 0;
+  --#{$accordion}__toggle--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$accordion}__toggle--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$accordion}__toggle--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$accordion}__toggle--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
 
   // Accordion toggle toggle-start modifier
   // This decreases the gap between icon and text, alternative is calc it to * 2 the token or create a new token
