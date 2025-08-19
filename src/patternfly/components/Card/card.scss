@@ -312,7 +312,6 @@
 }
 
 .#{$card}__title-text {
-  overflow: auto;
   font-family: var(--#{$card}__title-text--FontFamily);
   font-size: var(--#{$card}__title-text--FontSize);
   font-weight: var(--#{$card}__title-text--FontWeight);
