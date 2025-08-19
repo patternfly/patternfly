@@ -20,6 +20,9 @@
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$accordion}__toggle--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$accordion}__toggle--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$accordion}__toggle--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
 
   // Accordion toggle toggle-start modifier
   // This decreases the gap between icon and text, alternative is calc it to * 2 the token or create a new token
@@ -99,6 +102,15 @@
   --#{$accordion}--m-bordered--RowGap: 0;
   --#{$accordion}__item--m-bordered--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$accordion}__item--m-bordered--BorderBlockEndColor: var(--pf-t--global--border--color--default);
+  
+  // accordion item border for high contrast
+  --#{$accordion}__item--BorderWidth: 0;
+  --#{$accordion}__item--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$accordion}__item--m-expanded--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+
+  // expandable content border for high contrast
+  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$accordion}__expandable-content--BorderColor: var(--pf-t--global--border--color--high-contrast);
 }
 
 .#{$accordion} {
@@ -129,7 +141,8 @@
     --#{$accordion}--RowGap: var(--#{$accordion}--m-bordered--RowGap);
     --#{$accordion}__item--BorderRadius: 0;
     --#{$accordion}__toggle--BorderRadius: 0;
-
+    --#{$accordion}__item--BorderWidth: 0;
+  
     .#{$accordion}__item {
       border-block-end: var(--#{$accordion}__item--m-bordered--BorderBlockEndWidth) solid var(--#{$accordion}__item--m-bordered--BorderBlockEndColor);
     }
@@ -145,6 +158,7 @@
     pointer-events: none;
     content: "";
     background-color: var(--#{$accordion}__item--m-expanded--BackgroundColor);
+    border: var(--#{$accordion}__item--BorderWidth) solid var(--#{$accordion}__item--BorderColor);
     border-radius: var(--#{$accordion}__item--BorderRadius);
     opacity: var(--#{$accordion}__item--before--Opacity);
     transition-timing-function: var(--#{$accordion}__item--before--TransitionTimingFunction);
@@ -159,6 +173,7 @@
     --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--expand--fade);
     --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
     --#{$accordion}__item--before--TranslateY: var(--#{$accordion}__item--m-expanded--before--TranslateY);
+    --#{$accordion}__item--BorderWidth: var(--#{$accordion}__item--m-expanded--BorderWidth);
     --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
     --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
     --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
@@ -188,8 +203,18 @@
   border: 0;
   border-radius: var(--#{$accordion}__toggle--BorderRadius);
 
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$accordion}__toggle--BorderWidth) solid var(--#{$accordion}__toggle--BorderColor);
+    border-radius: inherit;
+  }
+
   &:is(:hover, :focus) {
     --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__toggle--hover--BackgroundColor);
+    --#{$accordion}__toggle--BorderWidth: var(--#{$accordion}__toggle--hover--BorderWidth);
   }
 }
 
@@ -235,6 +260,7 @@
     max-height: 99999px;
     margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
     visibility: revert;
+    border: var(--#{$accordion}__expandable-content--BorderWidth) solid var(--#{$accordion}__expandable-content--BorderColor);
     transition-delay: 0s;
 
     &.pf-m-fixed {
