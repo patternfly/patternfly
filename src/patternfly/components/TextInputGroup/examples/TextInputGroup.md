@@ -161,7 +161,7 @@ The React implementation can be found in the [search input](/components/search-i
 
 ### Search input group, match with navigable options
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch="true" text-input-group--search-input--IsNavigable="true" text-input-group--search-input--aria-label="Search input group match with navigable options" text-input-group--search-input--clear-button-aria-label="Clear search input group match with navigable options"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch=true text-input-group--search-input--IsNavigable=true text-input-group--search-input--aria-label="Search input group match with navigable options" text-input-group--search-input--clear-button-aria-label="Clear search input group match with navigable options"}}
 ```
 
 ### Search input group, expandable

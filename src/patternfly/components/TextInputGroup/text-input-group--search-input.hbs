@@ -2,11 +2,7 @@
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-        {{#if text-input-group--search-input--aria-label}}
-          {{> text-input-group-text-input text-input-group-text-input--aria-label=text-input-group--search-input--aria-label }}
-        {{else}}
-          {{> text-input-group-text-input text-input-group-text-input--aria-label="Search input" }}
-        {{/if}}
+        {{> text-input-group-text-input text-input-group-text-input--aria-label=(ternary text-input-group--search-input--aria-label text-input-group--search-input--aria-label 'Search input') }}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#if text-input-group--value}}
@@ -39,21 +35,12 @@
           {{/text-input-group-group}}
         {{/if}}
       {{/if}}
-      {{#if text-input-group--search-input--clear-button-aria-label}}
-        {{> button
-          button--IsPlain=true
-          button--IsIcon=true
-          button--icon="times fa-fw"
-          button--aria-label=text-input-group--search-input--clear-button-aria-label
-        }}
-      {{else}}
-        {{> button
-          button--IsPlain=true
-          button--IsIcon=true
-          button--icon="times fa-fw"
-          button--aria-label="Clear input"
-        }}
-      {{/if}}
+      {{> button
+        button--IsPlain=true
+        button--IsIcon=true
+        button--icon="times fa-fw"
+        button--aria-label=(ternary text-input-group--search-input--clear-button-aria-label text-input-group--search-input--clear-button-aria-label "Clear input")
+      }}
     {{/text-input-group-utilities}}
   {{/if}}
 {{/text-input-group}}
