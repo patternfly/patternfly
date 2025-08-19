@@ -2,13 +2,22 @@
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--aria-label="Search input"}}
+        {{> text-input-group-text-input text-input-group-text-input--aria-label=(ternary text-input-group--search-input--aria-label text-input-group--search-input--aria-label 'Search input') }}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#if text-input-group--value}}
     {{#> text-input-group-utilities}}
       {{#if text-input-group--search-input--count}}
-        {{> badge badge--modifier="pf-m-read" badge--text=text-input-group--search-input--count}}
+        {{#> badge badge--modifier="pf-m-read"}}
+          <span aria-hidden="true">{{text-input-group--search-input--count}}</span>
+          {{#> screen-reader}}
+            {{#if text-input-group--search-input--IsNavigable}}
+              Showing result {{text-input-group--search-input--count}}
+            {{else}}
+              {{text-input-group--search-input--count}} matching results
+            {{/if}}
+          {{/screen-reader}}
+        {{/badge}}
         {{#if text-input-group--search-input--IsNavigable}}
           {{#> text-input-group-group}}
             {{> button
@@ -26,7 +35,12 @@
           {{/text-input-group-group}}
         {{/if}}
       {{/if}}
-      {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
+      {{> button
+        button--IsPlain=true
+        button--IsIcon=true
+        button--icon="times fa-fw"
+        button--aria-label=(ternary text-input-group--search-input--clear-button-aria-label text-input-group--search-input--clear-button-aria-label "Clear input")
+      }}
     {{/text-input-group-utilities}}
   {{/if}}
 {{/text-input-group}}
