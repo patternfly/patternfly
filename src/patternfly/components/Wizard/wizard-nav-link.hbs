@@ -5,6 +5,9 @@
   {{~#if wizard-nav-item--IsSuccess}}
     pf-m-success
   {{/if}}
+  {{~#if wizard-nav-item--IsWarning}}
+    pf-m-warning
+  {{/if}}
   {{~#if wizard-nav-item--IsDanger}}
     pf-m-danger
   {{/if}}
@@ -40,7 +43,7 @@
   {{#if wizard-nav-link--attribute}}
     {{{wizard-nav-link--attribute}}}
   {{/if}}>
-  {{#ifAny wizard-nav-item--IsSuccess wizard-nav-item--IsDanger}}
+  {{#ifAny wizard-nav-item--IsSuccess wizard-nav-item--IsDanger wizard-nav-item--IsWarning}}
     {{> wizard-nav-link-status-icon}}
   {{/ifAny}}
   {{#> wizard-nav-link-main}}

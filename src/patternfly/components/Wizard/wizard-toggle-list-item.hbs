@@ -1,11 +1,12 @@
 <span class="{{pfv}}wizard__toggle-list-item
 {{#if wizard-toggle-list-item--IsSuccess}} pf-m-success{{/if}}
+{{#if wizard-toggle-list-item--IsWarning}} pf-m-warning{{/if}}
 {{#if wizard-toggle-list-item--IsDanger}} pf-m-danger{{/if}}
 {{#if wizard-toggle-list-item--modifier}} {{wizard-toggle-list-item--modifier}}{{/if}}"
   {{#if wizard-toggle-list-item--attribute}}
     {{{wizard-toggle-list-item--attribute}}}
   {{/if}}>
-  {{#ifAny wizard-toggle-list-item--IsSuccess wizard-toggle-list-item--IsDanger}}
+  {{#ifAny wizard-toggle-list-item--IsSuccess wizard-toggle-list-item--IsDanger wizard-toggle-list-item--IsWarning}}
     {{> wizard-toggle-status-icon}}
   {{/ifAny}}
   {{> @partial-block}}
