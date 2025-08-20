@@ -12,7 +12,7 @@ import './TextInputGroup.css'
 {{#> text-input-group text-input-group--id="text-input-group-basic"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--aria-label="Basic"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
 {{/text-input-group}}
@@ -23,7 +23,7 @@ import './TextInputGroup.css'
 {{#> text-input-group text-input-group--id="text-input-group-disabled" text-input-group--IsDisabled="true"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--aria-label="Disabled"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
 {{/text-input-group}}
@@ -40,7 +40,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{#> text-input-group text-input-group--id="text-input-group-plain" text-input-group--modifier="pf-m-plain" text-input-group--value="Text input group with plain styling"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--aria-label="Plain"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
 {{/text-input-group}}
@@ -52,11 +52,11 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--placeholder='placeholder'}}
+      {{> text-input-group-text-input text-input-group-text-input--placeholder='placeholder' text-input-group-text-input--aria-label="Utilities and icon with placeholder"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear utilities and icon with placeholder example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -67,7 +67,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{#> text-input-group text-input-group--IsSuccess=true text-input-group--id="text-input-group-validation-success"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input text-input-group--value="Success validation"}}
+      {{> text-input-group-text-input text-input-group--value="Success validation" text-input-group-text-input--aria-label="Success validation"}}
       {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
@@ -77,7 +77,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="Warning validation with icon at start"}}
+      {{> text-input-group-text-input text-input-group--value="Warning validation with icon at start" text-input-group-text-input--aria-label="Warning validation"}}
       {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
@@ -87,7 +87,22 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="Error validation with icon at start and utilities"}}
+      {{> text-input-group-text-input text-input-group--value="Error validation with icon at start and utilities" text-input-group-text-input--aria-label="Error validation"}}
+      {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+  {{#> text-input-group-utilities}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear error validation example"'}}
+      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+    {{/button}}
+  {{/text-input-group-utilities}}
+{{/text-input-group}}
+
+<br/>
+{{#> text-input-group text-input-group--IsError=true text-input-group--id="text-input-group-validation-error"}}
+  {{#> text-input-group-main }}
+    {{#> text-input-group-text}}
+      {{> text-input-group-text-input text-input-group--value="Error validation with no icon but with utilities"}}
       {{> text-input-group-icon text-input-group-icon--IsStatus=true}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
@@ -105,11 +120,11 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{#> text-input-group-main}}
     {{> text-input-group--label-group}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--aria-label="Filters"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear filter example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -120,11 +135,11 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{#> text-input-group-main}}
     {{> text-input-group--label-group}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--aria-label="Filters expanded"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear input"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear filters expanded example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -134,7 +149,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 {{#> text-input-group text-input-group--id="text-input-group-autocomplete-last-option-hint" text-input-group--value="apples"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" }}
+      {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" text-input-group-text-input--aria-label="Autocomplete with last option hint"}}
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
@@ -146,22 +161,22 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
 The React implementation can be found in the [search input](/components/search-input) component.
 
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Find by name"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Find by name" text-input-group--search-input--aria-label="Search input group"}}
 ```
 
 ### Search input group, no match
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-no-match" text-input-group-text-input--placeholder="Find by name" text-input-group--value="Joh"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-no-match" text-input-group-text-input--placeholder="Find by name" text-input-group--value="Joh" text-input-group--search-input--aria-label="Search input group no match" text-input-group--search-input--clear-button-aria-label="Clear search input group no match"}}
 ```
 
 ###  Search input group, match with result count
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-result-count" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="3"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-result-count" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="3" text-input-group--search-input--aria-label="Search input group match with result count" text-input-group--search-input--clear-button-aria-label="Clear search input group match with result count"}}
 ```
 
 ### Search input group, match with navigable options
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch="true"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch=true text-input-group--search-input--IsNavigable=true text-input-group--search-input--aria-label="Search input group match with navigable options" text-input-group--search-input--clear-button-aria-label="Clear search input group match with navigable options"}}
 ```
 
 ### Search input group, expandable
@@ -170,13 +185,13 @@ The React implementation can be found in the [search input](/components/search-i
 <br>
 {{#> input-group input-group--IsPlain=true input-group--IsSearchExpandable=true}}
   {{#> input-group-item input-group-item--IsSearchInput=true}}
-    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
+    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search input group collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close search input group expandable"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -185,13 +200,13 @@ The React implementation can be found in the [search input](/components/search-i
 <br>
 {{#> input-group input-group--IsPlain=true input-group--IsSearchExpandable=true input-group--IsExpanded=true}}
   {{#> input-group-item input-group-item--IsSearchInput=true}}
-    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search"}}
+    {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group expanded" text-input-group--search-input--clear-button-aria-label="Clear search input group expandable"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search input group collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close search input group expandable"'}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -200,10 +215,10 @@ The React implementation can be found in the [search input](/components/search-i
 ```hbs
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name"}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name" text-input-group--search-input--aria-label="Search input group with submit button"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Submit search input group"' button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -212,13 +227,13 @@ The React implementation can be found in the [search input](/components/search-i
 ```hbs
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned" text-input-group--search-input--aria-label="Search input group advanced search" text-input-group--search-input--clear-button-aria-label="Clear advance search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="caret-down" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="caret-down" button--attribute='aria-expanded="false" aria-label="Advanced search collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search advance search input group collapsed"' button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -227,7 +242,7 @@ The React implementation can be found in the [search input](/components/search-i
 ```hbs
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded" text-input-group--value="username:root firstname:ned"}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded" text-input-group--value="username:root firstname:ned" text-input-group--search-input--aria-label="Search input group advanced search expanded" text-input-group--search-input--clear-button-aria-label="Clear advance search input group expanded"}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{> button
@@ -235,14 +250,14 @@ The React implementation can be found in the [search input](/components/search-i
       button--IsIcon=true
       button--icon="caret-down"
       button--IsExpanded=true
-      button--aria-label="Advanced search"}}
+      button--aria-label="Advanced search expanded"}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{> button
       button--IsControl=true
       button--IsIcon=true
       button--icon="arrow-right"
-      button--aria-label="Search"
+      button--aria-label="Search advance search input group expanded"
       button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
@@ -293,10 +308,10 @@ The React implementation can be found in the [search input](/components/search-i
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+            {{#> button button--id="submit-advanced-search-expanded" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded search-input-group-advanced-search-expanded"}}
               Submit
             {{/button}}
-            {{#> button button--IsLink=true button--IsReset=true}}
+            {{#> button button--id="reset-advanced-search-expanded" button--IsLink=true button--IsReset=true button--aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"}}
               Reset
             {{/button}}
           {{/form-actions}}
@@ -309,7 +324,7 @@ The React implementation can be found in the [search input](/components/search-i
 
 ### Search input group, autocomplete
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete" text-input-group--value="app"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete" text-input-group--value="app" text-input-group--search-input--aria-label="Search input group autocomplete" text-input-group--search-input--clear-button-aria-label="Clear autocomplete search input group"}}
 
 {{#> menu}}
   {{#> menu-content}}
@@ -357,7 +372,7 @@ The React implementation can be found in the [search input](/components/search-i
 
 ### Search input group, autocomplete last option hint
 ```hbs
-{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete-last-option-hint" text-input-group--value="app" text-input-group-text-input--hint-text="appleseed"}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete-last-option-hint" text-input-group--value="app" text-input-group-text-input--hint-text="appleseed" text-input-group--search-input--aria-label="Search input group autocomplete last option hint" text-input-group--search-input--clear-button-aria-label="Clear autocomple search input group last option hint"}}
 
 {{#> menu}}
   {{#> menu-content}}
@@ -381,7 +396,7 @@ The React implementation can be found in the [search input](/components/search-i
 <div class="ws-example-wrapper">
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete" text-input-group--value="username:root firstname:n"}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete" text-input-group--value="username:root firstname:n" text-input-group--search-input--aria-label="Search input group advanced search expanded with autocomplete" text-input-group--search-input--clear-button-aria-label="Clear advance search input group expanded with autocomplete"}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{> button
@@ -389,14 +404,14 @@ The React implementation can be found in the [search input](/components/search-i
       button--IsIcon=true
       button--icon="caret-down"
       button--IsExpanded=true
-      button--aria-label="Advanced search"}}
+      button--aria-label="Advanced search expanded with autocomplete"}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{> button
       button--IsControl=true
       button--IsIcon=true
       button--icon="arrow-right"
-      button--aria-label="Search"
+      button--aria-label="Search advanced search input group expanded with autocomplete"
       button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
@@ -447,10 +462,10 @@ The React implementation can be found in the [search input](/components/search-i
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
           {{#> form-actions}}
-            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+            {{#> button button--id="submit-advanced-search-expanded-with-autocomplete" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
               Submit
             {{/button}}
-            {{#> button button--IsLink=true button--IsReset=true}}
+            {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
               Reset
             {{/button}}
           {{/form-actions}}

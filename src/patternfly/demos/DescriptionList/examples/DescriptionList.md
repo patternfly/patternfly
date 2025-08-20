@@ -21,7 +21,8 @@ cssPrefix: pf-d-description-list
       {{/card-header}}
       {{> divider}}
       {{#> card-body}}
-        {{> description-list-template description-list--modifier="pf-m-auto-fit"}}
+        {{> description-list-template description-list--modifier="pf-m-auto-fit"
+        description-list--aria-label="Details"}}
       {{/card-body}}
     {{/card}}
   {{/page-main-section}}
@@ -34,7 +35,7 @@ cssPrefix: pf-d-description-list
 {{> page-template page-template--id="description-list-in-drawer-example" page-template--IsDrawer="true" page-template--drawer-panel--IsOpen="true"}}
 
 {{#*inline "page-template-drawer-panel-tab-content"}}
-  {{#> description-list description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-compact"}}
+  {{#> description-list description-list--aria-label="Overview" description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-compact"}}
     {{#> description-list-group}}
       {{#> description-list-term}}
         {{#> description-list-text}}
@@ -283,7 +284,7 @@ cssPrefix: pf-d-description-list
             {{/title}}
           {{/grid-item}}
           {{#> grid-item}}
-            {{#> description-list description-list--modifier="pf-m-2-col-on-xl"}}
+            {{#> description-list description-list--aria-label="Service overview" description-list--modifier="pf-m-2-col-on-xl"}}
               {{#> description-list-group}}
                 {{#> description-list-term}}
                   {{#> description-list-text}}
@@ -386,7 +387,7 @@ cssPrefix: pf-d-description-list
             {{/title}}
           {{/grid-item}}
           {{#> grid-item}}
-            {{#> description-list}}
+            {{#> description-list description-list--aria-label="Service routing"}}
               {{#> description-list-group}}
                 {{#> description-list-term}}
                   {{#> description-list-text}}

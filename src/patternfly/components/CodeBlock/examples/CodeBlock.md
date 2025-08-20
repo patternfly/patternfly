@@ -11,10 +11,10 @@ cssPrefix: pf-v6-c-code-block
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard basic example code content"' button--IsIcon=true button--icon="copy"}}
       {{/code-block-actions-item}}
       {{#> code-block-actions-item}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Run in Web Terminal"' button--IsIcon=true button--icon="play"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Run basic example code in Web Terminal"' button--IsIcon=true button--icon="play"}}
       {{/code-block-actions-item}}
     {{/code-block-actions}}
   {{/code-block-header}}
@@ -36,10 +36,10 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs{{~/
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard expandable example code content"' button--IsIcon=true button--icon="copy"}}
       {{/code-block-actions-item}}
       {{#> code-block-actions-item}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Run in Web Terminal"' button--IsIcon=true button--icon="play"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Run expandable example code in Web Terminal"' button--IsIcon=true button--icon="play"}}
       {{/code-block-actions-item}}
     {{/code-block-actions}}
   {{/code-block-header}}
@@ -77,10 +77,10 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard"' button--IsIcon=true button--icon="copy"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Copy to clipboard expandable expanded example code content"' button--IsIcon=true button--icon="copy"}}
       {{/code-block-actions-item}}
       {{#> code-block-actions-item}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Run in Web Terminal"' button--IsIcon=true button--icon="play"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Run expandable expanded example code in Web Terminal"' button--IsIcon=true button--icon="play"}}
       {{/code-block-actions-item}}
     {{/code-block-actions}}
   {{/code-block-header}}

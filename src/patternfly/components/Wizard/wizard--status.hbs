@@ -8,7 +8,7 @@
   {{/wizard-header}}
   {{#> wizard-toggle}}
     {{#> wizard-toggle-list}}
-      {{#> wizard-toggle-list-item wizard-toggle-list-item--IsSuccess=wizard--status--IsSuccess wizard-toggle-list-item--IsDanger=wizard--status--IsDanger}}
+      {{#> wizard-toggle-list-item wizard-toggle-list-item--IsSuccess=wizard--status--IsSuccess wizard-toggle-list-item--IsDanger=wizard--status--IsDanger wizard-toggle-list-item--IsWarning=wizard--status--IsWarning}}
         Configuration
         {{> wizard-toggle-separator}}
       {{/wizard-toggle-list-item}}
@@ -27,7 +27,7 @@
                 Information
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
-            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true" wizard-nav-item--IsSuccess=wizard--status--IsSuccess wizard-nav-item--IsDanger=wizard--status--IsDanger}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true" wizard-nav-item--IsSuccess=wizard--status--IsSuccess wizard-nav-item--IsDanger=wizard--status--IsDanger wizard-nav-item--IsWarning=wizard--status--IsWarning}}
               {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
                 Configuration
               {{/wizard-nav-link}}

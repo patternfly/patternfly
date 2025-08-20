@@ -29,22 +29,22 @@ cssPrefix: pf-v6-c-title
 
 ### Heading level modifiers
 ```hbs
-{{#> title titleType="div" title--modifier="pf-m-h1"}}
+{{#> title titleType="h1" title--modifier="pf-m-h1"}}
   H1-styled title
 {{/title}}
-{{#> title titleType="div" title--modifier="pf-m-h2"}}
+{{#> title titleType="h2" title--modifier="pf-m-h2"}}
   H2-styled title
 {{/title}}
-{{#> title titleType="div" title--modifier="pf-m-h3"}}
+{{#> title titleType="h3" title--modifier="pf-m-h3"}}
   H3-styled title
 {{/title}}
-{{#> title titleType="div" title--modifier="pf-m-h4"}}
+{{#> title titleType="h4" title--modifier="pf-m-h4"}}
   H4-styled title
 {{/title}}
-{{#> title titleType="div" title--modifier="pf-m-h5"}}
+{{#> title titleType="h5" title--modifier="pf-m-h5"}}
   H5-styled title
 {{/title}}
-{{#> title titleType="div" title--modifier="pf-m-h6"}}
+{{#> title titleType="h6" title--modifier="pf-m-h6"}}
   H6-styled title
 {{/title}}
 ```
@@ -55,7 +55,7 @@ cssPrefix: pf-v6-c-title
   2xl page title
 {{/title}}
 
-{{#> title titleType="div" title--modifier="pf-m-h1" title--IsPageTitle=true}}
+{{#> title titleType="h1" title--modifier="pf-m-h1" title--IsPageTitle=true}}
   H1 page title
 {{/title}}
 ```
@@ -78,7 +78,7 @@ The content component defines margin on headers. To regain the same spacing use,
 ### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-title` | `*` |  Initiates a title. Always use it with a modifier class. |
+| `.pf-v6-c-title` | `h1-h6` |  Initiates a title. Always use it with a modifier class. |
 | `.pf-m-4xl` | `.pf-v6-c-title` | Modifies for 4xl size |
 | `.pf-m-3xl` | `.pf-v6-c-title` | Modifies for 3xl size |
 | `.pf-m-2xl` | `.pf-v6-c-title` | Modifies for 2xl size |
