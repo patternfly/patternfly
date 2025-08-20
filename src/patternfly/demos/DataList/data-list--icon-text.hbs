@@ -1,12 +1,23 @@
 {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
   {{#> l-flex-item}}
-    {{#if data-list--icon-text--icon}}
-      <i class="fas fa-{{data-list--icon-text--icon}}" aria-hidden="true"></i>
-    {{else}}
-      <i class="fas fa-code-branch" aria-hidden="true"></i>
-    {{/if}}
+    {{#> icon}}
+      {{#> icon-content icon-content--modifier=data-list--icon-text--modifier}}
+        {{#if data-list--icon-text--icon}}
+          <i class="fas fa-{{data-list--icon-text--icon}}" aria-hidden="true"></i>
+        {{else}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/if}}
+      {{/icon-content}}
+    {{/icon}}
   {{/l-flex-item}}
   {{#> l-flex-item}}
     <span>{{data-list--icon-text--text}}</span>
+    {{#>screen-reader}}
+      {{#if data-list--icon-text--screenreader-text}}
+        {{data-list--icon-text--screenreader-text}}
+      {{else}}
+        Branches
+      {{/if}}
+    {{/screen-reader}}
   {{/l-flex-item}}
 {{/l-flex}}
