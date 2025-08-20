@@ -13,7 +13,7 @@
   --#{$menu-toggle}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--action--default);
+  --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
   --#{$menu-toggle}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$menu-toggle}--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
@@ -22,14 +22,14 @@
   // * Menu toggle hover
   --#{$menu-toggle}--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--hover--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--hover--BorderWidth: var(--pf-t--global--border--width--action--default);
+  --#{$menu-toggle}--hover--BorderWidth: var(--pf-t--global--border--width--control--hover);
   --#{$menu-toggle}--hover--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$menu-toggle}--hover__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // * Menu toggle expanded
   --#{$menu-toggle}--expanded--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--expanded--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--expanded--BorderWidth: var(--pf-t--global--border--width--action--clicked);
+  --#{$menu-toggle}--expanded--BorderWidth: var(--pf-t--global--border--width--control--clicked);
   --#{$menu-toggle}--expanded--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$menu-toggle}--expanded__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
 
@@ -139,9 +139,9 @@
   --#{$menu-toggle}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$menu-toggle}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$menu-toggle}--m-plain--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$menu-toggle}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--default);
-  --#{$menu-toggle}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
-  --#{$menu-toggle}--m-plain--expanded--BorderWidth: var(--pf-t--global--border--width--action--clicked);
+  --#{$menu-toggle}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$menu-toggle}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$menu-toggle}--m-plain--expanded--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
