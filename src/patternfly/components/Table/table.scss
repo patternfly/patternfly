@@ -96,8 +96,8 @@
   --#{$table}__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$table}__button--OutlineOffset: calc(var(--pf-t--global--border--width--strong) * -1);
   --#{$table}__button--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$table}__button--BorderWidth: var(--pf-t--global--high-contrast--border--width--action--default);
-  --#{$table}__button--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--action--hover);
+  --#{$table}__button--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$table}__button--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
