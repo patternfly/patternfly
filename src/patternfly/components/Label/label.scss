@@ -11,6 +11,7 @@
   --#{$label}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$label}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$label}--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$label}--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
 
   // Gray (default)
   --#{$label}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
@@ -219,17 +220,17 @@
   --#{$label}__text--MaxWidth: 100%;
 
   // Actions
-  --#{$label}__actions--MarginInlineEnd: calc(var(--#{$label}__actions--c-button--PaddingInlineEnd) * -1);
+  --#{$label}__actions--MarginInlineEnd: 0; // TODO - remove in breaking change
 
   // Actions button (close)
   --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label}__actions--c-button--OutlineOffset: #{pf-size-prem(-3px)};
-  --#{$label}__actions--c-button--MarginBlockStart: calc(var(--#{$label}__actions--c-button--PaddingBlockStart) * -1);
-  --#{$label}__actions--c-button--MarginBlockEnd: calc(var(--#{$label}__actions--c-button--PaddingBlockEnd) * -1);
-  --#{$label}__actions--c-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$label}__actions--c-button--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
-  --#{$label}__actions--c-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
-  --#{$label}__actions--c-button--PaddingInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$label}__actions--c-button--MarginBlockStart: 0; // TODO - remove in breaking change
+  --#{$label}__actions--c-button--MarginBlockEnd: 0; // TODO - remove in breaking change
+  --#{$label}__actions--c-button--PaddingBlockStart: 0; // TODO - remove in breaking change
+  --#{$label}__actions--c-button--PaddingInlineEnd: 0; // TODO - remove in breaking change
+  --#{$label}__actions--c-button--PaddingBlockEnd: 0; // TODO - remove in breaking change
+  --#{$label}__actions--c-button--PaddingInlineStart: 0; // TODO - remove in breaking change
 
   // Editable
   --#{$label}--m-editable--TextDecorationLine: var(--pf-t--global--text-decoration--editable-text--line--default);
@@ -255,6 +256,7 @@
 
 .#{$label} {
   position: relative;
+  gap: var(--#{$label}--Gap);
   min-width: var(--#{$label}--MinWidth);
   max-width: var(--#{$label}--MaxWidth);
   padding-block-start: var(--#{$label}--PaddingBlockStart);
@@ -586,6 +588,10 @@
   margin-inline-end: var(--#{$label}__actions--MarginInlineEnd);
 
   .#{$button} {
+    @at-root .#{$label}.pf-m-compact & {
+      --#{$button}--m-plain--m-no-padding--after--Inset: 0 calc(#{pf-size-prem(2px) * -1});
+    }
+
     --#{$button}--FontSize: var(--#{$label}__actions--c-button--FontSize);
     --#{$button}--m-plain--m-no-padding--PaddingBlockStart: var(--#{$label}__actions--c-button--PaddingBlockStart);
     --#{$button}--m-plain--m-no-padding--PaddingInlineEnd: var(--#{$label}__actions--c-button--PaddingInlineEnd);
