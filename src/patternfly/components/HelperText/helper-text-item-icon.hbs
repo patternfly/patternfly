@@ -2,7 +2,6 @@
   {{#if helper-text-item-icon--attribute}}
     {{{helper-text-item-icon--attribute}}}
   {{/if}}>
-  {{#if helper-text-item--HasIcon}}
     {{#if helper-text-item--IsIndeterminate}}
       <i class="fas fa-fw fa-minus" aria-hidden="true"></i>
     {{else if helper-text-item--IsWarning}}
@@ -11,12 +10,9 @@
       <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
     {{else if helper-text-item--IsError}}
       <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
-    {{else}}
-      <i class="fas fa-fw fa-minus" aria-hidden="true"></i>
+    {{else if @partial-block}}
+      {{> @partial-block}}
+    {{else if helper-text-item-icon--type}}
+      <i class="fas fa-fw fa-{{helper-text-item-icon--type}}" aria-hidden="true"></i>
     {{/if}}
-  {{else if @partial-block}}
-    {{> @partial-block}}
-  {{else}}
-    <i class="fas fa-fw fa-{{helper-text-item-icon--type}}" aria-hidden="true"></i>
-  {{/if}}
 </span>

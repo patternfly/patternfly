@@ -25,7 +25,7 @@ import './DatePicker.css'
 
 ### Helper text
 ```hbs
-{{#> date-picker date-picker--id="helper-text" helper-text--value="Select a date"}}
+{{#> date-picker date-picker--id="helper-text" helper-text--value="Select a date" helper-text-item--HasNoIcon=true}}
   {{#> input-group}}
     {{#> input-group-item input-group-item--IsFill=true}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
@@ -39,7 +39,7 @@ import './DatePicker.css'
 
 ### Invalid
 ```hbs
-{{#> date-picker date-picker--id="invalid" helper-text--value="Invalid date" helper-text-item--IsError="true" helper-text-item--HasIcon=true}}
+{{#> date-picker date-picker--id="invalid" helper-text--value="Invalid date" helper-text-item--IsError=true}}
   {{#> input-group}}
     {{#> input-group-item input-group-item--IsFill=true}}
       {{> form-control controlType="input" input="true" form-control--IsError="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
