@@ -62,7 +62,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$dual-list-selector}__list-item-row--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$dual-list-selector}__list-item-row--m-selected--BorderWidth: var(--pf-t--global--high-contrast--border--width--strong);
+  --#{$dual-list-selector}__list-item-row--m-selected--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
 
