@@ -46,9 +46,9 @@
   // * Menu list item
   --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}__list-item--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$menu}__list-item--BorderWidth: var(--pf-t--global--high-contrast--border--width--control--default);
-  --#{$menu}__list-item--BorderColor: transparent;
-  --#{$menu}__list-item--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$menu}__list-item--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$menu}__list-item--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$menu}__list-item--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$menu}__list-item--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
   --#{$menu}__list-item--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$menu}__list-item--TransitionProperty: background-color;
@@ -225,7 +225,6 @@
   // TODO: Explore this fallback method
   // padding-block-start: var(--#{$menu}--PaddingBlockStart, var(--#{$menu}--PaddingBlock));
   // padding-block-end: var(--#{$menu}--PaddingBlockEnd, var(--#{$menu}--PaddingBlock));
-  box-sizing: content-box;
   display: grid;
   row-gap: var(--#{$menu}--RowGap);
   width: var(--#{$menu}--Width);
@@ -299,6 +298,7 @@
 
     :where(.#{$menu}) {
       padding: 0;
+      border: 0;
     }
 
     &.pf-m-drilled-in {
@@ -528,7 +528,7 @@
   &:focus-within,
   &:has(> :hover) {
     --#{$menu}__list-item--BackgroundColor: var(--#{$menu}__list-item--hover--BackgroundColor);
-    --#{$menu}__list-item--BorderColor: var(--#{$menu}__list-item--hover--BorderColor);
+    --#{$menu}__list-item--BorderWidth: var(--#{$menu}__list-item--hover--BorderWidth);
 
     .#{$menu}__item-select-icon,
     .#{$menu}__item-external-icon {
