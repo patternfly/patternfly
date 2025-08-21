@@ -11,7 +11,7 @@
     {{{form-helper-text--attribute}}}
   {{/if}}>
   {{#if helper-text--value}}
-    {{> helper-text helper-text-item--id=(concat form-group--id '-helper') helper-text-item--HasIcon=true}}
+    {{> helper-text helper-text-item--id=(concat form-group--id '-helper')}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

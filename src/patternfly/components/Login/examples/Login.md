@@ -16,7 +16,7 @@ wrapperTag: div
       {{> __login-main-header}}
       {{#> login-main-body}}
         {{#> form}}
-          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
             {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
@@ -55,7 +55,7 @@ wrapperTag: div
       {{> __login-main-header}}
       {{#> login-main-body}}
         {{#> form}}
-          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text-item--IsError=true}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="invalid-login-demo-form-username"' required="true"}}Username{{/form-label}}
             {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--IsError='true' form-control--attribute='type="text" id="invalid-login-demo-form-username" name="invalid-login-demo-form-username" aria-invalid="true"'}}{{/form-control}}
@@ -94,7 +94,7 @@ wrapperTag: div
       {{> __login-main-header}}
       {{#> login-main-body}}
         {{#> form}}
-          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
             {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
@@ -136,7 +136,7 @@ wrapperTag: div
       {{> __login-main-header}}
       {{#> login-main-body}}
         {{#> form}}
-          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true}}
           {{#> form-helper-text form-helper-text--modifier="pf-m-error pf-m-hidden"}}
             {{#> form-helper-text-icon}}
               <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
@@ -184,7 +184,7 @@ wrapperTag: div
       {{> __login-main-header __login-main-header--HasLangaugeSelector="true"}}
       {{#> login-main-body}}
         {{#> form}}
-          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+          {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
             {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
