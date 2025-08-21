@@ -222,7 +222,7 @@ wrapperTag: div
 | `.pf-v6-c-login__header` | `<header>` | Positions the login header. **Required**|
 | `.pf-v6-c-login__header .pf-v6-c-brand` | `<img>` | Creates a brand image inside of login header. **Required** |
 | `.pf-v6-c-login__main` | `<main>` | Positions the login main area. **Required** |
-| `.pf-v6-c-login__main-header` | `<header>` | Creates the header of the main area. **Required** |
+| `.pf-v6-c-login__main-header` | `<div>` | Creates the header of the main area. **Required** |
 | `.pf-v6-c-login__main-header .pf-v6-c-title` | `<h1>,<h2>,<h3>,<h4>,<h5>,<h6>` | Creates a title in the main header area. **Required** |
 | `.pf-v6-c-login__main-header-desc` | `<p>` | Creates the description in the main area header. |
 | `.pf-v6-c-login__main-header-utilities` | `<div>` | Creates a utilities section in the main header area. **Note:** For use with a language selector menu. |
