@@ -57,7 +57,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   // List item
   --#{$dual-list-selector}__list-item-row--FontSize: var(--pf-t--global--font--size--sm);
   --#{$dual-list-selector}__list-item-row--BackgroundColor:  var(--pf-t--global--background--color--action--plain--default);
-  --#{$dual-list-selector}__list-item-row--BorderWidth: 0;
+  --#{$dual-list-selector}__list-item-row--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$dual-list-selector}__list-item-row--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$dual-list-selector}__list-item-row--hover--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
