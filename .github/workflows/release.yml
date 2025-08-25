@@ -27,6 +27,9 @@ jobs:
       #   with:
       #     path: '**/node_modules'
       #     key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
       - run: yarn install --immutable
         # if: steps.yarn-cache.outputs.cache-hit != 'true'
       - run: yarn lint:sass
