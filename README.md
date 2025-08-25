@@ -16,12 +16,12 @@ Any of the files above are meant for use in consuming the library. The recommend
 
 ## Development
 
-**PatternFly Development requires Node v22.17.1 or greater**
+**PatternFly Development requires Node v20.18.3 or greater**
 
 To setup the PatternFly development environment:
 
 - clone the project
-- ensure you have Node.js v22.17.1 or greater installed
+- ensure you have Node.js v20.18.3 or greater installed
 - enable corepack: `corepack enable`
 - run `yarn install` from the project root
 - run `yarn start`
