@@ -209,7 +209,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 item-1" id="' data-list--id '-toggle-1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
