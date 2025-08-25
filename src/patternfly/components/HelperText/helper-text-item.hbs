@@ -12,9 +12,9 @@
   {{#if helper-text-item--attribute}}
     {{{helper-text-item--attribute}}}
   {{/if}}>
-  {{#if helper-text-item--HasIcon}}
+  {{#unless helper-text-item--HasNoIcon}}
     {{> helper-text-item-icon}}
-  {{/if}}
+  {{/unless}}
   {{#if helper-text--value}}
     {{> helper-text-item-text}}
   {{else if @partial-block}}
