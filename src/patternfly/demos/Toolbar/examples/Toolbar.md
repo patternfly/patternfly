@@ -147,7 +147,7 @@ import './Toolbar.css'
     {{/toolbar-content-section}}
     {{> toolbar-expandable-content}}
   {{/toolbar-content}}
-  {{#> toolbar-content}}
+  {{#> toolbar-content toolbar-content--modifier="pf-m-toolbar-filtered-items"}}
     {{> toolbar-group-label-group}}
     {{> toolbar-group-action-inline}}
   {{/toolbar-content}}
