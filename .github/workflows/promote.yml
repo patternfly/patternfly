@@ -14,11 +14,17 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: '20.18.3'
+          node-version: '22.17.1'
+          check-latest: true
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/checkout@v4
+      
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+      
       - name: Build for promotion
-        run: yarn install --frozen-lockfile && yarn build
+        run: yarn install --immutable && yarn build
       - name: GitHub Tag Name example
         run: |
           echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
