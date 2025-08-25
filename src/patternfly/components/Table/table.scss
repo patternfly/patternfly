@@ -21,7 +21,8 @@
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // * Table thead toggle
-  --#{$table}__thead__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$table}__thead__toggle--PaddingBlockStart: var(--#{$table}--cell--Padding--base); // TODO - remove thead toggle custom padding in breaking change
+  --#{$table}__thead__toggle--PaddingBlockEnd: var(--#{$table}--cell--Padding--base); // TODO - remove thead toggle custom padding in breaking change
 
   // * Table body cell
   --#{$table}__tbody--cell--PaddingBlockStart: var(--#{$table}--cell--Padding--base);
@@ -835,12 +836,19 @@
   --#{$table}--cell--PaddingInlineStart: var(--#{$table}__toggle--PaddingInlineStart);
   --#{$table}--cell--PaddingInlineEnd: var(--#{$table}__toggle--PaddingInlineEnd);
 
+  @at-root .#{$table}__thead & {
+    .#{$button} {
+      margin-block-start: calc(var(--#{$button}--PaddingBlockStart) * -1);
+      margin-block-end: calc(var(--#{$button}--PaddingBlockEnd) * -1);
+      line-height: 1lh; // set line-height instead of --LineHeight to avoid breaking the min-width calc for plain buttons
+    }
+  }
+
   .#{$button} {
     &.pf-m-expanded .#{$table}__toggle-icon {
       transform: rotate(var(--#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate));
     }
   }
-
 
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
@@ -997,6 +1005,10 @@
 .#{$table}__column-help-action {
   align-self: last baseline;
   margin-inline-start: var(--#{$table}__column-help--MarginInlineStart);
+
+  .#{$button} {
+    line-height: 1lh; // set line-height instead of --LineHeight to avoid breaking the min-width calc for plain buttons
+  }
 }
 
 // - Table sort
@@ -1157,6 +1169,7 @@
 // - Table thead
 .#{$table}__thead {
   --#{$table}__tr--BorderBlockEndWidth: 0;
+  --#{$table}__toggle--PaddingBlockStart: var(--#{$table}__thead__toggle--PaddingBlockStart);
   --#{$table}__toggle--PaddingBlockEnd: var(--#{$table}__thead__toggle--PaddingBlockEnd);
 
   vertical-align: bottom;

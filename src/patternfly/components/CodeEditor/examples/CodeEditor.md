@@ -143,7 +143,7 @@ This is an extra container used in React to prevent event propagation if upload 
         {{#> empty-state-header}}
           {{> empty-state-icon empty-state-icon--type="code"}}
           {{#> empty-state-title}}
-            {{#> empty-state-title-text}}
+            {{#> empty-state-title-text empty-state-title-text--element="h4"}}
               Start editing
             {{/empty-state-title-text}}
           {{/empty-state-title}}
