@@ -15,8 +15,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20.18.3'
+          check-latest: true
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/checkout@v4
+      
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+      
       - name: Build for promotion
         run: yarn install --immutable && yarn build
       - name: GitHub Tag Name example
