@@ -35,17 +35,24 @@
   --#{$accordion}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$accordion}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$accordion}__toggle-icon--Transition: transform var(--#{$accordion}__toggle-icon--TransitionDuration) var(--#{$accordion}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
+  --#{$accordion}__toggle-icon--Rotate: 0;
   --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expandable content
   --#{$accordion}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$accordion}__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$accordion}__expandable-content--MarginBlockEnd: 0;
   --#{$accordion}__expandable-content--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$accordion}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__expandable-content--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__expandable-content--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$accordion}__expandable-content--m-fixed--MaxHeight--base: 0;
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
+  --#{$accordion}__expandable-content--MaxHeight: 0;
+  --#{$accordion}__expandable-content--Visibility: hidden;
+  --#{$accordion}__item--m-expanded__expandable-content--Visibility: visible;
+  --#{$accordion}__item--m-expanded__expandable-content--MaxHeight: 99999px;
+  --#{$accordion}__item--m-expanded__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
 
   // expand animation
   --#{$accordion}__item--before--TransitionDuration--expand--fade: var(--pf-t--global--motion--duration--fade--default);
@@ -155,6 +162,7 @@
   &.pf-m-expanded {
     --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}__toggle--m-expanded--PaddingBlockEnd);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
+    --#{$accordion}__toggle-icon--Rotate: var(--#{$accordion}__toggle--m-expanded__toggle-icon--Rotate);
     --#{$accordion}__item--before--TransitionDuration--slide: var(--#{$accordion}__item--before--TransitionDuration--expand--slide);
     --#{$accordion}__item--before--TransitionDuration--fade: var(--#{$accordion}__item--before--TransitionDuration--expand--fade);
     --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
@@ -163,10 +171,11 @@
     --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
     --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
     --#{$accordion}__expandable-content--TranslateY: var(--#{$accordion}__item--m-expanded__expandable-content--TranslateY);
-
-    .#{$accordion}__toggle-icon {
-      transform: rotate(var(--#{$accordion}__toggle--m-expanded__toggle-icon--Rotate));
-    }
+    --#{$accordion}__expandable-content--MarginBlockEnd: var(--#{$accordion}__item--m-expanded__expandable-content--MarginBlockEnd);
+    --#{$accordion}__expandable-content--MaxHeight: var(--#{$accordion}__item--m-expanded__expandable-content--MaxHeight);
+    --#{$accordion}__expandable-content--Visibility: var(--#{$accordion}__item--m-expanded__expandable-content--Visibility);
+    --#{$accordion}__expandable-content--TransitionDuration--fade: 0s;
+    --#{$accordion}__expandable-content--m-fixed--MaxHeight--base: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
   }
 }
 
@@ -205,6 +214,7 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
+  transform: rotate(var(--#{$accordion}__toggle-icon--Rotate));
 }
 
 .#{$accordion}__expandable-content:where([hidden]) {
@@ -212,12 +222,13 @@
 }
 
 .#{$accordion}__expandable-content {
-  max-height: 0;
+  max-height:  var(--#{$accordion}__expandable-content--MaxHeight);
+  margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
-  visibility: hidden;
+  visibility:  var(--#{$accordion}__expandable-content--Visibility);
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
   opacity: var(--#{$accordion}__expandable-content--Opacity);
@@ -228,18 +239,8 @@
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
+    max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight--base);
     overflow-y: auto;
-  }
-
-  .#{$accordion}__item.pf-m-expanded & {
-    max-height: 99999px;
-    margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
-    visibility: revert;
-    transition-delay: 0s;
-
-    &.pf-m-fixed {
-      max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
-    }
   }
 }
 
