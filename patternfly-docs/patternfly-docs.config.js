@@ -3,7 +3,7 @@ module.exports = {
   hasGdprBanner: false,
   hasFooter: false,
   hasVersionSwitcher: false,
-  hasDarkThemeSwitcher: true,
+  hasThemeSwitcher: true,
   hasRTLSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
