@@ -3331,28 +3331,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/ast-helpers@npm:^1.4.0-alpha.265":
-  version: 1.4.0-alpha.265
-  resolution: "@patternfly/ast-helpers@npm:1.4.0-alpha.265"
+"@patternfly/ast-helpers@npm:^1.4.0-alpha.266":
+  version: 1.26.2
+  resolution: "@patternfly/ast-helpers@npm:1.26.2"
   dependencies:
     acorn: "npm:^8.4.1"
     acorn-class-fields: "npm:^1.0.0"
     acorn-jsx: "npm:^5.3.2"
     acorn-static-class-features: "npm:^1.0.0"
     astring: "npm:^1.7.5"
-  checksum: 10c0/a75227df4810d6be231d9c2e7c077d835525dd7d6d39a23528c09c93b24a4cde32b2f35360ea97f856ae59a746e3de4ed3a5ba623e9a4a1d78a26adb5f3de81a
+  checksum: 10c0/c3190e23a939d8df13135ad763d86a5af175c16339c530a7144c13094cfbad47c158dcfb00dd8595e80d60eb8cc30e1192be48af252e239719b0a160aaca50e5
   languageName: node
   linkType: hard
 
-"@patternfly/documentation-framework@npm:6.18.7":
-  version: 6.18.7
-  resolution: "@patternfly/documentation-framework@npm:6.18.7"
+"@patternfly/documentation-framework@npm:6.19.0":
+  version: 6.19.0
+  resolution: "@patternfly/documentation-framework@npm:6.19.0"
   dependencies:
     "@babel/core": "npm:^7.24.3"
     "@babel/preset-env": "npm:7.27.1"
     "@babel/preset-react": "npm:^7.24.1"
     "@mdx-js/util": "npm:1.6.16"
-    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.265"
+    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.266"
     "@reach/router": "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer: "npm:10.4.19"
     babel-loader: "npm:^9.1.3"
@@ -3419,7 +3419,7 @@ __metadata:
     react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
-  checksum: 10c0/05f1684a5a99e9ff69cffd9c943483f923b22a3aaa2413222b1cb42e6649e2a05646652c0d470b1d233c9e038f9d3e75a72c122f5a081702cfec0f1c19ebf28c
+  checksum: 10c0/771485443a61b6bc67c1119dc6cc775f19ca37c0d8ae49fc6063e9d0b1b26024eb469a4e2013d59c7a30a67d2d774488816c047c86f769c3ea9571447650c304
   languageName: node
   linkType: hard
 
@@ -3471,7 +3471,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@fortawesome/fontawesome": "npm:^1.1.8"
     "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.18.7"
+    "@patternfly/documentation-framework": "npm:6.19.0"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.3.1"
     "@patternfly/react-core": "npm:6.3.1"
