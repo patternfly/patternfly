@@ -78,7 +78,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$page}__main-container--BorderWidth: var(--pf-t--global--border--width--page--default);
   --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--page--default); 
-  --#{$page}__main-container--Padding--offset: var(--#{$page}__main-container--BorderWidth);
+  --#{$page}__main-container--Padding--offset: 4px;
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
@@ -371,6 +371,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-direction: column;
   align-self: var(--#{$page}__main-container--AlignSelf);
   max-height: var(--#{$page}__main-container--MaxHeight);
+  padding:  calc(var(--#{$page}__main-container--Padding--offset) - var(--#{$page}__main-container--BorderWidth));
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
   background: var(--#{$page}__main-container--BackgroundColor);
@@ -383,12 +384,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-container--MarginInlineEnd: var(--#{$page}__main-container--xs--MarginInlineEnd);
     --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--xs--MaxHeight);
     --#{$page}__main-container--BorderRadius: var(--#{$page}__main-container--xs--BorderRadius);
-  }
-
-  @media (prefers-contrast: more) {
-    --#{$page}__main-container--Padding--offset: #{pf-size-prem(4px)};
-
-    padding: calc(var(--#{$page}__main-container--Padding--offset) - var(--#{$page}__main-container--BorderWidth));
   }
 }
 
