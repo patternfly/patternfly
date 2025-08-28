@@ -442,7 +442,7 @@
 
 .#{$card}__body {
   font-size: var(--#{$card}__body--FontSize);
-  color: var(--#{$card}__body--Color);
+  color: var(--#{$card}__body--Color, inherit);
 }
 
 .#{$card}__footer {
