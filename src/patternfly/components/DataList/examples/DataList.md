@@ -209,7 +209,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -238,7 +238,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item-2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -263,7 +263,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item-3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -296,7 +296,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -325,7 +325,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item-2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -353,7 +353,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-3" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item-3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -386,7 +386,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -411,7 +411,7 @@ When a list item includes more than one block of content, it can be difficult fo
           {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--id="item-1" data-list-item--expanded="true"}}
             {{#> data-list-item-row}}
               {{#> data-list-item-control}}
-                {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+                {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
               {{/data-list-item-control}}
               {{#> data-list-item-content}}
                 {{#> data-list-cell}}
@@ -429,7 +429,7 @@ When a list item includes more than one block of content, it can be difficult fo
           {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--id="item-2"}}
             {{#> data-list-item-row}}
               {{#> data-list-item-control}}
-                {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+                {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item-2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
               {{/data-list-item-control}}
               {{#> data-list-item-content}}
                 {{#> data-list-cell}}
@@ -447,7 +447,7 @@ When a list item includes more than one block of content, it can be difficult fo
           {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--expanded="true" data-list-item--id="item-3"}}
             {{#> data-list-item-row}}
               {{#> data-list-item-control}}
-                {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+                {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item-3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
               {{/data-list-item-control}}
               {{#> data-list-item-content}}
                 {{#> data-list-cell}}
@@ -469,7 +469,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item-2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -494,7 +494,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item-3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
@@ -693,7 +693,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -794,7 +794,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -812,7 +812,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item-2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -830,7 +830,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-3" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item-3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -848,7 +848,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-4"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle4 ' data-list--id '-item4" id="' data-list--id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content4"')}}{{/data-list-toggle}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle4 ' data-list--id '-item-4" id="' data-list--id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content4"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
