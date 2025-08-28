@@ -229,7 +229,7 @@ wrapperTag: div
 | `.pf-v6-c-login__main-body` | `<div>` | Creates the body of the main area. **Required** |
 | `.pf-v6-c-login__main-body .pf-v6-c-form` | `<form>` | Creates the login form in the main body area. **Required**|
 | `.pf-v6-c-login__main-body .pf-v6-c-form .pf-v6-c-form-helper-text` | `<form>` | Creates the error messages shown when the form has errors. When not active, apply `.pf-m-hidden`. **Required** |
-| `.pf-v6-c-login__main-footer` | `<footer>` | Creates the footer of the main area. **Required** |
+| `.pf-v6-c-login__main-footer` | `<div>` | Creates the footer of the main area. **Required** |
 | `.pf-v6-c-login__main-footer-links` | `<ul>` | Creates a list of links in the main footer. **Required** |
 | `.pf-v6-c-login__main-footer-links-item` | `<li>` | Creates proper spacing for links in the main footer. **Required** |
 | `.pf-v6-c-login__main-footer-links-item-link` | `<a>` | Creates link in links list in footer. **Required** |
