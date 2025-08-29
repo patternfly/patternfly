@@ -80,7 +80,7 @@ For information on how to contribute, refer to our [contribution guide](https://
 For more information on using CSS, Sass, and handlebars, refer to our [development guidelines](https://pf-core-staging.patternfly.org/guidelines).
 
 ### Custom icon guidelines
-For more information on custom icons, refer to our [custom icon guidelines](https://pf-core-staging.patternfly.org/adding-custom-icons).
+For more information on custom icons, refer to our [custom icon guidelines](https://pf-core-staging.patternfly.org/custom-icons).
 
 ## Beta components
 
