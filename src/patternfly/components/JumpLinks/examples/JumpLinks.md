@@ -7,8 +7,8 @@ cssPrefix: pf-v6-c-jump-links
 ## Examples
 ### Horizontal default
 ```hbs
-{{#> jump-links}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--aria-label="Horizontal default example navigation"}}
+  {{#> jump-links-list jump-links-list--attribute='aria-label="Horizontal default example list"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -16,7 +16,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -36,8 +36,8 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Horizontal with centered list
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-center"}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--modifier="pf-m-center" jump-links--aria-label="Horizontal with centered list example navigation"}}
+  {{#> jump-links-list jump-links-list--attribute='aria-label="Horizontal with centered list example list"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -45,7 +45,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -65,10 +65,10 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Horizontal with label
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section"}}
+{{#> jump-links jump-links--aria-label="Horizontal with label example navigation"}}
   {{#> jump-links-main}}
-    {{> jump-links-header}}
-    {{#> jump-links-list}}
+    {{> jump-links-header jump-links-header--attribute='id="horizontal-with-label-header-one"'}}
+    {{#> jump-links-list jump-links-list--attribute='aria-labelledby="horizontal-with-label-header-one"'}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
           {{#> jump-links-link-text}}
@@ -76,7 +76,7 @@ cssPrefix: pf-v6-c-jump-links
           {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
-      {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+      {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
         {{#> jump-links-link}}
           {{#> jump-links-link-text}}
             Active section
@@ -94,10 +94,10 @@ cssPrefix: pf-v6-c-jump-links
   {{/jump-links-main}}
 {{/jump-links}}
 <br/>
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-center"}}
+{{#> jump-links jump-links--modifier="pf-m-center" jump-links--aria-label="Horizontal with label second example navigation"}}
   {{#> jump-links-main}}
-    {{> jump-links-header}}
-    {{#> jump-links-list}}
+    {{> jump-links-header jump-links-header--attribute='id="horizontal-with-label-header-two"'}}
+    {{#> jump-links-list jump-links-list--attribute='aria-labelledby="horizontal-with-label-header-two"'}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
           {{#> jump-links-link-text}}
@@ -105,7 +105,7 @@ cssPrefix: pf-v6-c-jump-links
           {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
-      {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+      {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
         {{#> jump-links-link}}
           {{#> jump-links-link-text}}
             Active section
@@ -126,8 +126,8 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Vertical default
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-vertical"}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--aria-label="Vertical default example navigation"}}
+  {{#> jump-links-list jump-links-list--attribute='aria-label="Vertical default example list"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -135,7 +135,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -169,9 +169,9 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Vertical with label
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-vertical"}}
-  {{> jump-links-header}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--aria-label="Vertical with label example navigation" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header jump-links-header--attribute='id="vertical-with-label-header"'}}
+  {{#> jump-links-list jump-links-list--attribute='aria-labelledby="vertical-with-label-header"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -179,7 +179,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -213,10 +213,10 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Vertical with inactive subsections
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-vertical"}}
-  {{> jump-links-header}}
-  {{#> jump-links-list}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+{{#> jump-links jump-links--aria-label="Vertical with inactive subsections example navigation" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header jump-links-header--attribute='id="vertical-with-inactive-subsections-header"'}}
+  {{#> jump-links-list jump-links-list--attribute='aria-labelledby="vertical-with-inactive-subsections-header"'}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -273,9 +273,9 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Vertical with active subsections
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-vertical"}}
-  {{> jump-links-header}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--aria-label="Vertical with active subsections example navigation" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header jump-links-header--attribute='id="vertical-with-active-subsections-header"'}}
+  {{#> jump-links-list jump-links-list--attribute='aria-labelledby="vertical-with-active-subsections-header"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -297,7 +297,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
         {{#> jump-links-list newcontext}}
-          {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+          {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
             {{#> jump-links-link}}
               {{#> jump-links-link-text}}
                 Active subsection
@@ -333,9 +333,9 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Expandable
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--id="jump-links-expandable" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical"}}
-  {{> jump-links-header}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--aria-label="Expandable example navigation" jump-links--id="jump-links-expandable" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header jump-links-header--attribute='id="expandable-header-header"'}}
+  {{#> jump-links-list jump-links-list--attribute='aria-labelledby="expandable-header-header"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -343,7 +343,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -377,9 +377,9 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Expanded
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--id="jump-links-expanded" jump-links--IsExpandable="true" jump-links--IsExpanded="true" jump-links--modifier="pf-m-vertical"}}
-  {{> jump-links-header}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--aria-label="Expanded example navigation" jump-links--id="jump-links-expanded" jump-links--IsExpandable="true" jump-links--IsExpanded="true" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header jump-links-header--attribute='id="expanded-header"'}}
+  {{#> jump-links-list jump-links-list--attribute='aria-labelledby="expanded-header"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -387,7 +387,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -421,9 +421,9 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Expandable (responsive)
 ```hbs
-{{#> jump-links jump-links--aria-label="Jump to section" jump-links--id="jump-links-expandable-responsive" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
-  {{> jump-links-header}}
-  {{#> jump-links-list}}
+{{#> jump-links jump-links--aria-label="Expandable responsive navigation" jump-links--id="jump-links-expandable-responsive" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> jump-links-header jump-links-header--attribute='id="expandable-responsive-header"'}}
+  {{#> jump-links-list jump-links-list--attribute='aria-labelledby="expandable-responsive-header"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -431,7 +431,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -465,9 +465,9 @@ cssPrefix: pf-v6-c-jump-links
 
 ### Expandable (responsive) with no label
 ```hbs
-{{#> jump-links jump-links--id="jump-links-expandable-responsive-with-no-label" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--HasNoLabel="true"}}
+{{#> jump-links jump-links--id="jump-links-expandable-responsive-with-no-label" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--HasNoLabel="true" jump-links--aria-label="Expandable responsive with no label navigation"}}
   {{> jump-links-header}}
-  {{#> jump-links-list}}
+  {{#> jump-links-list jump-links-list--attribute='aria-label="Expandable responsive with no label example list"'}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
@@ -475,7 +475,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
