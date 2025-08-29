@@ -283,6 +283,13 @@ States of a component should be included as a nested element. This includes hove
     background: var(--pf-v6-c-button--hover--Background);
   }
 }
+
+// --block--pseudoelement--PropertyCamelCase 
+.pf-v6-c-alert { 
+  &::after { 
+    border-color: var(--pf-v6-c-alert--after--BackgroundColor); 
+  } 
+}
 ```
 
 #### Sass variables
