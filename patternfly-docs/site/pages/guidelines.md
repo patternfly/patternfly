@@ -40,7 +40,7 @@ Components are modular and independent structures concerned with how a thing loo
 - A component always touches all four sides of its parent container.
 - The component itself never has widths, floats or margins.
 - The first element in a component should never use top margins and should touch the top of its component.
-- Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](/accessibility-guide).
+- Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](https://www.patternfly.org/accessibility/about-accessibility).
 
 The parent container of a component is prefixed with `-c` (after the PatternFly prefix `pf-` and version `v6-`), for example: `.pf-v6-c-alert` or `.pf-v6-c-button`.
 
@@ -308,13 +308,13 @@ PatternFly follows [Harry Robert's CSS Guidelines](https://cssguidelin.es/) with
 
 PatternFly doesn't follow these rules:
 
-- [Table of contents](https://cssguidelin.es/#able-of-contents)
+- [Table of contents](https://cssguidelin.es/#table-of-contents)
 - [Titling](https://cssguidelin.es/#titling)
 - [Anatomy of a Ruleset](https://cssguidelin.es/#anatomy-of-a-ruleset)
 - [Multi-line CSS](https://cssguidelin.es/#multi-line-css)
 - [Indenting](https://cssguidelin.es/#indenting)
 - [Meaningful Whitespace](https://cssguidelin.es/#meaningful-whitespace)
-- [80 Characters Wide](https://cssguidelin.es/#characters-wide)
+- [80 Characters Wide](https://cssguidelin.es/#80-characters-wide)
 
 #### Deviations
 
