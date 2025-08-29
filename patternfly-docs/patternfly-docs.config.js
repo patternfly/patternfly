@@ -29,7 +29,7 @@ module.exports = {
     },
     {
       text: 'Custom icons',
-      path: '/adding-custom-icons'
+      path: '/custom-icons'
     }
   ],
   port: 8001
