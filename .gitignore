@@ -11,6 +11,12 @@
 npm-debug.log
 yarn-error.log
 package-lock.json
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 /.idea
 /coverage/
 *.swp
@@ -23,3 +29,4 @@ backstop_data/bitmaps_test*
 backstop_data/html_report*
 backstop_data/reports
 .history
+chrome

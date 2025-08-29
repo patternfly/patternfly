@@ -4,6 +4,9 @@
   "version": "0.0.0-development",
   "keywords": [],
   "license": "MIT",
+  "engines": {
+    "node": ">=20.18.3 <22"
+  },
   "scripts": {
     "a11y": "patternfly-a11y --config patternfly-a11y.config",
     "backstop:clean": "rimraf -- backstop_data/bitmaps_test backstop_data/html_report",
@@ -11,6 +14,7 @@
     "backstop:test:dark": "backstop test --config='backstop.js' --dark",
     "backstop:approve": "backstop approve --config='backstop.js'",
     "backstop:approve:dark": "backstop approve --config='backstop.js' --dark",
+    "backstop:chrome": "node backstop_data/engine_scripts/puppet/chrome.js",
     "build-patternfly": "gulp buildPatternfly",
     "build": "gulp build",
     "build:docs": "gulp buildWebpack",
@@ -47,7 +51,7 @@
     "@commitlint/config-conventional": "^19.1.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^20.1.0",
-    "@patternfly/documentation-framework": "6.18.2",
+    "@patternfly/documentation-framework": "6.20.0",
     "@patternfly/patternfly-a11y": "5.1.0",
     "@patternfly/react-code-editor": "6.3.1",
     "@patternfly/react-core": "6.3.1",
@@ -99,7 +103,8 @@
   },
   "resolutions": {
     "@babel/preset-env": "7.18.2",
-    "monaco-editor": "0.34.1"
+    "monaco-editor": "0.34.1",
+    "on-headers": "~1.1.0"
   },
   "repository": {
     "type": "git",
@@ -109,5 +114,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@4.9.3"
 }

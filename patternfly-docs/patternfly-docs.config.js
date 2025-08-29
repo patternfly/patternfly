@@ -3,7 +3,7 @@ module.exports = {
   hasGdprBanner: false,
   hasFooter: false,
   hasVersionSwitcher: false,
-  hasDarkThemeSwitcher: true,
+  hasThemeSwitcher: true,
   hasRTLSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
@@ -29,7 +29,7 @@ module.exports = {
     },
     {
       text: 'Custom icons',
-      path: '/adding-custom-icons'
+      path: '/custom-icons'
     }
   ],
   port: 8001
