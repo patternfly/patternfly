@@ -14,6 +14,7 @@
     "backstop:test:dark": "backstop test --config='backstop.js' --dark",
     "backstop:approve": "backstop approve --config='backstop.js'",
     "backstop:approve:dark": "backstop approve --config='backstop.js' --dark",
+    "backstop:chrome": "node backstop_data/engine_scripts/puppet/chrome.js",
     "build-patternfly": "gulp buildPatternfly",
     "build": "gulp build",
     "build:docs": "gulp buildWebpack",
