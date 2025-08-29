@@ -29,7 +29,7 @@ PatternFly is made out of isolated and modular structures that fall into 2 categ
 
 Layouts are the containers that allow for organizing and grouping its immediate children on the page.
 
-- A layout never imposes padding or element styles on its children.
+- A layout never imposes element styles on its children.
 
 The classes are prefixed with `-l` (after the PatternFly prefix `pf-` and version `v6-`), for example: `.pf-v6-l-split` or `.pf-v6-l-stack`.
 
@@ -44,13 +44,13 @@ Components are modular and independent structures concerned with how a thing loo
 
 The parent container of a component is prefixed with `-c` (after the PatternFly prefix `pf-` and version `v6-`), for example: `.pf-v6-c-alert` or `.pf-v6-c-button`.
 
-#### When to Create a New Component
+#### When to create a new component
 
 As a general rule, create an extension to an element with BEM modifiers if it's a change of color or scale. If the change generates a new entity, then create a new component.
 
 Repetition is better than the wrong abstraction.
 
-#### Additional Features
+#### Additional features
 
 **Utilities**
 
@@ -80,7 +80,7 @@ Demos show how components and layouts can be put together to build more complex 
 3. **Support keyboard navigation** where applicable
 4. **Work across supported browsers** (latest 2 versions of Chrome, Firefox, Safari, Edge)
 5. **Be responsive** and work on mobile devices
-6. **Support theming** through CSS custom properties
+6. **Support theming** through design tokens
 7. **Include comprehensive examples** showing different states
 8. **Pass accessibility audits** using our aXe testing
 
@@ -127,30 +127,36 @@ The main reason to have design token CSS variables is to maintain consistency ac
   - a `property` is something like `size` or `color`.
   - a `modifier` is something like `100`, `200`, or `sm`.
   - and a `state` is something like `hover`, or `clicked`.
-- They are concepts, never tied to an element or component. This is incorrect: `--pf-t--global--h1--font--size`, this is correct: `--pf-t--global--font--size--800`.
+- They are concepts, never tied to an element or component.
+  - Incorrect: `--pf-t--global--h1--font--size`
+  - Correct: `--pf-t--global--font--size--800`
 
-For example a design token CSS variables setup would look like:
+Furthermore, design tokens have been grouped into palette, base, and semantic tokens.
+
+- Palette tokens are fundamental values like palette colors.
+- Base tokens create a family of acceptable values for a concept like danger status.
+- Semantic tokens assign meaningful relationships to tokens, like borders for things with danger status.
+
+For example design tokens for setting up danger status styling would look like:
 
 ```scss
-// --pf-t--global--concept--modifier
---pf-t--global--spacer--200: .5rem;
---pf-t--global--spacer--300: 1rem;
---pf-t--global--spacer--400: 1.5rem;
-
-// --pf-t--global--property--modifier
---pf-t--global--font--size--600: 1.5rem;
---pf-t--global--font--size--700: 1.75rem;
---pf-t--global--font--size--800: 2.25rem;
-
-// --pf-t--color--concept--modifier  
---pf-t--color--blue--10: #e0f0ff;
---pf-t--color--blue--30: #92c5f9;
---pf-t--color--blue--50: #0066cc;
+// Palette tokens
+  --pf-t--color--red-orange--50: #f0561d;
+  --pf-t--color--red-orange--60: #b1380b;
+  --pf-t--color--red-orange--70: #731f00;
+// Base tokens
+  --pf-t--global--color--status--danger--100: var(--pf-t--color--red-orange--60);
+  --pf-t--global--color--status--danger--200: var(--pf-t--color--red-orange--70);
+  --pf-t--global--color--status--danger--300: var(--pf-t--color--red-orange--80);
+// Semantic tokens 
+  --pf-t--global--border--color--status--warning--clicked: var(--pf-t--global--color--status--warning--300);
+  --pf-t--global--border--color--status--warning--default: var(--pf-t--global--color--status--warning--200);
+  --pf-t--global--border--color--status--warning--hover: var(--pf-t--global--color--status--warning--300);
 ```
 
 #### Component variables
 
-The second layer is scoped to themeable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
+The second layer is scoped to customizable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
 
 - They follow this general formula `--pf-v6-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element][[--child]|[--tag]|[--c-component]]--PropertyCamelCase`.
   - `--pf-v6-c-block` refers to the block, usually the component or layout name (i.e., `--pf-v6-c-alert`).
@@ -160,16 +166,17 @@ The second layer is scoped to themeable component custom properties. This setup 
   - `--breakpoint` is a media query breakpoint such as `sm` for `--pf-t--global--breakpoint--sm`.
   - `--pseudo-element` is one of either `before` or `after`.
   - `--child`, `--tag`, or `--c-component` refers to a child element. It could be a tag or component name, like `--c-menu` or `--svg`, or it could use `--child` to refer to any child element. If any modifiers, states, breakpoints, or pseudo-elements are on the child, include those after this portion of the name.
+  - The value of a component variable should refer to a semantic design token.
 - It's possible to include multiple elements, modifiers, states, and breakpoints in a single component variable.
 - The order of elements, modifiers, states, and breakpoints in the variable name should match the selector order.
 
 For example:
 
 ```scss
-// Component scoped variables are defined by design token variables
---pf-v6-c-alert--Padding: var(--pf-t--global--spacer--400);
---pf-v6-c-alert--hover--BackgroundColor: var(--pf-t--global--background--color--200);
---pf-v6-c-alert__title--FontSize: var(--pf-t--global--font--size--700);
+// Component scoped variables are defined by semantic design token variables
+--pf-v6-c-alert--FontSize: var(--pf-t--global--font--size--body--default);
+--pf-v6-c-alert__title--Color: var(--pf-t--global--text--color--regular);
+--pf-v6-c-alert--m-danger--BorderColor: var(--pf-t--global--border--color--status--danger--default);
 
 // --block--PropertyCamelCase
 .pf-v6-c-alert {
@@ -281,10 +288,6 @@ States of a component should be included as a nested element. This includes hove
 #### Sass variables
 
 We create design token CSS variables to maintain consistency across the design system. These values also inform our component level variables.
-
-#### Nested calc() functions
-
-There is currently a bug in cssnano ([issue #64 on postcss-calc](https://github.com/postcss/postcss-calc/issues/64)) that causes nested `calc()` CSS functions to be removed. So a function like `calc(5 * calc(3 - 1))` becomes `calc(5 * 3 - 1)`. It's worth noting that this problem only impacts our distribution package. Nested `calc()` functions work fine in the development environment.
 
 #### Hover styles
 

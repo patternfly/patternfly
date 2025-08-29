@@ -74,13 +74,13 @@ When making visual changes to a full page example, new example preview screensho
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
 ### Contribution guide 
-[For information on how to contribute, refer to our guide.](https://pf-core-staging.patternfly.org/contribution)
+For information on how to contribute, refer to our [contribution guide](https://pf-core-staging.patternfly.org/contribution).
 
 ### Development guidelines
-[For more information on using CSS, Sass, and handlebars, refer to our guidelines.](https://pf-core-staging.patternfly.org/guidelines)
+For more information on using CSS, Sass, and handlebars, refer to our [development guidelines](https://pf-core-staging.patternfly.org/guidelines).
 
 ### Custom icon guidelines
-[For more information on custom icons, refer to our guidelines.](https://pf-core-staging.patternfly.org/adding-custom-icons)
+For more information on custom icons, refer to our [custom icon guidelines](https://pf-core-staging.patternfly.org/adding-custom-icons).
 
 ## Beta components
 
