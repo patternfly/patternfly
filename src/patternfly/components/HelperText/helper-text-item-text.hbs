@@ -2,7 +2,7 @@
   {{#if helper-text-item-text--attribute}}
     {{{helper-text-item-text--attribute}}}
   {{/if}}>
-  {{#unless helper-text-item--HasNoIcon}}
+  {{#ifAny helper-text-item--IsSuccess helper-text-item--IsError helper-text-item--IsWarning helper-text-item--IsIndeterminate helper-text-item-icon--type}}
     {{#> screen-reader}}
       {{#if helper-text-item--IsWarning}}
         Warning: 
@@ -14,7 +14,7 @@
         Indeterminate: 
       {{/if}}
     {{/screen-reader}}
-  {{/unless}}
+  {{/ifAny}}
   {{#if helper-text--value}}
     {{{helper-text--value}}}
   {{else if @partial-block}}

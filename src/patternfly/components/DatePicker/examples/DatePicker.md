@@ -25,7 +25,7 @@ import './DatePicker.css'
 
 ### Helper text
 ```hbs
-{{#> date-picker date-picker--id="helper-text" helper-text--value="Select a date" helper-text-item--HasNoIcon=true}}
+{{#> date-picker date-picker--id="helper-text" helper-text--value="Select a date"}}
   {{#> input-group}}
     {{#> input-group-item input-group-item--IsFill=true}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}

@@ -7,7 +7,7 @@ cssPrefix: pf-v6-c-helper-text
 ## Examples
 ### Basic
 ```hbs
-{{> helper-text helper-text--value="This is default helper text" helper-text-item--HasNoIcon=true}}
+{{> helper-text helper-text--value="This is default helper text"}}
 {{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true}}
 {{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true}}
 {{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true}}
@@ -20,9 +20,9 @@ You can include multiple `HelperTextItem` components inside a single `HelperText
 
 ```hbs
 {{#> helper-text helper-text--IsList=true}}
-  {{> helper-text-item helper-text--value="This is default helper text" helper-text-item--HasNoIcon=true}}
-  {{> helper-text-item helper-text--value="This is another default helper text in the same block" helper-text-item--HasNoIcon=true}}
-  {{> helper-text-item helper-text--value="And this is more default text in the same block" helper-text-item--HasNoIcon=true}}
+  {{> helper-text-item helper-text--value="This is default helper text"}}
+  {{> helper-text-item helper-text--value="This is another default helper text in the same block"}}
+  {{> helper-text-item helper-text--value="And this is more default text in the same block"}}
 {{/helper-text}}
 ```
 
@@ -32,7 +32,7 @@ If the `HelperTextItem` components are expected or intended to dynamically updat
 
 ```hbs
 {{#> helper-text-wrapper helper-text-item--IsDynamic=true}}
-  {{> helper-text helper-text--value="This is default helper text" helper-text-item--HasNoIcon=true}}
+  {{> helper-text helper-text--value="This is default helper text"}}
   {{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true}}
   {{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true}}
   {{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true}}
