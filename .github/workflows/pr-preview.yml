@@ -27,14 +27,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20.18.3'
-      #- uses: actions/cache@v4
-      #  id: yarn-cache
-      #  name: Load npm deps from cache
-      #  with:
-      #    path: '**/node_modules'
-      #    key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
-        # if: steps.yarn-cache.outputs.cache-hit != 'true'
+          check-latest: true
+      
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+      
+      - uses: actions/cache@v4
+        id: yarn-cache
+        name: Load Yarn cache
+        with:
+          # Cache Yarn and Cypress binaries
+          path: |
+            ~/.cache/Cypress
+            ~/.cache/yarn
+            .yarn/cache
+          key: ${{ runner.os }}-yarn-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-cache-
+      
+      - name: Install dependencies
+        shell: bash
+        run: yarn install --immutable --network-timeout 100000
       - run: yarn lint:sass
         name: Lint SASS
         if: always()
@@ -61,4 +75,3 @@ jobs:
       - run: node .github/upload-preview.js coverage
         name: Upload a11y report
         if: always()
-
