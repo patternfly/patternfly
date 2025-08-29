@@ -187,7 +187,7 @@ cssPrefix: pf-v6-c-file-upload
           file-upload-file-details--attribute='aria-describedby="with-error-example-helper-text" aria-invalid="true"'
           file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
         {{#> file-upload-helper-text}}
-          {{> helper-text helper-text-item--HasIcon=true helper-text--value="Must be a CSV file no larger than 1 KB" helper-text-item--id='with-error-example-helper-text' helper-text-item--IsError=true}}
+          {{> helper-text helper-text--value="Must be a CSV file no larger than 1 KB" helper-text-item--id='with-error-example-helper-text' helper-text-item--IsError=true}}
         {{/file-upload-helper-text}}
       {{/file-upload}}
     {{/form-group-control}}

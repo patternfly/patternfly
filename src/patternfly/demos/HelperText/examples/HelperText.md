@@ -42,10 +42,10 @@ section: components
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--IsError='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}{{/form-control}}
       {{#> form-helper-text form-helper-text--id=(concat form-group--id '-helper')}}
-        {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{> helper-text-item helper-text--value='This criteria has been met.' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
-          {{> helper-text-item helper-text--value='This criteria has not been met.' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsError=true}}
-          {{> helper-text-item helper-text--value='This criteria has been met.' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+        {{#> helper-text helper-text--IsList=true}}
+          {{> helper-text-item helper-text--value='This criteria has been met.' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='This criteria has not been met.' helper-text-item--IsDynamic=true helper-text-item--IsError=true}}
+          {{> helper-text-item helper-text--value='This criteria has been met.' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -59,7 +59,7 @@ section: components
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--IsSuccess='true' form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}{{/form-control}}
       {{#> form-helper-text form-helper-text--id=(concat form-group--id '-helper')}}
-        {{> helper-text helper-text--value='This is dynamic helper text with an icon showing success.' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+        {{> helper-text helper-text--value='This is dynamic helper text with an icon showing success.' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}

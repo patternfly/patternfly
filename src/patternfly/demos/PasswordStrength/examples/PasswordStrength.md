@@ -27,9 +27,9 @@ section: components
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
-          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
-          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--HasIcon=true  helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols'  helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -59,9 +59,9 @@ section: components
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
-          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsError=true}}
-          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--IsDynamic=true helper-text-item--IsError=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -78,7 +78,7 @@ section: components
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
-        {{> helper-text helper-text--value='Weak' helper-text-item--HasIcon=true helper-text-item--IsError=true}}
+        {{> helper-text helper-text--value='Weak' helper-text-item--IsError=true}}
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
@@ -92,9 +92,9 @@ section: components
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
-          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
-          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -111,7 +111,7 @@ section: components
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
-        {{> helper-text helper-text--value="Strong" helper-text-item--HasIcon=true helper-text-item--IsSuccess=true}}
+        {{> helper-text helper-text--value="Strong" helper-text-item--IsSuccess=true}}
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
@@ -125,9 +125,9 @@ section: components
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
-          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
-          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
