@@ -51,6 +51,7 @@
 
   // Hover on selectable card
   --#{$card}--m-selectable--hover--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$card}--m-selectable--hover--BorderWidth: var(--pf-t--global--border--width--box--hover);
 
   // Focus on selectable card (label)
   --#{$card}--m-selectable--focus--BorderColor: var(--pf-t--global--border--color--hover);
@@ -96,7 +97,7 @@
 
   // Secondary
   --#{$card}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$card}--m-secondary--BorderColor: transparent;
+  --#{$card}--m-secondary--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // Full height
   --#{$card}--m-full-height--Height: 100%;
@@ -356,12 +357,13 @@
     z-index: -1;
     content: '';
     background-color: var(--#{$card}--BackgroundColor, transparent);
-    border: var(--#{$card}--m-selectable--BorderWidth) solid var(--#{$card}--BorderColor, transparent);
+    border: var(--#{$card}--BorderWidth) solid var(--#{$card}--BorderColor, transparent);
     border-radius: var(--#{$card}--BorderRadius);
   }
 
   &:hover {
     --#{$card}--BorderColor: var(--#{$card}--m-selectable--hover--BorderColor);
+    --#{$card}--BorderWidth: var(--#{$card}--m-selectable--hover--BorderWidth);
   }
 }
 
@@ -369,7 +371,7 @@
 .#{$card}__selectable-actions :is(.#{$check}__input, .#{$radio}__input):where(:checked) ~ :is(.#{$radio}__label, .#{$check}__label),
 .#{$card}.pf-m-selected {
   --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-selected--BorderColor);
-  --#{$card}--m-selectable--BorderWidth: var(--#{$card}--m-selectable--m-selected--BorderWidth); // this line used to be just BorderWidth, not m-selectable
+  --#{$card}--BorderWidth: var(--#{$card}--m-selectable--m-selected--BorderWidth);
 }
 
 // Focus on the card (focus on label but not checked)

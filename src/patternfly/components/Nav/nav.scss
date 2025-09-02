@@ -57,6 +57,10 @@
   --#{$nav}__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
   --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
+  --#{$nav}__link--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$nav}__link--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
+  --#{$nav}__link--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
+  --#{$nav}__link--m-current--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
 
   // background color transition on hover
   --#{$nav}__link--TransitionDuration--background-color: var(--pf-t--global--motion--duration--fade--default);
@@ -113,6 +117,8 @@
   // * Nav horizontal subnav
   --#{$nav}--m-horizontal--m-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$nav}--m-horizontal--m-subnav--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$nav}--m-horizontal--m-subnav--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -290,10 +296,22 @@
   transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
   transition-property: background-color, color;
 
+  &::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--#{$nav}__link--BorderWidth) solid var(--#{$nav}__link--BorderColor);
+    border-radius: inherit;
+  }
+
+
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
   &.pf-m-hover,
   &:focus {
+    --#{$nav}__link--BorderWidth: var(--#{$nav}__link--hover--BorderWidth);
+
     color: var(--#{$nav}__link--hover--Color);
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
@@ -301,6 +319,7 @@
   &.pf-m-current,
   &.pf-m-current:hover {
     --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);
+    --#{$nav}__link--BorderWidth: var(--#{$nav}__link--m-current--BorderWidth);
 
     color: var(--#{$nav}__link--m-current--Color);
     background-color: var(--#{$nav}__link--m-current--BackgroundColor);
@@ -428,6 +447,7 @@
     --#{$nav}__link--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart);
     --#{$nav}__link--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd);
 
+    border: var(--#{$nav}--m-horizontal--m-subnav--BorderWidth) solid var(--#{$nav}--m-horizontal--m-subnav--BorderColor);
     border-radius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
   }
 
