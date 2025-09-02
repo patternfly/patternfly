@@ -1407,10 +1407,10 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
-      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true  table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
-      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
         <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
         234
       {{/table-td}}
@@ -1430,18 +1430,18 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
       {{> table-cell-action}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-1')}}
-        {{/table-expandable-row-content}}
-      {{/table-td}}
-    {{/table-tr}}
-
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
           {{> table-nested table--id=(concat table--id '-nested-table-2')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        {{#> table-expandable-row-content}}
+          234 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -1490,9 +1490,9 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{/table-tr}}
 
     {{#> table-tr table-tr--IsExpandable=true}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-5')}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        {{#> table-expandable-row-content}}
+          82 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -1543,7 +1543,186 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-8')}}
+          4 pull requests currently under review.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-9')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Compound expansion example with nested table
+```hbs
+{{#> table table--id="table-compound-expansion-nested-table" table--IsGrid=true table--modifier="pf-m-grid-md" table--IsExpandable=true table--attribute='aria-label="Compound expandable with nested table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--IsSelected="true" table-th--IsAsc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+       Last commit
+      {{/table-th}}
+      {{> table-cell-empty table-cell--text='Links'}}
+      {{> table-cell-empty}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        234
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        4
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Workspaces"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>20 minutes</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true table-tr--IsExpanded=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-1')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        {{#> table-expandable-row-content}}
+          234 pull requests currently under review.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-3')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--IsControlRow="true"}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        2
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        82
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        1
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Workspaces"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>1 day ago</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-4')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          82 pull requests currently under review.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-6')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--IsControlRow="true"}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
+        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        4
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
+        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        4
+      {{/table-td}}
+      {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
+        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        1
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Workspaces"}}
+        <a href="#">siemur/test-space</a>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        <span>2 days ago</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Open in Github</a>
+      {{/table-td}}
+      {{> table-cell-action}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          {{> table-nested table--id=(concat table--id '-nested-table-7')}}
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--IsExpandable=true}}
+      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
+        {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
+          4 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -1617,7 +1796,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-2')}}
+          234 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -1664,7 +1843,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-5')}}
+          82 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -1711,7 +1890,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-8')}}
+          4 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -2737,7 +2916,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-2')}}
+          234 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -2785,7 +2964,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-5')}}
+          234 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -2836,7 +3015,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-8')}}
+          82 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
@@ -2887,7 +3066,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
     {{#> table-tr table-tr--IsExpandable=true}}
       {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
         {{#> table-expandable-row-content table-expandable-row-content--HasNoBackground=true}}
-          {{> table-nested table--id=(concat table--id '-nested-table-11')}}
+          4 pull requests currently under review.
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
