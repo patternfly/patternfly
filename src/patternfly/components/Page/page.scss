@@ -76,13 +76,19 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$page}__main-container--BorderWidth: var(--pf-t--global--border--width--main--default);
-  --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--main--default);
+  --#{$page}__main-container--BorderBlockStartWidth: var(--pf-t--global--border--width--main--default);
+  --#{$page}__main-container--BorderBlockEndWidth: var(--pf-t--global--border--width--main--default);
+  --#{$page}__main-container--BorderInlineStartWidth: var(--pf-t--global--border--width--main--default);
+  --#{$page}__main-container--BorderInlineEndWidth: var(--pf-t--global--border--width--main--default);
+  --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--main--default); 
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
   --#{$page}__main-container--xs--MaxHeight: 100%;
-  --#{$page}__main-container--xs--MarginInlineEnd: 0;
+  --#{$page}__main-container--xs--MarginInlineEnd: 0px;
+  --#{$page}__main-container--xs--BorderBlockEndWidth: 0px;
+  --#{$page}__main-container--xs--BorderInlineStartWidth: 0px;
+  --#{$page}__main-container--xs--BorderInlineEndWidth: 0px;
 
   // Main section
   --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
@@ -114,15 +120,15 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-subnav--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-subnav--PaddingBlockEnd: 0;
-  --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
-  --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth));
+  --#{$page}__main-subnav--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderInlineStartWidth));
+  --#{$page}__main-subnav--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderInlineEndWidth));
   --#{$page}__main-subnav--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--PaddingBlockStart: var(--pf-t--global--spacer--md);
-  --#{$page}__main-breadcrumb--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingInlineEnd: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderInlineEndWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--PaddingBlockEnd: 0;
-  --#{$page}__main-breadcrumb--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderWidth)); // subtract the border of the main section
+  --#{$page}__main-breadcrumb--PaddingInlineStart: calc(var(--pf-t--global--spacer--lg) - var(--#{$page}__main-container--BorderInlineStartWidth)); // subtract the border of the main section
   --#{$page}__main-breadcrumb--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-breadcrumb--m-sticky-top--PaddingBlockEnd: var(--pf-t--global--spacer--md);
 
@@ -373,7 +379,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
   background: var(--#{$page}__main-container--BackgroundColor);
-  border: var(--#{$page}__main-container--BorderWidth) solid var(--#{$page}__main-container--BorderColor);
+  border: solid var(--#{$page}__main-container--BorderColor);
+  border-block-start-width: var(--#{$page}__main-container--BorderBlockStartWidth);
+  border-block-end-width: var(--#{$page}__main-container--BorderBlockEndWidth);
+  border-inline-start-width: var(--#{$page}__main-container--BorderInlineStartWidth);
+  border-inline-end-width: var(--#{$page}__main-container--BorderInlineEndWidth);
   border-radius: var(--#{$page}__main-container--BorderRadius);
 
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
@@ -382,6 +392,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-container--MarginInlineEnd: var(--#{$page}__main-container--xs--MarginInlineEnd);
     --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--xs--MaxHeight);
     --#{$page}__main-container--BorderRadius: var(--#{$page}__main-container--xs--BorderRadius);
+    --#{$page}__main-container--BorderBlockEndWidth: var(--#{$page}__main-container--xs--BorderBlockEndWidth);
+    --#{$page}__main-container--BorderInlineStartWidth: var(--#{$page}__main-container--xs--BorderInlineStartWidth);
+    --#{$page}__main-container--BorderInlineEndWidth: var(--#{$page}__main-container--xs--BorderInlineEndWidth);
   }
 }
 
@@ -492,8 +505,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   gap: var(--#{$page}__main-section--RowGap);
   padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
   padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-  padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
-  padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
+  padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderInlineStartWidth));
+  padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderInlineEndWidth));
   background-color: var(--#{$page}__main-section--BackgroundColor);
 
   &.pf-m-secondary {
@@ -508,8 +521,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       &.pf-m-padding#{$breakpoint-name} {
         padding-block-start: var(--#{$page}__main-section--PaddingBlockStart);
         padding-block-end: var(--#{$page}__main-section--PaddingBlockEnd);
-        padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderWidth));
-        padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderWidth));
+        padding-inline-start: calc(var(--#{$page}__main-section--PaddingInlineStart) - var(--#{$page}__main-container--BorderInlineStartWidth));
+        padding-inline-end: calc(var(--#{$page}__main-section--PaddingInlineEnd) - var(--#{$page}__main-container--BorderInlineEndWidth));
       }
 
       &.pf-m-no-padding#{$breakpoint-name} {
