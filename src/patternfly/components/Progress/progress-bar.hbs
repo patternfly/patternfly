@@ -16,6 +16,9 @@
   {{#if progress__aria-label}}
     aria-label="{{progress__aria-label}}"
   {{/if}}
+  {{#if helper-text--value}}
+    aria-describedby="{{progress__id}}-help-text"
+  {{/if}}
   {{~#if progress__description}}
     {{#unless progress__aria-labelledby}}
       aria-labelledby="{{progress__id}}-description"
