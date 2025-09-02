@@ -35,6 +35,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar--PaddingInlineStart: 0;
   --#{$page}__sidebar--PaddingInlineEnd: 0;
+  --#{$page}__sidebar--BorderInlineEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$page}__sidebar--BorderInlineEndColor: var(--pf-t--global--border--color--high-contrast);
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$page}__sidebar--Opacity: 1;
@@ -64,6 +66,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
     --#{$page}__sidebar--Opacity: var(--#{$page}__sidebar--xl--Opacity);
+    --#{$page}__sidebar--BorderInlineEndWidth: 0;
   }
 
   // Container for the main content area (grid area)
@@ -225,6 +228,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
+  border-inline-end: var(--#{$page}__sidebar--BorderInlineEndWidth) solid var(--#{$page}__sidebar--BorderInlineEndColor);
   opacity: var(--#{$page}__sidebar--Opacity);
   transition: var(--#{$page}__sidebar--TransitionProperty) var(--#{$page}__sidebar--TransitionDuration) var(--#{$page}__sidebar--TransitionTimingFunction);
 
