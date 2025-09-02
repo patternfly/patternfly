@@ -18,7 +18,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--xl--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}__sidebar--BoxShadow: none;
+  --#{$page}__sidebar--BoxShadow: var(--pf-t--global--box-shadow--md--right);
 
   // TODO Reduced Motion default needed
   --#{$page}__sidebar--TransitionProperty: opacity;
@@ -247,7 +247,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     box-shadow: var(--#{$page}__sidebar--BoxShadow);
 
     @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
-      --#{$page}__sidebar--BoxShadow: none;
+      --#{$page}__sidebar--BoxShadow: var(--#{$page}__sidebar--BoxShadow);
     }
   }
 
