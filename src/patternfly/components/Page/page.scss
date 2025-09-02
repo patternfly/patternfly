@@ -76,8 +76,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$page}__main-container--BorderWidth: var(--pf-t--global--border--width--page--default);
-  --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--page--default); 
+  --#{$page}__main-container--BorderWidth: var(--pf-t--global--border--width--main--default);
+  --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--main--default);
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
