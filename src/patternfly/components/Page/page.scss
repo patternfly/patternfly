@@ -110,14 +110,22 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Sticky
   --#{$page}--section--m-sticky-top--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
+  --#{$page}--section--m-sticky-top--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$page}--section--m-sticky-top--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$page}--section--m-sticky-bottom--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
+  --#{$page}--section--m-sticky-bottom--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$page}--section--m-sticky-bottom--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$page}--section--m-shadow-bottom--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$page}--section--m-shadow-bottom--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$page}--section--m-shadow-bottom--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$page}--section--m-shadow-top--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$page}--section--m-shadow-top--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$page}--section--m-shadow-top--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$page}--section--m-shadow-top--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
   // Main section horizontal subnav
   --#{$page}__main-subnav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -343,11 +351,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   &.pf-m-shadow-bottom {
     z-index: var(--#{$page}--section--m-shadow-bottom--ZIndex);
+    border-block-end: var(--#{$page}--section--m-shadow-bottom--BorderBlockEndWidth) solid var(--#{$page}--section--m-shadow-bottom--BorderBlockEndColor);
     box-shadow: var(--#{$page}--section--m-shadow-bottom--BoxShadow);
   }
 
   &.pf-m-shadow-top {
     z-index: var(--#{$page}--section--m-shadow-top--ZIndex);
+    border-block-start: var(--#{$page}--section--m-shadow-top--BorderBlockStartWidth) solid var(--#{$page}--section--m-shadow-top--BorderBlockStartColor);
     box-shadow: var(--#{$page}--section--m-shadow-top--BoxShadow);
   }
 
@@ -361,6 +371,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         position: sticky;
         inset-block-start: 0;
         z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
+        border-block-end: var(--#{$page}--section--m-sticky-top--BorderBlockEndWidth) solid var(--#{$page}--section--m-sticky-top--BorderBlockEndColor);
         box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       }
 
@@ -368,6 +379,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         position: sticky;
         inset-block-end: 0;
         z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
+        border-block-start: var(--#{$page}--section--m-sticky-bottom--BorderBlockStartWidth) solid var(--#{$page}--section--m-sticky-bottom--BorderBlockStartColor);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
     }
