@@ -17,24 +17,12 @@
   @include dark.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-high-contrast) {
-//   @include highcontrast.pf-v6-tokens;
-// }
-
-@media (prefers-contrast: more) {
-  :root {
-    @include highcontrast.pf-v6-tokens;
-  }
+:root:where(.pf-v6-theme-high-contrast) {
+  @include highcontrast.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
-//   @include highcontrast-dark.pf-v6-tokens;
-// }
-
-@media (prefers-contrast: more) {
-  :root:where(.pf-v6-theme-dark) {
-    @include highcontrast-dark.pf-v6-tokens;
-  }
+:root:where(.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
+  @include highcontrast-dark.pf-v6-tokens;
 }
 
 @include pf-v6-rtl(false) {

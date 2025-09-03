@@ -143,7 +143,7 @@
   --pf-t--global--high-contrast--border--width--regular: 0;
   --pf-t--global--high-contrast--border--width--strong: 0;
 
-  @media (prefers-contrast: more) {
+  &:where(.pf-v6-theme-high-contrast) {
     --pf-t--global--high-contrast--border--width--action--clicked: var(--pf-t--global--border--width--action--clicked);
     --pf-t--global--high-contrast--border--width--action--default: var(--pf-t--global--border--width--action--default);
     --pf-t--global--high-contrast--border--width--action--hover: var(--pf-t--global--border--width--action--hover);
