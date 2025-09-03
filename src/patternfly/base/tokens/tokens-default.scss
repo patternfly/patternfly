@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Mon, 25 Aug 2025 19:17:30 GMT
+// Generated on Tue, 02 Sep 2025 22:55:02 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.2000);
@@ -157,7 +157,7 @@
   --pf-t--global--border--width--divider--default: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--divider--hover: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--extra-strong: var(--pf-t--global--border--width--300);
-  --pf-t--global--border--width--page--default: var(--pf-t--global--border--width--400);
+  --pf-t--global--border--width--main--default: var(--pf-t--global--border--width--400);
   --pf-t--global--border--width--regular: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--strong: var(--pf-t--global--border--width--200);
   --pf-t--global--box-shadow--X--lg--bottom: var(--pf-t--global--box-shadow--X--400);
@@ -574,7 +574,7 @@
   --pf-t--global--border--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--border--color--brand--default: var(--pf-t--global--color--brand--default);
   --pf-t--global--border--color--brand--hover: var(--pf-t--global--color--brand--hover);
-  --pf-t--global--border--color--page--default: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--border--color--main--default: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--status--custom--clicked: var(--pf-t--global--color--status--custom--clicked);
   --pf-t--global--border--color--status--custom--default: var(--pf-t--global--color--status--custom--default);
   --pf-t--global--border--color--status--custom--hover: var(--pf-t--global--color--status--custom--hover);
