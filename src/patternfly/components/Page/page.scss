@@ -88,10 +88,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
   --#{$page}__main-container--xs--MaxHeight: 100%;
-  --#{$page}__main-container--xs--MarginInlineEnd: 0px;
-  --#{$page}__main-container--xs--BorderBlockEndWidth: 0px;
-  --#{$page}__main-container--xs--BorderInlineStartWidth: 0px;
-  --#{$page}__main-container--xs--BorderInlineEndWidth: 0px;
+  --#{$page}__main-container--xs--MarginInlineEnd: 0;
+  --#{$page}__main-container--xs--BorderBlockEndWidth: 0;
+  --#{$page}__main-container--xs--BorderInlineStartWidth: 0px; // needs a unit because it's used in calc()
+  --#{$page}__main-container--xs--BorderInlineEndWidth: 0px; // needs a unit because it's used in calc()
 
   // Main section
   --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
