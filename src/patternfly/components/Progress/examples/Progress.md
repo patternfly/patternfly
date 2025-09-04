@@ -203,7 +203,7 @@ If the status that displays with the bar is not a percentage, then the ARIA tag 
 When conveying status, you should ensure:
 - There is visible helper text that explains the status.
 - The helper text includes the status icon, as seen in our [basic helper text example](/components/helper-text/html#basic).
-- The helper text is linked to the `.pf-v6-c-progress__bar[role="progressbar]` element via an `aria-describedby` attribute, as seen in the [progress helper text example](#helper-text).
+- The helper text is linked to the `.pf-v6-c-progress__bar[role="progressbar"]` element via an `aria-describedby` attribute, as seen in the [progress helper text example](#helper-text).
 
 ### Success
 ```hbs
