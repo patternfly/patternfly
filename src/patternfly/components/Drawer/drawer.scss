@@ -168,9 +168,9 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Divider 
   // TODO remove these variables in a breaking change in favor of setting the border variables directly
-  --#{$drawer}__panel--after--Width: var(--pf-t--global--high-contrast--border--width--divider--default);
+  --#{$drawer}__panel--after--Width: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$drawer}--m-inline__panel--after--Width: var(--pf-t--global--border--width--divider--default); // TODO this turns on border always for inline
-  --#{$drawer}--m-panel-bottom__panel--after--Height: var(--pf-t--global--high-contrast--border--width--divider--default);
+  --#{$drawer}--m-panel-bottom__panel--after--Height: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$drawer}__panel--after--BackgroundColor: var(--pf-t--global--border--color--high-contrast);
   --#{$drawer}--m-inline--m-expanded__panel--after--BackgroundColor: var(--pf-t--global--border--color--default);
   --#{$drawer}--m-inline__panel--PaddingInlineStart: 0; // no padding needed now

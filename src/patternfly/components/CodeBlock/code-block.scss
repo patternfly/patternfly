@@ -2,7 +2,7 @@
 
 @include pf-root($code-block) {
   --#{$code-block}--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$code-block}--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$code-block}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$code-block}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$code-block}--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$code-block}__header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
