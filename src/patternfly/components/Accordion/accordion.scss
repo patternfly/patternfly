@@ -113,10 +113,10 @@
   // accordion item border for high contrast
   --#{$accordion}__item--BorderWidth: 0;
   --#{$accordion}__item--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$accordion}__item--m-expanded--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$accordion}__item--m-expanded--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // expandable content border for high contrast
-  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$accordion}__expandable-content--BorderColor: var(--pf-t--global--border--color--high-contrast);
 }
 

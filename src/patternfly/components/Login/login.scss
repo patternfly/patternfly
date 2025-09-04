@@ -40,7 +40,7 @@
   --#{$login}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$login}__main--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__main--BorderRadius: var(--pf-t--global--border--radius--large);
-  --#{$login}__main--BorderWidth: var(--pf-t--global--high-contrast--border--width--box--default);
+  --#{$login}__main--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$login}__main--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {

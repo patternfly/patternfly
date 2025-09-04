@@ -6,7 +6,7 @@
   --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
   --#{$popover}--MaxWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
   --#{$popover}--BoxShadow: var(--pf-t--global--box-shadow--md);
-  --#{$popover}--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$popover}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$popover}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$popover}--BorderRadius: var(--pf-t--global--border--radius--medium);
 

@@ -194,7 +194,7 @@
 
   // * Compound expandable
   --#{$table}--compound-expansion--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$table}--compound-expansion--m-expanded--BorderWidth: var(--pf-t--global--high-contrast--border--width--regular);
+  --#{$table}--compound-expansion--m-expanded--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // * Table compact th
   --#{$table}--m-compact__th--PaddingBlockStart: calc(var(--pf-t--global--spacer--sm) + var(--pf-t--global--spacer--xs));
