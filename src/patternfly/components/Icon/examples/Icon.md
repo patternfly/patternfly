@@ -253,9 +253,6 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
   {{#> icon-content}}
     <i class="fas fa-check-circle" aria-hidden="true"></i>
   {{/icon-content}}
-  {{#> icon-progress}}
-    {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
-  {{/icon-progress}}
 {{/icon}}
 ```
 
