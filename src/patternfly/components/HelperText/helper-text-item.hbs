@@ -12,12 +12,10 @@
   {{#if helper-text-item--attribute}}
     {{{helper-text-item--attribute}}}
   {{/if}}>
-  {{#if helper-text-item--HasIcon}}
+  {{#ifAny helper-text-item--IsSuccess helper-text-item--IsError helper-text-item--IsWarning helper-text-item--IsIndeterminate helper-text-item-icon--type}}
     {{> helper-text-item-icon}}
-  {{/if}}
+  {{/ifAny}}
   {{#if helper-text--value}}
     {{> helper-text-item-text}}
-  {{else if @partial-block}}
-    {{> @partial-block}}
   {{/if}}
 </{{#if helper-text--IsList}}li{{else}}div{{/if}}>

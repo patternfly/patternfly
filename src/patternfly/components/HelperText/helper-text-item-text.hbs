@@ -2,6 +2,19 @@
   {{#if helper-text-item-text--attribute}}
     {{{helper-text-item-text--attribute}}}
   {{/if}}>
+  {{#ifAny helper-text-item--IsSuccess helper-text-item--IsError helper-text-item--IsWarning helper-text-item--IsIndeterminate helper-text-item-icon--type}}
+    {{#> screen-reader}}
+      {{#if helper-text-item--IsWarning}}
+        Warning: 
+      {{else if helper-text-item--IsSuccess}}
+        Success: 
+      {{else if helper-text-item--IsError}}
+        Error: 
+      {{else}}
+        Indeterminate: 
+      {{/if}}
+    {{/screen-reader}}
+  {{/ifAny}}
   {{#if helper-text--value}}
     {{{helper-text--value}}}
   {{else if @partial-block}}
