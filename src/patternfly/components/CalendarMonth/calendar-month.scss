@@ -150,6 +150,7 @@
     inset-block-end: var(--#{$calendar-month}__dates-cell--before--InsetBlockEnd);
     inset-inline-start: var(--#{$calendar-month}__dates-cell--before--InsetInlineStart);
     inset-inline-end: var(--#{$calendar-month}__dates-cell--before--InsetInlineEnd);
+    pointer-events: none;
     content: "";
   }
 
