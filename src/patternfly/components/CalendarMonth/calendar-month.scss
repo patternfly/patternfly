@@ -143,8 +143,7 @@
   padding-inline-end: var(--#{$calendar-month}__dates-cell--PaddingInlineEnd);
   text-align: center;
 
-  &::before,
-  &::after {
+  &::before {
     position: absolute;
     inset-block-start: var(--#{$calendar-month}__dates-cell--before--InsetBlockStart);
     inset-block-end: var(--#{$calendar-month}__dates-cell--before--InsetBlockEnd);
@@ -152,13 +151,7 @@
     inset-inline-end: var(--#{$calendar-month}__dates-cell--before--InsetInlineEnd);
     pointer-events: none;
     content: "";
-  }
-
-  &::before {
     background-color: var(--#{$calendar-month}__dates-cell--before--BackgroundColor);
-  }
-
-  &::after {
     border: solid var(--#{$calendar-month}__dates-cell--after--BorderColor);
     border-width: var(--#{$calendar-month}__dates-cell--after--BorderBlockStartWidth) 0 var(--#{$calendar-month}__dates-cell--after--BorderBlockEndWidth);
   }
