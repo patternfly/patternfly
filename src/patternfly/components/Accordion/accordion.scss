@@ -116,8 +116,9 @@
   --#{$accordion}__item--m-expanded--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // expandable content border for high contrast
-  --#{$accordion}__expandable-content--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$accordion}__expandable-content--BorderWidth: 0;
   --#{$accordion}__expandable-content--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$accordion}__item--m-expanded__expandable-content--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 }
 
 .#{$accordion} {
@@ -191,6 +192,8 @@
     --#{$accordion}__expandable-content--Visibility: var(--#{$accordion}__item--m-expanded__expandable-content--Visibility);
     --#{$accordion}__expandable-content--TransitionDuration--fade: 0s;
     --#{$accordion}__expandable-content--m-fixed--MaxHeight--base: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
+    --#{$accordion}__expandable-content--BorderWidth: var(--#{$accordion}__item--m-expanded__expandable-content--BorderWidth);
+
   }
 }
 
