@@ -2,6 +2,8 @@
 
 @include pf-root($modal-box) {
   --#{$modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$modal-box}--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$modal-box}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$modal-box}--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$modal-box}--BoxShadow: var(--pf-t--global--box-shadow--lg);
   --#{$modal-box}--ZIndex: var(--pf-t--global--z-index--xl); // TODO use a z-index token
@@ -87,6 +89,7 @@
   max-height: var(--#{$modal-box}--MaxHeight);
   overflow: auto;
   background-color: var(--#{$modal-box}--BackgroundColor);
+  border: var(--#{$modal-box}--BorderWidth) solid var(--#{$modal-box}--BorderColor);
   border-radius: var(--#{$modal-box}--BorderRadius);
   box-shadow: var(--#{$modal-box}--BoxShadow);
 

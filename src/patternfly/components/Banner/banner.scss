@@ -10,6 +10,8 @@
   --#{$banner}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$banner}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
   --#{$banner}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
+  --#{$banner}--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$banner}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
     --#{$banner}--PaddingInlineEnd: var(--#{$banner}--md--PaddingInlineEnd);
@@ -67,6 +69,8 @@
   color: var(--#{$banner}--Color);
   white-space: nowrap;
   background-color: var(--#{$banner}--BackgroundColor);
+  border-block-start: var(--#{$banner}--BorderWidth) solid var(--#{$banner}--BorderColor);
+  border-block-end: var(--#{$banner}--BorderWidth) solid var(--#{$banner}--BorderColor);
 
   &.pf-m-danger {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-danger--BackgroundColor);

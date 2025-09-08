@@ -1,5 +1,9 @@
 # PatternFly
 
+## Contributing
+
+We welcome contributions to PatternFly! Please read our [Contributing Guide](https://pf-core-staging.patternfly.org/contribution) to learn how to get started, submit issues, and contribute code to the project.
+
 ## Install
 
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
@@ -7,10 +11,11 @@
 
 When you install PatternFly, the package includes:
 
-- a single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
-- individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
-- a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly/patternfly.scss`
-- individual files for each component's source (SASS): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
+- @patternfly/patternfly/patternfly-base.css - base styles. Global styles, reset/normalize styles, global variables. These styles are required for patternfly styles to work properly.
+- @patternfly/patternfly/patternfly.css - this is patternfly-base.css, as well as all component and layout styles. Does not include utility styles.
+- @patternfly/patternfly/patternfly-addons.css - all utility class styles. These do not come with patternfly.css, and must be imported manually.
+- @patternfly/patternfly/utilities/[UtilityName]/[utility-name].css - individual utility class styles if you prefer only use one or two, and don't want to import all of them.
+- @patternfly/patternfly/patternfly-charts.css - required if using dark theme with [PatternFly charts](https://www.patternfly.org/charts/about-charts).
 
 Any of the files above are meant for use in consuming the library. The recommended consumption approach will vary from project to project.
 
@@ -70,14 +75,14 @@ When making visual changes to a full page example, new example preview screensho
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
-### Handlebars guidelines 
-[For information on how to contribute, refer to our guidelines.](https://pf-core-staging.patternfly.org/contribution)
+### Contribution guide 
+For information on how to contribute, refer to our [contribution guide](https://pf-core-staging.patternfly.org/contribution).
 
-### CSS/Sass guidelines
-[For more information on using CSS and Sass, refer to our guidelines.](https://pf-core-staging.patternfly.org/guidelines)
+### Development guidelines
+For more information on using CSS, Sass, and handlebars, refer to our [development guidelines](https://pf-core-staging.patternfly.org/guidelines).
 
 ### Custom icon guidelines
-[For more information on custom icons, refer to our guidelines.](https://pf-core-staging.patternfly.org/adding-custom-icons)
+For more information on custom icons, refer to our [custom icon guidelines](https://pf-core-staging.patternfly.org/custom-icons).
 
 ## Beta components
 
@@ -113,13 +118,14 @@ If you have any suggestions about ways that we can improve how we use this tool,
 
 ## FAQ
 
-#### CSS Variables
+### CSS Variables
 [How do I use CSS variables to customize the library?](https://pf-core-staging.patternfly.org/guidelines#variables)
 
-#### Browser support
+### Browser support
 PatternFly is supported on the latest two major versions of the following browsers:
 
 - Chrome
 - Firefox
 - Safari
 - Edge
+

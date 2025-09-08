@@ -39,7 +39,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 <h4>Editable</h4>
 {{#> clipboard-copy clipboard-copy--id="expandable-not-expanded-editable"}}
   {{#> clipboard-copy-group}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--IsExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle unexpanded editable example" aria-controls="' clipboard-copy--id '-content"' )}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--AriaExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle unexpanded editable example" aria-controls="' clipboard-copy--id '-content"' )}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="copy" button--attribute=(concat 'aria-label="Copy to clipboard unexpanded editable example" id="' clipboard-copy--id '-copy-button"')}}
@@ -51,7 +51,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 <br>
 {{#> clipboard-copy clipboard-copy--id="expandable-expanded-editable" clipboard-copy--IsExpanded="true"}}
   {{#> clipboard-copy-group}}
-    {{> button button--IsControl=true button--IsExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle expanded editable example" aria-controls="' clipboard-copy--id '-content"')}}
+    {{> button button--IsControl=true button--AriaExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle expanded editable example" aria-controls="' clipboard-copy--id '-content"')}}
     {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="copy" button--attribute=(concat 'aria-label="Copy to clipboard expanded editable example" id="' clipboard-copy--id '-copy-button"')}}
@@ -64,7 +64,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 <h4>Read-only</h4>
 {{#> clipboard-copy clipboard-copy--id="expandable-not-expanded-readonly"}}
   {{#> clipboard-copy-group}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--IsExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only unexpanded example" aria-controls="' clipboard-copy--id '-content"')}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--AriaExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only unexpanded example" aria-controls="' clipboard-copy--id '-content"')}}
     {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="copy" button--attribute=(concat 'aria-label="Copy to clipboard read-only collapsed example" id="' clipboard-copy--id '-copy-button"')}}
@@ -76,7 +76,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 <br>
 {{#> clipboard-copy clipboard-copy--id="expandable-expanded-readonly" clipboard-copy--IsExpanded="true"}}
   {{#> clipboard-copy-group}}
-    {{> button button--IsControl=true button--IsExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only expanded example" aria-controls="' clipboard-copy--id '-content"')}}
+    {{> button button--IsControl=true button--AriaExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only expanded example" aria-controls="' clipboard-copy--id '-content"')}}
     {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="copy" button--attribute=(concat 'aria-label="Copy to clipboard read-only expanded example" id="' clipboard-copy--id '-copy-button"')}}
@@ -89,7 +89,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 <h4>Code</h4>
 {{#> clipboard-copy clipboard-copy--IsCode=true clipboard-copy--id="expandable-not-expanded-code"}}
   {{#> clipboard-copy-group}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--IsExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle code unexpanded example" aria-controls="' clipboard-copy--id '-content"')}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--AriaExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle code unexpanded example" aria-controls="' clipboard-copy--id '-content"')}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'dir="ltr" type="text" value="{ &quot;menu&quot;: {     &quot;id&quot;: &quot;file&quot;,     &quot;value&quot;: &quot;File&quot;,     &quot;popup&quot;: {       &quot;menuitem&quot;: [         {&quot;value&quot;: &quot;New&quot;, &quot;onclick&quot;: &quot;CreateNewDoc()&quot;},         {&quot;value&quot;: &quot;Open&quot;, &quot;onclick&quot;: &quot;OpenDoc()&quot;},         {&quot;value&quot;: &quot;Close&quot;, &quot;onclick&quot;: &quot;CloseDoc()&quot;}       ]     }   }} " id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="copy" button--attribute=(concat 'aria-label="Copy to clipboard code unexpanded example" id="' clipboard-copy--id '-copy-button"')}}
@@ -111,7 +111,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 <br>
 {{#> clipboard-copy clipboard-copy--IsCode=true clipboard-copy--id="expandable-expanded-code" clipboard-copy--IsExpanded="true"}}
   {{#> clipboard-copy-group}}
-    {{> button button--IsControl=true button--IsExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle code expanded example" aria-controls="' clipboard-copy--id '-content"')}}
+    {{> button button--IsControl=true button--AriaExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle code expanded example" aria-controls="' clipboard-copy--id '-content"')}}
     {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'dir="ltr" type="text" value="{ &quot;menu&quot;: {     &quot;id&quot;: &quot;file&quot;,     &quot;value&quot;: &quot;File&quot;,     &quot;popup&quot;: {       &quot;menuitem&quot;: [         {&quot;value&quot;: &quot;New&quot;, &quot;onclick&quot;: &quot;CreateNewDoc()&quot;},         {&quot;value&quot;: &quot;Open&quot;, &quot;onclick&quot;: &quot;OpenDoc()&quot;},         {&quot;value&quot;: &quot;Close&quot;, &quot;onclick&quot;: &quot;CloseDoc()&quot;}       ]     }   }} " id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="copy" button--attribute=(concat 'aria-label="Copy to clipboard code expanded example" id="' clipboard-copy--id '-copy-button"')}}

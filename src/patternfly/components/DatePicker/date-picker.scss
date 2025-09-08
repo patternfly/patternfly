@@ -7,6 +7,8 @@
   --#{$date-picker}__input--c-form-control--Width: calc(var(--#{$date-picker}__input--c-form-control--width-chars) * 1ch + var(--#{$date-picker}__input--c-form-control--width-base));
   --#{$date-picker}__input--c-form-control--width-base: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm)); // form control left/right padding + status icon width and spacer
   --#{$date-picker}__input--c-form-control--width-chars: 11;
+  --#{$date-picker}__calendar--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$date-picker}__calendar--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$date-picker}__calendar--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$date-picker}__calendar--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$date-picker}__calendar--ZIndex: var(--pf-t--global--z-index--sm);
@@ -32,6 +34,7 @@
   }
 }
 
+// TODO - remove in breaking change
 .#{$date-picker}__calendar {
   position: absolute;
   inset-block-start: var(--#{$date-picker}__calendar--InsetBlockStart);
@@ -39,6 +42,7 @@
   inset-inline-end: var(--#{$date-picker}__calendar--InsetInlineEnd);
   z-index: var(--#{$date-picker}__calendar--ZIndex);
   background-color: var(--#{$date-picker}__calendar--BackgroundColor);
+  border: var(--#{$date-picker}__calendar--BorderWidth) solid var(--#{$date-picker}__calendar--BorderColor);
   box-shadow: var(--#{$date-picker}__calendar--BoxShadow);
 
   &.pf-m-align-right {

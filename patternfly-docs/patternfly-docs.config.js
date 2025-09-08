@@ -4,6 +4,7 @@ module.exports = {
   hasFooter: false,
   hasVersionSwitcher: false,
   hasThemeSwitcher: true,
+  hasHighContrastSwitcher: true,
   hasRTLSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
@@ -29,7 +30,7 @@ module.exports = {
     },
     {
       text: 'Custom icons',
-      path: '/adding-custom-icons'
+      path: '/custom-icons'
     }
   ],
   port: 8001

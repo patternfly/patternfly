@@ -60,77 +60,6 @@ cssPrefix: pf-v6-c-progress
 {{/progress}}
 ```
 
-### Success
-```hbs
-{{#> progress
-  progress__value="100"
-  progress__description="Title"
-  progress--success="true"
-  progress__id="progress-success-example"
-}}
-{{/progress}}
-```
-
-### Warning
-```hbs
-{{#> progress
-  progress__value="100"
-  progress__description="Title"
-  progress--warning="true"
-  progress__id="progress-warning-example"
-}}
-{{/progress}}
-```
-
-### Failure
-```hbs
-{{#> progress
-  progress__value="33"
-  progress__description="Title"
-  progress--danger="true"
-  progress__id="progress-failure-example"
-}}
-{{/progress}}
-```
-
-### Inside success
-```hbs
-{{#> progress
-  progress__value="100"
-  progress__description="Title"
-  progress--modifier="pf-m-lg"
-  progress--inside="inside"
-  progress--success="success"
-  progress__id="progress-inside-success-example"
-}}
-{{/progress}}
-```
-
-### Inside warning
-```hbs
-{{#> progress
-  progress__value="100"
-  progress__description="Title"
-  progress--modifier="pf-m-lg"
-  progress--inside="inside"
-  progress--warning="warning"
-  progress__id="progress-inside-warning-example"
-}}
-{{/progress}}
-```
-
-### Outside failure
-```hbs
-{{#> progress
-  progress__value="33"
-  progress__description="Title"
-  progress--modifier="pf-m-outside pf-m-lg"
-  progress--danger="danger"
-  progress__id="progress-outside-failure-example"
-}}
-{{/progress}}
-```
-
 ### Outside static width measure
 ```hbs
 {{#> progress
@@ -215,18 +144,6 @@ cssPrefix: pf-v6-c-progress
 {{/progress}}
 ```
 
-### Failure without measure
-```hbs
-{{#> progress
-  progress__value="33"
-  progress--no-measure="true"
-  progress__description="Title"
-  progress--danger="true"
-  progress__id="progress-no-measure-failure-example"
-}}
-{{/progress}}
-```
-
 ### Finite step
 ```hbs
 {{#> progress
@@ -259,6 +176,7 @@ cssPrefix: pf-v6-c-progress
   progress__description="Title"
   progress__id="progress-helper-text-example"
   helper-text--value="Progress helper text"
+  progress__HasAriaDescribedby=true
 }}
 {{/progress}}
 ```
@@ -276,6 +194,96 @@ If the status that displays with the bar is not a percentage, then the ARIA tag 
   progress__description="Title"
   progress--dynamic="true"
   progress__id="progress-step-instruction-example"
+}}
+{{/progress}}
+```
+
+## Status examples
+
+When conveying status, you should ensure:
+- There is visible helper text that explains the status.
+- The helper text includes the status icon, as seen in our [basic helper text example](/components/helper-text/html#basic).
+- The helper text is linked to the `.pf-v6-c-progress__bar[role="progressbar"]` element via an `aria-describedby` attribute, as seen in the [progress helper text example](#helper-text).
+
+### Success
+```hbs
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--success="true"
+  progress__id="progress-success-example"
+}}
+{{/progress}}
+```
+
+### Warning
+```hbs
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--warning="true"
+  progress__id="progress-warning-example"
+}}
+{{/progress}}
+```
+
+### Failure
+```hbs
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
+  progress--danger="true"
+  progress__id="progress-failure-example"
+}}
+{{/progress}}
+```
+
+### Inside success
+```hbs
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--modifier="pf-m-lg"
+  progress--inside="inside"
+  progress--success="success"
+  progress__id="progress-inside-success-example"
+}}
+{{/progress}}
+```
+
+### Inside warning
+```hbs
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--modifier="pf-m-lg"
+  progress--inside="inside"
+  progress--warning="warning"
+  progress__id="progress-inside-warning-example"
+}}
+{{/progress}}
+```
+
+### Outside failure
+```hbs
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress--danger="danger"
+  progress__id="progress-outside-failure-example"
+}}
+{{/progress}}
+```
+
+### Failure without measure
+```hbs
+{{#> progress
+  progress__value="33"
+  progress--no-measure="true"
+  progress__description="Title"
+  progress--danger="true"
+  progress__id="progress-no-measure-failure-example"
 }}
 {{/progress}}
 ```

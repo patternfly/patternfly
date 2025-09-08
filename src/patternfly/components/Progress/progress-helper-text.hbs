@@ -3,7 +3,7 @@
     {{{progress-helper-text--attribute}}}
   {{/if}}>
   {{#if helper-text--value}}
-    {{> helper-text}}
+    {{> helper-text helper-text--attribute=(concat 'id="' progress__id '-help-text"')}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

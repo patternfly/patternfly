@@ -6,6 +6,8 @@
   --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
   --#{$popover}--MaxWidth: calc(var(--#{$popover}__content--PaddingInlineStart) + var(--#{$popover}__content--PaddingInlineEnd) + #{pf-size-prem(300px)});
   --#{$popover}--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$popover}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$popover}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$popover}--BorderRadius: var(--pf-t--global--border--radius--medium);
 
 
@@ -73,6 +75,7 @@
   min-width: var(--#{$popover}--MinWidth);
   max-width: var(--#{$popover}--MaxWidth);
   font-size: var(--#{$popover}--FontSize);
+  border: var(--#{$popover}--BorderWidth) solid var(--#{$popover}--BorderColor);
   border-radius: var(--#{$popover}--BorderRadius);
   box-shadow: var(--#{$popover}--BoxShadow);
 
@@ -226,6 +229,7 @@
   height: var(--#{$popover}__arrow--Height);
   pointer-events: none;
   background-color: var(--#{$popover}__arrow--BackgroundColor);
+  border: var(--#{$popover}--BorderWidth) solid var(--#{$popover}--BorderColor);
   box-shadow: var(--#{$popover}__arrow--BoxShadow);
   transform: translateX(var(--#{$popover}__arrow--TranslateX, 0)) translateY(var(--#{$popover}__arrow--TranslateY, 0)) rotate(var(--#{$popover}__arrow--Rotate, 0));
 }

@@ -44,7 +44,8 @@
           button--IsPlain=true
           button--IsIcon=true
           button--icon-template="table-toggle-icon"
-          button--IsExpanded=table-tr--IsExpanded
+          button--AriaExpanded=table-tr--IsExpanded
+          button--modifier=(ternary table-tr--IsExpanded "pf-m-expanded" "")
           button--id=(concat table--id '-expandable-toggle-' table-td--row-index)
           button--aria-label="Details"
           button--aria-labelledby=(concat table--id '-node-' table-td--row-index ' ' table--id '-expandable-toggle-' table-td--row-index)
