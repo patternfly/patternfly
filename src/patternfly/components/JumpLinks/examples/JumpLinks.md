@@ -244,7 +244,7 @@ cssPrefix: pf-v6-c-jump-links
           Inactive section
         {{/jump-links-link-text}}
       {{/jump-links-link}}
-        {{#> jump-links-list newcontext}}
+        {{#> jump-links-list newcontext jump-links-list--attribute='aria-label="Second inactive subsection"'}}
           {{#> jump-links-item}}
             {{#> jump-links-link}}
               {{#> jump-links-link-text}}
@@ -306,7 +306,7 @@ cssPrefix: pf-v6-c-jump-links
           Active section
         {{/jump-links-link-text}}
       {{/jump-links-link}}
-        {{#> jump-links-list newcontext}}
+        {{#> jump-links-list newcontext jump-links-list--attribute='aria-label="Second active subsection"'}}
           {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
             {{#> jump-links-link}}
               {{#> jump-links-link-text}}
