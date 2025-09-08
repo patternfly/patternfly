@@ -487,10 +487,7 @@ For sighted users, interactive elements can be included in this message in one o
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
-
-  {{#> alert-item}}
-    {{> alert-group-overflow-button alert-group-overflow-button--text="View 3 more notifications"}}
-  {{/alert-item}}
+  {{> alert-group-overflow-button alert-group-overflow-button--text="View 3 more notifications"}}
 {{/alert-group}}
 ```
 
