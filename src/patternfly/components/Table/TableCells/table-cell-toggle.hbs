@@ -4,14 +4,13 @@
     button--IsPlain=true
     button--IsIcon=true
     button--icon-template="table-toggle-icon"
-    button--IsExpanded=table-tr--IsExpanded
-    button--IsAriaExpanded=table-tr--IsExpanded
+    button--AriaExpanded=table-tr--IsExpanded
+    button--modifier=(ternary table-tr--IsExpanded "pf-m-expanded" "")
     button--aria-describedby=table-tr--IsExpanded
     button--aria-label=(ternary IsThead 'Toggle all rows' 'Toggle row')
     button--aria-labelledby=(dasherize table--id 'node' table-tr--index)
     button--aria-controls=(ternary table-tr--aria-controls table-tr--aria-controls (dasherize table--id 'content' table-tr--index))
     button--id=(dasherize table--id 'expandable-toggle' table-tr--index)}}
-
     {{> table-toggle-icon}}
   {{/button}}
 {{/table-cell}}

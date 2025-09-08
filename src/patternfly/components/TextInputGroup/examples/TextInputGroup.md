@@ -249,7 +249,8 @@ The React implementation can be found in the [search input](/components/search-i
       button--IsControl=true
       button--IsIcon=true
       button--icon="caret-down"
-      button--IsExpanded=true
+      button--AriaExpanded=true
+      button--modifier="pf-m-expanded"
       button--aria-label="Advanced search expanded"}}
   {{/input-group-item}}
   {{#> input-group-item}}
@@ -403,7 +404,8 @@ The React implementation can be found in the [search input](/components/search-i
       button--IsControl=true
       button--IsIcon=true
       button--icon="caret-down"
-      button--IsExpanded=true
+      button--AriaExpanded=true
+      button--modifier="pf-m-expanded"
       button--aria-label="Advanced search expanded with autocomplete"}}
   {{/input-group-item}}
   {{#> input-group-item}}

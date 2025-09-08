@@ -10,7 +10,6 @@
     button--IsActive='pf-m-active'
     button--IsInline='pf-m-inline'
     button--IsControl='pf-m-control'
-    button--IsExpanded='pf-m-expanded'
     button--IsProgress='pf-m-progress'
     button--IsInProgress='pf-m-in-progress'
     button--IsAriaDisabled='pf-m-aria-disabled'
@@ -44,8 +43,8 @@
       type="button"
     {{/unless}}
   {{/if}}
-  {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
-    aria-expanded="{{button--IsExpanded}}"
+  {{#if (concat button--AriaExpanded)}}
+    aria-expanded="{{button--AriaExpanded}}"
   {{/if}}
   {{#if button--role}}
     role="{{button--role}}"
