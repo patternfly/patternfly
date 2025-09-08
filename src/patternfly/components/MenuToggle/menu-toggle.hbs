@@ -72,15 +72,6 @@
       {{#> menu-toggle-icon}}
         <i class="fas fa-{{ternary menu-toggle--icon menu-toggle--icon 'ellipsis-v'}}" aria-hidden=true></i>
       {{/menu-toggle-icon}}
-    {{else if menu-toggle--UsesButton}}
-      {{> button
-        button--IsPlain=true
-        button--IsIcon=true
-        button--icon='ellipsis-v'
-        button--IsDisabled=menu-toggle--IsDisabled
-        button--IsAriaDisabled=menu-toggle--IsAriaDisabled
-        button--IsExpanded=menu-toggle--IsExpanded
-        button--aria-label='Actions'}}
     {{/if}}
     {{!-- TODO: refactor this logic --}}
     {{#if menu-toggle--text}}
