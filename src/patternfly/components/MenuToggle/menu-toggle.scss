@@ -114,7 +114,7 @@
   // Split button action, primary
   --#{$menu-toggle}--m-split-button--m-primary--child--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$menu-toggle}--m-split-button--m-primary--child--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
-  --#{$menu-toggle}--m-split-button--m-primary--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$menu-toggle}--m-split-button--m-primary--child--BorderInlineStartColor: var(--pf-t--global--border--color--alt);
   --#{$menu-toggle}--m-split-button--m-primary--expanded--child--BackgroundColor: var(--pf-t--global--color--brand--clicked);
 
   // Split button action, secondary
