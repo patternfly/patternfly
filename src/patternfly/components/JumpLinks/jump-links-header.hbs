@@ -5,7 +5,11 @@
   {{#if jump-links--IsExpandable}}
     {{#> jump-links-toggle}}
       {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--aria-label="Toggle jump links" button--IsAriaExpanded=jump-links--IsExpanded}}
-        Jump to section
+        {{#if @partial-block}}
+          {{> @partial-block}}
+        {{else}}
+          Jump to section
+        {{/if}}
       {{/button}}
     {{/jump-links-toggle}}
   {{/if}}
