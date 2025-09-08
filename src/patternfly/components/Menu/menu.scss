@@ -41,7 +41,11 @@
 
   // * Menu footer
   --#{$menu}__footer--BoxShadow: none;
+  --#{$menu}__footer--BorderColor: transparent;
+  --#{$menu}__footer--BorderWidth: 0;
   --#{$menu}--m-scrollable__footer--BoxShadow: var(--pf-t--global--box-shadow--md--top);
+  --#{$menu}--m-scrollable__footer--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$menu}--m-scrollable__footer--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // * Menu list item
   --#{$menu}__list-item--Color: var(--pf-t--global--text--color--regular);
@@ -401,6 +405,8 @@
   &.pf-m-scrollable {
     --#{$menu}__content--MaxHeight: var(--#{$menu}--m-scrollable__content--MaxHeight);
     --#{$menu}__footer--BoxShadow: var(--#{$menu}--m-scrollable__footer--BoxShadow);
+    --#{$menu}__footer--BorderColor: var(--#{$menu}--m-scrollable__footer--BorderColor);
+    --#{$menu}__footer--BorderWidth: var(--#{$menu}--m-scrollable__footer--BorderWidth);
     --#{$menu}__footer--PaddingBlockStart: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
     --#{$menu}__footer--PaddingBlockEnd: calc(var(--#{$menu}__item--PaddingBlockStart) + var(--#{$menu}--RowGap));
 
@@ -453,6 +459,7 @@
   padding-inline-start: var(--#{$menu}__footer--PaddingInlineStart);
   padding-inline-end: var(--#{$menu}__footer--PaddingInlineEnd);
   box-shadow: var(--#{$menu}__footer--BoxShadow);
+  border-block-start: var(--#{$menu}__footer--BorderWidth) solid var(--#{$menu}__footer--BorderColor);
 }
 
 // - Menu content
