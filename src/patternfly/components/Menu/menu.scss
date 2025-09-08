@@ -458,8 +458,8 @@
   padding-block-end: var(--#{$menu}__footer--PaddingBlockEnd);
   padding-inline-start: var(--#{$menu}__footer--PaddingInlineStart);
   padding-inline-end: var(--#{$menu}__footer--PaddingInlineEnd);
-  box-shadow: var(--#{$menu}__footer--BoxShadow);
   border-block-start: var(--#{$menu}__footer--BorderWidth) solid var(--#{$menu}__footer--BorderColor);
+  box-shadow: var(--#{$menu}__footer--BoxShadow);
 }
 
 // - Menu content
