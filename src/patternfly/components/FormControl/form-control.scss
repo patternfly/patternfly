@@ -205,6 +205,14 @@
     text-overflow: ellipsis;
   }
 
+  > select {
+    background-color: var(--#{$form-control}--BackgroundColor); // needed for OS/browser combos where dark theme styles aren't applied properly. DO NOT REMOVE!
+
+    * {
+      color: var(--#{$form-control}--Color); // needed for OS/browser combos where dark theme styles aren't applied properly. DO NOT REMOVE!
+    }
+  }
+
   @at-root .#{$form-control} {
     &:has(input) {
       --#{$form-control}--PaddingBlockStart: var(--#{$form-control}__input--PaddingBlockStart);
@@ -393,9 +401,6 @@
       --#{$form-control}--PaddingInlineEnd: calc(var(--#{$form-control}__select--PaddingInlineEnd) - 1px);
       --#{$form-control}--PaddingInlineStart: calc(var(--#{$form-control}__select--PaddingInlineStart) - 4px);
     }
-
-    // We need this property for certain Linux distros/non-Mac OS where dark theme styles aren't applied properly.
-    background-color: var(--#{$form-control}--BackgroundColor);
   }
 
   &.pf-m-placeholder > select {
