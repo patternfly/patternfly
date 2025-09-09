@@ -57,6 +57,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__expandable-content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$toolbar}__expandable-content--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$toolbar}__expandable-content--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
 
   // * Toolbar sticky
   --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
@@ -64,6 +66,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$toolbar}--m-sticky--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$toolbar}--m-sticky--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
 
   // * Toolbar expand all
   --#{$toolbar}__expand-all-icon--Rotate: 0;
@@ -142,6 +146,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
     padding-block-start: var(--#{$toolbar}--m-sticky--PaddingBlockStart);
     padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
+    border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
   }
 
@@ -280,11 +285,13 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   padding-inline-start: var(--#{$toolbar}__expandable-content--PaddingInlineStart);
   padding-inline-end: var(--#{$toolbar}__expandable-content--PaddingInlineEnd);
   background-color: var(--#{$toolbar}__expandable-content--BackgroundColor);
+  border-block-end: var(--#{$toolbar}__expandable-content--BorderBlockEndWidth) solid var(--#{$toolbar}__expandable-content--BorderBlockEndColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     position: static;
     padding: 0;
+    border-block-end: 0;
     box-shadow: none;
   }
 
