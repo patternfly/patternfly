@@ -3389,7 +3389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/ast-helpers@npm:^1.4.0-alpha.274":
+"@patternfly/ast-helpers@npm:^1.4.0-alpha.275":
   version: 1.26.2
   resolution: "@patternfly/ast-helpers@npm:1.26.2"
   dependencies:
@@ -3402,15 +3402,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/documentation-framework@npm:6.22.4":
-  version: 6.22.4
-  resolution: "@patternfly/documentation-framework@npm:6.22.4"
+"@patternfly/documentation-framework@npm:6.22.5":
+  version: 6.22.5
+  resolution: "@patternfly/documentation-framework@npm:6.22.5"
   dependencies:
     "@babel/core": "npm:^7.28.3"
     "@babel/preset-env": "npm:7.27.1"
     "@babel/preset-react": "npm:^7.24.1"
     "@mdx-js/util": "npm:1.6.16"
-    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.274"
+    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.275"
     "@reach/router": "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer: "npm:10.4.19"
     babel-loader: "npm:^9.1.3"
@@ -3439,7 +3439,7 @@ __metadata:
     null-loader: "npm:4.0.1"
     parse-entities: "npm:2.0.0"
     path-browserify: "npm:1.0.1"
-    postcss: "npm:8.5.0"
+    postcss: "npm:^8.4.31"
     postcss-loader: "npm:7.1.0"
     process: "npm:^0.11.10"
     puppeteer: "npm:^24.2.0"
@@ -3477,7 +3477,7 @@ __metadata:
     react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
-  checksum: 10c0/1aa4db7c18def6b27da77add453ba752345d24b75256d9cfac0c31eb40cfda0c5f72e18a5b75e1a614c4981d27eb0b18b4b63dba314fe2fab0de334ba0a6e184
+  checksum: 10c0/e4167e346fb1e271cb172c3d7f396eeffc4a7190caa902f0f527eac8eac86feefc1569c68918c30e55742d92b9c1fba7522c496e141325730f1058bacbf16d71
   languageName: node
   linkType: hard
 
@@ -3529,7 +3529,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@fortawesome/fontawesome": "npm:^1.1.8"
     "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.22.4"
+    "@patternfly/documentation-framework": "npm:6.22.5"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.3.1"
     "@patternfly/react-core": "npm:6.3.1"
@@ -15657,6 +15657,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.11":
+  version: 3.3.11
+  resolution: "nanoid@npm:3.3.11"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10c0/40e7f70b3d15f725ca072dfc4f74e81fcf1fbb02e491cf58ac0c79093adc9b0a73b152bcde57df4b79cd097e13023d7504acb38404a4da7bc1cd8e887b82fe0b
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.6":
   version: 3.3.6
   resolution: "nanoid@npm:3.3.6"
@@ -15672,15 +15681,6 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10c0/e3fb661aa083454f40500473bb69eedb85dc160e763150b9a2c567c7e9ff560ce028a9f833123b618a6ea742e311138b591910e795614a629029e86e180660f3
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.8":
-  version: 3.3.11
-  resolution: "nanoid@npm:3.3.11"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: 10c0/40e7f70b3d15f725ca072dfc4f74e81fcf1fbb02e491cf58ac0c79093adc9b0a73b152bcde57df4b79cd097e13023d7504acb38404a4da7bc1cd8e887b82fe0b
   languageName: node
   linkType: hard
 
@@ -18065,17 +18065,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.5.0":
-  version: 8.5.0
-  resolution: "postcss@npm:8.5.0"
-  dependencies:
-    nanoid: "npm:^3.3.8"
-    picocolors: "npm:^1.1.1"
-    source-map-js: "npm:^1.2.1"
-  checksum: 10c0/ce4fb520808a932566a0fd97be905b43e219b55a3752fc8daa944082a35848fa8aff300b89b77dc52c8c3bb5cd53e77182ddb37addc6cacf586f1ef42a34ef45
-  languageName: node
-  linkType: hard
-
 "postcss@npm:^7.0.16":
   version: 7.0.39
   resolution: "postcss@npm:7.0.39"
@@ -18094,6 +18083,17 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 10c0/748b82e6e5fc34034dcf2ae88ea3d11fd09f69b6c50ecdd3b4a875cfc7cdca435c958b211e2cb52355422ab6fccb7d8f2f2923161d7a1b281029e4a913d59acf
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.31":
+  version: 8.5.6
+  resolution: "postcss@npm:8.5.6"
+  dependencies:
+    nanoid: "npm:^3.3.11"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/5127cc7c91ed7a133a1b7318012d8bfa112da9ef092dddf369ae699a1f10ebbd89b1b9f25f3228795b84585c72aabd5ced5fc11f2ba467eedf7b081a66fad024
   languageName: node
   linkType: hard
 
