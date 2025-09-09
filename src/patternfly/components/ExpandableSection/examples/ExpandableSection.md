@@ -7,7 +7,7 @@ cssPrefix: pf-v6-c-expandable-section
 ## Examples
 ### Hidden
 ```hbs
-{{#> expandable-section}}
+{{#> expandable-section expandable-section--id="hidden"}}
   {{#> expandable-section-toggle}}
     {{#if expandable-section--IsExpanded}}
       Show less hidden example content
@@ -23,7 +23,7 @@ cssPrefix: pf-v6-c-expandable-section
 
 ### Expanded
 ```hbs
-{{#> expandable-section expandable-section--IsExpanded=true}}
+{{#> expandable-section expandable-section--id="expanded" expandable-section--IsExpanded=true}}
   {{#> expandable-section-toggle}}
     {{#if expandable-section--IsExpanded}}
       Show less expanded example content
@@ -39,7 +39,7 @@ cssPrefix: pf-v6-c-expandable-section
 
 ### Indented
 ```hbs
-{{#> expandable-section expandable-section--IsExpanded=true expandable-section--IsIndented=true}}
+{{#> expandable-section expandable-section--id="indented" expandable-section--IsExpanded=true expandable-section--IsIndented=true}}
   {{#> expandable-section-toggle}}
     {{#if expandable-section--IsExpanded}}
       Show less indented example content
@@ -56,7 +56,7 @@ cssPrefix: pf-v6-c-expandable-section
 ### Disclosure variation (hidden)
 
 ```hbs
-{{#> expandable-section expandable-section--IsDisplayLg=true}}
+{{#> expandable-section expandable-section--id="disclosure-variation-hidden" expandable-section--IsDisplayLg=true}}
   {{#> expandable-section-toggle}}
     {{#if expandable-section--IsExpanded}}
       Show less disclosure variation example content
@@ -73,7 +73,7 @@ cssPrefix: pf-v6-c-expandable-section
 ### Disclosure variation (expanded)
 
 ```hbs
-{{#> expandable-section expandable-section--IsDisplayLg=true expandable-section--IsExpanded=true}}
+{{#> expandable-section expandable-section--id="disclosure-variation-expanded" expandable-section--IsDisplayLg=true expandable-section--IsExpanded=true}}
   {{#> expandable-section-toggle}}
     {{#if expandable-section--IsExpanded}}
       Show less disclosure variation example content
@@ -90,7 +90,7 @@ cssPrefix: pf-v6-c-expandable-section
 ### Disclosure variation (indented)
 
 ```hbs
-{{#> expandable-section expandable-section--IsDisplayLg=true expandable-section--IsExpanded=true expandable-section--IsIndented=true}}
+{{#> expandable-section expandable-section--id="disclosure-variation-indented" expandable-section--IsDisplayLg=true expandable-section--IsExpanded=true expandable-section--IsIndented=true}}
   {{#> expandable-section-toggle}}
     {{#if expandable-section--IsExpanded}}
       Show less disclosure variation indented example content
@@ -131,7 +131,7 @@ cssPrefix: pf-v6-c-expandable-section
 
 ### Truncate expansion (hidden)
 ```hbs
-{{#> expandable-section expandable-section--IsTruncate=true}}
+{{#> expandable-section expandable-section--id="truncated-expansion-hidden" expandable-section--IsTruncate=true}}
   {{#> expandable-section-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus, diam vitae eleifend consequat, metus sapien posuere quam, ut tincidunt nunc enim eget sapien. Mauris ac dui imperdiet dolor dignissim efficitur laoreet quis erat. Proin turpis leo, malesuada eget urna et, tristique mollis odio. Ut mattis nulla lorem, elementum hendrerit nunc molestie vitae. Proin massa sem, bibendum id urna in, viverra porta neque. Ut ut mi ac lacus rhoncus mollis id quis sem. Suspendisse non justo elementum, dictum eros nec, hendrerit sapien. Mauris aliquet, est sit amet tincidunt vehicula, purus est hendrerit arcu, vitae egestas odio lorem ut lacus. In et neque non metus viverra rhoncus quis non purus. Integer id venenatis tortor. Nulla sollicitudin convallis tellus, at porta eros volutpat in. Curabitur rhoncus rhoncus nisi, sit amet tincidunt dolor efficitur vitae. Integer purus neque, porta non odio lobortis, accumsan elementum risus. Pellentesque viverra id lacus a cursus. Etiam eu pulvinar risus. Etiam ultrices nec urna id consequat.
   {{/expandable-section-content}}
@@ -147,7 +147,7 @@ cssPrefix: pf-v6-c-expandable-section
 
 ### Truncate expansion (expanded)
 ```hbs
-{{#> expandable-section expandable-section--IsTruncate=true expandable-section--IsExpanded=true}}
+{{#> expandable-section expandable-section--id="truncate-expansion-expanded" expandable-section--IsTruncate=true expandable-section--IsExpanded=true}}
   {{#> expandable-section-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus, diam vitae eleifend consequat, metus sapien posuere quam, ut tincidunt nunc enim eget sapien. Mauris ac dui imperdiet dolor dignissim efficitur laoreet quis erat. Proin turpis leo, malesuada eget urna et, tristique mollis odio. Ut mattis nulla lorem, elementum hendrerit nunc molestie vitae. Proin massa sem, bibendum id urna in, viverra porta neque. Ut ut mi ac lacus rhoncus mollis id quis sem. Suspendisse non justo elementum, dictum eros nec, hendrerit sapien. Mauris aliquet, est sit amet tincidunt vehicula, purus est hendrerit arcu, vitae egestas odio lorem ut lacus. In et neque non metus viverra rhoncus quis non purus. Integer id venenatis tortor. Nulla sollicitudin convallis tellus, at porta eros volutpat in. Curabitur rhoncus rhoncus nisi, sit amet tincidunt dolor efficitur vitae. Integer purus neque, porta non odio lobortis, accumsan elementum risus. Pellentesque viverra id lacus a cursus. Etiam eu pulvinar risus. Etiam ultrices nec urna id consequat.
   {{/expandable-section-content}}

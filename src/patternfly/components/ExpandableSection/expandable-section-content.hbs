@@ -4,9 +4,9 @@
       hidden
     {{/unless}}
   {{/unless}}
-  {{#if expandable-section--IsDetached}}
-    id="{{expandable-section--id}}-content"
-  {{/if}}
+  id="{{expandable-section--id}}-content"
+  role="region"
+  aria-labelledby="{{expandable-section--id}}-toggle"
   {{#if expandable-section-content--attribute}}
     {{{expandable-section-content--attribute}}}
   {{/if}}>

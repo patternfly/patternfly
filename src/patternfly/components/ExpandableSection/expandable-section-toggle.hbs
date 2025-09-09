@@ -6,7 +6,8 @@
     button--IsLink=true
     button--IsInline=expandable-section--IsTruncate
     button--AriaExpanded=expandable-section--IsExpanded
-    button--aria-controls=(ternary expandable-section--IsDetached (concat expandable-section--id '-content') null)
+    button--aria-controls=(ternary expandable-section--id (concat expandable-section--id '-content') null)
+    button--id=(concat expandable-section--id '-toggle')
     button--icon-template=(ternary expandable-section--IsTruncate null "expandable-section-toggle-icon")}}
     {{#if @partial-block}}
       {{> @partial-block}}
