@@ -138,6 +138,8 @@
   // Nav
   --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}__nav--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$wizard}__nav--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__nav--Width: 100%;
   --#{$wizard}__nav--lg--Width: #{pf-size-prem(250px)};
@@ -147,6 +149,7 @@
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
     --#{$wizard}__nav--BoxShadow: none;
+    --#{$wizard}__nav--BorderBlockEndWidth: 0;
   }
 
   // Nav list (nested)
@@ -371,8 +374,8 @@
 
 .#{$wizard}__nav {
   position: absolute;
- inset-block-start: 0;
- inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   z-index: var(--#{$wizard}__nav--ZIndex);
   display: none;
   width: var(--#{$wizard}__nav--Width);
@@ -380,6 +383,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$wizard}__nav--BackgroundColor);
+  border-block-end: var(--#{$wizard}__nav--BorderBlockEndWidth) solid var(--#{$wizard}__nav--BorderBlockEndColor);
   box-shadow: var(--#{$wizard}__nav--BoxShadow);
 
   &.pf-m-expanded {
