@@ -1,9 +1,9 @@
 <div class="{{pfv}}data-list__cell{{#if data-list-cell--IsTruncate}} pf-m-truncate{{/if}}{{#if data-list-cell--modifier}} {{data-list-cell--modifier}}{{/if}}"
   {{#if data-list-cell--attribute}}
     {{{data-list-cell--attribute}}}
-  {{/if}}>
+  {{/if}}
   {{#ifAny data-list-cell--IsTruncate data-list-item-row--IsTruncate}}
     tabindex="0"
-  {{/ifAny}}
+  {{/ifAny}}>
   {{> @partial-block}}
 </div>
