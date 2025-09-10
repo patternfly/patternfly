@@ -76,7 +76,6 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   // Panel
   --#{$sidebar}__panel--FlexBasis--base: auto;
-  --#{$sidebar}__panel--BorderBlockEndWidth: 0;
   --#{$sidebar}__panel--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$sidebar}__panel--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$sidebar}__panel--BoxShadow--base: var(--pf-t--global--box-shadow--md--bottom);
