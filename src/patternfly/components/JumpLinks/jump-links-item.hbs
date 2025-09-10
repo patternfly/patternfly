@@ -1,6 +1,10 @@
-<li class="{{pfv}}jump-links__item{{#if jump-links-item--modifier}} {{jump-links-item--modifier}}{{/if}}"
+<li class="{{pfv}}jump-links__item{{#if jump-links-item--modifier}} {{jump-links-item--modifier}}{{/if}}{{#if jump-links-item--IsCurrent}} pf-m-current{{/if}}"
   {{#if jump-links-item--attribute}}
     {{{jump-links-item--attribute}}}
-  {{/if}}>
+  {{/if}}
+  {{#if jump-links-item--IsCurrent}}
+    aria-current="location"
+  {{/if}}
+  >
   {{> @partial-block}}
 </li>
