@@ -16,7 +16,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -45,7 +45,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -78,7 +78,7 @@ cssPrefix: pf-v6-c-jump-links
           {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
-      {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+      {{#> jump-links-item jump-links-item--IsCurrent=true}}
         {{#> jump-links-link}}
           {{#> jump-links-link-text}}
             Active section
@@ -109,7 +109,7 @@ cssPrefix: pf-v6-c-jump-links
           {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
-      {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+      {{#> jump-links-item jump-links-item--IsCurrent=true}}
         {{#> jump-links-link}}
           {{#> jump-links-link-text}}
             Active section
@@ -139,7 +139,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -185,7 +185,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -224,7 +224,7 @@ cssPrefix: pf-v6-c-jump-links
     Jump to vertical with inactive subsections example sections
   {{/jump-links-header}}
   {{#> jump-links-list jump-links-list--attribute='aria-labelledby="vertical-with-inactive-subsections-header"'}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -307,7 +307,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
         {{#> jump-links-list newcontext jump-links-list--attribute='aria-label="Second active subsection"'}}
-          {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+          {{#> jump-links-item jump-links-item--IsCurrent=true}}
             {{#> jump-links-link}}
               {{#> jump-links-link-text}}
                 Active subsection
@@ -355,7 +355,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -401,7 +401,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -447,7 +447,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
@@ -491,7 +491,7 @@ cssPrefix: pf-v6-c-jump-links
         {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current" jump-links-item--attribute='aria-current="location"'}}
+    {{#> jump-links-item jump-links-item--IsCurrent=true}}
       {{#> jump-links-link}}
         {{#> jump-links-link-text}}
           Active section
