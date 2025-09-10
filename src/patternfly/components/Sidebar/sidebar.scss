@@ -63,7 +63,6 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-stack__panel--Position: sticky;
   --#{$sidebar}--m-stack__panel--InsetBlockStart: 0;
   --#{$sidebar}--m-stack__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
-
   --#{$sidebar}--m-stack__panel--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$sidebar}--m-stack--m-panel-right__panel--Order: -1;
 
@@ -79,7 +78,6 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__panel--FlexBasis--base: auto;
   --#{$sidebar}__panel--BorderBlockEndWidth: 0;
   --#{$sidebar}__panel--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
-
   --#{$sidebar}__panel--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$sidebar}__panel--BoxShadow--base: var(--pf-t--global--box-shadow--md--bottom);
   --#{$sidebar}__panel--BoxShadow: var(--#{$sidebar}__panel--BoxShadow--base);
@@ -113,7 +111,6 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__main--AlignItems: var(--#{$sidebar}__main--md--AlignItems);
     --#{$sidebar}__main--m-border--before--Display: var(--#{$sidebar}__main--m-border--before--md--Display); // show border starting at md breakpoint
     --#{$sidebar}__panel--BorderBlockEndWidth: 0;
-
     --#{$sidebar}__panel--BoxShadow: none;
     --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--md--FlexBasis);
     --#{$sidebar}__panel--InsetBlockStart: var(--#{$sidebar}__panel--md--InsetBlockStart);
