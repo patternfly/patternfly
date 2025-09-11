@@ -35,7 +35,7 @@
     "start": "gulp develop",
     "test": "npm run a11y",
     "workflows": "node .github/generate-workflows",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
