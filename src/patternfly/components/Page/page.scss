@@ -154,6 +154,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-wizard--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-wizard--BorderBlockStartColor: var(--pf-t--global--border--color--default);
   --#{$page}__main-wizard--BorderBlockStartWidth: var(--pf-t--global--border--width--action--default);
+
+  // Drawer section
+  --#{$page}__drawer--c-drawer--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 }
 
 .#{$page} {
@@ -568,10 +572,15 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-shrink: 0;
 }
 
-.#{$page}__drawer .#{$page}__main-container {
-  align-self: revert;
+.#{$page}__drawer {
+  > .#{$drawer} > .#{$drawer}__main > .#{$drawer}__panel {
+    border-block-start: var(--#{$page}__drawer--c-drawer--BorderBlockStartWidth) solid var(--#{$page}__drawer--c-drawer--BorderBlockStartColor);
+  }
+  .#{$page}__main-container {
+    align-self: revert;
 
-  &.pf-m-fill {
-    flex-grow: 1;
+    &.pf-m-fill {
+      flex-grow: 1;
+    }
   }
 }
