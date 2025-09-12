@@ -280,6 +280,11 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor);
     --#{$dual-list-selector}__list-item-row--BorderWidth: var(--#{$dual-list-selector}__list-item-row--m-selected--BorderWidth);
 
+    &.pf-m-check {
+      --#{$dual-list-selector}__list-item-row--m-selected--BorderColor: transparent;
+      --#{$dual-list-selector}__list-item-row--BorderWidth: 0;
+    }
+
     .#{$dual-list-selector}__item-text {
       --#{$dual-list-selector}__item-text--Color: var(--#{$dual-list-selector}__list-item-row--m-selected__text--Color);
 
@@ -287,15 +292,14 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     --#{$dual-list-selector}__list-item-row--BackgroundColor: var(--#{$dual-list-selector}__list-item-row--hover--BackgroundColor);
     --#{$dual-list-selector}__list-item-row--BorderWidth: var(--#{$dual-list-selector}__list-item-row--hover--BorderWidth);
   }
 
   &.pf-m-check {
     --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: transparent;
-    --#{$dual-list-selector}__list-item-row--m-selected--BorderColor: transparent;
-    --#{$dual-list-selector}__list-item-row--BorderWidth: revert;
   }
 
   &.pf-m-ghost-row {
