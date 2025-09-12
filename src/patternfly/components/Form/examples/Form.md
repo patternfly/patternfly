@@ -198,7 +198,7 @@ cssPrefix: pf-v6-c-form
     {{#> form-group-control}}
       {{#> form-control controlType="textarea" form-control--modifier='pf-m-resize-both' form-control--IsError='true' form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
-      {{> form-helper-text helper-text--value='This is helper text with an icon.' helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+      {{> form-helper-text helper-text--value='This is helper text with an icon.' helper-text-item--IsError=true}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}

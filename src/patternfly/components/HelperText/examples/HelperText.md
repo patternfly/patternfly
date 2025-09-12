@@ -5,7 +5,7 @@ cssPrefix: pf-v6-c-helper-text
 ---
 
 ## Examples
-### Static
+### Basic
 ```hbs
 {{> helper-text helper-text--value="This is default helper text"}}
 {{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true}}
@@ -14,18 +14,12 @@ cssPrefix: pf-v6-c-helper-text
 {{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true}}
 ```
 
-### Icon
-```hbs
-{{> helper-text helper-text--value="This is default helper text" helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true helper-text-item--HasIcon=true}}
-```
+### Multiple items
 
-### Multiple static
+You can include multiple `HelperTextItem` components inside a single `HelperText` container.
+
 ```hbs
-{{#> helper-text}}
+{{#> helper-text helper-text--IsList=true}}
   {{> helper-text-item helper-text--value="This is default helper text"}}
   {{> helper-text-item helper-text--value="This is another default helper text in the same block"}}
   {{> helper-text-item helper-text--value="And this is more default text in the same block"}}
@@ -33,8 +27,11 @@ cssPrefix: pf-v6-c-helper-text
 ```
 
 ### Dynamic
+
+If the `HelperTextItem` components are expected or intended to dynamically update in some way, you should use a dynamic `HelperText` container.
+
 ```hbs
-{{#> helper-text-wrapper helper-text-item--IsDynamic=true helper-text-item--HasIcon=true}}
+{{#> helper-text-wrapper helper-text-item--IsDynamic=true}}
   {{> helper-text helper-text--value="This is default helper text"}}
   {{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true}}
   {{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true}}
@@ -45,7 +42,7 @@ cssPrefix: pf-v6-c-helper-text
 
 ### Dynamic list
 ```hbs
-{{#> helper-text helper-text-item--IsDynamic=true helper-text-item--HasIcon=true}}
+{{#> helper-text helper-text-item--IsDynamic=true helper-text--IsList=true}}
   {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsSuccess=true}}
   {{> helper-text-item helper-text--value='Cannot contain any variation of the word "redhat"' helper-text-item--IsError=true}}
   {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letter, uppercase letters, numbers, symbols' helper-text-item--IsSuccess=true}}
