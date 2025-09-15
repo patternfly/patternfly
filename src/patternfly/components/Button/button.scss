@@ -24,7 +24,7 @@
   --#{$button}--TransitionDelay: 0s;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
-  --#{$button}--TransitionProperty: color, background, border-width, border-color;
+  --#{$button}--TransitionProperty: color, background, border-color;
   --#{$button}--ScaleX: 1;
   --#{$button}--ScaleY: 1;
   --#{$button}--border--offset: 0;
@@ -168,7 +168,7 @@
   --#{$button}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$button}--m-plain--m-clicked--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$button}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
-  --#{$button}--m-plain--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$button}--m-plain--BorderColor: transparent;
   --#{$button}--m-plain--m-clicked--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$button}--m-plain--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
