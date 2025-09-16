@@ -79,6 +79,7 @@
     --#{$expandable-section}__content--Opacity: var(--#{$expandable-section}--m-expanded__content--Opacity);
     --#{$expandable-section}__content--TranslateY: var(--#{$expandable-section}--m-expanded__content--TranslateY);
     --#{$expandable-section}__content--Visibility: auto;
+    --#{$expandable-section}__content--Overflow: visible;
     --#{$expandable-section}__content--MaxHeight: 99999px;
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
@@ -165,6 +166,7 @@
 
   .#{$expandable-section}:where(:not(.pf-m-truncate)) & {
     max-height: var(--#{$expandable-section}__content--MaxHeight, 0);
+    overflow: var(--#{$expandable-section}__content--Overflow, hidden);
     visibility: var(--#{$expandable-section}__content--Visibility, hidden);
     opacity: var(--#{$expandable-section}__content--Opacity);
     transition-delay: 0s, 0s, var(--#{$expandable-section}__content--TransitionDelay--hide, 0s), var(--#{$expandable-section}__content--TransitionDelay--hide, 0s);
