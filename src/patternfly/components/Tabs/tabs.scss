@@ -30,7 +30,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical--inset: var(--pf-t--global--spacer--sm);
 
   // Tabs, Page insets modifier
-  --#{$tabs}--m-page-insets--inset: var(--pf-t--global--spacer--md);
+  --#{$tabs}--m-page-insets--inset: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--border--width--main--default));
 
   // Tabs, Vertical modifier
   --#{$tabs}--m-vertical--Width: 100%;

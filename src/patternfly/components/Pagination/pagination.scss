@@ -11,7 +11,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--BorderBlockEndWidth: 0;
 
   // Page insets
-  --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--m-page-insets--inset: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--border--width--main--default));
 
   // nav
   --#{$pagination}__nav--Display: none;
