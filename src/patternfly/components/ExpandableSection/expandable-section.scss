@@ -129,6 +129,7 @@
 
   &.pf-m-truncate {
     --#{$expandable-section}--Gap: var(--#{$expandable-section}--m-truncate--Gap);
+    --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
