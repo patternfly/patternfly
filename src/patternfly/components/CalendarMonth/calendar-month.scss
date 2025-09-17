@@ -58,12 +58,14 @@
   // date button
   --#{$calendar-month}__date--Width: 4ch;
   --#{$calendar-month}__date--Height: 4ch;
+  --#{$calendar-month}__date--after--BorderWidth: 0;
+  --#{$calendar-month}__date--after--BorderColor: transparent;
   --#{$calendar-month}__date--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$calendar-month}__date--Color: var(--pf-t--global--text--color--regular);
   --#{$calendar-month}__date--BackgroundColor: transparent;
   --#{$calendar-month}__date--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$calendar-month}__date--disabled--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$calendar-month}__date--after--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$calendar-month}__date--after--BorderWidth: 0;
   --#{$calendar-month}__date--after--BorderColor: transparent;
   --#{$calendar-month}__date--after--OutlineOffset: 0;
   --#{$calendar-month}__date--hover--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -72,9 +74,12 @@
   --#{$calendar-month}__date--focus--Color: var(--pf-t--global--icon--color--on-brand--clicked);
   --#{$calendar-month}__date--focus--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$calendar-month}__date--focus--after--BorderColor: var(--pf-t--global--border--color--hover);
+  --#{$calendar-month}__date--focus--after--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$calendar-month}__date--after--focus--OutlineOffset: -2px;
-  --#{$calendar-month}__dates-cell--m-current__date--after--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
-  --#{$calendar-month}__dates-cell--m-current__date--after--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$calendar-month}__dates-cell--m-current__date--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$calendar-month}__dates-cell--m-current__date--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$calendar-month}__dates-cell--m-selected__date--BorderWidth: var(--pf-t--global--border--width--high-contrast--strong);
+  --#{$calendar-month}__dates-cell--m-selected__date--BorderColor: transparent;
 }
 
 .#{$calendar-month} {
@@ -158,8 +163,8 @@
 
   &.pf-m-current {
     --#{$calendar-month}__date--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-current__date--BackgroundColor);
-    --#{$calendar-month}__date--after--BorderWidth: var(--#{$calendar-month}__dates-cell--m-current__date--after--BorderWidth);
-    --#{$calendar-month}__date--after--BorderColor: var(--#{$calendar-month}__dates-cell--m-current__date--after--BorderColor);
+    --#{$calendar-month}__date--BorderWidth: var(--#{$calendar-month}__dates-cell--m-current__date--BorderWidth);
+    --#{$calendar-month}__date--BorderColor: var(--#{$calendar-month}__dates-cell--m-current__date--BorderColor);
   }
 
   &.pf-m-in-range {
@@ -187,10 +192,12 @@
   &.pf-m-selected {
     --#{$calendar-month}__date--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--BackgroundColor);
     --#{$calendar-month}__date--Color: var(--#{$calendar-month}__dates-cell--m-selected__date--Color);
+    --#{$calendar-month}__date--BorderWidth: var(--#{$calendar-month}__dates-cell--m-selected__date--BorderWidth);
+    --#{$calendar-month}__date--BorderColor: var(--#{$calendar-month}__dates-cell--m-selected__date--BorderColor);
 
     // tweak the hover styling for a selected date
     --#{$calendar-month}__date--hover--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--hover--BackgroundColor);
-    --#{$calendar-month}__date--hover--BorderWidth: 0;
+    --#{$calendar-month}__date--hover--BorderWidth: var(--#{$calendar-month}__dates-cell--m-selected__date--BorderWidth);
 
     // tweak the focus styling for a selected date
     --#{$calendar-month}__date--focus--BackgroundColor: var(--#{$calendar-month}__dates-cell--m-selected__date--focus--BackgroundColor);
@@ -218,6 +225,15 @@
   background-color: var(--#{$calendar-month}__date--BackgroundColor);
   border: 0;
 
+  // base border
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border: var(--#{$calendar-month}__date--BorderWidth) solid var(--#{$calendar-month}__date--BorderColor);
+  }
+
+  // offset focus outline
   &::after {
     position: absolute;
     inset-block-start: var(--#{$calendar-month}__date--after--OutlineOffset);
@@ -229,6 +245,7 @@
   }
 
   &,
+  &::before,
   &::after {
     border-radius: var(--#{$calendar-month}__date--BorderRadius);
   }
@@ -236,13 +253,14 @@
   &:hover,
   &.pf-m-hover {
     --#{$calendar-month}__date--BackgroundColor: var(--#{$calendar-month}__date--hover--BackgroundColor);
-
-    border: var(--#{$calendar-month}__date--hover--BorderColor) solid var(--#{$calendar-month}__date--hover--BorderWidth);
+    --#{$calendar-month}__date--BorderWidth: var(--#{$calendar-month}__date--hover--BorderWidth);
+    --#{$calendar-month}__date--BorderColor: var(--#{$calendar-month}__date--hover--BorderColor);
   }
 
   &:focus,
   &.pf-m-focus {
     --#{$calendar-month}__date--after--BorderColor: var(--#{$calendar-month}__date--focus--after--BorderColor);
+    --#{$calendar-month}__date--after--BorderWidth: var(--#{$calendar-month}__date--focus--after--BorderWidth);
 
     outline: 0;
   }
