@@ -130,8 +130,6 @@
   &.pf-m-truncate {
     --#{$expandable-section}--Gap: var(--#{$expandable-section}--m-truncate--Gap);
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
-    --#{$expandable-section}__content--Opacity: 1;
-    --#{$expandable-section}__content--TranslateY: 0;
 
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
@@ -167,7 +165,7 @@
     display: revert;
   }
 
-  .#{$expandable-section}:where(:not(.pf-m-truncate)) & {
+  .#{$expandable-section}:where(:not(.pf-m-truncate)) > & {
     max-height: var(--#{$expandable-section}__content--MaxHeight, 0);
     overflow: var(--#{$expandable-section}__content--Overflow, hidden);
     visibility: var(--#{$expandable-section}__content--Visibility, hidden);
