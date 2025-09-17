@@ -208,7 +208,7 @@
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
   background-color: var(--#{$slider}__thumb--BackgroundColor);
-    border: var(--#{$slider}__thumb--BorderWidth) solid var(--#{$slider}__thumb--BorderColor);
+  border: var(--#{$slider}__thumb--BorderWidth) solid var(--#{$slider}__thumb--BorderColor);
   border-radius: var(--#{$slider}__thumb--BorderRadius);
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
 
