@@ -10,6 +10,8 @@
   --#{$slider}__rail-track--Height: #{pf-size-prem(4px)};
   --#{$slider}__rail-track--before--base--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
   --#{$slider}__rail-track--before--fill--BackgroundColor: var(--pf-t--global--border--color--hover);
+  --#{$slider}__rail-track--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$slider}__rail-track--before--BorderColor: transparent;
   --#{$slider}__rail-track--before--BorderRadius: var(--pf-t--global--border--radius--tiny);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
 
@@ -23,6 +25,8 @@
   --#{$slider}__step-tick--Height: #{pf-size-prem(4px)};
   --#{$slider}__step-tick--BackgroundColor: var(--pf-t--global--icon--color--nonstatus--on-gray--default);
   --#{$slider}__step-tick--TranslateX: -50%;
+  --#{$slider}__step-tick--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$slider}__step-tick--BorderColor: transparent;
   --#{$slider}__step-tick--BorderRadius: var(--pf-t--global--border--radius--sharp);
   --#{$slider}__step--m-active__slider-tick--BackgroundColor: var(--pf-t--global--icon--color--on-brand--default);
   --#{$slider}__step--first-child__step-tick--TranslateX: 0;
@@ -42,6 +46,8 @@
   --#{$slider}__thumb--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$slider}__thumb--TranslateX: -50%;
   --#{$slider}__thumb--TranslateY: -50%;
+  --#{$slider}__thumb--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$slider}__thumb--BorderColor: transparent;
   --#{$slider}__thumb--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$slider}__thumb--BoxShadow--base:
     0 0 0 2px var(--pf-t--global--background--color--primary--default),
@@ -127,6 +133,7 @@
         var(--#{$slider}__rail-track--before--fill--BackgroundColor) var(--#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop),
         var(--#{$slider}__rail-track--before--base--BackgroundColor) var(--#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop)
       );
+    border: var(--#{$slider}__rail-track--before--BorderWidth) solid var(--#{$slider}__rail-track--before--BorderColor);
     border-radius: var(--#{$slider}__rail-track--before--BorderRadius);
   }
 }
@@ -171,6 +178,7 @@
   width: var(--#{$slider}__step-tick--Width);
   height: var(--#{$slider}__step-tick--Height);
   background-color: var(--#{$slider}__step-tick--BackgroundColor);
+  border: var(--#{$slider}__step-tick--BorderWidth) solid var(--#{$slider}__step-tick--BorderColor);
   border-radius: var(--#{$slider}__step-tick--BorderRadius);
 }
 
@@ -200,6 +208,7 @@
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
   background-color: var(--#{$slider}__thumb--BackgroundColor);
+  border: var(--#{$slider}__thumb--BorderWidth) solid var(--#{$slider}__thumb--BorderColor);
   border-radius: var(--#{$slider}__thumb--BorderRadius);
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
 
