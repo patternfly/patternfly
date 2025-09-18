@@ -23,6 +23,7 @@
   --#{$expandable-section}__content--TransitionDelay--hide: var(--#{$expandable-section}__content--TransitionDuration--fade);
   --#{$expandable-section}__content--Opacity: 0;
   --#{$expandable-section}__content--TranslateY: 0;
+  --#{$expandable-section}__content--PaddingInlineStart: 0;
   --#{$expandable-section}--m-expand-top__content--TranslateY: 0;
   --#{$expandable-section}--m-expand-bottom__content--TranslateY: 0;
   --#{$expandable-section}--m-expanded__content--Opacity: 1;
@@ -158,8 +159,8 @@
 
 .#{$expandable-section}__content {
   max-width: var(--#{$expandable-section}__content--MaxWidth);
-  padding-block-end: var(--#{$expandable-section}__content--PaddingBlockEnd, 0);
-  padding-inline-start: var(--#{$expandable-section}__content--PaddingInlineStart, 0);
+  padding-block-end: var(--#{$expandable-section}__content--PaddingBlockEnd, 0); // TODO remove in breaking change
+  padding-inline-start: var(--#{$expandable-section}__content--PaddingInlineStart);
 
   &:where([hidden]) {
     display: revert;
