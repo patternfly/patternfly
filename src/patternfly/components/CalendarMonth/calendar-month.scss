@@ -58,8 +58,8 @@
   // date button
   --#{$calendar-month}__date--Width: 4ch;
   --#{$calendar-month}__date--Height: 4ch;
-  --#{$calendar-month}__date--after--BorderWidth: 0;
-  --#{$calendar-month}__date--after--BorderColor: transparent;
+  --#{$calendar-month}__date--BorderWidth: 0;
+  --#{$calendar-month}__date--BorderColor: transparent;
   --#{$calendar-month}__date--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$calendar-month}__date--Color: var(--pf-t--global--text--color--regular);
   --#{$calendar-month}__date--BackgroundColor: transparent;
