@@ -31,14 +31,15 @@
   --#{$toggle-group}__button--m-selected--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$toggle-group}__button--m-selected--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$toggle-group}__button--m-selected--before--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--m-selected-selected--before--BorderInlineStartColor: var(--pf-t--global--border--color--alt);
   --#{$toggle-group}__button--m-selected--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$toggle-group}__button--m-selected--after--BorderWidth: var(--pf-t--global--border--width--high-contrast--strong);
 
   // disabled
   --#{$toggle-group}__button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$toggle-group}__button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$toggle-group}__button--disabled--before--BorderColor: var(--pf-t--global--border--color--disabled);
-  --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--disabled-disabled--before--BorderInlineStartColor: var(--pf-t--global--border--color--disabled);
   --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Compact
@@ -68,21 +69,15 @@
 
   &:first-child {
     .#{$toggle-group}__button {
-      &,
-      &::before {
-        border-start-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderStartStartRadius);
-        border-end-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderEndStartRadius);
-      }
+      border-start-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderStartStartRadius);
+      border-end-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderEndStartRadius);
     }
   }
 
   &:last-child {
     .#{$toggle-group}__button {
-      &,
-      &::before {
-        border-start-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderStartEndRadius);
-        border-end-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderEndEndRadius);
-      }
+      border-start-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderStartEndRadius);
+      border-end-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderEndEndRadius);
     }
   }
 }
@@ -101,20 +96,28 @@
   background-color: var(--#{$toggle-group}__button--BackgroundColor);
   border: 0;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
     border-style: solid;
+    border-radius: inherit;
+  }
+
+  &::before {
     border-width: var(--#{$toggle-group}__button--before--BorderWidth);
     border-block-start-color: var(--#{$toggle-group}__button--before--BorderBlockStartColor, var(--#{$toggle-group}__button--before--BorderColor));
     border-block-end-color: var(--#{$toggle-group}__button--before--BorderBlockEndColor, var(--#{$toggle-group}__button--before--BorderColor));
     border-inline-start-color: var(--#{$toggle-group}__button--before--BorderInlineStartColor, var(--#{$toggle-group}__button--before--BorderColor));
     border-inline-end-color: var(--#{$toggle-group}__button--before--BorderInlineEndColor, var(--#{$toggle-group}__button--before--BorderColor));
+  }
+
+  // forced-colors borders
+  &::after {
+    border-color: var(--#{$toggle-group}__button--after--BorderColor, transparent);
+    border-width: var(--#{$toggle-group}__button--after--BorderWidth, 0);
   }
 
   &:is(:hover, :focus) {
@@ -130,6 +133,7 @@
     --#{$toggle-group}__button--Color: var(--#{$toggle-group}__button--m-selected--Color, inherit);
     --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--m-selected--ZIndex);
     --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--m-selected--before--BorderColor);
+    --#{$toggle-group}__button--after--BorderWidth: var(--#{$toggle-group}__button--m-selected--after--BorderWidth);
   }
 
   &:is(:disabled, .pf-m-disabled) {
