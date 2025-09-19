@@ -14,12 +14,21 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-page-insets--inset: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--border--width--main--default));
 
   // nav
-  --#{$pagination}__nav--Display: none;
+  --#{$pagination}__nav--Display: inline-flex;
   --#{$pagination}--m-display-summary__nav--Display: none;
+  --#{$pagination}--m-compact__nav--Display: inline-flex;
   --#{$pagination}--m-display-full__nav--Display: inline-flex;
   --#{$pagination}__nav--ColumnGap: var(--pf-t--global--spacer--sm);
 
+  // nav control
+  --#{$pagination}__nav-control--m-first--Display: none;
+  --#{$pagination}__nav-control--m-first--md--Display: block;
+  --#{$pagination}__nav-control--m-last--Display: none;
+  --#{$pagination}__nav-control--m-last--md--Display: block;
+
   // nav page select
+  --#{$pagination}__nav-page-select--Display: none;
+  --#{$pagination}__nav-page-select--md--Display: flex;
   --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--border--width--control--default) * 2);
@@ -27,8 +36,8 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
 
   // total items
-  --#{$pagination}__total-items--Display: block;
-  --#{$pagination}--m-display-summary__total-items--Display: block;
+  --#{$pagination}__total-items--Display: flex;
+  --#{$pagination}--m-display-summary__total-items--Display: flex;
   --#{$pagination}--m-display-full__total-items--Display: none;
 
   // top
@@ -60,7 +69,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
   // page menu
   --#{$pagination}__page-menu--Display--base: block;
-  --#{$pagination}__page-menu--Display: none;
+  --#{$pagination}__page-menu--Display: block;
   --#{$pagination}--m-display-summary__page-menu--Display: none;
   --#{$pagination}--m-display-full__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
   --#{$pagination}--m-bottom__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
@@ -71,6 +80,9 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom--BorderBlockStartWidth: 0;
     --#{$pagination}__page-menu--Display: var(--#{$pagination}__page-menu--md--Display);
     --#{$pagination}__nav--Display: inline-flex;
+    --#{$pagination}__nav-page-select--Display: var(--#{$pagination}__nav-page-select--md--Display);
+    --#{$pagination}__nav-control--m-first--Display: var(--#{$pagination}__nav-control--m-first--md--Display);
+    --#{$pagination}__nav-control--m-last--Display: var(--#{$pagination}__nav-control--m-last--md--Display);
     --#{$pagination}__total-items--Display: none;
   }
 
@@ -200,11 +212,19 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 // nav control
 .#{$pagination}__nav-control {
   @include pf-v6-mirror-inline-on-rtl;
+
+  &.pf-m-first {
+    display: var(--#{$pagination}__nav-control--m-first--Display)
+  }
+
+  &.pf-m-last {
+    display: var(--#{$pagination}__nav-control--m-last--Display)
+  }
 }
 
 // nav page element
 .#{$pagination}__nav-page-select {
-  display: flex;
+  display: var(--#{$pagination}__nav-page-select--Display);
   column-gap: var(--#{$pagination}__nav-page-select--ColumnGap);
   align-items: center;
 

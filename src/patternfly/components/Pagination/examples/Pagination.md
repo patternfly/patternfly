@@ -8,7 +8,6 @@ cssPrefix: pf-v6-c-pagination
 ### Top
 ```hbs
 {{#> pagination}}
-  {{> pagination-total-items-content}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-top-example"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top example"}}
 {{/pagination}}
@@ -87,7 +86,7 @@ cssPrefix: pf-v6-c-pagination
 ### Top disabled
 ```hbs
 {{#> pagination}}
-  {{> pagination-total-items-content}}
+  {{> pagination-total-items-content pagination-menu-toggle--IsDisabled=true pagination-nav-content--IsDisabled=true }}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-top-disabled-example" pagination-menu-toggle--IsDisabled=true}}
   {{> pagination-nav-content pagination-nav-content--IsDisabled="true"  pagination-nav--aria-label="Pagination nav - top disabled example"}}
 {{/pagination}}
@@ -96,7 +95,6 @@ cssPrefix: pf-v6-c-pagination
 ### Compact
 ```hbs
 {{#> pagination pagination--IsCompact="true"}}
-  {{> pagination-total-items-content}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-compact-example"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - compact example"}}
 {{/pagination}}
