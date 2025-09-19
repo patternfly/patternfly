@@ -23,6 +23,7 @@
   --#{$expandable-section}__content--TransitionDelay--hide: var(--#{$expandable-section}__content--TransitionDuration--fade);
   --#{$expandable-section}__content--Opacity: 0;
   --#{$expandable-section}__content--TranslateY: 0;
+  --#{$expandable-section}__content--PaddingInlineStart: 0;
   --#{$expandable-section}--m-expand-top__content--TranslateY: 0;
   --#{$expandable-section}--m-expand-bottom__content--TranslateY: 0;
   --#{$expandable-section}--m-expanded__content--Opacity: 1;
@@ -79,6 +80,7 @@
     --#{$expandable-section}__content--Opacity: var(--#{$expandable-section}--m-expanded__content--Opacity);
     --#{$expandable-section}__content--TranslateY: var(--#{$expandable-section}--m-expanded__content--TranslateY);
     --#{$expandable-section}__content--Visibility: auto;
+    --#{$expandable-section}__content--Overflow: visible;
     --#{$expandable-section}__content--MaxHeight: 99999px;
     --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
@@ -128,6 +130,7 @@
 
   &.pf-m-truncate {
     --#{$expandable-section}--Gap: var(--#{$expandable-section}--m-truncate--Gap);
+    --#{$expandable-section}__content--TransitionDelay--hide: 0s;
 
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
@@ -156,15 +159,16 @@
 
 .#{$expandable-section}__content {
   max-width: var(--#{$expandable-section}__content--MaxWidth);
-  padding-block-end: var(--#{$expandable-section}__content--PaddingBlockEnd, 0);
-  padding-inline-start: var(--#{$expandable-section}__content--PaddingInlineStart, 0);
+  padding-block-end: var(--#{$expandable-section}__content--PaddingBlockEnd, 0); // TODO remove in breaking change
+  padding-inline-start: var(--#{$expandable-section}__content--PaddingInlineStart);
 
   &:where([hidden]) {
     display: revert;
   }
 
-  .#{$expandable-section}:where(:not(.pf-m-truncate)) & {
+  .#{$expandable-section}:where(:not(.pf-m-truncate)) > & {
     max-height: var(--#{$expandable-section}__content--MaxHeight, 0);
+    overflow: var(--#{$expandable-section}__content--Overflow, hidden);
     visibility: var(--#{$expandable-section}__content--Visibility, hidden);
     opacity: var(--#{$expandable-section}__content--Opacity);
     transition-delay: 0s, 0s, var(--#{$expandable-section}__content--TransitionDelay--hide, 0s), var(--#{$expandable-section}__content--TransitionDelay--hide, 0s);
