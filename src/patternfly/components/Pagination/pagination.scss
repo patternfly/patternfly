@@ -110,6 +110,11 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}__nav--Display: var(--#{$pagination}--m-compact-mobile__nav--Display);
   }
 
+  &.pf-m-compact:not(.pf-m-compact-on-mobile) {
+    --#{$pagination}__nav--Display: inline-flex;
+    --#{$pagination}__page-menu--Display: block;
+  }
+
   .#{$pagination}__page-menu {
     display: var(--#{$pagination}__page-menu--Display);
   }
