@@ -14,7 +14,8 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-page-insets--inset: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--border--width--main--default));
 
   // nav
-  --#{$pagination}__nav--Display: inline-flex;
+  --#{$pagination}__nav--Display: none;
+  --#{$pagination}--m-compact-mobile__nav--Display: inline-flex;
   --#{$pagination}--m-display-summary__nav--Display: none;
   --#{$pagination}--m-compact__nav--Display: inline-flex;
   --#{$pagination}--m-display-full__nav--Display: inline-flex;
@@ -36,8 +37,8 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
 
   // total items
-  --#{$pagination}__total-items--Display: flex;
-  --#{$pagination}--m-display-summary__total-items--Display: flex;
+  --#{$pagination}__total-items--Display: block;
+  --#{$pagination}--m-display-summary__total-items--Display: block;
   --#{$pagination}--m-display-full__total-items--Display: none;
 
   // top
@@ -69,7 +70,8 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
   // page menu
   --#{$pagination}__page-menu--Display--base: block;
-  --#{$pagination}__page-menu--Display: block;
+  --#{$pagination}__page-menu--Display: none;
+  --#{$pagination}--m-compact-mobile__page-menu--Display: block;
   --#{$pagination}--m-display-summary__page-menu--Display: none;
   --#{$pagination}--m-display-full__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
   --#{$pagination}--m-bottom__page-menu--Display: var(--#{$pagination}__page-menu--Display--base);
@@ -102,6 +104,11 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   border: 0 solid var(--#{$pagination}--BorderColor);
   border-block-start-width: var(--#{$pagination}--BorderBlockStartWidth);
   border-block-end-width: var(--#{$pagination}--BorderBlockEndWidth);
+
+  &.pf-m-compact-on-mobile {
+    --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-compact-mobile__page-menu--Display);
+    --#{$pagination}__nav--Display: var(--#{$pagination}--m-compact-mobile__nav--Display);
+  }
 
   .#{$pagination}__page-menu {
     display: var(--#{$pagination}__page-menu--Display);
