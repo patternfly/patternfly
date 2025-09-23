@@ -312,7 +312,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
 .#{$dual-list-selector}__item,
 .#{$dual-list-selector}__item-main {
-  flex-basis: 100%; // TODO
+  flex-grow: 1;
 }
 
 .#{$dual-list-selector}__draggable {
