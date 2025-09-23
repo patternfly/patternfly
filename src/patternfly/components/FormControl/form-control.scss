@@ -394,13 +394,6 @@
     & .#{$form-control}__utilities {
       padding-inline-end: var(--#{$form-control}__utilities--select--PaddingInlineEnd);
     }
-
-    // Firefox's select text has additional padding
-    // stylelint-disable-next-line
-    @-moz-document url-prefix() {
-      --#{$form-control}--PaddingInlineEnd: calc(var(--#{$form-control}__select--PaddingInlineEnd) - 1px);
-      --#{$form-control}--PaddingInlineStart: calc(var(--#{$form-control}__select--PaddingInlineStart) - 4px);
-    }
   }
 
   &.pf-m-placeholder > select {
