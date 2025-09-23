@@ -93,6 +93,14 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--xs--BorderInlineStartWidth: 0px; // needs a unit because it's used in calc()
   --#{$page}__main-container--xs--BorderInlineEndWidth: 0px; // needs a unit because it's used in calc()
 
+  @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
+    --#{$page}__main-container--MarginInlineStart: var(--#{$page}__main-container--xs--MarginInlineStart);
+    --#{$page}__main-container--MarginInlineEnd: var(--#{$page}__main-container--xs--MarginInlineEnd);
+    --#{$page}__main-container--BorderBlockEndWidth: var(--#{$page}__main-container--xs--BorderBlockEndWidth);
+    --#{$page}__main-container--BorderInlineStartWidth: var(--#{$page}__main-container--xs--BorderInlineStartWidth);
+    --#{$page}__main-container--BorderInlineEndWidth: var(--#{$page}__main-container--xs--BorderInlineEndWidth);
+  }
+
   // Main section
   --#{$page}__main-section--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$page}__main-section--PaddingInlineEnd: var(--pf-t--global--spacer--lg); // This is the intended spacing - the border of the main section will be subtracted
@@ -408,13 +416,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
     --#{$page}__main-container--AlignSelf: var(--#{$page}__main-container--xs--AlignSelf);
-    --#{$page}__main-container--MarginInlineStart: var(--#{$page}__main-container--xs--MarginInlineStart);
-    --#{$page}__main-container--MarginInlineEnd: var(--#{$page}__main-container--xs--MarginInlineEnd);
     --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--xs--MaxHeight);
     --#{$page}__main-container--BorderRadius: var(--#{$page}__main-container--xs--BorderRadius);
-    --#{$page}__main-container--BorderBlockEndWidth: var(--#{$page}__main-container--xs--BorderBlockEndWidth);
-    --#{$page}__main-container--BorderInlineStartWidth: var(--#{$page}__main-container--xs--BorderInlineStartWidth);
-    --#{$page}__main-container--BorderInlineEndWidth: var(--#{$page}__main-container--xs--BorderInlineEndWidth);
   }
 }
 
