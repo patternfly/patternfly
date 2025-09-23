@@ -19,11 +19,13 @@
   // Switch input
   --#{$switch}__input--checked__toggle--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$switch}__input--checked__toggle--before--TranslateX: calc(100% + var(--#{$switch}__toggle-icon--Offset));
-  --#{$switch}__input--checked__toggle--BorderWidth: 0;
+  --#{$switch}__input--checked__toggle--BorderColor: transparent;
+  --#{$switch}__input--checked__toggle--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$switch}__input--checked__label--Color: var(--pf-t--global--text--color--regular);
   --#{$switch}__input--not-checked__label--Color: var(--pf-t--global--text--color--subtle);
   --#{$switch}__input--disabled__label--Color: var(--pf-t--global--text--color--disabled);
   --#{$switch}__input--disabled__toggle--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$switch}__input--disabled__toggle--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$switch}__input--checked__toggle--before--BackgroundColor: var(--pf-t--global--icon--color--inverse);
   --#{$switch}__input--not-checked__toggle--before--BackgroundColor: var(--pf-t--global--icon--color--subtle);
   --#{$switch}__input--disabled__toggle--before--BackgroundColor: var(--pf-t--global--icon--color--on-disabled);
@@ -40,6 +42,7 @@
   --#{$switch}__toggle--before--Width: calc(var(--#{$switch}--FontSize) - var(--#{$switch}__toggle-icon--Offset));
   --#{$switch}__toggle--before--Height: var(--#{$switch}__toggle--before--Width);
   --#{$switch}__toggle--before--InsetInlineStart: calc((var(--#{$switch}__toggle--Height) - var(--#{$switch}__toggle--before--Height)) / 2);
+  --#{$switch}__toggle--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$switch}__toggle--before--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$switch}__toggle--before--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$switch}__toggle--before--TransitionDuration: var(--pf-t--global--motion--duration--md);
@@ -88,6 +91,7 @@
 
     ~ .#{$switch}__toggle {
       --#{$switch}__toggle--BorderWidth: var(--#{$switch}__input--checked__toggle--BorderWidth);
+      --#{$switch}__toggle--BorderColor: var(--#{$switch}__input--checked__toggle--BorderColor);
 
       background-color: var(--#{$switch}__input--checked__toggle--BackgroundColor);
 
@@ -125,6 +129,7 @@
 
     ~ .#{$switch}__toggle {
       --#{$switch}__toggle-icon--Color: var(--#{$switch}__input--disabled__toggle-icon--Color);
+      --#{$switch}__toggle--BorderColor: var(--#{$switch}__input--disabled__toggle--BorderColor);
 
       cursor: not-allowed;
       background-color: var(--#{$switch}__input--disabled__toggle--BackgroundColor);
@@ -153,6 +158,7 @@
     height: var(--#{$switch}__toggle--before--Height);
     content: "";
     background-color: var(--#{$switch}__input--not-checked__toggle--before--BackgroundColor);
+    border: var(--#{$switch}__toggle--before--BorderWidth) solid transparent; // for forced color mode
     border-radius: var(--#{$switch}__toggle--before--BorderRadius);
     transition: var(--#{$switch}__toggle--before--Transition); // TODO remove shorthand in breaking change
     transform: translateY(-50%);
