@@ -98,6 +98,7 @@
   // Secondary
   --#{$card}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$card}--m-secondary--BorderColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$card}--m-secondary--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // Full height
   --#{$card}--m-full-height--Height: 100%;
@@ -221,6 +222,7 @@
 
   &.pf-m-secondary {
     --#{$card}--BorderColor: var(--#{$card}--m-secondary--BorderColor);
+    --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
     --#{$card}--BackgroundColor: var(--#{$card}--m-secondary--BackgroundColor);
   }
 
