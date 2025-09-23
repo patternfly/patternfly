@@ -43,6 +43,8 @@ $pf-v6-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "
     flex-basis: var(--#{$divider}--before--FlexBasis);
     content: "";
     background-color: var(--#{$divider}--Color);
+    border-block-start: var(--#{$divider}--Size) solid transparent;
+    border-inline-start: var(--#{$divider}--Size) solid transparent;
   }
 
   // - Divider horizontal
