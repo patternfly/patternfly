@@ -14,7 +14,7 @@
 
   // secondary modifier
   --#{$panel}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$panel}--m-secondary--before--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$panel}--m-secondary--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // bordered
   --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--box--default);
@@ -23,7 +23,7 @@
   // raised
   --#{$panel}--m-raised--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-  --#{$panel}--m-raised--before--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$panel}--m-raised--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // header
   --#{$panel}__header--PaddingBlockStart: var(--pf-t--global--spacer--md);
