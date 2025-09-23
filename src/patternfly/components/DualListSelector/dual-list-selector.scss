@@ -312,7 +312,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
 .#{$dual-list-selector}__item,
 .#{$dual-list-selector}__item-main {
-  flex-basis: 100%;
+  flex-basis: 100%; // TODO
 }
 
 .#{$dual-list-selector}__draggable {
@@ -335,7 +335,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
 .#{$dual-list-selector}__item {
   position: relative;
-  width: 100%;
+  min-width: 0;
   padding-block-start: var(--#{$dual-list-selector}__item--PaddingBlockStart);
   padding-block-end: var(--#{$dual-list-selector}__item--PaddingBlockEnd);
   padding-inline-start: var(--#{$dual-list-selector}__item--PaddingInlineStart);
