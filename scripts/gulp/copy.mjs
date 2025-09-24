@@ -36,8 +36,8 @@ export function copySource() {
   ]);
 }
 
-// const docFiles = ['patternfly-docs/site/**', 'src/patternfly/**/examples/*.css', 'src/patternfly/**/deprecated/*.css'];
-const docFiles = ['src/patternfly/**/examples/*.css', 'src/patternfly/**/deprecated/*.css'];
+const docFiles = ['patternfly-docs/site/**', 'src/patternfly/**/examples/*.css', 'src/patternfly/**/deprecated/*.css'];
+//const docFiles = ['src/patternfly/**/examples/*.css', 'src/patternfly/**/deprecated/*.css'];
 
 export function copyDocs() {
   return src(docFiles).pipe(dest('dist/docs'));
