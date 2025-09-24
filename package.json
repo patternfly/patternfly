@@ -5,7 +5,7 @@
   "keywords": [],
   "license": "MIT",
   "engines": {
-    "node": ">=20.18.3 <22"
+    "node": ">=20.18.3"
   },
   "scripts": {
     "a11y": "patternfly-a11y --config patternfly-a11y.config",
@@ -72,8 +72,8 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "glob": "^10.3.12",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0",
     "gulp-iconfont": "^11.0.1",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-postcss": "^10.0.0",
