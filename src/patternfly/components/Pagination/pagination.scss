@@ -17,29 +17,26 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}__nav--Display: none;
   --#{$pagination}--m-compact-mobile__nav--Display: inline-flex;
   --#{$pagination}--m-display-summary__nav--Display: none;
-  --#{$pagination}--m-compact__nav--Display: inline-flex;
   --#{$pagination}--m-display-full__nav--Display: inline-flex;
   --#{$pagination}__nav--ColumnGap: var(--pf-t--global--spacer--sm);
 
   // nav control
-  --#{$pagination}__nav-control--m-first--Display: none;
-  --#{$pagination}__nav-control--m-first--md--Display: block;
-  --#{$pagination}__nav-control--m-last--Display: none;
-  --#{$pagination}__nav-control--m-last--md--Display: block;
+  --#{$pagination}--m-compact-mobile__nav-control--m-first--Display: none;
+  --#{$pagination}--m-compact-mobile__nav-control--m-last--Display: none;
 
   // nav page select
-  --#{$pagination}__nav-page-select--Display: none;
-  --#{$pagination}__nav-page-select--md--Display: flex;
   --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--spacer--control--horizontal--default) + var(--pf-t--global--border--width--control--default) * 2);
   --#{$pagination}__nav-page-select--c-form-control--width-chars: 2;
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
+  --#{$pagination}--m-compact-mobile__nav-page-select--Display: none;
 
   // total items
   --#{$pagination}__total-items--Display: block;
   --#{$pagination}--m-display-summary__total-items--Display: block;
   --#{$pagination}--m-display-full__total-items--Display: none;
+  --#{$pagination}--m-compact-mobile__total-items--Display: none;
 
   // top
   --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -82,9 +79,6 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom--BorderBlockStartWidth: 0;
     --#{$pagination}__page-menu--Display: var(--#{$pagination}__page-menu--md--Display);
     --#{$pagination}__nav--Display: inline-flex;
-    --#{$pagination}__nav-page-select--Display: var(--#{$pagination}__nav-page-select--md--Display);
-    --#{$pagination}__nav-control--m-first--Display: var(--#{$pagination}__nav-control--m-first--md--Display);
-    --#{$pagination}__nav-control--m-last--Display: var(--#{$pagination}__nav-control--m-last--md--Display);
     --#{$pagination}__total-items--Display: none;
   }
 
@@ -106,13 +100,14 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   border-block-end-width: var(--#{$pagination}--BorderBlockEndWidth);
 
   &.pf-m-compact-on-mobile {
-    --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-compact-mobile__page-menu--Display);
-    --#{$pagination}__nav--Display: var(--#{$pagination}--m-compact-mobile__nav--Display);
-  }
-
-  &.pf-m-compact:not(.pf-m-compact-on-mobile) {
-    --#{$pagination}__nav--Display: inline-flex;
-    --#{$pagination}__page-menu--Display: block;
+    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
+      --#{$pagination}__total-items--Display: var(--#{$pagination}--m-compact-mobile__total-items--Display);
+      --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-compact-mobile__page-menu--Display);
+      --#{$pagination}__nav--Display: var(--#{$pagination}--m-compact-mobile__nav--Display);
+      --#{$pagination}__nav-page-select--Display: var(--#{$pagination}--m-compact-mobile__nav-page-select--Display);
+      --#{$pagination}__nav-control--m-first--Display: var(--#{$pagination}--m-compact-mobile__nav-control--m-first--Display);
+      --#{$pagination}__nav-control--m-last--Display: var(--#{$pagination}--m-compact-mobile__nav-control--m-last--Display);
+    }
   }
 
   .#{$pagination}__page-menu {
@@ -226,17 +221,17 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   @include pf-v6-mirror-inline-on-rtl;
 
   &.pf-m-first {
-    display: var(--#{$pagination}__nav-control--m-first--Display)
+    display: var(--#{$pagination}__nav-control--m-first--Display, revert);
   }
 
   &.pf-m-last {
-    display: var(--#{$pagination}__nav-control--m-last--Display)
+    display: var(--#{$pagination}__nav-control--m-last--Display, revert);
   }
 }
 
 // nav page element
 .#{$pagination}__nav-page-select {
-  display: var(--#{$pagination}__nav-page-select--Display);
+  display: var(--#{$pagination}__nav-page-select--Display, flex);
   column-gap: var(--#{$pagination}__nav-page-select--ColumnGap);
   align-items: center;
 
@@ -265,12 +260,14 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v6-apply-breakpoint($breakpoint) {
+      // TODO - remove in breaking change
       &.pf-m-display-summary#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-summary__nav--Display);
         --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-display-summary__page-menu--Display);
         --#{$pagination}__total-items--Display: var(--#{$pagination}--m-display-summary__total-items--Display);
       }
 
+      // TODO - remove in breaking change
       &.pf-m-display-full#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-full__nav--Display);
         --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-display-full__page-menu--Display);

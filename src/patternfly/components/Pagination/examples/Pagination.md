@@ -8,6 +8,7 @@ cssPrefix: pf-v6-c-pagination
 ### Top
 ```hbs
 {{#> pagination}}
+  {{> pagination-total-items-content}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-top-example"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top example"}}
 {{/pagination}}
@@ -95,8 +96,18 @@ cssPrefix: pf-v6-c-pagination
 ### Compact
 ```hbs
 {{#> pagination pagination--IsCompact="true"}}
+  {{> pagination-total-items-content}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-compact-example"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - compact example"}}
+{{/pagination}}
+```
+
+### Compact on mobile
+```hbs
+{{#> pagination pagination--modifier="pf-m-compact-on-mobile"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-compact-mobile-example"}}
+  {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - compact on mobile example"}}
 {{/pagination}}
 ```
 
@@ -170,6 +181,7 @@ cssPrefix: pf-v6-c-pagination
 | `.pf-m-display-full{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies for full display pagination component styles at optional [breakpoint](/tokens/all-patternfly-tokens). |
 | `.pf-m-bottom` | `.pf-v6-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-v6-c-pagination` | Modifies for compact pagination component styles. |
+| `.pf-m-compact-on-mobile` | `.pf-v6-c-pagination` | Modifies for compact pagination component styles on mobile only. |
 | `.pf-m-static` | `.pf-v6-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on summary. |
 | `.pf-m-sticky` | `.pf-v6-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-v6-c-pagination.pf-m-bottom`. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies pagination horizontal padding at optional [breakpoint](/tokens/all-patternfly-tokens). |
