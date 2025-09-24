@@ -13,6 +13,14 @@ export function copyAssets() {
   return src('src/patternfly/assets/**').pipe(dest('static/assets'));
 }
 
+export function copyAssetsToPublic() {
+  return src('src/patternfly/assets/**').pipe(dest('public/assets'));
+}
+
+export function copyFAToPublic() {
+  return src('src/patternfly/assets/fontawesome/**').pipe(dest('public/assets/fontawesome'));
+}
+
 export function copySource() {
   return Promise.all([
     // Copy excluded source files

@@ -2,7 +2,7 @@ import fs from'fs';
 import path from 'path';
 import gulp from'gulp';
 import rimraf from'rimraf';
-import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
+import { copyFA, copySource, copyAssets, copyAssetsToPublic, copyFAToPublic, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
 import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
 import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
 import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
@@ -107,7 +107,7 @@ const buildDocs = series(buildSrc, copyDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, watchSrcHelpers, startWebpackDevServer);
 
 // Builds `dist` folder
-export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
+export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles, copyAssetsToPublic, copyFAToPublic);
 
 export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
 
