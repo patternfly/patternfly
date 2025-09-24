@@ -8,7 +8,24 @@ subsection: forms
 ### Basic
 ```hbs
 {{#> form form--id="form-demo-basic"}}
-  {{#> form-group form-group--id="-name"}}
+  {{#> form-group form-group--id=(concat form--id "-title")}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"')}}Title{{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '"')}}
+        <option value="" selected>Selectable one</option>
+        <option value="Mr">Mr</option>
+        <option value="Miss">Miss</option>
+        <option value="Mrs" >Mrs</option>
+        <option value="Ms">Ms</option>
+        <option value="Dr">Dr</option>
+        <option value="Dr" disabled>Disabled option</option>
+        <option value="Other">Other</option>
+      {{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+  {{#> form-group form-group--id=(concat form--id  "-name")}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
@@ -17,7 +34,7 @@ subsection: forms
       {{> form-helper-text helper-text--value='Include your middle name if you have one.'}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-email"}}
+  {{#> form-group form-group--id=(concat form--id  "-email")}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"')}}Email{{/form-label}}
     {{/form-group-label}}
@@ -25,7 +42,7 @@ subsection: forms
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-phone"}}
+  {{#> form-group form-group--id=(concat form--id  "-phone")}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}Phone number{{/form-label}}
       {{> form-group-label-help form-group-label-help--aria-label="More information for phone number field"  form-group-label-help--aria-describedby=form-group--id}}
@@ -34,7 +51,7 @@ subsection: forms
       {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="tel" placeholder="Example, (555) 555-5555" id="' form-group--id '" name="' form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--id=(concat form--id  "-contact")}}
     {{#> form-group-label}}
       {{#> form-label}}How can we contact you?{{/form-label}}
     {{/form-group-label}}
@@ -53,7 +70,7 @@ subsection: forms
       {{/check}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup="true" form-group--IsRadioGroup="true" form-group--id="-time-zone"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--IsRadioGroup="true" form-group--id=(concat form--id  "-time-zone")}}
     {{#> form-group-label}}
       {{#> form-label}}Time zone{{/form-label}}
     {{/form-group-label}}
@@ -514,7 +531,7 @@ subsection: forms
               {{#> form-section form-section--id=(concat form--id '-node-selector-terms')}}
 
                 {{!-- node selector terms multiple inputs --}}
-                {{#> form-group form-group--id="-node-selector-terms"}}
+                {{#> form-group form-group--id=(concat form--id  "-node-selector-terms")}}
                   {{#> form-group-label}}
                     {{#> form-label form-label--attribute=(concat 'id="' form-group--id '-title"') required="true"}}Node selector terms{{/form-label}}
                   {{/form-group-label}}
