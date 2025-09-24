@@ -4,35 +4,35 @@ import rename from 'gulp-rename';
 const { src, watch, dest } = gulp;
 
 export function copyFA() {
-  return src('node_modules/@fortawesome/fontawesome/styles.css')
+  return src('node_modules/@fortawesome/fontawesome/styles.css', { encoding: false })
     .pipe(rename('fontawesome.css'))
     .pipe(dest('dist/assets/icons'));
 }
 
 export function copyAssets() {
-  return src('src/patternfly/assets/**').pipe(dest('static/assets'));
+  return src('src/patternfly/assets/**', { encoding: false }).pipe(dest('static/assets'));
 }
 
 export function copySource() {
   return Promise.all([
     // Copy excluded source files
-    src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss', './src/patternfly/components/**/themes/**/*.scss']).pipe(
+    src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss', './src/patternfly/components/**/themes/**/*.scss'], { encoding: false }).pipe(
       dest('dist')
     ),
     // Copy source files
-    src('src/patternfly/*.scss').pipe(dest('dist')),
-    src('src/patternfly/sass-utilities/**').pipe(dest('dist/sass-utilities')),
+    src('src/patternfly/*.scss', { encoding: false }).pipe(dest('dist')),
+    src('src/patternfly/sass-utilities/**', { encoding: false }).pipe(dest('dist/sass-utilities')),
     // base
-    src('src/patternfly/base/**').pipe(dest('dist/base')),
+    src('src/patternfly/base/**', { encoding: false }).pipe(dest('dist/base')),
     // Assets
-    src('static/assets/images/**/*').pipe(dest('dist/assets/images/')),
-    src('src/patternfly/assets/**/*').pipe(dest('dist/assets/')),
+    src('static/assets/images/**/*', { encoding: false }).pipe(dest('dist/assets/images/')),
+    src('src/patternfly/assets/**/*', { encoding: false }).pipe(dest('dist/assets/')),
     // Icons
-    src('src/icons/definitions/*').pipe(dest('dist/icons/')),
-    src('src/icons/PfIcons/*').pipe(dest('dist/icons/PfIcons/')),
+    src('src/icons/definitions/*', { encoding: false }).pipe(dest('dist/icons/')),
+    src('src/icons/PfIcons/*', { encoding: false }).pipe(dest('dist/icons/PfIcons/')),
     // For NPM
-    src('*.md').pipe(dest('dist')),
-    src('package.json').pipe(dest('dist'))
+    src('*.md', { encoding: false }).pipe(dest('dist')),
+    src('package.json', { encoding: false }).pipe(dest('dist'))
   ]);
 }
 
@@ -40,7 +40,7 @@ export function copySource() {
 const docFiles = ['src/patternfly/**/examples/*.css', 'src/patternfly/**/deprecated/*.css'];
 
 export function copyDocs() {
-  return src(docFiles).pipe(dest('dist/docs'));
+  return src(docFiles, { encoding: false }).pipe(dest('dist/docs'));
 }
 
 export function watchCopyDocs(cb) {
