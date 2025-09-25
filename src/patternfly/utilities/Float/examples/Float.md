@@ -1,6 +1,7 @@
 ---
 id: Float
-section: utility-classes
+section: foundations-and-styles
+subsection: utility-classes
 ---
 
 import './Float.css'
@@ -20,7 +21,7 @@ import './Float.css'
 
 ## Documentation
 ### Overview
-[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-float-inline-start-on-lg`
+[Breakpoints](/foundations-and-styles/design-tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-float-inline-start-on-lg`
 
 ### Usage
 | Class | Applied to | Outcome |

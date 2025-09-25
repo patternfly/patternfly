@@ -1,6 +1,7 @@
 ---
 id: Text
-section: utility-classes
+section: foundations-and-styles
+subsection: utility-classes
 ---
 
 ## Examples
@@ -80,7 +81,7 @@ section: utility-classes
 ```
 
 ### Inverse colors
-These colors are best used with the ["inverse" background colors](/utility-classes/background-color#inverse-background-colors).
+These colors are best used with the ["inverse" background colors](/foundations-and-styles/utility-classes/background-color#inverse-background-colors).
 
 ```hbs
 <div class="pf-v6-u-background-color-inverse">
@@ -215,7 +216,7 @@ These text utilities can be used to modify text within the PatternFly framework.
 
 Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](/guidelines/colors/#contrast-ratios) for more information.
 
-[Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-font-size-xl-on-lg`
+[Breakpoints](/foundations-and-styles/design-tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-font-size-xl-on-lg`
 
 ### Usage
 

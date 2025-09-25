@@ -1,6 +1,7 @@
 ---
 id: Flex
-section: utility-classes
+section: foundations-and-styles
+subsection: utility-classes
 ---
 
 import './Flex.css'
@@ -348,7 +349,7 @@ import './Flex.css'
 
 ## Documentation
 ### Overview
-For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. [Breakpoints](/tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-flex-row-on-lg`
+For these utilities to have effect, the parent element must be set to `display: flex` or `display: inline-flex`. [Breakpoints](/foundations-and-styles/design-tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-flex-row-on-lg`
 
 <!-- ## Accessibility
 
