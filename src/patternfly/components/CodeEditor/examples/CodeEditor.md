@@ -74,6 +74,22 @@ import './CodeEditor.css';
 {{> code-editor-template-no-actions}}
 ```
 
+### Without language tab
+
+```hbs
+{{#> code-editor}}
+  {{#> code-editor-header}}
+  {{/code-editor-header}}
+  {{#> code-editor-main}}
+    {{#> code-editor-code}}
+      {{#> code-editor-code-pre}}
+        code goes here
+      {{/code-editor-code-pre}}
+    {{/code-editor-code}}
+  {{/code-editor-main}}
+{{/code-editor}}
+```
+
 ### Drag file and hover over component
 
 ```hbs
@@ -215,7 +231,7 @@ This is an extra container used in React to prevent event propagation if upload 
 | Class                                      | Applied to | Outcome                                                                                       |
 | ------------------------------------------ | ---------- | --------------------------------------------------------------------------------------------- |
 | `.pf-v6-c-code-editor`                     | `<div>`    | Initiates the code editor component. **Required**                                             |
-| `.pf-v6-c-code-editor__header`             | `<div>`    | Initiates the code editor header used for the controls and tab elements. **Required**         |
+| `.pf-v6-c-code-editor__header`             | `<div>`    | Initiates the code editor header used for the controls and tab elements. |
 | `.pf-v6-c-code-editor__header-content`     | `<div>`    | Initiates the code editor header content used for the controls and tab elements. **Required** |
 | `.pf-v6-c-code-editor__main`               | `<div>`    | Initiates the main container for a code editor e.g. Monaco **Required**                       |
 | `.pf-v6-c-code-editor__code`               | `<div>`    | Initiates the container for code without a JS code editor. Comes with PatternFly styling.     |

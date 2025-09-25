@@ -58,6 +58,7 @@
 
   // tab
   --#{$code-editor}__tab--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$code-editor}--m-read-only__tab--BackgroundColor: var(--#{$code-editor}--m-read-only__main--BackgroundColor);
   --#{$code-editor}__tab--Color: var(--pf-t--global--text--color--subtle);
   --#{$code-editor}__tab--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$code-editor}__tab--PaddingInlineEnd: var( --pf-t--global--spacer--sm);
@@ -79,6 +80,7 @@
   flex-direction: column;
 
   &.pf-m-read-only {
+    --#{$code-editor}__tab--BackgroundColor: var(--#{$code-editor}--m-read-only__tab--BackgroundColor);
     --#{$code-editor}__main--BackgroundColor: var(--#{$code-editor}--m-read-only__main--BackgroundColor);
   }
 
@@ -89,13 +91,20 @@
 
 .#{$code-editor}__container {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 .#{$code-editor}__header {
   position: relative;
   display: flex;
+
+  &::before,
+  &::after {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+  }
 
   &::before {
     position: absolute;
@@ -103,12 +112,20 @@
     pointer-events: none;
     content: "";
     border: var(--#{$code-editor}__header--BorderWidth) solid var(--#{$code-editor}__header--BorderColor);
-    border-block-end: var(--#{$code-editor}__header--before--BorderBlockEndWidth) solid var(--#{$code-editor}__header--before--BorderBlockEndColor); // TODO - remove in breaking change
+    border-block-end-width: 0;
     border-start-start-radius: var(--#{$code-editor}__header--BorderStartStartRadius);
     border-start-end-radius: var(--#{$code-editor}__header--BorderStartEndRadius);
   }
 
+  &::after {
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    border-block-end: var(--#{$code-editor}__header--before--BorderBlockEndWidth) solid var(--#{$code-editor}__header--before--BorderBlockEndColor);
+  }
+
   &.pf-m-plain {
+    --#{$code-editor}__header--BorderWidth: 0;
     --#{$code-editor}__header-content--BackgroundColor: var(--#{$code-editor}__header-content--m-plain--BackgroundColor);
   }
 }
@@ -212,6 +229,7 @@
   padding-block-end: var(--#{$code-editor}__tab--PaddingBlockEnd);
   padding-inline-start: var(--#{$code-editor}__tab--PaddingInlineStart);
   padding-inline-end: var(--#{$code-editor}__tab--PaddingInlineEnd);
+  margin-inline-start: auto;
   color: var(--#{$code-editor}__tab--Color);
   background-color: var(--#{$code-editor}__tab--BackgroundColor);
   border-color: var(--#{$code-editor}__tab--BorderColor);
