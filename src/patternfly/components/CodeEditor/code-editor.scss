@@ -106,7 +106,7 @@
     content: "";
   }
 
-  &::before {
+  &::after {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -117,7 +117,7 @@
     border-start-end-radius: var(--#{$code-editor}__header--BorderStartEndRadius);
   }
 
-  &::after {
+  &::before {
     inset-block-end: 0;
     inset-inline-start: 0;
     inset-inline-end: 0;
