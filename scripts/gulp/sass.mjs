@@ -57,7 +57,7 @@ function compileSASS0(srcFiles) {
 }
 
 export function compileSASS(sassFiles) {
-  return compileSASS0(src(sassFiles));
+  return compileSASS0(src(sassFiles, { encoding: false }));
 }
 
 // Helper
@@ -85,7 +85,7 @@ export function watchSASS(sassFiles, cb) {
 
   function compileDocSASS(sassFile) {
     const toCompile = docCSSFiles;
-    compileSASS0(src(toCompile));
+    compileSASS0(src(toCompile, { encoding: false }));
     console.log('Compiled', toCompile.map(file => path.relative(process.cwd(), file)).join(' '));
   }
 
@@ -100,7 +100,7 @@ const postcssOptions = {
 };
 
 export function minifyCSS() {
-  return src('./dist/patternfly.css')
+  return src('./dist/patternfly.css', { encoding: false })
     .pipe(rename('patternfly.min.css'))
     .pipe(sourcemaps.init())
     .pipe(postcss([cssnano(postcssOptions)]))

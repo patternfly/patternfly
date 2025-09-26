@@ -64,7 +64,7 @@ export function generateSnippets(htmlIndexFiles) {
     }
   });
 
-  return src(htmlIndexFiles)
+  return src(htmlIndexFiles, { encoding: false })
     .pipe(
       through2.obj((chunk, _, cb2) => {
         const relativePath = path.relative(process.cwd(), chunk.history[0]);

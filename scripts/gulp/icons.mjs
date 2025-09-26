@@ -65,7 +65,7 @@ export function pfIconFont() {
   const nextCodepoint = maxCodepoint + 1;
   const nextUnicodeHex = '0x' + nextCodepoint.toString(16).toUpperCase();
 
-  return src('./src/icons/PfIcons/*.svg')
+  return src('./src/icons/PfIcons/*.svg', { encoding: false })
     .pipe(
       iconfontCss({
         fontName: pficonFontName,

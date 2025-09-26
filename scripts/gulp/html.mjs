@@ -28,7 +28,7 @@ function compileHBS0(srcFiles) {
 }
 
 export function compileHBS(hbsFiles) {
-  return compileHBS0(src(hbsFiles));
+  return compileHBS0(src(hbsFiles, { encoding: false }));
 }
 
 // Helper
@@ -84,12 +84,12 @@ function compileMD0(srcFiles) {
 }
 
 export function compileMD(mdFiles) {
-  return compileMD0(src(mdFiles));
+  return compileMD0(src(mdFiles, { encoding: false }));
 }
 
 // Helper
 function onMDChange(file) {
-  compileMD0(src(file));
+  compileMD0(src(file, { encoding: false }));
 }
 
 // Helper
