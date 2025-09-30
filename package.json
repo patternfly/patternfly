@@ -4,9 +4,6 @@
   "version": "0.0.0-development",
   "keywords": [],
   "license": "MIT",
-  "engines": {
-    "node": ">=20.18.3 <22"
-  },
   "scripts": {
     "a11y": "patternfly-a11y --config patternfly-a11y.config",
     "backstop:clean": "rimraf -- backstop_data/bitmaps_test backstop_data/html_report",
