@@ -193,6 +193,12 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-no-background--BackgroundColor);
   }
 
+  // Container query support (opt-in)
+  &.pf-m-container {
+    container-type: inline-size;
+    container-name: toolbar;
+  }
+
   // @include resize-observer-placeholder('md') {
   //   do resize observer things here
   // }
@@ -288,12 +294,25 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   border-block-end: var(--#{$toolbar}__expandable-content--BorderBlockEndWidth) solid var(--#{$toolbar}__expandable-content--BorderBlockEndColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
+  // New container query behavior (for .pf-m-container variant)
+  @at-root .#{$toolbar}.pf-m-container & {
+    @include pf-v6-container-query("lg", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: red !important;
+    }
+  }
+
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     position: static;
     padding: 0;
     border-block-end: 0;
     box-shadow: none;
+    background-color: blue !important;
   }
+
 
   &.pf-m-expanded,
   .#{$toolbar}__group {
