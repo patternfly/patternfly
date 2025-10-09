@@ -57,6 +57,64 @@
   }
 }
 
+// Container query mixin for responsive classes based on container size
+// Usage: @include pf-v6-container-query("md", "toolbar") { ... }
+@mixin pf-v6-container-query($point, $container-name: null) {
+  @if $point == "" or not $point or $point == "base" {
+    @content;
+  } @else if $point == "sm" {
+    @if $container-name {
+      @container #{$container-name} (min-width: #{$pf-v6-global--container-breakpoint--sm}) {
+        @content;
+      }
+    } @else {
+      @container (min-width: #{$pf-v6-global--container-breakpoint--sm}) {
+        @content;
+      }
+    }
+  } @else if $point == "md" {
+    @if $container-name {
+      @container #{$container-name} (min-width: #{$pf-v6-global--container-breakpoint--md}) {
+        @content;
+      }
+    } @else {
+      @container (min-width: #{$pf-v6-global--container-breakpoint--md}) {
+        @content;
+      }
+    }
+  } @else if $point == "lg" {
+    @if $container-name {
+      @container #{$container-name} (min-width: #{$pf-v6-global--container-breakpoint--lg}) {
+        @content;
+      }
+    } @else {
+      @container (min-width: #{$pf-v6-global--container-breakpoint--lg}) {
+        @content;
+      }
+    }
+  } @else if $point == "xl" {
+    @if $container-name {
+      @container #{$container-name} (min-width: #{$pf-v6-global--container-breakpoint--xl}) {
+        @content;
+      }
+    } @else {
+      @container (min-width: #{$pf-v6-global--container-breakpoint--xl}) {
+        @content;
+      }
+    }
+  } @else if $point == "2xl" {
+    @if $container-name {
+      @container #{$container-name} (min-width: #{$pf-v6-global--container-breakpoint--2xl}) {
+        @content;
+      }
+    } @else {
+      @container (min-width: #{$pf-v6-global--container-breakpoint--2xl}) {
+        @content;
+      }
+    }
+  }
+}
+
 // Create single prop / value classes, optionally add responsive suffix
 // @group mixins
 // @moduleType mixin
