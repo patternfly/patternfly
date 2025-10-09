@@ -557,6 +557,58 @@ Several components in the following examples do not include functional and/or ac
 {{/toolbar}}
 ```
 
+### Toolbar with container query support
+This example shows how the toolbar responds to its container size rather than viewport size. Add the `.pf-m-container` modifier to enable container-based responsive behavior.
+
+```hbs
+{{#> toolbar toolbar--id="toolbar-no-container-example" toolbar-expandable-content--IsExpanded=true}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content}}
+      {{> toolbar-group-search}}
+      {{> toolbar-group-filter}}
+      {{> toolbar-group-label-group}}
+      {{> toolbar-group-action-inline}}
+    {{/toolbar-expandable-content}}
+  {{/toolbar-content}}
+{{/toolbar}}
+<br/>
+<div style="display: flex;">
+  <div style="width: 290px; background: var(--pf-t--global--background--color--secondary--default); padding: 1rem;">Sidebar (290px)</div>
+  <div style="flex: 1;">
+    {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-container-example" toolbar-expandable-content--IsExpanded=true}}
+      {{#> toolbar-content}}
+        {{#> toolbar-content-section}}
+          {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
+        {{/toolbar-content-section}}
+        {{#> toolbar-expandable-content}}
+          {{> toolbar-group-search}}
+          {{> toolbar-group-filter}}
+          {{> toolbar-group-label-group}}
+          {{> toolbar-group-action-inline}}
+        {{/toolbar-expandable-content}}
+      {{/toolbar-content}}
+    {{/toolbar}}
+  </div>
+</div>
+```
+
+The container query breakpoints are 290px less than viewport breakpoints:
+- Container sm: 286px (vs viewport 576px)
+- Container md: 478px (vs viewport 768px)
+- Container lg: 702px (vs viewport 992px)
+- Container xl: 910px (vs viewport 1200px)
+- Container 2xl: 1160px (vs viewport 1450px)
+
+This is particularly useful when the toolbar is placed in:
+- Sidebar panels
+- Drawer components
+- Modal dialogs
+- Grid cells with constrained widths
+- Any nested layout container
+
 ### Sticky toolbar
 ```hbs
 {{#> toolbar toolbar--modifier="pf-m-sticky" toolbar--id="toolbar-sticky-example"}}
@@ -682,6 +734,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
+| `.pf-m-container` | `.pf-v6-c-toolbar` | Enables container query support for responsive behavior based on container size rather than viewport size. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
