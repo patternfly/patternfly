@@ -194,7 +194,9 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   // Container query support (opt-in)
-  &.pf-m-container {
+  // Establishes container context for all container modifiers
+  &.pf-m-container,
+  &[class*="pf-m-container-"] {
     container-type: inline-size;
     container-name: toolbar;
   }
@@ -294,25 +296,75 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   border-block-end: var(--#{$toolbar}__expandable-content--BorderBlockEndWidth) solid var(--#{$toolbar}__expandable-content--BorderBlockEndColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
-  // New container query behavior (for .pf-m-container variant)
-  @at-root .#{$toolbar}.pf-m-container & {
-    @include pf-v6-container-query("lg", "toolbar") {
-      position: static;
-      padding: 0;
-      border-block-end: 0;
-      box-shadow: none;
-      background-color: red !important;
-    }
-  }
-
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     position: static;
     padding: 0;
     border-block-end: 0;
     box-shadow: none;
-    background-color: blue !important;
+    background-color: lightskyblue !important;
   }
 
+  // Default container behavior (lg breakpoint) when using .pf-m-container
+  @at-root .#{$toolbar}.pf-m-container:not([class*="pf-m-container-"]) & {
+    @include pf-v6-container-query("lg", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: lavender !important;
+    }
+  }
+
+  // Container query behavior with explicit breakpoint modifiers
+  @at-root .#{$toolbar}.pf-m-container-sm & {
+    @include pf-v6-container-query("sm", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: lightgreen !important;
+    }
+  }
+
+  @at-root .#{$toolbar}.pf-m-container-md & {
+    @include pf-v6-container-query("md", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: lightcoral !important;
+    }
+  }
+
+  @at-root .#{$toolbar}.pf-m-container-lg & {
+    @include pf-v6-container-query("lg", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: yellow !important;
+    }
+  }
+
+  @at-root .#{$toolbar}.pf-m-container-xl & {
+    @include pf-v6-container-query("xl", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: violet !important;
+    }
+  }
+
+  @at-root .#{$toolbar}.pf-m-container-2xl & {
+    @include pf-v6-container-query("2xl", "toolbar") {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: orange !important;
+    }
+  }
 
   &.pf-m-expanded,
   .#{$toolbar}__group {
