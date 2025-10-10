@@ -297,11 +297,14 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-    position: static;
-    padding: 0;
-    border-block-end: 0;
-    box-shadow: none;
-    background-color: lightskyblue !important;
+    // Only apply viewport-based behavior if no container modifier is present
+    @at-root .#{$toolbar}:not([class*="pf-m-container"]) & {
+      position: static;
+      padding: 0;
+      border-block-end: 0;
+      box-shadow: none;
+      background-color: lightblue !important;
+    }
   }
 
   // Default container behavior (lg breakpoint) when using .pf-m-container
