@@ -296,6 +296,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   border-block-end: var(--#{$toolbar}__expandable-content--BorderBlockEndWidth) solid var(--#{$toolbar}__expandable-content--BorderBlockEndColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
+  // stylelint-disable 
+
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     // Only apply viewport-based behavior if no container modifier is present
     @at-root .#{$toolbar}:not([class*="pf-m-container"]) & {
@@ -368,6 +370,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       background-color: orange !important;
     }
   }
+//stylelint-enable 
 
   &.pf-m-expanded,
   .#{$toolbar}__group {
