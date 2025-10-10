@@ -557,8 +557,11 @@ Several components in the following examples do not include functional and/or ac
 {{/toolbar}}
 ```
 
+## Toolbars responsive to their container
 ### Toolbar with container query support
 This example shows how the toolbar responds to its container size rather than viewport size. Add the `.pf-m-container` modifier to enable container-based responsive behavior.
+<br/><br/>
+*Debugging note: View this example in full screen. These two toolbars should change color at the same time. Light blue is the media query, and lavender is the container query. This is meant to demonstrate that switching to the default container query behaves the same way as the media query, i.e. container breakpoints are adjusted to account for the sidebar. In page example is showing blue for both because the media query is triggering - should not have media query if it's got the modifier.*
 
 ```hbs
 {{#> toolbar toolbar--id="toolbar-no-container-example" toolbar-expandable-content--IsExpanded=true}}
@@ -596,11 +599,13 @@ This example shows how the toolbar responds to its container size rather than vi
 ```
 
 The container query breakpoints are 290px less than viewport breakpoints:
-- Container sm: 286px (vs viewport 576px)
-- Container md: 478px (vs viewport 768px)
-- Container lg: 702px (vs viewport 992px)
-- Container xl: 910px (vs viewport 1200px)
-- Container 2xl: 1160px (vs viewport 1450px)
+- `.pf-m-container-sm` - Adjust at 286px (vs viewport 576px)
+- `.pf-m-container-md` - Adjust at 478px (vs viewport 768px)
+- `.pf-m-container-lg` - Adjust at 702px (vs viewport 992px) - **default for `.pf-m-container`**
+- `.pf-m-container-xl` - Adjust at 910px (vs viewport 1200px)
+- `.pf-m-container-2xl` - Adjust at 1160px (vs viewport 1450px)
+
+**Note**: `.pf-m-container` without a breakpoint suffix defaults to `lg` behavior for backward compatibility.
 
 This is particularly useful when the toolbar is placed in:
 - Sidebar panels
@@ -608,6 +613,69 @@ This is particularly useful when the toolbar is placed in:
 - Modal dialogs
 - Grid cells with constrained widths
 - Any nested layout container
+
+### Toolbar with container query support (custom breakpoint)
+You can specify which container width triggers the responsive behavior using breakpoint modifiers.
+<br/><br/>
+*Debugging note: XL and 2XL can't trigger when confined by the content area (view in full screen)*
+```hbs
+{{#> toolbar toolbar--modifier="pf-m-container-md" toolbar--id="toolbar-container-md-example" toolbar-expandable-content--IsExpanded=true}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content}}
+      {{> toolbar-group-search}}
+      {{> toolbar-group-filter}}
+      {{> toolbar-group-label-group}}
+      {{> toolbar-group-action-inline}}
+    {{/toolbar-expandable-content}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+This toolbar will expand at the `md` container breakpoint (478px) instead of the default `lg` (702px).
+
+### Comparing container breakpoints
+This example shows how different breakpoint modifiers affect when the toolbar expands.
+
+```hbs
+<div style="display: flex; gap: 1rem; flex-direction: column;">
+  <div>
+    <h4>Container md (478px breakpoint)</h4>
+    {{#> toolbar toolbar--modifier="pf-m-container-md" toolbar--id="toolbar-container-md" toolbar-expandable-content--IsExpanded=true}}
+      {{#> toolbar-content}}
+        {{#> toolbar-content-section}}
+          {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
+        {{/toolbar-content-section}}
+        {{#> toolbar-expandable-content}}
+          {{> toolbar-group-search}}
+          {{> toolbar-group-filter}}
+          {{> toolbar-group-label-group}}
+          {{> toolbar-group-action-inline}}
+        {{/toolbar-expandable-content}}
+      {{/toolbar-content}}
+    {{/toolbar}}
+  </div>
+  
+  <div>
+    <h4>Container lg (702px breakpoint - default)</h4>
+    {{#> toolbar toolbar--modifier="pf-m-container-lg" toolbar--id="toolbar-container-lg" toolbar-expandable-content--IsExpanded=true}}
+      {{#> toolbar-content}}
+        {{#> toolbar-content-section}}
+          {{> toolbar-toggle-group toolbar-toggle-group--IsHidden=true}}
+        {{/toolbar-content-section}}
+        {{#> toolbar-expandable-content}}
+          {{> toolbar-group-search}}
+          {{> toolbar-group-filter}}
+          {{> toolbar-group-label-group}}
+          {{> toolbar-group-action-inline}}
+        {{/toolbar-expandable-content}}
+      {{/toolbar-content}}
+    {{/toolbar}}
+  </div>
+</div>
+```
 
 ### Sticky toolbar
 ```hbs
@@ -734,7 +802,12 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
-| `.pf-m-container` | `.pf-v6-c-toolbar` | Enables container query support for responsive behavior based on container size rather than viewport size. |
+| `.pf-m-container` | `.pf-v6-c-toolbar` | Enables container query support at the `lg` breakpoint (702px). |
+| `.pf-m-container-sm` | `.pf-v6-c-toolbar` | Enables container query support at the `sm` breakpoint (286px). |
+| `.pf-m-container-md` | `.pf-v6-c-toolbar` | Enables container query support at the `md` breakpoint (478px). |
+| `.pf-m-container-lg` | `.pf-v6-c-toolbar` | Enables container query support at the `lg` breakpoint (702px). |
+| `.pf-m-container-xl` | `.pf-v6-c-toolbar` | Enables container query support at the `xl` breakpoint (910px). |
+| `.pf-m-container-2xl` | `.pf-v6-c-toolbar` | Enables container query support at the `2xl` breakpoint (1160px). |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
