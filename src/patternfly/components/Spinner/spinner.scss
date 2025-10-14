@@ -55,6 +55,11 @@
   &.pf-m-xl {
     --#{$spinner}--diameter: var(--#{$spinner}--m-xl--diameter);
   }
+
+  // Disable animations when no-motion modifier is applied
+  .#{$pf-prefix}m-no-motion & {
+    --#{$spinner}--AnimationDuration: 0s;
+  }
 }
 
 .#{$spinner}__path {
