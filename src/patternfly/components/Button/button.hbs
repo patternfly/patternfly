@@ -43,7 +43,10 @@
       type="button"
     {{/unless}}
   {{/if}}
-  {{#if button--AriaExpanded}}
+  {{!-- For now we need to concat this for cases where a boolean true or boolean false are passed
+  to button--AriaExpanded, so that aria-expanded gets set correctly, and where passing a string "false"
+  may cause other hbs attributes (e.g. jump-links--IsExpanded) to render a pf-m-expanded class incorrectly. --}}
+  {{#if (concat button--AriaExpanded)}}
     aria-expanded="{{button--AriaExpanded}}"
   {{/if}}
   {{#if button--role}}
