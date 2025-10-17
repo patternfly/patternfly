@@ -87,7 +87,9 @@ import './Card.css'
       {{#> button button--modifier="pf-m-secondary"}}Secondary action{{/button}}
       {{#> button button--modifier="pf-m-tertiary"}}Tertiary action{{/button}}
     {{/card-actions}}
-    {{> card-title card-title-text--value="This is a longer card title that takes up more space"}}
+    {{#> card-header-main}}
+      {{> card-title card-title-text--value="This is a longer card title that takes up more space"}}
+    {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
     This is the card body
