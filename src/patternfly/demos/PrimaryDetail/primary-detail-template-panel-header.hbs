@@ -1,21 +1,17 @@
-{{#> drawer-body}}
-  {{#> l-flex l-flex--modifier="pf-m-column"}}
-    {{#> l-flex-item}}
-      {{#> drawer-head}}
-        {{#> drawer-actions}}
-          {{#unless drawer-panel--NoCloseButton}}
-            {{> drawer-close}}
-          {{/unless}}
-        {{/drawer-actions}}
-        {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' primary-detail-template--id '-drawer-label"')}}
-          {{{primary-detail-template-panel-header--title}}}
-        {{/title}}
-      {{/drawer-head}}
-    {{/l-flex-item}}
-    {{#if primary-detail-template-panel-header--sub-title}}
-      {{#> l-flex-item}}
-        {{{primary-detail-template-panel-header--sub-title}}}
-      {{/l-flex-item}}
-    {{/if}}
-  {{/l-flex}}
-{{/drawer-body}}
+{{#> drawer-head}}
+  {{#> drawer-actions}}
+    {{#unless drawer-panel--NoCloseButton}}
+      {{> drawer-close}}
+    {{/unless}}
+  {{/drawer-actions}}
+  {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' primary-detail-template--id '-drawer-label"')}}
+    {{{primary-detail-template-panel-header--title}}}
+  {{/title}}
+{{/drawer-head}}
+
+{{#if primary-detail-template-panel-header--sub-title}}
+  {{#> drawer-description}}
+    {{{primary-detail-template-panel-header--sub-title}}}
+  {{/drawer-description}}
+{{/if}}
+
