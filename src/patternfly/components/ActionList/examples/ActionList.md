@@ -146,7 +146,7 @@ In wizards
 
 
 ### Vertical action list
-```hbs
+```hbs isBeta
 Multiple groups
 {{#> action-list action-list--isVertical="true"}}
   {{#> action-list-group}}
