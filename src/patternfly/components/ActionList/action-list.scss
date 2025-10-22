@@ -6,6 +6,7 @@
 
   // * Action list group
   --#{$action-list}__group--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
+  --#{$action-list}--m-vertical--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--default);
 
   // * Action list icons
   --#{$action-list}--m-icons--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
@@ -33,6 +34,11 @@
   &.pf-m-vertical,
   &.pf-m-vertical .#{$action-list}__group {
     flex-direction: column;
+  }
+
+  &.pf-m-vertical {
+    row-gap: var(--#{$action-list}--m-vertical--RowGap);
+  }
   }
 }
 
