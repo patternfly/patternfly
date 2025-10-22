@@ -29,6 +29,11 @@
 
     column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
   }
+
+  &.pf-m-vertical,
+  &.pf-m-vertical .#{$action-list}__group {
+    flex-direction: column;
+  }
 }
 
 // - Action list group
