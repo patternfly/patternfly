@@ -3532,7 +3532,7 @@ __metadata:
     "@patternfly/documentation-framework": "npm:6.22.8"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.3.1"
-    "@patternfly/react-core": "npm:6.3.1"
+    "@patternfly/react-core": "npm:6.4.0"
     "@patternfly/react-table": "npm:6.4.0"
     "@starptech/prettyhtml": "npm:^0.10.0"
     backstopjs: "npm:^6.3.23"
@@ -3598,24 +3598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:6.3.1, @patternfly/react-core@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "@patternfly/react-core@npm:6.3.1"
-  dependencies:
-    "@patternfly/react-icons": "npm:^6.3.1"
-    "@patternfly/react-styles": "npm:^6.3.1"
-    "@patternfly/react-tokens": "npm:^6.3.1"
-    focus-trap: "npm:7.6.4"
-    react-dropzone: "npm:^14.3.5"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    react: ^17 || ^18 || ^19
-    react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/5f42f0df892ccb7f0f905cc7311c1d5325067d75c01164ff72a8d5843372d2600d568eb632a5135df1dcb7520cde11fd489bf0364aa43b32d5a6eb7690c68c00
-  languageName: node
-  linkType: hard
-
-"@patternfly/react-core@npm:^6.4.0":
+"@patternfly/react-core@npm:6.4.0, @patternfly/react-core@npm:^6.4.0":
   version: 6.4.0
   resolution: "@patternfly/react-core@npm:6.4.0"
   dependencies:
@@ -3629,6 +3612,23 @@ __metadata:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
   checksum: 10c0/54883543e470273ee01ba08e93efe6ae49fa18048ea69c7ae13e680228880ea2d164c9bcf6aef60ac4d97183060c06166aeff1a61c33cbfa4b0bcb1adb18f467
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-core@npm:^6.3.1":
+  version: 6.3.1
+  resolution: "@patternfly/react-core@npm:6.3.1"
+  dependencies:
+    "@patternfly/react-icons": "npm:^6.3.1"
+    "@patternfly/react-styles": "npm:^6.3.1"
+    "@patternfly/react-tokens": "npm:^6.3.1"
+    focus-trap: "npm:7.6.4"
+    react-dropzone: "npm:^14.3.5"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/5f42f0df892ccb7f0f905cc7311c1d5325067d75c01164ff72a8d5843372d2600d568eb632a5135df1dcb7520cde11fd489bf0364aa43b32d5a6eb7690c68c00
   languageName: node
   linkType: hard
 
