@@ -68,9 +68,59 @@
   // stylelink-enable declaration-no-important
 }
 
+.#{$pf-prefix}m-gradient-border {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: var(--pf-t--global--border--width--extra-strong) solid transparent;
+    border-radius: inherit;
+    background: linear-gradient(to right, #f56e6e 0%, #876fd4 65%, #5e40be 100%)
+      border-box;
+    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+}
+
+@property --#{$pf-global}--pulse--BoxShadow--Spread {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
+.#{$pf-prefix}m-pulse {
+  &,
+  &:focus,
+  &:focus-within {
+    animation: #{$pf-global}-pulse 2s infinite ease-in-out;
+    box-shadow: 0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(43.2% 0.232 292.759),
+    0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(50% 0.134 242.749),
+    0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815),
+    0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815);
+  }
+
+  &.pf-m-inset {
+    box-shadow: inset 0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(43.2% 0.232 292.759),
+    inset 0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(50% 0.134 242.749),
+    inset 0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815),
+    inset 0px 0px var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815);
+  }
+}
+
+@keyframes #{$pf-global}-pulse {
+  50% {
+    --#{$pf-global}--pulse--BoxShadow--Spread: var(--#{$pf-global}--pulse-pulsing--BoxShadow--Spread);
+  }
+}
+
 :root {
   --#{$pf-global}--danger-jiggle--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
   --#{$pf-global}--danger-jiggle--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
+  --#{$pf-global}--pulse--BoxShadow--Spread: 0px;
+  --#{$pf-global}--pulse-pulsing--BoxShadow--Spread: 15px;
 }
 
 // Register the property type for the custom property to be animatable
