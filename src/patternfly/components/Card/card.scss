@@ -344,6 +344,11 @@
     --#{$card}__actions--MarginBlockStart: 0;
     --#{$card}__actions--MarginBlockEnd: 0;
   }
+
+  &:has(button, a) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 // Labels are used to handle states of selectable and clickable cards
