@@ -1928,7 +1928,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 ## Plain variant
 
 ### Plain example
-```hbs
+```hbs isBeta
 {{#> table table--id="table-plain" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-plain" table--attribute='aria-label="This is a plain table example"'}}
   {{#> table-caption}}
     This is the table caption
