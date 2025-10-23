@@ -1,4 +1,11 @@
-<div class="{{pfv}}compass__section{{#if compass-section--modifier}} {{compass-section--modifier}}{{/if}}"
+<div class="{{pfv}}compass__section
+  {{setModifiers
+    compass-section--HasNoPadding='pf-m-no-padding'
+    compass-section--IsPill='pf-m-pill'
+    compass-section--IsFullHeight='pf-m-full-height'
+    compass-section--HasNoBorder='pf-m-no-border'
+    compass-section--modifier=compass-section--modifier
+  }}"
   {{#if compass-section--attribute}}
     {{{compass-section--attribute}}}
   {{/if}}>

@@ -11,21 +11,30 @@ cssPrefix: pf-v5-c-compass
 {{#> compass}}
   {{#> compass-header}}
     {{#> compass-logo}}logo{{/compass-logo}}
-    {{#> compass-nav}}nav{{/compass-nav}}
+    {{#> compass-nav}}
+      {{#> compass-section compass-section--HasNoPadding=true}}tabs{{/compass-section}}
+      {{#> compass-section compass-section--HasNoPadding=true}}subtabs{{/compass-section}}
+    {{/compass-nav}}
     {{#> compass-profile}}profile{{/compass-profile}}
   {{/compass-header}}
-  {{#> compass-panel compass--panel--IsStart=true}}panel start{{/compass-panel}}
+  {{#> compass-panel compass--panel--IsStart=true}}
+    {{#> compass-section compass-section--HasNoPadding=true}}panel start{{/compass-section}}
+  {{/compass-panel}}
   {{#> compass-main}}
     {{#> compass-hero}}hero{{/compass-hero}}
-    {{#> compass-main-header}}main header{{/compass-main-header}}
+    {{#> compass-main-header}}
+      {{#> compass-section}}section{{/compass-section}}
+    {{/compass-main-header}}
     {{#> compass-content}}
-      {{#> compass-section}}
-        section
-      {{/compass-section}}
+      {{#> compass-section}}section{{/compass-section}}
     {{/compass-content}}
   {{/compass-main}}
-  {{#> compass-panel compass--panel--IsEnd=true}}panel start{{/compass-panel}}
-  {{#> compass-footer}}footer{{/compass-footer}}
+  {{#> compass-panel compass--panel--IsEnd=true}}
+    {{#> compass-section compass-section--HasNoPadding=true}}panel start{{/compass-section}}
+  {{/compass-panel}}
+  {{#> compass-footer}}
+    {{#> compass-section compass-section--HasNoPadding=true compass-section--HasNoBorder=true}}footer{{/compass-section}}
+  {{/compass-footer}}
 {{/compass}}
 ```
 

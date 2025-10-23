@@ -22,12 +22,9 @@
   --#{$compass}__hero--gradient--stop-1: #000;
   --#{$compass}__hero--gradient--stop-2: #1b0d33;
   --#{$compass}__hero--gradient--stop-3: #3d2785;
-
-  // --#{$compass}__hero--bgimage: url("../assets/hero-bg.png");
-  // --#{$compass}--BackgroundUrl: url("../assets/Wallpaper-light.png");
-  // --#{$compass}--red--BackgroundUrl: url("../assets/Wallpaper-light.png");
-  // --#{$compass}--dark--BackgroundUrl: url("../assets/Wallpaper-dark.png");
-  // --#{$compass}--dark--BackgroundUrl: url("../assets/rh-wallpaper-dark.png");
+  --#{$compass}__hero--bgimage: url("./assets/images/compass--hero-bg.png");
+  --#{$compass}--BackgroundImage: url("./assets/images/compass--wallpaper-light.png");
+  --#{$compass}--dark--BackgroundImage: url("./assets/images/compass--wallpaper-dark.png");
 
   display: grid;
   grid-template-areas:
@@ -43,8 +40,12 @@
   height: 100dvh;
   padding: var(--#{$compass}--padding);
   margin-inline: auto;
-  background-image: var(--#{$compass}--BackgroundUrl);
+  background-image: var(--#{$compass}--BackgroundImage);
   background-size: cover;
+
+  :root:where(.pf-v6-theme-dark) & {
+    --#{$compass}--BackgroundImage: var(--#{$compass}--dark--BackgroundImage);
+  }
 }
 
 .#{$compass}__header {
@@ -157,15 +158,6 @@
   }
 }
 
-.#{$compass}__section {
-  overflow: auto;
-}
-
-.#{$compass}__section,
-.#{$compass}__main-header {
-  padding: var(--pf-t--global--spacer--inset--page-chrome);
-}
-
 .#{$compass}__panel.pf-m-end {
   grid-area: panel-end;
   padding: var(--pf-t--global--spacer--sm);
@@ -177,37 +169,21 @@
   justify-content: center;
 }
 
-.#{$compass}__glass,
-.#{$compass}__panel,
-.#{$compass}__main-header,
 .#{$compass}__section {
   --pf-v6-c-card--BackgroundColor: transparent;
   --pf-v6-c-card--BorderWidth: 0;
 
   position: relative;
+  padding-block-start: var(--pf-t--global--spacer--inset--page-chrome);
+  padding-block-end: var(--pf-t--global--spacer--inset--page-chrome);
+  padding-inline-start: var(--pf-t--global--spacer--inset--page-chrome);
+  padding-inline-end: var(--pf-t--global--spacer--inset--page-chrome);
   background-color: light-dark(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.75));
   backdrop-filter: var(--#{$compass}--glass--backdrop-filter);
   border: var(--pf-t--global--border--width--regular) solid var(--#{$compass}--glass--border);
   border-radius: var(--pf-t--global--border--radius--large);
   box-shadow: var(--pf-t--global--box-shadow--md);
 
-  &::after {
-    // content: "";
-    // background: color-mix(in srgb, var(--#{$compass}--glass--bgcolor) var(--#{$compass}--glass--opacity), transparent);
-    // mix-blend-mode: var(--#{$compass}--glass--blend-mode);
-    // background-image: linear-gradient(
-      // to right,
-      // color-mix(in srgb, var(--#{$compass}--glass--bgcolor) var(--#{$compass}--glass--opacity), transparent)
-    // );
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    border-radius: inherit;
-  }
-}
-
-.#{$compass}__glass {
   &.pf-m-no-border {
     border-width: 0;
   }
@@ -215,17 +191,21 @@
   &.pf-m-full-height {
     height: 100%;
   }
+
+  &.pf-m-pill {
+    border-radius: var(--pf-t--global--border--radius--pill);
+  }
+
+  &.pf-m-scrollable {
+    overflow: auto;
+  }
+
+  &.pf-m-no-padding {
+    padding: 0;
+  }
 }
 
-.pf-v6-c-tabs,
-.#{$compass}__message-bar,
-.#{$compass}__nav--primary,
-.#{$compass}__nav--secondary,
-.#{$compass}__panel {
-  border-radius: var(--pf-t--global--border--radius--pill);
-}
-
-:where(:root.no-glass) .#{$compass} {
+:where(:root.pf-v6-theme-no-glass) .#{$compass} {
   --#{$compass}--glass--background-filter: revert;
   --#{$compass}--glass--opacity: 100%;
   --#{$compass}--glass--border: var(--pf-t--global--border--color--default);
