@@ -161,6 +161,30 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{/button}}
 ```
 
+### Circle buttons
+
+```hbs isBeta
+{{> button button--IsPrimary=true button--aria-label="Add primary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsSecondary=true button--aria-label="Add secondary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsTertiary=true button--aria-label="Add tertiary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsDanger=true button--aria-label="Add danger circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsWarning=true button--aria-label="Add warning circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="times"}}
+
+{{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="copy"}}
+
+{{> button button--IsCircle=true button--IsPlain=true button--aria-label="Upload circle variant" button--IsIcon=true button--icon="upload"}}
+
+{{> button button--IsCircle=true button--IsPlain=true button--IsIcon=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading circle variant..."}}
+```
+
 ### Counts
 ```hbs
 {{#*inline "button-counts"}}
