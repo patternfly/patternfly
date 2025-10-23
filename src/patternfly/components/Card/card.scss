@@ -29,6 +29,12 @@
   --#{$card}__header--m-wrap--RowGap: var(--pf-t--global--spacer--sm);
   --#{$card}__header--m-wrap--ColumnGap: var(--pf-t--global--spacer--md);
 
+  // Description
+  --#{$card}__description--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$card}__description--Color: var(--pf-t--global--text--color--subtle);
+  --#{$card}__description--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  
+
   // Expandable
   --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -321,6 +327,12 @@
   line-height: var(--#{$card}__title-text--LineHeight);
   color: var(--#{$card}__title-text--Color);
   overflow-wrap: var(--#{$card}__title-text--OverflowWrap);
+}
+
+.#{$card}__description {
+  font-size: var(--#{$card}__description--FontSize);
+  color: var(--#{$card}__description--Color);
+  padding-block-start: var(--#{$card}__description--PaddingBlockStart);
 }
 
 .#{$card}__actions {
