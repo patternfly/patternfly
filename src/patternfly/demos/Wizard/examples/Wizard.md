@@ -207,13 +207,13 @@ wrapperTag: div
                   {{/wizard-main-body}}
                 {{/drawer-content}}
                 {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+                  {{#> drawer-head}}
+                    {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
+                    {{#> drawer-actions}}
+                      {{> drawer-close}}
+                    {{/drawer-actions}}
+                  {{/drawer-head}}
                   {{#> drawer-body}}
-                    {{#> drawer-head}}
-                      {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
-                      {{#> drawer-actions}}
-                        {{> drawer-close}}
-                      {{/drawer-actions}}
-                    {{/drawer-head}}
                   {{/drawer-body}}
                   {{#> drawer-body}}
                     {{#> content}}
@@ -288,14 +288,12 @@ wrapperTag: div
                   {{/wizard-main-body}}
                 {{/drawer-content}}
                 {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
-                  {{#> drawer-body}}
-                    {{#> drawer-head}}
-                      {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
-                      {{#> drawer-actions}}
-                        {{> drawer-close}}
-                      {{/drawer-actions}}
-                    {{/drawer-head}}
-                  {{/drawer-body}}
+                  {{#> drawer-head}}
+                    {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
+                    {{#> drawer-actions}}
+                      {{> drawer-close}}
+                    {{/drawer-actions}}
+                  {{/drawer-head}}
                   {{#> drawer-body}}
                     {{#> content}}
                       <p>

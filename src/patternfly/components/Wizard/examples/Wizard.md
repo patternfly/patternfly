@@ -194,15 +194,14 @@ import './Wizard.css'
               {{/wizard-main-body}}
             {{/drawer-content}}
             {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+              {{#> drawer-head}}
+                drawer-panel
+                {{#> drawer-actions}}
+                  {{> drawer-close}}
+                {{/drawer-actions}}
+              {{/drawer-head}}
               {{#> drawer-body}}
-                {{#> drawer-head}}
-                  {{#> drawer-actions}}
-                    {{> drawer-close}}
-                  {{/drawer-actions}}
-                  {{#> drawer-header}}
-                    drawer-panel
-                  {{/drawer-header}}
-                {{/drawer-head}}
+                drawer-body
               {{/drawer-body}}
             {{/drawer-panel}}
           {{/drawer-main}}
