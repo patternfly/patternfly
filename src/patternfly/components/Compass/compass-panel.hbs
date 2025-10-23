@@ -1,0 +1,11 @@
+<div class="{{pfv}}compass__panel
+  {{setModifiers
+    panel--IsStart='pf-m-start'
+    panel--IsEnd='pf-m-end'
+    panel--modifier=panel--modifier
+  }}"
+  {{#if compass-panel--attribute}}
+    {{{compass-panel--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</div>
