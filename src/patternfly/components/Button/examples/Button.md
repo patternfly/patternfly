@@ -303,4 +303,4 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-hamburger` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a hamburger button. |
 | `.pf-m-expand` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will expand a menu. |
 | `.pf-m-collapse` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will collapse a menu. |
-| `.pf-m-circle` | `.pf-v6-c-button` | Modifies a button to have a circular shape, instead of only rounded corners or a pill shape. |
+| `.pf-m-circle` | `.pf-v6-c-button` | Modifies a button to have a circular shape, instead of only rounded corners or a pill shape. Intended for buttons that contain only an icon. |
