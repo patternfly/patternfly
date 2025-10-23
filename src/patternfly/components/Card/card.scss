@@ -330,9 +330,9 @@
 }
 
 .#{$card}__description {
+  padding-block-start: var(--#{$card}__description--PaddingBlockStart);
   font-size: var(--#{$card}__description--FontSize);
   color: var(--#{$card}__description--Color);
-  padding-block-start: var(--#{$card}__description--PaddingBlockStart);
 }
 
 .#{$card}__actions {

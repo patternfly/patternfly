@@ -63,7 +63,7 @@ import './Card.css'
 {{/card}}
 ```
 ### With title and description in head
-```hbs
+```hbs isBeta
 {{#> card card--id="card-action-example-2"}}
   {{#> card-header}}
     {{#> card-actions}}
