@@ -125,7 +125,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--after--BorderBlockStartWidth: 0;
   --#{$tabs}__link--after--BorderInlineEndWidth: 0;
   --#{$tabs}__link--after--BorderInlineStartWidth: 0;
-  --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$tabs}__item--m-current__link--after--BorderColor: var(--#{$tabs}--link-accent--color);
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
   // Link accent
@@ -204,6 +204,12 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__add--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$tabs}__add--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__add--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+
+  // Nav variant
+  --#{$tabs}--m-nav--inset: var(--pf-t--global--spacer--xl);
+  --#{$tabs}--m-nav__link-accent--color: var(--pf-t--color--red--50);
+  --#{$tabs}--m-nav__link--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$tabs}--m-nav__link--disabled--Color: var(--pf-t--global--text--color--disabled);
 
   // Overflow menu toggle icon
   --#{$tabs}__link-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -509,6 +515,20 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     &,
     .#{$tabs}__list {
       overflow: visible;
+    }
+  }
+
+  &.pf-m-nav {
+    --#{$tabs}--link-accent--color: var(--#{$tabs}--m-nav__link-accent--color);
+    --#{$tabs}__link--disabled--BackgroundColor: transparent;
+    --#{$tabs}__link--disabled--Color: var(--#{$tabs}--m-nav__link--disabled--Color);
+    --#{$tabs}__link--hover--BorderColor: transparent;
+    --#{$tabs}__link--BorderRadius: var(--#{$tabs}--m-nav__link--BorderRadius);
+    --#{$tabs}--inset: var(--#{$tabs}--m-nav--inset);
+  
+    &::before,
+    .#{$tabs}__link::before {
+      border: 0;
     }
   }
 }
