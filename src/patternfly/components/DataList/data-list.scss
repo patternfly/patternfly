@@ -16,7 +16,8 @@
   }
 
   // item
-  --#{$data-list}__item--BackgroundColor: var( --pf-t--global--background--color--primary--default);
+  --#{$data-list}__item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$data-list}--pf-m-plain__item--BackgroundColor: transparent;
   --#{$data-list}__item--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$data-list}__item--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
@@ -188,6 +189,10 @@
 
   &.pf-m-drag-over {
     overflow-anchor: none;
+  }
+
+  &.pf-m-plain {
+    --#{$data-list}__item--BackgroundColor: var(--#{$data-list}--pf-m-plain__item--BackgroundColor);
   }
 }
 

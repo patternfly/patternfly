@@ -1074,6 +1074,42 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-break-word` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text breaks to the next line. |
 | `.pf-m-nowrap` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text does not wrap to the next line. |
 
+### Plain
+```hbs
+{{#> data-list data-list--IsPlain=true data-list--id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
+  {{#> data-list-item data-list-item--id="item-1"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Secondary content
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-2"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (pf-m-no-fill)</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+          Secondary content (pf-m-align-right pf-m-no-fill)
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-plain` | `.pf-v6-c-data-list` | Modifies a data list to have a transparent background. |
 
 ## Documentation
 ### Overview
