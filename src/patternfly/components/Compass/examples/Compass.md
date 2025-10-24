@@ -21,7 +21,9 @@ cssPrefix: pf-v5-c-compass
     {{#> compass-section compass-section--HasNoPadding=true}}panel start{{/compass-section}}
   {{/compass-panel}}
   {{#> compass-main}}
-    {{#> compass-hero}}hero{{/compass-hero}}
+    {{#> compass-hero}}
+      {{#> compass-hero-body}}hero{{/compass-hero-body}}
+    {{/compass-hero}}
     {{#> compass-main-header}}
       {{#> compass-section}}section{{/compass-section}}
     {{/compass-main-header}}

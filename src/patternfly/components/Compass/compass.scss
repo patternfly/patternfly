@@ -1,31 +1,30 @@
 @use '../../sass-utilities' as *;
 
-.#{$compass} {
-  --#{$compass}--padding: var(--pf-t--global--spacer--xl);
-  --#{$compass}--max-width: 100%;
-  --#{$compass}--row-gap: var(--pf-t--global--spacer--xl);
-  --#{$compass}--column-gap: var(--pf-t--global--spacer--xl);
-  --#{$compass}--nav--row-gap: var(--pf-t--global--spacer--md);
-  --#{$compass}--main--row-gap: var(--pf-t--global--spacer--md);
-  --#{$compass}--glass--background-filter: blur(32px);
-  --#{$compass}--glass--border: var(--pf-t--global--border--color--alt);
-  --#{$compass}--glass--bgcolor: light-dark(#ffffff, #000000);
-  --#{$compass}--glass--opacity: 75%;
-  --#{$compass}--glass--blend-mode: soft-light;
-  --#{$compass}--glass--blend-mode--dark: overlay;
-  --#{$compass}--glass--backdrop-filter: opacity(0.5);
-  --#{$compass}--glass--backdrop-filter--dark: blur(75px);
+@include pf-root($compass) {
+  --#{$compass}--BackgroundImage: url("./assets/images/compass--wallpaper-light.png");
+  --#{$compass}--BackgroundImage--dark: url("./assets/images/compass--wallpaper-dark.png");
+  --#{$compass}--Padding: var(--pf-t--global--spacer--xl);
+  --#{$compass}--RowGap: var(--pf-t--global--spacer--xl);
+  --#{$compass}--ColumnGap: var(--pf-t--global--spacer--xl);
+  --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--md);
+  --#{$compass}__panel--Padding: var(--pf-t--global--spacer--sm);
+  --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
+  --#{$compass}--glass--BorderColor: var(--pf-t--global--border--color--alt);
+  --#{$compass}--glass--BackgroundColor: light-dark(#ffffff, #000000);
+  --#{$compass}--glass--Opacity: 75%;
+  --#{$compass}--glass--BackdropFilter: opacity(0.5);
+  --#{$compass}--glass--BackdropFilter--dark: blur(75px);
   --#{$compass}--message-bar--min-width: 300px;
   --#{$compass}--message-bar--max-width: 600px;
-  --#{$compass}--feather--length: 20px;
   --#{$compass}__hero--gradient--angle: 289deg;
   --#{$compass}__hero--gradient--stop-1: #000;
   --#{$compass}__hero--gradient--stop-2: #1b0d33;
   --#{$compass}__hero--gradient--stop-3: #3d2785;
-  --#{$compass}__hero--bgimage: url("./assets/images/compass--hero-bg.png");
-  --#{$compass}--BackgroundImage: url("./assets/images/compass--wallpaper-light.png");
-  --#{$compass}--dark--BackgroundImage: url("./assets/images/compass--wallpaper-dark.png");
+  --#{$compass}__hero--BackgroundImage: url("./assets/images/compass--hero-bg.png");
+  --#{$compass}__hero--BackgroundImage--dark: url("./assets/images/compass--hero-bg.png");
+}
 
+.#{$compass} {
   display: grid;
   grid-template-areas:
     "header header header"
@@ -33,18 +32,19 @@
     "footer footer footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 1fr auto;
-  gap: var(--#{$compass}--row-gap) var(--#{$compass}--column-gap);
+  gap: var(--#{$compass}--RowGap) var(--#{$compass}--ColumnGap);
   align-items: center;
   justify-content: center;
-  max-width: var(--#{$compass}--max-width);
   height: 100dvh;
-  padding: var(--#{$compass}--padding);
+  padding: var(--#{$compass}--Padding);
   margin-inline: auto;
   background-image: var(--#{$compass}--BackgroundImage);
   background-size: cover;
 
   :root:where(.pf-v6-theme-dark) & {
-    --#{$compass}--BackgroundImage: var(--#{$compass}--dark--BackgroundImage);
+    --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
+    --#{$compass}__hero--BackgroundImage: var(--#{$compass}__hero--BackgroundImage--dark);
+    --#{$compass}__section--BackgroundColor: var(--#{$compass}__section--BackgroundColor);
   }
 }
 
@@ -55,67 +55,28 @@
   align-items: start;
 }
 
-.#{$compass}__hero {
-  display: flex;
-  padding-block-start: 32px;
-  padding-block-end: 32px;
-  padding-inline-start: 72px;
-  padding-inline-end: 0;
-  background-image: var(--#{$compass}__hero--bgimage),
-    linear-gradient(
-      var(--#{$compass}__hero--gradient--angle),
-      var(--#{$compass}__hero--gradient--stop-1) 0%,
-      var(--#{$compass}__hero--gradient--stop-2) 50%,
-      var(--#{$compass}__hero--gradient--stop-3) 100%
-    );
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-  border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--alt);
-  border-radius: 24px 72px;
-  box-shadow: var(--pf-t--global--box-shadow--md);
-}
-
-:root:not(.pf-v6-theme-dark) .#{$compass}__hero {
-  --pf-v6-c-content--Color: var(--pf-t--global--text--color--inverse);
-}
-
-.#{$compass}__hero-body {
-  width: 50%;
-}
-
 .#{$compass}__profile {
   justify-self: end;
 
-  .pf-v6-c-menu-toggle {
-    margin-block-start: calc(var(--pf-v6-c-menu-toggle--PaddingBlockStart) * -1);
+  // improves perceived alignment since it's a plain toggle
+  .#{$menu-toggle}.pf-m-plain {
+    margin-block-start: calc(var(--#{$menu-toggle}--PaddingBlockStart) * -1);
   }
 }
 
 .#{$compass}__nav {
   display: flex;
   flex-direction: column;
-  gap: var(--#{$compass}--nav--row-gap);
+  gap: var(--#{$compass}--nav--RowGap);
   align-items: center;
   justify-self: stretch;
 }
 
-.#{$compass}__panel.pf-m-start {
-  grid-area: panel-start;
-  padding: var(--pf-t--global--spacer--sm);
-}
-
 .#{$compass}__panel {
-  .pf-v6-c-button {
-    --pf-v6-c-button--FontSize: var(--pf-t--global--icon--size--font--lg);
-  }
-}
+  padding: var(--#{$compass}__panel--Padding);
 
-.#{$compass}__sparkle.pf-m-plain {
-  .pf-v6-c-button__icon {
-    transform-origin: center center;
-    scale: 1.25;
-    translate: 0.07rem 0.1rem;
+  &.pf-m-start {
+    grid-area: panel-start;
   }
 }
 
@@ -123,7 +84,7 @@
   display: flex;
   flex-direction: column;
   grid-area: main;
-  gap: var(--pf-t--global--spacer--md);
+  gap: var(--#{$compass}--main--RowGap);
   align-self: stretch;
   min-height: 0;
 }
@@ -133,17 +94,8 @@
   flex: 1 0 0;
   flex-direction: column;
   min-height: 0;
-  padding-block-start: 0;
-  padding-block-end: var(--pf-t--global--spacer--xl);
-  padding-inline-start: var(--pf-t--global--spacer--xl);
-  padding-inline-end: var(--pf-t--global--spacer--xl);
-  margin-block-start: 0;
-  margin-block-end: calc(var(--pf-t--global--spacer--xl) * -1);
-  margin-inline-start: calc(var(--pf-t--global--spacer--xl) * -1);
-  margin-inline-end: calc(var(--pf-t--global--spacer--xl) * -1);
   overflow: auto;
   scrollbar-width: none;
-  border-radius: var(--pf-t--global--border--radius--large);
 
   // mask: linear-gradient(
   //   rgba(0, 0, 0, calc(1 - var(--#{$compass}__scroll-top) / 20)),
@@ -169,20 +121,18 @@
   justify-content: center;
 }
 
-.#{$compass}__section {
-  --pf-v6-c-card--BackgroundColor: transparent;
-  --pf-v6-c-card--BorderWidth: 0;
 
-  position: relative;
-  padding-block-start: var(--pf-t--global--spacer--inset--page-chrome);
-  padding-block-end: var(--pf-t--global--spacer--inset--page-chrome);
-  padding-inline-start: var(--pf-t--global--spacer--inset--page-chrome);
-  padding-inline-end: var(--pf-t--global--spacer--inset--page-chrome);
-  background-color: light-dark(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.75));
-  backdrop-filter: var(--#{$compass}--glass--backdrop-filter);
-  border: var(--pf-t--global--border--width--regular) solid var(--#{$compass}--glass--border);
-  border-radius: var(--pf-t--global--border--radius--large);
-  box-shadow: var(--pf-t--global--box-shadow--md);
+.#{$compass}__section,
+.#{$compass}__nav .#{$tabs} { // exception for nav tabs - gives glass styling without stomping on padding
+  background-color: var(--#{$compass}__section--BackgroundColor); //light-dark(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.75));
+  backdrop-filter: var(--#{$compass}__section--BackdropFilter);
+  border: var(--#{$compass}__section--BorderWidth) solid var(--#{$compass}__section--BorderColor);
+  border-radius: var(--#{$compass}__section--BorderRadius);
+  box-shadow: var(--#{$compass}__section--BoxShadow);
+}
+
+.#{$compass}__section {
+  padding: var(--#{$compass}__section--Padding);
 
   &.pf-m-no-border {
     border-width: 0;
@@ -193,20 +143,39 @@
   }
 
   &.pf-m-pill {
-    border-radius: var(--pf-t--global--border--radius--pill);
+    border-radius: var(--#{$compass}__section--m-pill--BorderRadius);
   }
 
   &.pf-m-scrollable {
     overflow: auto;
   }
 
-  &.pf-m-no-padding {
+  &.pf-m-padding {
     padding: 0;
   }
 }
 
+.#{$compass}__hero {
+  display: flex;
+  padding-block-start: 32px;
+  padding-block-end: 32px;
+  padding-inline-start: 72px;
+  padding-inline-end: 0;
+  background-image: var(--#{$compass}__hero--bgimage);
+  border-radius: 24px 72px;
+  background-image: var(--#{$compass}__hero--bgimage),
+    linear-gradient(
+      var(--#{$compass}__hero--gradient--angle),
+      var(--#{$compass}__hero--gradient--stop-1) 0%,
+      var(--#{$compass}__hero--gradient--stop-2) 50%,
+      var(--#{$compass}__hero--gradient--stop-3) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
 :where(:root.pf-v6-theme-no-glass) .#{$compass} {
-  --#{$compass}--glass--background-filter: revert;
   --#{$compass}--glass--opacity: 100%;
   --#{$compass}--glass--border: var(--pf-t--global--border--color--default);
   --#{$compass}--glass--blend-mode: none;
@@ -214,8 +183,6 @@
 }
 
 :where(.pf-v6-theme-dark) .#{$compass} {
-  --#{$compass}--glass--blend-mode: var(--#{$compass}--glass--blend-mode--dark);
-  --#{$compass}--glass--backdrop-filter: var(--#{$compass}--glass--backdrop-filter--dark);
 }
 
 // .pf-chatbot__message-bar {
