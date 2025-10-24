@@ -413,6 +413,17 @@ To animate the current tab accent, you must set the following variables on the `
   Panel 4
 {{/tab-content}}
 ```
+### Site navigation variation
+```hbs isBeta
+{{#> tabs tabs--id="nav-tabs" tabs--isNav="true"}}
+  {{> __tabs-list }}
+{{/tabs}}
+<br/ >
+As sub navigation:
+{{#> tabs tabs--id="nav-tabs" tabs--isNav="true" tabs--IsSubtab="true"}}
+  {{> __tabs-list }}
+{{/tabs}}
+```
 
 ## Documentation
 
@@ -453,6 +464,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-initializing-accent` | `.pf-v6-c-tabs.pf-m-animate-current` | Modifies tabs styles while initializing the "current" tab's accent styles. |
 | `--pf-v6-c-tabs--link-accent--start` | `.pf-v6-c-tabs.pf-m-animate-current` | Sets the value for the "start" inset of the current tab's accent. |
 | `--pf-v6-c-tabs--link-accent--length` | `.pf-v6-c-tabs.pf-m-animate-current` | Sets the value for the length of the current tab's accent. |
+| `.pf-m-nav` | `.pf-v6-c-tabs` | Applies site navigation styling to the tab component. |
 | `.pf-m-current` | `.pf-v6-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-action` | `.pf-v6-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
 | `.pf-m-overflow` | `.pf-v6-c-tabs__item` | Applies overflow menu styling to a tab item. |
