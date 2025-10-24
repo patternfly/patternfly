@@ -196,6 +196,14 @@
   }
   // stylelint-enable selector-max-class
 
+  // when a card is clickable only, or has the screen reader class on its input
+  &.pf-m-clickable:not(.pf-m-selectable),
+  &:has(input.#{$pf-prefix}u-screen-reader) {
+    --#{$card}__actions--PaddingInlineStart: 0;
+    --#{$card}__actions--MarginBlockStart: 0;
+    --#{$card}__actions--MarginBlockEnd: 0;
+  }
+
   &.pf-m-compact {
     --#{$card}__title-text--FontSize: var(--#{$card}--m-compact__title-text--FontSize);
     --#{$card}__body--FontSize: var(--#{$card}--m-compact__body--FontSize);
@@ -343,11 +351,6 @@
   &.pf-m-no-offset {
     --#{$card}__actions--MarginBlockStart: 0;
     --#{$card}__actions--MarginBlockEnd: 0;
-  }
-
-  &:has(button, a) {
-    padding: 0;
-    margin: 0;
   }
 }
 
