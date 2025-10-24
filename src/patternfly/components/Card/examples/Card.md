@@ -72,9 +72,9 @@ import './Card.css'
     {{/card-actions}}
     {{#> card-header-main}}
       {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-title-text--id=(concat card--id '-check-label')}}
-      {{#> card--description}} This is the card description. {{/card--description}}
     {{/card-header-main}}
   {{/card-header}}
+  {{#> card--description}} This is the card description. {{/card--description}}
   {{#> card-body}}
     Body
   {{/card-body}}
