@@ -206,8 +206,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__add--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Nav variant
-  --#{$tabs}--m-nav--inset: var(--pf-t--global--spacer--xl);
-  --#{$tabs}--m-nav__link-accent--color: var(--pf-t--color--red--50);
   --#{$tabs}--m-nav__link--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$tabs}--m-nav__link--disabled--Color: var(--pf-t--global--text--color--disabled);
 
@@ -519,12 +517,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   &.pf-m-nav {
-    --#{$tabs}--link-accent--color: var(--#{$tabs}--m-nav__link-accent--color);
     --#{$tabs}__link--disabled--BackgroundColor: transparent;
     --#{$tabs}__link--disabled--Color: var(--#{$tabs}--m-nav__link--disabled--Color);
     --#{$tabs}__link--hover--BorderColor: transparent;
     --#{$tabs}__link--BorderRadius: var(--#{$tabs}--m-nav__link--BorderRadius);
-    --#{$tabs}--inset: var(--#{$tabs}--m-nav--inset);
   
     &::before,
     .#{$tabs}__link::before {
