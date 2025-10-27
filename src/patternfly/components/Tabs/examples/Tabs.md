@@ -262,6 +262,18 @@ cssPrefix: pf-v6-c-tabs
 {{/tabs}}
 ```
 
+### Site navigation variation
+```hbs isBeta
+{{#> tabs tabs--id="nav-tabs" tabs--isNav="true"}}
+  {{> __tabs-list }}
+{{/tabs}}
+<br/ >
+As sub navigation:
+{{#> tabs tabs--id="nav-tabs" tabs--isNav="true" tabs--IsSubtab="true"}}
+  {{> __tabs-list }}
+{{/tabs}}
+```
+
 ## Tab item actions
 
 ### Help button example
@@ -412,17 +424,6 @@ To animate the current tab accent, you must set the following variables on the `
 {{#> tab-content tab-content--modifier="pf-m-secondary" tab-content--attribute='id="secondary-tab4-panel"'}}
   Panel 4
 {{/tab-content}}
-```
-### Site navigation variation
-```hbs isBeta
-{{#> tabs tabs--id="nav-tabs" tabs--isNav="true"}}
-  {{> __tabs-list }}
-{{/tabs}}
-<br/ >
-As sub navigation:
-{{#> tabs tabs--id="nav-tabs" tabs--isNav="true" tabs--IsSubtab="true"}}
-  {{> __tabs-list }}
-{{/tabs}}
 ```
 
 ## Documentation
