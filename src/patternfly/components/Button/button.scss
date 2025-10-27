@@ -373,6 +373,8 @@
   --#{$button}--m-hamburger__icon--m-expand--ScaleX: -1;
 
   // Circle
+  --#{$button}--m-circle--ScaleX: 1.29;
+  --#{$button}--m-circle--ScaleY: 1.29;
   --#{$button}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--m-circle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$button}--m-circle--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
@@ -787,6 +789,10 @@
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-circle--PaddingInlineEnd);
     --#{$button}--PaddingBlockEnd: var(--#{$button}--m-circle--PaddingBlockEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-circle--PaddingInlineStart);
+
+    & .pf-v6-c-button__icon {
+      scale: var(--#{$button}--m-circle--ScaleX) var(--#{$button}--m-circle--ScaleY);
+    }
   }
 
   &:hover,
