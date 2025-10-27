@@ -64,6 +64,7 @@
   --pf-t--global--duration--200: 1ms !important;
   --pf-t--global--duration--100: 1ms !important;
   --pf-t--global--duration--50: 1ms !important;
+  --#{$pf-global}--pulse-pulsing--Animation--Duration: 0 !important;
 
   // stylelink-enable declaration-no-important
 }
@@ -92,21 +93,19 @@
 }
 
 .#{$pf-prefix}m-pulse {
-  &,
-  &:focus,
-  &:focus-within {
-    box-shadow: 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(43.2% 0.232 292.759deg),
-    0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(50% 0.134 242.749deg),
-    0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815deg),
-    0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815deg);
-    animation: #{$pf-global}-pulse 2s infinite ease-in-out;
+  & {
+    box-shadow: 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-End),
+    0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-End),
+    0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-Start),
+    0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-Start);
+    animation: #{$pf-global}-pulse var(--#{$pf-global}--pulse-pulsing--Animation--Duration) infinite ease-in-out;
   }
 
   &.pf-m-inset {
-    box-shadow: inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(43.2% 0.232 292.759deg),
-    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(50% 0.134 242.749deg),
-    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815deg),
-    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) oklch(45.9% 0.187 3.815deg);
+    box-shadow: inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-End),
+    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-End),
+    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-Start),
+    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-Start);
   }
 }
 
@@ -120,7 +119,16 @@
   --#{$pf-global}--danger-jiggle--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
   --#{$pf-global}--danger-jiggle--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
   --#{$pf-global}--pulse--BoxShadow--Spread: 0px;
+  --#{$pf-global}--pulse--BoxShadow--Color--Start-Start: oklch(45.9% 0.187 3.815deg);
+  --#{$pf-global}--pulse--BoxShadow--Color--Start-End: oklch(50% 0.134 242.749deg);
+  --#{$pf-global}--pulse--BoxShadow--Color--End-Start: oklch(45.9% 0.187 3.815deg);
+  --#{$pf-global}--pulse--BoxShadow--Color--End-End: oklch(43.2% 0.232 292.759deg);
   --#{$pf-global}--pulse-pulsing--BoxShadow--Spread: 15px;
+  --#{$pf-global}--pulse-pulsing--Animation--Duration: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$pf-global}--pulse-pulsing--Animation--Duration: 2s;
+  }
 }
 
 // Register the property type for the custom property to be animatable
