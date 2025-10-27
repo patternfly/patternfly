@@ -4,9 +4,10 @@ section: components
 cssPrefix: pf-v6-c-data-list
 ---
 
-## Examples
+# Examples
 
-### Basic
+## Basic data list
+### Basic data list example
 ```hbs
 {{#> data-list data-list--id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -37,8 +38,7 @@ cssPrefix: pf-v6-c-data-list
 {{/data-list}}
 ```
 
-### Accessibility
-
+### Basic data list accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="list"`       | `.pf-v6-c-data-list` | Indicates that the data list is a list. **Required** |
@@ -46,8 +46,7 @@ cssPrefix: pf-v6-c-data-list
 | `aria-labelledby`   | `.pf-v6-c-data-list__item` | Provides an accessible description for data list item. **Required** |
 | `id`                | `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__cell *`  | Provides a reference for data list item description. **Required** |
 
-### Usage
-
+### Basic data list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-data-list` | `<ul>` | Initiates a data list. **Required** |
@@ -60,7 +59,8 @@ cssPrefix: pf-v6-c-data-list
 | `.pf-m-no-fill` | `.pf-v6-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-v6-c-data-list__cell` | Modifies a data list cell to align-right. |
 
-### With headings
+## Data list with headings
+### Data list with headings example
 ```hbs
 {{#> data-list data-list--id="data-list-with-headings" data-list--attribute='aria-label="With headings data list example"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -89,14 +89,13 @@ cssPrefix: pf-v6-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
-
 ```
 
-### Usage
-
+### Data list with headings usage
 When a list item includes more than one block of content, it can be difficult for some screen reader users to discern where one list item ends and the next one begins. A simple way to provide better separation of list items is to define the primary content section as a heading. Headings are useful for indicating a new section of contents, but also provide an easy way for screen reader users to navigate to specific sections on the page. The heading level should be based on the context in which the DataList component is being used. For example, if the heading for the section that contains the DataList is a level 3, then `h4` elements should be used in the DataList list items.
 
-### Checkboxes, actions, and additional cells
+## Data list with checkboxes, actions, and additional cells
+### Data list with checkboxes, actions, and additional cells example
 ```hbs
 {{#> data-list data-list--id="data-list-checkboxes-actions-addl-cells" data-list--attribute='aria-label="Checkbox and action data list example"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -183,8 +182,7 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Accessibility
-
+### Data list with checkboxes, actions, and additional cells accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[descriptive text]"`  | `.pf-v6-c-data-list__action` > `.pf-v6-c-button`  | Provides an accessible label buttons. **Required** |
@@ -192,8 +190,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `aria-labelledby="{title_cell_id} {data_list_action_id}"`  | `.pf-v6-c-data-list__action` > `.pf-v6-c-button`   | Creates an accessible label for the action button using the title cell and button label **Required** |
 | `id`  | `.pf-v6-c-data-list__cell > *`, `.pf-v6-c-data-list__check` > `.pf-v6-c-check__input`, `.pf-v6-c-data-list__action` > `.pf-v6-c-button` | Provides a reference for interactive elements. **Required** |
 
-### Usage
-
+### Data list with checkboxes, actions, and additional cells usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-data-list__item-control` | `<div>` | Initiates a container for data list controls. For example, add `.pf-v6-c-data-list__check` here. **Required** |
@@ -203,7 +200,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-data-list__item-action` | Hides an actions container at optional [breakpoint](/tokens/all-patternfly-tokens), or hides it at all breakpoints with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-data-list__item-action` | Shows an actions container at optional [breakpoint](/tokens/all-patternfly-tokens). |
 
-### Expandable
+## Exandable data list
+### Expandable data list example
 ```hbs
 {{#> data-list data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
@@ -290,7 +288,7 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Expandable compact
+### Compact expandable data list example
 ```hbs
 {{#> data-list data-list--IsCompact=true data-list--id="data-list-expandable-compact" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
@@ -380,7 +378,7 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Expandable nested
+### Nested expandable data list example
 ```hbs
 {{#> data-list data-list--id="data-list-expandable-nested" data-list--attribute='aria-label="Expandable nested data list example"'}}
   {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
@@ -521,7 +519,8 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Compact
+## Compact data list
+### Compact data list example
 ```hbs
 {{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier=" pf-m-grid-sm" data-list--IsCompact=true}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -607,8 +606,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{/data-list-item}}{{/data-list}}
 ```
 
-### Accessibility
-
+### Compact data list accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-v6-c-data-list__toggle` > `.pf-v6-c-button` | Indicates that the expandable content is visible. **Required**|
@@ -618,8 +616,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `id="{button_id}"` | `.pf-v6-c-data-list__toggle` > `.pf-v6-c-button` | Provides a reference for toggle button description. **Required** |
 | `aria-controls="[id of element controlled]"` | `.pf-v6-c-data-list__toggle` > `.pf-v6-c-button`    | Identifies the section controlled by the toggle button. **Required** |
 
-### Usage
-
+### Compact data list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-data-list__item-control` | `<div>` | Initiates a container for data list controls. For example, add `.pf-v6-c-data-list__toggle` here. **Required** |
@@ -632,7 +629,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-no-padding` | `.pf-v6-c-data-list__expandable-content-body` | Removes padding for the expandable content body. |
 | `.pf-m-icon` | `.pf-v6-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 
-### Modifiers
+## Data list modifiers
+### Data list flex modifiers example
 ```hbs
 {{!-- Example 1 --}}
 <h2 class="Preview__section-title">Default fitting - example 1</h2>
@@ -731,19 +729,98 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 {{/data-list}}
-
 ```
 
-### Accessibility
+### Data list text modifiers example
+```hbs
+{{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with text modifiers"'}}
+  {{#> data-list-item data-list-item--id="item"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            This text will wrap to the next line because it has the default behavior of the data list cell.
+          </span>
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--IsTruncate=true}}
+          This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-break-word"}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-nowrap"}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-item-row data-list-item-row--IsTruncate=true}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+           This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will truncate because it is very very long. This text will truncate because it is very very long.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-item-row data-list-item-row--modifier="pf-m-break-word"}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+           http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> data-list-item-row data-list-item-row--modifier="pf-m-nowrap"}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+           This text will not break or wrap.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          This text will not break or wrap.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Data list modifiers accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-controls="[id of element controlled]"` | `.pf-v6-c-data-list__toggle` > `.pf-v6-c-button`    | Identifies the section controlled by the toggle button. **Required** |
-### Usage
+
+### Data list modifiers usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-flex-{1, 2, 3, 4, 5}` | `.pf-v6-c-data-list__cell` | Percentage based modifier for `.pf-v6-c-data-list__cell` widths. |
+| `.pf-v6-c-data-list__text` | `*` | Inserts the data list text element. Use this class to modify specific text directly. |
+| `.pf-m-truncate` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text is truncated. |
+| `.pf-m-break-word` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text breaks to the next line. |
+| `.pf-m-nowrap` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text does not wrap to the next line. |
 
-### Clickable rows
+## Data list with clickable rows
+### Data list with clickable rows example
 ```hbs
 {{#> data-list data-list--id="data-list-clickable-rows" data-list--attribute='aria-label="Clickable rows data list example"'}}
   {{#> data-list-item data-list-item--id="item-1" data-list-item--IsClickable="true" data-list-item--IsSelected="true"}}
@@ -778,17 +855,7 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `tabindex="0"` | `.pf-v6-c-data-list__item.pf-m-clickable` | Inserts the clickable row into the tab order of the page so that it is focusable. **Required** |
-### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-clickable` | `.pf-v6-c-data-list__item` | Modifies a data list item so that it is clickable. |
-| `.pf-m-selected` | `.pf-v6-c-data-list__item` | Modifies a data list item for the selected state. |
-
-### Clickable expandable rows
+### Data list with clickable expandable rows example
 ```hbs
 {{#> data-list data-list--id="data-list-clickable-expandable-rows" data-list-item--IsClickable="true" data-list--attribute='aria-label="Clickable, expandable data list example"'}}
   {{#> data-list-item data-list-item--id="item-1" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
@@ -866,7 +933,19 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Draggable
+### Data list with clickable rows accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `.pf-v6-c-data-list__item.pf-m-clickable` | Inserts the clickable row into the tab order of the page so that it is focusable. **Required** |
+
+### Data list with clickable rows usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-clickable` | `.pf-v6-c-data-list__item` | Modifies a data list item so that it is clickable. |
+| `.pf-m-selected` | `.pf-v6-c-data-list__item` | Modifies a data list item for the selected state. |
+
+## Draggable data list
+### Draggable data list example
 ```hbs
 <div id="draggable-help">
   Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
@@ -941,7 +1020,7 @@ When a list item includes more than one block of content, it can be difficult fo
 </div>
 ```
 
-### Accessibility
+### Draggable data list accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-pressed="true or false"` | `.pf-v6-c-data-list__item-draggable-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
@@ -950,7 +1029,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `aria-labelledby="[id value of .pf-v6-c-data-list__item-draggable-button] [id value of .pf-v6-c-data-list__cell-text]"` | `.pf-v6-c-data-list__item-draggable-button` | Provides an accessible name for the draggable button. |
 | `id="[]"` | `.pf-v6-c-data-list__item-draggable-button`, `.pf-v6-c-data-list__cell-text` | Gives the button and the text element accessible IDs |
 
-### Usage
+### Draggable data list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-data-list__item-draggable-button` | `<button>` | Initiates the draggable button. Use for drag and drop. |
@@ -960,121 +1039,9 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-disabled` | `.pf-v6-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
 | `.pf-m-drag-over` | `.pf-v6-c-data-list` | Modifies the data list to indicate that a draggable item is being dragged over the data list. |
 
-### Text modifiers
-```hbs
-{{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with text modifiers"'}}
-  {{#> data-list-item data-list-item--id="item"}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">
-            This text will wrap to the next line because it has the default behavior of the data list cell.
-          </span>
-        {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--IsTruncate=true}}
-          This text will truncate because it is very very long.
-        {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-break-word"}}
-          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
-        {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-nowrap"}}
-          This text will not break or wrap.
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-item-row data-list-item-row--IsTruncate=true}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-           This text will truncate because it is very very long. This text will truncate because it is very very long.
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will truncate because it is very very long. This text will truncate because it is very very long.
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will truncate because it is very very long. This text will truncate because it is very very long.
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will truncate because it is very very long. This text will truncate because it is very very long.
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-item-row data-list-item-row--modifier="pf-m-break-word"}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-           http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-    {{#> data-list-item-row data-list-item-row--modifier="pf-m-nowrap"}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-           This text will not break or wrap.
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will not break or wrap.
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will not break or wrap.
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will not break or wrap.
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-{{/data-list}}
-```
 
-### Text-modifiers-data-list-text
-```hbs
-{{#> data-list data-list--id="data-list-with-text-modifiers-and-text" data-list--attribute='aria-label="Data list with modifiers and text"'}}
-  {{#> data-list-item data-list-item--id="item-1"}}
-    {{#> data-list-item-row}}
-      {{#> data-list-item-content}}
-        {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">
-            This text will wrap to the next line because it has the default behavior of the data list cell.
-          </span>
-          {{#> data-list-text data-list-text--IsTruncate=true}}
-            This is data list text, you can apply `pf-m-truncate` directly to the text. This is data list text, you can apply `pf-m-truncate` directly to the text.
-          {{/data-list-text}}
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will wrap to the next line because it has the default behavior of the data list cell.
-          {{#> data-list-text data-list-text--modifier="pf-m-break-word"}}
-            http://thisisaverylongdatalisttextthatneedstobreakusethebreakwordmodifier.org
-          {{/data-list-text}}
-        {{/data-list-cell}}
-        {{#> data-list-cell}}
-          This text will wrap to the next line because it has the default behavior of the data list cell.
-          {{#> data-list-text data-list-text--modifier="pf-m-nowrap"}}
-            This is data list text, you can apply `pf-m-nowrap` directly to the text.
-          {{/data-list-text}}
-        {{/data-list-cell}}
-      {{/data-list-item-content}}
-    {{/data-list-item-row}}
-  {{/data-list-item}}
-{{/data-list}}
-```
-
-### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-v6-c-data-list__text` | `*` | Inserts the data list text element. Use this class to modify specific text directly. |
-| `.pf-m-truncate` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text is truncated. |
-| `.pf-m-break-word` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text breaks to the next line. |
-| `.pf-m-nowrap` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text does not wrap to the next line. |
-
-### Plain
+## Plain data list
+### Plain data list example
 ```hbs isBeta
 {{#> data-list data-list--IsPlain=true data-list--id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -1105,18 +1072,13 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-### Usage
-
+### Plain data list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-plain` | `.pf-v6-c-data-list` | Modifies a data list to have a transparent background. |
 
-## Documentation
-### Overview
-The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-v6-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/components/table).
-
-
-### Grid
+## Data list as grid
+### Data list as grid example
 ```hbs
 {{#> data-list data-list--id="data-list-grid" data-list--attribute='aria-label="Grid data list example"' data-list--modifier="pf-m-grid"}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -1174,7 +1136,7 @@ The DataList component provides a flexible alternative to the Table component, w
 {{/data-list}}
 ```
 
-### Grid (small breakpoint)
+### Data list as grid on small breakpoint example
 ```hbs
 {{#> data-list data-list--id="data-list-grid-small" data-list--attribute='aria-label="Grid small data list example"' data-list--modifier="pf-m-grid-sm"}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -1232,7 +1194,7 @@ The DataList component provides a flexible alternative to the Table component, w
 {{/data-list}}
 ```
 
-### Grid none
+### Data list with no grid
 ```hbs
 {{#> data-list data-list--id="data-list-grid-none" data-list--attribute='aria-label="Grid none data list example"' data-list--modifier="pf-m-grid-none"}}
   {{#> data-list-item data-list-item--id="item-1"}}
@@ -1290,8 +1252,11 @@ The DataList component provides a flexible alternative to the Table component, w
 {{/data-list}}
 ```
 
-### Usage
-
+### Data list as grid usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-grid{-[none, sm, md, lg, xl, 2xl]}` | `.pf-v6-c-data-list` | Modifies the data list to switch to a grid layout at a specified [breakpoint](/tokens/all-patternfly-tokens). `.pf-m-grid` will display the grid layout at all breakpoints. `.pf-m-grid-none` will display the desktop layout at all breakpoints. **Note:** Without a grid modifier, the data list will display the grid layout by default and switch to the desktop layout at a medium breakpoint. |
+
+## Documentation
+### Overview
+The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-v6-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/components/table).
