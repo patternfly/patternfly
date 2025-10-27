@@ -196,9 +196,9 @@
   }
   // stylelint-enable selector-max-class
 
-  // when a card is clickable only, or has the screen reader class on its input
-  &.pf-m-clickable:not(.pf-m-selectable),
-  &:has(input.#{$pf-prefix}u-screen-reader) {
+  // when the whole card is clickable and the card actions are invisible, remove the padding/margin so it doesn't take up space
+  @at-root .#{$card}__actions:has(> .#{$card}__selectable-actions input.#{$pf-prefix}screen-reader),
+  &.pf-m-clickable:not(.pf-m-selectable) {
     --#{$card}__actions--PaddingInlineStart: 0;
     --#{$card}__actions--MarginBlockStart: 0;
     --#{$card}__actions--MarginBlockEnd: 0;
