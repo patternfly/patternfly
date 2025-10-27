@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-v6-c-data-list
 ---
 
-# Examples
-
 ## Basic data list
 ### Basic data list example
 ```hbs
