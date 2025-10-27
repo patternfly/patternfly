@@ -376,10 +376,11 @@
   --#{$button}--m-circle--ScaleX: 1.29;
   --#{$button}--m-circle--ScaleY: 1.29;
   --#{$button}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$button}--m-circle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$button}--m-circle--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
-  --#{$button}--m-circle--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$button}--m-circle--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$button}--m-circle--Padding--base: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$button}--m-circle--PaddingBlockStart: var(--#{$button}--m-circle--Padding--base);
+  --#{$button}--m-circle--PaddingInlineEnd: 0;
+  --#{$button}--m-circle--PaddingBlockEnd: var(--#{$button}--m-circle--Padding--base);
+  --#{$button}--m-circle--PaddingInlineStart: 0;
 }
 
 .#{$button} {
