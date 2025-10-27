@@ -371,6 +371,16 @@
   --#{$button}--hamburger-icon--arrow--collapse--path: path("M3,7 L1,5 L3,3");
   --#{$button}--hamburger-icon--bottom--collapse--path: path("M9,9 L5,9");
   --#{$button}--m-hamburger__icon--m-expand--ScaleX: -1;
+
+  // Circle
+  --#{$button}--m-circle--ScaleX: 1.29;
+  --#{$button}--m-circle--ScaleY: 1.29;
+  --#{$button}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$button}--m-circle--Padding--base: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$button}--m-circle--PaddingBlockStart: var(--#{$button}--m-circle--Padding--base);
+  --#{$button}--m-circle--PaddingInlineEnd: 0;
+  --#{$button}--m-circle--PaddingBlockEnd: var(--#{$button}--m-circle--Padding--base);
+  --#{$button}--m-circle--PaddingInlineStart: 0;
 }
 
 .#{$button} {
@@ -771,6 +781,18 @@
 
     &.pf-m-collapse {
       @include pf-v6-hamburger($collapse: true);
+    }
+  }
+
+  &.pf-m-circle {
+    --#{$button}--BorderRadius: var(--#{$button}--m-circle--BorderRadius);
+    --#{$button}--PaddingBlockStart: var(--#{$button}--m-circle--PaddingBlockStart);
+    --#{$button}--PaddingInlineEnd: var(--#{$button}--m-circle--PaddingInlineEnd);
+    --#{$button}--PaddingBlockEnd: var(--#{$button}--m-circle--PaddingBlockEnd);
+    --#{$button}--PaddingInlineStart: var(--#{$button}--m-circle--PaddingInlineStart);
+
+    & .pf-v6-c-button__icon {
+      scale: var(--#{$button}--m-circle--ScaleX) var(--#{$button}--m-circle--ScaleY);
     }
   }
 
