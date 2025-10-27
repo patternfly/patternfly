@@ -1075,7 +1075,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-nowrap` | `.pf-v6-c-data-list`, `.pf-v6-c-data-list__item-row`, `.pf-v6-c-data-list__cell`, `.pf-v6-c-data-list__text` | Modifies the data list element so that text does not wrap to the next line. |
 
 ### Plain
-```hbs
+```hbs isBeta
 {{#> data-list data-list--IsPlain=true data-list--id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
