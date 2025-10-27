@@ -125,13 +125,13 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--after--BorderBlockStartWidth: 0;
   --#{$tabs}__link--after--BorderInlineEndWidth: 0;
   --#{$tabs}__link--after--BorderInlineStartWidth: 0;
-  --#{$tabs}__item--m-current__link--after--BorderColor: var(--#{$tabs}--link-accent--color);
+  --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
   // Link accent
   --#{$tabs}--link-accent--start: 0; // needed to create react-token
   --#{$tabs}--link-accent--length: 0; // needed to create react-token
-  --#{$tabs}--link-accent--color: var(--pf-t--global--border--color--clicked); // var(--#{$tabs}__item--m-current__link--after--BorderColor);
+  --#{$tabs}--link-accent--color: var(--#{$tabs}__item--m-current__link--after--BorderColor);
   --#{$tabs}--link-accent--border-size: var(--#{$tabs}__item--m-current__link--after--BorderWidth);
   --#{$tabs}--link-accent--TransitionDuration: var(--pf-t--global--motion--duration--md);
   --#{$tabs}--link-accent--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
@@ -579,7 +579,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Current
   &.pf-m-current {
     --#{$tabs}__link--Color: var(--#{$tabs}__item--m-current__link--Color);
-    --#{$tabs}__link--after--BorderColor: var(--#{$tabs}__item--m-current__link--after--BorderColor);
+    --#{$tabs}__link--after--BorderColor: var(--#{$tabs}--link-accent--color);
     --#{$tabs}__link--after--BorderWidth: var(--#{$tabs}__item--m-current__link--after--BorderWidth);
     --#{$tabs}__item--BackgroundColor: var(--#{$tabs}__item--m-current--BackgroundColor);
   }
