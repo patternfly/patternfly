@@ -62,7 +62,8 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 ```
-### With title and description in head
+
+### With description
 ```hbs isBeta
 {{#> card card--id="card-action-example-2"}}
   {{#> card-header}}
