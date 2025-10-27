@@ -65,7 +65,7 @@ import './Card.css'
 
 ### With description
 ```hbs isBeta
-{{#> card card--id="card-action-example-2"}}
+{{#> card card--id="card-description"}}
   {{#> card-header}}
     {{#> card-actions}}
       {{> card--menu-toggle}}
