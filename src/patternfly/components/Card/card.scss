@@ -249,7 +249,6 @@
   > .#{$divider} {
     & + .#{$card}__header,
     & + .#{$card}__title,
-    & + .#{$card}__description,
     & + .#{$card}__body,
     & + .#{$card}__footer {
       padding-block-start: var(--#{$card}--c-divider--child--PaddingBlockStart);
@@ -329,6 +328,11 @@
   overflow-wrap: var(--#{$card}__title-text--OverflowWrap);
 }
 
+.#{$card}__description {
+  padding-block-start: var(--#{$card}__description--PaddingBlockStart);
+  font-size: var(--#{$card}__description--FontSize);
+  color: var(--#{$card}__description--Color);
+}
 
 .#{$card}__actions {
   display: flex;
