@@ -64,12 +64,12 @@
   --pf-t--global--duration--200: 1ms !important;
   --pf-t--global--duration--100: 1ms !important;
   --pf-t--global--duration--50: 1ms !important;
-  --#{$pf-global}--pulse-pulsing--Animation--Duration: 0 !important;
+  --#{$pf-global}--thinking-active--Animation--Duration: 0 !important;
 
   // stylelink-enable declaration-no-important
 }
 
-.#{$pf-prefix}m-gradient-border {
+.#{$pf-prefix}m-ai-indicator {
   position: relative;
 
   &::before {
@@ -86,46 +86,46 @@
   }
 }
 
-@property --#{$pf-global}--pulse--BoxShadow--Spread {
+@property --#{$pf-global}--thinking--BoxShadow--Spread {
   syntax: "<length>";
   initial-value: 0;
   inherits: false;
 }
 
-.#{$pf-prefix}m-pulse {
-  box-shadow: 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-End),
-  0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-End),
-  0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-Start),
-  0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-Start);
-  animation: #{$pf-global}-pulse var(--#{$pf-global}--pulse-pulsing--Animation--Duration) infinite ease-in-out;
+.#{$pf-prefix}m-thinking {
+  box-shadow: 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-End),
+  0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-End),
+  0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-Start),
+  0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-Start);
+  animation: #{$pf-global}-thinking var(--#{$pf-global}--thinking-active--Animation--Duration) infinite ease-in-out;
 
   &.pf-m-inset {
-    box-shadow: inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-End),
-    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-End),
-    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--End-Start),
-    inset 0 0 var(--#{$pf-global}--pulse--BoxShadow--Spread) var(--#{$pf-global}--pulse--BoxShadow--Color--Start-Start);
+    box-shadow: inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-End),
+    inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-End),
+    inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-Start),
+    inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-Start);
   }
 }
 
-@keyframes #{$pf-global}-pulse {
+@keyframes #{$pf-global}-thinking {
   50% {
-    --#{$pf-global}--pulse--BoxShadow--Spread: var(--#{$pf-global}--pulse-pulsing--BoxShadow--Spread);
+    --#{$pf-global}--thinking--BoxShadow--Spread: var(--#{$pf-global}--thinking-active--BoxShadow--Spread);
   }
 }
 
 :root {
   --#{$pf-global}--danger-jiggle--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
   --#{$pf-global}--danger-jiggle--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
-  --#{$pf-global}--pulse--BoxShadow--Spread: 0px;
-  --#{$pf-global}--pulse--BoxShadow--Color--Start-Start: oklch(45.9% 0.187 3.815deg);
-  --#{$pf-global}--pulse--BoxShadow--Color--Start-End: oklch(50% 0.134 242.749deg);
-  --#{$pf-global}--pulse--BoxShadow--Color--End-Start: oklch(45.9% 0.187 3.815deg);
-  --#{$pf-global}--pulse--BoxShadow--Color--End-End: oklch(43.2% 0.232 292.759deg);
-  --#{$pf-global}--pulse-pulsing--BoxShadow--Spread: 15px;
-  --#{$pf-global}--pulse-pulsing--Animation--Duration: 0;
+  --#{$pf-global}--thinking--BoxShadow--Spread: 0px;
+  --#{$pf-global}--thinking--BoxShadow--Color--Start-Start: oklch(45.9% 0.187 3.815deg);
+  --#{$pf-global}--thinking--BoxShadow--Color--Start-End: oklch(50% 0.134 242.749deg);
+  --#{$pf-global}--thinking--BoxShadow--Color--End-Start: oklch(45.9% 0.187 3.815deg);
+  --#{$pf-global}--thinking--BoxShadow--Color--End-End: oklch(43.2% 0.232 292.759deg);
+  --#{$pf-global}--thinking-active--BoxShadow--Spread: 15px;
+  --#{$pf-global}--thinking-active--Animation--Duration: 0;
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$pf-global}--pulse-pulsing--Animation--Duration: 2s;
+    --#{$pf-global}--thinking-active--Animation--Duration: 2s;
   }
 }
 
