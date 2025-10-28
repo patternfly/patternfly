@@ -65,7 +65,7 @@ cssPrefix: pf-v6-c-data-list
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <h2 id="{{data-list--id}}-{{data-list-item--id}}">Primary content</h2>
+          <h4 id="{{data-list--id}}-{{data-list-item--id}}">Primary content</h4>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content
@@ -78,7 +78,7 @@ cssPrefix: pf-v6-c-data-list
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
-          <h2 id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (pf-m-no-fill)</h2>
+          <h4 id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (pf-m-no-fill)</h4>
         {{/data-list-cell}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
           Secondary content (pf-m-align-right pf-m-no-fill)
@@ -630,9 +630,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ## Data list modifiers
 ### Data list flex modifiers example
 ```hbs
-{{!-- Example 1 --}}
-<h2 class="Preview__section-title">Default fitting - example 1</h2>
-{{#> data-list data-list--id="data-list-default-fitting" data-list--attribute='aria-label="Width modifier data list example 1"'}}
+{{#> data-list data-list--id="data-list-modifiers" data-list--attribute='aria-label="Width modifier data list example 1"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -654,12 +652,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
-{{/data-list}}
-
-{{!-- Example 2 --}}
-<h2 class="Preview__section-title">Flex modifiers - example 2</h2>
-{{#> data-list data-list--id="data-list-flex-modifiers" data-list--attribute='aria-label="Width modifier data list example 2"'}}
-  {{#> data-list-item data-list-item--id="item-1"}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-check}}
@@ -681,12 +674,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{> data-list-item-action}}
     {{/data-list-item-row}}
   {{/data-list-item}}
-{{/data-list}}
-
-{{!-- Example 3 --}}
-<h2 class="Preview__section-title">Flex modifiers - example 3</h2>
-{{#> data-list data-list--id="data-list-flex-modifiers-2" data-list--attribute='aria-label="Width modifier data list example 3"'}}
-  {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
+  {{#> data-list-item data-list-item--id="item-3" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item-1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
