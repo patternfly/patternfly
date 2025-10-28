@@ -3389,7 +3389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/ast-helpers@npm:^1.4.0-alpha.302":
+"@patternfly/ast-helpers@npm:^1.4.0-alpha.303":
   version: 1.26.2
   resolution: "@patternfly/ast-helpers@npm:1.26.2"
   dependencies:
@@ -3402,15 +3402,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/documentation-framework@npm:6.28.8":
-  version: 6.28.8
-  resolution: "@patternfly/documentation-framework@npm:6.28.8"
+"@patternfly/documentation-framework@npm:6.28.9":
+  version: 6.28.9
+  resolution: "@patternfly/documentation-framework@npm:6.28.9"
   dependencies:
     "@babel/core": "npm:^7.28.3"
     "@babel/preset-env": "npm:7.27.1"
     "@babel/preset-react": "npm:^7.24.1"
     "@mdx-js/util": "npm:1.6.16"
-    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.302"
+    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.303"
     "@reach/router": "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer: "npm:10.4.19"
     babel-loader: "npm:^9.1.3"
@@ -3452,7 +3452,6 @@ __metadata:
     remark-mdxjs: "npm:2.0.0-next.8"
     remark-parse: "npm:8.0.3"
     remark-squeeze-paragraphs: "npm:4.0.0"
-    responsive-loader: "npm:3.1.2"
     sharp: "npm:0.33.0"
     style-to-object: "npm:0.3.0"
     to-vfile: "npm:6.1.0"
@@ -3477,7 +3476,7 @@ __metadata:
     react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
-  checksum: 10c0/0931220df130b6de1ceb0cab329e036ba8d61770f2e876d8fd737ac55941be85dfda32e75ba16ebf76d9ca1eb36ea11b4be5ac87ed2e1991b4852d0ee14a6f66
+  checksum: 10c0/ef78c9b08b4d00d762122b7ca13ca1d711bb50fd4b3cc3e64112cae7c6a8a869fc8d69cda9401d3f34bf16c733bd1f3a9a8d587cc297787065fbd625a4694ba4
   languageName: node
   linkType: hard
 
@@ -3529,7 +3528,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@fortawesome/fontawesome": "npm:^1.1.8"
     "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.28.8"
+    "@patternfly/documentation-framework": "npm:6.28.9"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.4.0"
     "@patternfly/react-core": "npm:6.4.0"
@@ -4153,7 +4152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.11.9":
+"@types/node@npm:*":
   version: 18.15.11
   resolution: "@types/node@npm:18.15.11"
   checksum: 10c0/670deb1a9daa812dc86b1e8964c0c6b0bef7c32672833c10578c1e5dd2682f2bd99b86d814fde86a5dd4a3da48ea039f41db30a835b245aa7c34c62fa1f23f0d
@@ -7199,13 +7198,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commondir@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "commondir@npm:1.0.1"
-  checksum: 10c0/33a124960e471c25ee19280c9ce31ccc19574b566dc514fe4f4ca4c34fa8b0b57cf437671f5de380e11353ea9426213fca17687dd2ef03134fea2dbc53809fd6
-  languageName: node
-  linkType: hard
-
 "compare-func@npm:^2.0.0":
   version: 2.0.0
   resolution: "compare-func@npm:2.0.0"
@@ -10059,17 +10051,6 @@ __metadata:
     statuses: "npm:2.0.1"
     unpipe: "npm:~1.0.0"
   checksum: 10c0/d38035831865a49b5610206a3a9a9aae4e8523cbbcd01175d0480ffbf1278c47f11d89be3ca7f617ae6d94f29cf797546a4619cd84dd109009ef33f12f69019f
-  languageName: node
-  linkType: hard
-
-"find-cache-dir@npm:^3.3.2":
-  version: 3.3.2
-  resolution: "find-cache-dir@npm:3.3.2"
-  dependencies:
-    commondir: "npm:^1.0.1"
-    make-dir: "npm:^3.0.2"
-    pkg-dir: "npm:^4.1.0"
-  checksum: 10c0/92747cda42bff47a0266b06014610981cfbb71f55d60f2c8216bc3108c83d9745507fb0b14ecf6ab71112bed29cd6fb1a137ee7436179ea36e11287e3159e587
   languageName: node
   linkType: hard
 
@@ -13649,7 +13630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.2, json5@npm:^2.2.1, json5@npm:^2.2.3":
+"json5@npm:^2.1.2, json5@npm:^2.2.3":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
   bin:
@@ -14028,13 +14009,6 @@ __metadata:
     emojis-list: "npm:^3.0.0"
     json5: "npm:^2.1.2"
   checksum: 10c0/d5654a77f9d339ec2a03d88221a5a695f337bf71eb8dea031b3223420bb818964ba8ed0069145c19b095f6c8b8fd386e602a3fc7ca987042bd8bb1dcc90d7100
-  languageName: node
-  linkType: hard
-
-"loader-utils@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "loader-utils@npm:3.2.1"
-  checksum: 10c0/d3e1f217d160e8e894a0385a33500d4ce14065e8ffb250f5a81ae65bc2c3baa50625ec34182ba4417b46b4ac6725aed64429e1104d6401e074af2aa1dd018394
   languageName: node
   linkType: hard
 
@@ -14498,7 +14472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^3.0.2, make-dir@npm:^3.1.0":
+"make-dir@npm:^3.1.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
   dependencies:
@@ -17132,7 +17106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-dir@npm:^4.1.0, pkg-dir@npm:^4.2.0":
+"pkg-dir@npm:^4.2.0":
   version: 4.2.0
   resolution: "pkg-dir@npm:4.2.0"
   dependencies:
@@ -19422,27 +19396,6 @@ __metadata:
   dependencies:
     lowercase-keys: "npm:^1.0.0"
   checksum: 10c0/1c2861d1950790da96159ca490eda645130eaf9ccc4d76db20f685ba944feaf30f45714b4318f550b8cd72990710ad68355ff15c41da43ed9a93c102c0ffa403
-  languageName: node
-  linkType: hard
-
-"responsive-loader@npm:3.1.2":
-  version: 3.1.2
-  resolution: "responsive-loader@npm:3.1.2"
-  dependencies:
-    "@types/node": "npm:^18.11.9"
-    find-cache-dir: "npm:^3.3.2"
-    json5: "npm:^2.2.1"
-    loader-utils: "npm:^3.2.1"
-    make-dir: "npm:^3.1.0"
-    schema-utils: "npm:^4.0.0"
-  peerDependencies:
-    webpack: ^5.73.0
-  peerDependenciesMeta:
-    jimp:
-      optional: true
-    sharp:
-      optional: true
-  checksum: 10c0/c93b200bb51fe2968ee8092b4817db55dd55f2306d1d75fa66aa6cd2dbddf9c7f394528f9182acbc3a37489fed9b5d743b51a5275c88d31fb665195cf0f5adaf
   languageName: node
   linkType: hard
 
