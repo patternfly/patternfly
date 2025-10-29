@@ -247,13 +247,16 @@
 
 /* stylelint-disable */
 @media (max-width: 1200px) {
-  .#{$compass} {
+  .#{$compass} * {
     display: none;
   }
-  body {
+  .#{$compass} {
+    position: relative;
     display: grid;
-    min-height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     place-content: center;
+    gap: 0;
 
     &::after {
       padding: 1em;
@@ -261,7 +264,7 @@
       background: var(--pf-t--global--background--color--primary--default);
       content: "This page is optimized for wide screens.\a\a Please view on a larger display and/or make your browser window wider.";
       width: 80%;
-      max-width: 360px;
+      width: 300px;
       border: 1px solid var(--pf-t--global--border--color--default);
       box-shadow: var(--pf-t--global--box-shadow--md);
       white-space: pre-wrap;
