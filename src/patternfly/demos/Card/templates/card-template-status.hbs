@@ -1,5 +1,5 @@
 {{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
-  {{#> card card--id=card-template-status--id card--modifier="pf-m-expanded"}}
+  {{#> card card--id=card-template-status--id}}
     {{#> card-header}}
       {{#> title titleType="h2" title--modifier="pf-m-xl"}}
         Status
@@ -87,64 +87,66 @@
         {{/l-flex}}
       {{/gallery}}
     {{/card-body}}
-    {{> divider}}
-    {{#> notification-drawer}}
-      {{#> notification-drawer-body}}
-        {{#> notification-drawer-group notification-drawer-group--IsExpanded=card-demo--notication-drawer--IsOpen}}
-          {{#> notification-drawer-group-toggle}}
-            {{#> notification-drawer-group-toggle-title}}
-              {{#> l-flex}}
-                {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
-                  Notifications
-                {{/l-flex-item}}
-                {{#> label-group label-group--id="label-group-notifications"}}
-                  {{#> label-group-main}}
-                    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
-                      {{#> label-group-list-item}}
-                        {{> label
-                            label--id="default-red-icon"
-                            label--color="red"
-                            label-text--value="1"
-                            label-icon--value="exclamation-circle"}}
-                      {{/label-group-list-item}}
-                      {{#> label-group-list-item}}
-                        {{> label
-                            label--id="default-orange-icon"
-                            label--color="orange"
-                            label-text--value="1"
-                            label-icon--value="exclamation-circle"}}
-                      {{/label-group-list-item}}
-                      {{#> label-group-list-item}}
-                        {{> label
-                            label--id="default-green-icon"
-                            label--color="green"
-                            label-text--value="3"
-                            label-icon--value="check-circle"}}
-                      {{/label-group-list-item}}
-                      {{#> label-group-list-item}}
-                        {{> label
-                            label--id="default-blue-icon"
-                            label--color="blue"
-                            label-text--value="3"
-                            label-icon--value="info-circle"}}
-                      {{/label-group-list-item}}
-                      {{#> label-group-list-item}}
-                        {{> label
-                            label--id="default-teal-icon"
-                            label--color="teal"
-                            label-text--value="3"
-                            label-icon--value="bell"}}
-                      {{/label-group-list-item}}
-                    {{/label-group-list}}
-                  {{/label-group-main}}
-                {{/label-group}}
-              {{/l-flex}}
-            {{/notification-drawer-group-toggle-title}}
-            {{> notification-drawer-group-toggle-icon}}
-          {{/notification-drawer-group-toggle}}
-          {{> card-demo--notification-list}}
-        {{/notification-drawer-group}}
-      {{/notification-drawer-body}}
-    {{/notification-drawer}}
+    {{#unless card-template-status--HideNotificationDrawer}}
+      {{> divider}}
+      {{#> notification-drawer}}
+        {{#> notification-drawer-body}}
+          {{#> notification-drawer-group notification-drawer-group--IsExpanded=card-demo--notication-drawer--IsOpen}}
+            {{#> notification-drawer-group-toggle}}
+              {{#> notification-drawer-group-toggle-title}}
+                {{#> l-flex}}
+                  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+                    Notifications
+                  {{/l-flex-item}}
+                  {{#> label-group label-group--id="label-group-notifications"}}
+                    {{#> label-group-main}}
+                      {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+                        {{#> label-group-list-item}}
+                          {{> label
+                              label--id="default-red-icon"
+                              label--color="red"
+                              label-text--value="1"
+                              label-icon--value="exclamation-circle"}}
+                        {{/label-group-list-item}}
+                        {{#> label-group-list-item}}
+                          {{> label
+                              label--id="default-orange-icon"
+                              label--color="orange"
+                              label-text--value="1"
+                              label-icon--value="exclamation-circle"}}
+                        {{/label-group-list-item}}
+                        {{#> label-group-list-item}}
+                          {{> label
+                              label--id="default-green-icon"
+                              label--color="green"
+                              label-text--value="3"
+                              label-icon--value="check-circle"}}
+                        {{/label-group-list-item}}
+                        {{#> label-group-list-item}}
+                          {{> label
+                              label--id="default-blue-icon"
+                              label--color="blue"
+                              label-text--value="3"
+                              label-icon--value="info-circle"}}
+                        {{/label-group-list-item}}
+                        {{#> label-group-list-item}}
+                          {{> label
+                              label--id="default-teal-icon"
+                              label--color="teal"
+                              label-text--value="3"
+                              label-icon--value="bell"}}
+                        {{/label-group-list-item}}
+                      {{/label-group-list}}
+                    {{/label-group-main}}
+                  {{/label-group}}
+                {{/l-flex}}
+              {{/notification-drawer-group-toggle-title}}
+              {{> notification-drawer-group-toggle-icon}}
+            {{/notification-drawer-group-toggle}}
+            {{> card-demo--notification-list}}
+          {{/notification-drawer-group}}
+        {{/notification-drawer-body}}
+      {{/notification-drawer}}
+    {{/unless}}
   {{/card}}
 {{/reset}}

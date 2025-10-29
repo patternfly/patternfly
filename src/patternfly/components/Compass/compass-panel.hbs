@@ -1,0 +1,15 @@
+<div class="{{pfv}}compass__panel
+  {{setModifiers
+    compass-panel--HasNoPadding='pf-m-no-padding'
+    compass-panel--IsPill='pf-m-pill'
+    compass-panel--IsFullHeight='pf-m-full-height'
+    compass-panel--HasNoBorder='pf-m-no-border'
+    compass-panel--IsHero='pf-v6-c-compass__hero'
+    compass-panel--IsScrollable='pf-m-scrollable'
+    compass-panel--modifier=compass-panel--modifier
+  }}"
+  {{#if compass-panel--attribute}}
+    {{{compass-panel--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</div>
