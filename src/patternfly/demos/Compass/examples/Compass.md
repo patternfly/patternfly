@@ -88,34 +88,6 @@ wrapperTag: div
     {{/compass-panel}}
   {{/compass-sidebar}}
   {{#> compass-main}}
-    {{#> compass-hero compass-hero--attribute='style="
-      --pf-v6-c-compass__hero--gradient--stop-1--dark: #000;
-      --pf-v6-c-compass__hero--gradient--stop-2--dark: #1b0d33;
-      --pf-v6-c-compass__hero--gradient--stop-3--dark: #3d2785;
-      --pf-v6-c-compass__hero--BackgroundImage--light: url(./assets/images/compass--hero-bg.png);
-      --pf-v6-c-compass__hero--BackgroundImage--dark: url(./assets/images/compass--hero-bg.png);
-    "'}}
-      {{#> compass-hero-body}}
-        {{#> content}}
-          <h1>Automation that does more</h1>
-          <p>Red&nbsp;Hat Ansible Automation Platform offers more capabilities, accessibility, and flexibility, so you can bring the power of automation to the teams, tasks, and environments that need it.</p>
-          {{#> action-list}}
-            {{#> action-list-group}}
-              {{#> action-list-item}}
-                {{#> button button--IsPrimary=true}}
-                  Upgrade today
-                {{/button}}
-              {{/action-list-item}}
-              {{#> action-list-item}}
-                {{#> button button--IsSecondary=true}}
-                  Talk to a Red Hatter
-                {{/button}}
-              {{/action-list-item}}
-            {{/action-list-group}}
-          {{/action-list}}
-        {{/content}}
-      {{/compass-hero-body}}
-    {{/compass-hero}}
     {{#> compass-main-header}}
       {{#> compass-panel}}
         {{#> l-flex l-flex--modifier="pf-m-align-items-center"}}
@@ -271,9 +243,9 @@ wrapperTag: div
   {{/compass-sidebar}}
   {{#> compass-main}}
     {{#> compass-hero compass-hero--attribute='style="
-      --pf-v6-c-compass__hero--gradient--stop-1--dark: #000;
+      --pf-v6-c-compass__hero--gradient--stop-1--dark: #3d2785;
       --pf-v6-c-compass__hero--gradient--stop-2--dark: #1b0d33;
-      --pf-v6-c-compass__hero--gradient--stop-3--dark: #3d2785;
+      --pf-v6-c-compass__hero--gradient--stop-3--dark: #000;
       --pf-v6-c-compass__hero--BackgroundImage--light: url(./assets/images/compass--hero-bg.png);
       --pf-v6-c-compass__hero--BackgroundImage--dark: url(./assets/images/compass--hero-bg.png);
     "'}}
