@@ -1,0 +1,11 @@
+.ws-core-c-compass .ws-preview-html * {
+  position: relative;
+}
+
+.ws-core-c-compass .ws-preview-html *::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: var(--pf-t--global--border--width--regular) dashed var(--pf-t--global--border--color--default);
+  pointer-events: none;
+}

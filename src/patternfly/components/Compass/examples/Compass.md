@@ -5,6 +5,8 @@ section: components
 cssPrefix: pf-v6-c-compass
 ---
 
+import './Compass.css';
+
 ## Examples
 ### Basic
 ```hbs isFullscreen isBeta
