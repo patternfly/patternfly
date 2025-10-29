@@ -28,15 +28,15 @@
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
-  --#{$compass}__hero--gradient--angle: 289deg;
+  --#{$compass}__hero--gradient--angle: 109deg;
   --#{$compass}__hero--gradient--stop-1--light: transparent;
   --#{$compass}__hero--gradient--stop-2--light: transparent;
   --#{$compass}__hero--gradient--stop-3--light: transparent;
-  --#{$compass}__hero--gradient--stop-1--dark: transparent; // #000;
-  --#{$compass}__hero--gradient--stop-2--dark: transparent; // #1b0d33;
-  --#{$compass}__hero--gradient--stop-3--dark: transparent; //  #3d2785;
-  --#{$compass}__hero--BackgroundImage--light: none; // url("./assets/images/compass--hero-bg.png");
-  --#{$compass}__hero--BackgroundImage--dark: none; // url("./assets/images/compass--hero-bg.png");
+  --#{$compass}__hero--gradient--stop-1--dark: transparent;
+  --#{$compass}__hero--gradient--stop-2--dark: transparent;
+  --#{$compass}__hero--gradient--stop-3--dark: transparent;
+  --#{$compass}__hero--BackgroundImage--light: none;
+  --#{$compass}__hero--BackgroundImage--dark: none;
   --#{$compass}__hero-body--Width: 800px;
   --#{$compass}__hero-body--MaxWidth: 80%;
 }
@@ -173,10 +173,6 @@
 
   &.pf-m-scrollable {
     overflow: auto;
-  }
-
-  &.pf-m-padding {
-    padding: 0;
   }
 }
 
