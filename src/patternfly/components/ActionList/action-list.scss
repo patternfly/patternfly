@@ -10,6 +10,7 @@
 
   // * Action list icons
   --#{$action-list}--m-icons--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
+  --#{$action-list}--m-vertical--m-icons--RowGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
 }
 
 // - Action list - Action list group
@@ -27,6 +28,7 @@
   // - Action list icons
   &.pf-m-icons {
     --#{$action-list}__group--ColumnGap: var(--#{$action-list}--m-icons--ColumnGap);
+    --#{$action-list}--m-vertical--RowGap:  var(--#{$action-list}--m-vertical--m-icons--RowGap);
 
     column-gap: var(--#{$action-list}--m-icons--ColumnGap); // update prop: val to prevent potential inheritance conflicts
   }

@@ -208,6 +208,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Nav variant
   --#{$tabs}--m-nav__link--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$tabs}--m-nav__link--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tabs}--m-nav--m-subtab__scroll-button--button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
 
   // Overflow menu toggle icon
   --#{$tabs}__link-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -525,6 +526,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     &::before,
     .#{$tabs}__link::before {
       border: 0;
+    }
+
+    &.pf-m-subtab .#{$tabs}__scroll-button .#{$button} {
+      --#{$button}--FontSize: var(--#{$tabs}--m-nav--m-subtab__scroll-button--button--FontSize);
     }
   }
 }

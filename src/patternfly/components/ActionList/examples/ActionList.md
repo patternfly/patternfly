@@ -148,7 +148,7 @@ In wizards
 ### Vertical action list
 ```hbs isBeta
 Multiple groups
-{{#> action-list action-list--isVertical="true"}}
+{{#> action-list action-list--IsVertical="true"}}
   {{#> action-list-group}}
     {{#> action-list-item}}
       {{#> button button--IsPrimary=true}}
@@ -176,7 +176,7 @@ Multiple groups
 {{/action-list}}
 <br/ >
 Icons, in two groups
-{{#> action-list action-list--isVertical="true"}}
+{{#> action-list action-list--IsVertical="true"}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
       {{> button button--IsPlain=true button--aria-label="Close" button--icon="times"}}
