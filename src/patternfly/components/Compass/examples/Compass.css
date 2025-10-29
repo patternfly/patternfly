@@ -1,11 +1,11 @@
-.ws-core-c-compass .ws-preview-html * {
+#ws-core-c-compass-basic [class*="pf-v6-c-compass"] {
   position: relative;
 }
 
-.ws-core-c-compass .ws-preview-html *::after {
-  content: "";
+#ws-core-c-compass-basic [class*="pf-v6-c-compass"]::after {
   position: absolute;
   inset: 0;
-  border: var(--pf-t--global--border--width--regular) dashed var(--pf-t--global--border--color--default);
   pointer-events: none;
+  content: "";
+  border: var(--pf-t--global--border--width--regular) dashed var(--pf-t--global--border--color--default);
 }

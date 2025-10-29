@@ -9,7 +9,7 @@ import './Compass.css';
 
 ## Examples
 ### Basic
-```hbs isFullscreen isBeta
+```hbs isBeta
 {{#> compass}}
   {{#> compass-header}}
     {{#> compass-logo}}logo{{/compass-logo}}
