@@ -2,7 +2,7 @@
 
 ## Contributing
 
-We welcome contributions to PatternFly! Please read our [Contributing Guide](https://pf-core-staging.patternfly.org/contribution) to learn how to get started, submit issues, and contribute code to the project.
+We welcome contributions to PatternFly! Please read our [Contributing Guide](https://pf-core-staging.patternfly.org/contribution) to learn how to get started, submit issues, and contribute code to the project. 
 
 ## Install
 

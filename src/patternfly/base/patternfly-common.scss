@@ -64,13 +64,69 @@
   --pf-t--global--duration--200: 1ms !important;
   --pf-t--global--duration--100: 1ms !important;
   --pf-t--global--duration--50: 1ms !important;
+  --#{$pf-global}--thinking-active--Animation--Duration: 0 !important;
 
   // stylelink-enable declaration-no-important
+}
+
+.#{$pf-prefix}m-ai-indicator {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background: linear-gradient(to right, #f56e6e 0%, #876fd4 65%, #5e40be 100%)
+      border-box;
+    border: var(--pf-t--global--border--width--extra-strong) solid transparent;
+    border-radius: inherit;
+    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+}
+
+@property --#{$pf-global}--thinking--BoxShadow--Spread {
+  syntax: "<length>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.#{$pf-prefix}m-thinking {
+  box-shadow: 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-End),
+  0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-End),
+  0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-Start),
+  0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-Start);
+  animation: #{$pf-global}-thinking var(--#{$pf-global}--thinking-active--Animation--Duration) infinite ease-in-out;
+
+  &.pf-m-inset {
+    box-shadow: inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-End),
+    inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-End),
+    inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--End-Start),
+    inset 0 0 var(--#{$pf-global}--thinking--BoxShadow--Spread) var(--#{$pf-global}--thinking--BoxShadow--Color--Start-Start);
+  }
+}
+
+@keyframes #{$pf-global}-thinking {
+  50% {
+    --#{$pf-global}--thinking--BoxShadow--Spread: var(--#{$pf-global}--thinking-active--BoxShadow--Spread);
+  }
 }
 
 :root {
   --#{$pf-global}--danger-jiggle--AnimationDuration--Transform: var(--pf-t--global--motion--duration--fade--default);
   --#{$pf-global}--danger-jiggle--AnimationTimingFunction--Transform: var(--pf-t--global--motion--timing-function--default);
+  --#{$pf-global}--thinking--BoxShadow--Spread: 0px;
+  --#{$pf-global}--thinking--BoxShadow--Color--Start-Start: oklch(45.9% 0.187 3.815deg);
+  --#{$pf-global}--thinking--BoxShadow--Color--Start-End: oklch(50% 0.134 242.749deg);
+  --#{$pf-global}--thinking--BoxShadow--Color--End-Start: oklch(45.9% 0.187 3.815deg);
+  --#{$pf-global}--thinking--BoxShadow--Color--End-End: oklch(43.2% 0.232 292.759deg);
+  --#{$pf-global}--thinking-active--BoxShadow--Spread: 15px;
+  --#{$pf-global}--thinking-active--Animation--Duration: 0;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$pf-global}--thinking-active--Animation--Duration: 2s;
+  }
 }
 
 // Register the property type for the custom property to be animatable

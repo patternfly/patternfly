@@ -196,6 +196,14 @@
   }
   // stylelint-enable selector-max-class
 
+  // when the whole card is clickable and the card actions are invisible, remove the padding/margin so it doesn't take up space
+  @at-root .#{$card}__actions:has(> .#{$card}__selectable-actions input.#{$pf-prefix}screen-reader), // targets "card as tile", which are selectable cards with inputs
+  &.pf-m-clickable:not(.pf-m-selectable) {
+    --#{$card}__actions--PaddingInlineStart: 0;
+    --#{$card}__actions--MarginBlockStart: 0;
+    --#{$card}__actions--MarginBlockEnd: 0;
+  }
+
   &.pf-m-compact {
     --#{$card}__title-text--FontSize: var(--#{$card}--m-compact__title-text--FontSize);
     --#{$card}__body--FontSize: var(--#{$card}--m-compact__body--FontSize);

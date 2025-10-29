@@ -6,7 +6,7 @@
     button--IsPlain=true
     button--IsIcon=true
     button--icon-template="form-field-group-toggle-icon"
-    button--AriaExpanded=form-field-group--IsExpanded
+    button--AriaExpanded=(ternary form-field-group--IsExpanded form-field-group--IsExpanded false)
     button--aria-label="Details"
     button--aria-labelledby=(concat form-field-group--id '-title ' form-field-group--id '-toggle')
     button--id=(concat form-field-group--id '-toggle')}}

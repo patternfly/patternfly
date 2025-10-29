@@ -161,6 +161,30 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{/button}}
 ```
 
+### Circle buttons
+
+```hbs isBeta
+{{> button button--IsPrimary=true button--aria-label="Add primary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsSecondary=true button--aria-label="Add secondary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsTertiary=true button--aria-label="Add tertiary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsDanger=true button--aria-label="Add danger circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsWarning=true button--aria-label="Add warning circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="plus-circle"}}
+
+{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="times"}}
+
+{{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="copy"}}
+
+{{> button button--IsCircle=true button--IsPlain=true button--aria-label="Upload circle variant" button--IsIcon=true button--icon="upload"}}
+
+{{> button button--IsCircle=true button--IsPlain=true button--IsIcon=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading circle variant..."}}
+```
+
 ### Counts
 ```hbs
 {{#*inline "button-counts"}}
@@ -303,3 +327,4 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-hamburger` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to be a hamburger button. |
 | `.pf-m-expand` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will expand a menu. |
 | `.pf-m-collapse` | `.pf-v6-c-button.pf-m-hamburger` | Modifies a hamburger button to indicate that it will collapse a menu. |
+| `.pf-m-circle` | `.pf-v6-c-button` | Modifies a button to have a circular shape, instead of only rounded corners or a pill shape. Intended for buttons that contain only an icon. |

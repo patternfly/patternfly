@@ -1925,6 +1925,96 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | `.pf-m-no-background` | `.pf-v6-c-table__expandable-row-content` | Modifies the expandable row content to have a transparent background. For in compound expandable when the parent expandable row has no padding with `.pf-m-no-padding`. |
 | `.pf-m-no-animate-expand` | `.pf-v6-c-table__control-row.pf-m-expanded` | Disables animation on a compound expandable row. **Note:** Used to disable the animation when clicking between compound expandable items. |
 
+## Plain variant
+
+### Plain example
+```hbs isBeta
+{{#> table table--id="table-plain" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-plain" table--attribute='aria-label="This is a plain table example"'}}
+  {{#> table-caption}}
+    This is the table caption
+  {{/table-caption}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Plain variant usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-plain` | `.pf-v6-c-table` | Modifies the table to have a transparent background. |
+
 ## Compact variant
 
 ### Compact example

@@ -205,6 +205,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__add--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__add--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
+  // Nav variant
+  --#{$tabs}--m-nav__link--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$tabs}--m-nav__link--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tabs}--m-nav--m-subtab__scroll-button--button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
+
   // Overflow menu toggle icon
   --#{$tabs}__link-toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$tabs}__link-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
@@ -511,6 +516,22 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       overflow: visible;
     }
   }
+
+  &.pf-m-nav {
+    --#{$tabs}__link--disabled--BackgroundColor: transparent;
+    --#{$tabs}__link--disabled--Color: var(--#{$tabs}--m-nav__link--disabled--Color);
+    --#{$tabs}__link--hover--BorderColor: transparent;
+    --#{$tabs}__link--BorderRadius: var(--#{$tabs}--m-nav__link--BorderRadius);
+  
+    &::before,
+    .#{$tabs}__link::before {
+      border: 0;
+    }
+
+    &.pf-m-subtab .#{$tabs}__scroll-button .#{$button} {
+      --#{$button}--FontSize: var(--#{$tabs}--m-nav--m-subtab__scroll-button--button--FontSize);
+    }
+  }
 }
 
 // Expandable toggle
@@ -563,7 +584,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Current
   &.pf-m-current {
     --#{$tabs}__link--Color: var(--#{$tabs}__item--m-current__link--Color);
-    --#{$tabs}__link--after--BorderColor: var(--#{$tabs}__item--m-current__link--after--BorderColor);
+    --#{$tabs}__link--after--BorderColor: var(--#{$tabs}--link-accent--color);
     --#{$tabs}__link--after--BorderWidth: var(--#{$tabs}__item--m-current__link--after--BorderWidth);
     --#{$tabs}__item--BackgroundColor: var(--#{$tabs}__item--m-current--BackgroundColor);
   }

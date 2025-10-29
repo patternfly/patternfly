@@ -1,5 +1,5 @@
 {{#> button
-  button--AriaExpanded=notification-badge--IsExpanded
+  button--AriaExpanded=(ternary notification-badge--IsExpanded notification-badge--IsExpanded false)
   button--IsClicked=notification-badge--IsExpanded
   button--IsStateful=true
   button--aria-label=notification-badge--aria-label

@@ -324,6 +324,11 @@
     }
   }
 
+  // - Table plain
+  &.pf-m-plain {
+    --#{$table}--BackgroundColor: transparent;
+  }
+
   // - Table striped
   // stylelint-disable
   &.pf-m-striped:not(.pf-m-expandable) > tbody:where(.#{$table}__tbody) > tr:where(.#{$table}__tr):nth-child(odd), // regular table

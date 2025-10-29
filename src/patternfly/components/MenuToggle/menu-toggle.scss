@@ -151,6 +151,7 @@
   --#{$menu-toggle}--m-plain--disabled--BackgroundColor: transparent;
   --#{$menu-toggle}--m-plain--m-small--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--compact);
   --#{$menu-toggle}--m-plain--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--compact);
+  --#{$menu-toggle}--m-plain--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
 
   // Typeahead
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
@@ -306,6 +307,10 @@
     --#{$menu-toggle}--disabled--BackgroundColor: var(--#{$menu-toggle}--m-plain--disabled--BackgroundColor);
     --#{$menu-toggle}--m-small--PaddingInlineStart: var(--#{$menu-toggle}--m-plain--m-small--PaddingInlineStart);
     --#{$menu-toggle}--m-small--PaddingInlineEnd: var(--#{$menu-toggle}--m-plain--m-small--PaddingInlineEnd);
+
+    &.pf-m-circle {
+      --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-plain--m-circle--BorderRadius);
+    }
 
     &::before {
       --#{$menu-toggle}--BorderWidth: var(--#{$menu-toggle}--m-plain--BorderWidth);

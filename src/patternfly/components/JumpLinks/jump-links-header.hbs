@@ -4,7 +4,7 @@
   {{/if}}>
   {{#if jump-links--IsExpandable}}
     {{#> jump-links-toggle}}
-      {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--IsAriaExpanded=jump-links--IsExpanded}}
+      {{#> button button--IsPlain=true button--icon-template="jump-links-toggle-icon" button--AriaExpanded=(ternary jump-links--IsExpanded jump-links--IsExpanded false)}}
         {{#if @partial-block}}
           {{> @partial-block}}
         {{else}}

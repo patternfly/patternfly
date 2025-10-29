@@ -53,7 +53,7 @@
   // scrollable
   --#{$panel}--m-scrollable__main--MaxHeight: #{pf-size-prem(300px)};
   --#{$panel}--m-scrollable__main--Overflow: auto;
-  --#{$panel}--m-scrollable__footer--BoxShadow: var(--pf-t--global--box-shadow--md--top);
+  --#{$panel}--m-scrollable__footer--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$panel}--m-scrollable__footer--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$panel}--m-scrollable__footer--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$panel}--m-scrollable__footer--BorderColor: var(--pf-t--global--border--color--high-contrast);

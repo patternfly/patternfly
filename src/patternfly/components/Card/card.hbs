@@ -1,4 +1,8 @@
-<div class="{{pfv}}card{{#if card--modifier}} {{card--modifier}}{{/if}}"
+<div class="{{pfv}}card
+  {{setModifiers
+    card--IsPlain='pf-m-plain'
+    card--modifier=card--modifier
+  }}"
   {{#if card--attribute}}
     {{{card--attribute}}}
   {{/if}}

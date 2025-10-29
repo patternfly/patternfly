@@ -181,6 +181,15 @@ import './MenuToggle.css'
 {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
 ```
 
+### Plain circle
+```hbs isBeta
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--attribute='aria-label="Circle styled actions"' menu-toggle--HasKebab=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Circle and expanded styled actions"' menu-toggle--HasKebab=true}}
+&nbsp;
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Circle and disabled styled actions"' menu-toggle--HasKebab=true}}
+```
+
 ### Plain with text
 ```hbs
 {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
@@ -1036,6 +1045,7 @@ Shown with default, primary, and secondary styling
 | `.pf-m-secondary` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the secondary variation. |
 | `.pf-m-text` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the text variation. |
 | `.pf-m-plain` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
+| `.pf-m-circle` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to be circular in shape. This is intended to be applied only to a plain menu toggle without any text. |
 | `.pf-m-expanded` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
 | `.pf-m-full-width` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to full width of parent. |
