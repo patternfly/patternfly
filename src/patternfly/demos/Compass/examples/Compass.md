@@ -8,10 +8,7 @@ wrapperTag: div
 ### Card view
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
-  {{#> compass compass--attribute='style="
-    --pf-v6-c-compass--BackgroundImage--light: url(./assets/images/compass--wallpaper-light.png);
-    --pf-v6-c-compass--BackgroundImage--dark: url(./assets/images/compass--wallpaper-dark.png);
-    "'}}
+  {{#> compass}}
     {{#> compass-header}}
       {{#> compass-logo}}
         {{> compass--icons compass--icons--redhat=true}}
