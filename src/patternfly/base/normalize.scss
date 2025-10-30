@@ -108,12 +108,51 @@
   :where(a) {
     color: var(--pf-t--global--text--color--link--default);
     text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
+    text-decoration-color: var(--pf-t--global--text-decoration--color--default);
+    text-decoration-style: var(--pf-t--global--text-decoration--link--style--default);
+    text-underline-offset: var(--pf-t--global--text-decoration--offset--default);
+    // RHDS uses: text-underline-offset: max(var(--pf-t--global--text-decoration--offset--default), 0.28em);
+    transition: ease text-underline-offset 0.3s;
   }
 
   :where(a:hover, a:focus) {
     color: var(--pf-t--global--text--color--link--hover);
     text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
+    text-decoration-color: var(--pf-t--global--text-decoration--color--hover);
+    text-decoration-style: var(--pf-t--global--text-decoration--link--style--hover);
+    text-underline-offset: var(--pf-t--global--text-decoration--offset--hover);
+    // RHDS uses:text-underline-offset: max(var(--pf-t--global--text-decoration--offset--hover), 0.33em);
   }
+
+  //TODO for reference, remove before final merge
+  // RHDS styles
+  // a {
+  //   // color: var(--rh-color-interactive-primary-default);
+  //   // text-decoration: underline dashed 1px;
+  //   // text-decoration-color: light-dark(var(--rh-color-gray-50), var(--rh-color-gray-40));
+  //   // text-underline-offset: max(5px, 0.28em);
+  //   // transition: ease text-underline-offset 0.3s;
+
+  //   &:hover {
+  //     // color: var(--rh-color-interactive-primary-hover);
+  //     // text-decoration-color: inherit;
+  //     // text-underline-offset: max(6px, 0.33em);
+  //   }
+
+  //   &:focus-within {
+  //     color: var(--rh-color-interactive-primary-focus);
+  //     text-decoration-color: inherit;
+  //     text-underline-offset: max(6px, 0.33em);
+  //     &:hover { color: var(--rh-color-interactive-primary-focus); }
+  //   }
+
+  //   &:visited { /* stylelint-disable-line no-descending-specificity */
+  //     color: var(--rh-color-interactive-primary-visited-default);
+  //     &:hover { color: var(--rh-color-interactive-primary-visited-hover); }
+  //   }
+  // }
+  //
+
 
   :where(
     a,
