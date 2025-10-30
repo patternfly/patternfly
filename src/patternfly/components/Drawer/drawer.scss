@@ -23,7 +23,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Panel
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --#{$drawer}__panel--MaxHeight: auto;
-  --#{$drawer}__panel--AlignSelf: initial;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--after--BackgroundColor); // TODO use token directly in breaking change
   --#{$drawer}__panel--BorderBlockStartWidth: 0;
@@ -61,9 +60,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection: column;
   --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
-  --#{$drawer}--m-pill__panel--AlignSelf: center;
-  --#{$drawer}--m-pill--m-inline__panel--AlignSelf: initial;
-  --#{$drawer}--m-pill__panel--Height: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
   --#{$drawer}--m-pill__panel--BorderBlockStartWidth: var(--pf-t--global--border--width--regular);
   --#{$drawer}--m-pill__panel--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
   --#{$drawer}--m-pill__panel--BorderInlineStartWidth: var(--pf-t--global--border--width--regular);
@@ -213,11 +209,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-inline,
   &.pf-m-static {
-    --#{$drawer}--m-pill__main--Gap: var(--#{$drawer}--m-pill--m-inline__main--Gap);
-    --#{$drawer}--m-pill__panel--AlignSelf: stretch;
-    --#{$drawer}--m-pill__panel--Height: initial;
     --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-inline--BackgroundColor);
     --#{$drawer}__panel--BorderInlineStartWidth: var(--#{$drawer}--m-inline__panel--after--Width);
+    --#{$drawer}--m-pill__main--Gap: var(--#{$drawer}--m-pill--m-inline__main--Gap);
+    --#{$drawer}--m-pill--m-expanded__panel--inset: 0;
 
     > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
       padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingInlineStart);
@@ -285,11 +280,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-pill {
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       --#{$drawer}__main--Gap: var(--#{$drawer}--m-pill__main--Gap, revert);
-      --#{$drawer}__panel--length: var(--#{$drawer}--m-pill__panel--Height);
-      --#{$drawer}--m-expanded__panel--inset: var(--#{$drawer}--m-pill--m-expanded__panel--inset);
-      --#{$drawer}__panel--AlignSelf: var(--#{$drawer}--m-pill__panel--AlignSelf);
       --#{$drawer}__panel--BorderColor: var(--#{$drawer}--m-pill__panel--BorderColor);
       --#{$drawer}__panel--BorderRadius: var(--#{$drawer}--m-pill__panel--BorderRadius);
+      --#{$drawer}--m-expanded__panel--inset: var(--#{$drawer}--m-pill--m-expanded__panel--inset);
+      --#{$drawer}__panel--MarginBlock: var(--#{$drawer}--m-pill--m-expanded__panel--inset);
 
       > .#{$drawer}__main > .#{$drawer}__panel {
         border-block-start-width: var(--#{$drawer}--m-pill__panel--BorderBlockStartWidth);
@@ -362,11 +356,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   z-index: var(--#{$drawer}__panel--ZIndex);
   flex-basis: var(--#{$drawer}__panel--FlexBasis);
   row-gap: var(--#{$drawer}__panel--RowGap);
-  align-self: var(--#{$drawer}__panel--AlignSelf, revert);
   order: 1;
-  width: var(--#{$drawer}__panel--Width, revert);
-  height: var(--#{$drawer}__panel--Height, revert);
   max-height: var(--#{$drawer}__panel--MaxHeight);
+  margin-block: var(--#{$drawer}__panel--MarginBlock, revert);
+  margin-inline: var(--#{$drawer}__panel--MarginInline, revert);
   overflow: auto;
   visibility: hidden; // hidden by default
   background-color: var(--#{$drawer}__panel--BackgroundColor);
@@ -557,7 +550,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Default
   .#{$drawer} {
     --#{$drawer}--m-inline__panel--after--Width: var(--#{$drawer}--m-inline__panel--after--md--Width);
-    --#{$drawer}__panel--Height: var(--#{$drawer}__panel--length);
 
     min-width: var(--#{$drawer}__panel--MinWidth);
 
@@ -624,8 +616,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__panel--FlexBasis--min: var(--#{$drawer}--m-panel-bottom__panel--FlexBasis--min);
     --#{$drawer}__panel--BorderInlineStartWidth: 0; // turn off default left border
     --#{$drawer}__panel--BorderBlockStartWidth: var(--#{$drawer}--m-panel-bottom__panel--after--Height); // set the border width based on the old height variable
-    --#{$drawer}__panel--Height: initial;
-    --#{$drawer}__panel--Width: var(--#{$drawer}__panel--length);
+    --#{$drawer}__panel--MarginBlock: initial;
+    --#{$drawer}__panel--MarginInline: var(--#{$drawer}--m-expanded__panel--inset);
 
     min-width: auto;
     min-height: var(--#{$drawer}--m-panel-bottom__panel--md--MinHeight);
