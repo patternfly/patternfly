@@ -6,6 +6,9 @@ $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl",
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 @include pf-root($drawer) {
+  // Main
+  --#{$drawer}--m-pill--m-inline__main--Gap: var(--pf-t--global--spacer--inset--page-chrome);
+
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -20,6 +23,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Panel
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --#{$drawer}__panel--MaxHeight: auto;
+  --#{$drawer}__panel--AlignSelf: initial;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--after--BackgroundColor); // TODO use token directly in breaking change
   --#{$drawer}__panel--BorderBlockStartWidth: 0;
@@ -41,6 +45,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--TransitionProperty: opacity, visibility, transform; // by default, fade the drawer
   --#{$drawer}__panel--Opacity: 0;
   --#{$drawer}--m-expanded__panel--Opacity: 1;
+  --#{$drawer}--m-expanded__panel--inset: 0px;
   --#{$drawer}__panel--FlexBasis: 100%;
   --#{$drawer}__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}__panel--md--FlexBasis: 50%;
@@ -56,6 +61,16 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection: column;
   --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
+  --#{$drawer}--m-pill__panel--AlignSelf: center;
+  --#{$drawer}--m-pill--m-inline__panel--AlignSelf: initial;
+  --#{$drawer}--m-pill__panel--Height: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$drawer}--m-pill__panel--BorderBlockStartWidth: var(--pf-t--global--border--width--regular);
+  --#{$drawer}--m-pill__panel--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$drawer}--m-pill__panel--BorderInlineStartWidth: var(--pf-t--global--border--width--regular);
+  --#{$drawer}--m-pill__panel--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$drawer}--m-pill__panel--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}--m-pill__panel--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$drawer}--m-pill--m-expanded__panel--inset: var(--pf-t--global--spacer--inset--page-chrome);
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$drawer}__panel--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--short);
@@ -198,9 +213,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-inline,
   &.pf-m-static {
+    --#{$drawer}--m-pill__main--Gap: var(--#{$drawer}--m-pill--m-inline__main--Gap);
+    --#{$drawer}--m-pill__panel--AlignSelf: stretch;
+    --#{$drawer}--m-pill__panel--Height: initial;
     --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-inline--BackgroundColor);
     --#{$drawer}__panel--BorderInlineStartWidth: var(--#{$drawer}--m-inline__panel--after--Width);
-    
 
     > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
       padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingInlineStart);
@@ -236,7 +253,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__main > .#{$drawer}__panel {
       @include pf-v6-bidirectional-style(
         $prop: transform,
-        $ltr-val: translateX(-100%),
+        $ltr-val: translateX(calc(-100% - var(--#{$drawer}--m-expanded__panel--inset))),
         $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
       );
 
@@ -250,7 +267,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     &.pf-m-panel-bottom > .#{$drawer}__main > .#{$drawer}__panel {
-      transform: translate(0, -100%);
+      transform: translate(0, calc(-100% - var(--#{$drawer}--m-expanded__panel--inset)));
     }
   }
   // stylelint-enable
@@ -262,6 +279,24 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     .#{$drawer}__splitter {
       pointer-events: auto;
+    }
+  }
+
+  &.pf-m-pill {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
+      --#{$drawer}__main--Gap: var(--#{$drawer}--m-pill__main--Gap, revert);
+      --#{$drawer}__panel--length: var(--#{$drawer}--m-pill__panel--Height);
+      --#{$drawer}--m-expanded__panel--inset: var(--#{$drawer}--m-pill--m-expanded__panel--inset);
+      --#{$drawer}__panel--AlignSelf: var(--#{$drawer}--m-pill__panel--AlignSelf);
+      --#{$drawer}__panel--BorderColor: var(--#{$drawer}--m-pill__panel--BorderColor);
+      --#{$drawer}__panel--BorderRadius: var(--#{$drawer}--m-pill__panel--BorderRadius);
+
+      > .#{$drawer}__main > .#{$drawer}__panel {
+        border-block-start-width: var(--#{$drawer}--m-pill__panel--BorderBlockStartWidth);
+        border-block-end-width: var(--#{$drawer}--m-pill__panel--BorderBlockEndWidth);
+        border-inline-start-width: var(--#{$drawer}--m-pill__panel--BorderInlineStartWidth);
+        border-inline-end-width: var(--#{$drawer}--m-pill__panel--BorderInlineEndWidth);
+      }
     }
   }
 }
@@ -284,6 +319,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .#{$drawer}__main {
   display: flex;
   flex: 1;
+  gap: var(--#{$drawer}__main--Gap, 0);
   overflow: hidden;
 }
 
@@ -326,7 +362,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   z-index: var(--#{$drawer}__panel--ZIndex);
   flex-basis: var(--#{$drawer}__panel--FlexBasis);
   row-gap: var(--#{$drawer}__panel--RowGap);
+  align-self: var(--#{$drawer}__panel--AlignSelf, revert);
   order: 1;
+  width: var(--#{$drawer}__panel--Width, revert);
+  height: var(--#{$drawer}__panel--Height, revert);
   max-height: var(--#{$drawer}__panel--MaxHeight);
   overflow: auto;
   visibility: hidden; // hidden by default
@@ -336,6 +375,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   border-block-end-width: var(--#{$drawer}__panel--BorderBlockEndWidth);
   border-inline-start-width: var(--#{$drawer}__panel--BorderInlineStartWidth);
   border-inline-end-width: var(--#{$drawer}__panel--BorderInlineEndWidth);
+  border-radius: var(--#{$drawer}__panel--BorderRadius, revert);
   box-shadow: var(--#{$drawer}__panel--BoxShadow);
   opacity: var(--#{$drawer}__panel--Opacity);
   transition-delay: var(--#{$drawer}__panel--TransitionDelay);
@@ -517,6 +557,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Default
   .#{$drawer} {
     --#{$drawer}--m-inline__panel--after--Width: var(--#{$drawer}--m-inline__panel--after--md--Width);
+    --#{$drawer}__panel--Height: var(--#{$drawer}__panel--length);
 
     min-width: var(--#{$drawer}__panel--MinWidth);
 
@@ -565,7 +606,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
-      transform: translateX(0);
+      transform: translateX(var(--#{$drawer}--m-expanded__panel--inset));
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
@@ -583,6 +624,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__panel--FlexBasis--min: var(--#{$drawer}--m-panel-bottom__panel--FlexBasis--min);
     --#{$drawer}__panel--BorderInlineStartWidth: 0; // turn off default left border
     --#{$drawer}__panel--BorderBlockStartWidth: var(--#{$drawer}--m-panel-bottom__panel--after--Height); // set the border width based on the old height variable
+    --#{$drawer}__panel--Height: initial;
+    --#{$drawer}__panel--Width: var(--#{$drawer}__panel--length);
 
     min-width: auto;
     min-height: var(--#{$drawer}--m-panel-bottom__panel--md--MinHeight);
