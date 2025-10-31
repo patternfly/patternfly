@@ -29,6 +29,11 @@
   --#{$card}__header--m-wrap--RowGap: var(--pf-t--global--spacer--sm);
   --#{$card}__header--m-wrap--ColumnGap: var(--pf-t--global--spacer--md);
 
+  // Description
+  --#{$card}__description--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$card}__description--Color: var(--pf-t--global--text--color--subtle);
+  
+
   // Expandable
   --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -331,6 +336,12 @@
   overflow-wrap: var(--#{$card}__title-text--OverflowWrap);
 }
 
+.#{$card}__description {
+  padding-block-start: var(--#{$card}__description--PaddingBlockStart);
+  font-size: var(--#{$card}__description--FontSize);
+  color: var(--#{$card}__description--Color);
+}
+
 .#{$card}__actions {
   display: flex;
   gap: var(--#{$card}__actions--Gap);
@@ -343,6 +354,7 @@
   margin-inline-start: auto;
 
   + .#{$card}__title,
+  + .#{$card}__description,
   + .#{$card}__body,
   + .#{$card}__footer {
     padding: 0;
@@ -420,6 +432,7 @@
 
 .#{$card}__header,
 .#{$card}__title,
+.#{$card}__description,
 .#{$card}__body,
 .#{$card}__footer {
   padding-block-end: var(--#{$card}--child--PaddingBlockEnd);
