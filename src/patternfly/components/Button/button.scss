@@ -141,7 +141,6 @@
   --#{$button}--m-link--m-inline--hover--TextUnderlineOffset: var(--pf-t--global--text-decoration--offset--hover);
   --#{$button}--m-link--m-inline--TransitionDuration: var(--pf-t--global--motion--duration--lg);
   --#{$button}--m-link--m-inline--TransitionProperty: text-underline-offset;
-
   --#{$button}--m-link--m-inline__progress--InsetInlineStart: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -553,10 +552,10 @@
       --#{$button}--m-clicked--BorderWidth: 0;
 
       text-align: start;
+      text-underline-offset: var(--#{$button}--m-link--m-inline--TextUnderlineOffset);
       white-space: normal;
       background: transparent; // don't show the ripple effect for inline links
       outline-offset: #{pf-size-prem(2px)};
-      text-underline-offset: var(--#{$button}--m-link--m-inline--TextUnderlineOffset);
 
       &:hover {
         --#{$button}--m-link--m-inline--TextUnderlineOffset: var(--#{$button}--m-link--m-inline--hover--TextUnderlineOffset);

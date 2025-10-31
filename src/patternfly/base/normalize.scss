@@ -108,9 +108,10 @@
   :where(a) {
     color: var(--pf-t--global--text--color--link--default);
     text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
-    text-decoration-color: var(--pf-t--global--text-decoration--color--default);
     text-decoration-style: var(--pf-t--global--text-decoration--link--style--default);
+    text-decoration-color: var(--pf-t--global--text-decoration--color--default);
     text-underline-offset: var(--pf-t--global--text-decoration--offset--default);
+
     // RHDS uses: text-underline-offset: max(var(--pf-t--global--text-decoration--offset--default), 0.28em);
     transition: ease text-underline-offset 0.3s;
   }
@@ -118,13 +119,14 @@
   :where(a:hover, a:focus) {
     color: var(--pf-t--global--text--color--link--hover);
     text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
-    text-decoration-color: var(--pf-t--global--text-decoration--color--hover);
     text-decoration-style: var(--pf-t--global--text-decoration--link--style--hover);
+    text-decoration-color: var(--pf-t--global--text-decoration--color--hover);
     text-underline-offset: var(--pf-t--global--text-decoration--offset--hover);
+
     // RHDS uses:text-underline-offset: max(var(--pf-t--global--text-decoration--offset--hover), 0.33em);
   }
 
-  //TODO for reference, remove before final merge
+  // TODO for reference, remove before final merge
   // RHDS styles
   // a {
   //   // color: var(--rh-color-interactive-primary-default);
@@ -151,7 +153,6 @@
   //     &:hover { color: var(--rh-color-interactive-primary-visited-hover); }
   //   }
   // }
-  //
 
 
   :where(
