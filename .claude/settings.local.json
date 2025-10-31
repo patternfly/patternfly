@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.cursor.com)",
+      "WebFetch(domain:cursor.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
