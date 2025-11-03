@@ -139,8 +139,10 @@
   --#{$button}--m-link--m-inline--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
   --#{$button}--m-link--m-inline--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
   --#{$button}--m-link--m-inline--hover--TextUnderlineOffset: var(--pf-t--global--text-decoration--offset--hover);
+  --#{$button}--m-link--m-inline--TransitionProperty: color, text-underline-offset; // remove color in breaking change
   --#{$button}--m-link--m-inline--TransitionDuration: var(--pf-t--global--motion--duration--lg);
-  --#{$button}--m-link--m-inline--TransitionProperty: text-underline-offset;
+  --#{$button}--m-link--m-inline--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+
   --#{$button}--m-link--m-inline__progress--InsetInlineStart: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
   --#{$button}--m-link--m-inline--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -524,8 +526,6 @@
       --#{$button}--PaddingInlineEnd: var(--#{$button}--m-link--m-inline--PaddingInlineEnd);
       --#{$button}--PaddingBlockEnd: var(--#{$button}--m-link--m-inline--PaddingBlockEnd);
       --#{$button}--PaddingInlineStart: var(--#{$button}--m-link--m-inline--PaddingInlineStart);
-      --#{$button}--TextUnderlineOffset: var(--#{$button}--m-link--m-inline--TextUnderlineOffset);
-      --#{$button}--hover--TextUnderlineOffset: var(--#{$button}--m-link--m-inline--hover--TextUnderlineOffset);
       --#{$button}--TransitionDuration: var(--#{$button}--m-link--m-inline--TransitionDuration);
       --#{$button}--TransitionTimingFunction: var(--#{$button}--m-link--m-inline--TransitionTimingFunction);
       --#{$button}--TransitionProperty: var(--#{$button}--m-link--m-inline--TransitionProperty);
@@ -533,9 +533,6 @@
       --#{$button}__progress--InsetInlineStart: var(--#{$button}--m-link--m-inline__progress--InsetInlineStart);
       --#{$button}--TextDecorationLine: var(--#{$button}--m-link--m-inline--TextDecorationLine);
       --#{$button}--TextDecorationStyle: var(--#{$button}--m-link--m-inline--TextDecorationStyle);
-      --#{$button}--hover--TextDecorationLine: var(--#{$button}--m-link--m-inline--hover--TextDecorationLine);
-      --#{$button}--hover--TextDecorationStyle: var(--#{$button}--m-link--m-inline--hover--TextDecorationStyle);
-      --#{$button}--hover--TextDecorationColor: var(--#{$button}--m-link--m-inline--hover--TextDecorationColor);
       --#{$button}--hover--BackgroundColor: transparent;
       --#{$button}--m-clicked--BackgroundColor: transparent;
       --#{$button}--disabled--BackgroundColor: transparent;
@@ -544,6 +541,8 @@
       --#{$button}--m-link--Color: var(--#{$button}--m-link--m-inline--Color);
       --#{$button}--m-link__icon--Color: var(--#{$button}--m-link--m-inline__icon--Color);
       --#{$button}--TextDecorationColor: var(--#{$button}--m-link--m-inline--TextDecorationColor);
+      --#{$button}--hover--TextDecorationLine: var(--#{$button}--m-link--m-inline--hover--TextDecorationLine);
+      --#{$button}--hover--TextDecorationStyle: var(--#{$button}--m-link--m-inline--hover--TextDecorationStyle);
       --#{$button}--hover--TextDecorationColor: var(--#{$button}--m-link--m-inline--hover--TextDecorationColor);
       --#{$button}--m-link--hover--Color: var(--#{$button}--m-link--m-inline--hover--Color);
       --#{$button}--m-link--hover__icon--Color: var(--#{$button}--m-link--m-inline--hover__icon--Color);
