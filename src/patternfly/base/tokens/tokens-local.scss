@@ -1,6 +1,16 @@
 // LOCAL TOKENS
 
 @mixin pf-v6-tokens {
+  // temporary until we have updates from design 
+  // new
+  --pf-t--global--text-decoration--color--default: var(--pf-t--global--text--color--default);
+  --pf-t--global--text-decoration--color--hover: var(--pf-t--global--text--color--hover);
+  --pf-t--global--text-decoration--offset--hover: calc(var(--pf-t--global--spacer--xs) + 1px);
+
+  // changed
+  --pf-t--global--text-decoration--link--style--default: var(--pf-t--global--text-decoration--style--200);
+  --pf-t--global--text-decoration--link--style--hover: var(--pf-t--global--text-decoration--style--200);
+
   // TODO Maintaining these in addition to the h1-h6 sizes
   --pf-t--global--font--size--heading--xs: var(--pf-t--global--font--size--md);
   --pf-t--global--font--size--heading--sm: var(--pf-t--global--font--size--lg);
