@@ -139,9 +139,9 @@
   --#{$button}--m-link--m-inline--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
   --#{$button}--m-link--m-inline--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
   --#{$button}--m-link--m-inline--hover--TextUnderlineOffset: var(--pf-t--global--text-decoration--offset--hover);
-  --#{$button}--m-link--m-inline--TransitionProperty: color, text-underline-offset; // remove color in breaking change
-  --#{$button}--m-link--m-inline--TransitionDuration: var(--pf-t--global--motion--duration--lg);
-  --#{$button}--m-link--m-inline--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--m-link--m-inline--TransitionProperty: color, text-underline-offset;
+  --#{$button}--m-link--m-inline--TransitionDuration: var(--pf-t--global--motion--duration--fade--default), var(--pf-t--global--motion--duration--lg);
+  --#{$button}--m-link--m-inline--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate), var(--pf-t--global--motion--timing-function--default);
 
   --#{$button}--m-link--m-inline__progress--InsetInlineStart: var(--pf-t--global--spacer--xs);
   --#{$button}--m-link--m-inline--m-in-progress--PaddingInlineStart: calc(var(--#{$button}--m-link--m-inline__progress--InsetInlineStart) + 1rem + var(--pf-t--global--spacer--sm));
