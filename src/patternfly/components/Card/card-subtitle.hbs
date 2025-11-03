@@ -1,0 +1,10 @@
+<div class="{{pfv}}card__subtitle{{#if card-subtitle--modifier}} {{card-subtitle--modifier}}{{/if}}"
+  {{#if card-subtitle--attribute}}
+    {{{card-subtitle--attribute}}}
+  {{/if}}>
+  {{#if card-subtitle-text}}
+    {{{card-subtitle-text}}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</div>

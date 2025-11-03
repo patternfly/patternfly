@@ -63,6 +63,47 @@ import './Card.css'
 {{/card}}
 ```
 
+### With subtitle
+```hbs isBeta
+{{#> card card--id="card-subtitle"}}
+  {{#> card-header}}
+    {{#> card-actions}}
+      {{> card--menu-toggle}}
+      {{> card--check}}
+    {{/card-actions}}
+    {{#> card-header-main}}
+      {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-subtitle-text="This is a card subtitle." card-title-text--id=(concat card--id '-check-label')}}
+    {{/card-header-main}}
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+<br/>
+{{#> card card--id="card-image-action-subtitle"}}
+  {{#> card-header}}
+    {{#> card-header-main}}
+      {{> masthead-image masthead--id=card--id masthead-image--height="70px"}}
+    {{/card-header-main}}
+    {{#> card-actions}}
+      {{> card--menu-toggle}}
+      {{> card--check}}
+    {{/card-actions}}
+  {{/card-header}}
+  {{> card-title card-title-text--value="Title" card-subtitle-text="Subtitle" card-title-text--id=(concat card--id '-check-label')}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+
+```
+
 ### With only actions in head (no title/footer)
 ```hbs
 {{#> card card--id="card-action-example-3"}}
@@ -901,6 +942,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-v6-c-card` | `<div>` | Creates a card component.  **Required** |
 | `.pf-v6-c-card__title` | `<div>` | Creates a card title container. |
 | `.pf-v6-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | Creates a card title text element. |
+| `.pf-v6-c-card__subtitle` | Creates a card subtitle element. |
 | `.pf-v6-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-v6-c-card__body` elements. |
 | `.pf-v6-c-card__footer` | `<div>` | Creates the footer of a card. |
 | `.pf-v6-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |

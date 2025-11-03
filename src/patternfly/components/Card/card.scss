@@ -296,7 +296,7 @@
         margin-inline-end: auto;
       }
 
-      margin-inline-start: 0
+      margin-inline-start: 0;
     }
   }
 }
@@ -329,6 +329,12 @@
   line-height: var(--#{$card}__title-text--LineHeight);
   color: var(--#{$card}__title-text--Color);
   overflow-wrap: var(--#{$card}__title-text--OverflowWrap);
+}
+
+.#{$card}__subtitle {
+  padding-block-start: var(--pf-t--global--spacer--sm);
+  font-size: var(--pf-t--global--font--size--body--sm);
+  color: var(--pf-t--global--text--color--subtle);
 }
 
 .#{$card}__actions {
