@@ -555,7 +555,8 @@
       background: transparent; // don't show the ripple effect for inline links
       outline-offset: #{pf-size-prem(2px)};
 
-      &:hover {
+      &:hover,
+      &:focus {
         --#{$button}--m-link--m-inline--TextUnderlineOffset: var(--#{$button}--m-link--m-inline--hover--TextUnderlineOffset);
       }
     }
