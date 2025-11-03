@@ -3,8 +3,8 @@
 @mixin pf-v6-tokens {
   // temporary until we have updates from design 
   // new
-  --pf-t--global--text-decoration--color--default: var(--pf-t--global--border--color--default); // needs dark version?
-  --pf-t--global--text-decoration--color--hover: var(--pf-t--global--border--color--hover); // needs dark version?
+  --pf-t--global--text-decoration--color--default: var(--pf-t--global--text--color--default);
+  --pf-t--global--text-decoration--color--hover: var(--pf-t--global--text--color--hover);
   --pf-t--global--text-decoration--offset--hover: calc(var(--pf-t--global--spacer--xs) + 1px);
 
   // changed
