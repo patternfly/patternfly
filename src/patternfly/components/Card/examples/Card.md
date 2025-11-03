@@ -63,7 +63,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### With subititle
+### With subtitle
 ```hbs isBeta
 {{#> card card--id="card-subtitle"}}
   {{#> card-header}}
