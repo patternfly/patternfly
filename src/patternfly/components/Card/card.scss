@@ -29,11 +29,6 @@
   --#{$card}__header--m-wrap--RowGap: var(--pf-t--global--spacer--sm);
   --#{$card}__header--m-wrap--ColumnGap: var(--pf-t--global--spacer--md);
 
-  // Description
-  --#{$card}__description--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$card}__description--Color: var(--pf-t--global--text--color--subtle);
-  
-
   // Expandable
   --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -293,7 +288,7 @@
         margin-inline-end: auto;
       }
 
-      margin-inline-start: 0
+      margin-inline-start: 0;
     }
   }
 }
@@ -328,10 +323,10 @@
   overflow-wrap: var(--#{$card}__title-text--OverflowWrap);
 }
 
-.#{$card}__description {
-  padding-block-start: var(--#{$card}__description--PaddingBlockStart);
-  font-size: var(--#{$card}__description--FontSize);
-  color: var(--#{$card}__description--Color);
+.#{$card}__subtitle {
+  padding-block-start: var(--pf-t--global--spacer--sm);
+  font-size: var(--pf-t--global--font--size--body--sm);
+  color: var(--pf-t--global--text--color--subtle);
 }
 
 .#{$card}__actions {
@@ -346,7 +341,7 @@
   margin-inline-start: auto;
 
   + .#{$card}__title,
-  + .#{$card}__description,
+  + .#{$card}__subtitle,
   + .#{$card}__body,
   + .#{$card}__footer {
     padding: 0;
@@ -424,7 +419,7 @@
 
 .#{$card}__header,
 .#{$card}__title,
-.#{$card}__description,
+.#{$card}__subtitle,
 .#{$card}__body,
 .#{$card}__footer {
   padding-block-end: var(--#{$card}--child--PaddingBlockEnd);
