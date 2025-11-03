@@ -47,6 +47,7 @@ import './Compass.css';
 | `.pf-v6-c-compass__panel` | `<div>` | Initiates a compass panel. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. **Required** |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the compass message bar. |
+| `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for end styles. **Required** |
 | `.pf-m-no-border` | `.pf-v6-c-compass__panel` | Modifies a compass panel to remove the border. |
