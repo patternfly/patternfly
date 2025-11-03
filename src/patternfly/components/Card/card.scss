@@ -341,7 +341,6 @@
   margin-inline-start: auto;
 
   + .#{$card}__title,
-  + .#{$card}__subtitle,
   + .#{$card}__body,
   + .#{$card}__footer {
     padding: 0;
@@ -419,7 +418,6 @@
 
 .#{$card}__header,
 .#{$card}__title,
-.#{$card}__subtitle,
 .#{$card}__body,
 .#{$card}__footer {
   padding-block-end: var(--#{$card}--child--PaddingBlockEnd);

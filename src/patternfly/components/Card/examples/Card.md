@@ -72,10 +72,9 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-title-text--id=(concat card--id '-check-label')}}
+      {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-subtitle-text="This is a card subtitle." card-title-text--id=(concat card--id '-check-label')}}
     {{/card-header-main}}
   {{/card-header}}
-  {{#> card--subtitle}} This is the card subtitle. {{/card--subtitle}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -94,10 +93,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
-  {{> card-title card-title-text--value="Title" card-title-text--id=(concat card--id '-check-label')}}
-  {{#> card--subtitle}}
-    Subtitle 
-  {{/card--subtitle}}
+  {{> card-title card-title-text--value="Title" card-subtitle-text="Subtitle" card-title-text--id=(concat card--id '-check-label')}}
   {{#> card-body}}
     Body
   {{/card-body}}
