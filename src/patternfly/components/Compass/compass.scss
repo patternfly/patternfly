@@ -61,6 +61,13 @@
   :root:where(.pf-v6-theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
   }
+
+  @at-root .#{$compass}__panel,
+  & {
+    &.pf-m-no-glass {
+      --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+    }
+  }
 }
 
 .#{$compass}__header {
