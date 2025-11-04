@@ -11,14 +11,14 @@
   --#{$compass}__sidebar--Padding: var(--pf-t--global--spacer--sm);
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
   --#{$compass}__panel--BackgroundColor--rgb--light: 255,255,255;
-  --#{$compass}__panel--BackgroundColor--opacity--light: .8;
+  --#{$compass}__panel--BackgroundColor--opacity--light: .85;
   --#{$compass}__panel--BackgroundColor--light: rgba(var(--#{$compass}__panel--BackgroundColor--rgb--light), var(--#{$compass}__panel--BackgroundColor--opacity--light));
-  --#{$compass}__panel--BackgroundColor--rgb--dark: 0,0,0;
+  --#{$compass}__panel--BackgroundColor--rgb--dark: 29,29,29;
   --#{$compass}__panel--BackgroundColor--opacity--dark: .8;
   --#{$compass}__panel--BackgroundColor--dark: rgba(var(--#{$compass}__panel--BackgroundColor--rgb--dark), var(--#{$compass}__panel--BackgroundColor--opacity--dark));
   --#{$compass}__panel--BackdropFilter: var(--#{$compass}__panel--BackdropFilter--light);
-  --#{$compass}__panel--BackdropFilter--light: blur(75px);
-  --#{$compass}__panel--BackdropFilter--dark: blur(75px);
+  --#{$compass}__panel--BackdropFilter--light: blur(12.5px);
+  --#{$compass}__panel--BackdropFilter--dark: blur(12.5px);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$compass}__panel--Padding: var(--pf-t--global--spacer--inset--page-chrome);
