@@ -1,0 +1,13 @@
+@mixin pf-v6-tokens {
+
+    --pf-t--global--color--brand--100: var(--pf-t--color--red--40);
+    --pf-t--global--color--brand--200: var(--pf-t--color--red--50);
+    --pf-t--global--color--brand--300: var(--pf-t--color--red--60);
+    --pf-t--global--color--brand--400: var(--pf-t--color--red--70);
+    --pf-t--global--color--brand--500: var(--pf-t--color--red--80);
+
+    --pf-t--global--dark--color--brand--100: var(--pf-t--color--red--30);
+    --pf-t--global--dark--color--brand--200: var(--pf-t--color--red--20);
+    --pf-t--global--dark--color--brand--300: var(--pf-t--color--red--10);
+  
+}

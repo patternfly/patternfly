@@ -5,12 +5,14 @@
 @use "./tokens/tokens-highcontrast" as highcontrast;
 @use "./tokens/tokens-highcontrast-dark" as highcontrast-dark;
 @use "./tokens/tokens-local" as local;
+@use "./patternfly-glass" as glass;
 
 :root {
   @include pf-v6-set-inverse(false);
   @include palette.pf-v6-tokens;
   @include default.pf-v6-tokens;
   @include local.pf-v6-tokens;
+  @include glass.pf-v6-tokens;
 }
 
 :root:where(.pf-v6-theme-dark) {
@@ -23,6 +25,10 @@
 
 :root:where(.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
   @include highcontrast-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-glass) {
+  @include glass.pf-v6-tokens;
 }
 
 @include pf-v6-rtl(false) {
