@@ -520,7 +520,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   &.pf-m-nav {
     --#{$tabs}__link--disabled--BackgroundColor: transparent;
     --#{$tabs}__link--disabled--Color: var(--#{$tabs}--m-nav__link--disabled--Color);
-    --#{$tabs}__link--hover--BorderColor: transparent;
     --#{$tabs}__link--BorderRadius: var(--#{$tabs}--m-nav__link--BorderRadius);
   
     &::before,
