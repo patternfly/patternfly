@@ -10,15 +10,8 @@
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__sidebar--Padding: var(--pf-t--global--spacer--sm);
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
-  --#{$compass}__panel--BackgroundColor--rgb--light: 255,255,255;
-  --#{$compass}__panel--BackgroundColor--opacity--light: .85;
-  --#{$compass}__panel--BackgroundColor--light: rgba(var(--#{$compass}__panel--BackgroundColor--rgb--light), var(--#{$compass}__panel--BackgroundColor--opacity--light));
-  --#{$compass}__panel--BackgroundColor--rgb--dark: 29,29,29;
-  --#{$compass}__panel--BackgroundColor--opacity--dark: .8;
-  --#{$compass}__panel--BackgroundColor--dark: rgba(var(--#{$compass}__panel--BackgroundColor--rgb--dark), var(--#{$compass}__panel--BackgroundColor--opacity--dark));
-  --#{$compass}__panel--BackdropFilter: var(--#{$compass}__panel--BackdropFilter--light);
-  --#{$compass}__panel--BackdropFilter--light: blur(12.5px);
-  --#{$compass}__panel--BackdropFilter--dark: blur(12.5px);
+  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
+  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$compass}__panel--Padding: var(--pf-t--global--spacer--inset--page-chrome);
@@ -151,16 +144,11 @@
 
 .#{$compass}__panel {
   padding: var(--#{$compass}__panel--Padding);
-  background-color: var(--#{$compass}__panel--BackgroundColor, var(--#{$compass}__panel--BackgroundColor--light));
-  backdrop-filter: var(--#{$compass}__panel--BackdropFilter, var(--#{$compass}__panel--BackdropFilter--light));
+  background-color: var(--#{$compass}__panel--BackgroundColor);
+  backdrop-filter: var(--#{$compass}__panel--BackdropFilter);
   border: var(--#{$compass}__panel--BorderWidth) solid var(--#{$compass}__panel--BorderColor);
   border-radius: var(--#{$compass}__panel--BorderRadius);
   box-shadow: var(--#{$compass}__panel--BoxShadow);
-
-  :root:where(.pf-v6-theme-dark) & {
-    --#{$compass}__panel--BackdropFilter: var(--#{$compass}__panel--BackdropFilter--dark);
-    --#{$compass}__panel--BackgroundColor: var(--#{$compass}__panel--BackgroundColor--dark);
-  }
 
   &.pf-m-no-border {
     border-width: 0;
@@ -211,13 +199,6 @@
 
 .#{$compass}__hero-body {
   width: min(var(--#{$compass}__hero-body--Width), var(--#{$compass}__hero-body--MaxWidth));
-}
-
-:where(:root.pf-v6-theme-no-glass) .#{$compass} {
-  --#{$compass}--glass--opacity: 100%;
-  --#{$compass}--glass--border: var(--pf-t--global--border--color--default);
-  --#{$compass}--glass--blend-mode: none;
-  --#{$compass}--glass--blend-mode--dark: none;
 }
 
 :where(.pf-v6-theme-dark) .#{$compass} {

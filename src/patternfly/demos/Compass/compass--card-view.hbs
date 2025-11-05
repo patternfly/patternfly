@@ -1,0 +1,134 @@
+{{#> compass--demo-context}}
+  {{#> compass}}
+    {{#> compass-header}}
+      {{#> compass-logo}}
+        {{> compass--icons compass--icons--redhat=true}}
+      {{/compass-logo}}
+      {{#> compass-nav}}
+        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+          {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
+            {{> __tabs-list}}
+          {{/tabs}}
+        {{/compass-panel}}
+        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+          {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
+            {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
+          {{/tabs}}
+        {{/compass-panel}}
+      {{/compass-nav}}
+      {{#> compass-profile}}
+        {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+          {{#> menu-toggle-icon}}
+            {{> avatar avatar--modifier="pf-m-md"}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/compass-profile}}
+    {{/compass-header}}
+    {{#> compass-sidebar compass-sidebar--IsStart=true}}
+      {{#> compass-panel compass-panel--IsPill=true}}
+        {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="Add" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--square-plus=true}}
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--question-circle=true}}
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--modifier=(concat (pfv "unset-prefix") "m-ai-indicator") button--IsPlain=true button--aria-label="AI assistant" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--sparkle=true}}
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--user=true}}
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--paper-plane=true}}
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list}}
+      {{/compass-panel}}
+    {{/compass-sidebar}}
+    {{#> compass-main}}
+      {{#> compass-main-header}}
+        {{#> compass-panel}}
+          {{#> l-flex l-flex--modifier="pf-m-align-items-center"}}
+            {{#> l-flex-item l-flex-item--modifier="pf-m-grow"}}
+              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                Page title
+              {{/title}}
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              {{#> action-list}}
+                {{#> action-list-group}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsPrimary=true}}
+                      Add integration
+                    {{/button}}
+                  {{/action-list-item}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsSecondary=true}}
+                      Test integration
+                    {{/button}}
+                  {{/action-list-item}}
+                {{/action-list-group}}
+              {{/action-list}}
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/compass-panel}}
+      {{/compass-main-header}}
+      {{#> compass-content}}
+        {{#> compass-panel compass-panel--IsScrollable=true}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
+            {{> toolbar-template
+              toolbar-template--id=(concat page-template--id '-toolbar')
+              toolbar-template--HasToggleGroup=true
+              toolbar-template--HasBulkSelect=true
+              toolbar-template--HasOverflowMenu=true
+              toolbar-template--HasFilter=true
+            }}
+            {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
+          {{/l-flex}}
+        {{/compass-panel}}
+      {{/compass-content}}
+    {{/compass-main}}
+    {{#> compass-sidebar compass-sidebar--IsEnd=true}}
+      {{#> compass-panel compass-panel--IsPill=true}}
+        {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--question-circle=true}}
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--user=true}}
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
+              {{> compass--icons compass--icons--paper-plane=true}}
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list}}
+      {{/compass-panel}}
+    {{/compass-sidebar}}
+    {{#> compass-footer}}
+      {{#> compass-footer-main}}
+        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}chatbot message bar{{/compass-panel}}
+      {{/compass-footer-main}}
+    {{/compass-footer}}
+  {{/compass}}
+{{/compass--demo-context}}

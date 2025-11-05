@@ -133,5 +133,27 @@
 
   // stylelint-disable custom-property-pattern
   --pf-t--temp--dev--tbd: #BC11E0;
+  // stylelint-enable
 
+  // Compass/glass tokens
+  --pf-t--global--background--color--glass--filter: blur(12.5px);
+  --pf-t--global--background--color--glass--opacity: .85;
+  --pf-t--global--background--color--glass--default: rgba(255, 255, 255, var(--pf-t--global--background--color--glass--opacity));
+  --pf-t--global--dark--background--color--glass--filter: blur(12.5px);
+  --pf-t--global--dark--background--color--glass--opacity: .85;
+  --pf-t--global--dark--background--color--glass--default: rgba(29, 29, 29, var(--pf-t--global--background--color--glass--opacity));
+
+  // Compass/glass dark tokens
+  &:where(.pf-v6-theme-dark) {
+    --pf-t--global--background--color--glass--filter: var(--pf-t--global--dark--background--color--glass--filter);
+    --pf-t--global--background--color--glass--opacity: var(--pf-t--global--dark--background--color--glass--opacity);
+    --pf-t--global--background--color--glass--default: var(--pf-t--global--dark--background--color--glass--default);
+  }
+
+  // no glass theme
+  &:root:where(.pf-m-no-glass) {
+    --pf-t--global--background--color--glass--filter: none;
+    --pf-t--global--background--color--glass--opacity: 1;
+    --pf-t--global--background--color--glass--default: var(--pf-t--global--background--color--primary--default);
+  }
 }
