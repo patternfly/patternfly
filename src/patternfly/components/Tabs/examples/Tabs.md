@@ -269,7 +269,7 @@ cssPrefix: pf-v6-c-tabs
 {{/tabs}}
 <br/ >
 As sub navigation:
-{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--IsSubtab=true}}
+{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--IsSubtab=true tabs--attribute='aria-label="Site sub-navigation variation example"'}}
   {{> __tabs-list }}
 {{/tabs}}
 ```
