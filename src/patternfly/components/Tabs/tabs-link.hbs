@@ -64,6 +64,7 @@
     aria-expanded="true"
   {{/if}}
   role="tab"
+  aria-selected="{{ternary tabs-item--IsCurrent true false}}"
   {{#if tabs-link--attribute}}
     {{{tabs-link--attribute}}}
   {{/if}}>

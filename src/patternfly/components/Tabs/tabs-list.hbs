@@ -1,5 +1,8 @@
 <ul class="{{pfv}}tabs__list{{#if tabs-list--modifier}} {{tabs-list--modifier}}{{/if}}"
   role="tablist"
+  {{#if tabs-list--aria-label}}
+    aria-label="{{tabs-list--aria-label}}"
+  {{/if}}
   {{#if tabs-list--attribute}}
     {{{tabs-list--attribute}}}
   {{/if}}>

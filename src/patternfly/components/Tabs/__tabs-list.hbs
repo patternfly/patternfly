@@ -26,7 +26,7 @@ __tabs-list--IsCloseDisabled: bool
   {{/if}}
 {{/unless}}
 
-{{#> tabs-list tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose tabs-item--HasHelp=__tabs-list--HasHelp}}
+{{#> tabs-list tabs-list--aria-label=__tabs-list--aria-label tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose tabs-item--HasHelp=__tabs-list--HasHelp}}
   {{> __tabs-item
     __tabs-item--id="users"
     __tabs-item--icon-name="fas fa-users"
