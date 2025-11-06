@@ -321,7 +321,7 @@ wrapperTag: div
 
 ### With drawer
 ```hbs isFullscreen isBeta
-{{#> drawer drawer--id="pill" drawer--IsPill=true drawer-panel--IsOpen=true drawer-panel--IsGlass=true}}
+{{#> drawer drawer--id="pill" drawer--IsPill=true drawer-panel--IsOpen=true}}
  {{#> drawer-main}}
     {{#> drawer-content}}
       {{> compass--card-view}}
