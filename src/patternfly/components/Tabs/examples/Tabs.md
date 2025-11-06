@@ -264,12 +264,12 @@ cssPrefix: pf-v6-c-tabs
 
 ### Site navigation variation
 ```hbs isBeta
-{{#> tabs tabs--id="nav-tabs" tabs--IsNav="true"}}
+{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--attribute='aria-label="Site navigation variation example"'}}
   {{> __tabs-list }}
 {{/tabs}}
 <br/ >
 As sub navigation:
-{{#> tabs tabs--id="nav-tabs" tabs--IsNav="true" tabs--IsSubtab="true"}}
+{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--IsSubtab=true tabs--attribute='aria-label="Site sub-navigation variation example"'}}
   {{> __tabs-list }}
 {{/tabs}}
 ```
