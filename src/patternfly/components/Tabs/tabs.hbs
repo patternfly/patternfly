@@ -1,4 +1,4 @@
-<{{#if tabs--type}}{{tabs--type}}{{else}}div{{/if}} class="{{pfv}}tabs 
+<{{#if tabs--type}}{{tabs--type}}{{else if tabs--IsNav}}nav{{else}}div{{/if}} class="{{pfv}}tabs 
   {{~#if tabs--IsSubtab}} pf-m-subtab{{/if}}
   {{~#if tabs--IsVertical}} pf-m-vertical{{/if}}
   {{~#if tabs--IsExpandable}} pf-m-expandable{{/if}}
@@ -12,9 +12,11 @@
   {{#if tabs--attribute}}
     {{{tabs--attribute}}}
   {{/if}}
-  {{#if tabs--id}}
-    role="region"
-    id="{{{tabs--id}}}"
-  {{/if}}>
+  {{#unless tabs--IsNav}}
+    {{#if tabs--id}}
+      role="region"
+      id="{{{tabs--id}}}"
+    {{/if}}
+  {{/unless}}>
   {{> @partial-block}}
-</{{#if tabs--type}}{{tabs--type}}{{else}}div{{/if}}>
+</{{#if tabs--type}}{{tabs--type}}{{else if tabs--IsNav}}nav{{else}}div{{/if}}>
