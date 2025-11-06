@@ -1,13 +1,93 @@
 @mixin pf-v6-tokens {
-
+    // brand tokens
     --pf-t--global--color--brand--100: var(--pf-t--color--red--40);
     --pf-t--global--color--brand--200: var(--pf-t--color--red--50);
     --pf-t--global--color--brand--300: var(--pf-t--color--red--60);
     --pf-t--global--color--brand--400: var(--pf-t--color--red--70);
     --pf-t--global--color--brand--500: var(--pf-t--color--red--80);
 
+    // dark brand tokens
     --pf-t--global--dark--color--brand--100: var(--pf-t--color--red--30);
     --pf-t--global--dark--color--brand--200: var(--pf-t--color--red--20);
     --pf-t--global--dark--color--brand--300: var(--pf-t--color--red--10);
   
+    // font size
+    --pf-t--global--font--size--900: 2.5rem;
+    --pf-t--global--font--size--1000: 3rem;
+
+    // bumped by one
+    --pf-t--global--font--size--2xl: var(--pf-t--global--font--size--700);
+    --pf-t--global--font--size--3xl: var(--pf-t--global--font--size--800);
+    --pf-t--global--font--size--4xl: var(--pf-t--global--font--size--900);
+    --pf-t--global--font--size--lg: var(--pf-t--global--font--size--500);
+    --pf-t--global--font--size--md: var(--pf-t--global--font--size--400);
+    --pf-t--global--font--size--sm: var(--pf-t--global--font--size--300);
+    --pf-t--global--font--size--xl: var(--pf-t--global--font--size--600);
+    --pf-t--global--font--size--xs: var(--pf-t--global--font--size--200);
+  
+    // icon sizes
+    --pf-t--global--icon--size--100: 1rem;
+    --pf-t--global--icon--size--200: 1.5rem;
+    --pf-t--global--icon--size--250: 2rem;
+    --pf-t--global--icon--size--300: 2.5rem;
+    --pf-t--global--icon--size--400: 6rem;
+    --pf-t--global--icon--size--500: 8rem;
+
+    // spacing
+    --pf-t--global--spacer--action--horizontal--compact: var(--pf-t--global--spacer--lg);
+    --pf-t--global--spacer--action--horizontal--default: var(--pf-t--global--spacer--xl);
+    --pf-t--global--spacer--action--horizontal--plain--compact: var(--pf-t--global--spacer--sm);
+    --pf-t--global--spacer--action--horizontal--plain--default: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--action--horizontal--spacious: var(--pf-t--global--spacer--2xl);
+    --pf-t--global--spacer--control--horizontal--compact: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--control--horizontal--default: var(--pf-t--global--spacer--xl);
+    --pf-t--global--spacer--control--horizontal--plain: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--control--horizontal--spacious: var(--pf-t--global--spacer--xl);
+    --pf-t--global--spacer--control--vertical--compact: var(--pf-t--global--spacer--sm);
+    --pf-t--global--spacer--control--vertical--default: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--control--vertical--plain: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--control--vertical--spacious: var(--pf-t--global--spacer--lg);
+    --pf-t--global--spacer--gap--action-to-action--default: var(--pf-t--global--spacer--lg);
+    --pf-t--global--spacer--gap--action-to-action--plain: var(--pf-t--global--spacer--sm);
+    --pf-t--global--spacer--gap--control-to-control--default: var(--pf-t--global--spacer--sm);
+    --pf-t--global--spacer--gap--group--horizontal: var(--pf-t--global--spacer--lg);
+    --pf-t--global--spacer--gap--group--vertical: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--gap--group-to-group--horizontal--compact: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--gap--group-to-group--horizontal--default: var(--pf-t--global--spacer--3xl);
+    --pf-t--global--spacer--gap--group-to-group--vertical--compact: var(--pf-t--global--spacer--lg);
+    --pf-t--global--spacer--gap--group-to-group--vertical--default: var(--pf-t--global--spacer--xl);
+    --pf-t--global--spacer--gap--text-to-element--compact: var(--pf-t--global--spacer--sm);
+    --pf-t--global--spacer--gap--text-to-element--default: var(--pf-t--global--spacer--md);
+    --pf-t--global--spacer--gutter--default: var(--pf-t--global--spacer--lg);
+    --pf-t--global--spacer--inset--page-chrome: var(--pf-t--global--spacer--xl);
+
+    // Glass theme  tokens
+    --pf-t--global--light--glass--background--color--glass--color: var(--pf-t--global--color--brand--500);
+    --pf-t--global--light--glass--background--color--glass--filter: blur(12.5px);
+    --pf-t--global--light--glass--background--color--glass--opacity: 10%;
+    --pf-t--global--light--glass--background--color--glass--default: color-mix(in srgb, var(--pf-t--global--light--glass--background--color--glass--color) var(--pf-t--global--light--glass--background--color--glass--opacity), transparent );
+    --pf-t--global--dark--glass--background--color--glass--color: var(--pf-t--global--color--brand--500);
+    --pf-t--global--dark--glass--background--color--glass--filter: blur(12.5px);
+    --pf-t--global--dark--glass--background--color--glass--opacity: 65%;
+    --pf-t--global--dark--glass--background--color--glass--default: color-mix(in srgb, var(--pf-t--global--dark--glass--background--color--glass--color) var(--pf-t--global--dark--glass--background--color--glass--opacity), transparent );
+
+    // Message bar tokens
+    --pf-v6-c-compass__message-bar--Width: 600px;
+    --pf-v6-c-compass__message-bar--MinWidth: 450px;
+    --pf-v6-c-compass__message-bar--MaxWidth: 900px;
+
+    // Thinking tokens
+    --pf-v6-global--thinking--BoxShadow--Spread: 5px;
+    --pf-v6-global--thinking--BoxShadow--Color--Start-Start: var(--pf-t--global--color--brand--100);
+    --pf-v6-global--thinking--BoxShadow--Color--Start-End: var(--pf-t--color--white);
+    --pf-v6-global--thinking--BoxShadow--Color--End-Start: var(--pf-t--global--color--brand--500); 
+    --pf-v6-global--thinking--BoxShadow--Color--End-End: var(--pf-t--global--color--brand--300); 
+    --pf-v6-global--thinking-active--BoxShadow--Spread: 10px;
+
+    .pf-v6-m-ai-indicator {
+        &::before {
+        background: linear-gradient(to right, #f56e6e 0%, var(--pf-t--global--color--brand--300) 65%, var(--pf-t--global--color--brand--500) 100%)
+            border-box;
+        }
+    }
 }

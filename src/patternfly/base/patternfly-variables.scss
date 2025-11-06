@@ -27,10 +27,6 @@
   @include highcontrast-dark.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-glass) {
-  @include glass.pf-v6-tokens;
-}
-
 @include pf-v6-rtl(false) {
   @include pf-v6-set-inverse;
 }
