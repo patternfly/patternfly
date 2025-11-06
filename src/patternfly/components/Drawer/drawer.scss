@@ -293,6 +293,16 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         border-block-end-width: var(--#{$drawer}--m-pill__panel--BorderBlockEndWidth);
         border-inline-start-width: var(--#{$drawer}--m-pill__panel--BorderInlineStartWidth);
         border-inline-end-width: var(--#{$drawer}--m-pill__panel--BorderInlineEndWidth);
+
+        // This won't apply background overrides if glass is disabled, allowing secondary backgrounds to work
+        // stylelint-disable max-nesting-depth
+        &:not(.pf-m-no-glass) {
+          --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
+          --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
+
+          backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
+        }
+        // stylelint-enable
       }
     }
   }
@@ -391,13 +401,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-no-background {
     --#{$drawer}__panel--BackgroundColor: transparent;
-  }
-
-  &.pf-m-glass {
-    --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
-    --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
-
-    backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
   }
 
   @media screen and (min-width: $pf-v6-global--breakpoint--md) {
