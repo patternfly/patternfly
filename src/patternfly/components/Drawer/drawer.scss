@@ -252,7 +252,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       @include pf-v6-bidirectional-style(
         $prop: transform,
         $ltr-val: translateX(calc(-100% - var(--#{$drawer}--m-expanded__panel--inset))),
-        $rtl-val: translateX(#{pf-v6-calc-inverse(-100%)}),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(calc(-100% - var(--#{$drawer}--m-expanded__panel--inset)))}),
       );
 
       --#{$drawer}__panel--Opacity: var(--#{$drawer}--m-expanded__panel--Opacity);
@@ -712,7 +712,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v6-c-drawer__panel--list--width {
       .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --#{$drawer}__panel--md--FlexBasis: #{percentage(math.div($width-value, 100))};
+        @if $width-value == 100 {
+          --#{$drawer}__panel--md--FlexBasis: calc(#{percentage(math.div($width-value, 100))} - (2 * var(--#{$drawer}--m-expanded__panel--inset)));
+        } @else {
+          --#{$drawer}__panel--md--FlexBasis: calc(#{percentage(math.div($width-value, 100))} - var(--#{$drawer}--m-expanded__panel--inset));
+        }
       }
     }
   }
