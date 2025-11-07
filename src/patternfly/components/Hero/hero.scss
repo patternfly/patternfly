@@ -19,6 +19,7 @@
   --#{$hero}--BackgroundRepeat: no-repeat;
   --#{$hero}--BackgroundPosition: right center;
   --#{$hero}--BackgroundSize: contain;
+  --#{$hero}--BorderStyle: solid;
   --#{$hero}--BorderBlockStartWidth: var(--pf-t--global--border--width--regular);
   --#{$hero}--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
   --#{$hero}--BorderInlineStartWidth: var(--pf-t--global--border--width--regular);
@@ -51,6 +52,7 @@
   background-position: var(--#{$hero}--BackgroundPosition);
   background-size: var(--#{$hero}--BackgroundSize);
   border-color: var(--#{$hero}--BorderColor);
+  border-style: var(--#{$hero}--BorderStyle);
   border-block-start-width: var(--#{$hero}--BorderBlockStartWidth);
   border-block-end-width: var(--#{$hero}--BorderBlockEndWidth);
   border-inline-start-width: var(--#{$hero}--BorderInlineStartWidth);
