@@ -18,7 +18,7 @@ import './Compass.css';
   {{/compass-header}}
   {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
   {{#> compass-main}}
-    {{#> compass-hero}}hero{{/compass-hero}}
+    {{#> hero}}hero{{/hero}}
     {{#> compass-main-header}}main header{{/compass-main-header}}
     {{#> compass-content}}content{{/compass-content}}
   {{/compass-main}}
@@ -40,8 +40,6 @@ import './Compass.css';
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the compass main wrapper. **Required** |
-| `.pf-v6-c-compass__hero` | `<div>` | Initiates the compass logo hero. |
-| `.pf-v6-c-compass__hero-body` | `<div>` | Initiates the compass hero body. |
 | `.pf-v6-c-compass__main-header` | `<div>` | Initiates the compass main header. |
 | `.pf-v6-c-compass__content` | `<div>` | Initiates the compass content. **Required** |
 | `.pf-v6-c-compass__panel` | `<div>` | Initiates a compass panel. |

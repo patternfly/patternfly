@@ -1,0 +1,45 @@
+@use '../../sass-utilities' as *;
+
+@include pf-root($hero) {
+  --#{$hero}--gradient--angle: 109deg;
+  --#{$hero}--gradient--stop-1--light: transparent;
+  --#{$hero}--gradient--stop-2--light: transparent;
+  --#{$hero}--gradient--stop-3--light: transparent;
+  --#{$hero}--gradient--stop-1--dark: transparent;
+  --#{$hero}--gradient--stop-2--dark: transparent;
+  --#{$hero}--gradient--stop-3--dark: transparent;
+  --#{$hero}--BackgroundImage--light: none;
+  --#{$hero}--BackgroundImage--dark: none;
+  --#{$hero}__body--Width: 800px;
+  --#{$hero}__body--MaxWidth: 80%;
+}
+
+.#{$hero} {
+  display: flex;
+  padding-block-start: 32px;
+  padding-block-end: 32px;
+  padding-inline-start: 72px;
+  padding-inline-end: 0;
+  background-image: var(--#{$hero}--BackgroundImage, var(--#{$hero}--BackgroundImage--light)),
+    linear-gradient(
+      var(--#{$hero}--gradient--angle),
+      var(--#{$hero}--gradient--stop-1, var(--#{$hero}--gradient--stop-1--light)) 0%,
+      var(--#{$hero}--gradient--stop-2, var(--#{$hero}--gradient--stop-2--light)) 50%,
+      var(--#{$hero}--gradient--stop-3, var(--#{$hero}--gradient--stop-3--light)) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  border-radius: 24px 72px;
+
+  :root:where(.pf-v6-theme-dark) & {
+    --#{$hero}--BackgroundImage: var(--#{$hero}--BackgroundImage--dark);
+    --#{$hero}--gradient--stop-1: var(--#{$hero}--gradient--stop-1--dark);
+    --#{$hero}--gradient--stop-2: var(--#{$hero}--gradient--stop-2--dark);
+    --#{$hero}--gradient--stop-3: var(--#{$hero}--gradient--stop-3--dark);
+  }
+}
+
+.#{$hero}__body {
+  width: min(var(--#{$hero}__body--Width), var(--#{$hero}__body--MaxWidth));
+}
