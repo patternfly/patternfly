@@ -26,10 +26,10 @@
   --#{$hero}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$hero}--m-glass--BorderColor: var(--pf-t--global--border--color--alt);
   --#{$hero}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--md);
-  --#{$hero}--BorderTopLeftRadius: 24px;
-  --#{$hero}--BorderTopRightRadius: 72px;
-  --#{$hero}--BorderBottomRightRadius: 24px;
-  --#{$hero}--BorderBottomLeftRadius: 72px;
+  --#{$hero}--BorderStartStartRadius: 24px;
+  --#{$hero}--BorderStartEndRadius: 72px;
+  --#{$hero}--BorderEndEndRadius: 24px;
+  --#{$hero}--BorderEndStartRadius: 72px;
   --#{$hero}__body--Width: 800px;
   --#{$hero}__body--MaxWidth: 80%;
 }
@@ -50,15 +50,15 @@
   background-repeat: var(--#{$hero}--BackgroundRepeat);
   background-position: var(--#{$hero}--BackgroundPosition);
   background-size: var(--#{$hero}--BackgroundSize);
+  border-color: var(--#{$hero}--BorderColor);
   border-block-start-width: var(--#{$hero}--BorderBlockStartWidth);
   border-block-end-width: var(--#{$hero}--BorderBlockEndWidth);
   border-inline-start-width: var(--#{$hero}--BorderInlineStartWidth);
   border-inline-end-width: var(--#{$hero}--BorderInlineEndWidth);
-  border-color: var(--#{$hero}--BorderColor);
-  border-top-left-radius: var(--#{$hero}--BorderTopLeftRadius);
-  border-top-right-radius: var(--#{$hero}--BorderTopRightRadius);
-  border-bottom-right-radius: var(--#{$hero}--BorderBottomRightRadius);
-  border-bottom-left-radius: var(--#{$hero}--BorderBottomLeftRadius);
+  border-start-start-radius: var(--#{$hero}--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$hero}--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$hero}--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$hero}--BorderEndEndRadius);
 
   :root:where(.pf-v6-theme-dark) & {
     --#{$hero}--BackgroundImage: var(--#{$hero}--BackgroundImage--dark);
