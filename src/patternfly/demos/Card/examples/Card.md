@@ -537,7 +537,7 @@ import './Card.css'
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
-    {{#> tabs tabs--id="status-tabs" tabs--modifier="pf-m-fill"}}
+    {{#> tabs tabs--aria-label="Status, tabbed card example" tabs--id="status-tabs" tabs--modifier="pf-m-fill"}}
       {{#> tabs-list}}
         {{> __tabs-item __tabs-item--id="object-1" __tabs-item--aria-label="Object 1" __tabs-item--text="Object 1" __tabs-item--current="true"}}
         {{> __tabs-item __tabs-item--id="object-2" __tabs-item--aria-label="Object 2" __tabs-item--text="Object 2"}}

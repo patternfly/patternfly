@@ -16,7 +16,7 @@
     {{/l-flex}}
   {{/drawer-head}}
   {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-    {{#> tabs tabs--modifier="pf-m-box pf-m-fill"}}
+    {{#> tabs tabs--aria-label="Drawer panel" tabs--modifier="pf-m-box pf-m-fill"}}
       {{#> tabs-list}}
         {{#> tabs-item tabs-item--IsCurrent="true"}}
           {{#> tabs-link tabs-link--attribute=(concat 'id="' page-template--id '-panel-tabs-tab1-link"')}}
