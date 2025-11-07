@@ -10,8 +10,8 @@ cssPrefix: pf-v6-c-tabs
 
 ### Default tabs example
 ```hbs
-{{#> tabs tabs--id="default-tabs"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--aria-label="Default example"}}
+{{#> tabs tabs--id="default-tabs" tabs--aria-label="Default exampe"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
@@ -25,8 +25,8 @@ cssPrefix: pf-v6-c-tabs
 
 ### Overflow beginning of list example
 ```hbs
-{{#> tabs tabs--id="overflow-beginning-of-list" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true" __tabs-list--IsLong="true" __tabs-list--aria-label="Overflow beginning of list example"}}
+{{#> tabs tabs--id="overflow-beginning-of-list" tabs--modifier="pf-m-scrollable" tabs--aria-label="Overflow beginning of list example"}}
+  {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true" __tabs-list--IsLong="true" }}
 {{/tabs}}
 ```
 
@@ -38,22 +38,22 @@ cssPrefix: pf-v6-c-tabs
 
 ### Horizontal overflow example
 ```hbs
-{{#> tabs tabs--id="horizontal-overflow" __tabs-list--IsOverflow="true"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Horizontal overflow example"}}
+{{#> tabs tabs--id="horizontal-overflow" __tabs-list--IsOverflow="true" tabs--aria-label="Horizontal overflow example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" }}
 {{/tabs}}
 ```
 
 ### Horizontal overflow expanded example
 ```hbs
-{{#> tabs tabs--id="horizontal-overflow-expanded" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Horizontal overflow expanded example"}}
+{{#> tabs tabs--id="horizontal-overflow-expanded" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true" tabs--aria-label="Horizontal overflow expanded example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" }}
 {{/tabs}}
 ```
 
 ### Horizontal overflow selected example
 ```hbs
-{{#> tabs tabs--id="horizontal-overflow-selected" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Horizontal overflow selected example"}}
+{{#> tabs tabs--id="horizontal-overflow-selected" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true" tabs--aria-label="Horizontal overflow selected example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" }}
 {{/tabs}}
 ```
 
@@ -61,56 +61,56 @@ cssPrefix: pf-v6-c-tabs
 
 ### Vertical tabs example
 ```hbs
-{{#> tabs tabs--id="vertical-tabs" tabs--IsVertical=true}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true" __tabs-list--aria-label="Vertical tabs example"}}
+{{#> tabs tabs--id="vertical-tabs" tabs--IsVertical=true tabs--aria-label="Vertical tabs example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true" }}
 {{/tabs}}
 ```
 
 ### Vertical expandable example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--IsVertical=true tabs--aria-label="Vertical expandable example"}}
   {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Vertical expandable example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expanded example
 ```hbs
-{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--IsVertical=true tabs--aria-label="Vertical expanded example"}}
   {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Vertical expanded example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expandable responsive example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" tabs--aria-label="Vertical expandable responsive example"}}
   {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Vertical expandable responsive example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expandable example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true tabs--aria-label="Vertical expandable deprecated example"}}
   {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Vertical expandable deprecated example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expanded example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--IsVertical=true}}
+{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--IsVertical=true tabs--aria-label="Vertical expanded deprecated example"}}
   {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Vertical expanded deprecated example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Vertical expandable responsive example (deprecated)
 ```hbs isDeprecated
-{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsVertical=true tabs--modifier="pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" tabs--aria-label="Vertical expandable responsive deprecated example"}}
   {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--aria-label="Vertical expandable responsive deprecated example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
@@ -118,29 +118,29 @@ cssPrefix: pf-v6-c-tabs
 
 ### Box tabs example
 ```hbs
-{{#> tabs tabs--id="box-tabs" tabs--modifier="pf-m-box"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--aria-label="Box example"}}
+{{#> tabs tabs--id="box-tabs" tabs--modifier="pf-m-box" tabs--aria-label="Box example"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Box overflow example
 ```hbs
-{{#> tabs tabs--id="box-overflow" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
-  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsLong="true" __tabs-list--aria-label="Box overflow example"}}
+{{#> tabs tabs--id="box-overflow" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true" tabs--aria-label="Box overflow example"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
 {{/tabs}}
 ```
 
 ### Box vertical example
 ```hbs
-{{#> tabs tabs--id="box-vertical" tabs--IsVertical=true tabs--modifier="pf-m-box"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true" __tabs-list--aria-label="Box vertical example"}}
+{{#> tabs tabs--id="box-vertical" tabs--IsVertical=true tabs--modifier="pf-m-box" tabs--aria-label="Box vertical example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Box tabs secondary variant example
 ```hbs
-{{#> tabs tabs--modifier="pf-m-box pf-m-secondary" tabs--id="box-tabs-secondary"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--aria-label="Box secondary variant example"}}
+{{#> tabs tabs--modifier="pf-m-box pf-m-secondary" tabs--id="box-tabs-secondary" tabs--aria-label="Box secondary variant example"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 <div className="tabs-example-block tabs-example-block--m-secondary"></div>
 ```
@@ -149,22 +149,22 @@ cssPrefix: pf-v6-c-tabs
 
 ### Default tab insets example
 ```hbs
-{{#> tabs tabs--id="default-tab-insets" tabs--modifier="pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
-  {{> __tabs-list __tabs-list--aria-label="Default tab insets example"}}
+{{#> tabs tabs--id="default-tab-insets" tabs--modifier="pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl" tabs--aria-label="Default tab insets example"}}
+  {{> __tabs-list}}
 {{/tabs}}
 ```
 
 ### Box tab insets example
 ```hbs
-{{#> tabs tabs--id="box-tab-insets" tabs--modifier="pf-m-box pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
-  {{> __tabs-list __tabs-list--aria-label="Box tab insets example"}}
+{{#> tabs tabs--id="box-tab-insets" tabs--modifier="pf-m-box pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl" tabs--aria-label="Box tab insets example"}}
+  {{> __tabs-list}}
 {{/tabs}}
 ```
 
 ### Page insets example
 ```hbs
-{{#> tabs tabs--id="page-insets" tabs--modifier="pf-m-page-insets"}}
-  {{> __tabs-list __tabs-list--aria-label="Page insets example"}}
+{{#> tabs tabs--id="page-insets" tabs--modifier="pf-m-page-insets" tabs--aria-label="Page insets example"}}
+  {{> __tabs-list}}
 {{/tabs}}
 ```
 
@@ -178,8 +178,8 @@ cssPrefix: pf-v6-c-tabs
 
 ### Icons and text example
 ```hbs
-{{#> tabs tabs--id="icons-and-text"}}
-  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--aria-label="Icons and text example"}}
+{{#> tabs tabs--id="icons-and-text" tabs--aria-label="Icons and text example"}}
+  {{> __tabs-list __tabs-list--HasIcons="true"}}
 {{/tabs}}
 ```
 
@@ -187,23 +187,23 @@ cssPrefix: pf-v6-c-tabs
 
 ### Tabs with sub tabs example
 ```hbs
-{{#> tabs tabs--id="tabs-with-sub-tabs" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--aria-label="With sub tabs example, primary"}}
+{{#> tabs tabs--id="tabs-with-sub-tabs" tabs--modifier="pf-m-scrollable" tabs--aria-label="With sub tabs example, primary"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="tabs-with-sub-tabs-subtab" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true" __tabs-list--aria-label="With sub tabs example, secondary"}}
+{{#> tabs tabs--id="tabs-with-sub-tabs-subtab" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable" tabs--aria-label="With sub tabs example, Containers"}}
+  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
 ### Box tabs with sub tabs example
 ```hbs
-{{#> tabs tabs--id="box-tabs-with-sub-tabs" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--aria-label="Box with sub tabs example, primary"}}
+{{#> tabs tabs--id="box-tabs-with-sub-tabs" tabs--modifier="pf-m-box pf-m-scrollable" tabs--aria-label="Box with sub tabs example, primary"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="box-tabs-with-sub-tabs-subtab" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true" __tabs-list--aria-label="Box with sub tabs example, secondary"}}
+{{#> tabs tabs--id="box-tabs-with-sub-tabs-subtab" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable" tabs--aria-label="Box with sub tabs example, Containers"}}
+  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
@@ -211,29 +211,29 @@ cssPrefix: pf-v6-c-tabs
 
 ### Filled tabs example
 ```hbs
-{{#> tabs tabs--id="filled-tabs" tabs--modifier="pf-m-fill"}}
-  {{> __tabs-list __tabs-list--IsShort="true" __tabs-list--aria-label="Filled example"}}
+{{#> tabs tabs--id="filled-tabs" tabs--modifier="pf-m-fill" tabs--aria-label="Filled example"}}
+  {{> __tabs-list __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
 ### Filled with icons example
 ```hbs
-{{#> tabs tabs--id="filled-with-icons" tabs--modifier="pf-m-fill"}}
-  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsShort="true" __tabs-list--aria-label="Filled with icons example"}}
+{{#> tabs tabs--id="filled-with-icons" tabs--modifier="pf-m-fill" tabs--aria-label="Filled with icons example"}}
+  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
 ### Filled box example
 ```hbs
-{{#> tabs tabs--id="filled-box" tabs--modifier="pf-m-fill pf-m-box"}}
-  {{> __tabs-list __tabs-list--IsShort="true" __tabs-list--aria-label="Filled box example"}}
+{{#> tabs tabs--id="filled-box" tabs--modifier="pf-m-fill pf-m-box" tabs--aria-label="Filled box example"}}
+  {{> __tabs-list __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
 ### Filled box with icons example
 ```hbs
-{{#> tabs tabs--id="filled-box-with-icons" tabs--modifier="pf-m-fill pf-m-box"}}
-  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsShort="true" __tabs-list--aria-label="Filled box with icons example"}}
+{{#> tabs tabs--id="filled-box-with-icons" tabs--modifier="pf-m-fill pf-m-box" tabs--aria-label="Filled box with icons example"}}
+  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
@@ -247,29 +247,29 @@ cssPrefix: pf-v6-c-tabs
 ### Using the nav element example
 ```hbs
 {{#> tabs tabs--id="using-the-nav-element" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--aria-label="Using nav element example" tabs-link--isLink="true"}}
-  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsDisabled="true" __tabs-list--aria-label="Using nav element example"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Sub tabs using the nav element example
 ```hbs
-{{#> tabs tabs--id="sub-tabs-using-the-nav-element" tabs--type="nav" tabs--attribute='aria-label="Tabs primary nav"' tabs-link--isLink="true" tabs--aria-label="Sub tabs using nav element example"}}
-  {{> __tabs-list __tabs-list--aria-label="Using nav element with sub tabs example"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element" tabs--type="nav" tabs-link--isLink="true" tabs--aria-label="Using nav element with sub tabs example, primary"}}
+  {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="sub-tabs-using-the-nav-element-subtab" tabs--type="nav" tabs--attribute='aria-label="Tabs subtab nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab" tabs--aria-label="Sub tabs using nav element example, Containers"}}
-  {{> __tabs-list-secondary __tabs-list--IsDisabled="true" __tabs-list--aria-label="Using nav element with sub tabs example, Containers"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element-subtab" tabs--type="nav" tabs-link--isLink="true" tabs--modifier="pf-m-subtab" tabs--aria-label="Using nav element with sub tabs example, Containers"}}
+  {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Site navigation variation
 ```hbs isBeta
-{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--attribute='aria-label="Site navigation variation example"'}}
+{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--aria-label="Site navigation variation example"}}
   {{> __tabs-list }}
 {{/tabs}}
 <br/ >
 As sub navigation:
-{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--IsSubtab=true tabs--attribute='aria-label="Site sub-navigation variation example"'}}
+{{#> tabs tabs--id="nav-tabs" tabs--IsNav=true tabs--IsSubtab=true tabs--aria-label="Site navigation variation as sub tabs example"}}
   {{> __tabs-list }}
 {{/tabs}}
 ```
@@ -285,7 +285,7 @@ As sub navigation:
       __tabs-list--IsScrollable="true"
       __tabs-list--DisabledFirstScrollButton="true"
       __tabs-list--HasHelp="true" __tabs-list--IsHelpDisabled="true"
-      __tabs-list--aria-label-prefix="Help button"}}
+      __tabs--aria-label-prefix="Help button"}}
 ```
 
 ### Close button example
@@ -298,7 +298,7 @@ As sub navigation:
       __tabs-list--IsCloseDisabled="true"
       __tabs-list--IsScrollable="true"
       __tabs-list--DisabledFirstScrollButton="true"
-      __tabs-list--aria-label-prefix="Close button"}}
+      __tabs--aria-label-prefix="Close button"}}
 ```
 
 ### Help and close button example
@@ -314,30 +314,30 @@ As sub navigation:
       __tabs-list--IsHelpDisabled="true"
       __tabs-list--IsCloseDisabled="true"
       __tabs-list--IsHelpCloseDisabled="true"
-      __tabs-list--aria-label-prefix="Help and close button"}}
+      __tabs--aria-label-prefix="Help and close button"}}
 ```
 
 ## Add tab button
 
 ### Add tab button example
 ```hbs
-{{#> tabs tabs--id="default-tabs-add-tab-button" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button with sub tabs example"}}
+{{#> tabs tabs--id="default-tabs-add-tab-button" tabs--modifier="pf-m-scrollable" tabs--aria-label="Add button with sub tabs example, primary"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
-{{#> tabs tabs--id="default-tabs-add-tab-button-subtab" tabs--modifier="pf-m-scrollable" tabs--IsSubtab="true"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button with sub tabs example, Containers"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="box-tabs-add-tab-button" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button box example"}}
+{{#> tabs tabs--id="default-tabs-add-tab-button-subtab" tabs--modifier="pf-m-scrollable" tabs--IsSubtab="true" tabs--aria-label="Add button with sub tabs example, Containers"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
 <br><br>
 
-{{#> tabs tabs--id="box-tabs-add-tab-button-secondary " tabs--modifier="pf-m-box pf-m-secondary pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button box secondary variant example"}}
+{{#> tabs tabs--id="box-tabs-add-tab-button" tabs--modifier="pf-m-box pf-m-scrollable" tabs--aria-label="Add button box example"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+{{/tabs}}
+
+<br><br>
+
+{{#> tabs tabs--id="box-tabs-add-tab-button-secondary " tabs--modifier="pf-m-box pf-m-secondary pf-m-scrollable" tabs--aria-label="Add button box secondary variant example"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 ```
 
@@ -349,33 +349,33 @@ To animate the current tab accent, you must set the following variables on the `
 
 ### Animate default tabs accent
 ```hbs
-{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-default" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 67px;"'}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--aria-label="Animate default example"}}
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-default" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 67px;"' tabs--aria-label="Animate default example"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Animate sub tabs accent
 ```hbs
-{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-subtabs" tabs--modifier="pf-m-scrollable" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 67px;"'}}
-  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--aria-label="Animate with sub tabs example"}}
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-subtabs" tabs--modifier="pf-m-scrollable" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 67px;"' tabs--aria-label="Animate with sub tabs example, primary"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-subtabs-sub" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 63px;"'}}
-  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true" __tabs-list--aria-label="Animate with sub tabs example, Users"}}
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-subtabs-sub" tabs--IsSubtab="true" tabs--modifier="pf-m-scrollable" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 63px;"' tabs--aria-label="Animate with sub tabs example, Users"}}
+  {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
 ### Animate filled tabs accent
 ```hbs
-{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-filled" tabs--modifier="pf-m-fill" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 253px;"'}}
-  {{> __tabs-list __tabs-list--IsShort="true" __tabs-list--aria-label="Animate filled example"}}
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-filled" tabs--modifier="pf-m-fill" tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 0px; --pf-v6-c-tabs--link-accent--length: 253px;"' tabs--aria-label="Animate filled example"}}
+  {{> __tabs-list __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
 ### Animate vertical tabs accent
 ```hbs
-{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-vertical" tabs--IsVertical=true __tabs-list--HasMultiLine=true tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 8px; --pf-v6-c-tabs--link-accent--length: 45px;"'}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true" __tabs-list--aria-label="Animate vertical example"}}
+{{#> tabs tabs--IsAnimateCurrent=true tabs--id="tabs-animate-current-vertical" tabs--IsVertical=true __tabs-list--HasMultiLine=true tabs--attribute='style="--pf-v6-c-tabs--link-accent--start: 8px; --pf-v6-c-tabs--link-accent--length: 45px;"' tabs--aria-label="Animate vertical example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 

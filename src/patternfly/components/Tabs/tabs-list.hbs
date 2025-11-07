@@ -2,6 +2,8 @@
   role="tablist"
   {{#if tabs-list--aria-label}}
     aria-label="{{tabs-list--aria-label}}"
+  {{else if tabs--aria-label}}
+    aria-label="{{tabs--aria-label}}"
   {{/if}}
   {{#if tabs-list--attribute}}
     {{{tabs-list--attribute}}}
