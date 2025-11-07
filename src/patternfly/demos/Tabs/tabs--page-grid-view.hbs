@@ -10,7 +10,7 @@
         {{#> wrapper newcontext tabs--page-grid-view--id=(concat tabs--page-grid-view--id "-subtabs")}}
           {{#> l-flex l-flex--modifier="pf-m-column"}}
             {{#> l-flex-item}}
-              {{#> tabs tabs--IsSecondary="true" tabs--id=tabs--page-grid-view--id}}
+              {{#> tabs tabs--aria-label="Cluster 1" tabs--IsSecondary="true" tabs--id=tabs--page-grid-view--id}}
                 {{#> tabs-list}}
                   {{> __tabs-item
                     __tabs-item--current="true"

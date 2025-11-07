@@ -275,7 +275,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
-      {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
+      {{#> tabs tabs--aria-label="Clusters" tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
         {{#> tabs-list}}
           {{> __tabs-item
             __tabs-item--current="true"
@@ -336,7 +336,7 @@ section: components
           {{#> drawer-panel drawer-panel--modifier="pf-m-width-33 pf-m-width-33-on-xl"}}
             {{> tabs--panel-header tabs--panel-header--title="Node 2" tabs--panel-header--sub-title='<a href="#">siemur/test-space</a>'}}
             {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-              {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
+              {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
             {{/drawer-body}}
             {{#> drawer-body primary-detail-template-template--id=(concat tabs-template--id '-tabs')}}
               {{> primary-detail-template-panel-tab-content progress--modifier="pf-m-sm" primary-detail-template-panel-tab-content--HasLabels="true"}}
@@ -363,7 +363,7 @@ section: components
       {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-template--id '-modal-description"')}}
         {{#> grid grid--modifier="pf-m-gutter"}}
           {{#> grid-item}}
-            {{#> tabs tabs--id=(concat modal-template--id '-tabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
+            {{#> tabs tabs--aria-label="PatternFly" tabs--id=(concat modal-template--id '-tabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
               {{#> tabs-list}}
                 {{> __tabs-item
                   __tabs-item--current="true"
@@ -432,7 +432,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
-      {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
+      {{#> tabs tabs--aria-label="Red Hat Enterprise Linux" tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
         {{#> tabs-list}}
           {{> __tabs-item
             __tabs-item--id="new"
@@ -470,7 +470,7 @@ section: components
             {{/title}}
           {{/grid-item}}
           {{#> grid-item}}
-            {{#> tabs tabs--id=(concat tabs-template--id '-subtabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
+            {{#> tabs tabs--aria-label="Get started" tabs--id=(concat tabs-template--id '-subtabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
               {{#> tabs-list}}
                 {{> __tabs-item
                   __tabs-item--current="true"
