@@ -1,3 +1,6 @@
-{{#> compass-panel compass-panel--IsHero=true compass-panel--modifier=compass-hero--modifier compass-panel--attribute=compass-hero--attribute}}
+<div class="{{pfv}}compass__hero{{#if compass-hero--modifier}} {{compass-hero--modifier}}{{/if}}"
+  {{#if compass-hero--attribute}}
+    {{{compass-hero--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
-{{/compass-panel}}
+</div>

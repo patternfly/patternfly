@@ -21,17 +21,6 @@
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
-  --#{$compass}__hero--gradient--angle: 109deg;
-  --#{$compass}__hero--gradient--stop-1--light: transparent;
-  --#{$compass}__hero--gradient--stop-2--light: transparent;
-  --#{$compass}__hero--gradient--stop-3--light: transparent;
-  --#{$compass}__hero--gradient--stop-1--dark: transparent;
-  --#{$compass}__hero--gradient--stop-2--dark: transparent;
-  --#{$compass}__hero--gradient--stop-3--dark: transparent;
-  --#{$compass}__hero--BackgroundImage--light: none;
-  --#{$compass}__hero--BackgroundImage--dark: none;
-  --#{$compass}__hero-body--Width: 800px;
-  --#{$compass}__hero-body--MaxWidth: 80%;
 }
 
 .#{$compass} {
@@ -168,36 +157,6 @@
   &.pf-m-scrollable {
     overflow: auto;
   }
-}
-
-.#{$compass}__hero {
-  display: flex;
-  padding-block-start: 32px;
-  padding-block-end: 32px;
-  padding-inline-start: 72px;
-  padding-inline-end: 0;
-  background-image: var(--#{$compass}__hero--BackgroundImage, var(--#{$compass}__hero--BackgroundImage--light)),
-    linear-gradient(
-      var(--#{$compass}__hero--gradient--angle),
-      var(--#{$compass}__hero--gradient--stop-1, var(--#{$compass}__hero--gradient--stop-1--light)) 0%,
-      var(--#{$compass}__hero--gradient--stop-2, var(--#{$compass}__hero--gradient--stop-2--light)) 50%,
-      var(--#{$compass}__hero--gradient--stop-3, var(--#{$compass}__hero--gradient--stop-3--light)) 100%
-    );
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-  border-radius: 24px 72px;
-
-  :root:where(.pf-v6-theme-dark) & {
-    --#{$compass}__hero--BackgroundImage: var(--#{$compass}__hero--BackgroundImage--dark);
-    --#{$compass}__hero--gradient--stop-1: var(--#{$compass}__hero--gradient--stop-1--dark);
-    --#{$compass}__hero--gradient--stop-2: var(--#{$compass}__hero--gradient--stop-2--dark);
-    --#{$compass}__hero--gradient--stop-3: var(--#{$compass}__hero--gradient--stop-3--dark);
-  }
-}
-
-.#{$compass}__hero-body {
-  width: min(var(--#{$compass}__hero-body--Width), var(--#{$compass}__hero-body--MaxWidth));
 }
 
 :where(.pf-v6-theme-dark) .#{$compass} {

@@ -1,0 +1,86 @@
+@use '../../sass-utilities' as *;
+
+@include pf-root($hero) {
+  --#{$hero}--PaddingBlockStart: var(--pf-t--global--spacer--xl);
+  --#{$hero}--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$hero}--PaddingInlineStart: var(--pf-t--global--spacer--3xl);
+  --#{$hero}--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$hero}--gradient--angle: 109deg;
+  --#{$hero}--gradient--stop-1--light: transparent;
+  --#{$hero}--gradient--stop-2--light: transparent;
+  --#{$hero}--gradient--stop-3--light: transparent;
+  --#{$hero}--gradient--stop-1--dark: transparent;
+  --#{$hero}--gradient--stop-2--dark: transparent;
+  --#{$hero}--gradient--stop-3--dark: transparent;
+  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--glass--default);
+  --#{$hero}--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
+  --#{$hero}--BackgroundImage--light: none;
+  --#{$hero}--BackgroundImage--dark: none;
+  --#{$hero}--BackgroundRepeat: no-repeat;
+  --#{$hero}--BackgroundPosition: right center;
+  --#{$hero}--BackgroundSize: contain;
+  --#{$hero}--BorderStyle: solid;
+  --#{$hero}--BorderBlockStartWidth: var(--pf-t--global--border--width--regular);
+  --#{$hero}--BorderBlockEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$hero}--BorderInlineStartWidth: var(--pf-t--global--border--width--regular);
+  --#{$hero}--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$hero}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$hero}--m-glass--BorderColor: var(--pf-t--global--border--color--alt);
+  --#{$hero}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$hero}--BorderStartStartRadius: 24px;
+  --#{$hero}--BorderStartEndRadius: 72px;
+  --#{$hero}--BorderEndEndRadius: 24px;
+  --#{$hero}--BorderEndStartRadius: 72px;
+  --#{$hero}__body--Width: 800px;
+  --#{$hero}__body--MaxWidth: 80%;
+}
+
+.#{$hero} {
+  display: flex;
+  padding-block-start: var(--#{$hero}--PaddingBlockStart);
+  padding-block-end: var(--#{$hero}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$hero}--PaddingInlineStart);
+  padding-inline-end: var(--#{$hero}--PaddingInlineEnd);
+  background-image: var(--#{$hero}--BackgroundImage, var(--#{$hero}--BackgroundImage--light)),
+    linear-gradient(
+      var(--#{$hero}--gradient--angle),
+      var(--#{$hero}--gradient--stop-1, var(--#{$hero}--gradient--stop-1--light)) 0%,
+      var(--#{$hero}--gradient--stop-2, var(--#{$hero}--gradient--stop-2--light)) 50%,
+      var(--#{$hero}--gradient--stop-3, var(--#{$hero}--gradient--stop-3--light)) 100%
+    );
+  background-repeat: var(--#{$hero}--BackgroundRepeat);
+  background-position: var(--#{$hero}--BackgroundPosition);
+  background-size: var(--#{$hero}--BackgroundSize);
+  border-color: var(--#{$hero}--BorderColor);
+  border-style: var(--#{$hero}--BorderStyle);
+  border-block-start-width: var(--#{$hero}--BorderBlockStartWidth);
+  border-block-end-width: var(--#{$hero}--BorderBlockEndWidth);
+  border-inline-start-width: var(--#{$hero}--BorderInlineStartWidth);
+  border-inline-end-width: var(--#{$hero}--BorderInlineEndWidth);
+  border-start-start-radius: var(--#{$hero}--BorderStartStartRadius);
+  border-start-end-radius: var(--#{$hero}--BorderStartEndRadius);
+  border-end-start-radius: var(--#{$hero}--BorderEndStartRadius);
+  border-end-end-radius: var(--#{$hero}--BorderEndEndRadius);
+
+  :root:where(.#{$pf-prefix}theme-dark) & {
+    --#{$hero}--BackgroundImage: var(--#{$hero}--BackgroundImage--dark);
+    --#{$hero}--gradient--stop-1: var(--#{$hero}--gradient--stop-1--dark);
+    --#{$hero}--gradient--stop-2: var(--#{$hero}--gradient--stop-2--dark);
+    --#{$hero}--gradient--stop-3: var(--#{$hero}--gradient--stop-3--dark);
+  }
+
+  :root:where(.#{$pf-prefix}theme-glass) & {
+    --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
+  
+    box-shadow: var(--#{$hero}--m-glass--BoxShadow);
+  }
+
+  &:not(.pf-m-no-glass) {
+    background-color: var(--#{$hero}--BackgroundColor);
+    backdrop-filter: var(--#{$hero}--BackdropFilter);
+  }
+}
+
+.#{$hero}__body {
+  width: min(var(--#{$hero}__body--Width), var(--#{$hero}__body--MaxWidth));
+}
