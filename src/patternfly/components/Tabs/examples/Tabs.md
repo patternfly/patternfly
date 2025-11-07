@@ -246,18 +246,18 @@ cssPrefix: pf-v6-c-tabs
 
 ### Using the nav element example
 ```hbs
-{{#> tabs tabs--id="using-the-nav-element" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Tabs nav"' tabs-link--isLink="true"}}
+{{#> tabs tabs--id="using-the-nav-element" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--aria-label="Using nav element example" tabs-link--isLink="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsDisabled="true" __tabs-list--aria-label="Using nav element example"}}
 {{/tabs}}
 ```
 
 ### Sub tabs using the nav element example
 ```hbs
-{{#> tabs tabs--id="sub-tabs-using-the-nav-element" tabs--type="nav" tabs--attribute='aria-label="Tabs primary nav"' tabs-link--isLink="true"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element" tabs--type="nav" tabs--attribute='aria-label="Tabs primary nav"' tabs-link--isLink="true" tabs--aria-label="Sub tabs using nav element example"}}
   {{> __tabs-list __tabs-list--aria-label="Using nav element with sub tabs example"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="sub-tabs-using-the-nav-element-subtab" tabs--type="nav" tabs--attribute='aria-label="Tabs subtab nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element-subtab" tabs--type="nav" tabs--attribute='aria-label="Tabs subtab nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab" tabs--aria-label="Sub tabs using nav element example, Containers"}}
   {{> __tabs-list-secondary __tabs-list--IsDisabled="true" __tabs-list--aria-label="Using nav element with sub tabs example, Containers"}}
 {{/tabs}}
 ```
@@ -284,7 +284,8 @@ As sub navigation:
       __tabs-list--IsAction="true"
       __tabs-list--IsScrollable="true"
       __tabs-list--DisabledFirstScrollButton="true"
-      __tabs-list--HasHelp="true" __tabs-list--IsHelpDisabled="true"}}
+      __tabs-list--HasHelp="true" __tabs-list--IsHelpDisabled="true"
+      __tabs-list--aria-label-prefix="Help button"}}
 ```
 
 ### Close button example
@@ -296,7 +297,8 @@ As sub navigation:
       __tabs-list--HasClose="true"
       __tabs-list--IsCloseDisabled="true"
       __tabs-list--IsScrollable="true"
-      __tabs-list--DisabledFirstScrollButton="true"}}
+      __tabs-list--DisabledFirstScrollButton="true"
+      __tabs-list--aria-label-prefix="Close button"}}
 ```
 
 ### Help and close button example
@@ -311,7 +313,8 @@ As sub navigation:
       __tabs-list--HasClose="true"
       __tabs-list--IsHelpDisabled="true"
       __tabs-list--IsCloseDisabled="true"
-      __tabs-list--IsHelpCloseDisabled="true"}}
+      __tabs-list--IsHelpCloseDisabled="true"
+      __tabs-list--aria-label-prefix="Help and close button"}}
 ```
 
 ## Add tab button
@@ -319,22 +322,22 @@ As sub navigation:
 ### Add tab button example
 ```hbs
 {{#> tabs tabs--id="default-tabs-add-tab-button" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button with sub tabs example"}}
 {{/tabs}}
 {{#> tabs tabs--id="default-tabs-add-tab-button-subtab" tabs--modifier="pf-m-scrollable" tabs--IsSubtab="true"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button with sub tabs example, Containers"}}
 {{/tabs}}
 
 <br><br>
 
 {{#> tabs tabs--id="box-tabs-add-tab-button" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button box example"}}
 {{/tabs}}
 
 <br><br>
 
 {{#> tabs tabs--id="box-tabs-add-tab-button-secondary " tabs--modifier="pf-m-box pf-m-secondary pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true" __tabs-list--aria-label="Add button box secondary variant example"}}
 {{/tabs}}
 ```
 

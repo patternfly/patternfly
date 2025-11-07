@@ -12,6 +12,12 @@
   {{#if tabs--attribute}}
     {{{tabs--attribute}}}
   {{/if}}
+    {{#if tabs--aria-label}}
+    aria-label="{{tabs--aria-label}}"
+  {{/if}}
+  {{#if tabs--aria-labelledby}}
+    aria-labelledby="{{tabs--aria-labelledby}}"
+  {{/if}}
   {{#unlessIfEquals tabs--type "nav"}}
     {{#unless tabs--IsNav}}
       {{#if tabs--id}}
