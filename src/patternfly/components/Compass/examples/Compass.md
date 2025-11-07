@@ -18,7 +18,9 @@ import './Compass.css';
   {{/compass-header}}
   {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
   {{#> compass-main}}
-    {{#> hero}}hero{{/hero}}
+    {{#> compass-hero}}
+      {{#> hero}}hero{{/hero}}
+    {{/compass-hero}}
     {{#> compass-main-header}}main header{{/compass-main-header}}
     {{#> compass-content}}content{{/compass-content}}
   {{/compass-main}}
@@ -43,6 +45,7 @@ import './Compass.css';
 | `.pf-v6-c-compass__main-header` | `<div>` | Initiates the compass main header. |
 | `.pf-v6-c-compass__content` | `<div>` | Initiates the compass content. **Required** |
 | `.pf-v6-c-compass__panel` | `<div>` | Initiates a compass panel. |
+| `.pf-v6-c-compass__hero` | `<div>` | Initiates a compass hero. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. **Required** |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the compass message bar. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |

@@ -2,12 +2,12 @@
 id: 'Hero'
 beta: true
 section: components
-cssPrefix: pf-v5-c-hero
+cssPrefix: pf-v6-c-hero
 ---
 
 ## Examples
 ### Basic
-```hbs
+```hbs isBeta
 {{#> hero}}
   {{#> hero-body}}
     Basic hero content
@@ -22,4 +22,4 @@ cssPrefix: pf-v5-c-hero
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-hero` | `<div>` | Initiates the hero. **Required** |
-| `.pf-v6-c-hero__body` | `<div>` | Initiates the hero body. **Required** |
+| `.pf-v6-c-hero__body` | `<div>` | Initiates the hero body. |
