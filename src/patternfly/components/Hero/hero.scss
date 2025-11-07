@@ -60,14 +60,14 @@
   border-end-start-radius: var(--#{$hero}--BorderEndStartRadius);
   border-end-end-radius: var(--#{$hero}--BorderEndEndRadius);
 
-  :root:where(.pf-v6-theme-dark) & {
+  :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$hero}--BackgroundImage: var(--#{$hero}--BackgroundImage--dark);
     --#{$hero}--gradient--stop-1: var(--#{$hero}--gradient--stop-1--dark);
     --#{$hero}--gradient--stop-2: var(--#{$hero}--gradient--stop-2--dark);
     --#{$hero}--gradient--stop-3: var(--#{$hero}--gradient--stop-3--dark);
   }
 
-  :root:where(.pf-v6-theme-glass) & {
+  :root:where(.#{$pf-prefix}theme-glass) & {
     --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
   
     box-shadow: var(--#{$hero}--m-glass--BoxShadow);
