@@ -21,5 +21,5 @@ cssPrefix: pf-v5-c-hero
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-hero` | `<div>` | Initiates the compass logo hero. **Required** |
-| `.pf-v6-c-hero__body` | `<div>` | Initiates the compass hero body. **Required** |
+| `.pf-v6-c-hero` | `<div>` | Initiates the hero. **Required** |
+| `.pf-v6-c-hero__body` | `<div>` | Initiates the hero body. **Required** |

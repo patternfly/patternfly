@@ -76,30 +76,28 @@ wrapperTag: div
       {{/compass-panel}}
     {{/compass-sidebar}}
     {{#> compass-main}}
-      {{#> compass-panel}}
-        {{#> hero}}
-          {{#> hero-body}}
-            {{#> content}}
-              <h1>Automation that does more</h1>
-              <p>Red&nbsp;Hat Ansible Automation Platform offers more capabilities, accessibility, and flexibility, so you can bring the power of automation to the teams, tasks, and environments that need it.</p>
-              {{#> action-list}}
-                {{#> action-list-group}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsPrimary=true}}
-                      Upgrade today
-                    {{/button}}
-                  {{/action-list-item}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsSecondary=true}}
-                      Talk to a Red Hatter
-                    {{/button}}
-                  {{/action-list-item}}
-                {{/action-list-group}}
-              {{/action-list}}
-            {{/content}}
-          {{/hero-body}}
-        {{/hero}}
-      {{/compass-panel}}
+      {{#> hero}}
+        {{#> hero-body}}
+          {{#> content}}
+            <h1>Automation that does more</h1>
+            <p>Red&nbsp;Hat Ansible Automation Platform offers more capabilities, accessibility, and flexibility, so you can bring the power of automation to the teams, tasks, and environments that need it.</p>
+            {{#> action-list}}
+              {{#> action-list-group}}
+                {{#> action-list-item}}
+                  {{#> button button--IsPrimary=true}}
+                    Upgrade today
+                  {{/button}}
+                {{/action-list-item}}
+                {{#> action-list-item}}
+                  {{#> button button--IsSecondary=true}}
+                    Talk to a Red Hatter
+                  {{/button}}
+                {{/action-list-item}}
+              {{/action-list-group}}
+            {{/action-list}}
+          {{/content}}
+        {{/hero-body}}
+      {{/hero}}
       {{#> compass-content}}
         {{#> grid grid--modifier="pf-m-gutter" grid--id="compass-dashboard-grid"}}
           {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:3"'}}
