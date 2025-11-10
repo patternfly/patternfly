@@ -42,7 +42,9 @@ import './Compass.css';
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the compass main wrapper. **Required** |
-| `.pf-v6-c-compass__main-header` | `<div>` | Initiates the compass main header. |
+| `.pf-v6-c-compass__main-header` | `.pf-v6-c-compass__panel` | Initiates the compass main header. |
+| `.pf-v6-c-compass__main-header-title` | `<div>` | Initiates a title within the compass main header. |
+| `.pf-v6-c-compass__main-header-toolbar` | `<div>` | Initiates a toolbar of actions within the compass main header. |
 | `.pf-v6-c-compass__content` | `<div>` | Initiates the compass content. **Required** |
 | `.pf-v6-c-compass__panel` | `<div>` | Initiates a compass panel. |
 | `.pf-v6-c-compass__hero` | `<div>` | Initiates a compass hero. |
