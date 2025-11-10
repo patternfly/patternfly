@@ -14,7 +14,7 @@ module.exports = {
     { section: 'utility-classes' },
     { section: 'patterns' },
     { section: 'extensions' },
-    { section: 'PatternFly-AI' },
+    { section: 'PatternFly-AI' }
   ],
   topNavItems: [
     {
