@@ -237,27 +237,29 @@ wrapperTag: div
     {{#> compass-main}}
       {{#> compass-main-header}}
         {{#> compass-panel}}
-          {{#> compass-main-header-title}}
-            {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-              Page title
-            {{/title}}
-          {{/compass-main-header-title}}
-          {{#> compass-main-header-toolbar}}
-            {{#> action-list}}
-              {{#> action-list-group}}
-                {{#> action-list-item}}
-                  {{#> button button--IsPrimary=true}}
-                    Add integration
-                  {{/button}}
-                {{/action-list-item}}
-                {{#> action-list-item}}
-                  {{#> button button--IsSecondary=true}}
-                    Test integration
-                  {{/button}}
-                {{/action-list-item}}
-              {{/action-list-group}}
-            {{/action-list}}
-          {{/compass-main-header-toolbar}}
+          {{#> compass-main-header-content}}
+            {{#> compass-main-header-title}}
+              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                Page title
+              {{/title}}
+            {{/compass-main-header-title}}
+            {{#> compass-main-header-toolbar}}
+              {{#> action-list}}
+                {{#> action-list-group}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsPrimary=true}}
+                      Add integration
+                    {{/button}}
+                  {{/action-list-item}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsSecondary=true}}
+                      Test integration
+                    {{/button}}
+                  {{/action-list-item}}
+                {{/action-list-group}}
+              {{/action-list}}
+            {{/compass-main-header-toolbar}}
+          {{/compass-main-header-content}}
         {{/compass-panel}}
       {{/compass-main-header}}
       {{#> compass-content}}

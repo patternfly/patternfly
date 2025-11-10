@@ -94,15 +94,13 @@
   min-height: 0;
 }
 
-.#{$compass}__main-header {
-  > .#{$compass}__panel {
-    display: flex;
-    gap: var(--#{$compass}__main-header--RowGap) var(--#{$compass}__main-header--ColumnGap);
+.#{$compass}__main-header-content {
+  display: flex;
+  gap: var(--#{$compass}__main-header--RowGap) var(--#{$compass}__main-header--ColumnGap);
+}
 
-    .#{$compass}__main-header-title {
-      flex-grow: 1;
-    }
-  }
+.#{$compass}__main-header-title {
+  flex-grow: 1;
 }
 
 .#{$compass}__content {
