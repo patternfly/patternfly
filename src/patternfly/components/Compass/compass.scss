@@ -10,6 +10,8 @@
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__sidebar--Padding: var(--pf-t--global--spacer--sm);
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
+  --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
   --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
@@ -90,6 +92,15 @@
   gap: var(--#{$compass}__main--RowGap);
   align-self: stretch;
   min-height: 0;
+}
+
+.#{$compass}__main-header-content {
+  display: flex;
+  gap: var(--#{$compass}__main-header-content--RowGap) var(--#{$compass}__main-header-content--ColumnGap);
+}
+
+.#{$compass}__main-header-title {
+  flex-grow: 1;
 }
 
 .#{$compass}__content {

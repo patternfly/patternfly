@@ -64,13 +64,13 @@
     {{#> compass-main}}
       {{#> compass-main-header}}
         {{#> compass-panel}}
-          {{#> l-flex l-flex--modifier="pf-m-align-items-center"}}
-            {{#> l-flex-item l-flex-item--modifier="pf-m-grow"}}
+          {{#> compass-main-header-content}}
+            {{#> compass-main-header-title}}
               {{#> title titleType="h2" title--modifier="pf-m-h1"}}
                 Page title
               {{/title}}
-            {{/l-flex-item}}
-            {{#> l-flex-item}}
+            {{/compass-main-header-title}}
+            {{#> compass-main-header-toolbar}}
               {{#> action-list}}
                 {{#> action-list-group}}
                   {{#> action-list-item}}
@@ -85,8 +85,8 @@
                   {{/action-list-item}}
                 {{/action-list-group}}
               {{/action-list}}
-            {{/l-flex-item}}
-          {{/l-flex}}
+            {{/compass-main-header-toolbar}}
+          {{/compass-main-header-content}}
         {{/compass-panel}}
       {{/compass-main-header}}
       {{#> compass-content}}
