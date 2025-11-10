@@ -95,19 +95,12 @@
 }
 
 .#{$compass}__main-header {
-  & .#{$compass}__panel {
+  > .#{$compass}__panel {
     display: flex;
-    flex-wrap: wrap;
     gap: var(--#{$compass}__main-header--RowGap) var(--#{$compass}__main-header--ColumnGap);
-    align-items: center;
 
     .#{$compass}__main-header-title {
       flex-grow: 1;
-      max-width: 100%;
-    }
-
-    .#{$compass}__main-header-toolbar {
-      max-width: 100%;
     }
   }
 }
