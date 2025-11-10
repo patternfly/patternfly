@@ -13,7 +13,8 @@ module.exports = {
     { section: 'layouts' },
     { section: 'utility-classes' },
     { section: 'patterns' },
-    { section: 'extensions' }
+    { section: 'extensions' },
+    { section: 'PatternFly-AI' }
   ],
   topNavItems: [
     {
