@@ -21,14 +21,22 @@ wrapperTag: div
       {{/compass-logo}}
       {{#> compass-nav}}
         {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
-          {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
-            {{> __tabs-list}}
-          {{/tabs}}
+          {{#> compass-nav-content}}
+            {{#> compass-nav-main}}
+              {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
+                {{> __tabs-list}}
+              {{/tabs}}
+            {{/compass-nav-main}}
+          {{/compass-nav-content}}
         {{/compass-panel}}
         {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
-          {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
-            {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
-          {{/tabs}}
+          {{#> compass-nav-content}}
+            {{#> compass-nav-main}}
+              {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
+                {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
+              {{/tabs}}
+            {{/compass-nav-main}}
+          {{/compass-nav-content}}
         {{/compass-panel}}
       {{/compass-nav}}
       {{#> compass-profile}}
@@ -180,14 +188,24 @@ wrapperTag: div
       {{/compass-logo}}
       {{#> compass-nav}}
         {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
-          {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
-            {{> __tabs-list}}
-          {{/tabs}}
+          {{#> compass-nav-content}}
+            {{#> compass-nav-main}}
+                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
+                  {{> __tabs-list}}
+                {{/tabs}}
+            {{/compass-nav-main}}
+          {{/compass-nav-content}}
         {{/compass-panel}}
         {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
-          {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
-            {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
-          {{/tabs}}
+          {{#> compass-nav-content}}
+            {{#> compass-nav-main}}
+              {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
+                  {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
+                {{/tabs}}
+              {{/compass-panel}}
+            {{/compass-nav-main}}
+          {{/compass-nav-content}}
         {{/compass-panel}}
       {{/compass-nav}}
       {{#> compass-profile}}

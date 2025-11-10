@@ -8,6 +8,7 @@
   --#{$compass}--RowGap: var(--pf-t--global--spacer--xl);
   --#{$compass}--ColumnGap: var(--pf-t--global--spacer--xl);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$compass}__nav--Padding: var(--pf-t--global--spacer--sm);
   --#{$compass}__sidebar--Padding: var(--pf-t--global--spacer--sm);
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
@@ -70,11 +71,18 @@
 }
 
 .#{$compass}__nav {
+  --#{$compass}__panel--Padding: 0 var(--#{$compass}__nav--Padding); // assumes there are tabs pushing the height enough not to need block padding on the home/search buttons
+
   display: flex;
   flex-direction: column;
   gap: var(--#{$compass}__nav--RowGap);
   align-items: center;
   justify-self: stretch;
+}
+
+.#{$compass}__nav-content {
+  display: flex;
+  align-items: center;
 }
 
 .#{$compass}__sidebar {

@@ -14,7 +14,15 @@ import './Compass.css';
 {{#> compass}}
   {{#> compass-header}}
     {{#> compass-logo}}logo{{/compass-logo}}
-    {{#> compass-nav}}nav{{/compass-nav}}
+    {{#> compass-nav}}
+      {{#> compass-panel}}
+        {{#> compass-nav-content}}
+          {{#> compass-nav-home}}home{{/compass-nav-home}}
+          {{#> compass-nav-main}}main{{/compass-nav-main}}
+          {{#> compass-nav-search}}search{{/compass-nav-search}}
+        {{/compass-nav-content}}
+      {{/compass-panel}}
+    {{/compass-nav}}
     {{#> compass-profile}}profile{{/compass-profile}}
   {{/compass-header}}
   {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
@@ -55,7 +63,11 @@ import './Compass.css';
 | `.pf-v6-c-compass__main-header-toolbar` | `<div>` | Initiates a toolbar of actions within the compass main header content. |
 | `.pf-v6-c-compass__content` | `<div>` | Initiates the compass content. **Required** |
 | `.pf-v6-c-compass__panel` | `<div>` | Initiates a compass panel. |
-| `.pf-v6-c-compass__hero` | `<div>` | Initiates a compass hero. |
+| `.pf-v6-c-compass__nav` | `<div>` | Initiates a compass container for site navigation. |
+| `.pf-v6-c-compass__nav-content` | `<div>` | Initiates a compass container for navigation content. |
+| `.pf-v6-c-compass__nav-home` | `<div>` | Initiates a container for compass home button. |
+| `.pf-v6-c-compass__nav-main` | `<div>` | Initiates a container for compass navigation main content. |
+| `.pf-v6-c-compass__nav-search` | `<div>` | Initiates a container for compass search button. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. **Required** |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the compass message bar. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
