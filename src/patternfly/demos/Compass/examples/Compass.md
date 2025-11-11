@@ -20,21 +20,31 @@ wrapperTag: div
         {{> compass--icons compass--icons--redhat=true}}
       {{/compass-logo}}
       {{#> compass-nav}}
-        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
           {{#> compass-nav-content}}
+            {{#> compass-nav-home}}
+              {{#> button button--IsPlain=true button--aria-label="Home" button--IsCircle=true button--IsIcon=true}}
+                {{> compass--icons compass--icons--home=true}}
+              {{/button}}
+            {{/compass-nav-home}}
             {{#> compass-nav-main}}
-              {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
-                {{> __tabs-list}}
-              {{/tabs}}
+                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true"}}
+                  {{> __tabs-list}}
+                {{/tabs}}
             {{/compass-nav-main}}
+            {{#> compass-nav-search}}
+              {{#> button button--IsPlain=true button--aria-label="Search" button--IsCircle=true button--IsIcon=true}}
+                {{> compass--icons compass--icons--search=true}}
+              {{/button}}
+            {{/compass-nav-search}}
           {{/compass-nav-content}}
         {{/compass-panel}}
-        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
           {{#> compass-nav-content}}
             {{#> compass-nav-main}}
-              {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
-                {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
-              {{/tabs}}
+                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
+                  {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
+                {{/tabs}}
             {{/compass-nav-main}}
           {{/compass-nav-content}}
         {{/compass-panel}}
@@ -187,23 +197,31 @@ wrapperTag: div
         {{> compass--icons compass--icons--redhat=true}}
       {{/compass-logo}}
       {{#> compass-nav}}
-        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
           {{#> compass-nav-content}}
+            {{#> compass-nav-home}}
+              {{#> button button--IsPlain=true button--aria-label="Home" button--IsCircle=true button--IsIcon=true}}
+                {{> compass--icons compass--icons--home=true}}
+              {{/button}}
+            {{/compass-nav-home}}
             {{#> compass-nav-main}}
-                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-inset-xl"}}
+                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true"}}
                   {{> __tabs-list}}
                 {{/tabs}}
             {{/compass-nav-main}}
+            {{#> compass-nav-search}}
+              {{#> button button--IsPlain=true button--aria-label="Search" button--IsCircle=true button--IsIcon=true}}
+                {{> compass--icons compass--icons--search=true}}
+              {{/button}}
+            {{/compass-nav-search}}
           {{/compass-nav-content}}
         {{/compass-panel}}
-        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
+        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
           {{#> compass-nav-content}}
             {{#> compass-nav-main}}
-              {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--IsPill=true}}
-                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab pf-m-inset-xl"}}
+                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
                   {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
                 {{/tabs}}
-              {{/compass-panel}}
             {{/compass-nav-main}}
           {{/compass-nav-content}}
         {{/compass-panel}}
