@@ -154,7 +154,7 @@
 .#{$compass}__main-footer {
   display: flex;
   justify-content: center;
-  margin-top: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
+  margin-block-start: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
 }
 
 .#{$compass}__sidebar.pf-m-end {
