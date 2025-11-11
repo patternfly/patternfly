@@ -38,10 +38,10 @@
   display: grid;
   grid-template-areas:
     "header header header"
-    "sidebar-start main sidebar-end"
-    "footer footer footer";
-  grid-template-rows: auto 1fr auto;
+    "sidebar-start main sidebar-end";
+  grid-template-rows: auto 1fr;
   grid-template-columns: auto 1fr auto;
+  grid-auto-rows: auto;
   gap: var(--#{$compass}--RowGap) var(--#{$compass}--ColumnGap);
   align-items: center;
   justify-content: center;
@@ -151,6 +151,12 @@
   }
 }
 
+.#{$compass}__main-footer {
+  display: flex;
+  justify-content: center;
+  margin-block-start: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
+}
+
 .#{$compass}__sidebar.pf-m-end {
   grid-area: sidebar-end;
   padding: var(--pf-t--global--spacer--sm);
@@ -158,7 +164,7 @@
 
 .#{$compass}__footer {
   display: flex;
-  grid-area: footer;
+  grid-column: 1 / -1;
   justify-content: center;
 }
 

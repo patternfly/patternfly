@@ -38,10 +38,13 @@ import './Compass.css';
       {{/compass-panel}}
     {{/compass-main-header}}
     {{#> compass-content}}content{{/compass-content}}
+    {{#> compass-main-footer}}
+      {{#> compass-message-bar}}message bar{{/compass-message-bar}}
+    {{/compass-main-footer}}
   {{/compass-main}}
   {{#> compass-sidebar compass-sidebar--IsEnd=true}}sidebar (end){{/compass-sidebar}}
   {{#> compass-footer}}
-    {{#> compass-message-bar}}message bar{{/compass-message-bar}}
+    footer
   {{/compass-footer}}
 {{/compass}}
 ```
@@ -62,13 +65,15 @@ import './Compass.css';
 | `.pf-v6-c-compass__main-header-title` | `<div>` | Initiates a title within the compass main header content. |
 | `.pf-v6-c-compass__main-header-toolbar` | `<div>` | Initiates a toolbar of actions within the compass main header content. |
 | `.pf-v6-c-compass__content` | `<div>` | Initiates the compass content. **Required** |
+| `.pf-v6-c-compass__main-footer` | `<div>` | Initiates the compass main footer. **Required** |
 | `.pf-v6-c-compass__panel` | `<div>` | Initiates a compass panel. |
 | `.pf-v6-c-compass__nav` | `<div>` | Initiates a compass container for site navigation. |
 | `.pf-v6-c-compass__nav-content` | `<div>` | Initiates a compass container for navigation content. |
 | `.pf-v6-c-compass__nav-home` | `<div>` | Initiates a container for compass home button. |
 | `.pf-v6-c-compass__nav-main` | `<div>` | Initiates a container for compass navigation main content. |
 | `.pf-v6-c-compass__nav-search` | `<div>` | Initiates a container for compass search button. |
-| `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. **Required** |
+| `.pf-v6-c-compass__hero` | `<div>` | Initiates a compass hero. |
+| `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the compass message bar. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for start styles. **Required** |
