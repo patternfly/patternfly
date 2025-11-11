@@ -168,13 +168,13 @@ cssPrefix: pf-v6-c-pagination
 | `.pf-v6-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-v6-c-pagination__nav-control` | `<div>` |  Initiates pagination nav control. |
 | `.pf-v6-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
-| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies for summary display pagination component styles at optional [breakpoint](/tokens/all-patternfly-tokens). |
-| `.pf-m-display-full{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies for full display pagination component styles at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies for summary display pagination component styles at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
+| `.pf-m-display-full{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies for full display pagination component styles at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
 | `.pf-m-bottom` | `.pf-v6-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-v6-c-pagination` | Modifies for compact pagination component styles. |
 | `.pf-m-static` | `.pf-v6-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on summary. |
 | `.pf-m-sticky` | `.pf-v6-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-v6-c-pagination.pf-m-bottom`. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies pagination horizontal padding at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies pagination horizontal padding at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
 | `.pf-m-page-insets` | `.pf-v6-c-pagination` |  Modifies the pagination component padding/inset to visually match padding of page elements. |
 | `.pf-m-first` | `.pf-v6-c-pagination__nav-control` | Indicates the control is for the first page button. |
 | `.pf-m-prev` | `.pf-v6-c-pagination__nav-control` | Indicates the control is for the previous page button. |

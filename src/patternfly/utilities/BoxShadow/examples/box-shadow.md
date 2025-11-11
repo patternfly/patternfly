@@ -1,6 +1,7 @@
 ---
 id: Box shadow
-section: utility-classes
+section: foundations-and-styles
+subsection: utility-classes
 ---
 
 import './box-shadow.css'

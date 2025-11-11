@@ -614,8 +614,8 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, `.p
 | `.progress-stepper__step-title` | `<div>`, `<button>` | Contains the title of the step. **Note:** the step title is a `<button>` when it has `.pf-m-help-text` and is used to trigger a popover with help text. |
 | `.progress-stepper__step-description` | `<div>` | Contains the description of the step. |
 | `.pf-m-center`| `.pf-v6-c-progress-stepper` | Modifies to center each step. |
-| `.pf-m-vertical{-on-[breakpoint]}`| `.pf-v6-c-progress-stepper` | Modifies progress stepper vertical layout at optional [breakpoint](/tokens/all-patternfly-tokens). |
-| `.pf-m-horizontal{-on-[breakpoint]}`| `.pf-v6-c-progress-stepper` | Modifies progress stepper horizontal layout at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-vertical{-on-[breakpoint]}`| `.pf-v6-c-progress-stepper` | Modifies progress stepper vertical layout at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
+| `.pf-m-horizontal{-on-[breakpoint]}`| `.pf-v6-c-progress-stepper` | Modifies progress stepper horizontal layout at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
 | `.pf-m-compact`| `.pf-v6-c-progress-stepper` | Modifies for compact styling. |
 | `.pf-m-success`| `.pf-v6-c-progress-stepper__step` | Modifies for success styling. |
 | `.pf-m-warning`| `.pf-v6-c-progress-stepper__step` | Modifies for warning styling. |
