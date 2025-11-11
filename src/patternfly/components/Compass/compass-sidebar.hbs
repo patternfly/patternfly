@@ -1,4 +1,7 @@
 <div class="{{pfv}}compass__sidebar
+  {{#unless compass-sidebar--IsCollapsed}}
+    pf-m-expanded
+  {{/unless}}
   {{setModifiers
     compass-sidebar--IsStart='pf-m-start'
     compass-sidebar--IsEnd='pf-m-end'
