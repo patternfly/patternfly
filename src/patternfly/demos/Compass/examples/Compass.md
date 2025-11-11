@@ -157,6 +157,13 @@ wrapperTag: div
           {{/grid-item}}
         {{/grid}}
       {{/compass-content}}
+      {{#> compass-main-footer}}
+        {{#> compass-message-bar}}
+          {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}
+            chatbot message bar
+          {{/compass-panel}}
+        {{/compass-message-bar}}
+      {{/compass-main-footer}}
     {{/compass-main}}
     {{#> compass-sidebar compass-sidebar--IsEnd=true}}
       {{#> compass-panel compass-panel--IsPill=true}}
@@ -179,11 +186,6 @@ wrapperTag: div
         {{/action-list}}
       {{/compass-panel}}
     {{/compass-sidebar}}
-    {{#> compass-footer}}
-      {{#> compass-footer-main}}
-        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}chatbot message bar{{/compass-panel}}
-      {{/compass-footer-main}}
-    {{/compass-footer}}
   {{/compass}}
 {{/compass--demo-context}}
 ```
@@ -327,6 +329,13 @@ wrapperTag: div
           {{/compass-panel}}
         {{/grid}}
       {{/compass-content}}
+      {{#> compass-main-footer}}
+        {{#> compass-message-bar}}
+          {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}
+            chatbot message bar
+          {{/compass-panel}}
+        {{/compass-message-bar}}
+      {{/compass-main-footer}}
     {{/compass-main}}
     {{#> compass-sidebar compass-sidebar--IsEnd=true}}
       {{#> compass-panel compass-panel--IsPill=true}}
@@ -349,11 +358,6 @@ wrapperTag: div
         {{/action-list}}
       {{/compass-panel}}
     {{/compass-sidebar}}
-    {{#> compass-footer}}
-      {{#> compass-footer-main}}
-        {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}chatbot message bar{{/compass-panel}}
-      {{/compass-footer-main}}
-    {{/compass-footer}}
   {{/compass}}
 {{/compass--demo-context}}
 ```
