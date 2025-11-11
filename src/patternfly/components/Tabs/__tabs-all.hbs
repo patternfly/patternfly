@@ -1,36 +1,36 @@
-  {{#> tabs tabs--id=(concat __tabs-all--id "-default-example") tabs--modifier="pf-m-scrollable"}}
+  {{#> tabs tabs--id=(concat __tabs-all--id "-default-example") tabs--modifier="pf-m-scrollable"  tabs--aria-label=(concat __tabs--aria-label-prefix ' default example')}}
     {{> __tabs-list}}
   {{/tabs}}
 
   <br><br>
 
-  {{#> tabs tabs--id=(concat __tabs-all--id "-box-example") tabs--modifier="pf-m-box pf-m-scrollable"}}
+  {{#> tabs tabs--id=(concat __tabs-all--id "-box-example") tabs--modifier="pf-m-box pf-m-scrollable" tabs--aria-label=(concat __tabs--aria-label-prefix ' box example')}}
     {{> __tabs-list}}
   {{/tabs}}
 
   <br><br>
 
-  {{#> tabs tabs--id=(concat __tabs-all--id "-box-secondary-example") tabs--modifier="pf-m-box pf-m-secondary pf-m-scrollable"}}
+  {{#> tabs tabs--id=(concat __tabs-all--id "-box-secondary-example") tabs--modifier="pf-m-box pf-m-secondary pf-m-scrollable" tabs--aria-label=(concat __tabs--aria-label-prefix ' box secondary variant example')}}
     {{> __tabs-list}}
   {{/tabs}}
 
   <br><br>
 
-  {{#> tabs tabs--id=(concat __tabs-all--id "-icons-text-example") tabs--modifier="pf-m-scrollable"}}
-    {{> __tabs-list __tabs-list--HasIcons="true"}}
-  {{/tabs}}
-
-  <br><br>
-
-  {{#> tabs tabs--id=(concat __tabs-all--id "-filled-example") tabs--modifier="pf-m-fill" __tabs-list--IsScrollable=reset}}
-    {{> __tabs-list __tabs-list--IsShort="true"}}
-  {{/tabs}}
-
-  <br><br>
-
-  {{#> tabs tabs--id=(concat __tabs-all--id "-secondary-primary-example") tabs--modifier="pf-m-scrollable"}}
+  {{#> tabs tabs--id=(concat __tabs-all--id "-icons-text-example") tabs--modifier="pf-m-scrollable" __tabs-list--HasIcons="true" tabs--aria-label=(concat __tabs--aria-label-prefix ' with icons example')}}
     {{> __tabs-list}}
   {{/tabs}}
-  {{#> tabs tabs--id=(concat __tabs-all--id "-secondary-secondary-example") tabs--modifier="pf-m-scrollable" tabs--IsSubtab="true"}}
+
+  <br><br>
+
+  {{#> tabs tabs--id=(concat __tabs-all--id "-filled-example") tabs--modifier="pf-m-fill" __tabs-list--IsScrollable=reset __tabs-list--IsShort="true" tabs--aria-label=(concat __tabs--aria-label-prefix ' filled example')}}
+    {{> __tabs-list}}
+  {{/tabs}}
+
+  <br><br>
+
+  {{#> tabs tabs--id=(concat __tabs-all--id "-secondary-primary-example") tabs--modifier="pf-m-scrollable" tabs--aria-label=(concat __tabs--aria-label-prefix ' with sub tabs example, primary')}}
+    {{> __tabs-list}}
+  {{/tabs}}
+  {{#> tabs tabs--id=(concat __tabs-all--id "-secondary-secondary-example") tabs--modifier="pf-m-scrollable" tabs--IsSubtab="true" tabs--aria-label=(concat __tabs--aria-label-prefix ' with sub tabs example, Containers')}}
     {{> __tabs-list}}
   {{/tabs}}

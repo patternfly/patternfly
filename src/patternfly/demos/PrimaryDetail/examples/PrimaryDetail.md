@@ -39,7 +39,7 @@ wrapperTag: div
 
           <!-- Tabs -->
           {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-            {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
+            {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
           {{/drawer-body}}
 
           <!-- Tab content -->
@@ -293,7 +293,7 @@ wrapperTag: div
 
         <!-- Tabs -->
         {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-          {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
+          {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
         {{/drawer-body}}
 
         <!-- Tab content -->
