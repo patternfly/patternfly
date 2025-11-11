@@ -8,6 +8,12 @@
   --#{$compass}--RowGap: var(--pf-t--global--spacer--xl);
   --#{$compass}--ColumnGap: var(--pf-t--global--spacer--xl);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$compass}__nav--PaddingBlockStart: 0;
+  --#{$compass}__nav--PaddingBlockEnd: 0;
+  --#{$compass}__nav--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$compass}__nav--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$compass}__nav-main--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$compass}__nav-main--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$compass}__sidebar--Padding: var(--pf-t--global--spacer--sm);
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
@@ -16,7 +22,10 @@
   --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$compass}__panel--Padding: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__panel--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__panel--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__panel--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--alt);
   --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--md);
@@ -70,6 +79,11 @@
 }
 
 .#{$compass}__nav {
+  --#{$compass}__panel--PaddingBlockStart: var(--#{$compass}__nav--PaddingBlockStart);
+  --#{$compass}__panel--PaddingBlockEnd: var(--#{$compass}__nav--PaddingBlockEnd);
+  --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__nav--PaddingInlineStart);
+  --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__nav--PaddingInlineEnd);
+
   display: flex;
   flex-direction: column;
   gap: var(--#{$compass}__nav--RowGap);
@@ -77,8 +91,21 @@
   justify-self: stretch;
 }
 
+.#{$compass}__nav-content {
+  display: flex;
+  align-items: center;
+}
+
+.#{$compass}__nav-main {
+  padding-inline-start: var(--#{$compass}__nav-main--PaddingInlineStart);
+  padding-inline-end: var(--#{$compass}__nav-main--PaddingInlineEnd);
+}
+
 .#{$compass}__sidebar {
-  --#{$compass}__panel--Padding: var(--#{$compass}__sidebar--Padding);
+  --#{$compass}__panel--PaddingBlockStart: var(--#{$compass}__sidebar--PaddingBlockStart);
+  --#{$compass}__panel--PaddingBlockEnd: var(--#{$compass}__sidebar--PaddingBlockEnd);
+  --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
+  --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
 
   &.pf-m-start {
     grid-area: sidebar-start;
@@ -142,7 +169,10 @@
 }
 
 .#{$compass}__panel {
-  padding: var(--#{$compass}__panel--Padding);
+  padding-block-start: var(--#{$compass}__panel--PaddingBlockStart);
+  padding-block-end: var(--#{$compass}__panel--PaddingBlockEnd);
+  padding-inline-start: var(--#{$compass}__panel--PaddingInlineStart);
+  padding-inline-end: var(--#{$compass}__panel--PaddingInlineEnd);
   background-color: var(--#{$compass}__panel--BackgroundColor);
   backdrop-filter: var(--#{$compass}__panel--BackdropFilter);
   border: var(--#{$compass}__panel--BorderWidth) solid var(--#{$compass}__panel--BorderColor);
