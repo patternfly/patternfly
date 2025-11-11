@@ -42,7 +42,7 @@ wrapperTag: div
         {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
           {{#> compass-nav-content}}
             {{#> compass-nav-main}}
-                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
+                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass secondary" tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
                   {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
                 {{/tabs}}
             {{/compass-nav-main}}
@@ -207,7 +207,7 @@ wrapperTag: div
               {{/button}}
             {{/compass-nav-home}}
             {{#> compass-nav-main}}
-                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true"}}
+                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass primary" tabs-link--isLink="true"}}
                   {{> __tabs-list}}
                 {{/tabs}}
             {{/compass-nav-main}}
@@ -221,7 +221,7 @@ wrapperTag: div
         {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
           {{#> compass-nav-content}}
             {{#> compass-nav-main}}
-                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
+                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass secondary" tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
                   {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
                 {{/tabs}}
             {{/compass-nav-main}}

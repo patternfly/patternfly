@@ -10,7 +10,7 @@ cssPrefix: pf-v6-c-tabs
 
 ### Default tabs example
 ```hbs
-{{#> tabs tabs--id="default-tabs" tabs--aria-label="Default exampe"}}
+{{#> tabs tabs--id="default-tabs" tabs--aria-label="Default example"}}
   {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
