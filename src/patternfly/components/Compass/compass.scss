@@ -87,6 +87,7 @@
 
 .#{$compass}__header,
 .#{$compass}__sidebar:is(.pf-m-start, .pf-m-end),
+.#{$compass}__main-footer,
 .#{$compass}__footer {
   visibility: hidden;
   opacity: 0;
@@ -106,6 +107,7 @@
 }
 
 .#{$compass}__header,
+.#{$compass}__main-footer,
 .#{$compass}__footer {
   max-height: 0;
 
@@ -223,6 +225,7 @@
   display: flex;
   justify-content: center;
   margin-block-start: var(--#{$compass}__main-footer--MarginBlockStart);
+  translate: 0 100%;
 }
 
 .#{$compass}__footer {

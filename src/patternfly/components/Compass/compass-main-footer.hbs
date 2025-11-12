@@ -1,4 +1,13 @@
-<div class="{{pfv}}compass__main-footer{{#if compass-main-footer--modifier}} {{compass-main-footer--modifier}}{{/if}}"
+<div class="{{pfv}}compass__main-footer
+  {{#unless compass-main-footer--IsCollapsed}}
+    pf-m-expanded
+  {{/unless}}
+  {{setModifiers
+    compass-main-footer--modifier=compass-main-footer--modifier
+  }}"
+  {{#if compass-main-footer--IsCollapsed}}
+    inert
+  {{/if}}
   {{#if compass-main-footer--attribute}}
     {{{compass-main-footer--attribute}}}
   {{/if}}>
