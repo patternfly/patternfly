@@ -5,8 +5,8 @@
   --#{$compass}--BackgroundImage--light: none;
   --#{$compass}--BackgroundImage--dark: none;
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}--RowGap: var(--pf-t--global--spacer--xl);
-  --#{$compass}--ColumnGap: var(--pf-t--global--spacer--xl);
+  --#{$compass}--RowGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__nav--PaddingBlockStart: 0;
   --#{$compass}__nav--PaddingBlockEnd: 0;
@@ -21,6 +21,7 @@
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
   --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
   --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
@@ -221,7 +222,7 @@
 .#{$compass}__main-footer {
   display: flex;
   justify-content: center;
-  margin-block-start: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
+  margin-block-start: var(--#{$compass}__main-footer--MarginBlockStart);
 }
 
 .#{$compass}__footer {
