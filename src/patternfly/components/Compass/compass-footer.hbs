@@ -5,6 +5,9 @@
   {{setModifiers
     compass-footer--modifier=compass-footer--modifier
   }}"
+  {{#if compass-footer--IsCollapsed}}
+    inert
+  {{/if}}
   {{#if compass-footer--attribute}}
     {{{compass-footer--attribute}}}
   {{/if}}>

@@ -7,6 +7,9 @@
     compass-sidebar--IsEnd='pf-m-end'
     compass-sidebar--modifier=compass-sidebar--modifier
   }}"
+  {{#if compass-sidebar--IsCollapsed}}
+    inert
+  {{/if}}
   {{#if compass-sidebar--attribute}}
     {{{compass-sidebar--attribute}}}
   {{/if}}>
