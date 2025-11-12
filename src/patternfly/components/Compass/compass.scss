@@ -166,13 +166,24 @@
   }
 
   &.pf-m-start {
+    @include pf-v6-bidirectional-style(
+      $prop: translate,
+      $ltr-val: -100%,
+      $rtl-val: 100%,
+    );
+
     grid-area: sidebar-start;
-    translate: -100%;
+
   }
 
   &.pf-m-end {
+    @include pf-v6-bidirectional-style(
+      $prop: translate,
+      $ltr-val: 100%,
+      $rtl-val: -100%,
+    );
+
     grid-area: sidebar-end;
-    translate: 100%;
   }
 }
 
