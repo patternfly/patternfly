@@ -5,8 +5,7 @@
   --#{$compass}--BackgroundImage--light: none;
   --#{$compass}--BackgroundImage--dark: none;
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}--RowGap: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}--Gap: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__nav--PaddingBlockStart: 0;
   --#{$compass}__nav--PaddingBlockEnd: 0;
@@ -21,7 +20,7 @@
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
-  --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
+  --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--Gap)); // Creates same gap as parent compass grid, mimicking the compass footer
   --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
   --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
@@ -38,25 +37,43 @@
   --#{$compass}__message-bar--MaxWidth: 600px;
 
   // Section animation
+  --#{$compass}--section--slide--length--header: 100%;
+  --#{$compass}--section--slide--length--sidebar: 100%;
+  --#{$compass}--section--slide--length--main-footer: 100%;
+  --#{$compass}--section--slide--length--footer: 100%;
   --#{$compass}--section--duration: var(--pf-t--global--motion--duration--fade--default);
   --#{$compass}--section--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s;
-  --#{$compass}--section--TransitionProperty: opacity, visibility, translate, max-height, max-width;
-  --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+  --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s, 0s;
+  --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
+  --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
   --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s;
+  --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s, 0s;
   --#{$compass}--section--m-expanded--TransitionDelay: 0s;
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$compass}--section--duration: var(--pf-t--global--motion--duration--slide-out--default);
-    --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s;
-    --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+    --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
+    --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
     --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s;
+    --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
+
+    &.pf-m-animate-smooth {
+      --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
+      --#{$compass}--section--slide--length--header: 10rem;
+      --#{$compass}--section--slide--length--sidebar: var(--pf-t--global--spacer--4xl);
+      --#{$compass}--section--slide--length--main-footer: 6rem;
+      --#{$compass}--section--slide--length--footer: 6rem;
+      --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+      --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
+      --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--slide-in--default);
+      --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+    }
   }
 }
 
 .#{$compass} {
+  // stylelint-disable-next-line
+  interpolate-size: allow-keywords;
   display: grid;
   grid-template-areas:
     "header header header"
@@ -64,7 +81,6 @@
   grid-template-rows: auto 1fr;
   grid-template-columns: auto 1fr auto;
   grid-auto-rows: auto;
-  gap: var(--#{$compass}--RowGap) var(--#{$compass}--ColumnGap);
   align-items: center;
   justify-content: center;
   height: 100dvh;
@@ -89,6 +105,7 @@
 .#{$compass}__sidebar:is(.pf-m-start, .pf-m-end),
 .#{$compass}__main-footer,
 .#{$compass}__footer {
+  margin: 0;
   visibility: hidden;
   opacity: 0;
   transition-delay: var(--#{$compass}--section--TransitionDelay);
@@ -109,10 +126,10 @@
 .#{$compass}__header,
 .#{$compass}__main-footer,
 .#{$compass}__footer {
-  max-height: 0;
+  height: 0;
 
   &.pf-m-expanded {
-    max-height: 9999px;
+    height: auto;
   }
 }
 
@@ -121,7 +138,11 @@
   grid-area: header;
   grid-template-columns: 1fr auto 1fr;
   align-items: start;
-  translate: 0 -100%;
+  translate: 0 calc(var(--#{$compass}--section--slide--length--header) * -1);
+
+  &.pf-m-expanded {
+    margin-block-end: var(--#{$compass}--Gap);
+  }
 }
 
 .#{$compass}__profile {
@@ -162,31 +183,39 @@
   --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
   --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
 
-  max-width: 0;
+  display: flex;
+  width: 0;
 
   &.pf-m-expanded {
-    max-width: 9999px;
+    width: auto;
   }
 
   &.pf-m-start {
     @include pf-v6-bidirectional-style(
       $prop: translate,
-      $ltr-val: -100%,
-      $rtl-val: 100%,
+      $ltr-val: calc(var(--#{$compass}--section--slide--length--sidebar) * -1),
+      $rtl-val: var(--#{$compass}--section--slide--length--sidebar),
     );
 
     grid-area: sidebar-start;
 
+    &.pf-m-expanded {
+      margin-inline-end: var(--#{$compass}--Gap);
+    }
   }
 
   &.pf-m-end {
     @include pf-v6-bidirectional-style(
       $prop: translate,
-      $ltr-val: 100%,
-      $rtl-val: -100%,
+      $ltr-val: var(--#{$compass}--section--slide--length--sidebar),
+      $rtl-val: calc(var(--#{$compass}--section--slide--length--sidebar) * -1),
     );
 
     grid-area: sidebar-end;
+
+    &.pf-m-expanded {
+      margin-inline-start: var(--#{$compass}--Gap);
+    }
   }
 }
 
@@ -224,15 +253,23 @@
 .#{$compass}__main-footer {
   display: flex;
   justify-content: center;
-  margin-block-start: var(--#{$compass}__main-footer--MarginBlockStart);
-  translate: 0 100%;
+  min-height: 0;
+  translate: 0 var(--#{$compass}--section--slide--length--main-footer);
+
+  &.pf-m-expanded {
+    margin-block-start: var(--#{$compass}__main-footer--MarginBlockStart);
+  }
 }
 
 .#{$compass}__footer {
   display: flex;
   grid-column: 1 / -1;
   justify-content: center;
-  translate: 0 100%;
+  translate: 0 var(--#{$compass}--section--slide--length--main-footer);
+
+  &.pf-m-expanded {
+    margin-block-start: var(--#{$compass}--Gap);
+  }
 }
 
 .#{$compass}__message-bar {
