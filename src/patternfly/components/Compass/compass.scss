@@ -57,7 +57,7 @@
     --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--slide-in--default);
     --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
 
-    &.pf-m-animate-smooth {
+    &.pf-m-animate-smoothly {
       --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
       --#{$compass}--section--slide--length--header: 10rem;
       --#{$compass}--section--slide--length--sidebar: var(--pf-t--global--spacer--4xl);
