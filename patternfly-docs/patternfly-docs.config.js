@@ -7,13 +7,9 @@ module.exports = {
   hasHighContrastSwitcher: true,
   hasRTLSwitcher: true,
   sideNavItems: [
-    { section: 'get-started' },
-    { section: 'developer-resources' },
     { section: 'components' },
-    { section: 'layouts' },
-    { section: 'utility-classes' },
     { section: 'patterns' },
-    { section: 'extensions' },
+    { section: 'foundations-and-styles' },
     { section: 'PatternFly-AI' }
   ],
   topNavItems: [
