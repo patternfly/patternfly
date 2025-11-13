@@ -1,9 +1,15 @@
 <div class="{{pfv}}compass__sidebar
+  {{#unless compass-sidebar--IsCollapsed}}
+    pf-m-expanded
+  {{/unless}}
   {{setModifiers
     compass-sidebar--IsStart='pf-m-start'
     compass-sidebar--IsEnd='pf-m-end'
     compass-sidebar--modifier=compass-sidebar--modifier
   }}"
+  {{#if compass-sidebar--IsCollapsed}}
+    inert
+  {{/if}}
   {{#if compass-sidebar--attribute}}
     {{{compass-sidebar--attribute}}}
   {{/if}}>

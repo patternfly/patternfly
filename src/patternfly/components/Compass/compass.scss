@@ -5,8 +5,8 @@
   --#{$compass}--BackgroundImage--light: none;
   --#{$compass}--BackgroundImage--dark: none;
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}--RowGap: var(--pf-t--global--spacer--xl);
-  --#{$compass}--ColumnGap: var(--pf-t--global--spacer--xl);
+  --#{$compass}--RowGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__nav--PaddingBlockStart: 0;
   --#{$compass}__nav--PaddingBlockEnd: 0;
@@ -14,10 +14,14 @@
   --#{$compass}__nav--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$compass}__nav-main--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$compass}__nav-main--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
-  --#{$compass}__sidebar--Padding: var(--pf-t--global--spacer--sm);
+  --#{$compass}__sidebar--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$compass}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$compass}__sidebar--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$compass}__sidebar--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$compass}__main--RowGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
   --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
   --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
@@ -32,6 +36,24 @@
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
+
+  // Section animation
+  --#{$compass}--section--duration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$compass}--section--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s;
+  --#{$compass}--section--TransitionProperty: opacity, visibility, translate, max-height, max-width;
+  --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+  --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s;
+  --#{$compass}--section--m-expanded--TransitionDelay: 0s;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$compass}--section--duration: var(--pf-t--global--motion--duration--slide-out--default);
+    --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s;
+    --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+    --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s;
+  }
 }
 
 .#{$compass} {
@@ -47,10 +69,11 @@
   justify-content: center;
   height: 100dvh;
   padding: var(--#{$compass}--Padding);
+  overflow: hidden;
   background-image: var(--#{$compass}--BackgroundImage);
   background-size: cover;
 
-  :root:where(.pf-v6-theme-dark) & {
+  :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
   }
 
@@ -62,11 +85,43 @@
   }
 }
 
+.#{$compass}__header,
+.#{$compass}__sidebar:is(.pf-m-start, .pf-m-end),
+.#{$compass}__main-footer,
+.#{$compass}__footer {
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: var(--#{$compass}--section--TransitionDelay);
+  transition-timing-function: var(--#{$compass}--section--TransitionTimingFunction);
+  transition-duration: var(--#{$compass}--section--TransitionDuration);
+  transition-property: var(--#{$compass}--section--TransitionProperty);
+
+  &.pf-m-expanded {
+    --#{$compass}--section--TransitionDelay: var(--#{$compass}--section--m-expanded--TransitionDelay);
+    --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--m-expanded--TransitionDuration);
+
+    visibility: visible;
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+.#{$compass}__header,
+.#{$compass}__main-footer,
+.#{$compass}__footer {
+  max-height: 0;
+
+  &.pf-m-expanded {
+    max-height: 9999px;
+  }
+}
+
 .#{$compass}__header {
   display: grid;
   grid-area: header;
   grid-template-columns: 1fr auto 1fr;
   align-items: start;
+  translate: 0 -100%;
 }
 
 .#{$compass}__profile {
@@ -107,8 +162,31 @@
   --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
   --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
 
+  max-width: 0;
+
+  &.pf-m-expanded {
+    max-width: 9999px;
+  }
+
   &.pf-m-start {
+    @include pf-v6-bidirectional-style(
+      $prop: translate,
+      $ltr-val: -100%,
+      $rtl-val: 100%,
+    );
+
     grid-area: sidebar-start;
+
+  }
+
+  &.pf-m-end {
+    @include pf-v6-bidirectional-style(
+      $prop: translate,
+      $ltr-val: 100%,
+      $rtl-val: -100%,
+    );
+
+    grid-area: sidebar-end;
   }
 }
 
@@ -137,14 +215,6 @@
   min-height: 0;
   overflow: auto;
 
-  // mask: linear-gradient(
-  //   rgba(0, 0, 0, calc(1 - var(--#{$compass}__scroll-top) / 20)),
-  //   black var(--#{$compass}--feather--length),
-  //   black calc(100% - var(--#{$compass}--feather--length)),
-  //   rgba(0, 0, 0, calc(1 - var(--#{$compass}__scroll-bottom) / 20))
-  // );
-  // backdrop-filter: blur(8px);
-
   > *:last-child {
     flex-grow: 1;
     max-height: 100%;
@@ -154,18 +224,15 @@
 .#{$compass}__main-footer {
   display: flex;
   justify-content: center;
-  margin-block-start: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--RowGap)); // Creates same gap as parent compass grid, mimicking the compass footer
-}
-
-.#{$compass}__sidebar.pf-m-end {
-  grid-area: sidebar-end;
-  padding: var(--pf-t--global--spacer--sm);
+  margin-block-start: var(--#{$compass}__main-footer--MarginBlockStart);
+  translate: 0 100%;
 }
 
 .#{$compass}__footer {
   display: flex;
   grid-column: 1 / -1;
   justify-content: center;
+  translate: 0 100%;
 }
 
 .#{$compass}__message-bar {
@@ -205,38 +272,6 @@
     overflow: auto;
   }
 }
-
-:where(.pf-v6-theme-dark) .#{$compass} {
-  // dark theme goes here
-}
-
-// .pf-chatbot__message-bar {
-//   width: 100%;
-//   min-width: var(--#{$compass}--message-bar--min-width);
-//   max-width: var(--#{$compass}--message-bar--max-width);
-//   padding-inline-start: 0px;
-//   padding-inline-end: 0.8em;
-//   background: transparent;
-//   border: 0;
-
-//   &:hover,
-//   &:focus-within {
-//     box-shadow: var(--pf-t--global--box-shadow--md);
-//   }
-
-//   .pf-chatbot__button--send.pf-m-compact {
-//     width: auto;
-//     height: auto;
-//     padding: var(--pf-v6-c-button--m-small--PaddingBlockStart) var(--pf-v6-c-button--m-small--PaddingInlineEnd)
-//       var(--pf-v6-c-button--m-small--PaddingBlockEnd) var(--pf-v6-c-button--m-small--PaddingInlineStart);
-
-//     .pf-v6-c-button__icon {
-//       min-width: 1lh;
-//     }
-//   }
-// }
-
-
 
 /* stylelint-disable */
 @media (max-width: 1200px) {

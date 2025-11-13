@@ -83,3 +83,4 @@ import './Compass.css';
 | `.pf-m-full-height` | `.pf-v6-c-compass__panel` | Modifies a compass panel to be full height. |
 | `.pf-m-pill` | `.pf-v6-c-compass__panel` | Modifies a compass panel to have a pill shaped border radius. |
 | `.pf-m-scrollable` | `.pf-v6-c-compass__panel` | Modifies a compass panel to scroll its overflow. |
+| `.pf-m-expanded` | `.pf-v6-c-compass__header`, `.pf-v6-c-compass__sidebar`, `.pf-v6-c-compass__main-footer`, `.pf-v6-c-compass__footer` | Modifies a compass section for expanded styles. |
