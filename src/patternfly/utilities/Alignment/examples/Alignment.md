@@ -27,7 +27,7 @@ import './Alignment.css'
 
 ## Documentation
 ### Overview
-[Breakpoints](/foundations-and-styles/design-tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-text-align-start-on-lg`
+[Breakpoints](/foundations-and-styles/design-tokens/all-design-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-text-align-start-on-lg`
 
 ### Usage
 | Class | Applied to | Outcome |

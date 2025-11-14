@@ -139,7 +139,7 @@ These classes can be used to ensure that the table changes between the tabular a
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-v6-c-table` | Changes tabular layout to responsive, grid based layout at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
+| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-v6-c-table` | Changes tabular layout to responsive, grid based layout at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-grid` | `.pf-v6-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
 
 ## Sortable
@@ -3391,8 +3391,8 @@ Width modifiers control the width of the columns. To control the responsive beha
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-table tr > th`, `.pf-v6-c-table tr > td` | Hides a table cell at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens), or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-table tr > th`, `.pf-v6-c-table tr > td` | Shows a table cell at optional [breakpoint](/foundations-and-styles/design-tokens/all-patternfly-tokens). |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v6-c-table tr > th`, `.pf-v6-c-table tr > td` | Hides a table cell at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens), or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v6-c-table tr > th`, `.pf-v6-c-table tr > td` | Shows a table cell at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 
 
 ## Text control modifiers

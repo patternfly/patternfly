@@ -42,7 +42,7 @@ Care should be taken especially when applying background colors, as this can hav
 
 Note that "inverse" background colors are labeled as such to indicate that they are best used with the ["inverse" text colors](/foundations-and-styles/utility-classes/text#inverse-colors).
 
-[Breakpoints](/foundations-and-styles/design-tokens/all-patternfly-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-background-color-disabled-on-lg`
+[Breakpoints](/foundations-and-styles/design-tokens/all-design-tokens) are optional. Breakpoint options include: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. Example: `.pf-v6-u-background-color-disabled-on-lg`
 
 ### Usage
 

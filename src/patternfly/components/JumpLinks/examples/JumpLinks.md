@@ -547,7 +547,7 @@ cssPrefix: pf-v6-c-jump-links
 | `.pf-v6-c-jump-links__link-text` | `<div>` | Initiates the jump links link text. |
 | `.pf-m-vertical` | `.pf-v6-c-jump-links` | Modifies the jump links component to be vertical. |
 | `.pf-m-center` | `.pf-v6-c-jump-links` | Modifies the jump links component to center its list and label. |
-| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-jump-links` | Modifies the jump links component to be expandable via a toggle at optional [breakpoint](/tokens/all-patternfly-tokens). **Note:** works with vertical jump links only. |
-| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-jump-links` | Modifies the jump links component to be non-expandable at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-jump-links` | Modifies the jump links component to be expandable via a toggle at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). **Note:** works with vertical jump links only. |
+| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-jump-links` | Modifies the jump links component to be non-expandable at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-expanded` | `.pf-v6-c-jump-links` | Modifies the expandable jump links component for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-jump-links__item`| Modifies the jump links item to be current. |
