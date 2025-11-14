@@ -10,7 +10,7 @@ module.exports = {
     { section: 'components' },
     { section: 'patterns' },
     { section: 'foundations-and-styles' },
-    { section: 'PatternFly-AI' }
+    { section: 'AI' }
   ],
   topNavItems: [
     {

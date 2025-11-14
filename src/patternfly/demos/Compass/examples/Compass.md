@@ -1,6 +1,6 @@
 ---
 id: Compass
-section: PatternFly-AI
+section: AI
 subsection: Generative UIs
 wrapperTag: div
 ---
