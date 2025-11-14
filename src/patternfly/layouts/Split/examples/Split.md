@@ -1,6 +1,7 @@
 ---
 id: Split
-section: layouts
+section: foundations-and-styles
+subsection: layouts
 cssPrefix: pf-v6-l-split
 ---
 

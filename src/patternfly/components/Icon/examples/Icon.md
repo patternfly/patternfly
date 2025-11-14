@@ -260,7 +260,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
 ### Overview
 The icon element is a container used to maintain a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
 
-Refer to the [icons](/design-foundations/icons) page for information about the PatternFly icon set and guidelines for use.
+Refer to the [icons](/foundations-and-styles/icons) page for information about the PatternFly icon set and guidelines for use.
 
 ### Usage
 | Class | Applied to | Outcome |

@@ -458,11 +458,11 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-box` | `.pf-v6-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-v6-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-v6-c-tabs` | Modifies the tabs to fill the available space. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v6-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-v6-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-page-insets` | `.pf-v6-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 | `.pf-m-secondary` | `.pf-v6-c-tabs.pf-m-box` | Modifies the tabs component tab background colors for the box variant. |
-| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/tokens/all-patternfly-tokens). **Note:** works with vertical tabs only. |
-| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). **Note:** works with vertical tabs only. |
+| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-v6-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-expanded` | `.pf-v6-c-tabs` | Modifies the expandable tabs component for the expanded state. |
 | `.pf-m-animate-current` | `.pf-v6-c-tabs` | Modifies tabs to animate movement of the current tab accent line. |
 | `.pf-m-initializing-accent` | `.pf-v6-c-tabs.pf-m-animate-current` | Modifies tabs styles while initializing the "current" tab's accent styles. |

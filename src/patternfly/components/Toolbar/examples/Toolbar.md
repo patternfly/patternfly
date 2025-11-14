@@ -16,8 +16,8 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 | -- | -- | -- |
 | `.pf-v6-c-toolbar__group` | `--pf-v6-c-toolbar__group--ColumnGap` | `16px` |
 | `.pf-v6-c-toolbar__item` | `--pf-v6-c-toolbar__item--ColumnGap` | `16px` |
-| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` |  `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/tokens/all-patternfly-tokens). |
-| `.pf-m-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` |  `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies both column gap and row gap for toolbar group or item spacing at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` |  `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
+| `.pf-m-gap-[none/sm/md/lg/xl/2xl]{-on-[breakpoint]}` |  `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies both column gap and row gap for toolbar group or item spacing at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 
 ### Toolbar item types
 
@@ -39,7 +39,7 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 
 Several components in the following examples do not include functional and/or accessibility specifications (for example `.pf-v6-c-select`, `.pf-v6-c-options-menu`). Rather, `.pf-v6-c-toolbar` focuses on functionality and accessibility specifications that apply to it only.
 
-**Available [breakpoints](/tokens/all-patternfly-tokens) are: `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl`.**
+**Available [breakpoints](/foundations-and-styles/design-tokens/all-design-tokens) are: `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl`.**
 
 ## Examples
 
@@ -220,8 +220,8 @@ Several components in the following examples do not include functional and/or ac
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `--pf-v6-c-toolbar__item--Width: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the width value of a toolbar item at optional [breakpoint](/tokens/all-patternfly-tokens). |
-| `--pf-v6-c-toolbar__item--MinWidth: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the min width value of a toolbar item at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `--pf-v6-c-toolbar__item--Width: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the width value of a toolbar item at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
+| `--pf-v6-c-toolbar__item--MinWidth: {width}` | `.pf-v6-c-toolbar__item` |  Modifies the min width value of a toolbar item at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 
 ## Group types
 
@@ -678,5 +678,5 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/tokens/all-patternfly-tokens). |
-| `.pf-m-gap-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies both column and row gap for toolbar group or item spacing at optional [breakpoint](/tokens/all-patternfly-tokens). |
+| `.pf-m-[column/row]-gap-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
+| `.pf-m-gap-[none/sm/md/lg/xl/2xl]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies both column and row gap for toolbar group or item spacing at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
