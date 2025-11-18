@@ -1,8 +1,8 @@
-#ws-core-p-compass-basic [class*="pf-v6-c-compass"] {
+#ws-core-a-compass-basic [class*="pf-v6-c-compass"] {
   position: relative;
 }
 
-#ws-core-p-compass-basic [class*="pf-v6-c-compass"]::after {
+#ws-core-a-compass-basic [class*="pf-v6-c-compass"]::after {
   position: absolute;
   inset: 0;
   pointer-events: none;
