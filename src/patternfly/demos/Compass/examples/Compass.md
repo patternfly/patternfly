@@ -50,7 +50,7 @@ wrapperTag: div
         {{/compass-panel}}
       {{/compass-nav}}
       {{#> compass-profile}}
-        {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+        {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--IsCircle=true}}
           {{#> menu-toggle-icon}}
             {{> avatar avatar--modifier="pf-m-md"}}
           {{/menu-toggle-icon}}
@@ -229,7 +229,7 @@ wrapperTag: div
         {{/compass-panel}}
       {{/compass-nav}}
       {{#> compass-profile}}
-        {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+        {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--IsCircle=true}}
           {{#> menu-toggle-icon}}
             {{> avatar avatar--modifier="pf-m-md"}}
           {{/menu-toggle-icon}}
