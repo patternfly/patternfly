@@ -41,21 +41,19 @@
   --#{$compass}--section--slide--length--sidebar: 100%;
   --#{$compass}--section--slide--length--main-footer: 100%;
   --#{$compass}--section--slide--length--footer: 100%;
-  --#{$compass}--section--duration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$compass}--section--duration: var(--pf-t--global--motion--duration--fade--short);
   --#{$compass}--section--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s, 0s;
   --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
   --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
   --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--fade--default);
-  --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, 0s, 0s, 0s, 0s;
+  --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s, 0s, 0s;
   --#{$compass}--section--m-expanded--TransitionDelay: 0s;
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$compass}--section--duration: var(--pf-t--global--motion--duration--slide-out--default);
     --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
     --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
-    --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--slide-in--default);
-    --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
+    --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s;
 
     &.pf-m-animate-smoothly {
       --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
@@ -65,8 +63,7 @@
       --#{$compass}--section--slide--length--footer: 6rem;
       --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
       --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
-      --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--slide-in--default);
-      --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
+      --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), var(--#{$compass}--section--m-expanded--duration), var(--#{$compass}--section--m-expanded--duration);
     }
   }
 }
