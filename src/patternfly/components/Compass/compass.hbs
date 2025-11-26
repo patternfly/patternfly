@@ -1,4 +1,12 @@
-<div class="{{pfv}}compass{{#if compass--modifier}} {{compass--modifier}}{{/if}}"
+<div class="{{pfv}}compass
+  {{#unless compass--NoSmoothAnimate}}
+    pf-m-animate-smoothly
+  {{/unless}}
+  {{setModifiers
+    compass--IsStart='pf-m-start'
+    compass--IsEnd='pf-m-end'
+    compass--modifier=compass--modifier
+  }}"
   {{#if compass--attribute}}
     {{{compass--attribute}}}
   {{/if}}>
