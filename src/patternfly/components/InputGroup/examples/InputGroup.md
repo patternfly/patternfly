@@ -131,7 +131,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
 
 ## Documentation
 ### Accessibility
-When using the `.pf-v6-c-input-group` always ensure labels are used outside the input group with the `.pf-v6-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributes. For more information on accessibility and forms see the [form component](/components/form).
+When using the `.pf-v6-c-input-group` always ensure labels are used outside the input group with the `.pf-v6-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributes. For more information on accessibility and forms see the [form component](/components/forms/form).
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
