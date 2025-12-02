@@ -7,11 +7,17 @@ wrapperTag: div
 
 ## Examples
 ### Card view
+
+This demo places a card view within the main Compass section. 
+
 ```hbs isFullscreen isBeta
 {{> compass--card-view}}
 ```
 
 ### Dashboard
+
+This demo places a dashboard within the main Compass section. 
+
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
@@ -191,6 +197,9 @@ wrapperTag: div
 ```
 
 ### Multiple sections
+
+This demo places multiple sections within the main Compass section, with each section containing a card view. 
+
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
@@ -363,6 +372,9 @@ wrapperTag: div
 ```
 
 ### With drawer
+
+This demo showcases how you can position a side-panel drawer on top of the other Compass elements. 
+
 ```hbs isFullscreen isBeta
 {{#> drawer drawer--id="pill" drawer--IsPill=true drawer-panel--IsOpen=true}}
  {{#> drawer-main}}
