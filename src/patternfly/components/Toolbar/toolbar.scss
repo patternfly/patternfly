@@ -193,9 +193,14 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-no-background--BackgroundColor);
   }
 
-  // @include resize-observer-placeholder('md') {
-  //   do resize observer things here
-  // }
+  &.pf-m-vertical {
+    --#{$toolbar}--child--m-align-end--MarginBlockStart: auto;
+    --#{$toolbar}--child--m-align-end--MarginInlineStart: 0;
+
+    :is(.#{$toolbar}__group, .#{$toolbar}__item, .#{$toolbar}__content-section) {
+      flex-direction: column;
+    }
+  }
 }
 
 // - Toolbar item
@@ -348,7 +353,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       }
 
       &.pf-m-align-end#{$breakpoint-name} {
-        margin-inline-start: auto;
+        margin-block-start: var(--#{$toolbar}--child--m-align-end--MarginBlockStart, 0);
+        margin-inline-start: var(--#{$toolbar}--child--m-align-end--MarginInlineStart, auto);
       }
 
       &.pf-m-flex-grow#{$breakpoint-name} {

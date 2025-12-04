@@ -39,6 +39,11 @@
 
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
+  --#{$nav}__item--accent--size: 0;
+  --#{$nav}__item--accent--color: transparent;
+  --#{$nav}__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--md));
+  --#{$nav}__item--current--accent--size: var(--pf-t--global--border--width--extra-strong);
+  --#{$nav}__item--current--accent--color: var(--pf-t--global--border--color--clicked);
 
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
@@ -129,6 +134,14 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // Docked
+  --#{$nav}--m-docked__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$nav}--m-docked__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$nav}--m-docked__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--sm));
 }
 
 // - Nav display - default to grid
@@ -166,6 +179,26 @@
 
   &.pf-m-fill {
     flex-grow: 1;
+  }
+
+  &.pf-m-docked {
+    --#{$nav}--PaddingBlockStart: 0;
+    --#{$nav}--PaddingBlockEnd: 0;
+    --#{$nav}__link--PaddingInlineStart: var(--#{$nav}--m-docked__link--PaddingInlineStart);
+    --#{$nav}__link--PaddingInlineEnd: var(--#{$nav}--m-docked__link--PaddingInlineEnd);
+    --#{$nav}__link--BackgroundColor: var(--#{$nav}--m-docked__link--BackgroundColor);
+    --#{$nav}__link--hover--BackgroundColor: var(--#{$nav}--m-docked__link--hover--BackgroundColor);
+    --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
+    --#{$nav}__item--accent--offset: var(--#{$nav}--m-docked__item--accent--offset);
+
+    .#{$nav}__link-text {
+      display: none;
+    }
+
+    .#{$nav}__link-icon {
+      min-width: 1lh;
+      text-align: center;
+    }
   }
 
   .#{$menu} {
@@ -244,7 +277,20 @@
 
 // - Nav item
 .#{$nav}__item {
+  position: relative;
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    inset-inline-start: var(--#{$nav}__item--accent--offset);
+    pointer-events: none;
+    content: "";
+    border: 0 solid;
+    border-inline-start-color: var(--#{$nav}__item--accent--color);
+    border-inline-start-width: var(--#{$nav}__item--accent--size);
+    border-radius: inherit;
+  }
 
   > .#{$nav}__link[button] {
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
@@ -254,6 +300,11 @@
     > .#{$nav}__subnav {
       margin-block-end: calc(var(--#{$nav}__subnav--PaddingBlockEnd) * -1); // offset bottom padding
     }
+  }
+
+  &:has(> .#{$nav}__link.pf-m-current) {
+    --#{$nav}__item--accent--size: var(--#{$nav}__item--current--accent--size);
+    --#{$nav}__item--accent--color: var(--#{$nav}__item--current--accent--color);
   }
 }
 

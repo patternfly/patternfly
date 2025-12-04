@@ -1,4 +1,9 @@
-<div class="{{pfv}}toolbar{{#if toolbar--modifier}} {{toolbar--modifier}}{{/if}}"
+<div class="{{pfv}}toolbar
+  {{setModifiers
+      toolbar--IsStatic='pf-m-static'
+      toolbar--IsVertical='pf-m-vertical'
+      toolbar--modifier=toolbar--modifier
+    }}"
   {{#if toolbar--id}}
     id="{{toolbar--id}}"
   {{/if}}

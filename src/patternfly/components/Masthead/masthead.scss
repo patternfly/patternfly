@@ -55,6 +55,17 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline__main--Display: flex;
   --#{$masthead}--m-display-inline__main--ColumnGap: var(--pf-t--global--spacer--md);
 
+  // Masthead docked
+  --#{$masthead}--m-docked--GridTemplateRows: min-content 1fr;
+  --#{$masthead}--m-docked--RowGap: var(--pf-t--global--spacer--gutter--default);
+  --#{$masthead}--m-docked--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--m-docked--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--m-docked--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$masthead}--m-docked--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$masthead}--m-docked--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$masthead}--m-docked--BorderInlineEndColor: var(--pf-t--global--border--color--default);
+
   // * Masthead toolbar
   --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
@@ -98,6 +109,33 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 // - Masthead
 .#{$masthead} {
+  &.pf-m-docked {
+    --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-docked--BackgroundColor);
+    --#{$masthead}--GridTemplateRows: var(--#{$masthead}--m-docked--GridTemplateRows);
+    --#{$masthead}--PaddingBlockStart: var(--#{$masthead}--m-docked--PaddingBlockStart);
+    --#{$masthead}--PaddingBlockEnd: var(--#{$masthead}--m-docked--PaddingBlockEnd);
+    --#{$masthead}--PaddingInlineStart: var(--#{$masthead}--m-docked--PaddingInlineStart);
+    --#{$masthead}--PaddingInlineEnd: var(--#{$masthead}--m-docked--PaddingInlineEnd);
+    --#{$masthead}--GridTemplateColumns: auto;
+    --#{$masthead}--RowGap: var(--#{$masthead}--m-docked--RowGap);
+    --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: auto;
+    --#{$masthead}__main--GridColumn: auto;
+    --#{$masthead}__content--GridColumn: auto;
+    --#{$masthead}__logo--Width: auto;
+    --#{$masthead}__main--MarginInlineEnd: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: revert;
+    height: 100%;
+    border-inline-end: var(--#{$masthead}--m-docked--BorderInlineEndWidth) solid var(--#{$masthead}--m-docked--BorderInlineEndColor);
+
+    .#{$masthead}__content {
+      flex-grow: 1;
+      align-self: revert;
+    }
+  }
+
   .#{$toolbar} {
     --#{$toolbar}--Width: var(--#{$masthead}--c-toolbar--Width);
     --#{$toolbar}--PaddingBlockEnd: 0;
@@ -116,6 +154,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // - Masthead
   display: grid;
+  grid-template-rows: var(--#{$masthead}--GridTemplateRows);
   grid-template-columns: var(--#{$masthead}--GridTemplateColumns);
   row-gap: var(--#{$masthead}--RowGap);
   column-gap: var(--#{$masthead}--ColumnGap);

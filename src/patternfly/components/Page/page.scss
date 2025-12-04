@@ -166,6 +166,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Drawer section
   --#{$page}__drawer--c-drawer--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
+
+  // Docked nav
+  --#{$page}--m-docked__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
+  --#{$page}--m-docked__main-container--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$page}--m-docked--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
 }
 
 .#{$page} {
@@ -188,6 +193,18 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       "header header"
       "sidebar main";
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
+  }
+
+  &.pf-m-docked {
+    --#{$page}--masthead--main-container--GridArea: main;
+    --#{$page}__main-container--MaxHeight: var(--#{$page}--m-docked__main-container--MaxHeight);
+    --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-docked__main-container--MarginBlockStart);
+    --#{$page}__main-container--MarginInlineStart: 0;
+
+    grid-template-areas: "header main";
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--#{$page}--m-docked--ColumnGap);
   }
 
   // Hamburger menu animation
@@ -404,6 +421,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-direction: column;
   align-self: var(--#{$page}__main-container--AlignSelf);
   max-height: var(--#{$page}__main-container--MaxHeight);
+  margin-block-start: var(--#{$page}__main-container--MarginBlockStart, 0);
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
   background: var(--#{$page}__main-container--BackgroundColor);

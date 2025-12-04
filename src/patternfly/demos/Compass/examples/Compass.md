@@ -373,3 +373,48 @@ wrapperTag: div
   {{/drawer-main}}
 {{/drawer}}
 ```
+
+### Max canvas
+```hbs isFullscreen isBeta
+{{#> compass--demo-context}}
+  {{#> compass compass--IsMaxCanvas=true}}
+    {{#> compass-header}}
+      {{> masthead-template masthead-template--HasDockedNav=true masthead-template--HasNoToggle=true nav--IsDocked=true}}
+    {{/compass-header}}
+    {{#> compass-main}}
+      {{#> compass-main-header}}
+        {{#> compass-panel}}
+          {{#> compass-main-header-content}}
+            {{#> compass-main-header-title}}
+              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                max canvas
+              {{/title}}
+            {{/compass-main-header-title}}
+            {{#> compass-main-header-toolbar}}
+              {{#> action-list}}
+                {{#> action-list-group}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsPrimary=true}}
+                      button
+                    {{/button}}
+                  {{/action-list-item}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsSecondary=true}}
+                      anotha' one
+                    {{/button}}
+                  {{/action-list-item}}
+                {{/action-list-group}}
+              {{/action-list}}
+            {{/compass-main-header-toolbar}}
+          {{/compass-main-header-content}}
+        {{/compass-panel}}
+      {{/compass-main-header}}
+      {{#> compass-content}}
+        {{#> compass-panel}}
+          [so much room for activities]
+        {{/compass-panel}}
+      {{/compass-content}}
+    {{/compass-main}}
+  {{/compass}}
+{{/compass--demo-context}}
+```
