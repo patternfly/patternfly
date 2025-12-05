@@ -2,7 +2,7 @@ import fs from'fs';
 import path from 'path';
 import gulp from'gulp';
 import { rimraf } from 'rimraf';
-import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
+import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs, copyReactIcons } from'./scripts/gulp/copy.mjs';
 import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
 import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
 import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
@@ -32,6 +32,7 @@ export function clean(cb) {
     '.circleci/css-size-report/package-lock.json',
     '.circleci/css-size-report/report.html',
     'src/icons/PfIcons/',
+    'src/icons/react-icons',
     'static/assets/fontawesome/',
     'static/assets/fonts/',
     'static/assets/pficon/',
@@ -107,8 +108,8 @@ const buildDocs = series(buildSrc, copyDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, watchSrcHelpers, startWebpackDevServer);
 
 // Builds `dist` folder
-const buildPatternflyFromClean = parallel(series(buildDocs, minifyCSS), series(pfIcons, parallel(copyFA, copySourceFiles)));
-const rebuildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
+const buildPatternflyFromClean = parallel(series(buildDocs, minifyCSS), series(pfIcons, parallel(copyFA, copyReactIcons, copySourceFiles)));
+const rebuildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copyReactIcons, copySourceFiles);
 
 const hasPfIconsDir = fs.existsSync('src/icons/PfIcons');
 export const buildPatternfly = hasPfIconsDir ? rebuildPatternfly : buildPatternflyFromClean;
