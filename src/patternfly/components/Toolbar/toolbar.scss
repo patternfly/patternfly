@@ -199,6 +199,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
     :is(.#{$toolbar}__group, .#{$toolbar}__item, .#{$toolbar}__content-section) {
       flex-direction: column;
+      align-items: center;
     }
   }
 }

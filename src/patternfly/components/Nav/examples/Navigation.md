@@ -559,6 +559,34 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Docked nav
+```hbs
+{{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="cube"}}
+        Link1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
+        Current
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="cloud"}}
+        Link3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="code"}}
+        Link4
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ## Documentation
 
 ### Overview

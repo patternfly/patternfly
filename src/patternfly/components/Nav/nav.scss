@@ -79,6 +79,9 @@
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
 
+  // Nav link text
+  --#{$nav}__link-text--FontSize: initial;
+
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingBlockStart: var(--#{$nav}__item--RowGap); // needed to keep focus outline on first item from being cut off
@@ -136,6 +139,7 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // Docked
+  --#{$nav}--m-docked__link-text--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$nav}--m-docked__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
@@ -184,6 +188,7 @@
   &.pf-m-docked {
     --#{$nav}--PaddingBlockStart: 0;
     --#{$nav}--PaddingBlockEnd: 0;
+    --#{$nav}__link-text--FontSize: var(--#{$nav}--m-docked__link-text--FontSize);
     --#{$nav}__link--PaddingInlineStart: var(--#{$nav}--m-docked__link--PaddingInlineStart);
     --#{$nav}__link--PaddingInlineEnd: var(--#{$nav}--m-docked__link--PaddingInlineEnd);
     --#{$nav}__link--BackgroundColor: var(--#{$nav}--m-docked__link--BackgroundColor);
@@ -191,8 +196,11 @@
     --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
     --#{$nav}__item--accent--offset: var(--#{$nav}--m-docked__item--accent--offset);
 
-    .#{$nav}__link-text {
-      display: none;
+    width: fit-content;
+
+    .#{$nav}__link {
+      flex-direction: column;
+      align-items: center;
     }
 
     .#{$nav}__link-icon {
@@ -377,9 +385,14 @@
   }
 }
 
-// - Nav toggle caret
+// - Nav link icon
 .#{$nav}__link-icon {
   color: var(--#{$nav}__link-icon--Color);
+}
+
+// - Nav link text
+.#{$nav}__link-text {
+  font-size: var(--#{$nav}__link-text--FontSize, inherit);
 }
 
 // - Nav toggle caret
@@ -392,7 +405,7 @@
   transform: translateY(var(--#{$nav}__toggle--TranslateY));
 }
 
-// - Nav toggle icon
+// - Nav toggle caret icon
 .#{$nav}__toggle-icon {
   display: inline-block;
   transition-timing-function: var(--#{$nav}__item__toggle-icon--TransitionTimingFunction--transform);

@@ -39,26 +39,26 @@
       {{/nav}}
     {{/toolbar-item}}
   {{else if masthead-template--HasDockedNav}}
-    {{#> nav nav--attribute='aria-label="Global"'}}
+    {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
       {{#> nav-list}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--icon="cube"}}
-            Link 1
+            Link1
           {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
-            Current link
+            Current
           {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--icon="cloud"}}
-            Link 3
+            Link3
           {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
           {{#> nav-link nav-link--href="#" nav-link--icon="code"}}
-            Link 4
+            Link4
           {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}

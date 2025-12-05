@@ -126,7 +126,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
     display: flex;
     flex-direction: column;
-    align-items: revert;
+    align-items: center;
     height: 100%;
     border-inline-end: var(--#{$masthead}--m-docked--BorderInlineEndWidth) solid var(--#{$masthead}--m-docked--BorderInlineEndColor);
 
