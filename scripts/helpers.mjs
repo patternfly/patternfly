@@ -1,4 +1,6 @@
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import fs from 'fs';
+import path from 'path';
 
 // TODO: TODO: update ternary to not escape chars
 
@@ -359,3 +361,29 @@ export const pfv = (type) => {
 export const prefix = function (term) {
   return pfv('c') + term;
 }
+
+// ======================================================================================
+// readReactIcon: is a helper function that reads a React Icon SVG file from src/icons/react-icons
+// ======================================================================================
+//
+// Usage:
+//   {{readReactIcon 'rh-ui-home'}}
+//   {{readReactIcon icon}}  // where icon is 'rh-ui-home' (without .svg extension)
+//
+// ======================================================================================
+export const readReactIcon = function (iconName) {
+  try {
+    const fileName = iconName.endsWith('.svg') ? iconName : `${iconName}.svg`;
+    const fullPath = path.join(process.cwd(), 'src/icons/react-icons', fileName);
+
+    if (!fs.existsSync(fullPath)) {
+      console.warn(`[readReactIcon helper] Icon not found: ${fullPath}`);
+      return '';
+    }
+
+    return fs.readFileSync(fullPath, 'utf8');
+  } catch (error) {
+    console.error(`[readReactIcon helper] Error reading icon ${iconName}:`, error.message);
+    return '';
+  }
+};
