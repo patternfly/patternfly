@@ -11,20 +11,20 @@ section: components
 
 ### Grouped nav
 ```hbs isFullscreen
-{{> page-template page-template--id="nav-grouped-nav-example" page-template-sidebar--nav--IsGrouped="true"}}
+{{> page-template page-template--id="nav-grouped-nav-example" page-template-sidebar--nav--IsGrouped=true}}
 ```
 
 ### Expandable nav
 ```hbs isFullscreen
-{{> page-template page-template--id="nav-expandable-example" page-template-sidebar--nav--IsExpandable="true"}}
+{{> page-template page-template--id="nav-expandable-example" page-template-sidebar--nav--IsExpandable=true}}
 ```
 
 ### Horizontal nav
 ```hbs isFullscreen
 {{> page-template page-template--id="nav-horizontal-example"
-      page-template--HasNoSidebar="true"
-      masthead-template--HasHorizontalNav="true"
-      masthead-template--HasNoToggle="true"
+      page-template--HasNoSidebar=true
+      masthead-template--HasHorizontalNav=true
+      masthead-template--HasNoToggle=true
 }}
 ```
 
@@ -37,9 +37,19 @@ section: components
 ```hbs isFullscreen
 {{> page-template
       page-template--id="nav-horizontal-example"
-      page-template--HasNoSidebar="true"
+      page-template--HasNoSidebar=true
       masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"
-      masthead-template--HasHorizontalNav="true"
-      page-template--HasHorizontalSubnav="true"
+      masthead-template--HasHorizontalNav=true
+      page-template--HasHorizontalSubnav=true
+}}
+```
+
+### Docked nav
+```hbs isFullscreen
+{{> page-template page-template--id="nav-docked-example"
+      page-template--HasNoSidebar=true
+      masthead-template--HasDockedNav=true
+      masthead-template--HasNoToggle=true
+      nav--IsDocked=true
 }}
 ```

@@ -6,14 +6,22 @@
 {{#unless masthead-template--HasNoSkipToContent}}
   {{> page-template-skip-to-content}}
 {{/unless}}
-{{#> masthead masthead--id=masthead-template--id masthead--modifier=masthead-template--modifier masthead-template-content-icon-group--breakpoint="lg"}} {{!-- set default breakpoint --}}
+{{#> masthead
+  masthead--id=masthead-template--id
+  masthead--modifier=masthead-template--modifier
+  masthead-template-content-icon-group--breakpoint="lg"
+  masthead--IsDocked=masthead-template--HasDockedNav
+  masthead-template--HasDividers=masthead-template--HasDockedNav}}
   {{#> masthead-main}}
     {{#unless masthead-template--HasNoToggle}}
       {{> masthead-toggle}}
     {{/unless}}
     {{#> masthead-brand}}
-      {{> masthead-logo}}
+      {{> masthead-logo masthead-logo--IsCompact=masthead-template--HasDockedNav}}
     {{/masthead-brand}}
   {{/masthead-main}}
+  {{#if masthead-template--HasDividers}}
+    {{> divider}}
+  {{/if}}
   {{> masthead-template-content}}
 {{/masthead}}

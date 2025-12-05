@@ -1,4 +1,8 @@
-<div class="{{pfv}}page{{#if page--HasNoSidebar}} pf-m-no-sidebar{{/if}}{{#if page--modifier}} {{page--modifier}}{{/if}}"
+<div class="{{pfv}}page
+  {{setModifiers
+    page--HasNoSidebar='pf-m-no-sidebar'
+    page--IsDocked='pf-m-docked'
+    page--modifier=page--modifier}}"
   {{#if page--attribute}}
     {{{page--attribute}}}
   {{/if}}
