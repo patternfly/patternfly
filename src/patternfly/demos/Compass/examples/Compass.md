@@ -26,85 +26,8 @@ This demo populates the main Compass section with a dashboard, which is often us
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
-    {{#> compass-header}}
-      {{#> compass-logo}}
-        {{> compass--icons compass--icons--redhat=true}}
-      {{/compass-logo}}
-      {{#> compass-nav}}
-        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
-          {{#> compass-nav-content}}
-            {{#> compass-nav-home}}
-              {{#> button button--IsPlain=true button--aria-label="Home" button--IsCircle=true button--IsIcon=true}}
-                {{> compass--icons compass--icons--home=true}}
-              {{/button}}
-            {{/compass-nav-home}}
-            {{#> compass-nav-main}}
-                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--attribute='aria-label="Primary nav"' tabs-link--isLink="true"}}
-                  {{> __tabs-list}}
-                {{/tabs}}
-            {{/compass-nav-main}}
-            {{#> compass-nav-search}}
-              {{#> button button--IsPlain=true button--aria-label="Search" button--IsCircle=true button--IsIcon=true}}
-                {{> compass--icons compass--icons--search=true}}
-              {{/button}}
-            {{/compass-nav-search}}
-          {{/compass-nav-content}}
-        {{/compass-panel}}
-        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
-          {{#> compass-nav-content}}
-            {{#> compass-nav-main}}
-                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass secondary" tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
-                  {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
-                {{/tabs}}
-            {{/compass-nav-main}}
-          {{/compass-nav-content}}
-        {{/compass-panel}}
-      {{/compass-nav}}
-      {{#> compass-profile}}
-        {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--IsCircle=true}}
-          {{#> menu-toggle-icon}}
-            {{> avatar avatar--modifier="pf-m-md"}}
-          {{/menu-toggle-icon}}
-          {{#> menu-toggle-text}}
-            Ned Username
-          {{/menu-toggle-text}}
-          {{#> menu-toggle-controls}}
-            {{> menu-toggle-toggle-icon}}
-          {{/menu-toggle-controls}}
-        {{/menu-toggle}}
-      {{/compass-profile}}
-    {{/compass-header}}
-    {{#> compass-sidebar compass-sidebar--IsStart=true}}
-      {{#> compass-panel compass-panel--IsPill=true}}
-        {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Add" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--square-plus=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--question-circle=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--modifier=(concat (pfv "unset-prefix") "m-ai-indicator") button--IsPlain=true button--aria-label="AI assistant" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--sparkle=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--user=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--paper-plane=true}}
-            {{/button}}
-          {{/action-list-item}}
-        {{/action-list}}
-      {{/compass-panel}}
-    {{/compass-sidebar}}
+    {{> compass--header}}
+    {{> compass--sidebar-start}}
     {{#> compass-main}}
       {{#> compass-hero}}
         {{#> hero}}
@@ -176,27 +99,7 @@ This demo populates the main Compass section with a dashboard, which is often us
         {{/compass-message-bar}}
       {{/compass-main-footer}}
     {{/compass-main}}
-    {{#> compass-sidebar compass-sidebar--IsEnd=true}}
-      {{#> compass-panel compass-panel--IsPill=true}}
-        {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--question-circle=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--user=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--paper-plane=true}}
-            {{/button}}
-          {{/action-list-item}}
-        {{/action-list}}
-      {{/compass-panel}}
-    {{/compass-sidebar}}
+    {{> compass--sidebar-end}}
   {{/compass}}
 {{/compass--demo-context}}
 ```
@@ -210,85 +113,8 @@ Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rou
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
-    {{#> compass-header}}
-      {{#> compass-logo}}
-        {{> compass--icons compass--icons--redhat=true}}
-      {{/compass-logo}}
-      {{#> compass-nav}}
-        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
-          {{#> compass-nav-content}}
-            {{#> compass-nav-home}}
-              {{#> button button--IsPlain=true button--aria-label="Home" button--IsCircle=true button--IsIcon=true}}
-                {{> compass--icons compass--icons--home=true}}
-              {{/button}}
-            {{/compass-nav-home}}
-            {{#> compass-nav-main}}
-                {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass primary" tabs-link--isLink="true"}}
-                  {{> __tabs-list}}
-                {{/tabs}}
-            {{/compass-nav-main}}
-            {{#> compass-nav-search}}
-              {{#> button button--IsPlain=true button--aria-label="Search" button--IsCircle=true button--IsIcon=true}}
-                {{> compass--icons compass--icons--search=true}}
-              {{/button}}
-            {{/compass-nav-search}}
-          {{/compass-nav-content}}
-        {{/compass-panel}}
-        {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
-          {{#> compass-nav-content}}
-            {{#> compass-nav-main}}
-                {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass secondary" tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
-                  {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
-                {{/tabs}}
-            {{/compass-nav-main}}
-          {{/compass-nav-content}}
-        {{/compass-panel}}
-      {{/compass-nav}}
-      {{#> compass-profile}}
-        {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--IsCircle=true}}
-          {{#> menu-toggle-icon}}
-            {{> avatar avatar--modifier="pf-m-md"}}
-          {{/menu-toggle-icon}}
-          {{#> menu-toggle-text}}
-            Ned Username
-          {{/menu-toggle-text}}
-          {{#> menu-toggle-controls}}
-            {{> menu-toggle-toggle-icon}}
-          {{/menu-toggle-controls}}
-        {{/menu-toggle}}
-      {{/compass-profile}}
-    {{/compass-header}}
-    {{#> compass-sidebar compass-sidebar--IsStart=true}}
-      {{#> compass-panel compass-panel--IsPill=true}}
-        {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Add" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--square-plus=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--question-circle=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--modifier=(concat (pfv "unset-prefix") "m-ai-indicator") button--IsPlain=true button--aria-label="AI assistant" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--sparkle=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--user=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--paper-plane=true}}
-            {{/button}}
-          {{/action-list-item}}
-        {{/action-list}}
-      {{/compass-panel}}
-    {{/compass-sidebar}}
+    {{> compass--header}}
+    {{> compass--sidebar-start}}
     {{#> compass-main}}
       {{#> compass-main-header}}
         {{#> compass-panel}}
@@ -353,27 +179,7 @@ Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rou
         {{/compass-message-bar}}
       {{/compass-main-footer}}
     {{/compass-main}}
-    {{#> compass-sidebar compass-sidebar--IsEnd=true}}
-      {{#> compass-panel compass-panel--IsPill=true}}
-        {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--question-circle=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--user=true}}
-            {{/button}}
-          {{/action-list-item}}
-          {{#> action-list-item}}
-            {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
-              {{> compass--icons compass--icons--paper-plane=true}}
-            {{/button}}
-          {{/action-list-item}}
-        {{/action-list}}
-      {{/compass-panel}}
-    {{/compass-sidebar}}
+    {{> compass--sidebar-end}}
   {{/compass}}
 {{/compass--demo-context}}
 ```

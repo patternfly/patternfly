@@ -9,6 +9,11 @@ export function copyFA() {
     .pipe(dest('dist/assets/icons'));
 }
 
+export function copyReactIcons() {
+  return src('node_modules/@patternfly/react-icons/dist/static/**/*.svg', { encoding: false, allowEmpty: true })
+    .pipe(dest('src/icons/react-icons'));
+}
+
 export function copyAssets() {
   return src('src/patternfly/assets/**', { encoding: false }).pipe(dest('static/assets'));
 }

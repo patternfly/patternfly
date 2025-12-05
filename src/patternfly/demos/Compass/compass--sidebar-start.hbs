@@ -1,0 +1,31 @@
+{{#> compass-sidebar compass-sidebar--IsStart=true}}
+  {{#> compass-panel compass-panel--IsPill=true}}
+    {{#> action-list action-list--modifier="pf-m-icons" action-list--IsVertical=true}}
+      {{#> action-list-item}}
+        {{#> button button--IsPlain=true button--aria-label="Add" button--IsCircle=true button--IsIcon=true}}
+          {{> pf-icon icon="rh-ui-add-square"}}
+        {{/button}}
+      {{/action-list-item}}
+      {{#> action-list-item}}
+        {{#> button button--IsPlain=true button--aria-label="Help" button--IsCircle=true button--IsIcon=true}}
+          {{> pf-icon icon="rh-ui-collection"}}
+        {{/button}}
+      {{/action-list-item}}
+      {{#> action-list-item}}
+        {{#> button button--modifier=(concat (pfv "unset-prefix") "m-ai-indicator") button--IsPlain=true button--aria-label="AI assistant" button--IsCircle=true button--IsIcon=true}}
+          {{> compass--icons compass--icons--sparkle=true}}
+        {{/button}}
+      {{/action-list-item}}
+      {{#> action-list-item}}
+        {{#> button button--IsPlain=true button--aria-label="User profile" button--IsCircle=true button--IsIcon=true}}
+          {{> pf-icon icon="rh-ui-volume-up"}}
+        {{/button}}
+      {{/action-list-item}}
+      {{#> action-list-item}}
+        {{#> button button--IsPlain=true button--aria-label="Send" button--IsCircle=true button--IsIcon=true}}
+          {{> pf-icon icon="rh-ui-microphone"}}
+        {{/button}}
+      {{/action-list-item}}
+    {{/action-list}}
+  {{/compass-panel}}
+{{/compass-sidebar}}
