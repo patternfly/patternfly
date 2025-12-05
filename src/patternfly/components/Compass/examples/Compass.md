@@ -9,7 +9,7 @@ cssPrefix: pf-v6-c-compass
 import './Compass.css';
 
 ## Examples
-### Basic
+### Default
 ```hbs isBeta
 {{#> compass}}
   {{#> compass-header}}
@@ -46,6 +46,29 @@ import './Compass.css';
   {{#> compass-footer}}
     footer
   {{/compass-footer}}
+{{/compass}}
+```
+
+### Max canvas
+```hbs isBeta
+{{#> compass compass--IsMaxCanvas=true}}
+  {{#> compass-header}}
+    header
+  {{/compass-header}}
+  {{#> compass-main}}
+    {{#> compass-main-header}}
+      {{#> compass-panel}}
+        {{#> compass-main-header-content}}
+          main header
+        {{/compass-main-header-content}}
+      {{/compass-panel}}
+    {{/compass-main-header}}
+    {{#> compass-content}}
+      {{#> compass-panel compass-panel--IsScrollable=true}}
+        max content
+      {{/compass-panel}}
+    {{/compass-content}}
+  {{/compass-main}}
 {{/compass}}
 ```
 
