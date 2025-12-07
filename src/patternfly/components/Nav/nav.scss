@@ -39,11 +39,17 @@
 
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
-  --#{$nav}__item--accent--size: 0;
-  --#{$nav}__item--accent--color: transparent;
+
+  // Nav item accent
+  --#{$nav}__item--accent--size: var(--pf-t--global--border--width--extra-strong);
+  --#{$nav}__item--accent--color: var(--pf-t--global--border--color--clicked);
   --#{$nav}__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--md));
-  --#{$nav}__item--current--accent--size: var(--pf-t--global--border--width--extra-strong);
-  --#{$nav}__item--current--accent--color: var(--pf-t--global--border--color--clicked);
+  --#{$nav}__item--accent--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$nav}__item--accent--Scale: 0;
+  --#{$nav}__item--current--accent--Scale: 1;
+  --#{$nav}__item--accent--TransitionDuration: 0;
+  --#{$nav}__item--current--accent--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__item--accent--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
 
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
@@ -139,13 +145,19 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // Docked
-  --#{$nav}--m-docked__link-text--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$nav}--m-docked__list--RowGap: var(--pf-t--global--spacer--md);
+  --#{$nav}--m-docked__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--sm));
+  --#{$nav}--m-docked__link--RowGap: 2px;
   --#{$nav}--m-docked__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$nav}--m-docked__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
-  --#{$nav}--m-docked__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--sm));
+  --#{$nav}--m-docked__link-icon--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$nav}--m-docked__link-icon--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$nav}--m-docked__link-icon--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$nav}--m-docked__link-icon--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$nav}--m-docked__link-icon--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$nav}--m-docked__link-icon--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$nav}--m-docked__link-icon--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$nav}--m-docked__link-text--FontSize: var(--pf-t--global--font--size--body--sm);
 }
 
 // - Nav display - default to grid
@@ -188,24 +200,45 @@
   &.pf-m-docked {
     --#{$nav}--PaddingBlockStart: 0;
     --#{$nav}--PaddingBlockEnd: 0;
-    --#{$nav}__link-text--FontSize: var(--#{$nav}--m-docked__link-text--FontSize);
+    --#{$nav}__list--RowGap: var(--#{$nav}--m-docked__list--RowGap);
+    --#{$nav}__item--accent--offset: var(--#{$nav}--m-docked__item--accent--offset);
     --#{$nav}__link--PaddingInlineStart: var(--#{$nav}--m-docked__link--PaddingInlineStart);
     --#{$nav}__link--PaddingInlineEnd: var(--#{$nav}--m-docked__link--PaddingInlineEnd);
-    --#{$nav}__link--BackgroundColor: var(--#{$nav}--m-docked__link--BackgroundColor);
-    --#{$nav}__link--hover--BackgroundColor: var(--#{$nav}--m-docked__link--hover--BackgroundColor);
-    --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
-    --#{$nav}__item--accent--offset: var(--#{$nav}--m-docked__item--accent--offset);
+    --#{$nav}__link--BackgroundColor: transparent;
+    --#{$nav}__link--hover--BackgroundColor: transparent;
+    --#{$nav}__link--m-current--BackgroundColor: transparent;
+    --#{$nav}__link-text--FontSize: var(--#{$nav}--m-docked__link-text--FontSize);
 
-    width: fit-content;
+    width: 100%;
+
+    .#{$nav}__item::before {
+      content: none;
+    }
 
     .#{$nav}__link {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
+      row-gap: var(--#{$nav}--m-docked__link--RowGap);
+      text-align: center;
+      padding: 0;
+
+      &:is(:hover, :focus) {
+        --#{$nav}--m-docked__link-icon--BackgroundColor: var(--#{$nav}--m-docked__link-icon--hover--BackgroundColor);
+      }
+
+      &.pf-m-current {
+        --#{$nav}--m-docked__link-icon--BackgroundColor: var(--#{$nav}--m-docked__link-icon--m-current--BackgroundColor);
+      }
     }
 
     .#{$nav}__link-icon {
-      min-width: 1lh;
-      text-align: center;
+      position: relative;
+      padding-block-start: var(--#{$nav}--m-docked__link-icon--PaddingBlockStart);
+      padding-block-end: var(--#{$nav}--m-docked__link-icon--PaddingBlockEnd);
+      padding-inline-start: var(--#{$nav}--m-docked__link-icon--PaddingInlineStart);
+      padding-inline-end: var(--#{$nav}--m-docked__link-icon--PaddingInlineEnd);
+      background-color: var(--#{$nav}--m-docked__link-icon--BackgroundColor);  
+      border-radius: var(--#{$nav}__link--BorderRadius);
     }
   }
 
@@ -288,16 +321,21 @@
   position: relative;
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
 
+  @at-root .#{$nav}.pf-m-docked .#{$nav}__link-icon::before,
   &::before {
     position: absolute;
-    inset: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
     inset-inline-start: var(--#{$nav}__item--accent--offset);
+    width: var(--#{$nav}__item--accent--size);
     pointer-events: none;
     content: "";
-    border: 0 solid;
-    border-inline-start-color: var(--#{$nav}__item--accent--color);
-    border-inline-start-width: var(--#{$nav}__item--accent--size);
-    border-radius: inherit;
+    background-color: var(--#{$nav}__item--accent--color);
+    border-radius: var(--#{$nav}__item--accent--BorderRadius);
+    scale: 1 var(--#{$nav}__item--accent--Scale);
+    transition-timing-function: var(--#{$nav}__item--accent--TransitionTimingFunction);
+    transition-duration: var(--#{$nav}__item--accent--TransitionDuration);
+    transition-property: scale;
   }
 
   > .#{$nav}__link[button] {
@@ -311,8 +349,8 @@
   }
 
   &:has(> .#{$nav}__link.pf-m-current) {
-    --#{$nav}__item--accent--size: var(--#{$nav}__item--current--accent--size);
-    --#{$nav}__item--accent--color: var(--#{$nav}__item--current--accent--color);
+    --#{$nav}__item--accent--Scale: var(--#{$nav}__item--current--accent--Scale);
+    --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
   }
 }
 
@@ -351,9 +389,13 @@
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
-  transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
-  transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
-  transition-property: background-color, color;
+
+  @at-root .#{$nav}.pf-m-docked .#{$nav}__link-icon,
+  & {
+    transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
+    transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
+    transition-property: background-color, color;
+  }
 
   &::after {
     position: absolute;
@@ -363,7 +405,6 @@
     border: var(--#{$nav}__link--BorderWidth) solid var(--#{$nav}__link--BorderColor);
     border-radius: inherit;
   }
-
 
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
