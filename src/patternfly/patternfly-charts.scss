@@ -130,23 +130,23 @@ $chart: #{$pf-prefix} + 'chart';
   // Individual Charts
 
   // Area Chart
-  --#{$chart}-area--Opacity: .3;
+  --#{$chart}-area--Opacity: .3; // add token for this
   --#{$chart}-area--stroke--Width: var(--#{$chart}-global--stroke--Width--sm);
   --#{$chart}-area--data--Fill: var(--#{$chart}-global--Fill--Color--900);
 
   // Axis Chart
   --#{$chart}-axis--axis--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
-  --#{$chart}-axis--axis--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--axis--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-axis--axis--Fill: transparent;
   --#{$chart}-axis--axis-label--Padding: 40;
   --#{$chart}-axis--axis-label--stroke--Color: transparent;
   --#{$chart}-axis--grid--Fill: none;
-  --#{$chart}-axis--grid--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--grid--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-axis--grid--PointerEvents: painted;
   --#{$chart}-axis--tick--Fill: transparent;
   --#{$chart}-axis--tick--Size: 5;
   --#{$chart}-axis--tick--Width: 1;
-  --#{$chart}-axis--tick--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--tick--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-axis--tick-label--Fill: var(--#{$chart}-global--Fill--Color--700);
 
   // Bar Chart
