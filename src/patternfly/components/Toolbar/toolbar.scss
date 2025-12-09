@@ -196,10 +196,23 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   &.pf-m-vertical {
     --#{$toolbar}--child--m-align-end--MarginBlockStart: auto;
     --#{$toolbar}--child--m-align-end--MarginInlineStart: 0;
+    --#{$toolbar}--PaddingBlockEnd: 0;
 
     :is(.#{$toolbar}__group, .#{$toolbar}__item, .#{$toolbar}__content-section) {
       flex-direction: column;
       align-items: center;
+    }
+
+    .#{$toolbar}__group {
+      row-gap: var(--#{$toolbar}__group--m-vertical--RowGap);
+    }
+
+    .#{$toolbar}__item {
+      row-gap: var(--#{$toolbar}__item--m-vertical--RowGap);
+    }
+
+    .#{$toolbar}__content-section {
+      row-gap: var(--#{$toolbar}__content-section--m-vertical--RowGap);
     }
   }
 }
@@ -213,6 +226,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   column-gap: var(--#{$toolbar}__item--ColumnGap);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
+
+  .#{$toolbar}.pf-m-vertical & {
+    row-gap: var(--#{$toolbar}__item--ColumnGap);
+  }
 
   // - Toolbar expand
   &.pf-m-expand-all.pf-m-expanded {
@@ -258,11 +275,19 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // - Toolbar action group
   &.pf-m-action-group {
     column-gap: var(--#{$toolbar}__group--m-action-group--ColumnGap);
+
+    .#{$toolbar}.pf-m-vertical & {
+      row-gap: var(--#{$toolbar}__group--m-action-group--ColumnGap);
+    }
   }
 
   // - Toolbar action group plain
   &.pf-m-action-group-plain {
     column-gap: var(--#{$toolbar}__group--m-action-group-plain--ColumnGap);
+
+    .#{$toolbar}.pf-m-vertical & {
+      row-gap: var(--#{$toolbar}__group--m-action-group-plain--ColumnGap);
+    }
   }
 
   // - Toolbar action group inline

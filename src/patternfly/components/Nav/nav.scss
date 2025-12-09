@@ -43,9 +43,10 @@
   // Nav item accent
   --#{$nav}__item--accent--size: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__item--accent--color: var(--pf-t--global--border--color--clicked);
-  --#{$nav}__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--md));
+  --#{$nav}__item--accent--offset: calc(var(--pf-t--global--spacer--inset--page-chrome) / 2 * -1);
   --#{$nav}__item--accent--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$nav}__item--accent--Scale: 0;
+  --#{$nav}__item--accent--TranslateX: -50%;
   --#{$nav}__item--current--accent--Scale: 1;
   --#{$nav}__item--accent--TransitionDuration: 0;
   --#{$nav}__item--current--accent--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
@@ -145,9 +146,9 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // Docked
-  --#{$nav}--m-docked__list--RowGap: var(--pf-t--global--spacer--md);
+  --#{$nav}--m-docked__list--RowGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
   --#{$nav}--m-docked__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$nav}--m-docked__link--RowGap: 2px;
+  --#{$nav}--m-docked__link--RowGap: #{pf-size-prem(2px)};
   --#{$nav}--m-docked__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link-icon--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
@@ -157,7 +158,9 @@
   --#{$nav}--m-docked__link-icon--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$nav}--m-docked__link-icon--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$nav}--m-docked__link-icon--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$nav}--m-docked__link-icon--MinWidth: calc(var(--#{$nav}--m-docked__link-icon--PaddingInlineStart) + var(--#{$nav}--m-docked__link-icon--PaddingInlineEnd) + 1lh);
   --#{$nav}--m-docked__link-text--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$nav}--m-docked__link-text--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 }
 
 // - Nav display - default to grid
@@ -209,7 +212,7 @@
     --#{$nav}__link--m-current--BackgroundColor: transparent;
     --#{$nav}__link-text--FontSize: var(--#{$nav}--m-docked__link-text--FontSize);
 
-    width: 100%;
+    width: fit-content;
 
     .#{$nav}__item::before {
       content: none;
@@ -233,12 +236,18 @@
 
     .#{$nav}__link-icon {
       position: relative;
+      align-self: center;
       padding-block-start: var(--#{$nav}--m-docked__link-icon--PaddingBlockStart);
       padding-block-end: var(--#{$nav}--m-docked__link-icon--PaddingBlockEnd);
       padding-inline-start: var(--#{$nav}--m-docked__link-icon--PaddingInlineStart);
       padding-inline-end: var(--#{$nav}--m-docked__link-icon--PaddingInlineEnd);
       background-color: var(--#{$nav}--m-docked__link-icon--BackgroundColor);  
       border-radius: var(--#{$nav}__link--BorderRadius);
+      min-width: var(--#{$nav}--m-docked__link-icon--MinWidth);
+    }
+
+    .#{$nav}__link-text {
+      margin-block-end: var(--#{$nav}--m-docked__link-text--MarginBlockEnd);
     }
   }
 
@@ -329,10 +338,11 @@
     inset-inline-start: var(--#{$nav}__item--accent--offset);
     width: var(--#{$nav}__item--accent--size);
     pointer-events: none;
-    content: "";
+    content: var(--#{$nav}__item--accent--content, "");
     background-color: var(--#{$nav}__item--accent--color);
     border-radius: var(--#{$nav}__item--accent--BorderRadius);
     scale: 1 var(--#{$nav}__item--accent--Scale);
+    translate: var(--#{$nav}__item--accent--TranslateX);
     transition-timing-function: var(--#{$nav}__item--accent--TransitionTimingFunction);
     transition-duration: var(--#{$nav}__item--accent--TransitionDuration);
     transition-property: scale;
@@ -509,6 +519,8 @@
 
 // - Nav horizontal
 .#{$nav}:where(.pf-m-horizontal) {
+  --#{$nav}__item--accent--content: none;
+
   padding: 0;
   overflow: hidden;
 

@@ -6,6 +6,14 @@
   --#{$compass}--BackgroundImage--dark: none;
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}--Gap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__dock--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--default);
+  --#{$compass}__dock--BackgroundColor: var(--pf-t--global--background--color--glass--default);
+  --#{$compass}__dock--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
+  --#{$compass}__dock--BorderColor: var(--pf-t--global--border--color--alt);
+  --#{$compass}__dock--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__dock--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$compass}__dock--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$compass}__dock--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__nav--PaddingBlockStart: 0;
   --#{$compass}__nav--PaddingBlockEnd: 0;
@@ -21,16 +29,16 @@
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--Gap)); // Creates same gap as parent compass grid, mimicking the compass footer
-  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
-  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
-  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$compass}__panel--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
+  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--alt);
+  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
@@ -86,8 +94,8 @@
   background-image: var(--#{$compass}--BackgroundImage);
   background-size: cover;
 
-  &.pf-m-max-canvas {
-    grid-template-areas: "header main";
+  &.pf-m-docked {
+    grid-template-areas: "dock main";
     grid-template-rows: auto;
     grid-template-columns: auto 1fr;
     align-items: stretch;
@@ -97,15 +105,8 @@
       padding: var(--#{$compass}--Padding);
     }
 
-    .#{$compass}__header {
-      display: block;
-      margin-block-end: 0;
-
-      > .#{$masthead} {
-        background-color: var(--#{$compass}__panel--BackgroundColor);
-        backdrop-filter: var(--#{$compass}__panel--BackdropFilter);
-        border-color: var(--#{$compass}__panel--BorderColor);
-      }
+    .#{$nav}.pf-m-docked {
+      --#{$nav}__item--accent--TranslateX: 0
     }
   }
 
@@ -195,6 +196,20 @@
 .#{$compass}__nav-main {
   padding-inline-start: var(--#{$compass}__nav-main--PaddingInlineStart);
   padding-inline-end: var(--#{$compass}__nav-main--PaddingInlineEnd);
+}
+
+.#{$compass}__dock {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-area: dock;
+  row-gap: var(--#{$compass}__dock--RowGap);
+  padding-block-start: var(--#{$compass}__dock--PaddingBlockStart);
+  padding-block-end: var(--#{$compass}__dock--PaddingBlockEnd);
+  padding-inline-start: var(--#{$compass}__dock--PaddingInlineStart);
+  padding-inline-end: var(--#{$compass}__dock--PaddingInlineEnd);
+  background-color: var(--#{$compass}__dock--BackgroundColor);
+  backdrop-filter: var(--#{$compass}__dock--BackdropFilter);
+  border-color: var(--#{$compass}__dock--BorderColor);
 }
 
 .#{$compass}__sidebar {

@@ -565,22 +565,22 @@ import './Navigation.css'
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--icon="cube"}}
-        Link1
+        cube
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
-        Current
+        dir
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--icon="cloud"}}
-        Link3
+        cloud
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--icon="code"}}
-        Link4
+        code
       {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}

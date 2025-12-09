@@ -374,20 +374,85 @@ wrapperTag: div
 {{/drawer}}
 ```
 
-### Max canvas
+### Docked
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
-  {{#> compass compass--IsMaxCanvas=true}}
-    {{#> compass-header}}
-      {{> masthead-template masthead-template--HasDockedNav=true masthead-template--HasNoToggle=true nav--IsDocked=true}}
-    {{/compass-header}}
+  {{#> compass compass--IsDocked=true}}
+    {{#> compass-dock}}
+      {{#> compass-dock-logo}}
+        {{> masthead-logo masthead-logo--IsCompact=true}}
+      {{/compass-dock-logo}}
+      {{#> compass-dock-main}}
+        {{#> toolbar toolbar--IsVertical=true}}
+          {{#> toolbar-content}}
+            {{#> toolbar-content-section}}
+              {{#> toolbar-group toolbar-group--IsActionGroup=true}}
+                {{#> toolbar-item}}
+                  {{#> button button--modifier=(concat (pfv "unset-prefix") "m-ai-indicator") button--IsPlain=true button--aria-label="AI assistant" button--IsCircle=true button--IsIcon=true}}
+                    {{> compass--icons compass--icons--sparkle=true}}
+                  {{/button}}
+                {{/toolbar-item}}
+                {{> divider}}
+                {{#> toolbar-item}}
+                  {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
+                    {{#> nav-list}}
+                      {{#> nav-item}}
+                        {{> nav-link nav-link--href="#" nav-link--icon="cube"}}
+                      {{/nav-item}}
+                      {{#> nav-item}}
+                        {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
+                      {{/nav-item}}
+                      {{#> nav-item}}
+                        {{> nav-link nav-link--href="#" nav-link--icon="cloud"}}
+                      {{/nav-item}}
+                      {{#> nav-item}}
+                        {{> nav-link nav-link--href="#" nav-link--icon="code"}}
+                      {{/nav-item}}
+                    {{/nav-list}}
+                  {{/nav}}
+                {{/toolbar-item}}
+                {{> divider}}
+                {{#> toolbar-group toolbar-group--IsActionGroupPlain=true}}
+                  {{#> toolbar-item}}
+                    {{> button button--IsPlain=true button--IsIcon=true button--icon="rocket" button--aria-label="Blast off"}}
+                  {{/toolbar-item}}
+                  {{#> toolbar-item}}
+                    {{> button button--IsPlain=true button--IsIcon=true button--icon="comment-alt" button--aria-label="Chat"}}
+                  {{/toolbar-item}}
+                {{/toolbar-group}}
+              {{/toolbar-group}}
+            {{/toolbar-content-section}}
+          {{/toolbar-content}}
+        {{/toolbar}}
+      {{/compass-dock-main}}
+      {{#> compass-dock-tools}}
+        {{#> toolbar toolbar--IsVertical=true}}
+          {{#> toolbar-content}}
+            {{#> toolbar-content-section}}
+              {{#> toolbar-group toolbar-group--IsActionGroupPlain=true}}
+                {{> divider}}
+                {{#> toolbar-item}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="bell" button--aria-label="Notifications"}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="question-circle" button--aria-label="Help"}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="cog" button--aria-label="Settings"}}
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+            {{/toolbar-content-section}}
+          {{/toolbar-content}}
+        {{/toolbar}}
+      {{/compass-dock-tools}}
+    {{/compass-dock}}
     {{#> compass-main}}
       {{#> compass-main-header}}
         {{#> compass-panel}}
           {{#> compass-main-header-content}}
             {{#> compass-main-header-title}}
               {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-                max canvas
+                Header
               {{/title}}
             {{/compass-main-header-title}}
             {{#> compass-main-header-toolbar}}
@@ -395,12 +460,12 @@ wrapperTag: div
                 {{#> action-list-group}}
                   {{#> action-list-item}}
                     {{#> button button--IsPrimary=true}}
-                      button
+                      action
                     {{/button}}
                   {{/action-list-item}}
                   {{#> action-list-item}}
                     {{#> button button--IsSecondary=true}}
-                      anotha' one
+                      action
                     {{/button}}
                   {{/action-list-item}}
                 {{/action-list-group}}
