@@ -220,10 +220,10 @@
 
     .#{$nav}__link {
       flex-direction: column;
-      align-items: stretch;
       row-gap: var(--#{$nav}--m-docked__link--RowGap);
-      text-align: center;
+      align-items: stretch;
       padding: 0;
+      text-align: center;
 
       &:is(:hover, :focus) {
         --#{$nav}--m-docked__link-icon--BackgroundColor: var(--#{$nav}--m-docked__link-icon--hover--BackgroundColor);
@@ -237,13 +237,13 @@
     .#{$nav}__link-icon {
       position: relative;
       align-self: center;
+      min-width: var(--#{$nav}--m-docked__link-icon--MinWidth);
       padding-block-start: var(--#{$nav}--m-docked__link-icon--PaddingBlockStart);
       padding-block-end: var(--#{$nav}--m-docked__link-icon--PaddingBlockEnd);
       padding-inline-start: var(--#{$nav}--m-docked__link-icon--PaddingInlineStart);
       padding-inline-end: var(--#{$nav}--m-docked__link-icon--PaddingInlineEnd);
       background-color: var(--#{$nav}--m-docked__link-icon--BackgroundColor);  
       border-radius: var(--#{$nav}__link--BorderRadius);
-      min-width: var(--#{$nav}--m-docked__link-icon--MinWidth);
     }
 
     .#{$nav}__link-text {
@@ -341,11 +341,11 @@
     content: var(--#{$nav}__item--accent--content, "");
     background-color: var(--#{$nav}__item--accent--color);
     border-radius: var(--#{$nav}__item--accent--BorderRadius);
-    scale: 1 var(--#{$nav}__item--accent--Scale);
-    translate: var(--#{$nav}__item--accent--TranslateX);
     transition-timing-function: var(--#{$nav}__item--accent--TransitionTimingFunction);
     transition-duration: var(--#{$nav}__item--accent--TransitionDuration);
     transition-property: scale;
+    scale: 1 var(--#{$nav}__item--accent--Scale);
+    translate: var(--#{$nav}__item--accent--TranslateX);
   }
 
   > .#{$nav}__link[button] {

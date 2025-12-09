@@ -200,8 +200,8 @@
 
 .#{$compass}__dock {
   display: grid;
-  grid-template-rows: auto 1fr auto;
   grid-area: dock;
+  grid-template-rows: auto 1fr auto;
   row-gap: var(--#{$compass}__dock--RowGap);
   padding-block-start: var(--#{$compass}__dock--PaddingBlockStart);
   padding-block-end: var(--#{$compass}__dock--PaddingBlockEnd);
