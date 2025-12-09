@@ -93,6 +93,20 @@ cssPrefix: pf-v6-c-masthead
 {{/masthead}}
 ```
 
+### Docked
+```hbs
+{{#> masthead masthead--id="docked-masthead-example" masthead--IsDocked=true}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      {{> masthead-logo masthead-logo--IsCompact=true}}
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{#> masthead-content}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="comment-alt" button--aria-label="Chat"}}
+  {{/masthead-content}}
+{{/masthead}}
+```
+
 ## Documentation
 
 ### Usage
@@ -106,3 +120,4 @@ cssPrefix: pf-v6-c-masthead
 | `.pf-v6-c-masthead__logo` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-v6-c-masthead__content` | `<div>` | Initiates the masthead content component. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
+| `.pf-m-docked` | `.pf-v6-c-masthead` | Modifies masthead for use with docked nav. |
