@@ -8,7 +8,9 @@ wrapperTag: div
 ## Examples
 ### Card view
 
-This demo places a card view within the main Compass section. 
+This demo populates the main Compass section with a card view, which is one of the more common page types used within a Compass layout. In this demo, the page includes:
+- A `.pf-v6-c-compass__main-header` that contains the page title, any toolbar, or action items.
+- A `.pf-v6-c-compass__content`, which contains a `.pf-v6-c-compass__panel` to create a rounded-rectangle container that serves as the main content background.
 
 ```hbs isFullscreen isBeta
 {{> compass--card-view}}
@@ -16,7 +18,10 @@ This demo places a card view within the main Compass section.
 
 ### Dashboard
 
-This demo places a dashboard within the main Compass section. 
+This demo populates the main Compass section with a dashboard, which is often used as the landing page within a Compass layout. This demo page includes:
+
+- A `.pf-v6-c-hero` element positioned between the top navigation and the main page content, containing promotional or introductory content with important CTAs.
+- A `.pf-v6-c-compass__content` without a `.pf-v6-c-compass__panel` wrapping all of the contents. This removes the rounded-rectangle container that typically serves as the main content background. Instead, the content area is a dashboard (a grid of cards), and each card is individually wrapped in`.pf-v6-c-compass__panel` to provide the rounded-rectangle styling.
 
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
@@ -200,6 +205,8 @@ This demo places a dashboard within the main Compass section.
 
 This demo places multiple sections within the main Compass section, with each section containing a card view. 
 
+Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rounded-rectangle container as the main content background. Instead, the `.pf-v6-c-compass__content` is a grid with 2 independently scrollable `.pf-v6-c-compass__panel` elements. 
+
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
@@ -373,7 +380,7 @@ This demo places multiple sections within the main Compass section, with each se
 
 ### With drawer
 
-This demo showcases how you can position a side-panel drawer on top of the other Compass elements. 
+This demo showcases how you can position a side-panel drawer on top of the other Compass elements.
 
 ```hbs isFullscreen isBeta
 {{#> drawer drawer--id="pill" drawer--IsPill=true drawer-panel--IsOpen=true}}
