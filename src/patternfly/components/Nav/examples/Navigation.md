@@ -564,24 +564,16 @@ import './Navigation.css'
 {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="cube"}}
-        cube
-      {{/nav-link}}
+      {{> nav-link nav-link--href="#" nav-link--icon="cube"}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
-        dir
-      {{/nav-link}}
+      {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="cloud"}}
-        cloud
-      {{/nav-link}}
+      {{> nav-link nav-link--href="#" nav-link--icon="cloud"}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="code"}}
-        code
-      {{/nav-link}}
+      {{> nav-link nav-link--href="#" nav-link--icon="code"}}
     {{/nav-item}}
   {{/nav-list}}
 {{/nav}}

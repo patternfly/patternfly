@@ -43,11 +43,10 @@
   // Nav item accent
   --#{$nav}__item--accent--size: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__item--accent--color: var(--pf-t--global--border--color--clicked);
-  --#{$nav}__item--accent--offset: calc(var(--pf-t--global--spacer--inset--page-chrome) / 2 * -1);
+  --#{$nav}__item--accent--offset: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$nav}__item--accent--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$nav}__item--accent--Scale: 0;
-  --#{$nav}__item--accent--TranslateX: -50%;
-  --#{$nav}__item--current--accent--Scale: 1;
+  --#{$nav}__item--accent--ScaleY: 0;
+  --#{$nav}__item--current--accent--ScaleY: 1;
   --#{$nav}__item--accent--TransitionDuration: 0;
   --#{$nav}__item--current--accent--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$nav}__item--accent--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
@@ -147,20 +146,10 @@
 
   // Docked
   --#{$nav}--m-docked__list--RowGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
-  --#{$nav}--m-docked__item--accent--offset: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$nav}--m-docked__link--RowGap: #{pf-size-prem(2px)};
   --#{$nav}--m-docked__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$nav}--m-docked__link-icon--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$nav}--m-docked__link-icon--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$nav}--m-docked__link-icon--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
-  --#{$nav}--m-docked__link-icon--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
-  --#{$nav}--m-docked__link-icon--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$nav}--m-docked__link-icon--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$nav}--m-docked__link-icon--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
-  --#{$nav}--m-docked__link-icon--MinWidth: calc(var(--#{$nav}--m-docked__link-icon--PaddingInlineStart) + var(--#{$nav}--m-docked__link-icon--PaddingInlineEnd) + 1lh);
-  --#{$nav}--m-docked__link-text--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$nav}--m-docked__link-text--MarginBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
 }
 
 // - Nav display - default to grid
@@ -204,50 +193,17 @@
     --#{$nav}--PaddingBlockStart: 0;
     --#{$nav}--PaddingBlockEnd: 0;
     --#{$nav}__list--RowGap: var(--#{$nav}--m-docked__list--RowGap);
-    --#{$nav}__item--accent--offset: var(--#{$nav}--m-docked__item--accent--offset);
     --#{$nav}__link--PaddingInlineStart: var(--#{$nav}--m-docked__link--PaddingInlineStart);
     --#{$nav}__link--PaddingInlineEnd: var(--#{$nav}--m-docked__link--PaddingInlineEnd);
-    --#{$nav}__link--BackgroundColor: transparent;
-    --#{$nav}__link--hover--BackgroundColor: transparent;
-    --#{$nav}__link--m-current--BackgroundColor: transparent;
-    --#{$nav}__link-text--FontSize: var(--#{$nav}--m-docked__link-text--FontSize);
+    --#{$nav}__link--hover--BackgroundColor: var(--#{$nav}--m-docked__link--hover--BackgroundColor);
+    --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
 
     width: fit-content;
-
-    .#{$nav}__item::before {
-      content: none;
-    }
-
-    .#{$nav}__link {
-      flex-direction: column;
-      row-gap: var(--#{$nav}--m-docked__link--RowGap);
-      align-items: stretch;
-      padding: 0;
-      text-align: center;
-
-      &:is(:hover, :focus) {
-        --#{$nav}--m-docked__link-icon--BackgroundColor: var(--#{$nav}--m-docked__link-icon--hover--BackgroundColor);
-      }
-
-      &.pf-m-current {
-        --#{$nav}--m-docked__link-icon--BackgroundColor: var(--#{$nav}--m-docked__link-icon--m-current--BackgroundColor);
-      }
-    }
 
     .#{$nav}__link-icon {
       position: relative;
       align-self: center;
-      min-width: var(--#{$nav}--m-docked__link-icon--MinWidth);
-      padding-block-start: var(--#{$nav}--m-docked__link-icon--PaddingBlockStart);
-      padding-block-end: var(--#{$nav}--m-docked__link-icon--PaddingBlockEnd);
-      padding-inline-start: var(--#{$nav}--m-docked__link-icon--PaddingInlineStart);
-      padding-inline-end: var(--#{$nav}--m-docked__link-icon--PaddingInlineEnd);
-      background-color: var(--#{$nav}--m-docked__link-icon--BackgroundColor);  
-      border-radius: var(--#{$nav}__link--BorderRadius);
-    }
-
-    .#{$nav}__link-text {
-      margin-block-end: var(--#{$nav}--m-docked__link-text--MarginBlockEnd);
+      min-width: 1lh;
     }
   }
 
@@ -330,7 +286,6 @@
   position: relative;
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
 
-  @at-root .#{$nav}.pf-m-docked .#{$nav}__link-icon::before,
   &::before {
     position: absolute;
     inset-block-start: 0;
@@ -344,8 +299,7 @@
     transition-timing-function: var(--#{$nav}__item--accent--TransitionTimingFunction);
     transition-duration: var(--#{$nav}__item--accent--TransitionDuration);
     transition-property: scale;
-    scale: 1 var(--#{$nav}__item--accent--Scale);
-    translate: var(--#{$nav}__item--accent--TranslateX);
+    scale: 1 var(--#{$nav}__item--accent--ScaleY);
   }
 
   > .#{$nav}__link[button] {
@@ -359,7 +313,7 @@
   }
 
   &:has(> .#{$nav}__link.pf-m-current) {
-    --#{$nav}__item--accent--Scale: var(--#{$nav}__item--current--accent--Scale);
+    --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
   }
 }
@@ -400,7 +354,6 @@
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
 
-  @at-root .#{$nav}.pf-m-docked .#{$nav}__link-icon,
   & {
     transition-timing-function: var(--#{$nav}__link--TransitionTimingFunction--background-color), var(--#{$nav}__link--m-current--TransitionTimingFunction--color);
     transition-duration: var(--#{$nav}__link--TransitionDuration--background-color), var(--#{$nav}__link--m-current--TransitionDuration--color);
