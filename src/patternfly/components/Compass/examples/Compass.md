@@ -13,10 +13,10 @@ import './Compass.css';
 
 In a basic Compass layout, the page structure is defined by the order of elements nested within the main `.pf-v6-c-compass` container:
 - Header: Content rendered at the top of the page (`.pf-v6-c-compass__header`), typically containing a logo (`.pf-v6-c-compass__logo`), middle navigation (`.pf-v6-c-compass__nav`), and profile (`.pf-v6-c-compass__profile`).
-- Start sidebar: Content rendered at the horizontal start of the page (by default, the left side). In this example, a `pf-v6-c-compass__sidebar` with the `.pf-m-start` modifier.
+- Start sidebar: Content rendered at the horizontal start of the page (by default, the left side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-start` modifier.
 - Main: Content rendered in the center of the page. The `.pf-v6-c-compass__main` wrapper contains the hero (`.pf-v6-c-compass__hero`), the main header (`.pf-v6-c-compass__main-header`), the content area (`.pf-v6-c-compass__content`), and the main footer (`.pf-v6-c-compass__main-footer`) with the message bar.
 - End sidebar: Content rendered at the horizontal end of the page (by default, the right side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-end modifier`.
-- Footer: Content rendered at the bottom of the page (.pf-v6-c-compass__footer`).
+- Footer: Content rendered at the bottom of the page (`.pf-v6-c-compass__footer`).
 
 ```hbs isBeta
 {{#> compass}}
