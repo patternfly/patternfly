@@ -1,3 +1,7 @@
+.ws-core-a-compass .pf-v6-c-compass {
+  height: 600px;
+}
+
 #ws-core-a-compass-default [class*="pf-v6-c-compass"],
 #ws-core-a-compass-docked [class*="pf-v6-c-compass"] {
   position: relative;

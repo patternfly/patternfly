@@ -241,6 +241,27 @@ import './Page.css'
 {{/page}}
 ```
 
+### With dock
+```hbs
+{{#> page page--HasDock=true}}
+  {{#> masthead masthead--IsDocked=true}}
+    {{#> masthead-main}}
+      {{#> masthead-brand}}
+        logo
+      {{/masthead-brand}}
+    {{/masthead-main}}
+    {{#> masthead-content}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="comment-alt" button--aria-label="Chat"}}
+    {{/masthead-content}}
+  {{/masthead}}
+  {{#> page-main}}
+    {{#> page-main-section}}
+      This is a default <code>.pf-v6-c-page__main-section</code>.
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
 ## Documentation
 ### Overview
 This component provides the basic chrome for a page, including sidebar and main areas.
@@ -268,6 +289,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required** |
 | `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
+| `.pf-m-dock` | `.pf-v6-c-page` | Modifies the page grid to have a dock. |
 | `.pf-m-no-sidebar` | `.pf-v6-c-page` | Modifies the page grid for layouts without a sidebar. |
 | `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the collapsed state. |

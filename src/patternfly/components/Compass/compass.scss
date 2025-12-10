@@ -94,7 +94,7 @@
   background-image: var(--#{$compass}--BackgroundImage);
   background-size: cover;
 
-  &.pf-m-docked {
+  &.pf-m-dock {
     grid-template-areas: "dock main";
     grid-template-rows: auto;
     grid-template-columns: auto 1fr;

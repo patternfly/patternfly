@@ -51,7 +51,7 @@ import './Compass.css';
 
 ### Docked
 ```hbs isBeta
-{{#> compass compass--IsDocked=true}}
+{{#> compass compass--HasDock=true}}
   {{#> compass-dock}}
     {{#> compass-dock-content}}
       {{#> compass-dock-logo}}
@@ -112,6 +112,7 @@ import './Compass.css';
 | `.pf-v6-c-compass__hero` | `<div>` | Initiates a compass hero. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the compass message bar. |
+| `.pf-m-dock` | `.pf-v6-c-compass` | Modifies for dock layout. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for end styles. **Required** |

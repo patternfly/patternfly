@@ -377,7 +377,7 @@ wrapperTag: div
 ### Docked
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
-  {{#> compass compass--IsDocked=true}}
+  {{#> compass compass--HasDock=true}}
     {{#> compass-dock}}
       {{#> compass-dock-logo}}
         {{> masthead-logo masthead-logo--IsCompact=true}}

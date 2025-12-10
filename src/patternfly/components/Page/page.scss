@@ -168,9 +168,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
   // Docked nav
-  --#{$page}--m-docked__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
-  --#{$page}--m-docked__main-container--MarginBlockStart: var(--pf-t--global--spacer--lg);
-  --#{$page}--m-docked--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
+  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
 }
 
 .#{$page} {
@@ -195,16 +195,16 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
   }
 
-  &.pf-m-docked {
+  &.pf-m-dock {
     --#{$page}--masthead--main-container--GridArea: main;
-    --#{$page}__main-container--MaxHeight: var(--#{$page}--m-docked__main-container--MaxHeight);
-    --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-docked__main-container--MarginBlockStart);
+    --#{$page}__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight);
+    --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart);
     --#{$page}__main-container--MarginInlineStart: 0;
 
     grid-template-areas: "header main";
     grid-template-rows: auto;
     grid-template-columns: auto 1fr;
-    column-gap: var(--#{$page}--m-docked--ColumnGap);
+    column-gap: var(--#{$page}--m-dock--ColumnGap);
   }
 
   // Hamburger menu animation
