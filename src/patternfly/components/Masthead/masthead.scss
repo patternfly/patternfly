@@ -63,8 +63,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-docked--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$masthead}--m-docked--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$masthead}--m-docked--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
-  --#{$masthead}--m-docked--BorderInlineEndColor: var(--pf-t--global--border--color--default);
 
   // * Masthead toolbar
   --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
@@ -129,7 +127,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     align-items: center;
     width: fit-content;
     height: 100%;
-    border-inline-end: var(--#{$masthead}--m-docked--BorderInlineEndWidth) solid var(--#{$masthead}--m-docked--BorderInlineEndColor);
 
     .#{$masthead}__content {
       flex-grow: 1;
