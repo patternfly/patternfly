@@ -98,9 +98,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 }
 
 // - Toolbar content section - Toolbar group - Toolbar item
-.#{$toolbar}__content-section,
-.#{$toolbar}__group,
-.#{$toolbar}__item {
+// Exclude toolbars with container modifier, as they use container queries instead
+.#{$toolbar}:not([class*="pf-m-container"]) .#{$toolbar}__content-section,
+.#{$toolbar}:not([class*="pf-m-container"]) .#{$toolbar}__group,
+.#{$toolbar}:not([class*="pf-m-container"]) .#{$toolbar}__item {
   @include pf-v6-hidden-visible(flex);
 }
 
@@ -200,7 +201,27 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // Establishes container context for all container modifiers
   &[class*="pf-m-container"] {
     container-type: inline-size;
-    container-name: toolbar;
+    container-name: pf-container-toolbar;
+
+    // Container queries (opt-in behavior)
+    // Set base/default state for container-query toolbars (hide filters, show toggle)
+    .#{$toolbar}__group:where(.pf-m-toggle-group) {
+      .#{$toolbar}__group,
+      .#{$toolbar}__item {
+        display: none;
+      }
+
+      .#{$toolbar}__toggle {
+        display: inline-flex;
+      }
+    }
+
+    // Override visibility modifiers to use container queries instead of media queries
+    .#{$toolbar}__content-section,
+    .#{$toolbar}__group,
+    .#{$toolbar}__item {
+      @include pf-v6-hidden-visible(flex, $container-name: 'pf-container-toolbar');
+    }
   }
 
   &.pf-m-vertical {
@@ -324,8 +345,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   border-block-end: var(--#{$toolbar}__expandable-content--BorderBlockEndWidth) solid var(--#{$toolbar}__expandable-content--BorderBlockEndColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
-  // stylelint-disable 
-
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     // Only apply viewport-based behavior if no container modifier is present
     @at-root .#{$toolbar}:not([class*="pf-m-container"]) & {
@@ -338,7 +357,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // Default container behavior (lg breakpoint) when using .pf-m-container
   @at-root .#{$toolbar}.pf-m-container:not([class*="pf-m-container-"]) & {
-    @include pf-v6-container-query("lg", "toolbar") {
+    @include pf-v6-container-query("lg", "pf-container-toolbar") {
       position: static;
       padding: 0;
       border-block-end: 0;
@@ -347,10 +366,11 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   // Container query behavior with explicit breakpoint modifiers
+  // stylelint-disable max-nesting-depth
   @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
     @if $breakpoint != "base" {
       @at-root .#{$toolbar}.pf-m-container-#{$breakpoint} & {
-        @include pf-v6-container-query($breakpoint, "toolbar") {
+        @include pf-v6-container-query($breakpoint, "pf-container-toolbar") {
           position: static;
           padding: 0;
           border-block-end: 0;
@@ -359,7 +379,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       }
     }
   }
-// stylelint-enable 
+  // stylelint-enable max-nesting-depth
 
   &.pf-m-expanded,
   .#{$toolbar}__group {
@@ -399,7 +419,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 }
 
 // Mixin for toggle group show/hide behavior
-@mixin toolbar-toggle-group-breakpoint-behavior($breakpoint-name) {
+@mixin pf-v6-toolbar-toggle-group-breakpoint-behavior($breakpoint-name) {
   .#{$toolbar}__group:where(.pf-m-toggle-group) {
     &.pf-m-show#{$breakpoint-name} {
       .#{$toolbar}__group,
@@ -506,27 +526,14 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
     // - Toolbar toggle group (only for non-container toolbars)
     @at-root .#{$toolbar}:not([class*="pf-m-container"]) {
-      @include toolbar-toggle-group-breakpoint-behavior($breakpoint-name);
+      @include pf-v6-toolbar-toggle-group-breakpoint-behavior($breakpoint-name);
     }
   }
 }
 
-// Container queries (opt-in behavior)
-// Set base/default state for container-query toolbars (hide filters, show toggle)
-.#{$toolbar}[class*="pf-m-container"] {
-  .#{$toolbar}__group:where(.pf-m-toggle-group) {
-    .#{$toolbar}__group,
-    .#{$toolbar}__item {
-      display: none;
-    }
-
-    .#{$toolbar}__toggle {
-      display: inline-flex;
-    }
-  }
-}
 
 // Container query responsive behavior
+// stylelint-disable max-nesting-depth
 .#{$toolbar}__group:where(.pf-m-toggle-group) {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
     @if $breakpoint != "base" {
@@ -534,7 +541,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
       @at-root .#{$toolbar}.pf-m-container &,
       .#{$toolbar}.pf-m-container-#{$breakpoint} & {
-        @include pf-v6-container-query($breakpoint, "toolbar") {
+        @include pf-v6-container-query($breakpoint, "pf-container-toolbar") {
           &.pf-m-show#{$breakpoint-name} {
             .#{$toolbar}__group,
             .#{$toolbar}__item {
@@ -551,3 +558,4 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     }
   }
 }
+// stylelint-enable max-nesting-depth
