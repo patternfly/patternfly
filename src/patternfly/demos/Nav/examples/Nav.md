@@ -45,7 +45,7 @@ section: components
 ```
 
 ### Docked nav
-```hbs isFullscreen
+```hbs isFullscreen isBeta
 {{> page-template page-template--id="nav-docked-example"
       page-template--HasNoSidebar=true
       masthead-template--HasDockedNav=true
