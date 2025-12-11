@@ -244,16 +244,18 @@ import './Page.css'
 ### With dock
 ```hbs isBeta
 {{#> page page--HasDock=true}}
-  {{#> masthead masthead--IsDocked=true}}
-    {{#> masthead-main}}
-      {{#> masthead-brand}}
-        logo
-      {{/masthead-brand}}
-    {{/masthead-main}}
-    {{#> masthead-content}}
-      {{> button button--IsPlain=true button--IsIcon=true button--icon="comment-alt" button--aria-label="Chat"}}
-    {{/masthead-content}}
-  {{/masthead}}
+  {{#> page-dock}}
+    {{#> masthead masthead--IsDocked=true}}
+      {{#> masthead-main}}
+        {{#> masthead-brand}}
+          logo
+        {{/masthead-brand}}
+      {{/masthead-main}}
+      {{#> masthead-content}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="comment-alt" button--aria-label="Chat"}}
+      {{/masthead-content}}
+    {{/masthead}}
+  {{/page-dock}}
   {{#> page-main}}
     {{#> page-main-section}}
       This is a default <code>.pf-v6-c-page__main-section</code>.

@@ -12,6 +12,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Header
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
+  // Dock
+  --#{$page}__dock--ZIndex: var(--pf-t--global--z-index--md);
+
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width--base: #{pf-size-prem(290px)};
@@ -201,7 +204,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart);
     --#{$page}__main-container--MarginInlineStart: 0;
 
-    grid-template-areas: "header main";
+    grid-template-areas: "dock main";
     grid-template-rows: auto;
     grid-template-columns: auto 1fr;
     column-gap: var(--#{$page}--m-dock--ColumnGap);
@@ -245,6 +248,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   z-index: var(--#{$page}--c-masthead--ZIndex);
   grid-area: header;
+}
+
+// Dock
+.#{$page}__dock {
+  z-index: var(--#{$page}__dock--ZIndex);
+  grid-area: dock;
 }
 
 // Sidebar

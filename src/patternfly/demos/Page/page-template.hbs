@@ -5,7 +5,13 @@
     page--HasNoSidebar=page-template--HasNoSidebar
     page--HasDock=masthead-template--HasDockedNav}}
   {{#unless page-template--HasNoMasthead}}
-    {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
+    {{#if masthead-template--HasDockedNav}}
+      {{#> page-dock}}
+        {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
+      {{/page-dock}}
+    {{else}}
+      {{> masthead-template masthead-template--id=(concat page--id '-docked')}}
+    {{/if}}
   {{/unless}}
   {{#unless page-template--HasNoSidebar}}
     {{> page-template-sidebar}}
