@@ -12,7 +12,7 @@
   masthead-template-content-icon-group--breakpoint="lg"
   masthead--IsDocked=masthead-template--HasDockedNav
   masthead-template--HasDividers=masthead-template--HasDockedNav
-  masthead-template--HasNoToggle=masthead-template--HasDockedNav}}
+  masthead-template--HasNoToggle=(concat masthead-template--HasDockedNav masthead-template--HasHorizontalNav)}}
   {{#> masthead-main}}
     {{#unless masthead-template--HasNoToggle}}
       {{> masthead-toggle}}

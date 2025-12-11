@@ -24,7 +24,6 @@ section: components
 {{> page-template page-template--id="nav-horizontal-example"
       page-template--HasNoSidebar=true
       masthead-template--HasHorizontalNav=true
-      masthead-template--HasNoToggle=true
 }}
 ```
 
