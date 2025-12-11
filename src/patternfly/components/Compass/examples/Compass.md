@@ -53,17 +53,7 @@ import './Compass.css';
 ```hbs isBeta
 {{#> compass compass--HasDock=true}}
   {{#> compass-dock}}
-    {{#> compass-dock-content}}
-      {{#> compass-dock-logo}}
-        logo
-      {{/compass-dock-logo}}
-      {{#> compass-dock-main}}
-        main
-      {{/compass-dock-main}}
-      {{#> compass-dock-tools}}
-        tools
-      {{/compass-dock-tools}}
-    {{/compass-dock-content}}
+    dock
   {{/compass-dock}}
   {{#> compass-main}}
     {{#> compass-main-header}}
@@ -91,9 +81,6 @@ import './Compass.css';
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the compass logo header. |
 | `.pf-v6-c-compass__nav` | `<div>` | Initiates the compass nav. |
 | `.pf-v6-c-compass__dock` | `<div>` | Initiates the compass dock. |
-| `.pf-v6-c-compass__dock-logo` | `<div>` | Initiates the compass dock logo. |
-| `.pf-v6-c-compass__dock-main` | `<div>` | Initiates the compass dock main container. |
-| `.pf-v6-c-compass__dock-tools` | `<div>` | Initiates the compass dock tools. |
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the compass main wrapper. **Required** |

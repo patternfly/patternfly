@@ -242,7 +242,7 @@ import './Page.css'
 ```
 
 ### With dock
-```hbs
+```hbs isBeta
 {{#> page page--HasDock=true}}
   {{#> masthead masthead--IsDocked=true}}
     {{#> masthead-main}}

@@ -94,7 +94,7 @@ cssPrefix: pf-v6-c-masthead
 ```
 
 ### Docked
-```hbs
+```hbs isBeta
 {{#> masthead masthead--id="docked-masthead-example" masthead--IsDocked=true}}
   {{#> masthead-main}}
     {{#> masthead-brand}}

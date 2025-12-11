@@ -6,14 +6,6 @@
   --#{$compass}--BackgroundImage--dark: none;
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}--Gap: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__dock--RowGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--default);
-  --#{$compass}__dock--BackgroundColor: var(--pf-t--global--background--color--glass--default);
-  --#{$compass}__dock--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
-  --#{$compass}__dock--BorderColor: var(--pf-t--global--border--color--alt);
-  --#{$compass}__dock--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__dock--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__dock--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$compass}__dock--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$compass}__nav--PaddingBlockStart: 0;
   --#{$compass}__nav--PaddingBlockEnd: 0;
@@ -104,10 +96,6 @@
     .#{$compass}__main {
       padding: var(--#{$compass}--Padding);
     }
-
-    .#{$nav}.pf-m-docked {
-      --#{$nav}__item--accent--TranslateX: 0
-    }
   }
 
   :root:where(.#{$pf-prefix}theme-dark) & {
@@ -196,20 +184,6 @@
 .#{$compass}__nav-main {
   padding-inline-start: var(--#{$compass}__nav-main--PaddingInlineStart);
   padding-inline-end: var(--#{$compass}__nav-main--PaddingInlineEnd);
-}
-
-.#{$compass}__dock {
-  display: grid;
-  grid-area: dock;
-  grid-template-rows: auto 1fr auto;
-  row-gap: var(--#{$compass}__dock--RowGap);
-  padding-block-start: var(--#{$compass}__dock--PaddingBlockStart);
-  padding-block-end: var(--#{$compass}__dock--PaddingBlockEnd);
-  padding-inline-start: var(--#{$compass}__dock--PaddingInlineStart);
-  padding-inline-end: var(--#{$compass}__dock--PaddingInlineEnd);
-  background-color: var(--#{$compass}__dock--BackgroundColor);
-  backdrop-filter: var(--#{$compass}__dock--BackdropFilter);
-  border-color: var(--#{$compass}__dock--BorderColor);
 }
 
 .#{$compass}__sidebar {

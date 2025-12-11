@@ -69,6 +69,9 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$toolbar}--m-sticky--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
 
+  // * Toolbar vertical
+  --#{$toolbar}--m-vertical--Width: fit-content;
+
   // * Toolbar expand all
   --#{$toolbar}__expand-all-icon--Rotate: 0;
   --#{$toolbar}__expand-all-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
@@ -197,6 +200,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     --#{$toolbar}--child--m-align-end--MarginBlockStart: auto;
     --#{$toolbar}--child--m-align-end--MarginInlineStart: 0;
     --#{$toolbar}--PaddingBlockEnd: 0;
+    --#{$toolbar}--Width: var(--#{$toolbar}--m-vertical--Width);
 
     :is(.#{$toolbar}__group, .#{$toolbar}__item, .#{$toolbar}__content-section) {
       flex-direction: column;
@@ -245,7 +249,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   column-gap: var(--#{$toolbar}__group--ColumnGap);
 
   .#{$toolbar}.pf-m-vertical & {
-    row-gap: var(--#{$toolbar}__group--ColumnGapp);
+    row-gap: var(--#{$toolbar}__group--ColumnGap);
   }
 
   // - Toolbar filter group

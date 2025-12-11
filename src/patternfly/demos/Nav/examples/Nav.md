@@ -49,7 +49,5 @@ section: components
 {{> page-template page-template--id="nav-docked-example"
       page-template--HasNoSidebar=true
       masthead-template--HasDockedNav=true
-      masthead-template--HasNoToggle=true
-      nav--IsDocked=true
 }}
 ```

@@ -379,72 +379,7 @@ wrapperTag: div
 {{#> compass--demo-context}}
   {{#> compass compass--HasDock=true}}
     {{#> compass-dock}}
-      {{#> compass-dock-logo}}
-        {{> masthead-logo masthead-logo--IsCompact=true}}
-      {{/compass-dock-logo}}
-      {{#> compass-dock-main}}
-        {{#> toolbar toolbar--IsVertical=true}}
-          {{#> toolbar-content}}
-            {{#> toolbar-content-section}}
-              {{#> toolbar-group toolbar-group--IsActionGroup=true}}
-                {{#> toolbar-item}}
-                  {{#> button button--modifier=(concat (pfv "unset-prefix") "m-ai-indicator") button--IsPlain=true button--aria-label="AI assistant" button--IsCircle=true button--IsIcon=true}}
-                    {{> compass--icons compass--icons--sparkle=true}}
-                  {{/button}}
-                {{/toolbar-item}}
-                {{> divider}}
-                {{#> toolbar-item}}
-                  {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
-                    {{#> nav-list}}
-                      {{#> nav-item}}
-                        {{> nav-link nav-link--href="#" nav-link--icon="cube" nav-link--aria-label="Cube"}}
-                      {{/nav-item}}
-                      {{#> nav-item}}
-                        {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder" nav-link--aria-label="Folder"}}
-                      {{/nav-item}}
-                      {{#> nav-item}}
-                        {{> nav-link nav-link--href="#" nav-link--icon="cloud" nav-link--aria-label="Cloud"}}
-                      {{/nav-item}}
-                      {{#> nav-item}}
-                        {{> nav-link nav-link--href="#" nav-link--icon="code" nav-link--aria-label="Code"}}
-                      {{/nav-item}}
-                    {{/nav-list}}
-                  {{/nav}}
-                {{/toolbar-item}}
-                {{> divider}}
-                {{#> toolbar-group toolbar-group--IsActionGroupPlain=true}}
-                  {{#> toolbar-item}}
-                    {{> button button--IsPlain=true button--IsIcon=true button--icon="rocket" button--aria-label="Blast off"}}
-                  {{/toolbar-item}}
-                  {{#> toolbar-item}}
-                    {{> button button--IsPlain=true button--IsIcon=true button--icon="comment-alt" button--aria-label="Chat"}}
-                  {{/toolbar-item}}
-                {{/toolbar-group}}
-              {{/toolbar-group}}
-            {{/toolbar-content-section}}
-          {{/toolbar-content}}
-        {{/toolbar}}
-      {{/compass-dock-main}}
-      {{#> compass-dock-tools}}
-        {{#> toolbar toolbar--IsVertical=true}}
-          {{#> toolbar-content}}
-            {{#> toolbar-content-section}}
-              {{#> toolbar-group toolbar-group--IsActionGroupPlain=true}}
-                {{> divider}}
-                {{#> toolbar-item}}
-                  {{> button button--IsPlain=true button--IsIcon=true button--icon="bell" button--aria-label="Notifications"}}
-                {{/toolbar-item}}
-                {{#> toolbar-item}}
-                  {{> button button--IsPlain=true button--IsIcon=true button--icon="question-circle" button--aria-label="Help"}}
-                {{/toolbar-item}}
-                {{#> toolbar-item}}
-                  {{> button button--IsPlain=true button--IsIcon=true button--icon="cog" button--aria-label="Settings"}}
-                {{/toolbar-item}}
-              {{/toolbar-group}}
-            {{/toolbar-content-section}}
-          {{/toolbar-content}}
-        {{/toolbar}}
-      {{/compass-dock-tools}}
+      {{> masthead-template masthead-template--HasDockedNav=true}}
     {{/compass-dock}}
     {{#> compass-main}}
       {{#> compass-main-header}}
