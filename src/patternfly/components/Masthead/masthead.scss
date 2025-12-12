@@ -142,6 +142,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   background-color: var(--#{$masthead}--BackgroundColor);
 
   &.pf-m-docked {
+    @include pf-v6-c-masthead--m-display-inline;
+
     --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-docked--BackgroundColor);
     --#{$masthead}--GridTemplateRows: var(--#{$masthead}--m-docked--GridTemplateRows);
     --#{$masthead}--PaddingBlockStart: var(--#{$masthead}--m-docked--PaddingBlockStart);
