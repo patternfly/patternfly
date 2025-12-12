@@ -373,17 +373,28 @@ export const prefix = function (term) {
 // ======================================================================================
 export const readReactIcon = function (iconName) {
   try {
+    if (typeof iconName !== 'string' || !iconName.trim()) {
+      console.error('[readReactIcon helper] Missing iconName');
+      return '';
+    }
+
+    const baseDir = path.resolve(process.cwd(), 'src/icons/react-icons');
     const fileName = iconName.endsWith('.svg') ? iconName : `${iconName}.svg`;
-    const fullPath = path.join(process.cwd(), 'src/icons/react-icons', fileName);
+    const fullPath = path.resolve(baseDir, fileName);
+
+    if (!fullPath.startsWith(baseDir + path.sep)) {
+      console.error(`[readReactIcon helper] Refusing to read outside icons dir: ${iconName}`);
+      return '';
+    }
 
     if (!fs.existsSync(fullPath)) {
-      console.warn(`[readReactIcon helper] Icon not found: ${fullPath}`);
+      console.error(`[readReactIcon helper] Icon not found: ${fullPath}`);
       return '';
     }
 
     return fs.readFileSync(fullPath, 'utf8');
   } catch (error) {
-    console.error(`[readReactIcon helper] Error reading icon ${iconName}:`, error.message);
+    console.error(`[readReactIcon helper] Error reading icon ${String(iconName)}:`, error);
     return '';
   }
 };
