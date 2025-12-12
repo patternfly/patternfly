@@ -203,7 +203,12 @@
     .#{$nav}__link-icon {
       position: relative;
       align-self: center;
+      text-align: center;
       min-width: 1lh;
+    }
+
+    .#{$nav}__link-text {
+      display: none;
     }
   }
 
