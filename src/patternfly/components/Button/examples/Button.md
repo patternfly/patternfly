@@ -251,6 +251,43 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 {{/button}}
 ```
 
+### Stateful plain
+```hbs
+<strong>Read</strong>
+<br>
+{{#> button button--IsStateful=true button--IsPlain=true button--IsRead=true button--icon="bell"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsPlain=true button--IsRead=true button--IsClicked=true button--icon="bell"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+<br><br>
+
+<strong>Unread</strong>
+<br>
+{{#> button button--IsStateful=true button--IsPlain=true button--IsUnread=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsPlain=true button--IsUnread=true button--IsClicked=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
+{{/button}}
+
+<br><br>
+
+<strong>Attention</strong>
+<br>
+{{#> button button--IsStateful=true button--IsPlain=true button--IsAttention=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsPlain=true button--IsAttention=true button--IsClicked=true button--icon="bell"}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{/button}}
+```
+
 ### Favorite
 A favorite button should use a plain button with the star icon. Applying `.pf-m-favorited` to the button initiates a microanimation and indicates that the item is favorited.
 ```hbs
