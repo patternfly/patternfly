@@ -112,7 +112,8 @@ const buildPatternflyFromClean = parallel(series(copyReactIcons, buildDocs, mini
 const rebuildPatternfly = parallel(series(buildDocs, minifyCSS), copySourceFiles);
 
 const hasPfIconsDir = fs.existsSync('src/icons/PfIcons');
-export const buildPatternfly = hasPfIconsDir ? rebuildPatternfly : buildPatternflyFromClean;
+const hasReactIconsDir = fs.existsSync('src/icons/react-icons');
+export const buildPatternfly = (hasPfIconsDir && hasReactIconsDir) ? rebuildPatternfly : buildPatternflyFromClean;
 
 export function pfIcons() {
   return definedPfIcons();
