@@ -78,6 +78,23 @@ $pf-v6-global--height-breakpoint-name-map: (
   "2xl": $pf-v6-global--height-breakpoint--2xl
 );
 
+// Container query breakpoints (290px less than viewport breakpoints)
+// Used when components opt into container-based responsive behavior
+$pf-v6-global--container-breakpoint--sm: 17.875rem !default; // 286px (576px - 290px)
+$pf-v6-global--container-breakpoint--md: 29.875rem !default; // 478px (768px - 290px)
+$pf-v6-global--container-breakpoint--lg: 43.875rem !default; // 702px (992px - 290px)
+$pf-v6-global--container-breakpoint--xl: 56.875rem !default; // 910px (1200px - 290px)
+$pf-v6-global--container-breakpoint--2xl: 72.5rem !default; // 1160px (1450px - 290px)
+
+// Global container breakpoint name map
+$pf-v6-global--container-breakpoint-name-map: (
+  "sm": $pf-v6-global--container-breakpoint--sm,
+  "md": $pf-v6-global--container-breakpoint--md,
+  "lg": $pf-v6-global--container-breakpoint--lg,
+  "xl": $pf-v6-global--container-breakpoint--xl,
+  "2xl": $pf-v6-global--container-breakpoint--2xl
+);
+
 // Spacer properties
 $pf-v6-global--spacer-properties-map: (
   "m":  "margin",
