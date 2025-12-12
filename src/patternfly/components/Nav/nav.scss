@@ -204,6 +204,11 @@
       position: relative;
       align-self: center;
       min-width: 1lh;
+      text-align: center;
+    }
+
+    .#{$nav}__link-text {
+      display: none;
     }
   }
 
