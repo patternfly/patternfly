@@ -108,13 +108,11 @@ const buildDocs = series(buildSrc, copyDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, watchSrcHelpers, startWebpackDevServer);
 
 // Builds `dist` folder
-const buildPatternflyFromClean = parallel(series(buildDocs, minifyCSS), series(pfIcons, parallel(copyFA, copyReactIcons, copySourceFiles)));
-const rebuildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copyReactIcons, copySourceFiles);
+const buildPatternflyFromClean = parallel(series(copyReactIcons, buildDocs, minifyCSS), series(pfIcons, copyFA, copySourceFiles));
+const rebuildPatternfly = parallel(series(buildDocs, minifyCSS), copySourceFiles);
 
 const hasPfIconsDir = fs.existsSync('src/icons/PfIcons');
 export const buildPatternfly = hasPfIconsDir ? rebuildPatternfly : buildPatternflyFromClean;
-
-export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
 
 export function pfIcons() {
   return definedPfIcons();
