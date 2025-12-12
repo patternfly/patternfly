@@ -1,4 +1,6 @@
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import fs from 'fs';
+import path from 'path';
 
 // TODO: TODO: update ternary to not escape chars
 
@@ -359,3 +361,40 @@ export const pfv = (type) => {
 export const prefix = function (term) {
   return pfv('c') + term;
 }
+
+// ======================================================================================
+// readReactIcon: is a helper function that reads a React Icon SVG file from src/icons/react-icons
+// ======================================================================================
+//
+// Usage:
+//   {{readReactIcon 'rh-ui-home'}}
+//   {{readReactIcon icon}}  // where icon is 'rh-ui-home' (without .svg extension)
+//
+// ======================================================================================
+export const readReactIcon = function (iconName) {
+  try {
+    if (typeof iconName !== 'string' || !iconName.trim()) {
+      console.error('[readReactIcon helper] Missing iconName');
+      return '';
+    }
+
+    const baseDir = path.resolve(process.cwd(), 'src/icons/react-icons');
+    const fileName = iconName.endsWith('.svg') ? iconName : `${iconName}.svg`;
+    const fullPath = path.resolve(baseDir, fileName);
+
+    if (!fullPath.startsWith(baseDir + path.sep)) {
+      console.error(`[readReactIcon helper] Refusing to read outside icons dir: ${iconName}`);
+      return '';
+    }
+
+    if (!fs.existsSync(fullPath)) {
+      console.error(`[readReactIcon helper] Icon not found: ${fullPath}`);
+      return '';
+    }
+
+    return fs.readFileSync(fullPath, 'utf8');
+  } catch (error) {
+    console.error(`[readReactIcon helper] Error reading icon ${String(iconName)}:`, error);
+    return '';
+  }
+};
