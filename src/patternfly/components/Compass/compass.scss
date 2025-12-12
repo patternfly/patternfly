@@ -21,16 +21,16 @@
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--Gap)); // Creates same gap as parent compass grid, mimicking the compass footer
-  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
-  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
-  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$compass}__panel--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
+  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--default);
+  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
   --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--alt);
+  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
@@ -85,6 +85,18 @@
   overflow: hidden;
   background-image: var(--#{$compass}--BackgroundImage);
   background-size: cover;
+
+  &.pf-m-dock {
+    grid-template-areas: "dock main";
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr;
+    align-items: stretch;
+    padding: 0;
+
+    .#{$compass}__main {
+      padding: var(--#{$compass}--Padding);
+    }
+  }
 
   :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);

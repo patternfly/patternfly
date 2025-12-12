@@ -1,8 +1,8 @@
-<{{#if masthead--type}}{{masthead--type}}{{else}}header{{/if}}
-  class="{{pfv}}masthead
-  {{~#if masthead--modifier}}
-    {{masthead--modifier}}
-  {{/if}}"
+<{{#if masthead--type}}{{masthead--type}}{{else}}header{{/if}} class="{{pfv}}masthead
+  {{setModifiers
+    masthead--IsDocked='pf-m-docked'
+    masthead--modifier=masthead--modifier
+  }}"
   {{#if masthead--id}}
     id="{{masthead--id}}"
   {{/if}}

@@ -10,6 +10,9 @@
   {{#ifAny nav-link--current nav-link--IsCurrent}}
     aria-current="page"
   {{/ifAny}}
+  {{#if nav-link--aria-label}}
+    aria-label="{{nav-link--aria-label}}"
+  {{/if}}
   {{#if nav-item--IsFlyout}}
     aria-haspopup="true"
   {{/if}}

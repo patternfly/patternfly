@@ -373,3 +373,48 @@ wrapperTag: div
   {{/drawer-main}}
 {{/drawer}}
 ```
+
+### Docked
+```hbs isFullscreen isBeta
+{{#> compass--demo-context}}
+  {{#> compass compass--HasDock=true}}
+    {{#> compass-dock}}
+      {{> masthead-template masthead-template--HasDockedNav=true}}
+    {{/compass-dock}}
+    {{#> compass-main}}
+      {{#> compass-main-header}}
+        {{#> compass-panel}}
+          {{#> compass-main-header-content}}
+            {{#> compass-main-header-title}}
+              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                Header
+              {{/title}}
+            {{/compass-main-header-title}}
+            {{#> compass-main-header-toolbar}}
+              {{#> action-list}}
+                {{#> action-list-group}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsPrimary=true}}
+                      action
+                    {{/button}}
+                  {{/action-list-item}}
+                  {{#> action-list-item}}
+                    {{#> button button--IsSecondary=true}}
+                      action
+                    {{/button}}
+                  {{/action-list-item}}
+                {{/action-list-group}}
+              {{/action-list}}
+            {{/compass-main-header-toolbar}}
+          {{/compass-main-header-content}}
+        {{/compass-panel}}
+      {{/compass-main-header}}
+      {{#> compass-content}}
+        {{#> compass-panel}}
+          [so much room for activities]
+        {{/compass-panel}}
+      {{/compass-content}}
+    {{/compass-main}}
+  {{/compass}}
+{{/compass--demo-context}}
+```

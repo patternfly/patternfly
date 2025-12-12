@@ -69,6 +69,9 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$toolbar}--m-sticky--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
 
+  // * Toolbar vertical
+  --#{$toolbar}--m-vertical--Width: fit-content;
+
   // * Toolbar expand all
   --#{$toolbar}__expand-all-icon--Rotate: 0;
   --#{$toolbar}__expand-all-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
@@ -193,9 +196,17 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-no-background--BackgroundColor);
   }
 
-  // @include resize-observer-placeholder('md') {
-  //   do resize observer things here
-  // }
+  &.pf-m-vertical {
+    --#{$toolbar}--child--m-align-end--MarginBlockStart: auto;
+    --#{$toolbar}--child--m-align-end--MarginInlineStart: 0;
+    --#{$toolbar}--PaddingBlockEnd: 0;
+    --#{$toolbar}--Width: var(--#{$toolbar}--m-vertical--Width);
+
+    :is(.#{$toolbar}__group, .#{$toolbar}__item, .#{$toolbar}__content-section) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 // - Toolbar item
@@ -237,6 +248,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   row-gap: var(--#{$toolbar}__group--RowGap);
   column-gap: var(--#{$toolbar}__group--ColumnGap);
 
+  .#{$toolbar}.pf-m-vertical & {
+    row-gap: var(--#{$toolbar}__group--ColumnGap);
+  }
+
   // - Toolbar filter group
   &.pf-m-filter-group {
     column-gap: var(--#{$toolbar}__group--m-filter-group--ColumnGap);
@@ -252,11 +267,19 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // - Toolbar action group
   &.pf-m-action-group {
     column-gap: var(--#{$toolbar}__group--m-action-group--ColumnGap);
+
+    .#{$toolbar}.pf-m-vertical & {
+      row-gap: var(--#{$toolbar}__group--m-action-group--ColumnGap);
+    }
   }
 
   // - Toolbar action group plain
   &.pf-m-action-group-plain {
     column-gap: var(--#{$toolbar}__group--m-action-group-plain--ColumnGap);
+
+    .#{$toolbar}.pf-m-vertical & {
+      row-gap: var(--#{$toolbar}__group--m-action-group-plain--ColumnGap);
+    }
   }
 
   // - Toolbar action group inline
@@ -348,7 +371,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       }
 
       &.pf-m-align-end#{$breakpoint-name} {
-        margin-inline-start: auto;
+        margin-block-start: var(--#{$toolbar}--child--m-align-end--MarginBlockStart, 0);
+        margin-inline-start: var(--#{$toolbar}--child--m-align-end--MarginInlineStart, auto);
       }
 
       &.pf-m-flex-grow#{$breakpoint-name} {

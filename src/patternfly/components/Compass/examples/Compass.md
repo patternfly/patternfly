@@ -9,7 +9,7 @@ cssPrefix: pf-v6-c-compass
 import './Compass.css';
 
 ## Examples
-### Basic
+### Default
 ```hbs isBeta
 {{#> compass}}
   {{#> compass-header}}
@@ -49,6 +49,29 @@ import './Compass.css';
 {{/compass}}
 ```
 
+### Docked
+```hbs isBeta
+{{#> compass compass--HasDock=true}}
+  {{#> compass-dock}}
+    dock
+  {{/compass-dock}}
+  {{#> compass-main}}
+    {{#> compass-main-header}}
+      {{#> compass-panel}}
+        {{#> compass-main-header-content}}
+          main header
+        {{/compass-main-header-content}}
+      {{/compass-panel}}
+    {{/compass-main-header}}
+    {{#> compass-content}}
+      {{#> compass-panel compass-panel--IsScrollable=true}}
+        content
+      {{/compass-panel}}
+    {{/compass-content}}
+  {{/compass-main}}
+{{/compass}}
+```
+
 ## Documentation
 ### Usage
 | Class | Applied to | Outcome |
@@ -57,6 +80,7 @@ import './Compass.css';
 | `.pf-v6-c-compass__header` | `<div>` | Initiates the compass header. **Required** |
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the compass logo header. |
 | `.pf-v6-c-compass__nav` | `<div>` | Initiates the compass nav. |
+| `.pf-v6-c-compass__dock` | `<div>` | Initiates the compass dock. |
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the compass main wrapper. **Required** |
@@ -75,6 +99,7 @@ import './Compass.css';
 | `.pf-v6-c-compass__hero` | `<div>` | Initiates a compass hero. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the compass message bar. |
+| `.pf-m-dock` | `.pf-v6-c-compass` | Modifies for dock layout. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a compass sidebar for end styles. **Required** |

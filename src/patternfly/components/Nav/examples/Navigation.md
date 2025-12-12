@@ -559,6 +559,26 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Docked nav
+```hbs isBeta
+{{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{> nav-link nav-link--href="#" nav-link--icon="cube" nav-link--aria-label="Cube"}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder" nav-link--aria-label="Folder"}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{> nav-link nav-link--href="#" nav-link--icon="cloud" nav-link--aria-label="Cloud"}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{> nav-link nav-link--href="#" nav-link--icon="code" nav-link--aria-label="Code"}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ## Documentation
 
 ### Overview
@@ -600,6 +620,7 @@ The navigation system relies on several different sub-components:
 | `.pf-v6-c-nav__scroll-button` | `<button>` | Initiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-m-horizontal` | `.pf-v6-c-nav` | Modifies nav for the horizontal variation. |
 | `.pf-m-horizontal-subnav` | `.pf-v6-c-nav` | Modifies nav for the horizontal subnav variation. |
+| `.pf-m-docked` | `.pf-v6-c-nav` | Modifies nav for the docked variation. |
 | `.pf-m-flyout` | `.pf-v6-c-nav__item` | Modifies nav item for the flyout variation. |
 | `.pf-m-scrollable` | `.pf-v6-c-nav` | Modifies nav for the scrollable state. |
 | `.pf-m-expanded` | `.pf-v6-c-nav__item` | Modifies for the expanded state. |
