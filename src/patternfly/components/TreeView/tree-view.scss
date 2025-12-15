@@ -94,6 +94,10 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__node-toggle-icon--base--Rotate);
   --#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate: 90deg;
 
+  // Disabled
+  --#{$tree-view}__list-item--m-disabled__node--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tree-view}__list-item--m-disabled__node-icon--Color: var(--pf-t--global--icon--color--disabled);
+
   // Text
   --#{$tree-view}__node-text--max-lines: 1;
 
@@ -428,6 +432,11 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   .#{$tree-view}__node-count {
     margin-inline-start: var(--#{$tree-view}__node-count--MarginInlineStart);
+  }
+
+  .pf-m-disabled > .#{$tree-view}__content > & {
+    --#{$tree-view}__node--Color: var(--#{$tree-view}__list-item--m-disabled__node--Color);
+    --#{$tree-view}__node-icon--Color: var(--#{$tree-view}__list-item--m-disabled__node-icon--Color);
   }
 }
 

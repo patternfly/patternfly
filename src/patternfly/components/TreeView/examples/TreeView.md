@@ -989,3 +989,4 @@ A search input can be used to filter tree view items. It is recommended that a t
 | `.pf-m-current` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to be current. |
 | `.pf-m-selectable` | `.pf-v6-c-tree-view__node` | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
 | `.pf-m-truncate` | `.pf-v6-c-tree-view`, `.pf-v6-c-tree-view__node-title`, `.pf-v6-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |
+| `.pf-m-disabled` | `.pf-v6-c-tree-view__list-item` | Modifies the tree view list item to display as disabled. |
