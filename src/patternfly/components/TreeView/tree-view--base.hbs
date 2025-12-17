@@ -28,12 +28,12 @@
         {{/tree-view-node}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item}}
+    {{#> tree-view-list-item tree-view-list-item--modifier="pf-m-disabled"}}
       {{#> tree-view-content}}
         {{#> tree-view-node}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
-              metadata
+              metadata (disabled item)
             {{/tree-view-node-title}}
             {{#> tree-view-node-text}}
               Standard object metadata
@@ -140,12 +140,12 @@
             {{/tree-view-node}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--modifier="pf-m-disabled"}}
               {{#> tree-view-content}}
                 {{#> tree-view-node}}
                   {{#> tree-view-node-content}}
                     {{#> tree-view-node-title}}
-                      matchExpressions
+                      matchExpressions (disabled item)
                     {{/tree-view-node-title}}
                     {{#> tree-view-node-text}}
                       matchExpressions is a list of the label selector requirements. The requirements and ANDed.

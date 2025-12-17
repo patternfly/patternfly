@@ -37,9 +37,9 @@ cssPrefix: pf-v6-c-tree-view
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--modifier="pf-m-disabled"}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--text="Application 2"}}
+            {{> tree-view-node tree-view-node--text="Application 2 (disabled item)"}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
