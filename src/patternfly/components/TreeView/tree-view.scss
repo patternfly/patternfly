@@ -99,6 +99,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__list-item--m-disabled__node-icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$tree-view}--m-compact__node-container--nested--Color: inherit;
   --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$tree-view}--m-compact__node-icon--nested--Color: inherit;
+  --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
 
   // Text
   --#{$tree-view}__node-text--max-lines: 1;
@@ -305,14 +307,18 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
           padding-block-end: var(--#{$tree-view}--m-compact__node-container--nested--PaddingBlockEnd);
           padding-inline-start: var(--#{$tree-view}--m-compact__node-container--nested--PaddingInlineStart);
           padding-inline-end: var(--#{$tree-view}--m-compact__node-container--nested--PaddingInlineEnd);
-          background-color: var(--#{$tree-view}--m-compact__node-container--nested--BackgroundColor);
           color: var(--#{$tree-view}--m-compact__node-container--nested--Color);
+          background-color: var(--#{$tree-view}--m-compact__node-container--nested--BackgroundColor);
         }
 
         // add margins to align item text flush left and offset gap between toggle and text
         .#{$tree-view}__node-toggle {
           margin-inline-start: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart);
           margin-inline-end: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd);
+        }
+
+        .#{$tree-view}__node-icon {
+          color: var(--#{$tree-view}--m-compact__node-icon--nested--Color);
         }
         // stylelint-enable
       }
@@ -355,6 +361,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   &.pf-m-no-background {
     --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$tree-view}--m-no-background__node-container--BackgroundColor);
     --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--#{$tree-view}--m-compact__node-container--m-disabled--nested--Color);
+    --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color);
   }
 }
 
@@ -442,6 +449,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node--Color: var(--#{$tree-view}__list-item--m-disabled__node--Color);
     --#{$tree-view}__node-icon--Color: var(--#{$tree-view}__list-item--m-disabled__node-icon--Color);
     --#{$tree-view}--m-compact__node-container--nested--Color: var(--#{$tree-view}--m-compact__node-container--m-disabled--nested--Color);
+    --#{$tree-view}--m-compact__node-icon--nested--Color: var(--#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color);
   }
 }
 
