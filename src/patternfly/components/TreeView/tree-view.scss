@@ -96,12 +96,13 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   // Disabled
   --#{$tree-view}__list-item--m-disabled__node--Color: var(--pf-t--global--text--color--disabled);
-  --#{$tree-view}__list-item--m-disabled__node-icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$tree-view}--m-compact__node-container--nested--Color: inherit;
   --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--pf-t--global--text--color--on-disabled);
+
+  --#{$tree-view}__list-item--m-disabled__node-icon--Color: var(--pf-t--global--icon--color--disabled);
   --#{$tree-view}--m-compact__node-icon--nested--Color: inherit;
   --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
-
+  
   // Text
   --#{$tree-view}__node-text--max-lines: 1;
 
@@ -360,8 +361,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   &.pf-m-no-background {
     --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$tree-view}--m-no-background__node-container--BackgroundColor);
-    --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--#{$tree-view}--m-compact__node-container--m-disabled--nested--Color);
-    --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color);
+    --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: inherit;
+    --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: inherit;
   }
 }
 
