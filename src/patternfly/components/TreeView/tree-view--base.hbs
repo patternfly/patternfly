@@ -30,7 +30,7 @@
     {{/tree-view-list-item}}
     {{#> tree-view-list-item}}
       {{#> tree-view-content}}
-        {{#> tree-view-node tree-view-node--modifier="pf-m-disabled"}}
+        {{#> tree-view-node tree-view-node--IsDisabled="true"}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
               metadata (disabled item)
@@ -142,10 +142,10 @@
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
               {{#> tree-view-content}}
-                {{#> tree-view-node tree-view-node--modifier="pf-m-disabled"}}
+                {{#> tree-view-node tree-view-node--IsDisabled="true" tree-view-node-toggle--IsDisabled="true"}}
                   {{#> tree-view-node-content}}
                     {{#> tree-view-node-title}}
-                      matchExpressions (disabled item)
+                      matchExpressions (disabled item and toggle)
                     {{/tree-view-node-title}}
                     {{#> tree-view-node-text}}
                       matchExpressions is a list of the label selector requirements. The requirements and ANDed.

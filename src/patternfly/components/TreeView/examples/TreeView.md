@@ -39,7 +39,10 @@ cssPrefix: pf-v6-c-tree-view
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
           {{#> tree-view-content}}
-            {{> tree-view-node  tree-view-node--modifier="pf-m-disabled" tree-view-node--text="Application 2 (disabled item)"}}
+            {{> tree-view-node 
+              tree-view-node--text="Application 2 (disabled item and toggle)"
+              tree-view-node--IsDisabled="true"
+              tree-view-node-toggle--IsDisabled='true'}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
@@ -398,7 +401,7 @@ A search input can be used to filter tree view items. It is recommended that a t
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--modifier="pf-m-disabled" tree-view-node--text="Application 2 (disabled item)"}}
+            {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--IsDisabled="true" tree-view-node--text="Application 2 (disabled item but expansion toggle enabled)"}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -821,9 +824,9 @@ A search input can be used to filter tree view items. It is recommended that a t
                 {{> tree-view-node tree-view-node--text="Loader"}}
               {{/tree-view-content}}
               {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
-                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsSelected=true tree-view-node--id=(concat tree-view--id '-7')}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsSelected=true tree-view-node-toggle--IsDisabled="true" tree-view-node--IsDisabled="true" tree-view-node--id=(concat tree-view--id '-7')}}
                   {{#> tree-view-content}}
-                    {{> tree-view-node tree-view-node--text="Loader app 1"}}
+                    {{> tree-view-node tree-view-node--text="Loader app 1 (disabled item and toggle button)"}}
                   {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
@@ -989,4 +992,5 @@ A search input can be used to filter tree view items. It is recommended that a t
 | `.pf-m-current` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to be current. |
 | `.pf-m-selectable` | `.pf-v6-c-tree-view__node` | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
 | `.pf-m-disabled` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to display as disabled. |
+| `.pf-m-disabled` | `.pf-v6-c-tree-view__node-toggle` | Modifies the tree view node toggle to display as disabled. |
 | `.pf-m-truncate` | `.pf-v6-c-tree-view`, `.pf-v6-c-tree-view__node-title`, `.pf-v6-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |

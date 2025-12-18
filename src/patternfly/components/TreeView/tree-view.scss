@@ -97,7 +97,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   // Disabled
   --#{$tree-view}__node--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$tree-view}__node-icon--m-disabled--Color: var(--pf-t--global--icon--color--disabled);
-  
+  --#{$tree-view}__node-toggle--m-disabled--Color: var(--pf-t--global--icon--color--disabled);
+
   // Text
   --#{$tree-view}__node-text--max-lines: 1;
 
@@ -187,6 +188,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$tree-view}--m-compact__node-icon--nested--Color: inherit;
   --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$tree-view}--m-compact__node-toggle--nested--Color: inherit;
+  --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
 
   // Background transparent
   --#{$tree-view}--m-no-background__node-container--BackgroundColor: transparent;
@@ -315,6 +318,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         .#{$tree-view}__node-toggle {
           margin-inline-start: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart);
           margin-inline-end: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd);
+          color: var(--#{$tree-view}--m-compact__node-toggle--nested--Color);
         }
 
         .#{$tree-view}__node-icon {
@@ -362,6 +366,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$tree-view}--m-no-background__node-container--BackgroundColor);
     --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: inherit;
     --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: inherit;
+    --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: inherit;
   }
 }
 
@@ -497,6 +502,10 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     $ltr-val: translateX(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX)),
     $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX))})
   );
+
+  &.pf-m-disabled {
+    --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--m-disabled--Color);
+  }
 }
 
 .#{$tree-view}__node-title,
