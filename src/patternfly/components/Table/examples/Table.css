@@ -16,6 +16,11 @@
   height: 400px;
 }
 
+#ws-core-c-table-sticky-header .ws-preview-html,
+#ws-core-c-table-sticky-footer .ws-preview-html {
+  overflow: auto;
+}
+
 .pf-v6-c-overflow-menu .pf-v6-c-menu {
   position: absolute;
   inset-inline-end: 0;
