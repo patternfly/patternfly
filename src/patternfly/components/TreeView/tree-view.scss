@@ -184,11 +184,11 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact__node-container--nested--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$tree-view}--m-compact__list-item--m-expanded__node-container--PaddingBlockEnd: 0;
-  --#{$tree-view}--m-compact__node-container--nested--Color: inherit;
+  --#{$tree-view}--m-compact__node-container--nested--Color: initial;
   --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$tree-view}--m-compact__node-icon--nested--Color: inherit;
+  --#{$tree-view}--m-compact__node-icon--nested--Color: initial;
   --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
-  --#{$tree-view}--m-compact__node-toggle--nested--Color: inherit;
+  --#{$tree-view}--m-compact__node-toggle--nested--Color: initial;
   --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
 
   // Background transparent
@@ -310,7 +310,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
           padding-block-end: var(--#{$tree-view}--m-compact__node-container--nested--PaddingBlockEnd);
           padding-inline-start: var(--#{$tree-view}--m-compact__node-container--nested--PaddingInlineStart);
           padding-inline-end: var(--#{$tree-view}--m-compact__node-container--nested--PaddingInlineEnd);
-          color: var(--#{$tree-view}--m-compact__node-container--nested--Color);
+          color: var(--#{$tree-view}--m-compact__node-container--nested--Color, inherit);
           background-color: var(--#{$tree-view}--m-compact__node-container--nested--BackgroundColor);
         }
 
@@ -318,11 +318,11 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         .#{$tree-view}__node-toggle {
           margin-inline-start: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart);
           margin-inline-end: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd);
-          color: var(--#{$tree-view}--m-compact__node-toggle--nested--Color);
+          color: var(--#{$tree-view}--m-compact__node-toggle--nested--Color, inherit);
         }
 
         .#{$tree-view}__node-icon {
-          color: var(--#{$tree-view}--m-compact__node-icon--nested--Color);
+          color: var(--#{$tree-view}--m-compact__node-icon--nested--Color, inherit);
         }
         // stylelint-enable
       }
@@ -364,9 +364,9 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   &.pf-m-no-background {
     --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$tree-view}--m-no-background__node-container--BackgroundColor);
-    --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: inherit;
-    --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: inherit;
-    --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: inherit;
+    --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: initial;
+    --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: initial;
+    --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: initial;
   }
 }
 
