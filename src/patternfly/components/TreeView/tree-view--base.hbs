@@ -28,9 +28,9 @@
         {{/tree-view-node}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--modifier="pf-m-disabled"}}
+    {{#> tree-view-list-item}}
       {{#> tree-view-content}}
-        {{#> tree-view-node}}
+        {{#> tree-view-node tree-view-node--modifier="pf-m-disabled"}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
               metadata (disabled item)
@@ -140,9 +140,9 @@
             {{/tree-view-node}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--modifier="pf-m-disabled"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
               {{#> tree-view-content}}
-                {{#> tree-view-node}}
+                {{#> tree-view-node tree-view-node--modifier="pf-m-disabled"}}
                   {{#> tree-view-node-content}}
                     {{#> tree-view-node-title}}
                       matchExpressions (disabled item)

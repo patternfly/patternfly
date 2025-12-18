@@ -37,9 +37,9 @@ cssPrefix: pf-v6-c-tree-view
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--modifier="pf-m-disabled"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--text="Application 2 (disabled item)"}}
+            {{> tree-view-node  tree-view-node--modifier="pf-m-disabled" tree-view-node--text="Application 2 (disabled item)"}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
@@ -396,9 +396,9 @@ A search input can be used to filter tree view items. It is recommended that a t
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-list-item--modifier="pf-m-disabled"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Application 2 (disabled item)"}}
+            {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--modifier="pf-m-disabled" tree-view-node--text="Application 2 (disabled item)"}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -988,5 +988,5 @@ A search input can be used to filter tree view items. It is recommended that a t
 | `.pf-m-no-background` | `.pf-v6-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
 | `.pf-m-current` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to be current. |
 | `.pf-m-selectable` | `.pf-v6-c-tree-view__node` | For use on nodes that are expandable and selectable, when the default click action on the node selects it instead of expanding it. |
+| `.pf-m-disabled` | `.pf-v6-c-tree-view__node` | Modifies the tree view node to display as disabled. |
 | `.pf-m-truncate` | `.pf-v6-c-tree-view`, `.pf-v6-c-tree-view__node-title`, `.pf-v6-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |
-| `.pf-m-disabled` | `.pf-v6-c-tree-view__list-item` | Modifies the tree view list item to display as disabled. |

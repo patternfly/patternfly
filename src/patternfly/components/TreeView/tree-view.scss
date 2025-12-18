@@ -95,8 +95,8 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate: 90deg;
 
   // Disabled
-  --#{$tree-view}__list-item--m-disabled__node--Color: var(--pf-t--global--text--color--disabled);
-  --#{$tree-view}__list-item--m-disabled__node-icon--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$tree-view}__node--m-disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tree-view}__node-icon--m-disabled--Color: var(--pf-t--global--icon--color--disabled);
   
   // Text
   --#{$tree-view}__node-text--max-lines: 1;
@@ -445,9 +445,9 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     margin-inline-start: var(--#{$tree-view}__node-count--MarginInlineStart);
   }
 
-  .pf-m-disabled > .#{$tree-view}__content > & {
-    --#{$tree-view}__node--Color: var(--#{$tree-view}__list-item--m-disabled__node--Color);
-    --#{$tree-view}__node-icon--Color: var(--#{$tree-view}__list-item--m-disabled__node-icon--Color);
+  &.pf-m-disabled {
+    --#{$tree-view}__node--Color: var(--#{$tree-view}__node--m-disabled--Color);
+    --#{$tree-view}__node-icon--Color: var(--#{$tree-view}__node-icon--m-disabled--Color);
     --#{$tree-view}--m-compact__node-container--nested--Color: var(--#{$tree-view}--m-compact__node-container--m-disabled--nested--Color);
     --#{$tree-view}--m-compact__node-icon--nested--Color: var(--#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color);
   }
