@@ -94,6 +94,11 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__node-toggle-icon--base--Rotate);
   --#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate: 90deg;
 
+  // Disabled
+  --#{$tree-view}__node--m-disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tree-view}__node-icon--m-disabled--Color: var(--pf-t--global--icon--color--disabled);
+  --#{$tree-view}__node-toggle--m-disabled--Color: var(--pf-t--global--icon--color--disabled);
+
   // Text
   --#{$tree-view}__node-text--max-lines: 1;
 
@@ -179,6 +184,12 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   --#{$tree-view}--m-compact__node-container--nested--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$tree-view}--m-compact__list-item--m-expanded__node-container--PaddingBlockEnd: 0;
+  --#{$tree-view}--m-compact__node-container--nested--Color: initial;
+  --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: var(--pf-t--global--text--color--on-disabled);
+  --#{$tree-view}--m-compact__node-icon--nested--Color: initial;
+  --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$tree-view}--m-compact__node-toggle--nested--Color: initial;
+  --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: var(--pf-t--global--icon--color--on-disabled);
 
   // Background transparent
   --#{$tree-view}--m-no-background__node-container--BackgroundColor: transparent;
@@ -299,6 +310,7 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
           padding-block-end: var(--#{$tree-view}--m-compact__node-container--nested--PaddingBlockEnd);
           padding-inline-start: var(--#{$tree-view}--m-compact__node-container--nested--PaddingInlineStart);
           padding-inline-end: var(--#{$tree-view}--m-compact__node-container--nested--PaddingInlineEnd);
+          color: var(--#{$tree-view}--m-compact__node-container--nested--Color, inherit);
           background-color: var(--#{$tree-view}--m-compact__node-container--nested--BackgroundColor);
         }
 
@@ -306,6 +318,11 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
         .#{$tree-view}__node-toggle {
           margin-inline-start: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineStart);
           margin-inline-end: var(--#{$tree-view}--m-compact__node-toggle--nested--MarginInlineEnd);
+          color: var(--#{$tree-view}--m-compact__node-toggle--nested--Color, inherit);
+        }
+
+        .#{$tree-view}__node-icon {
+          color: var(--#{$tree-view}--m-compact__node-icon--nested--Color, inherit);
         }
         // stylelint-enable
       }
@@ -347,6 +364,9 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   &.pf-m-no-background {
     --#{$tree-view}--m-compact__node-container--nested--BackgroundColor: var(--#{$tree-view}--m-no-background__node-container--BackgroundColor);
+    --#{$tree-view}--m-compact__node-container--m-disabled--nested--Color: initial;
+    --#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color: initial;
+    --#{$tree-view}--m-compact__node-toggle--m-disabled--nested--Color: initial;
   }
 }
 
@@ -429,6 +449,13 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   .#{$tree-view}__node-count {
     margin-inline-start: var(--#{$tree-view}__node-count--MarginInlineStart);
   }
+
+  &.pf-m-disabled {
+    --#{$tree-view}__node--Color: var(--#{$tree-view}__node--m-disabled--Color);
+    --#{$tree-view}__node-icon--Color: var(--#{$tree-view}__node-icon--m-disabled--Color);
+    --#{$tree-view}--m-compact__node-container--nested--Color: var(--#{$tree-view}--m-compact__node-container--m-disabled--nested--Color);
+    --#{$tree-view}--m-compact__node-icon--nested--Color: var(--#{$tree-view}--m-compact__node-icon--m-disabled--nested--Color);
+  }
 }
 
 .#{$tree-view}__node-container {
@@ -475,6 +502,10 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     $ltr-val: translateX(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX)),
     $rtl-val: translateX(#{pf-v6-calc-inverse(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX))})
   );
+
+  &.pf-m-disabled {
+    --#{$tree-view}__node-toggle--Color: var(--#{$tree-view}__node-toggle--m-disabled--Color);
+  }
 }
 
 .#{$tree-view}__node-title,

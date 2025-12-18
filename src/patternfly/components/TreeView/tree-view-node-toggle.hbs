@@ -1,8 +1,9 @@
-<{{#if tree-view-node-toggle--IsToggle}}button{{else}}span{{/if}} class="{{pfv}}tree-view__node-toggle{{#if tree-view-node-toggle--modifier}} {{tree-view-node-toggle--modifier}}{{/if}}"
+<{{#if tree-view-node-toggle--IsToggle}}button{{else}}span{{/if}} class="{{pfv}}tree-view__node-toggle {{#if tree-view-node-toggle--IsDisabled}}pf-m-disabled{{/if}} {{#if tree-view-node-toggle--modifier}} {{tree-view-node-toggle--modifier}}{{/if}}"
   {{#if tree-view-node-toggle--IsToggle}}
     id="toggle-{{tree-view-node--id}}"
     aria-label="Toggle"
     aria-labelledby="toggle-{{tree-view-node--id}} text-{{tree-view-node--id}}"
+    {{#if tree-view-node-toggle--IsDisabled}}disabled{{/if}}
   {{/if}}
   {{#if tree-view-node-toggle--attribute}}
     {{{tree-view-node-toggle--attribute}}}

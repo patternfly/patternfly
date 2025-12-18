@@ -12,6 +12,7 @@
     {{#unless tree-view-list-item--HasCheckbox}}
       {{#if tree-view-list-item--IsSelected}} pf-m-current{{/if}}
     {{/unless}}
+    {{#if tree-view-node--IsDisabled}} pf-m-disabled{{/if}}
     {{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
     {{#if tree-view-node--type}}
       tabindex="0"
