@@ -50,7 +50,7 @@
   font-family: var(--#{$code-block}__pre--FontFamily);
   font-size: var(--#{$code-block}__pre--FontSize);
   overflow-wrap: break-word;
-  white-space: pre-wrap;
+  white-space: pre-wrap !important;
 }
 
 .#{$code-block}__code {
