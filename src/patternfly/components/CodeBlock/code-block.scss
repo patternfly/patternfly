@@ -49,7 +49,7 @@
 .#{$code-block}__pre {
   font-family: var(--#{$code-block}__pre--FontFamily);
   font-size: var(--#{$code-block}__pre--FontSize);
-  overflow-wrap: break-word;
+  overflow-wrap: break-word !important;
   white-space: pre-wrap !important;
 }
 
