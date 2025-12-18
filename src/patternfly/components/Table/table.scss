@@ -254,9 +254,13 @@
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
   // * Table sticky header
-  --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs); // TODO: looks unused, removed in breaking change
   --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
   --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
+
+  // * Table sticky footer
+  --#{$table}--m-sticky-footer--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
+  --#{$table}--m-sticky-footer--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
 }
 
 // TODO: update grouping comments to // Table {element}
@@ -280,10 +284,7 @@
 
     &::before {
       position: absolute;
-      inset-block-start: 0;
-      inset-block-end: 0;
-      inset-inline-start: 0;
-      inset-inline-end: 0;
+      inset: 0;
       z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
       pointer-events: none;
       content: '';
@@ -321,6 +322,29 @@
         }
       }
       // stylelint-enable
+    }
+  }
+
+  // - Table sticky footer
+  &.pf-m-sticky-footer {
+    > .#{$table}__tfoot {
+      position: sticky;
+      inset-block-end: 0;
+      z-index: var(--#{$table}--m-sticky-footer--ZIndex);
+      background: var(--#{$table}--BackgroundColor);
+
+      &::before {
+        position: absolute;
+        inset: 0;
+        z-index: var(--#{$table}--m-sticky-footer--border--ZIndex);
+        pointer-events: none;
+        content: "";
+        border-block-start: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+      }
+    }
+
+    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
+      border-block-end: 0;
     }
   }
 
@@ -500,8 +524,8 @@
   // }
 
   .#{$table}__td.pf-m-action {
-    --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}__td--m-action--PaddingBlockStart);
-    --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}__td--m-action--PaddingBlockEnd);
+    --#{$table}--cell--PaddingBlockStart: var(--#{$table}__td--m-action--PaddingBlockStart);
+    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}__td--m-action--PaddingBlockEnd);
   }
 
   // - Table sort
@@ -1191,8 +1215,8 @@
   }
 
   .#{$table}__td.pf-m-action {
-    --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}--m-compact__td--m-action--PaddingBlockStart);
-    --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td--m-action--PaddingBlockEnd);
+    --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__td--m-action--PaddingBlockStart);
+    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td--m-action--PaddingBlockEnd);
   }
 
   .#{$table}__icon {
@@ -1274,6 +1298,13 @@
   &.pf-m-border-row {
     border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
   }
+}
+
+// - Table tfoot
+.#{$table}__tfoot {
+  --#{$table}__tr--BorderBlockEndWidth: 0;
+
+  vertical-align: top;
 }
 
 // - Table icon inline
