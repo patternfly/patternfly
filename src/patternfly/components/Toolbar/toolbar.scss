@@ -235,12 +235,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       align-items: center;
     }
   }
-  
-  // Container query support (opt-in)
-  &.pf-m-container {
-    container-type: inline-size;
-    container-name: toolbar;
-  }
 }
 
 // - Toolbar item
