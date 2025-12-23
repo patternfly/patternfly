@@ -99,9 +99,9 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar content section - Toolbar group - Toolbar item
 // Exclude toolbars with container modifier, as they use container queries instead
-.#{$toolbar}:not([class*="pf-m-container"]) .#{$toolbar}__content-section,
-.#{$toolbar}:not([class*="pf-m-container"]) .#{$toolbar}__group,
-.#{$toolbar}:not([class*="pf-m-container"]) .#{$toolbar}__item {
+.#{$toolbar}:where(:not([class*="pf-m-container"])) .#{$toolbar}__content-section,
+.#{$toolbar}:where(:not([class*="pf-m-container"])) .#{$toolbar}__group,
+.#{$toolbar}:where(:not([class*="pf-m-container"])) .#{$toolbar}__item {
   @include pf-v6-hidden-visible(flex);
 }
 
@@ -199,7 +199,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // Container query support (opt-in)
   // Establishes container context for all container modifiers
-  &[class*="pf-m-container"] {
+  &:where([class*="pf-m-container"]) {
     container-type: inline-size;
     container-name: pf-container-toolbar;
 
@@ -341,7 +341,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     // Only apply viewport-based behavior if no container modifier is present
-    @at-root .#{$toolbar}:not([class*="pf-m-container"]) & {
+    @at-root .#{$toolbar}:where(:not([class*="pf-m-container"])) & {
       position: static;
       padding: 0;
       border-block-end: 0;
@@ -350,7 +350,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   // Default container behavior (lg breakpoint) when using .pf-m-container
-  @at-root .#{$toolbar}.pf-m-container:not([class*="pf-m-container-"]) & {
+  @at-root .#{$toolbar}:where(.pf-m-container:not([class*="pf-m-container-"])) & {
     @include pf-v6-container-query("lg", "pf-container-toolbar") {
       position: static;
       padding: 0;
@@ -363,7 +363,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // stylelint-disable max-nesting-depth
   @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
     @if $breakpoint != "base" {
-      @at-root .#{$toolbar}.pf-m-container-#{$breakpoint} & {
+      @at-root .#{$toolbar}:where(.pf-m-container-#{$breakpoint}) & {
         @include pf-v6-container-query($breakpoint, "pf-container-toolbar") {
           position: static;
           padding: 0;
@@ -519,7 +519,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     }
 
     // - Toolbar toggle group (only for non-container toolbars)
-    @at-root .#{$toolbar}:not([class*="pf-m-container"]) {
+    @at-root .#{$toolbar}:where(:not([class*="pf-m-container"])) {
       @include pf-v6-toolbar-toggle-group-breakpoint-behavior($breakpoint-name);
     }
   }
@@ -533,8 +533,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     @if $breakpoint != "base" {
       $breakpoint-name: -on-#{$breakpoint};
 
-      @at-root .#{$toolbar}.pf-m-container &,
-      .#{$toolbar}.pf-m-container-#{$breakpoint} & {
+      @at-root .#{$toolbar}:where(.pf-m-container) &,
+      .#{$toolbar}:where(.pf-m-container-#{$breakpoint}) & {
         @include pf-v6-container-query($breakpoint, "pf-container-toolbar") {
           &.pf-m-show#{$breakpoint-name} {
             .#{$toolbar}__group,
