@@ -558,61 +558,64 @@ Several components in the following examples do not include functional and/or ac
 ```
 
 ## Toolbars responsive to their container
+
 ### Toolbar with container query support
+
 Add the `.pf-m-container` modifier to enable container-based responsive behavior.
 
-```hbs
-    <div class="ws-core-resizeable-container">
-{{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-compare-container-example"}}
-  {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+```hbs isBeta
+<div class="ws-core-resizeable-container">
+  {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-container-example"}}
+    {{#> toolbar-content}}
+      {{#> toolbar-content-section}}
         {{#> toolbar-item}}
-          Hide group on xl
+          Item
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          Hide group on xl
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        {{#> toolbar-item}}
-          Show group on lg
+          Item
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          Show group on lg
+          Item
+        {{/toolbar-item}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+          {{#> toolbar-item}}
+            Hide group on xl
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Hide group on xl
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+          Hide on xl
+        {{/toolbar-item}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+          Show on lg
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          Show group on lg
+          Item
         {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
-        Hide on xl
-      {{/toolbar-item}}
-      {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        Show on lg
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-    {{/toolbar-content-section}}
-  {{/toolbar-content}}
-{{/toolbar}}
+      {{/toolbar-content-section}}
+    {{/toolbar-content}}
+  {{/toolbar}}
 </div>
 ```
 
 The container query breakpoints are 290px less than viewport breakpoints:
+
 - `.pf-m-container-sm` - Adjust at 286px (vs viewport 576px)
 - `.pf-m-container-md` - Adjust at 478px (vs viewport 768px)
 - `.pf-m-container-lg` - Adjust at 702px (vs viewport 992px) - **default for `.pf-m-container`**
@@ -620,9 +623,10 @@ The container query breakpoints are 290px less than viewport breakpoints:
 - `.pf-m-container-2xl` - Adjust at 1160px (vs viewport 1450px)
 
 ### Comparing media query vs container query behavior
+
 This example demonstrates the key difference between media query-based and container query-based responsive behavior. Both toolbars have identical content and use the same visibility modifiers, but they respond to different size constraints. The container query breakpoints are 290px less than viewport breakpoints. For backward compatibility, container breakpoints are 290px less than viewport breakpoints to account for the width of the side navigation.
 
-```hbs
+```hbs isBeta
 <div style="display: flex; gap: 1rem; flex-direction: column;">
   <div>
     <h4>Media query</h4>
@@ -735,10 +739,12 @@ This example demonstrates the key difference between media query-based and conta
 ```
 
 ### Toolbar with container query support for hidden/visible items and groups
+
 Specify which container width triggers the responsive behavior using breakpoint modifiers.
 <br/><br/>
-*Debugging note: XL and 2XL can't trigger when confined by the content area (view in full screen)*
-```hbs
+_Debugging note: XL and 2XL can't trigger when confined by the content area (view in full screen)_
+
+```hbs isBeta
 {{#> toolbar toolbar--modifier="pf-m-container-md" toolbar--id="toolbar-container-md-example" toolbar-expandable-content--IsExpanded=true}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
@@ -759,7 +765,7 @@ This toolbar will expand at the `md` container breakpoint (478px) instead of the
 ### Comparing container breakpoints
 This example shows how different breakpoint modifiers affect when the toolbar expands.
 
-```hbs
+```hbs isBeta
 <div style="display: flex; gap: 1rem; flex-direction: column;">
   <div>
     <h4>Container md (478px breakpoint)</h4>
@@ -777,7 +783,7 @@ This example shows how different breakpoint modifiers affect when the toolbar ex
       {{/toolbar-content}}
     {{/toolbar}}
   </div>
-  
+
   <div>
     <h4>Container lg (702px breakpoint - default)</h4>
     {{#> toolbar toolbar--modifier="pf-m-container-lg" toolbar--id="toolbar-container-lg" toolbar-expandable-content--IsExpanded=true}}
