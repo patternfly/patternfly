@@ -65,7 +65,7 @@
   } @else {
     $breakpoint-map: $pf-v6-global--container-breakpoint-name-map;
     $breakpoint-value: map-get($breakpoint-map, $point);
-    
+
     @if $breakpoint-value {
       @if $container-name {
         @container #{$container-name} (min-width: #{$breakpoint-value}) {
