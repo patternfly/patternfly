@@ -12,7 +12,7 @@ config.relativeUrls.map((relativeUrl) => {
   return scenarios.push({
     label: url,
     url: fullUrl,
-    delay: relativeUrl.delay || 100, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
+    delay: relativeUrl.delay || 250, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
     readySelector: '.page-loaded',
     removeSelectors: ['.ws-full-page-utils'],
     misMatchThreshold: 0.001
@@ -23,7 +23,8 @@ Object.keys(config.viewports).map((viewport) =>
   viewports.push({
     name: viewport,
     width: config.viewports[viewport].width,
-    height: config.viewports[viewport].height
+    height: config.viewports[viewport].height,
+    deviceScaleFactor: 1
   })
 );
 
@@ -38,7 +39,14 @@ module.exports = {
   engineOptions: {
     // executablePath: '/Users/cmichael/Desktop/browsers/chrome-124/Chromium.app/Contents/MacOS/Chromium', // tells puppeteer to use a specific browser instead of the default that comes with puppeteer
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--force-device-scale-factor=1',
+      '--font-render-hinting=none',
+      '--disable-font-subpixel-positioning',
+      '--disable-gpu'
+    ]
   },
   paths: {
     bitmaps_reference: `backstop_data/bitmaps_reference${themeSuffix}`,
@@ -47,8 +55,14 @@ module.exports = {
     html_report: `backstop_data/html_report${themeSuffix}`,
     ci_report: 'backstop_data/ci_report'
   },
-  asyncCaptureLimit: 5,
+  asyncCaptureLimit: 1,
   asyncCompareLimit: 50,
+  resembleOutputOptions: {
+    errorType: 'movementDifferenceIntensity',
+    transparency: 0.3,
+    ignoreAntialiasing: true,
+    ignoreColors: false
+  },
   debug: false,
   debugWindow: false,
   archiveReport: false,
