@@ -42,12 +42,13 @@ cssPrefix: pf-v6-c-tree-view
             {{> tree-view-node 
               tree-view-node--text="Application 2 (disabled item and toggle)"
               tree-view-node--IsDisabled="true"
-              tree-view-node-toggle--IsDisabled='true'}}
+              tree-view-node-toggle--IsDisabled="true"
+              tree-view-node--type='div'}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Settings"}}
+                {{> tree-view-node tree-view-node--text="Settings" tree-view-node--type='div'}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -401,7 +402,7 @@ A search input can be used to filter tree view items. It is recommended that a t
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
           {{#> tree-view-content}}
-            {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--IsDisabled="true" tree-view-node--text="Application 2 (disabled item but expansion toggle enabled)"}}
+            {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--IsDisabled="true" tree-view-node-toggle--IsDisabled="true" tree-view-node--text="Application 2 (disabled item and toggle)"}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
@@ -797,9 +798,9 @@ A search input can be used to filter tree view items. It is recommended that a t
                 {{> tree-view-node tree-view-node--text="Options"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node--id=(concat tree-view--id '-3')}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-node-toggle--IsDisabled="true" tree-view-node--id=(concat tree-view--id '-3')}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Loader"}}
+                {{> tree-view-node tree-view-node--text="Loader (toggle disabled)"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
@@ -819,14 +820,14 @@ A search input can be used to filter tree view items. It is recommended that a t
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id=(concat tree-view--id '-6')}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--IsDisabled="true" tree-view-node--id=(concat tree-view--id '-6')}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Loader"}}
+                {{> tree-view-node tree-view-node--text="Loader (disabled item but toggle is enabled)"}}
               {{/tree-view-content}}
               {{#> tree-view-list newcontext tree-view--id=tree-view--id}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsSelectable="true" tree-view-list-item--IsSelected=true tree-view-node-toggle--IsDisabled="true" tree-view-node--IsDisabled="true" tree-view-node--id=(concat tree-view--id '-7')}}
                   {{#> tree-view-content}}
-                    {{> tree-view-node tree-view-node--text="Loader app 1 (disabled item and toggle button)"}}
+                    {{> tree-view-node tree-view-node--text="Loader app 1 (disabled item and toggle)"}}
                   {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
