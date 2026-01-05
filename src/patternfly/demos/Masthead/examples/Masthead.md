@@ -141,7 +141,6 @@ wrapperTag: div
 {{> page-template page-template--id="masthead-horizontal-nav"
       page-template--HasNoSidebar="true"
       masthead-template--HasHorizontalNav="true"
-      masthead-template--HasNoToggle="true"
 }}
 ```
 

@@ -55,6 +55,17 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-inline__main--Display: flex;
   --#{$masthead}--m-display-inline__main--ColumnGap: var(--pf-t--global--spacer--md);
 
+  // Masthead docked
+  --#{$masthead}--m-docked--GridTemplateRows: min-content 1fr;
+  --#{$masthead}--m-docked--RowGap: var(--pf-t--global--spacer--gutter--default);
+  --#{$masthead}--m-docked--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--m-docked--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--m-docked--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$masthead}--m-docked--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--glass--default);
+  --#{$masthead}--m-docked--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
+  --#{$masthead}--m-docked--c-toolbar--Height: 100%;
+
   // * Masthead toolbar
   --#{$masthead}__expandable-content--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$masthead}__expandable-content--BorderBlockStart: var(--#{$masthead}--BorderWidth) solid var(--#{$masthead}--BorderColor);
@@ -116,6 +127,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // - Masthead
   display: grid;
+  grid-template-rows: var(--#{$masthead}--GridTemplateRows);
   grid-template-columns: var(--#{$masthead}--GridTemplateColumns);
   row-gap: var(--#{$masthead}--RowGap);
   column-gap: var(--#{$masthead}--ColumnGap);
@@ -128,6 +140,43 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-inline-start: var(--#{$masthead}--PaddingInlineStart, var(--#{$masthead}--PaddingInline));
   padding-inline-end: var(--#{$masthead}--PaddingInlineEnd, var(--#{$masthead}--PaddingInline));
   background-color: var(--#{$masthead}--BackgroundColor);
+
+  &.pf-m-docked {
+    @include pf-v6-c-masthead--m-display-inline;
+
+    --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-docked--BackgroundColor);
+    --#{$masthead}--GridTemplateRows: var(--#{$masthead}--m-docked--GridTemplateRows);
+    --#{$masthead}--PaddingBlockStart: var(--#{$masthead}--m-docked--PaddingBlockStart);
+    --#{$masthead}--PaddingBlockEnd: var(--#{$masthead}--m-docked--PaddingBlockEnd);
+    --#{$masthead}--PaddingInlineStart: var(--#{$masthead}--m-docked--PaddingInlineStart);
+    --#{$masthead}--PaddingInlineEnd: var(--#{$masthead}--m-docked--PaddingInlineEnd);
+    --#{$masthead}--GridTemplateColumns: auto;
+    --#{$masthead}--RowGap: var(--#{$masthead}--m-docked--RowGap);
+    --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: auto;
+    --#{$masthead}__main--GridColumn: auto;
+    --#{$masthead}__content--GridColumn: auto;
+    --#{$masthead}__logo--Width: auto;
+    --#{$masthead}__main--MarginInlineEnd: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
+
+    .#{$masthead}__content {
+      flex-direction: column;
+      flex-grow: 1;
+      align-self: revert;
+    }
+
+    .#{$toolbar} {
+      --#{$masthead}--c-toolbar--Width: fit-content;
+
+      height: var(--#{$masthead}--m-docked--c-toolbar--Height);
+    }
+  }
 
   .#{$toolbar}__content-section {
     flex-wrap: nowrap;

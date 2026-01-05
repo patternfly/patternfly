@@ -57,6 +57,29 @@ In a basic Compass layout, the page structure is defined by the order of element
 {{/compass}}
 ```
 
+### Docked
+```hbs isBeta
+{{#> compass compass--HasDock=true}}
+  {{#> compass-dock}}
+    dock
+  {{/compass-dock}}
+  {{#> compass-main}}
+    {{#> compass-main-header}}
+      {{#> compass-panel}}
+        {{#> compass-main-header-content}}
+          main header
+        {{/compass-main-header-content}}
+      {{/compass-panel}}
+    {{/compass-main-header}}
+    {{#> compass-content}}
+      {{#> compass-panel compass-panel--IsScrollable=true}}
+        content
+      {{/compass-panel}}
+    {{/compass-content}}
+  {{/compass-main}}
+{{/compass}}
+```
+
 ## Documentation
 ### Usage
 | Class | Applied to | Outcome |

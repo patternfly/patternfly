@@ -40,6 +40,17 @@
   // * Nav item
   --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
 
+  // Nav item accent
+  --#{$nav}__item--accent--size: var(--pf-t--global--border--width--extra-strong);
+  --#{$nav}__item--accent--color: var(--pf-t--global--border--color--clicked);
+  --#{$nav}__item--accent--offset: calc(var(--pf-t--global--spacer--sm) * -1);
+  --#{$nav}__item--accent--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$nav}__item--accent--ScaleY: 0;
+  --#{$nav}__item--current--accent--ScaleY: 1;
+  --#{$nav}__item--accent--TransitionDuration: 0;
+  --#{$nav}__item--current--accent--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$nav}__item--accent--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
@@ -73,6 +84,9 @@
   // * Nav link icon
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
+
+  // Nav link text
+  --#{$nav}__link-text--FontSize: initial;
 
   // * Nav subnav
   --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
@@ -129,6 +143,13 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // Docked
+  --#{$nav}--m-docked__list--RowGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
+  --#{$nav}--m-docked__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
 }
 
 // - Nav display - default to grid
@@ -166,6 +187,29 @@
 
   &.pf-m-fill {
     flex-grow: 1;
+  }
+
+  &.pf-m-docked {
+    --#{$nav}--PaddingBlockStart: 0;
+    --#{$nav}--PaddingBlockEnd: 0;
+    --#{$nav}__list--RowGap: var(--#{$nav}--m-docked__list--RowGap);
+    --#{$nav}__link--PaddingInlineStart: var(--#{$nav}--m-docked__link--PaddingInlineStart);
+    --#{$nav}__link--PaddingInlineEnd: var(--#{$nav}--m-docked__link--PaddingInlineEnd);
+    --#{$nav}__link--hover--BackgroundColor: var(--#{$nav}--m-docked__link--hover--BackgroundColor);
+    --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
+
+    width: fit-content;
+
+    .#{$nav}__link-icon {
+      position: relative;
+      align-self: center;
+      min-width: 1lh;
+      text-align: center;
+    }
+
+    .#{$nav}__link-text {
+      display: none;
+    }
   }
 
   .#{$menu} {
@@ -244,7 +288,24 @@
 
 // - Nav item
 .#{$nav}__item {
+  position: relative;
   scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
+
+  &::before {
+    position: absolute;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: var(--#{$nav}__item--accent--offset);
+    width: var(--#{$nav}__item--accent--size);
+    pointer-events: none;
+    content: var(--#{$nav}__item--accent--content, "");
+    background-color: var(--#{$nav}__item--accent--color);
+    border-radius: var(--#{$nav}__item--accent--BorderRadius);
+    transition-timing-function: var(--#{$nav}__item--accent--TransitionTimingFunction);
+    transition-duration: var(--#{$nav}__item--accent--TransitionDuration);
+    transition-property: scale;
+    scale: 1 var(--#{$nav}__item--accent--ScaleY);
+  }
 
   > .#{$nav}__link[button] {
     margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
@@ -254,6 +315,11 @@
     > .#{$nav}__subnav {
       margin-block-end: calc(var(--#{$nav}__subnav--PaddingBlockEnd) * -1); // offset bottom padding
     }
+  }
+
+  &:has(> .#{$nav}__link.pf-m-current) {
+    --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
+    --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
   }
 }
 
@@ -305,7 +371,6 @@
     border-radius: inherit;
   }
 
-
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
   &.pf-m-hover,
@@ -326,9 +391,14 @@
   }
 }
 
-// - Nav toggle caret
+// - Nav link icon
 .#{$nav}__link-icon {
   color: var(--#{$nav}__link-icon--Color);
+}
+
+// - Nav link text
+.#{$nav}__link-text {
+  font-size: var(--#{$nav}__link-text--FontSize, inherit);
 }
 
 // - Nav toggle caret
@@ -341,7 +411,7 @@
   transform: translateY(var(--#{$nav}__toggle--TranslateY));
 }
 
-// - Nav toggle icon
+// - Nav toggle caret icon
 .#{$nav}__toggle-icon {
   display: inline-block;
   transition-timing-function: var(--#{$nav}__item__toggle-icon--TransitionTimingFunction--transform);
@@ -404,6 +474,8 @@
 
 // - Nav horizontal
 .#{$nav}:where(.pf-m-horizontal) {
+  --#{$nav}__item--accent--content: none;
+
   padding: 0;
   overflow: hidden;
 
