@@ -112,6 +112,6 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-m-no-border` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to remove the border. |
 | `.pf-m-no-padding` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to remove the padding. |
 | `.pf-m-full-height` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to be full height. |
-| `.pf-m-pill` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to have a pill shaped border radius. |
+| `.pf-m-pill` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to have a pill-shaped border radius. |
 | `.pf-m-scrollable` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to scroll its overflow. |
 | `.pf-m-expanded` | `.pf-v6-c-compass__header`, `.pf-v6-c-compass__sidebar`, `.pf-v6-c-compass__main-footer`, `.pf-v6-c-compass__footer` | Modifies a Compass section for expanded styles. |
