@@ -59,7 +59,8 @@ module.exports = {
   asyncCompareLimit: 50,
   resembleOutputOptions: {
     errorType: 'movementDifferenceIntensity',
-    ignoreAntialiasing: true
+    ignoreAntialiasing: true,
+    largeImageThreshold: 0
   },
   debug: false,
   debugWindow: false,
