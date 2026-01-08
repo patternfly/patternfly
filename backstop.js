@@ -9,13 +9,12 @@ const themeSuffix = isDarkTheme ? '_dark' : '';
 config.relativeUrls.map((relativeUrl) => {
   const url = relativeUrl.url || relativeUrl;
   const fullUrl = `${config.baseUrl}${url}`;
+  const delay = relativeUrl.delay;
   return scenarios.push({
     label: url,
     url: fullUrl,
-    delay: relativeUrl.delay || 100, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
-    readySelector: '.page-loaded',
-    removeSelectors: ['.ws-full-page-utils'],
-    misMatchThreshold: 0.001
+    // override defaults when needed
+    ...(delay !== undefined ? { delay } : {})
   });
 });
 
@@ -30,15 +29,29 @@ Object.keys(config.viewports).map((viewport) =>
 module.exports = {
   id: 'pf-core',
   viewports,
+  scenarioDefaults: {
+    delay: 250, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
+    readySelector: '.page-loaded',
+    removeSelectors: ['.ws-full-page-utils'],
+    misMatchThreshold: 0.001
+  },
   scenarios,
-  onReadyScript: 'puppet/onReady.js',
-  onBeforeScript: 'puppet/onBefore.js',
+  onReadyScript: 'playwright/onReady.js',
+  onBeforeScript: 'playwright/onBefore.js',
   report: ['browser'],
-  engine: 'puppeteer',
+  engine: 'playwright',
   engineOptions: {
-    // executablePath: '/Users/cmichael/Desktop/browsers/chrome-124/Chromium.app/Contents/MacOS/Chromium', // tells puppeteer to use a specific browser instead of the default that comes with puppeteer
+    browser: 'chromium',
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    gotoParameters: { waitUntil: 'networkidle' },
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--force-device-scale-factor=1',
+      '--font-render-hinting=none',
+      '--disable-font-subpixel-positioning',
+      '--disable-gpu'
+    ]
   },
   paths: {
     bitmaps_reference: `backstop_data/bitmaps_reference${themeSuffix}`,
@@ -47,8 +60,13 @@ module.exports = {
     html_report: `backstop_data/html_report${themeSuffix}`,
     ci_report: 'backstop_data/ci_report'
   },
-  asyncCaptureLimit: 5,
+  asyncCaptureLimit: 1,
   asyncCompareLimit: 50,
+  resembleOutputOptions: {
+    errorType: 'movementDifferenceIntensity',
+    ignoreAntialiasing: true,
+    largeImageThreshold: 0
+  },
   debug: false,
   debugWindow: false,
   archiveReport: false,

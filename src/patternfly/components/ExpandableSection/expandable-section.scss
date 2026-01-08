@@ -138,10 +138,10 @@
     &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
       display: -webkit-box;
+      overflow: hidden;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: var(--#{$expandable-section}--m-truncate__content--LineClamp);
       // stylelint-enable
-      overflow: hidden;
     }
   }
 }

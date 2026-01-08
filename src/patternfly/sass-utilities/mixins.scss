@@ -179,10 +179,10 @@
 @mixin pf-v6-line-clamp($line-clamp-val: 1) {
   // stylelint-disable
   display: -webkit-box;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: #{$line-clamp-val};
   // stylelint-enable
-  overflow: hidden;
 }
 
 @mixin pf-v6-overflow-hide-scroll {

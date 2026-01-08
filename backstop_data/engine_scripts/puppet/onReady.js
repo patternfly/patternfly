@@ -1,5 +1,7 @@
 module.exports = async (page, scenario, vp) => {
   await require('./overrideCSS')(page, scenario);
+  // Wait until all network requests have completed for a moment
+  await page.waitForLoadState('networkidle');
 
   if (process.argv.includes('--dark')) {
     // Emulate dark mode

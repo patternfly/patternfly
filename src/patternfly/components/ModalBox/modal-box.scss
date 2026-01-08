@@ -161,8 +161,8 @@
 
 .#{$modal-box}__header {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
   gap: var(--#{$modal-box}__header--Gap);
   padding-block-start: var(--#{$modal-box}__header--PaddingBlockStart);
   padding-block-end: var(--#{$modal-box}__header--PaddingBlockEnd);
@@ -181,8 +181,8 @@
 
 .#{$modal-box}__header-main {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   gap: var(--#{$modal-box}__header-main--Gap);
   min-width: 0;
   padding-block-start: var(--#{$modal-box}__header-main--PaddingBlockStart);

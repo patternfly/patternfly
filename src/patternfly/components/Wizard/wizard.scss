@@ -350,8 +350,8 @@
 .#{$wizard}__outer-wrap {
   position: relative;
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   min-height: var(--#{$wizard}__outer-wrap--MinHeight);
   background-color: var(--#{$wizard}__outer-wrap--BackgroundColor);
 
@@ -363,8 +363,8 @@
 .#{$wizard}__inner-wrap {
   position: relative;
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   min-height: 0;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
@@ -590,8 +590,8 @@
 .#{$wizard}__main {
   z-index: var(--#{$wizard}__main--ZIndex);
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
   word-break: break-word;

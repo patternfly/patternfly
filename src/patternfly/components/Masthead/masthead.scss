@@ -166,8 +166,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
 
     .#{$masthead}__content {
-      flex-direction: column;
       flex-grow: 1;
+      flex-direction: column;
       align-self: revert;
     }
 

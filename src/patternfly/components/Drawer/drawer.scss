@@ -335,8 +335,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .#{$drawer}__panel,
 .#{$drawer}__panel-main {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
   overflow: auto;
 }
 
