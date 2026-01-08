@@ -9,13 +9,12 @@ const themeSuffix = isDarkTheme ? '_dark' : '';
 config.relativeUrls.map((relativeUrl) => {
   const url = relativeUrl.url || relativeUrl;
   const fullUrl = `${config.baseUrl}${url}`;
+  const delay = relativeUrl.delay;
   return scenarios.push({
     label: url,
     url: fullUrl,
-    delay: relativeUrl.delay || 250, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
-    readySelector: '.page-loaded',
-    removeSelectors: ['.ws-full-page-utils'],
-    misMatchThreshold: 0.001
+    // override defaults when needed
+    ...(delay !== undefined ? { delay } : {})
   });
 });
 
@@ -23,22 +22,28 @@ Object.keys(config.viewports).map((viewport) =>
   viewports.push({
     name: viewport,
     width: config.viewports[viewport].width,
-    height: config.viewports[viewport].height,
-    deviceScaleFactor: 1
+    height: config.viewports[viewport].height
   })
 );
 
 module.exports = {
   id: 'pf-core',
   viewports,
+  scenarioDefaults: {
+    delay: 250, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
+    readySelector: '.page-loaded',
+    removeSelectors: ['.ws-full-page-utils'],
+    misMatchThreshold: 0.001
+  },
   scenarios,
-  onReadyScript: 'puppet/onReady.js',
-  onBeforeScript: 'puppet/onBefore.js',
+  onReadyScript: 'playwright/onReady.js',
+  onBeforeScript: 'playwright/onBefore.js',
   report: ['browser'],
-  engine: 'puppeteer',
+  engine: 'playwright',
   engineOptions: {
-    // executablePath: '/Users/cmichael/Desktop/browsers/chrome-124/Chromium.app/Contents/MacOS/Chromium', // tells puppeteer to use a specific browser instead of the default that comes with puppeteer
+    browser: 'chromium',
     headless: 'new',
+    gotoParameters: { waitUntil: 'networkidle' },
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
