@@ -384,8 +384,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     .#{$tabs}__list {
       position: relative;
-      flex-direction: column;
       flex-grow: 1;
+      flex-direction: column;
       max-width: var(--#{$tabs}--m-vertical--MaxWidth);
 
       &::before {
@@ -573,11 +573,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   display: flex;
   flex: none;
   column-gap: var(--#{$tabs}__item--ColumnGap);
-  scroll-snap-align: var(--#{$tabs}__item--ScrollSnapAlign);
   padding-block-start: var(--#{$tabs}__item--PaddingBlockStart);
   padding-block-end: var(--#{$tabs}__item--PaddingBlockEnd);
   padding-inline-start: var(--#{$tabs}__item--PaddingInlineStart);
   padding-inline-end: var(--#{$tabs}__item--PaddingInlineEnd);
+  scroll-snap-align: var(--#{$tabs}__item--ScrollSnapAlign);
   background-color: var(--#{$tabs}__item--BackgroundColor);
 
   // Current

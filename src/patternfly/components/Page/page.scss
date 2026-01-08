@@ -378,8 +378,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-group,
 .#{$page}__main-subnav {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
 
   &.pf-m-overflow-scroll {
     position: relative;
@@ -483,8 +483,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-drawer,
 .#{$page}__main-group {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 .#{$page}__main {
