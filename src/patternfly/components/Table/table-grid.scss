@@ -7,26 +7,42 @@
   }
 
   .pf-m-grid-md.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
+    @container pf-table (max-width: #{$pf-v6-global--breakpoint--md}) {
       @content;
+
+      > * {
+        background-color: red;
+      }
     }
   }
 
   .pf-m-grid-lg.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--lg)) {
+    @container pf-table (max-width: #{$pf-v6-global--breakpoint--lg}) {
       @content;
+
+      > * {
+        background-color: blue;
+      }
     }
   }
 
   .pf-m-grid-xl.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
+    @container pf-table (max-width: #{$pf-v6-global--breakpoint--xl}) {
       @content;
+
+      > * {
+        background-color: green;
+      }
     }
   }
 
   .pf-m-grid-2xl.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--2xl)) {
+    @container pf-table (max-width: #{$pf-v6-global--breakpoint--2xl}) {
       @content;
+
+      > * {
+        background-color: yellow;
+      }
     }
   }
 }
