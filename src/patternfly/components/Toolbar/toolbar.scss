@@ -356,7 +356,11 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 }
 
 @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: "";
+
+  @if $breakpoint != "base" {
+    $breakpoint-name: -on-#{$breakpoint};
+  }
 
   @include pf-v6-apply-breakpoint($breakpoint) {
     .#{$toolbar}__group,

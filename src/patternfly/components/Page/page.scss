@@ -401,7 +401,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Responsive height modifiers for sticky top/bottom
   @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint}-height;
+    }
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
 
@@ -516,7 +520,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Responsive height modifiers for sticky top/bottom
   @each $breakpoint, $breakpoint-value in $pf-page-v6--height-breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint}-height;
+    }
 
     @include pf-v6-apply-height-breakpoint($breakpoint) {
       &.pf-m-sticky-top#{$breakpoint-name},
@@ -564,7 +572,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @each $breakpoint, $breakpoint-value in $pf-page-v6--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint};
+    }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       // stylelint-disable max-nesting-depth

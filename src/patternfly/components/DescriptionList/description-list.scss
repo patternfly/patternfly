@@ -195,7 +195,11 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
 // stylelint-disable no-duplicate-selectors
 .#{$description-list} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-description-list--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint};
+    }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-1-col#{$breakpoint-name} {

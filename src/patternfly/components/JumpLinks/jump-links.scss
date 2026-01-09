@@ -95,7 +95,11 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   }
 
   @each $breakpoint, $breakpoint-value in $pf-v6-c-jump-links--m-expandable--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint};
+    }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-expandable#{$breakpoint-name} {

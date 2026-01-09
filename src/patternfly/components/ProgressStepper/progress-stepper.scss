@@ -430,7 +430,11 @@ $pf-v6-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 // stylelint-disable no-duplicate-selectors
 .#{$progress-stepper} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-progress-stepper--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint};
+    }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-horizontal#{$breakpoint-name} {
