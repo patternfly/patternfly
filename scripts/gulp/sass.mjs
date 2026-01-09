@@ -21,13 +21,11 @@ function compileSASS0(srcFiles) {
       const numDirectories = relativePath.split(path.sep).length - 1;
 
       try {
-        const css = sass.renderSync({
-          // Pass filename for import resolution. Contents are not compiled.
-          file: chunk.history[0],
-          // Contents to compile
-          data: scss
+        const css = sass.compileString(scss, {
+          // Pass filename for import resolution
+          url: new URL(`file://${chunk.history[0]}`)
         });
-        cssString = css.css.toString();
+        cssString = css.css;
         // TODO: Cleaner way to to do relative image assets in component CSS
         if (numDirectories > 0) {
           cssString = cssString.replace(/.\/assets\/images/g, `${'../'.repeat(numDirectories)}assets/images`);

@@ -703,7 +703,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Responsive width modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-drawer--breakpoint-map--width {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: "";
+
+  @if $breakpoint != "base" {
+    $breakpoint-name: -on-#{$breakpoint};
+  }
 
   @if $breakpoint == "base" {
     $breakpoint: "md";
@@ -712,7 +716,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v6-c-drawer__panel--list--width {
       .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --#{$drawer}__panel--md--FlexBasis: calc(#{percentage(math.div($width-value, 100))} - (2 * var(--#{$drawer}--m-expanded__panel--inset)));
+        --#{$drawer}__panel--md--FlexBasis: calc(#{math.percentage(math.div($width-value, 100))} - (2 * var(--#{$drawer}--m-expanded__panel--inset)));
         
         @if $width-value == 100 {
           --#{$drawer}__main--Gap: 0; // Reset gap for width-100 inline pill drawers to prevent misalignment
@@ -724,7 +728,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Responsive modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-drawer--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: "";
+
+  @if $breakpoint != "base" {
+    $breakpoint-name: -on-#{$breakpoint};
+  }
 
   @if $breakpoint == "base" {
     $breakpoint: "md";

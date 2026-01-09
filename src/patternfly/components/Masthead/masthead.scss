@@ -282,7 +282,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // stylelint-disable no-duplicate-selectors
 .#{$masthead} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-masthead--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint};
+    }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       &.pf-m-display-stack#{$breakpoint-name} {

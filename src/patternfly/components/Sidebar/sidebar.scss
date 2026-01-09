@@ -253,7 +253,11 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 // Responsive width modifiers
 @each $breakpoint, $breakpoint-value in $pf-v6-c-sidebar--breakpoint-map--width {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  $breakpoint-name: "";
+
+  @if $breakpoint != "base" {
+    $breakpoint-name: -on-#{$breakpoint};
+  }
 
   @include pf-v6-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-v6-c-sidebar__panel--list--width {
@@ -261,7 +265,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
         @if $width-value == "default" {
           --#{$sidebar}__panel--FlexBasis: var(--#{$sidebar}__panel--FlexBasis--base);
         } @else {
-          --#{$sidebar}__panel--FlexBasis: #{percentage(math.div($width-value, 100))};
+          --#{$sidebar}__panel--FlexBasis: #{math.percentage(math.div($width-value, 100))};
         }
       }
     }

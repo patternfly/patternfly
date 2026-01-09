@@ -422,7 +422,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
 
     @each $breakpoint, $breakpoint-value in $pf-v6-c-tabs--breakpoint-map {
-      $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+      $breakpoint-name: "";
+
+      @if $breakpoint != "base" {
+        $breakpoint-name: -on-#{$breakpoint};
+      }
 
       @include pf-v6-apply-breakpoint($breakpoint) {
         // stylelint-disable max-nesting-depth
@@ -803,7 +807,11 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 // stylelint-disable no-duplicate-selectors, max-nesting-depth
 .#{$tabs} {
   @each $breakpoint, $breakpoint-value in $pf-v6-c-tabs--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+    $breakpoint-name: "";
+
+    @if $breakpoint != "base" {
+      $breakpoint-name: -on-#{$breakpoint};
+    }
 
     @include pf-v6-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-v6-c-tabs--spacer-map {
