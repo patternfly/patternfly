@@ -127,6 +127,15 @@
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$pf-global}--thinking-active--Animation--Duration: 2s;
   }
+
+  container-type: inline-size;
+  container-name: pf-viewport pf-table;
+  height: 100vh;
+
+  > body {
+    overflow-y: auto;
+    min-height: 100vh;
+  }
 }
 
 // Register the property type for the custom property to be animatable
