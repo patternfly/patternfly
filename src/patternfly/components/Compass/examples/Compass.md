@@ -12,11 +12,11 @@ import './Compass.css';
 ### Basic
 
 In a basic Compass layout, the page structure is defined by the order of elements nested within the main `.pf-v6-c-compass` container:
-- Header: Content rendered at the top of the page (`.pf-v6-c-compass__header`), typically containing a logo (`.pf-v6-c-compass__logo`), middle navigation (`.pf-v6-c-compass__nav`), and profile (`.pf-v6-c-compass__profile`).
-- Start sidebar: Content rendered at the horizontal start of the page (by default, the left side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-start` modifier.
-- Main: Content rendered in the center of the page. The `.pf-v6-c-compass__main` wrapper contains the hero (`.pf-v6-c-compass__hero`), the main header (`.pf-v6-c-compass__main-header`), the content area (`.pf-v6-c-compass__content`), and the main footer (`.pf-v6-c-compass__main-footer`) with the message bar.
-- End sidebar: Content rendered at the horizontal end of the page (by default, the right side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-end modifier`.
-- Footer: Content rendered at the bottom of the page (`.pf-v6-c-compass__footer`).
+- **Header:** Content rendered at the top of the page (`.pf-v6-c-compass__header`), typically containing a logo (`.pf-v6-c-compass__logo`), middle navigation (`.pf-v6-c-compass__nav`), and profile (`.pf-v6-c-compass__profile`).
+- **Start sidebar:** Content rendered at the horizontal start of the page (by default, the left side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-start` modifier.
+- **Main:** Content rendered in the center of the page. The `.pf-v6-c-compass__main` wrapper contains a [hero component](/components/hero), the main header (`.pf-v6-c-compass__main-header`), the content area (`.pf-v6-c-compass__content`), and the main footer (`.pf-v6-c-compass__main-footer`) with the message bar.
+- **End sidebar:** Content rendered at the horizontal end of the page (by default, the right side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-end` modifier.
+- **Footer:** Content rendered at the bottom of the page (`.pf-v6-c-compass__footer`).
 
 ```hbs isBeta
 {{#> compass}}
@@ -87,7 +87,7 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass` | `<div>` | Initiates the Compass component. **Required** |
 | `.pf-v6-c-compass__header` | `<div>` | Initiates the Compass header. **Required** |
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the Compass logo header. |
-| `.pf-v6-c-compass__nav` | `<div>` | Initiates the Compass nav. |
+| `.pf-v6-c-compass__dock` | `<div>` | Initiates the compass dock. |
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the Compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a Compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the Compass main wrapper. **Required** |
@@ -103,9 +103,9 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass__nav-home` | `<div>` | Initiates a container for Compass home button. |
 | `.pf-v6-c-compass__nav-main` | `<div>` | Initiates a container for Compass navigation main content. |
 | `.pf-v6-c-compass__nav-search` | `<div>` | Initiates a container for Compass search button. |
-| `.pf-v6-c-compass__hero` | `<div>` | Initiates a Compass hero. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the Compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the Compass message bar. |
+| `.pf-m-dock` | `.pf-v6-c-compass` | Modifies for dock layout. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for end styles. **Required** |
