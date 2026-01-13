@@ -87,7 +87,7 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass` | `<div>` | Initiates the Compass component. **Required** |
 | `.pf-v6-c-compass__header` | `<div>` | Initiates the Compass header. **Required** |
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the Compass logo header. |
-| `.pf-v6-c-compass__dock` | `<div>` | Initiates the compass dock. |
+| `.pf-v6-c-compass__dock` | `<div>` | Initiates the Compass dock. |
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the Compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a Compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the Compass main wrapper. **Required** |
