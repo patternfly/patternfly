@@ -5,6 +5,13 @@
 @use "./tokens/tokens-highcontrast" as highcontrast;
 @use "./tokens/tokens-highcontrast-dark" as highcontrast-dark;
 @use "./tokens/tokens-local" as local;
+@use "./tokens/tokens-glass" as glass;
+@use "./tokens/tokens-redhat" as redhat; 
+@use "./tokens/tokens-redhat-dark" as redhat-dark;
+@use "./tokens/tokens-redhat-highcontrast" as redhat-highcontrast;
+@use "./tokens/tokens-redhat-highcontrast-dark" as redhat-highcontrast-dark;
+@use "./tokens/tokens-redhat-glass" as redhat-glass;
+@use "./tokens/tokens-redhat-glass-dark" as redhat-glass-dark;
 
 :root {
   @include pf-v6-set-inverse(false);
@@ -23,6 +30,34 @@
 
 :root:where(.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
   @include highcontrast-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-glass) {
+  @include glass.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-redhat) {
+  @include redhat.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-dark) {
+  @include redhat-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast) {
+  @include redhat-highcontrast.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
+  @include redhat-highcontrast-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-glass) {
+  @include redhat-glass.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-glass.pf-v6-theme-dark) {
+  @include redhat-glass-dark.pf-v6-tokens;
 }
 
 @include pf-v6-rtl(false) {

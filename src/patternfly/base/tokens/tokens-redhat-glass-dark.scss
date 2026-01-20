@@ -1,0 +1,17 @@
+
+// Do not edit directly
+// Generated on Tue, 20 Jan 2026 21:13:33 GMT
+
+// Only tokens that differ from base theme (10 tokens)
+@mixin pf-v6-tokens {
+  --pf-t--global--background--color--glass: rgba(41, 41, 41, 0.8000);
+  --pf-t--global--background--filter--glass: 12.5;
+  --pf-t--global--background--opacity--glass: 80;
+  --pf-t--global--border--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--border--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--border--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--200);
+  --pf-t--global--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--100);
+  --pf-t--global--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--200);
+  --pf-t--global--text--color--on-brand--accent--default: var(--pf-t--global--text--color--regular);
+}
