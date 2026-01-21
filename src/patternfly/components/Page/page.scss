@@ -9,11 +9,23 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
 
+  // Docked nav
+  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
+  --#{$page}--m-dock__main-container--MarginBlockStart: 0;
+  --#{$page}--m-dock__main-container--xl--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns: min-content 1fr;
+
   // Header
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
   // Dock
   --#{$page}__dock--ZIndex: var(--pf-t--global--z-index--md);
+  --#{$page}__dock--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$page}__dock--BorderInlineEndColor: var(--pf-t--global--border--color--default);
+  --#{$page}__dock--TransitionDuration--slide: 0s;
+  --#{$page}__dock--m-expanded--TransitionDuration--slide: 0s;
+  --#{$page}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
@@ -45,6 +57,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--Opacity: 1;
     --#{$page}__sidebar--TransitionProperty: transform;
     --#{$page}__sidebar--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$page}__dock--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-out--short);
+    --#{$page}__dock--m-expanded--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--default);
   }
 
   // Sidebar header
@@ -169,11 +183,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Drawer section
   --#{$page}__drawer--c-drawer--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
-
-  // Docked nav
-  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
-  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--lg);
-  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
 }
 
 .#{$page} {
@@ -202,12 +211,26 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}--masthead--main-container--GridArea: main;
     --#{$page}__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight);
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart);
-    --#{$page}__main-container--MarginInlineStart: 0;
 
-    grid-template-areas: "dock main";
-    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "dock main";
+    grid-template-rows: max-content 1fr;
     grid-template-columns: auto 1fr;
-    column-gap: var(--#{$page}--m-dock--ColumnGap);
+
+    @media (min-width: $pf-v6-global--breakpoint--xl) {
+      --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--xl--MarginBlockStart);
+      --#{$page}__main-container--MarginInlineStart: 0;
+
+      grid-template-areas: "dock main";
+      grid-template-rows: auto;
+      grid-template-columns: auto 1fr;
+      column-gap: var(--#{$page}--m-dock--ColumnGap);
+
+      > .#{$masthead} {
+        display: none;
+      }
+    }
   }
 
   // Hamburger menu animation
@@ -241,19 +264,50 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 // Header
-.#{$page} > .#{$masthead} {
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
-  }
+.#{$page} {
+  > .#{$masthead} {
+    @media (min-width: $pf-v6-global--breakpoint--xl) {
+      --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
+    }
 
-  z-index: var(--#{$page}--c-masthead--ZIndex);
-  grid-area: header;
+    z-index: var(--#{$page}--c-masthead--ZIndex);
+    grid-area: header;
+  }
+  
+  &.pf-m-dock {
+    > .#{$masthead} {
+      --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns);
+    }
+  }
 }
 
 // Dock
 .#{$page}__dock {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
   z-index: var(--#{$page}__dock--ZIndex);
   grid-area: dock;
+  width: var(--#{$page}__dock--Width);
+  translate: -100% 0;
+  transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide);
+
+  &.pf-m-expanded {
+    --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
+
+    translate: 0;
+    border-inline-end: var(--#{$page}__dock--BorderInlineEndWidth) solid var(--#{$page}__dock--BorderInlineEndColor);
+  }
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$page}__dock--BorderInlineEndWidth: 0;
+
+    position: revert;
+    inset: revert;
+    width: auto;
+    translate: 0;
+  }
 }
 
 // Sidebar
