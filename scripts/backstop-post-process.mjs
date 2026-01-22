@@ -42,7 +42,8 @@ function processConfigFile(configPath, customDescription, isDarkTheme) {
 
     // Extract JSON from JSONP wrapper
     // Format: report({...JSON...});
-    const match = content.match(/^report\(([\s\S]*)\);?\s*$/);
+    const normalized = content.replace(/^\uFEFF/, '');
+    const match = normalized.match(/^\s*report\(([\s\S]*)\);?\s*$/);
     if (!match) {
       console.error(`Error: Invalid config.js format at ${configPath}`);
       console.error('Expected JSONP format: report({...});');

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
+import { spawnSync } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -30,48 +30,54 @@ function parseArguments() {
 }
 
 function runBackstop(args) {
-  const backstopCommand = `backstop ${args.join(' ')} --config='backstop.js'`;
+  // Build argument array for spawnSync (no shell injection risk)
+  const backstopArgs = [...args, '--config', 'backstop.js'];
 
-  console.log(`Running: ${backstopCommand}`);
+  console.log(`Running: backstop ${backstopArgs.join(' ')}`);
 
-  try {
-    execSync(backstopCommand, {
-      stdio: 'inherit', // Show output in real-time
-      cwd: path.join(__dirname, '..') // Run from project root
-    });
-    return { success: true, exitCode: 0 };
-  } catch (error) {
-    // BackstopJS exits with non-zero code when tests fail (visual differences found)
-    // We still want to post-process the report in this case
-    // Only return false if there's a real error (no report generated)
-    const exitCode = error.status || 1;
-    return { success: false, exitCode };
+  const result = spawnSync('backstop', backstopArgs, {
+    stdio: 'inherit', // Show output in real-time
+    cwd: path.join(__dirname, '..') // Run from project root
+  });
+
+  // Handle spawn errors (e.g., backstop command not found)
+  if (result.error) {
+    console.error(`Error spawning backstop: ${result.error.message}`);
+    return { success: false, exitCode: 1 };
   }
+
+  // BackstopJS exits with non-zero code when tests fail (visual differences found)
+  // We still want to post-process the report in this case
+  const exitCode = result.status !== null ? result.status : 1;
+  return { success: exitCode === 0, exitCode };
 }
 
 function runPostProcessor(customDescription, isDarkTheme) {
-  const args = [];
+  // Build argument array for spawnSync (no shell injection risk)
+  const args = [path.join(__dirname, 'backstop-post-process.mjs')];
 
   if (customDescription) {
-    args.push(`--desc="${customDescription}"`);
+    args.push(`--desc=${customDescription}`);
   }
 
   if (isDarkTheme) {
     args.push('--dark');
   }
 
-  const postProcessCommand = `node ${path.join(__dirname, 'backstop-post-process.mjs')} ${args.join(' ')}`;
+  const result = spawnSync(process.execPath, args, {
+    stdio: 'inherit',
+    cwd: path.join(__dirname, '..')
+  });
 
-  try {
-    execSync(postProcessCommand, {
-      stdio: 'inherit',
-      cwd: path.join(__dirname, '..')
-    });
-    return true;
-  } catch (error) {
-    console.error('Post-processing failed');
+  // Handle spawn errors
+  if (result.error) {
+    console.error(`Error spawning post-processor: ${result.error.message}`);
     return false;
   }
+
+  // Check exit code
+  const exitCode = result.status !== null ? result.status : 1;
+  return exitCode === 0;
 }
 
 function main() {
