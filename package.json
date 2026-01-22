@@ -7,8 +7,8 @@
   "scripts": {
     "a11y": "patternfly-a11y --config patternfly-a11y.config",
     "backstop:clean": "rimraf -- backstop_data/bitmaps_test backstop_data/html_report",
-    "backstop:test": "backstop test --config='backstop.js'",
-    "backstop:test:dark": "backstop test --config='backstop.js' --dark",
+    "backstop:test": "node scripts/backstop-run.mjs test",
+    "backstop:test:dark": "node scripts/backstop-run.mjs test --dark",
     "backstop:approve": "backstop approve --config='backstop.js'",
     "backstop:approve:dark": "backstop approve --config='backstop.js' --dark",
     "backstop:chrome": "node backstop_data/engine_scripts/puppet/chrome.js",
