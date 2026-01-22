@@ -6,10 +6,6 @@ const viewports = [];
 const isDarkTheme = process.argv.includes('--dark');
 const themeSuffix = isDarkTheme ? '_dark' : '';
 
-// check for --desc flag to add a custom description to the report
-const descArg = process.argv.find(arg => arg.startsWith('--desc='));
-const customDescription = descArg ? descArg.split('=')[1].replace(/^["']|["']$/g, '') : null;
-
 config.relativeUrls.map((relativeUrl) => {
   const url = relativeUrl.url || relativeUrl;
   const fullUrl = `${config.baseUrl}${url}`;
@@ -30,12 +26,8 @@ Object.keys(config.viewports).map((viewport) =>
   })
 );
 
-// Generate report title
-const defaultTitle = isDarkTheme ? 'Core - Dark Theme' : 'Core - Light Theme';
-const reportTitle = customDescription || defaultTitle;
-
 module.exports = {
-  id: reportTitle,
+  id: 'pf-core',
   viewports,
   scenarioDefaults: {
     delay: 100, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
@@ -68,7 +60,7 @@ module.exports = {
     html_report: `backstop_data/html_report${themeSuffix}`,
     ci_report: 'backstop_data/ci_report'
   },
-  asyncCaptureLimit: 5,
+  asyncCaptureLimit: 3,
   asyncCompareLimit: 50,
   resembleOutputOptions: {
     errorType: 'movementDifferenceIntensity',
