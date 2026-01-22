@@ -1,0 +1,47 @@
+name: "Design Handoff"
+description: Hand off approved designs to the HTML/CSS core development team.
+title: "[Design]: "
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for the handoff! 
+        Please provide the following details to help the HTML/CSS team build the components accurately.
+
+  - type: input
+    id: figma-link
+    attributes:
+      label: Figma Link
+      description: Link to the specific frame or page in Figma.
+      placeholder: "https://www.figma.com/file/..."
+    validations:
+      required: true
+
+  - type: input
+    id: jira-ticket
+    attributes:
+      label: Jira/GitHub Ticket Link
+      description: Link to the original design/request ticket.
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-preview
+    attributes:
+      label: Design Screenshot
+      description: |
+        Please paste a screenshot of the design here. This provides a quick reference within the issue.
+        (Tip: You can drag and drop or paste images directly into this box).
+      placeholder: "Paste image here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-specs
+    attributes:
+      label: Interaction & Technical Notes
+      description: |
+        Detail any specific interactions, animations, or constraints (e.g., "Button should have a 200ms ease-in transition," "Mobile view uses a sticky footer").
+      placeholder: "Explain hover states, transitions, or responsive behavior..."
