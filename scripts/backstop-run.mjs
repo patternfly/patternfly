@@ -39,10 +39,13 @@ function runBackstop(args) {
       stdio: 'inherit', // Show output in real-time
       cwd: path.join(__dirname, '..') // Run from project root
     });
-    return true;
+    return { success: true, exitCode: 0 };
   } catch (error) {
-    console.error('BackstopJS command failed');
-    return false;
+    // BackstopJS exits with non-zero code when tests fail (visual differences found)
+    // We still want to post-process the report in this case
+    // Only return false if there's a real error (no report generated)
+    const exitCode = error.status || 1;
+    return { success: false, exitCode };
   }
 }
 
@@ -78,22 +81,19 @@ function main() {
   const isDarkTheme = backstopArgs.includes('--dark');
 
   // Run BackstopJS
-  const backstopSuccess = runBackstop(backstopArgs);
+  const backstopResult = runBackstop(backstopArgs);
 
-  if (!backstopSuccess) {
-    console.error('Stopping due to BackstopJS failure');
-    process.exit(1);
-  }
-
-  // Run post-processor
+  // Always run post-processor, even if tests failed
+  // (BackstopJS generates a report for both pass and fail cases)
   const postProcessSuccess = runPostProcessor(customDescription, isDarkTheme);
 
   if (!postProcessSuccess) {
-    console.error('Warning: Post-processing failed, but BackstopJS completed successfully');
-    process.exit(1);
+    console.error('Warning: Post-processing failed');
   }
 
-  process.exit(0);
+  // Exit with BackstopJS's original exit code
+  // (0 = all tests passed, non-zero = tests failed or error)
+  process.exit(backstopResult.exitCode);
 }
 
 main();
