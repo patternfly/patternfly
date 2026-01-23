@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Tue, 20 Jan 2026 21:13:33 GMT
+// Generated on Fri, 23 Jan 2026 20:37:43 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.4000);
@@ -151,9 +151,9 @@
   --pf-t--global--border--width--action--clicked: var(--pf-t--global--border--width--200);
   --pf-t--global--border--width--action--default: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--action--hover: var(--pf-t--global--border--width--200);
-  --pf-t--global--border--width--box--clicked: var(--pf-t--global--border--width--200);
+  --pf-t--global--border--width--box--clicked: var(--pf-t--global--border--width--300);
   --pf-t--global--border--width--box--default: var(--pf-t--global--border--width--100);
-  --pf-t--global--border--width--box--hover: var(--pf-t--global--border--width--100);
+  --pf-t--global--border--width--box--hover: var(--pf-t--global--border--width--200);
   --pf-t--global--border--width--box--status--default: var(--pf-t--global--border--width--200);
   --pf-t--global--border--width--box--status--read: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--control--clicked: var(--pf-t--global--border--width--200);
@@ -597,7 +597,8 @@
   --pf-t--global--text-decoration--width--default: var(--pf-t--global--border--width--regular);
   --pf-t--global--text-decoration--width--hover: var(--pf-t--global--border--width--strong);
   --pf-t--global--background--color--control--default: var(--pf-t--global--background--color--primary--default);
-  --pf-t--global--background--color--glass: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
+  --pf-t--global--background--color--glass--primary: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--alt: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--border--color--brand--default: var(--pf-t--global--color--brand--default);

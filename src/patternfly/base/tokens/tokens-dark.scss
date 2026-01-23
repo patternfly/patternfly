@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Tue, 20 Jan 2026 21:13:33 GMT
+// Generated on Fri, 23 Jan 2026 20:37:44 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--action--plain--default: rgba(0, 0, 0, 0.0000);
@@ -253,7 +253,8 @@
   --pf-t--global--text--color--status--danger--default: var(--pf-t--global--dark--color--status--danger--250);
   --pf-t--global--text--color--status--danger--hover: var(--pf-t--global--dark--color--status--danger--300);
   --pf-t--global--text--color--subtle: var(--pf-t--global--dark--text--color--200);
-  --pf-t--global--background--color--glass: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
+  --pf-t--global--background--color--glass--primary: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--alt: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--border--color--brand--default: var(--pf-t--global--color--brand--default);
