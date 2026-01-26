@@ -41,7 +41,7 @@ body:
   - type: textarea
     id: technical-specs
     attributes:
-      label: Interaction & Technical Notes
+      label: Any extra notes for developers
       description: |
-        Detail any specific interactions, animations, or constraints (e.g., "Button should have a 200ms ease-in transition," "Mobile view uses a sticky footer").
-      placeholder: "Explain hover states, transitions, or responsive behavior..."
+        Please highlight any key changes the developers should be looking out for- plus extra hand off notes you'd like to provide.
+      placeholder: "Explain variants, hover states, transitions, or responsive behavior..."
