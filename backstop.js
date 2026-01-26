@@ -60,7 +60,7 @@ module.exports = {
     html_report: `backstop_data/html_report${themeSuffix}`,
     ci_report: 'backstop_data/ci_report'
   },
-  asyncCaptureLimit: 3,
+  asyncCaptureLimit: 15,
   asyncCompareLimit: 50,
   resembleOutputOptions: {
     errorType: 'movementDifferenceIntensity',
