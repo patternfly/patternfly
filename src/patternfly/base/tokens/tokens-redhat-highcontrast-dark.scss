@@ -1,0 +1,47 @@
+
+// Do not edit directly
+// Generated on Fri, 23 Jan 2026 20:37:44 GMT
+
+// Only tokens that differ from base theme (40 tokens)
+@mixin pf-v6-tokens {
+  --pf-t--global--background--color--primary--default: var(--pf-t--color--black);
+  --pf-t--global--background--color--action--plain--alt--clicked: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--background--color--action--plain--alt--hover: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--background--color--control--default: var(--pf-t--global--dark--background--color--100);
+  --pf-t--global--background--color--disabled--default: var(--pf-t--global--dark--color--disabled--200);
+  --pf-t--global--background--color--floating--clicked: var(--pf-t--global--dark--background--color--300);
+  --pf-t--global--background--color--floating--default: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--floating--hover: var(--pf-t--global--dark--background--color--300);
+  --pf-t--global--background--color--primary--clicked: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--primary--hover: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--border--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--border--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--border--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--border--color--control--default: var(--pf-t--global--dark--border--color--300);
+  --pf-t--global--border--color--default: var(--pf-t--global--dark--border--color--300);
+  --pf-t--global--border--color--disabled: var(--pf-t--global--dark--color--disabled--100);
+  --pf-t--global--border--color--on-secondary: var(--pf-t--global--dark--border--color--300);
+  --pf-t--global--border--color--subtle: var(--pf-t--global--dark--border--color--300);
+  --pf-t--global--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--350);
+  --pf-t--global--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--300);
+  --pf-t--global--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--350);
+  --pf-t--global--color--nonstatus--gray--clicked: var(--pf-t--global--dark--color--nonstatus--gray--100);
+  --pf-t--global--color--nonstatus--gray--default: var(--pf-t--global--dark--color--nonstatus--gray--50);
+  --pf-t--global--color--nonstatus--gray--hover: var(--pf-t--global--dark--color--nonstatus--gray--100);
+  --pf-t--global--color--status--custom--clicked: var(--pf-t--global--dark--color--status--custom--300);
+  --pf-t--global--color--status--custom--default: var(--pf-t--global--dark--color--status--custom--200);
+  --pf-t--global--color--status--custom--hover: var(--pf-t--global--dark--color--status--custom--300);
+  --pf-t--global--color--status--danger--clicked: var(--pf-t--global--dark--color--status--danger--250);
+  --pf-t--global--color--status--danger--default: var(--pf-t--global--dark--color--status--danger--200);
+  --pf-t--global--color--status--danger--hover: var(--pf-t--global--dark--color--status--danger--250);
+  --pf-t--global--color--status--success--clicked: var(--pf-t--global--dark--color--status--success--300);
+  --pf-t--global--color--status--success--default: var(--pf-t--global--dark--color--status--success--200);
+  --pf-t--global--color--status--success--hover: var(--pf-t--global--dark--color--status--success--300);
+  --pf-t--global--icon--color--severity--critical--default: var(--pf-t--global--dark--color--severity--critical--200);
+  --pf-t--global--text--color--link--visited: var(--pf-t--global--dark--text--color--link--400);
+  --pf-t--global--text--color--on-disabled: var(--pf-t--global--dark--color--disabled--400);
+  --pf-t--global--text--color--status--danger--default: var(--pf-t--global--dark--color--status--danger--300);
+  --pf-t--global--border--color--high-contrast: var(--pf-t--global--border--color--default);
+  --pf-t--global--border--color--main--default: var(--pf-t--global--border--color--default);
+  --pf-t--global--icon--color--on-brand--accent--default: var(--pf-t--global--icon--color--inverse);
+}
