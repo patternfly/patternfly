@@ -487,7 +487,7 @@ Note that the table in the main content area uses the `pf-m-grid-lg` modifier an
                 toolbar-template--HasBulkSelect=true
                 toolbar-template--HasSearchFilter=true
               }}
-            {{> table-simple-table}}
+            {{> table-simple-table table-simple-table--modifier="pf-m-grid-lg"}}
             {{> table-pagination-footer}}
           {{/drawer-body}}
         {{/drawer-content}}
@@ -507,7 +507,7 @@ Note that the table in the main content area uses the `pf-m-grid-lg` modifier an
                 toolbar-template--HasBulkSelect=true
                 toolbar-template--HasSearchFilter=true
               }}
-            {{> table-simple-table table-simple-table--modifier="pf-m-grid-lg"}}
+            {{> table-simple-table}}
             {{> table-pagination-footer}}
           {{/drawer-body}}
         {{/drawer-panel}}
