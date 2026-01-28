@@ -464,3 +464,55 @@ By default, table cell alignment is set to baseline. This retains vertical align
   {{/page-main-section}}
 {{/inline}}
 ```
+
+### Container query with drawer
+
+This demo shows how tables can use container queries to respond to the size of their container. The drawer panel is defined as a container using `container-type: inline-size; container-name: pf-v6-contain-table`. This allows the table in the drawer to respond to the panel's width rather than the viewport width.
+
+Because the table in the main content area does not have a specific container around it, its responsive behavior defaults to the container specified on the `:root` element.
+
+Note that the table in the main content area uses the `pf-m-grid-lg` modifier and will change between the stacked and grid layout when the viewport reaches the large breakpoint. The table in the drawer uses the medium breakpoint, but changes from stacked to grid layout when its container (the drawer) reaches the medium breakpoint.
+
+```hbs isFullscreen
+{{> page-template page-template--id="table-drawer-container"}}
+
+{{#*inline "page-template-section"}}
+  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+    {{#> drawer drawer--id="table-drawer" drawer--modifier="pf-m-expanded pf-m-inline"}}
+      {{#> drawer-main}}
+        {{#> drawer-content}}
+          {{#> drawer-body drawer-body--modifier="pf-m-padding"}}
+            {{> toolbar-template
+                toolbar-template--id=(concat page--id '-main-toolbar')
+                toolbar-template--HasBulkSelect=true
+                toolbar-template--HasSearchFilter=true
+              }}
+            {{> table-simple-table}}
+            {{> table-pagination-footer}}
+          {{/drawer-body}}
+        {{/drawer-content}}
+
+        {{#> drawer-panel drawer-panel--modifier="pf-m-width-50"
+            drawer-panel--attribute='style="container-type: inline-size; container-name: pf-v6-contain-table;"'}}
+          {{#> drawer-head}}
+            <h2 class="pf-v6-c-title pf-m-2xl">Drawer as a container</h2>
+            {{#> drawer-actions}}
+              {{> drawer-close}}
+            {{/drawer-actions}}
+          {{/drawer-head}}
+
+          {{#> drawer-body}}
+            {{> toolbar-template
+                toolbar-template--id=(concat page--id '-drawer-toolbar')
+                toolbar-template--HasBulkSelect=true
+                toolbar-template--HasSearchFilter=true
+              }}
+            {{> table-simple-table table-simple-table--modifier="pf-m-grid-lg"}}
+            {{> table-pagination-footer}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/drawer}}
+  {{/page-main-section}}
+{{/inline}}
+```
