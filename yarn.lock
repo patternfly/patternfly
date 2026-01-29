@@ -3264,7 +3264,7 @@ __metadata:
     "@octokit/rest": "npm:^20.1.0"
     "@patternfly/documentation-framework": "npm:6.33.5"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
-    "@patternfly/react-code-editor": "npm:6.4.0"
+    "@patternfly/react-code-editor": "npm:6.4.1"
     "@patternfly/react-core": "npm:6.4.0"
     "@patternfly/react-table": "npm:6.4.0"
     "@rspack/cli": "npm:^1.6.0"
@@ -3318,12 +3318,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@patternfly/react-code-editor@npm:6.4.0":
-  version: 6.4.0
-  resolution: "@patternfly/react-code-editor@npm:6.4.0"
+"@patternfly/react-code-editor@npm:6.4.1":
+  version: 6.4.1
+  resolution: "@patternfly/react-code-editor@npm:6.4.1"
   dependencies:
     "@monaco-editor/react": "npm:^4.6.0"
-    "@patternfly/react-core": "npm:^6.4.0"
+    "@patternfly/react-core": "npm:^6.4.1"
     "@patternfly/react-icons": "npm:^6.4.0"
     "@patternfly/react-styles": "npm:^6.4.0"
     react-dropzone: "npm:14.3.5"
@@ -3331,7 +3331,7 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/42a2a119583c40f451cbcc8f60e4c5958b7c1ea110f2a44a4d79335197dec799e0fb1b75ba75472ff833441b551c25f6ede351ec35c9249e5cdc46aee8ff3a6c
+  checksum: 10c0/ab64416915bc7bbb3b6656a2f4b4c3735a836a2f27390925722359587d202843d8672ae33bfcdb71b76a36bb338d175855617dac7f5a7a9c4f0bdca5c9dc1365
   languageName: node
   linkType: hard
 
@@ -3349,6 +3349,23 @@ __metadata:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
   checksum: 10c0/54883543e470273ee01ba08e93efe6ae49fa18048ea69c7ae13e680228880ea2d164c9bcf6aef60ac4d97183060c06166aeff1a61c33cbfa4b0bcb1adb18f467
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-core@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@patternfly/react-core@npm:6.4.1"
+  dependencies:
+    "@patternfly/react-icons": "npm:^6.4.0"
+    "@patternfly/react-styles": "npm:^6.4.0"
+    "@patternfly/react-tokens": "npm:^6.4.0"
+    focus-trap: "npm:7.6.4"
+    react-dropzone: "npm:^14.3.5"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/204b2b9f2990b0f0f5d907ba9d63f4f78f8691c8a4c7c292318978c5d4ea2dea89dab962be20e97bc3f2fd5172f2ee44abc17683c2c96f8f7eeb8ad357ba9326
   languageName: node
   linkType: hard
 
