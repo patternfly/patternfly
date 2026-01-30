@@ -41,6 +41,9 @@ $pf-v6-global--height-breakpoint--lg: 48rem !default; // 768px
 $pf-v6-global--height-breakpoint--xl: 60rem !default; // 960px
 $pf-v6-global--height-breakpoint--2xl: 80rem !default; // 1280px
 
+// Semantic breakpoints
+$pf-v6-global--breakpoint--dock--expand: $pf-v6-global--breakpoint--lg !default;
+
 // Global breakpoint map - used for @pf-grid-item-modifiers
 $pf-v6-global--breakpoint-map: (
   "": null,
