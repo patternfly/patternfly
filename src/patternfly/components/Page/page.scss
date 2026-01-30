@@ -218,7 +218,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-rows: max-content 1fr;
     grid-template-columns: auto 1fr;
 
-    @media (min-width: $pf-v6-global--breakpoint--xl) {
+    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
       --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--xl--MarginBlockStart);
       --#{$page}__main-container--MarginInlineStart: 0;
 
@@ -300,7 +300,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     border-inline-end: var(--#{$page}__dock--BorderInlineEndWidth) solid var(--#{$page}__dock--BorderInlineEndColor);
   }
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--xl) {
+  @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
     --#{$page}__dock--BorderInlineEndWidth: 0;
 
     position: revert;
