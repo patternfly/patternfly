@@ -4,6 +4,7 @@
   --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
   --#{$radio}--m-standalone--MinHeight: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));
+
   // Expanded clickable area for standalone radio; provides 44x44px minimum touch target per WCAG guidelines
   --#{$radio}--m-standalone--before--Inset: -12px;
 
@@ -41,10 +42,10 @@
 
     // Expanded clickable area using pseudo-element
     &::before {
-      content: '';
       position: absolute;
       inset: var(--#{$radio}--m-standalone--before--Inset);
       pointer-events: auto;
+      content: '';
     }
 
     .#{$radio}__input {
