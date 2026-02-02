@@ -144,8 +144,8 @@
 
 .#{$notification-drawer}__header-action {
   display: flex;
-  align-items: center;
   gap: var(--#{$notification-drawer}__header-action--Gap);
+  align-items: center;
   margin-inline-start: auto;
 }
 
