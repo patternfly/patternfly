@@ -13,7 +13,7 @@ body:
     id: figma-link
     attributes:
       label: Figma Link
-      description: Link to the specific frame or page in Figma.
+      description: Link to the specific frame or page in Figma. It should have a "before" screen and an "after" screen for the dev to easily see the changes they need to implement.
       placeholder: "https://www.figma.com/file/..."
     validations:
       required: true
