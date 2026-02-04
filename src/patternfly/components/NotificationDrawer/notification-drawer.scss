@@ -18,6 +18,7 @@
   --#{$notification-drawer}__header-status--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$notification-drawer}__header-status--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$notification-drawer}__header-status--Color: var(--pf-t--global--text--color--subtle);
+  --#{$notification-drawer}__header-action--Gap: var(--pf-t--global--spacer--gap--action-to-action--plain);
 
   // Body
   --#{$notification-drawer}__body--ZIndex: var(--pf-t--global--z-index--xs);
@@ -143,6 +144,7 @@
 
 .#{$notification-drawer}__header-action {
   display: flex;
+  gap: var(--#{$notification-drawer}__header-action--Gap);
   align-items: center;
   margin-inline-start: auto;
 }
