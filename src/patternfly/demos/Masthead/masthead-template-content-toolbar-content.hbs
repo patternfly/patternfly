@@ -42,19 +42,42 @@
     {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
       {{#> nav-list}}
         {{#> nav-item}}
-          {{> nav-link nav-link--href="#" nav-link--icon="cube" nav-link--aria-label="Cube"}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="cube" nav-link--aria-label="Cube"}}
+            System panel
+          {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
-          {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder" nav-link--aria-label="Folder"}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder" nav-link--aria-label="Folder"}}
+            Policy
+          {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
-          {{> nav-link nav-link--href="#" nav-link--icon="cloud" nav-link--aria-label="Cloud"}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="cloud" nav-link--aria-label="Cloud"}}
+            Authentication
+          {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
-          {{> nav-link nav-link--href="#" nav-link--icon="code" nav-link--aria-label="Code"}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="code" nav-link--aria-label="Code"}}
+            Network services
+          {{/nav-link}}
         {{/nav-item}}
       {{/nav-list}}
     {{/nav}}
+    {{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-align-end pf-m-spacer-none pf-m-spacer-md-on-md"}}
+      {{#> toolbar-item}}
+        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon="th" menu-toggle--aria-label="Applications" menu-toggle--text="Applications" menu-toggle--IsDock=true menu-toggle--IsText=true}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> button button--IsDock=true button--IsPlain=true button--IsSettings=true button--icon="cog" button--aria-label="Settings" button--text="Settings"}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--aria-label="Help" menu-toggle--icon="question-circle" menu-toggle--text="Help" menu-toggle--IsDock=true menu-toggle--IsText=true}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--aria-label="Actions" menu-toggle--icon="ellipsis-v" menu-toggle--text="Actions" menu-toggle--IsDock=true menu-toggle--IsText=true}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+  {{else}}
+    {{> masthead-template-content-icon-group}}
   {{/if}}
-  {{> masthead-template-content-icon-group}}
 {{/toolbar-content-section}}

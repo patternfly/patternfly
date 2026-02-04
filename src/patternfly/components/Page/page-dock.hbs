@@ -1,4 +1,8 @@
-<div class="{{pfv}}page__dock{{#if page-dock--modifier}} {{page-dock--modifier}}{{/if}}"
+<div class="{{pfv}}page__dock
+  {{setModifiers
+    page-dock--IsExpanded='pf-m-expanded'
+    page-dock--modifier=page-dock--modifier
+  }}"
   {{#if page-dock--attribute}}
     {{{page-dock--attribute}}}
   {{/if}}>

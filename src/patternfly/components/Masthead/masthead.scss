@@ -160,8 +160,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: fit-content;
+    align-items: stretch;
     height: 100%;
     backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
 
@@ -169,10 +168,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       flex-grow: 1;
       flex-direction: column;
       align-self: revert;
+      align-items: stretch;
     }
 
     .#{$toolbar} {
-      --#{$masthead}--c-toolbar--Width: fit-content;
+      --pf-v6-c-toolbar--m-vertical--Width: auto;
 
       height: var(--#{$masthead}--m-docked--c-toolbar--Height);
     }
