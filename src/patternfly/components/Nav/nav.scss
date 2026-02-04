@@ -198,7 +198,13 @@
     --#{$nav}__link--hover--BackgroundColor: var(--#{$nav}--m-docked__link--hover--BackgroundColor);
     --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
 
-    width: fit-content;
+    width: 100%;
+  
+    &.pf-m-text-expanded {
+      .#{$nav}__link-text {
+        display: revert;
+      }
+    }
 
     .#{$nav}__link-icon {
       position: relative;
@@ -207,8 +213,12 @@
       text-align: center;
     }
 
-    .#{$nav}__link-text {
-      display: none;
+    @media (min-width: #{$pf-v6-global--breakpoint--dock--expand}) {
+      width: fit-content;
+
+      .#{$nav}__link-text {
+        display: none;
+      }
     }
   }
 

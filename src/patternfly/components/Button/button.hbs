@@ -27,6 +27,7 @@
     button--IsSettings='pf-m-settings'
     button--IsHamburger='pf-m-hamburger'
     button--IsCircle='pf-m-circle'
+    button--IsDock='pf-m-dock'
     button--modifier=button--modifier
   }}
   {{#if button--IsDisabled}}
@@ -100,7 +101,9 @@
         {{> button-icon}}
       {{/unless}}
     {{/ifAny}}
-    {{#if @partial-block}}
+    {{#if button--text}}
+      {{> button-text}}
+    {{else if @partial-block}}
       {{#if button--ExcludeTextWrapper}}
         {{> @partial-block}}
       {{else}}

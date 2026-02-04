@@ -905,6 +905,20 @@
     animation-duration: var(--#{$button}--m-notify__icon--AnimationDuration--notify);
     animation-timing-function: var(--#{$button}--m-notify__icon--AnimationTimingFunction--notify);
   }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+    &.pf-m-dock {
+      .#{$button}__text {
+        display: none;
+      }
+    }
+  }
+
+  &.pf-m-text-expanded {
+    .#{$button}__text {
+      display: revert;
+    }
+  }
 }
 
 .#{$button}__icon {

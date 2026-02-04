@@ -20,6 +20,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
   // Dock
+  --#{$page}__dock--Width: #{pf-size-prem(250px)};
+  --#{$page}__dock--desktop--Width: auto;
   --#{$page}__dock--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}__dock--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
   --#{$page}__dock--BorderInlineEndColor: var(--pf-t--global--border--color--default);
@@ -307,6 +309,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     inset: revert;
     width: auto;
     translate: 0;
+  }
+
+  .#{$toolbar}.pf-m-vertical :is(.#{$toolbar}__content-section, .#{$toolbar}__group, .#{$toolbar}__item) {
+    align-items: stretch;
   }
 }
 

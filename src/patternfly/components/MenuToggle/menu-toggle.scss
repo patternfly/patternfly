@@ -426,6 +426,29 @@
       pointer-events: none;
     }
   }
+  
+  &.pf-m-dock {
+    width: 100%;
+
+    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+      width: auto;
+
+      .#{$menu-toggle}__text,
+      .#{$menu-toggle}__controls {
+        display: none;
+      }
+    }
+  }
+
+  &.pf-m-text-expanded {
+    width: 100%;
+
+    .#{$menu-toggle}__text,
+    .#{$menu-toggle}__controls {
+      display: revert;
+    }
+  }
+
 }
 
 // Register the property type for the custom property to be animatable
