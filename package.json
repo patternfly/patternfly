@@ -53,6 +53,7 @@
     "@patternfly/patternfly-a11y": "5.1.0",
     "@patternfly/react-code-editor": "6.4.1",
     "@patternfly/react-core": "6.4.1",
+    "@patternfly/react-icons": "6.5.0-prerelease.13",
     "@patternfly/react-table": "6.4.1",
     "@rspack/cli": "^1.6.0",
     "@rspack/core": "^1.6.0",
