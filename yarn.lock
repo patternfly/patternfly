@@ -3269,6 +3269,7 @@ __metadata:
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.4.1"
     "@patternfly/react-core": "npm:6.4.1"
+    "@patternfly/react-icons": "npm:6.5.0-prerelease.13"
     "@patternfly/react-table": "npm:6.4.1"
     "@rspack/cli": "npm:^1.6.0"
     "@rspack/core": "npm:^1.6.0"
@@ -3352,6 +3353,16 @@ __metadata:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
   checksum: 10c0/204b2b9f2990b0f0f5d907ba9d63f4f78f8691c8a4c7c292318978c5d4ea2dea89dab962be20e97bc3f2fd5172f2ee44abc17683c2c96f8f7eeb8ad357ba9326
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-icons@npm:6.5.0-prerelease.13":
+  version: 6.5.0-prerelease.13
+  resolution: "@patternfly/react-icons@npm:6.5.0-prerelease.13"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/518809f6d0deedb8079fbbaa3e503ccdfdfdd076bab6f3ad94575eb09d10b283ddbe921de0a58079580431d0a638e68878648873fc02a9be517b4fec4c06290b
   languageName: node
   linkType: hard
 
