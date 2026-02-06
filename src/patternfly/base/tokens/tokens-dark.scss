@@ -1,11 +1,13 @@
 
 // Do not edit directly
-// Generated on Fri, 23 Jan 2026 20:37:44 GMT
+// Generated on Fri, 06 Feb 2026 20:13:04 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--action--plain--default: rgba(0, 0, 0, 0.0000);
-  --pf-t--global--background--filter--glass: 0;
-  --pf-t--global--background--opacity--glass: 100;
+  --pf-t--global--background--filter--glass--blur--floating: 0px;
+  --pf-t--global--background--filter--glass--blur--primary: 0px;
+  --pf-t--global--background--opacity--glass--floating: 100%;
+  --pf-t--global--background--opacity--glass--primary: 100%;
   --pf-t--global--border--color--high-contrast: rgba(255, 255, 255, 0.0000);
   --pf-t--global--dark--background--color--500: rgba(21, 21, 21, 0.8000);
   --pf-t--global--dark--background--color--600: rgba(199, 199, 199, 0.1500);
