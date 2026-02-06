@@ -41,9 +41,9 @@
   {{/unless}}
 
   {{#if menu-toggle--IsPlain}}
-    {{#ifAll (inverse menu-toggle--text) (inverse menu-toggle--IsDock)}}
+    {{#ifAny (inverse menu-toggle--IsText) menu-toggle--IsDock}}
       aria-label="{{ternary menu-toggle--aria-label menu-toggle--aria-label "Menu toggle"}}"
-    {{/ifAll}}
+    {{/ifAny}}
   {{/if}}
 
   {{#if menu-toggle--id}}
@@ -77,11 +77,11 @@
       {{/menu-toggle-icon}}
     {{/if}}
     {{!-- TODO: refactor this logic --}}
-    {{#if menu-toggle--text}}
+    {{#ifAll menu-toggle--text (inverse menu-toggle--IsDock)}}
       {{#> menu-toggle-controls}}
         {{> menu-toggle-toggle-icon}}
       {{/menu-toggle-controls}}
-    {{/if}}
+    {{/ifAll}}
     {{#if @partial-block}}
       {{> @partial-block}}
     {{/if}}

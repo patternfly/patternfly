@@ -5,7 +5,7 @@
   --#{$button}--AlignItems: baseline;
   --#{$button}--JustifyContent: center;
   --#{$button}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$button}--MinWidth: calc(1em * var(--#{$button}--LineHeight) + var(--#{$button}--PaddingBlockStart) + var(--#{$button}--PaddingBlockEnd));
+  --#{$button}--MinWidth: initial;
   --#{$button}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$button}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
@@ -394,7 +394,7 @@
   gap: var(--#{$button}--Gap);
   align-items: var(--#{$button}--AlignItems);
   justify-content: var(--#{$button}--JustifyContent);
-  min-width: var(--#{$button}--MinWidth);
+  min-width: var(--#{$button}--MinWidth, revert);
   padding-block-start: var(--#{$button}--PaddingBlockStart);
   padding-block-end: var(--#{$button}--PaddingBlockEnd);
   padding-inline-start: var(--#{$button}--PaddingInlineStart);
@@ -906,8 +906,13 @@
     animation-timing-function: var(--#{$button}--m-notify__icon--AnimationTimingFunction--notify);
   }
 
-  @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
-    &.pf-m-dock {
+  &.pf-m-dock {
+    justify-content: flex-start;
+    width: 100%;
+
+    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+      justify-content: center;
+
       .#{$button}__text {
         display: none;
       }
@@ -925,6 +930,7 @@
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
+  min-width: 1lh;
   transition-delay: var(--#{$button}__icon--TransitionDelay);
   transition-timing-function: var(--#{$button}__icon--TransitionTimingFunction);
   transition-duration: var(--#{$button}__icon--TransitionDuration);

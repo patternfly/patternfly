@@ -174,20 +174,20 @@ import './MenuToggle.css'
 
 ### Plain
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 ```
 
 ### Plain circle
 ```hbs isBeta
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--attribute='aria-label="Circle styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--aria-label="Circle styled actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Circle and expanded styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--aria-label="Circle and expanded styled actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Circle and disabled styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--aria-label="Circle and disabled styled actions" menu-toggle--HasKebab=true}}
 ```
 
 ### Plain with text
