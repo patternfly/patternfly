@@ -12,8 +12,8 @@
   --#{$hero}--gradient--stop-1--dark: transparent;
   --#{$hero}--gradient--stop-2--dark: transparent;
   --#{$hero}--gradient--stop-3--dark: transparent;
-  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--glass--default);
-  --#{$hero}--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
+  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
+  --#{$hero}--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$hero}--BackgroundImage--light: none;
   --#{$hero}--BackgroundImage--dark: none;
   --#{$hero}--BackgroundRepeat: no-repeat;

@@ -62,8 +62,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-docked--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$masthead}--m-docked--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$masthead}--m-docked--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--glass--default);
-  --#{$masthead}--m-docked--BackdropFilter: var(--pf-t--global--background--color--glass--filter);
+  --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
+  --#{$masthead}--m-docked--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$masthead}--m-docked--c-toolbar--Height: 100%;
 
   // * Masthead toolbar

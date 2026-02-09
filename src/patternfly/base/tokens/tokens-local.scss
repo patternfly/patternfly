@@ -137,57 +137,7 @@
   --pf-t--temp--dev--tbd: #BC11E0;
   // stylelint-enable
 
-  // Glass theme  tokens
-  // Glass theme off base. These are reused.
-  --pf-t--global--background--color--glass--filter--base: none;
-  --pf-t--global--background--color--glass--opacity--base: 1;
-  --pf-t--global--background--color--glass--default--base: var(--pf-t--global--background--color--primary--default);
-
-  // Glass theme off defaults
-  --pf-t--global--background--color--glass--filter: var(--pf-t--global--background--color--glass--filter--base);
-  --pf-t--global--background--color--glass--opacity: var(--pf-t--global--background--color--glass--opacity--base);
-  --pf-t--global--background--color--glass--default: var(--pf-t--global--background--color--glass--default--base);
-  --pf-t--global--dark--background--color--glass--filter: var(--pf-t--global--background--color--glass--filter--base);
-  --pf-t--global--dark--background--color--glass--opacity: var(--pf-t--global--background--color--glass--opacity--base);
-  --pf-t--global--dark--background--color--glass--default: var(--pf-t--global--background--color--glass--default--base);
-
-  // Glass theme on. In the root scope so they can be themed on :root
-  --pf-t--global--light--glass--background--color--glass--color: #ffffff;
-  --pf-t--global--light--glass--background--color--glass--filter: blur(12.5px);
-  --pf-t--global--light--glass--background--color--glass--opacity: 85%;
-  --pf-t--global--light--glass--background--color--glass--default: color-mix(in srgb, var(--pf-t--global--light--glass--background--color--glass--color) var(--pf-t--global--light--glass--background--color--glass--opacity), transparent );
-  --pf-t--global--dark--glass--background--color--glass--color: #1d1d1d;
-  --pf-t--global--dark--glass--background--color--glass--filter: blur(12.5px);
-  --pf-t--global--dark--glass--background--color--glass--opacity: 85%;
-  --pf-t--global--dark--glass--background--color--glass--default: color-mix(in srgb, var(--pf-t--global--dark--glass--background--color--glass--color) var(--pf-t--global--dark--glass--background--color--glass--opacity), transparent );
-
-  // Dark theme
-  &:where(.#{$pf-prefix}theme-dark) {
-    --pf-t--global--background--color--glass--filter: var(--pf-t--global--dark--background--color--glass--filter);
-    --pf-t--global--background--color--glass--opacity: var(--pf-t--global--dark--background--color--glass--opacity);
-    --pf-t--global--background--color--glass--default: var(--pf-t--global--dark--background--color--glass--default);
-  }
-
-  // Glass theme
-  &:where(.#{$pf-prefix}theme-glass) {
-    --pf-t--global--background--color--glass--filter: var(--pf-t--global--light--glass--background--color--glass--filter);
-    --pf-t--global--background--color--glass--opacity: var(--pf-t--global--light--glass--background--color--glass--opacity);
-    --pf-t--global--background--color--glass--default: var(--pf-t--global--light--glass--background--color--glass--default);
-  }
-
-  // Glass dark theme
-  &:where(.#{$pf-prefix}theme-glass.#{$pf-prefix}theme-dark) {
-    --pf-t--global--background--color--glass--filter: var(--pf-t--global--dark--glass--background--color--glass--filter);
-    --pf-t--global--background--color--glass--opacity: var(--pf-t--global--dark--glass--background--color--glass--opacity);
-    --pf-t--global--background--color--glass--default: var(--pf-t--global--dark--glass--background--color--glass--default);
-  }
-
-  // High contrast
-  &:where(.#{$pf-prefix}theme-high-contrast) {
-    --pf-t--global--background--color--glass--filter: var(--pf-t--global--background--color--glass--filter--base);
-    --pf-t--global--background--color--glass--opacity: var(--pf-t--global--background--color--glass--opacity--base);
-    --pf-t--global--background--color--glass--default: var(--pf-t--global--background--color--glass--default--base);
-  }
+  // Glass theme background tokens
+  --pf-t--global--background--color--glass--primary--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--primary) var(--pf-t--global--background--opacity--glass--primary), transparent );
+  --pf-t--global--background--color--glass--floating--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--floating) var(--pf-t--global--background--opacity--glass--floating), transparent );
 }
-
-
