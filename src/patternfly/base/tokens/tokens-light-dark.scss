@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Wed, 11 Feb 2026 20:52:20 GMT
+// Generated on Wed, 11 Feb 2026 21:43:12 GMT
 
 @mixin pf-v6-tokens {
   // Dark base tokens (referenced by semantic tokens in dark mode)
@@ -855,8 +855,10 @@
   --pf-t--global--border--color--300: light-dark(var(--pf-t--color--gray--45), var(--pf-t--color--gray--30));
   --pf-t--global--border--color--200: light-dark(var(--pf-t--color--gray--40), var(--pf-t--color--gray--40));
   --pf-t--global--border--color--100: light-dark(var(--pf-t--color--gray--30), var(--pf-t--color--gray--50));
-  --pf-t--global--background--opacity--glass: light-dark(100, 100);
-  --pf-t--global--background--filter--glass: light-dark(0, 0);
+  --pf-t--global--background--opacity--glass--primary: light-dark(100%, 100%);
+  --pf-t--global--background--opacity--glass--floating: light-dark(100%, 100%);
+  --pf-t--global--background--filter--glass--blur--primary: light-dark(blur(0px), 0);
+  --pf-t--global--background--filter--glass--blur--floating: light-dark(blur(0px), 0);
   --pf-t--global--background--color--tertiary--default: light-dark(var(--pf-t--global--background--color--600), var(--pf-t--global--dark--background--color--600));
   --pf-t--global--background--color--secondary--hover: light-dark(var(--pf-t--global--background--color--300), var(--pf-t--global--dark--background--color--200));
   --pf-t--global--background--color--secondary--default: light-dark(var(--pf-t--global--background--color--200), var(--pf-t--global--dark--background--color--100));
