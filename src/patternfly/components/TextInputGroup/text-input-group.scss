@@ -2,7 +2,7 @@
 
 @include pf-root($text-input-group) {
   --#{$text-input-group}--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$text-input-group}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$text-input-group}--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$text-input-group}--m-success--BorderColor: var(--pf-t--global--border--color--status--success--default);
   --#{$text-input-group}--m-warning--BorderColor: var(--pf-t--global--border--color--status--warning--default);
   --#{$text-input-group}--m-error--BorderColor: var(--pf-t--global--border--color--status--danger--default);
@@ -26,7 +26,7 @@
   --#{$text-input-group}__main--ColumnGap: var(--pf-t--global--spacer--xs);
 
   // Text wrapper
-  --#{$text-input-group}__text--BorderRadius--base: var(--pf-t--global--border--radius--small);
+  --#{$text-input-group}__text--BorderRadius--base: var(--pf-t--global--border--radius--control--form-element);
   --#{$text-input-group}__text--BorderStartStartRadius: var(--#{$text-input-group}__text--BorderRadius--base);
   --#{$text-input-group}__text--BorderStartEndRadius: var(--#{$text-input-group}__text--BorderRadius--base);
   --#{$text-input-group}__text--BorderEndEndRadius: var(--#{$text-input-group}__text--BorderRadius--base);

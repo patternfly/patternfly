@@ -193,12 +193,12 @@
   --#{$button}--m-plain--m-no-padding--border--offset: calc(#{pf-size-prem(2px)} * -1);
 
   // Control
-  --#{$button}--m-control--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$button}--m-control--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
   --#{$button}--m-control--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}--m-control--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}--m-control--Color: var(--pf-t--global--text--color--regular);
   --#{$button}--m-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$button}--m-control--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-control--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$button}--m-control--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$button}--m-control__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-control--hover--Color: var(--pf-t--global--text--color--regular);
