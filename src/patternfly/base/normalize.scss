@@ -130,10 +130,10 @@
   }
 
   :where(:root) {
-    color-scheme: light;
+    color-scheme: light dark;
   }
 
-  :where(.pf-v6-theme-dark) {
-    color-scheme: dark;
-  }
+  // :where(.pf-v6-theme-dark) {
+  //   color-scheme: dark;
+  // }
 }
