@@ -7,25 +7,25 @@
   }
 
   .pf-m-grid-md.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
+    @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--md}) {
       @content;
     }
   }
 
   .pf-m-grid-lg.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--lg)) {
+    @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--lg}) {
       @content;
     }
   }
 
   .pf-m-grid-xl.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
+    @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--xl}) {
       @content;
     }
   }
 
   .pf-m-grid-2xl.#{$table} {
-    @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--2xl)) {
+    @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--2xl}) {
       @content;
     }
   }
