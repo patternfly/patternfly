@@ -7,16 +7,16 @@
   vertical-align: -.125em;
 }
 
-.#{$pf-prefix}icon_rh-ui {
+.#{$pf-prefix}svg .#{$pf-prefix}icon-rh-ui {
   display: none;
 }
 
-.#{$pf-prefix}icons-set_rh-ui {
-  .#{$pf-prefix}icon_default {
+.#{$pf-prefix}icons-rh-ui {
+  .#{$pf-prefix}svg .#{$pf-prefix}icon-default {
     display: none;
   }
 
-  .#{$pf-prefix}icon_rh-ui {
+  .#{$pf-prefix}svg .#{$pf-prefix}icon-rh-ui {
     display: revert;
   }
 }
