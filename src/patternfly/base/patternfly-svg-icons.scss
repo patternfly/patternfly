@@ -6,3 +6,17 @@
   height: 1em;
   vertical-align: -.125em;
 }
+
+.#{$pf-prefix}icon_rh-ui {
+  display: none;
+}
+
+.#{$pf-prefix}icons-set_rh-ui {
+  .#{$pf-prefix}icon_default {
+    display: none;
+  }
+
+  .#{$pf-prefix}icon_rh-ui {
+    display: revert;
+  }
+}
