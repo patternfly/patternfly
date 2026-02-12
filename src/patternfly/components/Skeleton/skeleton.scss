@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($skeleton) {
-  --#{$skeleton}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$skeleton}--BackgroundColor: var(--pf-t--global--background--color--loading--skeleton--default);
   --#{$skeleton}--Width: auto;
   --#{$skeleton}--Height: auto;
   --#{$skeleton}--BorderRadius: var(--pf-t--global--spacer--sm);
@@ -13,9 +13,9 @@
 
   // After
   --#{$skeleton}--after--LinearGradientAngle: 90deg;
-  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--loading--skeleton--default);
-  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--loading--skeleton--subtle); 
-  --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--loading--skeleton--default);
+  --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--loading--skeleton--subtle);
+  --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--loading--skeleton--default);
+  --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--loading--skeleton--subtle);
   --#{$skeleton}--after--TranslateX: 0;
   --#{$skeleton}--after--AnimationName: #{$skeleton}-loading-reduced-motion;
   --#{$skeleton}--after--AnimationDuration: 3s;
@@ -24,9 +24,9 @@
   --#{$skeleton}--after--AnimationDelay: .5s;
 
   @media screen and (prefers-reduced-motion: no-preference) {
-    --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--loading--skeleton--default);
-    --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--loading--skeleton--subtle);
-    --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--loading--skeleton--default);
+    --#{$skeleton}--after--LinearGradientColorStop1: var(--pf-t--global--background--color--loading--skeleton--subtle);
+    --#{$skeleton}--after--LinearGradientColorStop2: var(--pf-t--global--background--color--loading--skeleton--default);
+    --#{$skeleton}--after--LinearGradientColorStop3: var(--pf-t--global--background--color--loading--skeleton--subtle);
     --#{$skeleton}--after--TranslateX: -100%;
     --#{$skeleton}--after--AnimationName: #{$skeleton}-loading;
   }
@@ -89,7 +89,14 @@
     inset: 0;
     display: block;
     content: "";
-    background: linear-gradient(var(--#{$skeleton}--after--LinearGradientAngle), var(--#{$skeleton}--after--LinearGradientColorStop1), var(--#{$skeleton}--after--LinearGradientColorStop2), var(--#{$skeleton}--after--LinearGradientColorStop3));
+    background: linear-gradient(
+      var(--#{$skeleton}--after--LinearGradientAngle),
+      transparent 0%,
+      transparent 30%,
+      var(--#{$skeleton}--after--LinearGradientColorStop2) 50%,
+      transparent 70%,
+      transparent 100%
+    );
     transform: translate3d(var(--#{$skeleton}--after--TranslateX), 0, 0); // translateZ() to force GPU acceleration
     animation: var(--#{$skeleton}--after--AnimationName) var(--#{$skeleton}--after--AnimationDuration) var(--#{$skeleton}--after--AnimationTimingFunction) var(--#{$skeleton}--after--AnimationDelay) var(--#{$skeleton}--after--AnimationIterationCount);
   }
