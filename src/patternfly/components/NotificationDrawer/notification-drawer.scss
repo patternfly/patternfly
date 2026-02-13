@@ -171,8 +171,16 @@
   padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingInlineStart);
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
-  border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
+    border-radius: inherit;
+  }
 
   &.pf-m-info {
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-info__list-item--BorderColor);
@@ -203,8 +211,6 @@
     --#{$notification-drawer}__list-item--BorderWidth: var(--#{$notification-drawer}__list-item--m-read--BorderWidth);
     --#{$notification-drawer}__list-item--BackgroundColor: var(--#{$notification-drawer}__list-item--m-read--BackgroundColor);
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-read--BorderColor);
-
-    position: relative;
   }
 
   &.pf-m-hoverable {
