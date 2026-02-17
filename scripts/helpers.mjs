@@ -2,6 +2,7 @@ import { patternflyNamespace, patternflyVersion } from './init.mjs';
 import fs from 'fs';
 import path from 'path';
 import Handlebars from 'handlebars';
+import { createRequire } from 'module';
 
 // TODO: TODO: update ternary to not escape chars
 
@@ -373,12 +374,15 @@ export const prefix = function (term) {
 // ======================================================================================
 export const pfIcon = function (iconName) {
   try {
-  if (!iconName || typeof iconName !== 'string') {
+    if (!iconName || typeof iconName !== 'string') {
       console.error(`\x1b[31mInvalid icon name: ${iconName}\x1b[0m`);
       return new Handlebars.SafeString(`<!-- Invalid icon name -->`);
     }
     const baseName = path.basename(iconName);
-    const iconDir = path.join(process.cwd(), 'node_modules/@patternfly/react-icons/dist/static');
+    const require = createRequire(import.meta.url);
+    const packageJsonPath = require.resolve('@patternfly/react-icons/package.json');
+    const packageDir = path.dirname(packageJsonPath);
+    const iconDir = path.join(packageDir, 'dist/static');
     const iconPath = path.join(iconDir, `${baseName}.svg`);
     const svgContent = fs.readFileSync(iconPath, 'utf8');
     return new Handlebars.SafeString(svgContent);
