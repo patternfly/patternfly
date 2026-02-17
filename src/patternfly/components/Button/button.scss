@@ -18,6 +18,10 @@
   --#{$button}--BorderColor: transparent;
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$button}--BorderStartStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderStartEndRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndStartRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--BorderEndEndRadius: var(--#{$button}--BorderRadius);
   --#{$button}--TextDecorationLine: none;
   --#{$button}--TextDecorationStyle: none;
   --#{$button}--TextDecorationColor: currentcolor;
@@ -278,6 +282,7 @@
   --#{$button}--m-display-lg--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--spacious);
   --#{$button}--m-display-lg--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--spacious);
   --#{$button}--m-display-lg--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--spacious);
+  --#{$button}--m-display-lg--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$button}--m-display-lg--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$button}--m-link--m-display-lg--FontSize: var(--pf-t--global--font--size--body--lg);
 
@@ -309,6 +314,7 @@
   --#{$button}__icon--TransitionDuration: 0s;
   --#{$button}__icon--TransitionProperty: none;
   --#{$button}__icon--Rotate: 0deg;
+  --#{$button}--hover__icon--TransitionDelay: 0s;
   --#{$button}--hover__icon--TransitionTimingFunction: auto;
   --#{$button}--hover__icon--TransitionDuration: 0s;
   --#{$button}--hover__icon--TransitionProperty: none;
@@ -333,7 +339,6 @@
 
   // Progress
   --#{$button}__progress--width: calc(var(--pf-t--global--icon--size--lg) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
-  --#{$button}__progress--Opacity: 0;
   --#{$button}__progress--TranslateY: -50%;
   --#{$button}__progress--TranslateX: 0;
   --#{$button}__progress--InsetBlockStart: 50%;
@@ -745,6 +750,7 @@
     --#{$button}--PaddingBlockEnd: var(--#{$button}--m-display-lg--PaddingBlockEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-display-lg--PaddingInlineStart);
     --#{$button}--FontSize: var(--#{$button}--m-display-lg--FontSize);
+    --#{$button}--FontWeight: var(--#{$button}--m-display-lg--FontWeight);
   }
 
   &.pf-m-favorite .#{$button}__icon {
@@ -820,6 +826,7 @@
     --#{$button}--ScaleY: var(--#{$button}--hover--ScaleY);
     --#{$button}--m-plain--m-no-padding__icon--Color: var(--#{$button}--m-plain--m-no-padding--hover__icon--Color);
     --#{$button}__icon--Color: var(--#{$button}--hover__icon--Color);
+    --#{$button}__icon--TransitionDelay: var(--#{$button}--hover__icon--TransitionDelay);
     --#{$button}__icon--TransitionTimingFunction: var(--#{$button}--hover__icon--TransitionTimingFunction);
     --#{$button}__icon--TransitionDuration: var(--#{$button}--hover__icon--TransitionDuration);
     --#{$button}__icon--TransitionProperty: var(--#{$button}--hover__icon--TransitionProperty);
@@ -862,7 +869,7 @@
     background: var(--#{$button}--disabled--BackgroundColor);
 
     &::after {
-      border-color: transparent;
+      border-color: var(--#{$button}--disabled--BorderColor);
     }
 
     .#{$button}__icon {
