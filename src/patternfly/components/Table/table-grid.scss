@@ -10,10 +10,18 @@
     @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--md}) {
       @content;
     }
+
+    @container (max-width: #{pf-v6-max-width-bp($pf-v6-global--breakpoint--md)}) {
+      @content;
+    }
   }
 
   .pf-m-grid-lg.#{$table} {
     @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--lg}) {
+      @content;
+    }
+
+    @container (max-width: #{pf-v6-max-width-bp($pf-v6-global--breakpoint--lg)}) {
       @content;
     }
   }
@@ -22,10 +30,18 @@
     @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--xl}) {
       @content;
     }
+
+    @container (max-width: #{pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)}) {
+      @content;
+    }
   }
 
   .pf-m-grid-2xl.#{$table} {
     @container #{$pf-prefix}contain-table (max-width: #{$pf-v6-global--breakpoint--2xl}) {
+      @content;
+    }
+
+    @container (max-width: #{pf-v6-max-width-bp($pf-v6-global--breakpoint--2xl)}) {
       @content;
     }
   }

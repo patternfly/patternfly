@@ -327,6 +327,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   display: flex;
   flex: 1;
   gap: var(--#{$drawer}__main--Gap, 0);
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -334,9 +335,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .#{$drawer}__content,
 .#{$drawer}__panel,
 .#{$drawer}__panel-main {
+  container-type: inline-size;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
+  min-width: 0;
   overflow: auto;
 }
 
