@@ -387,7 +387,8 @@ export const pfIcon = function (iconName) {
     const svgContent = fs.readFileSync(iconPath, 'utf8');
     return new Handlebars.SafeString(svgContent);
   } catch (error) {
-    console.error(`\x1b[31mError loading icon "${iconName}": ${error.message}\x1b[0m`);
-    return new Handlebars.SafeString(`<!-- Icon "${iconName}" not found -->`);
+    const safeName = (iconName && typeof iconName === 'string') ? path.basename(iconName) : 'unknown';
+    console.error(`\x1b[31mError loading icon "${safeName}": ${error.message}\x1b[0m`);
+    return new Handlebars.SafeString(`<!-- Icon "${safeName}" not found -->`);
   }
 }
