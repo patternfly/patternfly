@@ -38,6 +38,7 @@
   --#{$notification-drawer}__list-item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$notification-drawer}__list-item--BorderWidth: var(--pf-t--global--border--width--box--status--default);
   --#{$notification-drawer}__list-item--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$notification-drawer}__list-item--focus--OutlineOffset: #{pf-size-prem(-4px)};
 
   // List item modifiers
   --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--info--default);
@@ -173,8 +174,16 @@
   padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingInlineStart);
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
-  border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
+    border-radius: inherit;
+  }
 
   &.pf-m-info {
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-info__list-item--BorderColor);
@@ -205,8 +214,6 @@
     --#{$notification-drawer}__list-item--BorderWidth: var(--#{$notification-drawer}__list-item--m-read--BorderWidth);
     --#{$notification-drawer}__list-item--BackgroundColor: var(--#{$notification-drawer}__list-item--m-read--BackgroundColor);
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-read--BorderColor);
-
-    position: relative;
   }
 
   &.pf-m-hoverable {
@@ -215,6 +222,10 @@
     &:hover,
     &:focus {
       background-color: var(--#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor);
+    }
+
+    &:focus-visible {
+      outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
     }
   }
 }
@@ -318,4 +329,3 @@
     transform: rotate(var(--#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate));
   }
 }
-
