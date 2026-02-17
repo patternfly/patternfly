@@ -37,6 +37,7 @@
   --#{$notification-drawer}__list-item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$notification-drawer}__list-item--BorderWidth: var(--pf-t--global--border--width--box--status--default);
   --#{$notification-drawer}__list-item--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$notification-drawer}__list-item--focus--OutlineOffset: #{pf-size-prem(-4px)};
 
   // List item modifiers
   --#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color: var(--pf-t--global--icon--color--status--info--default);
@@ -220,6 +221,10 @@
     &:focus {
       background-color: var(--#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor);
     }
+
+    &:focus-visible {
+      outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
+    }
   }
 }
 
@@ -322,4 +327,3 @@
     transform: rotate(var(--#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate));
   }
 }
-
