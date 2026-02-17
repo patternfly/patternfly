@@ -1,4 +1,7 @@
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import fs from 'fs';
+import path from 'path';
+import Handlebars from 'handlebars';
 
 // TODO: TODO: update ternary to not escape chars
 
@@ -358,4 +361,23 @@ export const pfv = (type) => {
 
 export const prefix = function (term) {
   return pfv('c') + term;
+}
+
+// ======================================================================================
+// pfIcon: a helper function to use svg's from @patternfly/react-icons
+// ======================================================================================
+//
+// Usage:
+//   {{pfIcon 'arrow-right'}}
+//
+// ======================================================================================
+export const pfIcon = function (iconName) {
+  try {
+    const iconPath = path.join(process.cwd(), 'node_modules/@patternfly/react-icons/dist/static', `${iconName}.svg`);
+    const svgContent = fs.readFileSync(iconPath, 'utf8');
+    return new Handlebars.SafeString(svgContent);
+  } catch (error) {
+    console.error(`\x1b[31mError loading icon "${iconName}": ${error.message}\x1b[0m`);
+    return new Handlebars.SafeString(`<!-- Icon "${iconName}" not found -->`);
+  }
 }
