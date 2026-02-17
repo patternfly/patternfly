@@ -373,7 +373,13 @@ export const prefix = function (term) {
 // ======================================================================================
 export const pfIcon = function (iconName) {
   try {
-    const iconPath = path.join(process.cwd(), 'node_modules/@patternfly/react-icons/dist/static', `${iconName}.svg`);
+  if (!iconName || typeof iconName !== 'string') {
+      console.error(`\x1b[31mInvalid icon name: ${iconName}\x1b[0m`);
+      return new Handlebars.SafeString(`<!-- Invalid icon name -->`);
+    }
+    const baseName = path.basename(iconName);
+    const iconDir = path.join(process.cwd(), 'node_modules/@patternfly/react-icons/dist/static');
+    const iconPath = path.join(iconDir, `${baseName}.svg`);
     const svgContent = fs.readFileSync(iconPath, 'utf8');
     return new Handlebars.SafeString(svgContent);
   } catch (error) {
