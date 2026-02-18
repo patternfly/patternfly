@@ -1,4 +1,8 @@
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import fs from 'fs';
+import path from 'path';
+import Handlebars from 'handlebars';
+import { createRequire } from 'module';
 
 // TODO: TODO: update ternary to not escape chars
 
@@ -358,4 +362,33 @@ export const pfv = (type) => {
 
 export const prefix = function (term) {
   return pfv('c') + term;
+}
+
+// ======================================================================================
+// pfIcon: a helper function to use svg's from @patternfly/react-icons
+// ======================================================================================
+//
+// Usage:
+//   {{pfIcon 'arrow-right'}}
+//
+// ======================================================================================
+export const pfIcon = function (iconName) {
+  try {
+    if (!iconName || typeof iconName !== 'string') {
+      console.error(`\x1b[31mInvalid icon name: ${iconName}\x1b[0m`);
+      return new Handlebars.SafeString(`<!-- Invalid icon name -->`);
+    }
+    const baseName = path.basename(iconName);
+    const require = createRequire(import.meta.url);
+    const packageJsonPath = require.resolve('@patternfly/react-icons/package.json');
+    const packageDir = path.dirname(packageJsonPath);
+    const iconDir = path.join(packageDir, 'dist/static');
+    const iconPath = path.join(iconDir, `${baseName}.svg`);
+    const svgContent = fs.readFileSync(iconPath, 'utf8');
+    return new Handlebars.SafeString(svgContent);
+  } catch (error) {
+    const safeName = (iconName && typeof iconName === 'string') ? path.basename(iconName) : 'unknown';
+    console.error(`\x1b[31mError loading icon "${safeName}": ${error.message}\x1b[0m`);
+    return new Handlebars.SafeString(`<!-- Icon "${safeName}" not found -->`);
+  }
 }
