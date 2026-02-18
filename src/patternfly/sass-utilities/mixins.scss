@@ -59,6 +59,29 @@
   }
 }
 
+// Container query mixin for responsive classes based on container size
+// Usage: @include pf-v6-container-query("md", "toolbar") { ... }
+@mixin pf-v6-container-query($point, $container-name: null) {
+  @if $point == "" or not $point or $point == "base" {
+    @content;
+  } @else {
+    $breakpoint-map: $pf-v6-global--container-breakpoint-name-map;
+    $breakpoint-value: map-get($breakpoint-map, $point);
+
+    @if $breakpoint-value {
+      @if $container-name {
+        @container #{$container-name} (min-width: #{$breakpoint-value}) {
+          @content;
+        }
+      } @else {
+        @container (min-width: #{$breakpoint-value}) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
 // Create single prop / value classes, optionally add responsive suffix
 // @group mixins
 // @moduleType mixin
@@ -196,7 +219,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v6-hidden-visible($val: "block") {
+@mixin pf-v6-hidden-visible($val: "block", $container-name: null) {
   // stylelint-disable-next-line
   --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
 
@@ -218,14 +241,31 @@
     --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
   }
 
-  @each $size, $bp in $pf-v6-global--breakpoint-name-map {
-    @media screen and (min-width: $bp) {
-      &.pf-m-hidden-on-#{$size} {
-        --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
-      }
+  // Generate either media queries OR container queries, never both
+  @if $container-name {
+    // Container query mode - use container-based breakpoints
+    @each $size, $bp in $pf-v6-global--container-breakpoint-name-map {
+      @container #{$container-name} (min-width: #{$bp}) {
+        &.pf-m-hidden-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        }
 
-      &.pf-m-visible-on-#{$size} {
-        --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        &.pf-m-visible-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        }
+      }
+    }
+  } @else {
+    // Media query mode (default) - use viewport-based breakpoints
+    @each $size, $bp in $pf-v6-global--breakpoint-name-map {
+      @media screen and (min-width: $bp) {
+        &.pf-m-hidden-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        }
+
+        &.pf-m-visible-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        }
       }
     }
   }
