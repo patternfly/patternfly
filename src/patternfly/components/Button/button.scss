@@ -765,7 +765,7 @@
   }
 
   // Favorite button will run an animation when favorited
-  &.pf-m-favorited .#{$button}__icon {
+  &.pf-m-favorited:focus .#{$button}__icon {
     animation-name: #{$button}-icon-favorited;
     animation-duration: var(--#{$button}--m-favorited__icon--AnimationDuration);
     animation-timing-function: var(--#{$button}--m-favorited__icon--AnimationTimingFunction);
