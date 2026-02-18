@@ -176,15 +176,15 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
     .#{$masthead}__main {
       flex-direction: column;
-      align-items: flex-start;
       row-gap: var(--#{$masthead}--m-docked__main--RowGap);
+      align-items: flex-start;
     }
 
     .#{$masthead}__content {
       flex-grow: 1;
       flex-direction: column;
-      align-self: revert;
       align-items: stretch;
+      align-self: revert;
     }
 
     .#{$toolbar} {

@@ -931,10 +931,10 @@
 }
 
 .#{$button}__icon {
+  min-width: 1lh;
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
-  min-width: 1lh;
   transition-delay: var(--#{$button}__icon--TransitionDelay);
   transition-timing-function: var(--#{$button}__icon--TransitionTimingFunction);
   transition-duration: var(--#{$button}__icon--TransitionDuration);
