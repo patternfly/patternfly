@@ -1,4 +1,8 @@
-<{{#if masthead-logo--type}}{{masthead-logo--type}}{{else}}a{{/if}} class="{{pfv}}masthead__logo{{#if masthead-logo--modifier}} {{masthead-logo--modifier}}{{/if}}"
+<{{#if masthead-logo--type}}{{masthead-logo--type}}{{else}}a{{/if}} class="{{pfv}}masthead__logo
+  {{setModifiers
+    masthead-logo--IsCompact='pf-m-compact'
+    masthead-logo--modifier=masthead-logo--modifier
+  }}"
   {{#unless masthead-logo--type}}
     {{#if masthead-logo--href}}
       href="{{masthead-logo--href}}"

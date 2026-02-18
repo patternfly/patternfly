@@ -314,6 +314,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   .#{$toolbar}.pf-m-vertical :is(.#{$toolbar}__content-section, .#{$toolbar}__group, .#{$toolbar}__item) {
     align-items: stretch;
   }
+
+  &.pf-m-text-expanded {
+    width: var(--#{$page}__dock--Width);
+  }
 }
 
 // Sidebar
