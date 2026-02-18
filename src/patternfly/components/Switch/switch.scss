@@ -36,7 +36,7 @@
   // Switch toggle
   --#{$switch}__toggle--Height: calc(var(--#{$switch}--FontSize) * var(--#{$switch}--LineHeight));
   --#{$switch}__toggle--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$switch}__toggle--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$switch}__toggle--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$switch}__toggle--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$switch}__toggle--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$switch}__toggle--before--Width: calc(var(--#{$switch}--FontSize) - var(--#{$switch}__toggle-icon--Offset));
