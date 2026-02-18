@@ -5,6 +5,9 @@
   --#{$check}--AccentColor: var(--pf-t--global--color--brand--default);
   --#{$check}--m-standalone--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
 
+  // Expanded clickable area for standalone checkbox; provides 44x44px minimum touch target per WCAG guidelines
+  --#{$check}--m-standalone--before--Inset: -12px;
+
   // TODO: update to `--#{$check}--FontSize` `--#{$check}--LineHeight`
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$check}__label--Color: var(--pf-t--global--text--color--regular);
@@ -31,9 +34,18 @@
   accent-color: var(--#{$check}--AccentColor);
 
   &.pf-m-standalone {
+    position: relative;
     display: inline-grid;
     grid-template-columns: auto;
     min-height: var(--#{$check}--m-standalone--MinHeight);
+
+    // Expanded clickable area using pseudo-element
+    &::before {
+      position: absolute;
+      inset: var(--#{$check}--m-standalone--before--Inset);
+      pointer-events: auto;
+      content: '';
+    }
 
     .#{$check}__input {
       align-self: center;

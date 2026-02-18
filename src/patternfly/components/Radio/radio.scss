@@ -5,6 +5,9 @@
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
   --#{$radio}--m-standalone--MinHeight: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));
 
+  // Expanded clickable area for standalone radio; provides 44x44px minimum touch target per WCAG guidelines
+  --#{$radio}--m-standalone--before--Inset: -12px;
+
   // TODO: update to `--#{$radio}--FontSize` `--#{$radio}--LineHeight`
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$radio}__label--Color: var(--pf-t--global--text--color--regular);
@@ -32,9 +35,18 @@
   accent-color: var(--#{$radio}--AccentColor);
 
   &.pf-m-standalone {
+    position: relative;
     display: inline-grid;
     grid-template-columns: auto;
     min-height: var(--#{$radio}--m-standalone--MinHeight);
+
+    // Expanded clickable area using pseudo-element
+    &::before {
+      position: absolute;
+      inset: var(--#{$radio}--m-standalone--before--Inset);
+      pointer-events: auto;
+      content: '';
+    }
 
     .#{$radio}__input {
       align-self: center;
