@@ -399,8 +399,8 @@
 
 // - Nav link icon
 .#{$nav}__link-icon {
-  color: var(--#{$nav}__link-icon--Color);
   min-width: 1lh;
+  color: var(--#{$nav}__link-icon--Color);
   text-align: center;
 }
 
