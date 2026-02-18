@@ -321,10 +321,7 @@
 
 /* stylelint-disable */
 @media (max-width: 1200px) {
-  .#{$compass} * {
-    display: none;
-  }
-  .#{$compass} {
+  .#{$compass}:not(.pf-m-no-screen-warning) {
     position: relative;
     display: grid;
     grid-template-columns: auto;
@@ -343,6 +340,10 @@
       box-shadow: var(--pf-t--global--box-shadow--md);
       white-space: pre-wrap;
       text-align: center;
+    }
+
+    * {
+      display: none;
     }
   }
 }
