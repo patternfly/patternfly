@@ -200,24 +200,20 @@
 
     width: 100%;
   
-    &.pf-m-text-expanded {
-      .#{$nav}__link-text {
-        display: revert;
-      }
-    }
-
-    .#{$nav}__link-icon {
-      position: relative;
-      align-self: center;
-      min-width: 1lh;
-      text-align: center;
-    }
-
     @media (min-width: #{$pf-v6-global--breakpoint--dock--expand}) {
       width: fit-content;
 
       .#{$nav}__link-text {
         display: none;
+      }
+    }
+
+    @at-root .#{$page}__dock.pf-m-text-expanded &,
+    &.pf-m-text-expanded {
+      width: 100%;
+
+      .#{$nav}__link-text {
+        display: revert;
       }
     }
   }
@@ -404,6 +400,8 @@
 // - Nav link icon
 .#{$nav}__link-icon {
   color: var(--#{$nav}__link-icon--Color);
+  min-width: 1lh;
+  text-align: center;
 }
 
 // - Nav link text

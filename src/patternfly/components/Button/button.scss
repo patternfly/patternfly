@@ -919,7 +919,11 @@
     }
   }
 
+  @at-root .#{$page}__dock.pf-m-text-expanded &,
   &.pf-m-text-expanded {
+    justify-content: flex-start;
+    width: 100%;
+
     .#{$button}__text {
       display: revert;
     }

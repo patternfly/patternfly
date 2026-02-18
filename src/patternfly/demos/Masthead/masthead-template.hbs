@@ -19,7 +19,10 @@
       {{> masthead-toggle}}
     {{/unless}}
     {{#> masthead-brand}}
-      {{> masthead-logo masthead-logo--IsCompact=masthead-template--HasDockedNav}}
+      {{> masthead-logo}}
+      {{#if masthead-template--HasDockedNav}}
+        {{> masthead-logo masthead-logo--IsCompact=true}}
+      {{/if}}
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#if masthead-template--HasDividers}}

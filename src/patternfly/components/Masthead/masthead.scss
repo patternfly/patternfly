@@ -156,7 +156,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: auto;
     --#{$masthead}__main--GridColumn: auto;
     --#{$masthead}__content--GridColumn: auto;
-    --#{$masthead}__logo--Width: auto;
     --#{$masthead}__main--MarginInlineEnd: 0;
 
     display: flex;
@@ -164,6 +163,16 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     align-items: stretch;
     height: 100%;
     backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
+
+    .#{$masthead}__logo {
+      width: revert;
+
+      &.pf-m-compact {
+        display: none;
+        max-width: #{pf-size-prem(37px)};
+        max-height: revert;
+      }
+    }
 
     .#{$masthead}__main {
       flex-direction: column;
@@ -187,6 +196,28 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
       .#{$masthead}__main {
         align-items: center;
+      }
+
+      .#{$masthead}__logo {
+        display: none;
+
+        &.pf-m-compact {
+          display: revert;
+        }
+      }
+    }
+
+    @at-root .#{$page}__dock.pf-m-text-expanded & {
+      .#{$masthead}__logo {
+        display: revert;
+
+        &.pf-m-compact {
+          display: none;
+        }
+      }
+
+      .#{$masthead}__main {
+        align-items: flex-start;
       }
     }
   }
