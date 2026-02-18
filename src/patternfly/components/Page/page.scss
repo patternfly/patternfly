@@ -292,14 +292,14 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   z-index: var(--#{$page}__dock--ZIndex);
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
-  translate: -100% 0;
   transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide);
+  translate: -100% 0;
 
   &.pf-m-expanded {
     --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
 
-    translate: 0;
     border-inline-end: var(--#{$page}__dock--BorderInlineEndWidth) solid var(--#{$page}__dock--BorderInlineEndColor);
+    translate: 0;
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--expand) {

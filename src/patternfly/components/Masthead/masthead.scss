@@ -201,9 +201,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       .#{$masthead}__logo {
         display: none;
 
+        // stylelint-disable max-nesting-depth
         &.pf-m-compact {
           display: revert;
         }
+        // stylelint-enable
       }
     }
 
@@ -211,9 +213,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       .#{$masthead}__logo {
         display: revert;
 
+        // stylelint-disable max-nesting-depth
         &.pf-m-compact {
           display: none;
         }
+        // stylelint-enable
       }
 
       .#{$masthead}__main {
