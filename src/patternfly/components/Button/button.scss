@@ -325,6 +325,7 @@
   --#{$button}--m-favorited--hover__icon--Color: var(--pf-t--global--color--favorite--hover);
   --#{$button}--m-favorited__icon--AnimationDuration: var(--pf-t--global--motion--duration--icon--long);
   --#{$button}--m-favorited__icon--AnimationTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$button}--m-favorited__icon--AnimationFillMode: both;
   --#{$button}__icon--favorite--Opacity: 1;
   --#{$button}__icon--favorited--Opacity: 0;
   --#{$button}--m-favorited__icon--favorite--Opacity: 0;
@@ -764,11 +765,19 @@
     --#{$button}__icon--favorited--Opacity: var(--#{$button}--m-favorited__icon--favorited--Opacity);
   }
 
-  // Favorite button will run an animation when favorited
-  &.pf-m-favorited:focus .#{$button}__icon {
+  // Keep animation definition on favorited state so focus toggles don't reapply animation-name
+  &.pf-m-favorited .#{$button}__icon {
     animation-name: #{$button}-icon-favorited;
     animation-duration: var(--#{$button}--m-favorited__icon--AnimationDuration);
+    animation-play-state: paused;
     animation-timing-function: var(--#{$button}--m-favorited__icon--AnimationTimingFunction);
+    animation-fill-mode: var(--#{$button}--m-favorited__icon--AnimationFillMode);
+  }
+
+  // Run animation while the favorited button is keyboard focused or actively pressed
+  &.pf-m-favorited:focus .#{$button}__icon,
+  &.pf-m-favorited:active .#{$button}__icon {
+    animation-play-state: running;
   }
 
   &.pf-m-settings {
