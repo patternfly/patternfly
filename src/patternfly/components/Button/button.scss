@@ -774,8 +774,14 @@
     animation-fill-mode: var(--#{$button}--m-favorited__icon--AnimationFillMode);
   }
 
-  // Run animation while the favorited button is keyboard focused or actively pressed
-  &.pf-m-favorited:focus .#{$button}__icon,
+  // Run favorite animation when interaction logic applies a one-shot class.
+  // Keep non-scripted fallback triggers for existing integrations:
+  // - :focus-visible supports keyboard activation flows (e.g. React click on key release).
+  // - :focus:not(:focus-visible) covers pointer focus.
+  // - :active covers press interactions.
+  &.pf-m-is-animating .#{$button}__icon,
+  &.pf-m-favorited:focus-visible .#{$button}__icon,
+  &.pf-m-favorited:focus:not(:focus-visible) .#{$button}__icon,
   &.pf-m-favorited:active .#{$button}__icon {
     animation-play-state: running;
   }
