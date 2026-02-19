@@ -91,21 +91,21 @@ cssPrefix: pf-v6-c-toggle-group
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-copy'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-undo" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-undo'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Share button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-share-square" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-share-alt'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -117,21 +117,21 @@ cssPrefix: pf-v6-c-toggle-group
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected" toggle-group-button--attribute='aria-label="Copy button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-copy'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-undo" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-undo'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Share button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-share-square" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-share-alt'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -143,21 +143,21 @@ cssPrefix: pf-v6-c-toggle-group
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-copy'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-undo" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-undo'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Share button" disabled'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-share-square" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-share-alt'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -170,7 +170,7 @@ cssPrefix: pf-v6-c-toggle-group
   {{#> toggle-group-item}}
     {{#> toggle-group-button}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-copy'}}
       {{/toggle-group-icon}}
       {{#> toggle-group-text}}
         Copy
@@ -180,7 +180,7 @@ cssPrefix: pf-v6-c-toggle-group
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-undo" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-undo'}}
       {{/toggle-group-icon}}
       {{#> toggle-group-text}}
         Undo
@@ -190,7 +190,7 @@ cssPrefix: pf-v6-c-toggle-group
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-share-square" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-share-alt'}}
       {{/toggle-group-icon}}
       {{#> toggle-group-text}}
         Share
@@ -208,7 +208,7 @@ cssPrefix: pf-v6-c-toggle-group
         Copy
       {{/toggle-group-text}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-copy'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -218,7 +218,7 @@ cssPrefix: pf-v6-c-toggle-group
         Undo
       {{/toggle-group-text}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-undo" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-undo'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -228,7 +228,7 @@ cssPrefix: pf-v6-c-toggle-group
         Share
       {{/toggle-group-text}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-share-square" aria-hidden="true"></i>
+        {{pfIcon 'rh-ui-share-alt'}}
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
