@@ -252,23 +252,11 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 ```
 
 ### Favorite
-A favorite button should use a plain button with the star icon. Applying `.pf-m-favorited` indicates that the item is favorited. Applying `.pf-m-clicked` with `.pf-m-favorited` shows the clicked animation state.
+A favorite button should use a plain button with the star icon. Applying `.pf-m-favorited` to the button initiates a microanimation and indicates that the item is favorited.
 ```hbs
 {{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--aria-label="not starred"}}
 {{/button}}
 {{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--IsFavorited=true button--aria-label="starred"}}
-{{/button}}
-```
-
-### Favorite demo (interactive)
-Click the button to toggle favorite and test the animation.
-```hbs
-{{#> button
-  button--IsPlain=true
-  button--IsIcon=true
-  button--IsFavorite=true
-  button--aria-label="not starred"
-  button--attribute='aria-pressed="false" onclick="var isFavorited = this.classList.toggle(&#39;pf-m-favorited&#39;); this.setAttribute(&#39;aria-pressed&#39;, isFavorited ? &#39;true&#39; : &#39;false&#39;); this.setAttribute(&#39;aria-label&#39;, isFavorited ? &#39;starred&#39; : &#39;not starred&#39;); var button = this; setTimeout(function(){ button.classList.remove(&#39;pf-m-clicked&#39;); }, 300);"'}}
 {{/button}}
 ```
 
