@@ -68,6 +68,28 @@ export const ifAny = function () {
   return anyTruthy ? options.fn(this) : options.inverse(this);
 };
 
+// Using ifAll
+// {{#ifAll user.isActive user.hasPermission user.isLoggedIn}}
+//   Welcome! You have full access.
+// {{else}}
+//   Access restricted: Please check your account status.
+// {{/ifAll}}
+
+export const ifAll = function() {
+  // Convert arguments to an array, excluding the last 'options' object
+  var args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);
+  var options = arguments[arguments.length - 1];
+
+  // Check if every argument is truthy
+  var allTruthy = args.every(Boolean);
+
+  if (allTruthy) {
+      return options.fn(this);
+  } else {
+      return options.inverse(this);
+  }
+};
+
 /** Using ternary
 if custom value for select--width: {{#> select select--width='160px'}}Filter by name{{/select}}
 else custom value for select--width: {{#> select)}}Filter by name{{/select}}

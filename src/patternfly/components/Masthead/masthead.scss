@@ -16,6 +16,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // * Masthead main container holds the toggle and brand
   --#{$masthead}__main--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$masthead}__main--MarginInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$masthead}--m-docked__main--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
 
   // * Masthead brand
   --#{$masthead}__logo--MaxHeight: #{pf-size-prem(38px)};
@@ -155,26 +156,73 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns: auto;
     --#{$masthead}__main--GridColumn: auto;
     --#{$masthead}__content--GridColumn: auto;
-    --#{$masthead}__logo--Width: auto;
     --#{$masthead}__main--MarginInlineEnd: 0;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: fit-content;
+    align-items: stretch;
     height: 100%;
     backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
+
+    .#{$masthead}__logo {
+      width: revert;
+
+      &.pf-m-compact {
+        display: none;
+        max-width: #{pf-size-prem(37px)};
+        max-height: revert;
+      }
+    }
+
+    .#{$masthead}__main {
+      flex-direction: column;
+      row-gap: var(--#{$masthead}--m-docked__main--RowGap);
+      align-items: flex-start;
+    }
 
     .#{$masthead}__content {
       flex-grow: 1;
       flex-direction: column;
+      align-items: stretch;
       align-self: revert;
     }
 
     .#{$toolbar} {
-      --#{$masthead}--c-toolbar--Width: fit-content;
+      --pf-v6-c-toolbar--m-vertical--Width: auto;
 
       height: var(--#{$masthead}--m-docked--c-toolbar--Height);
+    }
+
+    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+      .#{$masthead}__main {
+        align-items: center;
+      }
+
+      .#{$masthead}__logo {
+        display: none;
+
+        // stylelint-disable max-nesting-depth
+        &.pf-m-compact {
+          display: revert;
+        }
+        // stylelint-enable
+      }
+    }
+
+    @at-root .#{$page}__dock.pf-m-text-expanded & {
+      .#{$masthead}__logo {
+        display: revert;
+
+        // stylelint-disable max-nesting-depth
+        &.pf-m-compact {
+          display: none;
+        }
+        // stylelint-enable
+      }
+
+      .#{$masthead}__main {
+        align-items: flex-start;
+      }
     }
   }
 

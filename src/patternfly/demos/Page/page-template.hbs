@@ -6,6 +6,27 @@
     page--HasDock=masthead-template--HasDockedNav}}
   {{#unless page-template--HasNoMasthead}}
     {{#if masthead-template--HasDockedNav}}
+      {{#if masthead-template--HasDockedNav}}
+        {{#> masthead masthead--IsDisplayInline=true}}
+          {{#> masthead-main}}
+            {{> masthead-toggle}}
+            {{#> masthead-brand}}
+              {{> masthead-logo}}
+            {{/masthead-brand}}
+          {{/masthead-main}}
+          {{#> masthead-content}}
+            {{#> toolbar toolbar--IsStatic=true}}
+              {{#> toolbar-content}}
+                {{#> toolbar-content-section}}
+                  {{#> toolbar-item toolbar-item--modifier="pf-m-align-end"}}
+                    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Search"}}
+                  {{/toolbar-item}}
+                {{/toolbar-content-section}}
+              {{/toolbar-content}}
+            {{/toolbar}}
+          {{/masthead-content}}
+        {{/masthead}}
+      {{/if}}
       {{#> page-dock}}
         {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
       {{/page-dock}}

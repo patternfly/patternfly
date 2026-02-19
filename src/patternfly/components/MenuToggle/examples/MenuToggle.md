@@ -174,20 +174,20 @@ import './MenuToggle.css'
 
 ### Plain
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 ```
 
 ### Plain circle
 ```hbs isBeta
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--attribute='aria-label="Circle styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--aria-label="Circle styled actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Circle and expanded styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--aria-label="Circle and expanded styled actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Circle and disabled styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--aria-label="Circle and disabled styled actions" menu-toggle--HasKebab=true}}
 ```
 
 ### Plain with text
@@ -1053,3 +1053,4 @@ Shown with default, primary, and secondary styling
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
 | `.pf-m-placeholder` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle text for placeholder styles. |
+| `.pf-m-text-expanded` | `.pf-v6-c-menu-toggle` | Modifies a dock menu toggle to show its text. |
