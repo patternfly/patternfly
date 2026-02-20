@@ -60,6 +60,7 @@
 
   // Indented
   --#{$expandable-section}--m-indented__content--PaddingInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) + var(--pf-t--global--spacer--gap--text-to-element--default) + var(--#{$expandable-section}__toggle-icon--MinWidth));
+  --#{$expandable-section}--m-indented--nested--Offset: var(--pf-t--global--spacer--action--horizontal--plain--default);
 
   // Truncate
   --#{$expandable-section}--m-truncate__content--LineClamp: 3;
@@ -179,5 +180,9 @@
     transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), 0s, 0s;
     transition-property: opacity, translate, visibility, max-height;
     translate: 0 var(--#{$expandable-section}__content--TranslateY);
+  }
+
+  > .#{$expandable-section}.pf-m-indented {
+    margin-inline-start: calc(var(--#{$expandable-section}--m-indented--nested--Offset) * -1);
   }
 }
