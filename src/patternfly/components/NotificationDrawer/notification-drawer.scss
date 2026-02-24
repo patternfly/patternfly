@@ -183,6 +183,10 @@
     border-radius: inherit;
   }
 
+  &:focus-visible {
+    outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
+  }
+
   &.pf-m-info {
     --#{$notification-drawer}__list-item--BorderColor: var(--#{$notification-drawer}__list-item--m-info__list-item--BorderColor);
     --#{$notification-drawer}__list-item-header-icon--Color: var(--#{$notification-drawer}__list-item--m-info__list-item-header-icon--Color);
@@ -220,10 +224,6 @@
     &:hover,
     &:focus {
       background-color: var(--#{$notification-drawer}__list-item--m-hoverable--hover--BackgroundColor);
-    }
-
-    &:focus-visible {
-      outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
     }
   }
 }
