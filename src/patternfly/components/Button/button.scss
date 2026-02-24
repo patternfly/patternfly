@@ -888,6 +888,12 @@
     &.pf-m-block:not(.pf-m-plain) {
       transition-timing-function: linear;
     }
+
+    &.pf-m-block:not(.pf-m-plain, .pf-m-in-progress) {
+      > :not(.#{$button}__progress) {
+        animation: #{$button}-progress-content-close var(--#{$button}--m-progress--TransitionDuration) linear both;
+      }
+    }
   }
 
   &.pf-m-in-progress {
@@ -899,12 +905,16 @@
     }
 
     &.pf-m-block:not(.pf-m-plain) {
+      --#{$button}--PaddingInlineEnd: var(--#{$button}--m-progress--PaddingInlineEnd);
+      --#{$button}--PaddingInlineStart: var(--#{$button}--m-progress--PaddingInlineStart);
+
       .#{$button}__progress {
         position: static;
         display: inline-flex;
         flex: none;
         align-self: center;
         inline-size: var(--#{$spinner}--m-md--diameter);
+        width: var(--#{$spinner}--m-md--diameter);
         overflow: hidden;
         transform: none;
         animation: #{$button}-progress-reveal var(--#{$button}--m-progress--TransitionDuration) linear both;
@@ -1032,12 +1042,22 @@
 
 @keyframes #{$button}-progress-reveal {
   from {
-    inline-size: 0;
     margin-inline-end: calc(var(--#{$button}--Gap) * -1);
+    clip-path: inset(0 100% 0 0);
   }
 
   to {
-    inline-size: var(--#{$spinner}--m-md--diameter);
     margin-inline-end: 0;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes #{$button}-progress-content-close {
+  from {
+    transform: translateX(calc(var(--#{$button}__progress--width) / 2));
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
