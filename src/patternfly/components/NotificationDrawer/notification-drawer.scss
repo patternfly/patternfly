@@ -173,6 +173,7 @@
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
+  outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
 
   &::before {
     position: absolute;
@@ -181,10 +182,6 @@
     content: '';
     border: var(--#{$notification-drawer}__list-item--BorderWidth) solid var(--#{$notification-drawer}__list-item--BorderColor);
     border-radius: inherit;
-  }
-
-  &:focus-visible {
-    outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
   }
 
   &.pf-m-info {
