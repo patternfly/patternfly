@@ -56,7 +56,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear utilities and icon with placeholder example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear utilities and icon with placeholder example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -124,7 +124,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear filter example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear filter example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -139,7 +139,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear filters expanded example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear filters expanded example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -188,10 +188,10 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search input group collapsed"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--attribute='aria-label="Open search input group collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close search input group expandable"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Close search input group expandable"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -203,10 +203,10 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group expanded" text-input-group--search-input--clear-button-aria-label="Clear search input group expandable"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search input group collapsed"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--attribute='aria-label="Open search input group collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close search input group expandable"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Close search input group expandable"'}}
   {{/input-group-item}}
 {{/input-group}}
 ```

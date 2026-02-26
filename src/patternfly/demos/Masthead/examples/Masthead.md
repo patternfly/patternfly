@@ -94,7 +94,7 @@ wrapperTag: div
       {{#> toolbar-item}}
         {{#> input-group input-group--IsPlain=true}}
           {{#> input-group-item input-group-item--IsPlain=true}}
-            {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--aria-label="Open search"}}
+            {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Open search"}}
           {{/input-group-item}}
         {{/input-group}}
       {{/toolbar-item}}

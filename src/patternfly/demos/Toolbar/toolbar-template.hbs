@@ -42,14 +42,14 @@ Options: [
       {{!-- sort --}}
       {{#if toolbar-template--HasSortButton}}
         {{#> toolbar-item}}
-          {{> button button--IsPlain=true button--IsIcon=true button--icon=(concat "sort-amount-down " (pfv "unset-prefix") "m-mirror-inline-rtl") button--aria-label="Sort"}}
+          {{> button button--IsPlain=true button--IsIcon=true button-icon--IsMirrorInlineRTL=true button--icon="sort-amount-down" button--aria-label="Sort"}}
         {{/toolbar-item}}
       {{/if}}
 
       {{!-- mobile sort dropdown --}}
       {{#if toolbar-template--HasSortButtonMobile}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
-          {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Sort by"' menu-toggle--icon=(concat "sort-amount-down " (pfv "unset-prefix") "m-mirror-inline-rtl")}}
+          {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Sort by"' menu-toggle-icon--IsMirrorInlineRTL=true menu-toggle--icon="sort-amount-down"}}
         {{/toolbar-item}}
       {{/if}}
 

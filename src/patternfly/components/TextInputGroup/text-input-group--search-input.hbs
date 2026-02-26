@@ -23,13 +23,13 @@
             {{> button
               button--IsPlain=true
               button--IsIcon=true
-              button--icon="angle-up fa-fw"
+              button--icon="angle-up"
               button--IsDisabled=text-input-group--search-input--IsFirstMatch
               button--aria-label="Previous"}}
             {{> button
               button--IsPlain=true
               button--IsIcon=true
-              button--icon="angle-down fa-fw"
+              button--icon="angle-down"
               button--IsDisabled=text-input-group--search-input--IsLastMatch
               button--aria-label="Next"}}
           {{/text-input-group-group}}
@@ -38,7 +38,7 @@
       {{> button
         button--IsPlain=true
         button--IsIcon=true
-        button--icon="times fa-fw"
+        button--icon="times"
         button--aria-label=(ternary text-input-group--search-input--clear-button-aria-label text-input-group--search-input--clear-button-aria-label "Clear input")
       }}
     {{/text-input-group-utilities}}
