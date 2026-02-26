@@ -108,6 +108,7 @@
   // Plain - no border or background color
   --#{$card}--m-plain--BorderColor: transparent;
   --#{$card}--m-plain--BackgroundColor: transparent;
+  --#{$card}--m-plain--BoxShadow: none;
 
   // Toggle right
   --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
@@ -207,7 +208,7 @@
 
   // when the whole card is clickable and the card actions are invisible, remove the padding/margin so it doesn't take up space
   @at-root .#{$card}__actions:has(> .#{$card}__selectable-actions input.#{$pf-prefix}screen-reader), // targets "card as tile", which are selectable cards with inputs
-  &.pf-m-selectable {
+  &:has(.#{$card}__selectable-actions input.#{$pf-prefix}screen-reader) {
     --#{$card}--BackgroundColor: var(--#{$card}--m-as-tile--BackgroundColor);
     --#{$card}--BorderColor: var(--#{$card}--m-as-tile--BorderColor);
   }
@@ -256,6 +257,7 @@
   &.pf-m-plain {
     --#{$card}--BorderColor: var(--#{$card}--m-plain--BorderColor);
     --#{$card}--BackgroundColor: var(--#{$card}--m-plain--BackgroundColor);
+    --#{$card}--BoxShadow: var(--#{$card}--m-plain--BoxShadow);
   }
 
   &.pf-m-expanded {
