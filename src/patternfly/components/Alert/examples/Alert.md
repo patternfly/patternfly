@@ -466,7 +466,7 @@ For sighted users, interactive elements can be included in this message in one o
         Danger toast alert title
       {{/alert-title}}
       {{#> alert-action}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="rh-microns-close"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Close danger alert: Danger alert title"' button--IsIcon=true button--icon="rh-microns-close"}}
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
@@ -483,7 +483,7 @@ For sighted users, interactive elements can be included in this message in one o
         Info toast alert description. From the settings tab, click <a href="#">View logs</a>&nbsp;to review the details.
       {{/alert-description}}
       {{#> alert-action}}
-        {{> button button--IsPlain=true button--attribute='aria-label="Close success alert: Success alert title"' button--IsIcon=true button--icon="rh-microns-close"}}
+        {{> button button--IsPlain=true button--attribute='aria-label="Close info alert: Info alert title"' button--IsIcon=true button--icon="rh-microns-close"}}
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}

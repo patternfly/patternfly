@@ -93,7 +93,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear error validation example"'}}
-      <i class="fas fa-rh-microns-close" aria-hidden="true"></i>
+      <i class="rh-microns-close" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
@@ -108,7 +108,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-rh-microns-close" aria-hidden="true"></i>
+      <i class="rh-microns-close" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
