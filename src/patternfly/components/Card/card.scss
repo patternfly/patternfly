@@ -148,8 +148,9 @@
   // SELECTABLE or CLICKABLE CARDS
   &.pf-m-selectable,
   &.pf-m-clickable {
-    isolation: isolate;
     --#{$card}--BorderColor: var(--#{$card}--m-selectable--BorderColor);
+
+    isolation: isolate;
 
     &::before {
       border: none; // border will come from the input's ::before instead of the card so remove this so there's isn't a double border
