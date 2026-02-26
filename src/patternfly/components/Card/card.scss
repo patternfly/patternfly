@@ -2,10 +2,11 @@
 
 @include pf-root($card) {
   --#{$card}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$card}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$card}--BorderColor: var(--pf-t--global--border--color--subtle);
   --#{$card}--BorderStyle: solid;
   --#{$card}--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$card}--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$card}--BoxShadow: var(--pf-t--global--box-shadow--sm);
   --#{$card}--first-child--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$card}--child--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$card}--child--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
@@ -39,7 +40,8 @@
   --#{$card}--m-expanded__header-toggle-icon--Rotate: -180deg;
 
   // Selectable/Clickable
-  --#{$card}--m-selectable--BorderWidth: var(--#{$card}--BorderWidth);
+  --#{$card}--m-selectable--BorderWidth: var(--pf-t--global--border--width--box--default);
+  --#{$card}--m-selectable--BorderColor: var(--pf-t--global--border--color--control--default);
 
   // Clickable clicked
   --#{$card}--m-clickable--m-current--BorderColor: var(--pf-t--global--border--color--clicked);
@@ -110,6 +112,10 @@
   // Toggle right
   --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
+
+  // As tile
+  --#{$card}--m-as-tile--BackgroundColor: var(--pf-t--global--background--color--control--default);
+  --#{$card}--m-as-tile--BorderColor: var(--pf-t--global--border--color--control--default);
 }
 
 .#{$card} {
@@ -120,6 +126,7 @@
   background-color: var(--#{$card}--BackgroundColor);
   border: 0;
   border-radius: var(--#{$card}--BorderRadius);
+  box-shadow: var(--#{$card}--BoxShadow);
 
   &::before {
     position: absolute;
@@ -142,6 +149,7 @@
   &.pf-m-selectable,
   &.pf-m-clickable {
     isolation: isolate;
+    --#{$card}--BorderColor: var(--#{$card}--m-selectable--BorderColor);
 
     &::before {
       border: none; // border will come from the input's ::before instead of the card so remove this so there's isn't a double border
@@ -198,6 +206,11 @@
 
   // when the whole card is clickable and the card actions are invisible, remove the padding/margin so it doesn't take up space
   @at-root .#{$card}__actions:has(> .#{$card}__selectable-actions input.#{$pf-prefix}screen-reader), // targets "card as tile", which are selectable cards with inputs
+  &.pf-m-selectable {
+    --#{$card}--BackgroundColor: var(--#{$card}--m-as-tile--BackgroundColor);
+    --#{$card}--BorderColor: var(--#{$card}--m-as-tile--BorderColor);
+  }
+  
   &.pf-m-clickable:not(.pf-m-selectable) {
     --#{$card}__actions--PaddingInlineStart: 0;
     --#{$card}__actions--MarginBlockStart: 0;
@@ -232,6 +245,11 @@
     --#{$card}--BorderColor: var(--#{$card}--m-secondary--BorderColor);
     --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
     --#{$card}--BackgroundColor: var(--#{$card}--m-secondary--BackgroundColor);
+
+    &.pf-m-selectable, &.pf-m-clickable {
+      --#{$card}--BorderColor: var(--#{$card}--m-selectable--BorderColor);
+      --#{$card}--BorderWidth: var(--#{$card}--m-selectable--BorderWidth);
+    }
   }
 
   &.pf-m-plain {
