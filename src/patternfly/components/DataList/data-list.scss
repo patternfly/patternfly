@@ -65,7 +65,7 @@
   --#{$data-list}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$data-list}__toggle-icon--Transition: transform var(--#{$data-list}__toggle-icon--TransitionDuration) var(--#{$data-list}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$data-list}__toggle-icon--Rotate: 0;
-  --#{$data-list}__item--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$data-list}__item--m-expanded__toggle-icon--Rotate: -180deg;
 
   // draggable button/icon
   --#{$data-list}__item-draggable-button--BackgroundColor: transparent;

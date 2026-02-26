@@ -76,7 +76,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__expand-all-icon--Rotate: 0;
   --#{$toolbar}__expand-all-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$toolbar}__expand-all-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$toolbar}__item--m-expand-all--m-expanded__expand-all-icon--Rotate: 90deg;
+  --#{$toolbar}__item--m-expand-all--m-expanded__expand-all-icon--Rotate: -180deg;
 
   // * Toolbar filter group
   --#{$toolbar}__group--m-filter-group--ColumnGap: var(--pf-t--global--spacer--gap--control-to-control--default);

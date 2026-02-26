@@ -65,7 +65,7 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   --#{$jump-links}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$jump-links}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$jump-links}__toggle-icon--Rotate: 0;
-  --#{$jump-links}--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$jump-links}--m-expanded__toggle-icon--Rotate: -180deg;
 }
 
 .#{$jump-links} {
