@@ -364,7 +364,7 @@ import './MenuToggle.css'
       {{/text-input-group-text}}
     {{/text-input-group-main}}
     {{#> text-input-group-utilities}}
-      {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear input"'}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--attribute='aria-label="Clear input"'}}
     {{/text-input-group-utilities}}
   {{/text-input-group}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}

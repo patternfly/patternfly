@@ -56,7 +56,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear utilities and icon with placeholder example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--attribute='aria-label="Clear utilities and icon with placeholder example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -93,7 +93,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear error validation example"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      <i class="fas fa-rh-microns-close" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
@@ -108,7 +108,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      <i class="fas fa-rh-microns-close" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
@@ -124,7 +124,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear filter example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--attribute='aria-label="Clear filter example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -139,7 +139,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Clear filters expanded example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--attribute='aria-label="Clear filters expanded example"'}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -191,7 +191,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--attribute='aria-label="Open search input group collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Close search input group expandable"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--attribute='aria-label="Close search input group expandable"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -206,7 +206,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--attribute='aria-label="Open search input group collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--attribute='aria-label="Close search input group expandable"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--attribute='aria-label="Close search input group expandable"'}}
   {{/input-group-item}}
 {{/input-group}}
 ```
