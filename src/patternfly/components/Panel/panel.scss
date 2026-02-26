@@ -121,6 +121,10 @@
 
     backdrop-filter: var(--#{$panel}--m-glass--BackdropFilter);
   }
+
+  &.pf-m-pill {
+    --#{$panel}--BorderRadius: var(--#{$panel}--m-pill--BorderRadius);
+  }
 }
 
 .#{$panel}__header {
