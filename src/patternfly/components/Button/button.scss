@@ -44,6 +44,10 @@
   --#{$button}--m-clicked--BackgroundColor: transparent;
   --#{$button}--m-clicked--BorderColor: transparent;
   --#{$button}--m-clicked--BorderWidth: var(--pf-t--global--border--width--action--clicked);
+  --#{$button}--m-clicked--TextDecorationLine: none;
+  --#{$button}--m-clicked--TextDecorationStyle: none;
+  --#{$button}--m-clicked--TextDecorationColor: currentcolor;
+  --#{$button}--m-clicked--TextUnderlineOffset: var(--pf-t--global--text-decoration--offset--default);
 
   // Primary
   --#{$button}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
@@ -285,6 +289,10 @@
   --#{$button}--m-display-lg--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
   --#{$button}--m-display-lg--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
   --#{$button}--m-display-lg--hover--TextUnderlineOffset: var(--pf-t--global--text-decoration--offset--hover);
+  --#{$button}--m-display-lg--m-clicked--TextDecorationColor: var(--pf-t--global--border--color--control--default);
+  --#{$button}--m-display-lg--m-clicked--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
+  --#{$button}--m-display-lg--m-clicked--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
+  --#{$button}--m-display-lg--m-clicked--TextUnderlineOffset: var(--pf-t--global--text-decoration--offset--hover);
 
   // CTA primary
   --#{$button}--m-display-lg--m-primary--Color: var(--pf-t--global--text--color--on-brand--accent--default);
@@ -297,6 +305,7 @@
   --#{$button}--m-display-lg--m-primary--m-clicked--BackgroundColor: var(--pf-t--global--color--brand--accent--clicked);
   --#{$button}--m-display-lg--m-primary--m-clicked__icon--Color: var(--pf-t--global--icon--color--on-brand--accent--clicked);
   --#{$button}--m-display-lg--m-primary--hover--TextDecorationColor: currentcolor;
+  --#{$button}--m-display-lg--m-primary--m-clicked--TextDecorationColor: currentcolor;
 
   // CTA Secondary
   --#{$button}--m-display-lg--m-secondary--Color: var(--pf-t--global--text--color--regular);
@@ -782,6 +791,10 @@
     --#{$button}--hover--TextDecorationLine: var(--#{$button}--m-display-lg--hover--TextDecorationLine);
     --#{$button}--hover--TextDecorationStyle: var(--#{$button}--m-display-lg--hover--TextDecorationStyle);
     --#{$button}--hover--TextUnderlineOffset: var(--#{$button}--m-display-lg--hover--TextUnderlineOffset);
+    --#{$button}--m-clicked--TextDecorationColor: var(--#{$button}--m-display-lg--m-clicked--TextDecorationColor);
+    --#{$button}--m-clicked--TextDecorationLine: var(--#{$button}--m-display-lg--m-clicked--TextDecorationLine);
+    --#{$button}--m-clicked--TextDecorationStyle: var(--#{$button}--m-display-lg--m-clicked--TextDecorationStyle);
+    --#{$button}--m-clicked--TextUnderlineOffset: var(--#{$button}--m-display-lg--m-clicked--TextUnderlineOffset);
     --#{$button}--m-primary--Color: var(--#{$button}--m-display-lg--m-primary--Color);
     --#{$button}--m-primary--BackgroundColor: var(--#{$button}--m-display-lg--m-primary--BackgroundColor);
     --#{$button}--m-primary__icon--Color: var(--#{$button}--m-display-lg--m-primary__icon--Color);
@@ -805,6 +818,7 @@
 
     &.pf-m-primary {
       --#{$button}--hover--TextDecorationColor: var(--#{$button}--m-display-lg--m-primary--hover--TextDecorationColor);
+      --#{$button}--m-clicked--TextDecorationColor: var(--#{$button}--m-display-lg--m-primary--m-clicked--TextDecorationColor);
     }
   }
 
@@ -902,6 +916,11 @@
     --#{$button}--BorderWidth: var(--#{$button}--m-clicked--BorderWidth);
     --#{$button}--BorderColor: var(--#{$button}--m-clicked--BorderColor);
     --#{$button}__icon--Color: var(--#{$button}--m-clicked__icon--Color);
+
+    text-decoration-line: var(--#{$button}--m-clicked--TextDecorationLine);
+    text-decoration-style: var(--#{$button}--m-clicked--TextDecorationStyle);
+    text-decoration-color: var(--#{$button}--m-clicked--TextDecorationColor);
+    text-underline-offset: var(--#{$button}--m-clicked--TextUnderlineOffset);
   }
 
   &:active {
