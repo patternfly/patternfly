@@ -131,7 +131,7 @@ import './Card.css'
                 <a href="#">See what's possible with the Explore page</a>
               </li>
               <li>
-                <a href="#">OpenShift 4.5: Top Tasks <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                <a href="#">OpenShift 4.5: Top Tasks {{pfIcon "rh-ui-external-link"}}</a>
               </li>
               <li>
                 <a href="#">Try a demo app</a>
@@ -293,7 +293,7 @@ import './Card.css'
         {{#> card-body}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-success"}}
-              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-check-circle"}}
             {{/icon-content}}
           {{/icon}}
         {{/card-body}}
@@ -303,7 +303,7 @@ import './Card.css'
         {{#> card-body}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-warning"}}
-              <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-warning"}}
             {{/icon-content}}
           {{/icon}}
         {{/card-body}}
@@ -313,7 +313,7 @@ import './Card.css'
         {{#> card-body}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-danger"}}
-              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-error"}}
             {{/icon-content}}
           {{/icon}}
         {{/card-body}}
@@ -330,7 +330,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-check-circle"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -343,7 +343,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-warning"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -362,7 +362,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-check-circle"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -375,7 +375,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-warning"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -394,7 +394,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-warning"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -407,7 +407,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -430,7 +430,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -443,7 +443,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-warning"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -463,7 +463,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-check-circle"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -476,7 +476,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-warning"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -496,7 +496,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-warning"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -509,7 +509,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -580,7 +580,7 @@ import './Card.css'
                 {{#> l-flex-item}}
                   {{#> icon icon--modifier="pf-m-inline"}}
                     {{#> icon-content icon-content--modifier="pf-m-success"}}
-                      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
                     {{/icon-content}}
                   {{/icon}}
                 {{/l-flex-item}}
@@ -632,7 +632,7 @@ import './Card.css'
                 {{#> l-flex-item}}
                   {{#> icon icon--modifier="pf-m-inline"}}
                     {{#> icon-content icon-content--modifier="pf-m-success"}}
-                      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
                     {{/icon-content}}
                   {{/icon}}
                 {{/l-flex-item}}
@@ -776,7 +776,7 @@ import './Card.css'
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-danger"}}
-              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
             {{/icon-content}}
           {{/icon}}
           <a hfer="#">25 incidents detected</a>
@@ -1127,7 +1127,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-error"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -1153,7 +1153,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-check-circle"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -1201,7 +1201,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    {{pfIcon "rh-ui-check-circle"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
