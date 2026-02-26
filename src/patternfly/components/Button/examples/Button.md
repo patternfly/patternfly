@@ -63,11 +63,11 @@ import './Button.css'
 ```hbs
 <strong>Plain</strong>
 <br>
-{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--IsIcon=true button--icon="rh-ui-close"}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close"}}
 <br><br>
 <strong>Plain no padding</strong>
 <br>
-{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--IsIcon=true button--icon="rh-ui-close"}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--IsIcon=true button--icon="rh-microns-close"}}
 <br><br>
 <strong>Inline link</strong>
 <br>
@@ -176,7 +176,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 {{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="rh-ui-close"}}
+{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="rh-microns-close"}}
 
 {{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="rh-ui-copy"}}
 
