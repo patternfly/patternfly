@@ -173,7 +173,7 @@
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
-  outline-offset: var(--#{$notification-drawer}__list-item--focus--OutlineOffset);
+  outline-offset: var(--#{$notification-drawer}__list-item--OutlineOffset);
 
   &::before {
     position: absolute;
