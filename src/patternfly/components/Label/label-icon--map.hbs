@@ -1,9 +1,9 @@
 {{#if label-icon--value}}
-  {{~label-icon--value}}
+  {{~pfIcon label-icon--value}}
 {{else}}
-  {{~#ifEquals label--status "success"}}check-circle{{/ifEquals}}
-  {{~#ifEquals label--status "warning"}}exclamation-triangle{{/ifEquals}}
-  {{~#ifEquals label--status "danger"}}exclamation-circle{{/ifEquals}}
-  {{~#ifEquals label--status "info"}}info-circle{{/ifEquals}}
-  {{~#ifEquals label--status "custom"}}bell{{/ifEquals}}
+  {{~#ifEquals label--status "success"}}{{pfIcon "rh-ui-check-circle-fill"}}{{/ifEquals}}
+  {{~#ifEquals label--status "warning"}}{{pfIcon "rh-ui-warning-fill"}}{{/ifEquals}}
+  {{~#ifEquals label--status "danger"}}{{pfIcon "rh-ui-error-fill"}}{{/ifEquals}}
+  {{~#ifEquals label--status "info"}}{{pfIcon "rh-ui-information-fill"}}{{/ifEquals}}
+  {{~#ifEquals label--status "custom"}}{{pfIcon "rh-ui-notification-fill"}}{{/ifEquals}}
 {{/if}}

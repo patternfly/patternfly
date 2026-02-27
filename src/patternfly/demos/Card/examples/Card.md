@@ -22,21 +22,21 @@ import './Card.css'
           {{#> label-group-main}}
             {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
               {{#> label-group-list-item}}
-                {{> label label--IsCompact=true label-text--value="Set up your cluster" label-icon--value="info-circle"}}
+                {{> label label--IsCompact=true label-text--value="Set up your cluster" label-icon--value="rh-ui-information-fill"}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
                 {{> label
                     label--color="purple"
                     label--IsCompact=true
                     label-text--value="Guided tours"
-                    label-icon--value="info-circle"}}
+                    label-icon--value="rh-ui-information-fill"}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
                 {{> label
                     label--color="green"
                     label--IsCompact=true
                     label-text--value="Quick starts"
-                    label-icon--value="info-circle"}}
+                    label-icon--value="rh-ui-information-fill"}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
                 {{> label label--IsOverflow=true label--IsCompact=true label-text--value="1 more"}}
@@ -67,7 +67,7 @@ import './Card.css'
       {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-all-3-col-on-lg pf-m-gutter"}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="blue" label-text--value="Set up your cluster" label-icon--value="info-circle"}}
+            {{> label label--color="blue" label-text--value="Set up your cluster" label-icon--value="rh-ui-information-fill"}}
             <p>Continue setting up your cluster to access all you can in the Console</p>
             {{#> list list--modifier="pf-m-plain"}}
               <li>
@@ -87,7 +87,7 @@ import './Card.css'
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="purple" label-text--value="Guided tours" label-icon--value="info-circle"}}
+            {{> label label--color="purple" label-text--value="Guided tours" label-icon--value="rh-ui-information-fill"}}
             <p>Tour some of the key features around the console</p>
             {{#> list list--modifier="pf-m-plain"}}
               <li>
@@ -104,7 +104,7 @@ import './Card.css'
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="green" label-text--value="Quick starts" label-icon--value="info-circle"}}
+            {{> label label--color="green" label-text--value="Quick starts" label-icon--value="rh-ui-information-fill"}}
             <p>Get started with features using our step-by-step documentation</p>
             {{#> list list--modifier="pf-m-plain"}}
               <li>
@@ -124,7 +124,7 @@ import './Card.css'
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{> label label--color="orange" label-text--value="Learning resources" label-icon--value="info-circle"}}
+            {{> label label--color="orange" label-text--value="Learning resources" label-icon--value="rh-ui-information-fill"}}
             <p>Learn about new features within the Console and get started with demo apps</p>
             {{#> list list--modifier="pf-m-plain"}}
               <li>
