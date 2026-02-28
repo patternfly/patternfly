@@ -86,6 +86,11 @@
   word-break: break-word;
   background-color: var(--#{$breadcrumb}__link--BackgroundColor);
 
+  > svg,
+  > i {
+    display: inline;
+  }
+
   &:is(:hover, :focus) {
     --#{$breadcrumb}__link--Color: var(--#{$breadcrumb}__link--hover--Color);
     --#{$breadcrumb}__link--TextDecorationLine: var(--#{$breadcrumb}__link--hover--TextDecorationLine);
