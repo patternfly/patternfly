@@ -45,6 +45,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--Opacity: 1;
     --#{$page}__sidebar--TransitionProperty: transform;
     --#{$page}__sidebar--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$page}__main-container--TransitionDuration: var(--#{$page}__sidebar--TransitionDuration);
   }
 
   // Sidebar header
@@ -87,6 +88,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderInlineStartWidth: var(--pf-t--global--border--width--main--default);
   --#{$page}__main-container--BorderInlineEndWidth: var(--pf-t--global--border--width--main--default);
   --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--main--default); 
+  --#{$page}__main-container--TransitionProperty: margin-inline-start;
+  --#{$page}__main-container--TransitionDuration: 0s;
+  --#{$page}__main-container--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
@@ -303,6 +307,20 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     max-width: 0;
     overflow: hidden;
   }
+
+  @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--xl)) {
+    // During managed-sidebar debounce, prevent a transient desktop-expanded sidebar
+    // from shrinking content after crossing below xl.
+    @at-root .#{$page}.pf-m-resize-observer.pf-m-breakpoint-xl > &.pf-m-expanded,
+    .#{$page}.pf-m-resize-observer.pf-m-breakpoint-2xl > &.pf-m-expanded {
+      --#{$page}__sidebar--TranslateX: -100%;
+      --#{$page}__sidebar--Opacity: 0;
+
+      max-width: 0;
+      overflow: hidden;
+      box-shadow: none;
+    }
+  }
 }
 
 .#{$page}__sidebar-header {
@@ -444,6 +462,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   border-inline-start-width: var(--#{$page}__main-container--BorderInlineStartWidth);
   border-inline-end-width: var(--#{$page}__main-container--BorderInlineEndWidth);
   border-radius: var(--#{$page}__main-container--BorderRadius);
+  transition-timing-function: var(--#{$page}__main-container--TransitionTimingFunction);
+  transition-duration: var(--#{$page}__main-container--TransitionDuration);
+  transition-property: var(--#{$page}__main-container--TransitionProperty);
 
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
     --#{$page}__main-container--AlignSelf: var(--#{$page}__main-container--xs--AlignSelf);
