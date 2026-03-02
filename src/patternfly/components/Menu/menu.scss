@@ -5,8 +5,8 @@
   --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
   --#{$menu}--Width: auto;
   --#{$menu}--MinWidth: auto;
-  --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$menu}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$menu}--Color: var(--pf-t--global--text--color--regular);
@@ -68,8 +68,8 @@
   // * Menu item
   --#{$menu}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$menu}__item--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__item--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$menu}__item--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu}__item--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu}__item--FontWeight: var(--pf-t--global--font--weight--body--default);

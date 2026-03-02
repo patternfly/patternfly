@@ -11,7 +11,7 @@
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu-toggle}--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--control--default);
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
@@ -142,7 +142,7 @@
   --#{$menu-toggle}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$menu-toggle}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
-  --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--control--default);
   --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$menu-toggle}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -426,6 +426,11 @@
       pointer-events: none;
     }
   }
+}
+
+.#{$form} .#{$menu-toggle},
+.#{$form} .#{$menu-toggle}.pf-m-plain {
+  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
 }
 
 // Register the property type for the custom property to be animatable
