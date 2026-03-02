@@ -42,7 +42,7 @@
 
   // Nav item accent
   --#{$nav}__item--accent--size: var(--pf-t--global--border--width--extra-strong);
-  --#{$nav}__item--accent--color: var(--pf-t--global--border--color--clicked);
+  --#{$nav}__item--accent--color: var(--pf-t--global--color--brand--accent--default);
   --#{$nav}__item--accent--offset: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$nav}__item--accent--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$nav}__item--accent--ScaleY: 0;
@@ -60,7 +60,7 @@
   // * Nav link
   --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$nav}__link--AlignItems: baseline;
-  --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$nav}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$nav}__link--WhiteSpace: normal;
   --#{$nav}__link--Color: var(--pf-t--global--text--color--subtle);
@@ -385,6 +385,7 @@
   &.pf-m-current:hover {
     --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);
     --#{$nav}__link--BorderWidth: var(--#{$nav}__link--m-current--BorderWidth);
+    
 
     color: var(--#{$nav}__link--m-current--Color);
     background-color: var(--#{$nav}__link--m-current--BackgroundColor);
