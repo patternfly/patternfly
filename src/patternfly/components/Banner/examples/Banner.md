@@ -107,7 +107,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Success banner:{{/screen-reader}}
-      <i class="fas fa-check-circle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-check-circle-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Success banner
@@ -121,7 +121,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Warning banner:{{/screen-reader}}
-      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-warning-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Warning banner
@@ -135,7 +135,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Danger banner:{{/screen-reader}}
-      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-error-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Danger banner
@@ -149,7 +149,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Custom status banner:{{/screen-reader}}
-      <i class="fas fa-info-circle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-information-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Info banner
@@ -163,7 +163,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Custom status banner:{{/screen-reader}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-notification-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Custom banner

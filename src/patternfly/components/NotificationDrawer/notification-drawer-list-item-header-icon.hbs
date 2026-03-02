@@ -3,14 +3,14 @@
     {{{notification-drawer-list-item-header-icon--attribute}}}
   {{/if}}>
   {{#if notification-drawer-list-item--IsInfo}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-information-fill"}}
   {{else if notification-drawer-list-item--IsWarning}}
-    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-warning-fill"}}
   {{else if notification-drawer-list-item--IsDanger}}
-    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-error-fill"}}
   {{else if notification-drawer-list-item--IsSuccess}}
-    <i class="fas fa-check-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-check-circle-fill"}}
   {{else if notification-drawer-list-item--IsCustom}}
-    <i class="fas fa-arrow-circle-up" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-notification-fill"}}
   {{/if}}
 </span>
