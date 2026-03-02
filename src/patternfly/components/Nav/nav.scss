@@ -42,7 +42,7 @@
 
   // Nav item accent
   --#{$nav}__item--accent--size: var(--pf-t--global--border--width--extra-strong);
-  --#{$nav}__item--accent--color: var(--pf-t--global--border--color--clicked);
+  --#{$nav}__item--accent--color: var(--pf-t--global--color--brand--accent--default);
   --#{$nav}__item--accent--offset: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$nav}__item--accent--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$nav}__item--accent--ScaleY: 0;
@@ -53,14 +53,14 @@
 
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
-  --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$nav}__item--m-expanded__toggle-icon--Rotate: 180deg;
   --#{$nav}__item__toggle-icon--TransitionDuration--transform: var(--pf-t--global--motion--duration--icon--default);
   --#{$nav}__item__toggle-icon--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--default);
 
   // * Nav link
   --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$nav}__link--AlignItems: baseline;
-  --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$nav}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$nav}__link--WhiteSpace: normal;
   --#{$nav}__link--Color: var(--pf-t--global--text--color--subtle);
