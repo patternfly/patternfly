@@ -37,7 +37,7 @@
   --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$card}__header-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
-  --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
+  --#{$card}--m-expanded__header-toggle-icon--Rotate: -180deg;
 
   // Selectable/Clickable
   --#{$card}--m-selectable--BorderWidth: var(--pf-t--global--border--width--box--default);
