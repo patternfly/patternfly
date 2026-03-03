@@ -249,8 +249,8 @@
     --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
     --#{$card}--BackgroundColor: var(--#{$card}--m-secondary--BackgroundColor);
 
-    &.pf-m-selectable:not(.pf-m-current):not(.pf-m-selected),
-    &.pf-m-clickable:not(.pf-m-current):not(.pf-m-selected) {
+    &.pf-m-selectable:not(.pf-m-current, .pf-m-selected),
+    &.pf-m-clickable:not(.pf-m-current, .pf-m-selected) {
       --#{$card}--BorderColor: var(--#{$card}--m-selectable--BorderColor);
       --#{$card}--BorderWidth: var(--#{$card}--m-selectable--BorderWidth);
     }
