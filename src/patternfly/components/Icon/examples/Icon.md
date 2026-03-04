@@ -15,13 +15,13 @@ cssPrefix: pf-v6-c-icon
 
 {{#> icon}}
   {{#> icon-content}}
-    <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{pfIcon "rh-microns-caret-right"}}
   {{/icon-content}}
 {{/icon}}
 
 {{#> icon}}
   {{#> icon-content}}
-    <i class="fas fa-angle-down" aria-hidden="true"></i>
+    {{pfIcon "rh-microns-caret-down"}}
   {{/icon-content}}
 {{/icon}}
 

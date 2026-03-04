@@ -8,7 +8,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ### Types
 ```hbs
 {{#> alert alert--modifier="pf-m-custom" alert--attribute='aria-label="Custom alert"'}}
-  {{> alert-icon alert-icon--type="bell"}}
+  {{> alert-icon alert-icon--type="rh-ui-notification-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Custom alert:{{/screen-reader}}
     Custom alert title
@@ -16,7 +16,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information alert"'}}
-  {{> alert-icon alert-icon--type="info-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-information-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Info alert:{{/screen-reader}}
     Info alert title
@@ -24,7 +24,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -32,7 +32,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-warning" alert--attribute='aria-label="Warning alert"'}}
-  {{> alert-icon alert-icon--type="exclamation-triangle"}}
+  {{> alert-icon alert-icon--type="rh-ui-warning-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Warning alert:{{/screen-reader}}
     Warning alert title
@@ -40,7 +40,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
-  {{> alert-icon alert-icon--type="exclamation-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-error-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Danger alert:{{/screen-reader}}
     Danger alert title
@@ -51,7 +51,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ### Variations
 ```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -73,7 +73,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
@@ -87,7 +87,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -106,7 +106,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -117,7 +117,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
@@ -125,7 +125,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert with title truncation"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title alert-title--modifier="pf-m-truncate"}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque cursus enim fringilla tincidunt. Proin lobortis aliquam dictum. Nam vel ullamcorper nulla, nec blandit dolor. Vivamus pellentesque neque justo, nec accumsan nulla rhoncus id. Suspendisse mollis, tortor quis faucibus volutpat, sem leo fringilla turpis, ac lacinia augue metus in nulla. Cras vestibulum lacinia orci. Pellentesque sodales consequat interdum. Sed porttitor tincidunt metus nec iaculis. Pellentesque non commodo justo. Morbi feugiat rhoncus neque, vitae facilisis diam aliquam nec. Sed dapibus vitae quam at tristique. Nunc vel commodo mi. Mauris et rhoncus leo.
@@ -136,7 +136,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert with title truncation at 2 lines"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title alert-title--modifier="pf-m-truncate" alert-title--attribute='style="--pf-v6-c-alert__title--max-lines: 2"'}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque cursus enim fringilla tincidunt. Proin lobortis aliquam dictum. Nam vel ullamcorper nulla, nec blandit dolor. Vivamus pellentesque neque justo, nec accumsan nulla rhoncus id. Suspendisse mollis, tortor quis faucibus volutpat, sem leo fringilla turpis, ac lacinia augue metus in nulla. Cras vestibulum lacinia orci. Pellentesque sodales consequat interdum. Sed porttitor tincidunt metus nec iaculis. Pellentesque non commodo justo. Morbi feugiat rhoncus neque, vitae facilisis diam aliquam nec. Sed dapibus vitae quam at tristique. Nunc vel commodo mi. Mauris et rhoncus leo.
@@ -150,7 +150,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ### Inline types
 ```hbs
 {{#> alert alert--modifier="pf-m-custom pf-m-inline" alert--attribute='aria-label="Inline custom alert"'}}
-  {{> alert-icon alert-icon--type="bell"}}
+  {{> alert-icon alert-icon--type="rh-ui-notification-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Custom inline alert:{{/screen-reader}}
     Custom inline alert title
@@ -158,7 +158,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-info pf-m-inline" alert--attribute='aria-label="Inline information alert"'}}
-  {{> alert-icon alert-icon--type="info-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-information-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Info alert:{{/screen-reader}}
     Info inline alert title
@@ -166,7 +166,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Inline success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success inline alert title
@@ -174,7 +174,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-warning pf-m-inline" alert--attribute='aria-label="Inline warning alert"'}}
-  {{> alert-icon alert-icon--type="exclamation-triangle"}}
+  {{> alert-icon alert-icon--type="rh-ui-warning-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Warning alert:{{/screen-reader}}
     Warning inline alert title
@@ -182,7 +182,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
-  {{> alert-icon alert-icon--type="exclamation-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-error-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Danger alert:{{/screen-reader}}
     Danger inline alert title
@@ -193,7 +193,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ### Inline variations
 ```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -215,7 +215,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
@@ -229,7 +229,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -248,7 +248,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
@@ -278,7 +278,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ### Inline plain
 ```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-plain pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -290,7 +290,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ```hbs
 {{#> alert alert--id="alert-expandable-example-1" alert--IsExpandable="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -313,7 +313,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 <br>
 {{#> alert alert--id="alert-expandable-example-2" alert--IsExpandable="true" alert--IsExpanded="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title (expanded)
@@ -336,7 +336,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 <br>
 {{#> alert alert--id="alert-expandable-example-3" alert--IsExpandable="true" alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title
@@ -359,7 +359,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 <br>
 {{#> alert alert--id="alert-expandable-example-4" alert--IsExpandable="true" alert--IsExpanded="true" alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
-  {{> alert-icon alert-icon--type="check-circle"}}
+  {{> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
     Success alert title (expanded)
@@ -390,7 +390,7 @@ An alert group is optional when only one static alert is needed. It becomes requ
 {{#> alert-group}}
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-inline pf-m-success" alert--attribute='aria-label="Success alert"'}}
-      {{#> alert-icon alert-icon--type="check-circle"}}
+      {{#> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
       {{/alert-icon}}
       {{#> alert-title}}
         {{#> screen-reader}}Success alert:{{/screen-reader}}
@@ -401,7 +401,7 @@ An alert group is optional when only one static alert is needed. It becomes requ
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-inline pf-m-danger" alert--attribute='aria-label="Danger alert"'}}
-      {{#> alert-icon alert-icon--type="exclamation-circle"}}
+      {{#> alert-icon alert-icon--type="rh-ui-error-fill"}}
       {{/alert-icon}}
       {{#> alert-title}}
         {{#> screen-reader}}Danger alert:{{/screen-reader}}
@@ -412,7 +412,7 @@ An alert group is optional when only one static alert is needed. It becomes requ
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-inline pf-m-info" alert--attribute='aria-label="Information alert"'}}
-      {{#> alert-icon alert-icon--type="info-circle"}}
+      {{#> alert-icon alert-icon--type="rh-ui-information-fill"}}
       {{/alert-icon}}
       {{#> alert-title}}
         {{#> screen-reader}}Info alert:{{/screen-reader}}
@@ -442,7 +442,7 @@ For sighted users, interactive elements can be included in this message in one o
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success toast alert"'}}
-      {{#> alert-icon alert-icon--type="check-circle"}}
+      {{#> alert-icon alert-icon--type="rh-ui-check-circle-fill"}}
       {{/alert-icon}}
       {{#> alert-title alert-title--attribute='id="alert_one_title"'}}
         {{#> screen-reader}}Success alert:{{/screen-reader}}
@@ -459,7 +459,7 @@ For sighted users, interactive elements can be included in this message in one o
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-danger" alert--attribute='aria-label="Danger toast alert"'}}
-      {{#> alert-icon alert-icon--type="exclamation-circle"}}
+      {{#> alert-icon alert-icon--type="rh-ui-error-fill"}}
       {{/alert-icon}}
       {{#> alert-title alert-title--attribute='id="alert_two_title"'}}
         {{#> screen-reader}}Danger alert:{{/screen-reader}}
@@ -473,7 +473,7 @@ For sighted users, interactive elements can be included in this message in one o
 
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-info" alert--attribute='aria-label="Information toast alert"'}}
-      {{#> alert-icon alert-icon--type="info-circle"}}
+      {{#> alert-icon alert-icon--type="rh-ui-information-fill"}}
       {{/alert-icon}}
       {{#> alert-title alert-title--attribute='id="alert_three_title"'}}
         {{#> screen-reader}}Info alert:{{/screen-reader}}

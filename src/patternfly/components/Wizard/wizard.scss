@@ -70,7 +70,7 @@
   --#{$wizard}__nav-link-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$wizard}__nav-link-toggle-icon--Rotate: 0;
-  --#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate: 90deg;
+  --#{$wizard}__nav-item--m-expanded__link-toggle-icon--Rotate: -180deg;
 
   // Nav link number
   --#{$wizard}__nav-link--before--Width: var(--pf-t--global--icon--size--font--xl);
