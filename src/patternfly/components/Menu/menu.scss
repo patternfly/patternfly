@@ -7,12 +7,14 @@
   --#{$menu}--MinWidth: auto;
   --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$menu}--PaddingInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$menu}--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
   --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$menu}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$menu}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$menu}--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu}--BorderRadius: calc(var(--#{$menu}__item--BorderRadius) + var(--#{$menu}--PaddingBlockStart));
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
   --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -61,11 +63,16 @@
   --#{$menu}__list-item--m-load__item--Color: var(--pf-t--global--text--color--link--default);
   --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
+  // * Menu list
+  --#{$menu}__list--PaddingInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$menu}__list--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+
   // * Menu li divider
   --#{$menu}__list--divider--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__list--divider--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Menu item
+  --#{$menu}__item--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--md);
@@ -235,6 +242,8 @@
   min-width: var(--#{$menu}--MinWidth);
   padding-block-start: var(--#{$menu}--PaddingBlockStart);
   padding-block-end: var(--#{$menu}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}--PaddingInlineEnd);
   overflow: hidden;
   color: var(--#{$menu}--Color);
   background-color: var(--#{$menu}--BackgroundColor);
@@ -475,9 +484,14 @@
 }
 
 // - Menu list
-.#{$menu}__list :where(.#{$divider}:is(li)) {
-  margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
-  margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
+.#{$menu}__list {
+  padding-inline-start: var(--#{$menu}__list--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}__list--PaddingInlineEnd);
+
+  :where(.#{$divider}:is(li)) {
+    margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
+    margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
+  }
 }
 
 // - Menu list item
@@ -499,6 +513,7 @@
     background-color: var(--#{$menu}__list-item--BackgroundColor);
     border-block-start: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
     border-block-end: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
+    border-radius: var(--#{$menu}__item--BorderRadius);
     transition: inherit;
   }
 
@@ -562,6 +577,7 @@
   text-decoration-line: none;
   background-color: var(--#{$menu}__item--BackgroundColor);
   border: 0;
+  border-radius: var(--#{$menu}__item--BorderRadius);
   outline-offset: var(--#{$menu}--OutlineOffset);
 
   @include pf-v6-hidden-visible(flex);
