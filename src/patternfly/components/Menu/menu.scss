@@ -480,14 +480,9 @@
 }
 
 // - Menu list
-.#{$menu}__list {
-  padding-inline-start: var(--#{$menu}__list--PaddingInlineStart);
-  padding-inline-end: var(--#{$menu}__list--PaddingInlineEnd);
-
-  :where(.#{$divider}:is(li)) {
-    margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
-    margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
-  }
+.#{$menu}__list :where(.#{$divider}:is(li)) {
+  margin-block-start: var(--#{$menu}__list--divider--MarginBlockStart);
+  margin-block-end: var(--#{$menu}__list--divider--MarginBlockEnd);
 }
 
 // - Menu list item
