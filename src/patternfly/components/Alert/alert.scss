@@ -102,7 +102,7 @@
   --#{$alert}--m-expandable__description--action-group--PaddingBlockStart: var(--#{$alert}__action-group--PaddingBlockStart-base);
 
   // Expanded
-  --#{$alert}--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$alert}--m-expanded__toggle-icon--Rotate: -180deg;
   --#{$alert}--m-expanded__description--action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart-base);
 }
 
@@ -197,6 +197,7 @@
   margin-inline-end: var(--#{$alert}__icon--MarginInlineEnd);
   font-size: var(--#{$alert}__icon--FontSize);
   color: var(--#{$alert}__icon--Color);
+  scale: 1.14;
 }
 
 .#{$alert}__title {
