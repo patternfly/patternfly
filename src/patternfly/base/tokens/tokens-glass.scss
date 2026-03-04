@@ -4,6 +4,12 @@
 
 // Only tokens that differ from base theme (2 tokens)
 @mixin pf-v6-tokens {
+  --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
+  --pf-t--global--background--color--glass--primary: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--background--filter--glass--blur--primary: blur(12.5px);
-  --pf-t--global--background--opacity--glass--primary: 80%;
+  --pf-t--global--background--opacity--glass--primary: 50%;
+  --pf-t--global--background--color--opacity--on-glass--primary: 30%; 
+  --pf-t--global--background--color--on-glass--primary: color-mix(in srgb, var(--pf-t--global--background--color--primary--default) var(--pf-t--global--background--color--opacity--on-glass--primary), transparent);
+  --pf-t--global--background--color--glass--primary--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--primary) var(--pf-t--global--background--opacity--glass--primary), transparent );
+  --pf-t--global--background--color--glass--floating--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--floating) var(--pf-t--global--background--opacity--glass--floating), transparent );    
 }

@@ -68,3 +68,19 @@
 @include pf-v6-rtl(false) {
   @include pf-v6-set-inverse;
 }
+
+:root:where(.pf-v6-theme-glass) {
+  body {
+    background: url(http://localhost:8001/assets/images/compass--wallpaper-light.png) center center / cover no-repeat;
+  }
+}
+
+:root:where(.pf-v6-theme-glass.pf-v6-theme-dark) {
+  body {
+    background: url(http://localhost:8001/assets/images/compass--wallpaper-dark.png) center center / cover no-repeat;
+  }
+}
+
+.pf-v6-c-page, .pf-v6-c-page__sidebar, .pf-v6-c-pagination.pf-m-sticky {
+  background: transparent !important;
+}

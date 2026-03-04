@@ -6,4 +6,6 @@
 @mixin pf-v6-tokens {
   --pf-t--global--background--filter--glass--blur--primary: blur(12.5px);
   --pf-t--global--background--opacity--glass--primary: 80%;
+  --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
+  --pf-t--global--background--color--glass--primary: var(--pf-t--global--background--color--primary--default);
 }

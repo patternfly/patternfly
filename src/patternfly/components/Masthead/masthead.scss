@@ -11,7 +11,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
   --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--secondary--default));
 
   // * Masthead main container holds the toggle and brand
   --#{$masthead}__main--ColumnGap: var(--pf-t--global--spacer--md);
