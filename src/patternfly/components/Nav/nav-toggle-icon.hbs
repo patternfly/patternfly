@@ -1,7 +1,11 @@
 <span class="{{pfv}}nav__toggle-icon">
-  {{#if nav-item--IsDrillup}}
-    <i class="fas fa-angle-left" aria-hidden="true"></i>
+  {{#if nav-item--IsExpandable}}
+    {{pfIcon "rh-microns-caret-down"}}
   {{else}}
-    <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{#if nav-item--IsDrillup}}
+      {{pfIcon "rh-microns-caret-left"}}
+    {{else}}
+      {{pfIcon "rh-microns-caret-right"}}
+    {{/if}}
   {{/if}}
 </span>

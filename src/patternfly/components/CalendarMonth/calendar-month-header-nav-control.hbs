@@ -12,9 +12,9 @@
     {{{calendar-month-header-nav-control--attribute}}}
   {{/if}}>
   {{#if calendar-month-header-nav-control--IsPrevMonth}}
-    {{> button button--IsPlain=true button--aria-label="Previous month" button--IsIcon=true button--icon="angle-left"}}
+    {{> button button--IsPlain=true button--aria-label="Previous month" button--IsIcon=true button--icon="rh-microns-caret-left"}}
   {{else if calendar-month-header-nav-control--IsNextMonth}}
-    {{> button button--IsPlain=true button--aria-label="Next month" button--IsIcon=true button--icon="angle-right"}}
+    {{> button button--IsPlain=true button--aria-label="Next month" button--IsIcon=true button--icon="rh-microns-caret-right"}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

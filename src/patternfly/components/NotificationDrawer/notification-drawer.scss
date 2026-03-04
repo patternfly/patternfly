@@ -106,7 +106,7 @@
   --#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$notification-drawer}__group-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$notification-drawer}__group-toggle-icon--Transition: transform var(--#{$notification-drawer}__group-toggle-icon--TransitionDuration) var(--#{$notification-drawer}__group-toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
-  --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: 90deg;
+  --#{$notification-drawer}__group--m-expanded__group-toggle-icon--Rotate: -180deg;
 }
 
 .#{$notification-drawer} {
