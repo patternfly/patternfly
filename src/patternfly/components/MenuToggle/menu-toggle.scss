@@ -428,11 +428,6 @@
   }
 }
 
-.#{$form} .#{$menu-toggle},
-.#{$form} .#{$menu-toggle}.pf-m-plain {
-  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
-}
-
 // Register the property type for the custom property to be animatable
 @property --#{$menu-toggle}--m-danger--TranslateX {
   syntax: "<length>";
