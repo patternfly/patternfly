@@ -4,8 +4,8 @@
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--action--plain--default: rgba(0, 0, 0, 0.0000);
-  --pf-t--global--background--filter--glass--blur--floating: blur(0px);
-  --pf-t--global--background--filter--glass--blur--primary: blur(0px);
+  // --pf-t--global--background--filter--glass--blur--floating: blur(0px);
+  // --pf-t--global--background--filter--glass--blur--primary: blur(0px);
   --pf-t--global--border--color--high-contrast: rgba(255, 255, 255, 0.0000);
   --pf-t--global--dark--background--color--500: rgba(21, 21, 21, 0.8000);
   --pf-t--global--dark--background--color--600: rgba(199, 199, 199, 0.1500);
@@ -254,8 +254,8 @@
   --pf-t--global--text--color--status--danger--default: var(--pf-t--global--dark--color--status--danger--250);
   --pf-t--global--text--color--status--danger--hover: var(--pf-t--global--dark--color--status--danger--300);
   --pf-t--global--text--color--subtle: var(--pf-t--global--dark--text--color--200);
-  --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
-  --pf-t--global--background--color--glass--primary: var(--pf-t--global--background--color--primary--default);
+  // --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
+  // --pf-t--global--background--color--glass--primary: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--alt: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--border--color--brand--default: var(--pf-t--global--color--brand--default);
