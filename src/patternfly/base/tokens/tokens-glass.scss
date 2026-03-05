@@ -1,9 +1,15 @@
 
 // Do not edit directly
-// Generated on Tue, 10 Feb 2026 01:53:46 GMT
+// Generated on Thu, 05 Mar 2026 15:22:57 GMT
 
-// Only tokens that differ from base theme (2 tokens)
+// Only tokens that differ from base theme (8 tokens)
 @mixin pf-v6-tokens {
+  --pf-t--global--background--color--glass--primary: rgba(255, 255, 255, 0.5000);
+  --pf-t--global--background--color--primary--clicked: rgba(242, 242, 242, 0.8000);
+  --pf-t--global--background--color--primary--default: rgba(255, 255, 255, 0.8000);
+  --pf-t--global--background--color--primary--hover: rgba(242, 242, 242, 0.8000);
+  --pf-t--global--background--color--secondary--clicked: rgba(163, 163, 163, 0.3000);
+  --pf-t--global--background--color--secondary--default: rgba(199, 199, 199, 0.3000);
+  --pf-t--global--background--color--secondary--hover: rgba(163, 163, 163, 0.3000);
   --pf-t--global--background--filter--glass--blur--primary: blur(12.5px);
-  --pf-t--global--background--opacity--glass--primary: 80%;
 }
