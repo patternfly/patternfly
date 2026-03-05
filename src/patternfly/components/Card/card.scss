@@ -36,7 +36,7 @@
   --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$card}__header-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
-  --#{$card}--m-expanded__header-toggle-icon--Rotate: -180deg;
+  --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
 
   // Selectable/Clickable
   --#{$card}--m-selectable--BorderWidth: var(--#{$card}--BorderWidth);
@@ -229,8 +229,9 @@
   }
 
   &.pf-m-secondary {
-    --#{$card}--BorderColor: var(--#{$card}--m-secondary--BorderColor);
-    --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
+    // TODO - let selectable secondary cards have a border
+    // --#{$card}--BorderColor: var(--#{$card}--m-secondary--BorderColor);
+    // --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
     --#{$card}--BackgroundColor: var(--#{$card}--m-secondary--BackgroundColor);
   }
 

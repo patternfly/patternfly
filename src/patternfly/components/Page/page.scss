@@ -78,7 +78,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--masthead--main-container--GridArea: sidebar / sidebar / main / main; // no sidebar
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--AlignSelf: start;
-  --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--glass--primary, var(--pf-t--global--background--color--primary--default));
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -190,6 +190,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}--BackgroundColor);
 
   @at-root :root:where(.pf-v6-theme-glass) & {
+    // background-image: url(http://localhost:8001/assets/images/glass-brand-light.png);
     background-image: url(http://localhost:8001/assets/images/compass--wallpaper-light.png);
     background-size: cover;
     background-position: center;
@@ -197,6 +198,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @at-root :root:where(.pf-v6-theme-glass.pf-v6-theme-dark) & {
+    // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.png);
     background-image: url(http://localhost:8001/assets/images/compass--wallpaper-dark.png);
   }
 
@@ -488,9 +490,25 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     align-self: stretch;
   }
 
-
   &:focus {
     outline: 0;
+  }
+}
+
+.#{$page}__main-subnav,
+.#{$page}__main-breadcrumb,
+.#{$page}__main-tabs,
+.#{$page}__main-section,
+.#{$page}__main-wizard,
+.#{$page}__main-group {
+  @at-root :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  &.pf-m-plain {
+    --#{$page}__main-section--BackgroundColor: transparent;
+    --#{$page}__main-subnav--BackgroundColor: transparent;
+    --#{$page}__main-breadcrumb--BackgroundColor: transparent;
+    --#{$page}__main-tabs--BackgroundColor: transparent;
+    --#{$page}__main-wizard--BackgroundColor: transparent;
+    --#{$page}__main-group--BackgroundColor: transparent;
   }
 }
 
