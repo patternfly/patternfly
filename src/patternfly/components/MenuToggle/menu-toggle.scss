@@ -61,7 +61,7 @@
   --#{$menu-toggle}--m-primary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$menu-toggle}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-primary--BorderColor: transparent;
   --#{$menu-toggle}--m-primary--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
   --#{$menu-toggle}--m-primary--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
@@ -81,7 +81,7 @@
   --#{$menu-toggle}--m-secondary--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
-  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-secondary--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
@@ -104,7 +104,7 @@
   --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$menu-toggle}--m-split-button--child--BorderInlineStartWidth: var(--pf-t--global--border--width--action--default);
   --#{$menu-toggle}--m-split-button--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--m-split-button--child--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-split-button--child--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-split-button--child--disabled--BorderInlineStartColor: var(--pf-t--global--icon--color--on-disabled);
   --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineStart--offset: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineEnd--offset: var(--pf-t--global--spacer--control--horizontal--default);
