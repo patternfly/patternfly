@@ -238,18 +238,20 @@
 .#{$modal-box}__footer {
   display: flex;
   flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: var(--pf-t--global--spacer--sm);
   align-items: center;
   padding-block-start: var(--#{$modal-box}__footer--PaddingBlockStart);
   padding-block-end: var(--#{$modal-box}__footer--PaddingBlockEnd);
   padding-inline-start: var(--#{$modal-box}__footer--PaddingInlineStart);
   padding-inline-end: var(--#{$modal-box}__footer--PaddingInlineEnd);
 
-  // Base margin left and right equal for buttons when wrapped
-  > .#{$button}:not(:last-child) {
-    margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginInlineEnd);
-
-    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--sm--MarginInlineEnd);
-    }
+  // Allow buttons to stack vertically when there is not enough horizontal space
+  > .#{$button} {
+    flex-grow: 1;
+    white-space: normal;
   }
 }
+
+
+
