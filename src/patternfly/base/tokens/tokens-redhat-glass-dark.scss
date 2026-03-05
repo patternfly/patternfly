@@ -1,16 +1,30 @@
 
 // Do not edit directly
-// Generated on Tue, 10 Feb 2026 01:53:46 GMT
+// Generated on Thu, 05 Mar 2026 15:22:57 GMT
 
-// Only tokens that differ from base theme (9 tokens)
+// Only tokens that differ from base theme (23 tokens)
 @mixin pf-v6-tokens {
+  --pf-t--global--background--color--glass--primary: rgba(41, 41, 41, 0.5000);
+  --pf-t--global--background--color--primary--clicked: rgba(56, 56, 56, 0.5000);
+  --pf-t--global--background--color--primary--default: rgba(41, 41, 41, 0.5000);
+  --pf-t--global--background--color--primary--hover: rgba(56, 56, 56, 0.5000);
+  --pf-t--global--background--color--secondary--clicked: rgba(41, 41, 41, 0.6000);
+  --pf-t--global--background--color--secondary--default: rgba(21, 21, 21, 0.6000);
+  --pf-t--global--background--color--secondary--hover: rgba(41, 41, 41, 0.6000);
   --pf-t--global--background--filter--glass--blur--primary: blur(12.5px);
-  --pf-t--global--background--opacity--glass--primary: 80%;
+  --pf-t--global--background--color--control--default: var(--pf-t--global--dark--background--color--500);
+  --pf-t--global--background--color--control--read-only: var(--pf-t--global--dark--background--color--500);
+  --pf-t--global--border--color--subtle: var(--pf-t--color--gray--70);
+  --pf-t--global--background--color--floating--clicked: var(--pf-t--global--dark--background--color--300);
+  --pf-t--global--background--color--floating--default: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--floating--hover: var(--pf-t--global--dark--background--color--300);
   --pf-t--global--border--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--400);
   --pf-t--global--border--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--400);
   --pf-t--global--border--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--400);
+  --pf-t--global--border--color--control--read-only: var(--pf-t--global--border--color--alt);
   --pf-t--global--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--200);
   --pf-t--global--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--100);
   --pf-t--global--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--200);
-  --pf-t--global--text--color--on-brand--accent--default: var(--pf-t--global--text--color--regular);
+  --pf-t--global--icon--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--300);
+  --pf-t--global--icon--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--300);
 }
