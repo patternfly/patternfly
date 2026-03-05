@@ -39,7 +39,7 @@
   --#{$accordion}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$accordion}__toggle-icon--Transition: transform var(--#{$accordion}__toggle-icon--TransitionDuration) var(--#{$accordion}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$accordion}__toggle-icon--Rotate: 0;
-  --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$accordion}__toggle--m-expanded__toggle-icon--Rotate: -180deg;
 
   // accordion expandable content
   --#{$accordion}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);

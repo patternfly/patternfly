@@ -139,7 +139,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__field-group-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body--default);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
-  --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$form}__field-group--m-expanded__toggle-icon--Rotate: -180deg;
 
   // Field group header
   --#{$form}__field-group-header--PaddingBlockStart: var(--pf-t--global--spacer--md);

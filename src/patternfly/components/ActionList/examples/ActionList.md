@@ -46,7 +46,7 @@ With kebab
 ```hbs
 {{#> action-list action-list--modifier="pf-m-icons"}}
   {{#> action-list-item}}
-    {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
+    {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="rh-microns-close"}}
   {{/action-list-item}}
   {{#> action-list-item}}
     {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
@@ -57,7 +57,7 @@ With group icons wrapper
 {{#> action-list}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--aria-label="Close" button--icon="times"}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--icon="rh-microns-close"}}
     {{/action-list-item}}
     {{#> action-list-item}}
       {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
@@ -65,7 +65,7 @@ With group icons wrapper
   {{/action-list-group}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="rh-microns-close"}}
     {{/action-list-item}}
     {{#> action-list-item}}
       {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
@@ -179,7 +179,7 @@ Icons, in two groups
 {{#> action-list action-list--IsVertical="true"}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--aria-label="Close" button--icon="times"}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--icon="rh-microns-close"}}
     {{/action-list-item}}
     {{#> action-list-item}}
       {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
@@ -187,7 +187,7 @@ Icons, in two groups
   {{/action-list-group}}
   {{#> action-list-group action-list-group--modifier="pf-m-icons"}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="times"}}
+      {{> button button--IsPlain=true button--aria-label="Close" button--IsIcon=true button--icon="rh-microns-close"}}
     {{/action-list-item}}
     {{#> action-list-item}}
       {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="check"}}
