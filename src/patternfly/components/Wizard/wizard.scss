@@ -138,7 +138,8 @@
   --#{$wizard}__toggle--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Nav
-  --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--sm);
+  --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$wizard}__nav--mobile--ZIndex: var(--pf-t--global--z-index--md);
   --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$wizard}--m-plain__nav--BackgroundColor: transparent;
   --#{$wizard}__nav--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
@@ -186,7 +187,7 @@
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}--m-plain__footer--BackgroundColor: transparent;
-  --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$wizard}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
@@ -396,7 +397,7 @@
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
-  z-index: var(--#{$wizard}__nav--ZIndex);
+  z-index: var(--#{$wizard}__nav--mobile--ZIndex);
   display: none;
   width: var(--#{$wizard}__nav--Width);
   max-height: 100%;
@@ -414,6 +415,10 @@
     display: block;
     height: 100%;
     border-inline-end: var(--#{$wizard}__nav--lg--BorderInlineEndWidth) solid var(--#{$wizard}__nav--lg--BorderInlineEndColor);
+  }
+
+  @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
+    z-index: var(--#{$wizard}__nav--ZIndex);
   }
 }
 
