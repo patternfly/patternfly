@@ -1,8 +1,8 @@
 
 // Do not edit directly
-// Generated on Tue, 10 Feb 2026 01:53:46 GMT
+// Generated on Thu, 05 Mar 2026 15:22:57 GMT
 
-// Only tokens that differ from base theme (7 tokens)
+// Only tokens that differ from base theme (8 tokens)
 @mixin pf-v6-tokens {
   --pf-t--global--border--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--400);
   --pf-t--global--border--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--400);
@@ -10,5 +10,6 @@
   --pf-t--global--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--200);
   --pf-t--global--color--brand--accent--default: var(--pf-t--global--dark--color--brand--accent--100);
   --pf-t--global--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--200);
-  --pf-t--global--text--color--on-brand--accent--default: var(--pf-t--global--text--color--regular);
+  --pf-t--global--icon--color--brand--accent--clicked: var(--pf-t--global--dark--color--brand--accent--300);
+  --pf-t--global--icon--color--brand--accent--hover: var(--pf-t--global--dark--color--brand--accent--300);
 }

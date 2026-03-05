@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Tue, 10 Feb 2026 01:53:46 GMT
+// Generated on Thu, 05 Mar 2026 15:22:57 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.4000);
@@ -9,8 +9,6 @@
   --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0.0000);
   --pf-t--global--background--filter--glass--blur--floating: blur(0px);
   --pf-t--global--background--filter--glass--blur--primary: blur(0px);
-  --pf-t--global--background--opacity--glass--floating: 100%;
-  --pf-t--global--background--opacity--glass--primary: 100%;
   --pf-t--global--border--color--high-contrast: rgba(255, 255, 255, 0.0000);
   --pf-t--global--border--radius--0: 0px;
   --pf-t--global--border--radius--100: 4px;
@@ -30,24 +28,24 @@
   --pf-t--global--border--width--high-contrast--strong: 0px;
   --pf-t--global--box-shadow--X--100: -10px;
   --pf-t--global--box-shadow--X--200: -4px;
-  --pf-t--global--box-shadow--X--300: -1px;
+  --pf-t--global--box-shadow--X--300: -2px;
   --pf-t--global--box-shadow--X--400: 0px;
   --pf-t--global--box-shadow--X--50: -20px;
-  --pf-t--global--box-shadow--X--500: 1px;
+  --pf-t--global--box-shadow--X--500: 2px;
   --pf-t--global--box-shadow--X--600: 4px;
   --pf-t--global--box-shadow--X--700: 10px;
   --pf-t--global--box-shadow--X--800: 20px;
   --pf-t--global--box-shadow--Y--100: -10px;
-  --pf-t--global--box-shadow--Y--200: -2px;
+  --pf-t--global--box-shadow--Y--200: -4px;
   --pf-t--global--box-shadow--Y--300: -1px;
   --pf-t--global--box-shadow--Y--400: 0px;
   --pf-t--global--box-shadow--Y--50: -20px;
   --pf-t--global--box-shadow--Y--500: 1px;
-  --pf-t--global--box-shadow--Y--600: 2px;
+  --pf-t--global--box-shadow--Y--600: 4px;
   --pf-t--global--box-shadow--Y--700: 10px;
   --pf-t--global--box-shadow--Y--800: 20px;
-  --pf-t--global--box-shadow--blur--100: 4px;
-  --pf-t--global--box-shadow--blur--200: 9px;
+  --pf-t--global--box-shadow--blur--100: 6px;
+  --pf-t--global--box-shadow--blur--200: 10px;
   --pf-t--global--box-shadow--blur--300: 20px;
   --pf-t--global--box-shadow--color--100: rgba(41, 41, 41, 0.1500);
   --pf-t--global--box-shadow--color--200: rgba(41, 41, 41, 0.2000);
@@ -143,7 +141,7 @@
   --pf-t--global--border--color--200: var(--pf-t--color--gray--40);
   --pf-t--global--border--color--300: var(--pf-t--color--gray--45);
   --pf-t--global--border--color--400: var(--pf-t--color--gray--60);
-  --pf-t--global--border--color--50: var(--pf-t--color--gray--10);
+  --pf-t--global--border--color--50: var(--pf-t--color--gray--20);
   --pf-t--global--border--radius--large: var(--pf-t--global--border--radius--400);
   --pf-t--global--border--radius--medium: var(--pf-t--global--border--radius--300);
   --pf-t--global--border--radius--pill: var(--pf-t--global--border--radius--500);
@@ -231,7 +229,7 @@
   --pf-t--global--color--brand--500: var(--pf-t--color--blue--80);
   --pf-t--global--color--brand--accent--100: var(--pf-t--color--red--50);
   --pf-t--global--color--brand--accent--200: var(--pf-t--color--red--60);
-  --pf-t--global--color--brand--accent--300: var(--pf-t--color--red--70);
+  --pf-t--global--color--brand--accent--300: var(--pf-t--color--gray--60);
   --pf-t--global--color--brand--accent--400: var(--pf-t--color--black);
   --pf-t--global--color--brand--subtle--100: var(--pf-t--color--blue--10);
   --pf-t--global--color--brand--subtle--200: var(--pf-t--color--blue--20);
@@ -416,6 +414,7 @@
   --pf-t--global--background--color--secondary--clicked: var(--pf-t--global--background--color--300);
   --pf-t--global--background--color--secondary--default: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--secondary--hover: var(--pf-t--global--background--color--300);
+  --pf-t--global--background--color--sticky--default: var(--pf-t--global--background--color--100);
   --pf-t--global--border--color--brand--subtle--clicked: var(--pf-t--global--color--brand--subtle--300);
   --pf-t--global--border--color--brand--subtle--default: var(--pf-t--global--color--brand--subtle--200);
   --pf-t--global--border--color--brand--subtle--hover: var(--pf-t--global--color--brand--subtle--300);
