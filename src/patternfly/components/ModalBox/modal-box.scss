@@ -73,10 +73,12 @@
   --#{$modal-box}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
+  --#{$modal-box}__footer--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
-  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
+  --#{$modal-box}__footer--c-button--MarginInlineEnd: 0;
+  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: 0;
 }
 
 .#{$modal-box} {
@@ -238,6 +240,9 @@
 .#{$modal-box}__footer {
   display: flex;
   flex: 0 0 auto;
+  flex-wrap: wrap;
+  row-gap: var(--#{$modal-box}__footer--RowGap);
+  column-gap: var(--#{$modal-box}__footer--ColumnGap);
   align-items: center;
   padding-block-start: var(--#{$modal-box}__footer--PaddingBlockStart);
   padding-block-end: var(--#{$modal-box}__footer--PaddingBlockEnd);
