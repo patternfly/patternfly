@@ -18,6 +18,10 @@
   --#{$form-control}--after--BorderRadius: var(--#{$form-control}--BorderRadius);
   --#{$form-control}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$form-control}--Width: 100%;
+  --#{$form-control}--TransitionDelay: 0s;
+  --#{$form-control}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$form-control}--TransitionDuration: var(--pf-t--global--motion--duration--md);
+  --#{$form-control}--TransitionProperty: color, background, border-color;
 
   // padding
   --#{$form-control}--inset--base: var(--pf-t--global--spacer--control--horizontal--default);
@@ -161,6 +165,10 @@
   resize: var(--#{$form-control}--Resize);
   background-color: var(--#{$form-control}--BackgroundColor);
   border-radius: var(--#{$form-control}--BorderRadius);
+  transition-delay: var(--#{$form-control}--TransitionDelay);
+  transition-timing-function: var(--#{$form-control}--TransitionTimingFunction);
+  transition-duration: var(--pf-t--global--motion--duration--fade--default);
+  transition-property: var(--#{$form-control}--TransitionProperty);
 
   &::before,
   &::after {
@@ -168,6 +176,7 @@
     inset: 0;
     pointer-events: none;
     content: "";
+    transition: inherit;
   }
 
   &::before {
@@ -195,6 +204,7 @@
     border: none;
     border-radius: var(--#{$form-control}--BorderRadius);
     outline-offset: var(--#{$form-control}--OutlineOffset);
+    transition: inherit;
   }
 
   > ::placeholder {
@@ -441,6 +451,7 @@
 .#{$form-control}__icon {
   font-size: var(--#{$form-control}__icon--FontSize);
   color: var(--#{$form-control}__icon--Color);
+  transition: inherit;
 
   &.pf-m-status {
     --#{$form-control}__icon--Color: var(--#{$form-control}__icon--m-status--Color);
@@ -456,6 +467,7 @@
   font-size: var(--#{$form-control}__toggle-icon--FontSize);
   color: var(--#{$form-control}__toggle-icon--Color);
   pointer-events: none;
+  transition: inherit;
 }
 
 .#{$form-control}__utilities {
