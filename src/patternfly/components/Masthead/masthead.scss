@@ -62,7 +62,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-docked--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$masthead}--m-docked--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$masthead}--m-docked--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--glass--primary);
+  --#{$masthead}--m-docked--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
   --#{$masthead}--m-docked--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$masthead}--m-docked--c-toolbar--Height: 100%;
 
@@ -210,9 +210,10 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // placeholder for banded
   @at-root :root:where(.pf-v6-theme-glass) & {
-    background-color: var(--pf-t--global--background--color--glass--primary);
+    background-color: var(--pf-t--global--background--color--glass--primary--default);
     backdrop-filter: var(--pf-t--global--background--filter--glass--blur--primary);
-    border: var(--pf-t--global--border--width--divider--default) solid var(--pf-t--global--border--color--alt);
+    border-block-end: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
+    box-shadow: var(--pf-t--global--box-shadow--glass--default);
     margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
   }
 }

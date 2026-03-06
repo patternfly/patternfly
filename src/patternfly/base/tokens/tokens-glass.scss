@@ -4,7 +4,7 @@
 
 // Only tokens that differ from base theme (8 tokens)
 @mixin pf-v6-tokens {
-  --pf-t--global--background--color--glass--primary: rgba(255, 255, 255, 0.5000);
+  --pf-t--global--background--color--glass--primary--default: rgba(255, 255, 255, 0.5000);
   --pf-t--global--background--color--primary--clicked: rgba(242, 242, 242, 0.8000);
   --pf-t--global--background--color--primary--default: rgba(255, 255, 255, 0.8000);
   --pf-t--global--background--color--primary--hover: rgba(242, 242, 242, 0.8000);
@@ -12,4 +12,20 @@
   --pf-t--global--background--color--secondary--default: rgba(199, 199, 199, 0.3000);
   --pf-t--global--background--color--secondary--hover: rgba(163, 163, 163, 0.3000);
   --pf-t--global--background--filter--glass--blur--primary: blur(12.5px);
+
+  // "main" borders
+  --pf-t--global--border--width--main--default: var(--pf-t--global--border--width--100);
+
+  // secondary floating
+  --pf-t--global--background--color--floating--secondary--default: var(--pf-t--global--background--color--floating--default);  // --pf-t--global--background--color--floating--secondary--hover: var(--pf-t--global--background--color--200);
+
+  // action plain alt
+  --pf-t--global--background--color--action--plain--alt--hover: var(--pf-t--global--background--color--action--plain--hover);
+  --pf-t--global--background--color--action--plain--alt--clicked: var(--pf-t--global--background--color--action--plain--clicked);
+
+  // custom tokens
+  --pf-t--global--border--color--glass--default: var(--pf-t--global--border--color--alt);
+  --pf-t--global--border--width--glass--default: var(--pf-t--global--border--width--regular);
+  --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
+  --pf-t--global--border--radius--glass--default: var(--pf-t--global--border--radius--medium);
 }
