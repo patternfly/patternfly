@@ -164,6 +164,8 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     width: fit-content;
     height: 100%;
     backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
+    border: 0;
+    box-shadow: none;
 
     .#{$masthead}__content {
       flex-grow: 1;
@@ -209,7 +211,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   // placeholder for banded
-  @at-root :root:where(.pf-v6-theme-glass) & {
+  @at-root :where(.pf-v6-theme-glass) & {
     background-color: var(--pf-t--global--background--color--glass--primary--default);
     backdrop-filter: var(--pf-t--global--background--filter--glass--blur--primary);
     border-block-end: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
