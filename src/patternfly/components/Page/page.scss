@@ -31,10 +31,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$page}__sidebar--Width--base: calc(#{pf-size-prem(290px)} + var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}__sidebar--Width--base: #{pf-size-prem(290px)};
   --#{$page}__sidebar--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--xl--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--floating--secondary--default);
+  --#{$page}__sidebar--xl--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--secondary--default));
   --#{$page}__sidebar--BoxShadow: var(--pf-t--global--box-shadow--md--right);
 
   // TODO Reduced Motion default needed
@@ -86,6 +87,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
     --#{$page}__sidebar--Opacity: var(--#{$page}__sidebar--xl--Opacity);
     --#{$page}__sidebar--BorderInlineEndWidth: 0;
+    --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--xl--BackgroundColor);
   }
 
   // Container for the main content area (grid area)
@@ -191,7 +193,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--lg);
   --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
 
-  :where(:root.pf-v6-theme-glass) & {
+  :where(.pf-v6-theme-glass) & {
+    --#{$page}__sidebar--Width--base: calc(#{pf-size-prem(290px)} + var(--pf-t--global--spacer--inset--page-chrome) * 2);
     --#{$page}__sidebar-body--PaddingInlineStart: var(--pf-t--global--spacer--lg);
     --#{$page}__sidebar-body--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   }
@@ -210,7 +213,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   max-height: 100%;
   background-color: var(--#{$page}--BackgroundColor);
 
-  @at-root :root:where(.pf-v6-theme-glass) & {
+  @at-root :where(.pf-v6-theme-glass) & {
     // background-image: url(http://localhost:8001/assets/images/glass-brand-light.png);
     background-image: url(http://localhost:8001/assets/images/compass--wallpaper-light.png);
     background-size: cover;
@@ -218,7 +221,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     background-repeat: no-repeat;
   }
 
-  @at-root :root:where(.pf-v6-theme-glass.pf-v6-theme-dark) & {
+  @at-root :where(.pf-v6-theme-glass.pf-v6-theme-dark) & {
     // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.png);
     background-image: url(http://localhost:8001/assets/images/compass--wallpaper-dark.png);
   }
@@ -315,6 +318,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   z-index: var(--#{$page}__dock--ZIndex);
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
+  border-inline-end: var(--pf-t--global--border--width--glass--default, 0) solid var(--pf-t--global--border--color--glass--default, transparent);
+  box-shadow: var(--pf-t--global--box-shadow--glass--default, none);
   transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide);
   translate: -100% 0;
 
@@ -391,33 +396,45 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     overflow: hidden;
   }
 
-  // @at-root :where(:root.pf-v6-theme-glass) & {
-  &:has(> .#{$page}__sidebar-main) {
-    padding: 0;
+  @at-root :where(.pf-v6-theme-glass) & {
+  // &:has(> .#{$page}__sidebar-main) {
     background: transparent;
+    overflow: visible;
+    padding: 0;
+    min-height: 0;
+
+    &.pf-m-expanded {
+      box-shadow: none;
+    }
 
     .#{$page}__sidebar-main {
-      flex-grow: 1;
       padding-block-end: var(--#{$page}__sidebar--PaddingBlockEnd);
       padding-inline-start: var(--#{$page}__sidebar--PaddingInlineStart);
       padding-inline-end: var(--#{$page}__sidebar--PaddingInlineEnd);
+      margin-block-start: calc(var(--pf-t--global--spacer--sm) * -1);
+      margin-block-end: var(--pf-t--global--spacer--md);
+      margin-inline-start: var(--pf-t--global--spacer--md);
+      margin-inline-end: var(--pf-t--global--spacer--md);
       background-color: var(--#{$page}__sidebar--BackgroundColor);
       border-radius: var(--pf-t--global--border--radius--glass--default);
-    }
-  }
+      border: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
+      box-shadow: var(--pf-t--global--box-shadow--glass--default);
+      overflow: auto;
 
-  @at-root :where(:root.pf-v6-theme-glass) & {
-    padding-inline-start: var(--pf-t--global--spacer--inset--page-chrome);
-    // margin-inline-start: var(--pf-t--global--spacer--inset--page-chrome);
-    // margin-inline-end: var(--pf-t--global--spacer--inset--page-chrome);
+      @media (min-width: $pf-v6-global--breakpoint--xl) {
+        margin-inline-start: var(--pf-t--global--spacer--inset--page-chrome);
+        margin-inline-end: var(--pf-t--global--spacer--inset--page-chrome);
+        margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
+        margin-block-start: 0;
+      }
+    }
   }
 }
 
 .#{$page}__sidebar-main {
   display: flex;
   flex-direction: column;
-  border: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
-  background-color: var(--pf-t--global--background--color--glass--primary--default);
+  flex-grow: 1;
 }
 
 .#{$page}__sidebar-header {
@@ -604,7 +621,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-section,
 .#{$page}__main-wizard,
 .#{$page}__main-group {
-  @at-root :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
   &.pf-m-plain {
     --#{$page}__main-section--BackgroundColor: transparent;
     --#{$page}__main-subnav--BackgroundColor: transparent;
