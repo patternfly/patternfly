@@ -127,6 +127,11 @@
   row-gap: var(--#{$accordion}--RowGap);
   background-color: var(--#{$accordion}--BackgroundColor);
 
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  &.pf-m-plain {
+    --#{$accordion}--BackgroundColor: transparent;
+  }
+
   &.pf-m-toggle-start {
     --#{$accordion}__toggle--ColumnGap: var(--#{$accordion}--m-toggle-start__toggle--ColumnGap);
   }
