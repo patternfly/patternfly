@@ -15,6 +15,7 @@
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$button}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$button}--BackgroundColor: transparent;
+  --#{$button}--BackgroundSurface: radial-gradient(circle, transparent 1%, color-mix(in srgb, currentcolor 15%, transparent) 2%) center/15000% 15000%;
   --#{$button}--BorderColor: transparent;
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -454,7 +455,7 @@
   -webkit-user-select: none;
   user-select: none;
   // stylelint-enable property-no-vendor-prefix
-  background: var(--#{$button}--BackgroundColor) radial-gradient(circle, transparent 1%, color-mix(in srgb, currentcolor 15%, transparent) 2%) center/15000% 15000%;
+  background: var(--#{$button}--BackgroundColor) var(--#{$button}--BackgroundSurface);
   border: 0;
   border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
@@ -940,7 +941,7 @@
   &.pf-m-aria-disabled {
     color: var(--#{$button}--disabled--Color);
     text-decoration-color: var(--#{$button}--disabled--TextDecorationColor);
-    background: var(--#{$button}--disabled--BackgroundColor);
+    background: var(--#{$button}--disabled--BackgroundColor) var(--#{$button}--BackgroundSurface);
 
     &::after {
       border-color: transparent;
