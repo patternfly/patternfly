@@ -79,6 +79,7 @@
   // disabled
   --#{$form-control}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$form-control}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$form-control}--m-disabled--before--BorderColor: transparent;
   --#{$form-control}--m-disabled--after--BorderColor: transparent;
 
   // readonly
@@ -311,8 +312,8 @@
     --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}--m-placeholder--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
-    --#{$form-control}--before--BorderStyle: none;
-    --#{$form-control}--after--BorderStyle: none;
+    --#{$form-control}--before--BorderColor: var(--#{$form-control}--m-disabled--before--BorderColor);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-disabled--after--BorderColor);
 
     cursor: not-allowed;
   }
