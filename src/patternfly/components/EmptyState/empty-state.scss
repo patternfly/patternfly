@@ -57,6 +57,11 @@
   // Actions
   --#{$empty-state}__actions--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
   --#{$empty-state}__actions--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
+
+  // Alert alignment
+  --#{$empty-state}__alert-title--Offset: var(--pf-t--global--spacer--lg);
+  --#{$empty-state}__alert-title--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$empty-state}__alert-title--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 }
 
 .#{$empty-state} {
@@ -121,6 +126,12 @@
 
   &.pf-m-custom {
     --#{$empty-state}__icon--Color: var(--#{$empty-state}--m-custom__icon--Color);
+  }
+
+  .#{$alert}__title {
+    padding-inline-start: var(--#{$empty-state}__alert-title--PaddingInlineStart);
+    padding-inline-end: var(--#{$empty-state}__alert-title--PaddingInlineEnd);
+    margin-inline-start: calc(-1 * var(--#{$empty-state}__alert-title--Offset));
   }
 }
 
