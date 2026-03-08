@@ -73,10 +73,6 @@
   --#{$modal-box}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-
-  // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
-  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2);
 }
 
 .#{$modal-box} {
@@ -252,6 +248,3 @@
     white-space: normal;
   }
 }
-
-
-
