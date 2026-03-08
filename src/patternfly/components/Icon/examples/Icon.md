@@ -15,13 +15,13 @@ cssPrefix: pf-v6-c-icon
 
 {{#> icon}}
   {{#> icon-content}}
-    <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{pfIcon "rh-microns-caret-right"}}
   {{/icon-content}}
 {{/icon}}
 
 {{#> icon}}
   {{#> icon-content}}
-    <i class="fas fa-angle-down" aria-hidden="true"></i>
+    {{pfIcon "rh-microns-caret-down"}}
   {{/icon-content}}
 {{/icon}}
 
@@ -123,27 +123,27 @@ cssPrefix: pf-v6-c-icon
 ```hbs
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-error-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-warning-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-success"}}
-    <i class="fas fa-check-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-check-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-info"}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-information-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-custom"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-notification-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```

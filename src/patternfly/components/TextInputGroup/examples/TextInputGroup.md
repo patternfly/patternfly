@@ -56,7 +56,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear utilities and icon with placeholder example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Clear utilities and icon with placeholder example"}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -92,9 +92,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear error validation example"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Clear error validation example"}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 
@@ -107,9 +105,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Clear input"}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -124,7 +120,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear filter example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Clear filter example"}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -139,7 +135,7 @@ For the purposes of this example, the `TextInputGroup` is contained in a wrapper
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Clear filters expanded example"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Clear filters expanded example"}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
@@ -188,10 +184,10 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search input group collapsed"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Open search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close search input group expandable"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close search input group expandable"}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -203,10 +199,10 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group expanded" text-input-group--search-input--clear-button-aria-label="Clear search input group expandable"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search fa-fw" button--attribute='aria-label="Open search input group collapsed"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Open search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="times fa-fw" button--attribute='aria-label="Close search input group expandable"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close search input group expandable"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -218,7 +214,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name" text-input-group--search-input--aria-label="Search input group with submit button"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Submit search input group"' button--IsSubmit="true"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--aria-label="Submit search input group" button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -233,7 +229,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button button--IsControl=true button--IsIcon=true button--icon="caret-down" button--attribute='aria-expanded="false" aria-label="Advanced search collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--attribute='aria-label="Search advance search input group collapsed"' button--IsSubmit="true"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--aria-label="Search advance search input group collapsed" button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
