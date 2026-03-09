@@ -113,7 +113,7 @@
 
   // * Table check
   --#{$table}__check--responsive--MarginInlineStart: var(--#{$table}__tbody--responsive--border-width--base);
-  --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(14px)};
+  --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(20px)};
 
   // * Table grid favorite
   --#{$table}--m-grid__favorite--MarginBlockStart: #{pf-size-prem(8px)};
@@ -121,6 +121,7 @@
 
   // * Table grid action
   --#{$table}__action--responsive--MarginInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$table}__action--responsive--MarginBlockStart: #{pf-size-prem(8px)};
   --#{$table}--m-grid__favorite--action--MarginInlineStart: var(--pf-t--global--spacer--2xl);
   --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
 
@@ -529,6 +530,7 @@
   // - Table grid action
   .#{$table}__action {
     text-align: end;
+    margin-block-start: var(--#{$table}__action--responsive--MarginBlockStart);
 
     // @smallest breakpoint
     @media screen and (max-width: $pf-v6-global--breakpoint--sm) {
