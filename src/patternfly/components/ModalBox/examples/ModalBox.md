@@ -172,7 +172,7 @@ import './ModalBox.css'
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"')}}
     {{> modal-box-close}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"') modal-box-title-icon--type="bullhorn"}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"') modal-box-title-icon--type="rh-standard-megaphone"}}
         Modal with icon title
       {{/modal-box-title}}
     {{/modal-box-header}}
