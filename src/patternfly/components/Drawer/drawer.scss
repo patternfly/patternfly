@@ -128,10 +128,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-inline__splitter--focus--OutlineOffset: #{pf-size-prem(-1px)};
 
   // Splitter border
-  --#{$drawer}__splitter--after--BorderColor: var(--pf-t--global--border--color--control--default);
-  --#{$drawer}__splitter--hover--after--BorderColor: var(--pf-t--global--border--color--control--default);
-  --#{$drawer}__splitter--focus--after--BorderColor: var(--pf-t--global--border--color--control--default);
-  --#{$drawer}__splitter--active--after--BorderColor: var(--pf-t--global--border--color--control--default);
+  --#{$drawer}__splitter--after--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}__splitter--hover--after--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}__splitter--focus--after--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$drawer}__splitter--active--after--BorderColor: var(--pf-t--global--border--color--default);
   --#{$drawer}__splitter--after--border-width--base: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter--after--BorderBlockStartWidth: 0;
   --#{$drawer}__splitter--after--BorderInlineEndWidth: var(--#{$drawer}__splitter--after--border-width--base);
