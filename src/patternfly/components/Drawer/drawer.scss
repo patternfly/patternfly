@@ -144,13 +144,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter--after--Height: auto;
   --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockStartWidth: var(--#{$drawer}__splitter--after--border-width--base);
   --#{$drawer}--m-panel-bottom__splitter--after--BorderBlockEndWidth: var(--#{$drawer}__splitter--after--border-width--base);
-  --#{$drawer}--m-pill__splitter--m-vertical--Width: #{pf-size-prem(8px)};
+  --#{$drawer}--m-pill__splitter--m-vertical--Width: #{pf-size-prem(10px)};
   --#{$drawer}--m-pill__splitter--m-vertical--Height: calc(100% - (2 * var(--#{$drawer}--m-pill__panel--BorderRadius)));
   --#{$drawer}--m-pill__splitter--m-vertical--MarginBlockStart: var(--#{$drawer}--m-pill__panel--BorderRadius);
   --#{$drawer}--m-pill__splitter--after--BorderColor: transparent;
-  --#{$drawer}--m-pill__splitter--hover--after--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$drawer}--m-pill__splitter--focus--after--BorderColor: var(--pf-t--global--border--color--clicked);
-  --#{$drawer}--m-pill__splitter--active--after--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$drawer}--m-pill__splitter--hover--after--BorderColor: var(--pf-t--global--color--brand--hover);
+  --#{$drawer}--m-pill__splitter--focus--after--BorderColor: var(--pf-t--global--color--brand--clicked);
+  --#{$drawer}--m-pill__splitter--active--after--BorderColor: var(--pf-t--global--color--brand--default);
   --#{$drawer}--m-pill__splitter--after--Width: #{pf-size-prem(1px)};
   --#{$drawer}--m-pill__splitter--after--Height: auto;
   --#{$drawer}--m-pill__splitter--after--InsetInlineStart: 50%;
@@ -184,6 +184,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter-handle--after--BackgroundColor: var(--pf-t--global--border--color--control--default);
   --#{$drawer}__splitter-handle--hover--after--BackgroundColor: var(--pf-t--global--border--color--brand--hover);
   --#{$drawer}__splitter-handle--focus--after--BackgroundColor: var(--pf-t--global--border--color--brand--clicked);
+  --#{$drawer}__splitter-handle--active--after--BackgroundColor: var(--pf-t--global--border--color--brand--default);
   --#{$drawer}__splitter-handle--after--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$drawer}__splitter-handle--after--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$drawer}__splitter-handle--after--BorderInlineEndWidth: 0;
@@ -587,11 +588,15 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__splitter--after--BorderColor: var(--#{$drawer}__splitter--hover--after--BorderColor);
   }
 
-  &:focus,
-  &:active {
+  &:focus {
     --#{$drawer}__splitter-handle--after--BackgroundColor: var(--#{$drawer}__splitter-handle--focus--after--BackgroundColor);
-    --#{$drawer}__splitter--after--BorderColor: var(--#{$drawer}__splitter--focus--after--BorderColor);
+    --#{$drawer}__splitter--after--BorderColor: var(--#{$drawer}__splitter--focus--after--BorderColor);  }
+
+  &:active {
+    --#{$drawer}__splitter-handle--after--BackgroundColor: var(--#{$drawer}__splitter-handle--active--after--BackgroundColor);
+    --#{$drawer}__splitter--after--BorderColor: var(--#{$drawer}__splitter--active--after--BorderColor);
   }
+
 
   &::after {
     position: absolute;
