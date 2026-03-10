@@ -260,11 +260,11 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   // placeholder for banded
   @at-root :where(.pf-v6-theme-glass) & {
+    margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
     background-color: var(--pf-t--global--background--color--glass--primary--default);
     backdrop-filter: var(--pf-t--global--background--filter--glass--blur--primary);
     border-block-end: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
     box-shadow: var(--pf-t--global--box-shadow--glass--default);
-    margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
   }
 }
 
