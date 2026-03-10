@@ -16,10 +16,10 @@
     background-size: cover;
   }
 
-  @at-root :where(.pf-v6-theme-dark) {
+  &:where(.pf-v6-theme-dark) {
     .pf-v6-c-page, .pf-v6-c-login, body {
       // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.png);
-      background-image: url("./assets/images/compass--wallpaper-light.png");
+      background-image: url("./assets/images/compass--wallpaper-dark.png");
     }
   }
 
