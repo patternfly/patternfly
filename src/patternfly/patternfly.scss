@@ -4,3 +4,30 @@
 @use './patternfly-base';
 @use './components';
 @use './layouts';
+
+:where(.pf-v6-theme-glass) {
+  // custom stuff for the POC
+  .pf-v6-c-page, .pf-v6-c-login, body {
+    // background-image: url(http://localhost:8001/assets/images/glass-brand-light.png);
+    background-image: url("./assets/images/compass--wallpaper-light.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @at-root :where(.pf-v6-theme-dark) {
+    .pf-v6-c-page, .pf-v6-c-login, body {
+      // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.png);
+      background-image: url("./assets/images/compass--wallpaper-light.png");
+    }
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  .pf-v6-c-page__sidebar {
+    overflow: auto;
+  }
+}
