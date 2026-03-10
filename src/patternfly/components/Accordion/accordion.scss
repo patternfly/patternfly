@@ -18,6 +18,8 @@
   --#{$accordion}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$accordion}__item--m-expanded__toggle--BackgroundColor: transparent;
+  --#{$accordion}--m-plain__item--m-expanded__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$accordion}__toggle--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
@@ -130,6 +132,9 @@
   @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
   &.pf-m-plain {
     --#{$accordion}--BackgroundColor: transparent;
+    --#{$accordion}__expandable-content--BackgroundColor: transparent;
+    --#{$accordion}__item--m-expanded--BackgroundColor: transparent;
+    --#{$accordion}__item--m-expanded__toggle--BackgroundColor: var(--#{$accordion}--m-plain__item--m-expanded__toggle--BackgroundColor);
   }
 
   &.pf-m-toggle-start {
@@ -188,6 +193,7 @@
     --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
     --#{$accordion}__item--before--TranslateY: var(--#{$accordion}__item--m-expanded--before--TranslateY);
     --#{$accordion}__item--BorderWidth: var(--#{$accordion}__item--m-expanded--BorderWidth);
+    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__item--m-expanded__toggle--BackgroundColor);
     --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
     --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
     --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
