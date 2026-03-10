@@ -197,19 +197,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   max-height: 100%;
   background-color: var(--#{$page}--BackgroundColor);
 
-  @at-root :where(.pf-v6-theme-glass) & {
-    // background-image: url(http://localhost:8001/assets/images/glass-brand-light.png);
-    background-image: url(http://localhost:8001/assets/images/compass--wallpaper-light.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  @at-root :where(.pf-v6-theme-glass.pf-v6-theme-dark) & {
-    // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.png);
-    background-image: url(http://localhost:8001/assets/images/compass--wallpaper-dark.png);
-  }
-
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width); // TODO can remove at breaking change
 
@@ -329,10 +316,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   @at-root :where(.pf-v6-theme-glass) & {
   // &:has(> .#{$page}__sidebar-main) {
-    background: transparent;
-    overflow: visible;
-    padding: 0;
     min-height: 0;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
 
     &.pf-m-expanded {
       box-shadow: none;
@@ -346,17 +333,17 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       margin-block-end: var(--pf-t--global--spacer--md);
       margin-inline-start: var(--pf-t--global--spacer--md);
       margin-inline-end: var(--pf-t--global--spacer--md);
-      background-color: var(--#{$page}__sidebar--BackgroundColor);
-      border-radius: var(--pf-t--global--border--radius--glass--default);
-      border: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
-      box-shadow: var(--pf-t--global--box-shadow--glass--default);
       overflow: auto;
+      background-color: var(--#{$page}__sidebar--BackgroundColor);
+      border: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
+      border-radius: var(--pf-t--global--border--radius--glass--default);
+      box-shadow: var(--pf-t--global--box-shadow--glass--default);
 
       @media (min-width: $pf-v6-global--breakpoint--xl) {
+        margin-block-start: 0;
+        margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
         margin-inline-start: var(--pf-t--global--spacer--inset--page-chrome);
         margin-inline-end: var(--pf-t--global--spacer--inset--page-chrome);
-        margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
-        margin-block-start: 0;
       }
     }
   }
@@ -364,8 +351,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__sidebar-main {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 .#{$page}__sidebar-header {

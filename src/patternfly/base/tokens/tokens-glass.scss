@@ -28,4 +28,30 @@
   --pf-t--global--border--width--glass--default: var(--pf-t--global--border--width--regular);
   --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
   --pf-t--global--border--radius--glass--default: var(--pf-t--global--border--radius--medium);
+
+
+  // custom stuff for the POC
+  .pf-v6-c-page, .pf-v6-c-login, body {
+    // background-image: url(http://localhost:8001/assets/images/glass-brand-light.png);
+    background-image: url("http://localhost:8001/assets/images/compass--wallpaper-light.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @at-root :where(.pf-v6-theme-dark) {
+    .pf-v6-c-page, .pf-v6-c-login, body {
+      // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.png);
+      background-image: url("http://localhost:8001/assets/images/compass--wallpaper-dark.png");
+    }
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  .pf-v6-c-page__sidebar {
+    overflow: auto;
+  }
 }
