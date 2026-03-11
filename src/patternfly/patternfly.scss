@@ -8,8 +8,8 @@
 :where(.pf-v6-theme-glass) {
   // custom stuff for the POC
   .pf-v6-c-page, .pf-v6-c-login, body {
-    // background-image: url(http://localhost:8001/assets/images/glass-brand-light.jpg);
-    background-image: url("./assets/images/compass--wallpaper-light.jpg");
+    background-image: url("./assets/images/glass-brand-light.jpg");
+    // background-image: url("./assets/images/compass--wallpaper-light.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -18,8 +18,8 @@
 
   &:where(.pf-v6-theme-dark) {
     .pf-v6-c-page, .pf-v6-c-login, body {
-      // background-image: url(http://localhost:8001/assets/images/glass-brand-dark.jpg);
-      background-image: url("./assets/images/compass--wallpaper-dark.jpg");
+      background-image: url("./assets/images/glass-brand-dark.jpg");
+      // background-image: url("./assets/images/compass--wallpaper-dark.jpg");
     }
   }
 
