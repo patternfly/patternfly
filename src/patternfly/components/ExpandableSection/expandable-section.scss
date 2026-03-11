@@ -125,6 +125,12 @@
     background-color: var(--#{$expandable-section}--m-display-lg--BackgroundColor);
     border: var(--#{$expandable-section}--m-display-lg--BorderWidth) solid var(--#{$expandable-section}--m-display-lg--BorderColor);
     border-radius: var(--#{$expandable-section}--m-display-lg--BorderRadius);
+
+    &.pf-m-plain {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+    }
   }
 
   &.pf-m-indented {

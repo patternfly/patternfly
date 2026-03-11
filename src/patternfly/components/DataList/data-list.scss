@@ -191,6 +191,7 @@
     overflow-anchor: none;
   }
 
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
   &.pf-m-plain {
     --#{$data-list}__item--BackgroundColor: var(--#{$data-list}--pf-m-plain__item--BackgroundColor);
   }
