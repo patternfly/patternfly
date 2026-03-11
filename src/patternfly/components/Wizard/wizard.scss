@@ -15,6 +15,10 @@
   --#{$wizard}__header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__header--BorderBlockEndColor: var(--pf-t--global--border--color--default);
 
+  // Header plain
+  --#{$wizard}__header--m-plain--BackgroundColor: transparent;
+  --#{$wizard}__header--m-plain--BorderBlockEndColor: transparent;
+
   // Close
   --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--spacer--control--vertical--plain));
   --#{$wizard}__close--InsetInlineEnd: var(--pf-t--global--spacer--sm);
@@ -186,6 +190,7 @@
   --#{$wizard}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__footer--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+
 }
 
 .#{$wizard} {
@@ -236,6 +241,12 @@
     button {
       font-size: var(--#{$wizard}__close--FontSize);
     }
+  }
+
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  &.pf-m-plain {
+    --#{$wizard}__header--BackgroundColor: var(--#{$wizard}__header--m-plain--BackgroundColor);
+    --#{$wizard}__header--BorderBlockEndColor: var(--#{$wizard}__header--m-plain--BorderBlockEndColor);
   }
 }
 
