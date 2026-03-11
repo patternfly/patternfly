@@ -384,7 +384,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @at-root :where(.pf-v6-theme-glass) & {
-  // &:has(> .#{$page}__sidebar-main) {
     min-height: 0;
     padding: 0;
     overflow: visible;
@@ -415,6 +414,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         margin-inline-end: var(--pf-t--global--spacer--inset--page-chrome);
       }
     }
+  }
+
+  &:has(> .#{$page}__sidebar-main) {
+    overflow: revert;
   }
 }
 
