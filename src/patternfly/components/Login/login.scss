@@ -38,6 +38,7 @@
 
   // main
   --#{$login}__main--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$login}__main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$login}__main--MarginBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$login}__main--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$login}__main--BorderWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--high-contrast--regular));
@@ -166,6 +167,7 @@
   align-self: start;
   margin-block-end: var(--#{$login}__main--MarginBlockEnd);
   background-color: var(--#{$login}__main--BackgroundColor);
+  backdrop-filter: var(--#{$login}__main--BackdropFilter);
   border: var(--#{$login}__main--BorderWidth) solid var(--#{$login}__main--BorderColor);
   border-radius: var(--#{$login}__main--BorderRadius);
   box-shadow: var(--#{$login}__main--BoxShadow);

@@ -81,6 +81,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--AlignSelf: start;
   --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$page}__main-container--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -491,6 +492,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
   background: var(--#{$page}__main-container--BackgroundColor);
+  backdrop-filter: var(--#{$page}__main-container--BackdropFilter);
   border: solid var(--#{$page}__main-container--BorderColor);
   border-block-start-width: var(--#{$page}__main-container--BorderBlockStartWidth);
   border-block-end-width: var(--#{$page}__main-container--BorderBlockEndWidth);
