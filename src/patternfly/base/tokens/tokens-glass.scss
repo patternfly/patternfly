@@ -5,9 +5,9 @@
 // Only tokens that differ from base theme (8 tokens)
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--glass--primary--default: rgba(255, 255, 255, 0.5000);
-  --pf-t--global--background--color--primary--clicked: rgba(242, 242, 242, 0.6);
+  --pf-t--global--background--color--primary--clicked: var(--pf-t--global--background--color--secondary--default);
   --pf-t--global--background--color--primary--default: rgba(255, 255, 255, 0.6);
-  --pf-t--global--background--color--primary--hover: rgba(242, 242, 242, 0.6);
+  --pf-t--global--background--color--primary--hover: var(--pf-t--global--background--color--secondary--default);
   --pf-t--global--background--color--secondary--clicked: rgba(163, 163, 163, 0.3000);
   --pf-t--global--background--color--secondary--default: rgba(199, 199, 199, 0.3000);
   --pf-t--global--background--color--secondary--hover: rgba(163, 163, 163, 0.3000);
