@@ -35,6 +35,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--xl--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--floating--secondary--default);
+  --#{$page}__sidebar--BackdropFilter: none;
+  --#{$page}__sidebar--xl--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$page}__sidebar--xl--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--secondary--default));
   --#{$page}__sidebar--BoxShadow: var(--pf-t--global--box-shadow--md--right);
 
@@ -88,6 +90,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--Opacity: var(--#{$page}__sidebar--xl--Opacity);
     --#{$page}__sidebar--BorderInlineEndWidth: 0;
     --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--xl--BackgroundColor);
+    --#{$page}__sidebar--BackdropFilter: var(--#{$page}__sidebar--xl--BackdropFilter);
   }
 
   // Container for the main content area (grid area)
@@ -354,6 +357,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
+  backdrop-filter: var(--#{$page}__sidebar--BackdropFilter);
   border-inline-end: var(--#{$page}__sidebar--BorderInlineEndWidth) solid var(--#{$page}__sidebar--BorderInlineEndColor);
   opacity: var(--#{$page}__sidebar--Opacity);
   transition: var(--#{$page}__sidebar--TransitionProperty) var(--#{$page}__sidebar--TransitionDuration) var(--#{$page}__sidebar--TransitionTimingFunction);
