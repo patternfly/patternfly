@@ -17,7 +17,6 @@
 
   // Header plain
   --#{$wizard}__header--m-plain--BackgroundColor: transparent;
-  --#{$wizard}__header--m-plain--BorderBlockEndColor: transparent;
 
   // Close
   --#{$wizard}__close--InsetBlockStart: calc(var(--pf-t--global--spacer--lg) - var(--pf-t--global--spacer--control--vertical--plain));
@@ -246,7 +245,6 @@
   @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
   &.pf-m-plain {
     --#{$wizard}__header--BackgroundColor: var(--#{$wizard}__header--m-plain--BackgroundColor);
-    --#{$wizard}__header--BorderBlockEndColor: var(--#{$wizard}__header--m-plain--BorderBlockEndColor);
   }
 }
 
