@@ -185,6 +185,7 @@ cssPrefix: pf-v6-c-expandable-section
 | `.pf-m-expand-top` | `.pf-v6-c-expandable-section.pf-m-detached` | Modifies the expandable animation and icon rotation directions for detached expandable sections. **Required** when the content is above the toggle. |
 | `.pf-m-expand-bottom` | `.pf-v6-c-expandable-section.pf-m-detached` | Modifies the expandable animation direction for detached expandable sections. **Required** when the content is below the toggle. |
 | `.pf-m-display-lg` | `.pf-v6-c-expandable-section` | Modifies the styling of the component to have large display styling. |
+| `.pf-m-plain` | `.pf-v6-c-expandable-section.pf-m-display-lg` | Modifies the large display variant for plain styles. |
 | `.pf-m-indented` | `.pf-v6-c-expandable-section` | Indicates that the expandable section content is indented and is aligned with the start of the title text to provide visual hierarchy. |
 | `.pf-m-truncate` | `.pf-v6-c-expandable-section` | Indicates that the expandable section content is truncated by default, and not truncated when expanded. |
 | `--pf-v6-c-expandable-section--m-truncate__content--LineClamp` | `.pf-v6-c-expandable-section.pf-m-truncate` | Modifies the number of lines to show before truncating. |
