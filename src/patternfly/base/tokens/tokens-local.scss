@@ -137,7 +137,6 @@
   --pf-t--temp--dev--tbd: #BC11E0;
   // stylelint-enable
 
-  // // Glass theme background tokens
-  // --pf-t--global--background--color--glass--primary--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--primary--default) var(--pf-t--global--background--opacity--glass--primary), transparent );
-  // --pf-t--global--background--color--glass--floating--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--floating) var(--pf-t--global--background--opacity--glass--floating), transparent );
+  // Glass theme tokens
+  --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
 }

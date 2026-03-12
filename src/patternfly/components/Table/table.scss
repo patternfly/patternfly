@@ -270,6 +270,8 @@
   &.pf-m-plain {
     --#{$table}--BackgroundColor: transparent;
     --#{$table}__expandable-row-content--BackgroundColor: transparent;
+    --#{$table}__expandable-row-content--PaddingInlineStart: 0;
+    --#{$table}__expandable-row-content--PaddingInlineEnd: 0;
     --#{$table}__control-row--BackgroundColor: transparent;
   }
 

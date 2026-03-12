@@ -21,47 +21,49 @@
   @include local.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-dark) {
-  @include dark.pf-v6-tokens;
-}
-
+// Default
 :root:where(.pf-v6-theme-high-contrast) {
   @include highcontrast.pf-v6-tokens;
-}
-
-:root:where(.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
-  @include highcontrast-dark.pf-v6-tokens;
 }
 
 :root:where(.pf-v6-theme-glass) {
   @include glass.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-glass.pf-v6-theme-dark) {
-  @include glass-dark.pf-v6-tokens;
-}
-
 :root:where(.pf-v6-theme-redhat) {
   @include redhat.pf-v6-tokens;
-}
-
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-dark) {
-  @include redhat-dark.pf-v6-tokens;
 }
 
 :root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast) {
   @include redhat-highcontrast.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast.pf-v6-theme-dark) {
-  @include redhat-highcontrast-dark.pf-v6-tokens;
-}
-
 :root:where(.pf-v6-theme-redhat.pf-v6-theme-glass) {
   @include redhat-glass.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-glass.pf-v6-theme-dark) {
+// Dark
+:root:where(.pf-v6-theme-dark) {
+  @include dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-dark.pf-v6-theme-high-contrast) {
+  @include highcontrast-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-dark.pf-v6-theme-glass) {
+  @include glass-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat) {
+  @include redhat-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-high-contrast) {
+  @include redhat-highcontrast-dark.pf-v6-tokens;
+}
+
+:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-glass) {
   @include redhat-glass-dark.pf-v6-tokens;
 }
 

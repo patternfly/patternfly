@@ -7,7 +7,7 @@
 
 :where(.pf-v6-theme-glass) {
   // custom stuff for the POC
-  .pf-v6-c-page, .pf-v6-c-login, body {
+  .pf-v6-c-login, body { // needs to go on 'body' because drawers with a nested page component
     // background-image: url("./assets/images/compass--wallpaper-light.jpg");
     background-image: url("./assets/images/glass-brand-light.jpg");
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
   }
 
   &:where(.pf-v6-theme-dark) {
-    .pf-v6-c-page, .pf-v6-c-login, body {
+    .pf-v6-c-login, body { // needs to go on 'body' because drawers with a nested page component
       // background-image: url("./assets/images/compass--wallpaper-dark.jpg");
       background-image: url("./assets/images/glass-brand-dark.jpg");
     }
