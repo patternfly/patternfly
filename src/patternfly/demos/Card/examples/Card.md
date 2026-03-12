@@ -293,7 +293,7 @@ import './Card.css'
         {{#> card-body}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-success"}}
-              {{pfIcon "rh-ui-check-circle"}}
+              {{pfIcon "rh-ui-check-circle-fill"}}
             {{/icon-content}}
           {{/icon}}
         {{/card-body}}
@@ -303,7 +303,7 @@ import './Card.css'
         {{#> card-body}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-warning"}}
-              {{pfIcon "rh-ui-warning"}}
+              {{pfIcon "rh-ui-warning-fill"}}
             {{/icon-content}}
           {{/icon}}
         {{/card-body}}
@@ -313,7 +313,7 @@ import './Card.css'
         {{#> card-body}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-danger"}}
-              {{pfIcon "rh-ui-error"}}
+              {{pfIcon "rh-ui-error-fill"}}
             {{/icon-content}}
           {{/icon}}
         {{/card-body}}
@@ -330,7 +330,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-check-circle"}}
+                    {{pfIcon "rh-ui-check-circle-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -343,7 +343,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    {{pfIcon "rh-ui-warning"}}
+                    {{pfIcon "rh-ui-warning-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -362,7 +362,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-check-circle"}}
+                    {{pfIcon "rh-ui-check-circle-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -375,7 +375,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    {{pfIcon "rh-ui-warning"}}
+                    {{pfIcon "rh-ui-warning-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -394,7 +394,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    {{pfIcon "rh-ui-warning"}}
+                    {{pfIcon "rh-ui-warning-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -407,7 +407,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -430,7 +430,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -443,7 +443,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    {{pfIcon "rh-ui-warning"}}
+                    {{pfIcon "rh-ui-warning-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -463,7 +463,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-check-circle"}}
+                    {{pfIcon "rh-ui-check-circle-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -476,7 +476,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    {{pfIcon "rh-ui-warning"}}
+                    {{pfIcon "rh-ui-warning-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -496,7 +496,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-                    {{pfIcon "rh-ui-warning"}}
+                    {{pfIcon "rh-ui-warning-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -509,7 +509,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -580,7 +580,7 @@ import './Card.css'
                 {{#> l-flex-item}}
                   {{#> icon icon--modifier="pf-m-inline"}}
                     {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
                     {{/icon-content}}
                   {{/icon}}
                 {{/l-flex-item}}
@@ -632,7 +632,7 @@ import './Card.css'
                 {{#> l-flex-item}}
                   {{#> icon icon--modifier="pf-m-inline"}}
                     {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
                     {{/icon-content}}
                   {{/icon}}
                 {{/l-flex-item}}
@@ -776,7 +776,7 @@ import './Card.css'
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> icon icon--modifier="pf-m-inline"}}
             {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
             {{/icon-content}}
           {{/icon}}
           <a hfer="#">25 incidents detected</a>
@@ -1127,7 +1127,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                    {{pfIcon "rh-ui-error"}}
+                    {{pfIcon "rh-ui-error-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -1153,7 +1153,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-check-circle"}}
+                    {{pfIcon "rh-ui-check-circle-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
@@ -1201,7 +1201,7 @@ import './Card.css'
               {{#> l-flex-item}}
                 {{#> icon icon--modifier="pf-m-inline"}}
                   {{#> icon-content icon-content--modifier="pf-m-success"}}
-                    {{pfIcon "rh-ui-check-circle"}}
+                    {{pfIcon "rh-ui-check-circle-fill"}}
                   {{/icon-content}}
                 {{/icon}}
               {{/l-flex-item}}
