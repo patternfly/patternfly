@@ -1,15 +1,13 @@
 
 // Do not edit directly
-// Generated on Thu, 05 Mar 2026 15:22:57 GMT
+// Generated on Thu, 12 Mar 2026 03:00:59 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.4000);
   --pf-t--global--background--color--600: rgba(199, 199, 199, 0.2500);
   --pf-t--global--background--color--700: rgba(199, 199, 199, 0.1000);
   --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0.0000);
-
-  // --pf-t--global--background--filter--glass--blur--floating: blur(0px);
-  // --pf-t--global--background--filter--glass--blur--primary: blur(0px);
+  --pf-t--global--background--filter--glass--blur--primary: initial;
   --pf-t--global--border--color--high-contrast: rgba(255, 255, 255, 0.0000);
   --pf-t--global--border--radius--0: 0px;
   --pf-t--global--border--radius--100: 4px;
@@ -137,6 +135,7 @@
   --pf-t--global--background--color--highlight--200: var(--pf-t--color--yellow--40);
   --pf-t--global--background--color--loading--skeleton--default: var(--pf-t--global--background--color--600);
   --pf-t--global--background--color--loading--skeleton--subtle: var(--pf-t--global--background--color--700);
+  --pf-t--global--background--color--striped--row--default: var(--pf-t--global--background--color--700);
   --pf-t--global--background--color--tertiary--default: var(--pf-t--global--background--color--600);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
   --pf-t--global--border--color--200: var(--pf-t--color--gray--40);
@@ -404,7 +403,6 @@
   --pf-t--global--background--color--floating--clicked: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--floating--default: var(--pf-t--global--background--color--100);
   --pf-t--global--background--color--floating--hover: var(--pf-t--global--background--color--200);
-  --pf-t--global--background--color--floating--secondary--default: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--highlight--clicked: var(--pf-t--global--background--color--highlight--200);
   --pf-t--global--background--color--highlight--default: var(--pf-t--global--background--color--highlight--100);
   --pf-t--global--background--color--inverse--clicked: var(--pf-t--global--background--color--450);
@@ -462,6 +460,8 @@
   --pf-t--global--border--radius--action--plain--default: var(--pf-t--global--border--radius--small);
   --pf-t--global--border--radius--control--default: var(--pf-t--global--border--radius--small);
   --pf-t--global--border--radius--control--form-element: var(--pf-t--global--border--radius--small);
+  --pf-t--global--border--radius--glass--default: initial;
+  --pf-t--global--border--width--glass--default: initial;
   --pf-t--global--color--brand--clicked: var(--pf-t--global--color--brand--300);
   --pf-t--global--color--brand--default: var(--pf-t--global--color--brand--200);
   --pf-t--global--color--brand--hover: var(--pf-t--global--color--brand--300);
@@ -600,13 +600,13 @@
   --pf-t--global--text-decoration--width--default: var(--pf-t--global--border--width--regular);
   --pf-t--global--text-decoration--width--hover: var(--pf-t--global--border--width--strong);
   --pf-t--global--background--color--control--default: var(--pf-t--global--background--color--primary--default);
-
-  // --pf-t--global--background--color--glass--floating: var(--pf-t--global--background--color--floating--default);
-  // --pf-t--global--background--color--glass--primary--default: var(--pf-t--global--background--color--primary--default);
+  --pf-t--global--background--color--floating--secondary--default: var(--pf-t--global--background--color--secondary--default);
+  --pf-t--global--background--color--glass--primary--default: initial;
   --pf-t--global--border--color--alt: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--border--color--brand--default: var(--pf-t--global--color--brand--default);
   --pf-t--global--border--color--brand--hover: var(--pf-t--global--color--brand--hover);
+  --pf-t--global--border--color--glass--default: initial;
   --pf-t--global--border--color--main--default: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--status--custom--clicked: var(--pf-t--global--color--status--custom--clicked);
   --pf-t--global--border--color--status--custom--default: var(--pf-t--global--color--status--custom--default);
