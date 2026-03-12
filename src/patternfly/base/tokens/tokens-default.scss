@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Thu, 12 Mar 2026 03:00:59 GMT
+// Generated on Thu, 12 Mar 2026 18:22:40 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--500: rgba(21, 21, 21, 0.4000);
@@ -596,6 +596,7 @@
   --pf-t--global--text--color--status--warning--default: var(--pf-t--global--color--status--warning--200);
   --pf-t--global--text--color--status--warning--hover: var(--pf-t--global--color--status--warning--300);
   --pf-t--global--text--color--subtle: var(--pf-t--global--text--color--200);
+  --pf-t--global--text-decoration--color--default: var(--pf-t--global--border--color--300);
   --pf-t--global--text-decoration--offset--default: var(--pf-t--global--spacer--xs);
   --pf-t--global--text-decoration--width--default: var(--pf-t--global--border--width--regular);
   --pf-t--global--text-decoration--width--hover: var(--pf-t--global--border--width--strong);
@@ -787,7 +788,6 @@
   --pf-t--global--text--color--status--unread--on-default--clicked: var(--pf-t--global--text--color--inverse);
   --pf-t--global--text--color--status--unread--on-default--default: var(--pf-t--global--text--color--inverse);
   --pf-t--global--text--color--status--unread--on-default--hover: var(--pf-t--global--text--color--inverse);
-  --pf-t--global--text-decoration--color--default: var(--pf-t--global--border--color--default);
   --pf-t--global--text-decoration--color--hover: var(--pf-t--global--border--color--hover);
   --pf-t--global--border--color--brand--accent--clicked: var(--pf-t--global--color--brand--accent--clicked);
   --pf-t--global--border--color--brand--accent--default: var(--pf-t--global--color--brand--accent--default);
