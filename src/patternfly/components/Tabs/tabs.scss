@@ -56,8 +56,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-vertical__item--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$tabs}__item--m-current--BackgroundColor: transparent;
   --#{$tabs}--m-box__item--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$tabs}--m-box__item--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$tabs}--m-box--m-secondary__item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$tabs}--m-box__item--m-current--BackgroundColor: transparent;
+  --#{$tabs}--m-box--m-secondary__item--BackgroundColor: transparent;
   --#{$tabs}--m-box--m-secondary__item--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
   --#{$tabs}__item--m-action--before--ZIndex: var(--pf-t--global--z-index--sm);
 
@@ -65,7 +65,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--Color: var(--pf-t--global--text--color--subtle);
   --#{$tabs}__link--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$tabs}__link--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$tabs}__link--BorderRadius: var(--pf-t--global--border--radius--control--default);
   --#{$tabs}__link--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$tabs}__link--BorderColor: transparent;
   --#{$tabs}__link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
@@ -75,21 +75,21 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$tabs}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}__link--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$tabs}__link--disabled--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$tabs}__link--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$tabs}__link--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tabs}__link--disabled--BackgroundColor: transparent;
   --#{$tabs}__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}__item--m-current__link--Color: var(--pf-t--global--text--color--regular);
   --#{$tabs}__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-vertical__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$tabs}--m-vertical__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$tabs}--m-box__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$tabs}--m-box__link--disabled--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$tabs}--m-box__link--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$tabs}--m-box__link--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tabs}--m-box__link--disabled--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-box__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}--m-box__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-box--m-secondary__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$tabs}--m-box--m-secondary__link--disabled--Color: var(--pf-t--global--text--color--on-disabled);
-  --#{$tabs}--m-box--m-secondary__link--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$tabs}--m-box--m-secondary__link--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$tabs}--m-box--m-secondary__link--disabled--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-box--m-secondary__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}--m-box--m-secondary__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
@@ -125,7 +125,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--after--BorderBlockStartWidth: 0;
   --#{$tabs}__link--after--BorderInlineEndWidth: 0;
   --#{$tabs}__link--after--BorderInlineStartWidth: 0;
-  --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--border--color--clicked);
+  --#{$tabs}__link--after--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$tabs}--m-box__link--after--BorderRadius: var(--pf-t--global--border--radius--sharp);
+  --#{$tabs}__item--m-current__link--after--BorderColor: var(--pf-t--global--color--brand--accent--default);
   --#{$tabs}__item--m-current__link--after--BorderWidth: var(--pf-t--global--border--width--extra-strong);
 
   // Link accent
@@ -307,6 +309,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__link--before--BorderBlockEndWidth: var(--#{$tabs}__link--before--border-width--base);
     --#{$tabs}__link--after--InsetBlockStart: 0;
     --#{$tabs}__link--after--InsetBlockEnd: auto;
+    --#{$tabs}__link--after--BorderRadius: var(--#{$tabs}--m-box__link--after--BorderRadius);
 
     .#{$tabs}__link {
       --#{$tabs}__link--after--BorderBlockStartWidth: var(--#{$tabs}__link--after--BorderWidth);
@@ -690,6 +693,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       border-block-end-width: var(--#{$tabs}__link--after--BorderBlockEndWidth);
       border-inline-start-width: var(--#{$tabs}__link--after--BorderInlineStartWidth);
       border-inline-end-width: var(--#{$tabs}__link--after--BorderInlineEndWidth);
+      border-radius: var(--#{$tabs}__link--after--BorderRadius);
     }
   }
 
