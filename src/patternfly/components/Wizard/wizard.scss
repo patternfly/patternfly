@@ -225,7 +225,7 @@
   @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
   &.pf-m-plain {
     --#{$wizard}__header--BackgroundColor: var(--#{$wizard}__header--m-plain--BackgroundColor);
-    --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}__toggle--m-plina--BackgroundColor);
+    --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}__toggle--m-plain--BackgroundColor);
     --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}__nav--m-plain--BackgroundColor);
     --#{$wizard}__outer-wrap--BackgroundColor: var(--#{$wizard}__outer-wrap--m-plain--BackgroundColor);
     --#{$wizard}__footer--BackgroundColor: var(--#{$wizard}__footer--m-plain--BackgroundColor);
