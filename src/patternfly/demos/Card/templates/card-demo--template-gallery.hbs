@@ -3,7 +3,7 @@
       {{#> bullseye}}
         {{#> empty-state empty-state--modifier="pf-m-xs"}}
           {{#> icon }}
-            {{#> icon-content icon-content--modifier="{{pfv}}empty-state__icon"}}
+            {{#> icon-content icon-content--modifier=(concat pfv "empty-state__icon")}}
               {{pfIcon "rh-ui-add-circle-fill"}}
             {{/icon-content}}
           {{/icon}}
