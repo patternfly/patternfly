@@ -357,7 +357,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
-  backdrop-filter: var(--#{$page}__sidebar--BackdropFilter);
   border-inline-end: var(--#{$page}__sidebar--BorderInlineEndWidth) solid var(--#{$page}__sidebar--BorderInlineEndColor);
   opacity: var(--#{$page}__sidebar--Opacity);
   transition: var(--#{$page}__sidebar--TransitionProperty) var(--#{$page}__sidebar--TransitionDuration) var(--#{$page}__sidebar--TransitionTimingFunction);
@@ -408,6 +407,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       margin-inline-end: var(--pf-t--global--spacer--md);
       overflow: auto;
       background-color: var(--#{$page}__sidebar--BackgroundColor);
+      backdrop-filter: var(--#{$page}__sidebar--BackdropFilter);
       border: var(--pf-t--global--border--width--glass--default) solid var(--pf-t--global--border--color--glass--default);
       border-radius: var(--pf-t--global--border--radius--glass--default);
       box-shadow: var(--pf-t--global--box-shadow--glass--default);

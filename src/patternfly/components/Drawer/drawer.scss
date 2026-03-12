@@ -69,7 +69,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-pill--m-expanded__panel--inset: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$drawer}__panel--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
   --#{$drawer}__panel--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
-  --#{$drawer}__panel--m-glass--BorderColor: var(--pf-t--global--border--color--alt);
+  --#{$drawer}__panel--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$drawer}__panel--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--short);
@@ -220,6 +220,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
       padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingInlineStart);
     }
+
+    &.pf-m-glass {
+      --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
+      --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
+  
+      backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
+    }
   }
 
   &.pf-m-panel-left > .#{$drawer}__main {
@@ -293,16 +300,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         border-block-end-width: var(--#{$drawer}--m-pill__panel--BorderBlockEndWidth);
         border-inline-start-width: var(--#{$drawer}--m-pill__panel--BorderInlineStartWidth);
         border-inline-end-width: var(--#{$drawer}--m-pill__panel--BorderInlineEndWidth);
-
-        // This won't apply background overrides if glass is disabled, allowing secondary backgrounds to work
-        // stylelint-disable max-nesting-depth
-        &:not(.pf-m-no-glass) {
-          --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
-          --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
-
-          backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
-        }
-        // stylelint-enable
       }
     }
   }
