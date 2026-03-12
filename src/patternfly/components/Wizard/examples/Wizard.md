@@ -490,8 +490,8 @@ import './Wizard.css'
 
 ### Plain header
 ```hbs isFullscreen
-{{#> wizard wizard--id="wizard-plain-header"}}
-  {{#> wizard-header wizard-header--modifier="pf-m-plain"}}
+{{#> wizard wizard--id="wizard-plain-header" wizard--modifier="pf-m-plain"}}
+  {{#> wizard-header}}
     {{> wizard-close}}
     {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
@@ -612,8 +612,8 @@ import './Wizard.css'
 | `.pf-v6-c-wizard__footer-cancel` | `<div>` | Initiates the cancel button. **Required** |
 | `.pf-m-expanded` | `.pf-v6-c-wizard__toggle`, `.pf-v6-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-finished` | `.pf-v6-c-wizard` | Modifies the wizard for the finished state. |
-| `.pf-m-plain` | `.pf-v6-c-wizard__header` | Modifies the header to have a transparent background and no bottom border. |
-| `.pf-m-no-plain` | `.pf-v6-c-wizard__header` | Prevents the header from automatically applying plain styling when glass theme is enabled. |
+| `.pf-m-plain` | `.pf-v6-c-wizard` | Modifies the wizard to have a transparent background. |
+| `.pf-m-no-plain` | `.pf-v6-c-wizard` | Prevents the wizard from automatically applying plain styling when glass theme is enabled. |
 | `.pf-m-expandable` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expandable state. |
 | `.pf-m-expanded` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |
