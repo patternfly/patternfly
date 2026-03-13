@@ -138,5 +138,7 @@
   // stylelint-enable
 
   // Glass theme tokens
-  --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
+  &:where(.pf-v6-theme-glass) {
+    --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
+  }
 }

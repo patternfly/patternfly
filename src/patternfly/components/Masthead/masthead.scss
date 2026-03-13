@@ -145,7 +145,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   &.pf-m-docked {
     @include pf-v6-c-masthead--m-display-inline;
 
-    --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-docked--BackgroundColor);
+    --#{$masthead}--BackgroundColor: transparent;
     --#{$masthead}--GridTemplateRows: var(--#{$masthead}--m-docked--GridTemplateRows);
     --#{$masthead}--PaddingBlockStart: var(--#{$masthead}--m-docked--PaddingBlockStart);
     --#{$masthead}--PaddingBlockEnd: var(--#{$masthead}--m-docked--PaddingBlockEnd);
@@ -162,7 +162,6 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     flex-direction: column;
     align-items: stretch;
     height: 100%;
-    backdrop-filter: var(--#{$masthead}--m-docked--BackdropFilter);
     border: 0;
     box-shadow: none;
 
@@ -259,7 +258,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   // placeholder for banded
-  @at-root :where(.pf-v6-theme-glass) & {
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-docked) {
     margin-block-end: var(--pf-t--global--spacer--inset--page-chrome);
     background-color: var(--pf-t--global--background--color--glass--primary--default);
     backdrop-filter: var(--pf-t--global--background--filter--glass--blur--primary);

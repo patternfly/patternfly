@@ -23,11 +23,21 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock--Width: #{pf-size-prem(250px)};
   --#{$page}__dock--desktop--Width: auto;
   --#{$page}__dock--ZIndex: var(--pf-t--global--z-index--md);
-  --#{$page}__dock--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
-  --#{$page}__dock--BorderInlineEndColor: var(--pf-t--global--border--color--default);
   --#{$page}__dock--TransitionDuration--slide: 0s;
   --#{$page}__dock--m-expanded--TransitionDuration--slide: 0s;
   --#{$page}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
+
+  // Dock main
+  --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$page}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$page}__dock-main--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
+  --#{$page}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
+  --#{$page}__dock-main--BorderInlineEndColor: transparent;
+  --#{$page}__dock-main--xl--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
+  --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
@@ -109,6 +119,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderInlineStartWidth: var(--pf-t--global--border--width--main--default);
   --#{$page}__main-container--BorderInlineEndWidth: var(--pf-t--global--border--width--main--default);
   --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--main--default); 
+  --#{$page}__main-container--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
@@ -307,22 +318,22 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   inset-block-end: 0;
   inset-inline-start: 0;
   z-index: var(--#{$page}__dock--ZIndex);
+  display: flex;
+  flex-direction: column;
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
-  border-inline-end: var(--pf-t--global--border--width--glass--default, 0) solid var(--pf-t--global--border--color--glass--default, transparent);
-  box-shadow: var(--pf-t--global--box-shadow--glass--default, none);
   transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide);
   translate: -100% 0;
 
   &.pf-m-expanded {
     --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
 
-    border-inline-end: var(--#{$page}__dock--BorderInlineEndWidth) solid var(--#{$page}__dock--BorderInlineEndColor);
     translate: 0;
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
-    --#{$page}__dock--BorderInlineEndWidth: 0;
+    --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
+    --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--xl--BorderInlineEndColor);
 
     position: revert;
     inset: revert;
@@ -336,6 +347,18 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   &.pf-m-text-expanded {
     width: var(--#{$page}__dock--Width);
+  }
+}
+
+.#{$page}__dock-main {
+  flex-grow: 1;
+  background-color: var(--#{$page}__dock-main--BackgroundColor);
+  backdrop-filter: var(--#{$page}__dock-main--BackdropFilter);
+  border-inline-end: var(--#{$page}__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock-main--BorderInlineEndColor);
+  box-shadow: var(--#{$page}__dock-main--BoxShadow);
+
+  .#{$page}__dock.pf-m-expanded & {
+    border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
   }
 }
 
@@ -572,7 +595,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   border-inline-start-width: var(--#{$page}__main-container--BorderInlineStartWidth);
   border-inline-end-width: var(--#{$page}__main-container--BorderInlineEndWidth);
   border-radius: var(--#{$page}__main-container--BorderRadius);
-  box-shadow: var(--pf-t--global--box-shadow--glass--default, none);
+  box-shadow: var(--#{$page}__main-container--BoxShadow);
 
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
     --#{$page}__main-container--AlignSelf: var(--#{$page}__main-container--xs--AlignSelf);
