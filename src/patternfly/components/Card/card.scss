@@ -110,6 +110,13 @@
   // Toggle right
   --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header--m-toggle-right--toggle--MarginInlineStart: var(--pf-t--global--spacer--gap--text-to-element--default);
+
+  // Glass
+  --#{$card}--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
+  --#{$card}--m-glass--BorderWidth: var(--pf-t--global--border--width--glass--default);
+  --#{$card}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
+  --#{$card}--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
+  --#{$card}--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
 }
 
 .#{$card} {
@@ -229,8 +236,9 @@
   }
 
   &.pf-m-secondary {
-    --#{$card}--BorderColor: var(--#{$card}--m-secondary--BorderColor);
-    --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
+    // TODO - let selectable secondary cards have a border
+    // --#{$card}--BorderColor: var(--#{$card}--m-secondary--BorderColor);
+    // --#{$card}--BorderWidth: var(--#{$card}--m-secondary--BorderWidth);
     --#{$card}--BackgroundColor: var(--#{$card}--m-secondary--BackgroundColor);
   }
 
@@ -256,6 +264,16 @@
     & + .#{$card}__footer {
       padding-block-start: var(--#{$card}--c-divider--child--PaddingBlockStart);
     }
+  }
+
+  &.pf-m-glass {
+    --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
+    --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
+    --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
+    --#{$card}--BorderStyle: solid;
+    --#{$card}--BoxShadow: var(--#{$card}--m-glass--BoxShadow);
+
+    backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
   }
 }
 

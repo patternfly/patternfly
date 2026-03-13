@@ -180,16 +180,16 @@
 
   // * Table compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
-  --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$table}__compound-expansion-toggle__button--BackgroundColor: transparent;
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // * Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__compound-expansion-toggle__button--after--BorderRadius: inherit;
   --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
+  --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: 0;
   --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
 
   // * Compound expandable
@@ -266,6 +266,15 @@
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
 
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  &.pf-m-plain {
+    --#{$table}--BackgroundColor: transparent;
+    --#{$table}__expandable-row-content--BackgroundColor: transparent;
+    --#{$table}__expandable-row-content--PaddingInlineStart: 0;
+    --#{$table}__expandable-row-content--PaddingInlineEnd: 0;
+    --#{$table}__control-row--BackgroundColor: transparent;
+  }
+
   &.pf-m-fixed {
     table-layout: fixed;
   }
@@ -322,11 +331,6 @@
       }
       // stylelint-enable
     }
-  }
-
-  // - Table plain
-  &.pf-m-plain {
-    --#{$table}--BackgroundColor: transparent;
   }
 
   // - Table striped

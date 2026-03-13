@@ -969,4 +969,5 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-expanded` | `.pf-v6-c-card` | Modifies the card for the expanded state. |
 | `.pf-m-toggle-right` | `.pf-v6-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |
 | `.pf-m-full-height` | `.pf-v6-c-card` | Modifies the card to full height of its parent. |
+| `.pf-m-glass` | `.pf-v6-c-card` | Applies glass styles when glass theme is enabled. |
 | `.pf-m-no-offset` | `.pf-v6-c-card__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the card title. |
