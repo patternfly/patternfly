@@ -115,6 +115,13 @@
   // As tile
   --#{$card}--m-as-tile--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$card}--m-as-tile--BorderColor: var(--pf-t--global--border--color--control--default);
+
+  // Glass
+  --#{$card}--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
+  --#{$card}--m-glass--BorderWidth: var(--pf-t--global--border--width--glass--default);
+  --#{$card}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
+  --#{$card}--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
+  --#{$card}--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
 }
 
 .#{$card} {
@@ -278,6 +285,16 @@
     & + .#{$card}__footer {
       padding-block-start: var(--#{$card}--c-divider--child--PaddingBlockStart);
     }
+  }
+
+  &.pf-m-glass {
+    --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
+    --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
+    --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
+    --#{$card}--BorderStyle: solid;
+    --#{$card}--BoxShadow: var(--#{$card}--m-glass--BoxShadow);
+
+    backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
   }
 }
 
