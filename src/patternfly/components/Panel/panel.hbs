@@ -1,4 +1,8 @@
-<div class="{{pfv}}panel{{#if panel--modifier}} {{panel--modifier}}{{/if}}"
+<div class="{{pfv}}panel
+  {{setModifiers
+    panel--IsPill="pf-m-pill"
+    panel--modifier=panel--modifier
+  }}"
   {{#if panel--attribute}}
     {{{panel--attribute}}}
   {{/if}}>
