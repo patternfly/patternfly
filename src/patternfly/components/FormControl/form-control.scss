@@ -18,6 +18,14 @@
   --#{$form-control}--after--BorderRadius: var(--#{$form-control}--BorderRadius);
   --#{$form-control}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$form-control}--Width: 100%;
+  --#{$form-control}--TransitionDelay: 0s;
+  --#{$form-control}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$form-control}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
+  --#{$form-control}--TransitionProperty: color, background-color, border-color;
+  --#{$form-control}__control--TransitionDelay: 0s;
+  --#{$form-control}__control--TransitionTimingFunction: auto;
+  --#{$form-control}__control--TransitionDuration: 0s;
+  --#{$form-control}__control--TransitionProperty: none;
 
   // padding
   --#{$form-control}--inset--base: var(--pf-t--global--spacer--control--horizontal--default);
@@ -71,6 +79,7 @@
   // disabled
   --#{$form-control}--m-disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$form-control}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$form-control}--m-disabled--before--BorderColor: transparent;
   --#{$form-control}--m-disabled--after--BorderColor: transparent;
 
   // readonly
@@ -130,6 +139,10 @@
   // Form control icon
   --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
+  --#{$form-control}__icon--TransitionDelay: 0s;
+  --#{$form-control}__icon--TransitionTimingFunction: auto;
+  --#{$form-control}__icon--TransitionDuration: 0s;
+  --#{$form-control}__icon--TransitionProperty: none;
   --#{$form-control}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$form-control}--m-warning__icon--m-status--Color: var(--pf-t--global--icon--color--status--warning--default);
@@ -146,6 +159,10 @@
   --#{$form-control}__toggle-icon--PaddingInlineEnd: 0; // remove in breaking change
   --#{$form-control}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}__toggle-icon--FontSize: var(--pf-t--global--icon--size--font--body--default); 
+  --#{$form-control}__toggle-icon--TransitionDelay: 0s;
+  --#{$form-control}__toggle-icon--TransitionTimingFunction: auto;
+  --#{$form-control}__toggle-icon--TransitionDuration: 0s;
+  --#{$form-control}__toggle-icon--TransitionProperty: none;
   --#{$form-control}--m-disabled__toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
 }
 
@@ -161,6 +178,10 @@
   resize: var(--#{$form-control}--Resize);
   background-color: var(--#{$form-control}--BackgroundColor);
   border-radius: var(--#{$form-control}--BorderRadius);
+  transition-delay: var(--#{$form-control}--TransitionDelay);
+  transition-timing-function: var(--#{$form-control}--TransitionTimingFunction);
+  transition-duration: var(--#{$form-control}--TransitionDuration);
+  transition-property: var(--#{$form-control}--TransitionProperty);
 
   &::before,
   &::after {
@@ -168,6 +189,7 @@
     inset: 0;
     pointer-events: none;
     content: "";
+    transition: inherit;
   }
 
   &::before {
@@ -195,6 +217,10 @@
     border: none;
     border-radius: var(--#{$form-control}--BorderRadius);
     outline-offset: var(--#{$form-control}--OutlineOffset);
+    transition-delay: var(--#{$form-control}__control--TransitionDelay);
+    transition-timing-function: var(--#{$form-control}__control--TransitionTimingFunction);
+    transition-duration: var(--#{$form-control}__control--TransitionDuration);
+    transition-property: var(--#{$form-control}__control--TransitionProperty);
   }
 
   > ::placeholder {
@@ -286,8 +312,8 @@
     --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}--m-placeholder--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
-    --#{$form-control}--before--BorderStyle: none;
-    --#{$form-control}--after--BorderStyle: none;
+    --#{$form-control}--before--BorderColor: var(--#{$form-control}--m-disabled--before--BorderColor);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-disabled--after--BorderColor);
 
     cursor: not-allowed;
   }
@@ -441,6 +467,10 @@
 .#{$form-control}__icon {
   font-size: var(--#{$form-control}__icon--FontSize);
   color: var(--#{$form-control}__icon--Color);
+  transition-delay: var(--#{$form-control}__icon--TransitionDelay);
+  transition-timing-function: var(--#{$form-control}__icon--TransitionTimingFunction);
+  transition-duration: var(--#{$form-control}__icon--TransitionDuration);
+  transition-property: var(--#{$form-control}__icon--TransitionProperty);
 
   &.pf-m-status {
     --#{$form-control}__icon--Color: var(--#{$form-control}__icon--m-status--Color);
@@ -456,6 +486,10 @@
   font-size: var(--#{$form-control}__toggle-icon--FontSize);
   color: var(--#{$form-control}__toggle-icon--Color);
   pointer-events: none;
+  transition-delay: var(--#{$form-control}__toggle-icon--TransitionDelay);
+  transition-timing-function: var(--#{$form-control}__toggle-icon--TransitionTimingFunction);
+  transition-duration: var(--#{$form-control}__toggle-icon--TransitionDuration);
+  transition-property: var(--#{$form-control}__toggle-icon--TransitionProperty);
 }
 
 .#{$form-control}__utilities {
@@ -467,4 +501,5 @@
   padding-block-start: var(--#{$form-control}__utilities--PaddingBlockStart);
   padding-inline-end: var(--#{$form-control}__utilities--PaddingInlineEnd);
   pointer-events: none;
+  transition: inherit;
 }

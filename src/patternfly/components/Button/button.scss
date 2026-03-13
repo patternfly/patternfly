@@ -15,6 +15,7 @@
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$button}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$button}--BackgroundColor: transparent;
+  --#{$button}--BackgroundSurface: radial-gradient(circle, transparent 1%, color-mix(in srgb, currentcolor 15%, transparent) 2%) center/15000% 15000%;
   --#{$button}--BorderColor: transparent;
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--action--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -331,6 +332,7 @@
   // Disabled
   --#{$button}--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$button}--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --#{$button}--disabled--BackgroundSurface: var(--#{$button}--BackgroundSurface);
   --#{$button}--disabled--TextDecorationColor: currentcolor;
   --#{$button}--disabled--BorderColor: transparent;
   --#{$button}--disabled__icon--Color: var(--pf-t--global--icon--color--on-disabled);
@@ -454,7 +456,7 @@
   -webkit-user-select: none;
   user-select: none;
   // stylelint-enable property-no-vendor-prefix
-  background: var(--#{$button}--BackgroundColor) radial-gradient(circle, transparent 1%, color-mix(in srgb, currentcolor 15%, transparent) 2%) center/15000% 15000%;
+  background: var(--#{$button}--BackgroundColor) var(--#{$button}--BackgroundSurface);
   border: 0;
   border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
@@ -586,6 +588,7 @@
       --#{$button}--hover--BackgroundColor: transparent;
       --#{$button}--m-clicked--BackgroundColor: transparent;
       --#{$button}--disabled--BackgroundColor: transparent;
+      --#{$button}--disabled--BackgroundSurface: none;
       --#{$button}--disabled--Color: var(--#{$button}--m-link--m-inline--disabled--Color);
       --#{$button}--disabled__icon--Color: var(--#{$button}--m-link--m-inline--disabled__icon--Color);
       --#{$button}--m-link--Color: var(--#{$button}--m-link--m-inline--Color);
@@ -747,6 +750,7 @@
     --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
     --#{$button}--disabled__icon--Color: var(--#{$button}--m-plain--disabled__icon--Color);
     --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
+    --#{$button}--disabled--BackgroundSurface: none;
     --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-plain--m-small--PaddingInlineEnd);
     --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-plain--m-small--PaddingInlineStart);
 
@@ -940,7 +944,7 @@
   &.pf-m-aria-disabled {
     color: var(--#{$button}--disabled--Color);
     text-decoration-color: var(--#{$button}--disabled--TextDecorationColor);
-    background: var(--#{$button}--disabled--BackgroundColor);
+    background: var(--#{$button}--disabled--BackgroundColor) var(--#{$button}--disabled--BackgroundSurface, none);
 
     &::after {
       border-color: transparent;
