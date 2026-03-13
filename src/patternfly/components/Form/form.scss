@@ -129,7 +129,9 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // Field group toggle
   --#{$form}__field-group--GridTemplateColumns--toggle: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) + var(--pf-t--global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
   --#{$form}__field-group-toggle--PaddingBlockStart: var(--#{$form}__field-group-header--PaddingBlockStart);
+  --#{$form}__field-group-toggle--PaddingBlockEnd: 0;
   --#{$form}__field-group-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  --#{$form}__field-group-toggle--MinBlockSize: calc(var(--#{$form}__field-group-toggle--PaddingBlockStart) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)) + var(--#{$form}__field-group-header--PaddingBlockEnd));
   --#{$form}__field-group__field-group__field-group-toggle--PaddingBlockStart: var(--pf-t--global--spacer--lg); // remove in breaking change
   --#{$form}__field-group-header-toggle--BorderWidth--base: var(--pf-t--global--border--width--divider--default);
   --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderBlockStartWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
@@ -400,6 +402,14 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     .#{$form}__field-group-toggle ~ .#{$form}__field-group-body {
       --#{$form}__field-group-body--GridColumn: var(--#{$form}__field-group__field-group__field-group-toggle--field-group-body--GridColumn);
     }
+
+    // Nested expandable groups without a header keep body content on row 1,
+    // so add top padding to preserve the expected gap from the group border.
+    // Match at the group level so this still applies when accessibility content
+    // exists between toggle and body.
+    &:has(> .#{$form}__field-group-toggle):not(:has(> .#{$form}__field-group-header)) > .#{$form}__field-group-body {
+      --#{$form}__field-group-body--PaddingBlockStart: var(--#{$form}__field-group-header--PaddingBlockStart);
+    }
   }
 
   &.pf-m-expanded {
@@ -423,8 +433,15 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__field-group-toggle {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+  min-block-size: var(--#{$form}__field-group-toggle--MinBlockSize);
   padding-block-start: var(--#{$form}__field-group-toggle--PaddingBlockStart);
+  padding-block-end: var(--#{$form}__field-group-toggle--PaddingBlockEnd);
   padding-inline-end: var(--#{$form}__field-group-toggle--PaddingInlineEnd);
+
+  // Without a header row, preserve vertical space for the toggle by mirroring header block-end padding.
+  &:not(:has(+ .#{$form}__field-group-header)) {
+    --#{$form}__field-group-toggle--PaddingBlockEnd: var(--#{$form}__field-group-header--PaddingBlockEnd);
+  }
 
   + .#{$form}__field-group-header {
     --#{$form}__field-group-header--GridColumn: var(--#{$form}__field-group-toggle--field-group-header--GridColumn);
@@ -504,8 +521,10 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   > .#{$form}__field-group {
     &:first-child {
-      --#{$form}__field-group-toggle--PaddingBlockStart: 0;
-      --#{$form}__field-group-header--PaddingBlockStart: 0;
+      &:has(> .#{$form}__field-group-header) {
+        --#{$form}__field-group-header--PaddingBlockStart: 0;
+        --#{$form}__field-group-toggle--PaddingBlockStart: 0;
+      }
     }
 
     &:last-child {
@@ -513,4 +532,3 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     }
   }
 }
-
