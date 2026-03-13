@@ -225,7 +225,9 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
       --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
   
-      backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
+      > .#{$drawer}__main > .#{$drawer}__panel {
+        backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
+      }
     }
   }
 

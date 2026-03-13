@@ -147,6 +147,17 @@ cssPrefix: pf-v6-c-panel
 {{/panel}}
 ```
 
+### Pill
+```hbs
+{{#> panel panel--IsPill=true}}
+  {{#> panel-main}}
+    {{#> panel-main-body}}
+      Main content
+    {{/panel-main-body}}
+  {{/panel-main}}
+{{/panel}}
+```
+
 ## Documentation
 ### Usage
 | Class | Applied to | Outcome |
@@ -161,3 +172,4 @@ cssPrefix: pf-v6-c-panel
 | `.pf-m-raised` | `.pf-v6-c-panel` | Modifies the panel for raised styles. |
 | `.pf-m-scrollable` | `.pf-v6-c-panel` | Modifies the panel for scrollable styles. |
 | `.pf-m-secondary` | `.pf-v6-c-panel` | Modifies the panel for secondary styles. |
+| `.pf-m-pill` | `.pf-v6-c-panel` | Modifies the panel for pill border radius. |
