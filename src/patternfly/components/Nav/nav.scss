@@ -198,17 +198,23 @@
     --#{$nav}__link--hover--BackgroundColor: var(--#{$nav}--m-docked__link--hover--BackgroundColor);
     --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
 
-    width: fit-content;
+    width: 100%;
+  
+    @media (min-width: #{$pf-v6-global--breakpoint--dock--expand}) {
+      width: fit-content;
 
-    .#{$nav}__link-icon {
-      position: relative;
-      align-self: center;
-      min-width: 1lh;
-      text-align: center;
+      .#{$nav}__link-text {
+        display: none;
+      }
     }
 
-    .#{$nav}__link-text {
-      display: none;
+    @at-root .#{$page}__dock.pf-m-text-expanded &,
+    &.pf-m-text-expanded {
+      width: 100%;
+
+      .#{$nav}__link-text {
+        display: revert;
+      }
     }
   }
 
@@ -393,7 +399,9 @@
 
 // - Nav link icon
 .#{$nav}__link-icon {
+  min-width: 1lh;
   color: var(--#{$nav}__link-icon--Color);
+  text-align: center;
 }
 
 // - Nav link text
