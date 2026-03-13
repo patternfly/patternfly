@@ -26,12 +26,12 @@
   --#{$compass}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__panel--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
-  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
-  --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--alt);
-  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
-  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
-  --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
+  --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--glass--default, var(--pf-t--global--border--radius--medium));
+  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--glass--default, 0);
+  --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
