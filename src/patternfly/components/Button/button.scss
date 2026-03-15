@@ -380,6 +380,8 @@
   --#{$button}__progress--InsetBlockStart: 50%;
   --#{$button}__progress--InsetInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
+  --#{$button}--m-progress--TransitionProperty: padding, color, background, border-color;
+  --#{$button}--m-progress--TransitionDuration: 250ms;
   --#{$button}--m-progress--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
@@ -961,6 +963,8 @@
   &.pf-m-progress {
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-progress--PaddingInlineEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-progress--PaddingInlineStart);
+    --#{$button}--TransitionProperty: var(--#{$button}--m-progress--TransitionProperty);
+    --#{$button}--TransitionDuration: var(--#{$button}--m-progress--TransitionDuration);  
   }
 
   &.pf-m-in-progress {
@@ -1057,6 +1061,16 @@
 
   .#{$spinner} {
     --#{$spinner}--Color: currentcolor;
+  }
+}
+
+.#{$button}.pf-m-block {
+  --#{$button}--AlignItems: center;
+
+  .#{$button}__progress {
+    position: static;
+    inset: auto;
+    transform: none;
   }
 }
 
