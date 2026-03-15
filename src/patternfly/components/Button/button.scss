@@ -228,7 +228,7 @@
 
   // Read
   --#{$button}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$button}--m-read--hover--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-read--hover--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$button}--m-read--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--default);
@@ -687,6 +687,12 @@
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-stateful--PaddingInlineEnd);
     --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-stateful--m-small--PaddingInlineEnd);
     --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-stateful--m-small--PaddingInlineStart);
+
+    &.pf-m-read,
+    &.pf-m-unread,
+    &.pf-m-attention {
+      --#{$button}--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
+    }
   }
 
   // Read
@@ -701,7 +707,7 @@
 
   // Unread
   &.pf-m-unread {
-    --#{$button}--Color: var(--#{$button}--m-unread--Color);
+   --#{$button}--Color: var(--#{$button}--m-unread--Color);
     --#{$button}--BackgroundColor: var(--#{$button}--m-unread--BackgroundColor);
     --#{$button}__icon--Color: var(--#{$button}--m-unread__icon--Color);
     --#{$button}--hover--Color: var(--#{$button}--m-unread--hover--Color);
