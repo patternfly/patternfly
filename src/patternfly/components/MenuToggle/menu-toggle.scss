@@ -11,7 +11,7 @@
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu-toggle}--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--control--default);
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
@@ -61,7 +61,7 @@
   --#{$menu-toggle}--m-primary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$menu-toggle}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-primary--BorderColor: transparent;
   --#{$menu-toggle}--m-primary--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
   --#{$menu-toggle}--m-primary--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
@@ -81,7 +81,7 @@
   --#{$menu-toggle}--m-secondary--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
-  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-secondary--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
@@ -104,7 +104,7 @@
   --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$menu-toggle}--m-split-button--child--BorderInlineStartWidth: var(--pf-t--global--border--width--action--default);
   --#{$menu-toggle}--m-split-button--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--m-split-button--child--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-split-button--child--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-split-button--child--disabled--BorderInlineStartColor: var(--pf-t--global--icon--color--on-disabled);
   --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineStart--offset: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineEnd--offset: var(--pf-t--global--spacer--control--horizontal--default);
@@ -142,7 +142,7 @@
   --#{$menu-toggle}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$menu-toggle}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
-  --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--control--default);
   --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$menu-toggle}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
