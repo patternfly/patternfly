@@ -488,6 +488,81 @@ import './Wizard.css'
 {{> wizard--status wizard--status--IsExpanded=true  wizard--status--id="warning-on-step-nav-expanded" wizard--status--IsWarning=true}}
 ```
 
+### Plain header
+```hbs isFullscreen
+{{#> wizard wizard--id="wizard-plain-header" wizard--modifier="pf-m-plain"}}
+  {{#> wizard-header}}
+    {{> wizard-close}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+        {{#> wizard-toggle-list-item}}
+          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+          Configuration
+          {{> wizard-toggle-separator}}
+        {{/wizard-toggle-list-item}}
+        {{#> wizard-toggle-list-item}}
+          Substep B
+        {{/wizard-toggle-list-item}}
+      {{/wizard-toggle-list}}
+      {{> wizard-toggle-icon}}
+    {{/wizard-toggle}}
+    {{#> wizard-outer-wrap}}
+      {{#> wizard-inner-wrap}}
+        {{#> wizard-nav}}
+          {{#> wizard-nav-list}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Information
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true" wizard-nav-item--IsExpanded="true"}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
+                Configuration
+              {{/wizard-nav-link}}
+              {{#> wizard-nav-list}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link}}
+                    Substep A
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
+                    Substep B
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+                {{#> wizard-nav-item newcontext}}
+                  {{#> wizard-nav-link}}
+                    Substep C
+                  {{/wizard-nav-link}}
+                {{/wizard-nav-item}}
+              {{/wizard-nav-list}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link}}
+                Additional
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+            {{#> wizard-nav-item}}
+              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
+                Review
+              {{/wizard-nav-link}}
+            {{/wizard-nav-item}}
+          {{/wizard-nav-list}}
+        {{/wizard-nav}}
+      {{#> wizard-main}}
+        {{> __wizard-form}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+    {{> wizard-footer}}
+  {{/wizard-outer-wrap}}
+{{/wizard}}
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -537,6 +612,8 @@ import './Wizard.css'
 | `.pf-v6-c-wizard__footer-cancel` | `<div>` | Initiates the cancel button. **Required** |
 | `.pf-m-expanded` | `.pf-v6-c-wizard__toggle`, `.pf-v6-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-finished` | `.pf-v6-c-wizard` | Modifies the wizard for the finished state. |
+| `.pf-m-plain` | `.pf-v6-c-wizard` | Modifies the wizard to have a transparent background. |
+| `.pf-m-no-plain` | `.pf-v6-c-wizard` | Prevents the wizard from automatically applying plain styling when glass theme is enabled. |
 | `.pf-m-expandable` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expandable state. |
 | `.pf-m-expanded` | `.pf-v6-c-wizard__nav-item` | Modifies a nav item for the expanded state. |
 | `.pf-m-current` | `.pf-v6-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |

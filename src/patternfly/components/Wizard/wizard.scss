@@ -7,6 +7,7 @@
 
   // Header
   --#{$wizard}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$wizard}__header--m-plain--BackgroundColor: transparent;
   --#{$wizard}__header--ZIndex: auto;
   --#{$wizard}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -57,7 +58,7 @@
   --#{$wizard}__nav-link-main--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-main--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-main--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$wizard}__nav-link-main--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$wizard}__nav-link--hover__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
@@ -99,6 +100,7 @@
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}__toggle--m-plain--BackgroundColor: transparent;
   --#{$wizard}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -138,6 +140,7 @@
   // Nav
   --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}__nav--m-plain--BackgroundColor: transparent;
   --#{$wizard}__nav--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$wizard}__nav--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
@@ -165,6 +168,7 @@
 
   // Outer wrap
   --#{$wizard}__outer-wrap--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}__outer-wrap--m-plain--BackgroundColor: transparent;
   --#{$wizard}__outer-wrap--lg--PaddingInlineStart: var(--#{$wizard}__nav--Width);
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
@@ -179,6 +183,7 @@
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}__footer--m-plain--BackgroundColor: transparent;
   --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -186,6 +191,7 @@
   --#{$wizard}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__footer--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+
 }
 
 .#{$wizard} {
@@ -214,6 +220,15 @@
     .#{$wizard}__toggle {
       display: none;
     }
+  }
+
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  &.pf-m-plain {
+    --#{$wizard}__header--BackgroundColor: var(--#{$wizard}__header--m-plain--BackgroundColor);
+    --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}__toggle--m-plain--BackgroundColor);
+    --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}__nav--m-plain--BackgroundColor);
+    --#{$wizard}__outer-wrap--BackgroundColor: var(--#{$wizard}__outer-wrap--m-plain--BackgroundColor);
+    --#{$wizard}__footer--BackgroundColor: var(--#{$wizard}__footer--m-plain--BackgroundColor);
   }
 }
 
