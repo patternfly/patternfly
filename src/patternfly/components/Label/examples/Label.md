@@ -109,13 +109,13 @@ Use a label group to display multiple labels at once.
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -147,13 +147,13 @@ Use a label group to display multiple labels at once.
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--color="blue" label--IsOverflow=true label-text--value="3 more"}}
@@ -169,19 +169,19 @@ Use a label group to display multiple labels at once.
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="info-circle"}}
+        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="purple" label-text--value="Label 5" label-icon--value="info-circle"}}
+        {{> label label--color="purple" label-text--value="Label 5" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--IsOverflow=true label-text--value="3 less"}}
@@ -199,13 +199,13 @@ The contents of a label group can be modified by removing labels or adding new o
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--IsAdd=true label-text--value="Add label"}}
@@ -224,13 +224,13 @@ The contents of a label group can be modified by removing labels or adding new o
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -246,22 +246,22 @@ The contents of a label group can be modified by removing labels or adding new o
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="info-circle"}}
+        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="orange" label-text--value="Label 5" label-icon--value="info-circle"}}
+        {{> label label--color="orange" label-text--value="Label 5" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="red" label-text--value="Label 6" label-icon--value="info-circle"}}
+        {{> label label--color="red" label-text--value="Label 6" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -275,13 +275,13 @@ The contents of a label group can be modified by removing labels or adding new o
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -294,13 +294,13 @@ The contents of a label group can be modified by removing labels or adding new o
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--IsOverflow=true label-text--value="3 more"}}
@@ -316,19 +316,19 @@ The contents of a label group can be modified by removing labels or adding new o
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="info-circle"}}
+        {{> label label--color="teal" label-text--value="Label 4" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="purple" label-text--value="Label 5" label-icon--value="info-circle"}}
+        {{> label label--color="purple" label-text--value="Label 5" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--IsOverflow=true label-text--value="3 less"}}
@@ -347,13 +347,13 @@ The contents of a label group can be modified by removing labels or adding new o
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -504,21 +504,21 @@ In addition to the JavaScript management of [editable labels](/components/label#
         {{> label
             label--IsCompact=true
             label-text--value="Label 1"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--color="blue"
             label--IsCompact=true
             label-text--value="Label 2"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--color="green"
             label--IsCompact=true
             label-text--value="Label 3"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -531,21 +531,21 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--IsCompact=true label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label--IsCompact=true label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--color="blue"
             label--IsCompact=true
             label-text--value="Label 2"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--color="green"
             label--IsCompact=true
             label-text--value="Label 3"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label label--IsOverflow=true label--IsCompact=true label-text--value="3 more"}}
@@ -561,21 +561,21 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--IsCompact=true label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label--IsCompact=true label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--color="blue"
             label--IsCompact=true
             label-text--value="Label 2"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{> label
             label--color="green"
             label--IsCompact=true
             label-text--value="Label 3"
-            label-icon--value="info-circle"}}
+            label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -599,13 +599,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label--color="blue" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label--color="blue" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 2" label--color="green" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 2" label--color="green" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 3 has a lot of text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 3 has a lot of text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -617,13 +617,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
+        {{> label label-text--value="Label 1" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--color="green" label-text--value="Label 3 has a lot of text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula" label-icon--value="info-circle"}}
+        {{> label label--color="green" label-text--value="Label 3 has a lot of text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula" label-icon--value="rh-ui-information-fill"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}

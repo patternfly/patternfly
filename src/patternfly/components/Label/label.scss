@@ -10,8 +10,8 @@
   --#{$label}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$label}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$label}--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$label}--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$label}--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
+  --#{$label}--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$label}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
 
   // Gray (default)
   --#{$label}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
@@ -204,17 +204,17 @@
   --#{$label}--m-compact--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$label}--m-compact--PaddingBlockEnd: 0;
   --#{$label}--m-compact--PaddingInlineStart: var(--pf-t--global--spacer--sm);
-  --#{$label}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$label}--m-compact--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$label}--m-compact--m-editable--TextUnderlineOffset: #{pf-size-prem(1px)};
   --#{$label}--m-compact--MinWidth: calc((var(--#{$label}--m-compact--FontSize) * var(--pf-t--global--font--line-height--body)) + (var(--#{$label}--m-compact--PaddingBlockStart) + var(--#{$label}--m-compact--PaddingBlockEnd)));
 
   // Content
   --#{$label}__content--MaxWidth: 100%;
-  --#{$label}__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
+  --#{$label}__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$label}__content--Cursor: initial;
 
   // Icon
-  --#{$label}__icon--FontSize: var(--pf-t--global--icon--size--font--body--sm);
+  --#{$label}__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
 
   // Text
   --#{$label}__text--MaxWidth: 100%;
@@ -223,7 +223,7 @@
   --#{$label}__actions--MarginInlineEnd: 0; // TODO - remove in breaking change
 
   // Actions button (close)
-  --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
+  --#{$label}__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$label}__actions--c-button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$label}__actions--c-button--MarginBlockStart: 0; // TODO - remove in breaking change
   --#{$label}__actions--c-button--MarginBlockEnd: 0; // TODO - remove in breaking change
