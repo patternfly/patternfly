@@ -7,7 +7,7 @@
 
   // Header
   --#{$wizard}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$wizard}__header--m-plain--BackgroundColor: transparent;
+  --#{$wizard}--m-plain__header--BackgroundColor: transparent;
   --#{$wizard}__header--ZIndex: auto;
   --#{$wizard}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -100,7 +100,7 @@
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__toggle--m-plain--BackgroundColor: transparent;
+  --#{$wizard}--m-plain__toggle--BackgroundColor: transparent;
   --#{$wizard}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -139,17 +139,19 @@
 
   // Nav
   --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__nav--m-plain--BackgroundColor: transparent;
+  --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$wizard}--m-plain__nav--BackgroundColor: transparent;
   --#{$wizard}__nav--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$wizard}__nav--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__nav--Width: 100%;
+  --#{$wizard}__nav--lg--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__nav--lg--Width: #{pf-size-prem(250px)};
   --#{$wizard}__nav--lg--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__nav--lg--BorderInlineEndColor: var(--pf-t--global--border--color--default);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
+    --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}__nav--lg--BackgroundColor);
     --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
     --#{$wizard}__nav--BoxShadow: none;
     --#{$wizard}__nav--BorderBlockEndWidth: 0;
@@ -168,7 +170,7 @@
 
   // Outer wrap
   --#{$wizard}__outer-wrap--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__outer-wrap--m-plain--BackgroundColor: transparent;
+  --#{$wizard}--m-plain__outer-wrap--BackgroundColor: transparent;
   --#{$wizard}__outer-wrap--lg--PaddingInlineStart: var(--#{$wizard}__nav--Width);
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
@@ -183,7 +185,7 @@
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$wizard}__footer--m-plain--BackgroundColor: transparent;
+  --#{$wizard}--m-plain__footer--BackgroundColor: transparent;
   --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -224,11 +226,14 @@
 
   @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
   &.pf-m-plain {
-    --#{$wizard}__header--BackgroundColor: var(--#{$wizard}__header--m-plain--BackgroundColor);
-    --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}__toggle--m-plain--BackgroundColor);
-    --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}__nav--m-plain--BackgroundColor);
-    --#{$wizard}__outer-wrap--BackgroundColor: var(--#{$wizard}__outer-wrap--m-plain--BackgroundColor);
-    --#{$wizard}__footer--BackgroundColor: var(--#{$wizard}__footer--m-plain--BackgroundColor);
+    --#{$wizard}__header--BackgroundColor: var(--#{$wizard}--m-plain__header--BackgroundColor);
+    --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}--m-plain__toggle--BackgroundColor);
+    --#{$wizard}__outer-wrap--BackgroundColor: var(--#{$wizard}--m-plain__outer-wrap--BackgroundColor);
+    --#{$wizard}__footer--BackgroundColor: var(--#{$wizard}--m-plain__footer--BackgroundColor);
+    
+    @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
+      --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}--m-plain__nav--BackgroundColor);   
+    }
   }
 }
 
