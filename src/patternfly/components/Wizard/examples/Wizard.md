@@ -488,7 +488,7 @@ import './Wizard.css'
 {{> wizard--status wizard--status--IsExpanded=true  wizard--status--id="warning-on-step-nav-expanded" wizard--status--IsWarning=true}}
 ```
 
-### Plain header
+### Plain
 ```hbs isFullscreen
 {{#> wizard wizard--id="wizard-plain-header" wizard--modifier="pf-m-plain"}}
   {{#> wizard-header}}
