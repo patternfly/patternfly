@@ -176,9 +176,7 @@
   }
 
   &.pf-m-expanded {
-    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__item--m-expanded__toggle--BackgroundColor);
     --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}__toggle--m-expanded--PaddingBlockEnd);
-    --#{$accordion}__toggle--BorderWidth: var(--#{$accordion}__toggle--m-expanded--BorderWidth);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
     --#{$accordion}__toggle-icon--Rotate: var(--#{$accordion}__toggle--m-expanded__toggle-icon--Rotate);
     --#{$accordion}__item--before--TransitionDuration--slide: var(--#{$accordion}__item--before--TransitionDuration--expand--slide);
@@ -227,9 +225,14 @@
     border-radius: inherit;
   }
 
-  :where(.#{$accordion}__item:not(.pf-m-expanded)) &:is(:hover, :focus) {
+  &:is(:hover, :focus) {
     --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__toggle--hover--BackgroundColor);
     --#{$accordion}__toggle--BorderWidth: var(--#{$accordion}__toggle--hover--BorderWidth);
+  }
+
+  .#{$accordion}__item.pf-m-expanded & {
+    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__item--m-expanded__toggle--BackgroundColor);
+    --#{$accordion}__toggle--BorderWidth: var(--#{$accordion}__toggle--m-expanded--BorderWidth);
   }
 }
 
