@@ -2,10 +2,11 @@
 
 @include pf-root($accordion) {
   // accordion
-  --#{$accordion}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$accordion}--BackgroundColor: transparent;
   --#{$accordion}--RowGap: var(--pf-t--global--spacer--xs); // No applicable spacer
 
   // accordion item
+  --#{$accordion}__item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$accordion}__item--BorderRadius: var(--pf-t--global--border--radius--200);
   --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked); // TODO - remove "m-expanded" in breaking change
 
@@ -17,7 +18,7 @@
   --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$accordion}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$accordion}__toggle--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$accordion}__item--m-expanded__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
@@ -45,10 +46,10 @@
 
   // accordion expandable content
   --#{$accordion}__expandable-content--MarginInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$accordion}__expandable-content--MarginBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__expandable-content--MarginBlockStart: 0;
   --#{$accordion}__expandable-content--MarginBlockEnd: 0;
   --#{$accordion}__expandable-content--MarginInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$accordion}__expandable-content--BackgroundColor: var(--#{$accordion}--BackgroundColor);
+  --#{$accordion}__expandable-content--BackgroundColor: transparent;
   --#{$accordion}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__expandable-content--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__expandable-content--FontSize: var(--pf-t--global--font--size--body--default);
@@ -58,6 +59,7 @@
   --#{$accordion}__expandable-content--Visibility: hidden;
   --#{$accordion}__item--m-expanded__expandable-content--Visibility: visible;
   --#{$accordion}__item--m-expanded__expandable-content--MaxHeight: 99999px;
+  --#{$accordion}__item--m-expanded__expandable-content--MarginBlockStart: var(--pf-t--global--spacer--sm);
   --#{$accordion}__item--m-expanded__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--lg);
 
   // expand animation
@@ -168,16 +170,13 @@
     inset: 0;
     pointer-events: none;
     content: "";
+    background: var(--#{$accordion}__item--BackgroundColor);
     border: var(--#{$accordion}__item--BorderWidth) solid var(--#{$accordion}__item--BorderColor);
     border-radius: var(--#{$accordion}__item--BorderRadius);
-    opacity: var(--#{$accordion}__item--before--Opacity);
-    transition-timing-function: var(--#{$accordion}__item--before--TransitionTimingFunction);
-    transition-duration: var(--#{$accordion}__item--before--TransitionDuration--fade);
-    transition-property: opacity;
   }
 
   &.pf-m-expanded {
-    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__toggle--m-expanded--BackgroundColor);
+    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__item--m-expanded__toggle--BackgroundColor);
     --#{$accordion}__toggle--PaddingBlockEnd: var(--#{$accordion}__toggle--m-expanded--PaddingBlockEnd);
     --#{$accordion}__toggle--BorderWidth: var(--#{$accordion}__toggle--m-expanded--BorderWidth);
     --#{$accordion}__toggle-text--FontWeight: var(--#{$accordion}__toggle--m-expanded__toggle-text--FontWeight);
@@ -187,6 +186,7 @@
     --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
     --#{$accordion}__item--before--TranslateY: var(--#{$accordion}__item--m-expanded--before--TranslateY);
     --#{$accordion}__item--BorderWidth: var(--#{$accordion}__item--m-expanded--BorderWidth);
+    --#{$accordion}__expandable-content--MarginBlockStart: var(--#{$accordion}__item--m-expanded__expandable-content--MarginBlockStart);
     --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
     --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
     --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
@@ -249,11 +249,6 @@
 }
 
 .#{$accordion}__expandable-content:where([hidden]) {
-  --#{$accordion}__expandable-content--MarginBlockStart: 0;
-  --#{$accordion}__expandable-content--MarginBlockEnd: 0;
-  --#{$accordion}__expandable-content--MarginInlineStart: 0;
-  --#{$accordion}__expandable-content--MarginInlineEnd: 0;
-
   display: revert;
 }
 
@@ -271,7 +266,7 @@
   transition-delay: 0s, 0s, var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
   transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
   transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), 0s, 0s, 0s;
-  transition-property: opacity, translate, visibility, max-height, margin-block-end;
+  transition-property: opacity, translate, visibility, max-height, margin;
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
