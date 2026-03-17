@@ -30,7 +30,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Dock main
   --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$page}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
-  --#{$page}__dock-main--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$page}__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
+  --#{$page}__dock-main--xl--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
   --#{$page}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
   --#{$page}__dock-main--BorderInlineEndColor: transparent;
@@ -101,6 +102,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--BorderInlineEndWidth: 0;
     --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--xl--BackgroundColor);
     --#{$page}__sidebar--BackdropFilter: var(--#{$page}__sidebar--xl--BackdropFilter);
+    --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--xl--BoxShadow);
   }
 
   // Container for the main content area (grid area)
