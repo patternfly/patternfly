@@ -2,11 +2,10 @@
 
 @include pf-root($accordion) {
   // accordion
-  --#{$accordion}--BackgroundColor: transparent;
+  --#{$accordion}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$accordion}--RowGap: var(--pf-t--global--spacer--xs); // No applicable spacer
 
   // accordion item
-  --#{$accordion}__item--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$accordion}__item--BorderRadius: var(--pf-t--global--border--radius--200);
   --#{$accordion}__item--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked); // TODO - remove "m-expanded" in breaking change
 
@@ -170,7 +169,6 @@
     inset: 0;
     pointer-events: none;
     content: "";
-    background: var(--#{$accordion}__item--BackgroundColor);
     border: var(--#{$accordion}__item--BorderWidth) solid var(--#{$accordion}__item--BorderColor);
     border-radius: var(--#{$accordion}__item--BorderRadius);
   }
