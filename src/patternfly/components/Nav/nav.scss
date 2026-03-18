@@ -200,7 +200,7 @@
 
     width: 100%;
   
-    @media (min-width: #{$pf-v6-global--breakpoint--dock--expand}) {
+    @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
       width: fit-content;
 
       .#{$nav}__link-text {

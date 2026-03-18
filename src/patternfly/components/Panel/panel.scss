@@ -58,6 +58,14 @@
   --#{$panel}--m-scrollable__footer--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$panel}--m-scrollable__footer--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$panel}--m-scrollable__footer--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
+
+  // glass
+  --#{$panel}--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
+  --#{$panel}--m-glass--before--BorderWidth: var(--pf-t--global--border--width--glass--default);
+  --#{$panel}--m-glass--before--BorderColor: var(--pf-t--global--border--color--glass--default);
+  --#{$panel}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
+  --#{$panel}--m-glass--BorderRadius: var(--pf-t--global--border--radius--glass--default);
+  --#{$panel}--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
 }
 
 .#{$panel} {
@@ -102,6 +110,16 @@
     --#{$panel}__footer--PaddingBlockEnd: var(--#{$panel}--m-scrollable__footer--PaddingBlockEnd);
     --#{$panel}__footer--BorderColor: var(--#{$panel}--m-scrollable__footer--BorderColor);
     --#{$panel}__footer--BorderWidth: var(--#{$panel}--m-scrollable__footer--BorderWidth);
+  }
+
+  &.pf-m-glass {
+    --#{$panel}--BackgroundColor: var(--#{$panel}--m-glass--BackgroundColor);
+    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-glass--before--BorderWidth);
+    --#{$panel}--before--BorderColor: var(--#{$panel}--m-glass--before--BorderColor);
+    --#{$panel}--BoxShadow: var(--#{$panel}--m-glass--BoxShadow);
+    --#{$panel}--BorderRadius: var(--#{$panel}--m-glass--BorderRadius);
+
+    backdrop-filter: var(--#{$panel}--m-glass--BackdropFilter);
   }
 }
 

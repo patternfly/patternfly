@@ -57,45 +57,33 @@ This demo populates the main Compass section with a dashboard, which is often us
         {{#> grid grid--modifier="pf-m-gutter" grid--id="compass-dashboard-grid"}}
           {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:3"'}}
             {{#> l-flex l-flex--modifier="pf-m-column"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-status card--IsPlain=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}} <!-- inventory -->
-          {{/compass-panel}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-line-chart card--IsPlain=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
-          {{/compass-panel}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-metrics card--IsPlain=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
-          {{/compass-panel}}
+              {{> card-template-status card--IsGlass=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}}
+              {{> card-template-line-chart card--IsGlass=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
+              {{> card-template-metrics card--IsGlass=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
             {{/l-flex}}
           {{/grid-item}}
           {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:2"'}}
             {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md pf-m-column-on-lg"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-                {{> card-template-details card--IsPlain=true card-template-details--id=(concat grid--id '-details-card-1')}}
-          {{/compass-panel}}
+                {{> card-template-details card--IsGlass=true card-template-details--id=(concat grid--id '-details-card-1')}}
               {{/l-flex-item}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-                {{> card-template-data-list card--IsPlain=true data-list--IsPlain=true card-template-data-list--id=(concat grid--id '-data-list-card-1')}}
-          {{/compass-panel}}
+                {{> card-template-data-list card--IsGlass=true data-list--IsPlain=true card-template-data-list--id=(concat grid--id '-data-list-card-1')}}
               {{/l-flex-item}}
             {{/l-flex}}
           {{/grid-item}}
           {{#> grid-item grid-item--modifier="pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:4"'}}
             {{#> l-flex l-flex--modifier="pf-m-column"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-events card--IsPlain=true card-template-events--id=(concat grid--id '-events-card-1')}}
-          {{/compass-panel}}
+              {{> card-template-events card--IsGlass=true card-template-events--id=(concat grid--id '-events-card-1')}}
             {{/l-flex}}
           {{/grid-item}}
         {{/grid}}
       {{/compass-content}}
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
-          {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}
+          {{#> panel panel--HasNoBorder=true panel--IsPill=true}}
             chatbot message bar
-          {{/compass-panel}}
+          {{/panel}}
         {{/compass-message-bar}}
       {{/compass-main-footer}}
     {{/compass-main}}
@@ -235,9 +223,9 @@ This demo showcases how you can position a side-panel drawer on top of the other
         {{/compass-panel}}
       {{/compass-main-header}}
       {{#> compass-content}}
-        {{#> compass-panel}}
+        {{#> panel panel--IsGlass=true}}
           [so much room for activities]
-        {{/compass-panel}}
+        {{/panel}}
       {{/compass-content}}
     {{/compass-main}}
   {{/compass}}

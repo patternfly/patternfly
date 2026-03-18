@@ -194,7 +194,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       height: var(--#{$masthead}--m-docked--c-toolbar--Height);
     }
 
-    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+    @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
       .#{$masthead}__main {
         align-items: center;
       }

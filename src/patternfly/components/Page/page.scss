@@ -250,7 +250,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-rows: max-content 1fr;
     grid-template-columns: auto 1fr;
 
-    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+    @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
       --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--xl--MarginBlockStart);
       --#{$page}__main-container--MarginInlineStart: 0;
 
@@ -333,7 +333,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     translate: 0;
   }
 
-  @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
     --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--xl--BorderInlineEndColor);
 
@@ -361,6 +361,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   .#{$page}__dock.pf-m-expanded & {
     border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
   }
 }
 

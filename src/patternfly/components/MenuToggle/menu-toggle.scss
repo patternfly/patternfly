@@ -431,7 +431,7 @@
     justify-content: flex-start;
     width: 100%;
 
-    @media (min-width: $pf-v6-global--breakpoint--dock--expand) {
+    @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
       justify-content: center;
       width: auto;
 
