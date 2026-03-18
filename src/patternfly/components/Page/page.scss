@@ -12,7 +12,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Docked nav
   --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
   --#{$page}--m-dock__main-container--MarginBlockStart: 0;
-  --#{$page}--m-dock__main-container--xl--MarginBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$page}--m-dock__main-container--desktop--MarginBlockStart: var(--pf-t--global--spacer--lg);
   --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns: min-content 1fr;
 
@@ -31,11 +31,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$page}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
   --#{$page}__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
-  --#{$page}__dock-main--xl--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$page}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
   --#{$page}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
   --#{$page}__dock-main--BorderInlineEndColor: transparent;
-  --#{$page}__dock-main--xl--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
   --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
@@ -102,7 +102,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--BorderInlineEndWidth: 0;
     --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--xl--BackgroundColor);
     --#{$page}__sidebar--BackdropFilter: var(--#{$page}__sidebar--xl--BackdropFilter);
-    --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--xl--BoxShadow);
   }
 
   // Container for the main content area (grid area)
@@ -251,7 +250,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-columns: auto 1fr;
 
     @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-      --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--xl--MarginBlockStart);
+      --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--desktop--MarginBlockStart);
       --#{$page}__main-container--MarginInlineStart: 0;
 
       grid-template-areas: "dock main";
@@ -335,7 +334,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
-    --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--xl--BorderInlineEndColor);
+    --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
 
     position: revert;
     inset: revert;
