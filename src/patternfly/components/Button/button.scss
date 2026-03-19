@@ -882,8 +882,8 @@
     --#{$button}--PaddingBlockEnd: var(--#{$button}--m-circle--PaddingBlockEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-circle--PaddingInlineStart);
 
-    aspect-ratio: 1;
     block-size: var(--#{$button}--m-circle--BlockSize);
+    aspect-ratio: 1;
 
     & .pf-v6-c-button__icon {
       scale: var(--#{$button}--m-circle--ScaleX) var(--#{$button}--m-circle--ScaleY);
