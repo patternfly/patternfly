@@ -424,9 +424,11 @@
   --#{$button}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--m-circle--Padding--base: var(--pf-t--global--spacer--control--vertical--default);
   --#{$button}--m-circle--PaddingBlockStart: var(--#{$button}--m-circle--Padding--base);
-  --#{$button}--m-circle--PaddingInlineEnd: 0;
+  --#{$button}--m-circle--PaddingInlineEnd: var(--#{$button}--m-circle--Padding--base);
   --#{$button}--m-circle--PaddingBlockEnd: var(--#{$button}--m-circle--Padding--base);
-  --#{$button}--m-circle--PaddingInlineStart: 0;
+  --#{$button}--m-circle--PaddingInlineStart: var(--#{$button}--m-circle--Padding--base);
+  --#{$button}--m-circle--BlockSize--padding-multiplier: 2.75;
+  --#{$button}--m-circle--BlockSize: calc(var(--#{$button}--m-circle--BlockSize--padding-multiplier) * var(--#{$button}--m-circle--Padding--base) + 1em);
 }
 
 .#{$button} {
@@ -879,6 +881,8 @@
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-circle--PaddingInlineEnd);
     --#{$button}--PaddingBlockEnd: var(--#{$button}--m-circle--PaddingBlockEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-circle--PaddingInlineStart);
+    aspect-ratio: 1;
+    block-size: var(--#{$button}--m-circle--BlockSize);
 
     & .pf-v6-c-button__icon {
       scale: var(--#{$button}--m-circle--ScaleX) var(--#{$button}--m-circle--ScaleY);
@@ -1012,7 +1016,6 @@
 }
 
 .#{$button}__icon {
-  min-width: 1lh;
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
