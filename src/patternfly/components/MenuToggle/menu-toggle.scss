@@ -642,7 +642,6 @@
 
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
-  min-width: 1lh;
   transition-delay: var(--#{$menu-toggle}__icon--TransitionDelay);
   transition-duration: var(--#{$menu-toggle}__icon--TransitionDuration);
   transition-property: var(--#{$menu-toggle}__icon--TransitionProperty);
