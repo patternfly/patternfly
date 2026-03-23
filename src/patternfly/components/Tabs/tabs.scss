@@ -551,7 +551,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 .#{$tabs}__toggle-button {
   .#{$button} {
-    justify-content: start;
     white-space: normal;
   }
 }
