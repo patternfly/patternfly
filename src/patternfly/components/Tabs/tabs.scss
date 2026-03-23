@@ -549,12 +549,6 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   align-items: center;
 }
 
-.#{$tabs}__toggle-button {
-  .#{$button} {
-    white-space: normal;
-  }
-}
-
 .#{$tabs}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
