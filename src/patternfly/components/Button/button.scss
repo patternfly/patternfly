@@ -1,7 +1,6 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($button) {
-  asdf
   --#{$button}--Display: inline-flex;
   --#{$button}--AlignItems: baseline;
   --#{$button}--JustifyContent: center;
