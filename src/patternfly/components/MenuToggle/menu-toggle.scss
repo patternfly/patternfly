@@ -6,7 +6,7 @@
   --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
   --#{$menu-toggle}--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
-  --#{$menu-toggle}--MinWidth: initial;
+  --#{$menu-toggle}--MinWidth: calc(1lh + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
   --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);

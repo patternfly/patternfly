@@ -1,11 +1,12 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($button) {
+  asdf
   --#{$button}--Display: inline-flex;
   --#{$button}--AlignItems: baseline;
   --#{$button}--JustifyContent: center;
   --#{$button}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$button}--MinWidth: initial;
+  --#{$button}--MinWidth: calc(1lh + var(--#{$button}--PaddingBlockStart) + var(--#{$button}--PaddingBlockEnd));
   --#{$button}--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
   --#{$button}--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$button}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
@@ -868,6 +869,8 @@
 
   &.pf-m-circle {
     --#{$button}--BorderRadius: var(--#{$button}--m-circle--BorderRadius);
+
+    padding-inline: 0;
   }
 
   &:hover,
@@ -997,7 +1000,6 @@
 }
 
 .#{$button}__icon {
-  min-width: 1lh;
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
