@@ -143,7 +143,7 @@
   --#{$menu-toggle}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
   --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$menu-toggle}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$menu-toggle}--m-plain--disabled__icon--Color: var(--pf-t--global--icon--color--disabled);
@@ -157,10 +157,11 @@
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
 
   // * Menu toggle small
-  --#{$menu-toggle}--m-small--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
-  --#{$menu-toggle}--m-small--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
-  --#{$menu-toggle}--m-small--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
-  --#{$menu-toggle}--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
+  --#{$menu-toggle}--toggle--m--small--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--toggle--m--small--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--toggle--m--small--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--toggle--m--small--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-small--BorderRadius: var(--pf-t--global--border--radius--action--default);
 
   // Status icon
   --#{$menu-toggle}__status-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -349,10 +350,11 @@
 
   // - Menu item small
   &.pf-m-small {
-    --#{$menu-toggle}--PaddingBlockStart: var(--#{$menu-toggle}--m-small--PaddingBlockStart);
-    --#{$menu-toggle}--PaddingBlockEnd: var(--#{$menu-toggle}--m-small--PaddingBlockEnd);
-    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-small--PaddingInlineStart);
-    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-small--PaddingInlineEnd);
+    --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-small--BorderRadius);
+    --#{$menu-toggle}--PaddingBlockStart: var(--#{$menu-toggle}--toggle--m--small--PaddingBlockStart);
+    --#{$menu-toggle}--PaddingBlockEnd: var(--#{$menu-toggle}--toggle--m--small--PaddingBlockEnd);
+    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--toggle--m--small--PaddingInlineStart);
+    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--toggle--m--small--PaddingInlineEnd);
     --#{$menu-toggle}__button--toggle-icon--PaddingInlineStart: var(--#{$menu-toggle}--m-small__button--toggle-icon--PaddingInlineStart);
     --#{$menu-toggle}__button--toggle-icon--PaddingInlineEnd: var(--#{$menu-toggle}--m-small__button--toggle-icon--PaddingInlineEnd);
     --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineStart--offset: var(--#{$menu-toggle}--m-split-button--m-small--pill--child--PaddingInlineStart--offset);
