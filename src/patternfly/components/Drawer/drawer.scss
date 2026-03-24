@@ -770,7 +770,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
           --#{$drawer}__splitter--Height: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--Height);
           --#{$drawer}__splitter-handle--InsetBlockStart: var(--#{$drawer}--m-inline--m-panel-bottom__splitter-handle--InsetBlockStart);
           --#{$drawer}__splitter--after--BorderBlockStartWidth: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockStartWidth);
-          // --#{$drawer}__splitter--after--BorderBlockEndWidth: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderBlockEndWidth);
           --#{$drawer}__splitter--after--BorderInlineEndWidth: 0;
           --#{$drawer}__splitter--after--BorderInlineStartWidth: 0;
         }
