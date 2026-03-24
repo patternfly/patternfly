@@ -7,7 +7,7 @@
   // Element variables
   --#{$progress}__bar--Height: var(--pf-t--global--spacer--md);
   --#{$progress}__bar--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default); // the bar always needs white under it so that the semi-transparent color shows correctly
-  --#{$progress}__bar--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$progress}__bar--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$progress}__bar--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$progress}__bar--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$progress}__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
@@ -17,6 +17,7 @@
   --#{$progress}__indicator--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$progress}__indicator--BorderWidth: var(--pf-t--global--border--width--high-contrast--extra-strong);
   --#{$progress}__indicator--BorderColor: transparent;
+  --#{$progress}__indicator--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$progress}__helper-text--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
 
   // Modifier variables
@@ -222,6 +223,7 @@
   position: absolute; // position absolute to bring above the semi-transparent bar overlay
   height: var(--#{$progress}__indicator--Height);
   background-color: var(--#{$progress}__indicator--BackgroundColor);
+  border-radius: var(--#{$progress}__indicator--BorderRadius);
 
   // for forced colors mode
   &::before {

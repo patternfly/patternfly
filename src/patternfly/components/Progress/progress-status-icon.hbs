@@ -3,7 +3,7 @@
     {{{progress-status-icon--attribute}}}
   {{/if}}>
   {{#if progress-status-icon--type}}
-    <i class="fas fa-fw fa-{{progress-status-icon--type}}" aria-hidden="true"></i>
+    {{pfIcon progress-status-icon--type}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
