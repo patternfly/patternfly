@@ -181,8 +181,8 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   &::before {
     position: absolute;
     inset: 0;
-    height: var(--#{$jump-links}__link--before--Height);
     width: var(--#{$jump-links}__link--before--Width);
+    height: var(--#{$jump-links}__link--before--Height);
     pointer-events: none;
     content: "";
     border-color: var(--#{$jump-links}__link--before--BorderColor);
