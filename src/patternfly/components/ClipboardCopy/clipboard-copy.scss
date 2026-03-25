@@ -96,6 +96,11 @@
   pre {
     white-space: pre-wrap;
   }
+
+  &.pf-m-expandable-readonly {
+    background-color: var(--pf-t--global--background--color--control--read-only);
+    border-color: var(--pf-t--global--border--color--control--read-only);
+  }
 }
 
 .#{$clipboard-copy}__text {
