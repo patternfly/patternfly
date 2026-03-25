@@ -1062,6 +1062,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-plain` | `.pf-v6-c-data-list` | Modifies a data list to have a transparent background. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-data-list` | Prevents the data list from automatically applying plain styling when glass theme is enabled. |
 
 ## Data list as grid
 ### Data list as grid example

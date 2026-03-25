@@ -2015,6 +2015,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-plain` | `.pf-v6-c-table` | Modifies the table to have a transparent background. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-table` | Prevents the table from automatically applying plain styling when glass theme is enabled. |
 
 ## Compact variant
 
