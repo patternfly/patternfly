@@ -267,5 +267,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
 | `.pf-m-truncate` | `.pf-v6-c-clipboard-copy.pf-m-truncate` | Modifies the inline copy clipboard component for use with text used in trucate component. |
 | `.pf-m-expanded` | `.pf-v6-c-clipboard-copy` | Modifies the clipboard copy component for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-button.pf-m-control` | Modifies the control toggle button for the expanded state. |
-| `.pf-m-expandable-readonly` | `.pf-v6-c-clipboard-copy__expandable-content` | Modifies expandable content to match readonly form control background and boarder. |
+| `.pf-m-expandable-readonly` | `.pf-v6-c-clipboard-copy__expandable-content` | Modifies expandable content to match readonly form control background and border. |
 | `.pf-m-code` | `code.pf-v6-c-clipboard-copy__text` | Modifies the inline copy clipboard text styles for use with the `<code>` element. |
