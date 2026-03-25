@@ -645,7 +645,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-section,
 .#{$page}__main-wizard,
 .#{$page}__main-group {
-  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
   &.pf-m-plain {
     --#{$page}__main-section--BackgroundColor: transparent;
     --#{$page}__main-subnav--BackgroundColor: transparent;

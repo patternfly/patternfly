@@ -567,7 +567,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     &.pf-m-inline,
     &.pf-m-static {
-      @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+      @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
       &.pf-m-plain {
         > .#{$drawer}__main > .#{$drawer}__panel {
           background: transparent;

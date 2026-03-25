@@ -266,7 +266,7 @@
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
 
-  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain),
+  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
   &.pf-m-plain {
     --#{$table}--BackgroundColor: transparent;
     --#{$table}__expandable-row-content--BackgroundColor: transparent;
