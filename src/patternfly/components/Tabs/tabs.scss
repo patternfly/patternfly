@@ -89,7 +89,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-box__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-box--m-secondary__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-box--m-secondary__link--disabled--Color: var(--pf-t--global--text--color--disabled);
-  --#{$tabs}--m-box--m-secondary__link--disabled--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$tabs}--m-box--m-secondary__link--disabled--BackgroundColor: transparent;
   --#{$tabs}--m-box--m-secondary__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}--m-box--m-secondary__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
