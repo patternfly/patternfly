@@ -22,6 +22,10 @@
   --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
 
+  // Readonly
+  --#{$clipboard-copy}--m-readonly__expandable-content--BackgroundColor: var(--pf-t--global--background--color--control--read-only);
+  --#{$clipboard-copy}--m-readonly__expandable-content--BorderColor: var(--pf-t--global--border--color--control--read-only);
+
   // Group
   --#{$clipboard-copy}__group--Gap: var(--pf-t--global--spacer--gap--control-to-control--default);
 
@@ -62,6 +66,11 @@
       display: inline-flex;
     }
   }
+
+  &.pf-m-readonly {
+    --#{$clipboard-copy}__expandable-content--BackgroundColor: var(--#{$clipboard-copy}--m-readonly__expandable-content--BackgroundColor);
+    --#{$clipboard-copy}__expandable-content--BorderColor: var(--#{$clipboard-copy}--m-readonly__expandable-content--BorderColor);
+  }
 }
 
 
@@ -95,11 +104,6 @@
 
   pre {
     white-space: pre-wrap;
-  }
-
-  &.pf-m-expandable-readonly {
-    background-color: var(--pf-t--global--background--color--control--read-only);
-    border-color: var(--pf-t--global--border--color--control--read-only);
   }
 }
 

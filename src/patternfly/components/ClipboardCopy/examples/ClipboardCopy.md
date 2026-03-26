@@ -69,19 +69,19 @@ cssPrefix: pf-v6-c-clipboard-copy
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="rh-ui-copy-fill" button--attribute=(concat 'aria-label="Copy to clipboard read-only collapsed example" id="' clipboard-copy--id '-copy-button"')}}
   {{/clipboard-copy-group}}
-  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--IsReadonlyExpandable=true clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
+  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
     This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
   {{/clipboard-copy-expandable-content}}
 {{/clipboard-copy}}
 <br>
-{{#> clipboard-copy clipboard-copy--id="expandable-expanded-readonly" clipboard-copy--IsExpanded="true"}}
+{{#> clipboard-copy clipboard-copy--id="expandable-expanded-readonly" clipboard-copy--IsExpanded="true" clipboard-copy--IsReadonly="true"}}
   {{#> clipboard-copy-group}}
     {{> button button--IsControl=true button--AriaExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only expanded example" aria-controls="' clipboard-copy--id '-content"')}}
     {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="rh-ui-copy-fill" button--attribute=(concat 'aria-label="Copy to clipboard read-only expanded example" id="' clipboard-copy--id '-copy-button"')}}
   {{/clipboard-copy-group}}
-  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--IsReadonlyExpandable=true clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
+  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
     This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
   {{/clipboard-copy-expandable-content}}
 {{/clipboard-copy}}
@@ -267,5 +267,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
 | `.pf-m-truncate` | `.pf-v6-c-clipboard-copy.pf-m-truncate` | Modifies the inline copy clipboard component for use with text used in trucate component. |
 | `.pf-m-expanded` | `.pf-v6-c-clipboard-copy` | Modifies the clipboard copy component for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-button.pf-m-control` | Modifies the control toggle button for the expanded state. |
-| `.pf-m-expandable-readonly` | `.pf-v6-c-clipboard-copy__expandable-content` | Modifies expandable content to match readonly form control background and border. |
+| `.pf-m-readonly` | `.pf-v6-c-clipboard-copy` | Designates the clipboard copy component as read-only and modifies expandable content to match read-only background and border styles. |
 | `.pf-m-code` | `code.pf-v6-c-clipboard-copy__text` | Modifies the inline copy clipboard text styles for use with the `<code>` element. |
