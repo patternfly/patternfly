@@ -65,7 +65,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--Color: var(--pf-t--global--text--color--subtle);
   --#{$tabs}__link--FontSize: var(--pf-t--global--font--size--sm);
   --#{$tabs}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$tabs}__link--BorderRadius: var(--pf-t--global--border--radius--control--default);
+  --#{$tabs}__link--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$tabs}__link--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$tabs}__link--BorderColor: transparent;
   --#{$tabs}__link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
