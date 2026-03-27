@@ -153,6 +153,14 @@
   --#{$menu-toggle}--m-plain--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--compact);
   --#{$menu-toggle}--m-plain--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
 
+  // Menu toggle action, pill
+  --#{$menu-toggle}--m-pill--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--m-pill--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$menu-toggle}--m-pill--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-pill--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-pill--action--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$menu-toggle}--m-pill--BorderRadius: var(--pf-t--global--border--radius--action--default);
+
   // Typeahead
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: stretch;
 
@@ -357,6 +365,19 @@
     --#{$menu-toggle}__button--toggle-icon--PaddingInlineEnd: var(--#{$menu-toggle}--m-small__button--toggle-icon--PaddingInlineEnd);
     --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineStart--offset: var(--#{$menu-toggle}--m-split-button--m-small--pill--child--PaddingInlineStart--offset);
     --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineEnd--offset: var(--#{$menu-toggle}--m-split-button--m-small--pill--child--PaddingInlineEnd--offset);
+  }
+
+  // Menu toggle pill
+  &.pf-m-pill {
+    --#{$menu-toggle}--PaddingBlockStart: var(--#{$menu-toggle}--m-pill--PaddingBlockStart);
+    --#{$menu-toggle}--PaddingBlockEnd: var(--#{$menu-toggle}--m-pill--PaddingBlockEnd);
+    --#{$menu-toggle}--PaddingInlineStart: var(--#{$menu-toggle}--m-pill--PaddingInlineStart);
+    --#{$menu-toggle}--PaddingInlineEnd: var(--#{$menu-toggle}--m-pill--PaddingInlineEnd);
+    --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-pill--BorderRadius);
+    
+    &:is(:hover, :focus) {
+      --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--m-pill--action--BackgroundColor);
+    }
   }
 
   &.pf-m-success {
