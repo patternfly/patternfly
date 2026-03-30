@@ -65,7 +65,7 @@ cssPrefix: pf-v6-c-clipboard-copy
 {{#> clipboard-copy clipboard-copy--id="expandable-not-expanded-readonly" clipboard-copy--IsReadonly="true"}}
   {{#> clipboard-copy-group}}
     {{> button button--IsControl=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--AriaExpanded=false button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only unexpanded example" aria-controls="' clipboard-copy--id '-content"')}}
-    {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
+    {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is a read-only version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="rh-ui-copy-fill" button--attribute=(concat 'aria-label="Copy to clipboard read-only collapsed example" id="' clipboard-copy--id '-copy-button"')}}
   {{/clipboard-copy-group}}
@@ -77,12 +77,12 @@ cssPrefix: pf-v6-c-clipboard-copy
 {{#> clipboard-copy clipboard-copy--id="expandable-expanded-readonly" clipboard-copy--IsExpanded="true" clipboard-copy--IsReadonly="true"}}
   {{#> clipboard-copy-group}}
     {{> button button--IsControl=true button--AriaExpanded=true button--IsIcon=true button--icon-template="clipboard-copy-toggle-icon" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-label="Toggle read-only expanded example" aria-controls="' clipboard-copy--id '-content"')}}
-    {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
+    {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is a read-only version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion." id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
     {{> button button--IsControl=true button--IsIcon=true button--icon="rh-ui-copy-fill" button--attribute=(concat 'aria-label="Copy to clipboard read-only expanded example" id="' clipboard-copy--id '-copy-button"')}}
   {{/clipboard-copy-group}}
   {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
-    This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
+    This is a read-only version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
   {{/clipboard-copy-expandable-content}}
 {{/clipboard-copy}}
 <br>
