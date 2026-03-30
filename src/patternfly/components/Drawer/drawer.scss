@@ -157,7 +157,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-pill__splitter--after--Height: auto;
   --#{$drawer}--m-pill__splitter--after--InsetInlineStart: 50%;
   --#{$drawer}--m-pill__splitter--after--InsetInlineEnd: auto;
-  --#{$drawer}--m-pill__splitter--after--Transform: translateX(-50%);
+  --#{$drawer}--m-pill__splitter--after--TranslateX: -50%;
   --#{$drawer}--m-pill--m-panel-bottom__splitter--Height: #{pf-size-prem(8px)};
   --#{$drawer}--m-pill--m-panel-bottom__splitter--Width: calc(100% - (2 * var(--#{$drawer}--m-pill__panel--BorderRadius)));
   --#{$drawer}--m-pill--m-panel-bottom__splitter--MarginInlineStart: var(--#{$drawer}--m-pill__panel--BorderRadius);
@@ -169,7 +169,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetBlockEnd: auto;
   --#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetInlineStart: 0;
   --#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetInlineEnd: 0;
-  --#{$drawer}--m-pill--m-panel-bottom__splitter--after--Transform: translateY(-50%);
+  --#{$drawer}--m-pill--m-panel-bottom__splitter--after--TranslateY: -50%;
   --#{$drawer}--m-inline__splitter--m-vertical--Width: #{pf-size-prem(12px)};
   --#{$drawer}--m-inline__splitter-handle--InsetInlineStart: 50%;
   --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(12px)};
@@ -180,7 +180,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__splitter-handle--InsetBlockStart: 50%;
   --#{$drawer}__splitter-handle--InsetInlineStart: 50%;
   --#{$drawer}--m-panel-left__splitter-handle--InsetInlineStart: 50%;
-  --#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart: 50%; // calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
+  --#{$drawer}--m-panel-bottom__splitter-handle--InsetBlockStart: 50%;
 
   // Splitter handle line
   --#{$drawer}__splitter-handle--after--BackgroundColor: var(--pf-t--global--border--color--control--default);
@@ -339,7 +339,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       --#{$drawer}__splitter--after--Height: var(--#{$drawer}--m-pill__splitter--after--Height);
       --#{$drawer}__splitter--after--InsetInlineStart: var(--#{$drawer}--m-pill__splitter--after--InsetInlineStart);
       --#{$drawer}__splitter--after--InsetInlineEnd: var(--#{$drawer}--m-pill__splitter--after--InsetInlineEnd);
-      --#{$drawer}__splitter--after--Transform: var(--#{$drawer}--m-pill__splitter--after--Transform);
+      --#{$drawer}__splitter--after--TranslateX: var(--#{$drawer}--m-pill__splitter--after--TranslateX);
 
       > .#{$drawer}__main > .#{$drawer}__panel {
         border-block-start-width: var(--#{$drawer}--m-pill__panel--BorderBlockStartWidth);
@@ -372,7 +372,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         --#{$drawer}__splitter--after--BorderBlockEndWidth: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--BorderBlockEndWidth);
         --#{$drawer}__splitter--after--InsetBlockStart: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetBlockStart);
         --#{$drawer}__splitter--after--InsetBlockEnd: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetBlockEnd);
-        --#{$drawer}__splitter--after--Transform: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--Transform);
+        --#{$drawer}__splitter--after--TranslateX: initial;
+        --#{$drawer}__splitter--after--TranslateY: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--TranslateY);
         --#{$drawer}__splitter--after--InsetInlineStart: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetInlineStart);
         --#{$drawer}__splitter--after--InsetInlineEnd: var(--#{$drawer}--m-pill--m-panel-bottom__splitter--after--InsetInlineEnd);
       }
@@ -617,7 +618,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     border-block-end-width: var(--#{$drawer}__splitter--after--BorderBlockEndWidth);
     border-inline-start-width: var(--#{$drawer}__splitter--after--BorderInlineStartWidth);
     border-inline-end-width: var(--#{$drawer}__splitter--after--BorderInlineEndWidth);
-    transform: var(--#{$drawer}__splitter--after--Transform, none);
+    translate: var(--#{$drawer}__splitter--after--TranslateX, 0) var(--#{$drawer}__splitter--after--TranslateY, 0);
   }
 }
 
