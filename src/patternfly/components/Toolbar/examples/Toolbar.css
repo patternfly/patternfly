@@ -88,10 +88,3 @@
   min-width: 300px;
   max-width: 100%;
 }
-
-#ws-core-spacer-container {
-  flex-shrink: 0;
-  width: 290px;
-  padding: var(--pf-t--global--spacer--md);
-  border: var(--pf-t--global--border--width--regular) dotted var(--pf-t--global--border--color--default);
-}
