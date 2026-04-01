@@ -20,7 +20,7 @@ cssPrefix: pf-v6-c-clipboard-copy
   {{/clipboard-copy-group}}
 {{/clipboard-copy}}
 <br />
-{{#> clipboard-copy clipboard-copy--id="basic-readonly"}}
+{{#> clipboard-copy clipboard-copy--id="basic-readonly" clipboard-copy--IsReadonly="true"}}
   {{#> clipboard-copy-group}}
     {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is read-only" id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
     {{/form-control}}
