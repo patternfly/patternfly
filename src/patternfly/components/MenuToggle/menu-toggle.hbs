@@ -3,6 +3,7 @@
     menu-toggle--IsPrimary='pf-m-primary'
     menu-toggle--IsSecondary='pf-m-secondary'
     menu-toggle--IsPlain='pf-m-plain'
+    menu-toggle--IsForm='pf-m-form'
     menu-toggle--IsSmall='pf-m-small'
     menu-toggle--IsText='pf-m-text'
     menu-toggle--IsExpanded='pf-m-expanded'
@@ -73,7 +74,7 @@
   {{#ifAny menu-toggle--IsPlain @partial-block}}
     {{#if menu-toggle--HasKebab}}
       {{#> menu-toggle-icon}}
-        <i class="fas fa-{{ternary menu-toggle--icon menu-toggle--icon 'ellipsis-v'}}" aria-hidden=true></i>
+        {{{pfIcon "rh-ui-ellipsis-vertical-fill"}}}
       {{/menu-toggle-icon}}
     {{/if}}
     {{!-- TODO: refactor this logic --}}

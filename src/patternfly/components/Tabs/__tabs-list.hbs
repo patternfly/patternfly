@@ -29,20 +29,20 @@ __tabs-list--IsCloseDisabled: bool
 {{#> tabs-list tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose tabs-item--HasHelp=__tabs-list--HasHelp}}
   {{> __tabs-item
     __tabs-item--id="users"
-    __tabs-item--icon-name="fas fa-users"
+    __tabs-item--icon-name="rh-ui-users-fill"
     __tabs-item--aria-label="Users"
     __tabs-item--text="Users"
     }}
   {{> __tabs-item
     __tabs-item--current=(inverse __tabs-list--IsOverflowSelected)
     __tabs-item--id="containers"
-    __tabs-item--icon-name="fas fa-box"
+    __tabs-item--icon-name="rh-ui-container-fill"
     __tabs-item--aria-label="Containers"
     __tabs-item--text=(ternary __tabs-list--HasMultiLine "Containers <br> and more" "Containers")
     }}
   {{> __tabs-item
     __tabs-item--id="database"
-    __tabs-item--icon-name="database"
+    __tabs-item--icon-name="rh-ui-storage-fill"
     __tabs-item--aria-label="Database"
     __tabs-item--text="Database"
     }}
@@ -51,7 +51,7 @@ __tabs-list--IsCloseDisabled: bool
     {{#if __tabs-list--IsDisabled}}
       {{> __tabs-item
         __tabs-item--id="disabled"
-        __tabs-item--icon-name="server"
+        __tabs-item--icon-name="rh-ui-server-fill"
         __tabs-item--aria-label="Disabled"
         __tabs-item--text="Disabled"
         tabs-link--IsDisabled="true"
@@ -60,7 +60,7 @@ __tabs-list--IsCloseDisabled: bool
         }}
       {{> __tabs-item
         __tabs-item--id="aria-disabled"
-        __tabs-item--icon-name="laptop"
+        __tabs-item--icon-name="rh-ui-laptop-fill"
         __tabs-item--aria-label="ARIA disabled"
         __tabs-item--text="ARIA disabled"
         tabs-link--IsAriaDisabled="true"
@@ -70,7 +70,7 @@ __tabs-list--IsCloseDisabled: bool
         {{#if __tabs-list--IsHelpDisabled}}
           {{> __tabs-item
             __tabs-item--id="help-disabled"
-            __tabs-item--icon-name="download"
+            __tabs-item--icon-name="rh-ui-download"
             __tabs-item--aria-label="Help disabled"
             __tabs-item--text="Help disabled"
             tabs-link--IsDisabled="true"
@@ -80,7 +80,7 @@ __tabs-list--IsCloseDisabled: bool
         {{#if __tabs-list--IsCloseDisabled}}
           {{> __tabs-item
             __tabs-item--id="close-disabled"
-            __tabs-item--icon-name="code"
+            __tabs-item--icon-name="rh-ui-code"
             __tabs-item--aria-label="Close disabled"
             __tabs-item--text="Close disabled"
             tabs-link--IsDisabled="true"
@@ -90,7 +90,7 @@ __tabs-list--IsCloseDisabled: bool
         {{#if __tabs-list--IsHelpCloseDisabled}}
           {{> __tabs-item
             __tabs-item--id="help-close-disabled"
-            __tabs-item--icon-name="folder"
+            __tabs-item--icon-name="rh-ui-folder-fill"
             __tabs-item--aria-label="Help and disabled"
             __tabs-item--text="Help and close disabled"
             tabs-link--IsDisabled="true"
@@ -101,39 +101,39 @@ __tabs-list--IsCloseDisabled: bool
     {{else}}
       {{> __tabs-item
         __tabs-item--id="server"
-        __tabs-item--icon-name="server"
+        __tabs-item--icon-name="rh-ui-server-fill"
         __tabs-item--aria-label="Server"
         __tabs-item--text="Server"
         }}
       {{> __tabs-item
         __tabs-item--id="system"
-        __tabs-item--icon-name="laptop"
+        __tabs-item--icon-name="rh-ui-laptop-fill"
         __tabs-item--aria-label="System"
         __tabs-item--text="System"
         }}
     {{/if}}
     {{> __tabs-item
       __tabs-item--id="network-wired"
-      __tabs-item--icon-name="project-diagram"
+      __tabs-item--icon-name="rh-ui-network-fill"
       __tabs-item--aria-label="Network"
       __tabs-item--text="Network"
       }}
     {{#if __tabs-list--IsLong}}
       {{> __tabs-item
         __tabs-item--id="cloud"
-        __tabs-item--icon-name="cloud"
+        __tabs-item--icon-name="rh-ui-cloud-fill"
         __tabs-item--aria-label="Hybrid Cloud"
         __tabs-item--text="Hybrid Cloud"
         }}
       {{> __tabs-item
         __tabs-item--id="automation"
-        __tabs-item--icon-name="magic"
+        __tabs-item--icon-name="rh-ui-automation-fill"
         __tabs-item--aria-label="Automation"
         __tabs-item--text="Automation"
         }}
       {{> __tabs-item
         __tabs-item--id="files"
-        __tabs-item--icon-name="file"
+        __tabs-item--icon-name="rh-ui-document-fill"
         __tabs-item--aria-label="files"
         __tabs-item--text="Files"
         }}
@@ -142,7 +142,7 @@ __tabs-list--IsCloseDisabled: bool
       {{#> wrapper
         __tabs-item--current=__tabs-list--IsOverflowSelected
         __tabs-item--id="more"
-        __tabs-item--icon-name="more"
+        __tabs-item--icon-name="rh-ui-enhancement-fill"
         __tabs-item--aria-label="Show more tabs"
         __tabs-item--text="More"
         __tabs-item--IsOverflow="true"

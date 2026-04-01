@@ -220,7 +220,7 @@
   --#{$button}--m-control--m-small--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
 
   // Stateful
-  --#{$button}--m-stateful--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$button}--m-stateful--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$button}--m-stateful--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}--m-stateful--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}--m-stateful--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
@@ -228,7 +228,7 @@
 
   // Read
   --#{$button}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$button}--m-read--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$button}--m-read--hover--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-read--hover--BorderColor: var(--pf-t--global--border--color--hover);
   --#{$button}--m-read--m-clicked--BackgroundColor: var(--pf-t--global--background--color--control--default);
@@ -681,7 +681,7 @@
     --#{$button}--m-small--PaddingInlineEnd: var(--#{$button}--m-stateful--m-small--PaddingInlineEnd);
     --#{$button}--m-small--PaddingInlineStart: var(--#{$button}--m-stateful--m-small--PaddingInlineStart);
   }
-
+  
   // Read
   &.pf-m-read {
     --#{$button}--BackgroundColor: var(--#{$button}--m-read--BackgroundColor);

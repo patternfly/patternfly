@@ -15,7 +15,7 @@
 
   // header content
   --#{$code-editor}__header-content--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$code-editor}__header-content--m-plain--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$code-editor}__header-content--m-plain--BackgroundColor: transparent;
   --#{$code-editor}__header-content--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$code-editor}__header-content--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$code-editor}__header-content--PaddingInlineStart: var(--pf-t--global--spacer--sm);

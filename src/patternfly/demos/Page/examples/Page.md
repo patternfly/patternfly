@@ -117,19 +117,19 @@ import './Page.css'
 }}
 
 {{#*inline "page-template-main-content"}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center" page-main-section--attribute='aria-labelledby="centered-page-sections-title"'}}
     {{#> content}}
-      <h1>Centering page sections</h1>
+      <h1 id="centered-page-sections-title">Centering page sections</h1>
       <p>When a width limited page section is wider than the value of <code>--pf-v6-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
       <p>All of the page sections on this page are centered.</p>
     {{/content~}}
   {{/page-main-section}}
   {{> divider}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center" page-main-section--attribute='aria-label="Gallery cards section"'}}
     {{> page-template-gallery-cards}}
   {{/page-main-section}}
   {{> divider}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-v6-u-text-align-center"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-v6-u-text-align-center" page-main-section--attribute='aria-label="Centered text section"'}}
     {{#> card}}
       {{#> card-body}}
         <p>The content in this section is also centered using the <code>.pf-v6-u-text-align-center</code> utility class.</p>

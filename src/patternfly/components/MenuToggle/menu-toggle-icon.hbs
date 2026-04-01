@@ -7,7 +7,17 @@
     {{{menu-toggle-icon--attribute}}}
   {{/if}}>
   {{#if menu-toggle--icon}}
-    <i class="fas fa-{{menu-toggle--icon}}" aria-hidden="true"></i>
+    {{#ifAny menu-toggle--IsSettings}}
+      {{{pfIcon "rh-ui-settings-fill"}}}
+    {{else}}
+      {{#ifEquals menu-toggle--icon "cog"}}
+        {{{pfIcon "rh-ui-settings-fill"}}}
+      {{else ifEquals menu-toggle--icon "ellipsis-v"}}
+        {{{pfIcon "rh-ui-ellipsis-vertical-fill"}}}
+      {{else}}
+        <i class="fas fa-{{menu-toggle--icon}}" aria-hidden="true"></i>
+      {{/ifEquals}}
+    {{/ifAny}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

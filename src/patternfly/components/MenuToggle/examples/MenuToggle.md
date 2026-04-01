@@ -354,6 +354,18 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Form
+```hbs
+{{#> menu-toggle menu-toggle--IsForm="true"}}
+  {{#> menu-toggle-text}}
+    Select option
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Typeahead
 ```hbs
 {{#> menu-toggle menu-toggle--id="typeahead-example" menu-toggle--IsDiv="true" menu-toggle--IsTypeahead="true" menu-toggle--modifier="pf-m-full-width"}}
@@ -1049,6 +1061,7 @@ Shown with default, primary, and secondary styling
 | `.pf-m-expanded` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
 | `.pf-m-full-width` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to full width of parent. |
+| `.pf-m-form` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle for use in forms with form element border radius. |
 | `.pf-m-success` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the success state. |
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |

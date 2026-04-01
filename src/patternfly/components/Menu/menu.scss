@@ -2,17 +2,19 @@
 
 @include pf-root($menu) {
   // * Menu
-  --#{$menu}--RowGap: var(--pf-t--global--spacer--sm);
+  --#{$menu}--RowGap: var(--pf-t--global--spacer--xs);
   --#{$menu}--Width: auto;
   --#{$menu}--MinWidth: auto;
-  --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$menu}--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$menu}--PaddingInlineStart: var(--pf-t--global--spacer--xs);
+  --#{$menu}--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
   --#{$menu}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$menu}--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$menu}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu}--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$menu}--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$menu}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu}--BorderRadius: calc(var(--#{$menu}__item--BorderRadius) + var(--#{$menu}--PaddingBlockStart));
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
   --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -62,14 +64,15 @@
   --#{$menu}__list-item--has--menu-action--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
 
   // * Menu li divider
-  --#{$menu}__list--divider--MarginBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$menu}__list--divider--MarginBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$menu}__list--divider--MarginBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$menu}__list--divider--MarginBlockEnd: var(--pf-t--global--spacer--xs);
 
   // * Menu item
+  --#{$menu}__item--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$menu}__item--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__item--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$menu}__item--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__item--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__item--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$menu}__item--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu}__item--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu}__item--FontWeight: var(--pf-t--global--font--weight--body--default);
@@ -80,32 +83,33 @@
   // * Menu header
   --#{$menu}__header--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__header--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$menu}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$menu}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__header--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__header--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // * Menu group title
   --#{$menu}__group-title--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__group-title--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$menu}__group-title--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$menu}__group-title--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__group-title--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__group-title--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // * Menu breadcrumb
   --#{$menu}__breadcrumb--PaddingBlockStart: 0;
   --#{$menu}__breadcrumb--PaddingBlockEnd: 0;
-  --#{$menu}__breadcrumb--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$menu}__breadcrumb--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__breadcrumb--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__breadcrumb--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // * Menu footer
   --#{$menu}__footer--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$menu}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$menu}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  --#{$menu}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$menu}__footer--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$menu}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
   // * Menu item main
   --#{$menu}__item-main--ColumnGap: var(--pf-t--global--spacer--sm);
 
   // * Menu group title
-  --#{$menu}__group-title--Color: var(--pf-t--global--text--color--subtle);
+  --#{$menu}__group-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$menu}__group-title--Color: var(--pf-t--global--text--color--regular);
 
   // * Menu description
   --#{$menu}__item-description--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -235,6 +239,8 @@
   min-width: var(--#{$menu}--MinWidth);
   padding-block-start: var(--#{$menu}--PaddingBlockStart);
   padding-block-end: var(--#{$menu}--PaddingBlockEnd);
+  padding-inline-start: var(--#{$menu}--PaddingInlineStart);
+  padding-inline-end: var(--#{$menu}--PaddingInlineEnd);
   overflow: hidden;
   color: var(--#{$menu}--Color);
   background-color: var(--#{$menu}--BackgroundColor);
@@ -497,8 +503,8 @@
     inset: 0;
     content: "";
     background-color: var(--#{$menu}__list-item--BackgroundColor);
-    border-block-start: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
-    border-block-end: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
+    border: var(--#{$menu}__list-item--BorderWidth) solid var(--#{$menu}__list-item--BorderColor);
+    border-radius: var(--#{$menu}__item--BorderRadius);
     transition: inherit;
   }
 
@@ -562,6 +568,7 @@
   text-decoration-line: none;
   background-color: var(--#{$menu}__item--BackgroundColor);
   border: 0;
+  border-radius: var(--#{$menu}__item--BorderRadius);
   outline-offset: var(--#{$menu}--OutlineOffset);
 
   @include pf-v6-hidden-visible(flex);

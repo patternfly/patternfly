@@ -27,16 +27,16 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Default main section example 1"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--attribute='aria-label="Secondary main section example 1"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Default main section example 2"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--ExcludeMainBody="true"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--ExcludeMainBody="true" page-main-section--attribute='aria-label="Multiple main body section example"'}}
       {{#> page-main-body}}
         This is a page__main-body, one of three within one page__main-section.
       {{/ page-main-body}}
@@ -66,13 +66,13 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Horizontal nav default main section example 1"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--attribute='aria-label="Horizontal nav secondary main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Horizontal nav default main section example 2"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
   {{/page-main}}
@@ -108,7 +108,7 @@ import './Page.css'
     {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Sidebar body layout section"'}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -129,13 +129,13 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main page-main-container--IsFilled="true"}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Regular page section example"'}}
       A regular page section.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-fill" page-main-section--attribute='aria-label="Fill page section example"'}}
       This section uses <code>.pf-m-fill</code> to fill the available space. The <code>.pf-v6-c-page__main-container</code> must also have <code>.pf-m-fill</code> in order for the section to have space to stretch to full height.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-fill" page-main-section--attribute='aria-label="No fill page section example"'}}
       This section uses <code>.pf-m-no-fill</code> and will not fill the available space.
     {{/page-main-section}}
   {{/page-main}}
@@ -160,13 +160,13 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Default padding main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> has default padding.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding" page-main-section--attribute='aria-label="No padding main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-no-padding</code> to remove all padding.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md" page-main-section--attribute='aria-label="Responsive padding main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-no-padding .pf-m-padding-on-md</code> to remove padding up to the <code>md</code> breakpoint.
     {{/page-main-section}}
   {{/page-main}}
@@ -203,7 +203,7 @@ import './Page.css'
     {{#> page-main-breadcrumb}}
       <code>.pf-v6-c-page__main-breadcrumb</code> for breadcrumbs
     {{/page-main-breadcrumb}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Main section variations example"'}}
       <code>.pf-v6-c-page__main-section</code> for main sections
     {{/page-main-section}}
     {{#> page-main-wizard}}
@@ -228,7 +228,7 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center" page-main-section--attribute='aria-label="Centered section example"'}}
       {{#> card}}
         {{#> card-body}}
           When a width limited page section is wider than the value of <code>--pf-v6-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
@@ -257,7 +257,7 @@ import './Page.css'
     {{/masthead}}
   {{/page-dock}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Dock main section example"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
   {{/page-main}}

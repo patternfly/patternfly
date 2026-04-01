@@ -229,6 +229,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   max-height: 100%;
   background-color: var(--#{$page}--BackgroundColor);
 
+  :where(:root.pf-v6-theme-glass) & {
+    background-color: transparent;
+  }
+
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width); // TODO can remove at breaking change
 
