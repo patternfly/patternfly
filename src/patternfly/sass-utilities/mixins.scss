@@ -61,11 +61,16 @@
 
 // Container query mixin for responsive classes based on container size
 // Usage: @include pf-v6-container-query("md", "toolbar") { ... }
-@mixin pf-v6-container-query($point, $container-name: null) {
+// Set $use-viewport-bp to true to use viewport-aligned breakpoints instead of offset breakpoints
+@mixin pf-v6-container-query($point, $container-name: null, $use-viewport-bp: false) {
   @if $point == "" or not $point or $point == "base" {
     @content;
   } @else {
-    $breakpoint-map: $pf-v6-global--container-breakpoint-name-map;
+    // Choose breakpoint map based on mode
+    $breakpoint-map: if($use-viewport-bp,
+      $pf-v6-global--breakpoint-name-map,
+      $pf-v6-global--container-breakpoint-name-map
+    );
     $breakpoint-value: map-get($breakpoint-map, $point);
 
     @if $breakpoint-value {
@@ -219,7 +224,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v6-hidden-visible($val: "block", $container-name: null) {
+@mixin pf-v6-hidden-visible($val: "block", $container-name: null, $use-viewport-bp: false) {
   // stylelint-disable-next-line
   --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
 
@@ -243,8 +248,13 @@
 
   // Generate either media queries OR container queries, never both
   @if $container-name {
-    // Container query mode - use container-based breakpoints
-    @each $size, $bp in $pf-v6-global--container-breakpoint-name-map {
+    // Container query mode - choose breakpoint map based on mode
+    $breakpoint-map: if($use-viewport-bp,
+      $pf-v6-global--breakpoint-name-map,
+      $pf-v6-global--container-breakpoint-name-map
+    );
+
+    @each $size, $bp in $breakpoint-map {
       @container #{$container-name} (min-width: #{$bp}) {
         &.pf-m-hidden-on-#{$size} {
           --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);

@@ -201,7 +201,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // Establishes container context for all container modifiers
   &:where([class*="pf-m-container"]) {
     container-type: inline-size;
-    container-name: pf-container-toolbar;
+    container-name: pf-v6-contain-toolbar;
 
     // Container queries (opt-in behavior)
     // Set base/default state for container-query toolbars (hide filters, show toggle)
@@ -220,7 +220,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     .#{$toolbar}__content-section,
     .#{$toolbar}__group,
     .#{$toolbar}__item {
-      @include pf-v6-hidden-visible(flex, $container-name: 'pf-container-toolbar');
+      @include pf-v6-hidden-visible(flex, $container-name: 'pf-v6-contain-toolbar', $use-viewport-bp: true);
     }
   }
 
@@ -351,7 +351,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // Default container behavior (lg breakpoint) when using .pf-m-container
   @at-root .#{$toolbar}:where(.pf-m-container:not([class*="pf-m-container-"])) & {
-    @include pf-v6-container-query("lg", "pf-container-toolbar") {
+    @include pf-v6-container-query("lg", "pf-v6-contain-toolbar", true) {
       position: static;
       padding: 0;
       border-block-end: 0;
@@ -364,7 +364,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
     @if $breakpoint != "base" {
       @at-root .#{$toolbar}:where(.pf-m-container-#{$breakpoint}) & {
-        @include pf-v6-container-query($breakpoint, "pf-container-toolbar") {
+        @include pf-v6-container-query($breakpoint, "pf-v6-contain-toolbar", true) {
           position: static;
           padding: 0;
           border-block-end: 0;
@@ -539,7 +539,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
       @at-root .#{$toolbar}:where(.pf-m-container) &,
       .#{$toolbar}:where(.pf-m-container-#{$breakpoint}) & {
-        @include pf-v6-container-query($breakpoint, "pf-container-toolbar") {
+        @include pf-v6-container-query($breakpoint, "pf-v6-contain-toolbar", true) {
           &.pf-m-show#{$breakpoint-name} {
             .#{$toolbar}__group,
             .#{$toolbar}__item {
