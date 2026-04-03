@@ -27,7 +27,9 @@
     overflow: auto;
   }
 
-  .pf-v6-c-page__sidebar {
+  // stylelint-disable-next-line
+  #page-sidebar {
     overflow: auto;
   }
+  // stylelint-enable-next-line
 }
