@@ -44,6 +44,7 @@
       position: absolute;
       inset: var(--#{$check}--m-standalone--before--Inset);
       pointer-events: auto;
+      cursor: inherit;
       content: '';
     }
 

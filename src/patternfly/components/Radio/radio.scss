@@ -45,6 +45,7 @@
       position: absolute;
       inset: var(--#{$radio}--m-standalone--before--Inset);
       pointer-events: auto;
+      cursor: inherit;
       content: '';
     }
 
