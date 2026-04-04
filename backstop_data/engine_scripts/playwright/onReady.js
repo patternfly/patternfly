@@ -3,16 +3,22 @@ module.exports = async (page, scenario, vp) => {
   // Wait until all network requests have completed for a moment
   await page.waitForLoadState('networkidle');
 
-  if (process.argv.includes('--dark')) {
-    // Emulate dark mode
-    if (page.emulateMedia) {
-      await page.emulateMedia({ colorScheme: 'dark' });
-    }
-    await require('./addDarkThemeClass')(page, scenario);
-  } else {
-    // Emulate light mode
-    if (page.emulateMedia) {
-      await page.emulateMedia({ colorScheme: 'light' });
-    }
+  // Detect theme flags
+  const isUnified = process.argv.includes('--unified');
+  const isDark = process.argv.includes('--dark');
+  const isGlass = process.argv.includes('--glass');
+  const isHighContrast = process.argv.includes('--high-contrast');
+
+  // Emulate color scheme based on dark mode
+  if (page.emulateMedia) {
+    await page.emulateMedia({ colorScheme: isDark ? 'dark' : 'light' });
   }
+
+  // Apply theme classes
+  await require('./applyThemeClasses')(page, {
+    unified: isUnified,
+    dark: isDark,
+    glass: isGlass,
+    highContrast: isHighContrast
+  });
 };

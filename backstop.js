@@ -2,9 +2,19 @@ const config = require('./backstop.config');
 const scenarios = [];
 const viewports = [];
 
-// check for --dark flag to trigger separate reference & test images, html report
-const isDarkTheme = process.argv.includes('--dark');
-const themeSuffix = isDarkTheme ? '_dark' : '';
+// Check for theme flags to trigger separate reference & test images, html report
+const isUnified = process.argv.includes('--unified');
+const isDark = process.argv.includes('--dark');
+const isGlass = process.argv.includes('--glass');
+const isHighContrast = process.argv.includes('--high-contrast');
+
+// Build theme suffix based on active flags
+const themeParts = [];
+if (isUnified) themeParts.push('unified');
+if (isDark) themeParts.push('dark');
+if (isGlass) themeParts.push('glass');
+if (isHighContrast) themeParts.push('hc');
+const themeSuffix = themeParts.length > 0 ? `_${themeParts.join('_')}` : '';
 
 config.relativeUrls.map((relativeUrl) => {
   const url = relativeUrl.url || relativeUrl;
