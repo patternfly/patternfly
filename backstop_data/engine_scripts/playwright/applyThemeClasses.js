@@ -1,13 +1,13 @@
 // Apply theme classes to html tag based on theme options
 module.exports = async (page, options) => {
-  const { unified, dark, glass, highContrast } = options;
+  const { felt, dark, glass, highContrast } = options;
 
   await page.evaluate((opts) => {
     const root = document.querySelector('html');
 
     // Apply theme classes based on options
-    if (opts.unified) {
-      root.classList.add('pf-v6-theme-unified');
+    if (opts.felt) {
+      root.classList.add('pf-v6-theme-redhat');
     }
 
     if (opts.dark) {

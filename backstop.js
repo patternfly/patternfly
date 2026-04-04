@@ -3,14 +3,14 @@ const scenarios = [];
 const viewports = [];
 
 // Check for theme flags to trigger separate reference & test images, html report
-const isUnified = process.argv.includes('--unified');
+const isFelt = process.argv.includes('--felt');
 const isDark = process.argv.includes('--dark');
 const isGlass = process.argv.includes('--glass');
 const isHighContrast = process.argv.includes('--high-contrast');
 
 // Build theme suffix based on active flags
 const themeParts = [];
-if (isUnified) themeParts.push('unified');
+if (isFelt) themeParts.push('felt');
 if (isDark) themeParts.push('dark');
 if (isGlass) themeParts.push('glass');
 if (isHighContrast) themeParts.push('hc');

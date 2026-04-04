@@ -4,7 +4,7 @@ module.exports = async (page, scenario, vp) => {
   await page.waitForLoadState('networkidle');
 
   // Detect theme flags
-  const isUnified = process.argv.includes('--unified');
+  const isFelt = process.argv.includes('--felt');
   const isDark = process.argv.includes('--dark');
   const isGlass = process.argv.includes('--glass');
   const isHighContrast = process.argv.includes('--high-contrast');
@@ -16,7 +16,7 @@ module.exports = async (page, scenario, vp) => {
 
   // Apply theme classes
   await require('./applyThemeClasses')(page, {
-    unified: isUnified,
+    felt: isFelt,
     dark: isDark,
     glass: isGlass,
     highContrast: isHighContrast
