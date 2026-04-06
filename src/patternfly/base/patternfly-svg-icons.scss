@@ -20,3 +20,11 @@
     display: revert;
   }
 }
+
+.#{$pf-prefix}icon-rh-standard {
+  width: 3em;
+  height: 3em;
+
+  // color: var(--pf-t--global--icon--color--brand--default);
+  color: var(--pf-t--global--color--brand--accent--default);
+}
