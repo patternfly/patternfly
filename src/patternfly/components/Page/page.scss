@@ -234,6 +234,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Glass theme
   --#{$page}--BackgroundColor--glass: transparent;
   --#{$page}__sidebar--Width--base--glass: calc(#{pf-size-prem(290px)} + var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}__sidebar--MarginBlockStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-body--PaddingInlineStart--glass: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar-body--PaddingInlineEnd--glass: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar-main--PaddingBlockEnd--glass: var(--#{$page}__sidebar--PaddingBlockEnd);
@@ -253,10 +254,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-main--xl--MarginBlockEnd--glass: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-main--xl--MarginInlineStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-main--xl--MarginInlineEnd--glass: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
 
   :where(.pf-v6-theme-glass) & {
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
     --#{$page}__sidebar--Width--base: var(--#{$page}__sidebar--Width--base--glass);
+    --#{$page}__sidebar--MarginBlockStart: var(--#{$page}__sidebar--MarginBlockStart--glass);
     --#{$page}__sidebar-body--PaddingInlineStart: var(--#{$page}__sidebar-body--PaddingInlineStart--glass);
     --#{$page}__sidebar-body--PaddingInlineEnd: var(--#{$page}__sidebar-body--PaddingInlineEnd--glass);
     --#{$page}__sidebar-main--PaddingBlockEnd: var(--#{$page}__sidebar-main--PaddingBlockEnd--glass);
@@ -272,6 +275,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar-main--BorderColor: var(--#{$page}__sidebar-main--BorderColor--glass);
     --#{$page}__sidebar-main--BorderRadius: var(--#{$page}__sidebar-main--BorderRadius--glass);
     --#{$page}__sidebar-main--BoxShadow: var(--#{$page}__sidebar-main--BoxShadow--glass);
+    --#{$page}__main-container--MarginBlockStart: var(--#{$page}__main-container--MarginBlockStart--glass);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
