@@ -30,12 +30,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Dock main
   --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$page}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
-  --#{$page}__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
+  --#{$page}__dock-main--BoxShadow: none;
+  --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
   --#{$page}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
   --#{$page}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
   --#{$page}__dock-main--BorderInlineEndColor: transparent;
-  --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
   --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
@@ -358,6 +358,35 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       @include pf-v6-hamburger;
     }
   }
+
+  // Dock hamburger menu animation
+  // mobile - show collapse arrow on top masthead toggle when dock expanded
+  &.pf-m-dock:where(:has(> .#{$page}__dock.pf-m-expanded)) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  // mobile - show collapse arrow on dock internal toggle when expanded
+  .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    // desktop - reset dock internal toggle to bars
+    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+      @include pf-v6-hamburger($reset: true);
+    }
+
+    // desktop - show expand arrow on hover (text collapsed by default)
+    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger;
+    }
+
+    // desktop - show collapse arrow on hover when text expanded
+    .#{$page}__dock.pf-m-text-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
+    }
+  }
 }
 
 // Header
@@ -426,10 +455,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   .#{$page}__dock.pf-m-expanded & {
     border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
+    box-shadow: var(--#{$page}__dock--m-expanded__dock-main--BoxShadow);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
+    --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
   }
 }
 
