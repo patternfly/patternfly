@@ -45,6 +45,31 @@ The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (
 {{/overflow-menu}}
 ```
 
+### Vertical
+```hbs isBeta
+{{#> overflow-menu overflow-menu--modifier="pf-m-vertical" overflow-menu--id="overflow-menu-vertical-expanded"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item}}
+      Item 1
+    {{/overflow-menu-item}}
+    {{#> overflow-menu-item}}
+      Item 2
+    {{/overflow-menu-item}}
+    {{#> overflow-menu-group}}
+      {{#> overflow-menu-item}}
+        Item 3
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        Item 4
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        Item 5
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+{{/overflow-menu}}
+```
+
 ### Default spacing for items and groups:
 
 | Class | CSS Variable | Computed Value |

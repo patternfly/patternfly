@@ -657,6 +657,52 @@ Fusce tristique nulla id vestibulum maximus. Morbi sit amet nisi nec orci pulvin
 {{/toolbar}}
 ```
 
+### Vertical with height visibility breakpoints
+
+Visibility can be set per breakpoint to show or hide items and groups based on viewport height.
+
+```hbs isBeta
+{{#> toolbar toolbar--id="toolbar-vertical-height-toggle-example" toolbar--IsVertical=true}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{> divider}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-md-height"}}
+          Item (hidden below md)
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider}}
+      {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg-height"}}
+        {{#> toolbar-item}}
+          Item (hidden below lg)
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item (hidden below lg)
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item (hidden below lg)
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
 ## Documentation
 
 ### Overview
@@ -715,6 +761,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | -- | -- | -- |
 | `.pf-m-toggle-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
 | `.pf-m-[show/hide]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element to hidden. |
+| `.pf-m-[show/hide]-on-{breakpoint}-height` | `.pf-v6-c-toolbar__group.pf-m-toggle-group` within `.pf-v6-c-toolbar.pf-m-vertical` | Same as width-based toggle group modifiers, but keyed to global **height** breakpoints (viewport `min-height`). Use for vertical toolbars such as docked navigation. |
 
 ### Spacer system
 

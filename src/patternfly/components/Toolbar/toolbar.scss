@@ -101,7 +101,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 .#{$toolbar}__content-section,
 .#{$toolbar}__group,
 .#{$toolbar}__item {
-  @include pf-v6-hidden-visible(flex);
+  @include pf-v6-hidden-visible(flex, $ifIncludeHeight: true);
 }
 
 // - Toolbar - Toolbar content
