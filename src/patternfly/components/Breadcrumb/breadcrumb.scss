@@ -26,7 +26,7 @@
   --#{$breadcrumb}__link--BackgroundColor: transparent;
 
   // Heading
-  --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
+  --#{$breadcrumb}__heading--FontSize: var(--#{$breadcrumb}__item--FontSize);
 
   // breadcrumb dropdown
   --#{$breadcrumb}__menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
