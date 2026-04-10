@@ -30,6 +30,8 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-[hidden/visible]` | `.pf-v6-c-toolbar > *` | Modifies toolbar element to be hidden/visible. |
+| `.pf-m-[hidden/visible]{-on-[breakpoint]}` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option breakpoint. |
+| `.pf-m-[hidden/visible]{-on-[breakpoint]}-height` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option height breakpoint. Primarily for use with vertical toolbars. |
 | `.pf-m-flex-grow` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element to `flex-grow: 1`, allowing it to consume available main-axis space. |
 | `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
 | `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
@@ -761,7 +763,6 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | -- | -- | -- |
 | `.pf-m-toggle-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
 | `.pf-m-[show/hide]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element to hidden. |
-| `.pf-m-[show/hide]-on-{breakpoint}-height` | `.pf-v6-c-toolbar__group.pf-m-toggle-group` within `.pf-v6-c-toolbar.pf-m-vertical` | Same as width-based toggle group modifiers, but keyed to global **height** breakpoints (viewport `min-height`). Use for vertical toolbars such as docked navigation. |
 
 ### Spacer system
 
