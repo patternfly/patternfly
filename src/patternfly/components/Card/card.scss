@@ -266,6 +266,19 @@
     --#{$card}--BorderColor: var(--#{$card}--m-plain--BorderColor);
     --#{$card}--BackgroundColor: var(--#{$card}--m-plain--BackgroundColor);
     --#{$card}--BoxShadow: var(--#{$card}--m-plain--BoxShadow);
+
+    // A clickable/selectable plain card should behave like a non-plain card in every way except the background color
+    &.pf-m-selectable,
+    &.pf-m-clickable {
+      --#{$card}--BorderColor: var(--#{$card}--m-selectable--BorderColor);
+      --#{$card}--BorderWidth: var(--#{$card}--m-selectable--BorderWidth);
+      
+      &.pf-m-current {
+        --#{$card}--BorderColor: var(--#{$card}--m-selectable--m-clickable--m-current--BorderColor);
+        --#{$card}--BorderWidth: var(--#{$card}--m-selectable--m-clickable--m-current--BorderWidth);
+      }
+    }
+
   }
 
   &.pf-m-expanded {
