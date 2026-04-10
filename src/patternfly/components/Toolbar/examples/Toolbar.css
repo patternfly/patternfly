@@ -79,3 +79,12 @@
   height: 200px;
   overflow: auto;
 }
+
+.ws-core-resizeable-container {
+  resize: horizontal;
+  overflow: auto;
+  border: var(--pf-t--global--border--width--extra-strong) dashed var(--pf-t--global--border--color--default);
+  width: 800px;
+  min-width: 300px;
+  max-width: 100%;
+}

@@ -129,7 +129,7 @@
   }
 
   container-type: inline-size;
-  container-name: #{$pf-prefix}contain-viewport #{$pf-prefix}contain-table;
+  container-name: #{$pf-prefix}contain-viewport #{$pf-prefix}contain-table #{$pf-prefix}contain-toolbar;
 }
 
 // Register the property type for the custom property to be animatable
