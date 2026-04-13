@@ -221,8 +221,8 @@
 
   // Stateful
   --#{$button}--m-stateful--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
-  --#{$button}--m-stateful--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
-  --#{$button}--m-stateful--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
+  --#{$button}--m-stateful--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$button}--m-stateful--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$button}--m-stateful--m-small--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--compact);
   --#{$button}--m-stateful--m-small--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--compact);
 
