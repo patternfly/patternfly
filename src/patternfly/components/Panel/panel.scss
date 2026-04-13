@@ -20,6 +20,9 @@
   --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$panel}--m-bordered--before--BorderColor: var(--pf-t--global--border--color--default);
 
+  // no border
+  --#{$panel}--m-no-border--before--BorderWidth: 0;
+
   // raised
   --#{$panel}--m-raised--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$panel}--m-raised--BackgroundColor: var(--pf-t--global--background--color--floating--default);
@@ -91,6 +94,10 @@
     --#{$panel}--before--BorderColor: var(--#{$panel}--m-bordered--before--BorderColor);
   }
 
+  &.pf-m-no-border {
+    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-no-border--before--BorderWidth);
+  }
+
   &.pf-m-secondary {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-secondary--BackgroundColor);
     --#{$panel}--before--BorderWidth: var(--#{$panel}--m-secondary--before--BorderWidth);
@@ -124,6 +131,10 @@
 
   &.pf-m-pill {
     --#{$panel}--BorderRadius: var(--#{$panel}--m-pill--BorderRadius);
+  }
+
+  &.pf-m-full-height {
+    height: 100%;
   }
 }
 

@@ -168,8 +168,10 @@ cssPrefix: pf-v6-c-panel
 | `.pf-v6-c-panel__main-body` | `<div>` | Initiates a panel content body container. |
 | `.pf-v6-c-panel__menu` | `<div>` | Initiates a panel menu container. |
 | `.pf-v6-c-panel__footer` | `<div>` | Initiates the panel footer. |
-| `.pf-m-bordered` | `.pf-v6-c-panel` | Modifies the panel for bordered styles. |
-| `.pf-m-raised` | `.pf-v6-c-panel` | Modifies the panel for raised styles. |
-| `.pf-m-scrollable` | `.pf-v6-c-panel` | Modifies the panel for scrollable styles. |
+| `.pf-m-bordered` | `.pf-v6-c-panel` | Adds a border to the panel. |
+| `.pf-m-no-border` | `.pf-v6-c-panel` | Removes the border from a variant that has a default border. |
+| `.pf-m-raised` | `.pf-v6-c-panel` | Applies elevated styles for use when the panel appears on top of other elements. |
+| `.pf-m-scrollable` | `.pf-v6-c-panel` | Modifies the panel so the main content is scrollable. |
 | `.pf-m-secondary` | `.pf-v6-c-panel` | Modifies the panel for secondary styles. |
 | `.pf-m-pill` | `.pf-v6-c-panel` | Modifies the panel for pill border radius. |
+| `.pf-m-full-height` | `.pf-v6-c-panel` | Makes the panel fill the avaiable height. |
