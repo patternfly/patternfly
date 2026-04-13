@@ -250,6 +250,6 @@ The action group consists of a primary and secondary action. Any additional acti
 | `.pf-v6-c-overflow-menu__control` | `<div>` | Initiates the overflow menu control. **Required** |
 | `.pf-v6-c-overflow-menu__group` | `<div>` | Initiates an overflow menu group. |
 | `.pf-v6-c-overflow-menu__item` | `<div>` | Initiates an overflow menu item. **Required** |
-| `.pf-m-vertical` | `.pf-v6-c-overflow-menu` | Modifies the flex direction of `.pf-v6-c-overflow-menu`, `.pf-v6-c-overflow-menu__content`, and `.pf-v6-c-overflow-menu__group` to "column", for vertically aligned overflow menus. |
+| `.pf-m-vertical` | `.pf-v6-c-overflow-menu` | Modifies the flex direction to "column", for vertically aligned overflow menus. |
 | `.pf-m-button-group` | `.pf-v6-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-button-group--spacer)`. Child spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-button-group--space-items)`. |
 | `.pf-m-icon-button-group` | `.pf-v6-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-icon-button-group--spacer)`. Child spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-icon-button-group--space-items)`. |
