@@ -302,8 +302,8 @@
     --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
     --#{$card}--BorderStyle: solid;
 
-    box-shadow: var(--#{$card}--m-glass--BoxShadow);
     backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
+    box-shadow: var(--#{$card}--m-glass--BoxShadow);
   }
 }
 
