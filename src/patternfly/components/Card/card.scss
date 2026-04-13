@@ -117,11 +117,11 @@
   --#{$card}--m-as-tile--BorderColor: var(--pf-t--global--border--color--control--default);
 
   // Glass
-    --#{$card}--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
-    --#{$card}--m-glass--BorderWidth: var(--pf-t--global--border--width--glass--default);
-    --#{$card}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
-    --#{$card}--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
-    --#{$card}--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
+  --#{$card}--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
+  --#{$card}--m-glass--BorderWidth: var(--pf-t--global--border--width--glass--default);
+  --#{$card}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
+  --#{$card}--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
+  --#{$card}--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
 }
 
 .#{$card} {
@@ -277,7 +277,7 @@
     --#{$card}--BorderColor: var(--#{$card}--m-plain--BorderColor);
     --#{$card}--BackgroundColor: var(--#{$card}--m-plain--BackgroundColor);
     --#{$card}--BoxShadow: var(--#{$card}--m-plain--BoxShadow);
-    
+
     backdrop-filter: none;
   }
 
