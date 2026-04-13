@@ -6,7 +6,6 @@
   --#{$card}--BorderStyle: solid;
   --#{$card}--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$card}--BorderRadius: var(--pf-t--global--border--radius--medium);
-  --#{$card}--BoxShadow: var(--pf-t--global--box-shadow--sm);
   --#{$card}--first-child--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$card}--child--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$card}--child--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
@@ -106,7 +105,6 @@
   // Plain - no border or background color
   --#{$card}--m-plain--BorderColor: transparent;
   --#{$card}--m-plain--BackgroundColor: transparent;
-  --#{$card}--m-plain--BoxShadow: none;
 
   // Toggle right
   --#{$card}__header--m-toggle-right--toggle--MarginInlineEnd: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
@@ -132,7 +130,6 @@
   background-color: var(--#{$card}--BackgroundColor);
   border: 0;
   border-radius: var(--#{$card}--BorderRadius);
-  box-shadow: var(--#{$card}--BoxShadow);
 
   &::before {
     position: absolute;
@@ -265,7 +262,6 @@
   &.pf-m-plain {
     --#{$card}--BorderColor: var(--#{$card}--m-plain--BorderColor);
     --#{$card}--BackgroundColor: var(--#{$card}--m-plain--BackgroundColor);
-    --#{$card}--BoxShadow: var(--#{$card}--m-plain--BoxShadow);
 
     // A clickable/selectable plain card should behave like a non-plain card in every way except the background color
     &.pf-m-selectable,
@@ -305,8 +301,8 @@
     --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
     --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
     --#{$card}--BorderStyle: solid;
-    --#{$card}--BoxShadow: var(--#{$card}--m-glass--BoxShadow);
 
+    box-shadow: var(--#{$card}--m-glass--BoxShadow);
     backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
   }
 }
