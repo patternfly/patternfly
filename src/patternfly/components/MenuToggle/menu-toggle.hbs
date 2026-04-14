@@ -14,7 +14,7 @@
     menu-toggle--IsPlaceholder='pf-m-placeholder'
     menu-toggle--IsSettings='pf-m-settings'
     menu-toggle--IsCircle='pf-m-circle'
-    menu-toggle--IsDock='pf-m-dock'
+    menu-toggle--IsDocked='pf-m-docked'
     menu-toggle--IsTextExpanded='pf-m-text-expanded'
     menu-toggle--modifier=menu-toggle--modifier
   }}
@@ -42,7 +42,7 @@
   {{/unless}}
 
   {{#if menu-toggle--IsPlain}}
-    {{#ifAny (inverse menu-toggle--IsText) menu-toggle--IsDock}}
+    {{#ifAny (inverse menu-toggle--IsText) menu-toggle--IsDocked}}
       aria-label="{{ternary menu-toggle--aria-label menu-toggle--aria-label "Menu toggle"}}"
     {{/ifAny}}
   {{/if}}
@@ -78,7 +78,7 @@
       {{/menu-toggle-icon}}
     {{/if}}
     {{!-- TODO: refactor this logic --}}
-    {{#ifAll menu-toggle--text (inverse menu-toggle--IsDock)}}
+    {{#ifAll menu-toggle--text (inverse menu-toggle--IsDocked)}}
       {{#> menu-toggle-controls}}
         {{> menu-toggle-toggle-icon}}
       {{/menu-toggle-controls}}
