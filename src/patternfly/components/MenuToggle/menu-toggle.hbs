@@ -76,6 +76,10 @@
       {{#> menu-toggle-icon}}
         {{{pfIcon "rh-ui-ellipsis-vertical-fill"}}}
       {{/menu-toggle-icon}}
+    {{else if menu-toggle--IsSettings}}
+      {{#> menu-toggle-icon}}
+        {{{pfIcon "rh-ui-settings-fill"}}}
+      {{/menu-toggle-icon}}
     {{/if}}
     {{!-- TODO: refactor this logic --}}
     {{#ifAll menu-toggle--text (inverse menu-toggle--IsDock)}}
