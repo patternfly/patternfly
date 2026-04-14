@@ -196,7 +196,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v6-hidden-visible($val: "block") {
+@mixin pf-v6-hidden-visible($val: "block", $ifIncludeHeight: false) {
   // stylelint-disable-next-line
   --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
 
@@ -216,6 +216,21 @@
   // toggle values based on state
   &.pf-m-hidden {
     --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+  }
+
+  // only apply height breakpoints if $ifIncludeHeight is true
+  @if $ifIncludeHeight {
+    @each $size, $bp in $pf-v6-global--height-breakpoint-name-map {
+      @media screen and (min-height: $bp) {
+        &.pf-m-hidden-on-#{$size}-height {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        }
+
+        &.pf-m-visible-on-#{$size}-height {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        }
+      }
+    }
   }
 
   @each $size, $bp in $pf-v6-global--breakpoint-name-map {

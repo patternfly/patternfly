@@ -36,7 +36,7 @@ With kebab
       {{/button}}
     {{/action-list-item}}
     {{#> action-list-item}}
-      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="ellipsis-v"}}
+      {{> button button--IsPlain=true button--aria-label="Toggle" button--IsIcon=true button--icon="rh-ui-ellipsis-vertical-fill"}}
     {{/action-list-item}}
   {{/action-list-group}}
 {{/action-list}}

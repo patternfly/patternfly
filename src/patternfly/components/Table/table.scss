@@ -239,6 +239,9 @@
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // * Table nested column header
+  --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: var(--#{$table}--border-width--base);
+  --#{$table}__thead--m-nested-column-header--BorderBlockEndColor: var(--#{$table}--BorderColor);
+  --#{$table}__thead--m-nested-column-header--after--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$table}__thead--m-nested-column-header__tr--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}__thead--m-nested-column-header__tr--PaddingBlockEnd: var(--pf-t--global--spacer--md);
@@ -254,9 +257,24 @@
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--striped--row--default);
 
   // * Table sticky header
+  --#{$table}--m-sticky-header--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
   --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
+  --#{$table}--m-sticky-header--BorderRadius: 0;
+  --#{$table}--m-sticky-header--BoxShadow: 0;
+  --#{$table}--m-sticky-header--BorderBlockEndWidth: var(--#{$table}--border-width--base);
+  --#{$table}--m-sticky-header--BorderBlockEndColor: var(--#{$table}--BorderColor);
+  --#{$table}--m-sticky-header--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
+  --#{$table}--m-sticky-header--BoxShadow--glass: var(--pf-t--global--box-shadow--sm);
+  --#{$table}--m-sticky-header--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}--m-sticky-header--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--default);
+
+  :where(.pf-v6-theme-glass) & {
+    --#{$table}--m-sticky-header--BorderBlockEndWidth: 0;
+    --#{$table}--m-sticky-header--BoxShadow: var(--#{$table}--m-sticky-header--BoxShadow--glass);
+    --#{$table}--m-sticky-header--BorderRadius: var(--#{$table}--m-sticky-header--BorderRadius--glass);
+  }
 }
 
 // TODO: update grouping comments to // Table {element}
@@ -266,8 +284,8 @@
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
 
-  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
-  &.pf-m-plain {
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
     --#{$table}--BackgroundColor: transparent;
     --#{$table}__expandable-row-content--BackgroundColor: transparent;
     --#{$table}__expandable-row-content--PaddingInlineStart: 0;
@@ -279,41 +297,63 @@
     table-layout: fixed;
   }
 
-  // - Table sticky header
-  &.pf-m-sticky-header > .#{$table}__thead,
-  .#{$table}__thead.pf-m-nested-column-header {
-    position: sticky;
-    inset-block-start: 0;
-    z-index: var(--#{$table}--m-sticky-header--ZIndex);
-    background: var(--#{$table}--BackgroundColor);
-
-    &::before {
-      position: absolute;
-      inset-block-start: 0;
-      inset-block-end: 0;
-      inset-inline-start: 0;
-      inset-inline-end: 0;
-      z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
-      pointer-events: none;
-      content: '';
-      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+  &.pf-m-sticky-header-base > .#{$table}__thead {
+    &::before,
+    &::after {
+      opacity: 0;
+      transition-timing-function: var(--#{$table}--m-sticky-header--TransitionTimingFunction--BackgroundColor);
+      transition-duration: var(--#{$table}--m-sticky-header--TransitionDuration--BackgroundColor);
+      transition-property: opacity;
     }
   }
 
-  &.pf-m-sticky-header {
+  &.pf-m-sticky-header,
+  &.pf-m-sticky-header-stuck {
+    --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: 0;
+  }
+
+  &.pf-m-sticky-header-stuck > .#{$table}__thead {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.pf-m-sticky-header,
+  &.pf-m-sticky-header-base {
     position: relative;
 
-    thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
+    > .#{$table}__thead {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--#{$table}--m-sticky-header--ZIndex);
+
+      &::before {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: '';
+        background-color: var(--#{$table}--m-sticky-header--BackgroundColor);
+        border-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+        box-shadow: var(--#{$table}--m-sticky-header--BoxShadow);
+      }
+
       > :where(th, td) {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
       }
     }
+  }
 
-    // - Table nested column header
-    > .pf-m-nested-column-header {
-      position: sticky;
-      inset-block-start: 0;
-      background: var(--#{$table}--BackgroundColor);
+  &.pf-m-sticky-header,
+  &.pf-m-sticky-header-base {
+    > .#{$table}__thead::after {
+      position: absolute;
+      inset: 0;
+      z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
+      pointer-events: none;
+      content: '';
+      border-block-end: var(--#{$table}--m-sticky-header--BorderBlockEndWidth) solid var(--#{$table}--m-sticky-header--BorderBlockEndColor);
     }
   }
 
@@ -1216,6 +1256,17 @@
 
   // - Table nested column header button
   &.pf-m-nested-column-header {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      z-index: var(--#{$table}__thead--m-nested-column-header--after--ZIndex);
+      pointer-events: none;
+      content: '';
+      border-block-end: var(--#{$table}__thead--m-nested-column-header--BorderBlockEndWidth) solid var(--#{$table}__thead--m-nested-column-header--BorderBlockEndColor);
+    }
+
     .#{$table}__button {
       --#{$table}__button--PaddingInlineStart: var(--#{$table}__nested-column-header__button--PaddingInlineStart);
       --#{$table}__button--PaddingInlineEnd: var(--#{$table}__nested-column-header__button--PaddingInlineEnd);

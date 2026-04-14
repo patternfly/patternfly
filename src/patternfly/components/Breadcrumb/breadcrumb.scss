@@ -2,7 +2,7 @@
 
 @include pf-root($breadcrumb) {
   // Breadcrumb item
-  --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$breadcrumb}__item--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
@@ -17,14 +17,16 @@
   --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
   --#{$breadcrumb}__link--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--default);
   --#{$breadcrumb}__link--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--default);
+  --#{$breadcrumb}__link--TextDecorationColor: var(--pf-t--global--text-decoration--color--default);
   --#{$breadcrumb}__link--hover--Color: var(--pf-t--global--text--color--link--hover);
   --#{$breadcrumb}__link--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
   --#{$breadcrumb}__link--hover--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--hover);
+  --#{$breadcrumb}__link--hover--TextDecorationColor: var(--pf-t--global--text-decoration--color--hover);
   --#{$breadcrumb}__link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$breadcrumb}__link--BackgroundColor: transparent;
 
   // Heading
-  --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
+  --#{$breadcrumb}__heading--FontSize: var(--#{$breadcrumb}__item--FontSize);
 
   // breadcrumb dropdown
   --#{$breadcrumb}__menu-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
@@ -83,6 +85,7 @@
   color: var(--#{$breadcrumb}__link--Color);
   text-decoration-line: var(--#{$breadcrumb}__link--TextDecorationLine);
   text-decoration-style: var(--#{$breadcrumb}__link--TextDecorationStyle);
+  text-decoration-color: var(--#{$breadcrumb}__link--TextDecorationColor);
   word-break: break-word;
   background-color: var(--#{$breadcrumb}__link--BackgroundColor);
 
@@ -90,6 +93,7 @@
     --#{$breadcrumb}__link--Color: var(--#{$breadcrumb}__link--hover--Color);
     --#{$breadcrumb}__link--TextDecorationLine: var(--#{$breadcrumb}__link--hover--TextDecorationLine);
     --#{$breadcrumb}__link--TextDecorationStyle: var(--#{$breadcrumb}__link--hover--TextDecorationStyle);
+    --#{$breadcrumb}__link--TextDecorationColor: var(--#{$breadcrumb}__link--hover--TextDecorationColor);
   }
 
 

@@ -261,13 +261,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingInlineStart);
     }
 
-    &.pf-m-glass {
+    > .#{$drawer}__main > .#{$drawer}__panel.pf-m-glass {
       --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
       --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
-  
-      > .#{$drawer}__main > .#{$drawer}__panel {
-        backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
-      }
+
+      backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
     }
   }
 
@@ -659,10 +657,10 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     &.pf-m-inline,
     &.pf-m-static {
-      @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
-      &.pf-m-plain {
-        > .#{$drawer}__main > .#{$drawer}__panel {
-          background: transparent;
+      > .#{$drawer}__main > .#{$drawer}__panel {
+        @at-root :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+        :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
+          --#{$drawer}__panel--BackgroundColor: transparent;
         }
       }
     }
