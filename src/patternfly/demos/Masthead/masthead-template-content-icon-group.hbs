@@ -9,13 +9,13 @@
       {{> masthead-template-application-launcher app-launcher--id=(concat toolbar-group--id '-app-launcher')}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+      {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
       {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Help"' menu-toggle--icon="question-circle"}}
     {{/toolbar-item}}
   {{/toolbar-group}}
   {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-hidden-on-' masthead-template-content-icon-group--breakpoint)}}
-    {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="ellipsis-v"}}
+    {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--icon="rh-ui-ellipsis-vertical-fill"}}
   {{/toolbar-item}}
 {{/toolbar-group}}

@@ -215,7 +215,7 @@ import './Table.css'
         toolbar-template--HasFilterGroup=true
         toolbar-template--HasSortButton=true
       }}
-    {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
+    {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header" table-simple-table--IsLong=true}}
     {{> table-pagination-footer}}
   {{/page-main-section}}
 {{/inline}}
@@ -324,7 +324,7 @@ import './Table.css'
       <div class="pf-v6-c-scroll-inner-wrapper">
         {{> table--scrollable
             table--scrollable--id="sticky-right-column-example"
-            table--scrollable--th--modifier--cell-9-modifier="pf-m-truncate pf-m-border-left"
+            table--scrollable--th--modifier--cell-13-modifier="pf-m-border-left"
             table--scrollable--ColumnLastIsStickyColumn=true}}
       </div>
       {{> table-pagination-footer}}

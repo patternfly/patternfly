@@ -5,14 +5,15 @@
         table--scrollable--th--content=cell-1--content
         table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 100px;"'
         table-th--IsSortable=true
+        table-th--IsNoWrap=true
         table-th--IsStickyLeft=true}}
   {{else}}
     {{> table--scrollable--th table--scrollable--th--content=cell-1--content table-th--IsSortable=true}}
   {{/if}}
   {{#if table--scrollable--Column2IsStickyColumn}}
-    {{> table--scrollable--th table--scrollable--th--modifier=table--scrollable--th--modifier--cell-2-modifier table--scrollable--th--content=cell-2--content table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 120px; --pf-v6-c-table__sticky-cell--InsetInlineStart: 100px;"' table-th--IsSortable=true table-th--IsStickyLeft=true}}
+    {{> table--scrollable--th table--scrollable--th--modifier=table--scrollable--th--modifier--cell-2-modifier table--scrollable--th--content=cell-2--content table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 120px; --pf-v6-c-table__sticky-cell--InsetInlineStart: 100px;"' table-th--IsSortable=true table-th--IsStickyLeft=true table-th--IsNoWrap=true}}
   {{else}}
-    {{> table--scrollable--th table--scrollable--th--content=cell-2--content table-th--IsSortable=true}}
+    {{> table--scrollable--th table--scrollable--th--content=cell-2--content table-th--IsSortable=true table-th--IsNoWrap=true}}
   {{/if}}
   {{> table--scrollable--th table--scrollable--th--content=cell-3--content table--scrollable--th--icon=cell-3--icon}}
   {{> table--scrollable--th table--scrollable--th--content=cell-4--content table--scrollable--th--icon=cell-4--icon}}
@@ -20,14 +21,18 @@
   {{> table--scrollable--th table--scrollable--th--content=cell-6--content table--scrollable--th--icon=cell-6--icon}}
   {{> table--scrollable--th table--scrollable--th--content=cell-7--content table--scrollable--th--icon=cell-7--icon}}
   {{> table--scrollable--th table--scrollable--th--content=cell-8--content table--scrollable--th--icon=cell-8--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-9--content table--scrollable--th--icon=cell-9--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-10--content table--scrollable--th--icon=cell-10--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-11--content table--scrollable--th--icon=cell-11--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-12--content table--scrollable--th--icon=cell-12--icon}}
 
   {{#if table--scrollable--ColumnLastIsStickyColumn}}
     {{> table--scrollable--th
-        table--scrollable--th--modifier=table--scrollable--th--modifier--cell-9-modifier
-        table--scrollable--th--content=cell-9--content
+        table--scrollable--th--modifier=table--scrollable--th--modifier--cell-13-modifier
+        table--scrollable--th--content=cell-13--content
         table-th--attribute='scope="col" style="--pf-v6-c-table__sticky-cell--MinWidth: 150px;"'
         table-th--IsStickyRight=true}}
   {{else}}
-    {{> table--scrollable--th table--scrollable--th--content=cell-9--content table--scrollable--th--icon=cell-9--icon}}
+    {{> table--scrollable--th table--scrollable--th--content=cell-13--content table--scrollable--th--icon=cell-13--icon}}
   {{/if}}
 {{/table-tr}}

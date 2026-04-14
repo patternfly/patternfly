@@ -30,6 +30,8 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-[hidden/visible]` | `.pf-v6-c-toolbar > *` | Modifies toolbar element to be hidden/visible. |
+| `.pf-m-[hidden/visible]{-on-[breakpoint]}` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option breakpoint. |
+| `.pf-m-[hidden/visible]{-on-[breakpoint]}-height` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option height breakpoint. Primarily for use with vertical toolbars. |
 | `.pf-m-flex-grow` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element to `flex-grow: 1`, allowing it to consume available main-axis space. |
 | `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
 | `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
@@ -652,6 +654,52 @@ Fusce tristique nulla id vestibulum maximus. Morbi sit amet nisi nec orci pulvin
       {{#> toolbar-item}}
         Item
       {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+### Vertical with height visibility breakpoints
+
+Visibility can be set per breakpoint to show or hide items and groups based on viewport height.
+
+```hbs isBeta
+{{#> toolbar toolbar--id="toolbar-vertical-height-toggle-example" toolbar--IsVertical=true}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{> divider}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-md-height"}}
+          Item (hidden below md)
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider}}
+      {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg-height"}}
+        {{#> toolbar-item}}
+          Item (hidden below lg)
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item (hidden below lg)
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item (hidden below lg)
+        {{/toolbar-item}}
+      {{/toolbar-group}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
 {{/toolbar}}

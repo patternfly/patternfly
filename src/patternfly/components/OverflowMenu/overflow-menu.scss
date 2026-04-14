@@ -2,21 +2,35 @@
 
 @include pf-root($overflow-menu) {
   --#{$overflow-menu}--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$overflow-menu}--RowGap: var(--pf-t--global--spacer--md);
 
   // * Overflow menu group
   --#{$overflow-menu}__group--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$overflow-menu}__group--RowGap: var(--pf-t--global--spacer--md);
 
   // * Overflow menu button group
   --#{$overflow-menu}__group--m-button-group--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$overflow-menu}__group--m-button-group--RowGap: var(--pf-t--global--spacer--sm);
 
   // * Overflow menu icon button group
   --#{$overflow-menu}__group--m-icon-button-group--ColumnGap: var(--pf-t--global--spacer--xs);
+  --#{$overflow-menu}__group--m-icon-button-group--RowGap: var(--pf-t--global--spacer--xs);
 }
 
 // - Overflow menu
 .#{$overflow-menu} {
   display: inline-flex;
+  row-gap: var(--#{$overflow-menu}--RowGap);
   column-gap: var(--#{$overflow-menu}--ColumnGap);
+}
+
+// - Overflow menu - vertical
+.#{$overflow-menu}.pf-m-vertical {
+  &,
+  .#{$overflow-menu}__content,
+  .#{$overflow-menu}__group {
+    flex-direction: column;
+  }
 }
 
 // - Overflow menu content - Overflow menu group
@@ -28,26 +42,31 @@
 
 // - Overflow menu group
 .#{$overflow-menu}__group {
+  row-gap: var(--#{$overflow-menu}__group--RowGap);
   column-gap: var(--#{$overflow-menu}__group--ColumnGap);
-
+  
   // - Overflow menu button group
   &.pf-m-button-group {
+    row-gap: var(--#{$overflow-menu}__group--m-button-group--RowGap);
     column-gap: var(--#{$overflow-menu}__group--m-button-group--ColumnGap);
   }
 
   // - Overflow menu icon button group
   &.pf-m-icon-button-group {
+    row-gap: var(--#{$overflow-menu}__group--m-icon-button-group--RowGap);
     column-gap: var(--#{$overflow-menu}__group--m-icon-button-group--ColumnGap);
   }
 }
 
 // - Oveflow menu item
 .#{$overflow-menu}__item {
+  row-gap: var(--#{$overflow-menu}__item--RowGap, var(--#{$overflow-menu}--RowGap));
   column-gap: var(--#{$overflow-menu}__item--ColumnGap, var(--#{$overflow-menu}--ColumnGap));
 }
 
 // - Overflow menu content - Overflow menu control
 .#{$overflow-menu}__content,
 .#{$overflow-menu}__control  {
+  row-gap: var(--#{$overflow-menu}--RowGap);
   column-gap: var(--#{$overflow-menu}--ColumnGap);
 }

@@ -1,4 +1,4 @@
-{{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
+{{#> table table--id=(concat page--id '-table') table--IsGrid=true table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--aria-label="This is a table with checkboxes"}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index='1'}}
       {{> table-cell-empty table-cell--text='Row select'}}
@@ -25,20 +25,20 @@
   {{#> table-tbody}}
     {{#> table-tr table-tr--index='2'}}
       {{> table-cell-check}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node1">Node 1</div>
           <a href="#">siemur/test-space</a>
         </div>
-      {{/table-th}}
+      {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
-        <span><i class="fas fa-code-branch"></i> 10</span>
+        <span>{{pfIcon "code-branch"}} 10</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Pull requests"}}
-        <span><i class="fas fa-code"></i> 25</span>
+        <span>{{pfIcon "code"}} 25</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Workspaces"}}
-        <span><i class="fas fa-cube"></i> 5</span>
+        <span>{{pfIcon "desktop"}} 5</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
@@ -51,20 +51,20 @@
 
     {{#> table-tr table-tr--index='3'}}
       {{> table-cell-check}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node2">Node 2</div>
           <a href="#">siemur/test-space</a>
         </div>
-      {{/table-th}}
+      {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
-        <span><i class="fas fa-code-branch"></i> 8</span>
+        <span>{{pfIcon "code-branch"}} 8</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Pull requests"}}
-        <span><i class="fas fa-code"></i> 30</span>
+        <span>{{pfIcon "code"}} 30</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Workspaces"}}
-        <span><i class="fas fa-cube"></i> 2</span>
+        <span>{{pfIcon "desktop"}} 2</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
@@ -77,20 +77,20 @@
 
     {{#> table-tr table-tr--index='4'}}
       {{> table-cell-check}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node3">Node 3</div>
           <a href="#">siemur/test-space</a>
         </div>
-      {{/table-th}}
+      {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
-        <span><i class="fas fa-code-branch"></i> 12</span>
+        <span>{{pfIcon "code-branch"}} 12</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Pull requests"}}
-        <span><i class="fas fa-code"></i> 48</span>
+        <span>{{pfIcon "code"}} 48</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Workspaces"}}
-        <span><i class="fas fa-cube"></i> 13</span>
+        <span>{{pfIcon "desktop"}} 13</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         30 days ago
@@ -103,20 +103,20 @@
 
     {{#> table-tr table-tr--index='5'}}
       {{> table-cell-check}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <div id="{{table--id}}-node4">Node 4</div>
           <a href="#">siemur/test-space</a>
         </div>
-      {{/table-th}}
+      {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
-        <span><i class="fas fa-code-branch"></i> 3</span>
+        <span>{{pfIcon "code-branch"}} 3</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Pull requests"}}
-        <span><i class="fas fa-code"></i> 8</span>
+        <span>{{pfIcon "code"}} 8</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Workspaces"}}
-        <span><i class="fas fa-cube"></i> 20</span>
+        <span>{{pfIcon "desktop"}} 20</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         8 days ago
@@ -136,13 +136,13 @@
         </div>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
-        <span><i class="fas fa-code-branch"></i> 34</span>
+        <span>{{pfIcon "code-branch"}} 34</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Pull requests"}}
-        <span><i class="fas fa-code"></i> 21</span>
+        <span>{{pfIcon "code"}} 21</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Workspaces"}}
-        <span><i class="fas fa-cube"></i> 26</span>
+        <span>{{pfIcon "desktop"}} 26</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Last commit"}}
         2 days ago
@@ -152,5 +152,137 @@
       {{/table-td}}
       {{> table-cell-action}}
     {{/table-tr}}
+
+    {{#if table-simple-table--IsLong}}
+      {{#> table-tr table-tr--index='7'}}
+        {{> table-cell-check}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <div>
+            <div id="{{table--id}}-node7">Node 7</div>
+            <a href="#">siemur/test-space</a>
+          </div>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          <span>{{pfIcon "code-branch"}} 15</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          <span>{{pfIcon "code"}} 18</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          <span>{{pfIcon "desktop"}} 7</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          5 days ago
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Action"}}
+          <a href="#">Action link</a>
+        {{/table-td}}
+        {{> table-cell-action}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--index='8'}}
+        {{> table-cell-check}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <div>
+            <div id="{{table--id}}-node8">Node 8</div>
+            <a href="#">siemur/test-space</a>
+          </div>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          <span>{{pfIcon "code-branch"}} 6</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          <span>{{pfIcon "code"}} 22</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          <span>{{pfIcon "desktop"}} 4</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          1 day ago
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Action"}}
+          <a href="#">Action link</a>
+        {{/table-td}}
+        {{> table-cell-action}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--index='9'}}
+        {{> table-cell-check}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <div>
+            <div id="{{table--id}}-node9">Node 9</div>
+            <a href="#">siemur/test-space</a>
+          </div>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          <span>{{pfIcon "code-branch"}} 9</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          <span>{{pfIcon "code"}} 15</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          <span>{{pfIcon "desktop"}} 11</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          14 days ago
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Action"}}
+          <a href="#">Action link</a>
+        {{/table-td}}
+        {{> table-cell-action}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--index='10'}}
+        {{> table-cell-check}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <div>
+            <div id="{{table--id}}-node10">Node 10</div>
+            <a href="#">siemur/test-space</a>
+          </div>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          <span>{{pfIcon "code-branch"}} 11</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          <span>{{pfIcon "code"}} 6</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          <span>{{pfIcon "desktop"}} 17</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          3 days ago
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Action"}}
+          <a href="#">Action link</a>
+        {{/table-td}}
+        {{> table-cell-action}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--index='11'}}
+        {{> table-cell-check}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <div>
+            <div id="{{table--id}}-node11">Node 11</div>
+            <a href="#">siemur/test-space</a>
+          </div>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          <span>{{pfIcon "code-branch"}} 19</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          <span>{{pfIcon "code"}} 14</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          <span>{{pfIcon "desktop"}} 9</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          6 days ago
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Action"}}
+          <a href="#">Action link</a>
+        {{/table-td}}
+        {{> table-cell-action}}
+      {{/table-tr}}
+    {{/if}}
   {{/table-tbody}}
 {{/table}}

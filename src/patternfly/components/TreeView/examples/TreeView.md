@@ -598,7 +598,7 @@ A search input can be used to filter tree view items. It is recommended that a t
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
         {{#> tree-view-action}}
-          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions" button--attribute='tabindex="-1"'}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-ellipsis-vertical-fill" button--aria-label="Actions" button--attribute='tabindex="-1"'}}
         {{/tree-view-action}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
@@ -675,7 +675,7 @@ A search input can be used to filter tree view items. It is recommended that a t
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{> button button--IsPlain=true button--IsIcon=true button--icon="ellipsis-v" button--aria-label="Actions" button--attribute='tabindex="-1"'}}
+          {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-ellipsis-vertical-fill" button--aria-label="Actions" button--attribute='tabindex="-1"'}}
         {{/tree-view-action}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}

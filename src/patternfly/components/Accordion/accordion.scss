@@ -129,8 +129,8 @@
   row-gap: var(--#{$accordion}--RowGap);
   background-color: var(--#{$accordion}--BackgroundColor);
 
-  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
-  &.pf-m-plain {
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
     --#{$accordion}--BackgroundColor: transparent;
     --#{$accordion}__expandable-content--BackgroundColor: transparent;
     --#{$accordion}__item--m-expanded--BackgroundColor: transparent;

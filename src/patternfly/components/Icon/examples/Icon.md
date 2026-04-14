@@ -27,7 +27,7 @@ cssPrefix: pf-v6-c-icon
 
 {{#> icon}}
   {{#> icon-content}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```

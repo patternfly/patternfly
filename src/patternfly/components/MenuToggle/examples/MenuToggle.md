@@ -91,7 +91,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsPrimary="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -139,7 +139,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsSecondary="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -261,7 +261,7 @@ import './MenuToggle.css'
 ```hbs
 {{#> menu-toggle menu-toggle--IsSecondary="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -275,7 +275,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -882,7 +882,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -897,7 +897,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -912,7 +912,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -930,7 +930,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -945,7 +945,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -960,7 +960,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -978,7 +978,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -993,7 +993,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -1008,7 +1008,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -1022,11 +1022,11 @@ Shown with default, primary, and secondary styling
 
 ### Settings
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
 
-{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
 
-{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
 ```
 
 ## Documentation

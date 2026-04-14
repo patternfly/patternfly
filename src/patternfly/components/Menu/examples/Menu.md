@@ -1169,7 +1169,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Actions'}}
-            <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
+            {{pfIcon "rh-ui-ellipsis-vertical-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
@@ -1230,7 +1230,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Copy'}}
-            <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
+            {{pfIcon "rh-ui-ellipsis-vertical-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
       {{/menu-list}}

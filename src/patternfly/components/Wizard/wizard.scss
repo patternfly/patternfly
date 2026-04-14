@@ -224,15 +224,15 @@
     }
   }
 
-  @at-root :where(.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass),
-  &.pf-m-plain {
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
     --#{$wizard}__header--BackgroundColor: var(--#{$wizard}--m-plain__header--BackgroundColor);
     --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}--m-plain__toggle--BackgroundColor);
     --#{$wizard}__outer-wrap--BackgroundColor: var(--#{$wizard}--m-plain__outer-wrap--BackgroundColor);
     --#{$wizard}__footer--BackgroundColor: var(--#{$wizard}--m-plain__footer--BackgroundColor);
-    
+
     @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
-      --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}--m-plain__nav--BackgroundColor);   
+      --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}--m-plain__nav--BackgroundColor);
     }
   }
 }

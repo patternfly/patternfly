@@ -140,7 +140,7 @@ cssPrefix: pf-v6-c-breadcrumb
       {{#> breadcrumb-dropdown}}
         {{#> menu-toggle menu-toggle--IsText=true menu-toggle--IsPlain=true menu-toggle--IsSmall=true}}
           {{#> menu-toggle-count}}
-            {{#> badge badge--modifier="pf-m-unread"}}
+            {{#> badge badge--modifier="pf-m-read"}}
               4
               <span class="pf-v6-screen-reader">additional items</span>
             {{/badge}}
