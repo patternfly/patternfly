@@ -361,18 +361,18 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Dock hamburger menu animation
   // mobile - show collapse arrow on dock internal toggle when expanded
-  .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+  .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
     @include pf-v6-hamburger($collapse: true);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     // desktop - reset dock internal toggle to bars
     .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
-    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
       @include pf-v6-hamburger($reset: true);
     }
 
-    // desktop - show expand arrow on hover (text collapsed by default)
+    // desktop - show expand arrow on hover
     .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger;
     }
