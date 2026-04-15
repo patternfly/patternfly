@@ -105,7 +105,7 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass__nav-search` | `<div>` | Initiates a container for Compass search button. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the Compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the Compass message bar. |
-| `.pf-m-dock` | `.pf-v6-c-compass` | Modifies for dock layout. |
+| `.pf-m-docked` | `.pf-v6-c-compass` | Modifies for dock layout. |
 | `.pf-m-no-glass` | `.pf-v6-c-compass`, `.pf-v6-c-compass__panel` | Modifies all elements or individual panels to remove the glass styles. |
 | `.pf-m-no-screen-warning` | `.pf-v6-c-compass` | Disables the screen warning that shows on smaller viewports. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for start styles. **Required** |

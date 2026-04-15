@@ -304,7 +304,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
   }
 
-  &.pf-m-dock {
+  &.pf-m-docked {
     --#{$page}--masthead--main-container--GridArea: main;
     --#{$page}__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight);
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart);
@@ -371,7 +371,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-area: header;
   }
   
-  &.pf-m-dock {
+  &.pf-m-docked {
     > .#{$masthead} {
       --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns);
     }

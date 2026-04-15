@@ -5,7 +5,10 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    <i class="fas fa-{{#if empty-state-icon--type}} fa-{{empty-state-icon--type}}{{else}}cubes{{/if}}"
-    aria-hidden="true"></i>
+    {{#if empty-state-icon--type}}
+      {{pfIcon empty-state-icon--type}}
+    {{else}}
+      {{pfIcon "cubes"}}
+    {{/if}}
   {{/if}}
 </div>

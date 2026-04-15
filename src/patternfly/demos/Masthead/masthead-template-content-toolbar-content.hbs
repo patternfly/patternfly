@@ -65,13 +65,13 @@
     {{/nav}}
     {{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-align-end pf-m-spacer-none pf-m-spacer-md-on-md"}}
       {{#> toolbar-item}}
-        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon="th" menu-toggle--aria-label="Applications" menu-toggle--text="Applications" menu-toggle--IsDock=true menu-toggle--IsText=true}}
+        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon="th" menu-toggle--aria-label="Applications" menu-toggle--text="Applications" menu-toggle--IsDocked=true menu-toggle--IsText=true}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> button button--IsDock=true button--IsPlain=true button--IsSettings=true button--aria-label="Settings" button--text="Settings"}}
+        {{> button button--IsDocked=true button--IsPlain=true button--IsSettings=true button--aria-label="Settings" button--text="Settings"}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--aria-label="Help" menu-toggle--icon="question-circle" menu-toggle--text="Help" menu-toggle--IsDock=true menu-toggle--IsText=true}}
+        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--aria-label="Help" menu-toggle--icon="question-circle" menu-toggle--text="Help" menu-toggle--IsDocked=true menu-toggle--IsText=true}}
       {{/toolbar-item}}
     {{/toolbar-group}}
   {{else}}

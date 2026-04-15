@@ -140,6 +140,17 @@
     border-radius: inherit;
   }
 
+  :where(.pf-v6-theme-glass) & {
+    &.pf-m-glass {
+      --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
+      --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
+      --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
+      
+      backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
+      box-shadow: var(--#{$card}--m-glass--BoxShadow);
+    }
+  }
+
   // SELECTABLE CARDS
   &.pf-m-selectable {
     // disables the gap since these have an empty label
@@ -263,6 +274,8 @@
     --#{$card}--BorderColor: var(--#{$card}--m-plain--BorderColor);
     --#{$card}--BackgroundColor: var(--#{$card}--m-plain--BackgroundColor);
 
+    backdrop-filter: none;
+    
     // A clickable/selectable plain card should behave like a non-plain card in every way except the background color
     &.pf-m-selectable,
     &.pf-m-clickable {
@@ -274,7 +287,6 @@
         --#{$card}--BorderWidth: var(--#{$card}--m-selectable--m-clickable--m-current--BorderWidth);
       }
     }
-
   }
 
   &.pf-m-expanded {
@@ -294,16 +306,6 @@
     & + .#{$card}__footer {
       padding-block-start: var(--#{$card}--c-divider--child--PaddingBlockStart);
     }
-  }
-
-  &.pf-m-glass {
-    --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
-    --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
-    --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
-    --#{$card}--BorderStyle: solid;
-
-    backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
-    box-shadow: var(--#{$card}--m-glass--BoxShadow);
   }
 }
 
