@@ -84,7 +84,7 @@ In a basic Compass layout, the page structure is defined by the order of element
       {{/panel}}
     {{/compass-main-header}}
     {{#> compass-content}}
-      {{#> panel panel--IsScrollable=true}}
+      {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true}}
         {{#> panel-main}}
           {{#> panel-main-body}}
             content

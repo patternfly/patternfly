@@ -137,7 +137,7 @@ Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rou
       {{/compass-main-header}}
       {{#> compass-content}}
         {{#> grid grid--modifier="pf-m-all-6-col pf-m-gutter"}}
-          {{#> panel panel--IsScrollable=true panel--IsGlass=true}}
+          {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
             {{#> panel-main}}
               {{#> panel-main-body}}
                 {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
@@ -153,7 +153,7 @@ Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rou
               {{/panel-main-body}}
             {{/panel-main}}
           {{/panel}}
-          {{#> panel panel--IsScrollable=true panel--IsGlass=true}}
+          {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
             {{#> panel-main}}
               {{#> panel-main-body}}
                 {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}

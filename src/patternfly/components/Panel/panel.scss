@@ -118,6 +118,12 @@
     --#{$panel}__footer--BorderWidth: var(--#{$panel}--m-scrollable__footer--BorderWidth);
   }
 
+  &.pf-m-scrollable-auto-height {
+    --#{$panel}__main--MaxHeight: 100%;
+
+    max-height: 100%;
+  }
+
   :where(.pf-v6-theme-glass) & {
     &.pf-m-glass {
       --#{$panel}--BackgroundColor: var(--#{$panel}--m-glass--BackgroundColor);
@@ -143,6 +149,12 @@
   }
 }
 
+.#{$panel},
+.#{$panel}__main {
+  display: flex;
+  flex-direction: column;
+}
+
 .#{$panel}__header {
   padding-block-start: var(--#{$panel}__header--PaddingBlockStart);
   padding-block-end: var(--#{$panel}__header--PaddingBlockEnd);
@@ -151,6 +163,7 @@
 }
 
 .#{$panel}__main {
+  min-height: 0;
   max-height: var(--#{$panel}__main--MaxHeight);
   overflow: var(--#{$panel}__main--Overflow);
 }

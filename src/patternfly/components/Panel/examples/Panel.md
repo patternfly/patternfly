@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-v6-c-panel
 ---
 
+import './Panel.css'
+
 ## Examples
 ### Basic
 ```hbs
@@ -18,7 +20,7 @@ cssPrefix: pf-v6-c-panel
 
 ### Secondary
 ```hbs
-{{#> panel panel--modifier="pf-m-secondary"}}
+{{#> panel panel--IsSecondary=true}}
   {{#> panel-main}}
     {{#> panel-main-body}}
       Main content with secondary styling
@@ -83,7 +85,7 @@ cssPrefix: pf-v6-c-panel
 
 ### Raised
 ```hbs
-{{#> panel panel--modifier="pf-m-raised"}}
+{{#> panel panel--IsRaised=true}}
   {{#> panel-main}}
     {{#> panel-main-body}}
       Main content
@@ -94,7 +96,7 @@ cssPrefix: pf-v6-c-panel
 
 ### Bordered
 ```hbs
-{{#> panel panel--modifier="pf-m-bordered"}}
+{{#> panel panel--IsBordered=true}}
   {{#> panel-main}}
     {{#> panel-main-body}}
       Main content
@@ -105,9 +107,33 @@ cssPrefix: pf-v6-c-panel
 
 ### Scrollable
 ```hbs
-{{#> panel panel--modifier="pf-m-scrollable"}}
+{{#> panel panel--IsScrollable=true}}
   {{#> panel-main panel-main--attribute="tabindex=0"}}
     {{#> panel-main-body}}
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content
+    {{/panel-main-body}}
+  {{/panel-main}}
+{{/panel}}
+```
+
+### Scrollable with auto height
+```hbs
+{{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true}}
+  {{#> panel-main panel-main--attribute="tabindex=0"}}
+    {{#> panel-main-body}}
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
       Main content<br><br>
       Main content<br><br>
       Main content<br><br>
@@ -124,12 +150,17 @@ cssPrefix: pf-v6-c-panel
 
 ### Scrollable with header and footer
 ```hbs
-{{#> panel panel--modifier="pf-m-scrollable"}}
+{{#> panel panel--IsScrollable=true}}
   {{#> panel-header}}
     Header content
   {{/panel-header}}
   {{#> panel-main panel-main--attribute="tabindex=0"}}
     {{#> panel-main-body}}
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
+      Main content<br><br>
       Main content<br><br>
       Main content<br><br>
       Main content<br><br>
@@ -172,6 +203,7 @@ cssPrefix: pf-v6-c-panel
 | `.pf-m-no-border` | `.pf-v6-c-panel` | Removes the border from a variant that has a default border. |
 | `.pf-m-raised` | `.pf-v6-c-panel` | Applies elevated styles for use when the panel appears on top of other elements. |
 | `.pf-m-scrollable` | `.pf-v6-c-panel` | Modifies the panel so the main content is scrollable. |
+| `.pf-m-scrollable-auto-height` | `.pf-v6-c-panel` | Modifies the panel to have an auto height when scrollable. |
 | `.pf-m-secondary` | `.pf-v6-c-panel` | Modifies the panel for secondary styles. |
 | `.pf-m-pill` | `.pf-v6-c-panel` | Modifies the panel for pill border radius. |
 | `.pf-m-full-height` | `.pf-v6-c-panel` | Makes the panel fill the avaiable height. |
