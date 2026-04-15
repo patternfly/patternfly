@@ -53,6 +53,9 @@
   --#{$panel}__footer--BorderColor: transparent;
   --#{$panel}__footer--BorderWidth: 0;
 
+  // pill
+  --#{$panel}--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
+
   // scrollable
   --#{$panel}--m-scrollable__main--MaxHeight: #{pf-size-prem(300px)};
   --#{$panel}--m-scrollable__main--Overflow: auto;
@@ -94,10 +97,6 @@
     --#{$panel}--before--BorderColor: var(--#{$panel}--m-bordered--before--BorderColor);
   }
 
-  &.pf-m-no-border {
-    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-no-border--before--BorderWidth);
-  }
-
   &.pf-m-secondary {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-secondary--BackgroundColor);
     --#{$panel}--before--BorderWidth: var(--#{$panel}--m-secondary--before--BorderWidth);
@@ -119,14 +118,20 @@
     --#{$panel}__footer--BorderWidth: var(--#{$panel}--m-scrollable__footer--BorderWidth);
   }
 
-  &.pf-m-glass {
-    --#{$panel}--BackgroundColor: var(--#{$panel}--m-glass--BackgroundColor);
-    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-glass--before--BorderWidth);
-    --#{$panel}--before--BorderColor: var(--#{$panel}--m-glass--before--BorderColor);
-    --#{$panel}--BoxShadow: var(--#{$panel}--m-glass--BoxShadow);
-    --#{$panel}--BorderRadius: var(--#{$panel}--m-glass--BorderRadius);
+  :where(.pf-v6-theme-glass) & {
+    &.pf-m-glass {
+      --#{$panel}--BackgroundColor: var(--#{$panel}--m-glass--BackgroundColor);
+      --#{$panel}--before--BorderWidth: var(--#{$panel}--m-glass--before--BorderWidth);
+      --#{$panel}--before--BorderColor: var(--#{$panel}--m-glass--before--BorderColor);
+      --#{$panel}--BoxShadow: var(--#{$panel}--m-glass--BoxShadow);
+      --#{$panel}--BorderRadius: var(--#{$panel}--m-glass--BorderRadius);
 
-    backdrop-filter: var(--#{$panel}--m-glass--BackdropFilter);
+      backdrop-filter: var(--#{$panel}--m-glass--BackdropFilter);
+    }
+  }
+
+  &.pf-m-no-border {
+    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-no-border--before--BorderWidth);
   }
 
   &.pf-m-pill {

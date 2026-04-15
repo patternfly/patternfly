@@ -21,17 +21,6 @@
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--Gap)); // Creates same gap as parent compass grid, mimicking the compass footer
-  --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$compass}__panel--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
-  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
-  --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--glass--default, transparent);
-  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--glass--default, var(--pf-t--global--border--radius--medium));
-  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--glass--default, 0);
-  --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
@@ -101,13 +90,6 @@
   :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
   }
-
-  @at-root .#{$compass}__panel,
-  & {
-    &.pf-m-no-glass {
-      --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-    }
-  }
 }
 
 .#{$compass}__header,
@@ -164,10 +146,12 @@
 }
 
 .#{$compass}__nav {
-  --#{$compass}__panel--PaddingBlockStart: var(--#{$compass}__nav--PaddingBlockStart);
-  --#{$compass}__panel--PaddingBlockEnd: var(--#{$compass}__nav--PaddingBlockEnd);
-  --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__nav--PaddingInlineStart);
-  --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__nav--PaddingInlineEnd);
+  .#{$panel} {
+    --#{$panel}__main-body--PaddingBlockStart: var(--#{$compass}__nav--PaddingBlockStart);
+    --#{$panel}__main-body--PaddingBlockEnd: var(--#{$compass}__nav--PaddingBlockEnd);
+    --#{$panel}__main-body--PaddingInlineStart: var(--#{$compass}__nav--PaddingInlineStart);
+    --#{$panel}__main-body--PaddingInlineEnd: var(--#{$compass}__nav--PaddingInlineEnd);
+  }
 
   display: flex;
   flex-direction: column;
@@ -187,10 +171,12 @@
 }
 
 .#{$compass}__sidebar {
-  --#{$compass}__panel--PaddingBlockStart: var(--#{$compass}__sidebar--PaddingBlockStart);
-  --#{$compass}__panel--PaddingBlockEnd: var(--#{$compass}__sidebar--PaddingBlockEnd);
-  --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
-  --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
+  .#{$panel} {
+    --#{$panel}__main-body--PaddingBlockStart: var(--#{$compass}__sidebar--PaddingBlockStart);
+    --#{$panel}__main-body--PaddingBlockEnd: var(--#{$compass}__sidebar--PaddingBlockEnd);
+    --#{$panel}__main-body--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
+    --#{$panel}__main-body--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
+  }
 
   display: flex;
   width: 0;
@@ -285,36 +271,4 @@
   width: var(--#{$compass}__message-bar--Width);
   min-width: var(--#{$compass}__message-bar--MinWidth);
   max-width: var(--#{$compass}__message-bar--MaxWidth);
-}
-
-.#{$compass}__panel {
-  padding-block-start: var(--#{$compass}__panel--PaddingBlockStart);
-  padding-block-end: var(--#{$compass}__panel--PaddingBlockEnd);
-  padding-inline-start: var(--#{$compass}__panel--PaddingInlineStart);
-  padding-inline-end: var(--#{$compass}__panel--PaddingInlineEnd);
-  background-color: var(--#{$compass}__panel--BackgroundColor);
-  backdrop-filter: var(--#{$compass}__panel--BackdropFilter);
-  border: var(--#{$compass}__panel--BorderWidth) solid var(--#{$compass}__panel--BorderColor);
-  border-radius: var(--#{$compass}__panel--BorderRadius);
-  box-shadow: var(--#{$compass}__panel--BoxShadow);
-
-  &.pf-m-no-border {
-    border-width: 0;
-  }
-
-  &.pf-m-no-padding {
-    padding: 0;
-  }
-
-  &.pf-m-full-height {
-    height: 100%;
-  }
-
-  &.pf-m-pill {
-    border-radius: var(--#{$compass}__panel--m-pill--BorderRadius);
-  }
-
-  &.pf-m-scrollable {
-    overflow: auto;
-  }
 }

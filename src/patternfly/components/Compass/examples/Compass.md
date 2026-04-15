@@ -23,13 +23,17 @@ In a basic Compass layout, the page structure is defined by the order of element
   {{#> compass-header}}
     {{#> compass-logo}}logo{{/compass-logo}}
     {{#> compass-nav}}
-      {{#> compass-panel}}
-        {{#> compass-nav-content}}
-          {{#> compass-nav-home}}home{{/compass-nav-home}}
-          {{#> compass-nav-main}}main{{/compass-nav-main}}
-          {{#> compass-nav-search}}search{{/compass-nav-search}}
-        {{/compass-nav-content}}
-      {{/compass-panel}}
+      {{#> panel}}
+        {{#> panel-main}}
+          {{#> panel-main-body}}
+            {{#> compass-nav-content}}
+              {{#> compass-nav-home}}home{{/compass-nav-home}}
+              {{#> compass-nav-main}}main{{/compass-nav-main}}
+              {{#> compass-nav-search}}search{{/compass-nav-search}}
+            {{/compass-nav-content}}
+          {{/panel-main-body}}
+        {{/panel-main}}
+      {{/panel}}
     {{/compass-nav}}
     {{#> compass-profile}}profile{{/compass-profile}}
   {{/compass-header}}
@@ -39,11 +43,15 @@ In a basic Compass layout, the page structure is defined by the order of element
       {{#> hero}}hero{{/hero}}
     {{/compass-hero}}
     {{#> compass-main-header}}
-      {{#> compass-panel}}
-        {{#> compass-main-header-content}}
-          main header
-        {{/compass-main-header-content}}
-      {{/compass-panel}}
+      {{#> panel}}
+        {{#> panel-main}}
+          {{#> panel-main-body}}
+            {{#> compass-main-header-content}}
+              main header
+            {{/compass-main-header-content}}
+          {{/panel-main-body}}
+        {{/panel-main}}
+      {{/panel}}
     {{/compass-main-header}}
     {{#> compass-content}}content{{/compass-content}}
     {{#> compass-main-footer}}
@@ -65,16 +73,24 @@ In a basic Compass layout, the page structure is defined by the order of element
   {{/compass-dock}}
   {{#> compass-main}}
     {{#> compass-main-header}}
-      {{#> compass-panel}}
-        {{#> compass-main-header-content}}
-          main header
-        {{/compass-main-header-content}}
-      {{/compass-panel}}
+      {{#> panel}}
+        {{#> panel-main}}
+          {{#> panel-main-body}}
+            {{#> compass-main-header-content}}
+              main header
+            {{/compass-main-header-content}}
+          {{/panel-main-body}}
+        {{/panel-main}}
+      {{/panel}}
     {{/compass-main-header}}
     {{#> compass-content}}
-      {{#> compass-panel compass-panel--IsScrollable=true}}
-        content
-      {{/compass-panel}}
+      {{#> panel panel--IsScrollable=true}}
+        {{#> panel-main}}
+          {{#> panel-main-body}}
+            content
+          {{/panel-main-body}}
+        {{/panel-main}}
+      {{/panel}}
     {{/compass-content}}
   {{/compass-main}}
 {{/compass}}
