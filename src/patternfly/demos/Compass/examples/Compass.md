@@ -96,7 +96,7 @@ This demo populates the main Compass section with a dashboard, which is often us
 
 This demo places multiple sections within the main Compass section, with each section containing a card view.
 
-Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rounded-rectangle container as the main content background. Instead, the `.pf-v6-c-compass__content` is a grid with 2 independently scrollable `.pf-v6-c-compass__panel` elements.
+Without a glass panel component wrapping all of the content, there is no rounded-rectangle container as the main content background. Instead, the `.pf-v6-c-compass__content` is a grid with 2 independently scrollable glass panel components.
 
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
