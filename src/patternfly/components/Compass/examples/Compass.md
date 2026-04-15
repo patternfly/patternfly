@@ -108,12 +108,11 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a Compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the Compass main wrapper. **Required** |
 | `.pf-v6-c-compass__main-header` | `<div>` | Initiates the Compass main header. |
-| `.pf-v6-c-compass__main-header-content` | `<div>` | Initiates the Compass main header content. This should be passed into a `.pf-v6-c-compass__panel` component. |
+| `.pf-v6-c-compass__main-header-content` | `<div>` | Initiates the Compass main header content. This should be passed into a glass panel component. |
 | `.pf-v6-c-compass__main-header-title` | `<div>` | Initiates a title within the Compass main header content. |
 | `.pf-v6-c-compass__main-header-toolbar` | `<div>` | Initiates a toolbar of actions within the Compass main header content. |
 | `.pf-v6-c-compass__content` | `<div>` | Initiates the Compass content. **Required** |
 | `.pf-v6-c-compass__main-footer` | `<div>` | Initiates the Compass main footer. **Required** |
-| `.pf-v6-c-compass__panel` | `<div>` | Initiates a Compass panel. |
 | `.pf-v6-c-compass__nav` | `<div>` | Initiates a Compass container for site navigation. |
 | `.pf-v6-c-compass__nav-content` | `<div>` | Initiates a Compass container for navigation content. |
 | `.pf-v6-c-compass__nav-home` | `<div>` | Initiates a container for Compass home button. |
@@ -126,9 +125,4 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-m-no-screen-warning` | `.pf-v6-c-compass` | Disables the screen warning that shows on smaller viewports. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for end styles. **Required** |
-| `.pf-m-no-border` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to remove the border. |
-| `.pf-m-no-padding` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to remove the padding. |
-| `.pf-m-full-height` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to be full height. |
-| `.pf-m-pill` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to have a pill-shaped border radius. |
-| `.pf-m-scrollable` | `.pf-v6-c-compass__panel` | Modifies a Compass panel to scroll its overflow. |
 | `.pf-m-expanded` | `.pf-v6-c-compass__header`, `.pf-v6-c-compass__sidebar`, `.pf-v6-c-compass__main-footer`, `.pf-v6-c-compass__footer` | Modifies a Compass section for expanded styles. |
