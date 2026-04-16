@@ -23,43 +23,25 @@ In a basic Compass layout, the page structure is defined by the order of element
   {{#> compass-header}}
     {{#> compass-logo}}logo{{/compass-logo}}
     {{#> compass-nav}}
-      {{#> panel panel--IsGlass=true}}
-        {{#> panel-main}}
-          {{#> panel-main-body}}
-            {{#> compass-nav-content}}
-              {{#> compass-nav-home}}home{{/compass-nav-home}}
-              {{#> compass-nav-main}}main{{/compass-nav-main}}
-              {{#> compass-nav-search}}search{{/compass-nav-search}}
-            {{/compass-nav-content}}
-          {{/panel-main-body}}
-        {{/panel-main}}
-      {{/panel}}
+      {{#> compass-nav-content}}
+        {{#> compass-nav-home}}home{{/compass-nav-home}}
+        {{#> compass-nav-main}}main{{/compass-nav-main}}
+        {{#> compass-nav-search}}search{{/compass-nav-search}}
+      {{/compass-nav-content}}
     {{/compass-nav}}
     {{#> compass-profile}}profile{{/compass-profile}}
   {{/compass-header}}
   {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
   {{#> compass-main}}
     {{#> compass-hero}}
-      {{#> hero}}hero{{/hero}}
+      hero
     {{/compass-hero}}
     {{#> compass-main-header}}
-      {{#> panel panel--IsGlass=true}}
-        {{#> panel-main}}
-          {{#> panel-main-body}}
-            {{#> compass-main-header-content}}
-              main header
-            {{/compass-main-header-content}}
-          {{/panel-main-body}}
-        {{/panel-main}}
-      {{/panel}}
+      {{#> compass-main-header-content}}
+        main header
+      {{/compass-main-header-content}}
     {{/compass-main-header}}
-    {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
-      {{#> panel-main}}
-        {{#> panel-main-body}}
-          content
-        {{/panel-main-body}}
-      {{/panel-main}}
-    {{/panel}}
+    {{#> compass-content}}content{{/compass-content}}
     {{#> compass-main-footer}}
       {{#> compass-message-bar}}message bar{{/compass-message-bar}}
     {{/compass-main-footer}}
@@ -79,24 +61,12 @@ In a basic Compass layout, the page structure is defined by the order of element
   {{/compass-dock}}
   {{#> compass-main}}
     {{#> compass-main-header}}
-      {{#> panel panel--IsGlass=true}}
-        {{#> panel-main}}
-          {{#> panel-main-body}}
-            {{#> compass-main-header-content}}
-              main header
-            {{/compass-main-header-content}}
-          {{/panel-main-body}}
-        {{/panel-main}}
-      {{/panel}}
+      {{#> compass-main-header-content}}
+        main header
+      {{/compass-main-header-content}}
     {{/compass-main-header}}
     {{#> compass-content}}
-      {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
-        {{#> panel-main}}
-          {{#> panel-main-body}}
-            content
-          {{/panel-main-body}}
-        {{/panel-main}}
-      {{/panel}}
+      content
     {{/compass-content}}
   {{/compass-main}}
 {{/compass}}

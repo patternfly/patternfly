@@ -82,7 +82,9 @@ This demo populates the main Compass section with a dashboard, which is often us
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
           {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
-            chatbot message bar
+            {{#> panel-main}}
+              chatbot message bar
+            {{/panel-main}}
           {{/panel}}
         {{/compass-message-bar}}
       {{/compass-main-footer}}
@@ -174,7 +176,9 @@ Without a glass panel component wrapping all of the content, there is no rounded
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
           {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
-            chatbot message bar
+            {{#> panel-main}}
+              chatbot message bar
+            {{/panel-main}}
           {{/panel}}
         {{/compass-message-bar}}
       {{/compass-main-footer}}
