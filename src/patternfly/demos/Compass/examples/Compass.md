@@ -58,7 +58,7 @@ This demo populates the main Compass section with a dashboard, which is often us
           {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:3"'}}
             {{#> l-flex l-flex--modifier="pf-m-column"}}
               {{> card-template-status card--IsGlass=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}}
-              {{> card-template-line-chart card--IsGlass=false card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
+              {{> card-template-line-chart card--IsGlass=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
               {{> card-template-metrics card--IsGlass=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
             {{/l-flex}}
           {{/grid-item}}
@@ -142,13 +142,13 @@ Without a glass panel component wrapping all of the content, there is no rounded
               {{#> panel-main-body}}
                 {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
                   {{> toolbar-template
-                    toolbar-template--id=(concat page-template--id '-toolbar')
+                    toolbar-template--id="compass-multiple-sections-toolbar"
                     toolbar-template--HasToggleGroup=true
                     toolbar-template--HasBulkSelect=true
                     toolbar-template--HasOverflowMenu=true
                     toolbar-template--HasFilter=true
                   }}
-                  {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
+                  {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery"}}
                 {{/l-flex}}
               {{/panel-main-body}}
             {{/panel-main}}
@@ -158,13 +158,13 @@ Without a glass panel component wrapping all of the content, there is no rounded
               {{#> panel-main-body}}
                 {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
                   {{> toolbar-template
-                    toolbar-template--id=(concat page-template--id '-toolbar')
+                    toolbar-template--id="compass-multiple-sections-toolbar-2"
                     toolbar-template--HasToggleGroup=true
                     toolbar-template--HasBulkSelect=true
                     toolbar-template--HasOverflowMenu=true
                     toolbar-template--HasFilter=true
                   }}
-                  {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
+                  {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery-2"}}
                 {{/l-flex}}
               {{/panel-main-body}}
             {{/panel-main}}
