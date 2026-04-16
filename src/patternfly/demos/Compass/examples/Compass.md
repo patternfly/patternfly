@@ -173,7 +173,7 @@ Without a glass panel component wrapping all of the content, there is no rounded
       {{/compass-content}}
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
-          {{#> panel panel--HasNoBorder=true panel--IsPill=true}}
+          {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
             chatbot message bar
           {{/panel}}
         {{/compass-message-bar}}

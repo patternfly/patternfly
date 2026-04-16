@@ -207,3 +207,4 @@ import './Panel.css'
 | `.pf-m-secondary` | `.pf-v6-c-panel` | Modifies the panel for secondary styles. |
 | `.pf-m-pill` | `.pf-v6-c-panel` | Modifies the panel for pill border radius. |
 | `.pf-m-full-height` | `.pf-v6-c-panel` | Makes the panel fill the avaiable height. |
+| `.pf-m-glass` | `.pf-v6-c-panel` | Applies glass styling to the panel. |
