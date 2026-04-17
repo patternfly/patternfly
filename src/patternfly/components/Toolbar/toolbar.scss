@@ -65,9 +65,23 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
-  --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$toolbar}--m-sticky--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$toolbar}--m-sticky--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
+
+  // * Toolbar sticky stuck
+  --#{$toolbar}--m-sticky-base--InsetBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky-base--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$toolbar}--m-sticky-base--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$toolbar}--m-sticky-base--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$toolbar}--m-sticky-stuck--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky-stuck--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky-stuck--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky-stuck--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky-stuck--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$toolbar}--m-sticky-stuck--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$toolbar}--m-sticky-stuck--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+  --#{$toolbar}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
 
   // * Toolbar vertical
   --#{$toolbar}--m-vertical--Width: fit-content;
@@ -151,6 +165,27 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
     border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-sticky-base {
+    position: sticky;
+    inset-block-start: var(--#{$toolbar}--m-sticky-base--InsetBlockStart);
+    z-index: var(--#{$toolbar}--m-sticky--ZIndex);
+    border-radius: var(--#{$toolbar}--m-sticky-base--BorderRadius);
+    transition-timing-function: var(--#{$toolbar}--m-sticky-base--TransitionTimingFunction);
+    transition-duration: var(--#{$toolbar}--m-sticky-base--TransitionDuration);
+    transition-property: background-color, box-shadow;
+  }
+
+  &.pf-m-sticky-stuck {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky-stuck--BackgroundColor);
+
+    padding-block-start: var(--#{$toolbar}--m-sticky-stuck--PaddingBlockStart);
+    padding-block-end: var(--#{$toolbar}--m-sticky-stuck--PaddingBlockEnd);
+    padding-inline-start: var(--#{$toolbar}--m-sticky-stuck--PaddingInlineStart);
+    padding-inline-end: var(--#{$toolbar}--m-sticky-stuck--PaddingInlineEnd);
+    border-block-end: var(--#{$toolbar}--m-sticky-stuck--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky-stuck--BorderBlockEndColor);
+    box-shadow: var(--#{$toolbar}--m-sticky-stuck--BoxShadow);
   }
 
   //  - Toolbar static
