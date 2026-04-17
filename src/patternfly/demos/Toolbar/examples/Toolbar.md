@@ -192,7 +192,7 @@ import './Toolbar.css'
     {{/page-main-body}}
     {{#> page-main-body}}
       {{> table-simple-table page--id="toolbar-and-table-static-search-overflow-menu-collapsed"}}
-      {{#> pagination pagination--modifier="pf-m-bottom"}}
+      {{#> pagination pagination--IsBottom=true}}
         {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-collapsed-example" pagination-menu-toggle--modifier="pf-m-top"}}
         {{> pagination-nav-content}}
       {{/pagination}}

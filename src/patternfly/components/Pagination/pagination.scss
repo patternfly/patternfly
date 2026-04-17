@@ -185,6 +185,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     border: 0;
     box-shadow: none;
   }
+  
   &.pf-m-sticky {
     --#{$pagination}--m-bottom--InsetBlockEnd: 0;
     --#{$pagination}--BorderBlockEndWidth: var(--#{$pagination}--m-sticky--BorderBlockEndWidth);

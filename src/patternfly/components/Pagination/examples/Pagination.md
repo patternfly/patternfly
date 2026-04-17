@@ -16,7 +16,7 @@ cssPrefix: pf-v6-c-pagination
 
 ### Top sticky
 ```hbs
-{{#> pagination pagination--modifier="pf-m-sticky"}}
+{{#> pagination pagination--IsSticky=true}}
   {{> pagination-total-items-content}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-top-sticky-example"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top sticky example"}}
@@ -48,7 +48,7 @@ cssPrefix: pf-v6-c-pagination
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
 <br><br>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
-{{#> pagination pagination--modifier="pf-m-bottom"}}
+{{#> pagination pagination--IsBottom=true}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-example" pagination-menu-toggle--modifier="pf-m-top"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - bottom example"}}
 {{/pagination}}
@@ -78,7 +78,7 @@ cssPrefix: pf-v6-c-pagination
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
 <br><br>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
-{{#> pagination pagination--modifier="pf-m-bottom pf-m-sticky"}}
+{{#> pagination pagination--IsBottom=true pagination--IsSticky=true}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-sticky-example" pagination-menu-toggle--modifier="pf-m-top"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - bottom sticky example"}}
 {{/pagination}}
@@ -93,7 +93,7 @@ cssPrefix: pf-v6-c-pagination
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
 <br><br>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
-{{#> pagination pagination--modifier="pf-m-bottom pf-m-static"}}
+{{#> pagination pagination--IsBottom=true pagination--IsStatic=true}}
   {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-sticky-example" pagination-menu-toggle--modifier="pf-m-top"}}
   {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - bottom sticky example"}}
 {{/pagination}}
