@@ -170,7 +170,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
   }
 
-  // maintain same styles in default
   &.pf-m-sticky-base {
     position: sticky;
     inset-block-start: 0;
