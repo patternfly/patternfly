@@ -179,9 +179,15 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     padding-inline-start: var(--#{$toolbar}--m-sticky--PaddingInlineStart);
     padding-inline-end: var(--#{$toolbar}--m-sticky--PaddingInlineEnd);
     border-radius: var(--#{$toolbar}--m-sticky--BorderRadius);
-    
-
+  
     &::before {
+      --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
+
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
+      box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
       opacity: 0;
       transition-timing-function: var(--#{$toolbar}--m-sticky--TransitionTimingFunction--BackgroundColor);
       transition-duration: var(--#{$toolbar}--m-sticky--TransitionDuration--BackgroundColor);
@@ -190,11 +196,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   &.pf-m-sticky-stuck {
-    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
-
-    border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
-    box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
-
     &::before {
       opacity: 1;
     }
