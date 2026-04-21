@@ -38,6 +38,25 @@ import './Label.css'
     label--IsCompact=true}}
 ```
 
+### Large
+
+```hbs
+{{> label--variants
+    label--IsFilled=true
+    label--variants--title="Large"
+    label--variants--id="large"
+    label--IsLarge=true}}
+
+<br><br>
+
+{{> label--variants
+    label--variants--title="Large"
+    label--variants--id="large-outline"
+    label--color="blue"
+    label--IsOutlined=true
+    label--IsLarge=true}}
+```
+
 ### Overflow
 
 This style of label is used to indicate overflow within a label group.
@@ -646,6 +665,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `.pf-m-filled` | `.pf-v6-c-label` | Modifies label for filled styles. |
 | `.pf-m-outline` | `.pf-v6-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-v6-c-label` | Modifies label for compact styles. |
+| `.pf-m-large` | `.pf-v6-c-label` | Modifies label for large styles. |
 | `.pf-m-overflow` | `.pf-v6-c-label` | Modifies label for overflow styles for use in a label group. |
 | `.pf-m-add` | `.pf-v6-c-label` | Modifies label for add styles for use in a label group. |
 | `.pf-m-blue` | `.pf-v6-c-label` | Modifies the label to have blue colored styling. |
