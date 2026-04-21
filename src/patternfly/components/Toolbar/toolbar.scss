@@ -78,12 +78,14 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
   --#{$toolbar}--m-sticky--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--default);
 
-  :where(.pf-v6-theme-glass) & {
-    --#{$toolbar}--m-sticky--BorderBlockEndWidth: 0;
-    --#{$toolbar}--m-sticky--BoxShadow: var(--#{$toolbar}--m-sticky--BoxShadow--glass);
-    --#{$toolbar}--m-sticky--BorderRadius: var(--#{$toolbar}--m-sticky--BorderRadius--glass);
-    --#{$toolbar}--m-sticky--PaddingInlineStart: var(--#{$toolbar}--m-sticky--PaddingInlineStart--glass);
-    --#{$toolbar}--m-sticky--PaddingInlineEnd: var(--#{$toolbar}--m-sticky--PaddingInlineEnd--glass);
+  :where(.pf-v6-theme-glass) {
+    .#{$toolbar} {
+      --#{$toolbar}--m-sticky--BorderBlockEndWidth: 0;
+      --#{$toolbar}--m-sticky--BoxShadow: var(--#{$toolbar}--m-sticky--BoxShadow--glass);
+      --#{$toolbar}--m-sticky--BorderRadius: var(--#{$toolbar}--m-sticky--BorderRadius--glass);
+      --#{$toolbar}--m-sticky--PaddingInlineStart: var(--#{$toolbar}--m-sticky--PaddingInlineStart--glass);
+      --#{$toolbar}--m-sticky--PaddingInlineEnd: var(--#{$toolbar}--m-sticky--PaddingInlineEnd--glass);
+    }
   }
 
   // * Toolbar vertical
@@ -186,6 +188,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       position: absolute;
       inset: 0;
       z-index: -1;
+      content: '';
       border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
       box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
       opacity: 0;
