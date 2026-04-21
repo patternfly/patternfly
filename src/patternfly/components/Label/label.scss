@@ -221,11 +221,12 @@
   --#{$label}--m-compact--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$label}--m-compact__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
   --#{$label}--m-compact__icon--FontSize: var(--pf-t--global--icon--size--font--body--sm);
+  --#{$label}--m-compact__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label}--m-compact--m-editable--TextUnderlineOffset: #{pf-size-prem(1px)};
   --#{$label}--m-compact--MinWidth: calc((var(--#{$label}--m-compact--FontSize) * var(--pf-t--global--font--line-height--body)) + (var(--#{$label}--m-compact--PaddingBlockStart) + var(--#{$label}--m-compact--PaddingBlockEnd)));
 
   // Large
-  --#{$label}--m-large--FontSize: var(--pf-t--global--icon--size--font--body--default);
+  --#{$label}--m-large--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$label}--m-large__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$label}--m-large__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--default);
 
@@ -466,6 +467,7 @@
     --#{$label}--Gap: var(--#{$label}--m-compact--Gap);
     --#{$label}__content--Gap: var(--#{$label}--m-compact__content--Gap);
     --#{$label}__icon--FontSize: var(--#{$label}--m-compact__icon--FontSize);
+    --#{$label}__actions--c-button--FontSize: var(--#{$label}--m-compact__actions--c-button--FontSize);
     --#{$label}--MinWidth: var(--#{$label}--m-compact--MinWidth);
     --#{$label}--m-editable--TextUnderlineOffset: var(--#{$label}--m-compact--m-editable--TextUnderlineOffset);
   }
