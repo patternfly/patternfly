@@ -3467,7 +3467,7 @@ __metadata:
     "@patternfly/documentation-framework": "npm:6.38.3"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.4.1"
-    "@patternfly/react-core": "npm:6.4.1"
+    "@patternfly/react-core": "npm:6.4.3"
     "@patternfly/react-icons": "npm:6.5.0-prerelease.13"
     "@patternfly/react-table": "npm:6.4.1"
     "@rspack/cli": "npm:^1.6.0"
@@ -3538,7 +3538,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:6.4.1, @patternfly/react-core@npm:^6.4.1":
+"@patternfly/react-core@npm:6.4.3":
+  version: 6.4.3
+  resolution: "@patternfly/react-core@npm:6.4.3"
+  dependencies:
+    "@patternfly/react-icons": "npm:^6.4.0"
+    "@patternfly/react-styles": "npm:^6.4.0"
+    "@patternfly/react-tokens": "npm:^6.4.0"
+    focus-trap: "npm:7.6.4"
+    react-dropzone: "npm:^14.3.5"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/c9f6b50b146a6acec22ab05c81916593a90a7d02436a89096b26e6e8880253cdcb90d2086951daac609006a80676db4dc3af7057a509084bc6cdb8d2aecd5bb6
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-core@npm:^6.4.1":
   version: 6.4.1
   resolution: "@patternfly/react-core@npm:6.4.1"
   dependencies:
