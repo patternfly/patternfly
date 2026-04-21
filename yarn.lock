@@ -3469,7 +3469,7 @@ __metadata:
     "@patternfly/react-code-editor": "npm:6.4.1"
     "@patternfly/react-core": "npm:6.4.3"
     "@patternfly/react-icons": "npm:6.5.0-prerelease.13"
-    "@patternfly/react-table": "npm:6.4.1"
+    "@patternfly/react-table": "npm:6.4.3"
     "@rspack/cli": "npm:^1.6.0"
     "@rspack/core": "npm:^1.6.0"
     "@rspack/dev-server": "npm:^1.1.4"
@@ -3538,7 +3538,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:6.4.3":
+"@patternfly/react-core@npm:6.4.3, @patternfly/react-core@npm:^6.4.3":
   version: 6.4.3
   resolution: "@patternfly/react-core@npm:6.4.3"
   dependencies:
@@ -3599,11 +3599,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-table@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@patternfly/react-table@npm:6.4.1"
+"@patternfly/react-table@npm:6.4.3":
+  version: 6.4.3
+  resolution: "@patternfly/react-table@npm:6.4.3"
   dependencies:
-    "@patternfly/react-core": "npm:^6.4.1"
+    "@patternfly/react-core": "npm:^6.4.3"
     "@patternfly/react-icons": "npm:^6.4.0"
     "@patternfly/react-styles": "npm:^6.4.0"
     "@patternfly/react-tokens": "npm:^6.4.0"
@@ -3612,7 +3612,7 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/9808a71211a70d7b5e6aead5eff49e06021bf621798e752e4c8490c1bc40a99292be877c8403fc89266aadd7299dcd3731b1354b806793b5d2e5a5db5e7d4706
+  checksum: 10c0/4cc47eeb978fe7b37006d97f149a897055520a83bc0d7f5978849dc3c174190fac7fa42c29d5bab1d84c69e4ba146a4562d1d3aaeb29d0d40c09ac31eb653d61
   languageName: node
   linkType: hard
 
