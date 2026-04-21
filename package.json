@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "a11y": "patternfly-a11y --config patternfly-a11y.config",
-    "backstop:clean": "rimraf -- backstop_data/bitmaps_test backstop_data/html_report",
+    "backstop:clean": "rimraf -- backstop_data/bitmaps_test backstop_data/bitmaps_test_glass backstop_data/html_report",
     "backstop:test": "backstop test --config='backstop.js'",
     "backstop:test:dark": "backstop test --config='backstop.js' --dark",
     "backstop:test:glass": "backstop test --config='backstop.js' --glass",
