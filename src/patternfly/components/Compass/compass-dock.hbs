@@ -5,5 +5,7 @@
   {{#if compass-dock--attribute}}
     {{{compass-dock--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> compass-dock-main}}
+    {{> @partial-block}}
+  {{/compass-dock-main}}
 </div>
