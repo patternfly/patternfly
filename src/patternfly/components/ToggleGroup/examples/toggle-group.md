@@ -314,7 +314,8 @@ cssPrefix: pf-v6-c-toggle-group
 {{/toggle-group}}
 ```
 
-### Filled
+### Full width toggle
+To make toggle group items fill the available space, use `.pf-m-fill`. In the following example, the toggle group items fill the width of the parent as the window size changes.
 ```hbs
 {{#> toggle-group toggle-group--modifier="pf-m-fill"}}
   {{#> toggle-group-item}}
