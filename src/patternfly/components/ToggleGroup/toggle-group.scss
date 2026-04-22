@@ -71,10 +71,6 @@
 
   // Filled style
   &.pf-m-fill {
-    .#{$toggle-group} {
-      flex-basis: 100%;
-    }
-
     .#{$toggle-group}__item {
       display: flex;
       flex-grow: 1;
