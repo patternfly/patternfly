@@ -732,8 +732,11 @@
   
   // Read
   &.pf-m-read {
+    --#{$button}--BackgroundColor: var(--#{$button}--m-read--BackgroundColor);
     --#{$button}--BorderColor: var(--#{$button}--m-read--BorderColor);
+    --#{$button}--hover--BackgroundColor: var(--#{$button}--m-read--hover--BackgroundColor);
     --#{$button}--hover--BorderColor: var(--#{$button}--m-read--hover--BorderColor);
+    --#{$button}--m-clicked--BackgroundColor: var(--#{$button}--m-read--m-clicked--BackgroundColor);
     --#{$button}--m-clicked--BorderColor: var(--#{$button}--m-read--m-clicked--BorderColor);
   }
 

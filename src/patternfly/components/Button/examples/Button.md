@@ -228,18 +228,6 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 
 <br><br>
 
-<strong>Read Plain</strong>
-<br>
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
-{{/button}}
-
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
-{{/button}}
-
-<br><br>
-
 <strong>Unread</strong>
 <br>
 {{#> button button--IsStateful=true button--IsUnread=true button--icon="rh-ui-notification-fill"}}
@@ -260,6 +248,64 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 
 {{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
   10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{/button}}
+
+<br><br>
+
+<strong>Plain</strong>
+<br>
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill"}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill"}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-attention-bell-fill"}}
+{{/button}}
+
+<br><br>
+
+<strong>Plain with count</strong>
+<br>
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 ```
 
