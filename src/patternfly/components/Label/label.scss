@@ -11,7 +11,7 @@
   --#{$label}--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$label}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$label}--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$label}--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$label}--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
 
   // Gray (default)
   --#{$label}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
@@ -218,8 +218,8 @@
   --#{$label}--m-compact--PaddingBlockEnd: 0;
   --#{$label}--m-compact--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$label}--m-compact--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$label}--m-compact--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$label}--m-compact__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$label}--m-compact--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
+  --#{$label}--m-compact__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
   --#{$label}--m-compact__icon--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label}--m-compact__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--sm);
   --#{$label}--m-compact--m-editable--TextUnderlineOffset: #{pf-size-prem(1px)};
@@ -229,10 +229,12 @@
   --#{$label}--m-large--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$label}--m-large__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
   --#{$label}--m-large__actions--c-button--FontSize: var(--pf-t--global--icon--size--font--body--default);
+  --#{$label}--m-large--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$label}--m-large__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
 
   // Content
   --#{$label}__content--MaxWidth: 100%;
-  --#{$label}__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--default);
+  --#{$label}__content--Gap: var(--pf-t--global--spacer--gap--text-to-element--compact);
   --#{$label}__content--Cursor: initial;
 
   // Icon
@@ -474,6 +476,8 @@
 
   &.pf-m-large {
     --#{$label}--FontSize: var(--#{$label}--m-large--FontSize);
+    --#{$label}--Gap: var(--#{$label}--m-large--Gap);
+    --#{$label}__content--Gap: var(--#{$label}--m-large__content--Gap);
     --#{$label}__icon--FontSize: var(--#{$label}--m-large__icon--FontSize);
     --#{$label}__actions--c-button--FontSize: var(--#{$label}--m-large__actions--c-button--FontSize);
   }
