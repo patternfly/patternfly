@@ -62,7 +62,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
   // * Toolbar sticky
   --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
-  --#{$toolbar}--m-sticky--InsetBlockStart: var(--pf-t--global--spacer--sm);
   --#{$toolbar}--m-sticky--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--PaddingInlineStart: 0;
@@ -175,7 +174,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
 
     position: sticky;
-    inset-block-start: var(--#{$toolbar}--m-sticky--InsetBlockStart);
+    inset-block-start: 0;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
     padding-block-start: var(--#{$toolbar}--m-sticky--PaddingBlockStart);
     padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
