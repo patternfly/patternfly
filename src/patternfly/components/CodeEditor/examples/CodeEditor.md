@@ -21,7 +21,7 @@ import './CodeEditor.css';
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
+        {{pfIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -51,7 +51,7 @@ import './CodeEditor.css';
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
+        {{pfIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -114,7 +114,7 @@ import './CodeEditor.css';
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
+        {{pfIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -146,7 +146,7 @@ This is an extra container used in React to prevent event propagation if upload 
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
+        {{pfIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -207,7 +207,7 @@ This is an extra container used in React to prevent event propagation if upload 
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
+        {{pfIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
