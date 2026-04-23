@@ -2,5 +2,11 @@
   {{#if wizard-nav-link-status-icon--attribute}}
     {{{wizard-nav-link-status-icon--attribute}}}
   {{/if}}>
-  <i class="fas fa-{{ternary wizard-nav-item--IsSuccess 'check-circle' (ternary wizard-nav-item--IsWarning 'exclamation-triangle' 'exclamation-circle')}}" aria-hidden="true"></i>
+  {{#if wizard-nav-item--IsSuccess}}
+    {{pfIcon "rh-ui-check-circle-fill"}}
+  {{else if wizard-nav-item--IsWarning}}
+    {{pfIcon "rh-ui-warning-fill"}}
+  {{else}}
+    {{pfIcon "rh-ui-error-fill"}}
+  {{/if}}
 </span>
