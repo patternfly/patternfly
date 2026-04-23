@@ -209,7 +209,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -263,7 +263,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -296,7 +296,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="{{data-list--id}}-{{data-list-item--id}}">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -325,7 +325,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -353,7 +353,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -386,7 +386,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -494,7 +494,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-          <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{pfIcon "rh-ui-branch"}}
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <div id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
