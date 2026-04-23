@@ -171,6 +171,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   &.pf-m-sticky-base {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
+
     position: sticky;
     inset-block-start: 0;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
@@ -178,15 +180,15 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
     padding-inline-start: var(--#{$toolbar}--m-sticky--PaddingInlineStart);
     padding-inline-end: var(--#{$toolbar}--m-sticky--PaddingInlineEnd);
+    background: transparent;
     border-radius: var(--#{$toolbar}--m-sticky--BorderRadius);
   
     &::before {
-      --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
-
       position: absolute;
       inset: 0;
       z-index: -1;
       content: '';
+      background: var(--#{$toolbar}--BackgroundColor);
       border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
       box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
       opacity: 0;
