@@ -205,10 +205,29 @@ This demo showcases how you can position a side-panel drawer on top of the other
 
 ### Docked
 ```hbs isFullscreen isBeta
-{{#> compass--demo-context}}
+{{#> compass--demo-context compass--id="compass-docked-demo"}}
   {{#> compass compass--HasDock=true}}
+    {{#> masthead masthead--IsDisplayInline=true}}
+      {{#> masthead-main}}
+        {{> masthead-toggle}}
+        {{#> masthead-brand}}
+          {{> masthead-logo}}
+        {{/masthead-brand}}
+      {{/masthead-main}}
+      {{#> masthead-content}}
+        {{#> toolbar toolbar--IsStatic=true}}
+          {{#> toolbar-content}}
+            {{#> toolbar-content-section}}
+              {{#> toolbar-item toolbar-item--modifier="pf-m-align-end"}}
+                {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Search"}}
+              {{/toolbar-item}}
+            {{/toolbar-content-section}}
+          {{/toolbar-content}}
+        {{/toolbar}}
+      {{/masthead-content}}
+    {{/masthead}}
     {{#> compass-dock}}
-      {{> masthead-template masthead-template--HasDockedNav=true}}
+      {{> masthead-template masthead-template--HasDockedNav=true masthead-template--id=(concat compass--id '-masthead')}}
     {{/compass-dock}}
     {{#> compass-main}}
       {{#> compass-main-header}}

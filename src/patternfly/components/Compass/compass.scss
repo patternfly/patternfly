@@ -97,9 +97,11 @@
   background-size: cover;
 
   &.pf-m-docked {
-    grid-template-areas: "dock main";
-    grid-template-rows: auto;
-    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 1fr;
     align-items: stretch;
     padding: 0;
 
@@ -110,6 +112,25 @@
 
   :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
+  }
+
+  > .#{$masthead} {
+    grid-area: header;
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    &.pf-m-docked {
+      grid-template-areas: "dock main";
+      grid-template-rows: auto;
+      grid-template-columns: auto 1fr;
+      row-gap: var(--#{$compass}__main--RowGap);
+      align-items: stretch;
+      padding: 0;
+
+      > .#{$masthead} {
+        display: none;
+      }
+    }
   }
 }
 
