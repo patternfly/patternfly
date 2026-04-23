@@ -254,26 +254,26 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 
 <strong>Plain</strong>
 <br>
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
 {{/button}}
 
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill"}}
-{{/button}}
-
-<br>
-
-{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
-{{/button}}
-
-{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill"}}
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
 {{/button}}
 
 <br>
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
 {{/button}}
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-attention-bell-fill"}}
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
 {{/button}}
 
 <br><br>
@@ -291,21 +291,21 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 <br>
 
 {{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
 
 {{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
 
 <br>
 
 {{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 
 {{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 ```
 
