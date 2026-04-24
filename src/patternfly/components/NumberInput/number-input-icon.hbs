@@ -7,7 +7,12 @@
     {{#if number-input-icon--attribute}}
       {{{number-input-icon--attribute}}}
     {{/if}}>
-    <i class="fas fa-{{ternary number-input-icon--IsMinus "minus" "plus"}}" aria-hidden="true"></i>
+    {{!-- <i class="fas fa-{{ternary number-input-icon--IsMinus "minus" "plus"}}" aria-hidden="true"></i> --}}
+    {{#if number-input-icon--IsMinus}}
+      {{pfIcon "rh-ui-minus"}}
+    {{else}}
+      {{pfIcon "rh-ui-add"}}
+    {{/if}}
   </span>
 {{/button}}
 
