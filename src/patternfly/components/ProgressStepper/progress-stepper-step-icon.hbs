@@ -7,9 +7,9 @@
     {{#if progress-stepper-step--IsInfo}}
       {{pfIcon "rh-ui-information-fill"}}
     {{else if progress-stepper-step--IsInProgress}}
-      <i class="pf-v6-pficon pf-v6-pficon-resources-full" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-resources-full"}}
     {{else if progress-stepper-step--IsInProgressAlt}}
-      <i class="pf-v6-pficon pf-v6-pficon-in-progress" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-in-progress"}}
     {{else if progress-stepper-step--IsInProgressAnimate}}
       {{#> spinner spinner--modifier="pf-m-xs"}}Loading...{{/spinner}}
     {{else if progress-stepper-step--IsComplete}}
@@ -21,7 +21,7 @@
     {{else if progress-stepper-step--IsPending}}
 
     {{else if progress-stepper-step--IsPendingAlt}}
-      <i class="pf-v6-pficon pf-v6-pficon-pending" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-pending"}}
     {{else}}
       {{>@partial-block}}
     {{/if}}
