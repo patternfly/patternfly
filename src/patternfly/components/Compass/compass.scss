@@ -113,7 +113,7 @@
     }
 
     > .#{$masthead} {
-      --pf-v6-c-masthead--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
+      --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
   
       grid-area: header;
     }
