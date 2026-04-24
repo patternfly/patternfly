@@ -25,6 +25,9 @@
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
 
+  // Docked
+  --#{$compass}--m-docked__masthead--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+
   // Section animation
   --#{$compass}--section--slide--length--header: 100%;
   --#{$compass}--section--slide--length--sidebar: 100%;
@@ -38,6 +41,27 @@
   --#{$compass}--section--m-expanded--duration: var(--pf-t--global--motion--duration--fade--default);
   --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s, 0s, 0s;
   --#{$compass}--section--m-expanded--TransitionDelay: 0s;
+
+  // Dock
+  --#{$compass}__dock--Width: #{pf-size-prem(250px)};
+  --#{$compass}__dock--desktop--Width: auto;
+  --#{$compass}__dock--ZIndex: var(--pf-t--global--z-index--md);
+  --#{$compass}__dock--TransitionDuration--slide: 0s;
+  --#{$compass}__dock--m-expanded--TransitionDuration--slide: 0s;
+  --#{$compass}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
+
+  // Dock main
+  --#{$compass}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$compass}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$compass}__dock-main--BoxShadow: none;
+  --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
+  --#{$compass}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$compass}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
+  --#{$compass}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
+  --#{$compass}__dock-main--BorderInlineEndColor: transparent;
+  --#{$compass}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
+  --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));  
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
@@ -76,19 +100,75 @@
   background-size: cover;
 
   &.pf-m-docked {
-    grid-template-areas: "dock main";
-    grid-template-rows: auto;
-    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 1fr;
     align-items: stretch;
     padding: 0;
 
     .#{$compass}__main {
       padding: var(--#{$compass}--Padding);
     }
+
+    > .#{$masthead} {
+      --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
+  
+      grid-area: header;
+    }
   }
 
   :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    &.pf-m-docked {
+      grid-template-areas: "dock main";
+      grid-template-rows: auto;
+      grid-template-columns: auto 1fr;
+      row-gap: var(--#{$compass}__main--RowGap);
+      align-items: stretch;
+      padding: 0;
+
+      > .#{$masthead} {
+        display: none;
+      }
+    }
+  }
+
+  // Masthead hamburger
+  > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    @include pf-v6-hamburger;
+  }
+
+  // mobile - show collapse when sidebar expanded
+  &:where(:has(> .#{$compass}__dock.pf-m-expanded)) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  // Docked masthead hamburger
+  .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    // desktop - reset dock internal toggle to bars
+    .#{$compass}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+      @include pf-v6-hamburger($reset: true);
+    }
+
+    // desktop - show expand arrow on hover
+    .#{$compass}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger;
+    }
+
+    // desktop - show collapse arrow on hover when text expanded
+    .#{$compass}__dock.pf-m-text-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
+    }
   }
 }
 
@@ -211,6 +291,65 @@
     &.pf-m-expanded {
       margin-inline-start: var(--#{$compass}--Gap);
     }
+  }
+}
+
+// Dock
+.#{$compass}__dock {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  z-index: var(--#{$compass}__dock--ZIndex);
+  display: flex;
+  flex-direction: column;
+  grid-area: dock;
+  width: var(--#{$compass}__dock--Width);
+  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide);
+  translate: -100% 0;
+
+  &.pf-m-expanded {
+    --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
+
+    translate: 0;
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    --#{$compass}__dock-main--BackgroundColor: var(--#{$compass}__dock-main--desktop--BackgroundColor);
+    --#{$compass}__dock-main--BorderInlineEndColor: var(--#{$compass}__dock-main--desktop--BorderInlineEndColor);
+
+    position: revert;
+    inset: revert;
+    width: auto;
+    translate: 0;
+  }
+
+  .#{$toolbar}.pf-m-vertical :is(.#{$toolbar}__content-section, .#{$toolbar}__group, .#{$toolbar}__item) {
+    align-items: stretch;
+  }
+
+  &.pf-m-text-expanded {
+    width: var(--#{$compass}__dock--Width);
+  }
+}
+
+.#{$compass}__dock-main {
+  flex-grow: 1;
+  background-color: var(--#{$compass}__dock-main--BackgroundColor);
+  backdrop-filter: var(--#{$compass}__dock-main--BackdropFilter);
+  border-inline-end: var(--#{$compass}__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock-main--BorderInlineEndColor);
+  box-shadow: var(--#{$compass}__dock-main--BoxShadow);
+
+  .#{$compass}__dock.pf-m-expanded & {
+    border-inline-end: var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor);
+    box-shadow: var(--#{$compass}__dock--m-expanded__dock-main--BoxShadow);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    --#{$compass}__dock-main--BoxShadow: var(--#{$compass}__dock-main--desktop--BoxShadow);
+    --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--#{$compass}__dock-main--desktop--BoxShadow);
+    --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--#{$compass}__dock-main--BorderInlineEndWidth);
+    --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--#{$compass}__dock-main--desktop--BorderInlineEndColor);
   }
 }
 

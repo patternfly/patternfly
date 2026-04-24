@@ -249,6 +249,64 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 {{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
   10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
+
+<br><br>
+
+<strong>Plain</strong>
+<br>
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
+{{/button}}
+
+<br><br>
+
+<strong>Plain with count</strong>
+<br>
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}items{{/screen-reader}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+  10 {{#> screen-reader}}unread items{{/screen-reader}}
+{{/button}}
+
+<br>
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{/button}}
+
+{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
+  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+{{/button}}
 ```
 
 ### Favorite
@@ -305,7 +363,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-danger` | `.pf-v6-c-button` | Modifies for danger styles. |
 | `.pf-m-warning` | `.pf-v6-c-button` | Modifies for warning styles. |
 | `.pf-m-link` | `.pf-v6-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
-| `.pf-m-plain` | `.pf-v6-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
+| `.pf-m-plain` | `.pf-v6-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, stateful, etc. |
 | `.pf-m-no-padding` | `.pf-v6-c-button.pf-m-plain` | Modifies a plain button to remove padding. This modifier should only be used when the button is inline within a sentence or block of text. Adjacent plain buttons without padding should always have spacing between them. |
 | `.pf-m-inline` | `.pf-v6-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link and has no padding and is displayed inline with other inline content. When used as a `<span>`, the text will flow inline with text around it. |
 | `.pf-m-block` | `.pf-v6-c-button` | Creates a block level button. |

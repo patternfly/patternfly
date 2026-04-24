@@ -64,10 +64,27 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$toolbar}--m-sticky--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$toolbar}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$toolbar}--m-sticky--PaddingInlineStart: 0;
+  --#{$toolbar}--m-sticky--PaddingInlineEnd: 0;
   --#{$toolbar}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
-  --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$toolbar}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$toolbar}--m-sticky--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$toolbar}--m-sticky--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$toolbar}--m-sticky--BorderRadius: 0;
+  --#{$toolbar}--m-sticky--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
+  --#{$toolbar}--m-sticky--BoxShadow--glass: var(--pf-t--global--box-shadow--sm);
+  --#{$toolbar}--m-sticky--PaddingInlineStart--glass: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky--PaddingInlineEnd--glass: var(--pf-t--global--spacer--sm);
+  --#{$toolbar}--m-sticky--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
+  --#{$toolbar}--m-sticky--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--default);
+
+  :where(.pf-v6-theme-glass) & {
+    --#{$toolbar}--m-sticky--BorderBlockEndWidth: 0;
+    --#{$toolbar}--m-sticky--BoxShadow: var(--#{$toolbar}--m-sticky--BoxShadow--glass);
+    --#{$toolbar}--m-sticky--BorderRadius: var(--#{$toolbar}--m-sticky--BorderRadius--glass);
+    --#{$toolbar}--m-sticky--PaddingInlineStart: var(--#{$toolbar}--m-sticky--PaddingInlineStart--glass);
+    --#{$toolbar}--m-sticky--PaddingInlineEnd: var(--#{$toolbar}--m-sticky--PaddingInlineEnd--glass);
+  }
 
   // * Toolbar vertical
   --#{$toolbar}--m-vertical--Width: fit-content;
@@ -151,6 +168,41 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
     border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-sticky-base {
+    --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-sticky--BackgroundColor);
+
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--#{$toolbar}--m-sticky--ZIndex);
+    padding-block-start: var(--#{$toolbar}--m-sticky--PaddingBlockStart);
+    padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
+    padding-inline-start: var(--#{$toolbar}--m-sticky--PaddingInlineStart);
+    padding-inline-end: var(--#{$toolbar}--m-sticky--PaddingInlineEnd);
+    background: transparent;
+    border-radius: inherit;
+  
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: '';
+      background: var(--#{$toolbar}--BackgroundColor);
+      border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
+      border-radius: var(--#{$toolbar}--m-sticky--BorderRadius);
+      box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
+      opacity: 0;
+      transition-timing-function: var(--#{$toolbar}--m-sticky--TransitionTimingFunction--BackgroundColor);
+      transition-duration: var(--#{$toolbar}--m-sticky--TransitionDuration--BackgroundColor);
+      transition-property: opacity;
+    }
+  }
+
+  &.pf-m-sticky-stuck {
+    &::before {
+      opacity: 1;
+    }
   }
 
   //  - Toolbar static

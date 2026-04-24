@@ -75,7 +75,7 @@
   background-color: var(--pf-t--global--background--color--secondary--default);
 }
 
-#ws-core-c-toolbar-sticky-toolbar .ws-preview-html {
+#ws-core-c-toolbar-sticky-toolbar .ws-preview-html, #ws-core-c-toolbar-dynamic-sticky-toolbar .ws-preview-html {
   height: 200px;
   overflow: auto;
 }

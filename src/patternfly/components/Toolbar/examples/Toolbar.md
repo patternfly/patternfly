@@ -618,6 +618,68 @@ Etiam nulla lacus, porttitor vel volutpat et, malesuada id nunc. Suspendisse por
 Fusce tristique nulla id vestibulum maximus. Morbi sit amet nisi nec orci pulvinar interdum. Duis convallis, nunc vel pharetra blandit, urna neque eleifend nunc, maximus faucibus tellus nisl a velit. Aliquam quis turpis tempor nisi ultricies fermentum at et ipsum. Pellentesque vel tincidunt nisl. Donec elit ante, sodales ac ultrices vitae, egestas ut magna. Nulla sollicitudin ornare mi, a porttitor sem fermentum vitae. Praesent maximus fringilla gravida. Sed ultricies turpis ut lacus sodales, et aliquet risus accumsan. Pellentesque lacus sapien, cursus vitae nulla vel, bibendum tristique risus.
 ```
 
+### Dynamic sticky toolbar
+
+This example shows the use of `.pf-m-sticky-base` and `.pf-m-sticky-stuck`. `.pf-m-sticky-stuck` can be applied dynamically as the page has scrolled to only show sticky styles when the toolbar is "stuck" and floating above the content.
+
+```hbs
+{{#> toolbar toolbar--modifier="pf-m-sticky-base pf-m-sticky-stuck" toolbar--id="toolbar-sticky-stuck-example"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor mattis massa dignissim blandit. Mauris pellentesque nisi a erat ultricies, mollis auctor nulla volutpat. Donec eu nisl magna. Donec nisi nulla, blandit et mauris in, lobortis elementum neque. Nunc pharetra eleifend purus, in commodo nisl accumsan in. Vestibulum feugiat nisl eu venenatis feugiat. Morbi ornare velit vitae tellus sollicitudin, sed ornare neque sagittis. Proin sodales, libero et vestibulum luctus, nunc mi euismod dui, vel accumsan lacus odio vel nibh. Etiam at mattis purus, sit amet vestibulum metus. Maecenas feugiat condimentum ligula eget hendrerit. Nullam eleifend convallis sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam rhoncus consectetur enim, at interdum mi tincidunt eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+<br><br>
+
+Maecenas vel sollicitudin ipsum, pulvinar pharetra magna. Aenean vel ipsum vel purus malesuada sagittis eget ac odio. Nullam vitae diam mollis, consectetur est vitae, sodales diam. Vivamus eu lectus quis mi maximus porta. Praesent erat sapien, vestibulum nec libero non, tincidunt congue mauris. Pellentesque vitae imperdiet mi. Nulla in ipsum neque. Cras a quam ut sem venenatis euismod non at tortor. Mauris porta purus augue, ut pharetra elit varius at. Vestibulum fringilla ligula ac leo tristique, porta venenatis nibh convallis.
+
+<br><br>
+
+Vestibulum vel orci mattis magna tristique suscipit. In vel tellus tempor, consectetur mi at, pellentesque enim. Cras venenatis tellus eget velit porttitor, sit amet malesuada tortor venenatis. Maecenas vitae augue ac orci volutpat gravida. In fermentum, orci eget tincidunt lobortis, turpis orci porta nibh, cursus dignissim lectus sapien at felis. Nulla facilisi. Aenean lectus justo, pellentesque sed nulla ut, pulvinar pellentesque tortor. Ut tempus euismod dolor gravida rhoncus. Quisque sed lorem sit amet erat tincidunt aliquet quis in nulla. Maecenas arcu erat, hendrerit a dui eget, convallis pharetra sapien. Nunc tellus enim, dictum eu egestas vel, ultrices eget est. Etiam quis vehicula sem. Nulla facilisi. Donec ante ipsum, fringilla iaculis ex a, tincidunt lobortis mi.
+
+<br><br>
+
+Etiam nulla lacus, porttitor vel volutpat et, malesuada id nunc. Suspendisse porttitor sem quis ante consequat, vitae commodo nulla ultricies. Nulla fermentum ipsum ac dolor elementum, eu luctus ex condimentum. Sed sed arcu aliquam, porta metus in, sollicitudin felis. Sed faucibus lacus consectetur orci ultricies laoreet. Morbi sed lectus dictum sem tempor porta. Donec ut diam tempor, venenatis erat vitae, accumsan diam. Etiam sed purus eget lacus vehicula iaculis non euismod dolor. Quisque ultricies eget est in semper.
+
+<br><br>
+
+Fusce tristique nulla id vestibulum maximus. Morbi sit amet nisi nec orci pulvinar interdum. Duis convallis, nunc vel pharetra blandit, urna neque eleifend nunc, maximus faucibus tellus nisl a velit. Aliquam quis turpis tempor nisi ultricies fermentum at et ipsum. Pellentesque vel tincidunt nisl. Donec elit ante, sodales ac ultrices vitae, egestas ut magna. Nulla sollicitudin ornare mi, a porttitor sem fermentum vitae. Praesent maximus fringilla gravida. Sed ultricies turpis ut lacus sodales, et aliquet risus accumsan. Pellentesque lacus sapien, cursus vitae nulla vel, bibendum tristique risus.
+```
+
 ### Vertical
 ```hbs isBeta
 {{#> toolbar toolbar--id="toolbar-vertical-example" toolbar--IsVertical=true}}

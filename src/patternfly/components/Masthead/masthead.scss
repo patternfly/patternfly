@@ -210,7 +210,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       }
     }
 
-    @at-root .#{$page}__dock.pf-m-text-expanded & {
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded & {
       .#{$masthead}__logo {
         display: revert;
 

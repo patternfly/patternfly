@@ -203,55 +203,22 @@ This demo showcases how you can position a side-panel drawer on top of the other
 {{/drawer}}
 ```
 
-### Docked
+### Docked nav
 ```hbs isFullscreen isBeta
-{{#> compass--demo-context}}
-  {{#> compass compass--HasDock=true}}
-    {{#> compass-dock}}
-      {{> masthead-template masthead-template--HasDockedNav=true}}
-    {{/compass-dock}}
-    {{#> compass-main}}
-      {{#> compass-main-header}}
-        {{#> panel panel--IsGlass=true}}
-          {{#> panel-main}}
-            {{#> panel-main-body}}
-              {{#> compass-main-header-content}}
-                {{#> compass-main-header-title}}
-                  {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-                    Header
-                  {{/title}}
-                {{/compass-main-header-title}}
-                {{#> compass-main-header-toolbar}}
-                  {{#> action-list}}
-                    {{#> action-list-group}}
-                      {{#> action-list-item}}
-                        {{#> button button--IsPrimary=true}}
-                          action
-                        {{/button}}
-                      {{/action-list-item}}
-                      {{#> action-list-item}}
-                        {{#> button button--IsSecondary=true}}
-                          action
-                        {{/button}}
-                      {{/action-list-item}}
-                    {{/action-list-group}}
-                  {{/action-list}}
-                {{/compass-main-header-toolbar}}
-              {{/compass-main-header-content}}
-            {{/panel-main-body}}
-          {{/panel-main}}
-        {{/panel}}
-      {{/compass-main-header}}
-      {{#> compass-content}}
-        {{#> panel panel--IsGlass=true}}
-          {{#> panel-main}}
-            {{#> panel-main-body}}
-              [so much room for activities]
-            {{/panel-main-body}}
-          {{/panel-main}}
-        {{/panel}}
-      {{/compass-content}}
-    {{/compass-main}}
-  {{/compass}}
-{{/compass--demo-context}}
+{{> compass--docked compass--docked--id="compass-docked-example"}}
+```
+
+### Docked nav - expanded on mobile
+```hbs isFullscreen isBeta
+{{> compass--docked compass--docked--id="compass-docked-mobile-expanded-example" compass-dock--IsExpanded=true}}
+```
+
+### Docked nav text expanded
+```hbs isFullscreen isBeta
+{{> compass--docked compass--docked--id="compass-docked-text-expanded-example" compass-dock--IsTextExpanded=true}}
+```
+
+### Docked nav text expanded - expanded on mobile
+```hbs isFullscreen isBeta
+{{> compass--docked compass--docked--id="compass-docked-text-expanded-mobile-expanded-example" compass-dock--IsExpanded=true compass-dock--IsTextExpanded=true}}
 ```
