@@ -120,7 +120,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-code-branch" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               From Git
@@ -132,7 +132,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-layer-group" aria-hidden="true"></i>
+              {{pfIcon "layer-group"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Container image
@@ -144,7 +144,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-            <i class="fas fa-fw fa-cube" aria-hidden="true"></i>
+              {{pfIcon "cube"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               From DockerFile
@@ -1101,7 +1101,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-code-branch" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Action 1
@@ -1116,7 +1116,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-code-branch" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Action 2 disabled
@@ -1131,7 +1131,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-code-branch" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Action 3
@@ -1182,7 +1182,7 @@ import './Menu.css'
             {{/menu-item-main}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Alert'}}
-            <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
+            {{pfIcon "bell"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
@@ -1198,7 +1198,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Copy'}}
-            <i class="fas fa-fw fa-clipboard" aria-hidden="true"></i>
+            {{pfIcon "rh-ui-clipboard-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
@@ -1214,7 +1214,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Expand'}}
-            <i class="fas fa-fw fa-bars" aria-hidden="true"></i>
+            {{pfIcon "rh-ui-menu-bars"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
@@ -1342,7 +1342,7 @@ import './Menu.css'
         {{#> menu-item menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-table" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-table"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Option 3
@@ -1388,7 +1388,7 @@ import './Menu.css'
         {{#> menu-item menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-table" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-table"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Option 3
