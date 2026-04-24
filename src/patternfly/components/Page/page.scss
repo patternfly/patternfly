@@ -418,7 +418,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
   transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide);
-  translate: -100% 0;
+
+  @include pf-v6-bidirectional-style(
+    $prop: translate,
+    $ltr-val: -100% 0,
+    $rtl-val: 100% 0
+  );
 
   &.pf-m-expanded {
     --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);

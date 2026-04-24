@@ -6,36 +6,37 @@
     page--HasDock=masthead-template--HasDockedNav}}
   {{#unless page-template--HasNoMasthead}}
     {{#if masthead-template--HasDockedNav}}
-      {{#if masthead-template--HasDockedNav}}
-        {{#> masthead masthead--IsDisplayInline=true}}
-          {{#> masthead-main}}
-            {{> masthead-toggle}}
-            {{#> masthead-brand}}
-              {{> masthead-logo}}
-            {{/masthead-brand}}
-          {{/masthead-main}}
-          {{#> masthead-content}}
-            {{#> toolbar toolbar--IsStatic=true}}
-              {{#> toolbar-content}}
-                {{#> toolbar-content-section}}
-                  {{#> toolbar-item toolbar-item--modifier="pf-m-align-end"}}
-                    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Search"}}
-                  {{/toolbar-item}}
-                {{/toolbar-content-section}}
-              {{/toolbar-content}}
-            {{/toolbar}}
-          {{/masthead-content}}
-        {{/masthead}}
-      {{/if}}
+      {{> page-template-skip-to-content}}
+      {{#> masthead masthead--IsDisplayInline=true}}
+        {{#> masthead-main}}
+          {{> masthead-toggle}}
+          {{#> masthead-brand}}
+            {{> masthead-logo}}
+          {{/masthead-brand}}
+        {{/masthead-main}}
+        {{#> masthead-content}}
+          {{#> toolbar toolbar--IsStatic=true}}
+            {{#> toolbar-content}}
+              {{#> toolbar-content-section}}
+                {{#> toolbar-item toolbar-item--modifier="pf-m-align-end"}}
+                  {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-search" button--aria-label="Search"}}
+                {{/toolbar-item}}
+              {{/toolbar-content-section}}
+            {{/toolbar-content}}
+          {{/toolbar}}
+        {{/masthead-content}}
+      {{/masthead}}
       {{#> page-dock}}
-        {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
+        {{> masthead-template masthead-template--id=(concat page--id '-masthead') masthead-template--HasNoSkipToContent=true}}
       {{/page-dock}}
     {{else}}
       {{> masthead-template masthead-template--id=(concat page--id '-docked')}}
     {{/if}}
   {{/unless}}
   {{#unless page-template--HasNoSidebar}}
-    {{> page-template-sidebar}}
+    {{#unless masthead-template--HasDockedNav}}
+      {{> page-template-sidebar}}
+    {{/unless}}
   {{/unless}}
   {{#if page-template--IsDrawer}}
     {{> page-template-drawer}}

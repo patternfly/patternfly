@@ -417,6 +417,7 @@
   --#{$button}--hamburger-icon--arrow--collapse--path: path("M3,7 L1,5 L3,3");
   --#{$button}--hamburger-icon--bottom--collapse--path: path("M9,9 L5,9");
   --#{$button}--m-hamburger__icon--m-expand--ScaleX: -1;
+  --#{$button}--m-hamburger__icon--m-collapse--ScaleX: 1;
 
   // Circle
   --#{$button}--m-circle--BorderRadius: var(--pf-t--global--border--radius--pill);
@@ -857,6 +858,11 @@
     --#{$button}--hover__icon--TransitionDuration: 0s;
     --#{$button}--hover__icon--TransitionProperty: scale;
 
+    @include pf-v6-rtl {
+      --#{$button}--m-hamburger__icon--m-expand--ScaleX: 1;
+      --#{$button}--m-hamburger__icon--m-collapse--ScaleX: -1;
+    }
+
     &.pf-m-expand {
       @include pf-v6-hamburger;
     }
@@ -987,7 +993,7 @@
     }
   }
 
-  @at-root .#{$page}__dock.pf-m-text-expanded &,
+  @at-root .#{$page}__dock.pf-m-text-expanded &:not(.pf-m-hamburger),
   &.pf-m-text-expanded {
     justify-content: flex-start;
     width: 100%;

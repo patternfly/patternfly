@@ -499,9 +499,9 @@
     // collapse
     @if $collapse {
       --#{$button}__icon--TransitionDelay: 0s;
-      --#{$button}__icon--ScaleX: 1;
+      --#{$button}__icon--ScaleX: var(--#{$button}--m-hamburger__icon--m-collapse--ScaleX);
       --#{$button}--hover__icon--TransitionDelay: 0s;
-      --#{$button}--hover__icon--ScaleX: 1;
+      --#{$button}--hover__icon--ScaleX: var(--#{$button}--m-hamburger__icon--m-collapse--ScaleX);
 
     // expand
     } @else {
