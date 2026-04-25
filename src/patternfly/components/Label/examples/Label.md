@@ -666,6 +666,8 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `.pf-m-outline` | `.pf-v6-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-v6-c-label` | Modifies label for compact styles. |
 | `.pf-m-large` | `.pf-v6-c-label` | Modifies label for large styles. |
+| `.pf-m-clickable` | `.pf-v6-c-label` | Modifies label for clickable styles when `.pf-v6-c-label__content` is an `<a>` or `<button>`. |
+| `.pf-m-clicked` | `.pf-v6-c-label` | Modifies label for clicked styles. |
 | `.pf-m-overflow` | `.pf-v6-c-label` | Modifies label for overflow styles for use in a label group. |
 | `.pf-m-add` | `.pf-v6-c-label` | Modifies label for add styles for use in a label group. |
 | `.pf-m-blue` | `.pf-v6-c-label` | Modifies the label to have blue colored styling. |
