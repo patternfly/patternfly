@@ -8,6 +8,7 @@
   {{#if label--IsEditable}} pf-m-editable{{/if}}
   {{#if label--IsEditableActive}} pf-m-editable-active{{/if}}
   {{#if label--IsDisabled}} pf-m-disabled{{/if}}
+  {{#if label--IsClicked}} pf-m-clicked{{/if}}
   {{#ifAny label--color label--status}}
     pf-m-{{ternary label--status label--status label--color}}
   {{/ifAny}}

@@ -30,6 +30,13 @@
       label--id=(concat label--variants--id '-status-button-removable')
       label-text--value=(concat label--variants--title ' button removable')}}
 
+{{> label
+      label--IsRemovable=true
+      label-content--IsButton=true
+      label--id=(concat label--variants--id '-status-button-clicked')
+      label-text--value=(concat label--variants--title ' button clicked')
+      label--IsClicked=true}}
+
   {{> label
       label--id=(concat label--variants--id '-status-truncated')
       label-text--value=(concat label--variants--title ', max-width truncation customization')
@@ -96,6 +103,14 @@
       label--id=(concat label--variants--id '-button-removable')
       label-text--value=(concat label--variants--title ' button removable')
       label-content--IsButton=true}}
+
+  {{> label
+      label--IsRemovable=true
+      label--IsClicked=true
+      label--id=(concat label--variants--id '-button-clicked')
+      label-text--value=(concat label--variants--title ' button clicked')
+      label-content--IsButton=true
+      label-icon--value="rh-ui-add-circle-fill"}}
 
   {{> label
       label--id=(concat label--variants--id '-truncated')
