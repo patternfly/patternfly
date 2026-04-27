@@ -6,30 +6,22 @@
 @use './layouts';
 
 :root:where(.pf-v6-theme-glass) {
-  body {
     background-image: url("./assets/images/PF-Bkg-Generic-Light.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-  }
 
   &:where(.pf-v6-theme-dark) {
-    body {
       background-image: url("./assets/images/PF-Bkg-Generic-Dark.svg");
-    }
   }
 
   &:where(.pf-v6-theme-redhat) {
-    body {
       background-image: url("./assets/images/Felt-Bkg-Generic-Light.svg");
-    }
   }
 
   &:where(.pf-v6-theme-redhat.pf-v6-theme-dark) {
-    body {
       background-image: url("./assets/images/Felt-Bkg-Generic-Dark.svg");
-    }
   }
 }
 
