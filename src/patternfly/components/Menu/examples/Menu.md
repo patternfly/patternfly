@@ -132,7 +132,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "layer-group"}}
+              {{pfIcon "rh-ui-collection-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Container image
@@ -144,7 +144,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "cube"}}
+              {{pfIcon "rh-ui-container-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               From DockerFile
@@ -1182,7 +1182,7 @@ import './Menu.css'
             {{/menu-item-main}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Alert'}}
-            {{pfIcon "bell"}}
+            {{pfIcon "rh-ui-notification-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}

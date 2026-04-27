@@ -93,7 +93,7 @@ cssPrefix: pf-v6-c-list
 {{#> list list--modifier="pf-m-plain"}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "book-open"}}
+      {{pfIcon "rh-ui-learn-fill"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item one
@@ -123,7 +123,7 @@ cssPrefix: pf-v6-c-list
 {{#> list list--modifier="pf-m-plain pf-m-icon-lg"}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "book-open"}}
+      {{pfIcon "rh-ui-learn-fill"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item one
