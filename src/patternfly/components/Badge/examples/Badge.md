@@ -9,7 +9,6 @@ cssPrefix: pf-v6-c-badge
 ```hbs
 {{#> badge badge--modifier="pf-m-read"}}
   7
-  {{> badge-icon}}
 {{/badge}}
 {{#> badge badge--modifier="pf-m-read"}}
   24
