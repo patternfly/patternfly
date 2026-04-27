@@ -41,11 +41,11 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$pagination}--m-sticky--InsetBlockStart: 0;
   --#{$pagination}--m-sticky--BorderBlockEndWidth:  var(--pf-t--global--border--width--high-contrast--regular);
-  --#{$pagination}--m-sticky-base--InsetBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$pagination}--m-sticky-base--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$pagination}--m-sticky-base--InsetBlockStart: 0;
+  --#{$pagination}--m-sticky-base--BorderRadius: 0;
   --#{$pagination}--m-sticky-base--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$pagination}--m-sticky-base--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
-  --#{$pagination}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
+  --#{$pagination}--m-sticky-stuck--BoxShadow: var(--#{$pagination}--m-sticky--BoxShadow);
   --#{$pagination}--m-sticky-stuck--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
 
   // bottom
@@ -63,9 +63,15 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-static--PaddingBlockEnd: 0;
   --#{$pagination}--m-bottom--m-static--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$pagination}--m-bottom--m-static--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$pagination}--m-bottom--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--md--top);
-  
+  --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: 0;
+
+  :where(:root.pf-v6-theme-glass) & {
+    --#{$pagination}--m-sticky-base--InsetBlockStart: var(--pf-t--global--spacer--sm);
+    --#{$pagination}--m-sticky-stuck--BorderRadius: var(--pf-t--global--border--radius--glass--default);
+    --#{$pagination}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
+    --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: var(--pf-t--global--spacer--sm);
+  }
+
   // page menu
   --#{$pagination}__page-menu--Display--base: block;
   --#{$pagination}__page-menu--Display: none;
@@ -207,26 +213,36 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 
   &.pf-m-sticky-base {
-    --#{$pagination}--m-sticky--InsetBlockStart: var(--#{$pagination}--m-sticky-base--InsetBlockStart);
-
-    border-radius: var(--#{$pagination}--m-sticky-base--BorderRadius);
-    transition-timing-function: var(--#{$pagination}--m-sticky-base--TransitionTimingFunction);
-    transition-duration: var(--#{$pagination}--m-sticky-base--TransitionDuration);
-    transition-property: background-color, box-shadow;
+    inset-block-start: var(--#{$pagination}--m-sticky-base--InsetBlockStart);
+    border-radius: var(--#{$pagination}--m-sticky-base--BorderRadius, 0);
 
     &.pf-m-bottom {
       --#{$pagination}--m-sticky-base--InsetBlockStart: 0;
       --#{$pagination}--m-bottom--InsetBlockEnd: var(--#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd);
     }
+
+    &::before {
+      content: "";
+      inset: 0;
+      position: absolute;
+      z-index: -1;
+      background-color: var(--#{$pagination}--m-sticky-base--BackgroundColor, transparent);
+      box-shadow: var(--#{$pagination}--m-sticky-base--BoxShadow, none);
+      border-radius: var(--#{$pagination}--m-sticky-base--BorderRadius, 0);
+      opacity: 0;
+      transition-timing-function: var(--#{$pagination}--m-sticky-base--TransitionTimingFunction);
+      transition-duration: var(--#{$pagination}--m-sticky-base--TransitionDuration);
+      transition-property: opacity;
+    }
   }
 
   &.pf-m-sticky-stuck {
-    --#{$pagination}--m-sticky--BoxShadow: var(--#{$pagination}--m-sticky-stuck--BoxShadow);
+    --#{$pagination}--m-sticky-base--BoxShadow: var(--#{$pagination}--m-sticky-stuck--BoxShadow);
+    --#{$pagination}--m-sticky-base--BorderRadius: var(--#{$pagination}--m-sticky-stuck--BorderRadius);
+    --#{$pagination}--m-sticky-base--BackgroundColor: var(--#{$pagination}--m-sticky-stuck--BackgroundColor);
 
-    background-color: var(--#{$pagination}--m-sticky-stuck--BackgroundColor);
-
-    &.pf-m-bottom {
-      --#{$pagination}--m-bottom--BoxShadow: var(--#{$pagination}--m-bottom--m-sticky-stuck--BoxShadow);
+    &::before {
+      opacity: 1;
     }
   }
 

@@ -228,8 +228,8 @@ This example shows the use of `.pf-m-sticky-base` and `.pf-m-sticky-stuck` on bo
 | `.pf-m-sticky` | `.pf-v6-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-v6-c-pagination.pf-m-bottom`. |
 | `.pf-m-sticky-base` | `.pf-v6-c-pagination` | Makes the pagination sticky on scroll, but does not apply sticky styling. `pf-m-sticky-stuck` must be used to apply sticky styling.  |
 | `.pf-m-sticky-stuck` | `.pf-v6-c-pagination.pf-m-sticky-base` | Applies sticky styling to a pagination with `pf-m-sticky-base`. |
-| `.pf-m-plain` | `.pf-v6-c-pagination.bottom` | Modifies the pagination to have a transparent background. Only applies outside of glass theme. |
-| `.pf-m-no-plain-on-glass` | `.pf-v6-c-pagination.bottom` | Prevents the pagination from being transparent on glass theme. |
+| `.pf-m-plain` | `.pf-v6-c-pagination.pf-m-bottom` | Modifies the pagination to have a transparent background. Only applies outside of glass theme. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-pagination.pf-m-bottom` | Prevents the pagination from being transparent on glass theme. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v6-c-pagination` | Modifies pagination horizontal padding at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-page-insets` | `.pf-v6-c-pagination` |  Modifies the pagination component padding/inset to visually match padding of page elements. |
 | `.pf-m-first` | `.pf-v6-c-pagination__nav-control` | Indicates the control is for the first page button. |
