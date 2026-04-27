@@ -56,6 +56,14 @@ In a basic Compass layout, the page structure is defined by the order of element
 ### Docked
 ```hbs isBeta
 {{#> compass compass--HasDock=true}}
+  {{#> masthead masthead--IsDisplayInline=true}}
+    {{#> masthead-main}}
+      masthead main
+    {{/masthead-main}}
+    {{#> masthead-content}}
+      masthead content
+    {{/masthead-content}}
+  {{/masthead}}
   {{#> compass-dock}}
     dock
   {{/compass-dock}}
