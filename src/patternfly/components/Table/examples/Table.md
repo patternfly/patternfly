@@ -1409,14 +1409,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true  table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1459,15 +1459,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1510,15 +1510,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1588,14 +1588,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1638,15 +1638,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1689,15 +1689,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1766,14 +1766,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1812,15 +1812,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1859,15 +1859,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -2065,7 +2065,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         0556
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2089,7 +2089,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9492
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2113,7 +2113,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9929
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2137,7 +2137,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         2217
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2604,7 +2604,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         0556
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2628,7 +2628,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9492
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2652,7 +2652,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9929
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2676,7 +2676,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         2217
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2733,7 +2733,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         0556
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2757,7 +2757,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9492
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2781,7 +2781,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9929
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2805,7 +2805,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         2217
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2975,14 +2975,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3023,14 +3023,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3073,15 +3073,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--modifier="pf-m-expanded" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3124,15 +3124,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-10"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-11"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-12"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3537,19 +3537,19 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         {{#> l-flex l-flex--modifier="pf-m-column"}}
           {{#> l-flex newcontext}}
             {{#> l-flex-item}}
-              <i class="fas fa-code-branch" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-branch-fill"}}
               &nbsp;5
             {{/l-flex-item}}
             {{#> l-flex-item}}
-              <i class="fas fa-code" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-code"}}
               &nbsp;9
             {{/l-flex-item}}
             {{#> l-flex-item}}
-              <i class="fas fa-cube" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-path-fill"}}
               &nbsp;2
             {{/l-flex-item}}
             {{#> l-flex-item}}
-              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-check-circle-fill"}}
               &nbsp;11
             {{/l-flex-item}}
           {{/l-flex}}

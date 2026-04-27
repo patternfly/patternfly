@@ -34,9 +34,9 @@
         {{#if table-tree-view--HasIcons}}
           {{#> table-tree-view-icon}}
             {{#if table-tr--tree--IsLeaf}}
-              <i class="fas fa-fw fa-leaf" aria-hidden="true"></i>
+              {{pfIcon "leaf"}}
             {{else}}
-              <i class="fas fa-fw fa-folder" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-folder-fill"}}
             {{/if}}
           {{/table-tree-view-icon}}
         {{/if}}
