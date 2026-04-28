@@ -32,7 +32,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-display-full__total-items--Display: none;
 
   // top
-  --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$pagination}--m-sticky--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$pagination}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
