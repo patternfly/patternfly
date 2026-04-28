@@ -222,13 +222,13 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     }
 
     &::before {
-      content: "";
-      inset: 0;
       position: absolute;
+      inset: 0;
       z-index: -1;
+      content: "";
       background-color: var(--#{$pagination}--m-sticky-base--BackgroundColor, transparent);
-      box-shadow: var(--#{$pagination}--m-sticky-base--BoxShadow, none);
       border-radius: var(--#{$pagination}--m-sticky-base--BorderRadius, 0);
+      box-shadow: var(--#{$pagination}--m-sticky-base--BoxShadow, none);
       opacity: 0;
       transition-timing-function: var(--#{$pagination}--m-sticky-base--TransitionTimingFunction);
       transition-duration: var(--#{$pagination}--m-sticky-base--TransitionDuration);
