@@ -184,6 +184,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-sticky-bottom--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}--section--m-sticky-bottom--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
+  // Sticky - glass
+  --#{$page}--section--m-sticky-top--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$page}--section--m-sticky-bottom--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$page}--section--m-shadow-bottom--ZIndex: var(--pf-t--global--z-index--xs);
@@ -670,6 +674,34 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         border-block-start: var(--#{$page}--section--m-sticky-bottom--BorderBlockStartWidth) solid var(--#{$page}--section--m-sticky-bottom--BorderBlockStartColor);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
+
+      // Glass sticky overrides: no shadow + fade transition when stuck
+      :where(:root.pf-v6-theme-glass) & {
+        &.pf-m-sticky-top#{$breakpoint-name} {
+          box-shadow: none;
+          transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
+          transition-property: background-color, box-shadow;
+        }
+
+        &.pf-m-sticky-bottom#{$breakpoint-name} {
+          box-shadow: none;
+          transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
+          transition-property: background-color, box-shadow;
+        }
+      }
+    }
+  }
+
+  // Glass sticky stuck state (not breakpoint-dependent)
+  :where(:root.pf-v6-theme-glass) & {
+    &.pf-m-sticky-top-stuck {
+      background-color: var(--pf-t--global--background--color--sticky--default);
+      box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
+    }
+
+    &.pf-m-sticky-bottom-stuck {
+      background-color: var(--pf-t--global--background--color--sticky--default);
+      box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
     }
   }
 }
