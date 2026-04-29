@@ -705,8 +705,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       background-color: var(--#{$page}--section--m-sticky-top--BackgroundColor);
       box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       opacity: 0;
-      transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
       transition-timing-function: var(--#{$page}--section--m-sticky-top--TransitionTimingFunction);
+      transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
       transition-property: opacity;
     }
   }
@@ -736,8 +736,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       background-color: var(--#{$page}--section--m-sticky-bottom--BackgroundColor);
       box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       opacity: 0;
-      transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
       transition-timing-function: var(--#{$page}--section--m-sticky-bottom--TransitionTimingFunction);
+      transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
       transition-property: opacity;
     }
   }
