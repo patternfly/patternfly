@@ -188,7 +188,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Sticky - dynamic
   --#{$page}--section--m-sticky-top--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$page}--section--m-sticky-top--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$page}--section--m-sticky-bottom--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$page}--section--m-sticky-bottom--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+
 
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
@@ -698,6 +701,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       opacity: 0;
       transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
+      transition-timing-function: var(--#{$page}--section--m-sticky-top--TransitionTimingFunction);
       transition-property: opacity;
     }
   }
@@ -728,6 +732,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       opacity: 0;
       transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
+      transition-timing-function: var(--#{$page}--section--m-sticky-bottom--TransitionTimingFunction);
       transition-property: opacity;
     }
   }
