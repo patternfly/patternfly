@@ -184,7 +184,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-sticky-bottom--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}--section--m-sticky-bottom--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
-  // Sticky - glass
+  // Sticky - dynamic
   --#{$page}--section--m-sticky-top--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
   --#{$page}--section--m-sticky-bottom--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
 
@@ -675,34 +675,36 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
 
-      // Glass sticky overrides: no shadow + fade transition when stuck
-      :where(.pf-v6-theme-glass) & {
-        &.pf-m-sticky-top#{$breakpoint-name} {
-          box-shadow: none;
-          transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
-          transition-property: background-color, box-shadow;
-        }
-
-        &.pf-m-sticky-bottom#{$breakpoint-name} {
-          box-shadow: none;
-          transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
-          transition-property: background-color, box-shadow;
-        }
-      }
     }
   }
 
-  // Glass sticky stuck state (not breakpoint-dependent)
-  :where(.pf-v6-theme-glass) & {
-    &.pf-m-sticky-top-stuck {
-      background-color: var(--pf-t--global--background--color--sticky--default);
-      box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
-    }
+  // Dynamic sticky modifiers: no shadow + fade transition when stuck
+  &.pf-m-sticky-top-base {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
+    box-shadow: none;
+    transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
+    transition-property: background-color, box-shadow;
+  }
 
-    &.pf-m-sticky-bottom-stuck {
-      background-color: var(--pf-t--global--background--color--sticky--default);
-      box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
-    }
+  &.pf-m-sticky-top-stuck {
+    background-color: var(--pf-t--global--background--color--sticky--default);
+    box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
+  }
+
+  &.pf-m-sticky-bottom-base {
+    position: sticky;
+    inset-block-end: 0;
+    z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
+    box-shadow: none;
+    transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
+    transition-property: background-color, box-shadow;
+  }
+
+  &.pf-m-sticky-bottom-stuck {
+    background-color: var(--pf-t--global--background--color--sticky--default);
+    box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
   }
 }
 
