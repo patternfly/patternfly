@@ -663,6 +663,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         position: sticky;
         inset-block-start: 0;
         z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
+        background-color: var(--pf-t--global--background--color--sticky--default);
         border-block-end: var(--#{$page}--section--m-sticky-top--BorderBlockEndWidth) solid var(--#{$page}--section--m-sticky-top--BorderBlockEndColor);
         box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       }
@@ -671,6 +672,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         position: sticky;
         inset-block-end: 0;
         z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
+        background-color: var(--pf-t--global--background--color--sticky--default);
         border-block-start: var(--#{$page}--section--m-sticky-bottom--BorderBlockStartWidth) solid var(--#{$page}--section--m-sticky-bottom--BorderBlockStartColor);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
@@ -684,13 +686,24 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     inset-block-start: 0;
     z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
     box-shadow: none;
-    transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
-    transition-property: background-color, box-shadow;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-color: var(--pf-t--global--background--color--sticky--default);
+      box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
+      opacity: 0;
+      transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
+      transition-property: opacity;
+    }
   }
 
   &.pf-m-sticky-top-stuck {
-    background-color: var(--pf-t--global--background--color--sticky--default);
-    box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
+    &::before {
+      opacity: 1;
+    }
   }
 
   &.pf-m-sticky-bottom-base {
@@ -698,13 +711,24 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     inset-block-end: 0;
     z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
     box-shadow: none;
-    transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
-    transition-property: background-color, box-shadow;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-color: var(--pf-t--global--background--color--sticky--default);
+      box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
+      opacity: 0;
+      transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
+      transition-property: opacity;
+    }
   }
 
   &.pf-m-sticky-bottom-stuck {
-    background-color: var(--pf-t--global--background--color--sticky--default);
-    box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
+    &::before {
+      opacity: 1;
+    }
   }
 }
 
