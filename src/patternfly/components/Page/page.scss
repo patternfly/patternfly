@@ -676,7 +676,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       }
 
       // Glass sticky overrides: no shadow + fade transition when stuck
-      :where(:root.pf-v6-theme-glass) & {
+      :where(.pf-v6-theme-glass) & {
         &.pf-m-sticky-top#{$breakpoint-name} {
           box-shadow: none;
           transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
@@ -693,7 +693,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Glass sticky stuck state (not breakpoint-dependent)
-  :where(:root.pf-v6-theme-glass) & {
+  :where(.pf-v6-theme-glass) & {
     &.pf-m-sticky-top-stuck {
       background-color: var(--pf-t--global--background--color--sticky--default);
       box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
