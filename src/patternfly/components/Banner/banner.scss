@@ -57,6 +57,9 @@
   --#{$banner}--m-blue--Color: var(--pf-t--global--text--color--nonstatus--on-blue--default);
   --#{$banner}--m-purple--BackgroundColor: var(--pf-t--global--color--nonstatus--purple--default);
   --#{$banner}--m-purple--Color: var(--pf-t--global--text--color--nonstatus--on-purple--default);
+  
+  // pill
+  --#{$banner}--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
 }
 
 .#{$banner} {
@@ -142,6 +145,10 @@
     inset-block-start: 0;
     z-index: var(--#{$banner}--m-sticky--ZIndex);
     box-shadow: var(--#{$banner}--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-pill {
+    border-radius: var(--#{$banner}--m-pill--BorderRadius);
   }
 
   a {
