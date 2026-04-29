@@ -284,7 +284,7 @@ import './Page.css'
         Breadcrumb
       {{/page-main-breadcrumb}}
       {{#> page-main-section page-main-section--attribute='aria-label="Sticky dynamic section title"'}}
-        This <code>.pf-v6-c-page__main-group</code> uses <code>.pf-m-sticky-top</code> and <code>.pf-m-sticky-top-stuck</code> for dynamic sticky positioning with a fade-in background and shadow.
+        This <code>.pf-v6-c-page__main-group</code> uses <code>.pf-m-sticky-top</code> and <code>.pf-m-sticky-top-stuck</code>. In glass mode, the background and shadow fade in when the section becomes stuck.
       {{/page-main-section}}
     {{/page-main-group}}
     {{#> page-main-section page-main-section--attribute='aria-label="Sticky dynamic content section"'}}
@@ -338,10 +338,8 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-align-center` | `.pf-v6-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |
 | `.pf-m-sticky-top{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the top of its container at an optional height breakpoint. |
 | `.pf-m-sticky-bottom{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the bottom of its container at an optional height breakpoint. |
-| `.pf-m-sticky-top-base` | `.pf-v6-c-page__main-*` | Sets up dynamic sticky top positioning with a transparent background and a `::before` pseudo-element for the fade-in background/shadow. Used with `.pf-m-sticky-top-stuck`. |
-| `.pf-m-sticky-top-stuck` | `.pf-v6-c-page__main-*` | Triggers the sticky top visual state, fading in the background and shadow. Apply via JS when the section becomes stuck. |
-| `.pf-m-sticky-bottom-base` | `.pf-v6-c-page__main-*` | Sets up dynamic sticky bottom positioning with a transparent background and a `::before` pseudo-element for the fade-in background/shadow. Used with `.pf-m-sticky-bottom-stuck`. |
-| `.pf-m-sticky-bottom-stuck` | `.pf-v6-c-page__main-*` | Triggers the sticky bottom visual state, fading in the background and shadow. Apply via JS when the section becomes stuck. |
+| `.pf-m-sticky-top-stuck` | `.pf-v6-c-page__main-*` | Modifies a sticky top section to have stuck styles in glass mode, fades in the background and shadow. |
+| `.pf-m-sticky-bottom-stuck` | `.pf-v6-c-page__main-*` | Modifies a sticky bottom section to have stuck styles in glass mode, fades in the background and shadow. |
 | `.pf-m-shadow-bottom` | `.pf-v6-c-page__main-*` | Modifies a section/group to have a bottom shadow. |
 | `.pf-m-shadow-top` | `.pf-v6-c-page__main-*` | Modifies a section/group to have a top shadow. |
 | `.pf-m-overflow-scroll` | `.pf-v6-c-page__main-*` | Modifies a section/group to show a scrollbar if it has overflow content. |
