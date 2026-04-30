@@ -56,8 +56,8 @@
 }
 
 .#{$compass} {
-  background-color: var(--#{$compass}--BackgroundColor);
   height: 100dvh;
+  background-color: var(--#{$compass}--BackgroundColor);
 }
 
 .#{$compass}__container {
