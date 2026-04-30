@@ -28,7 +28,7 @@ module.exports = async (page, scenario, vp, isReference, Engine, config) => {
 
     // Set theme variant preference
     if (options.felt) {
-      localStorage.setItem('theme-variant-preference', 'theme-redhat');
+      localStorage.setItem('theme-variant-preference', 'theme-felt');
     } else {
       localStorage.setItem('theme-variant-preference', 'theme-default');
     }
