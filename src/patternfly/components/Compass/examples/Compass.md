@@ -1,7 +1,8 @@
 ---
 id: 'Compass'
 beta: true
-section: components
+section: AI
+subsection: Generative UIs
 cssPrefix: pf-v6-c-compass
 ---
 
@@ -10,7 +11,7 @@ import './Compass.css';
 ## Examples
 ### Basic
 
-In a basic Compass layout, the page structure is defined by the order of elements nested within the main `.pf-v6-c-compass` container:
+In a basic Compass layout, the page structure is defined by the order of elements nested within `.pf-v6-c-compass__container` (inside `.pf-v6-c-compass`):
 - **Header:** Content rendered at the top of the page (`.pf-v6-c-compass__header`), typically containing a logo (`.pf-v6-c-compass__logo`), middle navigation (`.pf-v6-c-compass__nav`), and profile (`.pf-v6-c-compass__profile`).
 - **Start sidebar:** Content rendered at the horizontal start of the page (by default, the left side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-start` modifier.
 - **Main:** Content rendered in the center of the page. The `.pf-v6-c-compass__main` wrapper contains a [hero component](/components/hero), the main header (`.pf-v6-c-compass__main-header`), the content area (`.pf-v6-c-compass__content`), and the main footer (`.pf-v6-c-compass__main-footer`) with the message bar.
@@ -19,63 +20,59 @@ In a basic Compass layout, the page structure is defined by the order of element
 
 ```hbs isBeta
 {{#> compass}}
-  {{#> compass-header}}
-    {{#> compass-logo}}logo{{/compass-logo}}
-    {{#> compass-nav}}
-      {{#> compass-nav-content}}
-        {{#> compass-nav-home}}home{{/compass-nav-home}}
-        {{#> compass-nav-main}}main{{/compass-nav-main}}
-        {{#> compass-nav-search}}search{{/compass-nav-search}}
-      {{/compass-nav-content}}
-    {{/compass-nav}}
-    {{#> compass-profile}}profile{{/compass-profile}}
-  {{/compass-header}}
-  {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
-  {{#> compass-main}}
-    {{#> compass-hero}}
-      hero
-    {{/compass-hero}}
-    {{#> compass-main-header}}
-      {{#> compass-main-header-content}}
-        main header
-      {{/compass-main-header-content}}
-    {{/compass-main-header}}
-    {{#> compass-content}}content{{/compass-content}}
-    {{#> compass-main-footer}}
-      {{#> compass-message-bar}}message bar{{/compass-message-bar}}
-    {{/compass-main-footer}}
-  {{/compass-main}}
-  {{#> compass-sidebar compass-sidebar--IsEnd=true}}sidebar (end){{/compass-sidebar}}
-  {{#> compass-footer}}
-    footer
-  {{/compass-footer}}
+  {{#> compass-container}}
+    {{#> compass-header}}
+      {{#> compass-logo}}logo{{/compass-logo}}
+      {{#> compass-nav}}
+        {{#> compass-nav-content}}
+          {{#> compass-nav-home}}home{{/compass-nav-home}}
+          {{#> compass-nav-main}}main{{/compass-nav-main}}
+          {{#> compass-nav-search}}search{{/compass-nav-search}}
+        {{/compass-nav-content}}
+      {{/compass-nav}}
+      {{#> compass-profile}}profile{{/compass-profile}}
+    {{/compass-header}}
+    {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
+    {{#> compass-main}}
+      {{#> compass-hero}}
+        hero
+      {{/compass-hero}}
+      {{#> compass-main-header}}
+        {{#> compass-main-header-content}}
+          main header
+        {{/compass-main-header-content}}
+      {{/compass-main-header}}
+      {{#> compass-content}}content{{/compass-content}}
+      {{#> compass-main-footer}}
+        {{#> compass-message-bar}}message bar{{/compass-message-bar}}
+      {{/compass-main-footer}}
+    {{/compass-main}}
+    {{#> compass-sidebar compass-sidebar--IsEnd=true}}sidebar (end){{/compass-sidebar}}
+    {{#> compass-footer}}
+      footer
+    {{/compass-footer}}
+  {{/compass-container}}
 {{/compass}}
 ```
 
 ### Docked
 ```hbs isBeta
 {{#> compass compass--HasDock=true}}
-  {{#> masthead masthead--IsDisplayInline=true}}
-    {{#> masthead-main}}
-      masthead main
-    {{/masthead-main}}
-    {{#> masthead-content}}
-      masthead content
-    {{/masthead-content}}
-  {{/masthead}}
-  {{#> compass-dock}}
-    dock
-  {{/compass-dock}}
-  {{#> compass-main}}
-    {{#> compass-main-header}}
-      {{#> compass-main-header-content}}
-        main header
-      {{/compass-main-header-content}}
-    {{/compass-main-header}}
-    {{#> compass-content}}
-      content
-    {{/compass-content}}
-  {{/compass-main}}
+  {{#> compass-container}}
+    {{#> compass-dock}}
+      dock
+    {{/compass-dock}}
+    {{#> compass-main}}
+      {{#> compass-main-header}}
+        {{#> compass-main-header-content}}
+          main header
+        {{/compass-main-header-content}}
+      {{/compass-main-header}}
+      {{#> compass-content}}
+        content
+      {{/compass-content}}
+    {{/compass-main}}
+  {{/compass-container}}
 {{/compass}}
 ```
 
@@ -83,11 +80,11 @@ In a basic Compass layout, the page structure is defined by the order of element
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-compass` | `<div>` | Initiates the Compass component. **Required** |
+| `.pf-v6-c-compass` | `<div>` | Outermost wrapper for the Compass component. Handles background. **Required** |
+| `.pf-v6-c-compass__container` | `<div>` | Grid wrapper for Compass regions; use the `compass-container` partial. Applies layout modifiers (for example docked). **Required** |
 | `.pf-v6-c-compass__header` | `<div>` | Initiates the Compass header. **Required** |
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the Compass logo header. |
 | `.pf-v6-c-compass__dock` | `<div>` | Initiates the Compass dock. |
-| `.pf-v6-c-compass__dock-main` | `<div>` | Initiates the Compass dock main wrapper. |
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the Compass profile. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a Compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the Compass main wrapper. **Required** |
@@ -104,7 +101,7 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass__nav-search` | `<div>` | Initiates a container for Compass search button. |
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the Compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the Compass message bar. |
-| `.pf-m-docked` | `.pf-v6-c-compass` | Modifies for dock layout. |
+| `.pf-m-docked` | `.pf-v6-c-compass__container` | Modifies for dock layout. |
 | `.pf-m-no-screen-warning` | `.pf-v6-c-compass` | Disables the screen warning that shows on smaller viewports. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for end styles. **Required** |

@@ -1,0 +1,12 @@
+<div class="{{pfv}}compass__container
+  {{#unless compass--NoSmoothAnimate}}
+    pf-m-animate-smoothly
+  {{/unless}}
+  {{setModifiers
+    compass--HasDock='pf-m-docked'
+    compass--modifier=compass--modifier}}"
+  {{#if compass--attribute}}
+    {{{compass--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</div>

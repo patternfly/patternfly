@@ -137,8 +137,6 @@
   --pf-t--temp--dev--tbd: #BC11E0;
   // stylelint-enable
 
-  // Glass theme tokens
-  &:where(.pf-v6-theme-glass) {
-    --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
-  }
+  // Background images (overridden by glass / felt / dark local token mixins)
+  --pf-t--global--background--image--default: none;
 }

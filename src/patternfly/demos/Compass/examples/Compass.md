@@ -1,6 +1,7 @@
 ---
 id: Compass
-section: components
+section: AI
+subsection: Generative UIs
 wrapperTag: div
 ---
 
@@ -25,70 +26,72 @@ This demo populates the main Compass section with a dashboard, which is often us
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
-    {{> compass--header}}
-    {{> compass--sidebar--start}}
-    {{#> compass-main}}
-      {{#> compass-hero}}
-        {{#> hero}}
-          {{#> hero-body}}
-            {{#> content}}
-              <h1>Automation that does more</h1>
-              <p>Red&nbsp;Hat Ansible Automation Platform offers more capabilities, accessibility, and flexibility, so you can bring the power of automation to the teams, tasks, and environments that need it.</p>
-              {{#> action-list}}
-                {{#> action-list-group}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsPrimary=true}}
-                      Upgrade today
-                    {{/button}}
-                  {{/action-list-item}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsSecondary=true}}
-                      Talk to a Red Hatter
-                    {{/button}}
-                  {{/action-list-item}}
-                {{/action-list-group}}
-              {{/action-list}}
-            {{/content}}
-          {{/hero-body}}
-        {{/hero}}
-      {{/compass-hero}}
-      {{#> compass-content}}
-        {{#> grid grid--modifier="pf-m-gutter" grid--id="compass-dashboard-grid"}}
-          {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:3"'}}
-            {{#> l-flex l-flex--modifier="pf-m-column"}}
-              {{> card-template-status card--IsGlass=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}}
-              {{> card-template-line-chart card--IsGlass=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
-              {{> card-template-metrics card--IsGlass=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
-            {{/l-flex}}
-          {{/grid-item}}
-          {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:2"'}}
-            {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md pf-m-column-on-lg"}}
-              {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-                {{> card-template-details card--IsGlass=true card-template-details--id=(concat grid--id '-details-card-1')}}
-              {{/l-flex-item}}
-              {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-                {{> card-template-data-list card--IsGlass=true data-list--IsPlain=true card-template-data-list--id=(concat grid--id '-data-list-card-1')}}
-              {{/l-flex-item}}
-            {{/l-flex}}
-          {{/grid-item}}
-          {{#> grid-item grid-item--modifier="pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:4"'}}
-            {{#> l-flex l-flex--modifier="pf-m-column"}}
-              {{> card-template-events card--IsGlass=true card-template-events--id=(concat grid--id '-events-card-1')}}
-            {{/l-flex}}
-          {{/grid-item}}
-        {{/grid}}
-      {{/compass-content}}
-      {{#> compass-main-footer}}
-        {{#> compass-message-bar}}
-          {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
-            {{#> panel-main}}
-              chatbot message bar
-            {{/panel-main}}
-          {{/panel}}
-        {{/compass-message-bar}}
-      {{/compass-main-footer}}
-    {{/compass-main}}
-    {{> compass--sidebar--end}}
+    {{#> compass-container}}
+      {{> compass--header}}
+      {{> compass--sidebar--start}}
+      {{#> compass-main}}
+        {{#> compass-hero}}
+          {{#> hero}}
+            {{#> hero-body}}
+              {{#> content}}
+                <h1>Automation that does more</h1>
+                <p>Red&nbsp;Hat Ansible Automation Platform offers more capabilities, accessibility, and flexibility, so you can bring the power of automation to the teams, tasks, and environments that need it.</p>
+                {{#> action-list}}
+                  {{#> action-list-group}}
+                    {{#> action-list-item}}
+                      {{#> button button--IsPrimary=true}}
+                        Upgrade today
+                      {{/button}}
+                    {{/action-list-item}}
+                    {{#> action-list-item}}
+                      {{#> button button--IsSecondary=true}}
+                        Talk to a Red Hatter
+                      {{/button}}
+                    {{/action-list-item}}
+                  {{/action-list-group}}
+                {{/action-list}}
+              {{/content}}
+            {{/hero-body}}
+          {{/hero}}
+        {{/compass-hero}}
+        {{#> compass-content}}
+          {{#> grid grid--modifier="pf-m-gutter" grid--id="compass-dashboard-grid"}}
+            {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:3"'}}
+              {{#> l-flex l-flex--modifier="pf-m-column"}}
+                {{> card-template-status card--IsGlass=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}}
+                {{> card-template-line-chart card--IsGlass=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
+                {{> card-template-metrics card--IsGlass=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
+              {{/l-flex}}
+            {{/grid-item}}
+            {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:2"'}}
+              {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md pf-m-column-on-lg"}}
+                {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+                  {{> card-template-details card--IsGlass=true card-template-details--id=(concat grid--id '-details-card-1')}}
+                {{/l-flex-item}}
+                {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+                  {{> card-template-data-list card--IsGlass=true data-list--IsPlain=true card-template-data-list--id=(concat grid--id '-data-list-card-1')}}
+                {{/l-flex-item}}
+              {{/l-flex}}
+            {{/grid-item}}
+            {{#> grid-item grid-item--modifier="pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:4"'}}
+              {{#> l-flex l-flex--modifier="pf-m-column"}}
+                {{> card-template-events card--IsGlass=true card-template-events--id=(concat grid--id '-events-card-1')}}
+              {{/l-flex}}
+            {{/grid-item}}
+          {{/grid}}
+        {{/compass-content}}
+        {{#> compass-main-footer}}
+          {{#> compass-message-bar}}
+            {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
+              {{#> panel-main}}
+                chatbot message bar
+              {{/panel-main}}
+            {{/panel}}
+          {{/compass-message-bar}}
+        {{/compass-main-footer}}
+      {{/compass-main}}
+      {{> compass--sidebar--end}}
+    {{/compass-container}}
   {{/compass}}
 {{/compass--demo-context}}
 ```
@@ -102,87 +105,89 @@ Without a glass panel component wrapping all of the content, there is no rounded
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
   {{#> compass}}
-    {{> compass--header}}
-    {{> compass--sidebar--start}}
-    {{#> compass-main}}
-      {{#> compass-main-header}}
-        {{#> panel panel--IsGlass=true}}
-          {{#> panel-main}}
-            {{#> panel-main-body}}
-              {{#> compass-main-header-content}}
-                {{#> compass-main-header-title}}
-                  {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-                    Page title
-                  {{/title}}
-                {{/compass-main-header-title}}
-                {{#> compass-main-header-toolbar}}
-                  {{#> action-list}}
-                    {{#> action-list-group}}
-                      {{#> action-list-item}}
-                        {{#> button button--IsPrimary=true}}
-                          Add integration
-                        {{/button}}
-                      {{/action-list-item}}
-                      {{#> action-list-item}}
-                        {{#> button button--IsSecondary=true}}
-                          Test integration
-                        {{/button}}
-                      {{/action-list-item}}
-                    {{/action-list-group}}
-                  {{/action-list}}
-                {{/compass-main-header-toolbar}}
-              {{/compass-main-header-content}}
-            {{/panel-main-body}}
-          {{/panel-main}}
-        {{/panel}}
-      {{/compass-main-header}}
-      {{#> compass-content}}
-        {{#> grid grid--modifier="pf-m-all-6-col pf-m-gutter"}}
-          {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
+    {{#> compass-container}}
+      {{> compass--header}}
+      {{> compass--sidebar--start}}
+      {{#> compass-main}}
+        {{#> compass-main-header}}
+          {{#> panel panel--IsGlass=true}}
             {{#> panel-main}}
               {{#> panel-main-body}}
-                {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
-                  {{> toolbar-template
-                    toolbar-template--id="compass-multiple-sections-toolbar"
-                    toolbar-template--HasToggleGroup=true
-                    toolbar-template--HasBulkSelect=true
-                    toolbar-template--HasOverflowMenu=true
-                    toolbar-template--HasFilter=true
-                  }}
-                  {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery"}}
-                {{/l-flex}}
+                {{#> compass-main-header-content}}
+                  {{#> compass-main-header-title}}
+                    {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                      Page title
+                    {{/title}}
+                  {{/compass-main-header-title}}
+                  {{#> compass-main-header-toolbar}}
+                    {{#> action-list}}
+                      {{#> action-list-group}}
+                        {{#> action-list-item}}
+                          {{#> button button--IsPrimary=true}}
+                            Add integration
+                          {{/button}}
+                        {{/action-list-item}}
+                        {{#> action-list-item}}
+                          {{#> button button--IsSecondary=true}}
+                            Test integration
+                          {{/button}}
+                        {{/action-list-item}}
+                      {{/action-list-group}}
+                    {{/action-list}}
+                  {{/compass-main-header-toolbar}}
+                {{/compass-main-header-content}}
               {{/panel-main-body}}
             {{/panel-main}}
           {{/panel}}
-          {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
-            {{#> panel-main}}
-              {{#> panel-main-body}}
-                {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
-                  {{> toolbar-template
-                    toolbar-template--id="compass-multiple-sections-toolbar-2"
-                    toolbar-template--HasToggleGroup=true
-                    toolbar-template--HasBulkSelect=true
-                    toolbar-template--HasOverflowMenu=true
-                    toolbar-template--HasFilter=true
-                  }}
-                  {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery-2"}}
-                {{/l-flex}}
-              {{/panel-main-body}}
-            {{/panel-main}}
-          {{/panel}}
-        {{/grid}}
-      {{/compass-content}}
-      {{#> compass-main-footer}}
-        {{#> compass-message-bar}}
-          {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
-            {{#> panel-main}}
-              chatbot message bar
-            {{/panel-main}}
-          {{/panel}}
-        {{/compass-message-bar}}
-      {{/compass-main-footer}}
-    {{/compass-main}}
-    {{> compass--sidebar--end}}
+        {{/compass-main-header}}
+        {{#> compass-content}}
+          {{#> grid grid--modifier="pf-m-all-6-col pf-m-gutter"}}
+            {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
+              {{#> panel-main}}
+                {{#> panel-main-body}}
+                  {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
+                    {{> toolbar-template
+                      toolbar-template--id="compass-multiple-sections-toolbar"
+                      toolbar-template--HasToggleGroup=true
+                      toolbar-template--HasBulkSelect=true
+                      toolbar-template--HasOverflowMenu=true
+                      toolbar-template--HasFilter=true
+                    }}
+                    {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery"}}
+                  {{/l-flex}}
+                {{/panel-main-body}}
+              {{/panel-main}}
+            {{/panel}}
+            {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
+              {{#> panel-main}}
+                {{#> panel-main-body}}
+                  {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
+                    {{> toolbar-template
+                      toolbar-template--id="compass-multiple-sections-toolbar-2"
+                      toolbar-template--HasToggleGroup=true
+                      toolbar-template--HasBulkSelect=true
+                      toolbar-template--HasOverflowMenu=true
+                      toolbar-template--HasFilter=true
+                    }}
+                    {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery-2"}}
+                  {{/l-flex}}
+                {{/panel-main-body}}
+              {{/panel-main}}
+            {{/panel}}
+          {{/grid}}
+        {{/compass-content}}
+        {{#> compass-main-footer}}
+          {{#> compass-message-bar}}
+            {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
+              {{#> panel-main}}
+                chatbot message bar
+              {{/panel-main}}
+            {{/panel}}
+          {{/compass-message-bar}}
+        {{/compass-main-footer}}
+      {{/compass-main}}
+      {{> compass--sidebar--end}}
+    {{/compass-container}}
   {{/compass}}
 {{/compass--demo-context}}
 ```
@@ -202,22 +207,57 @@ This demo showcases how you can position a side-panel drawer on top of the other
 {{/drawer}}
 ```
 
-### Docked nav
+### Docked
 ```hbs isFullscreen isBeta
-{{> compass--docked compass--docked--id="compass-docked-example"}}
-```
-
-### Docked nav - expanded on mobile
-```hbs isFullscreen isBeta
-{{> compass--docked compass--docked--id="compass-docked-mobile-expanded-example" compass-dock--IsExpanded=true}}
-```
-
-### Docked nav text expanded
-```hbs isFullscreen isBeta
-{{> compass--docked compass--docked--id="compass-docked-text-expanded-example" compass-dock--IsTextExpanded=true}}
-```
-
-### Docked nav text expanded - expanded on mobile
-```hbs isFullscreen isBeta
-{{> compass--docked compass--docked--id="compass-docked-text-expanded-mobile-expanded-example" compass-dock--IsExpanded=true compass-dock--IsTextExpanded=true}}
+{{#> compass--demo-context}}
+  {{#> compass compass--HasDock=true}}
+    {{#> compass-container}}
+      {{#> compass-dock}}
+        {{> masthead-template masthead-template--HasDockedNav=true}}
+      {{/compass-dock}}
+      {{#> compass-main}}
+        {{#> compass-main-header}}
+          {{#> panel panel--IsGlass=true}}
+            {{#> panel-main}}
+              {{#> panel-main-body}}
+                {{#> compass-main-header-content}}
+                  {{#> compass-main-header-title}}
+                    {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                      Header
+                    {{/title}}
+                  {{/compass-main-header-title}}
+                  {{#> compass-main-header-toolbar}}
+                    {{#> action-list}}
+                      {{#> action-list-group}}
+                        {{#> action-list-item}}
+                          {{#> button button--IsPrimary=true}}
+                            action
+                          {{/button}}
+                        {{/action-list-item}}
+                        {{#> action-list-item}}
+                          {{#> button button--IsSecondary=true}}
+                            action
+                          {{/button}}
+                        {{/action-list-item}}
+                      {{/action-list-group}}
+                    {{/action-list}}
+                  {{/compass-main-header-toolbar}}
+                {{/compass-main-header-content}}
+              {{/panel-main-body}}
+            {{/panel-main}}
+          {{/panel}}
+        {{/compass-main-header}}
+        {{#> compass-content}}
+          {{#> panel panel--IsGlass=true}}
+            {{#> panel-main}}
+              {{#> panel-main-body}}
+                [so much room for activities]
+              {{/panel-main-body}}
+            {{/panel-main}}
+          {{/panel}}
+        {{/compass-content}}
+      {{/compass-main}}
+    {{/compass-container}}
+  {{/compass}}
+{{/compass--demo-context}}
 ```
