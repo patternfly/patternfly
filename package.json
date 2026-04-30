@@ -134,7 +134,7 @@
     "axios": "^1.13.1",
     "body-parser": "^2.2.0",
     "ws": "^8.18.0",
-    "follow-redirects": "^1.15.11",
+    "follow-redirects": "^1.16.0",
     "express": "^4.21.2",
     "parse-git-config": "^3.0.0",
     "braces": "^3.0.3",
