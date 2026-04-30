@@ -173,7 +173,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 ```
 
 ### Pill
-To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can be combined with any status modifier.
+To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can be combined with any Banner modifier.
 
 ```hbs
 {{#> banner banner--modifier="pf-m-pill pf-m-success"}}
