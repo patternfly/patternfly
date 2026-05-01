@@ -1,8 +1,7 @@
 ---
 id: 'Compass'
 beta: true
-section: AI
-subsection: Generative UIs
+section: components
 cssPrefix: pf-v6-c-compass
 ---
 
