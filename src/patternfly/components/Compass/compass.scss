@@ -399,10 +399,10 @@
   min-height: 0;
   margin-block-start: var(--#{$compass}__content--MarginBlockStart, 0);
   margin-block-end: var(--#{$compass}__content--MarginBlockEnd, 0);
-  margin-inline-start: var(--#{$compass}__content--MarginInlineStart, 0);
-  margin-inline-end: var(--#{$compass}__content--MarginInlineEnd, 0);
   padding-block-start: var(--#{$compass}__content--PaddingBlockStart, 0);
   padding-block-end: var(--#{$compass}__content--PaddingBlockEnd, 0);
+  margin-inline-start: var(--#{$compass}__content--MarginInlineStart, 0);
+  margin-inline-end: var(--#{$compass}__content--MarginInlineEnd, 0);
   padding-inline-start: var(--#{$compass}__content--PaddingInlineStart, 0);
   padding-inline-end: var(--#{$compass}__content--PaddingInlineEnd, 0);
   overflow: auto;
