@@ -66,10 +66,8 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: 0;
 
   :where(:root.pf-v6-theme-glass) & {
-    --#{$pagination}--m-sticky-base--InsetBlockStart: var(--pf-t--global--spacer--sm);
     --#{$pagination}--m-sticky-stuck--BorderRadius: var(--pf-t--global--border--radius--glass--default);
     --#{$pagination}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
-    --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: var(--pf-t--global--spacer--sm);
   }
 
   // page menu
