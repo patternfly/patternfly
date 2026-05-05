@@ -1,8 +1,7 @@
 ---
 id: 'Compass'
 beta: true
-section: AI
-subsection: Generative UIs
+section: components
 cssPrefix: pf-v6-c-compass
 ---
 
@@ -20,67 +19,63 @@ In a basic Compass layout, the page structure is defined by the order of element
 
 ```hbs isBeta
 {{#> compass}}
-  {{#> compass-container}}
-    {{#> compass-header}}
-      {{#> compass-logo}}logo{{/compass-logo}}
-      {{#> compass-nav}}
-        {{#> compass-nav-content}}
-          {{#> compass-nav-home}}home{{/compass-nav-home}}
-          {{#> compass-nav-main}}main{{/compass-nav-main}}
-          {{#> compass-nav-search}}search{{/compass-nav-search}}
-        {{/compass-nav-content}}
-      {{/compass-nav}}
-      {{#> compass-profile}}profile{{/compass-profile}}
-    {{/compass-header}}
-    {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
-    {{#> compass-main}}
-      {{#> compass-hero}}
-        hero
-      {{/compass-hero}}
-      {{#> compass-main-header}}
-        {{#> compass-main-header-content}}
-          main header
-        {{/compass-main-header-content}}
-      {{/compass-main-header}}
-      {{#> compass-content}}content{{/compass-content}}
-      {{#> compass-main-footer}}
-        {{#> compass-message-bar}}message bar{{/compass-message-bar}}
-      {{/compass-main-footer}}
-    {{/compass-main}}
-    {{#> compass-sidebar compass-sidebar--IsEnd=true}}sidebar (end){{/compass-sidebar}}
-    {{#> compass-footer}}
-      footer
-    {{/compass-footer}}
-  {{/compass-container}}
+  {{#> compass-header}}
+    {{#> compass-logo}}logo{{/compass-logo}}
+    {{#> compass-nav}}
+      {{#> compass-nav-content}}
+        {{#> compass-nav-home}}home{{/compass-nav-home}}
+        {{#> compass-nav-main}}main{{/compass-nav-main}}
+        {{#> compass-nav-search}}search{{/compass-nav-search}}
+      {{/compass-nav-content}}
+    {{/compass-nav}}
+    {{#> compass-profile}}profile{{/compass-profile}}
+  {{/compass-header}}
+  {{#> compass-sidebar compass-sidebar--IsStart=true}}sidebar (start){{/compass-sidebar}}
+  {{#> compass-main}}
+    {{#> compass-hero}}
+      hero
+    {{/compass-hero}}
+    {{#> compass-main-header}}
+      {{#> compass-main-header-content}}
+        main header
+      {{/compass-main-header-content}}
+    {{/compass-main-header}}
+    {{#> compass-content}}content{{/compass-content}}
+    {{#> compass-main-footer}}
+      {{#> compass-message-bar}}message bar{{/compass-message-bar}}
+    {{/compass-main-footer}}
+  {{/compass-main}}
+  {{#> compass-sidebar compass-sidebar--IsEnd=true}}sidebar (end){{/compass-sidebar}}
+  {{#> compass-footer}}
+    footer
+  {{/compass-footer}}
 {{/compass}}
 ```
 
 ### Docked
 ```hbs isBeta
 {{#> compass compass--HasDock=true}}
-  {{#> compass-container}}
-    {{#> masthead masthead--IsDisplayInline=true}}
-      {{#> masthead-main}}
-        masthead main
-      {{/masthead-main}}
-      {{#> masthead-content}}
-        masthead content
-      {{/masthead-content}}
-    {{/masthead}}
-    {{#> compass-dock}}
-      dock
-    {{/compass-dock}}
-    {{#> compass-main}}
-      {{#> compass-main-header}}
-        {{#> compass-main-header-content}}
-          main header
-        {{/compass-main-header-content}}
-      {{/compass-main-header}}
-      {{#> compass-content}}
-        content
-      {{/compass-content}}
-    {{/compass-main}}
-  {{/compass-container}}
+  {{#> masthead masthead--IsDisplayInline=true}}
+    {{#> masthead-main}}
+      masthead main
+    {{/masthead-main}}
+    {{#> masthead-content}}
+      masthead content
+    {{/masthead-content}}
+  {{/masthead}}
+  {{#> compass-dock}}
+    dock
+  {{/compass-dock}}
+  {{#> compass-main}}
+    {{#> compass-main-header}}
+      {{#> compass-main-header-content}}
+        main header
+      {{/compass-main-header-content}}
+    {{/compass-main-header}}
+    {{#> compass-content}}
+      content
+    {{/compass-content}}
+  {{/compass-main}}
 {{/compass}}
 ```
 
@@ -89,7 +84,7 @@ In a basic Compass layout, the page structure is defined by the order of element
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-compass` | `<div>` | Outermost wrapper for the Compass component. Handles background. **Required** |
-| `.pf-v6-c-compass__container` | `<div>` | Grid wrapper for Compass regions; use the `compass-container` partial. Applies layout modifiers (for example docked). **Required** |
+| `.pf-v6-c-compass__container` | `<div>` | Grid wrapper for Compass regions. **Required** |
 | `.pf-v6-c-compass__header` | `<div>` | Initiates the Compass header. **Required** |
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the Compass logo header. |
 | `.pf-v6-c-compass__dock` | `<div>` | Initiates the Compass dock. |

@@ -33,8 +33,6 @@
 :root:where(.pf-v6-theme-glass) {
   @include glass.pf-v6-tokens;
   @include local-glass.pf-v6-tokens;
-
-  --pf-t--global--box-shadow--glass--default: var(--pf-t--global--box-shadow--md);
 }
 
 :root:where(.pf-v6-theme-redhat) {
