@@ -66,14 +66,12 @@
   border-end-start-radius: var(--#{$hero}--BorderEndStartRadius);
   border-end-end-radius: var(--#{$hero}--BorderEndEndRadius);
 
-  :where(.#{$pf-prefix}theme-glass) & {
-    &.pf-m-glass {
-      --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
-      --#{$hero}--BackgroundColor: var(--#{$hero}--m-glass--BackgroundColor);
+  :where(.#{$pf-prefix}theme-glass) &.pf-m-glass {
+    --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
+    --#{$hero}--BackgroundColor: var(--#{$hero}--m-glass--BackgroundColor);
 
-      backdrop-filter: var(--#{$hero}--m-glass--BackdropFilter);
-      box-shadow: var(--#{$hero}--m-glass--BoxShadow);
-    }
+    backdrop-filter: var(--#{$hero}--m-glass--BackdropFilter);
+    box-shadow: var(--#{$hero}--m-glass--BoxShadow);
   }
 
   :root:where(.#{$pf-prefix}theme-dark) & {
