@@ -26,8 +26,8 @@
   --#{$hero}--BorderInlineStartWidth: var(--pf-t--global--border--width--regular);
   --#{$hero}--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
   --#{$hero}--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$hero}--m-glass--BorderColor: var(--pf-t--global--border--color--alt);
-  --#{$hero}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--md);
+  --#{$hero}--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
+  --#{$hero}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
   --#{$hero}--BorderStartStartRadius: 24px;
   --#{$hero}--BorderStartEndRadius: 72px;
   --#{$hero}--BorderEndEndRadius: 24px;
