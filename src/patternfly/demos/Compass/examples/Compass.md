@@ -30,7 +30,7 @@ This demo populates the main Compass section with a dashboard, which is often us
     {{> compass--sidebar--start}}
     {{#> compass-main}}
       {{#> compass-hero}}
-        {{#> hero hero--IsGlass}}
+        {{#> hero hero--IsGlass=true}}
           {{#> hero-body}}
             {{#> content}}
               <h1>Automation that does more</h1>
