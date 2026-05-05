@@ -166,7 +166,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
     padding-block-start: var(--#{$toolbar}--m-sticky--PaddingBlockStart);
     padding-block-end: var(--#{$toolbar}--m-sticky--PaddingBlockEnd);
+    padding-inline-start: var(--#{$toolbar}--m-sticky--PaddingInlineStart);
+    padding-inline-end: var(--#{$toolbar}--m-sticky--PaddingInlineEnd);
     border-block-end: var(--#{$toolbar}--m-sticky--BorderBlockEndWidth) solid var(--#{$toolbar}--m-sticky--BorderBlockEndColor);
+    border-radius: var(--#{$toolbar}--m-sticky--BorderRadius);
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
   }
 
