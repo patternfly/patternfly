@@ -12,7 +12,7 @@
   --#{$hero}--gradient--stop-1--dark: transparent;
   --#{$hero}--gradient--stop-2--dark: transparent;
   --#{$hero}--gradient--stop-3--dark: transparent;
-  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$hero}--BackgroundColor--glass: var(--pf-t--global--background--color--glass--primary--default);
   --#{$hero}--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$hero}--BackgroundImage--light: none;
@@ -43,6 +43,17 @@
   padding-inline-start: var(--#{$hero}--PaddingInlineStart);
   padding-inline-end: var(--#{$hero}--PaddingInlineEnd);
   background-color: var(--#{$hero}--BackgroundColor);
+  background-image: var(--#{$hero}--BackgroundImage, var(--#{$hero}--BackgroundImage--light)),
+  linear-gradient(
+    var(--#{$hero}--gradient--angle),
+    var(--#{$hero}--gradient--stop-1, var(--#{$hero}--gradient--stop-1--light)) 0%,
+    var(--#{$hero}--gradient--stop-2, var(--#{$hero}--gradient--stop-2--light)) 50%,
+    var(--#{$hero}--gradient--stop-3, var(--#{$hero}--gradient--stop-3--light)) 100%
+  );
+  background-repeat: var(--#{$hero}--BackgroundRepeat);
+  background-position: var(--#{$hero}--BackgroundPosition);
+  background-size: var(--#{$hero}--BackgroundSize);
+  backdrop-filter: var(--#{$hero}--BackdropFilter);
   border-color: var(--#{$hero}--BorderColor);
   border-style: var(--#{$hero}--BorderStyle);
   border-block-start-width: var(--#{$hero}--BorderBlockStartWidth);
@@ -58,17 +69,6 @@
     --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
     --#{$hero}--BackgroundColor: var(--#{$hero}--BackgroundColor--glass);
   
-    background-image: var(--#{$hero}--BackgroundImage, var(--#{$hero}--BackgroundImage--light)),
-    linear-gradient(
-      var(--#{$hero}--gradient--angle),
-      var(--#{$hero}--gradient--stop-1, var(--#{$hero}--gradient--stop-1--light)) 0%,
-      var(--#{$hero}--gradient--stop-2, var(--#{$hero}--gradient--stop-2--light)) 50%,
-      var(--#{$hero}--gradient--stop-3, var(--#{$hero}--gradient--stop-3--light)) 100%
-    );
-    background-repeat: var(--#{$hero}--BackgroundRepeat);
-    background-position: var(--#{$hero}--BackgroundPosition);
-    background-size: var(--#{$hero}--BackgroundSize);
-    backdrop-filter: var(--#{$hero}--BackdropFilter);
     box-shadow: var(--#{$hero}--m-glass--BoxShadow);
   }
 
