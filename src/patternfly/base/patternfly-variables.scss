@@ -30,18 +30,15 @@
   @include glass.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-felt) {
-:root:where(.pf-v6-theme-redhat) { // TODO - remove once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-redhat) { // TODO - rename to "felt" once theme switcher updates to use felt class
   @include felt.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-felt.pf-v6-theme-high-contrast) {
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast) { // TODO - remove once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast) { // TODO - rename to "felt" once theme switcher updates to use felt class
   @include felt-highcontrast.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-felt.pf-v6-theme-glass) {
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-glass) { // TODO - remove once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-redhat.pf-v6-theme-glass) { // TODO - rename to "felt" once theme switcher updates to use felt class
   @include felt-glass.pf-v6-tokens;
 }
 
@@ -58,21 +55,19 @@
   @include glass-dark.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-dark.pf-v6-theme-felt) {
-:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat) { // TODO - remove once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat) { // TODO - rename to "felt" once theme switcher updates to use felt class
   @include felt-dark.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-dark.pf-v6-theme-felt.pf-v6-theme-high-contrast) {
-:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-high-contrast) { // TODO - remove once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-high-contrast) { // TODO - rename to "felt" once theme switcher updates to use felt class
   @include felt-highcontrast-dark.pf-v6-tokens;
 }
 
-// :root:where(.pf-v6-theme-dark.pf-v6-theme-felt.pf-v6-theme-glass) {
-:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-glass) { // TODO - remove once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-glass) {  // TODO - rename to "felt" once theme switcher updates to use felt classx
   @include felt-glass-dark.pf-v6-tokens;
 }
 
+// RTL
 @include pf-v6-rtl(false) {
   @include pf-v6-set-inverse;
 }

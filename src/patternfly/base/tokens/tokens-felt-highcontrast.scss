@@ -1,8 +1,8 @@
 
 // Do not edit directly
-// Generated on Thu, 30 Apr 2026 21:30:42 GMT
+// Generated on Tue, 05 May 2026 03:04:17 GMT
 
-// Only tokens that differ from base theme (114 tokens)
+// Only tokens that differ from base theme (122 tokens)
 @mixin pf-v6-tokens {
   --pf-t--global--border--color--nonstatus--green--default: var(--pf-t--global--color--nonstatus--green--400);
   --pf-t--global--border--color--status--success--default: var(--pf-t--global--color--status--success--150);
@@ -10,6 +10,9 @@
   --pf-t--global--border--width--action--plain--hover: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--control--hover: var(--pf-t--global--border--width--200);
   --pf-t--global--border--width--main--default: var(--pf-t--global--border--width--200);
+  --pf-t--global--border--color--brand--accent--clicked: var(--pf-t--global--color--brand--accent--400);
+  --pf-t--global--border--color--brand--accent--default: var(--pf-t--global--color--brand--accent--400);
+  --pf-t--global--border--color--brand--accent--hover: var(--pf-t--global--color--brand--accent--400);
   --pf-t--global--border--color--brand--subtle--clicked: var(--pf-t--global--color--brand--subtle--400);
   --pf-t--global--border--color--brand--subtle--hover: var(--pf-t--global--color--brand--subtle--400);
   --pf-t--global--border--color--clicked: var(--pf-t--global--color--brand--400);
@@ -49,9 +52,14 @@
   --pf-t--global--border--color--status--warning--default: var(--pf-t--global--color--status--warning--500);
   --pf-t--global--border--color--status--warning--hover: var(--pf-t--global--color--status--warning--600);
   --pf-t--global--border--color--subtle: var(--pf-t--global--border--color--400);
+  --pf-t--global--border--radius--action--plain--default: var(--pf-t--global--border--radius--pill);
+  --pf-t--global--border--radius--control--default: var(--pf-t--global--border--radius--pill);
   --pf-t--global--border--width--high-contrast--extra-strong: var(--pf-t--global--border--width--extra-strong);
   --pf-t--global--border--width--high-contrast--regular: var(--pf-t--global--border--width--regular);
   --pf-t--global--border--width--high-contrast--strong: var(--pf-t--global--border--width--strong);
+  --pf-t--global--color--brand--accent--clicked: var(--pf-t--global--color--brand--accent--300);
+  --pf-t--global--color--brand--accent--default: var(--pf-t--global--color--brand--accent--400);
+  --pf-t--global--color--brand--accent--hover: var(--pf-t--global--color--brand--accent--300);
   --pf-t--global--color--brand--clicked: var(--pf-t--global--color--brand--400);
   --pf-t--global--color--brand--default: var(--pf-t--global--color--brand--300);
   --pf-t--global--color--brand--hover: var(--pf-t--global--color--brand--400);
