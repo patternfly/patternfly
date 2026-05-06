@@ -20,13 +20,13 @@
     }
   }
 
-  &:where(.pf-v6-theme-redhat) {
+  &:where(.pf-v6-theme-felt) {
     body {
       background-image: url("./assets/images/Felt-Bkg-Generic-Light.svg");
     }
   }
 
-  &:where(.pf-v6-theme-redhat.pf-v6-theme-dark) {
+  &:where(.pf-v6-theme-felt.pf-v6-theme-dark) {
     body {
       background-image: url("./assets/images/Felt-Bkg-Generic-Dark.svg");
     }
@@ -44,11 +44,11 @@
     background-image: url("./assets/images/PF-Bkg-Generic-Dark.svg");
   }
 
-  :root:where(.pf-v6-theme-redhat) & {
+  :root:where(.pf-v6-theme-felt) & {
     background-image: url("./assets/images/Felt-Bkg-Generic-Light.svg");
   }
 
-  :root:where(.pf-v6-theme-redhat.pf-v6-theme-dark) & {
+  :root:where(.pf-v6-theme-felt.pf-v6-theme-dark) & {
     background-image: url("./assets/images/Felt-Bkg-Generic-Dark.svg");
   }
 }
