@@ -112,10 +112,6 @@
     }
   }
 
-  :root:where(.#{$pf-prefix}theme-dark) & {
-    --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
-  }
-
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     &.pf-m-docked .#{$compass}__container {
       grid-template-areas: "dock main";
