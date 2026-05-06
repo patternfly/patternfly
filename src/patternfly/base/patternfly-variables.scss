@@ -30,15 +30,15 @@
   @include glass.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-redhat) { // TODO - rename to "felt" once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-felt) {
   @include felt.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-high-contrast) { // TODO - rename to "felt" once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-felt.pf-v6-theme-high-contrast) {
   @include felt-highcontrast.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-redhat.pf-v6-theme-glass) { // TODO - rename to "felt" once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-felt.pf-v6-theme-glass) {
   @include felt-glass.pf-v6-tokens;
 }
 
@@ -55,15 +55,15 @@
   @include glass-dark.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat) { // TODO - rename to "felt" once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-dark.pf-v6-theme-felt) {
   @include felt-dark.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-high-contrast) { // TODO - rename to "felt" once theme switcher updates to use felt class
+:root:where(.pf-v6-theme-dark.pf-v6-theme-felt.pf-v6-theme-high-contrast) {
   @include felt-highcontrast-dark.pf-v6-tokens;
 }
 
-:root:where(.pf-v6-theme-dark.pf-v6-theme-redhat.pf-v6-theme-glass) {  // TODO - rename to "felt" once theme switcher updates to use felt classx
+:root:where(.pf-v6-theme-dark.pf-v6-theme-felt.pf-v6-theme-glass) {
   @include felt-glass-dark.pf-v6-tokens;
 }
 
