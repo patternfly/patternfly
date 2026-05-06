@@ -100,28 +100,18 @@
     overflow: hidden;
   }
 
-  &.pf-m-docked .#{$compass}__container {
-    grid-template-areas:
-      "header"
-      "main";
-    grid-template-rows: max-content 1fr;
-    grid-template-columns: 1fr;
-    align-items: stretch;
-    padding: 0;
-  }
-
   &.pf-m-docked {
     .#{$compass}__main {
       padding: var(--#{$compass}--Padding);
     }
-  
+
     > .#{$masthead} {
       --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
   
       grid-area: header;
     }
   }
-  
+
   :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
   }
@@ -136,10 +126,8 @@
       padding: 0;
     }
     
-    &.pf-m-docked{
-      > .#{$masthead} {
-        display: none;
-      }
+    &.pf-m-docked > .#{$compass}__container > .#{$masthead} {
+      display: none;
     }
   }
 
@@ -175,6 +163,16 @@
       @include pf-v6-hamburger($collapse: true);
     }
   }
+}
+
+.pf-m-docked .#{$compass}__container {
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-rows: max-content 1fr;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  padding: 0;
 }
 
 .#{$compass}__header,
