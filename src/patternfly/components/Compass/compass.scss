@@ -56,6 +56,7 @@
   --#{$compass}__dock-main--BoxShadow: none;
   --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
   --#{$compass}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$compass}__dock-main--PaddingInlingStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
   --#{$compass}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
   --#{$compass}__dock-main--BorderInlineEndColor: transparent;
@@ -335,6 +336,7 @@
 
 .#{$compass}__dock-main {
   flex-grow: 1;
+  padding-inline-start: var(--#{$compass}__dock-main--PaddingInlingStart);
   background-color: var(--#{$compass}__dock-main--BackgroundColor);
   backdrop-filter: var(--#{$compass}__dock-main--BackdropFilter);
   border-inline-end: var(--#{$compass}__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock-main--BorderInlineEndColor);
