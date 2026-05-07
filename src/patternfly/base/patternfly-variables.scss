@@ -75,6 +75,7 @@
   @include local-felt-glass-dark.pf-v6-tokens;
 }
 
+// RTL
 @include pf-v6-rtl(false) {
   @include pf-v6-set-inverse;
 }

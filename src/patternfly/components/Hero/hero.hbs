@@ -1,4 +1,8 @@
-<div class="{{pfv}}hero{{#if hero--modifier}} {{hero--modifier}}{{/if}}"
+<div class="{{pfv}}hero
+  {{setModifiers
+    hero--IsGlass='pf-m-glass'
+    hero--modifier=hero--modifier
+  }}"
   {{#if hero--attribute}}
     {{{hero--attribute}}}
   {{/if}}>

@@ -1,8 +1,8 @@
 
 // Do not edit directly
-// Generated on Mon, 23 Mar 2026 14:56:21 GMT
+// Generated on Tue, 05 May 2026 03:04:17 GMT
 
-// Only tokens that differ from base theme (121 tokens)
+// Only tokens that differ from base theme (122 tokens)
 @mixin pf-v6-tokens {
   --pf-t--global--border--color--nonstatus--green--default: var(--pf-t--global--color--nonstatus--green--400);
   --pf-t--global--border--color--status--success--default: var(--pf-t--global--color--status--success--150);
@@ -115,6 +115,7 @@
   --pf-t--global--text--color--status--warning--hover: var(--pf-t--global--color--status--warning--600);
   --pf-t--global--text--color--subtle: var(--pf-t--global--text--color--250);
   --pf-t--global--text-decoration--color--default: var(--pf-t--global--border--color--400);
+  --pf-t--global--text-decoration--width--hover: var(--pf-t--global--border--width--strong);
   --pf-t--global--background--color--action--plain--alt--clicked: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--background--color--action--plain--alt--hover: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--border--color--high-contrast: var(--pf-t--global--border--color--default);
