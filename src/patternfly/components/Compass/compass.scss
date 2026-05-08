@@ -305,12 +305,19 @@
   flex-direction: column;
   grid-area: dock;
   width: var(--#{$compass}__dock--Width);
-  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide);
+  visibility: hidden;
+  transition: 
+    translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide),
+    visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
   translate: -100% 0;
 
   &.pf-m-expanded {
     --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
 
+    visibility: visible;
+    transition:
+      translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide),
+      visibility 0s 0s;
     translate: 0;
   }
 
@@ -321,6 +328,7 @@
     position: revert;
     inset: revert;
     width: auto;
+    visibility: revert;
     translate: 0;
   }
 

@@ -426,7 +426,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex-direction: column;
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
-  transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide);
+  visibility: hidden;
+  transition:
+    translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
+    visibility 0s var(--#{$page}__dock--TransitionDuration--slide);
 
   @include pf-v6-bidirectional-style(
     $prop: translate,
@@ -437,6 +440,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   &.pf-m-expanded {
     --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
 
+    visibility: visible;
+    transition:
+      translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
+      visibility 0s 0s;
     translate: 0;
   }
 
@@ -447,6 +454,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     position: revert;
     inset: revert;
     width: auto;
+    visibility: revert;
     translate: 0;
   }
 
