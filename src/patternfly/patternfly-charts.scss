@@ -1,6 +1,8 @@
 @use './sass-utilities' as *;
 @use "./base/tokens/tokens-charts" as charts;
 @use "./base/tokens/tokens-charts-dark" as charts-dark;
+@use "./base/tokens/tokens-charts-highcontrast" as charts-highcontrast;
+@use "./base/tokens/tokens-charts-highcontrast-dark" as charts-highcontrast-dark;
 
 // stylelint-disable-next-line scss/dollar-variable-pattern
 $chart: #{$pf-prefix} + 'chart';
@@ -18,8 +20,18 @@ $chart: #{$pf-prefix} + 'chart';
 }
 
 // Charts dark tokens
+:where(.pf-v6-theme-high-contrast) {
+  @include charts-highcontrast.pf-v6-tokens;
+}
+
+// Charts dark tokens
 :where(.pf-v6-theme-dark) {
   @include charts-dark.pf-v6-tokens;
+}
+
+// Charts dark tokens
+:where(.pf-v6-theme-dark.pf-v6-theme-high-contrast) {
+  @include charts-highcontrast-dark.pf-v6-tokens;
 }
 
 // Charts styles
@@ -93,7 +105,7 @@ $chart: #{$pf-prefix} + 'chart';
   // label
   --#{$chart}-global--label--Padding: var(--pf-t--chart--global--label--padding);
   --#{$chart}-global--label--Margin: var(--pf-t--chart--global--label--margin);
-  --#{$chart}-global--label--stroke: var(--pf-t--chart--global--label--stroke);
+  --#{$chart}-global--label--stroke: var(--pf-t--chart--global--label--stroke--color);
   --#{$chart}-global--label--text-anchor: var(--pf-t--chart--global--label--text-anchor);
   --#{$chart}-global--label--stroke--Width: 0;
   --#{$chart}-global--label--Fill: var(--pf-t--chart--global--label--fill);
@@ -130,38 +142,38 @@ $chart: #{$pf-prefix} + 'chart';
   // Individual Charts
 
   // Area Chart
-  --#{$chart}-area--Opacity: .3;
+  --#{$chart}-area--Opacity: var(--pf-t--chart--global--fill--opacity--area);
   --#{$chart}-area--stroke--Width: var(--#{$chart}-global--stroke--Width--sm);
   --#{$chart}-area--data--Fill: var(--#{$chart}-global--Fill--Color--900);
 
   // Axis Chart
   --#{$chart}-axis--axis--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
-  --#{$chart}-axis--axis--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--axis--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-axis--axis--Fill: transparent;
   --#{$chart}-axis--axis-label--Padding: 40;
   --#{$chart}-axis--axis-label--stroke--Color: transparent;
   --#{$chart}-axis--grid--Fill: none;
-  --#{$chart}-axis--grid--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--grid--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-axis--grid--PointerEvents: painted;
   --#{$chart}-axis--tick--Fill: transparent;
   --#{$chart}-axis--tick--Size: 5;
   --#{$chart}-axis--tick--Width: 1;
-  --#{$chart}-axis--tick--stroke--Color: var(--#{$chart}-global--Fill--Color--300);
+  --#{$chart}-axis--tick--stroke--Color: var(--pf-t--global--border--color--default);
   --#{$chart}-axis--tick-label--Fill: var(--#{$chart}-global--Fill--Color--700);
 
   // Bar Chart
   --#{$chart}-bar--Width: 10;
-  --#{$chart}-bar--data--stroke: none;
+  --#{$chart}-bar--data--stroke: var(--pf-t--global--border--color--high-contrast);
   --#{$chart}-bar--data--Fill: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-bar--data--Padding: 8;
-  --#{$chart}-bar--data-stroke--Width: 0;
+  --#{$chart}-bar--data-stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
 
   // Box Plot Chart
   --#{$chart}-boxplot--max--Padding: 8;
   --#{$chart}-boxplot--max--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-boxplot--max--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
   --#{$chart}-boxplot--median--Padding: 8;
-  --#{$chart}-boxplot--median--stroke--Color: var(--#{$chart}-global--Fill--Color--900);
+  --#{$chart}-boxplot--median--stroke--Color: var(--pf-t--global--border--color--alt);
   --#{$chart}-boxplot--median--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
   --#{$chart}-boxplot--min--Padding: 8;
   --#{$chart}-boxplot--min--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
@@ -206,6 +218,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-bullet--qualitative-range--ColorScale--300: var(--#{$chart}-color-black-300);
   --#{$chart}-bullet--qualitative-range--ColorScale--400: var(--#{$chart}-color-black-400);
   --#{$chart}-bullet--qualitative-range--ColorScale--500: var(--#{$chart}-color-black-500);
+  --#{$chart}-bullet--data--stroke--Color: var(--pf-t--global--border--color--high-contrast);
+  --#{$chart}-bullet--data--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
 
   // Candlestick
   --#{$chart}-candelstick--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
