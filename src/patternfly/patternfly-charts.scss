@@ -213,11 +213,11 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-bullet--negative-measure--ColorScale--400: var(--#{$chart}-color-red-orange-400);
   --#{$chart}-bullet--negative-measure--ColorScale--500: var(--#{$chart}-color-red-orange-500);
   --#{$chart}-bullet--qualitative-range--Width: 30;
-  --#{$chart}-bullet--qualitative-range--ColorScale--100: var(--#{$chart}-color-black-100);
-  --#{$chart}-bullet--qualitative-range--ColorScale--200: var(--#{$chart}-color-black-200);
-  --#{$chart}-bullet--qualitative-range--ColorScale--300: var(--#{$chart}-color-black-300);
-  --#{$chart}-bullet--qualitative-range--ColorScale--400: var(--#{$chart}-color-black-400);
-  --#{$chart}-bullet--qualitative-range--ColorScale--500: var(--#{$chart}-color-black-500);
+  --#{$chart}-bullet--qualitative-range--ColorScale--100: var(--pf-t--chart--global--fill--color--100);
+  --#{$chart}-bullet--qualitative-range--ColorScale--200: var(--pf-t--chart--global--fill--color--200);
+  --#{$chart}-bullet--qualitative-range--ColorScale--300: var(--pf-t--chart--global--fill--color--300);
+  --#{$chart}-bullet--qualitative-range--ColorScale--400: var(--pf-t--chart--global--fill--color--400);
+  --#{$chart}-bullet--qualitative-range--ColorScale--500: var(--pf-t--chart--global--fill--color--500);
   --#{$chart}-bullet--bar--stroke--Color: var(--pf-t--global--border--color--alt);
   --#{$chart}-bullet--bar--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
 
