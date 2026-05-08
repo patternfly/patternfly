@@ -541,6 +541,11 @@ $chart: #{$pf-prefix} + 'chart';
 
   // Skeleton
   --#{$chart}-echarts-skeleton--label--Color: transparent;
+  --#{$chart}-skeleton--ColorScale--100: var(--#{$chart}-color-black-100);
+  --#{$chart}-skeleton--ColorScale--200: var(--#{$chart}-color-black-200);
+  --#{$chart}-skeleton--ColorScale--300: var(--#{$chart}-color-black-300);
+  --#{$chart}-skeleton--ColorScale--400: var(--#{$chart}-color-black-400);
+  --#{$chart}-skeleton--ColorScale--500: var(--#{$chart}-color-black-500);
 
   // Toolbox
   --#{$chart}-echarts-toolbox--emphasis--item-style--BorderColor: var(--#{$chart}-theme--blue--ColorScale--400);
