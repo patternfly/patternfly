@@ -8,7 +8,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 @include pf-root($drawer) {
   // Pill inline main
   --#{$drawer}--m-pill--m-inline__main--Gap: 0;
-  --#{$drawer}--m-pill--m-inline__main--PaddingBlock: 0;
+  --#{$drawer}--m-pill--m-inline__main--PaddingBlockEnd: 0;
 
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -296,7 +296,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
     --#{$drawer}--m-pill--m-inline__main--Gap: var(--pf-t--global--spacer--inset--page-chrome);
-    --#{$drawer}--m-pill--m-inline__main--PaddingBlock: var(--pf-t--global--spacer--inset--page-chrome);
+    --#{$drawer}--m-pill--m-inline__main--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
     --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDelay--expand--focus);
 
     > .#{$drawer}__main > .#{$drawer}__panel {
@@ -365,7 +365,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     &.pf-m-static {
       @media screen and (min-width: $pf-v6-global--breakpoint--md) {
         > .#{$drawer}__main {
-          padding-block-end: var(--#{$drawer}--m-pill--m-inline__main--PaddingBlock);
+          padding-block-end: var(--#{$drawer}--m-pill--m-inline__main--PaddingBlockEnd);
         }
       }
     }
