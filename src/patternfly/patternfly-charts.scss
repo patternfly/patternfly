@@ -218,8 +218,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-bullet--qualitative-range--ColorScale--300: var(--#{$chart}-color-black-300);
   --#{$chart}-bullet--qualitative-range--ColorScale--400: var(--#{$chart}-color-black-400);
   --#{$chart}-bullet--qualitative-range--ColorScale--500: var(--#{$chart}-color-black-500);
-  --#{$chart}-bullet--data--stroke--Color: var(--pf-t--global--border--color--high-contrast);
-  --#{$chart}-bullet--data--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$chart}-bullet--bar--stroke--Color: var(--pf-t--global--border--color--alt);
+  --#{$chart}-bullet--bar--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
 
   // Candlestick
   --#{$chart}-candelstick--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
@@ -238,6 +238,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-donut--pie--angle--Padding: 1;
   --#{$chart}-donut--pie--Padding: 20;
   --#{$chart}-donut--pie--Width: 230;
+  --#{$chart}-donut--pie--data--stroke--Color: var(--pf-t--global--border--color--high-contrast);
+  --#{$chart}-donut--pie--data--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
 
   // Donut Threshold Chart
   --#{$chart}-donut--threshold--first--Color: var(--#{$chart}-global--Fill--Color--200);
@@ -275,6 +277,8 @@ $chart: #{$pf-prefix} + 'chart';
   --#{$chart}-legend--data--type: square;
   --#{$chart}-legend--title--Padding: 2;
   --#{$chart}-legend--Margin: 16;
+  --#{$chart}-legend--data--stroke--Color: var(--pf-t--global--border--color--high-contrast);
+  --#{$chart}-legend--data--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
 
   // Line Chart
   --#{$chart}-line--data--Fill: transparent;
@@ -285,8 +289,8 @@ $chart: #{$pf-prefix} + 'chart';
   // Pie Chart
   --#{$chart}-pie--Padding: 20;
   --#{$chart}-pie--data--Padding: 8;
-  --#{$chart}-pie--data--stroke--Width: var(--#{$chart}-global--stroke--Width--xs);
-  --#{$chart}-pie--data--stroke--Color: transparent;
+  --#{$chart}-pie--data--stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$chart}-pie--data--stroke--Color: var(--pf-t--global--border--color--alt);
   --#{$chart}-pie--labels--Padding: 8;
   --#{$chart}-pie--Height: 230;
   --#{$chart}-pie--Width: 230;
