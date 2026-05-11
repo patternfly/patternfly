@@ -85,27 +85,22 @@
   height: 100dvh;
   background-color: var(--#{$compass}--BackgroundColor);
 
-  .#{$compass}__container {
-    display: grid;
-    grid-template-areas:
-      "header header header"
-      "sidebar-start main sidebar-end";
-    grid-template-rows: auto 1fr;
-    grid-template-columns: auto 1fr auto;
-    grid-auto-rows: auto;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: var(--#{$compass}--Padding);
-    overflow: hidden;
-  }
-
   &.pf-m-docked {
+    .#{$compass}__container {
+      grid-template-areas:
+        "header"
+        "main";
+      grid-template-rows: max-content 1fr;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      padding: 0;
+    }
+
     .#{$compass}__main {
       padding: var(--#{$compass}--Padding);
     }
 
-    > .#{$masthead} {
+    > .#{$compass}__container > .#{$masthead} {
       --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
   
       grid-area: header;
@@ -161,14 +156,19 @@
   }
 }
 
-.pf-m-docked .#{$compass}__container {
+.#{$compass}__container {
+  display: grid;
   grid-template-areas:
-    "header"
-    "main";
-  grid-template-rows: max-content 1fr;
-  grid-template-columns: 1fr;
-  align-items: stretch;
-  padding: 0;
+    "header header header"
+    "sidebar-start main sidebar-end";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-rows: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--#{$compass}--Padding);
+  overflow: hidden;
 }
 
 .#{$compass}__header,
