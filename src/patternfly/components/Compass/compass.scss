@@ -77,6 +77,13 @@
       --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), var(--#{$compass}--section--m-expanded--duration), var(--#{$compass}--section--m-expanded--duration);
     }
   }
+
+  // Glass theme
+  --#{$compass}--BackgroundColor--glass: transparent;
+
+  :where(.pf-v6-theme-glass) & {
+    --#{$compass}--BackgroundColor: var(--#{$compass}--BackgroundColor--glass);
+  }
 }
 
 .#{$compass} {
