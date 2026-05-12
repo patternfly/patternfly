@@ -163,7 +163,7 @@ $chart: #{$pf-prefix} + 'chart';
 
   // Bar Chart
   --#{$chart}-bar--Width: 10;
-  --#{$chart}-bar--data--stroke: var(--pf-t--global--border--color--high-contrast);
+  --#{$chart}-bar--data--stroke: var(--pf-t--global--border--color--alt);
   --#{$chart}-bar--data--Fill: var(--#{$chart}-global--Fill--Color--900);
   --#{$chart}-bar--data--Padding: 8;
   --#{$chart}-bar--data-stroke--Width: var(--pf-t--global--border--width--high-contrast--regular);
