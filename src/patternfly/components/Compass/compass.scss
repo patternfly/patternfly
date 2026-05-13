@@ -26,10 +26,10 @@
   --#{$compass}__message-bar--MaxWidth: 600px;
 
   // Glass theme
-  --#{$compass}__content--MarginBlockStart--glass: calc(var(--pf-t--global--spacer--sm) * -1);
-  --#{$compass}__content--MarginBlockEnd--glass: calc(var(--pf-t--global--spacer--md) * -1);
-  --#{$compass}__content--MarginInlineStart--glass: calc(var(--pf-t--global--spacer--md) * -1);
-  --#{$compass}__content--MarginInlineEnd--glass: calc(var(--pf-t--global--spacer--md) * -1);
+  --#{$compass}__content--MarginBlockStart--glass: calc(var(--#{$compass}__content--PaddingBlockStart--glass) * -1);
+  --#{$compass}__content--MarginBlockEnd--glass: calc(var(--#{$compass}__content--PaddingBlockEnd--glass) * -1);
+  --#{$compass}__content--MarginInlineStart--glass: calc(var(--#{$compass}__content--PaddingInlineStart--glass) * -1);
+  --#{$compass}__content--MarginInlineEnd--glass: calc(var(--#{$compass}__content--PaddingInlineEnd--glass) * -1);
   --#{$compass}__content--PaddingBlockStart--glass: var(--pf-t--global--spacer--sm);
   --#{$compass}__content--PaddingBlockEnd--glass: var(--pf-t--global--spacer--md);
   --#{$compass}__content--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
