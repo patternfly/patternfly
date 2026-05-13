@@ -140,15 +140,13 @@
     border-radius: inherit;
   }
 
-  :where(.pf-v6-theme-glass) & {
-    &.pf-m-glass {
-      --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
-      --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
-      --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
-      
-      backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
-      box-shadow: var(--#{$card}--m-glass--BoxShadow);
-    }
+  :where(.pf-v6-theme-glass) &.pf-m-glass {
+    --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
+    --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
+    --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
+    
+    backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
+    box-shadow: var(--#{$card}--m-glass--BoxShadow);
   }
 
   // SELECTABLE CARDS

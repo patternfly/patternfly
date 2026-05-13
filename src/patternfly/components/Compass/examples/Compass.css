@@ -1,8 +1,8 @@
-#ws-page-main .ws-core-a-compass .pf-v6-c-compass {
+#ws-page-main .ws-core-c-compass .pf-v6-c-compass {
   height: 600px;
 }
 
-#ws-core-a-compass-basic [class*="pf-v6-c-compass"],
-#ws-core-a-compass-docked [class*="pf-v6-c-compass"] {
+#ws-core-c-compass-basic [class*="pf-v6-c-compass"],
+#ws-core-c-compass-docked [class*="pf-v6-c-compass"] {
   outline: var(--pf-t--global--border--width--regular) dashed var(--pf-t--global--border--color--default);
 }

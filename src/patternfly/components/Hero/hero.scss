@@ -1,10 +1,10 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($hero) {
-  --#{$hero}--PaddingBlockStart: var(--pf-t--global--spacer--xl);
-  --#{$hero}--PaddingBlockEnd: var(--pf-t--global--spacer--xl);
+  --#{$hero}--PaddingBlockStart: var(--pf-t--global--spacer--3xl);
+  --#{$hero}--PaddingBlockEnd: var(--pf-t--global--spacer--3xl);
   --#{$hero}--PaddingInlineStart: var(--pf-t--global--spacer--3xl);
-  --#{$hero}--PaddingInlineEnd: var(--pf-t--global--spacer--xl);
+  --#{$hero}--PaddingInlineEnd: var(--pf-t--global--spacer--3xl);
   --#{$hero}--gradient--angle: 109deg;
   --#{$hero}--gradient--stop-1--light: transparent;
   --#{$hero}--gradient--stop-2--light: transparent;
@@ -12,8 +12,7 @@
   --#{$hero}--gradient--stop-1--dark: transparent;
   --#{$hero}--gradient--stop-2--dark: transparent;
   --#{$hero}--gradient--stop-3--dark: transparent;
-  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
-  --#{$hero}--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
+  --#{$hero}--BackgroundColor: var(--pf-t--global--background--color--tertiary--default);
   --#{$hero}--BackgroundImage--light: none;
   --#{$hero}--BackgroundImage--dark: none;
   --#{$hero}--BackgroundRepeat: no-repeat;
@@ -25,14 +24,18 @@
   --#{$hero}--BorderInlineStartWidth: var(--pf-t--global--border--width--regular);
   --#{$hero}--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
   --#{$hero}--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$hero}--m-glass--BorderColor: var(--pf-t--global--border--color--alt);
-  --#{$hero}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--md);
-  --#{$hero}--BorderStartStartRadius: 24px;
-  --#{$hero}--BorderStartEndRadius: 72px;
-  --#{$hero}--BorderEndEndRadius: 24px;
-  --#{$hero}--BorderEndStartRadius: 72px;
+  --#{$hero}--BorderStartStartRadius: var(--pf-t--global--border--radius--medium);
+  --#{$hero}--BorderStartEndRadius: 48px;
+  --#{$hero}--BorderEndEndRadius: var(--pf-t--global--border--radius--medium);
+  --#{$hero}--BorderEndStartRadius: 48px;
   --#{$hero}__body--Width: 800px;
   --#{$hero}__body--MaxWidth: 80%;
+
+  // Glass styles
+  --#{$hero}--m-glass--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
+  --#{$hero}--m-glass--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
+  --#{$hero}--m-glass--BorderColor: var(--pf-t--global--border--color--glass--default);
+  --#{$hero}--m-glass--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
 }
 
 .#{$hero} {
@@ -41,13 +44,14 @@
   padding-block-end: var(--#{$hero}--PaddingBlockEnd);
   padding-inline-start: var(--#{$hero}--PaddingInlineStart);
   padding-inline-end: var(--#{$hero}--PaddingInlineEnd);
+  background-color: var(--#{$hero}--BackgroundColor);
   background-image: var(--#{$hero}--BackgroundImage, var(--#{$hero}--BackgroundImage--light)),
-    linear-gradient(
-      var(--#{$hero}--gradient--angle),
-      var(--#{$hero}--gradient--stop-1, var(--#{$hero}--gradient--stop-1--light)) 0%,
-      var(--#{$hero}--gradient--stop-2, var(--#{$hero}--gradient--stop-2--light)) 50%,
-      var(--#{$hero}--gradient--stop-3, var(--#{$hero}--gradient--stop-3--light)) 100%
-    );
+  linear-gradient(
+    var(--#{$hero}--gradient--angle),
+    var(--#{$hero}--gradient--stop-1, var(--#{$hero}--gradient--stop-1--light)) 0%,
+    var(--#{$hero}--gradient--stop-2, var(--#{$hero}--gradient--stop-2--light)) 50%,
+    var(--#{$hero}--gradient--stop-3, var(--#{$hero}--gradient--stop-3--light)) 100%
+  );
   background-repeat: var(--#{$hero}--BackgroundRepeat);
   background-position: var(--#{$hero}--BackgroundPosition);
   background-size: var(--#{$hero}--BackgroundSize);
@@ -62,23 +66,20 @@
   border-end-start-radius: var(--#{$hero}--BorderEndStartRadius);
   border-end-end-radius: var(--#{$hero}--BorderEndEndRadius);
 
+  :where(.#{$pf-prefix}theme-glass) &.pf-m-glass {
+    --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
+    --#{$hero}--BackgroundColor: var(--#{$hero}--m-glass--BackgroundColor);
+
+    backdrop-filter: var(--#{$hero}--m-glass--BackdropFilter);
+    box-shadow: var(--#{$hero}--m-glass--BoxShadow);
+  }
+
   :root:where(.#{$pf-prefix}theme-dark) & {
     --#{$hero}--BackgroundImage: var(--#{$hero}--BackgroundImage--dark);
     --#{$hero}--gradient--stop-1: var(--#{$hero}--gradient--stop-1--dark);
     --#{$hero}--gradient--stop-2: var(--#{$hero}--gradient--stop-2--dark);
     --#{$hero}--gradient--stop-3: var(--#{$hero}--gradient--stop-3--dark);
-  }
-
-  :root:where(.#{$pf-prefix}theme-glass) & {
-    --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
-  
-    box-shadow: var(--#{$hero}--m-glass--BoxShadow);
-  }
-
-  &:not(.pf-m-no-glass) {
-    background-color: var(--#{$hero}--BackgroundColor);
-    backdrop-filter: var(--#{$hero}--BackdropFilter);
-  }
+  } 
 }
 
 .#{$hero}__body {

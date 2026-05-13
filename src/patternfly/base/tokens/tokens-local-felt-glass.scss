@@ -1,0 +1,5 @@
+@use '../../sass-utilities/init' as *;
+
+@mixin pf-v6-tokens {
+  --pf-t--global--background--image--default: var(--pf-t--global--background--image--felt--glass, url("./assets/images/Felt-Bkg-Generic-Light.svg"));
+}

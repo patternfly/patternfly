@@ -47,6 +47,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-sticky-base--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
   --#{$pagination}--m-sticky-stuck--BoxShadow: var(--#{$pagination}--m-sticky--BoxShadow);
   --#{$pagination}--m-sticky-stuck--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+  --#{$pagination}--m-sticky--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
 
   // bottom
   --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -66,10 +67,10 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: 0;
 
   :where(:root.pf-v6-theme-glass) & {
-    --#{$pagination}--m-sticky-base--InsetBlockStart: var(--pf-t--global--spacer--sm);
     --#{$pagination}--m-sticky-stuck--BorderRadius: var(--pf-t--global--border--radius--glass--default);
-    --#{$pagination}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--glass--default);
-    --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: var(--pf-t--global--spacer--sm);
+    --#{$pagination}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--sm);
+    --#{$pagination}--m-sticky--BorderRadius: var(--#{$pagination}--m-sticky--BorderRadius--glass);
+    --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm);
   }
 
   // page menu
@@ -199,6 +200,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
     inset-block-start: var(--#{$pagination}--m-sticky--InsetBlockStart);
     background-color: var(--#{$pagination}--m-sticky--BackgroundColor);
+    border-radius: var(--#{$pagination}--m-sticky--BorderRadius);
     box-shadow: var(--#{$pagination}--m-sticky--BoxShadow);
   }
 

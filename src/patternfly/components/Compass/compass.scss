@@ -1,9 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($compass) {
-  --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--light);
-  --#{$compass}--BackgroundImage--light: none;
-  --#{$compass}--BackgroundImage--dark: none;
+  --#{$compass}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}--Gap: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
@@ -24,16 +22,6 @@
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
-
-  // Glass theme
-  --#{$compass}__content--MarginBlockStart--glass: calc(var(--#{$compass}__content--PaddingBlockStart--glass) * -1);
-  --#{$compass}__content--MarginBlockEnd--glass: calc(var(--#{$compass}__content--PaddingBlockEnd--glass) * -1);
-  --#{$compass}__content--MarginInlineStart--glass: calc(var(--#{$compass}__content--PaddingInlineStart--glass) * -1);
-  --#{$compass}__content--MarginInlineEnd--glass: calc(var(--#{$compass}__content--PaddingInlineEnd--glass) * -1);
-  --#{$compass}__content--PaddingBlockStart--glass: var(--pf-t--global--spacer--sm);
-  --#{$compass}__content--PaddingBlockEnd--glass: var(--pf-t--global--spacer--md);
-  --#{$compass}__content--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
-  --#{$compass}__content--PaddingInlineEnd--glass: var(--pf-t--global--spacer--md);
 
   // Docked
   --#{$compass}--m-docked__masthead--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -78,7 +66,7 @@
     --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
     --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s;
 
-    &.pf-m-animate-smoothly {
+    &.pf-m-animate-smoothly .#{$compass}__container {
       --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
       --#{$compass}--section--slide--length--header: 10rem;
       --#{$compass}--section--slide--length--sidebar: var(--pf-t--global--spacer--4xl);
@@ -90,7 +78,19 @@
     }
   }
 
+  // Glass theme
+  --#{$compass}--BackgroundColor--glass: transparent;
+  --#{$compass}__content--MarginBlockStart--glass: calc(var(--#{$compass}__content--PaddingBlockStart--glass) * -1);
+  --#{$compass}__content--MarginBlockEnd--glass: calc(var(--#{$compass}__content--PaddingBlockEnd--glass) * -1);
+  --#{$compass}__content--MarginInlineStart--glass: calc(var(--#{$compass}__content--PaddingInlineStart--glass) * -1);
+  --#{$compass}__content--MarginInlineEnd--glass: calc(var(--#{$compass}__content--PaddingInlineEnd--glass) * -1);
+  --#{$compass}__content--PaddingBlockStart--glass: var(--pf-t--global--spacer--sm);
+  --#{$compass}__content--PaddingBlockEnd--glass: var(--pf-t--global--spacer--md);
+  --#{$compass}__content--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
+  --#{$compass}__content--PaddingInlineEnd--glass: var(--pf-t--global--spacer--md);
+
   :where(.pf-v6-theme-glass) & {
+    --#{$compass}--BackgroundColor: var(--#{$compass}--BackgroundColor--glass);
     --#{$compass}__content--MarginBlockStart: var(--#{$compass}__content--MarginBlockStart--glass);
     --#{$compass}__content--MarginBlockEnd: var(--#{$compass}__content--MarginBlockEnd--glass);
     --#{$compass}__content--MarginInlineStart: var(--#{$compass}__content--MarginInlineStart--glass);
@@ -105,57 +105,43 @@
 .#{$compass} {
   // stylelint-disable-next-line
   interpolate-size: allow-keywords;
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "sidebar-start main sidebar-end";
-  grid-template-rows: auto 1fr;
-  grid-template-columns: auto 1fr auto;
-  grid-auto-rows: auto;
-  align-items: center;
-  justify-content: center;
   height: 100dvh;
-  padding: var(--#{$compass}--Padding);
-  overflow: hidden;
-  background-image: var(--#{$compass}--BackgroundImage);
-  background-size: cover;
+  background-color: var(--#{$compass}--BackgroundColor);
 
   &.pf-m-docked {
-    grid-template-areas:
-      "header"
-      "main";
-    grid-template-rows: max-content 1fr;
-    grid-template-columns: 1fr;
-    align-items: stretch;
-    padding: 0;
+    .#{$compass}__container {
+      grid-template-areas:
+        "header"
+        "main";
+      grid-template-rows: max-content 1fr;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      padding: 0;
+    }
 
     .#{$compass}__main {
       padding: var(--#{$compass}--Padding);
     }
 
-    > .#{$masthead} {
+    > .#{$compass}__container > .#{$masthead} {
       --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
   
       grid-area: header;
     }
   }
 
-  :root:where(.#{$pf-prefix}theme-dark) & {
-    --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
-  }
-
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    &.pf-m-docked {
+    &.pf-m-docked .#{$compass}__container {
       grid-template-areas: "dock main";
       grid-template-rows: auto;
       grid-template-columns: auto 1fr;
       row-gap: var(--#{$compass}__main--RowGap);
       align-items: stretch;
       padding: 0;
-
-      > .#{$masthead} {
-        display: none;
-      }
+    }
+    
+    &.pf-m-docked > .#{$compass}__container > .#{$masthead} {
+      display: none;
     }
   }
 
@@ -191,6 +177,21 @@
       @include pf-v6-hamburger($collapse: true);
     }
   }
+}
+
+.#{$compass}__container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar-start main sidebar-end";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-rows: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--#{$compass}--Padding);
+  overflow: hidden;
 }
 
 .#{$compass}__header,

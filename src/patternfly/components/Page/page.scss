@@ -264,6 +264,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-main--xl--MarginInlineStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-main--xl--MarginInlineEnd--glass: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
 
   :where(.pf-v6-theme-glass) & {
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
@@ -285,6 +286,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar-main--BorderRadius: var(--#{$page}__sidebar-main--BorderRadius--glass);
     --#{$page}__sidebar-main--BoxShadow: var(--#{$page}__sidebar-main--BoxShadow--glass);
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}__main-container--MarginBlockStart--glass);
+    --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--MaxHeight--glass);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {

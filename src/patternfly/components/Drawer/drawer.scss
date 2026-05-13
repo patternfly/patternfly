@@ -6,8 +6,8 @@ $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl",
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 @include pf-root($drawer) {
-  // Main
-  --#{$drawer}--m-pill--m-inline__main--Gap: var(--pf-t--global--spacer--inset--page-chrome);
+  // Pill inline main
+  --#{$drawer}--m-pill--m-inline__main--Gap: 0;
 
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -294,6 +294,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
+    --#{$drawer}--m-pill--m-inline__main--Gap: var(--pf-t--global--spacer--inset--page-chrome);
     --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDelay--expand--focus);
 
     > .#{$drawer}__main > .#{$drawer}__panel {
