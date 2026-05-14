@@ -35,6 +35,33 @@ cssPrefix: pf-v6-c-avatar
 {{> avatar avatar--modifier="pf-m-xl" avatar--AltText="Avatar image extra large"}}
 ```
 
+### Colorful default
+Use a color modifier to add visual interest to the default avatar icon.
+```hbs
+{{> avatar--colorful avatar--modifier="pf-m-red" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-green" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="" avatar--AltText="Avatar with color"}}
+```
+
+### Colorful initials
+```hbs
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-red" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-orangered" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-orange" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-yellow" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-green" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-teal" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-blue" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-purple" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--Initial="C" avatar--AltText="Initials with color"}}
+```
+
 ## Documentation
 ### Overview
 The avatar component provides a default SVG icon. If an image is used it should be 36px by 36px.
