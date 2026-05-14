@@ -51,15 +51,15 @@ Use a color modifier to add visual interest to the default avatar icon.
 
 ### Colorful initials
 ```hbs
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-red" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-orangered" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-orange" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-yellow" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-green" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-teal" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-blue" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--modifier="pf-m-purple" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--Initial="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-red" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-green" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--Initials="C" avatar--AltText="Initials with color"}}
+{{> avatar--colorful avatar--AltText="Initials with color" avatar--Initials="C"}}
 ```
 
 ## Documentation

@@ -23,8 +23,8 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-bordered--BorderWidth: var(--pf-t--global--border--width--box--default);
 
   // Colorful
-  --#{$avatar}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
-  --#{$avatar}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
+  --#{$avatar}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$avatar}--Color: var(--pf-t--global--color--nonstatus--gray--hover);
   --#{$avatar}--colorful--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$avatar}--colorful--BorderColor: var(--pf-t--global--border--color--nonstatus--gray--default);
   --#{$avatar}--m-red--BackgroundColor: var(--pf-t--global--color--nonstatus--red--default);
@@ -89,8 +89,9 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
     }
   }
 
-  &:has(.#{$avatar}__initials),
-  &:has(svg) {
+  &.#{$avatar}--colorful {
+    --#{$avatar}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
+    --#{$avatar}--Color: var(--pf-t--global--text--color--nonstatus--on--gray--hover);
     --#{$avatar}--BorderWidth: var(--#{$avatar}--colorful--BorderWidth);
     --#{$avatar}--BorderColor: var(--#{$avatar}--colorful--BorderColor);
   }
