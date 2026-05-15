@@ -9,9 +9,13 @@
       "excludePackagePatterns": [
         "@patternfly/patternfly-a11y",
         "@patternfly/react-core",
+        "@patternfly/react-icons",
         "@patternfly/react-code-editor",
         "@patternfly/react-table",
-        "@patternfly/documentation-framework"
+        "@patternfly/documentation-framework",
+        "sass",
+        "stylelint*",
+        "backstopjs"
       ],
       "enabled": false
     },
@@ -20,9 +24,13 @@
       "packageNames": [
         "@patternfly/patternfly-a11y",
         "@patternfly/react-core",
+        "@patternfly/react-icons",
         "@patternfly/react-code-editor",
         "@patternfly/react-table",
-        "@patternfly/documentation-framework"
+        "@patternfly/documentation-framework",
+        "sass",
+        "stylelint*",
+        "backstopjs"
       ]
     }
   ]
