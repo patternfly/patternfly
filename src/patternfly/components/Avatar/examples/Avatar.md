@@ -8,58 +8,65 @@ cssPrefix: pf-v6-c-avatar
 ### Basic
 ```hbs
 {{> avatar}}
+{{> avatar avatar--Src="/assets/images/img_avater-rhds.svg"}}
 ```
 
 ### Bordered
 ```hbs
 {{> avatar avatar--modifier="pf-m-bordered" avatar--AltText="Avatar image bordered"}}
+{{> avatar avatar--modifier="pf-m-bordered" avatar--AltText="Avatar image bordered" avatar--Src="/assets/images/img_avater-rhds.svg"}}
 ```
 
 ### Small
 ```hbs
 {{> avatar avatar--modifier="pf-m-sm" avatar--AltText="Avatar image small"}}
+{{> avatar avatar--modifier="pf-m-sm" avatar--AltText="Avatar image small" avatar--Src="/assets/images/img_avater-rhds.svg"}}
 ```
 
 ### Medium
 ```hbs
 {{> avatar avatar--modifier="pf-m-md" avatar--AltText="Avatar image medium"}}
+{{> avatar avatar--modifier="pf-m-md" avatar--AltText="Avatar image medium" avatar--Src="/assets/images/img_avater-rhds.svg"}}
 ```
 
 ### Large
 ```hbs
 {{> avatar avatar--modifier="pf-m-lg" avatar--AltText="Avatar image large"}}
+{{> avatar avatar--modifier="pf-m-lg" avatar--AltText="Avatar image large" avatar--Src="/assets/images/img_avater-rhds.svg"}}
 ```
 
 ### Extra large
 ```hbs
 {{> avatar avatar--modifier="pf-m-xl" avatar--AltText="Avatar image extra large"}}
+{{> avatar avatar--modifier="pf-m-xl" avatar--AltText="Avatar image extra large" avatar--Src="/assets/images/img_avater-rhds.svg"}}
 ```
 
 ### Colorful default
 Use a color modifier to add visual interest to the default avatar icon.
 ```hbs
-{{> avatar--colorful avatar--modifier="pf-m-red" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-green" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--AltText="Avatar with color"}}
-{{> avatar--colorful avatar--modifier="" avatar--AltText="Avatar with color"}}
+{{> avatar--colorful avatar--modifier="pf-m-red" avatar--AriaLabel="Red avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--AriaLabel="Orange-red avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--AriaLabel="Orange avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--AriaLabel="Yellow avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-green" avatar--AriaLabel="Green avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--AriaLabel="Teal avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--AriaLabel="Blue avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--AriaLabel="Purple avatar with icon"}}
+{{> avatar--colorful avatar--AriaLabel="Avatar with icon and no color"}}
 ```
 
 ### Colorful initials
+Use a color modifier with a user's initial to add visual interest when no image is available.
 ```hbs
-{{> avatar--colorful avatar--modifier="pf-m-red" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-green" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--Initials="C" avatar--AltText="Initials with color"}}
-{{> avatar--colorful avatar--AltText="Initials with color" avatar--Initials="C"}}
+{{> avatar--colorful avatar--modifier="pf-m-red" avatar--Initials="C" avatar--AriaLabel="Red avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--Initials="C" avatar--AriaLabel="Orange-red avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--Initials="C" avatar--AriaLabel="Orange avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--Initials="C" avatar--AriaLabel="Yellow avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-green" avatar--Initials="C" avatar--AriaLabel="Green avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AriaLabel="Teal avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AriaLabel="Blue avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--Initials="C" avatar--AriaLabel="Purple avatar with initial"}}
+{{> avatar--colorful avatar--AriaLabel="Avatar with initial and no color" avatar--Initials="C"}}
 ```
 
 ## Documentation
@@ -69,14 +76,27 @@ The avatar component provides a default SVG icon. If an image is used it should 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `alt` | `.pf-v6-c-avatar` | The alt attribute describes the appearance and function of the avatar image. **Required** |
+| `alt` | `.pf-v6-c-avatar` | The alt attribute describes the appearance and function of the avatar image. **Required for image avatars** |
+| `role="img"` | `<div class="pf-v6-c-avatar">` | Indicates the element represents an image. **Required for colorful avatars** |
+| `aria-label` | `<div class="pf-v6-c-avatar">` | Provides an accessible name for the avatar. **Required for colorful avatars** |
+| `aria-hidden="true"` | `.pf-v6-c-avatar__initials`, `<svg>` | Hides decorative content from screen readers when the container has `aria-label`. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |
+| `.pf-v6-c-avatar` | `<img>`, `<div>` |  Initiates an avatar. **Required** |
+| `.pf-v6-c-avatar--colorful` | `<div class="pf-v6-c-avatar">` | Modifies an avatar to use colorful styling with a border. |
+| `.pf-v6-c-avatar__initials` | `<span>` | Contains the user's initials in a colorful avatar. |
 | `.pf-m-bordered` | `.pf-v6-c-avatar` | Modifies an avatar to have a border. |
 | `.pf-m-sm{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be small on an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-md{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be medium on an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). **Note:** This is the default size. |
 | `.pf-m-lg{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be large on an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-xl{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be extra large on an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
+| `.pf-m-red` | `.pf-v6-c-avatar` |  Modifies avatar for red styling. |
+| `.pf-m-orangered` | `.pf-v6-c-avatar` |  Modifies avatar for orangered styling. |
+| `.pf-m-orange` | `.pf-v6-c-avatar` |  Modifies avatar for orange styling. |
+| `.pf-m-yellow` | `.pf-v6-c-avatar` |  Modifies avatar for yellow styling. |
+| `.pf-m-green` | `.pf-v6-c-avatar` |  Modifies avatar for green styling. |
+| `.pf-m-teal` | `.pf-v6-c-avatar` |  Modifies avatar for teal styling. |
+| `.pf-m-blue` | `.pf-v6-c-avatar` |  Modifies avatar for blue styling. |
+| `.pf-m-purple` | `.pf-v6-c-avatar` |  Modifies avatar for purple styling. |
