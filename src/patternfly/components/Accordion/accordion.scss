@@ -55,7 +55,9 @@
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
   --#{$accordion}__expandable-content--MaxHeight: 0;
   --#{$accordion}__expandable-content--Visibility: hidden;
+  --#{$accordion}__expandable-content--Overflow: hidden;
   --#{$accordion}__item--m-expanded__expandable-content--Visibility: visible;
+  --#{$accordion}__item--m-expanded__expandable-content--Overflow: visible;
   --#{$accordion}__item--m-expanded__expandable-content--MaxHeight: 99999px;
   --#{$accordion}__item--m-expanded__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
 
@@ -204,6 +206,7 @@
     --#{$accordion}__expandable-content--TransitionDuration--fade: 0s;
     --#{$accordion}__expandable-content--m-fixed--MaxHeight--base: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
     --#{$accordion}__expandable-content--BorderWidth: var(--#{$accordion}__item--m-expanded__expandable-content--BorderWidth);
+    --#{$accordion}__expandable-content--Overflow: var(--#{$accordion}__item--m-expanded__expandable-content--Overflow);
   }
 }
 
@@ -264,7 +267,7 @@
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
-  overflow-y: auto;
+  overflow-y: var(--#{$accordion}__expandable-content--Overflow);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
   visibility:  var(--#{$accordion}__expandable-content--Visibility);
@@ -279,6 +282,8 @@
   translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
+    --#{$accordion}__expandable-content--Overflow: auto;
+
     max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight--base);
   }
 }
