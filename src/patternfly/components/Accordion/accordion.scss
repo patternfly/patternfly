@@ -264,6 +264,7 @@
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
+  overflow-y: auto;
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
   visibility:  var(--#{$accordion}__expandable-content--Visibility);
@@ -279,7 +280,6 @@
 
   &.pf-m-fixed {
     max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight--base);
-    overflow-y: auto;
   }
 }
 
