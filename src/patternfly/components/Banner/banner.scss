@@ -23,6 +23,9 @@
   --#{$banner}--link--TextDecoration: underline;
   --#{$banner}--link--hover--Color: var(--#{$banner}--Color);
   --#{$banner}--link--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$banner}--a--TextDecorationColor: currentColor;
+  --#{$banner}--m-link--TextDecorationColor: var(--#{$banner}--a--TextDecorationColor);
+  --#{$banner}--m-link--hover--TextDecorationColor: var(--#{$banner}--a--TextDecorationColor);
 
   // modifier variables
   --#{$banner}--m-sticky--ZIndex: var(--pf-t--global--z-index--md);
@@ -74,6 +77,10 @@
   background-color: var(--#{$banner}--BackgroundColor);
   border-block-start: var(--#{$banner}--BorderWidth) solid var(--#{$banner}--BorderColor);
   border-block-end: var(--#{$banner}--BorderWidth) solid var(--#{$banner}--BorderColor);
+
+  a {
+    text-decoration-color: var(--#{$banner}--a--TextDecorationColor);
+  }
 
   &.pf-m-danger {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-danger--BackgroundColor);
@@ -174,6 +181,11 @@
     --#{$button}--disabled--Color: var(--#{$banner}--link--disabled--Color);
 
     text-decoration-line: var(--#{$banner}--link--TextDecoration);
+    
+    &.pf-m-link {
+      --#{$button}--TextDecorationColor: var(--#{$banner}--m-link--TextDecorationColor);
+      --#{$button}--hover--TextDecorationColor: var(--#{$banner}--m-link--hover--TextDecorationColor);
+    }
 
     &:disabled,
     &.pf-m-disabled {
