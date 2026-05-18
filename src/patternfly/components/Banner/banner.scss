@@ -23,7 +23,7 @@
   --#{$banner}--link--TextDecoration: underline;
   --#{$banner}--link--hover--Color: var(--#{$banner}--Color);
   --#{$banner}--link--disabled--Color: var(--pf-t--global--text--color--disabled);
-  --#{$banner}--a--TextDecorationColor: currentColor;
+  --#{$banner}--a--TextDecorationColor: currentcolor;
   --#{$banner}--m-link--TextDecorationColor: var(--#{$banner}--a--TextDecorationColor);
   --#{$banner}--m-link--hover--TextDecorationColor: var(--#{$banner}--a--TextDecorationColor);
 
