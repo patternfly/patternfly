@@ -20,6 +20,7 @@
       "enabled": false
     },
     {
+      "groupName": "non-pf-a11y-deps",
       "datasources": ["npm"],
       "packageNames": [
         "@patternfly/patternfly-a11y",
@@ -31,6 +32,12 @@
         "sass",
         "stylelint*",
         "backstopjs"
+      ]
+    },
+    {
+      "datasources": ["npm"],
+      "packageNames": [
+        "@patternfly/patternfly-a11y"
       ]
     }
   ]
