@@ -25,6 +25,10 @@
   @include local.pf-v6-tokens;
 }
 
+:root:where(.pf-v6-theme-felt) {
+  @include felt.pf-v6-tokens;
+}
+
 // Default
 :root:where(.pf-v6-theme-high-contrast) {
   @include highcontrast.pf-v6-tokens;
@@ -33,10 +37,6 @@
 :root:where(.pf-v6-theme-glass) {
   @include glass.pf-v6-tokens;
   @include local-glass.pf-v6-tokens;
-}
-
-:root:where(.pf-v6-theme-felt) {
-  @include felt.pf-v6-tokens;
 }
 
 :root:where(.pf-v6-theme-felt.pf-v6-theme-high-contrast) {
@@ -53,6 +53,10 @@
   @include dark.pf-v6-tokens;
 }
 
+:root:where(.pf-v6-theme-dark.pf-v6-theme-felt) {
+  @include felt-dark.pf-v6-tokens;
+}
+
 :root:where(.pf-v6-theme-dark.pf-v6-theme-high-contrast) {
   @include highcontrast-dark.pf-v6-tokens;
 }
@@ -60,10 +64,6 @@
 :root:where(.pf-v6-theme-dark.pf-v6-theme-glass) {
   @include glass-dark.pf-v6-tokens;
   @include local-glass-dark.pf-v6-tokens;
-}
-
-:root:where(.pf-v6-theme-dark.pf-v6-theme-felt) {
-  @include felt-dark.pf-v6-tokens;
 }
 
 :root:where(.pf-v6-theme-dark.pf-v6-theme-felt.pf-v6-theme-high-contrast) {
