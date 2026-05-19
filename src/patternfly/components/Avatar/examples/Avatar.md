@@ -67,7 +67,8 @@ Use a color modifier with a user's initial to add visual interest when no image 
 {{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AriaLabel="Teal avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AriaLabel="Blue avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-purple" avatar--Initials="C" avatar--AriaLabel="Purple avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-gray" avatar--AriaLabel="Avatar with initial and no color" avatar--Initials="C"}}
+{{> avatar--colorful avatar--modifier="pf-m-gray" avatar--AriaLabel="Gray avatar with initial" avatar--Initials="C"}}
+{{> avatar--colorful avatar--AriaLabel="Avatar with initial and no color" avatar--Initials="C"}}
 ```
 
 ## Documentation
