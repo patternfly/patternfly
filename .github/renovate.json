@@ -20,7 +20,7 @@
       "enabled": false
     },
     {
-      "groupName": "non-pf-a11y-deps",
+      "groupName": "grouped-pf-deps",
       "datasources": ["npm"],
       "packageNames": [
         "@patternfly/patternfly-a11y",
