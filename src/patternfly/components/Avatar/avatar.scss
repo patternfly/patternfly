@@ -23,10 +23,10 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-bordered--BorderWidth: var(--pf-t--global--border--width--box--default);
 
   // Colorful
-  --#{$avatar}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$avatar}--Color: var(--pf-t--global--color--nonstatus--gray--hover);
   --#{$avatar}--colorful--BorderWidth: var(--pf-t--global--border--width--box--default);
-  --#{$avatar}--colorful--BorderColor: var(--pf-t--global--border--color--nonstatus--gray--default);
+  --#{$avatar}--m-gray--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$avatar}--m-gray--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
+  --#{$avatar}--m-gray--BorderColor: var(--pf-t--global--border--color--default);
   --#{$avatar}--m-red--BackgroundColor: var(--pf-t--global--color--nonstatus--red--default);
   --#{$avatar}--m-red--Color: var(--pf-t--global--text--color--nonstatus--on-red--default);
   --#{$avatar}--m-red--BorderColor: var(--pf-t--global--border--color--nonstatus--red--default);
@@ -71,9 +71,6 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   justify-content: center;
   width: var(--#{$avatar}--Width);
   height: var(--#{$avatar}--Height);
-  overflow: clip;
-  color: var(--#{$avatar}--Color);
-  background-color: var(--#{$avatar}--BackgroundColor);
   border: var(--#{$avatar}--BorderWidth) solid var(--#{$avatar}--BorderColor);
   border-radius: var(--#{$avatar}--BorderRadius);
 
@@ -87,19 +84,6 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
       @include pf-v6-build-css-variable-stack("--#{$avatar}--Width", "--#{$avatar}--m-#{$size}--Width", $pf-v6-c-avatar--breakpoint-map);
       @include pf-v6-build-css-variable-stack("--#{$avatar}--Height", "--#{$avatar}--m-#{$size}--Height", $pf-v6-c-avatar--breakpoint-map);
     }
-  }
-
-  &.#{$avatar}--colorful {
-    --#{$avatar}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
-    --#{$avatar}--Color: var(--pf-t--global--text--color--nonstatus--on--gray--hover);
-    --#{$avatar}--BorderWidth: var(--#{$avatar}--colorful--BorderWidth);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--colorful--BorderColor);
-  }
-
-  .#{$avatar}__initials {
-    font-size: var(--#{$avatar}__initials--FontSize);
-    font-weight: var(--#{$avatar}__initials--FontWeight);
-    line-height: var(--#{$avatar}__initials--LineHeight);
   }
 
   &.pf-m-sm {
@@ -118,51 +102,78 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
     --#{$avatar}__initials--LineHeight: var(--#{$avatar}--m-xl__initials--LineHeight);
   }
 
-  &.pf-m-red {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-red--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-red--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-red--BorderColor);
-  }
+  &.#{$avatar}--colorful {
+    --#{$avatar}--BorderWidth: var(--#{$avatar}--colorful--BorderWidth);
 
-  &.pf-m-orangered {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-orangered--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-orangered--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-orangered--BorderColor);
-  }
+    overflow: clip;
+    font-size: var(--#{$avatar}__initials--FontSize);
+    font-weight: var(--#{$avatar}__initials--FontWeight);
+    line-height: var(--#{$avatar}__initials--LineHeight);
+    vertical-align: middle;
+    background-color: var(--#{$avatar}--BackgroundColor);
+    border-color: var(--#{$avatar}--BorderColor);
+    
+    .#{$avatar}__initials {
+      --#{$avatar}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
+  
+      font-size: var(--#{$avatar}__initials--FontSize);
+      font-weight: var(--#{$avatar}__initials--FontWeight);
+      line-height: var(--#{$avatar}__initials--LineHeight);
+      color: var(--#{$avatar}--Color);
+    }
 
-  &.pf-m-orange {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-orange--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-orange--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-orange--BorderColor);
-  }
-
-  &.pf-m-yellow {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-yellow--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-yellow--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-yellow--BorderColor);
-  }
-
-  &.pf-m-green {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-green--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-green--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-green--BorderColor);
-  }
-
-  &.pf-m-teal {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-teal--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-teal--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-teal--BorderColor);
-  }
-
-  &.pf-m-blue {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-blue--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-blue--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-blue--BorderColor);
-  }
-
-  &.pf-m-purple {
-    --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-purple--BackgroundColor);
-    --#{$avatar}--Color: var(--#{$avatar}--m-purple--Color);
-    --#{$avatar}--BorderColor: var(--#{$avatar}--m-purple--BorderColor);
+    &.pf-m-red {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-red--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-red--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-red--BorderColor);
+    }
+  
+    &.pf-m-orangered {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-orangered--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-orangered--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-orangered--BorderColor);
+    }
+  
+    &.pf-m-orange {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-orange--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-orange--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-orange--BorderColor);
+    }
+  
+    &.pf-m-yellow {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-yellow--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-yellow--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-yellow--BorderColor);
+    }
+  
+    &.pf-m-green {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-green--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-green--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-green--BorderColor);
+    }
+  
+    &.pf-m-teal {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-teal--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-teal--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-teal--BorderColor);
+    }
+  
+    &.pf-m-blue {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-blue--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-blue--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-blue--BorderColor);
+    }
+  
+    &.pf-m-purple {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-purple--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-purple--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-purple--BorderColor);
+    }
+    
+    &.pf-m-gray {
+      --#{$avatar}--BackgroundColor: var(--#{$avatar}--m-gray--BackgroundColor);
+      --#{$avatar}--Color: var(--#{$avatar}--m-gray--Color);
+      --#{$avatar}--BorderColor: var(--#{$avatar}--m-gray--BorderColor);
+    }
   }
 }
