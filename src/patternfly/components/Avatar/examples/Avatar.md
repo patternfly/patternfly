@@ -59,10 +59,10 @@ Use a color modifier to add visual interest to the default avatar icon.
 ### Colorful initials
 Use a color modifier with a user's initial to add visual interest when no image is available.
 ```hbs
-{{> avatar--colorful avatar--modifier="pf-m-red" avatar--Initials="C" avatar--AriaLabel="Red avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-red pf-m-sm" avatar--Initials="C" avatar--AriaLabel="Red avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--Initials="C" avatar--AriaLabel="Orange-red avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--Initials="C" avatar--AriaLabel="Orange avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--Initials="C" avatar--AriaLabel="Yellow avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange pf-m-lg" avatar--Initials="C" avatar--AriaLabel="Orange avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow pf-m-xl" avatar--Initials="C" avatar--AriaLabel="Yellow avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-green" avatar--Initials="C" avatar--AriaLabel="Green avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AriaLabel="Teal avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AriaLabel="Blue avatar with initial"}}

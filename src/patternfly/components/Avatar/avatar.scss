@@ -28,6 +28,7 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
   --#{$avatar}--m-gray--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$avatar}--m-gray--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
+  --#{$avatar}--m-gray--FillColor: var(--pf-t--global--icon--color--nonstatus--on-gray--hover);
   --#{$avatar}--m-gray--BorderColor: var(--pf-t--global--border--color--default);
   --#{$avatar}--m-red--BackgroundColor: var(--pf-t--global--color--nonstatus--red--default);
   --#{$avatar}--m-red--Color: var(--pf-t--global--text--color--nonstatus--on-red--default);
