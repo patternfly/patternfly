@@ -42,9 +42,9 @@ jobs:
             ~/.cache/Cypress
             ~/.cache/yarn
             .yarn/cache
-          key: ${{ runner.os }}-yarn-cache-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-pr-yarn-cache-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-cache-
+            ${{ runner.os }}-pr-yarn-cache-
       
       - name: Install dependencies
         shell: bash
@@ -62,7 +62,7 @@ jobs:
         name: Load webpack cache
         with:
           path: '.cache'
-          key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-pr-v4-${{ hashFiles('yarn.lock') }}
       - run: yarn build:docs
         name: Build docs
       - run: node .github/upload-preview.js public
