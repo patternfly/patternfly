@@ -243,9 +243,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Glass theme
   --#{$page}--BackgroundColor--glass: transparent;
   --#{$page}__sidebar--Width--base--glass: calc(#{pf-size-prem(290px)} + var(--pf-t--global--spacer--inset--page-chrome) * 2);
-  --#{$page}__sidebar--MarginBlockStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}__sidebar-body--PaddingInlineStart--glass: var(--pf-t--global--spacer--lg);
-  --#{$page}__sidebar-body--PaddingInlineEnd--glass: var(--pf-t--global--spacer--lg);
+  --#{$page}__sidebar--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__sidebar-body--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
+  --#{$page}__sidebar-body--PaddingInlineEnd--glass: var(--pf-t--global--spacer--md);
   --#{$page}__sidebar-main--PaddingBlockEnd--glass: var(--#{$page}__sidebar--PaddingBlockEnd);
   --#{$page}__sidebar-main--PaddingInlineStart--glass: var(--#{$page}__sidebar--PaddingInlineStart);
   --#{$page}__sidebar-main--PaddingInlineEnd--glass: var(--#{$page}__sidebar--PaddingInlineEnd);
@@ -262,9 +262,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-main--xl--MarginBlockStart--glass: 0;
   --#{$page}__sidebar-main--xl--MarginBlockEnd--glass: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}__sidebar-main--xl--MarginInlineStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}__sidebar-main--xl--MarginInlineEnd--glass: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}__sidebar-main--xl--MarginInlineEnd--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
 
   :where(.pf-v6-theme-glass) & {
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
