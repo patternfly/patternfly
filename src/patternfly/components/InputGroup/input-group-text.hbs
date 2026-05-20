@@ -14,10 +14,10 @@
     {{> @partial-block}}
   {{/if}}
   {{#if input-group-text--HasDollarSignIcon}}
-    $
+    <span aria-hidden="true">$</span>
   {{/if}}
   {{#if input-group-text--HasAtIcon}}
-    @
+    <span aria-hidden="true">@</span>
   {{/if}}
   {{#if input-group-text--HasCalendarIcon}}
     {{pfIcon "rh-ui-calendar-fill"}}
