@@ -22,7 +22,7 @@ module.exports = {
       }
     ],
     '@semantic-release/release-notes-generator',
-    '@semantic-release/github',
+    ['@semantic-release/github', { successComment: false, failComment: false }],
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
   tagFormat: 'patch-v${version}'
