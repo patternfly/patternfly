@@ -1007,6 +1007,12 @@
       display: revert;
     }
   }
+
+  &:where(.pf-m-docked, .pf-m-text-expanded) {
+    .#{$button}__icon {
+      min-width: 1lh;
+    }
+  }
 }
 
 .#{$button}__icon {
