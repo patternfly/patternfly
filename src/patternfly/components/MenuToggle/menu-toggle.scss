@@ -458,14 +458,13 @@
     .#{$menu-toggle}__controls {
       display: revert;
     }
-    
+  }
+
+  &:where(.pf-m-docked, .pf-m-text-expanded) {
     .#{$menu-toggle}__icon {
       min-width: 1lh;
     }
   }
-
-  // &:where(.pf-m-docked, .pf-m-text-expanded) {
-  // }
 }
 
 // Register the property type for the custom property to be animatable
