@@ -249,9 +249,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-main--PaddingBlockEnd--glass: var(--#{$page}__sidebar--PaddingBlockEnd);
   --#{$page}__sidebar-main--PaddingInlineStart--glass: var(--#{$page}__sidebar--PaddingInlineStart);
   --#{$page}__sidebar-main--PaddingInlineEnd--glass: var(--#{$page}__sidebar--PaddingInlineEnd);
-  --#{$page}__sidebar-main--MarginBlockStart--glass: calc(var(--pf-t--global--spacer--sm) * -1);
-  --#{$page}__sidebar-main--MarginBlockEnd--glass: var(--pf-t--global--spacer--md);
-  --#{$page}__sidebar-main--MarginInlineStart--glass: var(--pf-t--global--spacer--md);
+  --#{$page}__sidebar-main--MarginBlockStart--glass: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$page}__sidebar-main--MarginBlockEnd--glass: calc(var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--xs));
+  --#{$page}__sidebar-main--MarginInlineStart--glass: calc(var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--xs));
   --#{$page}__sidebar-main--MarginInlineEnd--glass: var(--pf-t--global--spacer--md);
   --#{$page}__sidebar-main--BackgroundColor--glass: var(--#{$page}__sidebar--BackgroundColor);
   --#{$page}__sidebar-main--BackdropFilter--glass: var(--#{$page}__sidebar--BackdropFilter);
