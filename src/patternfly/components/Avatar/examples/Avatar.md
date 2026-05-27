@@ -8,37 +8,37 @@ cssPrefix: pf-v6-c-avatar
 ### Basic
 ```hbs
 {{> avatar}}
-{{> avatar avatar--Src="/assets/images/img_avatar-rhds.svg"}}
+{{> avatar avatar--src="/assets/images/img_avatar-rhds.svg"}}
 ```
 
 ### Bordered
 ```hbs
-{{> avatar avatar--modifier="pf-m-bordered" avatar--AltText="Avatar image bordered"}}
-{{> avatar avatar--modifier="pf-m-bordered" avatar--AltText="Avatar image bordered" avatar--Src="/assets/images/img_avatar-rhds.svg"}}
+{{> avatar avatar--modifier="pf-m-bordered" avatar--alt="Avatar image bordered"}}
+{{> avatar avatar--modifier="pf-m-bordered" avatar--alt="Avatar image bordered" avatar--src="/assets/images/img_avatar-rhds.svg"}}
 ```
 
 ### Small
 ```hbs
-{{> avatar avatar--modifier="pf-m-sm" avatar--AltText="Avatar image small"}}
-{{> avatar avatar--modifier="pf-m-sm" avatar--AltText="Avatar image small" avatar--Src="/assets/images/img_avatar-rhds.svg"}}
+{{> avatar avatar--modifier="pf-m-sm" avatar--alt="Avatar image small"}}
+{{> avatar avatar--modifier="pf-m-sm" avatar--alt="Avatar image small" avatar--src="/assets/images/img_avatar-rhds.svg"}}
 ```
 
 ### Medium
 ```hbs
-{{> avatar avatar--modifier="pf-m-md" avatar--AltText="Avatar image medium"}}
-{{> avatar avatar--modifier="pf-m-md" avatar--AltText="Avatar image medium" avatar--Src="/assets/images/img_avatar-rhds.svg"}}
+{{> avatar avatar--modifier="pf-m-md" avatar--alt="Avatar image medium"}}
+{{> avatar avatar--modifier="pf-m-md" avatar--alt="Avatar image medium" avatar--src="/assets/images/img_avatar-rhds.svg"}}
 ```
 
 ### Large
 ```hbs
-{{> avatar avatar--modifier="pf-m-lg" avatar--AltText="Avatar image large"}}
-{{> avatar avatar--modifier="pf-m-lg" avatar--AltText="Avatar image large" avatar--Src="/assets/images/img_avatar-rhds.svg"}}
+{{> avatar avatar--modifier="pf-m-lg" avatar--alt="Avatar image large"}}
+{{> avatar avatar--modifier="pf-m-lg" avatar--alt="Avatar image large" avatar--src="/assets/images/img_avatar-rhds.svg"}}
 ```
 
 ### Extra large
 ```hbs
-{{> avatar avatar--modifier="pf-m-xl" avatar--AltText="Avatar image extra large"}}
-{{> avatar avatar--modifier="pf-m-xl" avatar--AltText="Avatar image extra large" avatar--Src="/assets/images/img_avatar-rhds.svg"}}
+{{> avatar avatar--modifier="pf-m-xl" avatar--alt="Avatar image extra large"}}
+{{> avatar avatar--modifier="pf-m-xl" avatar--alt="Avatar image extra large" avatar--src="/assets/images/img_avatar-rhds.svg"}}
 ```
 
 ### Colorful default
@@ -59,10 +59,10 @@ Use a color modifier to add visual interest to the default avatar icon.
 ### Colorful initials
 Use a color modifier with a user's initial to add visual interest when no image is available.
 ```hbs
-{{> avatar--colorful avatar--modifier="pf-m-red" avatar--Initials="C" avatar--AriaLabel="Red avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-red pf-m-sm" avatar--Initials="C" avatar--AriaLabel="Red avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--Initials="C" avatar--AriaLabel="Orange-red avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--Initials="C" avatar--AriaLabel="Orange avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--Initials="C" avatar--AriaLabel="Yellow avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange pf-m-lg" avatar--Initials="C" avatar--AriaLabel="Orange avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow pf-m-xl" avatar--Initials="C" avatar--AriaLabel="Yellow avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-green" avatar--Initials="C" avatar--AriaLabel="Green avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AriaLabel="Teal avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AriaLabel="Blue avatar with initial"}}
