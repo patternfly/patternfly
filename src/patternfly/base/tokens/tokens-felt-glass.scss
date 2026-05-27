@@ -2,7 +2,7 @@
 // Do not edit directly
 // Generated on Mon, 01 Jun 2026 21:26:11 GMT
 
-// Only tokens that differ from base theme (23 tokens)
+// Only tokens that differ from base theme (24 tokens)
 @mixin pf-v6-tokens {
   --pf-t--global--background--color--glass--primary--default: rgb(255, 255, 255, 0.5000);
   --pf-t--global--background--color--primary--clicked: rgb(199, 199, 199, 0.3000);
@@ -26,5 +26,6 @@
   --pf-t--global--color--brand--accent--clicked: var(--pf-t--global--color--brand--accent--200);
   --pf-t--global--color--brand--accent--default: var(--pf-t--global--color--brand--accent--100);
   --pf-t--global--color--brand--accent--hover: var(--pf-t--global--color--brand--accent--200);
+  --pf-t--global--spacer--inset--page-chrome: var(--pf-t--global--spacer--md);
   --pf-t--global--background--color--floating--secondary--default: var(--pf-t--global--background--color--floating--default);
 }
