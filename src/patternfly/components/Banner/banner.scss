@@ -78,10 +78,6 @@
   border-block-start: var(--#{$banner}--BorderWidth) solid var(--#{$banner}--BorderColor);
   border-block-end: var(--#{$banner}--BorderWidth) solid var(--#{$banner}--BorderColor);
 
-  a {
-    text-decoration-color: var(--#{$banner}--a--TextDecorationColor);
-  }
-
   &.pf-m-danger {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-danger--BackgroundColor);
     --#{$banner}--Color: var(--#{$banner}--m-danger--Color);
@@ -157,10 +153,11 @@
   &.pf-m-pill {
     border-radius: var(--#{$banner}--m-pill--BorderRadius);
   }
-
-  a {
-    color: var(--#{$banner}--link--Color);
-    text-decoration-line: var(--#{$banner}--link--TextDecoration);
+    
+    a {
+      color: var(--#{$banner}--link--Color);
+      text-decoration-line: var(--#{$banner}--link--TextDecoration);
+      text-decoration-color: var(--#{$banner}--a--TextDecorationColor);
 
     &:hover:not(.pf-m-disabled) {
       --#{$banner}--link--Color: var(--#{$banner}--link--hover--Color);
