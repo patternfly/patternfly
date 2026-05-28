@@ -2,10 +2,10 @@
 
 @include pf-root($draggable) {
   --#{$draggable}--Cursor: auto;
-  --#{$draggable}--m-dragging--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$draggable}--m-dragging--Cursor: grabbing;
   --#{$draggable}--m-dragging--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$draggable}--m-dragging--BackgroundColor: transparent;
+  --#{$draggable}--m-dragging--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$draggable}--m-dragging--after--BorderWidth: var(--pf-t--global--border--width--regular);
   --#{$draggable}--m-dragging--after--BorderColor: var(--pf-t--global--border--color--brand--default);
   --#{$draggable}--m-dragging--after--BorderRadius: var(--pf-t--global--border--radius--small);
