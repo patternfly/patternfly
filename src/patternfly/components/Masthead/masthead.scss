@@ -9,7 +9,7 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--ColumnGap: var(--pf-t--global--spacer--gutter--default);
   --#{$masthead}--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$masthead}--PaddingBlock: var(--pf-t--global--spacer--md);
-  --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--PaddingInline: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$masthead}--BorderColor: var(--pf-t--global--border--color--default);
   --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
 
