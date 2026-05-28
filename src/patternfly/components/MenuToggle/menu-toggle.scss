@@ -438,6 +438,10 @@
     justify-content: flex-start;
     width: 100%;
 
+    .#{$menu-toggle}__icon {
+      min-width: 1lh;
+    }
+
     @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
       justify-content: center;
       width: auto;
@@ -457,12 +461,6 @@
     .#{$menu-toggle}__text,
     .#{$menu-toggle}__controls {
       display: revert;
-    }
-  }
-
-  &:where(.pf-m-docked, .pf-m-text-expanded) {
-    .#{$menu-toggle}__icon {
-      min-width: 1lh;
     }
   }
 }
