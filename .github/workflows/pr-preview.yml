@@ -6,7 +6,7 @@ on:
   pull_request_target:
 jobs:
   check-permissions:
-    uses: patternfly/.github/.github/workflows/check-team-membership.yml@fdb52a63a2220ec8a3b6c2d43f312cda708ffa06
+    uses: patternfly/.github/.github/workflows/check-team-membership.yml@main
     secrets: inherit
   build-upload:
     needs: check-permissions
