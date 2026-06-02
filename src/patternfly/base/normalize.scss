@@ -2,6 +2,7 @@
 
 // Normalize
 @if $pf-v6-global--enable-normalize {
+  // stylelint-disable selector-max-type
   *,
   *::before,
   *::after {
@@ -144,4 +145,5 @@
   :where(.pf-v6-theme-dark) {
     color-scheme: dark;
   }
+  // stylelint-enable selector-max-type
 }

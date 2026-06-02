@@ -232,8 +232,8 @@ $pf-v6-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
+  transform: rotate(var(--#{$jump-links}__toggle-icon--Rotate));
   transition-timing-function: var(--#{$jump-links}__toggle-icon--TransitionTimingFunction);
   transition-duration: var(--#{$jump-links}__toggle-icon--TransitionDuration);
   transition-property: transform;
-  transform: rotate(var(--#{$jump-links}__toggle-icon--Rotate));
 }

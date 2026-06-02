@@ -144,9 +144,9 @@
     --#{$card}--BackgroundColor: var(--#{$card}--m-glass--BackgroundColor);
     --#{$card}--BorderColor: var(--#{$card}--m-glass--BorderColor);
     --#{$card}--BorderWidth: var(--#{$card}--m-glass--BorderWidth);
-    
-    backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
+
     box-shadow: var(--#{$card}--m-glass--BoxShadow);
+    backdrop-filter: var(--#{$card}--m-glass--BackdropFilter);
   }
 
   // SELECTABLE CARDS
@@ -462,9 +462,9 @@
 }
 
 .#{$card}__clickable-action {
+  outline: 0;
   background: none;
   border: 0;
-  outline: 0;
 
   &:disabled,
   &.pf-m-disabled {

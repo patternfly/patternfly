@@ -265,17 +265,18 @@
 .#{$nav}__subnav {
   --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
 
+  visibility: visible;
   max-height: 99999px;
   padding-block-start: var(--#{$nav}__subnav--PaddingBlockStart);
   padding-block-end: var(--#{$nav}__subnav--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
-  overflow-y: clip;
-  visibility: visible;
+  // stylelint-disable-next-line
+  overflow-y: clip; // TODO - replace with overflow-block in Safari 27+
+  translate: 0 var(--#{$nav}__subnav--TranslateY);
   transition-delay: 0s, 0s, var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s);
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--expand);
   transition-duration: var(--#{$nav}__subnav--TransitionDuration--expand), var(--#{$nav}__subnav--TransitionDuration--expand--slide), 0s, 0s, 0s, 0s;
   transition-property: opacity, translate, visibility, max-height, padding-block-start, padding-block-end;
-  translate: 0 var(--#{$nav}__subnav--TranslateY);
 
   &[hidden] {
     --#{$nav}__subnav--TransitionDelay--expand--focus: var(--#{$nav}__subnav--TransitionDuration--expand);
@@ -286,8 +287,8 @@
     --#{$nav}__subnav--TranslateY: var(--#{$nav}__subnav--hidden--TranslateY);
 
     display: grid; // overrides `display: none` - element is hidden via `visibility: hidden`
-    max-height: 0;
     visibility: hidden;
+    max-height: 0;
     opacity: 0;
   }
 }
@@ -307,10 +308,10 @@
     content: var(--#{$nav}__item--accent--content, "");
     background-color: var(--#{$nav}__item--accent--color);
     border-radius: var(--#{$nav}__item--accent--BorderRadius);
+    scale: 1 var(--#{$nav}__item--accent--ScaleY);
     transition-timing-function: var(--#{$nav}__item--accent--TransitionTimingFunction);
     transition-duration: var(--#{$nav}__item--accent--TransitionDuration);
     transition-property: scale;
-    scale: 1 var(--#{$nav}__item--accent--ScaleY);
   }
 
   > .#{$nav}__link[button] {
@@ -422,10 +423,10 @@
 // - Nav toggle caret icon
 .#{$nav}__toggle-icon {
   display: inline-block;
+  transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
   transition-timing-function: var(--#{$nav}__item__toggle-icon--TransitionTimingFunction--transform);
   transition-duration: var(--#{$nav}__item__toggle-icon--TransitionDuration--transform);
   transition-property: transform;
-  transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
 
@@ -502,7 +503,8 @@
     padding-block-end: var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
     padding-inline-start: var(--#{$nav}--m-horizontal__list--PaddingInlineStart);
     padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
-    overflow-x: auto;
+    // stylelint-disable-next-line
+    overflow-x: auto; // TODO - replace with overflow-inline in Safari 27+
     white-space: nowrap;
     scroll-snap-type: var(--#{$nav}__list--ScrollSnapType);
     scroll-padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);

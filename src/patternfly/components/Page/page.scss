@@ -464,9 +464,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__dock-main {
   flex-grow: 1;
   background-color: var(--#{$page}__dock-main--BackgroundColor);
-  backdrop-filter: var(--#{$page}__dock-main--BackdropFilter);
   border-inline-end: var(--#{$page}__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock-main--BorderInlineEndColor);
   box-shadow: var(--#{$page}__dock-main--BoxShadow);
+  backdrop-filter: var(--#{$page}__dock-main--BackdropFilter);
 
   .#{$page}__dock.pf-m-expanded & {
     border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
@@ -496,8 +496,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-inline-end: var(--#{$page}__sidebar--PaddingInlineEnd);
   margin-block-start: var(--#{$page}__sidebar--MarginBlockStart);
   margin-inline-end: var(--#{$page}__sidebar--MarginInlineEnd);
-  overflow-x: hidden;
-  overflow-y: auto;
+  // stylelint-disable property-layout-mappings
+  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
+  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  // stylelint-enable
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
   border-inline-end: var(--#{$page}__sidebar--BorderInlineEndWidth) solid var(--#{$page}__sidebar--BorderInlineEndColor);
@@ -561,10 +563,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   margin-inline-start: var(--#{$page}__sidebar-main--MarginInlineStart);
   margin-inline-end: var(--#{$page}__sidebar-main--MarginInlineEnd);
   background-color: var(--#{$page}__sidebar-main--BackgroundColor);
-  backdrop-filter: var(--#{$page}__sidebar-main--BackdropFilter);
   border: var(--#{$page}__sidebar-main--BorderWidth) solid var(--#{$page}__sidebar-main--BorderColor);
   border-radius: var(--#{$page}__sidebar-main--BorderRadius);
   box-shadow: var(--#{$page}__sidebar-main--BoxShadow);
+  backdrop-filter: var(--#{$page}__sidebar-main--BackdropFilter);
 }
 
 .#{$page}__sidebar-header {
@@ -761,7 +763,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
   background: var(--#{$page}__main-container--BackgroundColor);
-  backdrop-filter: var(--#{$page}__main-container--BackdropFilter);
   border: solid var(--#{$page}__main-container--BorderColor);
   border-block-start-width: var(--#{$page}__main-container--BorderBlockStartWidth);
   border-block-end-width: var(--#{$page}__main-container--BorderBlockEndWidth);
@@ -769,6 +770,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   border-inline-end-width: var(--#{$page}__main-container--BorderInlineEndWidth);
   border-radius: var(--#{$page}__main-container--BorderRadius);
   box-shadow: var(--#{$page}__main-container--BoxShadow);
+  backdrop-filter: var(--#{$page}__main-container--BackdropFilter);
 
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
     --#{$page}__main-container--AlignSelf: var(--#{$page}__main-container--xs--AlignSelf);
@@ -781,8 +783,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__drawer {
   z-index: var(--#{$page}__main-container--ZIndex);
   grid-area: var(--#{$page}__main-container--GridArea);
-  overflow-x: hidden;
-  overflow-y: auto;
+  // stylelint-disable property-layout-mappings
+  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
+  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  // stylelint-enable
   -webkit-overflow-scrolling: touch;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--xl) {

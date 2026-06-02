@@ -160,8 +160,8 @@
     background-color: var(--#{$switch}__input--not-checked__toggle--before--BackgroundColor);
     border: var(--#{$switch}__toggle--before--BorderWidth) solid transparent; // for forced color mode
     border-radius: var(--#{$switch}__toggle--before--BorderRadius);
-    transition: var(--#{$switch}__toggle--before--Transition); // TODO remove shorthand in breaking change
     transform: translateY(-50%);
+    transition: var(--#{$switch}__toggle--before--Transition); // TODO remove shorthand in breaking change
   }
 
   &::after {

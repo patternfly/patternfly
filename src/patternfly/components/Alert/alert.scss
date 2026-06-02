@@ -188,8 +188,8 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$alert}__toggle-icon--Rotate));
+  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
 }
 
 .#{$alert}__icon {
@@ -204,7 +204,7 @@
   grid-area: title;
   font-weight: var(--#{$alert}__title--FontWeight);
   color: var(--#{$alert}__title--Color);
-  word-break: break-word;
+  overflow-wrap: break-word;
 
   &.pf-m-truncate {
     @include pf-v6-line-clamp("var(--#{$alert}__title--max-lines)");
@@ -214,7 +214,7 @@
 .#{$alert}__description {
   grid-area: description;
   padding-block-start: var(--#{$alert}__description--PaddingBlockStart);
-  word-break: break-word;
+  overflow-wrap: break-word;
 
   + .#{$alert}__action-group {
     --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart);

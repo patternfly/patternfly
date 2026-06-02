@@ -1,16 +1,16 @@
 
 // Do not edit directly
-// Generated on Fri, 15 May 2026 17:53:36 GMT
+// Generated on Mon, 01 Jun 2026 21:26:11 GMT
 
 @mixin pf-v6-tokens {
-  --pf-t--global--background--color--action--plain--default: rgba(0, 0, 0, 0.0000);
-  --pf-t--global--background--color--striped--row--default: rgba(21, 21, 21, 0.3000);
+  --pf-t--global--background--color--action--plain--default: rgb(0, 0, 0, 0.0000);
+  --pf-t--global--background--color--striped--row--default: rgb(21, 21, 21, 0.3000);
   --pf-t--global--background--filter--glass--blur--primary: initial;
-  --pf-t--global--dark--background--color--500: rgba(21, 21, 21, 0.8000);
-  --pf-t--global--dark--background--color--600: rgba(199, 199, 199, 0.1500);
-  --pf-t--global--dark--background--color--700: rgba(199, 199, 199, 0.2500);
-  --pf-t--global--dark--box-shadow--color--100: rgba(0, 0, 0, 0.5000);
-  --pf-t--global--dark--box-shadow--color--200: rgba(0, 0, 0, 0.6000);
+  --pf-t--global--dark--background--color--500: rgb(21, 21, 21, 0.8000);
+  --pf-t--global--dark--background--color--600: rgb(199, 199, 199, 0.1500);
+  --pf-t--global--dark--background--color--700: rgb(199, 199, 199, 0.2500);
+  --pf-t--global--dark--box-shadow--color--100: rgb(0, 0, 0, 0.5000);
+  --pf-t--global--dark--box-shadow--color--200: rgb(0, 0, 0, 0.6000);
   --pf-t--global--background--color--action--plain--clicked: var(--pf-t--global--dark--background--color--600);
   --pf-t--global--background--color--action--plain--hover: var(--pf-t--global--dark--background--color--600);
   --pf-t--global--background--color--backdrop--default: var(--pf-t--global--dark--background--color--500);

@@ -376,20 +376,20 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
   display: inline-block;
   min-width: var(--#{$tree-view}__node-toggle-icon--MinWidth);
   text-align: center;
-  transition: transform var(--#{$tree-view}__node-toggle-icon--TransitionDuration) var(--#{$tree-view}__node-toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$tree-view}__node-toggle-icon--Rotate));
+  transition: transform var(--#{$tree-view}__node-toggle-icon--TransitionDuration) var(--#{$tree-view}__node-toggle-icon--TransitionTimingFunction);
 }
 
 .#{$tree-view}__list-item {
   .#{$tree-view}__list {
-    max-height: 0;
     visibility: hidden;
+    max-height: 0;
     opacity: var(--#{$tree-view}__list--Opacity);
+    translate: 0 var(--#{$tree-view}__list--TranslateY);
     transition-delay: 0s, 0s, var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--fade);
     transition-timing-function: var(--#{$tree-view}__list--TransitionTimingFunction);
     transition-duration: var(--#{$tree-view}__list--TransitionDuration--fade), var(--#{$tree-view}__list--TransitionDuration--slide), 0s, 0s;
     transition-property: opacity, translate, visibility, max-height;
-    translate: 0 var(--#{$tree-view}__list--TranslateY);
   }
 
   .#{$tree-view}__list-item {
@@ -402,12 +402,12 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
     --#{$tree-view}__node-toggle-icon--Rotate: var(--#{$tree-view}__list-item--m-expanded__node-toggle-icon--Rotate);
 
     > .#{$tree-view}__list {
-      max-height: 99999px;
       visibility: revert;
+      max-height: 99999px;
       opacity: var(--#{$tree-view}--m-expanded__list--Opacity);
+      translate: 0 var(--#{$tree-view}--m-expanded__list--TranslateY);
       transition-delay: 0s;
       transition-duration: var(--#{$tree-view}__list--TransitionDuration--expand--fade), var(--#{$tree-view}__list--TransitionDuration--expand--slide), 0s, 0s;
-      translate: 0 var(--#{$tree-view}--m-expanded__list--TranslateY);
     }
   }
 }

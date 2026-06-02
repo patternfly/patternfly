@@ -198,8 +198,8 @@
 .#{$compass}__sidebar:is(.pf-m-start, .pf-m-end),
 .#{$compass}__main-footer,
 .#{$compass}__footer {
-  margin: 0;
   visibility: hidden;
+  margin: 0;
   opacity: 0;
   transition-delay: var(--#{$compass}--section--TransitionDelay);
   transition-timing-function: var(--#{$compass}--section--TransitionTimingFunction);
@@ -327,8 +327,8 @@
   flex-direction: column;
   grid-area: dock;
   width: var(--#{$compass}__dock--Width);
-  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide);
   translate: -100% 0;
+  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide);
 
   &.pf-m-expanded {
     --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
@@ -358,9 +358,9 @@
 .#{$compass}__dock-main {
   flex-grow: 1;
   background-color: var(--#{$compass}__dock-main--BackgroundColor);
-  backdrop-filter: var(--#{$compass}__dock-main--BackdropFilter);
   border-inline-end: var(--#{$compass}__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock-main--BorderInlineEndColor);
   box-shadow: var(--#{$compass}__dock-main--BoxShadow);
+  backdrop-filter: var(--#{$compass}__dock-main--BackdropFilter);
 
   .#{$compass}__dock.pf-m-expanded & {
     border-inline-end: var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor);

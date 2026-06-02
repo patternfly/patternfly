@@ -70,8 +70,8 @@
     --#{$hero}--BorderColor: var(--#{$hero}--m-glass--BorderColor);
     --#{$hero}--BackgroundColor: var(--#{$hero}--m-glass--BackgroundColor);
 
-    backdrop-filter: var(--#{$hero}--m-glass--BackdropFilter);
     box-shadow: var(--#{$hero}--m-glass--BoxShadow);
+    backdrop-filter: var(--#{$hero}--m-glass--BackdropFilter);
   }
 
   :root:where(.#{$pf-prefix}theme-dark) & {

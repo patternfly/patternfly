@@ -350,8 +350,8 @@
 
   height: var(--#{$data-list}__toggle-icon--Height);
   pointer-events: none;
-  transition: var(--#{$data-list}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$data-list}__toggle-icon--Rotate));
+  transition: var(--#{$data-list}__toggle-icon--Transition); // TODO remove shorthand in breaking change
 }
 
 .#{$data-list}__item-content {
@@ -411,7 +411,8 @@
   margin-block-end: var(--#{$data-list}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$data-list}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$data-list}__expandable-content--MarginInlineEnd);
-  overflow-y: auto;
+  // stylelint-disable-next-line
+  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
   background-color: var(--#{$data-list}__expandable-content--BackgroundColor);
   border-radius: var(--#{$data-list}__expandable-content-body--BorderRadius);
 

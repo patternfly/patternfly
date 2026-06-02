@@ -254,8 +254,8 @@
 .#{$accordion}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
   transform: rotate(var(--#{$accordion}__toggle-icon--Rotate));
+  transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
 }
 
 .#{$accordion}__expandable-content:where([hidden]) {
@@ -263,23 +263,24 @@
 }
 
 .#{$accordion}__expandable-content {
+  visibility:  var(--#{$accordion}__expandable-content--Visibility);
   max-height:  var(--#{$accordion}__expandable-content--MaxHeight);
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
-  overflow-y: var(--#{$accordion}__expandable-content--Overflow);
+  // stylelint-disable-next-line
+  overflow-y: var(--#{$accordion}__expandable-content--Overflow); // TODO - replace with overflow-block in Safari 27+
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
-  visibility:  var(--#{$accordion}__expandable-content--Visibility);
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border: var(--#{$accordion}__expandable-content--BorderWidth) solid var(--#{$accordion}__expandable-content--BorderColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
   opacity: var(--#{$accordion}__expandable-content--Opacity);
+  translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
   transition-delay: 0s, 0s, var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
   transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
   transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), 0s, 0s, 0s;
   transition-property: opacity, translate, visibility, max-height, margin-block-end;
-  translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
     --#{$accordion}__expandable-content--Overflow: auto;

@@ -152,8 +152,8 @@
   display: inline-block;
   min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
   color: var(--#{$expandable-section}__toggle-icon--Color);
-  transition: var(--#{$expandable-section}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$expandable-section}__toggle-icon--Rotate));
+  transition: var(--#{$expandable-section}__toggle-icon--Transition); // TODO remove shorthand in breaking change
 
   &.pf-m-expand-top { // TODO: Remove this block in breaking change in favor of using modifier on outer expandable section wrapper
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);
@@ -170,14 +170,14 @@
   }
 
   .#{$expandable-section}:where(:not(.pf-m-truncate)) > & {
+    visibility: var(--#{$expandable-section}__content--Visibility, hidden);
     max-height: var(--#{$expandable-section}__content--MaxHeight, 0);
     overflow: var(--#{$expandable-section}__content--Overflow, hidden);
-    visibility: var(--#{$expandable-section}__content--Visibility, hidden);
     opacity: var(--#{$expandable-section}__content--Opacity);
+    translate: 0 var(--#{$expandable-section}__content--TranslateY);
     transition-delay: 0s, 0s, var(--#{$expandable-section}__content--TransitionDelay--hide, 0s), var(--#{$expandable-section}__content--TransitionDelay--hide, 0s);
     transition-timing-function: var(--#{$expandable-section}__content--TransitionTimingFunction);
     transition-duration: var(--#{$expandable-section}__content--TransitionDuration--fade), var(--#{$expandable-section}__content--TransitionDuration--slide), 0s, 0s;
     transition-property: opacity, translate, visibility, max-height;
-    translate: 0 var(--#{$expandable-section}__content--TranslateY);
   }
 }

@@ -159,17 +159,17 @@
   inset-block-start: 0;
   inset-inline-start: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+  clip-path: inset(50%);
 }
 
 @mixin pf-v6-u-visible {
   position: static;
   overflow: visible;
-  clip: auto;
   white-space: normal;
   border: inherit;
+  clip-path: revert;
 }
 
 @mixin pf-v6-text-overflow {

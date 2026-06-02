@@ -411,11 +411,11 @@
 
     // default settings
     overflow: var(--#{$table}--cell--Overflow);
+    text-overflow: var(--#{$table}--cell--TextOverflow);
     font-size: var(--#{$table}--cell--FontSize);
     font-weight: var(--#{$table}--cell--FontWeight);
     line-height: var(--#{$table}--cell--LineHeight);
     color: var(--#{$table}--cell--Color);
-    text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
 
@@ -584,8 +584,8 @@
   tr:where(.#{$table}__tr) {
     &.pf-m-clickable {
       cursor: pointer;
-      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
+      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
 
       &:is(:hover, :focus) {
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
@@ -595,8 +595,8 @@
     // tr selected
     &.pf-m-selected {
       position: relative;
-      background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
+      background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
     }
 
     &.pf-m-first-cell-offset-reset > :first-child {
@@ -609,8 +609,8 @@
   tbody:where(.#{$table}__tbody) {
     &.pf-m-clickable {
       cursor: pointer;
-      background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-clickable--OutlineOffset);
+      background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
 
       &:is(:hover, :focus) {
         --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
@@ -623,8 +623,8 @@
 
     // - Table tbody expanded
     &.pf-m-selected {
-      background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
+      background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
 
       .#{$table}__tr.pf-m-expanded:not(.#{$table}__expandable-row) {
         border: none;
@@ -663,11 +663,11 @@
         display: var(--#{$table}__expandable-row--Display, revert);
         visibility: hidden;
         opacity: var(--#{$table}__expandable-row--Opacity);
+        translate: 0 var(--#{$table}__expandable-row--TranslateY);
         transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
         transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
         transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s, 0s;
         transition-property: opacity, translate, visibility, background-color;
-        translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
         &[hidden] {
           display: var(--#{$table}__expandable-row--Display, revert);
@@ -676,9 +676,9 @@
         &.pf-m-expanded {
           visibility: visible;
           opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+          translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
           transition-delay: 0s;
           transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
-          translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
 
           > :is(.#{$table}__td, .#{$table}__th) {
             > .#{$table}__expandable-row-content {
@@ -769,8 +769,8 @@
   min-width: var(--#{$table}__text--MinWidth);
   max-width: var(--#{$table}--cell--MaxWidth);
   overflow: var(--#{$table}--cell--Overflow);
-  line-height: var(--#{$table}--cell--LineHeight);
   text-overflow: var(--#{$table}--cell--TextOverflow);
+  line-height: var(--#{$table}--cell--LineHeight);
   word-break: var(--#{$table}--cell--WordBreak);
   white-space: var(--#{$table}--cell--WhiteSpace);
 
@@ -804,10 +804,10 @@
   text-align: start;
   white-space: inherit;
   user-select: text;
+  outline-offset: var(--#{$table}__button--OutlineOffset);
   background-color: var(--#{$table}__button--BackgroundColor);
   border: 0;
   border-radius: var(--#{$table}__button--BorderRadius);
-  outline-offset: var(--#{$table}__button--OutlineOffset);
 
   &::after {
     position: absolute;
@@ -919,10 +919,10 @@
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
 
+    transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
     transition-timing-function: var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
     transition-duration: var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration);
     transition-property: transform;
-    transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
 
   svg {

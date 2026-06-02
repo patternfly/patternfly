@@ -649,10 +649,10 @@
 
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
+  rotate: var(--#{$menu-toggle}__icon--Rotate);
   transition-delay: var(--#{$menu-toggle}__icon--TransitionDelay);
   transition-duration: var(--#{$menu-toggle}__icon--TransitionDuration);
   transition-property: var(--#{$menu-toggle}__icon--TransitionProperty);
-  rotate: var(--#{$menu-toggle}__icon--Rotate);
   
   @at-root .#{$menu-toggle}:not(.pf-m-plain) & {
     @extend %pf-v6-menu-toggle__icon--MarginBlock;

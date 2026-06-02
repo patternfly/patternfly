@@ -184,9 +184,9 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   max-height: var(--#{$dual-list-selector}__menu--MaxHeight);
   margin-block-start: var(--#{$dual-list-selector}__menu--MarginBlockStart);
   overflow: auto;
+  outline-offset: 2px; // push the focus outline out so that it is not broken by the list item row background
   border: var(--#{$dual-list-selector}__menu--BorderWidth) solid var(--#{$dual-list-selector}__menu--BorderColor);
   border-radius: var(--#{$dual-list-selector}__menu--BorderRadius);
-  outline-offset: 2px; // push the focus outline out so that it is not broken by the list item row background
 }
 
 .#{$dual-list-selector}__list {
@@ -226,14 +226,14 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
     > .#{$dual-list-selector}__list {
       .#{$dual-list-selector}.pf-m-animate-expand & { // TODO - remove opt-in class in a breaking change
-        max-height: 0;
         visibility: hidden;
+        max-height: 0;
         opacity: var(--#{$dual-list-selector}__list--Opacity);
+        translate: 0 var(--#{$dual-list-selector}__list--TranslateY);
         transition-delay: 0s, 0s, var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--fade);
         transition-timing-function: var(--#{$dual-list-selector}__list--TransitionTimingFunction);
         transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--fade), var(--#{$dual-list-selector}__list--TransitionDuration--slide), 0s, 0s;
         transition-property: opacity, translate, visibility, max-height;
-        translate: 0 var(--#{$dual-list-selector}__list--TranslateY);
       }
     }
   }
@@ -243,12 +243,12 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
 
     > .#{$dual-list-selector}__list {
       .#{$dual-list-selector}.pf-m-animate-expand & {
-        max-height: 99999px;
         visibility: revert;
+        max-height: 99999px;
         opacity: var(--#{$dual-list-selector}--m-expanded__list--Opacity);
+        translate: 0 var(--#{$dual-list-selector}--m-expanded__list--TranslateY);
         transition-delay: 0s;
         transition-duration: var(--#{$dual-list-selector}__list--TransitionDuration--expand--fade), var(--#{$dual-list-selector}__list--TransitionDuration--expand--slide), 0s, 0s;
-        translate: 0 var(--#{$dual-list-selector}--m-expanded__list--TranslateY);
       }
     }
   }
@@ -401,10 +401,10 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   min-width: var(--#{$dual-list-selector}__item-toggle-icon--MinWidth);
   color: var(--#{$dual-list-selector}__item-toggle-icon--Color, inherit);
   text-align: center;
+  transform: rotate(var(--#{$dual-list-selector}__item-toggle-icon--Rotate));
   transition-timing-function: var(--#{$dual-list-selector}__item-toggle-icon--TransitionTimingFunction);
   transition-duration: var(--#{$dual-list-selector}__item-toggle-icon--TransitionDuration);
   transition-property: transform;
-  transform: rotate(var(--#{$dual-list-selector}__item-toggle-icon--Rotate));
 }
 
 // stylelint-disable no-duplicate-selectors

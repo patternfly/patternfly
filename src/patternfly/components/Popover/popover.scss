@@ -219,7 +219,7 @@
 
 .#{$popover}__arrow {
   position: absolute;
-  // stylelint-disable liberty/use-logical-spec
+  // stylelint-disable property-layout-mappings
   top: var(--#{$popover}__arrow--InsetBlockStart, auto);
   right: var(--#{$popover}__arrow--InsetInlineEnd, auto);
   bottom: var(--#{$popover}__arrow--InsetBlockEnd, auto);
@@ -260,7 +260,7 @@
 
 // Body
 .#{$popover}__body {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .#{$popover}__footer {

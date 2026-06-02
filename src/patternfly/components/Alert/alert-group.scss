@@ -164,13 +164,13 @@
   display: grid;
   grid-template-rows: 1fr;
   opacity: 1;
+  transform: translateX(0) translateY(0);
 
   // This transition will happen when the item is added (.pf-m-offstage-top is removed)
   // Reduced motion by default
   // transparency change only
   transition: 
     opacity var(--#{$alert-group}--m-toast__item--Transition--opacity--default);
-  transform: translateX(0) translateY(0);
 
   // This transition will happen when the item is added (.pf-m-offstage-top is removed)
   // give it height, then slide it down into place

@@ -391,10 +391,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // - Toolbar expand all
 .#{$toolbar}__expand-all-icon {
   display: inline-flex;
+  transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
   transition-timing-function: var(--#{$toolbar}__expand-all-icon--TransitionTimingFunction);
   transition-duration: var(--#{$toolbar}__expand-all-icon--TransitionDuration);
   transition-property: transform;
-  transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl; // - TODO: mirror this icon in breaking change
 }

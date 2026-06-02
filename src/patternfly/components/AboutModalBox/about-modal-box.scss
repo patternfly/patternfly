@@ -101,8 +101,10 @@
   grid-template-rows: max-content max-content auto;
   width: var(--#{$about-modal-box}--Width);
   height: var(--#{$about-modal-box}--Height);
-  overflow-x: hidden;
-  overflow-y: auto;
+  // stylelint-disable property-layout-mappings
+  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
+  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  // stylelint-enable
   background-color: var(--#{$about-modal-box}--BackgroundColor);
   background-image: var(--#{$about-modal-box}--BackgroundImage);
   background-repeat: no-repeat;
@@ -173,10 +175,12 @@
   margin-block-end: var(--#{$about-modal-box}__content--MarginBlockEnd);
   margin-inline-start: var(--#{$about-modal-box}__content--MarginInlineStart); // Using margin instead of padding to prevent scrollbar extending to top of content block
   margin-inline-end: var(--#{$about-modal-box}__content--MarginInlineEnd);
-  overflow-x: hidden;
-  overflow-y: auto;
+  // stylelint-disable property-layout-mappings
+  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
+  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  // stylelint-dnable
   overscroll-behavior: contain;
-  word-break: break-word;
+  overflow-wrap: break-word;
   -webkit-overflow-scrolling: touch;
 
   @media screen and (min-width: $pf-v6-global--breakpoint--sm) {

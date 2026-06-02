@@ -1,16 +1,16 @@
 
 // Do not edit directly
-// Generated on Fri, 15 May 2026 17:53:37 GMT
+// Generated on Mon, 01 Jun 2026 21:26:11 GMT
 
 // Only tokens that differ from base theme (19 tokens)
 @mixin pf-v6-tokens {
-  --pf-t--global--background--color--glass--primary--default: rgba(41, 41, 41, 0.5000);
-  --pf-t--global--background--color--primary--clicked: rgba(56, 56, 56, 0.5000);
-  --pf-t--global--background--color--primary--default: rgba(41, 41, 41, 0.5000);
-  --pf-t--global--background--color--primary--hover: rgba(56, 56, 56, 0.5000);
-  --pf-t--global--background--color--secondary--clicked: rgba(41, 41, 41, 0.6000);
-  --pf-t--global--background--color--secondary--default: rgba(21, 21, 21, 0.6000);
-  --pf-t--global--background--color--secondary--hover: rgba(41, 41, 41, 0.6000);
+  --pf-t--global--background--color--glass--primary--default: rgb(41, 41, 41, 0.5000);
+  --pf-t--global--background--color--primary--clicked: rgb(56, 56, 56, 0.5000);
+  --pf-t--global--background--color--primary--default: rgb(41, 41, 41, 0.5000);
+  --pf-t--global--background--color--primary--hover: rgb(56, 56, 56, 0.5000);
+  --pf-t--global--background--color--secondary--clicked: rgb(41, 41, 41, 0.6000);
+  --pf-t--global--background--color--secondary--default: rgb(21, 21, 21, 0.6000);
+  --pf-t--global--background--color--secondary--hover: rgb(41, 41, 41, 0.6000);
   --pf-t--global--background--filter--glass--blur--primary: blur(16px);
   --pf-t--global--background--color--control--default: var(--pf-t--global--dark--background--color--500);
   --pf-t--global--background--color--control--read-only: var(--pf-t--global--dark--background--color--500);

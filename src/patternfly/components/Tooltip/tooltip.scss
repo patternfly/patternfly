@@ -129,7 +129,7 @@
   font-size: var(--#{$tooltip}__content--FontSize);
   color: var(--#{$tooltip}__content--Color);
   text-align: center;
-  word-break: break-word;
+  overflow-wrap: break-word;
   background-color: var(--#{$tooltip}__content--BackgroundColor);
   border-radius: var(--#{$tooltip}__content--BorderRadius);
 
@@ -140,7 +140,7 @@
 
 .#{$tooltip}__arrow {
   position: absolute;
-  // stylelint-disable liberty/use-logical-spec
+  // stylelint-disable property-layout-mappings
   top: var(--#{$tooltip}__arrow--InsetBlockStart, auto);
   right: var(--#{$tooltip}__arrow--InsetInlineEnd, auto);
   bottom: var(--#{$tooltip}__arrow--InsetBlockEnd, auto);
