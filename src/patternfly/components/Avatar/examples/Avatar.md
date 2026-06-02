@@ -53,7 +53,6 @@ Use a color modifier to add visual interest to the default avatar icon.
 {{> avatar--colorful avatar--modifier="pf-m-blue" avatar--AriaLabel="Blue avatar with icon"}}
 {{> avatar--colorful avatar--modifier="pf-m-purple" avatar--AriaLabel="Purple avatar with icon"}}
 {{> avatar--colorful avatar--modifier="pf-m-gray" avatar--AriaLabel="Gray avatar with icon"}}
-{{> avatar--colorful avatar--AriaLabel="Default colorful avatar with icon and no color"}}
 ```
 
 ### Colorful initials
@@ -68,7 +67,6 @@ Use a color modifier with a user's initial to add visual interest when no image 
 {{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AriaLabel="Blue avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-purple" avatar--Initials="C" avatar--AriaLabel="Purple avatar with initial"}}
 {{> avatar--colorful avatar--modifier="pf-m-gray" avatar--AriaLabel="Gray avatar with initial" avatar--Initials="C"}}
-{{> avatar--colorful avatar--AriaLabel="Avatar with initial and no color" avatar--Initials="C"}}
 ```
 
 ## Documentation
