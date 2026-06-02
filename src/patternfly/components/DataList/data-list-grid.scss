@@ -77,7 +77,6 @@
 
   .#{$data-list}__expandable-content {
     max-height: initial;
-    // stylelint-disable-next-line
-    overflow-y: visible; // TODO - replace with overflow-block in Safari 27+
+    overflow-y: visible;
   }
 }

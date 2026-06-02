@@ -564,8 +564,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   position: relative;
   display: var(--#{$tabs}__list--Display);
   max-width: 100%;
-  // stylelint-disable-next-line
-  overflow-x: auto; // TODO - replace with overflow-inline in Safari 27+
+  overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: var(--#{$tabs}__list--ScrollSnapType);
   -webkit-overflow-scrolling: touch;

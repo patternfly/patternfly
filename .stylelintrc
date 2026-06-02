@@ -73,7 +73,7 @@
     ],
     "property-layout-mappings": [
       "flow-relative",
-      { "ignoreProperties": ["width", "max-width", "min-width", "height", "max-height", "min-height"] }
+      { "ignoreProperties": ["width", "max-width", "min-width", "height", "max-height", "min-height", "overflow-x", "overflow-y"] }
     ],
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-colon-space-after": "at-least-one-space",

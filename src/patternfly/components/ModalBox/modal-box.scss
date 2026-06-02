@@ -223,10 +223,8 @@
   padding-block-start: var(--#{$modal-box}__body--PaddingBlockStart);
   padding-inline-start: var(--#{$modal-box}__body--PaddingInlineStart);
   padding-inline-end: var(--#{$modal-box}__body--PaddingInlineEnd);
-  // stylelint-disable property-layout-mappings
-  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
-  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
-  // stylelint-enable
+  overflow-x: hidden;
+  overflow-y: auto;
   overscroll-behavior: contain;
   overflow-wrap: break-word;
   -webkit-overflow-scrolling: touch;

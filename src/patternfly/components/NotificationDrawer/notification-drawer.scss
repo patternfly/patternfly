@@ -154,8 +154,7 @@
   flex: 1;
   padding-block-start: var(--#{$notification-drawer}__body--PaddingBlockStart);
   padding-block-end: var(--#{$notification-drawer}__body--PaddingBlockEnd);
-  // stylelint-disable-next-line
-  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  overflow-y: auto;
 }
 
 .#{$notification-drawer}__list:not([hidden]) {

@@ -250,8 +250,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   display: flex;
   flex-direction: column;
   height: 100%;
-  // stylelint-disable-next-line
-  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
+  overflow-x: hidden;
 
   &.pf-m-inline,
   &.pf-m-static {
@@ -866,8 +865,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     // Drawer inline
     .#{$drawer}.pf-m-inline#{$breakpoint-name} {
       > .#{$drawer}__main > .#{$drawer}__content {
-        // stylelint-disable-next-line
-        overflow-x: auto; // TODO - replace with overflow-inline in Safari 27+
+        overflow-x: auto;
       }
 
       > .#{$drawer}__main > .#{$drawer}__panel {

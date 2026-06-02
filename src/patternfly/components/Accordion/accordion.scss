@@ -268,8 +268,7 @@
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
-  // stylelint-disable-next-line
-  overflow-y: var(--#{$accordion}__expandable-content--Overflow); // TODO - replace with overflow-block in Safari 27+
+  overflow-y: var(--#{$accordion}__expandable-content--Overflow);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);

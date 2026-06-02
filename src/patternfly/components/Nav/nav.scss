@@ -270,8 +270,7 @@
   padding-block-start: var(--#{$nav}__subnav--PaddingBlockStart);
   padding-block-end: var(--#{$nav}__subnav--PaddingBlockEnd);
   padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
-  // stylelint-disable-next-line
-  overflow-y: clip; // TODO - replace with overflow-block in Safari 27+
+  overflow-y: clip;
   translate: 0 var(--#{$nav}__subnav--TranslateY);
   transition-delay: 0s, 0s, var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s), var(--#{$nav}__subnav--TransitionDelay--expand--focus, 0s);
   transition-timing-function: var(--#{$nav}__subnav--TransitionTimingFunction--expand);
@@ -503,8 +502,7 @@
     padding-block-end: var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
     padding-inline-start: var(--#{$nav}--m-horizontal__list--PaddingInlineStart);
     padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
-    // stylelint-disable-next-line
-    overflow-x: auto; // TODO - replace with overflow-inline in Safari 27+
+    overflow-x: auto;
     white-space: nowrap;
     scroll-snap-type: var(--#{$nav}__list--ScrollSnapType);
     scroll-padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);

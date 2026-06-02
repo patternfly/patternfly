@@ -411,8 +411,7 @@
   margin-block-end: var(--#{$data-list}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$data-list}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$data-list}__expandable-content--MarginInlineEnd);
-  // stylelint-disable-next-line
-  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  overflow-y: auto;
   background-color: var(--#{$data-list}__expandable-content--BackgroundColor);
   border-radius: var(--#{$data-list}__expandable-content-body--BorderRadius);
 

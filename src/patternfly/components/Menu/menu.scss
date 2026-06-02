@@ -286,8 +286,7 @@
     border-radius: var(--#{$menu}--BorderRadius);
 
     .#{$menu}__content {
-      // stylelint-disable-next-line
-      overflow-y: visible; // TODO - replace with overflow-block in Safari 27+
+      overflow-y: visible;
     }
   }
 
@@ -425,8 +424,7 @@
 
     .#{$menu}__content,
     .#{$menu}__list {
-      // stylelint-disable-next-line
-      overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+      overflow-y: auto;
     }
 
     // offset row-gap when scrollbar is present

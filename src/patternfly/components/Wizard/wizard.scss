@@ -400,8 +400,7 @@
   display: none;
   width: var(--#{$wizard}__nav--Width);
   max-height: 100%;
-  // stylelint-disable-next-line
-  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$wizard}__nav--BackgroundColor);
   border-block-end: var(--#{$wizard}__nav--BorderBlockEndWidth) solid var(--#{$wizard}__nav--BorderBlockEndColor);
@@ -613,10 +612,8 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  // stylelint-disable property-layout-mappings
-  overflow-x: hidden; // TODO - replace with overflow-inline in Safari 27+
-  overflow-y: auto; // TODO - replace with overflow-block in Safari 27+
-  // stylelint-enable
+  overflow-x: hidden;
+  overflow-y: auto;
   overflow-wrap: break-word;
 }
 
