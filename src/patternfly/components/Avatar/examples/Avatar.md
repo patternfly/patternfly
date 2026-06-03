@@ -44,29 +44,29 @@ cssPrefix: pf-v6-c-avatar
 ### Colorful default
 Use a color modifier to add visual interest to the default avatar icon.
 ```hbs
-{{> avatar--colorful avatar--modifier="pf-m-red" avatar--AriaLabel="Red avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--AriaLabel="Orange-red avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--AriaLabel="Orange avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--AriaLabel="Yellow avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-green" avatar--AriaLabel="Green avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--AriaLabel="Teal avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--AriaLabel="Blue avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--AriaLabel="Purple avatar with icon"}}
-{{> avatar--colorful avatar--modifier="pf-m-gray" avatar--AriaLabel="Gray avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-red" avatar--aria-label="Red avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--aria-label="Orange-red avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--aria-label="Orange avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--aria-label="Yellow avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-green" avatar--aria-label="Green avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--aria-label="Teal avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--aria-label="Blue avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--aria-label="Purple avatar with icon"}}
+{{> avatar--colorful avatar--modifier="pf-m-gray" avatar--aria-label="Gray avatar with icon"}}
 ```
 
 ### Colorful initials
 Use a color modifier with a user's initial to add visual interest when no image is available.
 ```hbs
-{{> avatar--colorful avatar--modifier="pf-m-red" avatar--Initials="C" avatar--AriaLabel="Red avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--Initials="C" avatar--AriaLabel="Orange-red avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--Initials="C" avatar--AriaLabel="Orange avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--Initials="C" avatar--AriaLabel="Yellow avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-green" avatar--Initials="C" avatar--AriaLabel="Green avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--Initials="C" avatar--AriaLabel="Teal avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--Initials="C" avatar--AriaLabel="Blue avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--Initials="C" avatar--AriaLabel="Purple avatar with initial"}}
-{{> avatar--colorful avatar--modifier="pf-m-gray" avatar--AriaLabel="Gray avatar with initial" avatar--Initials="C"}}
+{{> avatar--colorful avatar--modifier="pf-m-red" avatar--initials="C" avatar--aria-label="Red avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-orangered" avatar--initials="C" avatar--aria-label="Orange-red avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-orange" avatar--initials="C" avatar--aria-label="Orange avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-yellow" avatar--initials="C" avatar--aria-label="Yellow avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-green" avatar--initials="C" avatar--aria-label="Green avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-teal" avatar--initials="C" avatar--aria-label="Teal avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-blue" avatar--initials="C" avatar--aria-label="Blue avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-purple" avatar--initials="C" avatar--aria-label="Purple avatar with initial"}}
+{{> avatar--colorful avatar--modifier="pf-m-gray" avatar--aria-label="Gray avatar with initial" avatar--initials="C"}}
 ```
 
 ## Documentation
@@ -77,15 +77,15 @@ The avatar component provides a default SVG icon. If an image is used it should 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `alt` | `.pf-v6-c-avatar` | The alt attribute describes the appearance and function of the avatar image. **Required for image avatars** |
-| `role="img"` | `<div class="pf-v6-c-avatar">` | Indicates the element represents an image. **Required for colorful avatars** |
-| `aria-label` | `<div class="pf-v6-c-avatar">` | Provides an accessible name for the avatar. **Required for colorful avatars** |
+| `role="img"` | `.pf-v6-c-avatar` | Indicates the element represents an image. **Required for colorful avatars** |
+| `aria-label` | `.pf-v6-c-avatar` | Provides an accessible name for the avatar. **Required for colorful avatars** |
 | `aria-hidden="true"` | `.pf-v6-c-avatar__initials`, `<svg>` | Hides decorative content from screen readers when the container has `aria-label`. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-avatar` | `<img>`, `<div>` |  Initiates an avatar. **Required** |
-| `.pf-v6-c-avatar--colorful` | `<div class="pf-v6-c-avatar">` | Modifies an avatar to use colorful styling with a border. |
+| `.pf-v6-c-avatar--colorful` | `.pf-v6-c-avatar` | Modifies an avatar to use colorful styling with a border. |
 | `.pf-v6-c-avatar__initials` | `<span>` | Contains the user's initials in a colorful avatar. |
 | `.pf-m-bordered` | `.pf-v6-c-avatar` | Modifies an avatar to have a border. |
 | `.pf-m-sm{-on-[breakpoint]}` | `.pf-v6-c-avatar` | Modifies an avatar to be small on an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |

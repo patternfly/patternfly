@@ -26,7 +26,7 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-colorful--BorderWidth: var(--pf-t--global--border--width--box--default);
   --#{$avatar}--m-colorful--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--BorderColor);
-  --#{$avatar}--m-colorful--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
+  --#{$avatar}--m-colorful--Color: var(--pf-t--global--color--nonstatus--gray--hover);
   --#{$avatar}--m-gray--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$avatar}--m-gray--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
   --#{$avatar}--m-gray--BorderColor: var(--pf-t--global--border--color--default);
@@ -53,20 +53,17 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-blue--BorderColor: var(--pf-t--global--border--color--nonstatus--blue--default);
   --#{$avatar}--m-purple--BackgroundColor: var(--pf-t--global--color--nonstatus--purple--default);
   --#{$avatar}--m-purple--Color: var(--pf-t--global--text--color--nonstatus--on-purple--default);
-  --#{$avatar}--m-purple--BorderColor: var(--pf-t--global--border--color--nonstatus--purple--default);
+  --#{$avatar}--m-purple--BorderColor: var(--pf-t--global--border--color--nonstatus--purple--default);  
 
   // Initials
   --#{$avatar}__initials--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$avatar}__initials--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$avatar}--m-sm__initials--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$avatar}--m-sm__initials--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$avatar}--m-sm__initials--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$avatar}--m-lg__initials--FontSize: var(--pf-t--global--font--size--2xl);
   --#{$avatar}--m-lg__initials--FontWeight: var(--pf-t--global--font--weight--heading--bold);
-  --#{$avatar}--m-lg__initials--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$avatar}--m-lg__initials--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$avatar}--m-xl__initials--FontSize: var(--pf-t--global--font--size--4xl);
-  --#{$avatar}--m-xl__initials--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$avatar}--m-xl__initials--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$avatar}--m-xl__initials--FontFamily: var(--pf-t--global--font--family--heading);
 }
@@ -108,7 +105,6 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
 
   &.pf-m-colorful {
     --#{$avatar}--BorderWidth: var(--#{$avatar}--m-colorful--BorderWidth);
-    --#{$avatar}--m-colorful--Color: var(--pf-t--global--color--nonstatus--gray--hover);
 
     display: inline-flex;
     align-items: center;

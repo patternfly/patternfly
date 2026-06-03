@@ -1,9 +1,9 @@
 <div class="{{pfv}}avatar pf-m-colorful
     {{~#if avatar--modifier}} {{avatar--modifier}}{{/if}}"
     role="img"
-    {{#if avatar--AriaLabel}}aria-label="{{avatar--AriaLabel}}"{{else}}aria-hidden="true"{{/if}}>
-    {{#if avatar--Initials}}
-      <span class="{{pfv}}avatar__initials" aria-hidden="true">{{avatar--Initials}}</span>
+    {{#if avatar--aria-label}}aria-label="{{avatar--aria-label}}"{{else}}aria-hidden="true"{{/if}}>
+    {{#if avatar--initials}}
+      <span class="{{pfv}}avatar__initials" aria-hidden="true">{{avatar--initials}}</span>
     {{else}}
         <svg aria-hidden="true" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
         <rect width="36" height="36" fill="var(--pf-v6-c-avatar--m-colorful--BackgroundColor, var(--pf-t--global--background--color--secondary--default))"/>
