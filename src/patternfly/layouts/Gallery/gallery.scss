@@ -18,7 +18,7 @@ $pf-v6-l-gallery--breakpoint-map: build-breakpoint-map();
   grid-template-columns: var(--#{$gallery}--GridTemplateColumns);
 
   &.pf-m-gutter {
-    grid-gap: var(--#{$gallery}--m-gutter--GridGap);
+    gap: var(--#{$gallery}--m-gutter--GridGap);
   }
 
   @include pf-v6-build-css-variable-stack("--#{$gallery}--GridTemplateColumns--minmax--min", "--#{$gallery}--GridTemplateColumns--min", $pf-v6-l-gallery--breakpoint-map);

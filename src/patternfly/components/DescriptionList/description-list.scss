@@ -109,7 +109,6 @@ $pf-v6-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "m
       width: 100%;
       margin-block-end: var(--#{$description-list}--RowGap);
       break-inside: avoid;
-      page-break-inside: avoid;
 
       // stylelint-disable property-no-vendor-prefix
       -webkit-column-break-inside: avoid;

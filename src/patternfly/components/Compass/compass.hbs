@@ -8,5 +8,7 @@
   {{#if compass--attribute}}
     {{{compass--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> compass-container}}
+    {{> @partial-block}}
+  {{/compass-container}}
 </div>

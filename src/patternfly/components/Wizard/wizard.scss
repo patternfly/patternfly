@@ -261,7 +261,7 @@
 
 .#{$wizard}__title {
   padding-inline-end: var(--#{$wizard}__title--PaddingInlineEnd);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .#{$wizard}__title-text {
@@ -325,7 +325,7 @@
   align-items: baseline;
   margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBlockEnd);
   text-align: start;
-  word-break: break-word;
+  overflow-wrap: break-word;
 
   &:not(:last-child) {
     margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginInlineEnd);
@@ -478,8 +478,8 @@
   padding-inline: 0;
   color: var(--#{$wizard}__nav-link--Color);
   text-align: start; // needed for when the item is a button
+  overflow-wrap: break-word;
   text-decoration-line: var(--#{$wizard}__nav-link--TextDecoration);
-  word-break: break-word;
   counter-increment: wizard-nav-count;
   background-color: transparent;
   border: none;
@@ -601,10 +601,10 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
+  transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
   transition-timing-function: var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
   transition-duration: var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration);
   transition-property: transform;
-  transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
 }
 
 .#{$wizard}__main {
@@ -614,7 +614,7 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .#{$wizard}__main-body {

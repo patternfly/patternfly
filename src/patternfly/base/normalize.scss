@@ -2,13 +2,14 @@
 
 // Normalize
 @if $pf-v6-global--enable-normalize {
+  // stylelint-disable selector-max-type
   *,
   *::before,
   *::after {
     box-sizing: border-box;
     scrollbar-color: var(--pf-t--global--border--color--default) transparent;
   }
-    
+
   // styling scrollbar color in Safari requires setting max-width and max-height
   *::-webkit-scrollbar-thumb {
     background-color: var(--pf-t--global--border--color--default);
@@ -22,6 +23,14 @@
   *::-webkit-scrollbar {
     max-width: var(--pf-t--global--spacer--sm);
     max-height: var(--pf-t--global--spacer--sm);
+  }
+
+  :where(html) {
+    background-image: var(--pf-t--global--background--image--default);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
   }
 
   :where(
@@ -136,4 +145,5 @@
   :where(.pf-v6-theme-dark) {
     color-scheme: dark;
   }
+  // stylelint-enable selector-max-type
 }

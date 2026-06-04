@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Wed, 10 Sep 2025 19:58:14 GMT
+// Generated on Mon, 01 Jun 2026 21:26:11 GMT
 
 @mixin pf-v6-tokens {
   --pf-t--chart--global--BorderWidth--lg: 8;
@@ -10,9 +10,11 @@
   --pf-t--chart--global--FontSize--lg: 18;
   --pf-t--chart--global--FontSize--sm: 14;
   --pf-t--chart--global--FontSize--xs: 12;
+  --pf-t--chart--global--fill--opacity--area: 20%;
   --pf-t--chart--global--label--margin: 8;
   --pf-t--chart--global--label--padding: 10;
-  --pf-t--chart--global--label--stroke: transparent;
+  --pf-t--chart--global--label--stroke--color: transparent;
+  --pf-t--chart--global--label--stroke--width: 0;
   --pf-t--chart--global--label--text-anchor: middle;
   --pf-t--chart--global--layout--height: 300;
   --pf-t--chart--global--layout--padding: 50;

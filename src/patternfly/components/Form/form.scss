@@ -195,7 +195,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
       .#{$form}__group {
         display: grid;
         grid-template-columns: var(--#{$form}--m-horizontal__group-label--md--GridColumnWidth) var(--#{$form}--m-horizontal__group-control--md--GridColumnWidth);
-        grid-column-gap: var(--#{$form}--m-horizontal__group-label--md--GridColumnGap);
+        column-gap: var(--#{$form}--m-horizontal__group-label--md--GridColumnGap);
       }
 
       .#{$form}__group-label {
@@ -408,14 +408,14 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     }
 
     &.pf-m-expandable > .#{$form}__field-group-body { // TODO - remove .pf-m-expandable in a breaking change, it shouldn't be needed. Only needed now so that these styles are an opt-in behind .pf-m-expandable
+      visibility: visible;
       max-height: 99999px;
       padding-block-start: var(--#{$form}__field-group-body--PaddingBlockStart);
       padding-block-end: var(--#{$form}__field-group-body--PaddingBlockEnd);
-      visibility: visible;
       opacity: 1;
+      translate: 0 var(--#{$form}__field-group--m-expanded__field-group-body--TranslateY);
       transition-delay: 0s;
       transition-duration: var(--#{$form}__field-group-body--TransitionDuration--expand--fade), var(--#{$form}__field-group-body--TransitionDuration--expand--slide), 0s, 0s, 0s, 0s;
-      translate: 0 var(--#{$form}__field-group--m-expanded__field-group-body--TranslateY);
     }
   }
 }
@@ -440,10 +440,10 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   display: inline-block;
   min-width: var(--#{$form}__field-group-toggle-icon--MinWidth);
   text-align: center;
+  transform: rotate(var(--#{$form}__field-group-toggle-icon--Rotate));
   transition-timing-function: var(--#{$form}__field-group-toggle-icon--TransitionTimingFunction);
   transition-duration: var(--#{$form}__field-group-toggle-icon--TransitionDuration);
   transition-property: transform;
-  transform: rotate(var(--#{$form}__field-group-toggle-icon--Rotate));
 
   @include pf-v6-mirror-inline-on-rtl;
 }
@@ -491,15 +491,15 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   padding-block-end: var(--#{$form}__field-group-body--PaddingBlockEnd);
 
   @at-root .#{$form}__field-group.pf-m-expandable > & {
+    visibility: hidden;
     max-height: 0;
     padding-block-start: 0;
     padding-block-end: 0;
-    visibility: hidden;
     opacity: 0;
+    translate: 0 var(--#{$form}__field-group-body--TranslateY);
     transition-delay: 0s, 0s, var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--fade);
     transition-duration: var(--#{$form}__field-group-body--TransitionDuration--collapse--fade), var(--#{$form}__field-group-body--TransitionDuration--collapse--slide), 0s, 0s, 0s, 0s;
     transition-property: opacity, translate, visibility, max-height, padding-block-start, padding-block-end;
-    translate: 0 var(--#{$form}__field-group-body--TranslateY);
   }
 
   > .#{$form}__field-group {

@@ -221,9 +221,9 @@
   padding-inline-start: var(--#{$text-input-group}__text-input--PaddingInlineStart);
   padding-inline-end: var(--#{$text-input-group}__text-input--PaddingInlineEnd);
   color: var(--#{$text-input-group}__text-input--Color);
+  outline-offset: var(--#{$text-input-group}__text-input--OutlineOffset);
   background-color: var(--#{$text-input-group}__text-input--BackgroundColor);
   border: 0;
-  outline-offset: var(--#{$text-input-group}__text-input--OutlineOffset);
 
   &,
   &.pf-m-hint {

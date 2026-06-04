@@ -141,7 +141,7 @@
       "main footer"
       "main .";
     grid-template-columns: var(--#{$login}__container--xl--GridTemplateColumns);
-    grid-column-gap: var(--#{$login}__container--xl--GridColumnGap);
+    column-gap: var(--#{$login}__container--xl--GridColumnGap);
     justify-content: center;
     padding-inline-start: var(--#{$login}__container--PaddingInlineStart);
     padding-inline-end: var(--#{$login}__container--PaddingInlineEnd);
@@ -167,10 +167,10 @@
   align-self: start;
   margin-block-end: var(--#{$login}__main--MarginBlockEnd);
   background-color: var(--#{$login}__main--BackgroundColor);
-  backdrop-filter: var(--#{$login}__main--BackdropFilter);
   border: var(--#{$login}__main--BorderWidth) solid var(--#{$login}__main--BorderColor);
   border-radius: var(--#{$login}__main--BorderRadius);
   box-shadow: var(--#{$login}__main--BoxShadow);
+  backdrop-filter: var(--#{$login}__main--BackdropFilter);
 
   // If the first child isn't a header, then we need to put the header's top padding there
   > :first-child:not(.#{$login}__main-header) {

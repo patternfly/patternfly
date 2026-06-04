@@ -553,8 +553,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: var(--#{$tabs}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$tabs}__toggle-icon--Rotate));
+  transition: var(--#{$tabs}__toggle-icon--Transition); // TODO remove shorthand in breaking change
 }
 
 // Tab list
@@ -738,8 +738,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   align-self: end;
   font-size: var(--#{$tabs}__link-toggle-icon--FontSize);
   color: var(--#{$tabs}__link-toggle-icon--Color);
-  transition: var(--#{$tabs}__link-toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$tabs}__link-toggle-icon--Rotate));
+  transition: var(--#{$tabs}__link-toggle-icon--Transition); // TODO remove shorthand in breaking change
 }
 
 .#{$tabs}__item-action {
@@ -846,10 +846,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       border: 0 solid var(--#{$tabs}--link-accent--color);
       border-block-end-width: var(--#{$tabs}--link-accent--BorderBlockEndWidth);
       border-inline-start-width: var(--#{$tabs}--link-accent--BorderInlineStartWidth);
+      transform-origin: var(--#{$tabs}--link-accent--TransformOrigin);
       transition-timing-function: var(--#{$tabs}--link-accent--TransitionTimingFunction);
       transition-duration: var(--#{$tabs}--link-accent--TransitionDuration);
       transition-property: width, height, translate;
-      transform-origin: var(--#{$tabs}--link-accent--TransformOrigin);
 
       @include pf-v6-bidirectional-style(
         $prop: translate,

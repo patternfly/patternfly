@@ -350,8 +350,8 @@
 
   height: var(--#{$data-list}__toggle-icon--Height);
   pointer-events: none;
-  transition: var(--#{$data-list}__toggle-icon--Transition); // TODO remove shorthand in breaking change
   transform: rotate(var(--#{$data-list}__toggle-icon--Rotate));
+  transition: var(--#{$data-list}__toggle-icon--Transition); // TODO remove shorthand in breaking change
 }
 
 .#{$data-list}__item-content {

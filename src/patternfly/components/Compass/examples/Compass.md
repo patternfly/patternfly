@@ -10,7 +10,7 @@ import './Compass.css';
 ## Examples
 ### Basic
 
-In a basic Compass layout, the page structure is defined by the order of elements nested within the main `.pf-v6-c-compass` container:
+In a basic Compass layout, the page structure is defined by the order of elements nested within `.pf-v6-c-compass__container` (inside `.pf-v6-c-compass`):
 - **Header:** Content rendered at the top of the page (`.pf-v6-c-compass__header`), typically containing a logo (`.pf-v6-c-compass__logo`), middle navigation (`.pf-v6-c-compass__nav`), and profile (`.pf-v6-c-compass__profile`).
 - **Start sidebar:** Content rendered at the horizontal start of the page (by default, the left side). In this example, a `.pf-v6-c-compass__sidebar` with the `.pf-m-start` modifier.
 - **Main:** Content rendered in the center of the page. The `.pf-v6-c-compass__main` wrapper contains a [hero component](/components/hero), the main header (`.pf-v6-c-compass__main-header`), the content area (`.pf-v6-c-compass__content`), and the main footer (`.pf-v6-c-compass__main-footer`) with the message bar.
@@ -83,12 +83,13 @@ In a basic Compass layout, the page structure is defined by the order of element
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-compass` | `<div>` | Initiates the Compass component. **Required** |
+| `.pf-v6-c-compass` | `<div>` | Outermost wrapper for the Compass component. Handles background. **Required** |
+| `.pf-v6-c-compass__container` | `<div>` | Grid wrapper for Compass regions. **Required** |
 | `.pf-v6-c-compass__header` | `<div>` | Initiates the Compass header. **Required** |
 | `.pf-v6-c-compass__logo` | `<div>` | Initiates the Compass logo header. |
 | `.pf-v6-c-compass__dock` | `<div>` | Initiates the Compass dock. |
-| `.pf-v6-c-compass__dock-main` | `<div>` | Initiates the Compass dock main wrapper. |
 | `.pf-v6-c-compass__profile` | `<div>` | Initiates the Compass profile. |
+| `.pf-v6-c-compass__dock-main` | `<div>` | Initiates the Compass dock main wrapper. |
 | `.pf-v6-c-compass__sidebar` | `<div>` | Initiates a Compass sidebar. **Required** |
 | `.pf-v6-c-compass__main` | `<div>` | Initiates the Compass main wrapper. **Required** |
 | `.pf-v6-c-compass__main-header` | `<div>` | Initiates the Compass main header. |

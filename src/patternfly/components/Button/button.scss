@@ -439,10 +439,10 @@
   line-height: var(--#{$button}--LineHeight, inherit);
   color: var(--#{$button}--Color);
   text-align: center;
+  white-space: nowrap;
   text-decoration-line: var(--#{$button}--TextDecorationLine);
   text-decoration-style: var(--#{$button}--TextDecorationStyle);
   text-decoration-color: var(--#{$button}--TextDecorationColor);
-  white-space: nowrap;
   cursor: pointer; // needed for when a button does not use <button> - eg, <span>
   // stylelint-disable property-no-vendor-prefix
   -webkit-user-select: none;
@@ -454,11 +454,11 @@
   border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
   border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
   border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
+  scale: var(--#{$button}--ScaleX) var(--#{$button}--ScaleY);
   transition-delay: var(--#{$button}--TransitionDelay);
   transition-timing-function: var(--#{$button}--TransitionTimingFunction);
   transition-duration: var(--#{$button}--TransitionDuration);
   transition-property: var(--#{$button}--TransitionProperty);
-  scale: var(--#{$button}--ScaleX) var(--#{$button}--ScaleY);
 
   &::after {
     position: absolute;
@@ -596,10 +596,10 @@
       --#{$button}--m-clicked--BorderWidth: 0;
 
       text-align: start;
-      text-underline-offset: var(--#{$button}--m-link--m-inline--TextUnderlineOffset);
       white-space: normal;
-      background: transparent; // don't show the ripple effect for inline links
+      text-underline-offset: var(--#{$button}--m-link--m-inline--TextUnderlineOffset);
       outline-offset: #{pf-size-prem(2px)};
+      background: transparent; // don't show the ripple effect for inline links
 
       &:hover,
       &:focus {
@@ -1013,12 +1013,12 @@
   margin-inline-start: var(--#{$button}__icon--MarginInlineStart);
   margin-inline-end: var(--#{$button}__icon--MarginInlineEnd);
   color: var(--#{$button}__icon--Color);
+  rotate: var(--#{$button}__icon--Rotate);
+  scale: var(--#{$button}__icon--ScaleX) var(--#{$button}__icon--ScaleY);
   transition-delay: var(--#{$button}__icon--TransitionDelay);
   transition-timing-function: var(--#{$button}__icon--TransitionTimingFunction);
   transition-duration: var(--#{$button}__icon--TransitionDuration);
   transition-property: var(--#{$button}__icon--TransitionProperty);
-  rotate: var(--#{$button}__icon--Rotate);
-  scale: var(--#{$button}__icon--ScaleX) var(--#{$button}__icon--ScaleY);
 
   &.pf-m-start {
     --#{$button}__icon--MarginInlineEnd: var(--#{$button}__icon--m-start--MarginInlineEnd);

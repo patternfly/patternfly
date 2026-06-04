@@ -173,9 +173,9 @@
   padding-block-end: var(--#{$notification-drawer}__list-item--PaddingBlockEnd);
   padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingInlineStart);
   padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingInlineEnd);
+  outline-offset: var(--#{$notification-drawer}__list-item--OutlineOffset);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
   border-radius: var(--#{$notification-drawer}__list-item--BorderRadius);
-  outline-offset: var(--#{$notification-drawer}__list-item--OutlineOffset);
 
   &::before {
     position: absolute;
@@ -242,7 +242,7 @@
 
 .#{$notification-drawer}__list-item-header-title {
   font-weight: var(--#{$notification-drawer}__list-item-header-title--FontWeight);
-  word-break: break-word;
+  overflow-wrap: break-word;
 
   &.pf-m-truncate {
     @include pf-v6-line-clamp("var(--#{$notification-drawer}__list-item-header-title--max-lines)");
@@ -263,7 +263,7 @@
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   margin-block-end: var(--#{$notification-drawer}__list-item-description--MarginBlockEnd);
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .#{$notification-drawer}__list-item-timestamp {
@@ -295,9 +295,9 @@
   padding-block-end: var(--#{$notification-drawer}__group-toggle--PaddingBlockEnd);
   padding-inline-start: var(--#{$notification-drawer}__group-toggle--PaddingInlineStart);
   padding-inline-end: var(--#{$notification-drawer}__group-toggle--PaddingInlineEnd);
+  outline-offset: var(--#{$notification-drawer}__group-toggle--OutlineOffset);
   background-color: var(--#{$notification-drawer}__group-toggle--BackgroundColor);
   border: none;
-  outline-offset: var(--#{$notification-drawer}__group-toggle--OutlineOffset);
 }
 
 .#{$notification-drawer}__group-toggle-title {
@@ -307,7 +307,7 @@
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginInlineEnd);
   font-size: var(--#{$notification-drawer}__group-toggle-title--FontSize);
   text-align: start;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .#{$notification-drawer}__group-toggle-count {

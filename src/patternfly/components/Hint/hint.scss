@@ -31,7 +31,7 @@
 .#{$hint} {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-row-gap: var(--#{$hint}--GridRowGap);
+  row-gap: var(--#{$hint}--GridRowGap);
   padding-block-start: var(--#{$hint}--PaddingBlockStart);
   padding-block-end: var(--#{$hint}--PaddingBlockEnd);
   padding-inline-start: var(--#{$hint}--PaddingInlineStart);

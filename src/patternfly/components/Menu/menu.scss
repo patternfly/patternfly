@@ -347,8 +347,8 @@
 
     // - Menu list
     .#{$menu}__list {
-      overflow: hidden;
       visibility: visible;
+      overflow: hidden;
       transition: var(--#{$menu}--m-drilldown__list--Transition);
 
       & .#{$menu}__list {
@@ -390,8 +390,8 @@
 
   // stylelint-disable selector-max-class
   &.pf-m-drilled-in > .#{$menu}__content > .#{$menu}__list {
-    overflow: visible;
     visibility: hidden;
+    overflow: visible;
 
     > .#{$divider},
     > .#{$menu}__list-item:not(.pf-m-current-path) {
@@ -566,10 +566,10 @@
   color: var(--#{$menu}__item--Color);
   text-align: start;
   text-decoration-line: none;
+  outline-offset: var(--#{$menu}--OutlineOffset);
   background-color: var(--#{$menu}__item--BackgroundColor);
   border: 0;
   border-radius: var(--#{$menu}__item--BorderRadius);
-  outline-offset: var(--#{$menu}--OutlineOffset);
 
   @include pf-v6-hidden-visible(flex);
 
@@ -627,7 +627,7 @@
 .#{$menu}__item-description {
   font-size: var(--#{$menu}__item-description--FontSize);
   color: var(--#{$menu}__item-description--Color);
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 // - Menu check

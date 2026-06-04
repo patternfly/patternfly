@@ -9,20 +9,34 @@
       "excludePackagePatterns": [
         "@patternfly/patternfly-a11y",
         "@patternfly/react-core",
+        "@patternfly/react-icons",
         "@patternfly/react-code-editor",
         "@patternfly/react-table",
-        "@patternfly/documentation-framework"
+        "@patternfly/documentation-framework",
+        "sass",
+        "stylelint*",
+        "backstopjs"
       ],
       "enabled": false
     },
     {
+      "groupName": "grouped-pf-deps",
       "datasources": ["npm"],
       "packageNames": [
-        "@patternfly/patternfly-a11y",
         "@patternfly/react-core",
+        "@patternfly/react-icons",
         "@patternfly/react-code-editor",
         "@patternfly/react-table",
-        "@patternfly/documentation-framework"
+        "@patternfly/documentation-framework",
+        "sass",
+        "stylelint*",
+        "backstopjs"
+      ]
+    },
+    {
+      "datasources": ["npm"],
+      "packageNames": [
+        "@patternfly/patternfly-a11y"
       ]
     }
   ]

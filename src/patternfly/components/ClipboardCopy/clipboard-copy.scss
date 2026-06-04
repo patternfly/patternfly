@@ -91,7 +91,7 @@
   padding-inline-start: var(--#{$clipboard-copy}__expandable-content--PaddingInlineStart);
   padding-inline-end: var(--#{$clipboard-copy}__expandable-content--PaddingInlineEnd);
   margin-block-start: var(--#{$clipboard-copy}__expandable-content--MarginBlockStart);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: var(--#{$clipboard-copy}__expandable-content--BackgroundColor);
   background-clip: padding-box;
   border: solid var(--#{$clipboard-copy}__expandable-content--BorderColor);
@@ -108,7 +108,7 @@
 }
 
 .#{$clipboard-copy}__text {
-  word-break: break-word;
+  overflow-wrap: break-word;
   white-space: normal;
 
   &.pf-m-code {

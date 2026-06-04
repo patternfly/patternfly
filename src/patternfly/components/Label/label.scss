@@ -266,9 +266,9 @@
   font-size: var(--#{$label}--FontSize);
   white-space: nowrap;
   background: transparent;
-  isolation: isolate;
   border: 0;
   border-radius: var(--#{$label}--BorderRadius);
+  isolation: isolate;
 
   &.pf-m-blue {
     --#{$label}--BackgroundColor: var(--#{$label}--m-blue--BackgroundColor);

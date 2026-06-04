@@ -27,7 +27,7 @@
 .#{$radio} {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--#{$radio}--GridGap);
+  gap: var(--#{$radio}--GridGap);
   align-items: baseline;
   accent-color: var(--#{$radio}--AccentColor);
 

@@ -6,8 +6,8 @@ $pf-v6-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl",
 $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 @include pf-root($drawer) {
-  // Main
-  --#{$drawer}--m-pill--m-inline__main--Gap: var(--pf-t--global--spacer--inset--page-chrome);
+  // Pill inline main
+  --#{$drawer}--m-pill--m-inline__main--Gap: 0;
 
   // Section
   --#{$drawer}__section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
@@ -30,7 +30,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--BorderInlineStartWidth: var(--#{$drawer}__panel--after--Width); // default is left side
   --#{$drawer}__panel--BorderInlineEndWidth: 0;
   --#{$drawer}__panel--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-  --#{$drawer}__panel--m-inline--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$drawer}__panel--m-inline--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$drawer}__panel--m-secondary--BackgroundColor: var(--pf-t--global--background--color--floating--secondary--default);
   --#{$drawer}__panel--RowGap: var(--pf-t--global--spacer--sm);
   --#{$drawer}__panel--PaddingBlockStart: var(--pf-t--global--spacer--sm);
@@ -49,6 +49,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
   --#{$drawer}__panel--md--FlexBasis: 50%;
   --#{$drawer}__panel--md--FlexBasis--max: 100%;
+  --#{$drawer}__panel--m-inline--md--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$drawer}__panel--xl--MinWidth: #{pf-size-prem(450px)};
   --#{$drawer}__panel--xl--FlexBasis: #{pf-size-prem(450px)};
   --#{$drawer}--m-panel-bottom__panel--md--MinHeight: 50%;
@@ -261,13 +262,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
       padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingInlineStart);
     }
-
-    > .#{$drawer}__main > .#{$drawer}__panel.pf-m-glass {
-      --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
-      --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
-
-      backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
-    }
   }
 
   &.pf-m-panel-left > .#{$drawer}__main {
@@ -294,6 +288,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
+    --#{$drawer}--m-pill--m-inline__main--Gap: var(--pf-t--global--spacer--inset--page-chrome);
     --#{$drawer}__panel--TransitionDelay--focus: var(--#{$drawer}__panel--TransitionDelay--expand--focus);
 
     > .#{$drawer}__main > .#{$drawer}__panel {
@@ -441,6 +436,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .#{$drawer}__panel {
   position: relative;
   z-index: var(--#{$drawer}__panel--ZIndex);
+  visibility: hidden; // hidden by default
   flex-basis: var(--#{$drawer}__panel--FlexBasis);
   row-gap: var(--#{$drawer}__panel--RowGap);
   order: 1;
@@ -448,7 +444,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   margin-block: var(--#{$drawer}__panel--MarginBlock, revert);
   margin-inline: var(--#{$drawer}__panel--MarginInline, revert);
   overflow: auto;
-  visibility: hidden; // hidden by default
   background-color: var(--#{$drawer}__panel--BackgroundColor);
   border: solid var(--#{$drawer}__panel--BorderColor);
   border-block-start-width: var(--#{$drawer}__panel--BorderBlockStartWidth);
@@ -574,8 +569,8 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   margin-block-start: var(--#{$drawer}__splitter--MarginBlockStart, 0);
   margin-inline-start: var(--#{$drawer}__splitter--MarginInlineStart, 0);
   cursor: var(--#{$drawer}__splitter--Cursor);
-  background-color: var(--#{$drawer}__splitter--BackgroundColor);
   outline-offset: var(--#{$drawer}__splitter--focus--OutlineOffset);
+  background-color: var(--#{$drawer}__splitter--BackgroundColor);
 
   &.pf-m-vertical {
     --#{$drawer}__splitter--Height: var(--#{$drawer}__splitter--m-vertical--Height);
@@ -661,10 +656,19 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     &.pf-m-inline,
     &.pf-m-static {
+      --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-inline--md--BackgroundColor);
+
       > .#{$drawer}__main > .#{$drawer}__panel {
-        @at-root :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+        :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
         :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
           --#{$drawer}__panel--BackgroundColor: transparent;
+        }
+
+        :where(:root.pf-v6-theme-glass) &.pf-m-glass {
+          --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-glass--BackgroundColor);
+          --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--m-glass--BorderColor);
+
+          backdrop-filter: var(--#{$drawer}__panel--m-glass--BackdropFilter);
         }
       }
     }

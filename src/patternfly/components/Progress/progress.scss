@@ -43,7 +43,7 @@
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: auto auto;
-  grid-gap: var(--#{$progress}--GridGap);
+  gap: var(--#{$progress}--GridGap);
   align-items: end;
 
   // Modifiers
@@ -163,7 +163,7 @@
 // the progress__description is displayed above the progress bar on the left
 .#{$progress}__description {
   grid-column: 1 / 2;
-  word-break: break-word;
+  overflow-wrap: break-word;
 
   &.pf-m-truncate {
     @include pf-v6-text-overflow;
@@ -179,7 +179,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   text-align: end;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 // the progress__status-icon is an icon displayed always in the upper right
@@ -189,11 +189,8 @@
 
 .#{$progress}__bar::before,
 .#{$progress}__indicator {
-  // disable linter as the indicator element should always grow ltr
-  // stylelint-disable liberty/use-logical-spec
   inset-block-start: 0;
   inset-inline-start: 0;
-  // stylelint-enable
 }
 
 // The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color

@@ -226,7 +226,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
-  word-break: break-word;
+  overflow-wrap: break-word;
   -webkit-overflow-scrolling: touch;
 
   &:last-child {
