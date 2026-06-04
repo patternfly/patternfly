@@ -9,12 +9,11 @@
   --#{$panel}--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // border
-  --#{$panel}--before--BorderWidth: 0;
+  --#{$panel}--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$panel}--before--BorderColor: var(--pf-t--global--border--color--high-contrast);
 
   // secondary modifier
   --#{$panel}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$panel}--m-secondary--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
 
   // bordered
   --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--box--default);
@@ -100,7 +99,6 @@
 
   &.pf-m-secondary {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-secondary--BackgroundColor);
-    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-secondary--before--BorderWidth);
   }
 
   &.pf-m-raised {
