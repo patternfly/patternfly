@@ -236,8 +236,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
   // Docked nav
-  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
-  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
 
   // Glass theme
@@ -265,6 +265,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-main--xl--MarginInlineEnd--glass: var(--pf-t--global--spacer--gutter--default);
   --#{$page}__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
   --#{$page}__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
+  --#{$page}--m-dock__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
+  --#{$page}--m-dock__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
 
   :where(.pf-v6-theme-glass) & {
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
@@ -287,6 +289,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar-main--BoxShadow: var(--#{$page}__sidebar-main--BoxShadow--glass);
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}__main-container--MarginBlockStart--glass);
     --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--MaxHeight--glass);
+    --#{$page}--m-dock__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight--glass);
+    --#{$page}--m-dock__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart--glass);  
   }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
