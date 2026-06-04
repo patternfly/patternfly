@@ -426,12 +426,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   z-index: var(--#{$page}__dock--ZIndex);
   display: flex;
   flex-direction: column;
+  visibility: hidden;
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
-  visibility: hidden;
-  transition:
-    translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
-    visibility 0s var(--#{$page}__dock--TransitionDuration--slide);
+  transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$page}__dock--TransitionDuration--slide);
 
   @include pf-v6-bidirectional-style(
     $prop: translate,

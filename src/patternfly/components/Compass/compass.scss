@@ -325,8 +325,8 @@
   z-index: var(--#{$compass}__dock--ZIndex);
   display: flex;
   flex-direction: column;
-  grid-area: dock;
   visibility: hidden;
+  grid-area: dock;
   width: var(--#{$compass}__dock--Width);
   translate: -100% 0;
   transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
