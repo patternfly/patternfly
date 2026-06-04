@@ -324,8 +324,8 @@
   inset-inline-start: 0;
   z-index: var(--#{$compass}__dock--ZIndex);
   display: flex;
-  flex-direction: column;
   visibility: hidden;
+  flex-direction: column;
   grid-area: dock;
   width: var(--#{$compass}__dock--Width);
   translate: -100% 0;
@@ -335,10 +335,8 @@
     --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
 
     visibility: visible;
-    transition:
-      translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide),
-      visibility 0s 0s;
     translate: 0;
+    transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s 0s;
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
@@ -347,8 +345,8 @@
 
     position: revert;
     inset: revert;
-    width: auto;
     visibility: revert;
+    width: auto;
     translate: 0;
   }
 

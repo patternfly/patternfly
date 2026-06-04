@@ -425,8 +425,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   inset-inline-start: 0;
   z-index: var(--#{$page}__dock--ZIndex);
   display: flex;
-  flex-direction: column;
   visibility: hidden;
+  flex-direction: column;
   grid-area: dock;
   width: var(--#{$page}__dock--Width);
   transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$page}__dock--TransitionDuration--slide);
@@ -441,10 +441,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
 
     visibility: visible;
+    translate: 0;
     transition:
       translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
       visibility 0s 0s;
-    translate: 0;
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
@@ -453,8 +453,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
     position: revert;
     inset: revert;
-    width: auto;
     visibility: revert;
+    width: auto;
     translate: 0;
   }
 
