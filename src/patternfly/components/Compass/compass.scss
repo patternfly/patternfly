@@ -326,10 +326,10 @@
   display: flex;
   flex-direction: column;
   grid-area: dock;
-  width: var(--#{$compass}__dock--Width);
   visibility: hidden;
-  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
+  width: var(--#{$compass}__dock--Width);
   translate: -100% 0;
+  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
 
   &.pf-m-expanded {
     --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
