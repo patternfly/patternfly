@@ -9,13 +9,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
 
-  // Docked nav
-  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
-  --#{$page}--m-dock__main-container--MarginBlockStart: 0;
-  --#{$page}--m-dock__main-container--desktop--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns: min-content 1fr;
-
   // Header
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
@@ -39,6 +32,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
+
+  // Docked nav
+  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock__main-container--desktop--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns: min-content 1fr;
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
@@ -234,11 +234,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Drawer section
   --#{$page}__drawer--c-drawer--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
-
-  // Docked nav
-  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
-  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
 
   // Glass theme
   --#{$page}--BackgroundColor--glass: transparent;
