@@ -29,7 +29,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
   --#{$page}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
   --#{$page}__dock-main--BorderInlineEndColor: transparent;
-  --#{$page}__dock-main--desktop--BorderInlineEndwidth: var(--pf-t--global--border--width--regular);
+  --#{$page}__dock-main--desktop--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
   --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--subtle);
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
   --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
