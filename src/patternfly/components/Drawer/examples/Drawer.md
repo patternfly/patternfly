@@ -356,7 +356,7 @@ import './Drawer.css'
 | `.pf-m-no-border` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-v6-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-v6-c-drawer__body` | Modifies the element to remove padding. |
-| `.pf-m-no-background` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__panel` | Modifies the drawer element background color to transparent. |
+| `.pf-m-no-background` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__panel` | Modifies the drawer element background color to transparent. **Note:** `.pf-m-no-background` is deprecated, use `.pf-m-plain` instead. |
 | `.pf-m-plain` | `.pf-v6-c-drawer__panel.pf-m-inline`, `.pf-v6-c-drawer__panel.pf-m-static`, `.pf-v6-c-drawer__section` | Applies plain styling. |
 | `.pf-m-no-plain-on-glass` | `.pf-v6-c-drawer__panel.pf-m-inline`, `.pf-v6-c-drawer__panel.pf-m-static`, `.pf-v6-c-drawer__section` | Prevents the elements from automatically applying plain styling when glass theme is enabled. |
 | `.pf-m-primary` | `.pf-v6-c-drawer__content` | Modifies the drawer content to use the primary background color. |

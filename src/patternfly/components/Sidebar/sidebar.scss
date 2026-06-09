@@ -206,6 +206,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   }
 
   &.pf-m-no-background,
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
   :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
     --#{$sidebar}__panel--BackgroundColor: transparent;
   }
@@ -232,6 +233,7 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   }
 
   &.pf-m-no-background,
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
   :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
     --#{$sidebar}__content--BackgroundColor: transparent;
   }
