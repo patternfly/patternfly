@@ -24,9 +24,6 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
 
   // Colorful
   --#{$avatar}--m-colorful--BorderWidth: var(--pf-t--global--border--width--box--default);
-  --#{$avatar}--m-colorful--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--BorderColor);
-  --#{$avatar}--m-colorful--Color: var(--pf-t--global--color--nonstatus--gray--hover);
   --#{$avatar}--m-gray--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$avatar}--m-gray--Color: var(--pf-t--global--icon--color--nonstatus--on-gray--hover);
   --#{$avatar}--m-gray--BorderColor: var(--pf-t--global--border--color--default);
@@ -113,16 +110,16 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   }
 
   &.pf-m-colorful {
-    --#{$avatar}--BorderWidth: var(--#{$avatar}--m-colorful--BorderWidth);
-
+  --#{$avatar}--BorderWidth: var(--#{$avatar}--m-colorful--BorderWidth);
+  
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: clip;
-    color: var(--#{$avatar}--m-colorful--Color);
+    color: var(--#{$avatar}--m-colorful--Color, inherit);
     vertical-align: middle;
-    background-color: var(--#{$avatar}--m-colorful--BackgroundColor);
-    border-color: var(--#{$avatar}--m-colorful--BorderColor);
+    background-color: var(--#{$avatar}--m-colorful--BackgroundColor, transparent);
+    border-color: var(--#{$avatar}--m-colorful--BorderColor, transparent);
 
     &.pf-m-red {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-red--BackgroundColor);
