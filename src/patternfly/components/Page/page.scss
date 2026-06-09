@@ -480,7 +480,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndwidth);
+    --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndWidth);
     --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
     --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
     --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
