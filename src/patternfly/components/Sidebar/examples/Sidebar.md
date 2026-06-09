@@ -236,3 +236,4 @@ import './Sidebar.css'
 | `.pf-m-width-{default, 25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v6-c-sidebar__panel` | Modifies the panel width at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). **Note:** does not apply when the panel is stacked on top of the content. |
 | `.pf-m-no-background` | `.pf-v6-c-sidebar`, `.pf-v6-c-sidebar__panel, .pf-v6-c-sidebar__content` | Modifies the element to have a transparent background. |
 | `.pf-m-secondary` | `.pf-v6-c-sidebar__panel, .pf-v6-c-sidebar__content` | Modifies the element to have secondary styling. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-sidebar__panel, .pf-v6-c-sidebar__content` | Prevents the elements from automatically applying plain styling when glass theme is enabled. |
