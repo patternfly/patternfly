@@ -27,7 +27,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
   --#{$page}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
-  --#{$page}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
+  --#{$page}__dock-main--BorderInlineEndWidth: 0;
   --#{$page}__dock-main--BorderInlineEndColor: transparent;
   --#{$page}__dock-main--desktop--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
   --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--subtle);
@@ -286,7 +286,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}__main-container--MarginBlockStart--glass);
     --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--MaxHeight--glass);
     --#{$page}--m-dock__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight--glass);
-    --#{$page}--m-dock__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart--glass);  
+    --#{$page}--m-dock__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart--glass);
+    --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
@@ -448,9 +449,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
-    --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
-
     position: revert;
     inset: revert;
     visibility: revert;
@@ -481,6 +479,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndWidth);
+    --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
     --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
     --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
     --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
