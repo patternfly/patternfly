@@ -119,7 +119,7 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   }
 
   &.pf-m-colorful {
-  --#{$avatar}--BorderWidth: var(--#{$avatar}--m-colorful--BorderWidth);
+    --#{$avatar}--BorderWidth: var(--#{$avatar}--m-colorful--BorderWidth);
   
     display: inline-flex;
     align-items: center;
