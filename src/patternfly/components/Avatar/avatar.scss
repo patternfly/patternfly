@@ -9,14 +9,19 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$avatar}--Width: #{pf-size-prem(36px)};
   --#{$avatar}--Height: #{pf-size-prem(36px)};
+  --#{$avatar}--FontSize: #{pf-size-prem(36px)};
   --#{$avatar}--m-sm--Width: #{pf-size-prem(24px)};
   --#{$avatar}--m-sm--Height: #{pf-size-prem(24px)};
+  --#{$avatar}--m-sm--FontSize: #{pf-size-prem(24px)};
   --#{$avatar}--m-md--Width: #{pf-size-prem(36px)};
   --#{$avatar}--m-md--Height: #{pf-size-prem(36px)};
+  --#{$avatar}--m-md--FontSize: #{pf-size-prem(36px)};
   --#{$avatar}--m-lg--Width: #{pf-size-prem(72px)};
   --#{$avatar}--m-lg--Height: #{pf-size-prem(72px)};
+  --#{$avatar}--m-lg--FontSize: #{pf-size-prem(72px)};
   --#{$avatar}--m-xl--Width: #{pf-size-prem(128px)};
   --#{$avatar}--m-xl--Height: #{pf-size-prem(128px)};
+  --#{$avatar}--m-xl--FontSize: #{pf-size-prem(128px)};
 
   // Bordered
   --#{$avatar}--m-bordered--BorderColor: var(--pf-t--global--border--color--default);
@@ -63,20 +68,21 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-xl__initials--FontSize: var(--pf-t--global--font--size--4xl);
   --#{$avatar}--m-xl__initials--FontWeight: var(--pf-t--global--font--weight--heading--default);
   --#{$avatar}--m-xl__initials--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$avatar}--m-gray--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
-  --#{$avatar}__initials--m-red--Color: var(--pf-t--global--text--color--nonstatus--on-red--default);
-  --#{$avatar}__initials--m-orangered--Color: var(--pf-t--global--text--color--nonstatus--on-orangered--default);
-  --#{$avatar}__initials--m-orange--Color: var(--pf-t--global--text--color--nonstatus--on-orange--default);
-  --#{$avatar}__initials--m-yellow--Color: var(--pf-t--global--text--color--nonstatus--on-yellow--default);
-  --#{$avatar}__initials--m-green--Color: var(--pf-t--global--text--color--nonstatus--on-green--default);
-  --#{$avatar}__initials--m-teal--Color: var(--pf-t--global--text--color--nonstatus--on-teal--default);
-  --#{$avatar}__initials--m-blue--Color: var(--pf-t--global--text--color--nonstatus--on-blue--default);
-  --#{$avatar}__initials--m-purple--Color: var(--pf-t--global--text--color--nonstatus--on-purple--default);
+  --#{$avatar}--m-gray__initials--Color: var(--pf-t--global--text--color--nonstatus--on-gray--hover);
+  --#{$avatar}--m-red__initials--Color: var(--pf-t--global--text--color--nonstatus--on-red--default);
+  --#{$avatar}--m-orangered__initials--Color: var(--pf-t--global--text--color--nonstatus--on-orangered--default);
+  --#{$avatar}--m-orange__initials--Color: var(--pf-t--global--text--color--nonstatus--on-orange--default);
+  --#{$avatar}--m-yellow__initials--Color: var(--pf-t--global--text--color--nonstatus--on-yellow--default);
+  --#{$avatar}--m-green__initials--Color: var(--pf-t--global--text--color--nonstatus--on-green--default);
+  --#{$avatar}--m-teal__initials--Color: var(--pf-t--global--text--color--nonstatus--on-teal--default);
+  --#{$avatar}--m-blue__initials--Color: var(--pf-t--global--text--color--nonstatus--on-blue--default);
+  --#{$avatar}--m-purple__initials--Color: var(--pf-t--global--text--color--nonstatus--on-purple--default);
 }
 
 .#{$avatar} {
   width: var(--#{$avatar}--Width);
   height: var(--#{$avatar}--Height);
+  font-size: var(--#{$avatar}--FontSize);
   border: var(--#{$avatar}--BorderWidth) solid var(--#{$avatar}--BorderColor);
   border-radius: var(--#{$avatar}--BorderRadius);
 
@@ -93,17 +99,20 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
   }
 
   &.pf-m-sm {
+    --#{$avatar}--FontSize: var(--#{$avatar}--m-sm--FontSize);
     --#{$avatar}__initials--FontSize: var(--#{$avatar}--m-sm__initials--FontSize);
     --#{$avatar}__initials--FontWeight: var(--#{$avatar}--m-sm__initials--FontWeight);
   }
 
   &.pf-m-lg {
+    --#{$avatar}--FontSize: var(--#{$avatar}--m-lg--FontSize);
     --#{$avatar}__initials--FontSize: var(--#{$avatar}--m-lg__initials--FontSize);
     --#{$avatar}__initials--FontWeight: var(--#{$avatar}--m-lg__initials--FontWeight);
     --#{$avatar}__initials--FontFamily: var(--#{$avatar}--m-lg__initials--FontFamily);
   }
 
   &.pf-m-xl {
+    --#{$avatar}--FontSize: var(--#{$avatar}--m-xl--FontSize);
     --#{$avatar}__initials--FontSize: var(--#{$avatar}--m-xl__initials--FontSize);
     --#{$avatar}__initials--FontWeight: var(--#{$avatar}--m-xl__initials--FontWeight);
     --#{$avatar}__initials--FontFamily: var(--#{$avatar}--m-xl__initials--FontFamily);
@@ -125,63 +134,63 @@ $pf-v6-c-avatar--sizes: "sm", "md", "lg", "xl";
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-red--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-red--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-red--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-red--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-red__initials--Color);
     }
   
     &.pf-m-orangered {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-orangered--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-orangered--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-orangered--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-orangered--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-orangered__initials--Color);
     }
   
     &.pf-m-orange {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-orange--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-orange--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-orange--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-orange--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-orange__initials--Color);
     }
   
     &.pf-m-yellow {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-yellow--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-yellow--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-yellow--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-yellow--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-yellow__initials--Color);
     }
   
     &.pf-m-green {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-green--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-green--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-green--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-green--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-green__initials--Color);
     }
   
     &.pf-m-teal {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-teal--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-teal--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-teal--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-teal--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-teal__initials--Color);
     }
   
     &.pf-m-blue {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-blue--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-blue--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-blue--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-blue--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-blue__initials--Color);
     }
   
     &.pf-m-purple {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-purple--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-purple--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-purple--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-purple--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-purple__initials--Color);
     }
     
     &.pf-m-gray {
       --#{$avatar}--m-colorful--BackgroundColor: var(--#{$avatar}--m-gray--BackgroundColor);
       --#{$avatar}--m-colorful--Color: var(--#{$avatar}--m-gray--Color);
       --#{$avatar}--m-colorful--BorderColor: var(--#{$avatar}--m-gray--BorderColor);
-      --#{$avatar}__initials--Color: var(--#{$avatar}__initials--m-gray--Color);
+      --#{$avatar}__initials--Color: var(--#{$avatar}--m-gray__initials--Color);
     }
   }
 
