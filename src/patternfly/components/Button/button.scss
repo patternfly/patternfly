@@ -24,7 +24,7 @@
   --#{$button}--TransitionDelay: 0s;
   --#{$button}--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --#{$button}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
-  --#{$button}--TransitionProperty: color, background, border-color;
+  --#{$button}--TransitionProperty: padding, color, background, border-color;
   --#{$button}--ScaleX: 1;
   --#{$button}--ScaleY: 1;
   --#{$button}--border--offset: 0;
@@ -386,8 +386,7 @@
   --#{$button}__progress--InsetBlockStart: 50%;
   --#{$button}__progress--InsetInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$button}__progress--Color: var(--#{$button}__icon--Color);
-  --#{$button}--m-progress--TransitionProperty: padding, color, background, border-color;
-  --#{$button}--m-progress--TransitionDuration: 250ms;
+  --#{$button}__progress--position: absolute;
   --#{$button}--m-progress--PaddingInlineEnd: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-progress--PaddingInlineStart: calc(var(--pf-t--global--spacer--control--horizontal--default) + var(--#{$button}__progress--width) / 2);
   --#{$button}--m-in-progress--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
@@ -976,8 +975,6 @@
   &.pf-m-progress {
     --#{$button}--PaddingInlineEnd: var(--#{$button}--m-progress--PaddingInlineEnd);
     --#{$button}--PaddingInlineStart: var(--#{$button}--m-progress--PaddingInlineStart);
-    --#{$button}--TransitionProperty: var(--#{$button}--m-progress--TransitionProperty);
-    --#{$button}--TransitionDuration: var(--#{$button}--m-progress--TransitionDuration);  
   }
 
   &.pf-m-in-progress {
@@ -1068,9 +1065,10 @@
 }
 
 .#{$button}__progress {
-  position: absolute;
+  position: var(--#{$button}__progress--position);
   inset-block-start: var(--#{$button}__progress--InsetBlockStart);
   inset-inline-start: var(--#{$button}__progress--InsetInlineStart);
+  align-self: center;
   line-height: 1;
   color: var(--#{$button}__progress--Color);
   transform: translate(var(--#{$button}__progress--TranslateX), var(--#{$button}__progress--TranslateY));
@@ -1082,12 +1080,9 @@
 
 .#{$button}.pf-m-block {
   --#{$button}--AlignItems: center;
-
-  .#{$button}__progress {
-    position: static;
-    inset: auto;
-    transform: none;
-  }
+  --#{$button}__progress--position: relative;
+  --#{$button}__progress--InsetInlineStart: 0;
+  --#{$button}__progress--TranslateY: 0;
 }
 
 // enable inline link to have underline when used with truncate
