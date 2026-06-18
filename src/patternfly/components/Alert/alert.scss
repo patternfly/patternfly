@@ -194,6 +194,7 @@
 
 .#{$alert}__icon {
   grid-area: icon;
+  align-self: baseline;
   margin-inline-end: var(--#{$alert}__icon--MarginInlineEnd);
   font-size: var(--#{$alert}__icon--FontSize);
   color: var(--#{$alert}__icon--Color);
