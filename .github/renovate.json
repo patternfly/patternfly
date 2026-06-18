@@ -12,11 +12,9 @@
       "matchPackageNames": [
         "@patternfly/documentation-framework",
         "sass",
-        "backstopjs"
-      ],
-      "matchPackagePatterns": [
-        "^stylelint",
-        "^@patternfly/react"
+        "backstopjs",
+        "/^stylelint/",
+        "/^@patternfly/react/"
       ],
       "enabled": true
     },
