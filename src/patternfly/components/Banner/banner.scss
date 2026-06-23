@@ -157,7 +157,10 @@
     a {
       color: var(--#{$banner}--link--Color);
       text-decoration-line: var(--#{$banner}--link--TextDecoration);
-      text-decoration-color: var(--#{$banner}--a--TextDecorationColor);
+  a {
+    color: var(--#{$banner}--link--Color);
+    text-decoration-line: var(--#{$banner}--link--TextDecoration);
+    text-decoration-color: var(--#{$banner}--a--TextDecorationColor);
 
     &:hover:not(.pf-m-disabled) {
       --#{$banner}--link--Color: var(--#{$banner}--link--hover--Color);
