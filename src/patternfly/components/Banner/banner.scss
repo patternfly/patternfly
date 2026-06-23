@@ -179,13 +179,10 @@
     --#{$button}--m-link--m-inline--Color: var(--#{$banner}--link--Color);
     --#{$button}--m-link--m-inline--hover--Color: var(--#{$banner}--link--hover--Color);
     --#{$button}--disabled--Color: var(--#{$banner}--link--disabled--Color);
-
-    text-decoration-line: var(--#{$banner}--link--TextDecoration);
+    --#{$button}--m-link--m-inline--TextDecorationColor: var(--#{$banner}--link--TextDecorationColor);
+    --#{$button}--m-link--m-inline--hover--TextDecorationColor: var(--#{$banner}--link--TextDecorationColor);
     
-    &.pf-m-link {
-      --#{$button}--TextDecorationColor: var(--#{$banner}--m-link--TextDecorationColor);
-      --#{$button}--hover--TextDecorationColor: var(--#{$banner}--m-link--hover--TextDecorationColor);
-    }
+    text-decoration-line: var(--#{$banner}--link--TextDecoration);
 
     &:disabled,
     &.pf-m-disabled {
