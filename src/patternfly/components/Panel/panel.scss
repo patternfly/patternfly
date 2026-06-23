@@ -14,6 +14,7 @@
 
   // secondary modifier
   --#{$panel}--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$panel}--m-secondary--before--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular); // TODO - remove in a breaking change
 
   // bordered
   --#{$panel}--m-bordered--before--BorderWidth: var(--pf-t--global--border--width--box--default);
@@ -99,6 +100,7 @@
 
   &.pf-m-secondary {
     --#{$panel}--BackgroundColor: var(--#{$panel}--m-secondary--BackgroundColor);
+    --#{$panel}--before--BorderWidth: var(--#{$panel}--m-secondary--before--BorderWidth);
   }
 
   &.pf-m-raised {
