@@ -24,8 +24,6 @@
   --#{$banner}--link--hover--Color: var(--#{$banner}--Color);
   --#{$banner}--link--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$banner}--link--TextDecorationColor: currentcolor;
-  --#{$banner}--m-link--TextDecorationColor: var(--#{$banner}--a--TextDecorationColor);
-  --#{$banner}--m-link--hover--TextDecorationColor: var(--#{$banner}--a--TextDecorationColor);
 
   // modifier variables
   --#{$banner}--m-sticky--ZIndex: var(--pf-t--global--z-index--md);
@@ -153,7 +151,7 @@
   &.pf-m-pill {
     border-radius: var(--#{$banner}--m-pill--BorderRadius);
   }
-    
+
   a {
     color: var(--#{$banner}--link--Color);
     text-decoration-line: var(--#{$banner}--link--TextDecoration);
