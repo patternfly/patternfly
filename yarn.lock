@@ -3376,9 +3376,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/documentation-framework@npm:6.44.3":
-  version: 6.44.3
-  resolution: "@patternfly/documentation-framework@npm:6.44.3"
+"@patternfly/documentation-framework@npm:6.44.4":
+  version: 6.44.4
+  resolution: "@patternfly/documentation-framework@npm:6.44.4"
   dependencies:
     "@babel/core": "npm:^7.29.0"
     "@babel/preset-env": "npm:7.29.0"
@@ -3448,7 +3448,7 @@ __metadata:
     react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
-  checksum: 10c0/913fc3b77e2a005a4b4edc4f9c452b0e659a86779d2d176bfb373c816093f664ff12c75bdbde0cdece5fe02ed32f0a7f1505a5f73dcddb5d1b79b3ebee223fbc
+  checksum: 10c0/8ee0ca719534e7193ec80705a4b98b056f245ccfea157d224ea1651778bcd0a282f9cc54b96f1668f9fd95932254ffbe9180df7a5fda373a31c68ad98e22c800
   languageName: node
   linkType: hard
 
@@ -3500,7 +3500,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@fortawesome/fontawesome": "npm:^1.1.8"
     "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.44.3"
+    "@patternfly/documentation-framework": "npm:6.44.4"
     "@patternfly/patternfly-a11y": "npm:5.1.0"
     "@patternfly/react-code-editor": "npm:6.5.1"
     "@patternfly/react-core": "npm:6.5.1"
