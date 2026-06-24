@@ -301,7 +301,7 @@
     table-layout: fixed;
   }
 
-  &.pf-m-sticky-header-base > .#{$table}__thead, &.pf-m-sticky-header-base .#{$table}__th {
+  &.pf-m-sticky-header-base > .#{$table}__thead, &.pf-m-sticky-header-base > .#{$table}__thead .#{$table}__th {
     &::before,
     &::after {
       opacity: 0;
