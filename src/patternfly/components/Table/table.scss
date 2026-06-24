@@ -311,7 +311,7 @@
     }
   }
 
-  &.pf-m-sticky-header-stuck > .#{$table}__thead, &.pf-m-sticky-header-stuck .#{$table}__th {
+  &.pf-m-sticky-header-stuck > .#{$table}__thead, &.pf-m-sticky-header-stuck > .#{$table}__thead .#{$table}__th {
     &::before,
     &::after {
       opacity: 1;
