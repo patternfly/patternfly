@@ -301,7 +301,7 @@
     table-layout: fixed;
   }
 
-  &.pf-m-sticky-header-base > .#{$table}__thead {
+  &.pf-m-sticky-header-base > .#{$table}__thead, &.pf-m-sticky-header-base .#{$table}__th {
     &::before,
     &::after {
       opacity: 0;
@@ -311,12 +311,7 @@
     }
   }
 
-  &.pf-m-sticky-header,
-  &.pf-m-sticky-header-stuck {
-    --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: 0;
-  }
-
-  &.pf-m-sticky-header-stuck > .#{$table}__thead {
+  &.pf-m-sticky-header-stuck > .#{$table}__thead, &.pf-m-sticky-header-stuck .#{$table}__th {
     &::before,
     &::after {
       opacity: 1;
@@ -338,26 +333,47 @@
         z-index: -1;
         pointer-events: none;
         content: '';
-        background-color: var(--#{$table}--m-sticky-header--BackgroundColor);
         border-radius: var(--#{$table}--m-sticky-header--BorderRadius);
         box-shadow: var(--#{$table}--m-sticky-header--BoxShadow);
+      }
+
+      .#{$table}__th::before,
+      .#{$table}__th::after {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        content: '';
+      }
+
+      .#{$table}__th::before {
+        z-index: -1;
+        background-color: var(--#{$table}--m-sticky-header--BackgroundColor);
+      }
+
+      .#{$table}__th:first-child::before {
+        border-start-start-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+        border-end-start-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+      }
+
+      .#{$table}__th:last-child::before {
+        border-start-end-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+        border-end-end-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+      }
+
+      .#{$table}__th::after {
+        z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
+        border-block-end: var(--#{$table}--m-sticky-header--BorderBlockEndWidth) solid var(--#{$table}--m-sticky-header--BorderBlockEndColor);
       }
 
       > :where(th, td) {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
       }
     }
-  }
 
-  &.pf-m-sticky-header,
-  &.pf-m-sticky-header-base {
-    > .#{$table}__thead::after {
-      position: absolute;
-      inset: 0;
-      z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
-      pointer-events: none;
-      content: '';
-      border-block-end: var(--#{$table}--m-sticky-header--BorderBlockEndWidth) solid var(--#{$table}--m-sticky-header--BorderBlockEndColor);
+    :where(.pf-v6-theme-glass) & {
+      .pf-m-nested-column-header {
+        --#{$table}--m-sticky-header--BorderRadius: 0;
+      }
     }
   }
 
