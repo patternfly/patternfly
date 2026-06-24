@@ -3,13 +3,13 @@
     {{{dual-list-selector-controls-item--attribute}}}
   {{/if}}>
   {{#if dual-list-selector-controls-item--IsAdd}}
-    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Add selected"' button--IsIcon=true button--icon="angle-right"}}
+    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Add selected"' button--IsIcon=true button--icon="rh-microns-caret-right"}}
   {{else if dual-list-selector-controls-item--IsAddAll}}
-    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Add all"' button--IsIcon=true button--icon="angle-double-right"}}
+    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Add all"' button--IsIcon=true button--icon="rh-microns-double-caret-right"}}
   {{else if dual-list-selector-controls-item--IsRemoveAll}}
-    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Remove all"' button--IsIcon=true button--icon="angle-double-left"}}
+    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Remove all"' button--IsIcon=true button--icon="rh-microns-double-caret-left"}}
   {{else if dual-list-selector-controls-item--IsRemove}}
-    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Remove selected"' button--IsIcon=true button--icon="angle-left"}}
+    {{> button button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-controls-item--IsDisabled button--attribute='aria-label="Remove selected"' button--IsIcon=true button--icon="rh-microns-caret-left"}}
   {{else if @partial-block}}
     {{>@partial-block}}
   {{/if}}
