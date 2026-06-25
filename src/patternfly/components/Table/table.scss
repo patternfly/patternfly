@@ -376,6 +376,7 @@
     :where(.pf-v6-theme-glass) & {
       .pf-m-nested-column-header {
         --#{$table}--m-sticky-header--BorderRadius: 0;
+        --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: 0;
       }
     }
   }
