@@ -4251,6 +4251,9 @@ For sticky columns to function correctly, the parent table's width must be contr
           Destination
         {{/table-th}}
       {{/table-tr}}
+      {{#> table-tr table-tr--modifier="pf-m-border-row" table-tr--attribute='aria-hidden="true"'}}
+        {{> table-td table-td--attribute='colspan="6"'}}
+      {{/table-tr}}
     {{/table-thead}}
 
     {{#> table-tbody}}

@@ -241,7 +241,7 @@
   // * Table nested column header
   --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: var(--#{$table}--border-width--base);
   --#{$table}__thead--m-nested-column-header--BorderBlockEndColor: var(--#{$table}--BorderColor);
-  --#{$table}__thead--m-nested-column-header--after--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
+  --#{$table}__thead--m-nested-column-header--after--ZIndex: initial;
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$table}__thead--m-nested-column-header__tr--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}__thead--m-nested-column-header__tr--PaddingBlockEnd: var(--pf-t--global--spacer--md);
@@ -302,7 +302,6 @@
   }
 
   &.pf-m-sticky-header-base > .#{$table}__thead, 
-  &.pf-m-sticky-header-base > .#{$table}__thead .#{$table}__tr,
   &.pf-m-sticky-header-base > .#{$table}__thead .#{$table}__th {
     &::after {
       opacity: 0;
@@ -313,7 +312,6 @@
   }
 
   &.pf-m-sticky-header-stuck > .#{$table}__thead, 
-  &.pf-m-sticky-header-stuck > .#{$table}__thead .#{$table}__tr,
   &.pf-m-sticky-header-stuck > .#{$table}__thead .#{$table}__th {
     &::after {
       opacity: 1;
@@ -347,6 +345,7 @@
         pointer-events: none;
         content: '';
         background-color: var(--#{$table}--m-sticky-header--BackgroundColor);
+        border-block-end: var(--#{$table}--m-sticky-header--BorderBlockEndWidth) solid var(--#{$table}--m-sticky-header--BorderBlockEndColor);
       }
 
       .#{$table}__th:first-child::after {
@@ -357,15 +356,6 @@
       .#{$table}__th:last-child::after {
         border-start-end-radius: var(--#{$table}--m-sticky-header--BorderRadius);
         border-end-end-radius: var(--#{$table}--m-sticky-header--BorderRadius);
-      }
-
-      .#{$table}__tr:last-child::after {
-        position: absolute;
-        inset: 0;
-        z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
-        pointer-events: none;
-        content: '';
-        border-block-end: var(--#{$table}--m-sticky-header--BorderBlockEndWidth) solid var(--#{$table}--m-sticky-header--BorderBlockEndColor);
       }
 
       > :where(th, td) {
@@ -1308,14 +1298,13 @@
 
   // - Table nested column header button
   &.pf-m-nested-column-header {
+    --#{$table}--m-sticky-header--BorderBlockEndWidth: 0;
+
     position: relative;
 
-    &::after {
-      position: absolute;
-      inset: 0;
+    .#{$table}__tr:last-child:not(.pf-m-border-row) {
       z-index: var(--#{$table}__thead--m-nested-column-header--after--ZIndex);
       pointer-events: none;
-      content: '';
       border-block-end: var(--#{$table}__thead--m-nested-column-header--BorderBlockEndWidth) solid var(--#{$table}__thead--m-nested-column-header--BorderBlockEndColor);
     }
 
@@ -1379,7 +1368,8 @@
   }
 
   &.pf-m-border-row {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    height: var(--#{$table}--border-width--base);
+    background-color: var(--#{$table}--BorderColor);
   }
 }
 
