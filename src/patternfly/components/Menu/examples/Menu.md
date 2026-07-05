@@ -1666,6 +1666,10 @@ import './Menu.css'
 | `disabled` | `button.pf-v6-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
 | `role="menuitem"` | `.pf-v6-c-menu__item`, `.pf-v6-c-menu__list-item` (checkbox) | Assigns `.pf-v6-c-menu__item` as an option in a set of choices contained by a menu. |
 | `role="none"` | `.pf-v6-c-menu__list-item` | Removes semantic meaning from `.pf-v6-c-menu__list-item`. |
+| `role="listbox"` | `.pf-v6-c-menu__list` | When the menu is used as a select (single or multi-select), replaces `role="menu"` to declare `.pf-v6-c-menu__list` as a listbox. |
+| `role="option"` | `.pf-v6-c-menu__item` | When the menu is used as a select, replaces `role="menuitem"` to assign `.pf-v6-c-menu__item` as a selectable option in the listbox. |
+| `aria-selected="true"` or `"false"` | `.pf-v6-c-menu__item` (`role="option"`) | **Required** on every option in a select listbox. Indicates whether that option is currently selected; must never be omitted, even for unselected options. |
+| `aria-multiselectable="true"` | `.pf-v6-c-menu__list` (`role="listbox"`) | Indicates that more than one option in the listbox can be selected at a time. Only applies to multi-select. |
 | `aria-disabled="true"` | `.pf-v6-c-menu__item` | Indicates to assistive technologies that the menu item is disabled, but still allows it to be focusable via keyboard. Additional click prevention may be required. |
 | `tabindex="-1"` | `a.pf-v6-c-menu__item` | When the menu item uses a link element and has `aria-disabled="true"` passed in, removes it from keyboard focus. This is similar to passing `disabled` to a menu item that uses a button element. |
 | `aria-hidden="true"` | `.pf-v6-c-menu__item-icon`, `.pf-v6-c-menu__item-action-icon`, `.pf-v6-c-menu__item-external-icon`, `.pf-v6-c-menu__item-toggle-icon`, `.pf-v6-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
