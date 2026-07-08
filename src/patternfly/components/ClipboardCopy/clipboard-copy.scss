@@ -108,7 +108,7 @@
 }
 
 .#{$clipboard-copy}__text {
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   white-space: normal;
 
   &.pf-m-code {

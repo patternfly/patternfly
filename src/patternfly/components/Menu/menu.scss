@@ -627,7 +627,7 @@
 .#{$menu}__item-description {
   font-size: var(--#{$menu}__item-description--FontSize);
   color: var(--#{$menu}__item-description--Color);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 // - Menu check
