@@ -83,7 +83,7 @@
   font-weight: var(--#{$breadcrumb}__link--FontWeight);
   line-height: inherit;
   color: var(--#{$breadcrumb}__link--Color);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   text-decoration-line: var(--#{$breadcrumb}__link--TextDecorationLine);
   text-decoration-style: var(--#{$breadcrumb}__link--TextDecorationStyle);
   text-decoration-color: var(--#{$breadcrumb}__link--TextDecorationColor);

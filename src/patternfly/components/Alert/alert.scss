@@ -205,7 +205,7 @@
   grid-area: title;
   font-weight: var(--#{$alert}__title--FontWeight);
   color: var(--#{$alert}__title--Color);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   &.pf-m-truncate {
     @include pf-v6-line-clamp("var(--#{$alert}__title--max-lines)");
@@ -215,7 +215,7 @@
 .#{$alert}__description {
   grid-area: description;
   padding-block-start: var(--#{$alert}__description--PaddingBlockStart);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   + .#{$alert}__action-group {
     --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart);

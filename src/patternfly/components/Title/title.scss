@@ -71,7 +71,7 @@
 
 .#{$title} {
   font-family: var(--#{$title}--FontFamily);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   &.pf-m-4xl {
     font-size: var(--#{$title}--m-4xl--FontSize);

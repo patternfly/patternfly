@@ -242,7 +242,7 @@
 
 .#{$notification-drawer}__list-item-header-title {
   font-weight: var(--#{$notification-drawer}__list-item-header-title--FontWeight);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   &.pf-m-truncate {
     @include pf-v6-line-clamp("var(--#{$notification-drawer}__list-item-header-title--max-lines)");
@@ -263,7 +263,7 @@
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   margin-block-end: var(--#{$notification-drawer}__list-item-description--MarginBlockEnd);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .#{$notification-drawer}__list-item-timestamp {
@@ -307,7 +307,7 @@
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginInlineEnd);
   font-size: var(--#{$notification-drawer}__group-toggle-title--FontSize);
   text-align: start;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .#{$notification-drawer}__group-toggle-count {

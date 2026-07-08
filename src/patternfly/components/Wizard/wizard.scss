@@ -325,7 +325,7 @@
   align-items: baseline;
   margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBlockEnd);
   text-align: start;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   &:not(:last-child) {
     margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginInlineEnd);
@@ -478,7 +478,7 @@
   padding-inline: 0;
   color: var(--#{$wizard}__nav-link--Color);
   text-align: start; // needed for when the item is a button
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   text-decoration-line: var(--#{$wizard}__nav-link--TextDecoration);
   counter-increment: wizard-nav-count;
   background-color: transparent;
@@ -614,7 +614,7 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .#{$wizard}__main-body {
