@@ -1304,7 +1304,6 @@
 
     .#{$table}__tr:last-child:not(.pf-m-border-row) {
       z-index: var(--#{$table}__thead--m-nested-column-header--after--ZIndex);
-      pointer-events: none;
       border-block-end: var(--#{$table}__thead--m-nested-column-header--BorderBlockEndWidth) solid var(--#{$table}__thead--m-nested-column-header--BorderBlockEndColor);
     }
 
