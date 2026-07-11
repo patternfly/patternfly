@@ -19,7 +19,7 @@ section: components
         Newest notification
       {{/alert-title}}
       {{#> alert-action}}
-        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close success alert: Newest notification"}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close success alert: Newest notification"}}
       {{/alert-action}}
       {{#> alert-description}}
         This is a description of the notification content.
@@ -35,7 +35,7 @@ section: components
         Second newest notification
       {{/alert-title}}
       {{#> alert-action}}
-        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close warning alert: second newest notification"}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close warning alert: second newest notification"}}
       {{/alert-action}}
       {{#> alert-description}}
         This is a description of the notification content.
@@ -51,7 +51,7 @@ section: components
         Last notification
       {{/alert-title}}
       {{#> alert-action}}
-        {{> button button--IsPlain=true button--IsIcon=true button--icon="times" button--aria-label="Close danger alert: Last notification"}}
+        {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close danger alert: Last notification"}}
       {{/alert-action}}
       {{#> alert-description}}
         This is a description of the notification content.

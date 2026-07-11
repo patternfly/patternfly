@@ -30,3 +30,4 @@ backstop_data/html_report*
 backstop_data/reports
 .history
 chrome
+.claude/*.local.*

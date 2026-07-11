@@ -12,7 +12,7 @@
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu-toggle}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
   --#{$menu-toggle}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);

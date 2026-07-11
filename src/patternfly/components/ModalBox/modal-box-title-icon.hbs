@@ -3,16 +3,16 @@
     {{{modal-box-title-icon--attribute}}}
   {{/if}}>
   {{#if modal-box--IsCustomAlert}}
-    <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-notification-fill"}}
   {{else if modal-box--IsInfoAlert}}
-    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-information-fill"}}
   {{else if modal-box--IsSuccessAlert}}
-    <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-check-circle-fill"}}
   {{else if modal-box--IsWarningAlert}}
-    <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-warning-fill"}}
   {{else if modal-box--IsDangerAlert}}
-    <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-error-fill"}}
   {{else}}
-    <i class="fas fa-fw fa-{{modal-box-title-icon--type}}" aria-hidden="true"></i>
+    {{pfIcon modal-box-title-icon--type}}
   {{/if}}
 </span>

@@ -180,14 +180,14 @@ cssPrefix: pf-v6-c-slider
   slider--attribute='style="--pf-v6-c-slider--value: 50%;"'
   }}
   {{#> slider-actions}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="minus fa-fw" button--attribute='aria-label="Minus"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="minus" button--attribute='aria-label="Minus"'}}
   {{/slider-actions}}
   {{#> slider-main}}
     {{> slider-rail}}
     {{> slider-thumb}}
   {{/slider-main}}
   {{#> slider-actions}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="plus fa-fw" button--attribute='aria-label="Plus"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="plus" button--attribute='aria-label="Plus"'}}
   {{/slider-actions}}
 {{/slider}}
 
@@ -215,7 +215,7 @@ cssPrefix: pf-v6-c-slider
     {{/slider-value}}
   {{/slider-main}}
   {{#> slider-actions}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="lock fa-fw" button--attribute='aria-label="Locked"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="lock" button--attribute='aria-label="Locked"'}}
   {{/slider-actions}}
 {{/slider}}
 
@@ -242,7 +242,7 @@ cssPrefix: pf-v6-c-slider
     {{/slider-value}}
   {{/slider-main}}
   {{#> slider-actions}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="lock-open fa-fw" button--attribute='aria-label="Lock"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="lock-open" button--attribute='aria-label="Lock"'}}
   {{/slider-actions}}
 {{/slider}}
 ```

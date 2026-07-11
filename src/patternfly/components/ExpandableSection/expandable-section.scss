@@ -11,8 +11,8 @@
   --#{$expandable-section}__toggle-icon--Transition: transform var(--#{$expandable-section}__toggle-icon--TransitionDuration) var(--#{$expandable-section}__toggle-icon--TransitionTimingFunction); // TODO remove in breaking change along with shorthand property
   --#{$expandable-section}__toggle-icon--Rotate: 0;
   --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: 0;
-  --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
+  --#{$expandable-section}--m-expanded__toggle-icon--Rotate: -180deg;
+  --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate: 180deg;
   --#{$expandable-section}__content--TransitionDuration--collapse--slide: 0s;
   --#{$expandable-section}__content--TransitionDuration--collapse--fade: var(--pf-t--global--motion--duration--fade--short);
   --#{$expandable-section}__content--TransitionDuration--expand--slide: 0s;

@@ -1,0 +1,48 @@
+{{#> compass-header}}
+  {{#> compass-logo}}
+    {{> compass--icons compass--icons--redhat=true}}
+  {{/compass-logo}}
+  {{#> compass-nav}}
+    {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
+      {{#> compass-nav-content}}
+        {{#> compass-nav-home}}
+          {{#> button button--IsPlain=true button--aria-label="Home" button--IsCircle=true button--IsIcon=true}}
+            {{pfIcon "rh-ui-home"}}
+          {{/button}}
+        {{/compass-nav-home}}
+        {{#> compass-nav-main}}
+          {{#> tabs tabs--id="primary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass primary" tabs-link--isLink="true"}}
+            {{> __tabs-list}}
+          {{/tabs}}
+        {{/compass-nav-main}}
+        {{#> compass-nav-search}}
+          {{#> button button--IsPlain=true button--aria-label="Search" button--IsCircle=true button--IsIcon=true}}
+            {{pfIcon "rh-ui-search"}}
+          {{/button}}
+        {{/compass-nav-search}}
+      {{/compass-nav-content}}
+    {{/compass-panel}}
+    {{#> compass-panel compass-panel--HasNoPadding=false compass-panel--IsPill=true}}
+      {{#> compass-nav-content}}
+        {{#> compass-nav-main}}
+          {{#> tabs tabs--id="secondary-nav" tabs--type="nav" tabs--IsNav=true tabs--aria-label="Compass secondary" tabs-link--isLink="true" tabs--modifier="pf-m-subtab"}}
+            {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
+          {{/tabs}}
+        {{/compass-nav-main}}
+      {{/compass-nav-content}}
+    {{/compass-panel}}
+  {{/compass-nav}}
+  {{#> compass-profile}}
+    {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsText=true menu-toggle--IsCircle=true}}
+      {{#> menu-toggle-icon}}
+        {{> avatar avatar--modifier="pf-m-md"}}
+      {{/menu-toggle-icon}}
+      {{#> menu-toggle-text}}
+        Ned Username
+      {{/menu-toggle-text}}
+      {{#> menu-toggle-controls}}
+        {{> menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
+    {{/menu-toggle}}
+  {{/compass-profile}}
+{{/compass-header}}

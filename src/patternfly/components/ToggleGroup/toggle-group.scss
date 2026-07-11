@@ -16,7 +16,7 @@
   --#{$toggle-group}__button--hover--before--BorderColor: var(--pf-t--global--border--color--default);
   --#{$toggle-group}__button--hover--after--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$toggle-group}__button--before--BorderWidth: var(--pf-t--global--border--width--control--default);
-  --#{$toggle-group}__button--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$toggle-group}__button--before--BorderColor: var(--pf-t--global--border--color--control--default);
 
   // item
   --#{$toggle-group}__item--item--MarginInlineStart: calc(-1 * var(--pf-t--global--border--width--control--default));

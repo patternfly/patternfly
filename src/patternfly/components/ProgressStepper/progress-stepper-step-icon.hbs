@@ -5,7 +5,7 @@
     {{/if}}>
 
     {{#if progress-stepper-step--IsInfo}}
-      <i class="fas fa-info-circle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-information-fill"}}
     {{else if progress-stepper-step--IsInProgress}}
       <i class="pf-v6-pficon pf-v6-pficon-resources-full" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsInProgressAlt}}
@@ -13,11 +13,11 @@
     {{else if progress-stepper-step--IsInProgressAnimate}}
       {{#> spinner spinner--modifier="pf-m-xs"}}Loading...{{/spinner}}
     {{else if progress-stepper-step--IsComplete}}
-      <i class="fas fa-check-circle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-check-circle-fill"}}
     {{else if progress-stepper-step--IsFailure}}
-      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-error-fill"}}
     {{else if progress-stepper-step--IsIssue}}
-      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-warning-fill"}}
     {{else if progress-stepper-step--IsPending}}
 
     {{else if progress-stepper-step--IsPendingAlt}}

@@ -7,10 +7,10 @@
   --#{$form-control}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$form-control}--Resize: none;
   --#{$form-control}--OutlineOffset: -6px;
-  --#{$form-control}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$form-control}--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
   --#{$form-control}--before--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--before--BorderStyle: solid;
-  --#{$form-control}--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$form-control}--before--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$form-control}--before--BorderRadius: var(--#{$form-control}--BorderRadius);
   --#{$form-control}--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$form-control}--after--BorderStyle: solid;

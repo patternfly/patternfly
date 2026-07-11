@@ -5,7 +5,7 @@
   --#{$clipboard-copy}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$clipboard-copy}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$clipboard-copy}__toggle-icon--Transition: transform var(--#{$clipboard-copy}__toggle-icon--TransitionDuration) var(--#{$clipboard-copy}__toggle-icon--TransitionTimingFunction); // TODO Remove in breaking change along with shorthand property
-  --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: -180deg;
 
   // Clipboard copy expanded content
   --#{$clipboard-copy}__expandable-content--MarginBlockStart: var(--pf-t--global--spacer--xs);
@@ -18,8 +18,8 @@
   --#{$clipboard-copy}__expandable-content--BorderInlineEndWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderBlockEndWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderInlineStartWidth: var(--pf-t--global--border--width--control--default);
-  --#{$clipboard-copy}__expandable-content--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$clipboard-copy}__expandable-content--BorderColor: var(--pf-t--global--border--color--control--default);
+  --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
 
   // Group

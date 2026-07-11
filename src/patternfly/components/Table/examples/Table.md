@@ -136,6 +136,7 @@ import './Table.css'
 ## Responsive table behavior
 ### Responsive layout modifier usage
 These classes can be used to ensure that the table changes between the tabular and grid-based layout at an appropriate screen width.
+**Note:** If a wrapping element creates an `inline-size` or `size` container with the container name `pf-v6-contain-table`, the breakpoints will apply to the container's width.
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |

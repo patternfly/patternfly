@@ -63,11 +63,11 @@ import './Button.css'
 ```hbs
 <strong>Plain</strong>
 <br>
-{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--IsIcon=true button--icon="times"}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close"}}
 <br><br>
 <strong>Plain no padding</strong>
 <br>
-{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--IsIcon=true button--icon="times"}}
+{{> button button--aria-label="Remove" button--IsSpan=true button--IsPlain=true button--HasNoPadding=true button--IsIcon=true button--icon="rh-microns-close"}}
 <br><br>
 <strong>Inline link</strong>
 <br>
@@ -115,11 +115,11 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
     Call to action
   {{/button}}
 
-  {{#> button button--IsLink=true button--IsDisplayLg=true button--icon="arrow-right" button-icon--IsEnd=true}}
+  {{#> button button--IsLink=true button--IsDisplayLg=true button--icon="rh-ui-arrow-right" button-icon--IsEnd=true}}
     Call to action
   {{/button}}
 
-  {{#> button button--IsLink=true button--IsInline=true button--IsDisplayLg=true button--icon="arrow-right" button-icon--IsEnd=true}}
+  {{#> button button--IsLink=true button--IsInline=true button--IsDisplayLg=true button--icon="rh-ui-arrow-right" button-icon--IsEnd=true}}
     Call to action
   {{/button}}
 {{/inline}}
@@ -148,9 +148,9 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
   Secondary loading
 {{/button}}
 <br/>
-{{> button button--IsPlain=true button--aria-label="Upload" button--IsIcon=true button--icon="upload"}}
+{{> button button--IsPlain=true button--aria-label="Upload" button--IsIcon=true button--icon="rh-ui-upload"}}
 
-{{> button button--IsPlain=true button--IsIcon=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading..."}}
+{{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-upload" button--IsInProgress=true button--progress-text="Uploading..."}}
 <br/>
 {{#> button button--IsLink=true button--IsInline=true button--IsProgress=true}}
   Inline loader
@@ -164,25 +164,25 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 ### Circle buttons
 
 ```hbs isBeta
-{{> button button--IsPrimary=true button--aria-label="Add primary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+{{> button button--IsPrimary=true button--aria-label="Add primary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsSecondary=true button--aria-label="Add secondary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+{{> button button--IsSecondary=true button--aria-label="Add secondary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsTertiary=true button--aria-label="Add tertiary circle variant" button--IsCircle=true button--icon="plus-circle"}}
+{{> button button--IsTertiary=true button--aria-label="Add tertiary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsDanger=true button--aria-label="Add danger circle variant" button--IsCircle=true button--icon="plus-circle"}}
+{{> button button--IsDanger=true button--aria-label="Add danger circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsWarning=true button--aria-label="Add warning circle variant" button--IsCircle=true button--icon="plus-circle"}}
+{{> button button--IsWarning=true button--aria-label="Add warning circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="plus-circle"}}
+{{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="times"}}
+{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="rh-microns-close"}}
 
-{{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="copy"}}
+{{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="rh-ui-copy"}}
 
-{{> button button--IsCircle=true button--IsPlain=true button--aria-label="Upload circle variant" button--IsIcon=true button--icon="upload"}}
+{{> button button--IsCircle=true button--IsPlain=true button--aria-label="Upload circle variant" button--IsIcon=true button--icon="rh-ui-upload"}}
 
-{{> button button--IsCircle=true button--IsPlain=true button--IsIcon=true button--icon="upload" button--IsInProgress=true button--progress-text="Uploading circle variant..."}}
+{{> button button--IsCircle=true button--IsPlain=true button--IsIcon=true button--icon="rh-ui-upload" button--IsInProgress=true button--progress-text="Uploading circle variant..."}}
 ```
 
 ### Counts
@@ -211,18 +211,18 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 ### Plain with no padding
 ```hbs
-For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--IsIcon=true button--icon-template="icon-help"}}.
+For when a plain/icon button is placed inline with text {{> button button--IsPlain=true button--HasNoPadding=true button--aria-label="More info" button--IsIcon=true button--icon="rh-ui-question-mark-circle"}}.
 ```
 
 ### Stateful
 ```hbs
 <strong>Read</strong>
 <br>
-{{#> button button--IsStateful=true button--IsRead=true button--icon="bell"}}
+{{#> button button--IsStateful=true button--IsRead=true button--icon="rh-ui-notification-fill"}}
   10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 
-{{#> button button--IsStateful=true button--IsRead=true button--IsClicked=true button--icon="bell"}}
+{{#> button button--IsStateful=true button--IsRead=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
   10 {{#> screen-reader}}items{{/screen-reader}}
 {{/button}}
 
@@ -230,11 +230,11 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 
 <strong>Unread</strong>
 <br>
-{{#> button button--IsStateful=true button--IsUnread=true button--icon="bell"}}
+{{#> button button--IsStateful=true button--IsUnread=true button--icon="rh-ui-notification-fill"}}
   10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
 
-{{#> button button--IsStateful=true button--IsUnread=true button--IsClicked=true button--icon="bell"}}
+{{#> button button--IsStateful=true button--IsUnread=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
   10 {{#> screen-reader}}unread items{{/screen-reader}}
 {{/button}}
 
@@ -242,11 +242,11 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 
 <strong>Attention</strong>
 <br>
-{{#> button button--IsStateful=true button--IsAttention=true button--icon="bell"}}
+{{#> button button--IsStateful=true button--IsAttention=true button--icon="rh-ui-attention-bell-fill"}}
   10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="bell"}}
+{{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
   10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
 {{/button}}
 ```
