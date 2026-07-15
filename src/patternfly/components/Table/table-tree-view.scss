@@ -37,6 +37,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
 // - Table tree view
 .#{$table}.pf-m-tree-view {
+  --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 90deg;
+
   > tbody > tr {
     --#{$table}--m-tree-view__toggle--InsetInlineStart: var(--#{$table}__tree-view-main--PaddingInlineStart);
 
