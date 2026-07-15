@@ -96,6 +96,21 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--TransitionTimingFunction--background-color: var(--pf-t--global--motion--timing-function--default);
 
   // Subtab link
+  // This calc is __item--padding + __link--padding - __subtab__link--padding + (font-size difference) * (line-height / 2)
+  --#{$tabs}--m-subtab__item--PaddingBlockStart: calc(
+    var(--pf-t--global--spacer--sm)
+    + var(--pf-t--global--spacer--control--vertical--plain)
+    - var(--#{$tabs}--m-subtab__link--PaddingBlockStart)
+    + (var(--pf-t--global--font--size--sm) - var(--pf-t--global--font--size--xs))
+    * (var(--pf-t--global--font--line-height--body) / 2)
+  );
+  --#{$tabs}--m-subtab__item--PaddingBlockEnd: calc(
+    var(--pf-t--global--spacer--sm)
+    + var(--pf-t--global--spacer--control--vertical--plain)
+    - var(--#{$tabs}--m-subtab__link--PaddingBlockStart)
+    + (var(--pf-t--global--font--size--sm) - var(--pf-t--global--font--size--xs))
+    * (var(--pf-t--global--font--line-height--body) / 2)
+  );
   --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
   --#{$tabs}--m-subtab__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
   --#{$tabs}--m-subtab__link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
@@ -517,6 +532,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   &.pf-m-subtab {
+    --#{$tabs}__item--PaddingBlockStart: var(--#{$tabs}--m-subtab__item--PaddingBlockStart);
+    --#{$tabs}__item--PaddingBlockEnd: var(--#{$tabs}--m-subtab__item--PaddingBlockEnd);
     --#{$tabs}__link--FontSize: var(--#{$tabs}--m-subtab__link--FontSize);
     --#{$tabs}__link--PaddingBlockStart: var(--#{$tabs}--m-subtab__link--PaddingBlockStart);
     --#{$tabs}__link--PaddingInlineStart: var(--#{$tabs}--m-subtab__link--PaddingInlineStart);
