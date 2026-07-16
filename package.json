@@ -72,7 +72,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^20.1.0",
     "@patternfly/documentation-framework": "6.49.0",
-    "@patternfly/patternfly-a11y": "5.1.0",
+    "@patternfly/patternfly-a11y": "5.2.1",
     "@patternfly/react-code-editor": "6.6.0",
     "@patternfly/react-core": "6.6.0",
     "@patternfly/react-icons": "6.6.0",
