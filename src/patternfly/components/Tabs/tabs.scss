@@ -71,9 +71,9 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$tabs}__link--disabled--BorderColor: transparent;
   --#{$tabs}__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
-  --#{$tabs}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__link--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$tabs}__link--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
-  --#{$tabs}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$tabs}__link--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$tabs}__link--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$tabs}__link--disabled--BackgroundColor: transparent;
