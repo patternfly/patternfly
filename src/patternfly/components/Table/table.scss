@@ -79,8 +79,8 @@
   --#{$table}--cell--hidden-visible--Display: table-cell;
 
   // * Table toggle
-  --#{$table}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
-  --#{$table}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$table}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 0;
@@ -117,8 +117,8 @@
   --#{$table}__tr--m-ghost-row--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // * Table action
-  --#{$table}__action--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
-  --#{$table}__action--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$table}__action--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}__action--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$table}__action--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
 
