@@ -39,7 +39,7 @@
 
   // Header main
   --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
-  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
 
   // Title
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);

@@ -24,15 +24,15 @@
   --#{$card}__footer--Color: var(--pf-t--global--text--color--subtle);
   --#{$card}__actions--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$card}__actions--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);
-  --#{$card}__actions--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$card}__actions--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__actions--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$card}__actions--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$card}__header--m-wrap--RowGap: var(--pf-t--global--spacer--sm);
   --#{$card}__header--m-wrap--ColumnGap: var(--pf-t--global--spacer--md);
 
   // Expandable
-  --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__header-toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$card}__header-toggle--MarginInlineEnd: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$card}__header-toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$card}__header-toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$card}__header-toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$card}__header-toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);

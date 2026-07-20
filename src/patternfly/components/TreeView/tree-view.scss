@@ -4,16 +4,16 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
 @include pf-root($tree-view) {
   // Node base
-  --#{$tree-view}__node--indent--base: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$tree-view}__node-toggle-icon--MinWidth)); // based off of the expected width of the toggle button
+  --#{$tree-view}__node--indent--base: calc(var(--#{$tree-view}__node-toggle--PaddingInlineStart) + var(--#{$tree-view}__node-toggle--PaddingInlineEnd) + var(--#{$tree-view}__node-toggle-icon--MinWidth)); // based off of the expected width of the toggle button
   --#{$tree-view}__node--nested-indent--base: calc(var(--#{$tree-view}__node--indent--base) - var(--pf-t--global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // Content
   --#{$tree-view}__content--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Node
-  --#{$tree-view}__node--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$tree-view}__node--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$tree-view}__node--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$tree-view}__node--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
+  --#{$tree-view}__node--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$tree-view}__node--PaddingInlineStart: var(--#{$tree-view}__node--indent--base);
   --#{$tree-view}__node--Color: var(--pf-t--global--text--color--subtle);
   --#{$tree-view}__node--BackgroundColor: transparent;
@@ -66,9 +66,9 @@ $pf-v6-c-tree-view--MaxNesting: 10 !default;
 
   // Toggle icon
   --#{$tree-view}__node-toggle-icon--MinWidth: var(--pf-t--global--icon--size--font--body--default);
-  --#{$tree-view}__node-toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node-toggle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$tree-view}__node-toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$tree-view}__node-toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$tree-view}__node-toggle--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$tree-view}__node-toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$tree-view}__node-toggle--MarginBlockStart: calc(var(--#{$tree-view}__node-toggle--PaddingBlockStart) * -1);
   --#{$tree-view}__node-toggle--MarginBlockEnd: calc(var(--#{$tree-view}__node-toggle--PaddingBlockStart) * -1);

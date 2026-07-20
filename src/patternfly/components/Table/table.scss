@@ -89,8 +89,8 @@
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: -180deg;
 
   // * Table button
-  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
