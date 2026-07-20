@@ -98,7 +98,7 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // Subtab link
   --#{$tabs}--m-subtab__link--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
   --#{$tabs}--m-subtab__link--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
-  --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
+  --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$tabs}--m-subtab__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
   --#{$tabs}--m-subtab__link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$tabs}--m-subtab__link--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
@@ -521,14 +521,14 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   &.pf-m-subtab {
     --#{$tabs}__link--FontSize: var(--#{$tabs}--m-subtab__link--FontSize);
     --#{$tabs}__link--PaddingBlockStart: var(--#{$tabs}--m-subtab__link--PaddingBlockStart);
-    --#{$tabs}__link--PaddingInlineStart: var(--#{$tabs}--m-subtab__link--PaddingInlineStart);
     --#{$tabs}__link--PaddingBlockEnd: var(--#{$tabs}--m-subtab__link--PaddingBlockEnd);
+    --#{$tabs}__link--PaddingInlineStart: var(--#{$tabs}--m-subtab__link--PaddingInlineStart);
     --#{$tabs}__link--PaddingInlineEnd: var(--#{$tabs}--m-subtab__link--PaddingInlineEnd);
     --#{$tabs}__item-action--c-button--FontSize: var(--#{$tabs}--m-subtab__item-action--c-button--FontSize);
     --#{$tabs}__add--c-button--FontSize: var(--#{$tabs}--m-subtab__add--c-button--FontSize);
 
     .#{$tabs}__link {
-      margin-block-start: var(--#{$tabs}--m-subtab__link--MarginBlock);
+      margin-block-start: var(--#{$tabs}--m-subtab__link--MarginBlockStart);
       margin-block-end: var(--#{$tabs}--m-subtab__link--MarginBlockEnd);
     }
   }

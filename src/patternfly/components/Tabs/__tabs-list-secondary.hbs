@@ -10,7 +10,7 @@ __tabs-item--NoText: bool
 ------------------------------------
 --}}
 
-{{#if __tabs-list--IsScrollable}}
+{{#if __tabs-list-secondary--IsScrollable}}
   {{#unless __tabs-list--NoScrollButtons}}
     {{#if __tabs-list--DisabledFirstScrollButton}}
       {{> tabs-scroll-button tabs-scroll-button--IsLeft="true" tabs-scroll-button--IsDisabled="true"}}
@@ -101,7 +101,7 @@ __tabs-item--NoText: bool
   {{/unless}}
 {{/tabs-list}}
 
-{{#if __tabs-list--IsScrollable}}
+{{#if __tabs-list-secondary--IsScrollable}}
   {{#unless __tabs-list--NoScrollButtons}}
     {{#if __tabs-list--DisabledLastScrollButton}}
       {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true"}}
