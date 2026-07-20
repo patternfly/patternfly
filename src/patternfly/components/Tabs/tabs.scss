@@ -96,7 +96,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--TransitionTimingFunction--background-color: var(--pf-t--global--motion--timing-function--default);
 
   // Subtab link
-  --#{$tabs}--m-subtab__link--MarginBlock: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
+  --#{$tabs}--m-subtab__link--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
+  --#{$tabs}--m-subtab__link--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
   --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
   --#{$tabs}--m-subtab__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
   --#{$tabs}--m-subtab__link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
@@ -527,7 +528,8 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__add--c-button--FontSize: var(--#{$tabs}--m-subtab__add--c-button--FontSize);
 
     .#{$tabs}__link {
-      margin-block: var(--#{$tabs}--m-subtab__link--MarginBlock);
+      margin-block-start: var(--#{$tabs}--m-subtab__link--MarginBlock);
+      margin-block-end: var(--#{$tabs}--m-subtab__link--MarginBlockEnd);
     }
   }
 
