@@ -14,20 +14,24 @@ wrapperTag: div
   {{#> page-main-section}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer-panel--IsOpen="true"}}
+
+      {{#> drawer-section}}
+        {{> toolbar-template
+            toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--HasFilterGroup=true
+            toolbar-template--HasOverflowMenu=true
+            toolbar-template--HasSearchFilter=true
+            toolbar-template--HasSortButton=true
+            toolbar-template--HasToggleGroup=true
+          }}
+        {{> divider divider--type="div"}}
+      {{/drawer-section}}
 
       {{#> drawer-main}}
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> toolbar-template
-              toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--HasFilterGroup=true
-              toolbar-template--HasOverflowMenu=true
-              toolbar-template--HasSearchFilter=true
-              toolbar-template--HasSortButton=true
-              toolbar-template--HasToggleGroup=true
-            }}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -62,7 +66,7 @@ wrapperTag: div
   {{#> page-main-section}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline"}}
 
       {{#> drawer-main}}
 
@@ -106,7 +110,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer-panel--IsOpen="true"}}
 
       {{#> drawer-main}}
 
@@ -148,11 +152,12 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer-panel--IsOpen="true"}}
 
       {{#> drawer-section}}
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--modifier="pf-m-inset-lg"
             toolbar-template--HasBulkSelect=true
             toolbar-template--HasSearchFilter=true
             toolbar-template--HasSortButton=true
@@ -200,7 +205,7 @@ wrapperTag: div
     {{#> card}}
 
       <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
+      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
 
         {{#> drawer-main}}
           <!-- Content -->
@@ -238,7 +243,7 @@ wrapperTag: div
     {{#> card}}
 
       <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
+      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
         {{#> drawer-main}}
 
           <!-- Content -->
@@ -270,39 +275,47 @@ wrapperTag: div
 
 {{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
-  {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer-panel--IsOpen="true"}}
 
-    {{#> drawer-main}}
-
-      <!-- Content -->
-      {{#> drawer-content}}
+      {{#> drawer-section}}
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--modifier="pf-m-inset-lg"
+            toolbar-template--attribute='style="--pf-v6-c-toolbar--PaddingBlockStart: var(--pf-t--global--spacer--md)"'
             toolbar-template--HasMenu=true
             toolbar-template--HasOverflowMenu=true
             toolbar-template--HasOverflowMenuSecondButton=true
           }}
-        {{> data-list-simple-data-list}}
-      {{/drawer-content}}
+        {{> divider divider--type="div"}}
+      {{/drawer-section}}
 
-      <!-- Panel -->
-      {{#> drawer-panel drawer-panel--type="div" progress--modifier="pf-m-sm"}}
+      {{#> drawer-main}}
 
-        <!-- Panel header -->
-        {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Node 2" primary-detail-template-panel-header--sub-title='<a href="#">siemur/test-space</a>'}}
+        <!-- Content -->
+        {{#> drawer-content}}
+          {{> data-list-simple-data-list}}
+        {{/drawer-content}}
 
-        <!-- Tabs -->
-        {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-          {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
-        {{/drawer-body}}
+        <!-- Panel -->
+        {{#> drawer-panel drawer-panel--type="div" progress--modifier="pf-m-sm"}}
 
-        <!-- Tab content -->
-        {{#> drawer-body}}
-          {{> primary-detail-template-panel-tab-content}}
-        {{/drawer-body}}
-      {{/drawer-panel}}
-    {{/drawer-main}}
-  {{/primary-detail-template}}
+          <!-- Panel header -->
+          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Node 2" primary-detail-template-panel-header--sub-title='<a href="#">siemur/test-space</a>'}}
+
+          <!-- Tabs -->
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
+          {{/drawer-body}}
+
+          <!-- Tab content -->
+          {{#> drawer-body}}
+            {{> primary-detail-template-panel-tab-content}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/primary-detail-template}}
+  {{/page-main-section}}
 {{/inline}}
 ```
 
