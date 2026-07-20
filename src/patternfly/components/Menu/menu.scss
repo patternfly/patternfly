@@ -17,7 +17,7 @@
   --#{$menu}--BorderRadius: calc(var(--#{$menu}__item--BorderRadius) + var(--#{$menu}--PaddingBlockStart));
   --#{$menu}--OutlineOffset: calc(var(--pf-t--global--border--width--control--default) * -3);
   --#{$menu}--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$menu}--button--disabled--Color: var(--pf-t--global--text--color--disabled); // TODO: remove in breaking change
   --#{$menu}--icon--disabled--Color: var(--pf-t--global--icon--color--disabled);
   --#{$menu}--TransitionDuration: 0s;
   --#{$menu}--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
@@ -205,7 +205,7 @@
     --#{$menu}__item-toggle-icon--Color: var(--#{$menu}--icon--disabled--Color);
     --#{$menu}__item-external--Color: transparent;
     --#{$menu}__item-select-icon--Color: transparent;
-    --#{$menu}__item-description--Color: var(--#{$menu}--icon--disabled--Color);
+    --#{$menu}__item-description--Color: var(--#{$menu}__item--m-disabled--Color);
     --#{$menu}__list-item--BackgroundColor: transparent;
     --#{$menu}__list-item--hover--BackgroundColor: transparent;
     --#{$menu}__list-item--hover--BorderColor: transparent;
