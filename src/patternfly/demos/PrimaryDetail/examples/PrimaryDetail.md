@@ -205,7 +205,7 @@ wrapperTag: div
     {{#> card}}
 
       <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
+      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsInline="true" drawer-panel--IsOpen="true"}}
 
         {{#> drawer-main}}
           <!-- Content -->
