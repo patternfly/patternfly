@@ -201,33 +201,31 @@ wrapperTag: div
 
 {{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
-  {{#> page-main-section}}
-    {{#> card}}
+  {{#> page-main-section page-main-section--attribute='style="--pf-v6-c-page__main-section--PaddingBlockStart: 0; --pf-v6-c-page__main-section--PaddingBlockEnd: 0;"'}}
 
-      <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsInline="true" drawer-panel--IsOpen="true"}}
+    <!-- Drawer -->
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsInline="true" drawer-panel--IsOpen="true"}}
 
-        {{#> drawer-main}}
-          <!-- Content -->
-          {{#> drawer-content drawer-content--NoBody="true"}}
-            {{#> drawer-content-body drawer-content-body--modifier="pf-m-no-padding"}}
-              {{> primary-detail-template-simple-list}}
-            {{/drawer-content-body}}
-          {{/drawer-content}}
+      {{#> drawer-main}}
+        <!-- Content -->
+        {{#> drawer-content drawer-content--NoBody="true"}}
+          {{#> drawer-content-body drawer-content-body--modifier="pf-m-no-padding"}}
+            {{> primary-detail-template-simple-list}}
+          {{/drawer-content-body}}
+        {{/drawer-content}}
 
-          <!-- Panel -->
-          {{#> drawer-panel drawer-panel--type="div" drawer-panel--attribute=(concat 'id="' drawer--id '-panel" aria-label="Panel"') drawer-panel--modifier="pf-m-width-75-on-xl"}}
+        <!-- Panel -->
+        {{#> drawer-panel drawer-panel--type="div" drawer-panel--attribute=(concat 'id="' drawer--id '-panel" aria-label="Panel"') drawer-panel--modifier="pf-m-width-75-on-xl"}}
 
-            <!-- Panel header -->
-            {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements"}}
+          <!-- Panel header -->
+          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements"}}
 
-            {{#> drawer-body}}
-              {{> primary-detail-template-panel-body}}
-            {{/drawer-body}}
-          {{/drawer-panel}}
-        {{/drawer-main}}
-      {{/primary-detail-template}}
-    {{/card}}
+          {{#> drawer-body}}
+            {{> primary-detail-template-panel-body}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/primary-detail-template}}
   {{/page-main-section}}
 {{/inline}}
 ```
