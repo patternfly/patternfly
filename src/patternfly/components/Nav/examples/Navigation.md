@@ -579,6 +579,63 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Docked nav with expandable links
+```hbs isBeta
+{{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cubes" nav-link--aria-label="Cubes"}}
+        System panel
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsExpandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--attribute='id="docked-expandable-1"'}}
+        Policy
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-1"'}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            Current link
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Subnav link 2
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Subnav link 3
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsExpandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud" nav-link--aria-label="Cloud" nav-link--attribute='id="docked-expandable-2"'}}
+        Authentication
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-2"'}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Subnav link 1
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Subnav link 2
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-code" nav-link--aria-label="Code"}}
+        Network services
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ## Documentation
 
 ### Overview
