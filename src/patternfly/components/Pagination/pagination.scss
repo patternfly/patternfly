@@ -51,6 +51,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
   // bottom
   --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+  --#{$pagination}--m-bottom--BorderRadius: 0;
   --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--InsetBlockEnd: 0;
@@ -64,6 +65,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-static--PaddingBlockEnd: 0;
   --#{$pagination}--m-bottom--m-static--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$pagination}--m-bottom--m-static--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$pagination}--m-bottom--m-static--BorderRadius: 0;
   --#{$pagination}--m-bottom--m-static--BackgroundColor: transparent;
   --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: 0;
 
@@ -74,6 +76,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm);
     --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm);
     --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm);
+    --#{$pagination}--m-bottom--BorderRadius: var(--#{$pagination}--m-sticky--BorderRadius--glass);
   }
 
   // page menu
@@ -127,6 +130,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     padding-inline-start: var(--#{$pagination}--m-bottom--m-sticky--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--m-sticky--PaddingInlineEnd);
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
+    border-radius: var(--#{$pagination}--m-bottom--BorderRadius);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
 
     .#{$pagination}__nav-control.pf-m-first,
@@ -149,6 +153,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       --#{$pagination}--m-bottom--MarginBlockStart: 0;
       --#{$pagination}--m-bottom--InsetBlockEnd: auto;
+      --#{$pagination}--m-bottom--BorderRadius: var(--#{$pagination}--m-bottom--m-static--BorderRadius);
 
       position: relative;
       justify-content: flex-end;
@@ -187,6 +192,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     padding-inline-start: var(--#{$pagination}--m-bottom--m-static--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--m-static--PaddingInlineEnd);
     border: 0;
+    border-radius: var(--#{$pagination}--m-bottom--m-static--BorderRadius);
     box-shadow: none;
   }
 
