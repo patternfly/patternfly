@@ -150,6 +150,9 @@
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$nav}--m-docked__link-expandable-icon--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
+  --#{$nav}--m-docked__link-expandable-icon--InsetInlineStart: 50%;
+  --#{$nav}--m-docked__link-expandable-icon--TransformX: -50%;
 }
 
 // - Nav display - default to grid
@@ -199,6 +202,18 @@
     --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
 
     width: 100%;
+
+    .#{$nav}__toggle {
+      display: none;
+    }
+
+    .#{$nav}__link-expandable-icon {
+      position: absolute;
+      inset-block-end: calc(var(--#{$nav}--m-docked__link-expandable-icon--PaddingBlockEnd) * -1);
+      inset-inline-start: var(--#{$nav}--m-docked__link-expandable-icon--InsetInlineStart);
+      display: initial;
+      transform: translateX(var(--#{$nav}--m-docked__link-expandable-icon--TransformX));
+    }
   
     @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
       width: fit-content;
@@ -212,7 +227,15 @@
     &.pf-m-text-expanded {
       width: 100%;
 
+      .#{$nav}__link-expandable-icon {
+        display: none;
+      }
+
       .#{$nav}__link-text {
+        display: revert;
+      }
+
+      .#{$nav}__toggle {
         display: revert;
       }
     }

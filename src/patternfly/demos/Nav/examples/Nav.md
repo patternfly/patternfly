@@ -74,3 +74,19 @@ section: components
       page-dock--IsTextExpanded=true
 }}
 ```
+### Docked nav with expandable link
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expandable-example"
+      masthead-template--HasDockedNav=true
+      masthead-template--HasExpandableDockedNav=true
+}}
+```
+
+### Docked nav with expandable link text expanded
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expandable-example"
+      masthead-template--HasDockedNav=true
+      page-dock--IsTextExpanded=true
+      masthead-template--HasExpandableDockedNav=true
+}}
+```

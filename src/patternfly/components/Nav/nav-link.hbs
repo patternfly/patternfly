@@ -5,6 +5,7 @@
     nav-link--current='pf-m-current'
     nav-link--IsCurrent='pf-m-current'
     nav-link--IsHover='pf-m-hover'
+    nav-link--IsExpandable='pf-m-hover'
     nav-link--modifier=nav--modifier
   }}"
   {{#ifAny nav-link--current nav-link--IsCurrent}}
@@ -29,6 +30,9 @@
   {{#if nav-link--icon}}
     {{> nav-link-icon}}
   {{/if}}
+  {{#ifAll nav--IsDocked nav-item--IsExpandable}}
+    {{> nav-link-expandable-icon}}
+  {{/ifAll}}
   {{#if nav-link--text}}
     {{> nav-link-text}}
   {{else if @partial-block}}
