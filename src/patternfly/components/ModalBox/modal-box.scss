@@ -75,8 +75,7 @@
   --#{$modal-box}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
-  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2);
+  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
 .#{$modal-box} {
@@ -247,9 +246,5 @@
   // Base margin left and right equal for buttons when wrapped
   > .#{$button}:not(:last-child) {
     margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginInlineEnd);
-
-    @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--sm--MarginInlineEnd);
-    }
   }
 }
