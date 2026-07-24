@@ -14,20 +14,24 @@ wrapperTag: div
   {{#> page-main-section}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer-panel--IsOpen="true"}}
+
+      {{#> drawer-section}}
+        {{> toolbar-template
+            toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--HasFilterGroup=true
+            toolbar-template--HasOverflowMenu=true
+            toolbar-template--HasSearchFilter=true
+            toolbar-template--HasSortButton=true
+            toolbar-template--HasToggleGroup=true
+          }}
+        {{> divider divider--type="div"}}
+      {{/drawer-section}}
 
       {{#> drawer-main}}
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> toolbar-template
-              toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--HasFilterGroup=true
-              toolbar-template--HasOverflowMenu=true
-              toolbar-template--HasSearchFilter=true
-              toolbar-template--HasSortButton=true
-              toolbar-template--HasToggleGroup=true
-            }}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -58,67 +62,27 @@ wrapperTag: div
 {{> page-template page-template--id="primary-detail-collapsed-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
 {{#* inline "page-template-section"}}
-  {{> divider divider--type="div"}}
   {{#> page-main-section}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer")}}
+
+      {{#> drawer-section}}
+        {{> toolbar-template
+            toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--HasFilterGroup=true
+            toolbar-template--HasOverflowMenu=true
+            toolbar-template--HasSearchFilter=true
+            toolbar-template--HasSortButton=true
+            toolbar-template--HasToggleGroup=true
+          }}
+        {{> divider divider--type="div"}}
+      {{/drawer-section}}
 
       {{#> drawer-main}}
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> toolbar-template
-              toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--HasFilterGroup=true
-              toolbar-template--HasOverflowMenu=true
-              toolbar-template--HasSearchFilter=true
-              toolbar-template--HasSortButton=true
-              toolbar-template--HasToggleGroup=true
-            }}
-          {{> data-list-simple-data-list}}
-        {{/drawer-content}}
-
-        <!-- Panel -->
-        {{#> drawer-panel progress--modifier="pf-m-sm"}}
-
-          <!-- Panel header -->
-          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements" primary-detail-template-panel-header--sub-title="PatternFly elements"}}
-
-          <!-- Tab content -->
-          {{#> drawer-body}}
-            {{> primary-detail-template-panel-body}}
-          {{/drawer-body}}
-        {{/drawer-panel}}
-
-      {{/drawer-main}}
-    {{/primary-detail-template}}
-  {{/page-main-section}}
-{{/inline}}
-```
-
-### Primary-detail content body padding
-```hbs isFullscreen
-{{> page-template page-template--id="primary-detail-content-body-padding-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
-
-{{#* inline "page-template-section"}}
-  {{> divider divider--type="div"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
-
-    <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
-
-      {{#> drawer-main}}
-
-        <!-- Content -->
-        {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
-          {{> toolbar-template
-              toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--HasFilterGroup=true
-              toolbar-template--HasOverflowMenu=true
-              toolbar-template--HasSortButton=true
-              toolbar-template--HasToggleGroup=true
-            }}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -148,11 +112,12 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer-panel--IsOpen="true"}}
 
       {{#> drawer-section}}
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--modifier="pf-m-inset-lg"
             toolbar-template--HasBulkSelect=true
             toolbar-template--HasSearchFilter=true
             toolbar-template--HasSortButton=true
@@ -190,119 +155,52 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Primary-detail card simple list expanded on mobile
-```hbs isFullscreen
-{{> page-template page-template--id="primary-detail-card-simple-list-on-mobile-example"}}
-
-{{#* inline "page-template-section"}}
-  {{> divider divider--type="div"}}
-  {{#> page-main-section}}
-    {{#> card}}
-
-      <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
-
-        {{#> drawer-main}}
-          <!-- Content -->
-          {{#> drawer-content drawer-content--NoBody="true"}}
-            {{#> drawer-content-body drawer-content-body--modifier="pf-m-no-padding"}}
-              {{> primary-detail-template-simple-list}}
-            {{/drawer-content-body}}
-          {{/drawer-content}}
-
-          <!-- Panel -->
-          {{#> drawer-panel drawer-panel--type="div" drawer-panel--attribute=(concat 'id="' drawer--id '-panel" aria-label="Panel"') drawer-panel--modifier="pf-m-width-75-on-xl"}}
-
-            <!-- Panel header -->
-            {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements"}}
-
-            {{#> drawer-body}}
-              {{> primary-detail-template-panel-body}}
-            {{/drawer-body}}
-          {{/drawer-panel}}
-        {{/drawer-main}}
-      {{/primary-detail-template}}
-    {{/card}}
-  {{/page-main-section}}
-{{/inline}}
-```
-
-### Primary-detail card data list expanded on mobile
-```hbs isFullscreen
-{{> page-template page-template--id="primary-detail-card-data-list-example"}}
-
-{{#* inline "page-template-section"}}
-  {{> divider divider--type="div"}}
-  {{#> page-main-section}}
-
-    {{#> card}}
-
-      <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
-        {{#> drawer-main}}
-
-          <!-- Content -->
-          {{#> drawer-content}}
-            {{> primary-detail-template-card-toolbar primary-detail-template-card-toolbar--id=(concat drawer--id '-toolbar')}}
-            {{> primary-detail-template-card-data-list primary-detail-template-card-data-list--id=(concat drawer--id '-simple-list')}}
-          {{/drawer-content}}
-
-          <!-- Panel -->
-          {{#> drawer-panel drawer-panel--type="div" drawer-panel--attribute=(concat 'id="' drawer--id '-panel" aria-label="Panel"') drawer-panel--modifier="pf-m-width-75-on-2xl"}}
-
-            <!-- Panel header -->
-            {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements"}}
-            {{#> drawer-body}}
-              {{> primary-detail-template-panel-body}}
-            {{/drawer-body}}
-          {{/drawer-panel}}
-        {{/drawer-main}}
-      {{/primary-detail-template}}
-    {{/card}}
-
-  {{/page-main-section}}
-{{/inline}}
-```
-
 ### Inline modifier
 ```hbs isFullscreen
-{{> page-template page-template--id="primary-detail-inline-modifier-example"}}
+{{> page-template page-template--id="primary-detail-inline-modifier-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
 {{#* inline "page-template-section"}}
-  {{> divider divider--type="div"}}
-  {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+  {{#> page-main-section}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline" drawer-panel--IsOpen="true"}}
 
-    {{#> drawer-main}}
-
-      <!-- Content -->
-      {{#> drawer-content}}
+      {{#> drawer-section}}
         {{> toolbar-template
             toolbar-template--id=(concat drawer--id '-toolbar')
-            toolbar-template--HasMenu=true
+            toolbar-template--HasFilterGroup=true
             toolbar-template--HasOverflowMenu=true
-            toolbar-template--HasOverflowMenuSecondButton=true
+            toolbar-template--HasSearchFilter=true
+            toolbar-template--HasSortButton=true
+            toolbar-template--HasToggleGroup=true
           }}
-        {{> data-list-simple-data-list}}
-      {{/drawer-content}}
+        {{> divider divider--type="div"}}
+      {{/drawer-section}}
 
-      <!-- Panel -->
-      {{#> drawer-panel drawer-panel--type="div" progress--modifier="pf-m-sm"}}
+      {{#> drawer-main}}
 
-        <!-- Panel header -->
-        {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Node 2" primary-detail-template-panel-header--sub-title='<a href="#">siemur/test-space</a>'}}
+        <!-- Content -->
+        {{#> drawer-content}}
+          {{> data-list-simple-data-list}}
+        {{/drawer-content}}
 
-        <!-- Tabs -->
-        {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-          {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
-        {{/drawer-body}}
+        <!-- Panel -->
+        {{#> drawer-panel drawer-panel--type="div" progress--modifier="pf-m-sm"}}
 
-        <!-- Tab content -->
-        {{#> drawer-body}}
-          {{> primary-detail-template-panel-tab-content}}
-        {{/drawer-body}}
-      {{/drawer-panel}}
-    {{/drawer-main}}
-  {{/primary-detail-template}}
+          <!-- Panel header -->
+          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Node 2" primary-detail-template-panel-header--sub-title='<a href="#">siemur/test-space</a>'}}
+
+          <!-- Tabs -->
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{> primary-detail-template-panel-tabs primary-detail-template-panel-tabs--aria-label="Node 2" primary-detail-template-panel-tabs--modifier="pf-m-box pf-m-fill"}}
+          {{/drawer-body}}
+
+          <!-- Tab content -->
+          {{#> drawer-body}}
+            {{> primary-detail-template-panel-tab-content}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/primary-detail-template}}
+  {{/page-main-section}}
 {{/inline}}
 ```
 
