@@ -248,7 +248,7 @@ cssPrefix: pf-v6-c-form
 {{/form}}
 ```
 
-### Action list
+### Action group
 ```hbs
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
@@ -257,12 +257,12 @@ cssPrefix: pf-v6-c-form
         {{#> action-list-group}}
           {{#> action-list-item}}
             {{#> button button--IsPrimary=true button--IsSubmit=true}}
-              Submit form
+              Submit
             {{/button}}
           {{/action-list-item}}
           {{#> action-list-item}}
-            {{#> button button--IsLink=true button--IsReset=true}}
-              Reset form
+            {{#> button button--IsLink=true}
+              Cancel
             {{/button}}
           {{/action-list-item}}
         {{/action-list-group}}
@@ -272,18 +272,20 @@ cssPrefix: pf-v6-c-form
 {{/form}}
 ```
 
-### Action group
+### Action group (deprecated)
 ```hbs isDeprecated
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
-    {{#> form-actions}}
-      {{#> button button--IsPrimary=true button--IsSubmit=true}}
-        Submit form
-      {{/button}}
-      {{#> button button--IsLink=true button--IsReset=true}}
-        Reset form
-      {{/button}}
-    {{/form-actions}}
+    {{#> form-group-control}}
+      {{#> form-actions}}
+        {{#> button button--IsPrimary=true button--IsSubmit=true}}
+          Submit
+        {{/button}}
+        {{#> button button--IsLink=true}
+          Cancel
+        {{/button}}
+      {{/form-actions}}
+    {{/form-group-control}}
   {{/form-group}}
 {{/form}}
 ```
