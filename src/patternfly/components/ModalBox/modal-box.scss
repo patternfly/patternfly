@@ -249,7 +249,7 @@
     margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginInlineEnd);
 
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--MarginInlineEnd); // remove in breaking change
+      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--sm--MarginInlineEnd); // remove in breaking change
     }
   }
 }
