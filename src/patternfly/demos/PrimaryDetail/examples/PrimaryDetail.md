@@ -104,53 +104,6 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Primary-detail content body padding
-```hbs isFullscreen
-{{> page-template page-template--id="primary-detail-content-body-padding-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
-
-{{#* inline "page-template-section"}}
-  {{#> page-main-section}}
-
-    <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer-panel--IsOpen="true"}}
-
-      {{#> drawer-section}}
-        {{> toolbar-template
-            toolbar-template--id=(concat drawer--id '-toolbar')
-            toolbar-template--HasFilterGroup=true
-            toolbar-template--HasOverflowMenu=true
-            toolbar-template--HasSearchFilter=true
-            toolbar-template--HasSortButton=true
-            toolbar-template--HasToggleGroup=true
-          }}
-        {{> divider divider--type="div"}}
-      {{/drawer-section}}
-
-      {{#> drawer-main}}
-
-        <!-- Content -->
-        {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
-          {{> data-list-simple-data-list}}
-        {{/drawer-content}}
-
-        <!-- Panel -->
-        {{#> drawer-panel progress--modifier="pf-m-sm"}}
-
-          <!-- Panel header -->
-          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements" primary-detail-template-panel-header--sub-title="PatternFly elements"}}
-
-          <!-- Tab content -->
-          {{#> drawer-body}}
-            {{> primary-detail-template-panel-body}}
-          {{/drawer-body}}
-        {{/drawer-panel}}
-
-      {{/drawer-main}}
-    {{/primary-detail-template}}
-  {{/page-main-section}}
-{{/inline}}
-```
-
 ### Primary-detail card view expanded
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-view-expanded-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
