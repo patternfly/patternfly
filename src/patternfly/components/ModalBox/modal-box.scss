@@ -76,7 +76,7 @@
 
   // Footer buttons
   --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
-  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--MarginInlineEnd);
+  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
 .#{$modal-box} {
