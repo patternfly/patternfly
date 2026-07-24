@@ -352,6 +352,7 @@ $pf-v6-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   border: 0;
 }
 
+// Deprecated: Use action-list instead.
 .#{$form}__actions {
   display: flex;
   flex-wrap: wrap;

@@ -91,14 +91,20 @@ subsection: forms
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
-      {{#> form-actions}}
-        {{#> button button--IsPrimary=true button--IsSubmit=true}}
-          Submit
-        {{/button}}
-        {{#> button button--IsLink=true}}
-          Cancel
-        {{/button}}
-      {{/form-actions}}
+      {{#> action-list}}
+        {{#> action-list-group}}
+          {{#> action-list-item}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+              Submit
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsLink=true}}
+              Cancel
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list-group}}
+      {{/action-list}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
@@ -157,14 +163,20 @@ subsection: forms
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
-      {{#> form-actions}}
-        {{#> button button--IsPrimary=true button--IsSubmit=true}}
-          Submit
-        {{/button}}
-        {{#> button button--IsLink=true}}
-          Cancel
-        {{/button}}
-      {{/form-actions}}
+      {{#> action-list}}
+        {{#> action-list-group}}
+          {{#> action-list-item}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+              Submit
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsLink=true}}
+              Cancel
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list-group}}
+      {{/action-list}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
@@ -287,14 +299,20 @@ subsection: forms
     {{/grid}}
     {{#> form-group form-group--modifier="pf-m-action"}}
       {{#> form-group-control}}
-        {{#> form-actions}}
-          {{#> button button--IsPrimary=true button--IsSubmit=true}}
-            Submit
-          {{/button}}
-          {{#> button button--IsLink=true}}
-            Cancel
-          {{/button}}
-        {{/form-actions}}
+        {{#> action-list}}
+          {{#> action-list-group}}
+            {{#> action-list-item}}
+              {{#> button button--IsPrimary=true button--IsSubmit=true}}
+                Submit
+              {{/button}}
+            {{/action-list-item}}
+            {{#> action-list-item}}
+              {{#> button button--IsLink=true}}
+                Cancel
+              {{/button}}
+            {{/action-list-item}}
+          {{/action-list-group}}
+        {{/action-list}}
       {{/form-group-control}}
     {{/form-group}}
   {{/grid}}
@@ -716,14 +734,24 @@ subsection: forms
     {{/form-field-group-header}}
   {{/form-field-group}}
 
-  {{!-- Form action buttons --}}
-  {{#> form-actions}}
-    {{#> button button--IsPrimary=true button--IsSubmit=true}}
-      Save
-    {{/button}}
-    {{#> button button--IsSecondary=true button--IsReset=true}}
-      Cancel
-    {{/button}}
-  {{/form-actions}}
+  {{!-- Form action list buttons --}}
+  {{#> form-group form-group--modifier="pf-m-action"}}
+    {{#> form-group-control}}
+      {{#> action-list}}
+        {{#> action-list-group}}
+          {{#> action-list-item}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+              Save
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsSecondary=true button--IsReset=true}}
+              Cancel
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list-group}}
+      {{/action-list}}
+    {{/form-group-control}}
+  {{/form-group}}
 {{/form}}
 ```

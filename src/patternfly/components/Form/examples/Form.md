@@ -248,8 +248,32 @@ cssPrefix: pf-v6-c-form
 {{/form}}
 ```
 
-### Action group
+### Action list
 ```hbs
+{{#> form}}
+  {{#> form-group form-group--modifier="pf-m-action"}}
+    {{#> form-group-control}}
+      {{#> action-list}}
+        {{#> action-list-group}}
+          {{#> action-list-item}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+              Submit form
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsLink=true button--IsReset=true}}
+              Reset form
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list-group}}
+      {{/action-list}}
+    {{/form-group-control}}
+  {{/form-group}}
+{{/form}}
+```
+
+### Action group
+```hbs isDeprecated
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-actions}}
@@ -611,7 +635,7 @@ To avoid the form label's required indicator or help tooltip icon from wrapping 
 | `.pf-v6-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
 | `.pf-v6-c-form__group-label-help` | `<span>` | Initiates field level help. |
 | `.pf-v6-c-form__group-control` | `<div>` |  Initiates a form group control section. |
-| `.pf-v6-c-form__actions` | `<div>` | Iniates a row of actions. |
+| `.pf-v6-c-form__actions` | `<div>` | Initiates a row of actions. **Deprecated:** Use [Action list](/components/action-list) instead. **Note:** `.pf-v6-c-form__actions` will be removed in a future release. |
 | `.pf-v6-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |
 | `.pf-v6-c-form__alert` | `<div>` | Initiates the form alert container for inline alerts. |
 | `.pf-v6-c-form__field-group` | `<div>` | Initiates a form field group. |

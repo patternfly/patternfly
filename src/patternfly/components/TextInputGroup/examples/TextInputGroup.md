@@ -304,14 +304,20 @@ The React implementation can be found in the [search input](/components/search-i
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
-          {{#> form-actions}}
-            {{#> button button--id="submit-advanced-search-expanded" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded search-input-group-advanced-search-expanded"}}
-              Submit
-            {{/button}}
-            {{#> button button--id="reset-advanced-search-expanded" button--IsLink=true button--IsReset=true button--aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"}}
-              Reset
-            {{/button}}
-          {{/form-actions}}
+          {{#> action-list}}
+            {{#> action-list-group}}
+              {{#> action-list-item}}
+                {{#> button button--id="submit-advanced-search-expanded" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded search-input-group-advanced-search-expanded"}}
+                  Submit
+                {{/button}}
+              {{/action-list-item}}
+              {{#> action-list-item}}
+                {{#> button button--id="reset-advanced-search-expanded" button--IsLink=true button--IsReset=true button--aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"}}
+                  Reset
+                {{/button}}
+              {{/action-list-item}}
+            {{/action-list-group}}
+          {{/action-list}}
         {{/form-group}}
       {{/form}}
     {{/panel-main-body}}
@@ -459,14 +465,20 @@ The React implementation can be found in the [search input](/components/search-i
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
-          {{#> form-actions}}
-            {{#> button button--id="submit-advanced-search-expanded-with-autocomplete" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
-              Submit
-            {{/button}}
-            {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
-              Reset
-            {{/button}}
-          {{/form-actions}}
+          {{#> action-list}}
+            {{#> action-list-group}}
+              {{#> action-list-item}}
+                {{#> button button--id="submit-advanced-search-expanded-with-autocomplete" button--IsPrimary=true button--IsSubmit=true button--aria-labelledby="submit-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
+                  Submit
+                {{/button}}
+              {{/action-list-item}}
+              {{#> action-list-item}}
+                {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
+                  Reset
+                {{/button}}
+              {{/action-list-item}}
+            {{/action-list-group}}
+          {{/action-list}}
         {{/form-group}}
       {{/form}}
     {{/panel-main-body}}
