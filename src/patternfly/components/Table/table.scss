@@ -217,8 +217,8 @@
   --#{$table}--m-compact__action--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
 
   // * Table compact expandable row content
-  --#{$table}--m-compact__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$table}--m-compact__expandable-row-content--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$table}--m-compact__expandable-row-content--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$table}--m-compact__expandable-row-content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   // * Table expandable row expanded
   --#{$table}__expandable-row--m-expanded--BorderBlockEndColor: var(--pf-t--global--border--color--default);
