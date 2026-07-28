@@ -91,8 +91,8 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
   Submit
 {{/button}}
 
-{{#> button button--IsPrimary=true button--IsReset=true}}
-  Reset
+{{#> button button--IsPrimary=true}}
+  Cancel
 {{/button}}
 
 {{#> button button--IsPrimary=true}}

@@ -63,14 +63,20 @@
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
-      {{#> form-actions}}
-        {{#> button button--IsPrimary=true button--IsSubmit=true}}
-          Submit
-        {{/button}}
-        {{#> button button--IsSecondary=true button--IsReset=true}}
-          Cancel
-        {{/button}}
-      {{/form-actions}}
+      {{#> action-list}}
+        {{#> action-list-group}}
+          {{#> action-list-item}}
+            {{#> button button--IsPrimary=true button--IsSubmit=true}}
+              Submit
+            {{/button}}
+          {{/action-list-item}}
+          {{#> action-list-item}}
+            {{#> button button--IsSecondary=true}}
+              Cancel
+            {{/button}}
+          {{/action-list-item}}
+        {{/action-list-group}}
+      {{/action-list}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
