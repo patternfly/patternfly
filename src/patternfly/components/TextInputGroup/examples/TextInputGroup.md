@@ -312,8 +312,8 @@ The React implementation can be found in the [search input](/components/search-i
                 {{/button}}
               {{/action-list-item}}
               {{#> action-list-item}}
-                {{#> button button--id="reset-advanced-search-expanded" button--IsLink=true button--IsReset=true button--aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"}}
-                  Reset
+                {{#> button button--id="reset-advanced-search-expanded" button--IsLink=true button--aria-labelledby="reset-advanced-search-expanded search-input-group-advanced-search-expanded"}}
+                  Cancel
                 {{/button}}
               {{/action-list-item}}
             {{/action-list-group}}
@@ -473,8 +473,8 @@ The React implementation can be found in the [search input](/components/search-i
                 {{/button}}
               {{/action-list-item}}
               {{#> action-list-item}}
-                {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true button--IsReset=true button--IsSubmit=true button--aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
-                  Reset
+                {{#> button button--id="reset-advanced-search-expanded-with-autocomplete" button--IsLink=true  button--IsSubmit=true button--aria-labelledby="reset-advanced-search-expanded-with-autocomplete search-input-group-advanced-search-expanded-with-autocomplete"}}
+                  Cancel
                 {{/button}}
               {{/action-list-item}}
             {{/action-list-group}}

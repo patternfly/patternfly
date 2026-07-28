@@ -745,7 +745,7 @@ subsection: forms
             {{/button}}
           {{/action-list-item}}
           {{#> action-list-item}}
-            {{#> button button--IsSecondary=true button--IsReset=true}}
+            {{#> button button--IsSecondary=true}}
               Cancel
             {{/button}}
           {{/action-list-item}}
