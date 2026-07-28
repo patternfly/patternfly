@@ -163,7 +163,7 @@
 // the progress__description is displayed above the progress bar on the left
 .#{$progress}__description {
   grid-column: 1 / 2;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   &.pf-m-truncate {
     @include pf-v6-text-overflow;
@@ -179,7 +179,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   text-align: end;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 // the progress__status-icon is an icon displayed always in the upper right

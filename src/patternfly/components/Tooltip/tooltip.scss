@@ -129,7 +129,7 @@
   font-size: var(--#{$tooltip}__content--FontSize);
   color: var(--#{$tooltip}__content--Color);
   text-align: center;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   background-color: var(--#{$tooltip}__content--BackgroundColor);
   border-radius: var(--#{$tooltip}__content--BorderRadius);
 

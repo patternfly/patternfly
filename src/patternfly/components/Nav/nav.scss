@@ -2,8 +2,8 @@
 
 @include pf-root($nav) {
   // * Nav shared values
-  --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$nav}__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$nav}__list--RowGap: var(--pf-t--global--spacer--sm);

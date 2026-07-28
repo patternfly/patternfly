@@ -20,7 +20,7 @@
   --#{$data-list}--pf-m-plain__item--BackgroundColor: transparent;
   --#{$data-list}__item--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
   --#{$data-list}__item--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
-  --#{$data-list}__item--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
+  --#{$data-list}__item--m-clickable--OutlineOffset: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$data-list}__item--BorderBlockEndColor: var(--pf-t--global--border--color--default);
   --#{$data-list}__item--BorderBlockEndWidth: var(--pf-t--global--border--width--strong);
   --#{$data-list}__item--sm--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -58,8 +58,8 @@
 
   // toggle
   --#{$data-list}__toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1); // offset toggle to align left
-  --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$data-list}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$data-list}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$data-list}__toggle-icon--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
   --#{$data-list}__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$data-list}__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
@@ -98,8 +98,8 @@
   --#{$data-list}__item-action--Display: flex;
   --#{$data-list}__item-action--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$data-list}__item-action--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
-  --#{$data-list}__item-action--PaddingBlockStart--offset: var(--pf-t--global--spacer--control--vertical--default);
-  --#{$data-list}__item-action--PaddingBlockEnd--offset: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$data-list}__item-action--PaddingBlockStart--offset: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$data-list}__item-action--PaddingBlockEnd--offset: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$data-list}__item-action--MarginInlineStart: var(--pf-t--global--spacer--md);
   --#{$data-list}__item-action--md--MarginInlineStart: var(--pf-t--global--spacer--xl);
   --#{$data-list}__item-action--Gap: var(--pf-t--global--spacer--gap--action-to-action--default);

@@ -75,7 +75,8 @@ module.exports = {
     'landmark-no-duplicate-main',
     'landmark-main-is-top-level',
     'scrollable-region-focusable',
-    'aria-required-children' // Remove once https://github.com/patternfly/patternfly-react/issues/9968 is resolved
+    'aria-required-children', // Remove once https://github.com/patternfly/patternfly-react/issues/9968 is resolved
+    'target-size' // See if we can remove once https://github.com/patternfly/patternfly/issues/8492 is resolved
   ].join(','),
   ignoreIncomplete: true,
   skip: '(mailto)|(/(developer-resources)/.+)'

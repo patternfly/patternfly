@@ -11,10 +11,10 @@
 
   // accordion toggle
   --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$accordion}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$accordion}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$accordion}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$accordion}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
