@@ -630,61 +630,8 @@ This example demonstrates the key difference between media query-based and conta
 <div style="display: flex; gap: 1rem; flex-direction: column;">
   <div>
     <h4>Media query</h4>
-        <div class="ws-core-resizeable-container">
-{{#> toolbar toolbar--id="toolbar-compare-media-example"}}
-  {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
-        {{#> toolbar-item}}
-          Hide group on xl
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          Hide group on xl
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        {{#> toolbar-item}}
-          Show group on lg
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          Show group on lg
-        {{/toolbar-item}}
-        {{#> toolbar-item}}
-          Show group on lg
-        {{/toolbar-item}}
-      {{/toolbar-group}}
-      {{> divider divider--modifier="pf-m-vertical"}}
-      {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
-        Hide on xl
-      {{/toolbar-item}}
-      {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-        Show on lg
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        Item
-      {{/toolbar-item}}
-    {{/toolbar-content-section}}
-  {{/toolbar-content}}
-{{/toolbar}}
-</div>
-  </div>
-
-  <div>
-    <h4>Container query</h4>
-    <div style="display:flex;">
-      <div class="ws-core-resizeable-container">
-      {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-compare-container-example"}}
+    <div class="ws-core-resizeable-container">
+      {{#> toolbar toolbar--id="toolbar-compare-media-example"}}
         {{#> toolbar-content}}
           {{#> toolbar-content-section}}
             {{#> toolbar-item}}
@@ -731,7 +678,60 @@ This example demonstrates the key difference between media query-based and conta
         {{/toolbar-content}}
       {{/toolbar}}
     </div>
+  </div>
 
+  <div>
+    <h4>Container query</h4>
+    <div style="display:flex;">
+      <div class="ws-core-resizeable-container">
+        {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-compare-container-example"}}
+          {{#> toolbar-content}}
+            {{#> toolbar-content-section}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+                {{#> toolbar-item}}
+                  Hide group on xl
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  Hide group on xl
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+                {{#> toolbar-item}}
+                  Show group on lg
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  Show group on lg
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  Show group on lg
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+              {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+                Hide on xl
+              {{/toolbar-item}}
+              {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+                Show on lg
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+            {{/toolbar-content-section}}
+          {{/toolbar-content}}
+        {{/toolbar}}
+      </div>
+    </div>
   </div>
 </div>
 ```

@@ -255,8 +255,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   // Container query support (opt-in)
   // Establishes container context for all container modifiers
   &:where([class*="pf-m-container"]) {
-    container-type: inline-size;
     container-name: pf-v6-contain-toolbar;
+    container-type: inline-size;
 
     // Container queries (opt-in behavior)
     // Set base/default state for container-query toolbars (hide filters, show toggle)
