@@ -107,7 +107,7 @@ import './CodeEditor.css';
       {{/code-editor-controls}}
       {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
       {{#> code-editor-keyboard-shortcuts}}
-        {{#> button button--IsLink=true button--icon-template="icon-help"}}
+        {{#> button button--IsLink=true button--icon="rh-ui-question-mark-circle"}}
           View shortcuts
         {{/button}}
       {{/code-editor-keyboard-shortcuts}}
@@ -157,7 +157,7 @@ This is an extra container used in React to prevent event propagation if upload 
     {{#> code-editor-upload}}
       {{#> empty-state}}
         {{#> empty-state-header}}
-          {{> empty-state-icon empty-state-icon--type="code"}}
+          {{> empty-state-icon empty-state-icon--type="rh-ui-code"}}
           {{#> empty-state-title}}
             {{#> empty-state-title-text empty-state-title-text--element="h4"}}
               Start editing
@@ -200,7 +200,7 @@ This is an extra container used in React to prevent event propagation if upload 
       {{/code-editor-controls}}
       {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
       {{#> code-editor-keyboard-shortcuts}}
-        {{#> button button--IsLink=true button--icon-template="icon-help"}}
+        {{#> button button--IsLink=true button--icon="rh-ui-question-mark-circle"}}
           View shortcuts
         {{/button}}
       {{/code-editor-keyboard-shortcuts}}

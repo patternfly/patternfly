@@ -235,7 +235,7 @@ cssPrefix: pf-v6-c-empty-state
 ```hbs
 {{#> empty-state empty-state--modifier="pf-m-success"}}
   {{#> empty-state-header}}
-    {{> empty-state-icon empty-state-icon--type="check-circle"}}
+    {{> empty-state-icon empty-state-icon--type="rh-ui-check-circle-fill"}}
     {{#> empty-state-title}}
       {{#> empty-state-title-text empty-state-title-text--element="h4"}}
         You're all set

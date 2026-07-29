@@ -184,7 +184,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Open search input group collapsed"}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-search" button--aria-label="Open search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close search input group expandable"}}
@@ -199,7 +199,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Search" text-input-group--search-input--aria-label="Search input group expanded" text-input-group--search-input--clear-button-aria-label="Clear search input group expandable"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchExpand=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="search" button--aria-label="Open search input group collapsed"}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-search" button--aria-label="Open search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true input-group-item--IsSearchAction=true}}
     {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-close" button--aria-label="Close search input group expandable"}}
@@ -214,7 +214,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name" text-input-group--search-input--aria-label="Search input group with submit button"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--aria-label="Submit search input group" button--IsSubmit="true"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="rh-microns-arrow-right" button--aria-label="Submit search input group" button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -226,10 +226,10 @@ The React implementation can be found in the [search input](/components/search-i
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned" text-input-group--search-input--aria-label="Search input group advanced search" text-input-group--search-input--clear-button-aria-label="Clear advance search input group collapsed"}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="caret-down" button--attribute='aria-expanded="false" aria-label="Advanced search collapsed"'}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="rh-microns-caret-down" button--attribute='aria-expanded="false" aria-label="Advanced search collapsed"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="arrow-right" button--aria-label="Search advance search input group collapsed" button--IsSubmit="true"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="rh-microns-arrow-right" button--aria-label="Search advance search input group collapsed" button--IsSubmit="true"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
@@ -244,7 +244,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button
       button--IsControl=true
       button--IsIcon=true
-      button--icon="caret-down"
+      button--icon="rh-microns-caret-down"
       button--AriaExpanded=true
       button--modifier="pf-m-expanded"
       button--aria-label="Advanced search expanded"}}
@@ -253,7 +253,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button
       button--IsControl=true
       button--IsIcon=true
-      button--icon="arrow-right"
+      button--icon="rh-microns-arrow-right"
       button--aria-label="Search advance search input group expanded"
       button--IsSubmit="true"}}
   {{/input-group-item}}
@@ -405,7 +405,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button
       button--IsControl=true
       button--IsIcon=true
-      button--icon="caret-down"
+      button--icon="rh-microns-caret-down"
       button--AriaExpanded=true
       button--modifier="pf-m-expanded"
       button--aria-label="Advanced search expanded with autocomplete"}}
@@ -414,7 +414,7 @@ The React implementation can be found in the [search input](/components/search-i
     {{> button
       button--IsControl=true
       button--IsIcon=true
-      button--icon="arrow-right"
+      button--icon="rh-microns-arrow-right"
       button--aria-label="Search advanced search input group expanded with autocomplete"
       button--IsSubmit="true"}}
   {{/input-group-item}}
