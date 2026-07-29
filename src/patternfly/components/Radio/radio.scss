@@ -6,7 +6,7 @@
   --#{$radio}--m-standalone--MinHeight: calc(var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight));
 
   // Standalone
-  --#{$radio}--m-standalone--before--Inset: calc(var(--pf-t--global--spacer--md) * -1);
+  --#{$radio}--m-standalone--before--Inset: calc(var(--pf-t--global--spacer--sm) * -1);
 
   // TODO: update to `--#{$radio}--FontSize` `--#{$radio}--LineHeight`
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);

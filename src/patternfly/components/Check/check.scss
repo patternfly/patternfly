@@ -6,7 +6,7 @@
   --#{$check}--m-standalone--MinHeight: calc(var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight));
 
   // Standalone
-  --#{$check}--m-standalone--before--Inset: calc(var(--pf-t--global--spacer--md) * -1);
+  --#{$check}--m-standalone--before--Inset: calc(var(--pf-t--global--spacer--sm) * -1);
 
   // TODO: update to `--#{$check}--FontSize` `--#{$check}--LineHeight`
   --#{$check}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
