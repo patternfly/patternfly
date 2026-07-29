@@ -106,7 +106,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> form-control controlType="input" input=true form-control--attribute='type="text" id="textInput13" name="textInput13" aria-label="Input example with popover"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
-    {{> button button--IsControl=true button--IsIcon=true button--icon="question-circle" button--aria-label="Popover for input"}}
+    {{> button button--IsControl=true button--IsIcon=true button--icon="rh-ui-question-mark-circle-fill" button--aria-label="Popover for input"}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -115,7 +115,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> form-control controlType="input" input=true form-control--attribute='type="text" id="textInput12" name="textInput12" aria-label="Input example with popover"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsPlain=true}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="question-circle" button--attribute='aria-label="Popover for input"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-question-mark-circle-fill" button--attribute='aria-label="Popover for input"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
