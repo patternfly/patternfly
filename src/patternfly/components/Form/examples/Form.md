@@ -261,7 +261,7 @@ cssPrefix: pf-v6-c-form
             {{/button}}
           {{/action-list-item}}
           {{#> action-list-item}}
-            {{#> button button--IsLink=true}
+            {{#> button button--IsLink=true}}
               Cancel
             {{/button}}
           {{/action-list-item}}
@@ -281,7 +281,7 @@ cssPrefix: pf-v6-c-form
         {{#> button button--IsPrimary=true button--IsSubmit=true}}
           Submit
         {{/button}}
-        {{#> button button--IsLink=true}
+        {{#> button button--IsLink=true}}
           Cancel
         {{/button}}
       {{/form-actions}}
