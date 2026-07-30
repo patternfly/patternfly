@@ -16,15 +16,15 @@ __tabs-list--IsCloseDisabled: bool
 ------------------------------------
 --}}
 
-{{#unless __tabs-list--NoScrollButtons}}
-  {{#if __tabs-list--DisabledFirstScrollButton}}
-    {{> tabs-scroll-button tabs-scroll-button--IsLeft="true" tabs-scroll-button--IsDisabled="true"}}
-  {{else if __tabs-list--IsScrollable}}
-    {{> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
-  {{else}}
-    {{> tabs-scroll-button tabs-scroll-button--IsLeft="true" tabs-scroll-button--IsDisabled="true" tabs-scroll-button--IsHidden="true"}}
-  {{/if}}
-{{/unless}}
+{{#if __tabs-list--IsScrollable}}
+  {{#unless __tabs-list--NoScrollButtons}}
+    {{#if __tabs-list--DisabledFirstScrollButton}}
+      {{> tabs-scroll-button tabs-scroll-button--IsLeft="true" tabs-scroll-button--IsDisabled="true"}}
+    {{else}}
+      {{> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}
+    {{/if}}
+  {{/unless}}
+{{/if}}
 
 {{#> tabs-list tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose tabs-item--HasHelp=__tabs-list--HasHelp}}
   {{> __tabs-item
@@ -154,15 +154,15 @@ __tabs-list--IsCloseDisabled: bool
   {{/unless}}
 {{/tabs-list}}
 
-{{#unless __tabs-list--NoScrollButtons}}
-  {{#if __tabs-list--DisabledLastScrollButton}}
-    {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true"}}
-  {{else if __tabs-list--IsScrollable}}
-    {{> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
-  {{else}}
-    {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true" tabs-scroll-button--IsHidden="true"}}
-  {{/if}}
-{{/unless}}
+{{#if __tabs-list--IsScrollable}}
+  {{#unless __tabs-list--NoScrollButtons}}
+    {{#if __tabs-list--DisabledLastScrollButton}}
+      {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true"}}
+    {{else}}
+      {{> tabs-scroll-button tabs-scroll-button--IsRight="true"}}
+    {{/if}}
+  {{/unless}}
+{{/if}}
 
 {{#if __tabs-list--HasAddTab}}
   {{> tabs-add}}

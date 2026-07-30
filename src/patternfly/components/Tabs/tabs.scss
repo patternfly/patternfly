@@ -70,10 +70,10 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}__link--BorderColor: transparent;
   --#{$tabs}__link--hover--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$tabs}__link--disabled--BorderColor: transparent;
-  --#{$tabs}__link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$tabs}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$tabs}__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
-  --#{$tabs}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm);
+  --#{$tabs}__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$tabs}__link--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$tabs}__link--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$tabs}__link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
   --#{$tabs}__link--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$tabs}__link--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$tabs}__link--disabled--BackgroundColor: transparent;
@@ -92,9 +92,17 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --#{$tabs}--m-box--m-secondary__link--disabled--BackgroundColor: transparent;
   --#{$tabs}--m-box--m-secondary__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$tabs}--m-box--m-secondary__item--m-current__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--xs);
   --#{$tabs}__link--TransitionDuration--background-color: var(--pf-t--global--motion--duration--fade--short);
   --#{$tabs}__link--TransitionTimingFunction--background-color: var(--pf-t--global--motion--timing-function--default);
+
+  // Subtab link
+  --#{$tabs}--m-subtab__link--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
+  --#{$tabs}--m-subtab__link--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) - var(--pf-t--global--spacer--control--vertical--compact) + (var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body) - 1lh) / 2);
+  --#{$tabs}--m-subtab__link--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$tabs}--m-subtab__link--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--compact);
+  --#{$tabs}--m-subtab__link--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--plain--default);
+  --#{$tabs}--m-subtab__link--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
+  --#{$tabs}--m-subtab__link--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--plain--default);
 
   // Link before
   --#{$tabs}__link--before--border-color--base: var(--pf-t--global--border--color--default);
@@ -512,8 +520,17 @@ $pf-v6-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   &.pf-m-subtab {
     --#{$tabs}__link--FontSize: var(--#{$tabs}--m-subtab__link--FontSize);
+    --#{$tabs}__link--PaddingBlockStart: var(--#{$tabs}--m-subtab__link--PaddingBlockStart);
+    --#{$tabs}__link--PaddingBlockEnd: var(--#{$tabs}--m-subtab__link--PaddingBlockEnd);
+    --#{$tabs}__link--PaddingInlineStart: var(--#{$tabs}--m-subtab__link--PaddingInlineStart);
+    --#{$tabs}__link--PaddingInlineEnd: var(--#{$tabs}--m-subtab__link--PaddingInlineEnd);
     --#{$tabs}__item-action--c-button--FontSize: var(--#{$tabs}--m-subtab__item-action--c-button--FontSize);
     --#{$tabs}__add--c-button--FontSize: var(--#{$tabs}--m-subtab__add--c-button--FontSize);
+
+    .#{$tabs}__link {
+      margin-block-start: var(--#{$tabs}--m-subtab__link--MarginBlockStart);
+      margin-block-end: var(--#{$tabs}--m-subtab__link--MarginBlockEnd);
+    }
   }
 
   &.pf-m-page-insets {
