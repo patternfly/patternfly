@@ -176,6 +176,7 @@
     inset: 0;
     pointer-events: none;
     content: "";
+    transition: inherit;
   }
 
   &::before {
@@ -294,10 +295,13 @@
     --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}--m-placeholder--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
-    --#{$form-control}--before--BorderStyle: none;
-    --#{$form-control}--after--BorderStyle: none;
 
     cursor: not-allowed;
+
+    &::before,
+    &::after {
+      border-color: transparent;
+    }
   }
 
   &.pf-m-error {
