@@ -560,6 +560,8 @@ import './Navigation.css'
 ```
 
 ### Docked nav
+The docked nav opens and closes when `.pf-m-text-expanded` or `.pf-m-expandable-expanded` are applied to a [page](/components/page#usage) or [compass](/components/compass#usage) dock.
+
 ```hbs isBeta
 {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -668,6 +670,7 @@ The navigation system relies on several different sub-components:
 | `.pf-v6-c-nav__list` | `<ul>` | Initiates nav list. |
 | `.pf-v6-c-nav__item` | `<li>` | Initiates nav list item. |
 | `.pf-v6-c-nav__link` | `<a>` | Initiates nav list link. |
+| `.pf-v6-c-nav__link-expandable-icon` | `<span>` | Initiates an indicator icon on a docked nav link, signaling that the item has a subnav. Shown only while the dock is collapsed. |
 | `.pf-v6-c-nav__link-icon` | `<span>` | Initiates nav list link icon. |
 | `.pf-v6-c-nav__link-text` | `<span>` | Initiates nav list link text. |
 | `.pf-v6-c-nav__section` | `<section>` | Initiates a nav section element. |
