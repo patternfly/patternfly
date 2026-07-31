@@ -589,22 +589,22 @@ import './Navigation.css'
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item nav-item--IsExpandable="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--attribute='id="docked-expandable-1"'}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--current="false" nav-link--attribute='id="docked-expandable-1"'}}
         Policy
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-1"'}}
         {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-resource" nav-link--aria-label="Resource"}}
             Current link
           {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-compare" nav-link--aria-label="Compare"}}
             Subnav link 2
           {{/nav-link}}
         {{/nav-item}}
         {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-collection" nav-link--aria-label="collection"}}
             Subnav link 3
           {{/nav-link}}
         {{/nav-item}}

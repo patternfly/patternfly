@@ -47,23 +47,23 @@
               System panel
             {{/nav-link}}
           {{/nav-item}}
-          {{#> nav-item nav-item--IsExpandable="true"}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--attribute='id="docked-expandable-1"'}}
+          {{#> nav-item nav-item--IsExpandable="true" nav-item--IsExpanded=masthead-template--IsExpandableItemExpanded}}
+            {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--attribute='id="docked-expandable-1"'}}
               Policy
             {{/nav-link}}
             {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-1"'}}
               {{#> nav-item}}
-                {{#> nav-link nav-link--href="#"}}
-                  Current link
+                {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-resource" nav-link--aria-label="Resource"}}
+                  Subnav link 1
                 {{/nav-link}}
               {{/nav-item}}
               {{#> nav-item}}
-                {{#> nav-link nav-link--href="#"}}
+                {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-compare" nav-link--aria-label="Compare"}}
                   Subnav link 2
                 {{/nav-link}}
               {{/nav-item}}
               {{#> nav-item}}
-                {{#> nav-link nav-link--href="#"}}
+                {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-collection" nav-link--aria-label="collection"}}
                   Subnav link 3
                 {{/nav-link}}
               {{/nav-item}}
@@ -75,12 +75,12 @@
             {{/nav-link}}
             {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-2"'}}
               {{#> nav-item}}
-                {{#> nav-link nav-link--href="#"}}
+                {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud-security" nav-link--aria-label="Cloud security"}}
                   Subnav link 1
                 {{/nav-link}}
               {{/nav-item}}
               {{#> nav-item}}
-                {{#> nav-link nav-link--href="#"}}
+                {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud-tenant" nav-link--aria-label="Cloud tenant"}}
                   Subnav link 2
                 {{/nav-link}}
               {{/nav-item}}
