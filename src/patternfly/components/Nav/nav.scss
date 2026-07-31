@@ -240,8 +240,7 @@
     }
 
     @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expanded &,
-    &.pf-m-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
+    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
     &.pf-m-expandable-expanded {
       .#{$nav}__link-expandable-icon {
         display: none;
@@ -253,8 +252,7 @@
     }
 
     @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expanded &,
-    &.pf-m-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
+    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
     &.pf-m-expandable-expanded {
       .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
         --#{$nav}__link--BackgroundColor: initial;
