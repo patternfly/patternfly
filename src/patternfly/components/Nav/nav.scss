@@ -54,7 +54,7 @@
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: -180deg;
-  --#{$nav}__item__toggle-icon--TransitionDuration--transform: var(--pf-t--global--motion--duration--icon--default);
+  --#{$nav}__item__-icon--TransitionDuration--transform: var(--pf-t--global--motion--duration--icon--default);
   --#{$nav}__item__toggle-icon--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--default);
 
   // * Nav link
@@ -229,9 +229,8 @@
       }
     }
 
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
-    &.pf-m-expandable-expanded {
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
+    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       width: 100%;
 
       .#{$nav}__link-text {
@@ -239,9 +238,8 @@
       }
     }
 
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
-    &.pf-m-expandable-expanded {
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
+    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       .#{$nav}__link-expandable-icon {
         display: none;
       }
@@ -251,9 +249,8 @@
       }
     }
 
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
-    &.pf-m-expandable-expanded {
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
+    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
         --#{$nav}__link--BackgroundColor: initial;
         --#{$nav}__item--accent--ScaleY: 0;
