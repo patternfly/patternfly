@@ -93,6 +93,17 @@
           {{/nav-item}}
         {{/nav-list}}
       {{/nav}}
+      {{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-align-end pf-m-spacer-none pf-m-spacer-md-on-md"}}
+        {{#> toolbar-item}}
+          {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon="rh-ui-thumbnail-view-large" menu-toggle--aria-label="Applications" menu-toggle--text="Applications" menu-toggle--IsDocked=true menu-toggle--IsText=true}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{> button button--IsDocked=true button--IsPlain=true button--IsSettings=true button--aria-label="Settings" button--text="Settings"}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--aria-label="Help" menu-toggle--icon="rh-ui-question-mark-circle" menu-toggle--text="Help" menu-toggle--IsDocked=true menu-toggle--IsText=true}}
+        {{/toolbar-item}}
+      {{/toolbar-group}}
     {{else}}
       {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
         {{#> nav-list}}

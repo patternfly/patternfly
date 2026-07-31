@@ -453,8 +453,8 @@
     }
   }
 
-  @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &.pf-m-docked,
-  &.pf-m-text-expanded {
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &.pf-m-docked,
+  &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
     justify-content: flex-start;
     width: 100%;
 
