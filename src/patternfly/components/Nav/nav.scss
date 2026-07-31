@@ -203,7 +203,7 @@
 
     width: 100%;
 
-    .#{$nav}__toggle {
+    .#{$nav}__toggle, .#{$nav}__subnav {
       display: none;
     }
 
@@ -213,6 +213,12 @@
       inset-inline-start: var(--#{$nav}--m-docked__link-expandable-icon--InsetInlineStart);
       display: initial;
       transform: translateX(var(--#{$nav}--m-docked__link-expandable-icon--TransformX));
+    }
+
+    .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
+      --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
+      --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
+      --#{$nav}__link--BackgroundColor: var(--pf-v6-c-nav--m-docked__link--hover--BackgroundColor);
     }
   
     @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
@@ -227,16 +233,32 @@
     &.pf-m-text-expanded {
       width: 100%;
 
+      .#{$nav}__link-text {
+        display: revert;
+      }
+    }
+
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
+    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expanded &,
+    &.pf-m-expanded {
       .#{$nav}__link-expandable-icon {
         display: none;
       }
 
-      .#{$nav}__link-text {
+      .#{$nav}__toggle, .#{$nav}__subnav {
         display: revert;
       }
 
-      .#{$nav}__toggle {
-        display: revert;
+      .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
+        --#{$nav}__link--BackgroundColor: initial;
+        --#{$nav}__item--accent--ScaleY: 0;
+        --#{$nav}__link--m-current--BackgroundColor: initial;
+        
+        .#{$nav}__item:has(> .#{$nav}__link.pf-m-current) {
+          --#{$nav}__link--BackgroundColor: initial;
+          --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
+          --#{$nav}__link--m-current--BackgroundColor: var(--pf-v6-c-nav--m-docked__link--hover--BackgroundColor);
+        }
       }
     }
   }

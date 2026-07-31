@@ -88,5 +88,6 @@ section: components
       masthead-template--HasDockedNav=true
       page-dock--IsTextExpanded=true
       masthead-template--HasExpandableDockedNav=true
+      masthead-template--IsExpandableItemExpanded=true
 }}
 ```
