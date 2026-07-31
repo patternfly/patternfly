@@ -230,7 +230,8 @@
     }
 
     @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded {
+    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
+    &.pf-m-expandable-expanded {
       width: 100%;
 
       .#{$nav}__link-text {
@@ -240,7 +241,8 @@
 
     @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
     &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expanded &,
-    &.pf-m-expanded {
+    &.pf-m-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
+    &.pf-m-expandable-expanded {
       .#{$nav}__link-expandable-icon {
         display: none;
       }
@@ -248,7 +250,12 @@
       .#{$nav}__toggle, .#{$nav}__subnav {
         display: revert;
       }
+    }
 
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
+    &.pf-m-text-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expanded &,
+    &.pf-m-expanded, :is(.#{$page}__dock, .#{$compass}__dock).pf-m-expandable-expanded &,
+    &.pf-m-expandable-expanded {
       .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
         --#{$nav}__link--BackgroundColor: initial;
         --#{$nav}__item--accent--ScaleY: 0;
