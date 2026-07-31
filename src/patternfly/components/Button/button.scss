@@ -289,7 +289,8 @@
   --#{$button}--m-display-lg--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--spacious);
   --#{$button}--m-display-lg--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--spacious);
   --#{$button}--m-display-lg--PaddingInlineStart: var(--pf-t--global--spacer--action--horizontal--spacious);
-  --#{$button}--m-display-lg--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$button}--m-display-lg--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$button}--m-display-lg--FontWeight: var(--pf-t--global--font--weight--body--bold); // TODO - remove in a breaking change
   --#{$button}--m-link--m-display-lg--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$button}--m-display-lg--hover--TextDecorationColor: var(--pf-t--global--border--color--control--default);
   --#{$button}--m-display-lg--hover--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--hover);
@@ -380,7 +381,6 @@
 
   // Progress
   --#{$button}__progress--width: calc(var(--pf-t--global--icon--size--lg) + var(--pf-t--global--spacer--sm)); // matches medium spinner diameter plus a spacer
-  --#{$button}__progress--Opacity: 0;
   --#{$button}__progress--TranslateY: -50%;
   --#{$button}__progress--TranslateX: 0;
   --#{$button}__progress--InsetBlockStart: 50%;
@@ -875,7 +875,6 @@
     --#{$button}__icon--TransitionDelay: var(--#{$button}--hamburger-icon--TransitionDuration);
     --#{$button}__icon--TransitionDuration: 0s;
     --#{$button}__icon--TransitionProperty: scale;
-    --#{$button}--hover__icon--TransitionDelay: var(--#{$button}--hamburger-icon--TransitionDuration);
     --#{$button}--hover__icon--TransitionDuration: 0s;
     --#{$button}--hover__icon--TransitionProperty: scale;
 
@@ -957,7 +956,7 @@
     background: var(--#{$button}--disabled--BackgroundColor);
 
     &::after {
-      border-color: transparent;
+      border-color: var(--#{$button}--disabled--BorderColor);
     }
 
     .#{$button}__icon {
