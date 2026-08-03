@@ -139,7 +139,7 @@ wrapperTag: div
           {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true}}
           {{#> form-helper-text form-helper-text--modifier="pf-m-error pf-m-hidden"}}
             {{#> form-helper-text-icon}}
-              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-error"}}
             {{/form-helper-text-icon}}
             Invalid login credentials.
           {{/form-helper-text}}

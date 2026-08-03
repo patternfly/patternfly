@@ -3,7 +3,11 @@
     {{{tree-view-node-icon--attribute}}}
   {{/if}}>
   {{#if tree-view-node-icon--IsFolder}}
-    <i class="fas fa-folder{{#if tree-view-list-item--IsExpanded}}-open{{/if}}" aria-hidden="true"></i>
+    {{#if tree-view-list-item--IsExpanded}}
+      {{pfIcon "rh-ui-folder-open-fill"}}
+    {{else}}
+      {{pfIcon "rh-ui-folder-fill"}}
+    {{/if}}
   {{else}}
     {{> @partial-block}}
   {{/if}}

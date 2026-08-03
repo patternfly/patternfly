@@ -14,12 +14,12 @@
     {{> @partial-block}}
   {{/if}}
   {{#if input-group-text--HasDollarSignIcon}}
-    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+    <span aria-hidden="true">$</span>
   {{/if}}
   {{#if input-group-text--HasAtIcon}}
-    <i class="fas fa-at" aria-hidden="true"></i>
+    <span aria-hidden="true">@</span>
   {{/if}}
   {{#if input-group-text--HasCalendarIcon}}
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-calendar-fill"}}
   {{/if}}
 </{{#if input-group-text--type}}{{input-group-text--type}}{{else}}span{{/if}}>

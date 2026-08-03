@@ -29,11 +29,11 @@ cssPrefix: pf-v6-c-form-control
 <br>
 {{> form-control controlType="input" input="true" form-control--IsExpanded="true" form-control--attribute='type="text" value="Expanded" id="input-expanded" aria-label="Expanded input example"'}}
 <br>
-{{> form-control controlType="input" input="true" form-control--HasIcon="calendar" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
+{{> form-control controlType="input" input="true" form-control--HasIcon="rh-ui-calendar-fill" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
 <br>
-{{> form-control controlType="input" input="true" form-control--IsWarning="true" form-control--HasIcon="clock" form-control--attribute='type="text" value="Clock (invalid)" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
+{{> form-control controlType="input" input="true" form-control--IsWarning="true" form-control--HasIcon="rh-ui-clock-fill" form-control--attribute='type="text" value="Clock (invalid)" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
 <br>
-{{> form-control controlType="input" input="true" form-control--HasIcon="bell" form-control--attribute='type="text" value="Custom icon" id="input-custom-icon" name="custom-icon" aria-label="Custom icon input example"'}}
+{{> form-control controlType="input" input="true" form-control--HasIcon="rh-ui-notification-fill" form-control--attribute='type="text" value="Custom icon" id="input-custom-icon" name="custom-icon" aria-label="Custom icon input example"'}}
 ```
 
 ### Select
