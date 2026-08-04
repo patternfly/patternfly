@@ -9,7 +9,11 @@
       {{#> grid-item}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> l-flex-item}}
-            <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
+            {{#> icon }}
+              {{#> icon-content icon-content--modifier="pf-m-success"}}
+                {{pfIcon "rh-ui-check-circle-fill"}}
+              {{/icon-content}}
+            {{/icon}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
             <span>Cluster</span>
@@ -19,7 +23,11 @@
       {{#> grid-item}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> l-flex-item}}
-            <i class="fas fa-exclamation-circle {{pfv 'u'}}danger-color-100" aria-hidden="true"></i>
+            {{#> icon }}
+              {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                {{pfIcon "rh-ui-error-fill"}}
+              {{/icon-content}}
+            {{/icon}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
             <span class="popover-parent">
@@ -32,7 +40,11 @@
       {{#> grid-item}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> l-flex-item}}
-            <i class="fas fa-exclamation-circle {{pfv 'u'}}danger-color-100" aria-hidden="true"></i>
+            {{#> icon }}
+              {{#> icon-content icon-content--modifier="pf-m-danger"}}
+                {{pfIcon "rh-ui-error-fill"}}
+              {{/icon-content}}
+            {{/icon}}
           {{/l-flex-item}}
           {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
             {{#> l-flex-item}}
@@ -47,7 +59,11 @@
       {{#> grid-item}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> l-flex-item}}
-            <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
+            {{#> icon }}
+              {{#> icon-content icon-content--modifier="pf-m-success"}}
+                {{pfIcon "rh-ui-check-circle-fill"}}
+              {{/icon-content}}
+            {{/icon}}
           {{/l-flex-item}}
           {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
             {{#> l-flex-item}}

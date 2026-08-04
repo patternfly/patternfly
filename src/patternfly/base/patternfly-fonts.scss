@@ -3,7 +3,7 @@
 @font-face {
   font-family: "Red Hat Text";
   font-style: normal;
-  font-weight: 400 500;
+  font-weight: 400 600;
   src: url("#{$pf-v6-global--font-path}/RedHatText/RedHatTextVF.woff2") format("woff2-variations");
   font-display: fallback;
 }
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Red Hat Text";
   font-style: italic;
-  font-weight: 400 500;
+  font-weight: 400 600;
   src: url("#{$pf-v6-global--font-path}/RedHatText/RedHatTextVF-Italic.woff2") format("woff2-variations");
   font-display: fallback;
 }
@@ -19,7 +19,7 @@
 @font-face {
   font-family: "Red Hat Display";
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 600 800;
   src: url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplayVF.woff2") format("woff2-variations");
   font-display: fallback;
 }
@@ -27,7 +27,7 @@
 @font-face {
   font-family: "Red Hat Display";
   font-style: italic;
-  font-weight: 400 700;
+  font-weight: 600 800;
   src: url("#{$pf-v6-global--font-path}/RedHatDisplay/RedHatDisplayVF-Italic.woff2") format("woff2-variations");
   font-display: fallback;
 }

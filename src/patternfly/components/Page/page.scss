@@ -13,14 +13,43 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
   // Dock
+  --#{$page}__dock--Width: #{pf-size-prem(250px)};
+  --#{$page}__dock--desktop--Width: auto;
   --#{$page}__dock--ZIndex: var(--pf-t--global--z-index--md);
+  --#{$page}__dock--TransitionDuration--slide: 0s;
+  --#{$page}__dock--m-expanded--TransitionDuration--slide: 0s;
+  --#{$page}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
+
+  // Dock main
+  --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$page}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$page}__dock-main--BoxShadow: none;
+  --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
+  --#{$page}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$page}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
+  --#{$page}__dock-main--BorderInlineEndWidth: 0;
+  --#{$page}__dock-main--BorderInlineEndColor: transparent;
+  --#{$page}__dock-main--desktop--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$page}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
+  --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
+  --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: transparent;
+
+  // Docked nav
+  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock__main-container--desktop--MarginBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns: min-content 1fr;
 
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__sidebar--Width--base: #{pf-size-prem(290px)};
   --#{$page}__sidebar--Width: var(--#{$page}__sidebar--Width--base);
   --#{$page}__sidebar--xl--Width: var(--#{$page}__sidebar--Width--base);
-  --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--floating--secondary--default);
+  --#{$page}__sidebar--BackdropFilter: none;
+  --#{$page}__sidebar--xl--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
+  --#{$page}__sidebar--xl--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--secondary--default));
   --#{$page}__sidebar--BoxShadow: var(--pf-t--global--box-shadow--md--right);
 
   // TODO Reduced Motion default needed
@@ -34,6 +63,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--TranslateZ: 0;
   --#{$page}__sidebar--m-expanded--TranslateX: 0;
   --#{$page}__sidebar--xl--TranslateX: 0;
+  --#{$page}__sidebar--MarginBlockStart: 0;
   --#{$page}__sidebar--MarginInlineEnd: calc(var(--pf-t--global--spacer--inset--page-chrome) / 2);
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar--PaddingInlineStart: 0;
@@ -45,7 +75,25 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--Opacity: 1;
     --#{$page}__sidebar--TransitionProperty: transform;
     --#{$page}__sidebar--TransitionDuration: var(--pf-t--global--motion--duration--slide-in--default);
+    --#{$page}__dock--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-out--short);
+    --#{$page}__dock--m-expanded--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--default);
   }
+
+  // Sidebar main
+  --#{$page}__sidebar-main--PaddingBlockStart: 0;
+  --#{$page}__sidebar-main--PaddingBlockEnd: 0;
+  --#{$page}__sidebar-main--PaddingInlineStart: 0;
+  --#{$page}__sidebar-main--PaddingInlineEnd: 0;
+  --#{$page}__sidebar-main--MarginBlockStart: 0;
+  --#{$page}__sidebar-main--MarginBlockEnd: 0;
+  --#{$page}__sidebar-main--MarginInlineStart: 0;
+  --#{$page}__sidebar-main--MarginInlineEnd: 0;
+  --#{$page}__sidebar-main--BackgroundColor: transparent;
+  --#{$page}__sidebar-main--BackdropFilter: none;
+  --#{$page}__sidebar-main--BorderWidth: 0;
+  --#{$page}__sidebar-main--BorderColor: transparent;
+  --#{$page}__sidebar-main--BorderRadius: 0;
+  --#{$page}__sidebar-main--BoxShadow: none;
 
   // Sidebar header
   --#{$page}__sidebar-header--BorderBlockEndWidth: var(--pf-t--global--border--width--divider--default);
@@ -70,6 +118,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__sidebar--TranslateX: var(--#{$page}__sidebar--xl--TranslateX);
     --#{$page}__sidebar--Opacity: var(--#{$page}__sidebar--xl--Opacity);
     --#{$page}__sidebar--BorderInlineEndWidth: 0;
+    --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--xl--BackgroundColor);
+    --#{$page}__sidebar--BackdropFilter: var(--#{$page}__sidebar--xl--BackdropFilter);
   }
 
   // Container for the main content area (grid area)
@@ -78,7 +128,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--masthead--main-container--GridArea: sidebar / sidebar / main / main; // no sidebar
   --#{$page}__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg));
   --#{$page}__main-container--AlignSelf: start;
-  --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$page}__main-container--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$page}__main-container--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
   --#{$page}__main-container--MarginInlineStart: var(--#{$page}--inset);
   --#{$page}__main-container--MarginInlineEnd: var(--#{$page}--inset);
   --#{$page}__main-container--BorderRadius: var(--pf-t--global--border--radius--medium);
@@ -87,6 +138,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-container--BorderInlineStartWidth: var(--pf-t--global--border--width--main--default);
   --#{$page}__main-container--BorderInlineEndWidth: var(--pf-t--global--border--width--main--default);
   --#{$page}__main-container--BorderColor: var(--pf-t--global--border--color--main--default); 
+  --#{$page}__main-container--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$page}__main-container--xs--AlignSelf: stretch;
   --#{$page}__main-container--xs--BorderRadius: 0;
   --#{$page}__main-container--xs--MarginInlineStart: 0;
@@ -114,6 +166,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__main-breadcrumb--page__main-tabs--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$page}__main-section--m-secondary--BorderBlockStartWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--high-contrast--regular));
+  --#{$page}__main-section--m-secondary--BorderBlockStartColor: var(--pf-t--global--border--color--subtle);
+  --#{$page}__main-section--m-secondary--BorderBlockEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--high-contrast--regular));
+  --#{$page}__main-section--m-secondary--BorderBlockEndColor: var(--pf-t--global--border--color--subtle);
+
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
@@ -123,10 +180,19 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$page}--section--m-sticky-top--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}--section--m-sticky-top--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$page}--section--m-sticky-top--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$page}--section--m-sticky-bottom--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--section--m-sticky-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$page}--section--m-sticky-bottom--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}--section--m-sticky-bottom--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
+  --#{$page}--section--m-sticky-bottom--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+
+  // Sticky - dynamic
+  --#{$page}--section--m-sticky-top--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$page}--section--m-sticky-top--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$page}--section--m-sticky-bottom--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$page}--section--m-sticky-bottom--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+
 
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
@@ -170,10 +236,65 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__drawer--c-drawer--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
-  // Docked nav
-  --#{$page}--m-dock__main-container--MaxHeight: calc(100% - var(--pf-t--global--spacer--lg) * 2);
-  --#{$page}--m-dock__main-container--MarginBlockStart: var(--pf-t--global--spacer--lg);
-  --#{$page}--m-dock--ColumnGap: var(--pf-t--global--spacer--inset--page-chrome);
+  // Glass theme
+  --#{$page}--BackgroundColor--glass: transparent;
+  --#{$page}__sidebar--Width--base--glass: calc(#{pf-size-prem(290px)} + var(--pf-t--global--spacer--inset--page-chrome) * 2);
+  --#{$page}__sidebar--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__sidebar-body--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
+  --#{$page}__sidebar-body--PaddingInlineEnd--glass: var(--pf-t--global--spacer--md);
+  --#{$page}__sidebar-main--PaddingBlockEnd--glass: var(--#{$page}__sidebar--PaddingBlockEnd);
+  --#{$page}__sidebar-main--PaddingInlineStart--glass: var(--#{$page}__sidebar--PaddingInlineStart);
+  --#{$page}__sidebar-main--PaddingInlineEnd--glass: var(--#{$page}__sidebar--PaddingInlineEnd);
+  --#{$page}__sidebar-main--MarginBlockStart--glass: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$page}__sidebar-main--MarginBlockEnd--glass: calc(var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--xs));
+  --#{$page}__sidebar-main--MarginInlineStart--glass: calc(var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--xs));
+  --#{$page}__sidebar-main--MarginInlineEnd--glass: var(--pf-t--global--spacer--md);
+  --#{$page}__sidebar-main--BackgroundColor--glass: var(--#{$page}__sidebar--BackgroundColor);
+  --#{$page}__sidebar-main--BackdropFilter--glass: var(--#{$page}__sidebar--BackdropFilter);
+  --#{$page}__sidebar-main--BorderWidth--glass: var(--pf-t--global--border--width--glass--default);
+  --#{$page}__sidebar-main--BorderColor--glass: var(--pf-t--global--border--color--glass--default);
+  --#{$page}__sidebar-main--BorderRadius--glass: var(--pf-t--global--border--radius--glass--default);
+  --#{$page}__sidebar-main--BoxShadow--glass: var(--pf-t--global--box-shadow--glass--default);
+  --#{$page}__sidebar-main--xl--MarginBlockStart--glass: 0;
+  --#{$page}__sidebar-main--xl--MarginBlockEnd--glass: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__sidebar-main--xl--MarginInlineStart--glass: var(--pf-t--global--spacer--inset--page-chrome);
+  --#{$page}__sidebar-main--xl--MarginInlineEnd--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
+  --#{$page}--m-dock__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
+  --#{$page}--m-dock__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
+
+  :where(.pf-v6-theme-glass) & {
+    --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
+    --#{$page}__sidebar--Width--base: var(--#{$page}__sidebar--Width--base--glass);
+    --#{$page}__sidebar--MarginBlockStart: var(--#{$page}__sidebar--MarginBlockStart--glass);
+    --#{$page}__sidebar-body--PaddingInlineStart: var(--#{$page}__sidebar-body--PaddingInlineStart--glass);
+    --#{$page}__sidebar-body--PaddingInlineEnd: var(--#{$page}__sidebar-body--PaddingInlineEnd--glass);
+    --#{$page}__sidebar-main--PaddingBlockEnd: var(--#{$page}__sidebar-main--PaddingBlockEnd--glass);
+    --#{$page}__sidebar-main--PaddingInlineStart: var(--#{$page}__sidebar-main--PaddingInlineStart--glass);
+    --#{$page}__sidebar-main--PaddingInlineEnd: var(--#{$page}__sidebar-main--PaddingInlineEnd--glass);
+    --#{$page}__sidebar-main--MarginBlockStart: var(--#{$page}__sidebar-main--MarginBlockStart--glass);
+    --#{$page}__sidebar-main--MarginBlockEnd: var(--#{$page}__sidebar-main--MarginBlockEnd--glass);
+    --#{$page}__sidebar-main--MarginInlineStart: var(--#{$page}__sidebar-main--MarginInlineStart--glass);
+    --#{$page}__sidebar-main--MarginInlineEnd: var(--#{$page}__sidebar-main--MarginInlineEnd--glass);
+    --#{$page}__sidebar-main--BackgroundColor: var(--#{$page}__sidebar-main--BackgroundColor--glass);
+    --#{$page}__sidebar-main--BackdropFilter: var(--#{$page}__sidebar-main--BackdropFilter--glass);
+    --#{$page}__sidebar-main--BorderWidth: var(--#{$page}__sidebar-main--BorderWidth--glass);
+    --#{$page}__sidebar-main--BorderColor: var(--#{$page}__sidebar-main--BorderColor--glass);
+    --#{$page}__sidebar-main--BorderRadius: var(--#{$page}__sidebar-main--BorderRadius--glass);
+    --#{$page}__sidebar-main--BoxShadow: var(--#{$page}__sidebar-main--BoxShadow--glass);
+    --#{$page}__main-container--MarginBlockStart: var(--#{$page}__main-container--MarginBlockStart--glass);
+    --#{$page}__main-container--MaxHeight: var(--#{$page}__main-container--MaxHeight--glass);
+    --#{$page}--m-dock__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight--glass);
+    --#{$page}--m-dock__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart--glass);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--xl) {
+    --#{$page}__sidebar-main--MarginBlockStart--glass: var(--#{$page}__sidebar-main--xl--MarginBlockStart--glass);
+    --#{$page}__sidebar-main--MarginBlockEnd--glass: var(--#{$page}__sidebar-main--xl--MarginBlockEnd--glass);
+    --#{$page}__sidebar-main--MarginInlineStart--glass: var(--#{$page}__sidebar-main--xl--MarginInlineStart--glass);
+    --#{$page}__sidebar-main--MarginInlineEnd--glass: var(--#{$page}__sidebar-main--xl--MarginInlineEnd--glass);
+  }
 }
 
 .#{$page} {
@@ -198,16 +319,30 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
   }
 
-  &.pf-m-dock {
+  &.pf-m-docked {
     --#{$page}--masthead--main-container--GridArea: main;
     --#{$page}__main-container--MaxHeight: var(--#{$page}--m-dock__main-container--MaxHeight);
     --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--MarginBlockStart);
-    --#{$page}__main-container--MarginInlineStart: 0;
 
-    grid-template-areas: "dock main";
-    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "dock main";
+    grid-template-rows: max-content 1fr;
     grid-template-columns: auto 1fr;
-    column-gap: var(--#{$page}--m-dock--ColumnGap);
+
+    @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+      --#{$page}__main-container--MarginBlockStart: var(--#{$page}--m-dock__main-container--desktop--MarginBlockStart);
+      --#{$page}__main-container--MarginInlineStart: 0;
+
+      grid-template-areas: "dock main";
+      grid-template-rows: auto;
+      grid-template-columns: auto 1fr;
+      column-gap: var(--#{$page}--m-dock--ColumnGap);
+
+      > .#{$masthead} {
+        display: none;
+      }
+    }
   }
 
   // Hamburger menu animation
@@ -238,22 +373,118 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       @include pf-v6-hamburger;
     }
   }
+
+  // Dock hamburger menu animation
+  // mobile - show collapse arrow on dock internal toggle when expanded
+  .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    // desktop - reset dock internal toggle to bars
+    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+      @include pf-v6-hamburger($reset: true);
+    }
+
+    // desktop - show expand arrow on hover
+    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger;
+    }
+
+    // desktop - show collapse arrow on hover when text expanded
+    .#{$page}__dock.pf-m-text-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
+    }
+  }
 }
 
 // Header
-.#{$page} > .#{$masthead} {
-  @media (min-width: $pf-v6-global--breakpoint--xl) {
-    --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
-  }
+.#{$page} {
+  > .#{$masthead} {
+    @media (min-width: $pf-v6-global--breakpoint--xl) {
+      --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
+    }
 
-  z-index: var(--#{$page}--c-masthead--ZIndex);
-  grid-area: header;
+    z-index: var(--#{$page}--c-masthead--ZIndex);
+    grid-area: header;
+  }
+  
+  &.pf-m-docked {
+    > .#{$masthead} {
+      --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns);
+    }
+  }
 }
 
 // Dock
 .#{$page}__dock {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
   z-index: var(--#{$page}__dock--ZIndex);
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
   grid-area: dock;
+  width: var(--#{$page}__dock--Width);
+  transition: translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$page}__dock--TransitionDuration--slide);
+
+  @include pf-v6-bidirectional-style(
+    $prop: translate,
+    $ltr-val: -100% 0,
+    $rtl-val: 100% 0
+  );
+
+  &.pf-m-expanded {
+    --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
+
+    visibility: visible;
+    translate: 0;
+    transition:
+      translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
+      visibility 0s 0s;
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    position: revert;
+    inset: revert;
+    visibility: revert;
+    width: auto;
+    translate: 0;
+  }
+
+  .#{$toolbar}.pf-m-vertical :is(.#{$toolbar}__content-section, .#{$toolbar}__group, .#{$toolbar}__item) {
+    align-items: stretch;
+  }
+
+  &.pf-m-text-expanded {
+    width: var(--#{$page}__dock--Width);
+  }
+}
+
+.#{$page}__dock-main {
+  flex-grow: 1;
+  background-color: var(--#{$page}__dock-main--BackgroundColor);
+  border-inline-end: var(--#{$page}__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock-main--BorderInlineEndColor);
+  box-shadow: var(--#{$page}__dock-main--BoxShadow);
+  backdrop-filter: var(--#{$page}__dock-main--BackdropFilter);
+
+  .#{$page}__dock.pf-m-expanded & {
+    border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
+    box-shadow: var(--#{$page}__dock--m-expanded__dock-main--BoxShadow);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndWidth);
+    --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
+    --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
+    --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
+    --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
+    --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--BorderInlineEndWidth);
+    --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
+  }
 }
 
 // Sidebar
@@ -269,6 +500,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-block-end: var(--#{$page}__sidebar--PaddingBlockEnd);
   padding-inline-start: var(--#{$page}__sidebar--PaddingInlineStart);
   padding-inline-end: var(--#{$page}__sidebar--PaddingInlineEnd);
+  margin-block-start: var(--#{$page}__sidebar--MarginBlockStart);
   margin-inline-end: var(--#{$page}__sidebar--MarginInlineEnd);
   overflow-x: hidden;
   overflow-y: auto;
@@ -303,6 +535,42 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     max-width: 0;
     overflow: hidden;
   }
+
+  @at-root :where(.pf-v6-theme-glass) {
+    .#{$page}__sidebar {
+      min-height: 0;
+      padding: 0;
+      overflow: revert;
+      background: transparent;
+
+      &.pf-m-expanded {
+        box-shadow: none;
+      }
+    }
+
+    .#{$page}__sidebar-main {
+      overflow: auto;
+    }
+  }
+}
+
+.#{$page}__sidebar-main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding-block-start: var(--#{$page}__sidebar-main--PaddingBlockStart);
+  padding-block-end: var(--#{$page}__sidebar-main--PaddingBlockEnd);
+  padding-inline-start: var(--#{$page}__sidebar-main--PaddingInlineStart);
+  padding-inline-end: var(--#{$page}__sidebar-main--PaddingInlineEnd);
+  margin-block-start: var(--#{$page}__sidebar-main--MarginBlockStart);
+  margin-block-end: var(--#{$page}__sidebar-main--MarginBlockEnd);
+  margin-inline-start: var(--#{$page}__sidebar-main--MarginInlineStart);
+  margin-inline-end: var(--#{$page}__sidebar-main--MarginInlineEnd);
+  background-color: var(--#{$page}__sidebar-main--BackgroundColor);
+  border: var(--#{$page}__sidebar-main--BorderWidth) solid var(--#{$page}__sidebar-main--BorderColor);
+  border-radius: var(--#{$page}__sidebar-main--BorderRadius);
+  box-shadow: var(--#{$page}__sidebar-main--BoxShadow);
+  backdrop-filter: var(--#{$page}__sidebar-main--BackdropFilter);
 }
 
 .#{$page}__sidebar-header {
@@ -413,6 +681,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         position: sticky;
         inset-block-start: 0;
         z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
+        background-color: var(--#{$page}--section--m-sticky-top--BackgroundColor);
         border-block-end: var(--#{$page}--section--m-sticky-top--BorderBlockEndWidth) solid var(--#{$page}--section--m-sticky-top--BorderBlockEndColor);
         box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       }
@@ -421,9 +690,69 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         position: sticky;
         inset-block-end: 0;
         z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
+        background-color: var(--#{$page}--section--m-sticky-bottom--BackgroundColor);
         border-block-start: var(--#{$page}--section--m-sticky-bottom--BorderBlockStartWidth) solid var(--#{$page}--section--m-sticky-bottom--BorderBlockStartColor);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
+
+    }
+  }
+
+  // Dynamic sticky modifiers: no shadow + fade transition when stuck
+  &.pf-m-sticky-top-base {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
+    box-shadow: none;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-color: var(--#{$page}--section--m-sticky-top--BackgroundColor);
+      box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
+      opacity: 0;
+      transition-timing-function: var(--#{$page}--section--m-sticky-top--TransitionTimingFunction);
+      transition-duration: var(--#{$page}--section--m-sticky-top--TransitionDuration);
+      transition-property: opacity;
+    }
+  }
+
+  &.pf-m-sticky-top-base,
+  .#{$page}__main-group.pf-m-sticky-top-base &:last-child {
+    --#{$page}__main-breadcrumb--PaddingBlockEnd: var(--#{$page}__main-breadcrumb--m-sticky-top--PaddingBlockEnd);
+  }
+
+  &.pf-m-sticky-top-stuck {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.pf-m-sticky-bottom-base {
+    position: sticky;
+    inset-block-end: 0;
+    z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
+    box-shadow: none;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-color: var(--#{$page}--section--m-sticky-bottom--BackgroundColor);
+      box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
+      opacity: 0;
+      transition-timing-function: var(--#{$page}--section--m-sticky-bottom--TransitionTimingFunction);
+      transition-duration: var(--#{$page}--section--m-sticky-bottom--TransitionDuration);
+      transition-property: opacity;
+    }
+  }
+
+  &.pf-m-sticky-bottom-stuck {
+    &::before {
+      opacity: 1;
     }
   }
 }
@@ -444,6 +773,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   border-inline-start-width: var(--#{$page}__main-container--BorderInlineStartWidth);
   border-inline-end-width: var(--#{$page}__main-container--BorderInlineEndWidth);
   border-radius: var(--#{$page}__main-container--BorderRadius);
+  box-shadow: var(--#{$page}__main-container--BoxShadow);
+  backdrop-filter: var(--#{$page}__main-container--BackdropFilter);
 
   @media screen and (max-width: pf-v6-max-width-bp($pf-v6-global--breakpoint--md)) {
     --#{$page}__main-container--AlignSelf: var(--#{$page}__main-container--xs--AlignSelf);
@@ -477,9 +808,25 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     align-self: stretch;
   }
 
-
   &:focus {
     outline: 0;
+  }
+}
+
+.#{$page}__main-subnav,
+.#{$page}__main-breadcrumb,
+.#{$page}__main-tabs,
+.#{$page}__main-section,
+.#{$page}__main-wizard,
+.#{$page}__main-group {
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
+    --#{$page}__main-section--BackgroundColor: transparent;
+    --#{$page}__main-subnav--BackgroundColor: transparent;
+    --#{$page}__main-breadcrumb--BackgroundColor: transparent;
+    --#{$page}__main-tabs--BackgroundColor: transparent;
+    --#{$page}__main-wizard--BackgroundColor: transparent;
+    --#{$page}__main-group--BackgroundColor: transparent;
   }
 }
 
@@ -502,7 +849,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-inline-end: var(--#{$page}__main-subnav--PaddingInlineEnd);
   background-color: var(--#{$page}__main-subnav--BackgroundColor);
 
-  &.pf-m-sticky-top {
+  &.pf-m-sticky-top,
+  &.pf-m-sticky-top-base {
     padding-block-end: var(--#{$page}__main-subnav--m-sticky-top--PaddingBlockEnd);
   }
 }
@@ -569,6 +917,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   &.pf-m-secondary {
     --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-secondary--BackgroundColor);
+
+    border-block-start: var(--#{$page}__main-section--m-secondary--BorderBlockStartWidth) solid var(--#{$page}__main-section--m-secondary--BorderBlockStartColor);
+    border-block-end: var(--#{$page}__main-section--m-secondary--BorderBlockEndWidth) solid var(--#{$page}__main-section--m-secondary--BorderBlockEndColor);
   }
 
   @each $breakpoint, $breakpoint-value in $pf-page-v6--breakpoint-map {

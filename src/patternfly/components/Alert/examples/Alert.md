@@ -259,7 +259,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 ### Custom icon
 ```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="cog"}}
+  {{> alert-icon alert-icon--type="rh-ui-settings-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
@@ -267,7 +267,7 @@ cssPrefix: ['pf-v6-c-alert','pf-v6-c-alert-group']
 {{/alert}}
 <br>
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
-  {{> alert-icon alert-icon--type="cog"}}
+  {{> alert-icon alert-icon--type="rh-ui-settings-fill"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title (inline)

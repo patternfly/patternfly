@@ -347,8 +347,8 @@
 
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
       grid-template: auto / var(--#{$content}--dl--GridTemplateColumns--dt) var(--#{$content}--dl--GridTemplateColumns--dd);
-      grid-row-gap: var(--#{$content}--dl--RowGap);
-      grid-column-gap: var(--#{$content}--dl--ColumnGap);
+      row-gap: var(--#{$content}--dl--RowGap);
+      column-gap: var(--#{$content}--dl--ColumnGap);
     }
   }
 

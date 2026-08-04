@@ -429,6 +429,8 @@ Another variation is using the definition list:
 | `.pf-v6-c-accordion__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
 | `.pf-v6-c-accordion__expandable-content` | `<div>`, `<dd>` | Initiates expandable content. **Must be paired with a button** |
 | `.pf-v6-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
+| `.pf-m-plain` | `.pf-v6-c-accordion` | Modifies the accordion have plain styles. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-accordion` | Prevents the accordion from automatically applying plain styling when glass theme is enabled. |
 | `.pf-m-bordered` | `.pf-v6-c-accordion` | Modifies the accordion to add borders between items. |
 | `.pf-m-display-lg` | `.pf-v6-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
 | `.pf-m-toggle-start` | `.pf-v6-c-accordion` | Modifies accordion styling when accordion toggle icons are rendered at the start of the toggle, before the toggle text. |

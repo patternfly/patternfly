@@ -45,6 +45,31 @@ The overflow menu relies on groups (`.pf-v6-c-overflow-menu__group`) and items (
 {{/overflow-menu}}
 ```
 
+### Vertical
+```hbs isBeta
+{{#> overflow-menu overflow-menu--modifier="pf-m-vertical" overflow-menu--id="overflow-menu-vertical-expanded"}}
+  {{#> overflow-menu-content}}
+    {{#> overflow-menu-item}}
+      Item 1
+    {{/overflow-menu-item}}
+    {{#> overflow-menu-item}}
+      Item 2
+    {{/overflow-menu-item}}
+    {{#> overflow-menu-group}}
+      {{#> overflow-menu-item}}
+        Item 3
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        Item 4
+      {{/overflow-menu-item}}
+      {{#> overflow-menu-item}}
+        Item 5
+      {{/overflow-menu-item}}
+    {{/overflow-menu-group}}
+  {{/overflow-menu-content}}
+{{/overflow-menu}}
+```
+
 ### Default spacing for items and groups:
 
 | Class | CSS Variable | Computed Value |
@@ -225,5 +250,6 @@ The action group consists of a primary and secondary action. Any additional acti
 | `.pf-v6-c-overflow-menu__control` | `<div>` | Initiates the overflow menu control. **Required** |
 | `.pf-v6-c-overflow-menu__group` | `<div>` | Initiates an overflow menu group. |
 | `.pf-v6-c-overflow-menu__item` | `<div>` | Initiates an overflow menu item. **Required** |
+| `.pf-m-vertical` | `.pf-v6-c-overflow-menu` | Modifies the flex direction to "column", for vertically aligned overflow menus. |
 | `.pf-m-button-group` | `.pf-v6-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-button-group--spacer)`. Child spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-button-group--space-items)`. |
 | `.pf-m-icon-button-group` | `.pf-v6-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-icon-button-group--spacer)`. Child spacer value is set to `var(--pf-v6-c-overflow-menu__group--m-icon-button-group--space-items)`. |

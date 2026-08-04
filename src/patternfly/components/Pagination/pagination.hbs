@@ -1,4 +1,13 @@
-<div class="{{pfv}}pagination{{#if pagination--IsCompact}} pf-m-compact{{/if}}{{#if pagination--modifier}} {{pagination--modifier}}{{/if}}"
+<div class="{{pfv}}pagination
+  {{setModifiers
+    pagination--IsCompact='pf-m-compact'
+    pagination--IsBottom='pf-m-bottom'
+    pagination--IsSticky='pf-m-sticky'
+    pagination--IsStatic='pf-m-static'
+    pagination--IsStickyBase='pf-m-sticky-base'
+    pagination--IsStickyStuck='pf-m-sticky-stuck'
+    pagination--modifier=pagination--modifier
+  }}"
   {{#if pagination--attribute}}
     {{{pagination--attribute}}}
   {{/if}}>

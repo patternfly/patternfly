@@ -1,29 +1,27 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:recommended"],
   "enabledManagers": ["npm"],
   "packageRules": [
     {
-      "packagePatterns": ["*"],
-      "excludePackagePatterns": [
-        "@patternfly/patternfly-a11y",
-        "@patternfly/react-core",
-        "@patternfly/react-code-editor",
-        "@patternfly/react-table",
-        "@patternfly/documentation-framework"
-      ],
+      "matchDatasources": ["npm"],
       "enabled": false
     },
     {
-      "datasources": ["npm"],
-      "packageNames": [
-        "@patternfly/patternfly-a11y",
-        "@patternfly/react-core",
-        "@patternfly/react-code-editor",
-        "@patternfly/react-table",
-        "@patternfly/documentation-framework"
-      ]
+      "groupName": "PatternFly dependencies",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "@patternfly/documentation-framework",
+        "sass",
+        "backstopjs",
+        "/^stylelint/",
+        "/^@patternfly/react/"
+      ],
+      "enabled": true
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@patternfly/patternfly-a11y"],
+      "enabled": true
     }
   ]
 }

@@ -215,7 +215,7 @@ import './Table.css'
         toolbar-template--HasFilterGroup=true
         toolbar-template--HasSortButton=true
       }}
-    {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
+    {{> table-simple-table table--HasStickyHeader=true table-simple-table--IsLong=true}}
     {{> table-pagination-footer}}
   {{/page-main-section}}
 {{/inline}}
@@ -294,8 +294,8 @@ import './Table.css'
         }}
       <div class="pf-v6-c-scroll-inner-wrapper">
         {{> table--scrollable
+            table--HasStickyHeader=true
             table--scrollable--id="sticky-header-and-multiple-columns-demo-table"
-            table--scrollable--modifier="pf-m-sticky-header"
             table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"
             table--scrollable--Column1IsStickyColumn=true
             table--scrollable--Column2IsStickyColumn=true}}
@@ -324,7 +324,7 @@ import './Table.css'
       <div class="pf-v6-c-scroll-inner-wrapper">
         {{> table--scrollable
             table--scrollable--id="sticky-right-column-example"
-            table--scrollable--th--modifier--cell-9-modifier="pf-m-truncate pf-m-border-left"
+            table--scrollable--th--modifier--cell-13-modifier="pf-m-border-left"
             table--scrollable--ColumnLastIsStickyColumn=true}}
       </div>
       {{> table-pagination-footer}}

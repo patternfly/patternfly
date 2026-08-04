@@ -25,6 +25,9 @@ $fa-font-path: "./assets/fonts/webfonts" !default;
 // FontIcon path
 $pf-v6-global--fonticon-path: "./assets/pficon" !default;
 
+// Image path
+$pf-v6-global--image-path: "./assets/images" !default;
+
 // Grid breakpoints
 // Note that these duplicate and should match breakpoint tokens
 $pf-v6-global--breakpoint--xs: 0 !default;
@@ -40,6 +43,9 @@ $pf-v6-global--height-breakpoint--md: 40rem !default; // 640px
 $pf-v6-global--height-breakpoint--lg: 48rem !default; // 768px
 $pf-v6-global--height-breakpoint--xl: 60rem !default; // 960px
 $pf-v6-global--height-breakpoint--2xl: 80rem !default; // 1280px
+
+// Semantic breakpoints
+$pf-v6-global--breakpoint--dock--desktop: $pf-v6-global--breakpoint--lg !default;
 
 // Global breakpoint map - used for @pf-grid-item-modifiers
 $pf-v6-global--breakpoint-map: (

@@ -6,12 +6,12 @@
   --#{$menu-toggle}--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
   --#{$menu-toggle}--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--default);
-  --#{$menu-toggle}--MinWidth: calc(var(--#{$menu-toggle}--FontSize) * var(--#{$menu-toggle}--LineHeight) + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
+  --#{$menu-toggle}--MinWidth: calc(1lh + var(--#{$menu-toggle}--PaddingBlockStart) + var(--#{$menu-toggle}--PaddingBlockEnd));
   --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$menu-toggle}--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--control--default);
   --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$menu-toggle}--border--ZIndex: var(--pf-t--global--z-index--xs); // add z-index for toggle border to render above other borders
@@ -61,7 +61,7 @@
   --#{$menu-toggle}--m-primary--PaddingInlineEnd: var(--pf-t--global--spacer--action--horizontal--default);
   --#{$menu-toggle}--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --#{$menu-toggle}--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-primary--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-primary--BorderColor: transparent;
   --#{$menu-toggle}--m-primary--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
   --#{$menu-toggle}--m-primary--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
@@ -81,7 +81,7 @@
   --#{$menu-toggle}--m-secondary--BackgroundColor: transparent;
   --#{$menu-toggle}--m-secondary--Color: var(--pf-t--global--text--color--brand--default);
   --#{$menu-toggle}--m-secondary--BorderColor: var(--pf-t--global--border--color--brand--default);
-  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-secondary--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-secondary--hover--Color: var(--pf-t--global--text--color--brand--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --#{$menu-toggle}--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
@@ -99,12 +99,15 @@
   --#{$menu-toggle}--m-full-height--PaddingInlineEnd: var(--pf-t--global--spacer--control--horizontal--spacious);
   --#{$menu-toggle}--m-full-height--PaddingInlineStart: var(--pf-t--global--spacer--control--horizontal--spacious);
 
+  // Form (for use in forms)
+  --#{$menu-toggle}--m-form--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
+
   // Split button, child
   --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$menu-toggle}--m-split-button--child--BorderInlineStartWidth: var(--pf-t--global--border--width--action--default);
   --#{$menu-toggle}--m-split-button--child--BorderInlineStartColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--m-split-button--child--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$menu-toggle}--m-split-button--child--BorderRadius: var(--pf-t--global--border--radius--action--default);
   --#{$menu-toggle}--m-split-button--child--disabled--BorderInlineStartColor: var(--pf-t--global--icon--color--on-disabled);
   --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineStart--offset: var(--pf-t--global--spacer--control--horizontal--default);
   --#{$menu-toggle}--m-split-button--pill--child--PaddingInlineEnd--offset: var(--pf-t--global--spacer--control--horizontal--default);
@@ -142,7 +145,7 @@
   --#{$menu-toggle}--m-plain--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$menu-toggle}--m-plain--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BorderWidth: var(--pf-t--global--border--width--action--plain--clicked);
-  --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$menu-toggle}--m-plain--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$menu-toggle}--m-plain--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$menu-toggle}--m-plain--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$menu-toggle}--m-plain--disabled--Color: var(--pf-t--global--text--color--disabled);
@@ -201,7 +204,7 @@
   gap: var(--#{$menu-toggle}--Gap);
   align-items: center;
   justify-content: center;
-  min-width: var(--#{$menu-toggle}--MinWidth);
+  min-width: var(--#{$menu-toggle}--MinWidth, revert);
   max-width: 100%;
   padding-block-start: var(--#{$menu-toggle}--PaddingBlockStart);
   padding-block-end: var(--#{$menu-toggle}--PaddingBlockEnd);
@@ -288,6 +291,10 @@
 
   &.pf-m-full-width {
     width: 100%;
+  }
+
+  &.pf-m-form {
+    --#{$menu-toggle}--BorderRadius: var(--#{$menu-toggle}--m-form--BorderRadius);
   }
 
   &.pf-m-plain {
@@ -424,6 +431,36 @@
     &,
     .#{$button} {
       pointer-events: none;
+    }
+  }
+  
+  &.pf-m-docked {
+    justify-content: flex-start;
+    width: 100%;
+
+    .#{$menu-toggle}__icon {
+      min-width: 1lh;
+    }
+
+    @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+      justify-content: center;
+      width: auto;
+
+      .#{$menu-toggle}__text,
+      .#{$menu-toggle}__controls {
+        display: none;
+      }
+    }
+  }
+
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &.pf-m-docked,
+  &.pf-m-text-expanded {
+    justify-content: flex-start;
+    width: 100%;
+
+    .#{$menu-toggle}__text,
+    .#{$menu-toggle}__controls {
+      display: revert;
     }
   }
 }
@@ -615,10 +652,10 @@
 
 .#{$menu-toggle}__icon {
   flex-shrink: 0;
+  rotate: var(--#{$menu-toggle}__icon--Rotate);
   transition-delay: var(--#{$menu-toggle}__icon--TransitionDelay);
   transition-duration: var(--#{$menu-toggle}__icon--TransitionDuration);
   transition-property: var(--#{$menu-toggle}__icon--TransitionProperty);
-  rotate: var(--#{$menu-toggle}__icon--Rotate);
   
   @at-root .#{$menu-toggle}:not(.pf-m-plain) & {
     @extend %pf-v6-menu-toggle__icon--MarginBlock;

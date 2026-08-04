@@ -20,3 +20,9 @@
     display: revert;
   }
 }
+
+.#{$pf-prefix}icon-rh-standard {
+  width: 3rem;
+  height: 3rem;
+  color: var(--pf-t--global--icon--color--brand--accent--default);
+}

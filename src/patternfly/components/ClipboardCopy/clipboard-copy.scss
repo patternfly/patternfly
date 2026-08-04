@@ -13,7 +13,7 @@
   --#{$clipboard-copy}__expandable-content--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$clipboard-copy}__expandable-content--PaddingBlockEnd: var(--pf-t--global--spacer--md);
   --#{$clipboard-copy}__expandable-content--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$clipboard-copy}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$clipboard-copy}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$clipboard-copy}__expandable-content--BorderBlockStartWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderInlineEndWidth: var(--pf-t--global--border--width--control--default);
   --#{$clipboard-copy}__expandable-content--BorderBlockEndWidth: var(--pf-t--global--border--width--control--default);
@@ -21,6 +21,10 @@
   --#{$clipboard-copy}__expandable-content--BorderColor: var(--pf-t--global--border--color--control--default);
   --#{$clipboard-copy}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--control--form-element);
   --#{$clipboard-copy}__expandable-content--OutlineOffset: var(--pf-t--global--spacer--xs);
+
+  // Readonly
+  --#{$clipboard-copy}--m-readonly__expandable-content--BackgroundColor: var(--pf-t--global--background--color--control--read-only);
+  --#{$clipboard-copy}--m-readonly__expandable-content--BorderColor: var(--pf-t--global--border--color--control--read-only);
 
   // Group
   --#{$clipboard-copy}__group--Gap: var(--pf-t--global--spacer--gap--control-to-control--default);
@@ -62,6 +66,11 @@
       display: inline-flex;
     }
   }
+
+  &.pf-m-readonly {
+    --#{$clipboard-copy}__expandable-content--BackgroundColor: var(--#{$clipboard-copy}--m-readonly__expandable-content--BackgroundColor);
+    --#{$clipboard-copy}__expandable-content--BorderColor: var(--#{$clipboard-copy}--m-readonly__expandable-content--BorderColor);
+  }
 }
 
 
@@ -82,7 +91,7 @@
   padding-inline-start: var(--#{$clipboard-copy}__expandable-content--PaddingInlineStart);
   padding-inline-end: var(--#{$clipboard-copy}__expandable-content--PaddingInlineEnd);
   margin-block-start: var(--#{$clipboard-copy}__expandable-content--MarginBlockStart);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: var(--#{$clipboard-copy}__expandable-content--BackgroundColor);
   background-clip: padding-box;
   border: solid var(--#{$clipboard-copy}__expandable-content--BorderColor);
@@ -99,7 +108,7 @@
 }
 
 .#{$clipboard-copy}__text {
-  word-break: break-word;
+  overflow-wrap: anywhere;
   white-space: normal;
 
   &.pf-m-code {

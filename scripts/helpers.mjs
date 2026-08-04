@@ -68,6 +68,28 @@ export const ifAny = function () {
   return anyTruthy ? options.fn(this) : options.inverse(this);
 };
 
+// Using ifAll
+// {{#ifAll user.isActive user.hasPermission user.isLoggedIn}}
+//   Welcome! You have full access.
+// {{else}}
+//   Access restricted: Please check your account status.
+// {{/ifAll}}
+
+export const ifAll = function() {
+  // Convert arguments to an array, excluding the last 'options' object
+  var args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);
+  var options = arguments[arguments.length - 1];
+
+  // Check if every argument is truthy
+  var allTruthy = args.every(Boolean);
+
+  if (allTruthy) {
+      return options.fn(this);
+  } else {
+      return options.inverse(this);
+  }
+};
+
 /** Using ternary
 if custom value for select--width: {{#> select select--width='160px'}}Filter by name{{/select}}
 else custom value for select--width: {{#> select)}}Filter by name{{/select}}
@@ -390,5 +412,52 @@ export const pfIcon = function (iconName) {
     const safeName = (iconName && typeof iconName === 'string') ? path.basename(iconName) : 'unknown';
     console.error(`\x1b[31mError loading icon "${safeName}": ${error.message}\x1b[0m`);
     return new Handlebars.SafeString(`<!-- Icon "${safeName}" not found -->`);
+  }
+}
+
+// ======================================================================================
+// readFile: a helper function to inline file contents from the project
+// ======================================================================================
+//
+// Usage:
+//   {{readFile '/assets/images/PF-IconLogo.svg'}}
+//   {{readFile 'src/patternfly/assets/images/PF-IconLogo.svg'}}
+//
+// ======================================================================================
+export const readFile = function (filePath) {
+  try {
+    if (!filePath || typeof filePath !== 'string') {
+      console.error(`\x1b[31mInvalid file path: ${filePath}\x1b[0m`);
+      return new Handlebars.SafeString(`<!-- Invalid file path -->`);
+    }
+
+    // Resolve path relative to project root
+    const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+    let resolvedPath;
+    let expectedRoot;
+
+    if (filePath.startsWith('/')) {
+      // If path starts with /, treat it as relative to src/patternfly
+      expectedRoot = path.join(projectRoot, 'src/patternfly');
+      resolvedPath = path.join(expectedRoot, filePath);
+    } else {
+      // Otherwise treat as relative to project root
+      expectedRoot = projectRoot;
+      resolvedPath = path.join(projectRoot, filePath);
+    }
+
+    // Validate that the resolved path stays within the intended directory boundary
+    const relativePath = path.relative(expectedRoot, resolvedPath);
+    if (relativePath.startsWith('..') || path.isAbsolute(relativePath)) {
+      console.error(`\x1b[31mPath traversal attempt detected: ${filePath}\x1b[0m`);
+      return new Handlebars.SafeString(`<!-- Invalid file path -->`);
+    }
+
+    const fileContent = fs.readFileSync(resolvedPath, 'utf8');
+    return new Handlebars.SafeString(fileContent);
+  } catch (error) {
+    const safePath = (filePath && typeof filePath === 'string') ? filePath : 'unknown';
+    console.error(`\x1b[31mError reading file "${safePath}": ${error.message}\x1b[0m`);
+    return new Handlebars.SafeString(`<!-- File "${safePath}" not found -->`);
   }
 }

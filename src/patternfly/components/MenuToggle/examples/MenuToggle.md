@@ -91,7 +91,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsPrimary="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -139,7 +139,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsSecondary="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -174,20 +174,20 @@ import './MenuToggle.css'
 
 ### Plain
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=true menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--aria-label="Actions" menu-toggle--HasKebab=true}}
 ```
 
 ### Plain circle
 ```hbs isBeta
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--attribute='aria-label="Circle styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--aria-label="Circle styled actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--attribute='aria-label="Circle and expanded styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsExpanded=true menu-toggle--aria-label="Circle and expanded styled actions" menu-toggle--HasKebab=true}}
 &nbsp;
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Circle and disabled styled actions"' menu-toggle--HasKebab=true}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsCircle=true menu-toggle--IsDisabled="true" menu-toggle--aria-label="Circle and disabled styled actions" menu-toggle--HasKebab=true}}
 ```
 
 ### Plain with text
@@ -261,7 +261,7 @@ import './MenuToggle.css'
 ```hbs
 {{#> menu-toggle menu-toggle--IsSecondary="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -275,7 +275,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    {{pfIcon "rh-ui-settings-fill"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
@@ -290,7 +290,7 @@ import './MenuToggle.css'
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--modifier="pf-m-sm"}}
+    {{> avatar avatar--IsImg avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -304,7 +304,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--modifier="pf-m-sm"}}
+    {{> avatar avatar--IsImg avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -318,7 +318,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--modifier="pf-m-sm"}}
+    {{> avatar avatar--IsImg avatar--modifier="pf-m-sm"}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -347,6 +347,18 @@ import './MenuToggle.css'
 {{#> menu-toggle menu-toggle--modifier="pf-m-full-width"}}
   {{#> menu-toggle-text}}
     Full width
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Form
+```hbs
+{{#> menu-toggle menu-toggle--IsForm="true"}}
+  {{#> menu-toggle-text}}
+    Select option
   {{/menu-toggle-text}}
   {{#> menu-toggle-controls}}
     {{> menu-toggle-toggle-icon}}
@@ -870,7 +882,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -885,7 +897,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -900,7 +912,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -918,7 +930,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -933,7 +945,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -948,7 +960,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -966,7 +978,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -981,7 +993,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -996,7 +1008,7 @@ Shown with default, primary, and secondary styling
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true" menu-toggle-button--IsTextToggle="true"}}
     {{#> menu-toggle-icon}}
-      <i class="fas fa-cog" aria-hidden="true"></i>
+      {{pfIcon "rh-ui-settings-fill"}}
     {{/menu-toggle-icon}}
     {{#> menu-toggle-text}}
       Icon
@@ -1010,11 +1022,11 @@ Shown with default, primary, and secondary styling
 
 ### Settings
 ```hbs
-{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+{{> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
 
-{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+{{> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
 
-{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--icon="cog" menu-toggle--aria-label="Settings"}}
+{{> menu-toggle menu-toggle--IsDisabled="true" menu-toggle--IsPlain=true menu-toggle--IsSettings=true menu-toggle--aria-label="Settings"}}
 ```
 
 ## Documentation
@@ -1049,7 +1061,9 @@ Shown with default, primary, and secondary styling
 | `.pf-m-expanded` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
 | `.pf-m-full-width` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component to full width of parent. |
+| `.pf-m-form` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle for use in forms with form element border radius. |
 | `.pf-m-success` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the success state. |
 | `.pf-m-warning` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the warning state. |
 | `.pf-m-danger` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle component for the danger state. |
 | `.pf-m-placeholder` | `.pf-v6-c-menu-toggle` | Modifies the menu toggle text for placeholder styles. |
+| `.pf-m-text-expanded` | `.pf-v6-c-menu-toggle` | Modifies a dock menu toggle to show its text. |

@@ -9,8 +9,7 @@ module.exports = {
   sideNavItems: [
     { section: 'components' },
     { section: 'patterns' },
-    { section: 'foundations-and-styles' },
-    { section: 'AI' }
+    { section: 'foundations-and-styles' }
   ],
   topNavItems: [
     {

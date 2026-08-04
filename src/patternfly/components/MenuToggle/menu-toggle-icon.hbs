@@ -7,7 +7,11 @@
     {{{menu-toggle-icon--attribute}}}
   {{/if}}>
   {{#if menu-toggle--icon}}
-    <i class="fas fa-{{menu-toggle--icon}}" aria-hidden="true"></i>
+    {{#if menu-toggle--IsSettings}}
+      {{{pfIcon "rh-ui-settings-fill"}}}
+    {{else}}
+      {{pfIcon menu-toggle--icon}}
+    {{/if}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

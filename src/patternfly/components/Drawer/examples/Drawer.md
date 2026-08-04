@@ -293,6 +293,18 @@ import './Drawer.css'
 {{/drawer}}
 ```
 
+### Resizable Pill
+```hbs isBeta
+{{#> drawer drawer--id="resizable-pill" drawer--IsPill=true drawer-panel--IsOpen=true drawer-panel--IsResizable=true}}
+ {{#> drawer-main}}
+    {{#> drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+    {{/drawer-content}}
+    {{> drawer-example-panel}}
+  {{/drawer-main}}
+{{/drawer}}
+```
+
 ### Pill inline
 ```hbs isBeta
 {{#> drawer drawer--id="pill--inline" drawer--IsInline=true drawer--IsPill=true drawer-panel--IsOpen=true}}
@@ -344,7 +356,9 @@ import './Drawer.css'
 | `.pf-m-no-border` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-v6-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-v6-c-drawer__body` | Modifies the element to remove padding. |
-| `.pf-m-no-background` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__panel` | Modifies the drawer element background color to transparent. |
+| `.pf-m-no-background` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__panel` | Modifies the drawer element background color to transparent. **Note:** `.pf-m-no-background` is deprecated, use `.pf-m-plain` instead. |
+| `.pf-m-plain` | `.pf-v6-c-drawer__panel.pf-m-inline`, `.pf-v6-c-drawer__panel.pf-m-static`, `.pf-v6-c-drawer__section` | Applies plain styling. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-drawer__panel.pf-m-inline`, `.pf-v6-c-drawer__panel.pf-m-static`, `.pf-v6-c-drawer__section` | Prevents the elements from automatically applying plain styling when glass theme is enabled. |
 | `.pf-m-primary` | `.pf-v6-c-drawer__content` | Modifies the drawer content to use the primary background color. |
 | `.pf-m-secondary` | `.pf-v6-c-drawer__section`, `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` | Modifies the drawer element to use the secondary background color. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |

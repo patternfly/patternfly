@@ -2,7 +2,7 @@
   {{#> code-editor-header}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        <i class="fas fa-code" aria-hidden="true"></i>
+        {{pfIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         YAML
@@ -13,7 +13,7 @@
     {{#> code-editor-upload}}
       {{#> empty-state}}
         {{#> empty-state-header}}
-          {{> empty-state-icon empty-state-icon--type="code"}}
+          {{> empty-state-icon empty-state-icon--type="rh-ui-code"}}
           {{#> empty-state-title}}
             {{#> empty-state-title-text empty-state-title-text--element="h4"}}
               Start editing

@@ -19,9 +19,9 @@
   --#{$alert}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Toggle
-  --#{$alert}__toggle--MarginBlockStart: calc(-1 * var(--pf-t--global--spacer--control--vertical--default));
-  --#{$alert}__toggle--MarginBlockEnd: calc(-1 * var(--pf-t--global--spacer--control--vertical--default));
-  --#{$alert}__toggle--MarginInlineStart: calc(-1 * var(--pf-t--global--spacer--action--horizontal--plain--default));
+  --#{$alert}__toggle--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$alert}__toggle--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$alert}__toggle--MarginInlineStart: calc(var(--pf-t--global--spacer--action--horizontal--plain--default) * -1);
   --#{$alert}__toggle--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
   // Toggle icon
@@ -41,8 +41,8 @@
   --#{$alert}__title--max-lines: 1;
 
   // Action
-  --#{$alert}__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
-  --#{$alert}__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--default) * -1);
+  --#{$alert}__action--MarginBlockStart: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
+  --#{$alert}__action--MarginBlockEnd: calc(var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$alert}__action--TranslateY: #{pf-size-prem(2px)};
   --#{$alert}__action--MarginInlineEnd: calc(var(--pf-t--global--spacer--sm) * -1);
 
@@ -188,12 +188,13 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
-  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
   transform: rotate(var(--#{$alert}__toggle-icon--Rotate));
+  transition: transform var(--#{$alert}__toggle-icon--TransitionDuration) var(--#{$alert}__toggle-icon--TransitionTimingFunction);
 }
 
 .#{$alert}__icon {
   grid-area: icon;
+  align-self: baseline;
   margin-inline-end: var(--#{$alert}__icon--MarginInlineEnd);
   font-size: var(--#{$alert}__icon--FontSize);
   color: var(--#{$alert}__icon--Color);
@@ -204,7 +205,7 @@
   grid-area: title;
   font-weight: var(--#{$alert}__title--FontWeight);
   color: var(--#{$alert}__title--Color);
-  word-break: break-word;
+  overflow-wrap: anywhere;
 
   &.pf-m-truncate {
     @include pf-v6-line-clamp("var(--#{$alert}__title--max-lines)");
@@ -214,7 +215,7 @@
 .#{$alert}__description {
   grid-area: description;
   padding-block-start: var(--#{$alert}__description--PaddingBlockStart);
-  word-break: break-word;
+  overflow-wrap: anywhere;
 
   + .#{$alert}__action-group {
     --#{$alert}__action-group--PaddingBlockStart: var(--#{$alert}__description--action-group--PaddingBlockStart);

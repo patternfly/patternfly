@@ -21,7 +21,7 @@ section: patterns
   {{#> page-main-section}}
     {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
   {{/page-main-section}}
-  {{#> pagination pagination--modifier="pf-m-bottom pf-m-sticky"}}
+  {{#> pagination pagination--IsBottom=true pagination--IsSticky=true}}
     {{> pagination-menu-toggle pagination-menu-toggle--id="pagination-menu-toggle-bottom-example" pagination-menu-toggle--modifier="pf-m-top"}}
     {{> pagination-nav-content}}
   {{/pagination}}

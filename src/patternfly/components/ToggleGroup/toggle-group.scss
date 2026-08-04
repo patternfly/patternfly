@@ -51,9 +51,9 @@
   --#{$toggle-group}__button--disabled--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Compact
-  --#{$toggle-group}--m-compact__button--PaddingBlockStart: 0;
+  --#{$toggle-group}--m-compact__button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$toggle-group}--m-compact__button--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$toggle-group}--m-compact__button--PaddingBlockEnd: 0;
+  --#{$toggle-group}--m-compact__button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$toggle-group}--m-compact__button--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$toggle-group}--m-compact__button--FontSize: var(--pf-t--global--font--size--body--default);
 }
@@ -67,6 +67,19 @@
     --#{$toggle-group}__button--PaddingBlockEnd: var(--#{$toggle-group}--m-compact__button--PaddingBlockEnd);
     --#{$toggle-group}__button--PaddingInlineStart: var(--#{$toggle-group}--m-compact__button--PaddingInlineStart);
     --#{$toggle-group}__button--FontSize: var(--#{$toggle-group}--m-compact__button--FontSize);
+  }
+
+  // Filled style
+  &.pf-m-fill {
+    .#{$toggle-group}__item {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .#{$toggle-group}__button {
+      flex-basis: 100%;
+      justify-content: center;
+    }
   }
 }
 

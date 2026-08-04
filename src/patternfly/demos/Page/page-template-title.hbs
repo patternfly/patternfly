@@ -1,5 +1,5 @@
-{{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=page-template-title--modifier}}
-  {{#> content--element content--element--type="h1" content--element--IsPageTitle=true}}
+{{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=page-template-title--modifier page-main-section--attribute='aria-labelledby="main-title"'}}
+  {{#> content--element content--element--type="h1" content--element--IsPageTitle=true content--element--attribute='id="main-title"'}}
     {{~#if page-template-title--title}}
       {{page-template-title--title}}
     {{else}}

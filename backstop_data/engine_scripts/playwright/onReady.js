@@ -3,16 +3,9 @@ module.exports = async (page, scenario, vp) => {
   // Wait until all network requests have completed for a moment
   await page.waitForLoadState('networkidle');
 
-  if (process.argv.includes('--dark')) {
-    // Emulate dark mode
-    if (page.emulateMedia) {
-      await page.emulateMedia({ colorScheme: 'dark' });
-    }
-    await require('./addDarkThemeClass')(page, scenario);
-  } else {
-    // Emulate light mode
-    if (page.emulateMedia) {
-      await page.emulateMedia({ colorScheme: 'light' });
-    }
+  // Emulate color scheme based on dark mode
+  const isDark = process.argv.includes('--dark');
+  if (page.emulateMedia) {
+    await page.emulateMedia({ colorScheme: isDark ? 'dark' : 'light' });
   }
 };

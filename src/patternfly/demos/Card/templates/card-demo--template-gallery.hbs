@@ -2,7 +2,9 @@
     {{#> card card--id="card-empty-state" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> bullseye}}
         {{#> empty-state empty-state--modifier="pf-m-xs"}}
-          <i class="fas fa-plus-circle {{pfv}}empty-state__icon"></i>
+          <div class="{{concat (pfv) "empty-state__icon"}}">
+            {{pfIcon "rh-ui-add-circle-fill"}}
+          </div>
           {{#> title titleType="h2" title--modifier="pf-m-md"}}
             Add a new card to your page
           {{/title}}

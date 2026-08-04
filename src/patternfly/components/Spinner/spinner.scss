@@ -66,10 +66,10 @@
   width: 100%;
   height: 100%;
   stroke: var(--#{$spinner}--Color);
+  stroke-width: var(--#{$spinner}--StrokeWidth);
+  stroke-linecap: round;
   stroke-dasharray: 283;
   stroke-dashoffset: 280;
-  stroke-linecap: round;
-  stroke-width: var(--#{$spinner}--StrokeWidth);
   transform-origin: 50% 50%;
   animation: #{$spinner}-animation-dash var(--#{$spinner}--AnimationDuration) var(--#{$spinner}__path--AnimationTimingFunction) infinite;
 }

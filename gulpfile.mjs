@@ -97,9 +97,6 @@ export async function buildWebpack() {
 
 async function startWebpackDevServer() {
   await start(themeCLIOptions);
-
-  // temporary auto deletion of public dir due to docs-framework bug
-  rimraf(path.join(process.cwd(), 'public'))
 }
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));

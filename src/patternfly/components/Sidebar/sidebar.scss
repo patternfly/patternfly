@@ -205,6 +205,12 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__panel--InsetBlockStart: auto;
   }
 
+  &.pf-m-no-background,
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
+    --#{$sidebar}__panel--BackgroundColor: transparent;
+  }
+
   &.pf-m-secondary {
     --#{$sidebar}__panel--BackgroundColor: var(--#{$sidebar}__panel--m-secondary--BackgroundColor);
   }
@@ -226,7 +232,9 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --#{$sidebar}__content--PaddingInlineStart: var(--#{$sidebar}__content--m-padding--PaddingBlockStart);
   }
 
-  &.pf-m-no-background {
+  &.pf-m-no-background,
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
     --#{$sidebar}__content--BackgroundColor: transparent;
   }
 
@@ -240,14 +248,6 @@ $pf-v6-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   :where(&:first-child) {
     --#{$sidebar}__content--Order: -1;
-  }
-}
-
-.#{$sidebar},
-.#{$sidebar}__panel,
-.#{$sidebar}__content {
-  &.pf-m-no-background {
-    background-color: transparent;
   }
 }
 

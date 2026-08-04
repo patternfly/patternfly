@@ -89,8 +89,8 @@
   --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: -180deg;
 
   // * Table button
-  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$table}__button--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$table}__button--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$table}__button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$table}__button--Color: var(--pf-t--global--text--color--regular);
@@ -99,7 +99,7 @@
   --#{$table}__button--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$table}__button--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$table}__button--hover--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
-  --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$table}__button--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$table}__button--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$table}__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
 
@@ -180,16 +180,16 @@
 
   // * Table compound expansion toggle button
   --#{$table}__compound-expansion-toggle__button--Color: var(--pf-t--global--icon--color--brand--default);
-  --#{$table}__compound-expansion-toggle__button--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
+  --#{$table}__compound-expansion-toggle__button--BackgroundColor: transparent;
   --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf-t--global--icon--color--brand--hover);
-  --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$table}__compound-expansion-toggle__button--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
+  --#{$table}__compound-expansion-toggle__button--expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
 
   // * Table compound expansion toggle button after
   --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf-t--global--border--color--clicked);
   --#{$table}__compound-expansion-toggle__button--after--BorderRadius: inherit;
   --#{$table}__compound-expansion-toggle__button--after--BorderBlockStartWidth: 0;
-  --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
+  --#{$table}__compound-expansion-toggle__button--hover--after--BorderBlockStartWidth: 0;
   --#{$table}__compound-expansion-toggle--m-expanded__button--after--BorderBlockStartWidth: var(--pf-t--global--border--width--strong);
 
   // * Compound expandable
@@ -239,6 +239,9 @@
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // * Table nested column header
+  --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: var(--#{$table}--border-width--base);
+  --#{$table}__thead--m-nested-column-header--BorderBlockEndColor: var(--#{$table}--BorderColor);
+  --#{$table}__thead--m-nested-column-header--after--ZIndex: initial;
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
   --#{$table}__thead--m-nested-column-header__tr--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}__thead--m-nested-column-header__tr--PaddingBlockEnd: var(--pf-t--global--spacer--md);
@@ -251,12 +254,31 @@
   --#{$table}__nested-column-header__button--PaddingInlineEnd: calc(var(--#{$table}__button--PaddingInlineEnd) - (var(--pf-t--global--spacer--control--horizontal--plain) / 2));
 
   // * Table striped
-  --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--striped--row--default);
 
   // * Table sticky header
+  --#{$table}--m-sticky-header--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$table}--m-sticky-header--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
   --#{$table}--m-sticky-header--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
+  --#{$table}--m-sticky-header--BorderRadius: 0;
+  --#{$table}--m-sticky-header--BoxShadow: 0;
+  --#{$table}--m-sticky-header--BorderBlockEndWidth: var(--#{$table}--border-width--base);
+  --#{$table}--m-sticky-header--BorderBlockEndColor: var(--#{$table}--BorderColor);
+  --#{$table}--m-sticky-header--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
+  --#{$table}--m-sticky-header--BoxShadow--glass: var(--pf-t--global--box-shadow--sm);
+  --#{$table}--m-sticky-header--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}--m-sticky-header--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--default);
+    
+  // * Table sticky footer
+  --#{$table}--m-sticky-footer--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
+  --#{$table}--m-sticky-footer--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
+
+  :where(.pf-v6-theme-glass) & {
+    --#{$table}--m-sticky-header--BorderBlockEndWidth: 0;
+    --#{$table}--m-sticky-header--BoxShadow: var(--#{$table}--m-sticky-header--BoxShadow--glass);
+    --#{$table}--m-sticky-header--BorderRadius: var(--#{$table}--m-sticky-header--BorderRadius--glass);
+  }
 }
 
 // TODO: update grouping comments to // Table {element}
@@ -266,45 +288,86 @@
   width: 100%;
   background-color: var(--#{$table}--BackgroundColor);
 
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
+    --#{$table}--BackgroundColor: transparent;
+    --#{$table}__expandable-row-content--BackgroundColor: transparent;
+    --#{$table}__expandable-row-content--PaddingInlineStart: 0;
+    --#{$table}__expandable-row-content--PaddingInlineEnd: 0;
+    --#{$table}__control-row--BackgroundColor: transparent;
+  }
+
   &.pf-m-fixed {
     table-layout: fixed;
   }
 
-  // - Table sticky header
-  &.pf-m-sticky-header > .#{$table}__thead,
-  .#{$table}__thead.pf-m-nested-column-header {
-    position: sticky;
-    inset-block-start: 0;
-    z-index: var(--#{$table}--m-sticky-header--ZIndex);
-    background: var(--#{$table}--BackgroundColor);
-
-    &::before {
-      position: absolute;
-      inset-block-start: 0;
-      inset-block-end: 0;
-      inset-inline-start: 0;
-      inset-inline-end: 0;
-      z-index: var(--#{$table}--m-sticky-header--border--ZIndex);
-      pointer-events: none;
-      content: '';
-      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+  &.pf-m-sticky-header-base > .#{$table}__thead, 
+  &.pf-m-sticky-header-base > .#{$table}__thead .#{$table}__th {
+    &::after {
+      opacity: 0;
+      transition-timing-function: var(--#{$table}--m-sticky-header--TransitionTimingFunction--BackgroundColor);
+      transition-duration: var(--#{$table}--m-sticky-header--TransitionDuration--BackgroundColor);
+      transition-property: opacity;
     }
   }
 
-  &.pf-m-sticky-header {
+  &.pf-m-sticky-header-stuck > .#{$table}__thead, 
+  &.pf-m-sticky-header-stuck > .#{$table}__thead .#{$table}__th {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.pf-m-sticky-header,
+  &.pf-m-sticky-header-base {
     position: relative;
 
-    thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
+    > .#{$table}__thead {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--#{$table}--m-sticky-header--ZIndex);
+
+      &::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: '';
+        border-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+        box-shadow: var(--#{$table}--m-sticky-header--BoxShadow);
+      }
+  
+
+      .#{$table}__th::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: '';
+        background-color: var(--#{$table}--m-sticky-header--BackgroundColor);
+        border-block-end: var(--#{$table}--m-sticky-header--BorderBlockEndWidth) solid var(--#{$table}--m-sticky-header--BorderBlockEndColor);
+      }
+
+      .#{$table}__th:first-child::after {
+        border-start-start-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+        border-end-start-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+      }
+
+      .#{$table}__th:last-child::after {
+        border-start-end-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+        border-end-end-radius: var(--#{$table}--m-sticky-header--BorderRadius);
+      }
+
       > :where(th, td) {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
       }
     }
 
-    // - Table nested column header
-    > .pf-m-nested-column-header {
-      position: sticky;
-      inset-block-start: 0;
-      background: var(--#{$table}--BackgroundColor);
+    :where(.pf-v6-theme-glass) & {
+      .pf-m-nested-column-header {
+        --#{$table}--m-sticky-header--BorderRadius: 0;
+        --#{$table}__thead--m-nested-column-header--BorderBlockEndWidth: 0;
+      }
     }
   }
 
@@ -321,6 +384,29 @@
         }
       }
       // stylelint-enable
+    }
+  }
+
+  // - Table sticky footer
+  &.pf-m-sticky-footer {
+    > .#{$table}__tfoot {
+      position: sticky;
+      inset-block-end: 0;
+      z-index: var(--#{$table}--m-sticky-footer--ZIndex);
+      background: var(--#{$table}--BackgroundColor);
+
+      &::before {
+        position: absolute;
+        inset: 0;
+        z-index: var(--#{$table}--m-sticky-footer--border--ZIndex);
+        pointer-events: none;
+        content: "";
+        border-block-start: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+      }
+    }
+
+    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
+      border-block-end: 0;
     }
   }
 
@@ -367,11 +453,11 @@
 
     // default settings
     overflow: var(--#{$table}--cell--Overflow);
+    text-overflow: var(--#{$table}--cell--TextOverflow);
     font-size: var(--#{$table}--cell--FontSize);
     font-weight: var(--#{$table}--cell--FontWeight);
     line-height: var(--#{$table}--cell--LineHeight);
     color: var(--#{$table}--cell--Color);
-    text-overflow: var(--#{$table}--cell--TextOverflow);
     word-break: var(--#{$table}--cell--WordBreak);
     white-space: var(--#{$table}--cell--WhiteSpace);
 
@@ -500,8 +586,8 @@
   // }
 
   .#{$table}__td.pf-m-action {
-    --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}__td--m-action--PaddingBlockStart);
-    --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}__td--m-action--PaddingBlockEnd);
+    --#{$table}--cell--PaddingBlockStart: var(--#{$table}__td--m-action--PaddingBlockStart);
+    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}__td--m-action--PaddingBlockEnd);
   }
 
   // - Table sort
@@ -540,8 +626,8 @@
   tr:where(.#{$table}__tr) {
     &.pf-m-clickable {
       cursor: pointer;
-      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
+      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
 
       &:is(:hover, :focus) {
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
@@ -551,8 +637,8 @@
     // tr selected
     &.pf-m-selected {
       position: relative;
-      background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
+      background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
     }
 
     &.pf-m-first-cell-offset-reset > :first-child {
@@ -565,8 +651,8 @@
   tbody:where(.#{$table}__tbody) {
     &.pf-m-clickable {
       cursor: pointer;
-      background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-clickable--OutlineOffset);
+      background-color: var(--#{$table}__tbody--m-clickable--BackgroundColor);
 
       &:is(:hover, :focus) {
         --#{$table}__tbody--m-clickable--BackgroundColor: var(--#{$table}__tbody--m-clickable--hover--BackgroundColor);
@@ -579,8 +665,8 @@
 
     // - Table tbody expanded
     &.pf-m-selected {
-      background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
       outline-offset: var(--#{$table}__tbody--m-selected--OutlineOffset);
+      background-color: var(--#{$table}__tbody--m-selected--BackgroundColor);
 
       .#{$table}__tr.pf-m-expanded:not(.#{$table}__expandable-row) {
         border: none;
@@ -619,11 +705,11 @@
         display: var(--#{$table}__expandable-row--Display, revert);
         visibility: hidden;
         opacity: var(--#{$table}__expandable-row--Opacity);
+        translate: 0 var(--#{$table}__expandable-row--TranslateY);
         transition-delay: 0s, 0s, var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--fade);
         transition-timing-function: var(--#{$table}__expandable-row--TransitionTimingFunction);
         transition-duration: var(--#{$table}__expandable-row--TransitionDuration--collapse--fade), var(--#{$table}__expandable-row--TransitionDuration--collapse--slide), 0s, 0s;
         transition-property: opacity, translate, visibility, background-color;
-        translate: 0 var(--#{$table}__expandable-row--TranslateY);
 
         &[hidden] {
           display: var(--#{$table}__expandable-row--Display, revert);
@@ -632,9 +718,9 @@
         &.pf-m-expanded {
           visibility: visible;
           opacity: var(--#{$table}__tbody--m-expanded__expandable-row--Opacity);
+          translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
           transition-delay: 0s;
           transition-duration: var(--#{$table}__expandable-row--TransitionDuration--expand--fade), var(--#{$table}__expandable-row--TransitionDuration--expand--slide), 0s, 0s;
-          translate: 0 var(--#{$table}__tbody--m-expanded__expandable-row--TranslateY);
 
           > :is(.#{$table}__td, .#{$table}__th) {
             > .#{$table}__expandable-row-content {
@@ -725,8 +811,8 @@
   min-width: var(--#{$table}__text--MinWidth);
   max-width: var(--#{$table}--cell--MaxWidth);
   overflow: var(--#{$table}--cell--Overflow);
-  line-height: var(--#{$table}--cell--LineHeight);
   text-overflow: var(--#{$table}--cell--TextOverflow);
+  line-height: var(--#{$table}--cell--LineHeight);
   word-break: var(--#{$table}--cell--WordBreak);
   white-space: var(--#{$table}--cell--WhiteSpace);
 
@@ -760,10 +846,10 @@
   text-align: start;
   white-space: inherit;
   user-select: text;
+  outline-offset: var(--#{$table}__button--OutlineOffset);
   background-color: var(--#{$table}__button--BackgroundColor);
   border: 0;
   border-radius: var(--#{$table}__button--BorderRadius);
-  outline-offset: var(--#{$table}__button--OutlineOffset);
 
   &::after {
     position: absolute;
@@ -875,10 +961,10 @@
   .#{$table}__toggle-icon {
     @include pf-v6-mirror-inline-on-rtl;
 
+    transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
     transition-timing-function: var(--#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction);
     transition-duration: var(--#{$table}__toggle--c-button__toggle-icon--TransitionDuration);
     transition-property: transform;
-    transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
 
   svg {
@@ -1191,8 +1277,8 @@
   }
 
   .#{$table}__td.pf-m-action {
-    --pf-v6-c-table--cell--PaddingBlockStart: var(--#{$table}--m-compact__td--m-action--PaddingBlockStart);
-    --pf-v6-c-table--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td--m-action--PaddingBlockEnd);
+    --#{$table}--cell--PaddingBlockStart: var(--#{$table}--m-compact__td--m-action--PaddingBlockStart);
+    --#{$table}--cell--PaddingBlockEnd: var(--#{$table}--m-compact__td--m-action--PaddingBlockEnd);
   }
 
   .#{$table}__icon {
@@ -1212,6 +1298,15 @@
 
   // - Table nested column header button
   &.pf-m-nested-column-header {
+    --#{$table}--m-sticky-header--BorderBlockEndWidth: 0;
+
+    position: relative;
+
+    .#{$table}__tr:last-child:not(.pf-m-border-row) {
+      z-index: var(--#{$table}__thead--m-nested-column-header--after--ZIndex);
+      border-block-end: var(--#{$table}__thead--m-nested-column-header--BorderBlockEndWidth) solid var(--#{$table}__thead--m-nested-column-header--BorderBlockEndColor);
+    }
+
     .#{$table}__button {
       --#{$table}__button--PaddingInlineStart: var(--#{$table}__nested-column-header__button--PaddingInlineStart);
       --#{$table}__button--PaddingInlineEnd: var(--#{$table}__nested-column-header__button--PaddingInlineEnd);
@@ -1272,8 +1367,16 @@
   }
 
   &.pf-m-border-row {
-    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    height: var(--#{$table}--border-width--base);
+    background-color: var(--#{$table}--BorderColor);
   }
+}
+
+// - Table tfoot
+.#{$table}__tfoot {
+  --#{$table}__tr--BorderBlockEndWidth: 0;
+
+  vertical-align: top;
 }
 
 // - Table icon inline

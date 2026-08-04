@@ -2,7 +2,7 @@
   {{#> description-list-group}}
     {{#> description-list-term}}
       {{#> description-list-icon}}
-        <i class="fas fa-cube" aria-hidden="true"></i>
+        {{pfIcon "rh-ui-wrap-text"}}
       {{/description-list-icon}} 
       {{#> description-list-text}}
         This is a long description that should wrap to multiple lines in cases where the viewport is quite narrow.
@@ -15,7 +15,7 @@
   {{#> description-list-group}}
     {{#> description-list-term}}
       {{#> description-list-icon}}
-        <i class="fas fa-book" aria-hidden="true"></i>
+        {{pfIcon "rh-ui-catalog-alt-fill"}}
       {{/description-list-icon}}
       {{#> description-list-text}}
         Namespace
@@ -28,7 +28,7 @@
   {{#> description-list-group}}
     {{#> description-list-term}}
       {{#> description-list-icon}}
-        <i class="fas fa-key" aria-hidden="true"></i>
+        {{pfIcon "rh-ui-key-fill"}}
       {{/description-list-icon}}
       {{#> description-list-text}}
         Labels
@@ -41,14 +41,14 @@
   {{#> description-list-group}}
     {{#> description-list-term}}
       {{#> description-list-icon}}
-        <i class="fas fa-globe" aria-hidden="true"></i>
+        {{pfIcon "rh-ui-language-fill"}}
       {{/description-list-icon}}
       {{#> description-list-text}}
         Pod selector
       {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
-      {{#> button button--IsLink=true button--icon="plus-circle" button--IsInline=true}}
+      {{#> button button--IsLink=true button--icon="rh-ui-add-circle-fill" button--IsInline=true}}
         app=MyApp
       {{/button}}
     {{/description-list-description}}
@@ -56,7 +56,7 @@
   {{#> description-list-group}}
     {{#> description-list-term}}
       {{#> description-list-icon}}
-        <i class="fas fa-flag" aria-hidden="true"></i>
+        {{pfIcon "rh-ui-flag-fill"}}
       {{/description-list-icon}}
       {{#> description-list-text}}
         Annotation

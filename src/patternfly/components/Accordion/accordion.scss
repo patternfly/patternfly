@@ -11,13 +11,15 @@
 
   // accordion toggle
   --#{$accordion}__toggle--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
-  --#{$accordion}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$accordion}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$accordion}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$accordion}__toggle--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$accordion}__toggle--m-expanded--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--plain);
   --#{$accordion}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$accordion}__item--m-expanded__toggle--BackgroundColor: transparent;
+  --#{$accordion}--m-plain__item--m-expanded__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$accordion}__toggle--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
@@ -53,7 +55,9 @@
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
   --#{$accordion}__expandable-content--MaxHeight: 0;
   --#{$accordion}__expandable-content--Visibility: hidden;
+  --#{$accordion}__expandable-content--Overflow: hidden;
   --#{$accordion}__item--m-expanded__expandable-content--Visibility: visible;
+  --#{$accordion}__item--m-expanded__expandable-content--Overflow: visible;
   --#{$accordion}__item--m-expanded__expandable-content--MaxHeight: 99999px;
   --#{$accordion}__item--m-expanded__expandable-content--MarginBlockEnd: var(--pf-t--global--spacer--md);
 
@@ -127,6 +131,14 @@
   row-gap: var(--#{$accordion}--RowGap);
   background-color: var(--#{$accordion}--BackgroundColor);
 
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
+    --#{$accordion}--BackgroundColor: transparent;
+    --#{$accordion}__expandable-content--BackgroundColor: transparent;
+    --#{$accordion}__item--m-expanded--BackgroundColor: transparent;
+    --#{$accordion}__item--m-expanded__toggle--BackgroundColor: var(--#{$accordion}--m-plain__item--m-expanded__toggle--BackgroundColor);
+  }
+
   &.pf-m-toggle-start {
     --#{$accordion}__toggle--ColumnGap: var(--#{$accordion}--m-toggle-start__toggle--ColumnGap);
   }
@@ -183,6 +195,7 @@
     --#{$accordion}__item--before--Opacity: var(--#{$accordion}__item--m-expanded--before--Opacity);
     --#{$accordion}__item--before--TranslateY: var(--#{$accordion}__item--m-expanded--before--TranslateY);
     --#{$accordion}__item--BorderWidth: var(--#{$accordion}__item--m-expanded--BorderWidth);
+    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__item--m-expanded__toggle--BackgroundColor);
     --#{$accordion}__expandable-content--TransitionDuration--slide: var(--#{$accordion}__expandable-content--TransitionDuration--expand--slide);
     --#{$accordion}__expandable-content--TransitionDuration--fade: var(--#{$accordion}__expandable-content--TransitionDuration--expand--fade);
     --#{$accordion}__expandable-content--Opacity: var(--#{$accordion}__item--m-expanded__expandable-content--Opacity);
@@ -193,6 +206,7 @@
     --#{$accordion}__expandable-content--TransitionDuration--fade: 0s;
     --#{$accordion}__expandable-content--m-fixed--MaxHeight--base: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight);
     --#{$accordion}__expandable-content--BorderWidth: var(--#{$accordion}__item--m-expanded__expandable-content--BorderWidth);
+    --#{$accordion}__expandable-content--Overflow: var(--#{$accordion}__item--m-expanded__expandable-content--Overflow);
   }
 }
 
@@ -240,8 +254,8 @@
 .#{$accordion}__toggle-icon {
   @include pf-v6-mirror-inline-on-rtl;
 
-  transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
   transform: rotate(var(--#{$accordion}__toggle-icon--Rotate));
+  transition: var(--#{$accordion}__toggle-icon--Transition); // TODO remove shorthand property in breaking change
 }
 
 .#{$accordion}__expandable-content:where([hidden]) {
@@ -249,26 +263,28 @@
 }
 
 .#{$accordion}__expandable-content {
+  visibility:  var(--#{$accordion}__expandable-content--Visibility);
   max-height:  var(--#{$accordion}__expandable-content--MaxHeight);
   margin-block-end: var(--#{$accordion}__expandable-content--MarginBlockEnd);
   margin-inline-start: var(--#{$accordion}__expandable-content--MarginInlineStart);
   margin-inline-end: var(--#{$accordion}__expandable-content--MarginInlineEnd);
+  overflow-y: var(--#{$accordion}__expandable-content--Overflow);
   font-size: var(--#{$accordion}__expandable-content--FontSize);
   color: var(--#{$accordion}__expandable-content--Color);
-  visibility:  var(--#{$accordion}__expandable-content--Visibility);
   background-color: var(--#{$accordion}__expandable-content--BackgroundColor);
   border: var(--#{$accordion}__expandable-content--BorderWidth) solid var(--#{$accordion}__expandable-content--BorderColor);
   border-radius: var(--#{$accordion}__expandable-content--BorderRadius);
   opacity: var(--#{$accordion}__expandable-content--Opacity);
+  translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
   transition-delay: 0s, 0s, var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--fade);
   transition-timing-function: var(--#{$accordion}__expandable-content--TransitionTimingFunction);
   transition-duration: var(--#{$accordion}__expandable-content--TransitionDuration--fade), var(--#{$accordion}__expandable-content--TransitionDuration--slide), 0s, 0s, 0s;
   transition-property: opacity, translate, visibility, max-height, margin-block-end;
-  translate: 0 var(--#{$accordion}__expandable-content--TranslateY);
 
   &.pf-m-fixed {
+    --#{$accordion}__expandable-content--Overflow: auto;
+
     max-height: var(--#{$accordion}__expandable-content--m-fixed--MaxHeight--base);
-    overflow-y: auto;
   }
 }
 

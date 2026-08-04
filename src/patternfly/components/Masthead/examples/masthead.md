@@ -98,6 +98,7 @@ cssPrefix: pf-v6-c-masthead
 {{#> masthead masthead--id="docked-masthead-example" masthead--IsDocked=true}}
   {{#> masthead-main}}
     {{#> masthead-brand}}
+      {{> masthead-logo}}
       {{> masthead-logo masthead-logo--IsCompact=true}}
     {{/masthead-brand}}
   {{/masthead-main}}

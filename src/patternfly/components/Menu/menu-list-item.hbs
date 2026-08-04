@@ -28,7 +28,7 @@
         {{#> menu-item-main}}
           {{#if menu-list-item--icon}}
             {{#> menu-item-icon}}
-              <i class="fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+              {{pfIcon menu-list-item--icon}}
             {{/menu-item-icon}}
           {{/if}}
           {{#> menu-item-text}}
@@ -41,7 +41,7 @@
         {{#> menu-item-main}}
           {{#if menu-list-item--icon}}
             {{#> menu-item-icon}}
-              <i class="fas fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+              {{pfIcon menu-list-item--icon}}
             {{/menu-item-icon}}
           {{/if}}
           {{#> menu-item-text}}
@@ -57,7 +57,7 @@
         {{> menu-item-toggle-icon menu-item-toggle-icon--IsDrillup="true"}}
         {{#if menu-list-item--icon}}
           {{#> menu-item-icon}}
-            <i class="fas fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+            {{pfIcon menu-list-item--icon}}
           {{/menu-item-icon}}
         {{/if}}
         {{#> menu-item-text}}
@@ -70,7 +70,7 @@
       {{#> menu-item-main}}
         {{#if menu-list-item--icon}}
           {{#> menu-item-icon}}
-            <i class="fas fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+            {{pfIcon menu-list-item--icon}}
           {{/menu-item-icon}}
         {{/if}}
         {{#> menu-item-text}}

@@ -2,5 +2,9 @@
   {{#if table-toggle-icon--attribute}}
     {{{table-toggle-icon--attribute}}}
   {{/if}}>
-  {{pfIcon "rh-microns-caret-down"}}
+  {{#if table--IsTree-view}}
+    {{pfIcon "rh-microns-caret-right"}}
+  {{else}}
+    {{pfIcon "rh-microns-caret-down"}}
+  {{/if}}
 </div>

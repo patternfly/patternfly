@@ -128,8 +128,8 @@
     --#{$pf-global}--thinking-active--Animation--Duration: 2s;
   }
 
-  container-type: inline-size;
   container-name: #{$pf-prefix}contain-viewport #{$pf-prefix}contain-table;
+  container-type: inline-size;
 }
 
 // Register the property type for the custom property to be animatable

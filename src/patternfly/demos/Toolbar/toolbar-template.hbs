@@ -14,7 +14,7 @@ Options: [
   toolbar-template--HasNoPagination
 ] --}}
 
-{{#> toolbar toolbar--id=toolbar-template--id toolbar--modifier=toolbar-template--modifier}}
+{{#> toolbar toolbar--id=toolbar-template--id toolbar--modifier=toolbar-template--modifier toolbar--attribute=toolbar-template--attribute}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
       {{!-- partial --}}
@@ -32,7 +32,7 @@ Options: [
       {{!-- toggle group --}}
       {{#if toolbar-template--HasToggleGroup}}
         {{#> toolbar-group toolbar-group--IsToggleGroup=true toolbar-group--modifier="pf-m-show-on-xl"}}
-          {{> toolbar-toggle menu-toggle-icon='filter'}}
+          {{> toolbar-toggle menu-toggle-icon='rh-ui-filter-fill'}}
           {{> toolbar-template-content}}
         {{/toolbar-group}}
       {{else}}

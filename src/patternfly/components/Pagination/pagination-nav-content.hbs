@@ -1,11 +1,11 @@
 {{#> pagination-nav}}
   {{#unless pagination--IsCompact}}
     {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-first"}}
-      {{> button button--IsPlain=true button--IsIcon=true button--icon="angle-double-left" button--IsDisabled=true button--attribute='aria-label="Go to first page"'}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-double-caret-left" button--IsDisabled=true button--attribute='aria-label="Go to first page"'}}
     {{/pagination-nav-control}}
   {{/unless}}
   {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-prev"}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="angle-left" button--IsDisabled=true button--attribute='aria-label="Go to previous page"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-caret-left" button--IsDisabled=true button--attribute='aria-label="Go to previous page"'}}
   {{/pagination-nav-control}}
   {{#unless pagination--IsCompact}}
     {{#> pagination-nav-page-select}}
@@ -20,11 +20,11 @@
     {{/pagination-nav-page-select}}
   {{/unless}}
   {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-next"}}
-    {{> button button--IsPlain=true button--IsIcon=true button--icon="angle-right" button--IsDisabled=pagination-nav-content--IsDisabled button--attribute='aria-label="Go to next page"'}}
+    {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-caret-right" button--IsDisabled=pagination-nav-content--IsDisabled button--attribute='aria-label="Go to next page"'}}
   {{/pagination-nav-control}}
   {{#unless pagination--IsCompact}}
     {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-last"}}
-      {{> button button--IsPlain=true button--IsIcon=true button--icon="angle-double-right" button--IsDisabled=pagination-nav-content--IsDisabled button--attribute='disabled aria-label="Go to last page"'}}
+      {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-microns-double-caret-right" button--IsDisabled=pagination-nav-content--IsDisabled button--attribute='disabled aria-label="Go to last page"'}}
     {{/pagination-nav-control}}
   {{/unless}}
 {{/pagination-nav}}

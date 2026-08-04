@@ -37,6 +37,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
 // - Table tree view
 .#{$table}.pf-m-tree-view {
+  --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 90deg;
+
   > tbody > tr {
     --#{$table}--m-tree-view__toggle--InsetInlineStart: var(--#{$table}__tree-view-main--PaddingInlineStart);
 
@@ -195,8 +197,8 @@ $pf-v6-c-tree-view--MaxDepth: 10;
 
   tbody:where(.#{$table}__tbody) tr:where(.#{$table}__tr) {
     position: relative;
-    border: none;
     outline-offset: var(--#{$table}--m-tree-view-grid--tr--OutlineOffset);
+    border: none;
 
     &::before {
       position: absolute;
@@ -248,7 +250,7 @@ $pf-v6-c-tree-view--MaxDepth: 10;
   td:where(.#{$table}__td)[data-label] {
     grid-template-columns: var(--#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns);
     grid-column: 1;
-    grid-column-gap: var(--#{$table}--m-tree-view-grid__tbody--cell--GridColumnGap);
+    column-gap: var(--#{$table}--m-tree-view-grid__tbody--cell--GridColumnGap);
     align-items: start;
 
     // set contents of td to start at column two of td grid

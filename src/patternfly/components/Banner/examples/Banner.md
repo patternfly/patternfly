@@ -172,6 +172,79 @@ When a banner is used to convey status, it is advised to add an icon that also c
 {{/banner}}
 ```
 
+### Pill
+To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can be combined with any Banner modifier.
+
+```hbs
+{{#> banner banner--modifier="pf-m-pill pf-m-success"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Success banner:{{/screen-reader}}
+      {{pfIcon "rh-ui-check-circle-fill"}}
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Success banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-pill pf-m-warning"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Warning banner:{{/screen-reader}}
+      {{pfIcon "rh-ui-warning-fill"}}
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Warning banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-pill pf-m-danger"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Danger banner:{{/screen-reader}}
+      {{pfIcon "rh-ui-error-fill"}}
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Danger banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-pill pf-m-info"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Custom status banner:{{/screen-reader}}
+      {{pfIcon "rh-ui-information-fill"}}
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Info banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-pill pf-m-custom"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Custom status banner:{{/screen-reader}}
+      {{pfIcon "rh-ui-notification-fill"}}
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Custom banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+```
+
 ## Documentation
 
 ### Usage
@@ -192,3 +265,4 @@ When a banner is used to convey status, it is advised to add an icon that also c
 | `.pf-m-info` | `.pf-v6-c-banner` |  Modifies banner for info status styling. |
 | `.pf-m-custom` | `.pf-v6-c-banner` |  Modifies banner for custom status styling. |
 | `.pf-m-sticky` | `.pf-v6-c-banner` |  Modifies banner to be sticky to the top of its container. |
+| `.pf-m-pill` | `.pf-v6-c-banner` |  Modifies banner for pill styles. |

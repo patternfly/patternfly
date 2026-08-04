@@ -7,7 +7,7 @@
   // Element variables
   --#{$progress}__bar--Height: var(--pf-t--global--spacer--md);
   --#{$progress}__bar--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default); // the bar always needs white under it so that the semi-transparent color shows correctly
-  --#{$progress}__bar--BorderRadius: var(--pf-t--global--border--radius--medium);
+  --#{$progress}__bar--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$progress}__bar--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$progress}__bar--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$progress}__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
@@ -17,6 +17,7 @@
   --#{$progress}__indicator--BackgroundColor: var(--pf-t--global--color--brand--default);
   --#{$progress}__indicator--BorderWidth: var(--pf-t--global--border--width--high-contrast--extra-strong);
   --#{$progress}__indicator--BorderColor: transparent;
+  --#{$progress}__indicator--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$progress}__helper-text--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) - var(--#{$progress}--GridGap));
 
   // Modifier variables
@@ -42,7 +43,7 @@
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: auto auto;
-  grid-gap: var(--#{$progress}--GridGap);
+  gap: var(--#{$progress}--GridGap);
   align-items: end;
 
   // Modifiers
@@ -162,7 +163,7 @@
 // the progress__description is displayed above the progress bar on the left
 .#{$progress}__description {
   grid-column: 1 / 2;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 
   &.pf-m-truncate {
     @include pf-v6-text-overflow;
@@ -178,7 +179,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   text-align: end;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 // the progress__status-icon is an icon displayed always in the upper right
@@ -188,11 +189,8 @@
 
 .#{$progress}__bar::before,
 .#{$progress}__indicator {
-  // disable linter as the indicator element should always grow ltr
-  // stylelint-disable liberty/use-logical-spec
   inset-block-start: 0;
   inset-inline-start: 0;
-  // stylelint-enable
 }
 
 // The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color
@@ -222,6 +220,7 @@
   position: absolute; // position absolute to bring above the semi-transparent bar overlay
   height: var(--#{$progress}__indicator--Height);
   background-color: var(--#{$progress}__indicator--BackgroundColor);
+  border-radius: var(--#{$progress}__indicator--BorderRadius);
 
   // for forced colors mode
   &::before {

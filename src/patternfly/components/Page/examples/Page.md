@@ -27,16 +27,16 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Default main section example 1"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--attribute='aria-label="Secondary main section example 1"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Default main section example 2"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--ExcludeMainBody="true"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--ExcludeMainBody="true" page-main-section--attribute='aria-label="Multiple main body section example"'}}
       {{#> page-main-body}}
         This is a page__main-body, one of three within one page__main-section.
       {{/ page-main-body}}
@@ -66,13 +66,13 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Horizontal nav default main section example 1"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary" page-main-section--attribute='aria-label="Horizontal nav secondary main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Horizontal nav default main section example 2"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
     {{/page-main-section}}
   {{/page-main}}
@@ -108,7 +108,7 @@ import './Page.css'
     {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Sidebar body layout section"'}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -129,13 +129,13 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main page-main-container--IsFilled="true"}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Regular page section example"'}}
       A regular page section.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-fill" page-main-section--attribute='aria-label="Fill page section example"'}}
       This section uses <code>.pf-m-fill</code> to fill the available space. The <code>.pf-v6-c-page__main-container</code> must also have <code>.pf-m-fill</code> in order for the section to have space to stretch to full height.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-fill" page-main-section--attribute='aria-label="No fill page section example"'}}
       This section uses <code>.pf-m-no-fill</code> and will not fill the available space.
     {{/page-main-section}}
   {{/page-main}}
@@ -160,13 +160,13 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Default padding main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> has default padding.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding" page-main-section--attribute='aria-label="No padding main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-no-padding</code> to remove all padding.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md" page-main-section--attribute='aria-label="Responsive padding main section example"'}}
       This <code>.pf-v6-c-page__main-section</code> uses <code>.pf-m-no-padding .pf-m-padding-on-md</code> to remove padding up to the <code>md</code> breakpoint.
     {{/page-main-section}}
   {{/page-main}}
@@ -203,7 +203,7 @@ import './Page.css'
     {{#> page-main-breadcrumb}}
       <code>.pf-v6-c-page__main-breadcrumb</code> for breadcrumbs
     {{/page-main-breadcrumb}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Main section variations example"'}}
       <code>.pf-v6-c-page__main-section</code> for main sections
     {{/page-main-section}}
     {{#> page-main-wizard}}
@@ -228,7 +228,7 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center" page-main-section--attribute='aria-label="Centered section example"'}}
       {{#> card}}
         {{#> card-body}}
           When a width limited page section is wider than the value of <code>--pf-v6-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
@@ -257,8 +257,38 @@ import './Page.css'
     {{/masthead}}
   {{/page-dock}}
   {{#> page-main}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Dock main section example"'}}
       This is a default <code>.pf-v6-c-page__main-section</code>.
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Sticky section dynamic
+```hbs
+{{#> page page--nav-direction="vertical"}}
+  {{#> masthead}}
+    {{#> masthead-main}}
+      {{> masthead-toggle}}
+      {{#> masthead-brand}}
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
+      {{/masthead-brand}}
+    {{/masthead-main}}
+    {{> masthead-content}}
+  {{/masthead}}
+  {{#> page-main}}
+    {{#> page-main-group page-main-group--modifier="pf-m-sticky-top-base pf-m-sticky-top-stuck"}}
+      {{#> page-main-breadcrumb}}
+        Breadcrumb
+      {{/page-main-breadcrumb}}
+      {{#> page-main-section page-main-section--attribute='aria-label="Sticky dynamic section title"'}}
+        This <code>.pf-v6-c-page__main-group</code> uses <code>.pf-m-sticky-top-base</code> and <code>.pf-m-sticky-top-stuck</code> for dynamic sticky positioning with a fade-in background and shadow.
+      {{/page-main-section}}
+    {{/page-main-group}}
+    {{#> page-main-section page-main-section--attribute='aria-label="Sticky dynamic content section"'}}
+      Content below the sticky section.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -291,7 +321,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required** |
 | `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
-| `.pf-m-dock` | `.pf-v6-c-page` | Modifies the page grid to have a dock. |
+| `.pf-m-docked` | `.pf-v6-c-page` | Modifies the page grid to have a dock. |
 | `.pf-m-no-sidebar` | `.pf-v6-c-page` | Modifies the page grid for layouts without a sidebar. |
 | `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the collapsed state. |
@@ -302,10 +332,16 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. Note that `.pf-v6-c-page__main-container` must also have `.pf-m-fill` applied in order for the section to have space to stretch to full height.|
 | `.pf-m-no-fill` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element not to grow to fill the available vertical space. |
+| `.pf-m-plain` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__main-breadcrumb`, `.pf-v6-c-page__main-subnav`, and `.pf-v6-c-page__main-tabs` | Applies plain styling to the section. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__main-breadcrumb`, `.pf-v6-c-page__main-subnav`, and `.pf-v6-c-page__main-tabs` | Prevents the section from automatically applying plain styling when glass theme is enabled. |
 | `.pf-m-limit-width` | `.pf-v6-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
 | `.pf-m-align-center` | `.pf-v6-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |
 | `.pf-m-sticky-top{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the top of its container at an optional height breakpoint. |
 | `.pf-m-sticky-bottom{-on-[breakpoint]-height}` | `.pf-v6-c-page__main-*` | Modifies a section/group to be sticky to the bottom of its container at an optional height breakpoint. |
+| `.pf-m-sticky-top-base` | `.pf-v6-c-page__main-*` | Sets up dynamic sticky top positioning with no background or shadow. Used with `.pf-m-sticky-top-stuck`. |
+| `.pf-m-sticky-top-stuck` | `.pf-v6-c-page__main-*` | Triggers the sticky top stuck state, fading in the background and shadow. Apply via JS when the section becomes stuck. |
+| `.pf-m-sticky-bottom-base` | `.pf-v6-c-page__main-*` | Sets up dynamic sticky bottom positioning with no background or shadow. Used with `.pf-m-sticky-bottom-stuck`. |
+| `.pf-m-sticky-bottom-stuck` | `.pf-v6-c-page__main-*` | Triggers the sticky bottom stuck state, fading in the background and shadow. Apply via JS when the section becomes stuck. |
 | `.pf-m-shadow-bottom` | `.pf-v6-c-page__main-*` | Modifies a section/group to have a bottom shadow. |
 | `.pf-m-shadow-top` | `.pf-v6-c-page__main-*` | Modifies a section/group to have a top shadow. |
 | `.pf-m-overflow-scroll` | `.pf-v6-c-page__main-*` | Modifies a section/group to show a scrollbar if it has overflow content. |

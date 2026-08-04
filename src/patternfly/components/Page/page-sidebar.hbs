@@ -2,16 +2,18 @@
   {{#if page-sidebar--attribute}}
     {{{page-sidebar--attribute}}}
   {{/if}}>
-  {{#if page-sidebar--HasContextSelector}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-menu"}}
-      {{> menu-toggle menu-toggle--IsExpanded=page-sidebar--ContextSelectorIsExpanded menu-toggle--id="context-selector-collapsed-example" menu-toggle--text="My project"}}
-    {{/page-sidebar-body}}
-  {{/if}}
-  {{#if page-sidebar--ExcludeSidebarBody}}
-    {{> @partial-block}}
-  {{else}}
-    {{#> page-sidebar-body}}
+  <div class="{{pfv}}page__sidebar-main">
+    {{#if page-sidebar--HasContextSelector}}
+      {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-menu"}}
+        {{> menu-toggle menu-toggle--IsExpanded=page-sidebar--ContextSelectorIsExpanded menu-toggle--id="context-selector-collapsed-example" menu-toggle--text="My project"}}
+      {{/page-sidebar-body}}
+    {{/if}}
+    {{#if page-sidebar--ExcludeSidebarBody}}
       {{> @partial-block}}
-    {{/page-sidebar-body}}
-  {{/if}}
+    {{else}}
+      {{#> page-sidebar-body}}
+        {{> @partial-block}}
+      {{/page-sidebar-body}}
+    {{/if}}
+  </div>
 </{{#if page-sidebar--IsAside}}aside{{else}}div{{/if}}>

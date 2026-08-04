@@ -1,4 +1,16 @@
-<div class="{{pfv}}panel{{#if panel--modifier}} {{panel--modifier}}{{/if}}"
+<div class="{{pfv}}panel
+  {{setModifiers
+    panel--IsBordered="pf-m-bordered"
+    panel--HasNoBorder="pf-m-no-border"
+    panel--IsSecondary="pf-m-secondary"
+    panel--IsRaised="pf-m-raised"
+    panel--IsScrollable="pf-m-scrollable"
+    panel--IsScrollableAutoHeight="pf-m-scrollable-auto-height"
+    panel--IsGlass="pf-m-glass"
+    panel--IsPill="pf-m-pill"
+    panel--IsFullHeight="pf-m-full-height"
+    panel--modifier=panel--modifier
+  }}"
   {{#if panel--attribute}}
     {{{panel--attribute}}}
   {{/if}}>

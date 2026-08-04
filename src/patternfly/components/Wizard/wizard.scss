@@ -7,6 +7,7 @@
 
   // Header
   --#{$wizard}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$wizard}--m-plain__header--BackgroundColor: transparent;
   --#{$wizard}__header--ZIndex: auto;
   --#{$wizard}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -57,7 +58,7 @@
   --#{$wizard}__nav-link-main--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-main--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$wizard}__nav-link-main--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
-  --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$wizard}__nav-link-main--BorderRadius: var(--pf-t--global--border--radius--action--plain--default);
   --#{$wizard}__nav-link-main--BorderColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--default);
   --#{$wizard}__nav-link--hover__nav-link-main--BorderWidth: var(--pf-t--global--border--width--action--plain--hover);
@@ -99,6 +100,7 @@
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}--m-plain__toggle--BackgroundColor: transparent;
   --#{$wizard}__toggle--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__toggle--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--md);
@@ -137,16 +139,19 @@
 
   // Nav
   --#{$wizard}__nav--ZIndex: var(--pf-t--global--z-index--sm);
-  --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}__nav--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$wizard}--m-plain__nav--BackgroundColor: transparent;
   --#{$wizard}__nav--BorderBlockEndWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$wizard}__nav--BorderBlockEndColor: var(--pf-t--global--border--color--high-contrast);
   --#{$wizard}__nav--BoxShadow: var(--pf-t--global--box-shadow--md--bottom);
   --#{$wizard}__nav--Width: 100%;
+  --#{$wizard}__nav--lg--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}__nav--lg--Width: #{pf-size-prem(250px)};
   --#{$wizard}__nav--lg--BorderInlineEndWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__nav--lg--BorderInlineEndColor: var(--pf-t--global--border--color--default);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
+    --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}__nav--lg--BackgroundColor);
     --#{$wizard}__nav--Width: var(--#{$wizard}__nav--lg--Width);
     --#{$wizard}__nav--BoxShadow: none;
     --#{$wizard}__nav--BorderBlockEndWidth: 0;
@@ -165,6 +170,7 @@
 
   // Outer wrap
   --#{$wizard}__outer-wrap--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}--m-plain__outer-wrap--BackgroundColor: transparent;
   --#{$wizard}__outer-wrap--lg--PaddingInlineStart: var(--#{$wizard}__nav--Width);
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
@@ -179,6 +185,7 @@
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$wizard}--m-plain__footer--BackgroundColor: transparent;
   --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$wizard}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
@@ -186,6 +193,7 @@
   --#{$wizard}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--BorderBlockStartWidth: var(--pf-t--global--border--width--divider--default);
   --#{$wizard}__footer--BorderBlockStartColor: var(--pf-t--global--border--color--default);
+
 }
 
 .#{$wizard} {
@@ -215,6 +223,18 @@
       display: none;
     }
   }
+
+  :where(:root:not(.pf-v6-theme-glass)) &.pf-m-plain,
+  :where(:root.pf-v6-theme-glass) &:not(.pf-m-no-plain-on-glass) {
+    --#{$wizard}__header--BackgroundColor: var(--#{$wizard}--m-plain__header--BackgroundColor);
+    --#{$wizard}__toggle--BackgroundColor: var(--#{$wizard}--m-plain__toggle--BackgroundColor);
+    --#{$wizard}__outer-wrap--BackgroundColor: var(--#{$wizard}--m-plain__outer-wrap--BackgroundColor);
+    --#{$wizard}__footer--BackgroundColor: var(--#{$wizard}--m-plain__footer--BackgroundColor);
+
+    @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
+      --#{$wizard}__nav--BackgroundColor: var(--#{$wizard}--m-plain__nav--BackgroundColor);
+    }
+  }
 }
 
 .#{$wizard}__header {
@@ -241,7 +261,7 @@
 
 .#{$wizard}__title {
   padding-inline-end: var(--#{$wizard}__title--PaddingInlineEnd);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .#{$wizard}__title-text {
@@ -305,7 +325,7 @@
   align-items: baseline;
   margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBlockEnd);
   text-align: start;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 
   &:not(:last-child) {
     margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginInlineEnd);
@@ -458,8 +478,8 @@
   padding-inline: 0;
   color: var(--#{$wizard}__nav-link--Color);
   text-align: start; // needed for when the item is a button
+  overflow-wrap: anywhere;
   text-decoration-line: var(--#{$wizard}__nav-link--TextDecoration);
-  word-break: break-word;
   counter-increment: wizard-nav-count;
   background-color: transparent;
   border: none;
@@ -581,10 +601,10 @@
   @include pf-v6-mirror-inline-on-rtl;
 
   display: inline-block;
+  transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
   transition-timing-function: var(--#{$wizard}__nav-link-toggle-icon--TransitionTimingFunction);
   transition-duration: var(--#{$wizard}__nav-link-toggle-icon--TransitionDuration);
   transition-property: transform;
-  transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
 }
 
 .#{$wizard}__main {
@@ -594,7 +614,7 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .#{$wizard}__main-body {

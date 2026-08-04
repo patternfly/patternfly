@@ -1,0 +1,6 @@
+.ws-core-c-avatar .ws-preview-html {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pf-t--global--spacer--sm);
+  align-items: end;
+}

@@ -4,51 +4,61 @@
     {{> compass--sidebar--start}}
     {{#> compass-main}}
       {{#> compass-main-header}}
-        {{#> compass-panel}}
-          {{#> compass-main-header-content}}
-            {{#> compass-main-header-title}}
-              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-                Page title
-              {{/title}}
-            {{/compass-main-header-title}}
-            {{#> compass-main-header-toolbar}}
-              {{#> action-list}}
-                {{#> action-list-group}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsPrimary=true}}
-                      Add integration
-                    {{/button}}
-                  {{/action-list-item}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsSecondary=true}}
-                      Test integration
-                    {{/button}}
-                  {{/action-list-item}}
-                {{/action-list-group}}
-              {{/action-list}}
-            {{/compass-main-header-toolbar}}
-          {{/compass-main-header-content}}
-        {{/compass-panel}}
+        {{#> panel panel--IsGlass=true}}
+          {{#> panel-main}}
+            {{#> panel-main-body}}
+            {{#> compass-main-header-content}}
+              {{#> compass-main-header-title}}
+                {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                  Page title
+                {{/title}}
+              {{/compass-main-header-title}}
+              {{#> compass-main-header-toolbar}}
+                {{#> action-list}}
+                  {{#> action-list-group}}
+                    {{#> action-list-item}}
+                      {{#> button button--IsPrimary=true}}
+                        Add integration
+                      {{/button}}
+                    {{/action-list-item}}
+                    {{#> action-list-item}}
+                      {{#> button button--IsSecondary=true}}
+                        Test integration
+                      {{/button}}
+                    {{/action-list-item}}
+                  {{/action-list-group}}
+                {{/action-list}}
+              {{/compass-main-header-toolbar}}
+            {{/compass-main-header-content}}
+          {{/panel-main-body}}
+        {{/panel-main}}
+      {{/panel}}
       {{/compass-main-header}}
       {{#> compass-content}}
-        {{#> compass-panel compass-panel--IsScrollable=true}}
-          {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
-            {{> toolbar-template
-              toolbar-template--id=(concat page-template--id '-toolbar')
-              toolbar-template--HasToggleGroup=true
-              toolbar-template--HasBulkSelect=true
-              toolbar-template--HasOverflowMenu=true
-              toolbar-template--HasFilter=true
-            }}
-            {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
-          {{/l-flex}}
-        {{/compass-panel}}
+        {{#> panel panel--IsGlass=true panel--IsScrollable=true panel--IsScrollableAutoHeight=true}}
+          {{#> panel-main}}
+            {{#> panel-main-body}}
+              {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
+                {{> toolbar-template
+                  toolbar-template--id=(concat page-template--id '-toolbar')
+                  toolbar-template--HasToggleGroup=true
+                  toolbar-template--HasBulkSelect=true
+                  toolbar-template--HasOverflowMenu=true
+                  toolbar-template--HasFilter=true
+                }}
+                {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
+              {{/l-flex}}
+            {{/panel-main-body}}
+          {{/panel-main}}
+        {{/panel}}
       {{/compass-content}}
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
-          {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}
-            chatbot message bar
-          {{/compass-panel}}
+          {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
+            {{#> panel-main}}
+              chatbot message bar
+            {{/panel-main}}
+          {{/panel}}
         {{/compass-message-bar}}
       {{/compass-main-footer}}
     {{/compass-main}}

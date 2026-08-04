@@ -2,5 +2,11 @@
   {{#if menu-toggle-status-icon--attribute}}
     {{{menu-toggle-status-icon--attribute}}}
   {{/if}}>
-  <i class="fas fa-{{#if menu-toggle--IsSuccess}}check-circle{{else if menu-toggle--IsWarning}}exclamation-triangle{{else if menu-toggle--IsDanger}}exclamation-circle{{/if}}" aria-hidden="true"></i>
+  {{#if menu-toggle--IsSuccess}}
+    {{{pfIcon "rh-ui-check-circle-fill"}}}
+  {{else if menu-toggle--IsWarning}}
+    {{{pfIcon "rh-ui-warning-fill"}}}
+  {{else if menu-toggle--IsDanger}}
+    {{{pfIcon "rh-ui-error-fill"}}}
+  {{/if}}
 </span>

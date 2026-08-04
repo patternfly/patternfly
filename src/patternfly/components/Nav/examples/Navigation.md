@@ -536,22 +536,22 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="cube"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cubes"}}
         Link 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-folder"}}
         Current link
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="cloud"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud"}}
         Link 3
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="code"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-code"}}
         Link 4
       {{/nav-link}}
     {{/nav-item}}
@@ -564,16 +564,16 @@ import './Navigation.css'
 {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{> nav-link nav-link--href="#" nav-link--icon="cube" nav-link--aria-label="Cube"}}
+      {{> nav-link nav-link--href="#" nav-link--icon="rh-ui-cubes" nav-link--aria-label="Cubes"}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="folder" nav-link--aria-label="Folder"}}
+      {{> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder"}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{> nav-link nav-link--href="#" nav-link--icon="cloud" nav-link--aria-label="Cloud"}}
+      {{> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud" nav-link--aria-label="Cloud"}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{> nav-link nav-link--href="#" nav-link--icon="code" nav-link--aria-label="Code"}}
+      {{> nav-link nav-link--href="#" nav-link--icon="rh-ui-code" nav-link--aria-label="Code"}}
     {{/nav-item}}
   {{/nav-list}}
 {{/nav}}

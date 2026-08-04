@@ -27,7 +27,7 @@
 .#{$check} {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--#{$check}--GridGap);
+  gap: var(--#{$check}--GridGap);
   accent-color: var(--#{$check}--AccentColor);
 
   &.pf-m-standalone {

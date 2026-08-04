@@ -1,7 +1,6 @@
 ---
 id: Compass
-section: AI
-subsection: Generative UIs
+section: components
 wrapperTag: div
 ---
 
@@ -10,7 +9,7 @@ wrapperTag: div
 
 This demo populates the main Compass section with a card view, which is one of the more common page types used within a Compass layout. In this demo, the page includes:
 - A `.pf-v6-c-compass__main-header` that contains the page title and toolbar with action items.
-- A `.pf-v6-c-compass__content`, which contains a `.pf-v6-c-compass__panel` to create a rounded-rectangle container that serves as the main content background.
+- A `.pf-v6-c-compass__content`, which contains a glass panel component to create a rounded-rectangle container that serves as the main content background.
 
 ```hbs isFullscreen isBeta
 {{> compass--card-view}}
@@ -21,7 +20,7 @@ This demo populates the main Compass section with a card view, which is one of t
 This demo populates the main Compass section with a dashboard, which is often used as the landing page within a Compass layout. This demo page includes:
 
 - A `.pf-v6-c-hero` component positioned between the top navigation and the main page content, containing promotional or introductory content with important CTAs.
-- A `.pf-v6-c-compass__content` without a `.pf-v6-c-compass__panel` wrapping all of the contents. This removes the rounded-rectangle container that typically serves as the main content background. Instead, the content area is a dashboard (a grid of cards), and each card is individually wrapped in`.pf-v6-c-compass__panel` to provide the rounded-rectangle styling.
+- A `.pf-v6-c-compass__content` without a glass panel component wrapping all of the contents. This removes the rounded-rectangle container that typically serves as the main content background. Instead, the content area is a dashboard (a grid of cards), and each card has a glass modifier.
 
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
@@ -30,7 +29,7 @@ This demo populates the main Compass section with a dashboard, which is often us
     {{> compass--sidebar--start}}
     {{#> compass-main}}
       {{#> compass-hero}}
-        {{#> hero}}
+        {{#> hero hero--IsGlass=true}}
           {{#> hero-body}}
             {{#> content}}
               <h1>Automation that does more</h1>
@@ -57,45 +56,35 @@ This demo populates the main Compass section with a dashboard, which is often us
         {{#> grid grid--modifier="pf-m-gutter" grid--id="compass-dashboard-grid"}}
           {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:3"'}}
             {{#> l-flex l-flex--modifier="pf-m-column"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-status card--IsPlain=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}} <!-- inventory -->
-          {{/compass-panel}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-line-chart card--IsPlain=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
-          {{/compass-panel}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-metrics card--IsPlain=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
-          {{/compass-panel}}
+              {{> card-template-status card--IsGlass=true card-template-status--HideNotificationDrawer=true card-template-status--id=(concat grid--id '-status-card-1')}}
+              {{> card-template-line-chart card--IsGlass=true card-template-line-chart--id=(concat grid--id '-line-chart-card-1')}}
+              {{> card-template-metrics card--IsGlass=true card-template-metrics--id=(concat grid--id '-metrics-card-1')}}
             {{/l-flex}}
           {{/grid-item}}
           {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:2"'}}
             {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md pf-m-column-on-lg"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-                {{> card-template-details card--IsPlain=true card-template-details--id=(concat grid--id '-details-card-1')}}
-          {{/compass-panel}}
+                {{> card-template-details card--IsGlass=true card-template-details--id=(concat grid--id '-details-card-1')}}
               {{/l-flex-item}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-                {{> card-template-data-list card--IsPlain=true data-list--IsPlain=true card-template-data-list--id=(concat grid--id '-data-list-card-1')}}
-          {{/compass-panel}}
+                {{> card-template-data-list card--IsGlass=true data-list--IsPlain=true card-template-data-list--id=(concat grid--id '-data-list-card-1')}}
               {{/l-flex-item}}
             {{/l-flex}}
           {{/grid-item}}
           {{#> grid-item grid-item--modifier="pf-m-4-col-on-lg pf-m-3-col-on-2xl" grid-item--attribute='style="--pf-v6-l-grid--item--Order-on-lg:4"'}}
             {{#> l-flex l-flex--modifier="pf-m-column"}}
-          {{#> compass-panel compass-panel--HasNoPadding=true}}
-              {{> card-template-events card--IsPlain=true card-template-events--id=(concat grid--id '-events-card-1')}}
-          {{/compass-panel}}
+              {{> card-template-events card--IsGlass=true card-template-events--id=(concat grid--id '-events-card-1')}}
             {{/l-flex}}
           {{/grid-item}}
         {{/grid}}
       {{/compass-content}}
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
-          {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}
-            chatbot message bar
-          {{/compass-panel}}
+          {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
+            {{#> panel-main}}
+              chatbot message bar
+            {{/panel-main}}
+          {{/panel}}
         {{/compass-message-bar}}
       {{/compass-main-footer}}
     {{/compass-main}}
@@ -108,7 +97,7 @@ This demo populates the main Compass section with a dashboard, which is often us
 
 This demo places multiple sections within the main Compass section, with each section containing a card view.
 
-Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rounded-rectangle container as the main content background. Instead, the `.pf-v6-c-compass__content` is a grid with 2 independently scrollable `.pf-v6-c-compass__panel` elements.
+Without a glass panel component wrapping all of the content, there is no rounded-rectangle container as the main content background. Instead, the `.pf-v6-c-compass__content` is a grid with 2 independently scrollable glass panel components.
 
 ```hbs isFullscreen isBeta
 {{#> compass--demo-context}}
@@ -117,65 +106,79 @@ Without a `.pf-v6-c-compass__panel` wrapping all of the content, there is no rou
     {{> compass--sidebar--start}}
     {{#> compass-main}}
       {{#> compass-main-header}}
-        {{#> compass-panel}}
-          {{#> compass-main-header-content}}
-            {{#> compass-main-header-title}}
-              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-                Page title
-              {{/title}}
-            {{/compass-main-header-title}}
-            {{#> compass-main-header-toolbar}}
-              {{#> action-list}}
-                {{#> action-list-group}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsPrimary=true}}
-                      Add integration
-                    {{/button}}
-                  {{/action-list-item}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsSecondary=true}}
-                      Test integration
-                    {{/button}}
-                  {{/action-list-item}}
-                {{/action-list-group}}
-              {{/action-list}}
-            {{/compass-main-header-toolbar}}
-          {{/compass-main-header-content}}
-        {{/compass-panel}}
+        {{#> panel panel--IsGlass=true}}
+          {{#> panel-main}}
+            {{#> panel-main-body}}
+              {{#> compass-main-header-content}}
+                {{#> compass-main-header-title}}
+                  {{#> title titleType="h2" title--modifier="pf-m-h1"}}
+                    Page title
+                  {{/title}}
+                {{/compass-main-header-title}}
+                {{#> compass-main-header-toolbar}}
+                  {{#> action-list}}
+                    {{#> action-list-group}}
+                      {{#> action-list-item}}
+                        {{#> button button--IsPrimary=true}}
+                          Add integration
+                        {{/button}}
+                      {{/action-list-item}}
+                      {{#> action-list-item}}
+                        {{#> button button--IsSecondary=true}}
+                          Test integration
+                        {{/button}}
+                      {{/action-list-item}}
+                    {{/action-list-group}}
+                  {{/action-list}}
+                {{/compass-main-header-toolbar}}
+              {{/compass-main-header-content}}
+            {{/panel-main-body}}
+          {{/panel-main}}
+        {{/panel}}
       {{/compass-main-header}}
       {{#> compass-content}}
         {{#> grid grid--modifier="pf-m-all-6-col pf-m-gutter"}}
-          {{#> compass-panel compass-panel--IsScrollable=true}}
-            {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
-              {{> toolbar-template
-                toolbar-template--id=(concat page-template--id '-toolbar')
-                toolbar-template--HasToggleGroup=true
-                toolbar-template--HasBulkSelect=true
-                toolbar-template--HasOverflowMenu=true
-                toolbar-template--HasFilter=true
-              }}
-              {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
-            {{/l-flex}}
-          {{/compass-panel}}
-          {{#> compass-panel compass-panel--IsScrollable=true}}
-            {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
-              {{> toolbar-template
-                toolbar-template--id=(concat page-template--id '-toolbar')
-                toolbar-template--HasToggleGroup=true
-                toolbar-template--HasBulkSelect=true
-                toolbar-template--HasOverflowMenu=true
-                toolbar-template--HasFilter=true
-              }}
-              {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}
-            {{/l-flex}}
-          {{/compass-panel}}
+          {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
+            {{#> panel-main}}
+              {{#> panel-main-body}}
+                {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
+                  {{> toolbar-template
+                    toolbar-template--id="compass-multiple-sections-toolbar"
+                    toolbar-template--HasToggleGroup=true
+                    toolbar-template--HasBulkSelect=true
+                    toolbar-template--HasOverflowMenu=true
+                    toolbar-template--HasFilter=true
+                  }}
+                  {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery"}}
+                {{/l-flex}}
+              {{/panel-main-body}}
+            {{/panel-main}}
+          {{/panel}}
+          {{#> panel panel--IsScrollable=true panel--IsScrollableAutoHeight=true panel--IsGlass=true}}
+            {{#> panel-main}}
+              {{#> panel-main-body}}
+                {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap-md"}}
+                  {{> toolbar-template
+                    toolbar-template--id="compass-multiple-sections-toolbar-2"
+                    toolbar-template--HasToggleGroup=true
+                    toolbar-template--HasBulkSelect=true
+                    toolbar-template--HasOverflowMenu=true
+                    toolbar-template--HasFilter=true
+                  }}
+                  {{> card-template-gallery card-template-gallery--id="compass-multiple-sections-card-gallery-2"}}
+                {{/l-flex}}
+              {{/panel-main-body}}
+            {{/panel-main}}
+          {{/panel}}
         {{/grid}}
       {{/compass-content}}
       {{#> compass-main-footer}}
         {{#> compass-message-bar}}
-          {{#> compass-panel compass-panel--HasNoPadding=true compass-panel--HasNoBorder=true compass-panel--IsPill=true}}
-            chatbot message bar
-          {{/compass-panel}}
+          {{#> panel panel--HasNoBorder=true panel--IsPill=true panel--IsGlass=true}}
+            {{#> panel-main}}
+              chatbot message bar
+            {{/panel-main}}
+          {{/panel}}
         {{/compass-message-bar}}
       {{/compass-main-footer}}
     {{/compass-main}}
@@ -199,47 +202,22 @@ This demo showcases how you can position a side-panel drawer on top of the other
 {{/drawer}}
 ```
 
-### Docked
+### Docked nav
 ```hbs isFullscreen isBeta
-{{#> compass--demo-context}}
-  {{#> compass compass--HasDock=true}}
-    {{#> compass-dock}}
-      {{> masthead-template masthead-template--HasDockedNav=true}}
-    {{/compass-dock}}
-    {{#> compass-main}}
-      {{#> compass-main-header}}
-        {{#> compass-panel}}
-          {{#> compass-main-header-content}}
-            {{#> compass-main-header-title}}
-              {{#> title titleType="h2" title--modifier="pf-m-h1"}}
-                Header
-              {{/title}}
-            {{/compass-main-header-title}}
-            {{#> compass-main-header-toolbar}}
-              {{#> action-list}}
-                {{#> action-list-group}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsPrimary=true}}
-                      action
-                    {{/button}}
-                  {{/action-list-item}}
-                  {{#> action-list-item}}
-                    {{#> button button--IsSecondary=true}}
-                      action
-                    {{/button}}
-                  {{/action-list-item}}
-                {{/action-list-group}}
-              {{/action-list}}
-            {{/compass-main-header-toolbar}}
-          {{/compass-main-header-content}}
-        {{/compass-panel}}
-      {{/compass-main-header}}
-      {{#> compass-content}}
-        {{#> compass-panel}}
-          [so much room for activities]
-        {{/compass-panel}}
-      {{/compass-content}}
-    {{/compass-main}}
-  {{/compass}}
-{{/compass--demo-context}}
+{{> compass--docked compass--docked--id="compass-docked-example"}}
+```
+
+### Docked nav - expanded on mobile
+```hbs isFullscreen isBeta
+{{> compass--docked compass--docked--id="compass-docked-mobile-expanded-example" compass-dock--IsExpanded=true}}
+```
+
+### Docked nav text expanded
+```hbs isFullscreen isBeta
+{{> compass--docked compass--docked--id="compass-docked-text-expanded-example" compass-dock--IsTextExpanded=true}}
+```
+
+### Docked nav text expanded - expanded on mobile
+```hbs isFullscreen isBeta
+{{> compass--docked compass--docked--id="compass-docked-text-expanded-mobile-expanded-example" compass-dock--IsExpanded=true compass-dock--IsTextExpanded=true}}
 ```

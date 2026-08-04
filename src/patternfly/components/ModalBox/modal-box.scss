@@ -39,7 +39,7 @@
 
   // Header main
   --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
-  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
+  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
 
   // Title
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
@@ -75,8 +75,8 @@
   --#{$modal-box}__footer--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
-  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: calc(var(--#{$modal-box}__footer--c-button--MarginInlineEnd) / 2);
+  --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
+  --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
 .#{$modal-box} {
@@ -226,7 +226,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
-  word-break: break-word;
+  overflow-wrap: anywhere;
   -webkit-overflow-scrolling: touch;
 
   &:last-child {
@@ -249,7 +249,7 @@
     margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginInlineEnd);
 
     @media screen and (min-width: $pf-v6-global--breakpoint--sm) {
-      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--sm--MarginInlineEnd);
+      --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--#{$modal-box}__footer--c-button--sm--MarginInlineEnd); // remove in breaking change
     }
   }
 }

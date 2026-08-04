@@ -1409,14 +1409,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true  table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1459,15 +1459,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1510,15 +1510,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1588,14 +1588,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1638,15 +1638,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1689,15 +1689,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1766,14 +1766,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1812,15 +1812,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1859,15 +1859,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -1930,7 +1930,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
 ### Plain example
 ```hbs isBeta
-{{#> table table--id="table-plain" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-plain" table--attribute='aria-label="This is a plain table example"'}}
+{{#> table table--id="table-plain" table--IsGrid=true table--IsPlain=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a plain table example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
@@ -2015,6 +2015,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-plain` | `.pf-v6-c-table` | Modifies the table to have a transparent background. |
+| `.pf-m-no-plain-on-glass` | `.pf-v6-c-table` | Prevents the table from automatically applying plain styling when glass theme is enabled. |
 
 ## Compact variant
 
@@ -2064,7 +2065,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         0556
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2088,7 +2089,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9492
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2112,7 +2113,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9929
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2136,7 +2137,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         2217
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2603,7 +2604,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         0556
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2627,7 +2628,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9492
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2651,7 +2652,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9929
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2675,7 +2676,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         2217
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2732,7 +2733,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         0556
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2756,7 +2757,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9492
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2780,7 +2781,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         9929
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2804,7 +2805,7 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
         2217
       {{/table-td}}
       {{#> table-td table-td--data-label="Icon" table-td--IsIcon=true}}
-        <i class="fas fa-check"></i>
+        {{pfIcon "rh-ui-check"}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Action"}}
         <a href="#">Action link</a>
@@ -2974,14 +2975,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-1"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-2"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-3"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3022,14 +3023,14 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
 
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-controls="' table--id '-nested-table-4"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;10
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-5"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         234
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-6"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3072,15 +3073,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--IsControlRow="true" table-tr--IsExpanded=true}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         2
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--modifier="pf-m-expanded" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-8"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         82
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-9"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3123,15 +3124,15 @@ Note: To apply padding to `.pf-v6-c-table__expandable-row`, wrap the content in 
   {{#> table-tbody}}
     {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-10"')}}
-        <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-branch-fill"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Branches" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-11"')}}
-        <i class="fas fa-code" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-code"}}&nbsp;
         4
       {{/table-td}}
       {{#> table-td table-td--IsCompoundExpansionToggle=true table-td--data-label="Pull requests" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-12"')}}
-        <i class="fas fa-cube" aria-hidden="true"></i>&nbsp;
+        {{pfIcon "rh-ui-path-fill"}}&nbsp;
         1
       {{/table-td}}
       {{#> table-th table-th--data-label="Workspaces"}}
@@ -3536,19 +3537,19 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         {{#> l-flex l-flex--modifier="pf-m-column"}}
           {{#> l-flex newcontext}}
             {{#> l-flex-item}}
-              <i class="fas fa-code-branch" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-branch-fill"}}
               &nbsp;5
             {{/l-flex-item}}
             {{#> l-flex-item}}
-              <i class="fas fa-code" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-code"}}
               &nbsp;9
             {{/l-flex-item}}
             {{#> l-flex-item}}
-              <i class="fas fa-cube" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-path-fill"}}
               &nbsp;2
             {{/l-flex-item}}
             {{#> l-flex-item}}
-              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              {{pfIcon "rh-ui-check-circle-fill"}}
               &nbsp;11
             {{/l-flex-item}}
           {{/l-flex}}
@@ -3761,102 +3762,207 @@ There are a few ways this can be handled:
 ### Sticky header
 ```hbs
 <div class="pf-v6-c-scroll-inner-wrapper">
-  {{#> table table--id="table-sticky-header" table--IsGrid=true table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
-    {{#> table-thead}}
-      {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"'}}
-          Repositories
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"'}}
-          Branches
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"'}}
-          Pull requests
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"'}}
-          Workspaces
-        {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"'}}
-          Last commit
-        {{/table-th}}
-      {{/table-tr}}
-    {{/table-thead}}
-
-    {{#> table-tbody}}
-      {{#> table-tr}}
-        {{#> table-td table-td--data-label="Repository name"}}
-          Repository 1
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Branches"}}
-          10
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Pull requests"}}
-          25
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Workspaces"}}
-          5
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Last commit"}}
-          2 days ago
-        {{/table-td}}
-      {{/table-tr}}
-
-      {{#> table-tr}}
-        {{#> table-td table-td--data-label="Repository name"}}
-          Repository 2
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Branches"}}
-          10
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Pull requests"}}
-          25
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Workspaces"}}
-          5
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Last commit"}}
-          2 days ago
-        {{/table-td}}
-      {{/table-tr}}
-
-      {{#> table-tr}}
-        {{#> table-td table-td--data-label="Repository name"}}
-          Repository 3
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Branches"}}
-          10
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Pull requests"}}
-          25
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Workspaces"}}
-          5
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Last commit"}}
-          2 days ago
-        {{/table-td}}
-      {{/table-tr}}
-
-      {{#> table-tr}}
-        {{#> table-td table-td--data-label="Repository name"}}
-          Repository 4
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Branches"}}
-          10
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Pull requests"}}
-          25
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Workspaces"}}
-          5
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Last commit"}}
-          2 days ago
-        {{/table-td}}
-      {{/table-tr}}
-    {{/table-tbody}}
-  {{/table}}
+  {{> 
+    table--default
+    table--aria-label="This is a table with sticky header cells"
+    table--HasStickyHeader=true}}
 </div>
+```
+
+### Sticky header with base and stuck
+
+This example shows the use of `.pf-m-sticky-header-base` and `.pf-m-sticky-header-stuck`. `.pf-m-sticky-header-stuck` can be applied dynamically as a table has scrolled to only show sticky styles when the header is "stuck" and floating above the table content.
+
+```hbs
+<div class="pf-v6-c-scroll-inner-wrapper">
+  {{> 
+    table--default
+    table--aria-label="This is a table with sticky header cells"
+    table--HasStickyHeaderBase=true
+    table--HasStickyHeaderStuck=true}}
+</div>
+```
+
+### Sticky footer
+```hbs
+{{#> table table--id="table-sticky-footer" table--IsGrid=true table--modifier="pf-m-grid-md" table--HasStickyFooter=true table--attribute='aria-label="This is a table with a sticky footer"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 6
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 7
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 8
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tfoot}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="row"'}}
+        Total nodes
+      {{/table-th}}
+      {{#> table-td table-td--attribute='colspan="4"'}}
+        4
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tfoot}}
+{{/table}}
 ```
 
 ### Sticky column
@@ -3865,8 +3971,7 @@ There are a few ways this can be handled:
   {{> table--scrollable
       table--scrollable--id="sticky-column-example"
       table--scrollable--Column1IsStickyColumn=true
-      table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate pf-m-border-right"
-      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate"}}
+      table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
 </div>
 ```
 
@@ -3877,8 +3982,7 @@ There are a few ways this can be handled:
       table--scrollable--id="sticky-multi-column-example"
       table--scrollable--Column1IsStickyColumn=true
       table--scrollable--Column2IsStickyColumn=true
-      table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate"
-      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"}}
+      table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
 </div>
 ```
 
@@ -3887,11 +3991,10 @@ There are a few ways this can be handled:
 <div class="pf-v6-c-scroll-outer-wrapper">
   <div class="pf-v6-c-scroll-inner-wrapper">
     {{> table--scrollable table--scrollable--id="sticky-header-columns-example"
-        table--scrollable--modifier="pf-m-sticky-header"
+        table--HasStickyHeader=true
         table--scrollable--Column1IsStickyColumn=true
         table--scrollable--Column2IsStickyColumn=true
-        table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate"
-        table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"}}
+        table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
   </div>
 </div>
 ```
@@ -3903,7 +4006,7 @@ There are a few ways this can be handled:
   {{> table--scrollable
       table--scrollable--id="sticky-right-column-example"
       table--scrollable--ColumnLastIsStickyColumn=true
-      table--scrollable--th--modifier--cell-9-modifier="pf-m-truncate pf-m-border-left"}}
+      table--scrollable--th--modifier--cell-13-modifier="pf-m-border-left"}}
 </div>
 ```
 
@@ -3914,6 +4017,8 @@ For sticky columns to function correctly, the parent table's width must be contr
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-sticky-header` | `.pf-v6-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
+| `.pf-m-sticky-header-base` | `.pf-v6-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll, but does not apply sticky styling. `.pf-m-sticky-header-stuck` should be used to apply sticky styling. |
+| `.pf-m-sticky-header-stuck` | `.pf-v6-c-table` | Applies sticky header styling to a table with `.pf-m-sticky-header-base`. |
 | `.pf-v6-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
 | `.pf-v6-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
 | `.pf-v6-c-table__sticky-cell` | `<th>`, `<td>` | Initiates a sticky table cell. |
@@ -4115,7 +4220,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Nested column headers, sticky header
 ```hbs
 <div class="pf-v6-c-scroll-inner-wrapper">
-  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--IsGrid=true table--attribute='aria-label="This is a sticky nested column header table example"'}}
+  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md" table--HasStickyHeader=true table--IsGrid=true table--attribute='aria-label="This is a sticky nested column header table example"'}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
@@ -4145,6 +4250,9 @@ For sticky columns to function correctly, the parent table's width must be contr
         {{#> table-th table-th--attribute='scope="col"' table-th--IsSortable=true table-th--modifier="pf-v6-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Destination
         {{/table-th}}
+      {{/table-tr}}
+      {{#> table-tr table-tr--modifier="pf-m-border-row" table-tr--attribute='aria-hidden="true"'}}
+        {{> table-td table-td--attribute='colspan="6"'}}
       {{/table-tr}}
     {{/table-thead}}
 
@@ -5071,6 +5179,124 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 | -- | -- | -- |
 | `.pf-m-striped` | `.pf-v6-c-table`, `tbody`, `tr` | Modifies odd table rows to be striped. |
 | `.pf-m-striped-even` | `tbody` | Modifies even table rows to be striped. For use in tables with multiple `tbody` elements where adjacent `tbody` elements need even row striping to maintain visual consistency. |
+
+## Table footer
+
+### Table footer example
+```hbs
+{{#> table table--id="table-footer" table--IsGrid=true table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with a footer example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tfoot}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="row"'}}
+        Total nodes
+      {{/table-th}}
+      {{#> table-td table-td--attribute='colspan="4"'}}
+        4
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tfoot}}
+{{/table}}
+```
+
+### Table footer usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-v6-c-table__tfoot` | `tfoot` | Initiates a table footer. |
 
 ## Documentation
 

@@ -1,9 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($compass) {
-  --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--light);
-  --#{$compass}--BackgroundImage--light: none;
-  --#{$compass}--BackgroundImage--dark: none;
+  --#{$compass}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$compass}--Padding: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}--Gap: var(--pf-t--global--spacer--inset--page-chrome);
   --#{$compass}__nav--RowGap: var(--pf-t--global--spacer--gap--group--vertical);
@@ -21,20 +19,12 @@
   --#{$compass}__main-header-content--RowGap: var(--pf-t--global--spacer--sm);
   --#{$compass}__main-header-content--ColumnGap: var(--pf-t--global--spacer--md);
   --#{$compass}__main-footer--MarginBlockStart: calc(var(--#{$compass}__main--RowGap) * -1 + var(--#{$compass}--Gap)); // Creates same gap as parent compass grid, mimicking the compass footer
-  --#{$compass}__panel--m-pill--BorderRadius: var(--pf-t--global--border--radius--pill);
-  --#{$compass}__panel--PaddingBlockStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--PaddingBlockEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--PaddingInlineStart: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--PaddingInlineEnd: var(--pf-t--global--spacer--inset--page-chrome);
-  --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default);
-  --#{$compass}__panel--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary);
-  --#{$compass}__panel--BorderColor: var(--pf-t--global--border--color--alt);
-  --#{$compass}__panel--BorderRadius: var(--pf-t--global--border--radius--large);
-  --#{$compass}__panel--BorderWidth: var(--pf-t--global--border--width--regular);
-  --#{$compass}__panel--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$compass}__message-bar--Width: 450px;
   --#{$compass}__message-bar--MinWidth: 300px;
   --#{$compass}__message-bar--MaxWidth: 600px;
+
+  // Docked
+  --#{$compass}--m-docked__masthead--BackgroundColor: var(--pf-t--global--background--color--primary--default);
 
   // Section animation
   --#{$compass}--section--slide--length--header: 100%;
@@ -50,12 +40,33 @@
   --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s, 0s, 0s;
   --#{$compass}--section--m-expanded--TransitionDelay: 0s;
 
+  // Dock
+  --#{$compass}__dock--Width: #{pf-size-prem(250px)};
+  --#{$compass}__dock--desktop--Width: auto;
+  --#{$compass}__dock--ZIndex: var(--pf-t--global--z-index--md);
+  --#{$compass}__dock--TransitionDuration--slide: 0s;
+  --#{$compass}__dock--m-expanded--TransitionDuration--slide: 0s;
+  --#{$compass}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
+
+  // Dock main
+  --#{$compass}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$compass}__dock-main--desktop--BackgroundColor: var(--pf-t--global--background--color--glass--primary--default, var(--pf-t--global--background--color--primary--default));
+  --#{$compass}__dock-main--BoxShadow: none;
+  --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
+  --#{$compass}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
+  --#{$compass}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
+  --#{$compass}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
+  --#{$compass}__dock-main--BorderInlineEndColor: transparent;
+  --#{$compass}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
+  --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));  
+
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
     --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
     --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s;
 
-    &.pf-m-animate-smoothly {
+    &.pf-m-animate-smoothly .#{$compass}__container {
       --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
       --#{$compass}--section--slide--length--header: 10rem;
       --#{$compass}--section--slide--length--sidebar: var(--pf-t--global--spacer--4xl);
@@ -66,11 +77,109 @@
       --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), var(--#{$compass}--section--m-expanded--duration), var(--#{$compass}--section--m-expanded--duration);
     }
   }
+
+  // Glass theme
+  --#{$compass}--BackgroundColor--glass: transparent;
+  --#{$compass}__content--MarginBlockStart--glass: calc(var(--#{$compass}__content--PaddingBlockStart--glass) * -1);
+  --#{$compass}__content--MarginBlockEnd--glass: calc(var(--#{$compass}__content--PaddingBlockEnd--glass) * -1);
+  --#{$compass}__content--MarginInlineStart--glass: calc(var(--#{$compass}__content--PaddingInlineStart--glass) * -1);
+  --#{$compass}__content--MarginInlineEnd--glass: calc(var(--#{$compass}__content--PaddingInlineEnd--glass) * -1);
+  --#{$compass}__content--PaddingBlockStart--glass: var(--pf-t--global--spacer--sm);
+  --#{$compass}__content--PaddingBlockEnd--glass: var(--pf-t--global--spacer--md);
+  --#{$compass}__content--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
+  --#{$compass}__content--PaddingInlineEnd--glass: var(--pf-t--global--spacer--md);
+
+  :where(.pf-v6-theme-glass) & {
+    --#{$compass}--BackgroundColor: var(--#{$compass}--BackgroundColor--glass);
+    --#{$compass}__content--MarginBlockStart: var(--#{$compass}__content--MarginBlockStart--glass);
+    --#{$compass}__content--MarginBlockEnd: var(--#{$compass}__content--MarginBlockEnd--glass);
+    --#{$compass}__content--MarginInlineStart: var(--#{$compass}__content--MarginInlineStart--glass);
+    --#{$compass}__content--MarginInlineEnd: var(--#{$compass}__content--MarginInlineEnd--glass);
+    --#{$compass}__content--PaddingBlockStart: var(--#{$compass}__content--PaddingBlockStart--glass);
+    --#{$compass}__content--PaddingBlockEnd: var(--#{$compass}__content--PaddingBlockEnd--glass);
+    --#{$compass}__content--PaddingInlineStart: var(--#{$compass}__content--PaddingInlineStart--glass);
+    --#{$compass}__content--PaddingInlineEnd: var(--#{$compass}__content--PaddingInlineEnd--glass);
+  }
 }
 
 .#{$compass} {
   // stylelint-disable-next-line
   interpolate-size: allow-keywords;
+  height: 100dvh;
+  background-color: var(--#{$compass}--BackgroundColor);
+
+  &.pf-m-docked {
+    .#{$compass}__container {
+      grid-template-areas:
+        "header"
+        "main";
+      grid-template-rows: max-content 1fr;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      padding: 0;
+    }
+
+    .#{$compass}__main {
+      padding: var(--#{$compass}--Padding);
+    }
+
+    > .#{$compass}__container > .#{$masthead} {
+      --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
+  
+      grid-area: header;
+    }
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    &.pf-m-docked .#{$compass}__container {
+      grid-template-areas: "dock main";
+      grid-template-rows: auto;
+      grid-template-columns: auto 1fr;
+      row-gap: var(--#{$compass}__main--RowGap);
+      align-items: stretch;
+      padding: 0;
+    }
+    
+    &.pf-m-docked > .#{$compass}__container > .#{$masthead} {
+      display: none;
+    }
+  }
+
+  // Masthead hamburger
+  > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    @include pf-v6-hamburger;
+  }
+
+  // mobile - show collapse when sidebar expanded
+  &:where(:has(> .#{$compass}__dock.pf-m-expanded)) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  // Docked masthead hamburger
+  .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+    @include pf-v6-hamburger($collapse: true);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    // desktop - reset dock internal toggle to bars
+    .#{$compass}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+      @include pf-v6-hamburger($reset: true);
+    }
+
+    // desktop - show expand arrow on hover
+    .#{$compass}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger;
+    }
+
+    // desktop - show collapse arrow on hover when text expanded
+    .#{$compass}__dock.pf-m-text-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
+    }
+  }
+}
+
+.#{$compass}__container {
   display: grid;
   grid-template-areas:
     "header header header"
@@ -80,42 +189,17 @@
   grid-auto-rows: auto;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
+  height: 100%;
   padding: var(--#{$compass}--Padding);
   overflow: hidden;
-  background-image: var(--#{$compass}--BackgroundImage);
-  background-size: cover;
-
-  &.pf-m-dock {
-    grid-template-areas: "dock main";
-    grid-template-rows: auto;
-    grid-template-columns: auto 1fr;
-    align-items: stretch;
-    padding: 0;
-
-    .#{$compass}__main {
-      padding: var(--#{$compass}--Padding);
-    }
-  }
-
-  :root:where(.#{$pf-prefix}theme-dark) & {
-    --#{$compass}--BackgroundImage: var(--#{$compass}--BackgroundImage--dark);
-  }
-
-  @at-root .#{$compass}__panel,
-  & {
-    &.pf-m-no-glass {
-      --#{$compass}__panel--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-    }
-  }
 }
 
 .#{$compass}__header,
 .#{$compass}__sidebar:is(.pf-m-start, .pf-m-end),
 .#{$compass}__main-footer,
 .#{$compass}__footer {
-  margin: 0;
   visibility: hidden;
+  margin: 0;
   opacity: 0;
   transition-delay: var(--#{$compass}--section--TransitionDelay);
   transition-timing-function: var(--#{$compass}--section--TransitionTimingFunction);
@@ -164,10 +248,12 @@
 }
 
 .#{$compass}__nav {
-  --#{$compass}__panel--PaddingBlockStart: var(--#{$compass}__nav--PaddingBlockStart);
-  --#{$compass}__panel--PaddingBlockEnd: var(--#{$compass}__nav--PaddingBlockEnd);
-  --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__nav--PaddingInlineStart);
-  --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__nav--PaddingInlineEnd);
+  .#{$panel} {
+    --#{$panel}__main-body--PaddingBlockStart: var(--#{$compass}__nav--PaddingBlockStart);
+    --#{$panel}__main-body--PaddingBlockEnd: var(--#{$compass}__nav--PaddingBlockEnd);
+    --#{$panel}__main-body--PaddingInlineStart: var(--#{$compass}__nav--PaddingInlineStart);
+    --#{$panel}__main-body--PaddingInlineEnd: var(--#{$compass}__nav--PaddingInlineEnd);
+  }
 
   display: flex;
   flex-direction: column;
@@ -187,10 +273,12 @@
 }
 
 .#{$compass}__sidebar {
-  --#{$compass}__panel--PaddingBlockStart: var(--#{$compass}__sidebar--PaddingBlockStart);
-  --#{$compass}__panel--PaddingBlockEnd: var(--#{$compass}__sidebar--PaddingBlockEnd);
-  --#{$compass}__panel--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
-  --#{$compass}__panel--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
+  .#{$panel} {
+    --#{$panel}__main-body--PaddingBlockStart: var(--#{$compass}__sidebar--PaddingBlockStart);
+    --#{$panel}__main-body--PaddingBlockEnd: var(--#{$compass}__sidebar--PaddingBlockEnd);
+    --#{$panel}__main-body--PaddingInlineStart: var(--#{$compass}__sidebar--PaddingInlineStart);
+    --#{$panel}__main-body--PaddingInlineEnd: var(--#{$compass}__sidebar--PaddingInlineEnd);
+  }
 
   display: flex;
   width: 0;
@@ -228,6 +316,69 @@
   }
 }
 
+// Dock
+.#{$compass}__dock {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  z-index: var(--#{$compass}__dock--ZIndex);
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  grid-area: dock;
+  width: var(--#{$compass}__dock--Width);
+  translate: -100% 0;
+  transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
+
+  &.pf-m-expanded {
+    --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
+
+    visibility: visible;
+    translate: 0;
+    transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s 0s;
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    --#{$compass}__dock-main--BackgroundColor: var(--#{$compass}__dock-main--desktop--BackgroundColor);
+    --#{$compass}__dock-main--BorderInlineEndColor: var(--#{$compass}__dock-main--desktop--BorderInlineEndColor);
+
+    position: revert;
+    inset: revert;
+    visibility: revert;
+    width: auto;
+    translate: 0;
+  }
+
+  .#{$toolbar}.pf-m-vertical :is(.#{$toolbar}__content-section, .#{$toolbar}__group, .#{$toolbar}__item) {
+    align-items: stretch;
+  }
+
+  &.pf-m-text-expanded {
+    width: var(--#{$compass}__dock--Width);
+  }
+}
+
+.#{$compass}__dock-main {
+  flex-grow: 1;
+  background-color: var(--#{$compass}__dock-main--BackgroundColor);
+  border-inline-end: var(--#{$compass}__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock-main--BorderInlineEndColor);
+  box-shadow: var(--#{$compass}__dock-main--BoxShadow);
+  backdrop-filter: var(--#{$compass}__dock-main--BackdropFilter);
+
+  .#{$compass}__dock.pf-m-expanded & {
+    border-inline-end: var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor);
+    box-shadow: var(--#{$compass}__dock--m-expanded__dock-main--BoxShadow);
+  }
+
+  @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
+    --#{$compass}__dock-main--BoxShadow: var(--#{$compass}__dock-main--desktop--BoxShadow);
+    --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--#{$compass}__dock-main--desktop--BoxShadow);
+    --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--#{$compass}__dock-main--BorderInlineEndWidth);
+    --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--#{$compass}__dock-main--desktop--BorderInlineEndColor);
+  }
+}
+
 .#{$compass}__main {
   display: flex;
   flex-direction: column;
@@ -251,6 +402,14 @@
   flex: 1 0 0;
   flex-direction: column;
   min-height: 0;
+  padding-block-start: var(--#{$compass}__content--PaddingBlockStart, 0);
+  padding-block-end: var(--#{$compass}__content--PaddingBlockEnd, 0);
+  padding-inline-start: var(--#{$compass}__content--PaddingInlineStart, 0);
+  padding-inline-end: var(--#{$compass}__content--PaddingInlineEnd, 0);
+  margin-block-start: var(--#{$compass}__content--MarginBlockStart, 0);
+  margin-block-end: var(--#{$compass}__content--MarginBlockEnd, 0);
+  margin-inline-start: var(--#{$compass}__content--MarginInlineStart, 0);
+  margin-inline-end: var(--#{$compass}__content--MarginInlineEnd, 0);
   overflow: auto;
 
   > *:last-child {
@@ -286,65 +445,3 @@
   min-width: var(--#{$compass}__message-bar--MinWidth);
   max-width: var(--#{$compass}__message-bar--MaxWidth);
 }
-
-.#{$compass}__panel {
-  padding-block-start: var(--#{$compass}__panel--PaddingBlockStart);
-  padding-block-end: var(--#{$compass}__panel--PaddingBlockEnd);
-  padding-inline-start: var(--#{$compass}__panel--PaddingInlineStart);
-  padding-inline-end: var(--#{$compass}__panel--PaddingInlineEnd);
-  background-color: var(--#{$compass}__panel--BackgroundColor);
-  backdrop-filter: var(--#{$compass}__panel--BackdropFilter);
-  border: var(--#{$compass}__panel--BorderWidth) solid var(--#{$compass}__panel--BorderColor);
-  border-radius: var(--#{$compass}__panel--BorderRadius);
-  box-shadow: var(--#{$compass}__panel--BoxShadow);
-
-  &.pf-m-no-border {
-    border-width: 0;
-  }
-
-  &.pf-m-no-padding {
-    padding: 0;
-  }
-
-  &.pf-m-full-height {
-    height: 100%;
-  }
-
-  &.pf-m-pill {
-    border-radius: var(--#{$compass}__panel--m-pill--BorderRadius);
-  }
-
-  &.pf-m-scrollable {
-    overflow: auto;
-  }
-}
-
-/* stylelint-disable */
-@media (max-width: 1200px) {
-  .#{$compass}:not(.pf-m-no-screen-warning) {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    place-content: center;
-    gap: 0;
-
-    &::after {
-      padding: 1em;
-      border-radius: var(--pf-t--global--border--radius--large);
-      background: var(--pf-t--global--background--color--primary--default);
-      content: "This page is optimized for wide screens.\a\a Please view on a larger display and/or make your browser window wider.";
-      width: 80%;
-      width: 300px;
-      border: 1px solid var(--pf-t--global--border--color--default);
-      box-shadow: var(--pf-t--global--box-shadow--md);
-      white-space: pre-wrap;
-      text-align: center;
-    }
-
-    * {
-      display: none;
-    }
-  }
-}
-/* stylelint-enable */

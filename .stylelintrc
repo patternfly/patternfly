@@ -5,8 +5,7 @@
   ],
   "plugins": [
     "stylelint-order",
-    "stylelint-scss",
-    "stylelint-use-logical-spec"
+    "stylelint-scss"
   ],
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
@@ -49,10 +48,21 @@
     "font-weight-notation": "numeric",
     "import-notation": "string",
     "keyframes-name-pattern": null,
-    "liberty/use-logical-spec": ["always", { "except": ["width", "max-width", "min-width", "height", "max-height", "min-height"] }],
     "max-nesting-depth": 3,
     "media-query-no-invalid": null,
+    "nesting-selector-no-missing-scoping-root": [
+      true,
+      {
+        "ignoreAtRules": ["mixin", "include", "media", "content"]
+      }
+    ],
     "no-descending-specificity": null,
+    "no-invalid-position-declaration": [
+      true,
+      {
+        "ignoreAtRules": ["include", "mixin", "media", "content"]
+      }
+    ],
     "no-unknown-animations": true,
     "order/order": [
       "custom-properties",
@@ -60,6 +70,10 @@
     ],
     "property-disallowed-list": [
       "text-decoration"
+    ],
+    "property-layout-mappings": [
+      "flow-relative",
+      { "ignoreProperties": ["width", "max-width", "min-width", "height", "max-height", "min-height", "overflow-x", "overflow-y"] }
     ],
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-colon-space-after": "at-least-one-space",

@@ -46,7 +46,31 @@ section: components
 ### Docked nav
 ```hbs isFullscreen isBeta
 {{> page-template page-template--id="nav-docked-example"
-      page-template--HasNoSidebar=true
       masthead-template--HasDockedNav=true
+}}
+```
+
+### Docked nav - expanded on mobile
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expanded-example"
+      masthead-template--HasDockedNav=true
+      page-dock--IsExpanded=true
+}}
+```
+
+### Docked nav text expanded
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-example"
+      masthead-template--HasDockedNav=true
+      page-dock--IsTextExpanded=true
+}}
+```
+
+### Docked nav text expanded - expanded on mobile
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expanded-example"
+      masthead-template--HasDockedNav=true
+      page-dock--IsExpanded=true
+      page-dock--IsTextExpanded=true
 }}
 ```

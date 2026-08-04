@@ -4,11 +4,11 @@
   {{/if}}>
   {{#if table-th--IsSelected}}
     {{#if table-th--IsAsc}}
-      <i class="fas fa-long-arrow-alt-up"></i>
+      {{pfIcon "rh-ui-sort-up-small-to-large"}}
     {{else}}
-      <i class="fas fa-long-arrow-alt-down"></i>
+      {{pfIcon "rh-ui-sort-down-small-to-large"}}
     {{/if}}
   {{else}}
-    <i class="fas fa-arrows-alt-v"></i>
+    {{pfIcon "rh-ui-arrow-up-down"}}
   {{/if}}
 </span>

@@ -10,7 +10,7 @@
         {{/title}}
       {{/card-title}}
     {{/card-header}}
-    {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded"}}
+    {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded" card--IsGlass=false}}
       {{#> card-header card-header--modifier="pf-m-toggle-right"}}
         {{> card-header-toggle}}
         {{> card-title card-title-text--value="CPU 1" card-title-text--id=(concat card--id '-title')}}
@@ -21,13 +21,13 @@
         {{/card-body}}
       {{/card-expandable-content}}
     {{/card}}
-    {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain"}}
+    {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain" card--IsGlass=false}}
       {{#> card-header card-header--modifier="pf-m-toggle-right"}}
         {{> card-header-toggle}}
         {{> card-title card-title-text--value="Pod count" card-title-text--id=(concat card--id '-title')}}
       {{/card-header}}
     {{/card}}
-    {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain"}}
+    {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain" card--IsGlass=false}}
       {{#> card-header card-header--modifier="pf-m-toggle-right"}}
         {{> card-header-toggle}}
         {{> card-title card-title-text--value="Memory" card-title-text--id=(concat card--id '-title')}}

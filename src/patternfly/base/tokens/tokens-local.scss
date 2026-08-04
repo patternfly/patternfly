@@ -1,4 +1,4 @@
-@use '../../sass-utilities/init' as *;
+@use '../../sass-utilities/' as *;
 
 // LOCAL TOKENS
 
@@ -137,7 +137,6 @@
   --pf-t--temp--dev--tbd: #BC11E0;
   // stylelint-enable
 
-  // Glass theme background tokens
-  --pf-t--global--background--color--glass--primary--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--primary) var(--pf-t--global--background--opacity--glass--primary), transparent );
-  --pf-t--global--background--color--glass--floating--default: color-mix(in srgb, var(--pf-t--global--background--color--glass--floating) var(--pf-t--global--background--opacity--glass--floating), transparent );
+  // Background images (overridden by glass / felt / dark local token mixins)
+  --pf-t--global--background--image--default: none;
 }

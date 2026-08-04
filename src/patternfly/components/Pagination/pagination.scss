@@ -32,7 +32,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-display-full__total-items--Display: none;
 
   // top
-  --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$pagination}--m-sticky--PaddingBlockStart: var(--pf-t--global--spacer--md);
   --#{$pagination}--m-sticky--PaddingBlockEnd: var(--pf-t--global--spacer--md);
@@ -41,9 +41,17 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-sticky--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$pagination}--m-sticky--InsetBlockStart: 0;
   --#{$pagination}--m-sticky--BorderBlockEndWidth:  var(--pf-t--global--border--width--high-contrast--regular);
+  --#{$pagination}--m-sticky-base--InsetBlockStart: 0;
+  --#{$pagination}--m-sticky-base--BorderRadius: 0;
+  --#{$pagination}--m-sticky-base--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
+  --#{$pagination}--m-sticky-base--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$pagination}--m-sticky-stuck--BoxShadow: var(--#{$pagination}--m-sticky--BoxShadow);
+  --#{$pagination}--m-sticky-stuck--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+  --#{$pagination}--m-sticky--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
 
   // bottom
-  --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+  --#{$pagination}--m-bottom--BorderRadius: 0;
   --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--InsetBlockEnd: 0;
@@ -57,6 +65,19 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-static--PaddingBlockEnd: 0;
   --#{$pagination}--m-bottom--m-static--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$pagination}--m-bottom--m-static--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
+  --#{$pagination}--m-bottom--m-static--BorderRadius: 0;
+  --#{$pagination}--m-bottom--m-static--BackgroundColor: transparent;
+  --#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd: 0;
+
+  :where(:root.pf-v6-theme-glass) & {
+    --#{$pagination}--m-sticky-stuck--BorderRadius: var(--pf-t--global--border--radius--glass--default);
+    --#{$pagination}--m-sticky-stuck--BoxShadow: var(--pf-t--global--box-shadow--sm);
+    --#{$pagination}--m-sticky--BorderRadius: var(--#{$pagination}--m-sticky--BorderRadius--glass);
+    --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm);
+    --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm);
+    --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm);
+    --#{$pagination}--m-bottom--BorderRadius: var(--#{$pagination}--m-sticky--BorderRadius--glass);
+  }
 
   // page menu
   --#{$pagination}__page-menu--Display--base: block;
@@ -67,6 +88,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}__page-menu--md--Display: var(--#{$pagination}__page-menu--Display--base);
 
   @media screen and (min-width: $pf-v6-global--breakpoint--md) {
+    --#{$pagination}--m-bottom--BackgroundColor: transparent;
     --#{$pagination}--m-bottom--BoxShadow: none;
     --#{$pagination}--m-bottom--BorderBlockStartWidth: 0;
     --#{$pagination}__page-menu--Display: var(--#{$pagination}__page-menu--md--Display);
@@ -108,6 +130,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     padding-inline-start: var(--#{$pagination}--m-bottom--m-sticky--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--m-sticky--PaddingInlineEnd);
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
+    border-radius: var(--#{$pagination}--m-bottom--BorderRadius);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
 
     .#{$pagination}__nav-control.pf-m-first,
@@ -130,6 +153,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       --#{$pagination}--m-bottom--MarginBlockStart: 0;
       --#{$pagination}--m-bottom--InsetBlockEnd: auto;
+      --#{$pagination}--m-bottom--BorderRadius: var(--#{$pagination}--m-bottom--m-static--BorderRadius);
 
       position: relative;
       justify-content: flex-end;
@@ -137,7 +161,7 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       padding-block-end: var(--#{$pagination}--m-bottom--m-static--PaddingBlockEnd);
       padding-inline-start: var(--#{$pagination}--m-bottom--m-static--PaddingInlineStart);
       padding-inline-end: var(--#{$pagination}--m-bottom--m-static--PaddingInlineEnd);
-  
+
       .#{$pagination}__nav-control.pf-m-first,
       .#{$pagination}__nav-control.pf-m-last,
       .#{$pagination}__nav-page-select {
@@ -160,12 +184,15 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 
   &.pf-m-static {
+    --#{$pagination}--m-bottom--BackgroundColor: var(--#{$pagination}--m-bottom--m-static--BackgroundColor);
+
     position: relative;
     padding-block-start: var(--#{$pagination}--m-bottom--m-static--PaddingBlockStart);
     padding-block-end: var(--#{$pagination}--m-bottom--m-static--PaddingBlockEnd);
     padding-inline-start: var(--#{$pagination}--m-bottom--m-static--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--m-static--PaddingInlineEnd);
     border: 0;
+    border-radius: var(--#{$pagination}--m-bottom--m-static--BorderRadius);
     box-shadow: none;
   }
 
@@ -174,15 +201,54 @@ $pf-v6-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--BorderBlockEndWidth: var(--#{$pagination}--m-sticky--BorderBlockEndWidth);
     --#{$pagination}--m-bottom--BorderBlockStartWidth: var(--#{$pagination}--m-bottom--m-sticky--BorderBlockStartWidth);
 
-    position: sticky;
     inset-block-start: var(--#{$pagination}--m-sticky--InsetBlockStart);
+    background-color: var(--#{$pagination}--m-sticky--BackgroundColor);
+    border-radius: var(--#{$pagination}--m-sticky--BorderRadius);
+    box-shadow: var(--#{$pagination}--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-sticky,
+  &.pf-m-sticky-base {
+    position: sticky;
     z-index: var(--#{$pagination}--m-sticky--ZIndex);
     padding-block-start: var(--#{$pagination}--m-bottom--m-sticky--PaddingBlockStart);
     padding-block-end: var(--#{$pagination}--m-bottom--m-sticky--PaddingBlockEnd);
     padding-inline-start: var(--#{$pagination}--m-bottom--m-sticky--PaddingInlineStart);
     padding-inline-end: var(--#{$pagination}--m-bottom--m-sticky--PaddingInlineEnd);
-    background-color: var(--#{$pagination}--m-sticky--BackgroundColor);
-    box-shadow: var(--#{$pagination}--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-sticky-base {
+    inset-block-start: var(--#{$pagination}--m-sticky-base--InsetBlockStart);
+    border-radius: var(--#{$pagination}--m-sticky-base--BorderRadius, 0);
+
+    &.pf-m-bottom {
+      --#{$pagination}--m-sticky-base--InsetBlockStart: 0;
+      --#{$pagination}--m-bottom--InsetBlockEnd: var(--#{$pagination}--m-bottom--m-sticky-base--InsetBlockEnd);
+    }
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-color: var(--#{$pagination}--m-sticky-stuck--BackgroundColor);
+      border-radius: var(--#{$pagination}--m-sticky-stuck--BorderRadius);
+      box-shadow: var(--#{$pagination}--m-sticky-stuck--BoxShadow);
+      opacity: 0;
+      transition-timing-function: var(--#{$pagination}--m-sticky-base--TransitionTimingFunction);
+      transition-duration: var(--#{$pagination}--m-sticky-base--TransitionDuration);
+      transition-property: opacity;
+    }
+  }
+
+  &.pf-m-sticky-stuck {
+    --#{$pagination}--m-sticky-base--BoxShadow: var(--#{$pagination}--m-sticky-stuck--BoxShadow);
+    --#{$pagination}--m-sticky-base--BorderRadius: var(--#{$pagination}--m-sticky-stuck--BorderRadius);
+    --#{$pagination}--m-sticky-base--BackgroundColor: var(--#{$pagination}--m-sticky-stuck--BackgroundColor);
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   &.pf-m-page-insets {

@@ -159,17 +159,17 @@
   inset-block-start: 0;
   inset-inline-start: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+  clip-path: inset(50%);
 }
 
 @mixin pf-v6-u-visible {
   position: static;
   overflow: visible;
-  clip: auto;
   white-space: normal;
   border: inherit;
+  clip-path: revert;
 }
 
 @mixin pf-v6-text-overflow {
@@ -196,7 +196,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v6-hidden-visible($val: "block") {
+@mixin pf-v6-hidden-visible($val: "block", $ifIncludeHeight: false) {
   // stylelint-disable-next-line
   --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
 
@@ -216,6 +216,21 @@
   // toggle values based on state
   &.pf-m-hidden {
     --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+  }
+
+  // only apply height breakpoints if $ifIncludeHeight is true
+  @if $ifIncludeHeight {
+    @each $size, $bp in $pf-v6-global--height-breakpoint-name-map {
+      @media screen and (min-height: $bp) {
+        &.pf-m-hidden-on-#{$size}-height {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        }
+
+        &.pf-m-visible-on-#{$size}-height {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        }
+      }
+    }
   }
 
   @each $size, $bp in $pf-v6-global--breakpoint-name-map {
@@ -484,9 +499,9 @@
     // collapse
     @if $collapse {
       --#{$button}__icon--TransitionDelay: 0s;
-      --#{$button}__icon--ScaleX: 1;
+      --#{$button}__icon--ScaleX: var(--#{$button}--m-hamburger__icon--m-collapse--ScaleX);
       --#{$button}--hover__icon--TransitionDelay: 0s;
-      --#{$button}--hover__icon--ScaleX: 1;
+      --#{$button}--hover__icon--ScaleX: var(--#{$button}--m-hamburger__icon--m-collapse--ScaleX);
 
     // expand
     } @else {
