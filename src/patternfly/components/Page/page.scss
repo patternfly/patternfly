@@ -19,6 +19,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock--TransitionDuration--slide: 0s;
   --#{$page}__dock--m-expanded--TransitionDuration--slide: 0s;
   --#{$page}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$page}__dock--m-expandable-expanded--ZIndex: var(--pf-t--global--z-index--lg);
 
   // Dock main
   --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
@@ -446,6 +447,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     transition:
       translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
       visibility 0s 0s;
+  }
+
+  &.pf-m-expandable-expanded {
+    --#{$page}__dock--ZIndex: var(--#{$page}__dock--m-expandable-expanded--ZIndex);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {

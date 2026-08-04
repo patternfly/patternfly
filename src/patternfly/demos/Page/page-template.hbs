@@ -6,6 +6,9 @@
     page--HasDock=masthead-template--HasDockedNav}}
   {{#unless page-template--HasNoMasthead}}
     {{#if masthead-template--HasDockedNav}}
+      {{#if page-dock--IsExpandableExpanded}}
+        {{#> backdrop}}{{/backdrop}}
+      {{/if}}
       {{> page-template-skip-to-content}}
       {{#> masthead masthead--IsDisplayInline=true}}
         {{#> masthead-main}}
