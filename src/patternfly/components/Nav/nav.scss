@@ -54,7 +54,7 @@
   // * Nav item toggle icon
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: -180deg;
-  --#{$nav}__item__-icon--TransitionDuration--transform: var(--pf-t--global--motion--duration--icon--default);
+  --#{$nav}__item__icon--TransitionDuration--transform: var(--pf-t--global--motion--duration--icon--default);
   --#{$nav}__item__toggle-icon--TransitionTimingFunction--transform: var(--pf-t--global--motion--timing-function--default);
 
   // * Nav link

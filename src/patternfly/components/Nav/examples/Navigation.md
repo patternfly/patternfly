@@ -591,12 +591,12 @@ The docked nav opens and closes when `.pf-m-text-expanded` or `.pf-m-expandable-
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item nav-item--IsExpandable="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--current="false" nav-link--attribute='id="docked-expandable-1"'}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--attribute='id="docked-expandable-1"'}}
         Policy
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-1"'}}
         {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-resource" nav-link--aria-label="Resource"}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-resource" nav-link--aria-label="Resource"}}
             Current link
           {{/nav-link}}
         {{/nav-item}}
