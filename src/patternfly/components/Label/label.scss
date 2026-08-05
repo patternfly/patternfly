@@ -567,7 +567,6 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    pointer-events: none;
     content: "";
     background-color: var(--#{$label}--BackgroundColor);
     border: var(--#{$label}--BorderWidth) solid var(--#{$label}--BorderColor);
@@ -588,8 +587,15 @@
   margin-inline-end: var(--#{$label}__actions--MarginInlineEnd);
 
   .#{$button} {
-    @at-root .#{$label}.pf-m-compact & {
-      --#{$button}--m-plain--m-no-padding--after--Inset: 0 calc(#{pf-size-prem(2px) * -1});
+    @at-root .#{$label} & {
+      padding-block-start: var(--#{$label}--PaddingBlockStart);
+      padding-block-end: var(--#{$label}--PaddingBlockEnd);
+      padding-inline-end: var(--#{$label}--PaddingInlineEnd);
+      margin-block-start: calc(var(--#{$label}--PaddingBlockStart) * -1);
+      margin-block-end: calc(var(--#{$label}--PaddingBlockEnd) * -1);
+      margin-inline-end: calc(var(--#{$label}--PaddingInlineEnd) * -1);
+      border-start-end-radius: var(--#{$label}--BorderRadius);
+      border-end-end-radius: var(--#{$label}--BorderRadius);
     }
 
     --#{$button}--FontSize: var(--#{$label}__actions--c-button--FontSize);
