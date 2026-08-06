@@ -97,12 +97,13 @@
   --#{$table}--cell--responsive--th--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // * Table grid compact table
+  --#{$table}--m-compact--cell--first-child--responsive--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__tr--responsive--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact__tr--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact__tr__td--responsive--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__tr__td--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
-  --#{$table}--m-compact__check--responsive--MarginBlockStart: #{pf-size-prem(7px)};
-  --#{$table}--m-compact__action--responsive--MarginBlockStart: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$table}--m-compact__check--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) +  #{pf-size-prem(4px)}); // cell padding plus an offset for the check/radio to align with text
+  --#{$table}--m-compact__action--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) + var(--pf-t--global--spacer--control--vertical--compact) * -1);
   --#{$table}--m-compact__action--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
 
@@ -113,7 +114,7 @@
 
   // * Table check
   --#{$table}__check--responsive--MarginInlineStart: var(--#{$table}__tbody--responsive--border-width--base);
-  --#{$table}__check--responsive--MarginBlockStart: #{pf-size-prem(14px)};
+  --#{$table}__check--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) +  #{pf-size-prem(4px)}); // cell padding plus an offset for the check/radio to align with text
 
   // * Table grid favorite
   --#{$table}--m-grid__favorite--MarginBlockStart: #{pf-size-prem(8px)};
@@ -121,6 +122,7 @@
 
   // * Table grid action
   --#{$table}__action--responsive--MarginInlineStart: var(--pf-t--global--spacer--xl);
+  --#{$table}__action--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) + var(--pf-t--global--spacer--control--vertical--plain) * -1);
   --#{$table}--m-grid__favorite--action--MarginInlineStart: var(--pf-t--global--spacer--2xl);
   --#{$table}--m-grid__check--favorite--action--MarginInlineStart: calc(var(--#{$table}--m-grid__check--favorite--MarginInlineStart) + var(--#{$table}--m-grid__favorite--action--MarginInlineStart));
 
@@ -241,7 +243,8 @@
       padding-inline-start: var(--#{$table}--cell--responsive--PaddingInlineStart);
 
       // remove padding from first child to align with kebab
-      &:first-child {
+      &:first-child,
+      &:is(.#{$table}__toggle, .#{$table}__check) + :where(th, td) {
         --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
       }
     }
@@ -249,6 +252,7 @@
 
   // - Table grid compact
   &.pf-m-compact {
+    --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--#{$table}--m-compact--cell--first-child--responsive--PaddingBlockStart);
     --#{$table}__tr--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr--responsive--PaddingBlockStart);
     --#{$table}__tr--responsive--PaddingBlockEnd: var(--#{$table}--m-compact__tr--responsive--PaddingBlockEnd);
     --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--m-compact__tr__td--responsive--PaddingBlockStart);
@@ -258,7 +262,7 @@
 
     .#{$table}__action {
       margin-block-start: var(--#{$table}--m-compact__action--responsive--MarginBlockStart);
-      margin-block-end: var(--#{$table}--m-compact__action--responsive--MarginBlockStart);
+      margin-block-end: var(--#{$table}--m-compact__action--responsive--MarginBlockEnd);
     }
 
     .#{$table}__toggle .#{$button} {
@@ -529,6 +533,7 @@
   // - Table grid action
   .#{$table}__action {
     text-align: end;
+    margin-block-start: var(--#{$table}__action--responsive--MarginBlockStart);
 
     // @smallest breakpoint
     @media screen and (max-width: $pf-v6-global--breakpoint--sm) {
