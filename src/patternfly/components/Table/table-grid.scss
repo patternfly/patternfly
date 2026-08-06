@@ -102,7 +102,7 @@
   --#{$table}--m-compact__tr--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$table}--m-compact__tr__td--responsive--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$table}--m-compact__tr__td--responsive--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
-  --#{$table}--m-compact__check--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) +  #{pf-size-prem(4px)});
+  --#{$table}--m-compact__check--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) +  #{pf-size-prem(4px)}); // cell padding plus an offset for the check/radio to align with text
   --#{$table}--m-compact__action--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) + var(--pf-t--global--spacer--control--vertical--compact) * -1);
   --#{$table}--m-compact__action--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBlockEnd: calc(var(--pf-t--global--spacer--xs) * -1);
