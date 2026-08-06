@@ -796,6 +796,10 @@
     width: var(--#{$button}--m-block--Width);
     transition-duration: var(--#{$button}--m-progress--TransitionDuration);
     transition-property: var(--#{$button}--m-progress--TransitionProperty);
+
+    .#{$button}__progress {
+      align-self: center;
+    }
   }
 
   &.pf-m-small {
@@ -1076,7 +1080,6 @@
   position: var(--#{$button}__progress--Position);
   inset-block-start: var(--#{$button}__progress--InsetBlockStart);
   inset-inline-start: var(--#{$button}__progress--InsetInlineStart);
-  align-self: center;
   line-height: 1;
   color: var(--#{$button}__progress--Color);
   transform: translate(var(--#{$button}__progress--TranslateX), var(--#{$button}__progress--TranslateY));
