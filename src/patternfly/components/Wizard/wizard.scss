@@ -186,7 +186,7 @@
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$wizard}--m-plain__footer--BackgroundColor: transparent;
-  --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$wizard}__footer--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$wizard}__footer--PaddingBlockStart: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$wizard}__footer--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
