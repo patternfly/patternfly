@@ -19,6 +19,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__dock--TransitionDuration--slide: 0s;
   --#{$page}__dock--m-expanded--TransitionDuration--slide: 0s;
   --#{$page}__dock--TransitionTimingFunction--slide: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$page}__dock--m-expandable-expanded--ZIndex: var(--pf-t--global--z-index--lg);
 
   // Dock main
   --#{$page}__dock-main--BackgroundColor: var(--pf-t--global--background--color--floating--default);
@@ -376,24 +377,24 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Dock hamburger menu animation
   // mobile - show collapse arrow on dock internal toggle when expanded
-  .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+  .#{$page}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
     @include pf-v6-hamburger($collapse: true);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     // desktop - reset dock internal toggle to bars
-    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
-    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+    .#{$page}__dock:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$page}__dock.pf-m-expanded:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
       @include pf-v6-hamburger($reset: true);
     }
 
     // desktop - show expand arrow on hover
-    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    .#{$page}__dock:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger;
     }
 
     // desktop - show collapse arrow on hover when text expanded
-    .#{$page}__dock.pf-m-text-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    .#{$page}__dock.pf-m-text-expanded:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger($collapse: true);
     }
   }
@@ -437,7 +438,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     $rtl-val: 100% 0
   );
 
-  &.pf-m-expanded {
+  &.pf-m-expanded,
+  &.pf-m-expandable-expanded {
     --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
 
     visibility: visible;
@@ -448,11 +450,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    position: revert;
-    inset: revert;
-    visibility: revert;
-    width: auto;
-    translate: 0;
+    &:not(.pf-m-expandable-expanded) {
+      position: revert;
+      inset: revert;
+      visibility: revert;
+      width: auto;
+      translate: 0;
+    }
   }
 
   .#{$toolbar}.pf-m-vertical :is(.#{$toolbar}__content-section, .#{$toolbar}__group, .#{$toolbar}__item) {
@@ -471,19 +475,21 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   box-shadow: var(--#{$page}__dock-main--BoxShadow);
   backdrop-filter: var(--#{$page}__dock-main--BackdropFilter);
 
-  .#{$page}__dock.pf-m-expanded & {
+  .#{$page}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded) & {
     border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
     box-shadow: var(--#{$page}__dock--m-expanded__dock-main--BoxShadow);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndWidth);
-    --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
-    --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
-    --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
-    --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
-    --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--BorderInlineEndWidth);
-    --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
+    .#{$page}__dock:not(.pf-m-expandable-expanded) & {
+      --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndWidth);
+      --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
+      --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
+      --#{$page}__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
+      --#{$page}__dock--m-expanded__dock-main--BoxShadow: var(--#{$page}__dock-main--desktop--BoxShadow);
+      --#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--BorderInlineEndWidth);
+      --#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
+    }
   }
 }
 
