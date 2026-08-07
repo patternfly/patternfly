@@ -449,10 +449,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       visibility 0s 0s;
   }
 
-  &.pf-m-expandable-expanded {
-    --#{$page}__dock--ZIndex: var(--#{$page}__dock--m-expandable-expanded--ZIndex);
-  }
-
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     &:not(.pf-m-expandable-expanded) {
       position: revert;

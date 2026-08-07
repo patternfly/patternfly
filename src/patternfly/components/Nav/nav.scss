@@ -150,9 +150,11 @@
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$nav}--m-docked__link-expandable-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$nav}--m-docked__link-expandable-icon--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
   --#{$nav}--m-docked__link-expandable-icon--InsetInlineStart: 50%;
   --#{$nav}--m-docked__link-expandable-icon--TransformX: -50%;
+  --#{$nav}--m-docked__link-expandable-icon--Scale: 80%;
 }
 
 // - Nav display - default to grid
@@ -212,7 +214,12 @@
       inset-block-end: calc(var(--#{$nav}--m-docked__link-expandable-icon--PaddingBlockEnd) * -1);
       inset-inline-start: var(--#{$nav}--m-docked__link-expandable-icon--InsetInlineStart);
       display: initial;
+      color: var(--#{$nav}--m-docked__link-expandable-icon--Color);
       transform: translateX(var(--#{$nav}--m-docked__link-expandable-icon--TransformX));
+
+      svg {
+        scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
+      }
     }
 
     .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
@@ -447,7 +454,7 @@
 // - Nav link icon
 .#{$nav}__link-icon {
   min-width: 1lh;
-  color: var(--#{$nav}__link-icon--Color);
+  color: inherit;
   text-align: center;
 }
 
