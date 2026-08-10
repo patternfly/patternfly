@@ -3376,9 +3376,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/documentation-framework@npm:6.51.4":
-  version: 6.51.4
-  resolution: "@patternfly/documentation-framework@npm:6.51.4"
+"@patternfly/documentation-framework@npm:6.51.6":
+  version: 6.51.6
+  resolution: "@patternfly/documentation-framework@npm:6.51.6"
   dependencies:
     "@babel/core": "npm:^7.29.0"
     "@babel/preset-env": "npm:7.29.0"
@@ -3448,7 +3448,7 @@ __metadata:
     react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
-  checksum: 10c0/e6531b8ae2e2cc4b5425e639c30913d98be2c65d84085366fc95bf6ff01385866a1317df8ea6eb8f00cca7a2d0666f7a40d6063a83b1396645d43bf3ae71353c
+  checksum: 10c0/508206ad3d47eae628810a77fa27804b025050f2e59315e104a088f31197e2c60a4c0bd4586fa7f5c34d1d26e054666ae03fe9a67ca441097d91a8e74e238a0f
   languageName: node
   linkType: hard
 
@@ -3500,7 +3500,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@fortawesome/fontawesome": "npm:^1.1.8"
     "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.51.4"
+    "@patternfly/documentation-framework": "npm:6.51.6"
     "@patternfly/patternfly-a11y": "npm:5.2.1"
     "@patternfly/react-code-editor": "npm:6.6.1"
     "@patternfly/react-core": "npm:6.6.1"
@@ -3535,6 +3535,7 @@ __metadata:
     husky: "npm:^9.0.11"
     lint-staged: "npm:^15.2.2"
     node-plop: "npm:^0.32.0"
+    postcss: "npm:^8.4.38"
     postcss-css-variables: "npm:^0.19.0"
     postcss-preset-env: "npm:^9.5.4"
     prettier: "npm:^3.2.5"
@@ -14350,6 +14351,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.17":
+  version: 3.3.18
+  resolution: "nanoid@npm:3.3.18"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10c0/b994b4e396730f8be2520923284e2040d61eaee55cc6d4935ef6d38d34bafdc46133eda4d3faea5073bda545aa6079d82b886caeac5c731cf9ac18bcc1301425
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.8":
   version: 3.3.11
   resolution: "nanoid@npm:3.3.11"
@@ -16496,6 +16506,17 @@ __metadata:
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
   checksum: 10c0/0a12c1e74b456c57122e81f684e02fd98ff4d57526f794d10c996df1147158808f5ae373ac82b988c8de6cbbaa82dbd7b13803b14f5dd3cf7cc6a42ccad5c9f2
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.38":
+  version: 8.5.26
+  resolution: "postcss@npm:8.5.26"
+  dependencies:
+    nanoid: "npm:^3.3.17"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/2bdafc00d96bd57b6649a52e458864a4bf58ee56cfdbe4aea1472b5cccc127e6c1ad653bd0bec50d211e650eb0b9270c80e1e72aff2e2fa40d9e7363234d6e43
   languageName: node
   linkType: hard
 
