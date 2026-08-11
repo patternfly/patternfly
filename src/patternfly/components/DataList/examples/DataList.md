@@ -940,7 +940,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1" disabled')}}
+        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat ata-list--id "-draggable-button-1")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -956,7 +956,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-2" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-2 ' data-list--id '-item-2"')}}
+        {{> data-list-item-draggable-button button--id=(concat ata-list--id "-draggable-button-2")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -972,7 +972,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-3" data-list-item--modifier="pf-m-ghost-row"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3" disabled')}}
+        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat ata-list--id "-draggable-button-3")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -988,7 +988,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-4"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4"')}}
+        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat ata-list--id "-draggable-button-4")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
