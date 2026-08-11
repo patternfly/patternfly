@@ -940,7 +940,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat ata-list--id "-draggable-button-1")}}
+        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat data-list--id "-draggable-button-1")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -956,7 +956,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button button--id=(concat ata-list--id "-draggable-button-2")}}
+        {{> data-list-item-draggable-button button--id=(concat data-list--id "-draggable-button-2")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -972,7 +972,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-3" data-list-item--modifier="pf-m-ghost-row"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat ata-list--id "-draggable-button-3")}}
+        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat data-list--id "-draggable-button-3")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -988,7 +988,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--id="item-4"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat ata-list--id "-draggable-button-4")}}
+        {{> data-list-item-draggable-button button--IsDisabled=true button--id=(concat data-list--id "-draggable-button-4")}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -1001,8 +1001,8 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
-<div class="{{pfv 'unset-prefix'}}screen-reader" aria-live="assertive">
-  This is the aria-live section that provides real-time feedback to the user.
+<div style="display: none;">
+  To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.
 </div>
 ```
 
