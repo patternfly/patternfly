@@ -117,7 +117,7 @@
   --#{$table}__check--responsive--MarginBlockStart: calc(var(--#{$table}--cell--first-child--responsive--PaddingBlockStart) +  #{pf-size-prem(4px)}); // cell padding plus an offset for the check/radio to align with text
 
   // * Table grid favorite
-  --#{$table}--m-grid__favorite--MarginBlockStart: #{pf-size-prem(8px)};
+  --#{$table}--m-grid__favorite--MarginBlockStart: 0;
   --#{$table}--m-grid__check--favorite--MarginInlineStart: var(--pf-t--global--spacer--xl);
 
   // * Table grid action
@@ -244,7 +244,7 @@
 
       // remove padding from first child to align with kebab
       &:first-child,
-      &:is(.#{$table}__toggle, .#{$table}__check) + :where(th, td) {
+      &:is(.#{$table}__toggle, .#{$table}__check, .#{$table}__favorite) + :where(th, td) {
         --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
       }
     }
