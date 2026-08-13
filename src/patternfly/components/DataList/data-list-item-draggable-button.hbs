@@ -1,9 +1,11 @@
-<button class="{{pfv}}data-list__item-draggable-button{{#if data-list-item-draggable-button--modifier}} {{data-list-item-draggable-button--modifier}}{{/if}}"
-  type="button"
-  aria-label="Reorder"
-  aria-pressed="false"
-  {{#if data-list-item-draggable-button--attribute}}
-    {{{data-list-item-draggable-button--attribute}}}
-  {{/if}}>
+{{#> button
+  button--IsPlain=true
+  button--IsIcon=true
+  button--aria-label='Drag button'
+  button--aria-labelledby=(concat button--id ' ' data-list--id '-' data-list-item--id)
+  button--aria-describedby='draggable-help'
+  button--modifier=(concat (pfv) 'data-list__item-draggable-button')
+  button--attribute='aria-pressed="false"'
+}}
   {{> data-list-item-draggable-icon}}
-</button>
+{{/button}}

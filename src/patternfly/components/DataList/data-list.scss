@@ -73,7 +73,7 @@
   --#{$data-list}__item-draggable-button--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$data-list}__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--lg) * -1);
   --#{$data-list}__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--lg) * -1);
-  --#{$data-list}__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$data-list}__item-draggable-button--PaddingBlockStart: var(--#{$data-list}__cell--PaddingBlockStart);
   --#{$data-list}__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
   --#{$data-list}__item-draggable-button--MarginInlineStart: calc(var(--pf-t--global--spacer--md) * -1);
   --#{$data-list}__item-draggable-button-icon--Color: var(--pf-t--global--icon--color--subtle);
@@ -92,7 +92,7 @@
 
   // check
   --#{$data-list}__check--Height: calc(var(--#{$data-list}--FontSize) * var(--#{$data-list}--LineHeight));
-  --#{$data-list}__check--MarginBlockStart: #{pf-size-prem(-1px)}; // slightly offset input
+  --#{$data-list}__check--MarginBlockStart: 0;
 
   // actions
   --#{$data-list}__item-action--Display: flex;
@@ -141,7 +141,7 @@
   --#{$data-list}--m-compact__item-content--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockStart: calc(var(--pf-t--global--spacer--sm) * -1);
   --#{$data-list}--m-compact__item-draggable-button--MarginBlockEnd: calc(var(--pf-t--global--spacer--sm) * -1);
-  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart: var(--pf-t--global--spacer--xs);
+  --#{$data-list}--m-compact__item-draggable-button--PaddingBlockStart: var(--#{$data-list}--m-compact__cell--PaddingBlockStart);
   --#{$data-list}--m-compact__item-draggable-button--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$data-list}--m-compact__cell--m-icon--cell--PaddingBlockStart: var(--pf-t--global--spacer--sm);
 }
@@ -288,9 +288,10 @@
   }
 }
 
-.#{$data-list}__item-draggable-button {
+.#{$data-list}__item-draggable-button.#{$button}.pf-m-plain {
   display: flex;
   flex-direction: column; // fixes safari alignment
+  justify-content: start;
   padding-block-start: var(--#{$data-list}__item-draggable-button--PaddingBlockStart);
   padding-block-end: var(--#{$data-list}__item-draggable-button--PaddingBlockEnd);
   padding-inline-start: var(--#{$data-list}__item-draggable-button--PaddingInlineStart);
@@ -298,6 +299,7 @@
   margin-block-start: var(--#{$data-list}__item-draggable-button--MarginBlockStart);
   margin-block-end: var(--#{$data-list}__item-draggable-button--MarginBlockEnd);
   margin-inline-start: var(--#{$data-list}__item-draggable-button--MarginInlineStart);
+  line-height: 1lh; // inherit line height from parent, fixes compact alignment
   background-color: var(--#{$data-list}__item-draggable-button--BackgroundColor);
   border: 0;
 
@@ -315,7 +317,7 @@
     cursor: grabbing;
   }
 
-  &.pf-m-disabled {
+  &:is(:disabled, .pf-m-disabled) {
     --#{$data-list}__item-draggable-button-icon--Color: var(--#{$data-list}__item-draggable-button--m-disabled__draggable-icon--Color);
 
     pointer-events: none;
