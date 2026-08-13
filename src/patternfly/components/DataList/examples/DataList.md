@@ -1006,7 +1006,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Draggable data list accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-pressed="true or false"` | `.pf-v6-c-data-list__item-draggable-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
+| `aria-pressed="true or false"` | `.pf-v6-c-data-list__item-draggable-button` | Indicates that the button is a toggle. |
 | `aria-live` | `[element with live text]` | Gives screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-v6-c-data-list__item-draggable-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="draggable-help"></div>`. **Highly recommended** |
 | `aria-labelledby="[id value of .pf-v6-c-data-list__item-draggable-button] [id value of .pf-v6-c-data-list__cell-text]"` | `.pf-v6-c-data-list__item-draggable-button` | Provides an accessible name for the draggable button. |
@@ -1015,11 +1015,9 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Draggable data list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v6-c-data-list__item-draggable-button` | `<button>` | Initiates the draggable button. Use for drag and drop. |
+| `.pf-v6-c-data-list__item-draggable-button` | `.pf-v6-c-button` | Initiates the draggable button. Use for drag and drop. |
 | `.pf-v6-c-data-list__item-draggable-icon` | `<span>` | Initiates the draggable button icon. |
-| `.pf-m-draggable` | `.pf-v6-c-data-list__item` | Modifies a data list item so that it is draggable. |
-| `.pf-m-ghost-row` | `.pf-v6-c-data-list__item.pf-m-draggable` | Modifies a draggable data list item to be the ghost row. |
-| `.pf-m-disabled` | `.pf-v6-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
+| `.pf-m-ghost-row` | `.pf-v6-c-data-list__item` | Modifies a draggable data list item to be the ghost row. |
 | `.pf-m-drag-over` | `.pf-v6-c-data-list` | Modifies the data list to indicate that a draggable item is being dragged over the data list. |
 
 

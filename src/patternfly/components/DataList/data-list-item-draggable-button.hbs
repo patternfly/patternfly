@@ -2,8 +2,10 @@
   button--IsPlain=true
   button--IsIcon=true
   button--aria-label='Drag button'
+  button--aria-labelledby=(concat button--id ' ' data-list--id '-' data-list-item--id)
   button--aria-describedby='draggable-help'
   button--modifier=(concat (pfv) 'data-list__item-draggable-button')
+  button--attribute='aria-pressed="false"'
 }}
   {{> data-list-item-draggable-icon}}
 {{/button}}
