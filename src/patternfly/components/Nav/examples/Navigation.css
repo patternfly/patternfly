@@ -29,3 +29,7 @@
 [id^="ws-core-c-navigation-horizontal-subnav"] .ws-preview-html {
   background: transparent; /* reset background for horizontal subnav examples */
 }
+
+.ws-core-c-navigation .ws-preview-html:not(:has(.pf-m-expanded, .pf-m-horizontal, .pf-m-drilldown)) {
+  margin-inline-start: var(--pf-t--global--spacer--md);
+}
