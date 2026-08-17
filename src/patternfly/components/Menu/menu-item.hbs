@@ -20,7 +20,10 @@
         aria-disabled="true"
       {{/if}}
     {{/if}}
-    role="menuitem"
+    role="{{#if menu-item--role}}{{menu-item--role}}{{else}}menuitem{{/if}}"
+    {{#if menu-item--aria-selected}}
+      aria-selected="{{menu-item--aria-selected}}"
+    {{/if}}
   {{/if}}
   {{#if menu-item--attribute}}
     {{{menu-item--attribute}}}

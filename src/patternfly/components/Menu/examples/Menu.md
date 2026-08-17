@@ -1317,9 +1317,9 @@ import './Menu.css'
 ```hbs
 {{#> menu}}
   {{#> menu-content}}
-    {{#> menu-list}}
+    {{#> menu-list menu-list--role="listbox"}}
       {{#> menu-list-item}}
-        {{#> menu-item}}
+        {{#> menu-item menu-item--role="option" menu-item--aria-selected="false"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Option 1
@@ -1329,7 +1329,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item}}
+        {{#> menu-item menu-item--role="option" menu-item--aria-selected="false"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Option 2
@@ -1339,7 +1339,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--modifier="pf-m-selected"}}
+        {{#> menu-item menu-item--role="option" menu-item--aria-selected="true" menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
               {{pfIcon "rh-ui-table"}}
@@ -1363,9 +1363,9 @@ import './Menu.css'
 ```hbs
 {{#> menu}}
   {{#> menu-content}}
-    {{#> menu-list}}
+    {{#> menu-list menu-list--role="listbox" menu-list--attribute='aria-multiselectable="true"'}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--modifier="pf-m-selected"}}
+        {{#> menu-item menu-item--role="option" menu-item--aria-selected="true" menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Option 1
@@ -1375,7 +1375,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--modifier="pf-m-selected"}}
+        {{#> menu-item menu-item--role="option" menu-item--aria-selected="true" menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Option 2
@@ -1385,7 +1385,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--modifier="pf-m-selected"}}
+        {{#> menu-item menu-item--role="option" menu-item--aria-selected="true" menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
               {{pfIcon "rh-ui-table"}}
