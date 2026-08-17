@@ -1,7 +1,6 @@
 ---
 id: 'Description list'
 section: components
-cssPrefix: pf-d-description-list
 ---
 
 ## Examples
