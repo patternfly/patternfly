@@ -19,6 +19,8 @@
 }
 
 .ws-core-c-navigation .ws-preview-html {
+  padding-inline-start: var(--pf-t--global--spacer--md);
+  padding-inline-end: var(--pf-t--global--spacer--md);
   background: var(--pf-v6-c-page__sidebar--BackgroundColor); /* use sidebar background for vertical nav examples */
 }
 
@@ -28,8 +30,4 @@
 
 [id^="ws-core-c-navigation-horizontal-subnav"] .ws-preview-html {
   background: transparent; /* reset background for horizontal subnav examples */
-}
-
-.ws-core-c-navigation .ws-preview-html:not(:has(.pf-m-expanded, .pf-m-horizontal, .pf-m-drilldown)) {
-  margin-inline-start: var(--pf-t--global--spacer--md);
 }
