@@ -25,7 +25,7 @@
 }
 
 [id^="ws-core-c-navigation-horizontal"] .ws-preview-html {
-  background: var(--pf-v6-c-masthead--BackgroundColor); /* use masthead background for horizontal nav examples */
+  background: var(--pf-t--global--background--color--secondary--default); /* use masthead background for horizontal nav examples */
 }
 
 [id^="ws-core-c-navigation-horizontal-subnav"] .ws-preview-html {
