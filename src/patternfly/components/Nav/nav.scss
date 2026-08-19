@@ -225,7 +225,7 @@
     .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
       --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
       --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
-      --#{$nav}__link--BackgroundColor: var(--pf-v6-c-nav--m-docked__link--hover--BackgroundColor);
+      --#{$nav}__link--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
     }
   
     @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
