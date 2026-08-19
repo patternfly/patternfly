@@ -1,7 +1,6 @@
 ---
 id: 'Dashboard'
 section: patterns
-cssPrefix: pf-d-dashboard
 ---
 
 ## Examples

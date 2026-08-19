@@ -1,7 +1,6 @@
 ---
 id: 'Back to top'
 section: components
-cssPrefix: pf-d-back-to-top
 ---
 
 ## Examples

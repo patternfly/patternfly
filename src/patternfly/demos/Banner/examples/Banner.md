@@ -1,7 +1,6 @@
 ---
 id: 'Banner'
 section: components
-cssPrefix: pf-v6-c-banner
 wrapperTag: div
 ---
 

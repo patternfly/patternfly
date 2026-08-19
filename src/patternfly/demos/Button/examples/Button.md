@@ -1,7 +1,6 @@
 ---
 id: 'Button'
 section: components
-cssPrefix: pf-d-button
 ---
 
 ## Examples
