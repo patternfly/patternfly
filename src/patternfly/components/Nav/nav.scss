@@ -83,6 +83,7 @@
   
   // * Nav link icon
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$nav}__link-icon--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Nav link text
@@ -151,7 +152,7 @@
   --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$nav}--m-docked__link-expandable-icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$nav}--m-docked__link-expandable-icon--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--compact);
+  --#{$nav}--m-docked__link-expandable-icon--InsetBlockStart: 50%;
   --#{$nav}--m-docked__link-expandable-icon--InsetInlineStart: 50%;
   --#{$nav}--m-docked__link-expandable-icon--TransformX: -50%;
   --#{$nav}--m-docked__link-expandable-icon--Scale: 80%;
@@ -211,15 +212,11 @@
 
     .#{$nav}__link-expandable-icon {
       position: absolute;
-      inset-block-end: calc(var(--#{$nav}--m-docked__link-expandable-icon--PaddingBlockEnd) * -1);
-      inset-inline-start: var(--#{$nav}--m-docked__link-expandable-icon--InsetInlineStart);
-      display: initial;
+      inset-block-start: 50%;
+      inset-inline-start: var(--#{$nav}--m-docked__link-expandable-icon--InsetBlockStart);
       color: var(--#{$nav}--m-docked__link-expandable-icon--Color);
-      transform: translateX(var(--#{$nav}--m-docked__link-expandable-icon--TransformX));
-
-      svg {
-        scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
-      }
+      scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
+      translate: -50% calc(-50% + .75em);
     }
 
     .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
@@ -436,6 +433,7 @@
   &.pf-m-hover,
   &:focus {
     --#{$nav}__link--BorderWidth: var(--#{$nav}__link--hover--BorderWidth);
+    --#{$nav}__link-icon--Color: var(--#{$nav}__link-icon--hover--Color);
 
     color: var(--#{$nav}__link--hover--Color);
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
@@ -454,7 +452,7 @@
 // - Nav link icon
 .#{$nav}__link-icon {
   min-width: 1lh;
-  color: inherit;
+  color: var(--#{$nav}__link-icon--Color);
   text-align: center;
 }
 
