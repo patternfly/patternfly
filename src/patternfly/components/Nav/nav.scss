@@ -152,10 +152,8 @@
   --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$nav}--m-docked__link-expandable-icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$nav}--m-docked__link-expandable-icon--InsetBlockStart: 50%;
-  --#{$nav}--m-docked__link-expandable-icon--InsetInlineStart: 50%;
-  --#{$nav}--m-docked__link-expandable-icon--TransformX: -50%;
-  --#{$nav}--m-docked__link-expandable-icon--Scale: 80%;
+  --#{$nav}--m-docked__link-expandable-icon--offset: 0.75em;
+  --#{$nav}--m-docked__link-expandable-icon--Scale: 0.8;
 }
 
 // - Nav display - default to grid
@@ -213,10 +211,10 @@
     .#{$nav}__link-expandable-icon {
       position: absolute;
       inset-block-start: 50%;
-      inset-inline-start: var(--#{$nav}--m-docked__link-expandable-icon--InsetBlockStart);
+      inset-inline-start: 50%;
       color: var(--#{$nav}--m-docked__link-expandable-icon--Color);
       scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
-      translate: -50% calc(-50% + .75em);
+      translate: -50% calc(-50% + var(--#{$nav}--m-docked__link-expandable-icon--offset));
     }
 
     .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
