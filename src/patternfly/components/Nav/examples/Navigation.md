@@ -560,6 +560,8 @@ import './Navigation.css'
 ```
 
 ### Docked nav
+The docked nav opens and closes when `.pf-m-text-expanded` or `.pf-m-expandable-expanded` are applied to a [page](/components/page#usage) or [compass](/components/compass#usage) dock.
+
 ```hbs isBeta
 {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
@@ -574,6 +576,63 @@ import './Navigation.css'
     {{/nav-item}}
     {{#> nav-item}}
       {{> nav-link nav-link--href="#" nav-link--icon="rh-ui-code" nav-link--aria-label="Code"}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+### Docked nav with expandable links
+```hbs isBeta
+{{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cubes" nav-link--aria-label="Cubes"}}
+        System panel
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsExpandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder" nav-link--attribute='id="docked-expandable-1"'}}
+        Policy
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-1"'}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-resource" nav-link--aria-label="Resource"}}
+            Current link
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-compare" nav-link--aria-label="Compare"}}
+            Subnav link 2
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-collection" nav-link--aria-label="collection"}}
+            Subnav link 3
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsExpandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud" nav-link--aria-label="Cloud" nav-link--attribute='id="docked-expandable-2"'}}
+        Authentication
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="docked-expandable-2"'}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Subnav link 1
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Subnav link 2
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-code" nav-link--aria-label="Code"}}
+        Network services
+      {{/nav-link}}
     {{/nav-item}}
   {{/nav-list}}
 {{/nav}}
@@ -611,6 +670,7 @@ The navigation system relies on several different sub-components:
 | `.pf-v6-c-nav__list` | `<ul>` | Initiates nav list. |
 | `.pf-v6-c-nav__item` | `<li>` | Initiates nav list item. |
 | `.pf-v6-c-nav__link` | `<a>` | Initiates nav list link. |
+| `.pf-v6-c-nav__link-expandable-icon` | `<span>` | Initiates an indicator icon on a docked nav link, signaling that the item has a subnav. Shown only while the dock is collapsed. |
 | `.pf-v6-c-nav__link-icon` | `<span>` | Initiates nav list link icon. |
 | `.pf-v6-c-nav__link-text` | `<span>` | Initiates nav list link text. |
 | `.pf-v6-c-nav__section` | `<section>` | Initiates a nav section element. |

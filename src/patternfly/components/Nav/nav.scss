@@ -83,6 +83,7 @@
   
   // * Nav link icon
   --#{$nav}__link-icon--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$nav}__link-icon--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$nav}__link--m-current__link-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Nav link text
@@ -150,6 +151,9 @@
   --#{$nav}--m-docked__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-docked__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$nav}--m-docked__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
+  --#{$nav}--m-docked__link-expandable-icon--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$nav}--m-docked__link-expandable-icon--offset: 0.75em;
+  --#{$nav}--m-docked__link-expandable-icon--Scale: 0.8;
 }
 
 // - Nav display - default to grid
@@ -199,21 +203,34 @@
     --#{$nav}__link--m-current--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
 
     width: 100%;
+
+    .#{$nav}__link-expandable-icon {
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+      color: var(--#{$nav}--m-docked__link-expandable-icon--Color);
+      scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
+      translate: -50% calc(-50% + var(--#{$nav}--m-docked__link-expandable-icon--offset));
+    }
   
     @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
       width: fit-content;
 
-      .#{$nav}__link-text {
+      .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: none;
       }
     }
 
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock).pf-m-text-expanded &,
-    &.pf-m-text-expanded {
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
+    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       width: 100%;
 
-      .#{$nav}__link-text {
+      .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: revert;
+      }
+
+      .#{$nav}__link-expandable-icon {
+        display: none;
       }
     }
   }
@@ -323,6 +340,7 @@
     }
   }
 
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-text-expanded, .pf-m-expandable-expanded) .pf-m-docked &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
   &:has(> .#{$nav}__link.pf-m-current) {
     --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
@@ -382,11 +400,13 @@
   &.pf-m-hover,
   &:focus {
     --#{$nav}__link--BorderWidth: var(--#{$nav}__link--hover--BorderWidth);
+    --#{$nav}__link-icon--Color: var(--#{$nav}__link-icon--hover--Color);
 
     color: var(--#{$nav}__link--hover--Color);
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-text-expanded, .pf-m-expandable-expanded) .#{$nav}__item:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link,
   &.pf-m-current,
   &.pf-m-current:hover {
     --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);

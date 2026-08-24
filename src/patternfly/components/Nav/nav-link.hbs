@@ -29,6 +29,9 @@
   {{#if nav-link--icon}}
     {{> nav-link-icon}}
   {{/if}}
+  {{#ifAll nav--IsDocked nav-item--IsExpandable}}
+    {{> nav-link-expandable-icon}}
+  {{/ifAll}}
   {{#if nav-link--text}}
     {{> nav-link-text}}
   {{else if @partial-block}}

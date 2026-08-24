@@ -74,3 +74,30 @@ section: components
       page-dock--IsTextExpanded=true
 }}
 ```
+### Docked nav with expandable link
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expandable-link-example"
+      masthead-template--HasDockedNav=true
+      masthead-template--HasExpandableDockedNav=true
+}}
+```
+
+### Docked nav with expandable link expanded
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expandable-link-expanded-example"
+      masthead-template--HasDockedNav=true
+      page-dock--IsExpandableExpanded=true
+      masthead-template--HasExpandableDockedNav=true
+      masthead-template--IsExpandableItemExpanded=true
+}}
+```
+
+### Docked nav with expandable link text expanded
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="nav-docked-expandable-link-text-expanded-example"
+      masthead-template--HasDockedNav=true
+      page-dock--IsTextExpanded=true
+      masthead-template--HasExpandableDockedNav=true
+      masthead-template--IsExpandableItemExpanded=true
+}}
+```

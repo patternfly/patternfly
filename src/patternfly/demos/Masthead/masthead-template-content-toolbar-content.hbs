@@ -7,73 +7,9 @@
   {{/if}}
 
   {{#if masthead-template--HasHorizontalNav}}
-    {{#> toolbar-item toolbar-item--modifier="pf-m-overflow-container" toolbar-item--attribute='style="--pf-v6-c-toolbar__item--MinWidth: 18ch;"'}}
-      {{#> nav nav--HasScroll=true nav--IsHorizontal=true nav--IsScrollable=true nav--HasScroll=true nav--attribute=(concat 'id="' masthead--id '-horizontal-nav" aria-label="Global"')}}
-        {{#> nav-list}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Horizontal nav item 5
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/toolbar-item}}
+    {{> masthead-template-horizontal-nav}}
   {{else if masthead-template--HasDockedNav}}
-    {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}
-      {{#> nav-list}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cubes" nav-link--aria-label="Cubes"}}
-            System panel
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--icon="rh-ui-folder" nav-link--aria-label="Folder"}}
-            Policy
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-cloud" nav-link--aria-label="Cloud"}}
-            Authentication
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--icon="rh-ui-code" nav-link--aria-label="Code"}}
-            Network services
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
-    {{#> toolbar-group toolbar-group--IsActionGroupPlain=true toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-align-end pf-m-spacer-none pf-m-spacer-md-on-md"}}
-      {{#> toolbar-item}}
-        {{> menu-toggle menu-toggle--IsPlain=true menu-toggle--icon="rh-ui-thumbnail-view-large" menu-toggle--aria-label="Applications" menu-toggle--text="Applications" menu-toggle--IsDocked=true menu-toggle--IsText=true}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{> button button--IsDocked=true button--IsPlain=true button--IsSettings=true button--aria-label="Settings" button--text="Settings"}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{> menu-toggle menu-toggle--IsPlain="true" menu-toggle--aria-label="Help" menu-toggle--icon="rh-ui-question-mark-circle" menu-toggle--text="Help" menu-toggle--IsDocked=true menu-toggle--IsText=true}}
-      {{/toolbar-item}}
-    {{/toolbar-group}}
+    {{> masthead-template-docked-nav}}
   {{else}}
     {{> masthead-template-content-icon-group}}
   {{/if}}

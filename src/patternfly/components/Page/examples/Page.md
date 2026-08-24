@@ -322,6 +322,10 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
 | `.pf-m-docked` | `.pf-v6-c-page` | Modifies the page grid to have a dock. |
+| `.pf-v6-c-page__dock` | `<div>` | Creates a dock region for persisting navigation or other content at the edge of the page. |
+| `.pf-m-expanded` | `.pf-v6-c-page__dock` | Expands the dock as an overlay. On desktop, the dock returns to its collapsed, icon-only state. |
+| `.pf-m-expandable-expanded` | `.pf-v6-c-page__dock` | Expands the dock as an overlay on desktop instead of collapsing to an icon-only rail. Used when an expandable nav item opens a subnav overlay. |
+| `.pf-m-text-expanded` | `.pf-v6-c-page__dock` | Expands the dock so nav items show icon and text labels and reveals the masthead logo. |
 | `.pf-m-no-sidebar` | `.pf-v6-c-page` | Modifies the page grid for layouts without a sidebar. |
 | `.pf-m-expanded` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-v6-c-page__sidebar` | Modifies the sidebar for the collapsed state. |
