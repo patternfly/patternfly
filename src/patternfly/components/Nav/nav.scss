@@ -212,12 +212,6 @@
       scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
       translate: -50% calc(-50% + var(--#{$nav}--m-docked__link-expandable-icon--offset));
     }
-
-    .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
-      --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
-      --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
-      --#{$nav}__link--BackgroundColor: var(--#{$nav}--m-docked__link--m-current--BackgroundColor);
-    }
   
     @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
       width: fit-content;
@@ -233,18 +227,6 @@
 
       .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: revert;
-      }
-
-      .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
-        --#{$nav}__link--BackgroundColor: initial;
-        --#{$nav}__item--accent--ScaleY: 0;
-        --#{$nav}__link--m-current--BackgroundColor: initial;
-        
-        .#{$nav}__item:has(> .#{$nav}__link.pf-m-current) {
-          --#{$nav}__link--BackgroundColor: initial;
-          --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
-          --#{$nav}__link--m-current--BackgroundColor: var(--pf-v6-c-nav--m-docked__link--hover--BackgroundColor);
-        }
       }
 
       .#{$nav}__link-expandable-icon {
@@ -358,9 +340,12 @@
     }
   }
 
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-text-expanded, .pf-m-expandable-expanded) .pf-m-docked &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
   &:has(> .#{$nav}__link.pf-m-current) {
     --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
+
+    background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 }
 
@@ -423,6 +408,7 @@
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-text-expanded, .pf-m-expandable-expanded) .#{$nav}__item:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link,
   &.pf-m-current,
   &.pf-m-current:hover {
     --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);
