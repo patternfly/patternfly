@@ -234,17 +234,7 @@
       .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: revert;
       }
-    }
 
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
-    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
-      .#{$nav}__link-expandable-icon {
-        display: none;
-      }
-    }
-
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
-    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       .#{$nav}__item:has(> .#{$nav}__subnav .#{$nav}__link.pf-m-current) {
         --#{$nav}__link--BackgroundColor: initial;
         --#{$nav}__item--accent--ScaleY: 0;
@@ -255,6 +245,10 @@
           --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
           --#{$nav}__link--m-current--BackgroundColor: var(--pf-v6-c-nav--m-docked__link--hover--BackgroundColor);
         }
+      }
+
+      .#{$nav}__link-expandable-icon {
+        display: none;
       }
     }
   }
