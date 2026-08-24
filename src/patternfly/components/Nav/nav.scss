@@ -204,10 +204,6 @@
 
     width: 100%;
 
-    .#{$nav}__toggle, .#{$nav}__subnav {
-      display: none;
-    }
-
     .#{$nav}__link-expandable-icon {
       position: absolute;
       inset-block-start: 50%;
@@ -226,7 +222,7 @@
     @media (min-width: #{$pf-v6-global--breakpoint--dock--desktop}) {
       width: fit-content;
 
-      .#{$nav}__link-text {
+      .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: none;
       }
     }
@@ -235,7 +231,7 @@
     &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       width: 100%;
 
-      .#{$nav}__link-text {
+      .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: revert;
       }
     }
@@ -244,10 +240,6 @@
     &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
       .#{$nav}__link-expandable-icon {
         display: none;
-      }
-
-      .#{$nav}__toggle, .#{$nav}__subnav {
-        display: revert;
       }
     }
 
