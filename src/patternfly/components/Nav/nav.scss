@@ -344,8 +344,6 @@
   &:has(> .#{$nav}__link.pf-m-current) {
     --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
-
-    background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 }
 
