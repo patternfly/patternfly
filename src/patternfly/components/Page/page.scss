@@ -976,4 +976,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       flex-grow: 1;
     }
   }
+
+  &:has(.pf-m-full-height) {
+    --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--md);
+
+    z-index: var(--#{$page}__drawer--ZIndex);
+  }
 }

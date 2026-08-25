@@ -21,7 +21,9 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}__content--ZIndex: var(--pf-t--global--z-index--xs);
 
   // Panel
+  --#{$drawer}__panel--Position: relative;
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
+  --#{$drawer}__panel--Height: auto;
   --#{$drawer}__panel--MaxHeight: auto;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--after--BackgroundColor); // TODO use token directly in breaking change
@@ -285,6 +287,34 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     flex-direction: column;
   }
 
+  &.pf-m-full-height {
+    --#{$drawer}__panel--MaxHeight: 100dvh;
+
+    @media (min-width: $pf-v6-global--breakpoint--md) {
+      --#{$drawer}__panel--Position: fixed;
+      --#{$drawer}__panel--Height: 100dvh;
+    }
+
+    > .#{$drawer}__main > .#{$drawer}__panel {
+      inset-block-start: 0;
+      inset-inline-end: 0;
+      inline-size: var(--#{$drawer}__panel--FlexBasis);
+      pointer-events: auto;
+
+      @include pf-v6-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(100%),
+        $rtl-val: translateX(#{pf-v6-calc-inverse(100%)}),
+      );
+    }
+
+    @media (min-width: $pf-v6-global--breakpoint--md) {
+      &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
+        transform: translateX(0);
+      }
+    }
+  }
+
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
@@ -434,12 +464,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Panel
 .#{$drawer}__panel {
-  position: relative;
+  position: var(--#{$drawer}__panel--Position);
   z-index: var(--#{$drawer}__panel--ZIndex);
   visibility: hidden; // hidden by default
   flex-basis: var(--#{$drawer}__panel--FlexBasis);
   row-gap: var(--#{$drawer}__panel--RowGap);
   order: 1;
+  height: var(--#{$drawer}__panel--Height);
   max-height: var(--#{$drawer}__panel--MaxHeight);
   margin-block: var(--#{$drawer}__panel--MarginBlock, revert);
   margin-inline: var(--#{$drawer}__panel--MarginInline, revert);
