@@ -373,6 +373,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
     }
   }
+
+  &:not(:has(.#{$drawer}__content)) {
+    > .#{$drawer}__main > .#{$drawer}__panel {
+      height: var(--#{$drawer}__panel--Height, auto);
+      margin-inline-start: var(--#{$drawer}__panel--MarginInlineStart, revert);
+    }
+  }
 }
 
 // Header area

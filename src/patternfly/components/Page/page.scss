@@ -239,15 +239,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__drawer--InsetBlockEnd: 0;
   --#{$page}__drawer--InsetInlineStart: 0;
   --#{$page}__drawer--InsetInlineEnd: 0;
-  --#{$page}__drawer--c-drawer__panel--Height: auto;
-  --#{$page}__drawer--c-drawer__panel--MarginInlineStart: 100%;
   --#{$page}__drawer--c-drawer--BorderBlockStartWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$page}__drawer--c-drawer--BorderBlockStartColor: var(--pf-t--global--border--color--high-contrast);
 
   @media (min-width: $pf-v6-global--breakpoint--md) {
     --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--md);
     --#{$page}__drawer--Position: fixed;
-    --#{$page}__drawer--c-drawer__panel--Height: 100%;
   }
 
   // Glass theme
@@ -992,6 +989,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   &:not(:has(.#{$drawer}__content)) {
+    --#{$drawer}__panel--MarginInlineStart: 100%;
+
     position: var(--#{$page}__drawer--Position);
     inset-block-start: var(--#{$page}__drawer--InsetBlockStart);
     inset-block-end: var(--#{$page}__drawer--InsetBlockEnd);
@@ -1000,9 +999,11 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     z-index: var(--#{$page}__drawer--ZIndex);
     pointer-events: none;
 
+    @media (min-width: $pf-v6-global--breakpoint--md) {
+      --#{$drawer}__panel--Height: 100%;
+    }
+
     > .#{$drawer} > .#{$drawer}__main > .#{$drawer}__panel {
-      height: var(--#{$page}__drawer--c-drawer__panel--Height);
-      margin-inline-start: var(--#{$page}__drawer--c-drawer__panel--MarginInlineStart);
       pointer-events: auto;
     }
   }
