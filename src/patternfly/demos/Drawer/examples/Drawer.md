@@ -28,6 +28,24 @@ wrapperTag: div
 {{/inline}}
 ```
 
+### Expanded without content
+```hbs isFullscreen
+{{> page-template
+      page-template--id="drawer-expanded-without-content-example"
+      page-template--IsDrawer="true"
+      page-template--HasNoDrawerContent="true"
+      page-template--drawer-panel--IsOpen="true"
+}}
+
+{{#*inline "page-template-drawer-panel"}}
+  {{#> drawer-panel}}
+    {{#> drawer-body}}
+      drawer panel
+    {{/drawer-body}}
+  {{/drawer-panel}}
+{{/inline}}
+```
+
 ### Expanded bottom
 ```hbs isFullscreen
 {{> page-template
