@@ -125,7 +125,7 @@
 
     > .#{$compass}__container > .#{$masthead} {
       --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
-  
+
       grid-area: header;
     }
   }
@@ -139,7 +139,7 @@
       align-items: stretch;
       padding: 0;
     }
-    
+
     &.pf-m-docked > .#{$compass}__container > .#{$masthead} {
       display: none;
     }
