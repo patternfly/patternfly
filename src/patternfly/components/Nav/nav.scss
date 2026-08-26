@@ -208,6 +208,7 @@
       position: absolute;
       inset-block-start: 50%;
       inset-inline-start: 50%;
+      display: none;
       color: var(--#{$nav}--m-docked__link-expandable-icon--Color);
       scale: var(--#{$nav}--m-docked__link-expandable-icon--Scale);
       translate: -50% calc(-50% + var(--#{$nav}--m-docked__link-expandable-icon--offset));
@@ -218,6 +219,10 @@
 
       .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
         display: none;
+      }
+
+      .#{$nav}__link-expandable-icon {
+        display: revert;
       }
     }
 
