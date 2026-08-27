@@ -10,6 +10,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--inset: var(--pf-t--global--spacer--inset--page-chrome);
 
   // Header
+  --#{$page}__header--ZIndex: var(--pf-t--global--z-index--md);
   --#{$page}--c-masthead--ZIndex: var(--pf-t--global--z-index--md);
 
   // Dock
@@ -347,51 +348,35 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Hamburger menu animation
   // mobile - show expand on hover
-  .#{$page}__header,
-  > .#{$masthead} {
-    .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
-      @include pf-v6-hamburger;
-    }
+  > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    @include pf-v6-hamburger;
   }
 
   // mobile - show collapse when sidebar expanded
   &:where(:has(> .#{$page}__sidebar.pf-m-expanded)) {
-    .#{$page}__header,
-    > .#{$masthead} {
-      .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
-        @include pf-v6-hamburger($collapse: true);
-      }
+    > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
     }
   }
 
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     // desktop - disable default arrow
-    @at-root .#{$page}__header .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
     & > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
     &:where(:has(> .#{$page}__sidebar.pf-m-expanded)) {
-      .#{$page}__header,
-      > .#{$masthead} {
-        .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
-          @include pf-v6-hamburger($reset: true);
-        }
+      > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+        @include pf-v6-hamburger($reset: true);
       }
     }
 
     // desktop - show collapse on hover
-    @at-root .#{$page}__header,
-    & > .#{$masthead} {
-      .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
-        @include pf-v6-hamburger($collapse: true);
-      }
+    > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+      @include pf-v6-hamburger($collapse: true);
     }
 
     // desktop - show expand on hover when sidebar collapsed
     &:where(:has(> .#{$page}__sidebar.pf-m-collapsed)) {
-      .#{$page}__header,
-      > .#{$masthead} {
-        .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
-          @include pf-v6-hamburger;
-        }
+      > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+        @include pf-v6-hamburger;
       }
     }
   }
@@ -422,33 +407,25 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 // Header
-.#{$page}__header:has(.#{$masthead}) {
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-.#{$page}__header .#{$masthead} {
-  grid-column: 1 / -1;
+.#{$page}__header {
+  z-index: var(--#{$page}__header--ZIndex);
 }
 
 .#{$page}__header,
 .#{$page} > .#{$masthead} {
-  z-index: var(--#{$page}--c-masthead--ZIndex);
   grid-area: header;
 }
 
-.#{$page}__header .#{$masthead},
 .#{$page} > .#{$masthead} {
+  z-index: var(--#{$page}--c-masthead--ZIndex);
+
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$masthead}--m-display-inline--breakpoint--xl--GridTemplateColumns);
   }
 }
 
-.#{$page}.pf-m-docked {
-  .#{$page}__header .#{$masthead},
-  > .#{$masthead} {
-    --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns);
-  }
+.#{$page}.pf-m-docked > .#{$masthead} {
+  --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns);
 }
 
 // Dock
