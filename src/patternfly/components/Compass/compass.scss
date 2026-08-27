@@ -117,16 +117,22 @@
       grid-template-columns: 1fr;
       align-items: stretch;
       padding: 0;
+
+      .#{$compass}__header {
+        all: revert; // reset all styles for use as dock header
+      }
+
+      > :is(.#{$compass}__header, .#{$masthead}) {
+        grid-area: header;
+      }
+
+      > .#{$masthead} {
+        --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
+      }
     }
 
     .#{$compass}__main {
       padding: var(--#{$compass}--Padding);
-    }
-
-    > .#{$compass}__container > .#{$masthead} {
-      --#{$masthead}--BackgroundColor: var(--#{$compass}--m-docked__masthead--BackgroundColor);
-  
-      grid-area: header;
     }
   }
 
@@ -139,20 +145,15 @@
       align-items: stretch;
       padding: 0;
     }
-    
-    &.pf-m-docked > .#{$compass}__container > .#{$masthead} {
+
+    &.pf-m-docked > .#{$compass}__container > :is(.#{$compass}__header, .#{$masthead}) {
       display: none;
     }
   }
 
   // Masthead hamburger
-  > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+  @at-root .#{$compass}__container > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
     @include pf-v6-hamburger;
-  }
-
-  // mobile - show collapse when sidebar expanded
-  &:where(:has(> .#{$compass}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded))) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
-    @include pf-v6-hamburger($collapse: true);
   }
 
   // Docked masthead hamburger

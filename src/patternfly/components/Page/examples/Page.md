@@ -294,6 +294,23 @@ import './Page.css'
 {{/page}}
 ```
 
+### Custom header
+```hbs
+{{#> page}}
+  {{#> page-header page-header--IsHeader=true}}
+    Custom header
+  {{/page-header}}
+  {{#> page-sidebar}}
+    Navigation
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
+      Page content
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
 ## Documentation
 ### Overview
 This component provides the basic chrome for a page, including sidebar and main areas.
@@ -310,6 +327,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-page` | `<div>` | Declares the page component. |
+| `.pf-v6-c-page__header` | `<div>`, `<header>` | Declares the page header. |
 | `.pf-v6-c-page__sidebar` | `<aside>` | Declares the page sidebar. |
 | `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-v6-c-page__main` | `<main>` | Declares the main page area. |
