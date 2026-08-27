@@ -233,7 +233,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-wizard--BorderBlockStartWidth: var(--pf-t--global--border--width--action--default);
 
   // Drawer section
-   --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--sm);
+  --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$page}__drawer--Position: relative;
   --#{$page}__drawer--InsetBlockStart: 0;
   --#{$page}__drawer--InsetBlockEnd: 0;
