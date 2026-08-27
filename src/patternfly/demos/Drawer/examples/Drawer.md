@@ -46,6 +46,25 @@ wrapperTag: div
 {{/inline}}
 ```
 
+### Expanded full height left
+```hbs isFullscreen
+{{> page-template
+      page-template--id="drawer-expanded-full-height-left-example"
+      page-template--IsDrawer="true"
+      page-template--drawer-panel--IsOpen="true"
+      drawer--IsFullHeight="true"
+      drawer--IsPanelLeft="true"
+}}
+
+{{#*inline "page-template-drawer-panel"}}
+  {{#> drawer-panel}}
+    {{#> drawer-body}}
+      drawer panel
+    {{/drawer-body}}
+  {{/drawer-panel}}
+{{/inline}}
+```
+
 ### Expanded bottom
 ```hbs isFullscreen
 {{> page-template
