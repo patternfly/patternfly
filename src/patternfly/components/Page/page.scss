@@ -977,10 +977,18 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     }
   }
 
-  &:has(.pf-m-full-height) {
+  &:has(.#{$drawer}.pf-m-full-height) {
     --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--md);
 
     z-index: var(--#{$page}__drawer--ZIndex);
     overflow-y: unset;
+
+    &:not(:has(.#{$drawer}__content)) {
+      pointer-events: none;
+
+      .#{$drawer}__panel {
+        pointer-events: auto;
+      }
+    }
   }
 }

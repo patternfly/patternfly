@@ -1,9 +1,11 @@
 {{#> page-drawer}}
   {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen=page-template--drawer-panel--IsOpen drawer--IsFullHeight=drawer--IsFullHeight drawer--IsPanelLeft=drawer--IsPanelLeft}}
     {{#> drawer-main}}
-      {{#> drawer-content}}
-        {{> page-template-main}}
-      {{/drawer-content}}
+      {{#unless page-template--HasNoDrawerContent}}
+        {{#> drawer-content}}
+          {{> page-template-main}}
+        {{/drawer-content}}
+      {{/unless}}
       {{> page-template-drawer-panel}}
     {{/drawer-main}}
   {{/drawer}}

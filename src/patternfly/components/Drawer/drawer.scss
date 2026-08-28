@@ -303,7 +303,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}--Height: unset;
     --#{$drawer}--OverflowX: unset;
     --#{$drawer}__panel--MaxHeight: 100dvh;
-    --#{$drawer}__main--Display: initial;
     --#{$drawer}__main--Overflow: unset;
 
     .#{$drawer}__content {
@@ -341,8 +340,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         );
       }
 
-      &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel,
-      &.pf-m-panel-left.pf-m-expanded .#{$drawer}__panel {
+      &.pf-m-expanded > .#{$drawer}__main .#{$drawer}__panel {
         transform: translateX(0);
       }
     }
