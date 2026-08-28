@@ -813,6 +813,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   &:has(.#{$drawer}.pf-m-full-height) {
+    --#{$page}__main-container--BackdropFilter: none;
+
     z-index: auto;
   }
 }
