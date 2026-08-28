@@ -352,7 +352,7 @@ import './Drawer.css'
 | `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens) will default to the `md` breakpoint. |
 | `.pf-m-pill` | `.pf-v6-c-drawer` | Modifies the drawer for pill styles. |
-| `.pf-m-full-height` | `.pf-v6-c-drawer` | Modifies the drawer panel to span the viewport height when used inside `.pf-v6-c-page__drawer`. `.pf-v6-c-drawer__content` is optional with this modifier. |
+| `.pf-m-full-height` | `.pf-v6-c-drawer` | Positions the panel as `fixed` to fill the viewport height. Works in page main and as `.pf-v6-c-page__drawer` beside masthead, sidebar, and main. `.pf-v6-c-drawer__content` is optional with this modifier. |
 | `.pf-m-no-glass` | `.pf-v6-c-drawer__panel.pf-m-pill` | Modifies the drawer panel to remove glass styling when using glass theme. |
 | `.pf-m-no-border` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-v6-c-drawer__body` | Modifies the element to add padding. |

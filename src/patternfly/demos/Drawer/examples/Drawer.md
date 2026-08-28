@@ -28,47 +28,48 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Expanded full height
+### Expanded full height in page
 ```hbs isFullscreen
-{{> page-template
-      page-template--id="drawer-expanded-full-height-example"
-      page-template--IsDrawer="true"
-      page-template--drawer-panel--IsOpen="true"
-      drawer--IsFullHeight="true"
-}}
+{{> page-template page-template--id="drawer-expanded-full-height-in-page-example"}}
 
-{{#*inline "page-template-drawer-panel"}}
-  {{#> drawer-panel}}
-    {{#> drawer-body}}
-      drawer panel
-    {{/drawer-body}}
-  {{/drawer-panel}}
+{{#*inline "page-template-main-content"}}
+  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen=true drawer--IsFullHeight=true}}
+    {{#> drawer-main}}
+      {{#> drawer-content}}
+        {{> page-template-section}}
+      {{/drawer-content}}
+      {{#> drawer-panel}}
+        {{#> drawer-body}}
+          drawer panel
+        {{/drawer-body}}
+      {{/drawer-panel}}
+    {{/drawer-main}}
+  {{/drawer}}
 {{/inline}}
 ```
 
-### Expanded full height left
+### Expanded full height in page without content
 ```hbs isFullscreen
-{{> page-template
-      page-template--id="drawer-expanded-full-height-left-example"
-      page-template--IsDrawer="true"
-      page-template--drawer-panel--IsOpen="true"
-      drawer--IsFullHeight="true"
-      drawer--IsPanelLeft="true"
-}}
+{{> page-template page-template--id="drawer-expanded-full-height-in-page-without-content-example"}}
 
-{{#*inline "page-template-drawer-panel"}}
-  {{#> drawer-panel}}
-    {{#> drawer-body}}
-      drawer panel
-    {{/drawer-body}}
-  {{/drawer-panel}}
+{{#*inline "page-template-main-content"}}
+  {{> page-template-section}}
+  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen=true drawer--IsFullHeight=true}}
+    {{#> drawer-main}}
+      {{#> drawer-panel}}
+        {{#> drawer-body}}
+          drawer panel
+        {{/drawer-body}}
+      {{/drawer-panel}}
+    {{/drawer-main}}
+  {{/drawer}}
 {{/inline}}
 ```
 
-### Expanded full height without content
+### Expanded full height page drawer
 ```hbs isFullscreen
 {{> page-template
-      page-template--id="drawer-expanded-full-height-without-content-example"
+      page-template--id="drawer-expanded-full-height-page-drawer-example"
       page-template--IsDrawer="true"
       page-template--HasNoDrawerContent="true"
       page-template--drawer-panel--IsOpen="true"

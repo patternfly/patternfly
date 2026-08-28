@@ -317,9 +317,11 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     @media (min-width: $pf-v6-global--breakpoint--md) {
       --#{$drawer}__panel--Position: fixed;
       --#{$drawer}__panel--Height: 100%;
+      --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--lg);
 
       .#{$drawer}__panel {
         inset-block-start: 0;
+        inset-block-end: 0;
         inset-inline-start: var(--#{$drawer}--m-full-height__panel--InsetInlineStart);
         inset-inline-end: var(--#{$drawer}--m-full-height__panel--InsetInlineEnd);
         inline-size: var(--#{$drawer}__panel--FlexBasis);

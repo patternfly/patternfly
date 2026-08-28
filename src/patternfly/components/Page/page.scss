@@ -811,6 +811,10 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   &:focus {
     outline: 0;
   }
+
+  &:has(.#{$drawer}.pf-m-full-height) {
+    z-index: auto;
+  }
 }
 
 .#{$page}__main-subnav,
@@ -977,18 +981,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     }
   }
 
-  &:has(.#{$drawer}.pf-m-full-height) {
-    --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--md);
+  // Sibling of main-container: don't block page clicks when the panel is the only child
+  &:has(.#{$drawer}.pf-m-full-height):not(:has(.#{$drawer}__content)) {
+    pointer-events: none;
 
-    z-index: var(--#{$page}__drawer--ZIndex);
-    overflow-y: unset;
-
-    &:not(:has(.#{$drawer}__content)) {
-      pointer-events: none;
-
-      .#{$drawer}__panel {
-        pointer-events: auto;
-      }
+    .#{$drawer}__panel {
+      pointer-events: auto;
     }
   }
 }
