@@ -981,7 +981,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     }
   }
 
-  // Sibling of main-container: don't block page clicks when the panel is the only child
   &:has(.#{$drawer}.pf-m-full-height):not(:has(.#{$drawer}__content)) {
     pointer-events: none;
 
