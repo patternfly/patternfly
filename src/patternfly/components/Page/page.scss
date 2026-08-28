@@ -981,5 +981,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__drawer--ZIndex: var(--pf-t--global--z-index--md);
 
     z-index: var(--#{$page}__drawer--ZIndex);
+    overflow-y: unset;
   }
 }
