@@ -1,3 +1,10 @@
 {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-  {{> page-template-main-content}}
+  {{#if page-template--IsPageDrawer}}
+    {{#if page-template--HasNoDrawerContent}}
+      {{> page-template-main-content}}
+    {{/if}}
+    {{> page-template-page-drawer}}
+  {{else}}
+    {{> page-template-main-content}}
+  {{/if}}
 {{/page-main}}
