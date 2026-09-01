@@ -1,11 +1,9 @@
 {{#> page-drawer}}
-  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen=page-template--drawer-panel--IsOpen drawer--IsViewPort=drawer--IsViewPort drawer--IsPanelLeft=drawer--IsPanelLeft}}
+  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen=page-template--drawer-panel--IsOpen drawer--IsPanelLeft=drawer--IsPanelLeft}}
     {{#> drawer-main}}
-      {{#unless page-template--HasNoDrawerContent}}
-        {{#> drawer-content}}
-          {{> page-template-main}}
-        {{/drawer-content}}
-      {{/unless}}
+      {{#> drawer-content}}
+        {{> page-template-main}}
+      {{/drawer-content}}
       {{> page-template-drawer-panel}}
     {{/drawer-main}}
   {{/drawer}}

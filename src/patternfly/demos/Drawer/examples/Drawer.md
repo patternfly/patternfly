@@ -28,60 +28,19 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Expanded full height in page
-```hbs isFullscreen
-{{> page-template
-      page-template--id="drawer-expanded-full-height-in-page-example"
-      page-template--IsPageDrawer="true"
-      page-template--drawer-panel--IsOpen="true"
-      drawer--IsViewport="true"
-}}
+### Expanded viewport page drawer
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="drawer-expanded-viewport-page-example"}}
 
-{{#*inline "page-template-drawer-panel"}}
-  {{#> drawer-panel}}
-    {{#> drawer-body}}
-      drawer panel
-    {{/drawer-body}}
-  {{/drawer-panel}}
-{{/inline}}
-```
-
-### Expanded full height in page without content
-```hbs isFullscreen
-{{> page-template
-      page-template--id="drawer-expanded-full-height-in-page-without-content-example"
-      page-template--IsPageDrawer="true"
-      page-template--HasNoDrawerContent="true"
-      page-template--drawer-panel--IsOpen="true"
-      drawer--IsViewport="true"
-}}
-
-{{#*inline "page-template-drawer-panel"}}
-  {{#> drawer-panel}}
-    {{#> drawer-body}}
-      drawer panel
-    {{/drawer-body}}
-  {{/drawer-panel}}
-{{/inline}}
-```
-
-### Expanded full height page drawer
-```hbs isFullscreen
-{{> page-template
-      page-template--id="drawer-expanded-full-height-page-drawer-example"
-      page-template--IsDrawer="true"
-      page-template--HasNoDrawerContent="true"
-      page-template--drawer-panel--IsOpen="true"
-      drawer--IsViewport="true"
-}}
-
-{{#*inline "page-template-drawer-panel"}}
-  {{#> drawer-panel}}
-    {{#> drawer-body}}
-      drawer panel
-    {{/drawer-body}}
-  {{/drawer-panel}}
-{{/inline}}
+{{#> drawer drawer--id="drawer-expanded-viewport-page-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true"}}
+  {{#> drawer-main}}
+    {{#> drawer-panel}}
+      {{#> drawer-body}}
+        drawer panel
+      {{/drawer-body}}
+    {{/drawer-panel}}
+  {{/drawer-main}}
+{{/drawer}}
 ```
 
 ### Expanded bottom

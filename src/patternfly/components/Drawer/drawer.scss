@@ -30,7 +30,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Panel
   --#{$drawer}__panel--Position: relative;
   --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
-  --#{$drawer}__panel--Height: auto;
   --#{$drawer}__panel--MaxHeight: auto;
   --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--sm);
   --#{$drawer}__panel--BorderColor: var(--#{$drawer}__panel--after--BackgroundColor); // TODO use token directly in breaking change
@@ -92,9 +91,9 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__panel--Opacity: 1;
   }
 
-  // Full height
-  --#{$drawer}--m-full-height__panel--InsetInlineStart: auto;
-  --#{$drawer}--m-full-height__panel--InsetInlineEnd: 0;
+  // Drawer viewport
+  --#{$drawer}--m-viewport__panel--InsetInlineStart: auto;
+  --#{$drawer}--m-viewport__panel--InsetInlineEnd: var(--#{$drawer}--m-expanded__panel--inset);
 
   // Drawer panel head
   --#{$drawer}__head--ColumnGap: var(--pf-t--global--spacer--gap--text-to-element--default);
@@ -304,27 +303,37 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     --#{$drawer}__panel--MaxHeight: 100dvh;
     --#{$drawer}__main--Overflow: unset;
 
+    z-index: var(--pf-t--global--z-index--md);
+
     > .#{$drawer}__main > .#{$drawer}__content {
       overflow: unset;
     }
 
+    &:not(:has(.#{$drawer}__content)) {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+
+      > .#{$drawer}__main > .#{$drawer}__panel {
+        pointer-events: auto;
+      }
+    }
+
     &.pf-m-panel-left {
-      --#{$drawer}--m-full-height__panel--InsetInlineStart: 0;
-      --#{$drawer}--m-full-height__panel--InsetInlineEnd: auto;
+      --#{$drawer}--m-viewport__panel--InsetInlineStart: 0;
+      --#{$drawer}--m-viewport__panel--InsetInlineEnd: auto;
     }
 
     @media (min-width: $pf-v6-global--breakpoint--md) {
       --#{$drawer}__panel--Position: fixed;
-      --#{$drawer}__panel--Height: 100%;
       --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--md);
 
       > .#{$drawer}__main > .#{$drawer}__panel {
         inset-block-start: 0;
         inset-block-end: 0;
-        inset-inline-start: var(--#{$drawer}--m-full-height__panel--InsetInlineStart);
-        inset-inline-end: var(--#{$drawer}--m-full-height__panel--InsetInlineEnd);
+        inset-inline-start: var(--#{$drawer}--m-viewport__panel--InsetInlineStart);
+        inset-inline-end: var(--#{$drawer}--m-viewport__panel--InsetInlineEnd);
         inline-size: var(--#{$drawer}__panel--FlexBasis);
-        height: var(--#{$drawer}__panel--Height);
 
         @include pf-v6-bidirectional-style(
           $prop: transform,
@@ -1018,7 +1027,3 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
   }
 }
-
-// :where(.pf-v6-theme-glass) {
-  
-// }

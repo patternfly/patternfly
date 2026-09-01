@@ -811,10 +811,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   &:focus {
     outline: 0;
   }
-
-  &:has(.#{$drawer}.pf-m-viewport) {
-    z-index: auto;
-  }
 }
 
 .#{$page}__main-subnav,
@@ -978,14 +974,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
     &.pf-m-fill {
       flex-grow: 1;
-    }
-  }
-
-  &:has(.#{$drawer}.pf-m-viewport):not(:has(.#{$drawer}__content)) {
-    pointer-events: none;
-
-    .#{$drawer}__panel {
-      pointer-events: auto;
     }
   }
 }
