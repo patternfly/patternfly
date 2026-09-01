@@ -1,4 +1,8 @@
-<section class="{{pfv}}page__main-section{{#if page-main-section--IsLimitWidth}} pf-m-limit-width{{/if}}{{#if page-main-section--modifier}} {{page-main-section--modifier}}{{/if}}"
+<section class="{{pfv}}page__main-section
+  {{setModifiers
+    page-main-section--IsLimitWidth='pf-m-limit-width'
+    page-main-section--HasNoPadding='pf-m-no-padding'
+    page-main-section--modifier=page-main-section--modifier}}"
   {{#if page-main-section--attribute}}
     {{{page-main-section--attribute}}}
   {{/if}}>

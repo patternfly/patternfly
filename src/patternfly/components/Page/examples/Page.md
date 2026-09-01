@@ -295,15 +295,65 @@ import './Page.css'
 ```
 
 ### Custom header
-```hbs
+```hbs isBeta
 {{#> page}}
-  {{#> page-header page-header--IsHeader=true}}
+  {{#> page-header}}
     Custom header
   {{/page-header}}
   {{#> page-sidebar}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
+      Page content
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Footer
+```hbs isBeta
+{{#> page}}
+  {{#> masthead}}
+    {{#> masthead-main}}
+      {{> masthead-toggle}}
+      {{#> masthead-brand}}
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
+      {{/masthead-brand}}
+    {{/masthead-main}}
+    {{> masthead-content}}
+  {{/masthead}}
+  {{#> page-sidebar}}
+    Navigation
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
+      Page content
+    {{/page-main-section}}
+  {{/page-main}}
+  {{#> page-footer}}
+    Page footer
+  {{/page-footer}}
+{{/page}}
+```
+
+### Plain
+```hbs isBeta
+{{#> page page--IsPlain=true}}
+  {{#> masthead}}
+    {{#> masthead-main}}
+      {{> masthead-toggle}}
+      {{#> masthead-brand}}
+        {{#> masthead-logo}}
+          Logo
+        {{/masthead-logo}}
+      {{/masthead-brand}}
+    {{/masthead-main}}
+    {{> masthead-content}}
+  {{/masthead}}
+  {{#> page-main page-main-section--HasNoPadding=true}}
     {{#> page-main-section page-main-section--IsLimitWidth="true"}}
       Page content
     {{/page-main-section}}
@@ -327,7 +377,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v6-c-page` | `<div>` | Declares the page component. |
-| `.pf-v6-c-page__header` | `<div>`, `<header>` | Declares the page header. |
+| `.pf-v6-c-page__header` | `<header>`, `<div>` | Declares the page header. |
 | `.pf-v6-c-page__sidebar` | `<aside>` | Declares the page sidebar. |
 | `.pf-v6-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v6-c-page__sidebar-body` element will grow to fill the available vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-v6-c-page__dock` | `<div>` | Creates a dock region for persisting navigation or other content at the edge of the page. |
@@ -340,7 +390,7 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v6-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required** |
 | `.pf-v6-c-page__main-group` | `<div>` | Creates the group of `.pf-v6-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-v6-c-page__drawer` | `<div>` | Creates a container for the drawer component when placing the main page element in the drawer body. |
-| `.pf-v6-c-page__footer` | `<div>`, `<footer>` | Declares the page footer. |
+| `.pf-v6-c-page__footer` | `<footer>`, `<div>` | Declares the page footer. |
 | `.pf-m-docked` | `.pf-v6-c-page` | Modifies the page grid to have a dock. |
 | `.pf-m-plain` | `.pf-v6-c-page` | Modifies the page to remove the content area background and overflow scroll. |
 | `.pf-m-no-sidebar` | `.pf-v6-c-page` | Modifies the page grid for layouts without a sidebar. |

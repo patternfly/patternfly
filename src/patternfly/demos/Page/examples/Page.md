@@ -169,18 +169,18 @@ import './Page.css'
 {{> page-template page-template--id="page-demo-no-sidebar-masthead" page-template--HasNoSidebar=true page-template--HasNoMasthead=true}}
 ```
 
-### Plain with custom header
+### Plain
 ```hbs isFullscreen
 {{> page-template
-      page-template--id="page-demo-plain-custom-header"
+      page-template--id="page-demo-plain"
       page-template-gallery--IsLongGallery=true
       page-template--ExcludeSidebar=true
-      page-template--modifier="pf-m-plain"
+      page--IsPlain=true
       page-template--HasFooter=true
 }}
 
 {{#*inline "page-template-main-content"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+  {{#> page-main-section page-main-section--HasNoPadding=true}}
     {{#> panel panel--IsGlass=true}}
       {{#> panel-main}}
         {{#> panel-main-body}}
@@ -192,7 +192,7 @@ import './Page.css'
       {{/panel-main}}
     {{/panel}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+  {{#> page-main-section page-main-section--HasNoPadding=true}}
     {{> card-template-expandable-status card-template-expandable-status--id=(concat page-template--id '-expandable-status-card-1') card-template-expandable-status--IsGlass=true}}
   {{/page-main-section}}
   {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery" card--IsGlass=true}}
