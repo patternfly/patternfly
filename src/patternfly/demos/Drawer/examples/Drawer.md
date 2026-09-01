@@ -29,21 +29,18 @@ wrapperTag: div
 ```
 
 ### Expanded without content
-```hbs isFullscreen
-{{> page-template
-      page-template--id="drawer-expanded-without-content-example"
-      page-template--IsDrawer="true"
-      page-template--HasNoDrawerContent="true"
-      page-template--drawer-panel--IsOpen="true"
-}}
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="drawer-expanded-without-content-example"}}
 
-{{#*inline "page-template-drawer-panel"}}
-  {{#> drawer-panel}}
-    {{#> drawer-body}}
-      drawer panel
-    {{/drawer-body}}
-  {{/drawer-panel}}
-{{/inline}}
+{{#> drawer drawer--id="drawer-expanded-without-content-example-drawer" drawer-panel--IsOpen="true"}}
+  {{#> drawer-main}}
+    {{#> drawer-panel}}
+      {{#> drawer-body}}
+        drawer panel
+      {{/drawer-body}}
+    {{/drawer-panel}}
+  {{/drawer-main}}
+{{/drawer}}
 ```
 
 ### Expanded bottom
