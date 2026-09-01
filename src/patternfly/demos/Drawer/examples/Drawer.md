@@ -34,7 +34,7 @@ wrapperTag: div
       page-template--id="drawer-expanded-full-height-in-page-example"
       page-template--IsPageDrawer="true"
       page-template--drawer-panel--IsOpen="true"
-      drawer--IsFullHeight="true"
+      drawer--IsViewport="true"
 }}
 
 {{#*inline "page-template-drawer-panel"}}
@@ -53,7 +53,7 @@ wrapperTag: div
       page-template--IsPageDrawer="true"
       page-template--HasNoDrawerContent="true"
       page-template--drawer-panel--IsOpen="true"
-      drawer--IsFullHeight="true"
+      drawer--IsViewport="true"
 }}
 
 {{#*inline "page-template-drawer-panel"}}
@@ -72,7 +72,7 @@ wrapperTag: div
       page-template--IsDrawer="true"
       page-template--HasNoDrawerContent="true"
       page-template--drawer-panel--IsOpen="true"
-      drawer--IsFullHeight="true"
+      drawer--IsViewport="true"
 }}
 
 {{#*inline "page-template-drawer-panel"}}

@@ -812,9 +812,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     outline: 0;
   }
 
-  &:has(.#{$drawer}.pf-m-full-height) {
-    --#{$page}__main-container--BackdropFilter: none;
-
+  &:has(.#{$drawer}.pf-m-viewport) {
     z-index: auto;
   }
 }
@@ -983,7 +981,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     }
   }
 
-  &:has(.#{$drawer}.pf-m-full-height):not(:has(.#{$drawer}__content)) {
+  &:has(.#{$drawer}.pf-m-viewport):not(:has(.#{$drawer}__content)) {
     pointer-events: none;
 
     .#{$drawer}__panel {

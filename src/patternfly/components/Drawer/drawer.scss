@@ -11,7 +11,6 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --#{$drawer}--OverflowX: hidden;
 
   // Main
-  --#{$drawer}__main--Display: flex;
   --#{$drawer}__main--Overflow: hidden;
 
   // Pill inline main
@@ -299,13 +298,13 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     flex-direction: column;
   }
 
-  &.pf-m-full-height {
+  &.pf-m-viewport {
     --#{$drawer}--Height: unset;
     --#{$drawer}--OverflowX: unset;
     --#{$drawer}__panel--MaxHeight: 100dvh;
     --#{$drawer}__main--Overflow: unset;
 
-    .#{$drawer}__content {
+    > .#{$drawer}__main > .#{$drawer}__content {
       overflow: unset;
     }
 
@@ -319,7 +318,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       --#{$drawer}__panel--Height: 100%;
       --#{$drawer}__panel--ZIndex: var(--pf-t--global--z-index--md);
 
-      .#{$drawer}__panel {
+      > .#{$drawer}__main > .#{$drawer}__panel {
         inset-block-start: 0;
         inset-block-end: 0;
         inset-inline-start: var(--#{$drawer}--m-full-height__panel--InsetInlineStart);
@@ -334,7 +333,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         );
       }
 
-      &.pf-m-panel-left .#{$drawer}__panel {
+      &.pf-m-panel-left  > .#{$drawer}__main > .#{$drawer}__panel {
         @include pf-v6-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(-100%),
@@ -342,7 +341,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         );
       }
 
-      &.pf-m-expanded > .#{$drawer}__main .#{$drawer}__panel {
+      &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
         transform: translateX(0);
       }
     }
@@ -456,7 +455,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Main area
 .#{$drawer}__main {
-  display: var(--#{$drawer}__main--Display);
+  display: flex;
   flex: 1;
   gap: var(--#{$drawer}__main--Gap, 0);
   overflow: var(--#{$drawer}__main--Overflow);
