@@ -1,5 +1,5 @@
 {{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
-  {{#> card card--modifier="pf-m-expanded"}}
+  {{#> card card--modifier="pf-m-expanded" card--IsGlass=card-template-expandable-status--IsGlass}}
     {{#> card-header card--id=card-template-expandable-status--id}}
       {{> card-header-toggle}}
       {{#> card-actions}}
@@ -12,7 +12,7 @@
       {{/card-title}}
     {{/card-header}}
     {{#> card-expandable-content}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md"}}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md" card--IsGlass=false}}
         {{> card-template-expandable-status-card card-template-expandable-status-card--HasIncident=true}}
         {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
         {{> card-template-expandable-status-card

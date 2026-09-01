@@ -1,0 +1,8 @@
+<{{ternary page-footer--type page-footer--type 'footer'}} class="{{pfv}}page__footer{{#if page-footer--modifier}} {{page-footer--modifier}}{{/if}}"
+  {{#if page-footer--attribute}}
+    {{{page-footer--attribute}}}
+  {{/if}}>
+  {{#> page-main-body}}
+    {{> @partial-block}}
+  {{/page-main-body}}
+</{{ternary page-footer--type page-footer--type 'footer'}}>
