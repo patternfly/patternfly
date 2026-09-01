@@ -28,7 +28,7 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Expanded viewport page drawer
+### Expanded viewport drawer
 ```hbs isFullscreen isBeta
 {{> page-template page-template--id="drawer-expanded-viewport-page-example"}}
 
