@@ -353,8 +353,8 @@ import './Page.css'
     {{/masthead-main}}
     {{> masthead-content}}
   {{/masthead}}
-  {{#> page-main page-main-section--HasNoPadding=true}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
+  {{#> page-main}}
+    {{#> page-main-section page-main-section--IsLimitWidth=true page-main-section--HasNoPadding=true}}
       Page content
     {{/page-main-section}}
   {{/page-main}}
