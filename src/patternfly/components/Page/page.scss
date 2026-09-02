@@ -476,7 +476,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Footer
 .#{$page}__footer {
-  z-index: var(--#{$page}__header--ZIndex);
+  z-index: var(--#{$page}__footer-ZIndex);
   grid-area: footer;
 }
 
