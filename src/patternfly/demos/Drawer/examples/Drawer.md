@@ -60,7 +60,7 @@ wrapperTag: div
 ```hbs isFullscreen isBeta
 {{> page-template page-template--id="drawer-expanded-resizable-viewport-example"}}
 
-{{#> drawer drawer--id="drawer-expanded-resizable-viewport-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true" drawer-panel--IsResizable=true}}
+{{#> drawer drawer--id="drawer-expanded-resizable-viewport-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true" drawer-panel--IsResizable="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}{{/drawer-content}}
     {{#> drawer-panel}}
@@ -70,9 +70,6 @@ wrapperTag: div
           {{> drawer-close}}
         {{/drawer-actions}}
       {{/drawer-head}}
-      {{#> drawer-body}}
-        Drawer panel body content
-      {{/drawer-body}}
     {{/drawer-panel}}
   {{/drawer-main}}
 {{/drawer}}
