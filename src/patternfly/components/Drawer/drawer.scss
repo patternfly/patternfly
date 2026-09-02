@@ -288,7 +288,7 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-viewport {
     position: fixed;
     inset: 0;
-    z-index: var(--pf-t--global--z-index--md);
+    z-index: var(--pf-t--global--z-index--lg);
     pointer-events: none;
 
     > .#{$drawer}__main > .#{$drawer}__panel {
