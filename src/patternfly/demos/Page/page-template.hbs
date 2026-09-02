@@ -33,14 +33,16 @@
       {{> masthead-template masthead-template--id=(concat page--id '-docked')}}
     {{/if}}
   {{/unless}}
-  {{#unless page-template--HasNoSidebar}}
-    {{#unless masthead-template--HasDockedNav}}
-      {{> page-template-sidebar}}
-    {{/unless}}
-  {{/unless}}
+  {{!-- page-template--HasNoSidebar applies the pf-m-no-sidebar variant class. page-template--ExcludeSidebar just removes the sidebar --}}
+  {{#ifAll (inverse page-template--HasNoSidebar) (inverse masthead-template--HasDockedNav) (inverse page-template--ExcludeSidebar)}}
+    {{> page-template-sidebar}}
+  {{/ifAll}}
   {{#if page-template--IsDrawer}}
     {{> page-template-drawer}}
   {{else}}
     {{> page-template-main}}
+  {{/if}}
+  {{#if page-template--HasFooter}}
+    {{#> page-footer}}custom footer{{/page-footer}}
   {{/if}}
 {{/page}}

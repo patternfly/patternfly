@@ -172,7 +172,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-section--m-secondary--BorderBlockEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--high-contrast--regular));
   --#{$page}__main-section--m-secondary--BorderBlockEndColor: var(--pf-t--global--border--color--subtle);
 
-
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
 
@@ -193,7 +192,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-sticky-top--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --#{$page}--section--m-sticky-bottom--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
   --#{$page}--section--m-sticky-bottom--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-
 
   // Shadows
   --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
@@ -265,6 +263,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--m-dock__main-container--MaxHeight--glass: calc(100% - var(--pf-t--global--spacer--inset--page-chrome) - var(--pf-t--global--spacer--gutter--default));
   --#{$page}--m-dock__main-container--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
 
+  // Plain
+  --#{$page}--m-plain__main-container--MarginBlockEnd: var(--#{$page}--inset);
+  --#{$page}--m-plain__main--RowGap: var(--pf-t--global--spacer--gutter--default);
+
+  // Footer
+  --#{$page}__footer--ZIndex: var(--#{$page}__main-container--ZIndex);
+
   :where(.pf-v6-theme-glass) & {
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
     --#{$page}__sidebar--Width--base: var(--#{$page}__sidebar--Width--base--glass);
@@ -311,6 +316,14 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   max-height: 100%;
   background-color: var(--#{$page}--BackgroundColor);
 
+  &:has(> .#{$page}__footer) {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: max-content 1fr auto;
+  }
+
   @media (min-width: $pf-v6-global--breakpoint--xl) {
     --#{$page}__sidebar--Width: var(--#{$page}__sidebar--xl--Width); // TODO can remove at breaking change
 
@@ -318,6 +331,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       "header header"
       "sidebar main";
     grid-template-columns: var(--#{$page}__sidebar--Width) 1fr;
+
+    &:has(> .#{$page}__footer) {
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    }
   }
 
   &.pf-m-docked {
@@ -404,6 +424,36 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       @include pf-v6-hamburger($collapse: true);
     }
   }
+
+  &.pf-m-plain {
+    --#{$page}__main-container--MarginBlockEnd: var(--#{$page}--m-plain__main-container--MarginBlockEnd);
+
+    height: revert;
+    min-height: 100dvh;
+    max-height: revert;
+
+    :is(.#{$page}__main, .#{$page}__main-container) {
+      overflow: revert;
+    }
+
+    .#{$page}__main-container {
+      max-height: revert;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .#{$page}__main {
+      gap: var(--#{$page}--m-plain__main--RowGap);
+    }
+
+    .#{$page}__main-breadcrumb,
+    .#{$page}__main-subnav {
+      padding: 0;
+    }
+  }
 }
 
 // Header
@@ -426,6 +476,12 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}.pf-m-docked > .#{$masthead} {
   --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}--m-dock--c-masthead--m-display-inline--GridTemplateColumns);
+}
+
+// Footer
+.#{$page}__footer {
+  z-index: var(--#{$page}__footer--ZIndex);
+  grid-area: footer;
 }
 
 // Dock
@@ -780,6 +836,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   align-self: var(--#{$page}__main-container--AlignSelf);
   max-height: var(--#{$page}__main-container--MaxHeight);
   margin-block-start: var(--#{$page}__main-container--MarginBlockStart, 0);
+  margin-block-end: var(--#{$page}__main-container--MarginBlockEnd, 0);
   margin-inline-start: var(--#{$page}__main-container--MarginInlineStart);
   margin-inline-end: var(--#{$page}__main-container--MarginInlineEnd);
   background: var(--#{$page}__main-container--BackgroundColor);

@@ -168,3 +168,33 @@ import './Page.css'
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-no-sidebar-masthead" page-template--HasNoSidebar=true page-template--HasNoMasthead=true}}
 ```
+
+### Plain
+```hbs isFullscreen
+{{> page-template
+      page-template--id="page-demo-plain"
+      page-template-gallery--IsLongGallery=true
+      page-template--ExcludeSidebar=true
+      page--IsPlain=true
+      page-template--HasFooter=true
+}}
+
+{{#*inline "page-template-main-content"}}
+  {{#> page-main-section page-main-section--HasNoPadding=true page-main-section--IsPlain=true}}
+    {{#> panel panel--IsGlass=true panel--IsBordered=true}}
+      {{#> panel-main}}
+        {{#> panel-main-body}}
+          {{#> content}}
+            <h1>Page title</h1>
+            <p>This is a full page demo.</p>
+          {{/content}}
+        {{/panel-main-body}}
+      {{/panel-main}}
+    {{/panel}}
+  {{/page-main-section}}
+  {{#> page-main-section page-main-section--HasNoPadding=true page-main-section--IsPlain=true}}
+    {{> card-template-expandable-status card-template-expandable-status--id=(concat page-template--id '-expandable-status-card-1') card-template-expandable-status--IsGlass=true}}
+  {{/page-main-section}}
+  {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery" card--IsGlass=true}}
+{{/inline}}
+```

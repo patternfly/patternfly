@@ -1,6 +1,6 @@
-<{{ternary page-header--IsHeader 'header' 'div'}} class="{{pfv}}page__header{{#if page-header--modifier}} {{page-header--modifier}}{{/if}}"
+<{{ternary page-header--type page-header--type 'header'}} class="{{pfv}}page__header{{#if page-header--modifier}} {{page-header--modifier}}{{/if}}"
   {{#if page-header--attribute}}
     {{{page-header--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</{{ternary page-header--IsHeader 'header' 'div'}}>
+</{{ternary page-header--type page-header--type 'header'}}>
