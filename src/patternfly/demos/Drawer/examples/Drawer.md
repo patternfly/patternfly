@@ -28,21 +28,6 @@ wrapperTag: div
 {{/inline}}
 ```
 
-### Expanded viewport drawer
-```hbs isFullscreen isBeta
-{{> page-template page-template--id="drawer-expanded-viewport-page-example"}}
-
-{{#> drawer drawer--id="drawer-expanded-viewport-page-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true"}}
-  {{#> drawer-main}}
-    {{#> drawer-panel}}
-      {{#> drawer-body}}
-        drawer panel
-      {{/drawer-body}}
-    {{/drawer-panel}}
-  {{/drawer-main}}
-{{/drawer}}
-```
-
 ### Expanded bottom
 ```hbs isFullscreen
 {{> page-template
@@ -69,6 +54,21 @@ wrapperTag: div
 ### Expanded drawer with jump links
 ```hbs isFullscreen
 {{> drawer-jump-links drawer-jump-links--id="drawer-expanded-jump-links" drawer-panel--IsOpen="true"}}
+```
+
+### Expanded resiable viewport drawer
+```hbs isFullscreen isBeta
+{{> page-template page-template--id="drawer-expanded-resiable-viewport-example"}}
+
+{{#> drawer drawer--id="drawer-expanded-resiable-viewport-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true" drawer-panel--IsResizable=true}}
+  {{#> drawer-main}}
+    {{#> drawer-panel}}
+      {{#> drawer-body}}
+        drawer panel
+      {{/drawer-body}}
+    {{/drawer-panel}}
+  {{/drawer-main}}
+{{/drawer}}
 ```
 
 ## Documentation

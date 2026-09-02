@@ -298,15 +298,15 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   &.pf-m-viewport {
-    --#{$drawer}--Height: unset;
-    --#{$drawer}--OverflowX: unset;
+    --#{$drawer}--Height: initial;
+    --#{$drawer}--OverflowX: initial;
     --#{$drawer}__panel--MaxHeight: 100dvh;
-    --#{$drawer}__main--Overflow: unset;
+    --#{$drawer}__main--Overflow: initial;
 
     z-index: var(--pf-t--global--z-index--md);
 
     > .#{$drawer}__main > .#{$drawer}__content {
-      overflow: unset;
+      overflow: initial;
     }
 
     &:not(:has(.#{$drawer}__content)) {
