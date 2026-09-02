@@ -429,6 +429,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-container--MarginBlockEnd: var(--#{$page}--m-plain__main-container--MarginBlockEnd);
 
     height: revert;
+    min-height: 100dvh;
     max-height: revert;
 
     :is(.#{$page}__main, .#{$page}__main-container) {

@@ -180,8 +180,8 @@ import './Page.css'
 }}
 
 {{#*inline "page-template-main-content"}}
-  {{#> page-main-section page-main-section--HasNoPadding=true}}
-    {{#> panel panel--IsGlass=true}}
+  {{#> page-main-section page-main-section--HasNoPadding=true page-main-section--IsPlain=true}}
+    {{#> panel panel--IsGlass=true panel--IsBordered=true}}
       {{#> panel-main}}
         {{#> panel-main-body}}
           {{#> content}}
@@ -192,7 +192,7 @@ import './Page.css'
       {{/panel-main}}
     {{/panel}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--HasNoPadding=true}}
+  {{#> page-main-section page-main-section--HasNoPadding=true page-main-section--IsPlain=true}}
     {{> card-template-expandable-status card-template-expandable-status--id=(concat page-template--id '-expandable-status-card-1') card-template-expandable-status--IsGlass=true}}
   {{/page-main-section}}
   {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery" card--IsGlass=true}}
