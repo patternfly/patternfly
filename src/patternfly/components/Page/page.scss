@@ -334,7 +334,6 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         "header header"
         "sidebar main"
         "footer footer";
-      grid-template-rows: max-content 1fr auto;
     }
   }
 
