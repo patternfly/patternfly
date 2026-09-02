@@ -267,6 +267,9 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--m-plain__main-container--MarginBlockEnd: var(--#{$page}--inset);
   --#{$page}--m-plain__main--RowGap: var(--pf-t--global--spacer--gutter--default);
 
+  // Footer
+  --#{$page}__footer--ZIndex: var(--#{$page}__main-container--ZIndex);
+
   :where(.pf-v6-theme-glass) & {
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
     --#{$page}__sidebar--Width--base: var(--#{$page}__sidebar--Width--base--glass);
@@ -476,7 +479,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Footer
 .#{$page}__footer {
-  z-index: var(--#{$page}__footer-ZIndex);
+  z-index: var(--#{$page}__footer--ZIndex);
   grid-area: footer;
 }
 
