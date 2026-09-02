@@ -56,15 +56,22 @@ wrapperTag: div
 {{> drawer-jump-links drawer-jump-links--id="drawer-expanded-jump-links" drawer-panel--IsOpen="true"}}
 ```
 
-### Expanded resiable viewport drawer
+### Expanded resizable viewport drawer
 ```hbs isFullscreen isBeta
-{{> page-template page-template--id="drawer-expanded-resiable-viewport-example"}}
+{{> page-template page-template--id="drawer-expanded-resizable-viewport-example"}}
 
-{{#> drawer drawer--id="drawer-expanded-resiable-viewport-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true" drawer-panel--IsResizable=true}}
+{{#> drawer drawer--id="drawer-expanded-resizable-viewport-example-drawer" drawer--IsViewport="true" drawer-panel--IsOpen="true" drawer-panel--IsResizable=true}}
   {{#> drawer-main}}
+    {{#> drawer-content}}{{/drawer-content}}
     {{#> drawer-panel}}
+    {{#> drawer-head}}
+        <span>Drawer panel header content</span>
+        {{#> drawer-actions}}
+          {{> drawer-close}}
+        {{/drawer-actions}}
+      {{/drawer-head}}
       {{#> drawer-body}}
-        drawer panel
+        Drawer panel body content
       {{/drawer-body}}
     {{/drawer-panel}}
   {{/drawer-main}}
