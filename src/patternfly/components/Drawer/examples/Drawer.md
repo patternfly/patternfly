@@ -336,7 +336,7 @@ import './Drawer.css'
 | `.pf-v6-c-drawer` | `<div>` | Initiates the drawer container. **Required** |
 | `.pf-v6-c-drawer__section` | `<div>` | Initiates a drawer section area. This element can be used above or below `.pf-v6-c-drawer__main` for titles, toolbars, footers, etc. |
 | `.pf-v6-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
-| `.pf-v6-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required**. May be empty when `.pf-m-viewport` is used as a viewport overlay. |
+| `.pf-v6-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required**. It is empty when used with `.pf-m-viewport`. |
 | `.pf-v6-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
 | `.pf-v6-c-drawer__panel-main` | `<div>` | Initiates the drawer panel main container for resizable drawers only. |
 | `.pf-v6-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` and `.pf-v6-c-drawer__panel-main`. **Required** |
