@@ -285,6 +285,17 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     flex-direction: column;
   }
 
+  &.pf-m-viewport {
+    position: fixed;
+    inset: 0;
+    z-index: var(--pf-t--global--z-index--lg);
+    pointer-events: none;
+
+    > .#{$drawer}__main > .#{$drawer}__panel {
+      pointer-events: auto;
+    }
+  }
+
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
@@ -956,7 +967,3 @@ $pf-v6-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
   }
 }
-
-// :where(.pf-v6-theme-glass) {
-  
-// }

@@ -336,7 +336,7 @@ import './Drawer.css'
 | `.pf-v6-c-drawer` | `<div>` | Initiates the drawer container. **Required** |
 | `.pf-v6-c-drawer__section` | `<div>` | Initiates a drawer section area. This element can be used above or below `.pf-v6-c-drawer__main` for titles, toolbars, footers, etc. |
 | `.pf-v6-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
-| `.pf-v6-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
+| `.pf-v6-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required**. It is empty when used with `.pf-m-viewport`. |
 | `.pf-v6-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
 | `.pf-v6-c-drawer__panel-main` | `<div>` | Initiates the drawer panel main container for resizable drawers only. |
 | `.pf-v6-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-v6-c-drawer__content`, `.pf-v6-c-drawer__panel` and `.pf-v6-c-drawer__panel-main`. **Required** |
@@ -352,6 +352,7 @@ import './Drawer.css'
 | `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-v6-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens) will default to the `md` breakpoint. |
 | `.pf-m-pill` | `.pf-v6-c-drawer` | Modifies the drawer for pill styles. |
+| `.pf-m-viewport` | `.pf-v6-c-drawer` | Positions the drawer as `fixed` to fill the viewport. Place the drawer after `.pf-v6-c-page` as a sibling. |
 | `.pf-m-no-glass` | `.pf-v6-c-drawer__panel.pf-m-pill` | Modifies the drawer panel to remove glass styling when using glass theme. |
 | `.pf-m-no-border` | `.pf-v6-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-v6-c-drawer__body` | Modifies the element to add padding. |
