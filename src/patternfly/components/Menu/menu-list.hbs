@@ -1,5 +1,5 @@
 <ul class="{{pfv}}menu__list{{#if menu-list--modifier}} {{menu-list--modifier}}{{/if}}"
-  role="menu"
+  role="{{#if menu-list--role}}{{menu-list--role}}{{else}}menu{{/if}}"
   {{#if menu-list--attribute}}
     {{{menu-list--attribute}}}
   {{/if}}>
