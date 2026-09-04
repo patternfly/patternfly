@@ -405,7 +405,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   }
 
   // Default container behavior (lg breakpoint) when using .pf-m-container
-  @at-root .#{$toolbar}:where(.pf-m-container:not([class*="pf-m-container-"])) & {
+  @at-root .#{$toolbar}:where(.pf-m-container) & {
     @include pf-v6-container-query("lg", "pf-v6-contain-toolbar", true) {
       position: static;
       padding: 0;
@@ -464,35 +464,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   &.pf-m-overflow-container {
     flex: 1;
     overflow: auto;
-  }
-}
-
-// Mixin for toggle group show/hide behavior
-@mixin pf-v6-toolbar-toggle-group-breakpoint-behavior($breakpoint-name) {
-  .#{$toolbar}__group:where(.pf-m-toggle-group) {
-    &.pf-m-show#{$breakpoint-name} {
-      .#{$toolbar}__group,
-      .#{$toolbar}__item {
-        display: flex;
-        flex: 0 1 auto;
-      }
-
-      .#{$toolbar}__toggle {
-        display: none;
-      }
-    }
-
-    &, // default value
-    &.pf-m-hide#{$breakpoint-name} {
-      .#{$toolbar}__group,
-      .#{$toolbar}__item {
-        display: none;
-      }
-
-      .#{$toolbar}__toggle {
-        display: inline-flex;
-      }
-    }
   }
 }
 
@@ -577,9 +548,33 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       }
     }
 
-    // - Toolbar toggle group (only for non-container toolbars)
-    @at-root .#{$toolbar}:where(:not([class*="pf-m-container"])) {
-      @include pf-v6-toolbar-toggle-group-breakpoint-behavior($breakpoint-name);
+    // - Toolbar toggle group
+    .#{$toolbar}:where(:not([class*="pf-m-container"])) {
+      .#{$toolbar}__group:where(.pf-m-toggle-group) {
+        &.pf-m-show#{$breakpoint-name} {
+          .#{$toolbar}__group,
+          .#{$toolbar}__item {
+            display: flex;
+            flex: 0 1 auto;
+          }
+    
+          .#{$toolbar}__toggle {
+            display: none;
+          }
+        }
+    
+        &, // default value
+        &.pf-m-hide#{$breakpoint-name} {
+          .#{$toolbar}__group,
+          .#{$toolbar}__item {
+            display: none;
+          }
+    
+          .#{$toolbar}__toggle {
+            display: inline-flex;
+          }
+        }
+      }
     }
   }
 }
