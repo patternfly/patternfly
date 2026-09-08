@@ -152,7 +152,7 @@
   }
 
   // Masthead hamburger
-  &:where(:has(> .#{$compass}__dock.pf-m-expanded)) > .#{$masthead} .#{$masthead}__toggle :is(.#{$button}.pf-m-hamburger, .#{$button}.pf-m-hamburger:hover, .#{$button}.pf-m-hamburger:focus-visible) {
+  @at-root .#{$compass}__container > .#{$masthead} .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
     @include pf-v6-hamburger;
   }
 
