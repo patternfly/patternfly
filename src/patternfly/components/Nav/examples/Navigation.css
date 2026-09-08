@@ -13,6 +13,14 @@
   inset-inline-start: 265px;
 }
 
+#ws-core-c-navigation-docked-nav-with-expandable-links .pf-v6-c-nav__item:has(.pf-m-current) {
+  --pf-v6-c-nav__item--accent--ScaleY: var(--pf-v6-c-nav__item--current--accent--ScaleY);
+
+  > .pf-v6-c-nav__link {
+    background-color: var(--pf-v6-c-nav__link--m-current--BackgroundColor);
+  }
+}
+
 #ws-core-c-navigation-horizontal .ws-preview-html,
 #ws-core-c-navigation-horizontal-overflow .ws-preview-html {
   padding: var(--pf-t--global--spacer--md);
