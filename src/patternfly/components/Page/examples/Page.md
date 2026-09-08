@@ -399,9 +399,8 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-m-page-insets` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body padding/inset to visually match padding of page elements. |
 | `.pf-m-context-selector` | `.pf-v6-c-page__sidebar-body` | Modifies a sidebar body to contain a context selector. |
 | `.pf-m-inset-none` | `.pf-v6-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
-| `.pf-m-expanded` | `.pf-v6-c-page__dock` | Expands the dock as an overlay. On desktop, the dock returns to its collapsed, icon-only state. |
-| `.pf-m-expandable-expanded` | `.pf-v6-c-page__dock` | Expands the dock as an overlay on desktop instead of collapsing to an icon-only rail. Used when an expandable nav item opens a subnav overlay. |
-| `.pf-m-text-expanded` | `.pf-v6-c-page__dock` | Expands the dock so nav items show icon and text labels and reveals the masthead logo. |
+| `.pf-m-expanded` | `.pf-v6-c-page__dock` | Expands the docked nav inline, and reveals the masthead logo. On smaller viewports, expands the dock as an overlay. |
+| `.pf-m-overlay` | `.pf-v6-c-page__dock` | Alters the `.pf-m-expanded` to an overlay on desktop. Used when an expandable nav item is opened. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). Should be used with pf-m-no-padding. |
 | `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-v6-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/foundations-and-styles/design-tokens/all-design-tokens). |
 | `.pf-m-fill` | `.pf-v6-c-page__main-container`, `.pf-v6-c-page__main-section`, `.pf-v6-c-page__main-group`, `.pf-v6-c-page__main-wizard`, `.pf-v6-c-page__sidebar-body` | Modifies the element to grow to fill the available space. Note that `.pf-v6-c-page__main-container` must also have `.pf-m-fill` applied in order for the section to have space to stretch to full height.|
