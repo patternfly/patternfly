@@ -235,11 +235,11 @@
   // * Table tbody clickable
   --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
-  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--primary--hover);
-  --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$table}__tbody--m-clickable--m-expanded--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
 
   // * Table tbody selected
-  --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--primary--clicked);
+  --#{$table}__tbody--m-selected--BackgroundColor: var(--pf-t--global--background--color--action--plain--clicked);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-t--global--spacer--xs));
 
   // * Table nested column header
