@@ -214,7 +214,7 @@ This demo showcases how you can position a side-panel drawer on top of the other
 
 ### Docked nav expanded - overlay
 ```hbs isFullscreen isBeta
-{{> compass--docked compass--docked--id="compass-docked-expanded-overlay-example" 
+{{> compass--docked compass--docked--id="compass-docked-expanded-overlay-example"
   compass-dock--IsExpanded=true
   compass-dock--IsOverlay=true
 }}
