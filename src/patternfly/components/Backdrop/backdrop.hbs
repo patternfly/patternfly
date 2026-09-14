@@ -1,6 +1,13 @@
-<div class="{{pfv}}backdrop{{#if backdrop--modifier}} {{backdrop--modifier}}{{/if}}"
+<div class="{{pfv}}backdrop
+  {{setModifiers
+    backdrop--IsAnimate='pf-m-animate'
+    backdrop--IsShow='pf-m-show'
+    backdrop--modifier=backdrop--modifier
+  }}"
   {{#if backdrop--attribute}}
     {{{backdrop--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

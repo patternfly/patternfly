@@ -2,7 +2,11 @@
   {{#unless modal-box--HasStatusTitle}}
     {{> modal-box--status-modifiers}}
   {{/unless}}
-  {{#if modal-box--modifier}} {{modal-box--modifier}}{{/if}}"
+  {{setModifiers
+    modal-box--IsAnimate='pf-m-animate'
+    modal-box--IsOpen='pf-m-open'
+    modal-box--modifier=modal-box--modifier
+  }}"
   role="dialog"
   aria-modal="true"
   {{#if modal-box--attribute}}

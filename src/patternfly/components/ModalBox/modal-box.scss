@@ -77,6 +77,18 @@
   // Footer buttons
   --#{$modal-box}__footer--c-button--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
   --#{$modal-box}__footer--c-button--sm--MarginInlineEnd: var(--pf-t--global--spacer--gap--action-to-action--default);
+
+  // Animate
+  --#{$modal-box}--m-animate--TransitionProperty: opacity, visibility;
+  --#{$modal-box}--m-animate--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$modal-box}--m-animate--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$modal-box}--m-animate--m-open--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$modal-box}--m-animate--m-open--TransitionDuration: var(--pf-t--global--motion--duration--fade--default), 0s;
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    --#{$modal-box}--m-animate--TransitionProperty: opacity, translate, visibility;
+    --#{$modal-box}--m-animate--m-open--TransitionDuration: var(--pf-t--global--motion--duration--fade--default), var(--pf-t--global--motion--duration--fade--default), 0s;
+  }
 }
 
 .#{$modal-box} {
@@ -110,6 +122,37 @@
     align-self: flex-start;
     max-width: var(--#{$modal-box}--m-align-top--MaxWidth);
     max-height: var(--#{$modal-box}--m-align-top--MaxHeight);
+  }
+
+  &.pf-m-animate {
+    @media screen and (prefers-reduced-motion: no-preference) {
+      translate: 0 #{pf-size-prem(24px)};
+    }
+
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition-timing-function: var(--#{$modal-box}--m-animate--TransitionTimingFunction);
+    transition-duration: var(--#{$modal-box}--m-animate--TransitionDuration);
+    transition-property: var(--#{$modal-box}--m-animate--TransitionProperty, none);
+  }
+
+  &.pf-m-open {
+    --#{$modal-box}--m-animate--TransitionDuration: var(--#{$modal-box}--m-animate--m-open--TransitionDuration);
+    --#{$modal-box}--m-animate--TransitionTimingFunction: var(--#{$modal-box}--m-animate--m-open--TransitionTimingFunction);
+
+    visibility: visible;
+    pointer-events: revert;
+    opacity: 1;
+    translate: 0;
+
+    @starting-style {
+      @media screen and (prefers-reduced-motion: no-preference) {
+        translate: 0 #{pf-size-prem(24px)};
+      }
+
+      opacity: 0;
+    }
   }
 
   @at-root .#{$modal-box}__title,

@@ -4,6 +4,15 @@
   --#{$backdrop}--Position: fixed;
   --#{$backdrop}--ZIndex: var(--pf-t--global--z-index--lg);
   --#{$backdrop}--BackgroundColor: var(--pf-t--global--background--color--backdrop--default);
+
+  // Animate top
+  --#{$backdrop}--m-animate--Opacity: 0;
+  --#{$backdrop}--m-animate--TransitionProperty: opacity, visibility;
+  --#{$backdrop}--m-animate--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--accelerate);
+  --#{$backdrop}--m-animate--TransitionDuration: var(--pf-t--global--motion--duration--fade--short);
+  --#{$backdrop}--m-animate--m-show--TransitionDuration: var(--pf-t--global--motion--duration--fade--default), 0s;
+  --#{$backdrop}--m-animate--m-show--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--decelerate);
+  --#{$backdrop}--m-animate--m-show--Opacity: 1;
 }
 
 .#{$backdrop} {
@@ -14,6 +23,37 @@
   width: 100%;
   height: 100%;
   background-color: var(--#{$backdrop}--BackgroundColor);
+
+  &.pf-m-animate {
+    visibility: hidden;
+    background-color: transparent;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background-color: var(--#{$backdrop}--BackgroundColor);
+      opacity: var(--#{$backdrop}--m-animate--Opacity);
+      transition-timing-function: var(--#{$backdrop}--m-animate--TransitionTimingFunction);
+      transition-duration: var(--#{$backdrop}--m-animate--TransitionDuration);
+      transition-property: var(--#{$backdrop}--m-animate--TransitionProperty, none);
+    }
+  }
+
+  &.pf-m-show {
+    --#{$backdrop}--m-animate--TransitionDuration: var(--#{$backdrop}--m-animate--m-show--TransitionDuration);
+    --#{$backdrop}--m-animate--TransitionTimingFunction: var(--#{$backdrop}--m-animate--m-show--TransitionTimingFunction);
+
+    visibility: visible;
+
+    &::before {
+      opacity: var(--#{$backdrop}--m-animate--m-show--Opacity);
+
+      @starting-style {
+        opacity: 0;
+      }
+    }
+  }
 }
 
 .#{$backdrop}__open {
