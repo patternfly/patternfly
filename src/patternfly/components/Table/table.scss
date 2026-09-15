@@ -285,21 +285,15 @@
   --#{$table}--m-sticky-footer--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--short);
   --#{$table}--m-sticky-footer--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
   --#{$table}--m-sticky-footer--BoxShadow--glass: var(--pf-t--global--box-shadow--sm);
-  --#{$table}--m-sticky-footer--BorderColor: var(--#{$table}--BorderColor);
-  --#{$table}--m-sticky-footer-stuck--BackgroundColor: var(--#{$table}--m-sticky-footer--BackgroundColor);
-  --#{$table}--m-sticky-footer-stuck--BorderBlockStartWidth: var(--#{$table}--m-sticky-footer--BorderBlockStartWidth);
-  --#{$table}--m-sticky-footer-stuck--BoxShadow: var(--#{$table}--m-sticky-footer--BoxShadow);
-  --#{$table}--m-sticky-footer-stuck--BorderRadius: var(--#{$table}--m-sticky-footer--BorderRadius);
   --#{$table}--m-sticky-footer--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
-  --#{$table}--m-sticky-footer--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
 
   :where(.pf-v6-theme-glass) & {
     --#{$table}--m-sticky-header--BorderBlockEndWidth: 0;
     --#{$table}--m-sticky-header--BoxShadow: var(--#{$table}--m-sticky-header--BoxShadow--glass);
     --#{$table}--m-sticky-header--BorderRadius: var(--#{$table}--m-sticky-header--BorderRadius--glass);
-    --#{$table}--m-sticky-footer-stuck--BorderBlockStartWidth: 0;
-    --#{$table}--m-sticky-footer-stuck--BoxShadow: var(--#{$table}--m-sticky-footer--BoxShadow--glass);
-    --#{$table}--m-sticky-footer-stuck--BorderRadius: var(--#{$table}--m-sticky-footer--BorderRadius--glass);
+    --#{$table}--m-sticky-footer--BorderBlockStartWidth: 0;
+    --#{$table}--m-sticky-footer--BoxShadow: var(--#{$table}--m-sticky-footer--BoxShadow--glass);
+    --#{$table}--m-sticky-footer--BorderRadius: var(--#{$table}--m-sticky-footer--BorderRadius--glass);
   }
 }
 
@@ -424,13 +418,6 @@
     &::after {
       opacity: 1;
     }
-  }
-
-  &.pf-m-sticky-footer-stuck,
-  &.pf-m-sticky-footer:not(.pf-m-sticky-footer-base) {
-    --#{$table}--m-sticky-footer--BorderBlockStartWidth: var(--#{$table}--m-sticky-footer-stuck--BorderBlockStartWidth);
-    --#{$table}--m-sticky-footer--BoxShadow: var(--#{$table}--m-sticky-footer-stuck--BoxShadow);
-    --#{$table}--m-sticky-footer--BorderRadius: var(--#{$table}--m-sticky-footer-stuck--BorderRadius);
   }
 
   &.pf-m-sticky-footer,
