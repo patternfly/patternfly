@@ -275,13 +275,25 @@
   --#{$table}--m-sticky-header--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--default);
     
   // * Table sticky footer
+  --#{$table}--m-sticky-footer--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
+  --#{$table}--m-sticky-footer--cell--ZIndex: var(--pf-t--global--z-index--xs);
+  --#{$table}--m-sticky-footer--BoxShadow: 0;
+  --#{$table}--m-sticky-footer--BorderRadius: 0;
+  --#{$table}--m-sticky-footer--BorderBlockStartWidth: var(--#{$table}--border-width--base);
+  --#{$table}--m-sticky-footer--BorderBlockStartColor: var(--#{$table}--BorderColor);
+  --#{$table}--m-sticky-footer--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
+  --#{$table}--m-sticky-footer--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--short);
+  --#{$table}--m-sticky-footer--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
+  --#{$table}--m-sticky-footer--BoxShadow--glass: var(--pf-t--global--box-shadow--sm);
   --#{$table}--m-sticky-footer--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
-  --#{$table}--m-sticky-footer--border--ZIndex: calc(var(--pf-t--global--z-index--xs) + 2);
 
   :where(.pf-v6-theme-glass) & {
     --#{$table}--m-sticky-header--BorderBlockEndWidth: 0;
     --#{$table}--m-sticky-header--BoxShadow: var(--#{$table}--m-sticky-header--BoxShadow--glass);
     --#{$table}--m-sticky-header--BorderRadius: var(--#{$table}--m-sticky-header--BorderRadius--glass);
+    --#{$table}--m-sticky-footer--BorderBlockStartWidth: 0;
+    --#{$table}--m-sticky-footer--BoxShadow: var(--#{$table}--m-sticky-footer--BoxShadow--glass);
+    --#{$table}--m-sticky-footer--BorderRadius: var(--#{$table}--m-sticky-footer--BorderRadius--glass);
   }
 }
 
@@ -340,7 +352,6 @@
         border-radius: var(--#{$table}--m-sticky-header--BorderRadius);
         box-shadow: var(--#{$table}--m-sticky-header--BoxShadow);
       }
-  
 
       .#{$table}__th::after {
         position: absolute;
@@ -392,25 +403,77 @@
   }
 
   // - Table sticky footer
-  &.pf-m-sticky-footer {
+  &.pf-m-sticky-footer-base > .#{$table}__tfoot,
+  &.pf-m-sticky-footer-base > .#{$table}__tfoot :is(.#{$table}__th, .#{$table}__td) {
+    &::after {
+      opacity: 0;
+      transition-timing-function: var(--#{$table}--m-sticky-footer--TransitionTimingFunction--BackgroundColor);
+      transition-duration: var(--#{$table}--m-sticky-footer--TransitionDuration--BackgroundColor);
+      transition-property: opacity;
+    }
+  }
+
+  &.pf-m-sticky-footer-stuck > .#{$table}__tfoot,
+  &.pf-m-sticky-footer-stuck > .#{$table}__tfoot :is(.#{$table}__th, .#{$table}__td) {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.pf-m-sticky-footer,
+  &.pf-m-sticky-footer-stuck {
+    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
+      border-block-end-color: transparent;
+    }
+  }
+
+  &.pf-m-sticky-footer,
+  &.pf-m-sticky-footer-base {
     > .#{$table}__tfoot {
       position: sticky;
       inset-block-end: 0;
       z-index: var(--#{$table}--m-sticky-footer--ZIndex);
-      background: var(--#{$table}--BackgroundColor);
+      background: transparent;
 
-      &::before {
+      &::after {
         position: absolute;
         inset: 0;
-        z-index: var(--#{$table}--m-sticky-footer--border--ZIndex);
+        z-index: -1;
         pointer-events: none;
-        content: "";
-        border-block-start: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+        content: '';
+        border-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
+        box-shadow: var(--#{$table}--m-sticky-footer--BoxShadow);
       }
-    }
 
-    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
-      border-block-end: 0;
+      > .#{$table}__tr > :is(th, td) {
+        z-index: var(--#{$table}--m-sticky-footer--cell--ZIndex);
+      }
+
+      :is(.#{$table}__th, .#{$table}__td)::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: '';
+        background: var(--#{$table}--m-sticky-footer--BackgroundColor);
+        border-block-start: var(--#{$table}--m-sticky-footer--BorderBlockStartWidth) solid var(--#{$table}--m-sticky-footer--BorderBlockStartColor);
+      }
+
+      > .#{$table}__tr:first-child > :is(.#{$table}__th, .#{$table}__td):first-child::after {
+        border-start-start-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
+      }
+
+      > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):first-child::after {
+        border-end-start-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
+      }
+
+      > .#{$table}__tr:first-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
+        border-start-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
+      }
+
+      > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
+        border-end-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
+      }
     }
   }
 
