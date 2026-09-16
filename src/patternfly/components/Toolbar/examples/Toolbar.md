@@ -1034,12 +1034,12 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
-| `.pf-m-container` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` breakpoint. |
-| `.pf-m-container-sm` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `sm` breakpoint. |
-| `.pf-m-container-md` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `md` breakpoint. |
-| `.pf-m-container-lg` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` breakpoint. |
-| `.pf-m-container-xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `xl` breakpoint |
-| `.pf-m-container-2xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `2xl` breakpoint |
+| `.pf-m-container` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
+| `.pf-m-container-sm` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `sm` container breakpoint (286px). |
+| `.pf-m-container-md` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `md` container breakpoint (478px). |
+| `.pf-m-container-lg` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
+| `.pf-m-container-xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `xl` container breakpoint (910px). |
+| `.pf-m-container-2xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `2xl` container breakpoint (1160px). |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |

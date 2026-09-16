@@ -3,6 +3,7 @@
 @use '../sass-utilities/scss-variables' as *;
 @use '../sass-utilities/namespaces-components' as *;
 @use 'sass:list';
+@use 'sass:map';
 @use 'sass:meta';
 
 // Media query used to create responsive classes
@@ -67,14 +68,17 @@
     @content;
   } @else {
     // Choose breakpoint map based on mode
-    $breakpoint-map: if($use-viewport-bp,
-      $pf-v6-global--breakpoint-name-map,
-      $pf-v6-global--container-breakpoint-name-map
-    );
-    $breakpoint-value: map-get($breakpoint-map, $point);
+    $breakpoint-map: $pf-v6-global--container-breakpoint-name-map;
+
+    @if $use-viewport-bp {
+      $breakpoint-map: $pf-v6-global--breakpoint-name-map;
+    }
+
+    $breakpoint-value: map.get($breakpoint-map, $point);
 
     @if $breakpoint-value {
       @if $container-name {
+        // stylelint-disable-next-line container-name-pattern -- interpolated container name
         @container #{$container-name} (min-width: #{$breakpoint-value}) {
           @content;
         }
@@ -264,12 +268,14 @@
   // Generate either media queries OR container queries, never both
   @if $container-name {
     // Container query mode - choose breakpoint map based on mode
-    $breakpoint-map: if($use-viewport-bp,
-      $pf-v6-global--breakpoint-name-map,
-      $pf-v6-global--container-breakpoint-name-map
-    );
+    $breakpoint-map: $pf-v6-global--container-breakpoint-name-map;
+
+    @if $use-viewport-bp {
+      $breakpoint-map: $pf-v6-global--breakpoint-name-map;
+    }
 
     @each $size, $bp in $breakpoint-map {
+      // stylelint-disable-next-line container-name-pattern -- interpolated container name
       @container #{$container-name} (min-width: #{$bp}) {
         &.pf-m-hidden-on-#{$size} {
           --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
