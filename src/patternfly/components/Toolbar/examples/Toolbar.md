@@ -767,6 +767,253 @@ Visibility can be set per breakpoint to show or hide items and groups based on v
 {{/toolbar}}
 ```
 
+## Toolbar responsive to container queries
+
+To opt-in to using container queries instead of viewport based media queries with the toolbar, use the `.pf-m-container` modifier, or a sized variant `.pf-m-container-{sm, md, lg, xl, 2xl}`, to enable container-based responsive behavior. **The sizes are:** `sm (286px)`, `md (478px)`, `lg (702px)`, `xl (910px)`, and `2xl (1160px)`. `.pf-m-container` on its own defaults to the lg container size.
+
+<br/>
+
+The `.pf-m-container{-[size]}` classes do three things:
+1. The `.pf-m-hidden{-on-[bp]}` and `.pf-m-visible{-on-[bp]}` classes respond to the toolbar’s size instead of the window size.
+2. The `.pf-m-show{-on-[bp]}` class on a toggle group to either show a filter toggle, or the items/groups in the toggle group, responds to the toolbar’s size instead of the window size.
+3. The “expandable content” shown when a toggle group is expanded displays as an overlay below the specified breakpoint in the class name, and inline with the page content above the specified breakpoint.
+
+### Hidden/visible items and groups
+
+Use `.pf-m-hidden{-on-[breakpoint]}` and `.pf-m-visible{-on-[breakpoint]}` on items and groups. With `.pf-m-container`, these modifiers respond to the toolbar's width rather than the viewport.
+
+_Debugging note: XL and 2XL can't trigger when confined by the content area (view in full screen)_
+
+```hbs isBeta
+<div class="ws-core-resizeable-container">
+  {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-container-example"}}
+    {{#> toolbar-content}}
+      {{#> toolbar-content-section}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+          {{#> toolbar-item}}
+            Hide group on xl
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Hide group on xl
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+          Hide on xl
+        {{/toolbar-item}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+          Show on lg
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-content-section}}
+    {{/toolbar-content}}
+  {{/toolbar}}
+</div>
+```
+
+### Comparing media query vs container query behavior
+
+This example demonstrates the key difference between media query-based and container query-based responsive behavior. Both toolbars have identical content and use the same visibility modifiers, but they respond to different size constraints. The media query toolbar responds to viewport width, while the container query toolbar (with `.pf-m-container` modifier) creates its own container context and responds to the toolbar element's width. Container query breakpoints use the same names as other PatternFly components, at the container widths listed above.
+
+```hbs isBeta
+<div style="display: flex; gap: 1rem; flex-direction: column;">
+  <div>
+    <h4>Media query</h4>
+    <div class="ws-core-resizeable-container">
+      {{#> toolbar toolbar--id="toolbar-compare-media-example"}}
+        {{#> toolbar-content}}
+          {{#> toolbar-content-section}}
+            {{#> toolbar-item}}
+              Item
+            {{/toolbar-item}}
+            {{#> toolbar-item}}
+              Item
+            {{/toolbar-item}}
+            {{#> toolbar-item}}
+              Item
+            {{/toolbar-item}}
+            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+              {{#> toolbar-item}}
+                Hide group on xl
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Hide group on xl
+              {{/toolbar-item}}
+            {{/toolbar-group}}
+            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+              {{#> toolbar-item}}
+                Show group on lg
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Show group on lg
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Show group on lg
+              {{/toolbar-item}}
+            {{/toolbar-group}}
+            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+              Hide on xl
+            {{/toolbar-item}}
+            {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+              Show on lg
+            {{/toolbar-item}}
+            {{#> toolbar-item}}
+              Item
+            {{/toolbar-item}}
+          {{/toolbar-content-section}}
+        {{/toolbar-content}}
+      {{/toolbar}}
+    </div>
+  </div>
+
+  <div>
+    <h4>Container query</h4>
+    <div style="display:flex;">
+      <div class="ws-core-resizeable-container">
+        {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-compare-container-example"}}
+          {{#> toolbar-content}}
+            {{#> toolbar-content-section}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+                {{#> toolbar-item}}
+                  Hide group on xl
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  Hide group on xl
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+                {{#> toolbar-item}}
+                  Show group on lg
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  Show group on lg
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  Show group on lg
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+              {{> divider divider--modifier="pf-m-vertical"}}
+              {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+                Hide on xl
+              {{/toolbar-item}}
+              {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+                Show on lg
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                Item
+              {{/toolbar-item}}
+            {{/toolbar-content-section}}
+          {{/toolbar-content}}
+        {{/toolbar}}
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Toggle group visibility
+
+Use `.pf-m-show-on-[breakpoint]` on a toggle group so filters appear and the toggle hides when the toolbar reaches that container width. Resize below `lg` (702px) to show the toggle, and above `lg` to show the filters.
+
+```hbs isBeta
+<div class="ws-core-resizeable-container">
+  {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-container-toggle-group"}}
+    {{#> toolbar-content}}
+      {{#> toolbar-content-section}}
+        {{> toolbar-toggle-group toolbar-toggle-group--ShowOn="lg"}}
+      {{/toolbar-content-section}}
+      {{#> toolbar-expandable-content}}
+        {{> toolbar-toggle-group}}
+      {{/toolbar-expandable-content}}
+    {{/toolbar-content}}
+  {{/toolbar}}
+</div>
+```
+
+### Expanded content display
+
+Expanded content with `.pf-m-container-{size}` switches from an overlay to an inline layout at the chosen container breakpoint. Resize each example between the `md` (478px) and `lg` (702px) widths to see when expandable content becomes inline.
+
+```hbs isBeta
+<div style="display: flex; gap: 1rem; flex-direction: column;">
+  <div>
+    <h4>Container md (478px breakpoint)</h4>
+    <div class="ws-core-resizeable-container ws-core-resizeable-container-expanded">
+      {{#> toolbar toolbar--modifier="pf-m-container-md" toolbar--id="toolbar-container-md" toolbar-expandable-content--IsExpanded=true}}
+        {{#> toolbar-content}}
+          {{#> toolbar-content-section}}
+            {{> toolbar-toggle-group}}
+          {{/toolbar-content-section}}
+          {{#> toolbar-expandable-content}}
+            {{> toolbar-group-search}}
+            {{> toolbar-group-filter}}
+            {{> toolbar-group-label-group}}
+            {{> toolbar-group-action-inline}}
+          {{/toolbar-expandable-content}}
+        {{/toolbar-content}}
+      {{/toolbar}}
+    </div>
+  </div>
+
+  <div>
+    <h4>Container lg (702px breakpoint - default)</h4>
+    <div class="ws-core-resizeable-container ws-core-resizeable-container-expanded">
+      {{#> toolbar toolbar--modifier="pf-m-container-lg" toolbar--id="toolbar-container-lg" toolbar-expandable-content--IsExpanded=true}}
+        {{#> toolbar-content}}
+          {{#> toolbar-content-section}}
+            {{> toolbar-toggle-group}}
+          {{/toolbar-content-section}}
+          {{#> toolbar-expandable-content}}
+            {{> toolbar-group-search}}
+            {{> toolbar-group-filter}}
+            {{> toolbar-group-label-group}}
+            {{> toolbar-group-action-inline}}
+          {{/toolbar-expandable-content}}
+        {{/toolbar-content}}
+      {{/toolbar}}
+    </div>
+  </div>
+</div>
+```
+
 ## Documentation
 
 ### Overview
@@ -792,6 +1039,12 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
+| `.pf-m-container` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
+| `.pf-m-container-sm` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `sm` container breakpoint (286px). |
+| `.pf-m-container-md` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `md` container breakpoint (478px). |
+| `.pf-m-container-lg` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
+| `.pf-m-container-xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `xl` container breakpoint (910px). |
+| `.pf-m-container-2xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `2xl` container breakpoint (1160px). |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
