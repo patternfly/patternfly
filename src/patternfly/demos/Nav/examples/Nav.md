@@ -50,7 +50,7 @@ section: components
 }}
 ```
 
-### Docked nav - expanded on mobile
+### Docked nav - expanded
 ```hbs isFullscreen isBeta
 {{> page-template page-template--id="nav-docked-expanded-example"
       masthead-template--HasDockedNav=true
@@ -58,22 +58,6 @@ section: components
 }}
 ```
 
-### Docked nav text expanded
-```hbs isFullscreen isBeta
-{{> page-template page-template--id="nav-docked-example"
-      masthead-template--HasDockedNav=true
-      page-dock--IsTextExpanded=true
-}}
-```
-
-### Docked nav text expanded - expanded on mobile
-```hbs isFullscreen isBeta
-{{> page-template page-template--id="nav-docked-expanded-example"
-      masthead-template--HasDockedNav=true
-      page-dock--IsExpanded=true
-      page-dock--IsTextExpanded=true
-}}
-```
 ### Docked nav with expandable link
 ```hbs isFullscreen isBeta
 {{> page-template page-template--id="nav-docked-expandable-link-example"
@@ -82,21 +66,22 @@ section: components
 }}
 ```
 
-### Docked nav with expandable link expanded
+### Docked nav with expandable link - overlay
 ```hbs isFullscreen isBeta
-{{> page-template page-template--id="nav-docked-expandable-link-expanded-example"
+{{> page-template page-template--id="nav-docked-expandable-link-overlay-example"
       masthead-template--HasDockedNav=true
-      page-dock--IsExpandableExpanded=true
+      page-dock--IsExpanded=true
+      page-dock--IsOverlay=true
       masthead-template--HasExpandableDockedNav=true
       masthead-template--IsExpandableItemExpanded=true
 }}
 ```
 
-### Docked nav with expandable link text expanded
+### Docked nav with expandable link - expanded
 ```hbs isFullscreen isBeta
-{{> page-template page-template--id="nav-docked-expandable-link-text-expanded-example"
+{{> page-template page-template--id="nav-docked-expandable-link-expanded-example"
       masthead-template--HasDockedNav=true
-      page-dock--IsTextExpanded=true
+      page-dock--IsExpanded=true
       masthead-template--HasExpandableDockedNav=true
       masthead-template--IsExpandableItemExpanded=true
 }}

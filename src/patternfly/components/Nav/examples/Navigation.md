@@ -560,7 +560,7 @@ import './Navigation.css'
 ```
 
 ### Docked nav
-The docked nav opens and closes when `.pf-m-text-expanded` or `.pf-m-expandable-expanded` are applied to a [page](/components/page#usage) or [compass](/components/compass#usage) dock.
+The docked nav opens and closes inline when `.pf-m-expanded` is applied and changes to an overlay when `.pf-m-overlay` is applied to a [page](/components/page#usage) or [compass](/components/compass#usage) dock.
 
 ```hbs isBeta
 {{#> nav nav--IsDocked=true nav--attribute='aria-label="Global"'}}

@@ -226,8 +226,8 @@
       }
     }
 
-    @at-root :is(.#{$page}__dock, .#{$compass}__dock):is(.pf-m-text-expanded, .pf-m-expandable-expanded) &, 
-    &:is(.pf-m-text-expanded, .pf-m-expandable-expanded) {
+    @at-root :is(.#{$page}__dock, .#{$compass}__dock):where(.pf-m-expanded, .pf-m-overlay) &,
+    &:where(.pf-m-expanded, .pf-m-overlay) {
       width: 100%;
 
       .#{$nav}__link-text, .#{$nav}__toggle, .#{$nav}__subnav {
@@ -345,7 +345,7 @@
     }
   }
 
-  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-text-expanded, .pf-m-expandable-expanded) .pf-m-docked &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-expanded) .pf-m-docked &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
   &:has(> .#{$nav}__link.pf-m-current) {
     --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
@@ -411,7 +411,7 @@
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 
-  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-text-expanded, .pf-m-expandable-expanded) .#{$nav}__item:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link,
+  @at-root :is(.#{$page}__dock, .#{$compass}__dock):not(.pf-m-expanded) .#{$nav}__item:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link,
   &.pf-m-current,
   &.pf-m-current:hover {
     --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);

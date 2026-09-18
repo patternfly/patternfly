@@ -106,9 +106,8 @@ In a basic Compass layout, the page structure is defined by the order of element
 | `.pf-v6-c-compass__footer` | `<div>` | Initiates the Compass footer. |
 | `.pf-v6-c-compass__message-bar` | `<div>` | Initiates the Compass message bar. |
 | `.pf-m-docked` | `.pf-v6-c-compass` | Modifies for dock layout. |
-| `.pf-m-expanded` | `.pf-v6-c-compass__dock` | Expands the dock as an overlay. On desktop, the dock returns to its collapsed, icon-only state. |
-| `.pf-m-expandable-expanded` | `.pf-v6-c-compass__dock` | Expands the dock as an overlay on desktop instead of collapsing to an icon-only rail. Used when an expandable nav item opens a subnav overlay. |
-| `.pf-m-text-expanded` | `.pf-v6-c-compass__dock` | Expands the dock so nav items show icon and text labels and reveals the masthead logo. |
+| `.pf-m-expanded` | `.pf-v6-c-compass__dock` | Expands the docked nav inline, and reveals the masthead logo. On smaller viewports, expands the dock as an overlay. |
+| `.pf-m-overlay` | `.pf-v6-c-compass__dock` | Alters the `.pf-m-expanded` to an overlay on desktop. Used when an expandable nav item is opened. |
 | `.pf-m-no-screen-warning` | `.pf-v6-c-compass` | Disables the screen warning that shows on smaller viewports. |
 | `.pf-m-start` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for start styles. **Required** |
 | `.pf-m-end` | `.pf-v6-c-compass__sidebar` | Modifies a Compass sidebar for end styles. **Required** |
