@@ -89,3 +89,7 @@
   resize: horizontal;
   border: var(--pf-t--global--border--width--extra-strong) dashed var(--pf-t--global--border--color--default);
 }
+
+.ws-core-resizeable-container.ws-core-resizeable-container-expanded {
+  min-height: 21rem;
+}

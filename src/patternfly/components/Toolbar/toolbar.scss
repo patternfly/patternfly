@@ -114,6 +114,18 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   --#{$toolbar}__group--m-action-group-inline--ColumnGap: var(--pf-t--global--spacer--gap--action-to-action--default);
 }
 
+@mixin pf-v6-toolbar-toggle-group-show {
+  .#{$toolbar}__group,
+  .#{$toolbar}__item {
+    display: flex;
+    flex: 0 1 auto;
+  }
+
+  .#{$toolbar}__toggle {
+    display: none;
+  }
+}
+
 // - Toolbar content section - Toolbar group - Toolbar item
 // Exclude toolbars with container modifier, as they use container queries instead
 .#{$toolbar}:where(:not([class*="pf-m-container"])) .#{$toolbar}__content-section,
@@ -552,15 +564,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     .#{$toolbar}:where(:not([class*="pf-m-container"])) {
       .#{$toolbar}__group:where(.pf-m-toggle-group) {
         &.pf-m-show#{$breakpoint-name} {
-          .#{$toolbar}__group,
-          .#{$toolbar}__item {
-            display: flex;
-            flex: 0 1 auto;
-          }
-    
-          .#{$toolbar}__toggle {
-            display: none;
-          }
+          @include pf-v6-toolbar-toggle-group-show;
         }
     
         &, // default value
@@ -583,23 +587,21 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 // Container query responsive behavior
 // stylelint-disable max-nesting-depth
 .#{$toolbar}__group:where(.pf-m-toggle-group) {
+  // Handle bare .pf-m-show
+  @at-root .#{$toolbar}:where([class*="pf-m-container"]) & {
+    &.pf-m-show {
+      @include pf-v6-toolbar-toggle-group-show;
+    }
+  }
+
   @each $breakpoint, $breakpoint-value in $pf-v6-c-toolbar--breakpoint-map {
     @if $breakpoint != "base" {
       $breakpoint-name: -on-#{$breakpoint};
 
-      @at-root .#{$toolbar}:where(.pf-m-container) &,
-      .#{$toolbar}:where(.pf-m-container-#{$breakpoint}) & {
+      @at-root .#{$toolbar}:where([class*="pf-m-container"]) & {
         @include pf-v6-container-query($breakpoint, "pf-v6-contain-toolbar") {
           &.pf-m-show#{$breakpoint-name} {
-            .#{$toolbar}__group,
-            .#{$toolbar}__item {
-              display: flex;
-              flex: 0 1 auto;
-            }
-
-            .#{$toolbar}__toggle {
-              display: none;
-            }
+            @include pf-v6-toolbar-toggle-group-show;
           }
         }
       }
