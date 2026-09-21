@@ -769,14 +769,14 @@ Visibility can be set per breakpoint to show or hide items and groups based on v
 
 ## Toolbar responsive to container queries
 
-To opt-in to using container queries instead of viewport based media queries with the toolbar, use the `.pf-m-container` modifier, or a sized variant `.pf-m-container-{sm, md, lg, xl, 2xl}`, to enable container-based responsive behavior. **The sizes are:** `sm (286px)`, `md (478px)`, `lg (702px)`, `xl (910px)`, and `2xl (1160px)`. `.pf-m-container` on its own defaults to the lg container size.
+To opt-in to using container queries instead of viewport based media queries with the toolbar, use the `.pf-m-container` modifier to enable container-based responsive behavior. Visibility and toggle group modifiers still use the named container breakpoints (`sm`, `md`, `lg`, `xl`, `2xl`).
 
 <br/>
 
-The `.pf-m-container{-[size]}` classes do three things:
+The `.pf-m-container` class does three things:
 1. The `.pf-m-hidden{-on-[bp]}` and `.pf-m-visible{-on-[bp]}` classes respond to the toolbar’s size instead of the window size.
 2. The `.pf-m-show{-on-[bp]}` class on a toggle group to either show a filter toggle, or the items/groups in the toggle group, responds to the toolbar’s size instead of the window size.
-3. The “expandable content” shown when a toggle group is expanded displays as an overlay below the specified breakpoint in the class name, and inline with the page content above the specified breakpoint.
+3. The “expandable content” shown when a toggle group is expanded displays as an overlay below the `lg` container breakpoint, and inline with the page content above that breakpoint.
 
 ### Hidden/visible items and groups
 
@@ -837,7 +837,7 @@ _Debugging note: XL and 2XL can't trigger when confined by the content area (vie
 
 ### Comparing media query vs container query behavior
 
-This example demonstrates the key difference between media query-based and container query-based responsive behavior. Both toolbars have identical content and use the same visibility modifiers, but they respond to different size constraints. The media query toolbar responds to viewport width, while the container query toolbar (with `.pf-m-container` modifier) creates its own container context and responds to the toolbar element's width. Container query breakpoints use the same names as other PatternFly components, at the container widths listed above.
+This example demonstrates the key difference between media query-based and container query-based responsive behavior. Both toolbars have identical content and use the same visibility modifiers, but they respond to different size constraints. The media query toolbar responds to viewport width, while the container query toolbar (with `.pf-m-container` modifier) creates its own container context and responds to the toolbar element's width. Container query breakpoints use the same names as other PatternFly components (`sm`, `md`, `lg`, `xl`, `2xl`).
 
 ```hbs isBeta
 <div style="display: flex; gap: 1rem; flex-direction: column;">
@@ -970,47 +970,23 @@ Use `.pf-m-show-on-[breakpoint]` on a toggle group so filters appear and the tog
 
 ### Expanded content display
 
-Expanded content with `.pf-m-container-{size}` switches from an overlay to an inline layout at the chosen container breakpoint. Resize each example between the `md` (478px) and `lg` (702px) widths to see when expandable content becomes inline.
+Expanded content with `.pf-m-container` switches from an overlay to an inline layout at the `lg (702px)` container breakpoint.
 
 ```hbs isBeta
-<div style="display: flex; gap: 1rem; flex-direction: column;">
-  <div>
-    <h4>Container md (478px breakpoint)</h4>
-    <div class="ws-core-resizeable-container ws-core-resizeable-container-expanded">
-      {{#> toolbar toolbar--modifier="pf-m-container-md" toolbar--id="toolbar-container-md" toolbar-expandable-content--IsExpanded=true}}
-        {{#> toolbar-content}}
-          {{#> toolbar-content-section}}
-            {{> toolbar-toggle-group}}
-          {{/toolbar-content-section}}
-          {{#> toolbar-expandable-content}}
-            {{> toolbar-group-search}}
-            {{> toolbar-group-filter}}
-            {{> toolbar-group-label-group}}
-            {{> toolbar-group-action-inline}}
-          {{/toolbar-expandable-content}}
-        {{/toolbar-content}}
-      {{/toolbar}}
-    </div>
-  </div>
-
-  <div>
-    <h4>Container lg (702px breakpoint - default)</h4>
-    <div class="ws-core-resizeable-container ws-core-resizeable-container-expanded">
-      {{#> toolbar toolbar--modifier="pf-m-container-lg" toolbar--id="toolbar-container-lg" toolbar-expandable-content--IsExpanded=true}}
-        {{#> toolbar-content}}
-          {{#> toolbar-content-section}}
-            {{> toolbar-toggle-group}}
-          {{/toolbar-content-section}}
-          {{#> toolbar-expandable-content}}
-            {{> toolbar-group-search}}
-            {{> toolbar-group-filter}}
-            {{> toolbar-group-label-group}}
-            {{> toolbar-group-action-inline}}
-          {{/toolbar-expandable-content}}
-        {{/toolbar-content}}
-      {{/toolbar}}
-    </div>
-  </div>
+<div class="ws-core-resizeable-container ws-core-resizeable-container-expanded">
+  {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-container-expanded" toolbar-expandable-content--IsExpanded=true}}
+    {{#> toolbar-content}}
+      {{#> toolbar-content-section}}
+        {{> toolbar-toggle-group}}
+      {{/toolbar-content-section}}
+      {{#> toolbar-expandable-content}}
+        {{> toolbar-group-search}}
+        {{> toolbar-group-filter}}
+        {{> toolbar-group-label-group}}
+        {{> toolbar-group-action-inline}}
+      {{/toolbar-expandable-content}}
+    {{/toolbar-content}}
+  {{/toolbar}}
 </div>
 ```
 
@@ -1040,11 +1016,6 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
 | `.pf-m-container` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
-| `.pf-m-container-sm` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `sm` container breakpoint (286px). |
-| `.pf-m-container-md` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `md` container breakpoint (478px). |
-| `.pf-m-container-lg` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
-| `.pf-m-container-xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `xl` container breakpoint (910px). |
-| `.pf-m-container-2xl` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `2xl` container breakpoint (1160px). |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
