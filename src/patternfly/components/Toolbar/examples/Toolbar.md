@@ -30,8 +30,8 @@ Toolbar relies on groups (`.pf-v6-c-toolbar__group`) and items (`.pf-v6-c-toolba
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-[hidden/visible]` | `.pf-v6-c-toolbar > *` | Modifies toolbar element to be hidden/visible. |
-| `.pf-m-[hidden/visible]{-on-[breakpoint]}` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option breakpoint. |
-| `.pf-m-[hidden/visible]{-on-[breakpoint]}-height` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option height breakpoint. Primarily for use with vertical toolbars. |
+| `.pf-m-[hidden/visible]{-on-[breakpoint]}` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option breakpoint. |
+| `.pf-m-[hidden/visible]{-on-[breakpoint]}-height` | `.pf-v6-c-toolbar__content`, `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar elements to be hidden/visible on an option height breakpoint. Primarily for use with vertical toolbars. |
 | `.pf-m-flex-grow` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element to `flex-grow: 1`, allowing it to consume available main-axis space. |
 | `.pf-m-align-[start/end]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar [main axis](https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis) element alignment. |
 | `.pf-m-align-items-[stretch/baseline/start/center/end]` | `.pf-v6-c-toolbar__content-section`, `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item` | Modifies toolbar element [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis) child alignment. |
@@ -778,9 +778,9 @@ The `.pf-m-container` class does three things:
 2. The `.pf-m-show{-on-[bp]}` class on a toggle group to either show a filter toggle, or the items/groups in the toggle group, responds to the toolbar’s size instead of the window size.
 3. The “expandable content” shown when a toggle group is expanded displays as an overlay below the `lg` container breakpoint, and inline with the page content above that breakpoint.
 
-### Hidden/visible items and groups
+### Hidden/visible content, items and groups
 
-Use `.pf-m-hidden{-on-[breakpoint]}` and `.pf-m-visible{-on-[breakpoint]}` on items and groups. With `.pf-m-container`, these modifiers respond to the toolbar's width rather than the viewport.
+Use `.pf-m-hidden{-on-[breakpoint]}` and `.pf-m-visible{-on-[breakpoint]}` on content, items, and groups. With `.pf-m-container`, these modifiers respond to the toolbar's width rather than the viewport.
 
 _Debugging note: XL and 2XL can't trigger when confined by the content area (view in full screen)_
 

@@ -134,6 +134,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   @include pf-v6-hidden-visible(flex, $ifIncludeHeight: true);
 }
 
+.#{$toolbar}:where(:not(.pf-m-container)) .#{$toolbar}__content {
+  @include pf-v6-hidden-visible(grid, $ifIncludeHeight: true);
+}
+
 // - Toolbar - Toolbar content
 .#{$toolbar},
 .#{$toolbar}__content {
@@ -142,8 +146,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar content - Toolbar content section - Toolbar expandable content
 .#{$toolbar}__content {
-  @include pf-v6-hidden-visible(grid, $ifIncludeHeight: true);
-
   row-gap: var(--#{$toolbar}__content--RowGap);
   padding-inline-start: var(--#{$toolbar}__content--PaddingInlineStart);
   padding-inline-end: var(--#{$toolbar}__content--PaddingInlineEnd);
@@ -284,6 +286,10 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     }
 
     // Override visibility modifiers to use container queries instead of media queries
+    .#{$toolbar}__content {
+      @include pf-v6-hidden-visible(grid, $container-name: 'pf-v6-contain-toolbar');
+    }
+
     .#{$toolbar}__content-section,
     .#{$toolbar}__group,
     .#{$toolbar}__item {
