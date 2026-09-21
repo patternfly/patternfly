@@ -336,7 +336,7 @@ Several components in the following examples do not include functional and/or ac
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element visibility (hide is media query support only). |
+| `.pf-m-[show/hide][-on-[sm/md/lg/xl/2xl]]` | `.pf-v6-c-toolbar__group`, `.pf-v6-c-toolbar__item`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element visibility (hide is media-query only). |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content`, `.pf-v6-c-toolbar__toggle` | Modifies the component for the expanded state. |
 
 ### Selected
@@ -1015,7 +1015,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
-| `.pf-m-container` | `.pf-v6-c-toolbar` | Creates a component-level container that responds to the toolbar's width at the `lg` container breakpoint (702px). |
+| `.pf-m-container` | `.pf-v6-c-toolbar` | Enables container queries so visibility and toggle-group modifiers respond to the toolbar's width. Expandable content switches from overlay to inline at the `lg` container breakpoint (702px). |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
@@ -1048,7 +1048,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-toggle-group` | `.pf-v6-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
-| `.pf-m-[show/hide]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element to hidden (hide is media query support only). |
+| `.pf-m-[show/hide]` | `.pf-v6-c-toolbar__group.pf-m-toggle-group`, `.pf-v6-c-toolbar__expandable-content` | Modifies toolbar element to hidden (hide is media-query only). |
 
 ### Spacer system
 
