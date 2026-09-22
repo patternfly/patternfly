@@ -403,7 +403,7 @@
   // explicitly set background-color prop to avoid affecting child elements settings
   &:hover,
   &.pf-m-hover,
-  &:focus {
+  &:focus-visible {
     --#{$nav}__link--BorderWidth: var(--#{$nav}__link--hover--BorderWidth);
     --#{$nav}__link-icon--Color: var(--#{$nav}__link-icon--hover--Color);
 
