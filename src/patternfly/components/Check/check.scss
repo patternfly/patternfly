@@ -34,17 +34,23 @@
   accent-color: var(--#{$check}--AccentColor);
 
   &.pf-m-standalone {
-    position: relative;
     display: inline-grid;
     grid-template-columns: auto;
     min-height: var(--#{$check}--m-standalone--MinHeight);
 
-    &::before {
-      position: absolute;
-      inset: var(--#{$check}--m-standalone--before--Inset);
-      pointer-events: auto;
-      cursor: inherit;
-      content: '';
+    // extends the click area when used with <label>
+    @at-root label#{&} {
+      position: relative;
+      isolation: isolate;
+
+      &::before {
+        position: absolute;
+        inset: var(--#{$check}--m-standalone--before--Inset);
+        z-index: -1; // don't overlay/block the input
+        pointer-events: auto;
+        cursor: inherit;
+        content: '';
+      }
     }
 
     .#{$check}__input {
