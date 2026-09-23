@@ -507,7 +507,8 @@
 
 // - Nav horizontal
 .#{$nav}:where(.pf-m-horizontal) {
-  --#{$nav}__item--accent--content: none;
+  --#{$nav}__item--accent--content: "";
+  --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
 
   padding: 0;
   overflow: hidden;
@@ -538,6 +539,16 @@
 
   .#{$nav}__link {
     outline-offset: var(--#{$nav}--OutlineOffset);
+  }
+
+  .#{$nav}__item::before {
+    inset-block-start: auto;
+    inset-block-end: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockEnd) * -1);
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    z-index: 1;
+    width: auto;
+    height: var(--#{$nav}__item--accent--size);
   }
 
   // - Nav subnav
