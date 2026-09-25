@@ -60,14 +60,14 @@ _Debugging note: `xl` and `2xl` may not trigger when the content area is narrowe
   {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-as-container-example"}}
     {{#> toolbar-content}}
       {{#> toolbar-content-section}}
-        {{#> toolbar-item}}
-          Item
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-md"}}
+          Hide on md
         {{/toolbar-item}}
         {{#> toolbar-item}}
           Item
         {{/toolbar-item}}
-        {{#> toolbar-item}}
-          Item
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-show-on-sm"}}
+          Show on sm
         {{/toolbar-item}}
         {{> divider divider--modifier="pf-m-vertical"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
