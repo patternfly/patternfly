@@ -157,24 +157,24 @@
   }
 
   // Docked masthead hamburger
-  .#{$compass}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+  .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
     @include pf-v6-hamburger($collapse: true);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     // desktop - reset dock internal toggle to bars
-    .#{$compass}__dock:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
-    .#{$compass}__dock.pf-m-expanded:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+    .#{$compass}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
       @include pf-v6-hamburger($reset: true);
     }
 
     // desktop - show expand arrow on hover
-    .#{$compass}__dock:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    .#{$compass}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger;
     }
 
-    // desktop - show collapse arrow on hover when text expanded
-    .#{$compass}__dock.pf-m-text-expanded:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    // desktop - show collapse arrow on hover when expanded
+    .#{$compass}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger($collapse: true);
     }
   }
@@ -332,17 +332,8 @@
   translate: -100% 0;
   transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
 
-  &.pf-m-expanded,
-  &.pf-m-expandable-expanded {
-    --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
-
-    visibility: visible;
-    translate: 0;
-    transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s 0s;
-  }
-
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    &:not(.pf-m-expandable-expanded) {
+    &:not(.pf-m-overlay) {
       --#{$compass}__dock-main--BackgroundColor: var(--#{$compass}__dock-main--desktop--BackgroundColor);
       --#{$compass}__dock-main--BorderInlineEndColor: var(--#{$compass}__dock-main--desktop--BorderInlineEndColor);
 
@@ -358,8 +349,13 @@
     align-items: stretch;
   }
 
-  &.pf-m-text-expanded {
+  &.pf-m-expanded {
+    --#{$compass}__dock--TransitionDuration--slide: var(--#{$compass}__dock--m-expanded--TransitionDuration--slide);
+
+    visibility: visible;
     width: var(--#{$compass}__dock--Width);
+    translate: 0;
+    transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s 0s;
   }
 }
 
@@ -370,13 +366,13 @@
   box-shadow: var(--#{$compass}__dock-main--BoxShadow);
   backdrop-filter: var(--#{$compass}__dock-main--BackdropFilter);
 
-  .#{$compass}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded) & {
+  .#{$compass}__dock.pf-m-expanded & {
     border-inline-end: var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor);
     box-shadow: var(--#{$compass}__dock--m-expanded__dock-main--BoxShadow);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    .#{$compass}__dock:not(.pf-m-expandable-expanded) & {
+    .#{$compass}__dock:not(.pf-m-overlay) & {
       --#{$compass}__dock-main--BoxShadow: var(--#{$compass}__dock-main--desktop--BoxShadow);
       --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--#{$compass}__dock-main--desktop--BoxShadow);
       --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--#{$compass}__dock-main--BorderInlineEndWidth);

@@ -403,24 +403,24 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Dock hamburger menu animation
   // mobile - show collapse arrow on dock internal toggle when expanded
-  .#{$page}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+  .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
     @include pf-v6-hamburger($collapse: true);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     // desktop - reset dock internal toggle to bars
-    .#{$page}__dock:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
-    .#{$page}__dock.pf-m-expanded:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
+    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger,
+    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger {
       @include pf-v6-hamburger($reset: true);
     }
 
     // desktop - show expand arrow on hover
-    .#{$page}__dock:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    .#{$page}__dock .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger;
     }
 
-    // desktop - show collapse arrow on hover when text expanded
-    .#{$page}__dock.pf-m-text-expanded:not(.pf-m-expandable-expanded) .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
+    // desktop - show collapse arrow on hover when expanded
+    .#{$page}__dock.pf-m-expanded .#{$masthead}__toggle .#{$button}.pf-m-hamburger:is(:hover, :focus-visible) {
       @include pf-v6-hamburger($collapse: true);
     }
   }
@@ -504,19 +504,8 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     $rtl-val: 100% 0
   );
 
-  &.pf-m-expanded,
-  &.pf-m-expandable-expanded {
-    --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
-
-    visibility: visible;
-    translate: 0;
-    transition:
-      translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
-      visibility 0s 0s;
-  }
-
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    &:not(.pf-m-expandable-expanded) {
+    &:not(.pf-m-overlay) {
       position: revert;
       inset: revert;
       visibility: revert;
@@ -529,8 +518,15 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     align-items: stretch;
   }
 
-  &.pf-m-text-expanded {
+  &.pf-m-expanded {
+    --#{$page}__dock--TransitionDuration--slide: var(--#{$page}__dock--m-expanded--TransitionDuration--slide);
+
+    visibility: visible;
     width: var(--#{$page}__dock--Width);
+    translate: 0;
+    transition:
+      translate var(--#{$page}__dock--TransitionDuration--slide) var(--#{$page}__dock--TransitionTimingFunction--slide),
+      visibility 0s 0s;
   }
 }
 
@@ -541,13 +537,13 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   box-shadow: var(--#{$page}__dock-main--BoxShadow);
   backdrop-filter: var(--#{$page}__dock-main--BackdropFilter);
 
-  .#{$page}__dock:is(.pf-m-expanded, .pf-m-expandable-expanded) & {
+  .#{$page}__dock.pf-m-expanded & {
     border-inline-end: var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndWidth) solid var(--#{$page}__dock--m-expanded__dock-main--BorderInlineEndColor);
     box-shadow: var(--#{$page}__dock--m-expanded__dock-main--BoxShadow);
   }
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
-    .#{$page}__dock:not(.pf-m-expandable-expanded) & {
+    .#{$page}__dock:not(.pf-m-overlay) & {
       --#{$page}__dock-main--BorderInlineEndWidth: var(--#{$page}__dock-main--desktop--BorderInlineEndWidth);
       --#{$page}__dock-main--BackgroundColor: var(--#{$page}__dock-main--desktop--BackgroundColor);
       --#{$page}__dock-main--BorderInlineEndColor: var(--#{$page}__dock-main--desktop--BorderInlineEndColor);
