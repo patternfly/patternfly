@@ -47,7 +47,7 @@ Several components in the following examples do not include functional and/or ac
 
 Toolbar width-based responsive modifiers use `@container` queries with the global PatternFly breakpoints.
 
-By default, `pf-v6-contain-toolbar` is established on :root, so the breakpoints behave like viewport breakpoints. To make a toolbar respond to its own available width, add `.pf-m-container` to the toolbar. *Note:* If a wrapping element creates an inline-size or size container with the container name `pf-v6-contain-toolbar`, the breakpoints will apply to the container's width.
+By default, the container `pf-v6-contain-toolbar` is established on `:root`, so the breakpoints behave like viewport breakpoints. To make a toolbar respond to its own available width, add `.pf-m-container` to the toolbar. Note: Alternatively, if a wrapping element creates an `inline-size` or `size` container with the container name `pf-v6-contain-toolbar`, the breakpoints will apply to that container's width instead.
 
 ### Toolbar as container
 
