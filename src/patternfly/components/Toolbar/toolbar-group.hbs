@@ -2,7 +2,7 @@
 
   <div class="{{pfv}}toolbar__group
     {{#if toolbar-toggle-group--IsShown}}
-      pf-m-show{{ternary toolbar-toggle-group--ShowOn (dasherize 'on' toolbar-toggle-group--ShowOn) null}}
+      pf-m-show{{ternary toolbar-toggle-group--ShowOn (concat '-on-' toolbar-toggle-group--ShowOn) null}}
     {{/if}}
     {{setModifiers
       toolbar-group--IsLabelGroupContainer='pf-m-label-group-container'
