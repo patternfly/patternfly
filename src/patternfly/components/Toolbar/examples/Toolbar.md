@@ -43,6 +43,69 @@ Several components in the following examples do not include functional and/or ac
 
 **Available [breakpoints](/foundations-and-styles/design-tokens/all-design-tokens) are: `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl`.**
 
+## Responsive toolbar behavior
+
+Toolbar width-based responsive modifiers use `@container` queries with the global PatternFly breakpoints.
+
+By default, the container `pf-v6-contain-toolbar` is established on `:root`, so the breakpoints behave like viewport breakpoints. To make a toolbar respond to its own available width, add `.pf-m-container` to the toolbar. Note: Alternatively, if a wrapping element creates an `inline-size` or `size` container with the container name `pf-v6-contain-toolbar`, the breakpoints will apply to that container's width instead.
+
+### Toolbar as container
+
+Add `.pf-m-container` to the toolbar so width-based modifiers respond to the toolbar's width. Resize the dashed box to see items and groups show and hide at the global breakpoints.
+
+_Debugging note: `xl` and `2xl` may not trigger when the content area is narrower than those breakpoints (view in full screen)._
+
+```hbs isBeta
+<div class="ws-core-resizeable-container">
+  {{#> toolbar toolbar--modifier="pf-m-container" toolbar--id="toolbar-as-container-example"}}
+    {{#> toolbar-content}}
+      {{#> toolbar-content-section}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-md"}}
+          Hide on md
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-show-on-sm"}}
+          Show on sm
+        {{/toolbar-item}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-hidden-on-xl"}}
+          {{#> toolbar-item}}
+            Hide group on xl
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Hide group on xl
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            Show group on lg
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+        {{> divider divider--modifier="pf-m-vertical"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+          Hide on xl
+        {{/toolbar-item}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+          Show on lg
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-content-section}}
+    {{/toolbar-content}}
+  {{/toolbar}}
+</div>
+```
+
 ## Examples
 
 ### Simple
@@ -792,6 +855,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-no-padding` | `.pf-v6-c-toolbar` | Modifies toolbar to have no padding. |
 | `.pf-m-no-background` | `.pf-v6-c-toolbar` | Modifies toolbar to have no background color. |
 | `.pf-m-vertical` | `.pf-v6-c-toolbar` | Modifies toolbar for a vertical layout. |
+| `.pf-m-container` | `.pf-v6-c-toolbar` | Initiates a named inline-size container so width-based breakpoint modifiers respond to the toolbar’s width. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-expanded` | `.pf-v6-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-action-group` | `.pf-v6-c-toolbar__group` | Initiates action group spacing. |
