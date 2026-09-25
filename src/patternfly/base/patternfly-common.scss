@@ -128,7 +128,7 @@
     --#{$pf-global}--thinking-active--Animation--Duration: 2s;
   }
 
-  container-name: #{$pf-prefix}contain-viewport #{$pf-prefix}contain-table;
+  container-name: #{$pf-prefix}contain-viewport #{$pf-prefix}contain-table #{$pf-prefix}contain-toolbar;
   container-type: inline-size;
 }
 

@@ -196,7 +196,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-v6-hidden-visible($val: "block", $ifIncludeHeight: false) {
+@mixin pf-v6-hidden-visible($val: "block", $ifIncludeHeight: false, $container-name: null) {
   // stylelint-disable-next-line
   --#{$pf-prefix}hidden-visible--visible--Display: #{$val};
 
@@ -234,13 +234,26 @@
   }
 
   @each $size, $bp in $pf-v6-global--breakpoint-name-map {
-    @media screen and (min-width: $bp) {
-      &.pf-m-hidden-on-#{$size} {
-        --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
-      }
+    @if $container-name {
+      // stylelint-disable-next-line container-name-pattern -- interpolated container name
+      @container #{$container-name} (min-width: #{$bp}) {
+        &.pf-m-hidden-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        }
 
-      &.pf-m-visible-on-#{$size} {
-        --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        &.pf-m-visible-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        }
+      }
+    } @else {
+      @media screen and (min-width: $bp) {
+        &.pf-m-hidden-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--hidden--Display);
+        }
+
+        &.pf-m-visible-on-#{$size} {
+          --#{$pf-prefix}hidden-visible--Display: var(--#{$pf-prefix}hidden-visible--visible--Display);
+        }
       }
     }
   }
@@ -256,6 +269,26 @@
 
     @media (min-width: $breakpoint) {
       @content;
+    }
+  }
+}
+
+// Apply container query if value is passed
+@mixin pf-v6-apply-container-breakpoint($breakpoint, $container-name: null) {
+  @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
+    @content;
+  } @else {
+    $breakpoint: pf-breakpoint-value($breakpoint);
+
+    @if $container-name {
+      // stylelint-disable-next-line container-name-pattern -- interpolated container name
+      @container #{$container-name} (min-width: #{$breakpoint}) {
+        @content;
+      }
+    } @else {
+      @container (min-width: #{$breakpoint}) {
+        @content;
+      }
     }
   }
 }
@@ -314,7 +347,7 @@
 }
 
 // Build variable stack
-@mixin pf-v6-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false) {
+@mixin pf-v6-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v6-global--breakpoint-map, $important: false, $container-name: null) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -337,13 +370,25 @@
     }
 
     // Assign variable stack to $prop
-    @include pf-v6-apply-breakpoint($breakpoint) {
-      @if $important == true {
-        // stylelint-disable declaration-no-important
-        #{$prop}: #{$variable-list} !important;
-        // stylelint-enable
-      } @else {
-        #{$prop}: #{$variable-list};
+    @if $container-name {
+      @include pf-v6-apply-container-breakpoint($breakpoint, $container-name) {
+        @if $important == true {
+          // stylelint-disable declaration-no-important
+          #{$prop}: #{$variable-list} !important;
+          // stylelint-enable
+        } @else {
+          #{$prop}: #{$variable-list};
+        }
+      }
+    } @else {
+      @include pf-v6-apply-breakpoint($breakpoint) {
+        @if $important == true {
+          // stylelint-disable declaration-no-important
+          #{$prop}: #{$variable-list} !important;
+          // stylelint-enable
+        } @else {
+          #{$prop}: #{$variable-list};
+        }
       }
     }
   }
