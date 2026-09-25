@@ -507,7 +507,8 @@
 
 // - Nav horizontal
 .#{$nav}:where(.pf-m-horizontal) {
-  --#{$nav}__item--accent--content: none;
+  --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
+  --#{$nav}__item--accent--offset: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockEnd) * -1);
 
   padding: 0;
   overflow: hidden;
@@ -540,6 +541,16 @@
     outline-offset: var(--#{$nav}--OutlineOffset);
   }
 
+  .#{$nav}__item::before {
+    inset-block-start: auto;
+    inset-block-end: var(--#{$nav}__item--accent--offset);
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    width: auto;
+    height: var(--#{$nav}__item--accent--size);
+    scale: var(--#{$nav}__item--accent--ScaleY) 1;
+  }
+
   // - Nav subnav
   &.pf-m-subnav {
     --#{$nav}--BackgroundColor: var(--#{$nav}--m-horizontal--m-subnav--BackgroundColor);
@@ -559,5 +570,9 @@
   &.pf-m-scrollable {
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart);
     --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd);
+
+    .#{$nav}__scroll-button::before {
+      inset-block-end: var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
+    }
   }
 }
