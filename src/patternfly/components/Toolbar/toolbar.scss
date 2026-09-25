@@ -424,6 +424,17 @@ $pf-v6-c-toolbar--container-name: #{$pf-prefix}contain-toolbar;
     $breakpoint-name: -on-#{$breakpoint};
   }
 
+  // Insets target the toolbar itself, so keep them on viewport media queries.
+  @include pf-v6-apply-breakpoint($breakpoint) {
+    .#{$toolbar} {
+      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
+        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
+          padding-inline: #{$inset-value};
+        }
+      }
+    }
+  }
+
   @include pf-v6-apply-container-breakpoint($breakpoint, $pf-v6-c-toolbar--container-name) {
     .#{$toolbar}__group,
     .#{$toolbar}__item {
@@ -448,15 +459,6 @@ $pf-v6-c-toolbar--container-name: #{$pf-prefix}contain-toolbar;
       @each $alignment in $pf-v6-c-toolbar--align-items--alignments {
         &.pf-m-align-self-#{$alignment}#{$breakpoint-name} {
           align-self: #{$alignment};
-        }
-      }
-    }
-
-    // - Toolbar inset
-    .#{$toolbar} {
-      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
-        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
-          padding-inline: #{$inset-value};
         }
       }
     }
