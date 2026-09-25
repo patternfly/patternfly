@@ -55,16 +55,19 @@
   --#{$compass}__dock--m-expanded__dock-main--BoxShadow: var(--pf-t--global--box-shadow--sm--right);
   --#{$compass}__dock-main--desktop--BoxShadow: var(--pf-t--global--box-shadow--glass--default, none);
   --#{$compass}__dock-main--BackdropFilter: var(--pf-t--global--background--filter--glass--blur--primary, revert);
-  --#{$compass}__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, 0);
+  --#{$compass}__dock-main--BorderInlineEndWidth: 0;
   --#{$compass}__dock-main--BorderInlineEndColor: transparent;
-  --#{$compass}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, transparent);
+  --#{$compass}__dock-main--desktop--BorderInlineEndWidth: var(--pf-t--global--border--width--regular);
+  --#{$compass}__dock-main--desktop--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));
   --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndWidth: var(--pf-t--global--border--width--glass--default, var(--pf-t--global--border--width--regular));
-  --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor: var(--pf-t--global--border--color--glass--default, var(--pf-t--global--border--color--subtle));  
+  --#{$compass}__dock--m-expanded__dock-main--BorderInlineEndColor: transparent;
 
   @media screen and (prefers-reduced-motion: no-preference) {
     --#{$compass}--section--TransitionDuration: var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), 0s, 0s, 0s;
     --#{$compass}--section--TransitionDelay: 0s, var(--#{$compass}--section--duration), 0s, var(--#{$compass}--section--duration), var(--#{$compass}--section--duration), var(--#{$compass}--section--duration);
     --#{$compass}--section--m-expanded--TransitionDuration: var(--#{$compass}--section--m-expanded--duration), 0s, var(--#{$compass}--section--m-expanded--duration), 0s, 0s, 0s;
+    --#{$compass}__dock--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-out--short);
+    --#{$compass}__dock--m-expanded--TransitionDuration--slide: var(--pf-t--global--motion--duration--slide-in--default);
 
     &.pf-m-animate-smoothly .#{$compass}__container {
       --#{$compass}--section--TransitionProperty: opacity, visibility, translate, height, width, margin;
@@ -334,6 +337,7 @@
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     &:not(.pf-m-overlay) {
+      --#{$compass}__dock-main--BorderInlineEndWidth: var(--#{$compass}__dock-main--desktop--BorderInlineEndWidth);
       --#{$compass}__dock-main--BackgroundColor: var(--#{$compass}__dock-main--desktop--BackgroundColor);
       --#{$compass}__dock-main--BorderInlineEndColor: var(--#{$compass}__dock-main--desktop--BorderInlineEndColor);
 
