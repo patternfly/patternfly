@@ -332,8 +332,13 @@
   flex-direction: column;
   grid-area: dock;
   width: var(--#{$compass}__dock--Width);
-  translate: -100% 0;
   transition: translate var(--#{$compass}__dock--TransitionDuration--slide) var(--#{$compass}__dock--TransitionTimingFunction--slide), visibility 0s var(--#{$compass}__dock--TransitionDuration--slide);
+
+  @include pf-v6-bidirectional-style(
+    $prop: translate,
+    $ltr-val: -100% 0,
+    $rtl-val: 100% 0
+  );
 
   @media (min-width: $pf-v6-global--breakpoint--dock--desktop) {
     &:not(.pf-m-overlay) {
