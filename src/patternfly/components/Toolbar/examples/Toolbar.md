@@ -66,7 +66,7 @@ _Debugging note: `xl` and `2xl` may not trigger when the content area is narrowe
         {{#> toolbar-item}}
           Item
         {{/toolbar-item}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-show-on-sm"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-sm"}}
           Show on sm
         {{/toolbar-item}}
         {{> divider divider--modifier="pf-m-vertical"}}
