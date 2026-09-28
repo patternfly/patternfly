@@ -45,7 +45,7 @@ Several components in the following examples do not include functional and/or ac
 
 ## Responsive toolbar behavior
 
-Toolbar width-based responsive modifiers use `@container` queries with the global PatternFly breakpoints.
+Toolbar width-based responsive modifiers use `@container` queries with the global PatternFly breakpoints. Responsive inset modifiers `.pf-m-inset-[size]-on-[breakpoint]` are an exception and use viewport media queries.
 
 By default, the container `pf-v6-contain-toolbar` is established on `:root`, so the breakpoints behave like viewport breakpoints. To make a toolbar respond to its own available width, add `.pf-m-container` to the toolbar. Note: Alternatively, if a wrapping element creates an `inline-size` or `size` container with the container name `pf-v6-contain-toolbar`, the breakpoints will apply to that container's width instead.
 
