@@ -5,6 +5,7 @@ $pf-v6-c-toolbar--inset-map: build-spacer-map();
 $pf-v6-c-toolbar--align-items--alignments: ('stretch', 'baseline', 'start', 'center', 'end');
 $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map('base');
 $pf-v6--include-toolbar-breakpoints: true !default;
+$pf-v6-c-toolbar--container-name: #{$pf-prefix}contain-toolbar;
 
 @if $pf-v6--include-toolbar-breakpoints {
   $pf-v6-c-toolbar--breakpoint-map: build-breakpoint-map();
@@ -118,7 +119,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 .#{$toolbar}__content-section,
 .#{$toolbar}__group,
 .#{$toolbar}__item {
-  @include pf-v6-hidden-visible(flex, $ifIncludeHeight: true);
+  @include pf-v6-hidden-visible(flex, $ifIncludeHeight: true, $container-name: $pf-v6-c-toolbar--container-name);
 }
 
 // - Toolbar - Toolbar content
@@ -129,7 +130,7 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar content - Toolbar content section - Toolbar expandable content
 .#{$toolbar}__content {
-  @include pf-v6-hidden-visible(grid, $ifIncludeHeight: true);
+  @include pf-v6-hidden-visible(grid, $ifIncludeHeight: true, $container-name: $pf-v6-c-toolbar--container-name);
 
   row-gap: var(--#{$toolbar}__content--RowGap);
   padding-inline-start: var(--#{$toolbar}__content--PaddingInlineStart);
@@ -251,6 +252,11 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     --#{$toolbar}--BackgroundColor: var(--#{$toolbar}--m-no-background--BackgroundColor);
   }
 
+  &.pf-m-container {
+    container-name: #{$pf-v6-c-toolbar--container-name};
+    container-type: inline-size;
+  }
+
   &.pf-m-vertical {
     --#{$toolbar}--child--m-align-end--MarginBlockStart: auto;
     --#{$toolbar}--child--m-align-end--MarginInlineStart: 0;
@@ -266,8 +272,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
 
 // - Toolbar item
 .#{$toolbar}__item {
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map);
-  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--Width--base", "--#{$toolbar}__item--Width", $pf-v6-c-toolbar--breakpoint-map, $container-name: $pf-v6-c-toolbar--container-name);
+  @include pf-v6-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v6-c-toolbar--breakpoint-map, $container-name: $pf-v6-c-toolbar--container-name);
 
   row-gap: var(--#{$toolbar}__item--RowGap);
   column-gap: var(--#{$toolbar}__item--ColumnGap);
@@ -366,7 +372,8 @@ $pf-v6--include-toolbar-breakpoints: true !default;
   border-block-end: var(--#{$toolbar}__expandable-content--BorderBlockEndWidth) solid var(--#{$toolbar}__expandable-content--BorderBlockEndColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 
-  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
+  // stylelint-disable-next-line container-name-pattern
+  @container #{$pf-v6-c-toolbar--container-name} (min-width: #{$pf-v6-global--breakpoint--lg}) {
     position: static;
     padding: 0;
     border-block-end: 0;
@@ -417,7 +424,18 @@ $pf-v6--include-toolbar-breakpoints: true !default;
     $breakpoint-name: -on-#{$breakpoint};
   }
 
+  // Insets target the toolbar itself, so keep them on viewport media queries.
   @include pf-v6-apply-breakpoint($breakpoint) {
+    .#{$toolbar} {
+      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
+        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
+          padding-inline: #{$inset-value};
+        }
+      }
+    }
+  }
+
+  @include pf-v6-apply-container-breakpoint($breakpoint, $pf-v6-c-toolbar--container-name) {
     .#{$toolbar}__group,
     .#{$toolbar}__item {
       &.pf-m-align-start#{$breakpoint-name} {
@@ -441,15 +459,6 @@ $pf-v6--include-toolbar-breakpoints: true !default;
       @each $alignment in $pf-v6-c-toolbar--align-items--alignments {
         &.pf-m-align-self-#{$alignment}#{$breakpoint-name} {
           align-self: #{$alignment};
-        }
-      }
-    }
-
-    // - Toolbar inset
-    .#{$toolbar} {
-      @each $inset, $inset-value in $pf-v6-c-toolbar--inset-map {
-        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
-          padding-inline: #{$inset-value};
         }
       }
     }
