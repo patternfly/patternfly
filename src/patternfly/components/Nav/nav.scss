@@ -514,7 +514,8 @@
   margin-block-end: var(--#{$nav}__item--accent--offset);
   overflow-x: clip;
 
-  .#{$toolbar}__item.pf-m-overflow-container:has(> &) {
+  .#{$toolbar}__item.pf-m-overflow-container:has(> &),
+  .#{$toolbar}__group.pf-m-overflow-container:has(> &) {
     overflow-x: clip;
     overflow-y: visible;
   }
