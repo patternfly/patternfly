@@ -250,6 +250,18 @@
     }
   }
 
+  // Keep sticky footer cells side by side in the responsive grid layout.
+  &.pf-m-sticky-footer,
+  &.pf-m-sticky-footer-base {
+    > .#{$table}__tfoot > .#{$table}__tr:has(> :nth-child(2):last-child) {
+      grid-template-columns: max-content minmax(0, 1fr);
+
+      > :is(.#{$table}__th, .#{$table}__td) {
+        --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
+      }
+    }
+  }
+
   // - Table grid compact
   &.pf-m-compact {
     --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--#{$table}--m-compact--cell--first-child--responsive--PaddingBlockStart);

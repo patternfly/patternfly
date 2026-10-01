@@ -403,8 +403,7 @@
   }
 
   // - Table sticky footer
-  &.pf-m-sticky-footer-base > .#{$table}__tfoot,
-  &.pf-m-sticky-footer-base > .#{$table}__tfoot :is(.#{$table}__th, .#{$table}__td) {
+  &.pf-m-sticky-footer-base > .#{$table}__tfoot {
     &::after {
       opacity: 0;
       transition-timing-function: var(--#{$table}--m-sticky-footer--TransitionTimingFunction--BackgroundColor);
@@ -413,8 +412,7 @@
     }
   }
 
-  &.pf-m-sticky-footer-stuck > .#{$table}__tfoot,
-  &.pf-m-sticky-footer-stuck > .#{$table}__tfoot :is(.#{$table}__th, .#{$table}__td) {
+  &.pf-m-sticky-footer-stuck > .#{$table}__tfoot {
     &::after {
       opacity: 1;
     }
@@ -441,6 +439,8 @@
         z-index: -1;
         pointer-events: none;
         content: '';
+        background: var(--#{$table}--m-sticky-footer--BackgroundColor);
+        border-block-start: var(--#{$table}--m-sticky-footer--BorderBlockStartWidth) solid var(--#{$table}--m-sticky-footer--BorderBlockStartColor);
         border-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
         box-shadow: var(--#{$table}--m-sticky-footer--BoxShadow);
       }
@@ -449,31 +449,6 @@
         z-index: var(--#{$table}--m-sticky-footer--cell--ZIndex);
       }
 
-      :is(.#{$table}__th, .#{$table}__td)::after {
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        content: '';
-        background: var(--#{$table}--m-sticky-footer--BackgroundColor);
-        border-block-start: var(--#{$table}--m-sticky-footer--BorderBlockStartWidth) solid var(--#{$table}--m-sticky-footer--BorderBlockStartColor);
-      }
-
-      > .#{$table}__tr:first-child > :is(.#{$table}__th, .#{$table}__td):first-child::after {
-        border-start-start-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
-      }
-
-      > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):first-child::after {
-        border-end-start-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
-      }
-
-      > .#{$table}__tr:first-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
-        border-start-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
-      }
-
-      > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
-        border-end-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
-      }
     }
   }
 
