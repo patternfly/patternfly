@@ -242,6 +242,7 @@
   font-size: var(--#{$modal-box}__title--FontSize);
   font-weight: var(--#{$modal-box}__title--FontWeight);
   line-height: var(--#{$modal-box}__title--LineHeight);
+  padding-inline-end: var(--#{$modal-box}__title--PaddingInlineEnd, 3rem);
 
   &.pf-m-icon {
     display: flex;
