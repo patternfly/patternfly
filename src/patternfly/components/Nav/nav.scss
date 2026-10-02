@@ -123,9 +123,11 @@
 
   // * Nav horizontal list
   --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
-  --#{$nav}--m-horizontal__list--PaddingBlockEnd: 0;
+  --#{$nav}--m-horizontal__list--PaddingBlockEnd: calc(var(--#{$nav}--m-horizontal__item--accent--offset) * -1);
   --#{$nav}--m-horizontal__list--PaddingInlineStart: 0;
   --#{$nav}--m-horizontal__list--PaddingInlineEnd: 0;
+  --#{$nav}--m-horizontal--MarginBlockEnd: var(--#{$nav}--m-horizontal__item--accent--offset);
+  --#{$nav}--m-horizontal__item--accent--offset: var(--#{$nav}__item--accent--offset);
   --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart: var(--#{$nav}__list--ColumnGap);
   --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}__list--ColumnGap);
 
@@ -134,8 +136,8 @@
   --#{$nav}--m-horizontal--m-subnav--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$nav}--m-horizontal--m-subnav--BorderWidth: var(--pf-t--global--border--width--high-contrast--regular);
   --#{$nav}--m-horizontal--m-subnav--BorderColor: var(--pf-t--global--border--color--high-contrast);
-  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--sm);
+  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__list--PaddingInlineEnd: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineStart: var(--#{$nav}__list--ColumnGap);
@@ -144,6 +146,7 @@
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  --#{$nav}--m-horizontal--m-subnav__item--accent--offset: var(--#{$nav}__item--accent--offset);
 
   // Docked
   --#{$nav}--m-docked__list--RowGap: var(--pf-t--global--spacer--gap--action-to-action--plain);
@@ -154,6 +157,10 @@
   --#{$nav}--m-docked__link-expandable-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$nav}--m-docked__link-expandable-icon--offset: 0.75em;
   --#{$nav}--m-docked__link-expandable-icon--Scale: 0.8;
+
+  :where(.pf-v6-theme-felt.pf-v6-theme-glass) .#{$masthead} & {
+    --#{$nav}--m-horizontal__item--accent--offset: calc(-1 * (var(--#{$masthead}--PaddingBlockEnd, var(--#{$masthead}--PaddingBlock)) + var(--pf-t--global--border--width--glass--default)));
+  }
 }
 
 // - Nav display - default to grid
@@ -507,15 +514,12 @@
 
 // - Nav horizontal
 .#{$nav}:where(.pf-m-horizontal) {
-  --#{$nav}--m-horizontal__list--PaddingBlockEnd: calc(var(--#{$nav}__item--accent--offset) * -1);
-
   align-items: start;
   padding: 0;
-  margin-block-end: var(--#{$nav}__item--accent--offset);
+  margin-block-end: var(--#{$nav}--m-horizontal--MarginBlockEnd);
   overflow-x: clip;
 
-  .#{$toolbar}__item.pf-m-overflow-container:has(> &),
-  .#{$toolbar}__group.pf-m-overflow-container:has(> &) {
+  .#{$toolbar}__item.pf-m-overflow-container:has(&) {
     overflow-x: clip;
     overflow-y: visible;
   }
@@ -550,7 +554,7 @@
 
   .#{$nav}__item::before {
     inset-block-start: auto;
-    inset-block-end: var(--#{$nav}__item--accent--offset);
+    inset-block-end: var(--#{$nav}--m-horizontal__item--accent--offset);
     inset-inline-start: 0;
     inset-inline-end: 0;
     width: auto;
@@ -561,7 +565,6 @@
   // - Nav subnav
   &.pf-m-subnav {
     --#{$nav}--BackgroundColor: var(--#{$nav}--m-horizontal--m-subnav--BackgroundColor);
-    --#{$nav}__item--accent--offset: calc(var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd) * -1);
     --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
     --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
     --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
@@ -570,6 +573,8 @@
     --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal--m-subnav--m-scrollable__list--PaddingInlineEnd);
     --#{$nav}__link--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart);
     --#{$nav}__link--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd);
+    --#{$nav}--m-horizontal__item--accent--offset: var(--#{$nav}--m-horizontal--m-subnav__item--accent--offset);
+    --#{$nav}--m-horizontal--MarginBlockEnd: 0;
 
     border: var(--#{$nav}--m-horizontal--m-subnav--BorderWidth) solid var(--#{$nav}--m-horizontal--m-subnav--BorderColor);
     border-radius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
