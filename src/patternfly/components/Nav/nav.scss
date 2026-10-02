@@ -121,15 +121,16 @@
   --#{$nav}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2) - 50%); // find height of single label, divide by two, offset by 50% of own height
 
-  // * Nav horizontal list
+  // * Nav horizontal
+  --#{$nav}--m-horizontal--MarginBlockEnd: var(--#{$nav}--m-horizontal__item--accent--offset);
   --#{$nav}--m-horizontal__list--PaddingBlockStart: 0;
   --#{$nav}--m-horizontal__list--PaddingBlockEnd: calc(var(--#{$nav}--m-horizontal__item--accent--offset) * -1);
   --#{$nav}--m-horizontal__list--PaddingInlineStart: 0;
   --#{$nav}--m-horizontal__list--PaddingInlineEnd: 0;
-  --#{$nav}--m-horizontal--MarginBlockEnd: var(--#{$nav}--m-horizontal__item--accent--offset);
   --#{$nav}--m-horizontal__item--accent--offset: var(--#{$nav}__item--accent--offset);
   --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineStart: var(--#{$nav}__list--ColumnGap);
   --#{$nav}--m-horizontal--m-scrollable__list--PaddingInlineEnd: var(--#{$nav}__list--ColumnGap);
+  --#{$nav}--m-horizontal__link--m-current--BackgroundColor: transparent;
 
   // * Nav horizontal subnav
   --#{$nav}--m-horizontal--m-subnav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
@@ -504,7 +505,10 @@
 
   // TODO - update this selector to the $pf-button__icon once that is introduced
   .#{$button} {
+    align-items: center;
+    height: 100%;
     outline-offset: var(--#{$nav}--OutlineOffset);
+    border-radius: 0;
 
     > * {
       @include pf-v6-mirror-inline-on-rtl;
@@ -577,6 +581,8 @@
     --#{$nav}--m-horizontal__item--accent--offset: var(--#{$nav}--m-horizontal--m-subnav__item--accent--offset);
     --#{$nav}--m-horizontal--MarginBlockEnd: 0;
 
+    align-items: stretch;
+    overflow: clip;
     border: var(--#{$nav}--m-horizontal--m-subnav--BorderWidth) solid var(--#{$nav}--m-horizontal--m-subnav--BorderColor);
     border-radius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
   }
