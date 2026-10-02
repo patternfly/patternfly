@@ -484,7 +484,9 @@
   &:first-of-type {
     .#{$button} {
       --#{$button}--BorderStartStartRadius: var(--#{$nav}__scroll-button--first-of-type--c-button--BorderStartStartRadius);
+      --#{$button}--BorderStartEndRadius: 0;
       --#{$button}--BorderEndStartRadius: var(--#{$nav}__scroll-button--first-of-type--c-button--BorderEndStartRadius);
+      --#{$button}--BorderEndEndRadius: 0;
     }
 
     &::before {
@@ -494,7 +496,9 @@
 
   &:last-of-type {
     .#{$button} {
+      --#{$button}--BorderStartStartRadius: 0;
       --#{$button}--BorderStartEndRadius: var(--#{$nav}__scroll-button--last-of-type--c-button--BorderStartEndRadius);
+      --#{$button}--BorderEndStartRadius: 0;
       --#{$button}--BorderEndEndRadius: var(--#{$nav}__scroll-button--last-of-type--c-button--BorderEndEndRadius);
     }
 
@@ -508,7 +512,6 @@
     align-items: center;
     height: 100%;
     outline-offset: var(--#{$nav}--OutlineOffset);
-    border-radius: 0;
 
     > * {
       @include pf-v6-mirror-inline-on-rtl;
@@ -555,6 +558,10 @@
 
   .#{$nav}__link {
     outline-offset: var(--#{$nav}--OutlineOffset);
+
+    &.pf-m-current:not(:hover, :focus-visible) {
+      background-color: transparent;
+    }
   }
 
   .#{$nav}__item::before {
@@ -582,7 +589,6 @@
     --#{$nav}--m-horizontal--MarginBlockEnd: 0;
 
     align-items: stretch;
-    overflow: clip;
     border: var(--#{$nav}--m-horizontal--m-subnav--BorderWidth) solid var(--#{$nav}--m-horizontal--m-subnav--BorderColor);
     border-radius: var(--#{$nav}--m-horizontal--m-subnav--BorderRadius);
   }
