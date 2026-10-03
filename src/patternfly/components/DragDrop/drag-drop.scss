@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($draggable) {
-  --#{$draggable}--Cursor: auto;
+  --#{$draggable}--Cursor: grab;
   --#{$draggable}--m-dragging--Cursor: grabbing;
   --#{$draggable}--m-dragging--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$draggable}--m-dragging--BackgroundColor: transparent;
