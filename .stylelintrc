@@ -5,7 +5,8 @@
   ],
   "plugins": [
     "stylelint-order",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-browser-compat"
   ],
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
@@ -39,6 +40,7 @@
         "stylelint-commands"
       ]
     }],
+    "plugin/browser-compat": true,
     "custom-property-pattern": "^pf-(v[56]|t-)-(color|global|chart|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-no-important": true,
