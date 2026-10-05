@@ -40,7 +40,12 @@
         "stylelint-commands"
       ]
     }],
-    "plugin/browser-compat": true,
+    "plugin/browser-compat": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "custom-property-pattern": "^pf-(v[56]|t-)-(color|global|chart|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-no-important": true,
