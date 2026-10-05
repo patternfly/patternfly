@@ -36,11 +36,11 @@ jobs:
         with:
           node-version: '20.19.0'
           check-latest: true
-      
+
       - name: Enable Corepack
         shell: bash
         run: corepack enable
-      
+
       - uses: actions/cache@v4
         id: yarn-cache
         name: Load Yarn cache
@@ -53,7 +53,7 @@ jobs:
           key: ${{ runner.os }}-pr-yarn-cache-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-pr-yarn-cache-
-      
+
       - name: Install dependencies
         shell: bash
         run: yarn install --immutable --network-timeout 100000
