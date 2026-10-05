@@ -353,7 +353,7 @@
     }
   }
 
-  @at-root .pf-m-docked:not(.pf-m-expanded) &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
+  @at-root .pf-m-docked &:not(.pf-m-expanded):has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
   &:has(> .#{$nav}__link.pf-m-current) {
     --#{$nav}__item--accent--ScaleY: var(--#{$nav}__item--current--accent--ScaleY);
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
@@ -425,7 +425,7 @@
     background-color: var(--#{$nav}__link--hover--BackgroundColor);
   }
 
-  @at-root .pf-m-docked:not(.pf-m-expanded) .#{$nav}__item:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link,
+  @at-root .pf-m-docked .#{$nav}__item:not(.pf-m-expanded):has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link,
   &.pf-m-current,
   &.pf-m-current:hover {
     --#{$nav}__link-icon--Color: var(--#{$nav}__link--m-current__link-icon--Color);
@@ -433,14 +433,6 @@
 
     color: var(--#{$nav}__link--m-current--Color);
     background-color: var(--#{$nav}__link--m-current--BackgroundColor);
-  }
-
-  @at-root :is(.pf-m-expanded, .pf-m-overlay) .pf-m-docked .#{$nav}__item:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) > .#{$nav}__link:not(:hover, :focus-visible) {
-    --#{$nav}__link-icon--Color: revert;
-    --#{$nav}__link--BorderWidth: revert;
-
-    color: var(--#{$nav}__link--Color);
-    background-color: var(--#{$nav}__link--BackgroundColor);
   }
 }
 
