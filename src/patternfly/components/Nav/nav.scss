@@ -359,7 +359,8 @@
     --#{$nav}__item--accent--TransitionDuration: var(--#{$nav}__item--current--accent--TransitionDuration);
   }
 
-  @at-root :is(.pf-m-expanded, .pf-m-overlay) .pf-m-docked &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) {
+  @at-root :is(.pf-m-expanded, .pf-m-overlay) .pf-m-docked &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current),
+  .pf-m-docked:is(.pf-m-expanded, .pf-m-overlay) &:has(.#{$nav}__subnav .#{$nav}__link.pf-m-current) {
     --#{$nav}__item--accent--ScaleY: 0;
     --#{$nav}__item--accent--TransitionDuration: revert;
   }
