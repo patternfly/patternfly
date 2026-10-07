@@ -43,7 +43,10 @@
     "plugin/browser-compat": [
       true,
       {
-        "severity": "warning"
+        "severity": "warning",
+        "allow": {
+          "features": ["at-rules.function"]
+        }
       }
     ],
     "custom-property-pattern": "^pf-(v[56]|t-)-(color|global|chart|[lcud])-.+$",
