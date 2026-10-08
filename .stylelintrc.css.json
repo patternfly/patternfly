@@ -3,7 +3,16 @@
   "rules": {
     "plugin/no-unsupported-browser-features": [
       true,
-      { "severity": "warning" }
+      {
+        "severity": "warning",
+        "ignore": [
+          "text-decoration",
+          "css-display-contents",
+          "css-scrollbar",
+          "css-overflow-anchor",
+          "css-clip-path"
+        ]
+      }
     ]
   }
 }

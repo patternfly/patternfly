@@ -209,6 +209,7 @@ $pf-v6-c-dual-list-selector__item--MaxNesting: 10;
   }
 
   &.pf-m-drag-over {
+    // stylelint-disable-next-line plugin/browser-compat
     overflow-anchor: none;
   }
 
