@@ -188,6 +188,7 @@
   }
 
   &.pf-m-drag-over {
+    // stylelint-disable-next-line plugin/browser-compat
     overflow-anchor: none;
   }
 
