@@ -182,6 +182,8 @@
     }
 
     .#{$data-list}__item-action {
+      asdf: foo;
+      fldsfl: var(--asdf);
       padding-block-start: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockStart) - var(--#{$data-list}--m-compact__item-action--PaddingBlockStart--offset));
       padding-block-end: calc(var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd) - var(--#{$data-list}--m-compact__item-action--PaddingBlockEnd--offset));
     }
