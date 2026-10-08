@@ -188,12 +188,13 @@
 }
 
 @mixin pf-v6-overflow-hide-scroll {
+  // hides scrollbars in Safari
+  // stylelint-disable-next-line plugin/browser-compat
   &::-webkit-scrollbar {
     display: none;
-  } // hides scrollbars in Chrome
+  }
 
-  scrollbar-width: none; // hides scrollbars in Firefox 64 and up
-  -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
+  scrollbar-width: none;
 }
 
 @mixin pf-v6-hidden-visible($val: "block", $ifIncludeHeight: false, $container-name: null) {
