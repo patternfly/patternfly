@@ -9,7 +9,8 @@
           "text-decoration",
           "css-display-contents",
           "css-scrollbar",
-          "css-overflow-anchor"
+          "css-overflow-anchor",
+          "css-clip-path"
         ]
       }
     ]
