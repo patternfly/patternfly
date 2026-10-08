@@ -163,6 +163,7 @@
   padding-inline-end: var(--#{$label-group}__textarea--PaddingInlineEnd);
   white-space: nowrap;
   resize: none;
-  scrollbar-width: none; // hide scrollbar
   border: 0;
+
+  @include pf-v6-overflow-hide-scroll;
 }
