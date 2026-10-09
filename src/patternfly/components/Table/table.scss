@@ -284,7 +284,7 @@
   --#{$table}--m-sticky-footer--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
   --#{$table}--m-sticky-footer--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--short);
   --#{$table}--m-sticky-footer--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
-  --#{$table}--m-sticky-footer--BoxShadow--glass: var(--pf-t--global--box-shadow--sm);
+  --#{$table}--m-sticky-footer--BoxShadow--glass: var(--pf-t--global--box-shadow--sm--top), var(--pf-t--global--box-shadow--sm--bottom);
   --#{$table}--m-sticky-footer--ZIndex: calc(var(--pf-t--global--z-index--xs) + 1);
 
   :where(.pf-v6-theme-glass) & {
@@ -474,6 +474,7 @@
       > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
         border-end-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
       }
+
     }
   }
 
