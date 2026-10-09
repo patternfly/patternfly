@@ -43,7 +43,6 @@
     "plugin/browser-compat": [
       true,
       {
-        "severity": "warning",
         "allow": {
           "features": ["at-rules.function"]
         }
