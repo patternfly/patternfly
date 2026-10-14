@@ -31,7 +31,7 @@
   }
 
   // Header
-  --#{$modal-box}__header--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingBlockStart: calc(var(--pf-t--global--spacer--lg) + var(--pf-t--global--spacer--control--vertical--plain));
   --#{$modal-box}__header--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$modal-box}__header--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--PaddingInlineStart: var(--pf-t--global--spacer--lg);
@@ -39,7 +39,7 @@
 
   // Header main
   --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
-  --#{$modal-box}__header-main--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
+  --#{$modal-box}__header-main--PaddingBlockStart: 0;
 
   // Title
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
