@@ -250,6 +250,46 @@
     }
   }
 
+  // Align sticky footer cell padding in the responsive grid layout.
+  &.pf-m-sticky-footer,
+  &.pf-m-sticky-footer-base {
+    > .#{$table}__tfoot > .#{$table}__tr:has(> :nth-child(2):last-child) {
+      > :is(.#{$table}__th, .#{$table}__td) {
+        --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
+      }
+    }
+  }
+
+  // Keep sticky footers in the normal flow in the responsive grid layout.
+  &.pf-m-sticky-footer,
+  &.pf-m-sticky-footer-base,
+  &.pf-m-sticky-footer-stuck {
+    > .#{$table}__tfoot {
+      position: static;
+      inset-block-end: auto;
+      z-index: auto;
+
+      &::after {
+        content: none;
+      }
+
+      > .#{$table}__tr > :is(th, td) {
+        z-index: auto;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &.pf-m-sticky-footer,
+  &.pf-m-sticky-footer-stuck {
+    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
+      border-block-end-color: var(--#{$table}__tr--BorderBlockEndColor);
+    }
+  }
+
   // - Table grid compact
   &.pf-m-compact {
     --#{$table}--cell--first-child--responsive--PaddingBlockStart: var(--#{$table}--m-compact--cell--first-child--responsive--PaddingBlockStart);
