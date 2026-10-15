@@ -10,7 +10,7 @@
       "checkAllBranchesWhen": false
     },
     "version": {
-      "conventionalCommits": true,
+      "specifierSource": "conventional-commits",
       "currentVersionResolver": "git-tag",
       "manifestRootsToUpdate": ["dist"],
       "versionActionsOptions": {
@@ -50,6 +50,5 @@
         "tag": "prerelease"
       }
     }
-  },
-  "analytics": false
+  }
 }

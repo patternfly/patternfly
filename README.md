@@ -21,12 +21,12 @@ Any of the files above are meant for use in consuming the library. The recommend
 
 ## Development
 
-**PatternFly Development requires Node v20.18.3 or greater**
+**PatternFly Development requires Node v24.22.0 or greater**
 
 To setup the PatternFly development environment:
 
 - clone the project
-- ensure you have Node.js v20.18.3 or greater installed
+- ensure you have Node.js v24.22.0 or greater installed
 - enable corepack: `corepack enable`
 - run `yarn install` from the project root
 - run `yarn start`
@@ -79,13 +79,13 @@ When making visual changes to a full page example, new example preview screensho
 For information on how to contribute, refer to our [contribution guide](https://pf-core-staging.patternfly.org/contribution).
 
 ### Breaking changes
-The current commit analyzer explicitly recognizes `BREAKING-CHANGE`. Nx 23.3.0 recognizes a breaking header such as:
+Use the following types of commit messages for breaking changes:
 
 ```text
 feat(button)!: replace the sizing API
 ```
 
-It also recognizes this commit-body marker:
+Nx recognizes this commit-body marker:
 
 ```text
 BREAKING CHANGE: The old sizing API has been removed.
