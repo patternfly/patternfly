@@ -60,14 +60,14 @@ jobs:
       - run: yarn lint:sass
         name: Lint SASS
         if: always()
-      - run: yarn lint:css
-        name: Lint CSS
-        if: always()
       - run: yarn lint:js
         name: Lint JS
         if: always()
       - run: yarn build-patternfly
         name: Build patternfly
+      - run: yarn lint:css
+        name: Lint CSS
+        if: always()
       - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache
