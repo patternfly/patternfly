@@ -32,6 +32,7 @@
   grid-template-columns: auto 1fr;
   gap: var(--#{$radio}--GridGap);
   align-items: baseline;
+  // stylelint-disable-next-line plugin/browser-compat
   accent-color: var(--#{$radio}--AccentColor);
 
   &.pf-m-standalone {
