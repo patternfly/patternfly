@@ -31,3 +31,4 @@ backstop_data/reports
 .history
 chrome
 .claude/*.local.*
+/.nx/

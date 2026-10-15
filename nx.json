@@ -1,0 +1,55 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "release": {
+    "projects": ["@patternfly/patternfly"],
+    "projectsRelationship": "fixed",
+    "releaseTag": {
+      "pattern": "prerelease-v{version}",
+      "strictPreid": true,
+      "checkAllBranchesWhen": false
+    },
+    "version": {
+      "conventionalCommits": true,
+      "currentVersionResolver": "git-tag",
+      "manifestRootsToUpdate": ["dist"],
+      "versionActionsOptions": {
+        "skipLockFileUpdate": true
+      }
+    },
+    "conventionalCommits": {
+      "useCommitScope": false,
+      "types": {
+        "perf": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Performance Improvements"
+          }
+        }
+      }
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "file": false
+      },
+      "projectChangelogs": false
+    },
+    "git": {
+      "commit": false,
+      "stageChanges": false,
+      "tag": true
+    }
+  },
+  "targetDefaults": {
+    "nx-release-publish": {
+      "cache": false,
+      "options": {
+        "packageRoot": "dist",
+        "access": "public",
+        "tag": "prerelease"
+      }
+    }
+  },
+  "analytics": false
+}

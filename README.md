@@ -78,6 +78,19 @@ When making visual changes to a full page example, new example preview screensho
 ### Contribution guide 
 For information on how to contribute, refer to our [contribution guide](https://pf-core-staging.patternfly.org/contribution).
 
+### Breaking changes
+The current commit analyzer explicitly recognizes `BREAKING-CHANGE`. Nx 23.3.0 recognizes a breaking header such as:
+
+```text
+feat(button)!: replace the sizing API
+```
+
+It also recognizes this commit-body marker:
+
+```text
+BREAKING CHANGE: The old sizing API has been removed.
+```
+
 ### Development guidelines
 For more information on using CSS, Sass, and handlebars, refer to our [development guidelines](https://pf-core-staging.patternfly.org/guidelines).
 
@@ -128,4 +141,3 @@ PatternFly is supported on the latest two major versions of the following browse
 - Firefox
 - Safari
 - Edge
-
