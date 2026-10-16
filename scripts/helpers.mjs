@@ -387,14 +387,14 @@ export const prefix = function (term) {
 }
 
 // ======================================================================================
-// pfIcon: a helper function to use svg's from @patternfly/react-icons
+// feltIcon: a helper function to use svg's from @rh-felt/react-icons
 // ======================================================================================
 //
 // Usage:
-//   {{pfIcon 'arrow-right'}}
+//   {{feltIcon 'arrow-right'}}
 //
 // ======================================================================================
-export const pfIcon = function (iconName) {
+export const feltIcon = function (iconName) {
   try {
     if (!iconName || typeof iconName !== 'string') {
       console.error(`\x1b[31mInvalid icon name: ${iconName}\x1b[0m`);

@@ -5,23 +5,23 @@
     {{/if}}>
 
     {{#if progress-stepper-step--IsInfo}}
-      {{pfIcon "rh-ui-information-fill"}}
+      {{feltIcon "rh-ui-information-fill"}}
     {{else if progress-stepper-step--IsInProgress}}
-      {{pfIcon "rh-ui-resources-full"}}
+      {{feltIcon "rh-ui-resources-full"}}
     {{else if progress-stepper-step--IsInProgressAlt}}
-      {{pfIcon "rh-ui-in-progress"}}
+      {{feltIcon "rh-ui-in-progress"}}
     {{else if progress-stepper-step--IsInProgressAnimate}}
       {{#> spinner spinner--modifier="pf-m-xs"}}Loading...{{/spinner}}
     {{else if progress-stepper-step--IsComplete}}
-      {{pfIcon "rh-ui-check-circle-fill"}}
+      {{feltIcon "rh-ui-check-circle-fill"}}
     {{else if progress-stepper-step--IsFailure}}
-      {{pfIcon "rh-ui-error-fill"}}
+      {{feltIcon "rh-ui-error-fill"}}
     {{else if progress-stepper-step--IsIssue}}
-      {{pfIcon "rh-ui-warning-fill"}}
+      {{feltIcon "rh-ui-warning-fill"}}
     {{else if progress-stepper-step--IsPending}}
 
     {{else if progress-stepper-step--IsPendingAlt}}
-      {{pfIcon "rh-ui-pending"}}
+      {{feltIcon "rh-ui-pending"}}
     {{else}}
       {{>@partial-block}}
     {{/if}}
