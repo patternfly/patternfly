@@ -1,7 +1,7 @@
 {
-  "name": "@patternfly/patternfly",
-  "description": "Assets, source, tooling, and content for PatternFly",
-  "version": "0.0.0-development",
+  "name": "@rh-felt/styles",
+  "description": "Assets, source, tooling, and content for Felt",
+  "version": "0.0.1-prerelease.0",
   "keywords": [],
   "license": "MIT",
   "scripts": {
@@ -147,8 +147,8 @@
     "url": "https://github.com/patternfly/patternfly.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "access": "public",
+    "tag": "prerelease"
   },
   "packageManager": "yarn@4.10.3"
 }

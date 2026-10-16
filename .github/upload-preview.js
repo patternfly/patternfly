@@ -28,8 +28,7 @@ switch(uploadFolderName) {
     break;
   case 'public':
     if (!prnum && prbranch === 'main') {
-      uploadURL = 'pf-core-staging.patternfly.org';
-      fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
+      uploadURL = 'rh-felt-styles.surge.sh';
     }
     else {
       uploadURL += '.surge.sh';
