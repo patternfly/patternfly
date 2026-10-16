@@ -93,7 +93,7 @@ cssPrefix: pf-v6-c-list
 {{#> list list--modifier="pf-m-plain"}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "rh-ui-learn-fill"}}
+      {{feltIcon "rh-ui-learn-fill"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item one
@@ -101,7 +101,7 @@ cssPrefix: pf-v6-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "rh-ui-key-fill"}}
+      {{feltIcon "rh-ui-key-fill"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item two
@@ -109,7 +109,7 @@ cssPrefix: pf-v6-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "rh-ui-desktop"}}
+      {{feltIcon "rh-ui-desktop"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item three
@@ -123,7 +123,7 @@ cssPrefix: pf-v6-c-list
 {{#> list list--modifier="pf-m-plain pf-m-icon-lg"}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "rh-ui-learn-fill"}}
+      {{feltIcon "rh-ui-learn-fill"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item one
@@ -131,7 +131,7 @@ cssPrefix: pf-v6-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "rh-ui-key-fill"}}
+      {{feltIcon "rh-ui-key-fill"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item two
@@ -139,7 +139,7 @@ cssPrefix: pf-v6-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      {{pfIcon "rh-ui-desktop"}}
+      {{feltIcon "rh-ui-desktop"}}
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item three

@@ -107,7 +107,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Success banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-check-circle-fill"}}
+      {{feltIcon "rh-ui-check-circle-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Success banner
@@ -121,7 +121,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Warning banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-warning-fill"}}
+      {{feltIcon "rh-ui-warning-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Warning banner
@@ -135,7 +135,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Danger banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-error-fill"}}
+      {{feltIcon "rh-ui-error-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Danger banner
@@ -149,7 +149,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Custom status banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-information-fill"}}
+      {{feltIcon "rh-ui-information-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Info banner
@@ -163,7 +163,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Custom status banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-notification-fill"}}
+      {{feltIcon "rh-ui-notification-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Custom banner
@@ -180,7 +180,7 @@ To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Success banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-check-circle-fill"}}
+      {{feltIcon "rh-ui-check-circle-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Success banner
@@ -194,7 +194,7 @@ To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Warning banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-warning-fill"}}
+      {{feltIcon "rh-ui-warning-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Warning banner
@@ -208,7 +208,7 @@ To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Danger banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-error-fill"}}
+      {{feltIcon "rh-ui-error-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Danger banner
@@ -222,7 +222,7 @@ To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Custom status banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-information-fill"}}
+      {{feltIcon "rh-ui-information-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Info banner
@@ -236,7 +236,7 @@ To display a banner with rounded corners, use `pf-m-pill`. The pill modifier can
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Custom status banner:{{/screen-reader}}
-      {{pfIcon "rh-ui-notification-fill"}}
+      {{feltIcon "rh-ui-notification-fill"}}
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Custom banner

@@ -14,7 +14,8 @@
         "sass",
         "backstopjs",
         "/^stylelint/",
-        "/^@patternfly/react/"
+        "/^@patternfly/react/",
+        "/^@rh-felt/react/"
       ],
       "enabled": true
     },
