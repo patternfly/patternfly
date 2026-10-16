@@ -402,7 +402,7 @@ export const feltIcon = function (iconName) {
     }
     const baseName = path.basename(iconName);
     const require = createRequire(import.meta.url);
-    const packageJsonPath = require.resolve('@patternfly/react-icons/package.json');
+    const packageJsonPath = require.resolve('@rh-felt/react-icons/package.json');
     const packageDir = path.dirname(packageJsonPath);
     const iconDir = path.join(packageDir, 'dist/static');
     const iconPath = path.join(iconDir, `${baseName}.svg`);

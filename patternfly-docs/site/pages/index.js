@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection } from '@patternfly/react-core';
+import { PageSection } from '@rh-felt/react-core';
 
 const HomePage = () => (
   <PageSection variant="light">

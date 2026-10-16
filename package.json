@@ -77,6 +77,8 @@
     "@patternfly/react-core": "6.6.1",
     "@patternfly/react-icons": "6.6.1",
     "@patternfly/react-table": "6.6.1",
+    "@rh-felt/react-core": "0.0.1-prerelease.1",
+    "@rh-felt/react-icons": "0.0.1-prerelease.1",
     "@rspack/cli": "^1.6.0",
     "@rspack/core": "^1.6.0",
     "@rspack/dev-server": "^1.1.4",
