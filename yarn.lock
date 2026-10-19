@@ -3493,6 +3493,83 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@patternfly/react-code-editor@npm:@rh-felt/react-code-editor@0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-code-editor@npm:0.0.1-prerelease.1"
+  dependencies:
+    "@monaco-editor/react": "npm:^4.7.0"
+    "@rh-felt/react-core": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
+    react-dropzone: "npm:14.3.5"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/2ba28e8b92cf60cf475e5a8b3e681acdf171d984d1e0fac5d709dad79d01d19bc55e87aced8301d94e5e816e11b72d01b016f3284b22a3af028af3656144af4c
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-core@npm:@rh-felt/react-core@0.0.1-prerelease.1, @rh-felt/react-core@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-core@npm:0.0.1-prerelease.1"
+  dependencies:
+    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-tokens": "npm:^0.0.1-prerelease.1"
+    focus-trap: "npm:7.6.6"
+    react-dropzone: "npm:^14.3.5"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/806ced8f98b864fed8bf2752efadce62d474456aa5d00dd02c805bd361620cc282d7a0e5bef63a7f2666a6355c5f733ec6e3e3a1919c75b5d22e18e144ad7776
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-icons@npm:@rh-felt/react-icons@0.0.1-prerelease.1, @rh-felt/react-icons@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-icons@npm:0.0.1-prerelease.1"
+  dependencies:
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/5b27e76ac2fe9d2d25b0f66a2fcd910627f533e3697b3c0bb435dbbd66d14fe0891a9b49e7a1e4e4bb3b5fc123e8f222cc26c907ac0eec4730f646c8cfb944cb
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-styles@npm:@rh-felt/react-styles@0.0.1-prerelease.1, @rh-felt/react-styles@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-styles@npm:0.0.1-prerelease.1"
+  checksum: 10c0/62700bb5d87368cd659e4b410c9bfe596554f0fca2236d20a93346339eecc63e7270fa159c9cbc3a188ccbc193f38a88803063286fe403d678f82c34b8f03094
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-table@npm:@rh-felt/react-table@0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-table@npm:0.0.1-prerelease.1"
+  dependencies:
+    "@rh-felt/react-core": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-tokens": "npm:^0.0.1-prerelease.1"
+    lodash: "npm:^4.18.1"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/6e286c91bde64f71d2a243043253b34189a93db53f04ec4ae4ad9ba68bb808ec72e297cd382612a81d7928da39a947bbb407513c355945406475bb0090b8cd88
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-tokens@npm:@rh-felt/react-tokens@0.0.1-prerelease.1, @rh-felt/react-tokens@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-tokens@npm:0.0.1-prerelease.1"
+  checksum: 10c0/c32b39b36ae8b01b89f90981393cc1f44944007aaf1519bc8b867fc8d5f9973c4d4a94082d15150761d39b43971c1f2412745ea11bfc88f35c5e8ed8a2acf74c
+  languageName: node
+  linkType: hard
+
 "@peculiar/asn1-cms@npm:^2.6.0, @peculiar/asn1-cms@npm:^2.6.1":
   version: 2.6.1
   resolution: "@peculiar/asn1-cms@npm:2.6.1"
@@ -3718,83 +3795,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rh-felt/react-code-editor@npm:0.0.1-prerelease.1":
-  version: 0.0.1-prerelease.1
-  resolution: "@rh-felt/react-code-editor@npm:0.0.1-prerelease.1"
-  dependencies:
-    "@monaco-editor/react": "npm:^4.7.0"
-    "@rh-felt/react-core": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
-    react-dropzone: "npm:14.3.5"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    react: ^17 || ^18 || ^19
-    react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/2ba28e8b92cf60cf475e5a8b3e681acdf171d984d1e0fac5d709dad79d01d19bc55e87aced8301d94e5e816e11b72d01b016f3284b22a3af028af3656144af4c
-  languageName: node
-  linkType: hard
-
-"@rh-felt/react-core@npm:0.0.1-prerelease.1, @rh-felt/react-core@npm:^0.0.1-prerelease.1":
-  version: 0.0.1-prerelease.1
-  resolution: "@rh-felt/react-core@npm:0.0.1-prerelease.1"
-  dependencies:
-    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-tokens": "npm:^0.0.1-prerelease.1"
-    focus-trap: "npm:7.6.6"
-    react-dropzone: "npm:^14.3.5"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    react: ^17 || ^18 || ^19
-    react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/806ced8f98b864fed8bf2752efadce62d474456aa5d00dd02c805bd361620cc282d7a0e5bef63a7f2666a6355c5f733ec6e3e3a1919c75b5d22e18e144ad7776
-  languageName: node
-  linkType: hard
-
-"@rh-felt/react-icons@npm:0.0.1-prerelease.1, @rh-felt/react-icons@npm:^0.0.1-prerelease.1":
-  version: 0.0.1-prerelease.1
-  resolution: "@rh-felt/react-icons@npm:0.0.1-prerelease.1"
-  dependencies:
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    react: ^17 || ^18 || ^19
-    react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/5b27e76ac2fe9d2d25b0f66a2fcd910627f533e3697b3c0bb435dbbd66d14fe0891a9b49e7a1e4e4bb3b5fc123e8f222cc26c907ac0eec4730f646c8cfb944cb
-  languageName: node
-  linkType: hard
-
-"@rh-felt/react-styles@npm:^0.0.1-prerelease.1":
-  version: 0.0.1-prerelease.1
-  resolution: "@rh-felt/react-styles@npm:0.0.1-prerelease.1"
-  checksum: 10c0/62700bb5d87368cd659e4b410c9bfe596554f0fca2236d20a93346339eecc63e7270fa159c9cbc3a188ccbc193f38a88803063286fe403d678f82c34b8f03094
-  languageName: node
-  linkType: hard
-
-"@rh-felt/react-table@npm:0.0.1-prerelease.1":
-  version: 0.0.1-prerelease.1
-  resolution: "@rh-felt/react-table@npm:0.0.1-prerelease.1"
-  dependencies:
-    "@rh-felt/react-core": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
-    "@rh-felt/react-tokens": "npm:^0.0.1-prerelease.1"
-    lodash: "npm:^4.18.1"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    react: ^17 || ^18 || ^19
-    react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/6e286c91bde64f71d2a243043253b34189a93db53f04ec4ae4ad9ba68bb808ec72e297cd382612a81d7928da39a947bbb407513c355945406475bb0090b8cd88
-  languageName: node
-  linkType: hard
-
-"@rh-felt/react-tokens@npm:^0.0.1-prerelease.1":
-  version: 0.0.1-prerelease.1
-  resolution: "@rh-felt/react-tokens@npm:0.0.1-prerelease.1"
-  checksum: 10c0/c32b39b36ae8b01b89f90981393cc1f44944007aaf1519bc8b867fc8d5f9973c4d4a94082d15150761d39b43971c1f2412745ea11bfc88f35c5e8ed8a2acf74c
-  languageName: node
-  linkType: hard
-
 "@rh-felt/styles@workspace:.":
   version: 0.0.0-use.local
   resolution: "@rh-felt/styles@workspace:."
@@ -3814,10 +3814,12 @@ __metadata:
     "@octokit/rest": "npm:^20.1.0"
     "@patternfly/documentation-framework": "npm:6.53.4"
     "@patternfly/patternfly-a11y": "npm:5.2.1"
-    "@rh-felt/react-code-editor": "npm:0.0.1-prerelease.1"
-    "@rh-felt/react-core": "npm:0.0.1-prerelease.1"
-    "@rh-felt/react-icons": "npm:0.0.1-prerelease.1"
-    "@rh-felt/react-table": "npm:0.0.1-prerelease.1"
+    "@patternfly/react-code-editor": "npm:@rh-felt/react-code-editor@0.0.1-prerelease.1"
+    "@patternfly/react-core": "npm:@rh-felt/react-core@0.0.1-prerelease.1"
+    "@patternfly/react-icons": "npm:@rh-felt/react-icons@0.0.1-prerelease.1"
+    "@patternfly/react-styles": "npm:@rh-felt/react-styles@0.0.1-prerelease.1"
+    "@patternfly/react-table": "npm:@rh-felt/react-table@0.0.1-prerelease.1"
+    "@patternfly/react-tokens": "npm:@rh-felt/react-tokens@0.0.1-prerelease.1"
     "@rspack/cli": "npm:^1.6.0"
     "@rspack/core": "npm:^1.6.0"
     "@rspack/dev-server": "npm:^1.1.4"
