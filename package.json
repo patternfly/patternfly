@@ -35,7 +35,7 @@
     "backstop:approve:all": "npm run backstop:approve; npm run backstop:approve:dark; npm run backstop:approve:glass; npm run backstop:approve:hc; npm run backstop:approve:dark-hc; npm run backstop:approve:dark-glass; npm run backstop:approve:felt; npm run backstop:approve:felt-dark; npm run backstop:approve:felt-glass; npm run backstop:approve:felt-hc; npm run backstop:approve:felt-dark-hc; npm run backstop:approve:felt-dark-glass",
     "backstop:chrome": "node backstop_data/engine_scripts/puppet/chrome.js",
     "playwright": "node ./node_modules/playwright/cli.js",
-    "build-patternfly": "gulp buildPatternfly",
+    "build-felt": "gulp buildFelt",
     "build": "gulp build",
     "build:docs": "gulp buildWebpack",
     "build:pficons": "gulp pfIcons",

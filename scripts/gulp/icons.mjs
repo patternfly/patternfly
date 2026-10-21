@@ -4,14 +4,14 @@ import iconfontCss from 'gulp-iconfont-css';
 import generateIcons from '../../src/icons/generateIcons.mjs';
 import path from 'path';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
-import { patternflyNamespace, patternflyVersion } from '../init.mjs';
+import { feltNamespace, feltVersion } from '../init.mjs';
 
 const { src, dest } = gulp;
 
 import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const pficonFontName = patternflyNamespace + patternflyVersion + 'pficon';
+const pficonFontName = feltNamespace + feltVersion + 'pficon';
 let maxCodepoint = 0;
 
 // functions to parse icon names/unicodes from sass file && write to json file

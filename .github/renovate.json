@@ -7,7 +7,7 @@
       "enabled": false
     },
     {
-      "groupName": "PatternFly dependencies",
+      "groupName": "Felt dependencies",
       "matchDatasources": ["npm"],
       "matchPackageNames": [
         "@patternfly/documentation-framework",

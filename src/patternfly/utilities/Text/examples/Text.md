@@ -212,7 +212,7 @@ These colors are best used with the ["inverse" background colors](/foundations-a
 
 ### Overview
 
-These text utilities can be used to modify text within the PatternFly framework. In most cases, using the components with available modifiers should be sufficient to implement most designs, and should be preferred over customizations using these utilities.
+These text utilities can be used to modify text within the Felt framework. In most cases, using the components with available modifiers should be sufficient to implement most designs, and should be preferred over customizations using these utilities.
 
 Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](/foundations-and-styles/colors#contrast-ratios) for more information.
 

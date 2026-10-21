@@ -1,2 +1,2 @@
-export const patternflyNamespace = 'pf-';
-export const patternflyVersion = 'v6-';
+export const feltNamespace = 'pf-';
+export const feltVersion = 'v6-';

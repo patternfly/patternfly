@@ -3399,7 +3399,7 @@ Width modifiers control the width of the columns. To control the responsive beha
 
 ## Text control modifiers
 
-To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-v6-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-v6-c-table__text`].
+To better control table cell behavior, Felt provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-v6-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-v6-c-table__text`].
 ### Text control example
 ```hbs
 {{#> table table--IsGrid=true table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
@@ -3443,7 +3443,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 {{/table}}
 ```
 
-By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-v6-c-table__text` wrapper on table cell content. In addition to `.pf-v6-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
+By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-v6-c-table__text` wrapper on table cell content. In addition to `.pf-v6-c-table__text`, all Felt layouts can be used in table cells and contain table text elements.
 
 ### Text control using the table text element example
 ```hbs
@@ -3485,7 +3485,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         {{#> stack stack--modifier="pf-m-gutter"}}
           {{#> stack-item}}
             {{#> table-text table-text--modifier="" table-text--type="div"}}
-              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-v6-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with a div or use a PatternFly layout.
+              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-v6-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with a div or use a Felt layout.
             {{/table-text}}
           {{/stack-item}}
           {{#> stack-item}}

@@ -1,4 +1,4 @@
-import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import { feltNamespace, feltVersion } from './init.mjs';
 import fs from 'fs';
 import path from 'path';
 import Handlebars from 'handlebars';
@@ -367,8 +367,8 @@ export function entries(...data) {
 }
 
 export const pfv = (type) => {
-  const namespace = patternflyNamespace;
-  let version = patternflyVersion;
+  const namespace = feltNamespace;
+  let version = feltVersion;
   let prefix = 'c-';
 
   if (type === 'unset-prefix') {

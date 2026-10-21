@@ -3,11 +3,11 @@ id: guidelines
 title: Development Guidelines
 ---
 
-# PatternFly development guidelines
+# Felt development guidelines
 
 Please enforce these guidelines at all times. Small or large, call out what's incorrect.
 
-This set of rules establishes some constraints and conventions. If you're ever unsure about a convention or if a problem could be solved in a few different ways, reach out to the PatternFly community. Talk through the best approach, and update these guidelines when necessary.
+This set of rules establishes some constraints and conventions. If you're ever unsure about a convention or if a problem could be solved in a few different ways, reach out to the Felt community. Talk through the best approach, and update these guidelines when necessary.
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ This set of rules establishes some constraints and conventions. If you're ever u
 
 ### Separation of UI structure concerns
 
-PatternFly is made out of isolated and modular structures that fall into 2 categories:
+Felt is made out of isolated and modular structures that fall into 2 categories:
 
 #### Layouts
 
@@ -31,7 +31,7 @@ Layouts are the containers that allow for organizing and grouping its immediate 
 
 - A layout never imposes element styles on its children.
 
-The classes are prefixed with `-l` (after the PatternFly prefix `pf-` and version `v6-`), for example: `.pf-v6-l-split` or `.pf-v6-l-stack`.
+The classes are prefixed with `-l` (after the Felt prefix `pf-` and version `v6-`), for example: `.pf-v6-l-split` or `.pf-v6-l-stack`.
 
 #### Components
 
@@ -42,7 +42,7 @@ Components are modular and independent structures concerned with how a thing loo
 - The first element in a component should never use top margins and should touch the top of its component.
 - Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](https://www.patternfly.org/accessibility/about-accessibility).
 
-The parent container of a component is prefixed with `-c` (after the PatternFly prefix `pf-` and version `v6-`), for example: `.pf-v6-c-alert` or `.pf-v6-c-button`.
+The parent container of a component is prefixed with `-c` (after the Felt prefix `pf-` and version `v6-`), for example: `.pf-v6-c-alert` or `.pf-v6-c-button`.
 
 #### When to create a new component
 
@@ -54,11 +54,11 @@ Repetition is better than the wrong abstraction.
 
 **Utilities**
 
-PatternFly is made up of isolated components that don't allow dependencies. Therefore, the use of helpers or utility classes is discouraged.
+Felt is made up of isolated components that don't allow dependencies. Therefore, the use of helpers or utility classes is discouraged.
 
-However, from time to time it is recognized that an exception to the PatternFly styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
+However, from time to time it is recognized that an exception to the Felt styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
 
-A utility class is prefixed with `-u` (after the PatternFly prefix `pf-`), for example: `.pf-v6-u-text-align-center`.
+A utility class is prefixed with `-u` (after the Felt prefix `pf-`), for example: `.pf-v6-u-text-align-center`.
 
 **Demos**
 
@@ -95,7 +95,7 @@ Demos show how components and layouts can be put together to build more complex 
 
 ### Browser support
 
-PatternFly supports the latest two major versions of:
+Felt supports the latest two major versions of:
 - Chrome
 - Firefox  
 - Safari
@@ -107,16 +107,16 @@ PatternFly supports the latest two major versions of:
 
 ### Naming conventions
 
-PatternFly follows BEM methodology with specific prefixes:
+Felt follows BEM methodology with specific prefixes:
 
 - **Components**: `.pf-v6-c-component-name__element--modifier`
 - **Layouts**: `.pf-v6-l-layout-name__element--modifier`
 - **Utilities**: `.pf-v6-u-utility-name--modifier`
-- **Prefix all PatternFly classes** with `.pf-v6-`
+- **Prefix all Felt classes** with `.pf-v6-`
 
 ### Variable System
 
-PatternFly follows a two-layer theming system where **design token CSS variables** always inform **component variables**. Each one of those layers follow a set of very specific rules.
+Felt follows a two-layer theming system where **design token CSS variables** always inform **component variables**. Each one of those layers follow a set of very specific rules.
 
 #### design token CSS variables
 
@@ -204,7 +204,7 @@ In the case where a 'magic' value needs to be used, ensure a comment is added to
 
 ### Sass guidelines
 
-PatternFly uses [Sass](http://sass-lang.com/) to preprocess CSS.
+Felt uses [Sass](http://sass-lang.com/) to preprocess CSS.
 
 As a general rule don't overcomplicate Sass, keep it easy to parse for a normal human.
 
@@ -245,9 +245,9 @@ Limit nesting to the following use cases:
 
 2. **Media queries**
 
-Component-specific media queries should be nested inside the component block. Remember that PatternFly is mobile first. **Do progressive enhancement, not graceful degradation.**
+Component-specific media queries should be nested inside the component block. Remember that Felt is mobile first. **Do progressive enhancement, not graceful degradation.**
 
-PatternFly has breakpoints defined as CSS custom properties:
+Felt has breakpoints defined as CSS custom properties:
 
 ```scss
 $pf-v6-global--breakpoint--xs: 0 !default; 
@@ -302,11 +302,11 @@ While the default styles applied to an element might not provide a visual indica
 
 ### Code style standards
 
-PatternFly follows [Harry Robert's CSS Guidelines](https://cssguidelin.es/) with some exceptions, deviations and additions.
+Felt follows [Harry Robert's CSS Guidelines](https://cssguidelin.es/) with some exceptions, deviations and additions.
 
 #### Exceptions
 
-PatternFly doesn't follow these rules:
+Felt doesn't follow these rules:
 
 - [Table of contents](https://cssguidelin.es/#table-of-contents)
 - [Titling](https://cssguidelin.es/#titling)
@@ -342,7 +342,7 @@ Follow this comment structure:
 
 **Lintable CSS rules**
 
-The [CSS linter](https://stylelint.io/) is PatternFly's single source of truth for CSS syntax, declaration order, and other CSS rules like disallow type selectors, disallow vendor prefixes, and more.
+The [CSS linter](https://stylelint.io/) is Felt's single source of truth for CSS syntax, declaration order, and other CSS rules like disallow type selectors, disallow vendor prefixes, and more.
 
 **Shorthand notation**
 
@@ -466,4 +466,4 @@ This guide is inspired by people we follow and respect:
 
 ## AI-assisted development guidelines
 
-Please reference [PatternFly's AI-assisted development guidelines](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md) if you'd like to contribute code generated using AI.
+Please reference [Felt's AI-assisted development guidelines](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md) if you'd like to contribute code generated using AI.

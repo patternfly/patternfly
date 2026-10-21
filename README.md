@@ -9,13 +9,13 @@ We welcome contributions to Felt! Please read our [Contributing Guide](https://p
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
 - run `npm install @rh-felt/styles --save`
 
-When you install PatternFly, the package includes:
+When you install Felt, the package includes:
 
-- @rh-felt/styles/patternfly-base.css - base styles. Global styles, reset/normalize styles, global variables. These styles are required for patternfly styles to work properly.
+- @rh-felt/styles/patternfly-base.css - base styles. Global styles, reset/normalize styles, global variables. These styles are required for Felt styles to work properly.
 - @rh-felt/styles/patternfly.css - this is patternfly-base.css, as well as all component and layout styles. Does not include utility styles.
 - @rh-felt/styles/patternfly-addons.css - all utility class styles. These do not come with patternfly.css, and must be imported manually.
 - @rh-felt/styles/utilities/[UtilityName]/[utility-name].css - individual utility class styles if you prefer only use one or two, and don't want to import all of them.
-- @rh-felt/styles/patternfly-charts.css - required if using dark theme with [PatternFly charts](https://www.patternfly.org/charts/about-charts).
+- @rh-felt/styles/patternfly-charts.css - required if using dark theme with [Felt charts](https://www.patternfly.org/charts/about-charts).
 
 Any of the files above are meant for use in consuming the library. The recommended consumption approach will vary from project to project.
 
