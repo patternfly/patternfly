@@ -11,7 +11,7 @@
   // header
   --#{$calendar-month}__header--MarginBlockEnd: var(--pf-t--global--spacer--md);
   --#{$calendar-month}__header--Gap: var(--pf-t--global--spacer--gap--control-to-control--default);
-  --#{$calendar-month}__header-year--Width: 9ch;
+  --#{$calendar-month}__header-year--Width: #{pf-v6-number-input-size(4ch)};
   --#{$calendar-month}__header-nav-control--MarginInlineEnd: 0;
   --#{$calendar-month}__header-nav-control--MarginInlineStart: 0;
 
@@ -117,6 +117,14 @@
 
 .#{$calendar-month}__header-year {
   width: var(--#{$calendar-month}__header-year--Width);
+
+  @supports (field-sizing: content) {
+    width: revert;
+
+    .#{$form-control} input {
+      field-sizing: content;
+    }
+  }
 }
 
 .#{$calendar-month}__calendar {
