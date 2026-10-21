@@ -1,29 +1,29 @@
-# PatternFly 
+# Felt Styles
  
 ## Contributing 
 
-We welcome contributions to PatternFly! Please read our [Contributing Guide](https://pf-core-staging.patternfly.org/contribution) to learn how to get started, submit issues, and contribute code to the project. 
+We welcome contributions to Felt! Please read our [Contributing Guide](https://pf-core-staging.patternfly.org/contribution) to learn how to get started, submit issues, and contribute code to the project. 
 
 ## Install
 
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
-- run `npm install @patternfly/patternfly --save`
+- run `npm install @rh-felt/styles --save`
 
-When you install PatternFly, the package includes:
+When you install Felt, the package includes:
 
-- @patternfly/patternfly/patternfly-base.css - base styles. Global styles, reset/normalize styles, global variables. These styles are required for patternfly styles to work properly.
-- @patternfly/patternfly/patternfly.css - this is patternfly-base.css, as well as all component and layout styles. Does not include utility styles.
-- @patternfly/patternfly/patternfly-addons.css - all utility class styles. These do not come with patternfly.css, and must be imported manually.
-- @patternfly/patternfly/utilities/[UtilityName]/[utility-name].css - individual utility class styles if you prefer only use one or two, and don't want to import all of them.
-- @patternfly/patternfly/patternfly-charts.css - required if using dark theme with [PatternFly charts](https://www.patternfly.org/charts/about-charts).
+- @rh-felt/styles/patternfly-base.css - base styles. Global styles, reset/normalize styles, global variables. These styles are required for Felt styles to work properly.
+- @rh-felt/styles/patternfly.css - this is patternfly-base.css, as well as all component and layout styles. Does not include utility styles.
+- @rh-felt/styles/patternfly-addons.css - all utility class styles. These do not come with patternfly.css, and must be imported manually.
+- @rh-felt/styles/utilities/[UtilityName]/[utility-name].css - individual utility class styles if you prefer only use one or two, and don't want to import all of them.
+- @rh-felt/styles/patternfly-charts.css - required if using dark theme with [Felt charts](https://www.patternfly.org/charts/about-charts).
 
 Any of the files above are meant for use in consuming the library. The recommended consumption approach will vary from project to project.
 
 ## Development
 
-**PatternFly Development requires Node v20.18.3 or greater**
+**Felt Development requires Node v20.18.3 or greater**
 
-To setup the PatternFly development environment:
+To setup the Felt development environment:
 
 - clone the project
 - ensure you have Node.js v20.18.3 or greater installed
@@ -90,7 +90,7 @@ When creating a brand new component, it should be released as beta in order to g
 
 ## Testing for accessibility
 
-PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility guide](https://www.patternfly.org/accessibility/patternflys-accessibility).
+Felt uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to check for accessibility violations. Our goal is to meet WCAG 2.0 AA requirements, as noted in our [Accessibility guide](https://www.patternfly.org/accessibility/patternflys-accessibility).
 
 ### How to perform an accessibility audit with aXe
 aXe is available as either a browser extension or npm script.
@@ -122,7 +122,7 @@ If you have any suggestions about ways that we can improve how we use this tool,
 [How do I use CSS variables to customize the library?](https://pf-core-staging.patternfly.org/guidelines#variables)
 
 ### Browser support
-PatternFly is supported on the latest two major versions of the following browsers:
+Felt is supported on the latest two major versions of the following browsers:
 
 - Chrome
 - Firefox

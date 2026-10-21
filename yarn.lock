@@ -3493,153 +3493,80 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@patternfly/patternfly@workspace:."
-  dependencies:
-    "@babel/core": "npm:^7.24.4"
-    "@babel/eslint-parser": "npm:^7.24.1"
-    "@babel/plugin-transform-class-properties": "npm:^7.24.4"
-    "@babel/plugin-transform-optional-chaining": "npm:^7.24.4"
-    "@babel/plugin-transform-private-methods": "npm:^7.24.4"
-    "@babel/plugin-transform-private-property-in-object": "npm:^7.24.4"
-    "@babel/plugin-transform-react-jsx": "npm:^7.23.4"
-    "@babel/preset-env": "npm:^7.24.4"
-    "@babel/preset-react": "npm:^7.24.1"
-    "@commitlint/cli": "npm:^19.2.1"
-    "@commitlint/config-conventional": "npm:^19.1.0"
-    "@fortawesome/fontawesome": "npm:^1.1.8"
-    "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.53.4"
-    "@patternfly/patternfly-a11y": "npm:5.2.1"
-    "@patternfly/react-code-editor": "npm:6.6.1"
-    "@patternfly/react-core": "npm:6.6.1"
-    "@patternfly/react-icons": "npm:6.6.1"
-    "@patternfly/react-table": "npm:6.6.1"
-    "@rspack/cli": "npm:^1.6.0"
-    "@rspack/core": "npm:^1.6.0"
-    "@rspack/dev-server": "npm:^1.1.4"
-    "@starptech/prettyhtml": "npm:^0.10.0"
-    backstopjs: "npm:^6.3.25"
-    cheerio: "npm:^1.0.0-rc.12"
-    commander: "npm:^12.0.0"
-    cssnano: "npm:^6.1.2"
-    eslint: "npm:^8.57.0"
-    eslint-config-standard: "npm:^17.1.0"
-    eslint-config-standard-jsx: "npm:^11.0.0"
-    eslint-config-standard-react: "npm:^13.0.0"
-    eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-n: "npm:^16.6.2"
-    eslint-plugin-node: "npm:^11.1.0"
-    eslint-plugin-promise: "npm:^6.1.1"
-    eslint-plugin-react: "npm:^7.34.1"
-    eslint-plugin-react-hooks: "npm:^4.6.0"
-    glob: "npm:^10.3.12"
-    gulp: "npm:^5.0.1"
-    gulp-cli: "npm:^3.1.0"
-    gulp-iconfont: "npm:^12.0.0"
-    gulp-iconfont-css: "npm:^3.0.0"
-    gulp-postcss: "npm:^10.0.0"
-    gulp-rename: "npm:^2.0.0"
-    gulp-sourcemaps: "npm:^3.0.0"
-    husky: "npm:^9.0.11"
-    lint-staged: "npm:^15.2.2"
-    node-plop: "npm:^0.32.0"
-    postcss: "npm:^8.4.38"
-    postcss-css-variables: "npm:^0.19.0"
-    postcss-preset-env: "npm:^9.5.4"
-    prettier: "npm:^3.2.5"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    remark-parse: "npm:^11.0.0"
-    remark-stringify: "npm:^11.0.0"
-    resemblejs: "npm:^5.0.0"
-    rimraf: "npm:^6.0.1"
-    sass: "npm:^1.74.1"
-    stylelint: "npm:^17.12.0"
-    stylelint-config-recess-order: "npm:^7.7.0"
-    stylelint-config-standard-scss: "npm:^17.0.0"
-    stylelint-order: "npm:^8.1.1"
-    surge: "npm:^0.24.6"
-    unified: "npm:^11.0.4"
-    webpack: "npm:^5.91.0"
-  languageName: unknown
-  linkType: soft
-
-"@patternfly/react-code-editor@npm:6.6.1":
-  version: 6.6.1
-  resolution: "@patternfly/react-code-editor@npm:6.6.1"
+"@patternfly/react-code-editor@npm:@rh-felt/react-code-editor@0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-code-editor@npm:0.0.1-prerelease.1"
   dependencies:
     "@monaco-editor/react": "npm:^4.7.0"
-    "@patternfly/react-core": "npm:^6.6.1"
-    "@patternfly/react-icons": "npm:^6.6.1"
-    "@patternfly/react-styles": "npm:^6.6.1"
+    "@rh-felt/react-core": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
     react-dropzone: "npm:14.3.5"
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/4ba9aeec43f5023169f7a666398290bf90e4f1bcb67fe01af1e5b4db1f5a511ab702e8ea9c38c8e6350af449ad9ff2379a516e74962d00fd5b874493f37f9168
+  checksum: 10c0/2ba28e8b92cf60cf475e5a8b3e681acdf171d984d1e0fac5d709dad79d01d19bc55e87aced8301d94e5e816e11b72d01b016f3284b22a3af028af3656144af4c
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:6.6.1, @patternfly/react-core@npm:^6.6.1":
-  version: 6.6.1
-  resolution: "@patternfly/react-core@npm:6.6.1"
+"@patternfly/react-core@npm:@rh-felt/react-core@0.0.1-prerelease.1, @rh-felt/react-core@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-core@npm:0.0.1-prerelease.1"
   dependencies:
-    "@patternfly/react-icons": "npm:^6.6.1"
-    "@patternfly/react-styles": "npm:^6.6.1"
-    "@patternfly/react-tokens": "npm:^6.6.1"
+    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-tokens": "npm:^0.0.1-prerelease.1"
     focus-trap: "npm:7.6.6"
     react-dropzone: "npm:^14.3.5"
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/48d8b952d87abb45b99d345731c89cd42e7ba7fdd9d973025068e97c97be84b95f1560c8b7e0f02b453453a0f7c8e23a2f269d1851b9bc615bfe5547ef3b0969
+  checksum: 10c0/806ced8f98b864fed8bf2752efadce62d474456aa5d00dd02c805bd361620cc282d7a0e5bef63a7f2666a6355c5f733ec6e3e3a1919c75b5d22e18e144ad7776
   languageName: node
   linkType: hard
 
-"@patternfly/react-icons@npm:6.6.1, @patternfly/react-icons@npm:^6.6.1":
-  version: 6.6.1
-  resolution: "@patternfly/react-icons@npm:6.6.1"
+"@patternfly/react-icons@npm:@rh-felt/react-icons@0.0.1-prerelease.1, @rh-felt/react-icons@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-icons@npm:0.0.1-prerelease.1"
   dependencies:
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/9161058b4c70f66a180c568064b5fe4279494f11ffc9f3e842d101a6e1714faf0e7200c36153169d03e90ba38547810ab5f2d041ac23fdc066297fd767bbbb56
+  checksum: 10c0/5b27e76ac2fe9d2d25b0f66a2fcd910627f533e3697b3c0bb435dbbd66d14fe0891a9b49e7a1e4e4bb3b5fc123e8f222cc26c907ac0eec4730f646c8cfb944cb
   languageName: node
   linkType: hard
 
-"@patternfly/react-styles@npm:^6.6.1":
-  version: 6.6.1
-  resolution: "@patternfly/react-styles@npm:6.6.1"
-  checksum: 10c0/0c50bf72fade26d30e6ff9abe0d2d8dbb5b546fe434067f70665ce704e63767a9f8ea7627871e2c6ce17ea4f475daa931fd420e1f1aee891c1f48b5905e57433
+"@patternfly/react-styles@npm:@rh-felt/react-styles@0.0.1-prerelease.1, @rh-felt/react-styles@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-styles@npm:0.0.1-prerelease.1"
+  checksum: 10c0/62700bb5d87368cd659e4b410c9bfe596554f0fca2236d20a93346339eecc63e7270fa159c9cbc3a188ccbc193f38a88803063286fe403d678f82c34b8f03094
   languageName: node
   linkType: hard
 
-"@patternfly/react-table@npm:6.6.1":
-  version: 6.6.1
-  resolution: "@patternfly/react-table@npm:6.6.1"
+"@patternfly/react-table@npm:@rh-felt/react-table@0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-table@npm:0.0.1-prerelease.1"
   dependencies:
-    "@patternfly/react-core": "npm:^6.6.1"
-    "@patternfly/react-icons": "npm:^6.6.1"
-    "@patternfly/react-styles": "npm:^6.6.1"
-    "@patternfly/react-tokens": "npm:^6.6.1"
+    "@rh-felt/react-core": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-icons": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-styles": "npm:^0.0.1-prerelease.1"
+    "@rh-felt/react-tokens": "npm:^0.0.1-prerelease.1"
     lodash: "npm:^4.18.1"
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/cefa6d56f75d60f702a15a93097a362c24d5ae5cc83c289ea75b626f915ae6992ca2720cc77846e7fe1da76f62c4a6527833750e8faf9cf9561e113d0e988f5d
+  checksum: 10c0/6e286c91bde64f71d2a243043253b34189a93db53f04ec4ae4ad9ba68bb808ec72e297cd382612a81d7928da39a947bbb407513c355945406475bb0090b8cd88
   languageName: node
   linkType: hard
 
-"@patternfly/react-tokens@npm:^6.6.1":
-  version: 6.6.1
-  resolution: "@patternfly/react-tokens@npm:6.6.1"
-  checksum: 10c0/818f0539722c147a83c35bd53860b80566117c823706e51228f652754c2053410da987712b21def02d55c39845c9d129819e96a78870cc390db80df59c127a8b
+"@patternfly/react-tokens@npm:@rh-felt/react-tokens@0.0.1-prerelease.1, @rh-felt/react-tokens@npm:^0.0.1-prerelease.1":
+  version: 0.0.1-prerelease.1
+  resolution: "@rh-felt/react-tokens@npm:0.0.1-prerelease.1"
+  checksum: 10c0/c32b39b36ae8b01b89f90981393cc1f44944007aaf1519bc8b867fc8d5f9973c4d4a94082d15150761d39b43971c1f2412745ea11bfc88f35c5e8ed8a2acf74c
   languageName: node
   linkType: hard
 
@@ -3867,6 +3794,81 @@ __metadata:
   checksum: 10c0/a7d97c2b3b2be15df4a419c34a11fdfe8e4ecb79140bbe8c4cf0e3afb79070c4ba2cd85106c2fb917bb7d7b7e2c2432fb0c88523eb288c80759211d3e123cb41
   languageName: node
   linkType: hard
+
+"@rh-felt/styles@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@rh-felt/styles@workspace:."
+  dependencies:
+    "@babel/core": "npm:^7.24.4"
+    "@babel/eslint-parser": "npm:^7.24.1"
+    "@babel/plugin-transform-class-properties": "npm:^7.24.4"
+    "@babel/plugin-transform-optional-chaining": "npm:^7.24.4"
+    "@babel/plugin-transform-private-methods": "npm:^7.24.4"
+    "@babel/plugin-transform-private-property-in-object": "npm:^7.24.4"
+    "@babel/plugin-transform-react-jsx": "npm:^7.23.4"
+    "@babel/preset-env": "npm:^7.24.4"
+    "@babel/preset-react": "npm:^7.24.1"
+    "@commitlint/cli": "npm:^19.2.1"
+    "@commitlint/config-conventional": "npm:^19.1.0"
+    "@fortawesome/fontawesome": "npm:^1.1.8"
+    "@octokit/rest": "npm:^20.1.0"
+    "@patternfly/documentation-framework": "npm:6.53.4"
+    "@patternfly/patternfly-a11y": "npm:5.2.1"
+    "@patternfly/react-code-editor": "npm:@rh-felt/react-code-editor@0.0.1-prerelease.1"
+    "@patternfly/react-core": "npm:@rh-felt/react-core@0.0.1-prerelease.1"
+    "@patternfly/react-icons": "npm:@rh-felt/react-icons@0.0.1-prerelease.1"
+    "@patternfly/react-styles": "npm:@rh-felt/react-styles@0.0.1-prerelease.1"
+    "@patternfly/react-table": "npm:@rh-felt/react-table@0.0.1-prerelease.1"
+    "@patternfly/react-tokens": "npm:@rh-felt/react-tokens@0.0.1-prerelease.1"
+    "@rspack/cli": "npm:^1.6.0"
+    "@rspack/core": "npm:^1.6.0"
+    "@rspack/dev-server": "npm:^1.1.4"
+    "@starptech/prettyhtml": "npm:^0.10.0"
+    backstopjs: "npm:^6.3.25"
+    cheerio: "npm:^1.0.0-rc.12"
+    commander: "npm:^12.0.0"
+    cssnano: "npm:^6.1.2"
+    eslint: "npm:^8.57.0"
+    eslint-config-standard: "npm:^17.1.0"
+    eslint-config-standard-jsx: "npm:^11.0.0"
+    eslint-config-standard-react: "npm:^13.0.0"
+    eslint-plugin-import: "npm:^2.29.1"
+    eslint-plugin-n: "npm:^16.6.2"
+    eslint-plugin-node: "npm:^11.1.0"
+    eslint-plugin-promise: "npm:^6.1.1"
+    eslint-plugin-react: "npm:^7.34.1"
+    eslint-plugin-react-hooks: "npm:^4.6.0"
+    glob: "npm:^10.3.12"
+    gulp: "npm:^5.0.1"
+    gulp-cli: "npm:^3.1.0"
+    gulp-iconfont: "npm:^12.0.0"
+    gulp-iconfont-css: "npm:^3.0.0"
+    gulp-postcss: "npm:^10.0.0"
+    gulp-rename: "npm:^2.0.0"
+    gulp-sourcemaps: "npm:^3.0.0"
+    husky: "npm:^9.0.11"
+    lint-staged: "npm:^15.2.2"
+    node-plop: "npm:^0.32.0"
+    postcss: "npm:^8.4.38"
+    postcss-css-variables: "npm:^0.19.0"
+    postcss-preset-env: "npm:^9.5.4"
+    prettier: "npm:^3.2.5"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    remark-parse: "npm:^11.0.0"
+    remark-stringify: "npm:^11.0.0"
+    resemblejs: "npm:^5.0.0"
+    rimraf: "npm:^6.0.1"
+    sass: "npm:^1.74.1"
+    stylelint: "npm:^17.12.0"
+    stylelint-config-recess-order: "npm:^7.7.0"
+    stylelint-config-standard-scss: "npm:^17.0.0"
+    stylelint-order: "npm:^8.1.1"
+    surge: "npm:^0.24.6"
+    unified: "npm:^11.0.4"
+    webpack: "npm:^5.91.0"
+  languageName: unknown
+  linkType: soft
 
 "@rspack/binding-darwin-arm64@npm:1.7.1":
   version: 1.7.1

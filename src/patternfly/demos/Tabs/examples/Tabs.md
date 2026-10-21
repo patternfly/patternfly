@@ -356,14 +356,14 @@ section: components
     {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-template--id '-modal-title"')}}
-        PatternFly
+        Felt
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
       {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-template--id '-modal-description"')}}
         {{#> grid grid--modifier="pf-m-gutter"}}
           {{#> grid-item}}
-            {{#> tabs tabs--aria-label="PatternFly" tabs--id=(concat modal-template--id '-tabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
+            {{#> tabs tabs--aria-label="Felt" tabs--id=(concat modal-template--id '-tabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
               {{#> tabs-list}}
                 {{> __tabs-item
                   __tabs-item--current="true"
@@ -381,7 +381,7 @@ section: components
           {{/grid-item}}
           {{#> grid-item}}
             {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' modal-template--id '-tabs-details-link" id="' modal-template--id '-tabs-details-panel"')}}
-              <p>PatternFly is a community project that promotes design commonality and improves user experience.</p>
+              <p>Felt is a community project that promotes design commonality and improves user experience.</p>
             {{/tab-content}}
             {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' modal-template--id '-tabs-documentation-link" id="' modal-template--id '-tabs-documentation-panel"')}}
               {{#> list}}
@@ -403,9 +403,9 @@ section: components
   {{#> page-main-section}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--id=(concat page-template--id '-card-1') card--modifier="pf-m-selectable-raised pf-m-compact"}}
-        {{> card-title card-title-text--value="PatternFly"}}
+        {{> card-title card-title-text--value="Felt"}}
         {{#> card-body}}
-          PatternFly is a community project that promotes design commonality and improves user experience.
+          Felt is a community project that promotes design commonality and improves user experience.
         {{/card-body}}
       {{/card}}
       {{#> card card--id=(concat page-template--id '-card-2') card--modifier="pf-m-selectable-raised pf-m-compact"}}

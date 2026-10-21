@@ -1,4 +1,4 @@
-// Patternfly
+// Felt
 import '../dist/patternfly.css';
 
 // Utilities

@@ -20,7 +20,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `pf-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `rh-felt-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
   case 'coverage':
@@ -28,8 +28,7 @@ switch(uploadFolderName) {
     break;
   case 'public':
     if (!prnum && prbranch === 'main') {
-      uploadURL = 'pf-core-staging.patternfly.org';
-      fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
+      uploadURL = 'rh-felt-styles-staging.surge.sh';
     }
     else {
       uploadURL += '.surge.sh';

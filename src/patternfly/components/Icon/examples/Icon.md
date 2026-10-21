@@ -9,25 +9,25 @@ cssPrefix: pf-v6-c-icon
 ```hbs
 {{#> icon}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-long-arrow-down"}}
+    {{feltIcon "rh-ui-long-arrow-down"}}
   {{/icon-content}}
 {{/icon}}
 
 {{#> icon}}
   {{#> icon-content}}
-    {{pfIcon "rh-microns-caret-right"}}
+    {{feltIcon "rh-microns-caret-right"}}
   {{/icon-content}}
 {{/icon}}
 
 {{#> icon}}
   {{#> icon-content}}
-    {{pfIcon "rh-microns-caret-down"}}
+    {{feltIcon "rh-microns-caret-down"}}
   {{/icon-content}}
 {{/icon}}
 
 {{#> icon}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-settings-fill"}}
+    {{feltIcon "rh-ui-settings-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -36,32 +36,32 @@ cssPrefix: pf-v6-c-icon
 ```hbs
 {{#> icon icon--modifier="pf-m-sm"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-md"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-lg"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-xl"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-2xl"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-3xl"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -70,17 +70,17 @@ cssPrefix: pf-v6-c-icon
 ```hbs
 {{#> icon icon--modifier="pf-m-body-sm"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-body-default"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-body-lg"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -89,32 +89,32 @@ cssPrefix: pf-v6-c-icon
 ```hbs
 {{#> icon icon--modifier="pf-m-heading-sm"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-heading-md"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-heading-lg"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-heading-xl"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-heading-2xl"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-heading-3xl"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -123,27 +123,27 @@ cssPrefix: pf-v6-c-icon
 ```hbs
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-danger"}}
-    {{pfIcon "rh-ui-error-fill"}}
+    {{feltIcon "rh-ui-error-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-warning"}}
-    {{pfIcon "rh-ui-warning-fill"}}
+    {{feltIcon "rh-ui-warning-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-success"}}
-    {{pfIcon "rh-ui-check-circle-fill"}}
+    {{feltIcon "rh-ui-check-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-info"}}
-    {{pfIcon "rh-ui-information-fill"}}
+    {{feltIcon "rh-ui-information-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-custom"}}
-    {{pfIcon "rh-ui-notification-fill"}}
+    {{feltIcon "rh-ui-notification-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -153,22 +153,22 @@ Use a size modifier on the icon container to maintain a consistent size, even if
 ```hbs
 {{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-lg"}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-xl"}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-2xl"}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 {{#> icon icon--modifier="pf-m-3xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-3xl"}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -179,7 +179,7 @@ Use a size modifier on the icon container to maintain a consistent size, even if
   <h1>Heading
     {{#> icon icon--modifier="pf-m-inline"}}
       {{#> icon-content}}
-        {{pfIcon "rh-ui-add-circle-fill"}}
+        {{feltIcon "rh-ui-add-circle-fill"}}
       {{/icon-content}}
     {{/icon}}
   </h1>
@@ -188,21 +188,21 @@ Use a size modifier on the icon container to maintain a consistent size, even if
   <h2>Second level
     {{#> icon icon--modifier="pf-m-inline"}}
       {{#> icon-content}}
-        {{pfIcon "rh-ui-add-circle-fill"}}
+        {{feltIcon "rh-ui-add-circle-fill"}}
       {{/icon-content}}
     {{/icon}}
   </h2>
   <p>
     {{#> icon icon--modifier="pf-m-inline"}}
       {{#> icon-content}}
-        {{pfIcon "rh-ui-add-circle-fill"}}
+        {{feltIcon "rh-ui-add-circle-fill"}}
       {{/icon-content}}
     {{/icon}}
     Curabitur accumsan turpis pharetra
     <strong>augue tincidunt
     {{#> icon icon--modifier="pf-m-inline"}}
       {{#> icon-content}}
-        {{pfIcon "rh-ui-add-circle-fill"}}
+        {{feltIcon "rh-ui-add-circle-fill"}}
       {{/icon-content}}
     {{/icon}}</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel
     cursus venenatis. Suspendisse potenti.
@@ -210,7 +210,7 @@ Use a size modifier on the icon container to maintain a consistent size, even if
   <small>Sometimes you need small text
     {{#> icon icon--modifier="pf-m-inline"}}
       {{#> icon-content}}
-        {{pfIcon "rh-ui-add-circle-fill"}}
+        {{feltIcon "rh-ui-add-circle-fill"}}
       {{/icon-content}}
     {{/icon}}
   </small>
@@ -218,22 +218,22 @@ Use a size modifier on the icon container to maintain a consistent size, even if
 
 Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}} small,
 {{#> icon icon--modifier="pf-m-md pf-m-inline"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}} medium,
 {{#> icon icon--modifier="pf-m-lg pf-m-inline"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}} large,
 {{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-add-circle-fill"}}
+    {{feltIcon "rh-ui-add-circle-fill"}}
   {{/icon-content}}
 {{/icon}} extra large
 ```
@@ -242,7 +242,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
 ```hbs
 {{#> icon icon--modifier="pf-m-md pf-m-in-progress"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-check-circle-fill"}}
+    {{feltIcon "rh-ui-check-circle-fill"}}
   {{/icon-content}}
   {{#> icon-progress}}
     {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
@@ -251,7 +251,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
 
 {{#> icon icon--modifier="pf-m-md"}}
   {{#> icon-content}}
-    {{pfIcon "rh-ui-check-circle-fill"}}
+    {{feltIcon "rh-ui-check-circle-fill"}}
   {{/icon-content}}
 {{/icon}}
 ```
@@ -260,7 +260,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
 ### Overview
 The icon element is a container used to maintain a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
 
-Refer to the [icons](/foundations-and-styles/iconography) page for information about the PatternFly icon set and guidelines for use.
+Refer to the [icons](/foundations-and-styles/iconography) page for information about the Felt icon set and guidelines for use.
 
 ### Usage
 | Class | Applied to | Outcome |

@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Help us to improve PatternFly
+about: Help us to improve Felt
 title: Bug - [Component] - [short description]
 type: bug
 assignees: ''
@@ -11,6 +11,7 @@ assignees: ''
 This is an issue with 
 - [ ] Patternfly 5  
 - [ ] Patternfly 6  
+- [ ] Felt
 - [ ] other
 
 Please give a clear and concise description of the problem. Which components are affected?

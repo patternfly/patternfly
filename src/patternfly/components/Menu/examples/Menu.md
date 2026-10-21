@@ -120,7 +120,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-branch-fill"}}
+              {{feltIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               From Git
@@ -132,7 +132,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-collection-fill"}}
+              {{feltIcon "rh-ui-collection-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Container image
@@ -144,7 +144,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-container-fill"}}
+              {{feltIcon "rh-ui-container-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               From DockerFile
@@ -1101,7 +1101,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-branch-fill"}}
+              {{feltIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Action 1
@@ -1116,7 +1116,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-branch-fill"}}
+              {{feltIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Action 2 disabled
@@ -1131,7 +1131,7 @@ import './Menu.css'
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-branch-fill"}}
+              {{feltIcon "rh-ui-branch-fill"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Action 3
@@ -1169,7 +1169,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Actions'}}
-            {{pfIcon "rh-ui-ellipsis-vertical-fill"}}
+            {{feltIcon "rh-ui-ellipsis-vertical-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
@@ -1182,7 +1182,7 @@ import './Menu.css'
             {{/menu-item-main}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Alert'}}
-            {{pfIcon "rh-ui-notification-fill"}}
+            {{feltIcon "rh-ui-notification-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
@@ -1198,7 +1198,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Copy'}}
-            {{pfIcon "rh-ui-clipboard-fill"}}
+            {{feltIcon "rh-ui-clipboard-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
@@ -1214,7 +1214,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Expand'}}
-            {{pfIcon "rh-ui-menu-bars"}}
+            {{feltIcon "rh-ui-menu-bars"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
@@ -1230,7 +1230,7 @@ import './Menu.css'
             {{/menu-item-description}}
           {{/menu-item}}
           {{#> menu-item-action button--aria-label='Copy'}}
-            {{pfIcon "rh-ui-ellipsis-vertical-fill"}}
+            {{feltIcon "rh-ui-ellipsis-vertical-fill"}}
           {{/menu-item-action}}
         {{/menu-list-item}}
       {{/menu-list}}
@@ -1342,7 +1342,7 @@ import './Menu.css'
         {{#> menu-item menu-item--role="option" menu-item--aria-selected="true" menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-table"}}
+              {{feltIcon "rh-ui-table"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Option 3
@@ -1388,7 +1388,7 @@ import './Menu.css'
         {{#> menu-item menu-item--role="option" menu-item--aria-selected="true" menu-item--modifier="pf-m-selected"}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
-              {{pfIcon "rh-ui-table"}}
+              {{feltIcon "rh-ui-table"}}
             {{/menu-item-icon}}
             {{#> menu-item-text}}
               Option 3

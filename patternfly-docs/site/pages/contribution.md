@@ -5,7 +5,7 @@ title: Contribution guide
 
 ## Quick Start for New Contributors
 
-New to contributing to PatternFly? Here's how to get started quickly:
+New to contributing to Felt? Here's how to get started quickly:
 
 **1. Set up your development environment:**
 ```bash
@@ -33,7 +33,7 @@ yarn start
 
 ## Code of Conduct
 
-All contributors and participants agree to abide by the [PatternFly Code of Conduct](https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md). Please read it before contributing.
+All contributors and participants agree to abide by the [Felt Code of Conduct](https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md). Please read it before contributing.
 
 ## Pull request guidelines
 

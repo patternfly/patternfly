@@ -1,8 +1,7 @@
 import fs from'fs';
-import path from 'path';
 import gulp from'gulp';
 import { rimraf } from 'rimraf';
-import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
+import { copyFA, copySource, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
 import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
 import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
 import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
@@ -104,13 +103,13 @@ const buildDocs = series(buildSrc, copyDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, watchSrcHelpers, startWebpackDevServer);
 
 // Builds `dist` folder
-const buildPatternflyFromClean = parallel(series(buildDocs, minifyCSS), series(pfIcons, parallel(copyFA, copySourceFiles)));
-const rebuildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
+const buildFeltFromClean = parallel(series(buildDocs, minifyCSS), series(pfIcons, parallel(copyFA, copySourceFiles)));
+const rebuildFelt = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
 const hasPfIconsDir = fs.existsSync('src/icons/PfIcons');
-export const buildPatternfly = hasPfIconsDir ? rebuildPatternfly : buildPatternflyFromClean;
+export const buildFelt = hasPfIconsDir ? rebuildFelt : buildFeltFromClean;
 
-export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
+export const build = series(buildFelt, buildWebpack); // Builds `dist` and `public` folders
 
 export function pfIcons() {
   return definedPfIcons();
@@ -120,4 +119,4 @@ export function pfIconFont() {
   return definedPfIconFont();
 }
 
-export const develop = series(buildPatternfly, watchAll);
+export const develop = series(buildFelt, watchAll);

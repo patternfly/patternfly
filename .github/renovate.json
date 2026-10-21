@@ -7,14 +7,15 @@
       "enabled": false
     },
     {
-      "groupName": "PatternFly dependencies",
+      "groupName": "Felt dependencies",
       "matchDatasources": ["npm"],
       "matchPackageNames": [
         "@patternfly/documentation-framework",
         "sass",
         "backstopjs",
         "/^stylelint/",
-        "/^@patternfly/react/"
+        "/^@patternfly/react/",
+        "/^@rh-felt/react/"
       ],
       "enabled": true
     },

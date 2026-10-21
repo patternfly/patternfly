@@ -90,7 +90,7 @@ wrapperTag: div
         {{#> drawer-panel progress--modifier="pf-m-sm"}}
 
           <!-- Panel header -->
-          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly-elements" primary-detail-template-panel-header--sub-title="PatternFly elements"}}
+          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Felt-elements" primary-detail-template-panel-header--sub-title="Felt elements"}}
 
           <!-- Tab content -->
           {{#> drawer-body}}
@@ -142,7 +142,7 @@ wrapperTag: div
           }}
 
           <!-- Panel header -->
-          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Patternfly" primary-detail-template-panel-header--sub-title="PatternFly elements"}}
+          {{> primary-detail-template-panel-header primary-detail-template-panel-header--title="Felt" primary-detail-template-panel-header--sub-title="Felt elements"}}
 
           {{#> drawer-body}}
             {{> primary-detail-template-panel-body}}

@@ -19,7 +19,7 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in Felt. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}
@@ -65,7 +65,7 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. The icon is optional.
+    This represents an the empty state pattern in Felt. The icon is optional.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}
@@ -106,7 +106,7 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in Felt. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}
@@ -153,7 +153,7 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in Felt. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}
@@ -199,7 +199,7 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in Felt. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
   {{#> empty-state-footer}}
     {{#> empty-state-actions}}
@@ -244,7 +244,7 @@ cssPrefix: pf-v6-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in Felt. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}

@@ -40,7 +40,7 @@ async function compare(pattern, options) {
     execSync(command, { cwd: __dirname });
     compareDir = path.join(__dirname, 'node_modules', packageName);
   } catch (error) {
-    // TODO -- move dist, git checkout, npm i, npm run build-patternfly, move dist back
+    // TODO -- move dist, git checkout, npm i, npm run build-felt, move dist back
     console.error(error.message);
     process.exit(10);
   }

@@ -5,12 +5,12 @@
   {{/if}}>
   {{#if tabs-item-action--IsHelp}}
     {{#> tabs-item-action-button tabs-item-action-button--aria-label=(concat "More info for " __tabs-item--text " label") tabs-item-action-button--IsDisabled=tabs-item-action--IsHelpDisabled tabs-item-action-button--IsAriaDisabled=tabs-item-action--IsHelpAriaDisabled}}
-      {{pfIcon "rh-ui-question-mark-circle"}}
+      {{feltIcon "rh-ui-question-mark-circle"}}
     {{/tabs-item-action-button}}
   {{/if}}
   {{#if tabs-item-action--IsClose}}
     {{#> tabs-item-action-button tabs-item-action-button--aria-label=(concat "Close " __tabs-item--text) tabs-item-action-button--IsDisabled=tabs-item-action--IsCloseDisabled tabs-item-action-button--IsAriaDisabled=tabs-item-action--IsCloseAriaDisabled}}
-      {{pfIcon "rh-microns-close"}}
+      {{feltIcon "rh-microns-close"}}
     {{/tabs-item-action-button}}
   {{/if}}
 </span>

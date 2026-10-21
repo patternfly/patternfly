@@ -10,9 +10,9 @@
                   {{#> label label--color="blue" label--IsOutlined=true}}
                     {{#> label-icon}}
                       {{#if card-template-expandable-status-card--label-icon}}
-                        {{pfIcon card-template-expandable-status-card--label-icon}}
+                        {{feltIcon card-template-expandable-status-card--label-icon}}
                       {{else}}
-                        {{pfIcon "rh-ui-port"}}
+                        {{feltIcon "rh-ui-port"}}
                       {{/if}}
                     {{/label-icon}}
                     {{> label-text label-text--value=(ternary card-template-expandable-status-card--label-text card-template-expandable-status-card--label-text 'Performance')}}
@@ -51,7 +51,7 @@
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-align-items-center pf-m-nowrap"}}
               {{#> icon}}
                 {{#> icon-content icon-content--modifier="pf-m-danger"}}
-                  {{pfIcon "rh-ui-connected"}}
+                  {{feltIcon "rh-ui-connected"}}
                 {{/icon-content}}
               {{/icon}}
               <p class="{{pfv 'u'}}color-200">System reboot <b class="{{pfv 'u'}}color-100">is</b> required</p>
@@ -60,7 +60,7 @@
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-align-items-center pf-m-nowrap"}}
               {{#> icon}}
                 {{#> icon-content icon-content--modifier="pf-m-success"}}
-                  {{pfIcon "rh-ui-connected"}}
+                  {{feltIcon "rh-ui-connected"}}
                 {{/icon-content}}
               {{/icon}}
               <p class="{{pfv 'u'}}color-200">System reboot <b class="{{pfv 'u'}}color-100">is not</b> required</p>

@@ -21,7 +21,7 @@ import './CodeEditor.css';
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        {{pfIcon "rh-ui-code"}}
+        {{feltIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -51,7 +51,7 @@ import './CodeEditor.css';
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        {{pfIcon "rh-ui-code"}}
+        {{feltIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -114,7 +114,7 @@ import './CodeEditor.css';
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        {{pfIcon "rh-ui-code"}}
+        {{feltIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -146,7 +146,7 @@ This is an extra container used in React to prevent event propagation if upload 
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        {{pfIcon "rh-ui-code"}}
+        {{feltIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -207,7 +207,7 @@ This is an extra container used in React to prevent event propagation if upload 
     {{/code-editor-header-content}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
-        {{pfIcon "rh-ui-code"}}
+        {{feltIcon "rh-ui-code"}}
       {{/code-editor-tab-icon}}
       {{#> code-editor-tab-text}}
         HTML
@@ -234,7 +234,7 @@ This is an extra container used in React to prevent event propagation if upload 
 | `.pf-v6-c-code-editor__header`             | `<div>`    | Initiates the code editor header used for the controls and tab elements. |
 | `.pf-v6-c-code-editor__header-content`     | `<div>`    | Initiates the code editor header content used for the controls and tab elements. **Required** |
 | `.pf-v6-c-code-editor__main`               | `<div>`    | Initiates the main container for a code editor e.g. Monaco **Required**                       |
-| `.pf-v6-c-code-editor__code`               | `<div>`    | Initiates the container for code without a JS code editor. Comes with PatternFly styling.     |
+| `.pf-v6-c-code-editor__code`               | `<div>`    | Initiates the container for code without a JS code editor. Comes with Felt styling.     |
 | `.pf-v6-c-code-editor__controls`           | `<div>`    | Initiates the code editor controls.                                                           |
 | `.pf-v6-c-code-editor__header-main`        | `<div>`    | Initiates the code editor header content area.                                                |
 | `.pf-v6-c-code-editor__keyboard-shortcuts` | `<div>`    | Initiates the code editor header keyboard shortcuts area.                                     |
@@ -242,6 +242,6 @@ This is an extra container used in React to prevent event propagation if upload 
 | `.pf-v6-c-code-editor__tab-text`           | `<span>`   | Initiates the code editor tab text.                                                           |
 | `.pf-v6-c-code-editor__tab-icon`           | `<span>`   | Initiates the code editor tab icon.                                                           |
 | `.pf-v6-c-code-editor__upload`             | `<div>`    | Initiates the code editor upload border.                                                      |
-| `.pf-v6-c-code-editor__container`             | `<div>`    | Initiates the container used inside `.pf-v6-c-code-editor` in PatternFly React. This is used in PatternFly React to prevent event propagation if upload is enabled or there is a provided empty state.                                                      |
+| `.pf-v6-c-code-editor__container`             | `<div>`    | Initiates the container used inside `.pf-v6-c-code-editor` in Felt React. This is used in Felt React to prevent event propagation if upload is enabled or there is a provided empty state.                                                      |
 | `.pf-m-full-height`             | `.pf-v6-c-code-editor`    | Modifies for full-height style.                                                   |
 

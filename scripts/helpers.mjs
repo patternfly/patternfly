@@ -1,4 +1,4 @@
-import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import { feltNamespace, feltVersion } from './init.mjs';
 import fs from 'fs';
 import path from 'path';
 import Handlebars from 'handlebars';
@@ -367,8 +367,8 @@ export function entries(...data) {
 }
 
 export const pfv = (type) => {
-  const namespace = patternflyNamespace;
-  let version = patternflyVersion;
+  const namespace = feltNamespace;
+  let version = feltVersion;
   let prefix = 'c-';
 
   if (type === 'unset-prefix') {
@@ -387,14 +387,14 @@ export const prefix = function (term) {
 }
 
 // ======================================================================================
-// pfIcon: a helper function to use svg's from @patternfly/react-icons
+// feltIcon: a helper function to use svg's from @rh-felt/react-icons
 // ======================================================================================
 //
 // Usage:
-//   {{pfIcon 'arrow-right'}}
+//   {{feltIcon 'arrow-right'}}
 //
 // ======================================================================================
-export const pfIcon = function (iconName) {
+export const feltIcon = function (iconName) {
   try {
     if (!iconName || typeof iconName !== 'string') {
       console.error(`\x1b[31mInvalid icon name: ${iconName}\x1b[0m`);
@@ -402,7 +402,7 @@ export const pfIcon = function (iconName) {
     }
     const baseName = path.basename(iconName);
     const require = createRequire(import.meta.url);
-    const packageJsonPath = require.resolve('@patternfly/react-icons/package.json');
+    const packageJsonPath = require.resolve('@rh-felt/react-icons/package.json');
     const packageDir = path.dirname(packageJsonPath);
     const iconDir = path.join(packageDir, 'dist/static');
     const iconPath = path.join(iconDir, `${baseName}.svg`);

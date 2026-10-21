@@ -10,6 +10,6 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "@patternfly/patternfly": "^4.0.0"
+    "@rh-felt/styles": "^0.0.1"
   }
 }

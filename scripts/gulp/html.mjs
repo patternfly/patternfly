@@ -67,7 +67,7 @@ function compileMD0(srcFiles) {
                 node.lang = 'html';
                 node.value = html;
               } catch (error) {
-                console.error(`\x1b[31m${chunk.history[0]}: ${error} for PatternFly example ${node.value}\x1b[0m`);
+                console.error(`\x1b[31m${chunk.history[0]}: ${error} for Felt example ${node.value}\x1b[0m`);
               }
             }
           })
