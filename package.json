@@ -36,7 +36,6 @@
     "backstop:chrome": "node backstop_data/engine_scripts/puppet/chrome.js",
     "playwright": "node ./node_modules/playwright/cli.js",
     "build-felt": "gulp buildFelt",
-    "build-patternfly": "yarn build-felt",
     "build": "gulp build",
     "build:docs": "gulp buildWebpack",
     "build:pficons": "gulp pfIcons",
