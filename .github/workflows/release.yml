@@ -51,6 +51,9 @@ jobs:
         if: always()
       - run: yarn build-patternfly
         name: Build patternfly
+      - run: yarn lint:css
+        name: Lint CSS
+        if: always()
       - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache
