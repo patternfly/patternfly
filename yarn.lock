@@ -3386,9 +3386,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/documentation-framework@npm:6.54.1":
-  version: 6.54.1
-  resolution: "@patternfly/documentation-framework@npm:6.54.1"
+"@patternfly/documentation-framework@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@patternfly/documentation-framework@npm:6.54.2"
   dependencies:
     "@babel/core": "npm:^7.29.0"
     "@babel/preset-env": "npm:7.29.0"
@@ -3451,14 +3451,14 @@ __metadata:
   peerDependencies:
     "@patternfly/patternfly": ^6.7.0
     "@patternfly/react-code-editor": ^6.7.0
-    "@patternfly/react-core": ^6.7.0
+    "@patternfly/react-core": ^6.7.1-prerelease.0
     "@patternfly/react-icons": ^6.7.0
     "@patternfly/react-table": ^6.7.0
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
-  checksum: 10c0/193592e8ab6457dffaf7bfb58f899202e18964c5dd13baf7989af172f9c7d0abc5b00842b574e8dfc43b05383f0e043c35de9e4e0a669a18c3efec0db3c7f26a
+  checksum: 10c0/0bccddd4657391e5a07b6e49dd1365024e14ed2f33ecf73b63434837a379e7ab30d909a7e132a1b3d28dc7103fa462c71e284d4c20d9bf7fa02a75c0eaf7fdfb
   languageName: node
   linkType: hard
 
@@ -3510,7 +3510,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@fortawesome/fontawesome": "npm:^1.1.8"
     "@octokit/rest": "npm:^20.1.0"
-    "@patternfly/documentation-framework": "npm:6.54.1"
+    "@patternfly/documentation-framework": "npm:6.54.2"
     "@patternfly/patternfly-a11y": "npm:5.2.1"
     "@patternfly/react-code-editor": "npm:6.7.0"
     "@patternfly/react-core": "npm:6.7.0"
@@ -9894,13 +9894,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.16.0":
-  version: 1.16.0
-  resolution: "follow-redirects@npm:1.16.0"
+"follow-redirects@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "follow-redirects@npm:1.16.1"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: 10c0/a1e2900163e6f1b4d1ed5c221b607f41decbab65534c63fe7e287e40a5d552a6496e7d9d7d976fa4ba77b4c51c11e5e9f683f10b43011ea11e442ff128d0e181
+  checksum: 10c0/544e24ccb93b7afb5dd5a2199bd556e167b84de2af7c13b2ced08494239677359d7883bae56ae43a9ca98ac5451e75cf4834a5fadd6fa79053b9248fac5447a4
   languageName: node
   linkType: hard
 
