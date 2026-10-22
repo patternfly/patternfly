@@ -153,5 +153,5 @@
     "access": "public",
     "tag": "prerelease"
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.18.1"
 }
