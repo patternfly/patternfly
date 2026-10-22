@@ -117,14 +117,6 @@
 
 .#{$calendar-month}__header-year {
   width: var(--#{$calendar-month}__header-year--Width);
-
-  @supports (field-sizing: content) {
-    width: revert;
-
-    .#{$form-control} input {
-      field-sizing: content;
-    }
-  }
 }
 
 .#{$calendar-month}__calendar {
