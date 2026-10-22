@@ -3867,6 +3867,11 @@ __metadata:
     surge: "npm:^0.24.6"
     unified: "npm:^11.0.4"
     webpack: "npm:^5.91.0"
+  dependenciesMeta:
+    chromedriver:
+      built: true
+    puppeteer:
+      built: true
   languageName: unknown
   linkType: soft
 
