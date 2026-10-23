@@ -250,16 +250,6 @@
     }
   }
 
-  // Align sticky footer cell padding in the responsive grid layout.
-  &.pf-m-sticky-footer,
-  &.pf-m-sticky-footer-base {
-    > .#{$table}__tfoot > .#{$table}__tr:has(> :nth-child(2):last-child) {
-      > :is(.#{$table}__th, .#{$table}__td) {
-        --#{$table}--cell--responsive--PaddingBlockStart: var(--#{$table}--cell--first-child--responsive--PaddingBlockStart);
-      }
-    }
-  }
-
   // Keep sticky footers in the normal flow in the responsive grid layout.
   &.pf-m-sticky-footer,
   &.pf-m-sticky-footer-base,
