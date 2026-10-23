@@ -79,61 +79,13 @@ When making visual changes to a full page example, new example preview screensho
 For information on how to contribute, refer to our [contribution guide](https://pf-core-staging.patternfly.org/contribution).
 
 ### Commit format
-Nx is configured to use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) for versioning. Nx Release ignores all commits that do not conform to the Conventional Commits standard by default.
+Nx is configured to use [Conventional Commits](https://www.conventionalcommits.org/) for versioning. Nx Release ignores all commits that do not conform to the Conventional Commits standard by default.
 
 By default, this results in:
 
-* feat(...) triggering a minor version bump (1.?.0)
-* fix(...) triggering a patch version bump (1.?.x)
+* **feat:** triggering a minor version bump (1.x.0)
+* **fix:** triggering a patch version bump (1.0.x)
 * BREAKING CHANGE in the footer of the commit message or with an exclamation mark after the commit type (fix(...)!) triggers a major version bump (?.0.0)
-
-For example:
-
-```text
-feat(button)!: replace the sizing API
-```
-
-This will generate release notes in the format:
-```text
-## 0.1.0-prerelease.0 (YYYY-MM-DD)
-
-### 🚀 Features
-
-- ⚠️  **button:** replace the sizing API ([commitId](https://github.com))
-
-### ⚠️  Breaking Changes
-
-- **button:** replace the sizing API  ([commitId](https://github.com))
-
-### ❤️ Thank You
-
-- Your name here
-```
-
-Nx also recognizes the commit-body marker `BREAKING CHANGE`:
-
-```text
-feat(button): replace the sizing API
-
-BREAKING CHANGE: The old sizing API has been removed.
-```
-
-This will generate release notes in the format:
-```text
-## 0.1.0-prerelease.0 (YYYY-MM-DD)
-
-### 🚀 Features
-- ⚠️  **button:** replace the sizing API ([commitId](https://github.com))
-
-### ⚠️  Breaking Changes
-
-- **button:** replace the sizing API  ([commitId](https://github.com))
-   The old sizing API has been removed.
-
-### ❤️ Thank You
-
-- Your name here
-```
 
 For configuration information, [see the Nx documentation](https://nx.dev/docs/guides/nx-release/customize-conventional-commit-types).
 
