@@ -85,7 +85,7 @@ By default, this results in:
 
 * **feat:** triggering a minor version bump (1.x.0)
 * **fix:** triggering a patch version bump (1.0.x)
-* BREAKING CHANGE in the footer of the commit message or with an exclamation mark after the commit type (fix(...)!) triggers a major version bump (?.0.0)
+* **BREAKING CHANGE:** either as text in the footer of the commit message or an exclamation mark after the commit type (fix(...)!) triggers a major version bump (x.0.0)
 
 For configuration information, [see the Nx documentation](https://nx.dev/docs/guides/nx-release/customize-conventional-commit-types).
 
