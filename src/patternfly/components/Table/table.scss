@@ -474,6 +474,7 @@
       > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
         border-end-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
       }
+
     }
   }
 
