@@ -50,25 +50,25 @@
       {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form--id '-check-group')}}
+  {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form--id '-check-group') form-group--aria-describedby=(concat form--id '-check-group-helper')}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required='true'}}
         How can we contact you?
       {{/form-label}}
     {{/form-group-label}}
-    {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
+    {{#> form-group-control form-group-control--modifier="pf-m-stack" check-input--aria-describedby=(concat form-group--id '-helper')}}
       {{> form-helper-text helper-text--value='This is a required field' helper-text-item--IsError=true}}
-      {{#> check}}
-        {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox1" name="alt-form-checkbox1"'}}{{/check-input}}
-        {{#> check-label check-label--attribute='for="alt-form-checkbox1"'}}Email{{/check-label}}
+      {{#> check check--id="alt-form-checkbox1"}}
+        {{#> check-input}}{{/check-input}}
+        {{#> check-label}}Email{{/check-label}}
       {{/check}}
-      {{#> check}}
-        {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox2"'}}{{/check-input}}
-        {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Phone{{/check-label}}
+      {{#> check check--id="alt-form-checkbox2"}}
+        {{#> check-input}}{{/check-input}}
+        {{#> check-label}}Phone{{/check-label}}
       {{/check}}
-      {{#> check}}
-        {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox3" name="alt-form-checkbox3"'}}{{/check-input}}
-        {{#> check-label check-label--attribute='for="alt-form-checkbox3"'}}Mail{{/check-label}}
+      {{#> check check--id="alt-form-checkbox3"}}
+        {{#> check-input}}{{/check-input}}
+        {{#> check-label}}Mail{{/check-label}}
       {{/check}}
     {{/form-group-control}}
   {{/form-group}}
