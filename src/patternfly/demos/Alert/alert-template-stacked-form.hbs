@@ -28,7 +28,7 @@
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='Enter a valid email address: example@gmail.com' helper-text-item--IsError=true}}
     {{/form-group-control}}
