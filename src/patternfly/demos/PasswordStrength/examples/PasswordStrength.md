@@ -19,7 +19,7 @@ section: components
     {{#> form-group-control}}
       {{#> input-group}}
         {{#> input-group-item input-group-item--IsFill=true}}
-          {{> form-control controlType="input" input="true"  form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="" placeholder="Password"')}}
+          {{> form-control controlType="input" input="true"  form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
           {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
@@ -51,7 +51,7 @@ section: components
     {{#> form-group-control}}
       {{#> input-group}}
         {{#> input-group-item input-group-item--IsFill=true}}
-          {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="Marie$RedHat78" placeholder="Password"')}}
+          {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="Marie$RedHat78" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
           {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
@@ -84,7 +84,7 @@ section: components
     {{#> form-group-control}}
       {{#> input-group}}
         {{#> input-group-item input-group-item--IsFill=true}}
-          {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="Marie$Can3Read" placeholder="Password"')}}
+          {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="Marie$Can3Read" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
           {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
@@ -117,7 +117,7 @@ section: components
     {{#> form-group-control}}
       {{#> input-group}}
         {{#> input-group-item input-group-item--IsFill=true}}
-          {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="Marie$Can8Read3Pass@Word" placeholder="Password"')}}
+          {{> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="Marie$Can8Read3Pass@Word" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
           {{> button button--IsControl=true button--IsIcon=true button--icon="eye-slash" button--aria-label="Show password"}}
