@@ -6,7 +6,7 @@
     {{check-label--modifier}}
   {{/if}}"
   {{#unless check--IsLabelWrapped}}
-    for="{{check--id}}-input"
+    for="{{dasherize check--id 'input'}}"
   {{/unless}}
   {{#if check-label--attribute}}
     {{{check-label--attribute}}}
