@@ -22,7 +22,8 @@
       "useCommitScope": false,
       "types": {
         "chore": {
-          "semverBump": "none"
+          "semverBump": "none",
+           "changelog": false
         },
         "ci": {
           "semverBump": "patch",
