@@ -1,7 +1,7 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($breadcrumb) {
-  // Breadcrumb item
+  // Breadcrumb list
   --#{$breadcrumb}__list--RowGap: var(--pf-t--global--spacer--xs);
 
   // Breadcrumb item
