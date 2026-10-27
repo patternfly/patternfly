@@ -27,7 +27,7 @@ switch(uploadFolderName) {
     uploadURL += '-a11y.surge.sh';
     break;
   case 'public':
-    if (!prnum && prbranch === 'main') {
+    if (!prnum && (prbranch === 'main' || prbranch === 'felt-v1')) {
       uploadURL = 'rh-felt-styles-staging.surge.sh';
     }
     else {
