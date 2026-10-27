@@ -72,6 +72,10 @@ jobs:
         if: always()
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         name: Avoid Unknown Host for github.com
+      - name: Configure release Git identity
+        run: |
+          git config user.email "patternfly-ci@redhat.com"
+          git config user.name "Patternfly CI/CD"
       - run: npx nx release --skip-publish
         env:
           HUSKY: 0
