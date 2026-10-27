@@ -1,4 +1,5 @@
 {
+  "nx": {},
   "name": "@rh-felt/styles",
   "description": "Assets, source, tooling, and content for Felt",
   "version": "0.0.1-prerelease.0",
@@ -71,6 +72,7 @@
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@fortawesome/fontawesome": "^1.1.8",
+    "@nx/js": "24.0.0",
     "@octokit/rest": "^20.1.0",
     "@patternfly/documentation-framework": "6.53.4",
     "@patternfly/patternfly-a11y": "5.2.1",
@@ -109,6 +111,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "node-plop": "^0.32.0",
+    "nx": "24.0.0",
     "postcss": "^8.4.38",
     "postcss-css-variables": "^0.19.0",
     "postcss-preset-env": "^9.5.4",
@@ -156,6 +159,9 @@
   "packageManager": "yarn@4.18.1",
   "dependenciesMeta": {
     "chromedriver": {
+      "built": true
+    },
+    "nx": {
       "built": true
     },
     "puppeteer": {

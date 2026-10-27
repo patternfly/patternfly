@@ -14,10 +14,12 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: '20.19.0'
+          node-version: '24.22.0'
           check-latest: true
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       - name: Enable Corepack
         shell: bash
@@ -25,14 +27,7 @@ jobs:
       
       - name: Build for promotion
         run: yarn install --immutable && yarn build
-      - name: GitHub Tag Name example
-        run: |
-          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
-      - name: Manual publish
-        run: |
-          cd dist
-          npm version ${{ github.ref_name }} --git-tag-version false
-          npm publish --tag latest
+      - name: Publish to npm 
+        run: npx nx release publish 
         env:
           HUSKY: 0

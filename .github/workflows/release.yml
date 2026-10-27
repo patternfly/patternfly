@@ -16,11 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       # Injected by generate-workflows.js
       - uses: actions/setup-node@v4
         with:
-          node-version: '20.19.0'
+          node-version: '24.22.0'
           check-latest: true
       
       - name: Enable Corepack
@@ -71,7 +72,7 @@ jobs:
         if: always()
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         name: Avoid Unknown Host for github.com
-      - run: npx semantic-release@19.0.5
+      - run: npx nx release --skip-publish
         env:
           HUSKY: 0
         name: Release to NPM
