@@ -12,7 +12,6 @@
     "version": {
       "specifierSource": "conventional-commits",
       "currentVersionResolver": "git-tag",
-      "fallbackCurrentVersionResolver": "disk",
       "manifestRootsToUpdate": ["dist"],
       "versionActionsOptions": {
         "skipLockFileUpdate": true
