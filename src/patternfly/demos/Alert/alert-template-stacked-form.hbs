@@ -16,7 +16,7 @@
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--IsError="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsError="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true}}
     {{/form-group-control}}
@@ -28,7 +28,7 @@
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='Enter a valid email address: example@gmail.com' helper-text-item--IsError=true}}
     {{/form-group-control}}
@@ -50,7 +50,7 @@
       {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form--id '-check-group') form-group--aria-describedby=(concat form--id '-check-group-helper')}}
+  {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form--id '-check-group') form-group--aria-describedby=(concat form-group--id '-check-group-helper')}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required='true'}}
         How can we contact you?
