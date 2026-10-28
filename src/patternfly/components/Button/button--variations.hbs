@@ -11,53 +11,59 @@
 {{> button-list button-icon--IsEnd=true button--icon="rh-ui-add-circle"}}
 
 {{#*inline "button-list"}}
-  {{#> button button--IsPrimary=true}}
-    Primary
-  {{/button}}
+  {{#> l-flex l-flex--modifier="pf-m-gap"}}
+    {{#> button button--IsPrimary=true}}
+      Primary
+    {{/button}}
 
-  {{#> button button--IsSecondary=true}}
-    Secondary
-  {{/button}}
+    {{#> button button--IsSecondary=true}}
+      Secondary
+    {{/button}}
 
-  {{#> button button--IsSecondary=true button--IsDanger=true}}
-    Secondary danger
-  {{/button}}
+    {{#> button button--IsSecondary=true button--IsDanger=true}}
+      Secondary danger
+    {{/button}}
 
-  {{#> button button--IsTertiary=true}}
-    Tertiary
-  {{/button}}
+    {{#> button button--IsTertiary=true}}
+      Tertiary
+    {{/button}}
 
-  {{#> button button--IsDanger=true}}
-    Danger
-  {{/button}}
+    {{#> button button--IsDanger=true}}
+      Danger
+    {{/button}}
 
-  {{#> button button--IsWarning=true}}
-    Warning
-  {{/button}}
-
-  <br>
-
-  {{#> button button--IsLink=true}}
-    Link
-  {{/button}}
-
-  {{#> button button--IsLink=true button--IsDanger=true}}
-    Link danger
-  {{/button}}
-
-  {{#> button button--IsLink=true button--IsInline=true}}
-    Inline link
-  {{/button}}
-
-  {{> button button--IsPlain=true button--aria-label="Remove" button--IsIcon=true button--icon="rh-microns-close"}}
-
-  {{> button button--IsPlain=true button--aria-label="Remove" button--icon="rh-microns-close" button--text="Plain with text"}}
+    {{#> button button--IsWarning=true}}
+      Warning
+    {{/button}}
+  {{/l-flex}}
 
   <br>
 
-  {{#> button button--IsControl=true}}
-    Control
-  {{/button}}
+  {{#> l-flex l-flex--modifier="pf-m-gap"}}
+    {{#> button button--IsLink=true}}
+      Link
+    {{/button}}
 
-  {{> button button--IsControl=true button--aria-label="Copy input" button--IsIcon=true button--icon="rh-ui-copy"}}
+    {{#> button button--IsLink=true button--IsDanger=true}}
+      Link danger
+    {{/button}}
+
+    {{#> button button--IsLink=true button--IsInline=true}}
+      Inline link
+    {{/button}}
+
+    {{> button button--IsPlain=true button--aria-label="Remove" button--IsIcon=true button--icon="rh-microns-close"}}
+
+    {{> button button--IsPlain=true button--aria-label="Remove" button--icon="rh-microns-close" button--text="Plain with text"}}
+  {{/l-flex}}
+
+  <br>
+
+  {{#> l-flex l-flex--modifier="pf-m-gap"}}
+    {{#> button button--IsControl=true}}
+      Control
+    {{/button}}
+
+    {{> button button--IsControl=true button--aria-label="Copy input" button--IsIcon=true button--icon="rh-ui-copy"}}
+  {{/l-flex}}
 {{/inline}}

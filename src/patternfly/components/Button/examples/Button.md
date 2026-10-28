@@ -34,29 +34,31 @@ import './Button.css'
 
 ### Links as buttons
 ```hbs
-{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsPrimary=true}}
-  Primary link to W3.org
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsPrimary=true}}
+    Primary link to W3.org
+  {{/button}}
 
-{{#> button button--IsAnchor=true button--url="#overview" button--aria-label="Read more about button documentation" button--IsSecondary=true}}
-  Secondary link to anchor
-{{/button}}
+  {{#> button button--IsAnchor=true button--url="#overview" button--aria-label="Read more about button documentation" button--IsSecondary=true}}
+    Secondary link to anchor
+  {{/button}}
 
-{{#> button button--IsAnchor=true button--url="#overview" button--aria-label="Read more about button documentation" button--IsSecondary=true button--IsDanger=true}}
-  Secondary danger link to anchor
-{{/button}}
+  {{#> button button--IsAnchor=true button--url="#overview" button--aria-label="Read more about button documentation" button--IsSecondary=true button--IsDanger=true}}
+    Secondary danger link to anchor
+  {{/button}}
 
-{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--attribute='aria-disabled=true tabindex="-1"' button--IsDisabled=true button--IsTertiary=true}}
-  Tertiary link to W3.org
-{{/button}}
+  {{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--attribute='aria-disabled=true tabindex="-1"' button--IsDisabled=true button--IsTertiary=true}}
+    Tertiary link to W3.org
+  {{/button}}
 
-{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsLink=true}}
-  Link to W3.org
-{{/button}}
+  {{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsLink=true}}
+    Link to W3.org
+  {{/button}}
 
-{{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsLink=true button--IsDanger=true}}
-  Link danger to W3.org
-{{/button}}
+  {{#> button button--IsAnchor=true button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--IsLink=true button--IsDanger=true}}
+    Link danger to W3.org
+  {{/button}}
+{{/l-flex}}
 ```
 
 ### Inline link as span
@@ -87,44 +89,48 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 ### Types
 ```hbs
-{{#> button button--IsPrimary=true button--IsSubmit=true}}
-  Submit
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsPrimary=true button--IsSubmit=true}}
+    Submit
+  {{/button}}
 
-{{#> button button--IsPrimary=true}}
-  Cancel
-{{/button}}
+  {{#> button button--IsPrimary=true}}
+    Cancel
+  {{/button}}
 
-{{#> button button--IsPrimary=true}}
-  Default
-{{/button}}
+  {{#> button button--IsPrimary=true}}
+    Default
+  {{/button}}
+{{/l-flex}}
 ```
 
 ### Call to action
 ```hbs
 {{#*inline "cta-buttons"}}
-  {{#> button button--IsPrimary=true }}
-    Call to action
-  {{/button}}
+  {{#> l-flex l-flex--modifier="pf-m-gap"}}
+    {{#> button button--IsPrimary=true }}
+      Call to action
+    {{/button}}
 
-  {{#> button button--IsSecondary=true}}
-    Call to action
-  {{/button}}
+    {{#> button button--IsSecondary=true}}
+      Call to action
+    {{/button}}
 
-  {{#> button button--IsTertiary=true}}
-    Call to action
-  {{/button}}
+    {{#> button button--IsTertiary=true}}
+      Call to action
+    {{/button}}
 
-  {{#> button button--IsLink=true button--IsDisplayLg=true button--icon="rh-ui-arrow-right" button-icon--IsEnd=true}}
-    Call to action
-  {{/button}}
+    {{#> button button--IsLink=true button--IsDisplayLg=true button--icon="rh-ui-arrow-right" button-icon--IsEnd=true}}
+      Call to action
+    {{/button}}
 
-  {{#> button button--IsLink=true button--IsInline=true button--IsDisplayLg=true button--icon="rh-ui-arrow-right" button-icon--IsEnd=true}}
-    Call to action
-  {{/button}}
+    {{#> button button--IsLink=true button--IsInline=true button--IsDisplayLg=true button--icon="rh-ui-arrow-right" button-icon--IsEnd=true}}
+      Call to action
+    {{/button}}
+  {{/l-flex}}
 {{/inline}}
 {{> cta-buttons button--IsDisplayLg=true}}
-<br><br>
+<br>
 <strong>disabled</strong>
 <br>
 {{> cta-buttons button--IsDisabled=true button--IsDisplayLg=true}}
@@ -132,74 +138,86 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 ### Progress
 ```hbs
-{{#> button button--IsPrimary=true button--IsProgress=true}}
-  Primary loader
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsPrimary=true button--IsProgress=true}}
+    Primary loader
+  {{/button}}
 
-{{#> button button--IsPrimary=true button--IsProgress=true button--IsInProgress=true}}
-  Primary loading
-{{/button}}
+  {{#> button button--IsPrimary=true button--IsProgress=true button--IsInProgress=true}}
+    Primary loading
+  {{/button}}
+{{/l-flex}}
 <br/>
-{{#> button button--IsSecondary=true button--IsProgress=true}}
-  Secondary loader
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsSecondary=true button--IsProgress=true}}
+    Secondary loader
+  {{/button}}
 
-{{#> button button--IsSecondary=true button--IsProgress=true button--IsInProgress=true}}
-  Secondary loading
-{{/button}}
+  {{#> button button--IsSecondary=true button--IsProgress=true button--IsInProgress=true}}
+    Secondary loading
+  {{/button}}
+{{/l-flex}}
 <br/>
-{{> button button--IsPlain=true button--aria-label="Upload" button--IsIcon=true button--icon="rh-ui-upload"}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{> button button--IsPlain=true button--aria-label="Upload" button--IsIcon=true button--icon="rh-ui-upload"}}
 
-{{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-upload" button--IsInProgress=true button--progress-text="Uploading..."}}
+  {{> button button--IsPlain=true button--IsIcon=true button--icon="rh-ui-upload" button--IsInProgress=true button--progress-text="Uploading..."}}
+{{/l-flex}}
 <br/>
-{{#> button button--IsLink=true button--IsInline=true button--IsProgress=true}}
-  Inline loader
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsLink=true button--IsInline=true button--IsProgress=true}}
+    Inline loader
+  {{/button}}
 
-{{#> button button--IsLink=true button--IsInline=true button--IsProgress=true button--IsInProgress=true}}
-  Inline loading
-{{/button}}
+  {{#> button button--IsLink=true button--IsInline=true button--IsProgress=true button--IsInProgress=true}}
+    Inline loading
+  {{/button}}
+{{/l-flex}}
 ```
 
 ### Circle buttons
 
 ```hbs isBeta
-{{> button button--IsPrimary=true button--aria-label="Add primary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{> button button--IsPrimary=true button--aria-label="Add primary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsSecondary=true button--aria-label="Add secondary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
+  {{> button button--IsSecondary=true button--aria-label="Add secondary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsTertiary=true button--aria-label="Add tertiary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
+  {{> button button--IsTertiary=true button--aria-label="Add tertiary circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsDanger=true button--aria-label="Add danger circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
+  {{> button button--IsDanger=true button--aria-label="Add danger circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsWarning=true button--aria-label="Add warning circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
+  {{> button button--IsWarning=true button--aria-label="Add warning circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
+  {{> button button--IsLink=true button--aria-label="Add link circle variant" button--IsCircle=true button--icon="rh-ui-add-circle"}}
 
-{{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="rh-microns-close"}}
+  {{> button button--IsPlain=true button--aria-label="Remove plain circle variant" button--IsCircle=true button--icon="rh-microns-close"}}
 
-{{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="rh-ui-copy"}}
+  {{> button button--IsControl=true button--aria-label="Copy control circle variant" button--IsCircle=true button--icon="rh-ui-copy"}}
 
-{{> button button--IsCircle=true button--IsPlain=true button--aria-label="Upload circle variant" button--IsIcon=true button--icon="rh-ui-upload"}}
+  {{> button button--IsCircle=true button--IsPlain=true button--aria-label="Upload circle variant" button--IsIcon=true button--icon="rh-ui-upload"}}
 
-{{> button button--IsCircle=true button--IsPlain=true button--IsIcon=true button--icon="rh-ui-upload" button--IsInProgress=true button--progress-text="Uploading circle variant..."}}
+  {{> button button--IsCircle=true button--IsPlain=true button--IsIcon=true button--icon="rh-ui-upload" button--IsInProgress=true button--progress-text="Uploading circle variant..."}}
+{{/l-flex}}
 ```
 
 ### Counts
 ```hbs
 {{#*inline "button-counts"}}
-  {{#> button button--IsPrimary=true button-count--IsUnread=true}}
-    View issues
-  {{/button}}
-  {{#> button button--IsPrimary=true button-count--IsRead=true}}
-    View issues
-  {{/button}}
-  {{#> button button--IsLink=true button-count--IsUnread=true}}
-    View issues
-  {{/button}}
-  {{#> button button--IsLink=true button-count--IsRead=true}}
-    View issues
-  {{/button}}
+  {{#> l-flex l-flex--modifier="pf-m-gap"}}
+    {{#> button button--IsPrimary=true button-count--IsUnread=true}}
+      View issues
+    {{/button}}
+    {{#> button button--IsPrimary=true button-count--IsRead=true}}
+      View issues
+    {{/button}}
+    {{#> button button--IsLink=true button-count--IsUnread=true}}
+      View issues
+    {{/button}}
+    {{#> button button--IsLink=true button-count--IsRead=true}}
+      View issues
+    {{/button}}
+  {{/l-flex}}
 {{/inline}}
 
 {{> button-counts button--count="7"}}
@@ -218,104 +236,124 @@ For when a plain/icon button is placed inline with text {{> button button--IsPla
 ```hbs
 <strong>Read</strong>
 <br>
-{{#> button button--IsStateful=true button--IsRead=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsRead=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}items{{/screen-reader}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsRead=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsRead=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}items{{/screen-reader}}
+  {{/button}}
+{{/l-flex}}
 
-<br><br>
+<br>
 
 <strong>Unread</strong>
 <br>
-{{#> button button--IsStateful=true button--IsUnread=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}unread items{{/screen-reader}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsUnread=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}unread items{{/screen-reader}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsUnread=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}unread items{{/screen-reader}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsUnread=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}unread items{{/screen-reader}}
+  {{/button}}
+{{/l-flex}}
 
-<br><br>
+<br>
 
 <strong>Attention</strong>
 <br>
-{{#> button button--IsStateful=true button--IsAttention=true button--icon="rh-ui-attention-bell-fill"}}
-  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsAttention=true button--icon="rh-ui-attention-bell-fill"}}
+    10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
-  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsAttention=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
+    10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+  {{/button}}
+{{/l-flex}}
 
-<br><br>
+<br>
 
 <strong>Plain</strong>
 <br>
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
-{{/button}}
-
-<br>
-
-{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
-{{/button}}
-
-{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="all items read"}}
+  {{/button}}
+{{/l-flex}}
 
 <br>
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-notification-fill" button--aria-label="unread items"}}
+  {{/button}}
+{{/l-flex}}
 
-<br><br>
+<br>
+
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
+  {{/button}}
+
+  {{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true  button--icon="rh-ui-attention-bell-fill" button--aria-label="unread items, needs attention"}}
+  {{/button}}
+{{/l-flex}}
+
+<br>
 
 <strong>Plain with count</strong>
 <br>
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}items{{/screen-reader}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}items{{/screen-reader}}
-{{/button}}
-
-<br>
-
-{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}unread items{{/screen-reader}}
-{{/button}}
-
-{{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
-  10 {{#> screen-reader}}unread items{{/screen-reader}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsRead=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}items{{/screen-reader}}
+  {{/button}}
+{{/l-flex}}
 
 <br>
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
-  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}unread items{{/screen-reader}}
+  {{/button}}
 
-{{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
-  10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
-{{/button}}
+  {{#> button button--IsStateful=true button--IsUnread=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-notification-fill"}}
+    10 {{#> screen-reader}}unread items{{/screen-reader}}
+  {{/button}}
+{{/l-flex}}
+
+<br>
+
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--icon="rh-ui-attention-bell-fill"}}
+    10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+  {{/button}}
+
+  {{#> button button--IsStateful=true button--IsAttention=true button--IsPlain=true button--IsClicked=true button--icon="rh-ui-attention-bell-fill"}}
+    10 {{#> screen-reader}}unread items, needs attention{{/screen-reader}}
+  {{/button}}
+{{/l-flex}}
 ```
 
 ### Favorite
 A favorite button should use a plain button with the star icon. Applying `.pf-m-favorited` to the button initiates a microanimation and indicates that the item is favorited.
 ```hbs
-{{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--aria-label="not starred"}}
-{{/button}}
-{{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--IsFavorited=true button--aria-label="starred"}}
-{{/button}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--aria-label="not starred"}}
+  {{/button}}
+  {{#> button button--IsPlain=true button--IsIcon=true button--IsFavorite=true button--IsFavorited=true button--aria-label="starred"}}
+  {{/button}}
+{{/l-flex}}
 ```
 
 ### Settings
@@ -325,9 +363,11 @@ A favorite button should use a plain button with the star icon. Applying `.pf-m-
 
 ### Hamburger
 ```hbs
-{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--AriaExpanded=false}}
-{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-expand" button--AriaExpanded=false}}
-{{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-collapse" button--AriaExpanded=true}}
+{{#> l-flex l-flex--modifier="pf-m-gap"}}
+  {{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--AriaExpanded=false}}
+  {{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-expand" button--AriaExpanded=false}}
+  {{> button button--IsHamburger=true button--IsPlain=true button--IsIcon=true button--aria-label="Hamburger" button--modifier="pf-m-collapse" button--AriaExpanded=true}}
+{{/l-flex}}
 ```
 
 ## Documentation
