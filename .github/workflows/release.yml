@@ -1,90 +1,35 @@
-name: release
+name: promote
 on:
   push:
-    branches:
-      - felt-v1
-concurrency:
-  group: ${{ github.workflow }}-felt-v1
-  cancel-in-progress: false
+    tags:
+      - felt-v*
 jobs:
-  build-deploy:
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
+  build-and-promote:
+    if: "!contains(github.ref_name, 'prerelease')"
     runs-on: ubuntu-latest
     env:
-      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
+      GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
-      # Injected by generate-workflows.js
       - uses: actions/setup-node@v4
         with:
           node-version: '24.22.0'
           check-latest: true
           registry-url: 'https://registry.npmjs.org'
-      
+      - uses: actions/checkout@v4
+        with:
+        felt-depth: 0
+
       - name: Enable Corepack
         shell: bash
         run: corepack enable
-      
-      - uses: actions/cache@v4
-        id: yarn-cache
-        name: Load Yarn cache
-        with:
-          # Cache Yarn and Cypress binaries
-          path: |
-            ~/.cache/Cypress
-            ~/.cache/yarn
-            .yarn/cache
-          key: ${{ runner.os }}-yarn-cache-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-cache-
-      
-      - name: Install dependencies
-        shell: bash
-        run: yarn install --immutable --network-timeout 100000
-      - run: yarn lint:sass
-        name: Lint SASS
-        if: always()
-      - run: yarn lint:js
-        name: Lint JS
-        if: always()
-      - run: yarn build-felt
-        name: Build Felt
-      - uses: actions/cache@v4
-        id: docs-cache
-        name: Load webpack cache
-        with:
-          path: '.cache'
-          key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
-      - run: yarn build:docs
-        name: Build docs
-      - run: node .github/upload-preview.js public
-        name: Upload docs
-        if: always()
-      - name: Install Chrome for Puppeteer
-        run: npx puppeteer browsers install chrome
-      - run: yarn serve & yarn test
-        name: a11y tests
-      - run: node .github/upload-preview.js coverage
-        name: Upload a11y report
-        if: always()
-      - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-        name: Avoid Unknown Host for github.com
-      - name: Configure release Git identity
-        run: |
-          git config user.email "patternfly-ci@redhat.com"
-          git config user.name "Patternfly CI/CD"
-      - name: Verify release tags
-        run: |
-          echo "Tags merged into HEAD:"
-          git tag --merged HEAD | grep felt-v || echo "No felt-v* tags found — this will be the first release"
-      - run: npx nx release --preid prerelease --verbose
+
+      - name: Build for promotion
+        run: yarn install --immutable && yarn build
+
+      - name: Publish to npm
+        run: npx nx release publish --tag latest --verbose
         env:
           HUSKY: 0
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        name: Prerelease to NPM
