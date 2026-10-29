@@ -18,22 +18,33 @@ jobs:
       GH_PR_NUM:   ${{ needs.check-permissions.outputs.pr-number }}
     steps:
       - uses: actions/checkout@v4
+        with:
+        fetch-depth: 0
       # Yes, we really want to checkout the PR
       - run: |
           git fetch origin pull/$GH_PR_NUM/head:tmp
           git checkout tmp
 
+      - name: Resolve base branch
+        id: base
+        run: |
+          BASE_REF=$(gh pr view "$GH_PR_NUM" --json baseRefName -q .baseRefName)
+          echo "ref=$BASE_REF" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PR_TOKEN }}
+
       - run: |
-          BASE_REF="${{ github.base_ref }}"
-          git fetch origin "$BASE_REF" --depth=1
+          git fetch origin "$BASE_REF"
           git rev-parse "origin/$BASE_REF"
           git rev-parse HEAD
           git rev-parse "origin/$BASE_REF..HEAD"
           git log "origin/$BASE_REF..HEAD" --format="%b"
+        env:
+          BASE_REF: ${{ steps.base.outputs.ref }}
 
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ github.event.pull_request.base.ref == 'felt-v1' && '24.22.0' || '20.19.0' }}
+          node-version: '20.19.0'
           check-latest: true
       
       - name: Enable Corepack
@@ -62,8 +73,8 @@ jobs:
       - run: yarn lint:js
         name: Lint JS
         if: always()
-      - run: ${{ github.event.pull_request.base.ref == 'felt-v1' && 'yarn build-felt' || 'yarn build-patternfly' }}
-        name: Build
+      - run: yarn build-patternfly
+        name: Build patternfly
       - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache
