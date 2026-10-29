@@ -19,7 +19,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/checkout@v4
         with:
-        felt-depth: 0
+        fetch-depth: 0
 
       - name: Enable Corepack
         shell: bash
@@ -29,7 +29,7 @@ jobs:
         run: yarn install --immutable && yarn build
 
       - name: Publish to npm
-        run: npx nx release publish --tag latest --verbose
+        run: npx nx release --yes --tag latest --verbose
         env:
           HUSKY: 0
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
