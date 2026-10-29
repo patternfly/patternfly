@@ -83,7 +83,7 @@ jobs:
         run: |
           echo "Tags merged into HEAD:"
           git tag --merged HEAD | grep felt-v || echo "No felt-v* tags found — this will be the first release"
-      - run: npx nx release --preid prerelease --verbose
+      - run: npx nx release --preid prerelease --yes --verbose
         env:
           HUSKY: 0
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
