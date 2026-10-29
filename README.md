@@ -21,12 +21,12 @@ Any of the files above are meant for use in consuming the library. The recommend
 
 ## Development
 
-**Felt Development requires Node v24.22.0 or greater**
+**Felt Development requires Node v24.22.1 or greater**
 
 To setup the Felt development environment:
 
 - clone the project
-- ensure you have Node.js v24.22.0 or greater installed
+- ensure you have Node.js v24.22.1 or greater installed
 - enable corepack: `corepack enable`
 - run `yarn install` from the project root
 - run `yarn start`
