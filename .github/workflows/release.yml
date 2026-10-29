@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          fetch-tags: true
           token: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       # Injected by generate-workflows.js
       - uses: actions/setup-node@v4
@@ -80,8 +79,12 @@ jobs:
         run: |
           git config user.email "patternfly-ci@redhat.com"
           git config user.name "Patternfly CI/CD"
-      - run: npx nx release
+      - name: Verify release tags
+        run: |
+          echo "Tags merged into HEAD:"
+          git tag --merged HEAD | grep felt-v || echo "No felt-v* tags found — this will be the first release"
+      - run: npx nx release --preid prerelease --verbose
         env:
           HUSKY: 0
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        name: Release to NPM
+        name: Prerelease to NPM

@@ -1,0 +1,35 @@
+name: promote
+on:
+  push:
+    tags:
+      - felt-v*
+jobs:
+  build-and-promote:
+    if: "!contains(github.ref_name, 'prerelease')"
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.0'
+          check-latest: true
+          registry-url: 'https://registry.npmjs.org'
+      - uses: actions/checkout@v4
+        with:
+        felt-depth: 0
+
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+
+      - name: Build for promotion
+        run: yarn install --immutable && yarn build
+
+      - name: Publish to npm
+        run: npx nx release publish --tag latest --verbose
+        env:
+          HUSKY: 0
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
