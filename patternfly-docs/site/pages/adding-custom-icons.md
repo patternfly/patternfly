@@ -5,7 +5,7 @@ title: Custom icon guidelines
 
 ## Adding a custom icon
 
-Below are the steps for adding a custom icon to the [pficon icons](/icons) icon font. Adding this icon in core will also add the icon to the [react-icons](https://github.com/patternfly/patternfly-react/tree/main/packages/react-icons) library as an SVG.
+Below are the steps for adding a custom icon to the [pficon icons](/icons) icon font. Adding this icon in core will also add the icon to the [react-icons](https://github.com/patternfly/patternfly-react/tree/felt-v1/packages/react-icons) library as an SVG.
 
 - Get the new source SVG from design.
 - Edit `src/icons/definitions/pficons.mjs` to add the new icon.
