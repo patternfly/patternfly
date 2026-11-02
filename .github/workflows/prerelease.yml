@@ -7,14 +7,19 @@ concurrency:
   group: ${{ github.workflow }}-felt-v1
   cancel-in-progress: false
 jobs:
-  build-deploy:
+  prepare:
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     runs-on: ubuntu-latest
+    permissions:
+      # Pushes the release commit and tags. This job never receives the OIDC
+      # token used for npm trusted publishing.
+      contents: write
+    outputs:
+      prepared: ${{ steps.check-release.outputs.prepared }}
     env:
       SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -83,8 +88,63 @@ jobs:
         run: |
           echo "Tags merged into HEAD:"
           git tag --merged HEAD | grep felt-v || echo "No felt-v* tags found — this will be the first release"
-      - run: npx nx release --preid prerelease --yes --verbose
+      - name: Prepare prerelease
+        run: npx nx release --preid prerelease --verbose --skip-publish
         env:
           HUSKY: 0
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        name: Prerelease to NPM
+      - name: Check whether a release was prepared
+        id: check-release
+        run: |
+          if git tag --points-at HEAD | grep -q '^felt-v'; then
+            echo "prepared=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "prepared=false" >> "$GITHUB_OUTPUT"
+            echo "No release commit at HEAD — nothing to publish."
+          fi
+      - name: Preserve versioned package for publishing
+        if: steps.check-release.outputs.prepared == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: nx-release-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+
+  publish:
+    name: Publish prerelease to NPM
+    needs: prepare
+    if: >
+      !cancelled() &&
+      needs.prepare.outputs.prepared == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      # This job installs dependencies and runs repository code, so it only
+      # receives the npm trusted-publishing OIDC token and read access. It
+      # never pushes.
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+          check-latest: true
+          registry-url: 'https://registry.npmjs.org'
+      - name: Enable Corepack
+        shell: bash
+        run: corepack enable
+      - name: Download versioned release package
+        uses: actions/download-artifact@v4
+        with:
+          name: nx-release-dist
+          path: dist
+      - name: Install dependencies
+        shell: bash
+        run: yarn install --immutable --network-timeout 100000
+      - run: npx nx release publish --verbose
+        env:
+          HUSKY: 0
+        name: Publish prerelease to NPM
