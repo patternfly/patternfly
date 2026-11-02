@@ -28,12 +28,12 @@ yarn start
 
 **3. Get help:**
 - Join our [Slack community](https://patternfly.slack.com/) - `#patternfly-core` channel
-- Read our [development guidelines](https://pf-core-staging.patternfly.org/guidelines)
+- Read our [development guidelines](https://rh-felt-styles-staging.surge.sh/custom-icons/guidelines)
 - Check existing [GitHub issues](https://github.com/patternfly/patternfly/issues)
 
 ## Code of Conduct
 
-All contributors and participants agree to abide by the [Felt Code of Conduct](https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md). Please read it before contributing.
+All contributors and participants agree to abide by the [Felt Code of Conduct](https://github.com/patternfly/patternfly/blob/felt-v1/CODE_OF_CONDUCT.md). Please read it before contributing.
 
 ## Pull request guidelines
 

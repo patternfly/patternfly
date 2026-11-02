@@ -2,7 +2,7 @@
  
 ## Contributing 
 
-We welcome contributions to Felt! Please read our [Contributing Guide](https://pf-core-staging.patternfly.org/contribution) to learn how to get started, submit issues, and contribute code to the project. 
+We welcome contributions to Felt! Please read our [Contributing Guide](https://rh-felt-styles-staging.surge.sh/contribution) to learn how to get started, submit issues, and contribute code to the project. 
 
 ## Install
 
@@ -70,13 +70,13 @@ When making visual changes to a full page example, new example preview screensho
 
 ## Guidelines for CSS development
 
-- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://pf-core-staging.patternfly.org, and information detailing the change.
+- For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://rh-felt-styles-staging.surge.sh, and information detailing the change.
 - If global variables are modified in Core, a React issue should be opened to address this.
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
 ### Contribution guide 
-For information on how to contribute, refer to our [contribution guide](https://pf-core-staging.patternfly.org/contribution).
+For information on how to contribute, refer to our [contribution guide](https://rh-felt-styles-staging.surge.sh/contribution).
 
 ### Commit format
 Nx is configured to use [Conventional Commits](https://www.conventionalcommits.org/) for versioning. Nx Release ignores all commits that do not conform to the Conventional Commits standard by default.
@@ -90,10 +90,10 @@ By default, this results in:
 For configuration information, [see the Nx documentation](https://nx.dev/docs/guides/nx-release/customize-conventional-commit-types).
 
 ### Development guidelines
-For more information on using CSS, Sass, and handlebars, refer to our [development guidelines](https://pf-core-staging.patternfly.org/guidelines).
+For more information on using CSS, Sass, and handlebars, refer to our [development guidelines](https://rh-felt-styles-staging.surge.sh/guidelines).
 
 ### Custom icon guidelines
-For more information on custom icons, refer to our [custom icon guidelines](https://pf-core-staging.patternfly.org/custom-icons).
+For more information on custom icons, refer to our [custom icon guidelines](https://rh-felt-styles-staging.surge.sh/custom-icons).
 
 ## Beta components
 
@@ -130,7 +130,7 @@ If you have any suggestions about ways that we can improve how we use this tool,
 ## FAQ
 
 ### CSS Variables
-[How do I use CSS variables to customize the library?](https://pf-core-staging.patternfly.org/guidelines#variables)
+[How do I use CSS variables to customize the library?](https://rh-felt-styles-staging.surge.sh/guidelines/#variable-system)
 
 ### Browser support
 Felt is supported on the latest two major versions of the following browsers:
