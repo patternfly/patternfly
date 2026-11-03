@@ -3,6 +3,7 @@
 @include pf-root($breadcrumb) {
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--default);
+  --#{$breadcrumb}__item--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$breadcrumb}__item--MarginInlineEnd: var(--pf-t--global--spacer--sm);
 
@@ -14,6 +15,7 @@
   // Breadcrumb link
   --#{$breadcrumb}__link--PaddingInlineStart: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
   --#{$breadcrumb}__link--PaddingInlineEnd: var(--pf-t--global--spacer--sm); // use a mutable value for alignment control
+  --#{$breadcrumb}__link--FontWeight: var(--pf-t--global--font--weight--body--default);
   --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
   --#{$breadcrumb}__link--TextDecorationLine: var(--pf-t--global--text-decoration--link--line--default);
   --#{$breadcrumb}__link--TextDecorationStyle: var(--pf-t--global--text-decoration--link--style--default);
