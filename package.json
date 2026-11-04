@@ -139,7 +139,8 @@
     "parse-git-config": "^3.0.0",
     "braces": "^3.0.3",
     "ip": "^2.0.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "stylelint-config-standard": "41.0.0"
   },
   "repository": {
     "type": "git",
