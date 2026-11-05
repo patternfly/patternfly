@@ -353,12 +353,12 @@ $pf-v6-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       &.pf-m-display-inline#{$breakpoint-name} {
         @include pf-v6-c-masthead--m-display-inline;
       }
-    }
-
-    @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
-      &.pf-m-inset-#{$inset} {
-        padding-inline-start: #{$inset-value};
-        padding-inline-end: #{$inset-value};
+      
+      @each $inset, $inset-value in $pf-v6-c-masthead--inset-map {
+        &.pf-m-inset-#{$inset}#{$breakpoint-name} {
+          padding-inline-start: #{$inset-value};
+          padding-inline-end: #{$inset-value};
+        }
       }
     }
   }
