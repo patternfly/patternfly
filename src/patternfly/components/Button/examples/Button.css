@@ -1,6 +1,6 @@
 .ws-core-c-button .pf-v6-c-button {
-  margin-inline-end: 6px;
-  margin-block-end: 6px;
+  margin-inline-end: var(--pf-t--global--spacer--md);
+  margin-block-end: var(--pf-t--global--spacer--md);
 }
 
 #ws-core-c-button-plain-with-no-padding .pf-v6-c-button {

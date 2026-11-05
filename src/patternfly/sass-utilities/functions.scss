@@ -134,3 +134,13 @@
 @function pf-v6-calc-inverse($val, $multiplier: var(--#{$pf-global}--inverse--multiplier)) {
   @return calc(#{$val} * #{$multiplier});
 }
+
+// For use with <input type="number">. Returns a calc() of form control base width + number input spinner width
+// Most commonly you will pass a 'ch' value for $extra-width for an input to be sized to show some number of characters.
+@function pf-v6-number-input-size($extra-width: null) {
+  @if not $extra-width {
+    @return calc(var(--pf-t--global--spacer--control--horizontal--default) * 2 + #{pf-size-prem(20px)});
+  }
+
+  @return calc(var(--pf-t--global--spacer--control--horizontal--default) * 2 + #{pf-size-prem(20px)} + #{$extra-width});
+}
