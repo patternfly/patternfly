@@ -57,4 +57,7 @@ jobs:
           VERSION="${GITHUB_REF_NAME#felt-v}"
           cd dist
           npm version "$VERSION" --git-tag-version false
-          npm publish --tag latest
+          # --ignore-scripts: dist/package.json carries the repo's "prepare":
+          # "husky" script, and this job intentionally installs nothing, so the
+          # husky binary would not resolve and publish would fail.
+          npm publish --ignore-scripts --tag latest
