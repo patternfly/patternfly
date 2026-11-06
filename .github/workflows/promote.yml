@@ -55,12 +55,13 @@ jobs:
           name: promote-dist
           path: dist
       - name: Publish to npm
+        env:
+          HUSKY: 0
+          TAG_NAME: ${{ github.ref_name }}
         run: |
           cd dist
-          npm version ${{ github.ref_name }} --git-tag-version false
+          npm version "$TAG_NAME" --git-tag-version false
           # --ignore-scripts: dist/package.json carries the repo's "prepare":
           # "husky" script, and this job intentionally installs nothing, so the
           # husky binary would not resolve and publish would fail.
           npm publish --ignore-scripts --tag latest
-        env:
-          HUSKY: 0
