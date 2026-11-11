@@ -913,9 +913,8 @@
     padding-inline: var(--pf-v6-c-button--PaddingBlockStart);
 
     .#{$button}__icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      place-items: center;
       min-width: 1lh;
       min-height: 1lh;
     }
