@@ -909,7 +909,15 @@
   &.pf-m-circle {
     --#{$button}--BorderRadius: var(--#{$button}--m-circle--BorderRadius);
 
-    padding-inline: 0;
+    min-width: revert;
+    padding-inline: var(--pf-v6-c-button--PaddingBlockStart);
+
+    .#{$button}__icon {
+      display: grid;
+      place-items: center;
+      min-width: 1lh;
+      min-height: 1lh;
+    }
   }
 
   &:hover,
