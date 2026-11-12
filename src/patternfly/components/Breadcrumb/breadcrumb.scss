@@ -1,6 +1,9 @@
 @use '../../sass-utilities' as *;
 
 @include pf-root($breadcrumb) {
+  // Breadcrumb list
+  --#{$breadcrumb}__list--RowGap: var(--pf-t--global--spacer--xs);
+
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
@@ -43,6 +46,7 @@
 .#{$breadcrumb}__list {
   display: flex;
   flex-wrap: wrap;
+  row-gap: var(--#{$breadcrumb}__list--RowGap);
   align-items: center;
 }
 
