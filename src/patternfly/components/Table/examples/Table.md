@@ -3956,10 +3956,18 @@ This example shows the use of `.pf-m-sticky-header-base` and `.pf-m-sticky-heade
   {{#> table-tfoot}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="row"' table-th--modifier="pf-m-hidden pf-m-visible-on-md"}}
-        Total nodes
+        Total repositories
       {{/table-th}}
-      {{#> table-td table-td--attribute='colspan="4"' table-td--data-label="Total nodes"}}
-        4
+      {{#> table-td table-td--attribute='colspan="4"' table-td--data-label="Total repositories"}}
+        8
+      {{/table-td}}
+    {{/table-tr}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="row"' table-th--modifier="pf-m-hidden pf-m-visible-on-md"}}
+        Total branches
+      {{/table-th}}
+      {{#> table-td table-td--attribute='colspan="4"' table-td--data-label="Total branches"}}
+        80
       {{/table-td}}
     {{/table-tr}}
   {{/table-tfoot}}
