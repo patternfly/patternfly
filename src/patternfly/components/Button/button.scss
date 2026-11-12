@@ -1119,6 +1119,7 @@
   }
 }
 
+// stylelint-disable plugin/browser-compat
 .#{$button}--hamburger-icon--top {
   d: var(--#{$button}--hamburger-icon--top--path);
 }
@@ -1134,6 +1135,7 @@
 .#{$button}--hamburger-icon--bottom {
   d: var(--#{$button}--hamburger-icon--bottom--path);
 }
+// stylelint-enable
 
 @keyframes #{$button}-icon-notify {
   33% {
