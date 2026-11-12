@@ -3955,10 +3955,10 @@ This example shows the use of `.pf-m-sticky-header-base` and `.pf-m-sticky-heade
 
   {{#> table-tfoot}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--attribute='scope="row"' table-th--modifier="pf-m-hidden pf-m-visible-on-md"}}
         Total nodes
       {{/table-th}}
-      {{#> table-td table-td--attribute='colspan="4"'}}
+      {{#> table-td table-td--attribute='colspan="4"' table-td--data-label="Total nodes"}}
         4
       {{/table-td}}
     {{/table-tr}}
@@ -4141,10 +4141,10 @@ This example uses `.pf-m-sticky-footer-base` and `.pf-m-sticky-footer-stuck` for
   {{/table-tbody}}
   {{#> table-tfoot}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="row"'}}
-        Total
+      {{#> table-th table-th--attribute='scope="row"' table-th--modifier="pf-m-hidden pf-m-visible-on-md"}}
+        Total nodes
       {{/table-th}}
-      {{#> table-td table-td--attribute='colspan="4"'}}
+      {{#> table-td table-td--attribute='colspan="4"' table-td--data-label="Total nodes"}}
         4
       {{/table-td}}
     {{/table-tr}}
@@ -5472,10 +5472,10 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
   {{#> table-tfoot}}
     {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="row"'}}
+      {{#> table-th table-th--attribute='scope="row"' table-th--modifier="pf-m-hidden pf-m-visible-on-md"}}
         Total nodes
       {{/table-th}}
-      {{#> table-td table-td--attribute='colspan="4"'}}
+      {{#> table-td table-td--attribute='colspan="4"' table-td--data-label="Total nodes"}}
         4
       {{/table-td}}
     {{/table-tr}}

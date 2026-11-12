@@ -5,6 +5,9 @@
     {{else}}
       role="group"
     {{/if}}
+    {{#if form-group--aria-describedby}}
+      aria-describedby="{{form-group--aria-describedby}}"
+    {{/if}}
     aria-labelledby="{{form--id}}{{form-group--id}}-legend"
   {{/if}}
   {{#if form-group--attribute}}

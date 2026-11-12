@@ -44,7 +44,7 @@ cssPrefix: pf-v6-c-form
       {{> form-group-label-help form-group-label-help--aria-label="More information for information field" form-group-label-help--aria-describedby=(concat form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" aria-label="Textarea example"')}}{{/form-control}}
+      {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id=(concat form--id '-checkbox') form-group--IsCheckGroup=true}}
