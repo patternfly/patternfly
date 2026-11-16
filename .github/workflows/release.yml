@@ -73,10 +73,6 @@ jobs:
         if: always()
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         name: Avoid Unknown Host for github.com
-      - name: Set up Node for release
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22.23.3'
       - run: yarn exec semantic-release
         env:
           HUSKY: 0
