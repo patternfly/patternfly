@@ -4,6 +4,11 @@
       {{> page-template-context-selector}}
     {{/page-sidebar-body}}
   {{/if}}
+  {{#if page-template-sidebar--HasSidebarHeader}}
+    {{#> page-sidebar-header}}
+      {{#> page-sidebar-title}}Sidebar title{{/page-sidebar-title}}
+    {{/page-sidebar-header}}
+  {{/if}}
   {{#if page-template-sidebar--nav--IsExpandable}}
     {{#> page-sidebar-body}}
       {{> page-template-expandable-nav}}
