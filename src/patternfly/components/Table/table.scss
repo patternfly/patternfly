@@ -260,6 +260,10 @@
   // * Table striped
   --#{$table}--m-striped__tr--BackgroundColor: var(--pf-t--global--background--color--striped--row--default);
 
+  // * Table footer 
+  --#{$table}__tfoot--BorderBlockStartWidth: var(--#{$table}--border-width--base);
+  --#{$table}__tfoot--BorderBlockStartColor: var(--#{$table}--BorderColor);
+
   // * Table sticky header
   --#{$table}--m-sticky-header--BackgroundColor: var(--pf-t--global--background--color--sticky--default);
   --#{$table}--m-sticky-header--cell--ZIndex: var(--pf-t--global--z-index--xs);
@@ -279,8 +283,6 @@
   --#{$table}--m-sticky-footer--cell--ZIndex: var(--pf-t--global--z-index--xs);
   --#{$table}--m-sticky-footer--BoxShadow: 0;
   --#{$table}--m-sticky-footer--BorderRadius: 0;
-  --#{$table}--m-sticky-footer--BorderBlockStartWidth: var(--#{$table}--border-width--base);
-  --#{$table}--m-sticky-footer--BorderBlockStartColor: var(--#{$table}--BorderColor);
   --#{$table}--m-sticky-footer--TransitionTimingFunction--BackgroundColor: var(--pf-t--global--motion--timing-function--default);
   --#{$table}--m-sticky-footer--TransitionDuration--BackgroundColor: var(--pf-t--global--motion--duration--fade--short);
   --#{$table}--m-sticky-footer--BorderRadius--glass: var(--pf-t--global--border--radius--medium);
@@ -402,6 +404,12 @@
     }
   }
 
+  &:has(.#{$table}__tfoot) {
+    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
+      border-block-end-color: transparent;
+    }
+  }
+
   // - Table sticky footer
   &.pf-m-sticky-footer-base > .#{$table}__tfoot,
   &.pf-m-sticky-footer-base > .#{$table}__tfoot :is(.#{$table}__th, .#{$table}__td) {
@@ -417,13 +425,6 @@
   &.pf-m-sticky-footer-stuck > .#{$table}__tfoot :is(.#{$table}__th, .#{$table}__td) {
     &::after {
       opacity: 1;
-    }
-  }
-
-  &.pf-m-sticky-footer,
-  &.pf-m-sticky-footer-stuck {
-    > .#{$table}__tbody:last-of-type > .#{$table}__tr:last-of-type {
-      border-block-end-color: transparent;
     }
   }
 
@@ -450,13 +451,8 @@
       }
 
       :is(.#{$table}__th, .#{$table}__td)::after {
-        position: absolute;
-        inset: 0;
         z-index: -1;
-        pointer-events: none;
-        content: '';
         background: var(--#{$table}--m-sticky-footer--BackgroundColor);
-        border-block-start: var(--#{$table}--m-sticky-footer--BorderBlockStartWidth) solid var(--#{$table}--m-sticky-footer--BorderBlockStartColor);
       }
 
       > .#{$table}__tr:first-child > :is(.#{$table}__th, .#{$table}__td):first-child::after {
@@ -474,7 +470,12 @@
       > .#{$table}__tr:last-child > :is(.#{$table}__th, .#{$table}__td):last-child::after {
         border-end-end-radius: var(--#{$table}--m-sticky-footer--BorderRadius);
       }
-
+      
+      :where(.pf-v6-theme-glass) & {
+        > .#{$table}__tr:first-child > :is(.#{$table}__th, .#{$table}__td) {
+          --#{$table}__tfoot--BorderBlockStartWidth: var(--#{$table}--m-sticky-footer--BorderBlockStartWidth);
+        }
+      }
     }
   }
 
@@ -1448,6 +1449,14 @@
   --#{$table}__tr--BorderBlockEndWidth: 0;
 
   vertical-align: top;
+
+  :is(.#{$table}__th, .#{$table}__td)::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    border-block-start: var(--#{$table}__tfoot--BorderBlockStartWidth) solid var(--#{$table}__tfoot--BorderBlockStartColor);
+  }
 }
 
 // - Table icon inline
