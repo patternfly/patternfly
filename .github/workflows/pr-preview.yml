@@ -46,11 +46,11 @@ jobs:
         with:
           node-version: '24.22.1'
           check-latest: true
-      
+
       - name: Enable Corepack
         shell: bash
         run: corepack enable
-      
+
       - uses: actions/cache@v4
         id: yarn-cache
         name: Load Yarn cache
@@ -63,7 +63,7 @@ jobs:
           key: ${{ runner.os }}-pr-yarn-cache-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-pr-yarn-cache-
-      
+
       - name: Install dependencies
         shell: bash
         run: yarn install --immutable --network-timeout 100000
@@ -75,6 +75,9 @@ jobs:
         if: always()
       - run: yarn build-patternfly
         name: Build patternfly
+      - run: yarn lint:css
+        name: Lint CSS
+        if: always()
       - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache

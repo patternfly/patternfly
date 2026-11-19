@@ -31,6 +31,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--#{$check}--GridGap);
+  // stylelint-disable-next-line plugin/browser-compat
   accent-color: var(--#{$check}--AccentColor);
 
   &.pf-m-standalone {
