@@ -149,6 +149,11 @@ import './Page.css'
 {{> page-template page-template--id="page-context-selector-expanded" page-template-sidebar--HasContextSelector=true page-template-context-selector--IsExpanded=true}}
 ```
 
+### Context selector with sidebar header
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-sidebar-header" page-template-sidebar--HasContextSelector=true page-template-sidebar--HasSidebarHeader=true}}
+```
+
 ### Sidebar collapsed
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-sidebar-collapsed" page-sidebar--modifier="pf-m-collapsed"}}
@@ -157,6 +162,11 @@ import './Page.css'
 ### Sidebar expanded
 ```hbs isFullscreen
 {{> page-template page-template--id="page-demo-sidebar-expanded" page-sidebar--modifier="pf-m-expanded"}}
+```
+
+### Sidebar header
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-sidebar-header" page-template-sidebar--HasSidebarHeader=true}}
 ```
 
 ### No sidebar

@@ -239,6 +239,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--BackgroundColor--glass: transparent;
   --#{$page}__sidebar--Width--base--glass: calc(#{pf-size-prem(290px)} + var(--pf-t--global--spacer--inset--page-chrome) * 2);
   --#{$page}__sidebar--MarginBlockStart--glass: var(--pf-t--global--spacer--gutter--default);
+  --#{$page}__sidebar-header--PaddingBlockStart--glass: var(--pf-t--global--spacer--md);
   --#{$page}__sidebar-body--PaddingInlineStart--glass: var(--pf-t--global--spacer--md);
   --#{$page}__sidebar-body--PaddingInlineEnd--glass: var(--pf-t--global--spacer--md);
   --#{$page}__sidebar-main--PaddingBlockEnd--glass: var(--#{$page}__sidebar--PaddingBlockEnd);
@@ -274,6 +275,7 @@ $pf-page-v6--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}--BackgroundColor: var(--#{$page}--BackgroundColor--glass);
     --#{$page}__sidebar--Width--base: var(--#{$page}__sidebar--Width--base--glass);
     --#{$page}__sidebar--MarginBlockStart: var(--#{$page}__sidebar--MarginBlockStart--glass);
+    --#{$page}__sidebar-header--PaddingBlockStart: var(--#{$page}__sidebar-header--PaddingBlockStart--glass);
     --#{$page}__sidebar-body--PaddingInlineStart: var(--#{$page}__sidebar-body--PaddingInlineStart--glass);
     --#{$page}__sidebar-body--PaddingInlineEnd: var(--#{$page}__sidebar-body--PaddingInlineEnd--glass);
     --#{$page}__sidebar-main--PaddingBlockEnd: var(--#{$page}__sidebar-main--PaddingBlockEnd--glass);
