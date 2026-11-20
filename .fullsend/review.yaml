@@ -1,0 +1,20 @@
+# Harness overlay for the review agent.
+# Base harness: fullsend-ai/agents v0.57.0 (41f89529).
+# Per-key merge: unset keys inherit from the base harness (ADR 0045/0055).
+base: https://raw.githubusercontent.com/fullsend-ai/agents/41f89529863ea6c26e804a348f56953423d294a3/harness/review.yaml#sha256=6d6e0941f5ce10edb1b5d104a896c2c871a3ca08259577ae2faf6f8932ff80aa
+
+forge:
+  github:
+    env:
+      runner: &review-env
+        # Skip dependency-bot PRs entirely (cost lever).
+        REVIEW_SKIP_AUTHORS: "app/renovate,app/dependabot"
+        # Risk verdict gate: withhold bot approval at risk score >= 3
+        # (default 4). Conservative while trust builds; loosen to "4"
+        # once the team is familiar with the risk judgment.
+        REVIEW_RISK_VERDICT_THRESHOLD: "3"
+        # Paths the agent cannot approve. Existing repo paths, plus
+        # CODEOWNERS and Dockerfile so those stay protected if added later.
+        # runner and sandbox share this block.
+        REVIEW_PROTECTED_PATHS: ".claude/,.gitignore,.github/,.fullsend/,scripts/,CODEOWNERS,Dockerfile"
+      sandbox: *review-env
