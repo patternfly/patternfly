@@ -40,12 +40,13 @@ permissions: {}
 jobs:
   dispatch:
     if: >-
-      (github.event_name != 'pull_request' && github.event_name != 'pull_request_review'
+      (github.event_name != 'pull_request_target' && github.event_name != 'pull_request_review'
        || github.event.pull_request.head.ref != 'fullsend/scaffold-install')
-      && (github.event_name != 'pull_request'
-       || github.event.pull_request.head.repo.id == github.repository_id)
+      && ((github.event_name != 'pull_request_target' && github.event_name != 'pull_request_review')
+       || github.event.pull_request.draft == false)
       && (github.event_name != 'issue_comment'
-       || startsWith(github.event.comment.body, '/fs-'))
+       || (startsWith(github.event.comment.body, '/fs-')
+           && github.event.comment.user.type != 'Bot'))
     permissions:
       actions: write
       id-token: write
