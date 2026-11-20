@@ -5,10 +5,17 @@
 # Routes events to agent workflows via reusable-dispatch.yml.
 # All agent execution happens in this repository's context.
 #
-# Security: pull_request_target runs the BASE branch version of this workflow,
-# preventing PRs from modifying it to exfiltrate credentials.
-# This shim never checks out PR code, so it is not vulnerable to "pwn request"
-# attacks.
+# Security: pull request events use pull_request, not pull_request_target
+# (GitHub blocks pull_request_target by default in public repositories;
+# ADR 0164). On pull_request this workflow runs from the PR's own
+# copy and forwards the repository secrets, so the dispatch job runs only for
+# same-repo PRs, whose authors already have write access. Fork PRs are skipped
+# here and again in reusable-dispatch.yml (a fork cannot edit the upstream
+# copy; a vendored copy runs from the PR); a maintainer comments /fs-review
+# to review one. In private repositories keep "Send secrets to workflows
+# from pull requests" and "Send write tokens to workflows from pull
+# requests" (Settings > Actions > General) turned off.
+# reusable-dispatch.yml checks out the base side for pull request events.
 #
 # Routing: this shim forwards the raw event context to reusable-dispatch.yml,
 # which determines the stage and runs the agent inline (ADR 62).
@@ -23,7 +30,7 @@ on:
     types: [opened, edited, labeled]
   issue_comment:
     types: [created]
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize, ready_for_review, closed, labeled, unlabeled]
   pull_request_review:
     types: [submitted]
@@ -33,11 +40,12 @@ permissions: {}
 jobs:
   dispatch:
     if: >-
-      (github.event_name != 'pull_request_target' && github.event_name != 'pull_request_review'
+      (github.event_name != 'pull_request' && github.event_name != 'pull_request_review'
        || github.event.pull_request.head.ref != 'fullsend/scaffold-install')
+      && (github.event_name != 'pull_request'
+       || github.event.pull_request.head.repo.id == github.repository_id)
       && (github.event_name != 'issue_comment'
-       || (startsWith(github.event.comment.body, '/fs-')
-           && github.event.comment.user.type != 'Bot'))
+       || startsWith(github.event.comment.body, '/fs-'))
     permissions:
       actions: write
       id-token: write
@@ -45,7 +53,7 @@ jobs:
       issues: write
       packages: read
       pull-requests: write
-    uses: fullsend-ai/fullsend/.github/workflows/reusable-dispatch.yml@v0.52.0
+    uses: fullsend-ai/fullsend/.github/workflows/reusable-dispatch.yml@v0.57.0
     with:
       event_action: ${{ github.event.action }}
       mint_url: ${{ vars.FULLSEND_MINT_URL }}
@@ -59,6 +67,10 @@ jobs:
       FULLSEND_INFERENCE_GATEWAY_API_KEY: ${{ secrets.FULLSEND_INFERENCE_GATEWAY_API_KEY }}
       OTEL_EXPORTER_OTLP_TRACES_HEADERS: ${{ secrets.OTEL_EXPORTER_OTLP_TRACES_HEADERS }}
       OTEL_EXPORTER_OTLP_HEADERS: ${{ secrets.OTEL_EXPORTER_OTLP_HEADERS }}
+      FULLSEND_JIRA_TOKEN: ${{ secrets.FULLSEND_JIRA_TOKEN }}
+      FULLSEND_JIRA_EMAIL: ${{ secrets.FULLSEND_JIRA_EMAIL }}
+      FULLSEND_JIRA_CLIENT_ID: ${{ secrets.FULLSEND_JIRA_CLIENT_ID }}
+      FULLSEND_JIRA_CLIENT_SECRET: ${{ secrets.FULLSEND_JIRA_CLIENT_SECRET }}
       FULLSEND_GITHUB_RUNNER_SECRETS: ${{ secrets.FULLSEND_GITHUB_RUNNER_SECRETS }}
 
   stop-fix:
