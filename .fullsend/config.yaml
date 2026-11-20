@@ -30,6 +30,12 @@ agents:
       enabled: false
     - name: prioritize
       enabled: false
+    - name: code
+      enabled: false
+    - name: fix
+      enabled: false
+    - name: triage
+      enabled: false
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
