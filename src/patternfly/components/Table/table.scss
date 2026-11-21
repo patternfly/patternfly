@@ -86,7 +86,7 @@
   --#{$table}__toggle--c-button__toggle-icon--Rotate: 0;
   --#{$table}__toggle--c-button__toggle-icon--TransitionDuration: var(--pf-t--global--motion--duration--icon--default);
   --#{$table}__toggle--c-button__toggle-icon--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
-  --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: -180deg;
+  --#{$table}__toggle--c-button--m-expanded__toggle-icon--Rotate: 90deg;
 
   // * Table button
   --#{$table}__button--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--plain);
