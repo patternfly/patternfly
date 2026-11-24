@@ -91,7 +91,7 @@ import './Page.css'
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-section-bottom"
-      page-template--HasFooter="true"
+      page-template--HasFooterSection="true"
       page-template-gallery--IsLongGallery="true"
       page-template-footer--modifier="pf-m-sticky-bottom"
 }}
@@ -101,7 +101,7 @@ import './Page.css'
 ```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-overflow-scroll"
-      page-template--HasFooter="true"
+      page-template--HasFooterSection="true"
       page-template-gallery--IsLongGallery="true"
       page-template-gallery--modifier="pf-m-overflow-scroll"
       page-template-gallery--attribute='tabindex="0"'
